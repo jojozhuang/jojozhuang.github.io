@@ -17,7 +17,7 @@ nav ul li.home {
 }
 a {
     text-decoration: none;
-    /*color: #999;*/
+    color: #000;
 }
 a:hover {
     text-decoration: underline;
