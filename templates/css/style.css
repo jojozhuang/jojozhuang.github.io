@@ -1,0 +1,550 @@
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+h4, h5, h6,
+h1, h2, h3 {margin: 0;}
+ul, ol {margin: 0; padding:0;}
+p {margin: 0;}
+html, body{
+	font-family: 'Ubuntu', sans-serif;
+	/*font-size: 100%;*/
+	background: #ffffff;
+}
+body a{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+body {
+  padding-top:0px;
+}
+a:focus {
+  outline-offset: 0px;
+  text-decoration:none;
+}
+/*-- header_top --*/
+.top-header{
+	background:#000;
+	padding:10px 0;
+	position:relative;
+}
+.header{
+	float:left;
+	  width: 50%;
+}
+.header h1{
+	 background:#11DADA;
+	color:#fff;
+	padding:35px 20px 10px 20px;
+	font-weight:600;
+	display:inline-block;
+	font-size: 4em;
+	  border-bottom: 9px solid #000;
+}
+.header-right{
+	float:right;
+	width:33%;
+}
+.list ul{
+		background:#000;
+		padding:0.5em 1em;
+		text-align:center;
+}
+.list ul li {
+	display:inline-block;
+	color:#fff;
+}
+.list ul li a{
+	color:#fff;
+}
+.header-right h2{
+	color:#333;
+	font-size:3em;
+	margin-top:50px;
+	display: inline-block;
+	text-align:right;
+}
+.header-right span{
+	color: #000;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 18px;
+  position: absolute;
+  top: 13%;
+  right: 11%;
+  font-style: italic;
+}
+/*----*/
+.content{
+	margin:2em 0;
+}
+.content h3{
+	color:#333;
+	font-size:1.6em;
+	font-weight:600;
+	  font-style: italic;
+}
+.work,.education {
+  border-left: 11px solid #11DADA;
+}
+.work {
+	margin-bottom:2.5em;
+}
+.details{
+	margin-top:2.5em;
+}
+.date p{
+	color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  background: #11DADA;
+  padding: 8px 0px;
+  text-align: center;
+  border-bottom: 4px solid #000;
+}
+.posts,.college{
+  margin-right: 3em;
+}
+.posts h4,.college h4{
+	color:#333;
+	font-size:1.2em;
+	margin-bottom:3px;
+	font-weight:600;
+}
+.posts p,.college h5{
+	line-height:1.5em;
+	color:#999;
+	font-weight: 300;
+}
+.college h5{
+	color:#999;
+	font-size:1em;
+	font-weight: 400;
+}
+.city{
+	width:19%;
+}
+.city h5{
+	color:#333;
+	font-size:1.1em;
+	font-weight:600;
+}
+.city p{
+	color:#333;
+	font-size:1em;
+	font-weight:600;
+}
+/*--skills--*/
+.skills{
+	margin:2.5em 0;
+}
+.skill-list:nth-child(1){
+	padding-left: 0;
+}
+.skill-list:nth-child(2){
+	padding-right: 0;
+}
+.grid1{
+	margin-top:2em;
+}
+.lists{
+	border-left: 11px solid #11DADA;
+	padding-left:15px;
+}
+.date {
+  padding-left: 0;
+}
+.sub h5{
+	float:left;
+	width:35%;
+	color:#333;
+	font-size:1.1em;
+	font-weight:500;
+	display:inline-block;
+}
+.progressy1,.progressy2,.progressy3,.progressy4,.progressy6,.progressy7{
+	width:60%;
+	float:left;
+}
+.progressy1,.progressy2,.progressy3,.progressy4,.progressy6,.progressy7{
+  background:#CDCDCD;
+  margin:4px 0 25px 0
+}
+.progressy1 p,.progressy2 p {
+  background:#333;
+  width: 95%;
+  height: 15px;
+}
+.progressy3 p{
+	background:#333;
+  width: 87%;
+  height: 15px;
+}
+.progressy4 p{
+	background:#333;
+  width: 80%;
+  height: 15px;
+}
+.progressy6 p{
+	background:#333;
+  width: 60%;
+  height: 15px;
+}
+.progressy7 p{
+	background:#333;
+  width: 40%;
+  height: 15px;
+}
+.info{
+	 margin:2em 0 2.5em 0;
+}
+.info p{
+  line-height: 1.5em;
+  color: #999;
+  font-weight: 300;
+  border-left: 11px solid #11DADA;
+  padding-left:15px;
+}
+.left_grid{
+	float:left;
+	width:50%;
+}
+.right_grid{
+	float:left;
+	width:50%;
+}
+ul.list2{
+	 border-left: 11px solid #11DADA;
+  padding-left:30px;
+  margin-top:1.5em;
+}
+ul.list2 li{
+	padding:6px 0;
+	color: #333;
+  font-weight: 400;
+  font-size:0.95em;
+}
+ul.media_sec li{
+	margin-top:1.5em;
+	display:block;
+	color: #333;
+  font-weight: 500;
+}
+ul.media_sec li a{
+	display:inline-block;
+	color: #333;
+  font-weight: 500;
+  font-size:0.95em;
+  text-decoration:none;
+}
+ul.media_sec li img{
+	margin-right:5px;
+}
+.copywrite {
+  padding-left: 1em;
+  margin-top: 2em;
+  text-align:center;
+}
+.copywrite p {
+  color: #999;
+  font-size: 0.9em;
+}
+.copywrite p a {
+  color: #999;
+}
+.copywrite p a:hover{
+  color: #11DADA;
+}
+/*--responsive--*/
+@media (max-width: 1024px){
+.top-header {
+  padding: 6px 0;
+}
+.header h1 {
+  padding: 44px 27px 10px 27px;
+  font-size: 3em;
+  border-bottom: 6px solid #000;
+}
+.list ul {
+  padding:0px 1em 8px 1em;
+}
+.list ul li {
+  font-size: 0.9em;
+}
+.header-right h2 {
+  font-size: 2.5em;
+  margin-top: 44px;
+}
+.city h5 {
+  font-size: 1em;
+}
+.posts p, .college h5,.info p {
+  font-size: 0.9em;
+}
+.city p {
+  font-size: 0.85em;
+}
+ul.list2 li {
+  font-size: 0.9em;
+}
+}
+@media (max-width: 768px){
+.header h1 {
+  padding: 43px 25px 10px 25px;
+  font-size: 2.3em;
+  border-bottom: 5px solid #000;
+}
+.header-right h2 {
+  font-size: 2em;
+  margin-top: 38px;
+}
+.header-right {
+  width: 40%;
+}
+.list ul li {
+  font-size: 0.8em;
+}
+.city {
+  width: 25%;
+  float: left;
+}
+.posts, .college {
+  margin-right: 2em;
+  float: left;
+  width: 50%;
+}
+.date {
+  float: left;
+  width: 20%;
+}
+.posts h4, .college h4 {
+  font-size: 1.1em;
+}
+.city h5 {
+  font-size: 0.95em;
+}
+.city p {
+  font-size: 0.8em;
+}
+.lists2 {
+  border-left: 11px solid #11DADA;
+  padding-left: 15px;
+}
+.skill-list:nth-child(1){
+	padding:0;
+}
+.skill-list:nth-child(2){
+	padding:0;
+	margin-top: 2em;
+}
+.left_grid {
+  width: 69%;
+}
+.right_grid {
+  width: 29%;
+}
+ul.list2 li {
+  font-size: 0.8em;
+}
+.date{
+	padding:0;
+}
+}
+@media (max-width:640px){
+.header-right {
+  width: 43%;
+}
+.header h1 {
+  padding: 51px 18px 11px 18px;
+  font-size: 2em;
+  border-bottom: 5px solid #000;
+}
+.header-right h2 {
+  font-size: 1.8em;
+  margin-top: 45px;
+}
+.content h3 {
+  font-size: 1.4em;
+}
+.posts, .college {
+  margin-right: 0em;
+  width: 72%;
+}
+.city h5 {
+  font-size: 0.85em;
+}
+.city p {
+  font-size: 0.75em;
+}
+.posts p, .college h5, .info p {
+  font-size: 0.85em;
+}
+.date p {
+  font-size: 0.9em;
+  padding: 5px 0px;
+  border-bottom: 3px solid #000;
+}
+.info {
+  margin: 2em 0;
+}
+.city {
+  width: 28%;
+}
+.sub h5 {
+  font-size: 0.9em;
+}
+.progressy1, .progressy2, .progressy3, .progressy4, .progressy6, .progressy7 {
+  margin: 4px 0 18px 0;
+}
+.progressy1 p, .progressy2 p,.progressy3 p, .progressy4 p, .progressy6 p, .progressy7 p {
+  height: 12px;
+}
+.left_grid {
+  width: 100%;
+  margin-bottom: 2em;
+}
+.right_grid {
+  width: 100%;
+}
+ul.media_sec{
+	  border-left: 11px solid #11DADA;
+  padding-left: 15px;
+}
+}
+@media (max-width:568px){
+.header-right {
+  width: 50%;
+}
+.header-right h2 {
+  font-size: 1.6em;
+  margin: 45px 0px 0 0px;
+  text-align: right;
+  display:block;
+}
+.posts{
+  width: 72%;
+}
+.college {
+  width: 79%;
+}
+.city {
+  margin-bottom: 20px;
+}
+}
+@media (max-width: 480px){
+.header {
+  width: 31%;
+}
+.header h1 {
+  padding: 43px 18px 11px 18px;
+  font-size: 1.8em;
+  border-bottom: 4px solid #000;
+}
+.header-right {
+  width: 59%;
+}
+.header-right h2 {
+  font-size: 1.5em;
+  margin: 37px 0px 0 0px;
+}
+.list ul {
+  padding: 0px 1em 4px 1em;
+}
+.top-header {
+  padding: 4px 0;
+}
+.city {
+  width: 100%;
+}
+.posts {
+  width: 100%;
+  padding-right: 0;
+  margin-bottom:1.5em;
+}
+.college {
+  width: 100%;
+  margin-bottom:1.5em;
+}
+.college h4 {
+  font-size:0.9em;
+}
+.work, .education,.info p,.lists,.lists2,ul.list2,ul.media_sec  {
+  border-left: 6px solid #11DADA;
+}
+.progressy1, .progressy2, .progressy3, .progressy4, .progressy6{
+  margin: 4px 0 15px 0;
+}
+.progressy7,.php {
+  margin: 4px 0 0px 0;
+}
+.progressy1 p, .progressy2 p, .progressy3 p, .progressy4 p, .progressy6 p, .progressy7 p {
+  height: 10px;
+}
+ul.media_sec li {
+  font-size: 0.9em;
+}
+ul.media_sec li:nth-child(3){
+ padding-bottom:0;
+}
+}
+@media (max-width: 320px){
+.header h1 {
+  padding: 34px 12px 11px 11px;
+  font-size: 1.3em;
+  border-bottom: 3px solid #000;
+}
+.list ul {
+  padding: 0px 0em 4px 0em;
+}
+.header-right {
+  width: 53%;
+}
+.content h3 {
+  font-size: 1.1em;
+}
+.content {
+  margin: 1.5em 0;
+}
+.details {
+  margin-top: 1.5em;
+}
+.top-header {
+  padding: 2.5px 0;
+}
+.header-right h2 {
+  font-size: 1.1em;
+  margin:12px 0px 0 0px;
+}
+.list ul li {
+  font-size: 0.7em;
+}
+.posts h4, .college h4 {
+  font-size:1em;
+}
+.posts p, .college h5, .info p {
+  font-size: 0.8em;
+}
+.date {
+  width: 36%;
+}
+.work {
+  margin-bottom: 1.5em;
+}
+.info {
+  margin: 1.5em 0;
+}
+.college h4 {
+  font-size: 0.95em;
+}
+.skills {
+  margin: 1.5em 0;
+}
+.skill-list:nth-child(2) {
+  margin-top: 1.5em;
+}
+}

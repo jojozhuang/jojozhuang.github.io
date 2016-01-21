@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+	  background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Rong Zhuang</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Blog</a></li>
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="#">Feed</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+
+    <div class="col-sm-12">
+      <p>This website is hosted by <a href="https://github.com">GitHub</a>. All of the content are static. The whole website is powered by <a href="http://jekyllrb.com/">Jekyll</a>.</p>
+      <p>Here are some links which helped me along the way:</p>
+      <ul>
+      <li>The official <a href="http://jekyllrb.com">Jekyll</a> website, along with detailed <a href="http://jekyllrb.com/docs/home">documentation</a>.</li>
+      <li>Documentation by GitHub about hosting static webpages with <a href="http://pages.github.com">GitHub pages</a>.</li>
+      <li>The <a href="https://github.com/poole/poole">poole</a> GitHub repository.</li>
+      <li>The GitHub repository for my <a href="https://github.com/jojozhuang/jojozhuang.github.io">personal website</a>.</li>
+      </ul>
+
+      <p>If you have any questions or comments, please post them below. If you liked this post, you can
+      <a href="https://twitter.com/intent/tweet?url=http://jojozhuang.github.io/blog/&text=How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole&via=jojozhuang"
+         target="_blank">
+        share it with your followers</a>
+      or
+      <a href="https://twitter.com/jojozhuang">
+        follow me on Twitter</a>!</p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

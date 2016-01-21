@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+	  background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="nav navbar-nav">
+        <li class="active"><a class="navbar-brand" href="index.html">Rong Zhuang</a></li>
+      </ul>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="feed.html">Feed</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="col-sm-4">
+    <img  class="img-circle avatar" alt="Rong Zhuang" src="images/rz-200px.jpg">
+    </div>
+    <div class="col-sm-8">
+      <p>Hi, I'm Rong Zhuang and currently enrolled in Master Degree of Computer Science in DePaul University.</p>
+      <p>I have more than 10 years of software development experience. Now, I'm working in CDM of DePaul. This is an on-campus job, and I'm focusing on web and mobile app development.</p>
+      <p>I'm also available for hire as I suppose to graduate in June 2016. Please go through <a href="cv">my CV</a> and contact me if you're interested in my professional background.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>
+    &copy; 2016. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
