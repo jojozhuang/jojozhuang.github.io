@@ -8,20 +8,12 @@
 		<body>
 			<nav>
 	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
+	        		<li><a href="/" title="Home">{{ site.name }}</a></li>
+							{% for page in site.pages_list %}
+							  <li><a href="{{ page[1]  }}">{{ page[0] }}</a></li>
+							{% endfor %}
 	    		</ul>
 			</nav>
-			<h3 class="masthead-title">
-			<a href="/" title="Home">{{ site.name }}</a>
-
-			{% for page in site.pages_list %}
-			  &nbsp;&nbsp;&nbsp;
-			  <small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
-			{% endfor %}
-			</h3>
 			<div class="container">
 
 			{{ content }}

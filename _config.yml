@@ -2,7 +2,6 @@ name: Rong Zhuang
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 pages_list:
-  Home: '/home'
   Blog: '/blog'
   About: '/about'
   CV: '/cv'
