@@ -1,7 +1,9 @@
-name: Hank Quinlan, Horrible Cop
+name: Rong Zhuang
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-pages_list:       
+pages_list:
+  Home: '/home'
+  Blog: '/blog'
   About: '/about'
-  Archive: '/archive'
+  CV: '/cv'
   Feed: '/atom.xml'
