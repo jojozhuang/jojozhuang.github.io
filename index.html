@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Hank Quinlan, Horrible Cop</title>
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
 		<nav>
