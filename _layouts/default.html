@@ -8,7 +8,7 @@
 		<body>
 			<nav>
 	    		<ul>
-	        		<li><a href="/" title="Home">{{ site.name }}</a></li>
+	        		<li class="home"><a href="/" title="Home">{{ site.name }}</a></li>
 							{% for page in site.pages_list %}
 							  <li><a href="{{ page[1]  }}">{{ page[0] }}</a></li>
 							{% endfor %}
