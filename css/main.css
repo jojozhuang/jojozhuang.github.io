@@ -13,7 +13,7 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 nav ul li.home {
-    font-size: 3.5em;
+    font-size: 3em;
 }
 a {
     text-decoration: none;
@@ -23,7 +23,7 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
