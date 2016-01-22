@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <link href="css/cv.css" rel='stylesheet' type='text/css' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
@@ -16,11 +16,6 @@
       border-radius: 0;
     }
 
-    /* Add a gray background color and some padding to the footer */
-    footer {
-	  background-color: #f2f2f2;
-      padding: 25px;
-    }
   </style>
 </head>
 <body>
@@ -37,13 +32,15 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Blog</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="active"><a href="cv.html">CV</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="active"><a href="#">CV</a></li>
         <li><a href="#">Feed</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
+        <li><a href="images/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>
+        <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
       </ul>
     </div>
   </div>
@@ -155,27 +152,42 @@
 				 <div class="lists">
 					 <div class="sub grid1">
 						 <h5>C#, ASP.NET MVC</h5>
-						 <div class="progressy1"><p></p></div>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="sub">
 						 <h5>SAP, ABAP, GTS</h5>
-						 <div class="progressy2"><p></p></div>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="sub">
 						 <h5>iOS(Swift), Android(Java)</h5>
-						 <div class="progressy3"><p></p></div>
-						 <div class="clearfix"></div>
-					 </div>
-           <div class="sub">
-						 <h5>PhoneGap/Cordova, Xamarin</h5>
-						 <div class="progressy4 php"><p></p></div>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
            <div class="sub">
 						 <h5>Html5, javascript, bootstrap, ReactJs</h5>
-						 <div class="progressy4 php"><p></p></div>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+              </div>
+             </div>
+						 <div class="clearfix"></div>
+					 </div>
+           <div class="sub">
+						 <h5>PhoneGap/Cordova, Xamarin</h5>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
 				 </div>
@@ -184,18 +196,27 @@
 				  <h3>Languages</h3>
 				  <div class="lists2">
 					  <div class="sub grid1">
-						 <h5>English</h5>
-						 <div class="progressy1"><p></p></div>
+						 <h5>Chinese</h5>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="sub">
-						 <h5>Chinese</h5>
-						 <div class="progressy4"><p></p></div>
+						 <h5>English</h5>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="sub">
 						 <h5>Japanese</h5>
-						 <div class="progressy6"><p></p></div>
+             <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+              </div>
+             </div>
 						 <div class="clearfix"></div>
 					 </div>
 				 </div>
@@ -206,27 +227,15 @@
 		     <div class="left_grid">
 				 <h3>Highlights & Additional Info</h3>
 				 <ul class="list2">
-          <li>Awarded 3rd prize with an ‘SAP dictionary’ app on Windows Phone, out of 15 competitors in 2011 Developer Challenge of SAP Labs China.</li>
+          <li>Awarded 3rd prize with an ‘SAP dictionary’ app on <span class="highlight">Windows Phone</span>, out of 15 competitors in 2011 Developer Challenge of SAP Labs China.</li>
            <li>Developed a multi-threaded elevator system with JAVA in the course of 'OO Software Development'.</li>
-           <li>Analyzed data by using Hadoop MapReduce over Amazon EC2 in the course of 'Mining Big Data'.</li>
-           <li>Built iOS Apps(eg. Remote TV controller, Travel Note) with SWIFT in the course of 'Mobile APP Dev For iOS'.</li>
-           <li>Built Android Apps(eg. Remote TV controller, Restaurant Recommendation) with JAVA in the course of 'Mobile APP Dev For Android’. The Restaurant app communicates with data server which is built with ASP.NET MVC to get restaurant list, images, comments, etc.</li>
-           <li>Built a Web Server through socket programming with JAVA in the course of ‘Distributed System’.</li>
-				 </ul>
-			 </div>
-			 <div class="right_grid">
-				 <h3>Social</h3>
-				 <ul class="media_sec">
-           <li><a href="https://www.linkedin.com/in/rongzhuang"><img src="images/linkedin.png" alt=""/>LinkedIn / Rong Zhuang</a></li>
-					 <li><a href="https://www.facebook.com/johnny.zhuang.37"><img src="images/fb.png" alt=""/>facebook / Rong Zhuang</a></li>
-					 <li><a href="https://twitter.com/jojozhuang"><img src="images/twt.png" alt=""/>twitter / Rong Zhuang</a></li>
-					 <li><a href="#"><img src="images/gg.png" alt=""/>google plus / Lorem.com</a></li>
+           <li>Analyzed data by using <span class="highlight">Hadoop</span> MapReduce over Amazon EC2 in the course of 'Mining Big Data'.</li>
+           <li>Built <span class="highlight">iOS</span> Apps(eg. Remote TV controller, Travel Note) with <span class="highlight">Swift</span> in the course of 'Mobile APP Dev For iOS'.</li>
+           <li>Built <span class="highlight">Android</span> Apps(eg. Remote TV controller, Restaurant Recommendation) with <span class="highlight">Java</span> in the course of 'Mobile APP Dev For Android’. The Restaurant app communicates with data server which is built with ASP.NET MVC to get restaurant list, images, comments, etc.</li>
+           <li>Built a Web Server through <span class="highlight">socket programming with Java</span> in the course of ‘Distributed System’.</li>
 				 </ul>
 			 </div>
 			 <div class="clearfix"></div>
-		 </div>
-		 <div class="copywrite">
-			 <p>© 2015 Curriculum Vitae . All Rights Reseverd | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 		 </div>
 	</div>
 </div>

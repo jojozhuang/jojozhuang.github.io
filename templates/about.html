@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <link href="css/main.css" rel='stylesheet' type='text/css' />
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -18,7 +18,7 @@
 
     /* Add a gray background color and some padding to the footer */
     footer {
-	  background-color: #f2f2f2;
+	  /*background-color: #f2f2f2;*/
       padding: 25px;
     }
   </style>
@@ -37,28 +37,31 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Blog</a></li>
-        <li class="active"><a href="#">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="cv.html">CV</a></li>
+        <li class="active"><a href="about.html">About</a></li>
         <li><a href="#">Feed</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="images/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>
+        <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron">
+<div style="background:transparent !important" class="jumbotron">
   <div class="container">
+    <div class="col-sm-2">
 
-    <div class="col-sm-12">
+    </div>
+    <div class="col-sm-8">
       <p>This website is hosted by <a href="https://github.com">GitHub</a>. All of the content are static. The whole website is powered by <a href="http://jekyllrb.com/">Jekyll</a>.</p>
       <p>Here are some links which helped me along the way:</p>
       <ul>
       <li>The official <a href="http://jekyllrb.com">Jekyll</a> website, along with detailed <a href="http://jekyllrb.com/docs/home">documentation</a>.</li>
       <li>Documentation by GitHub about hosting static webpages with <a href="http://pages.github.com">GitHub pages</a>.</li>
-      <li>The <a href="https://github.com/poole/poole">poole</a> GitHub repository.</li>
       <li>The GitHub repository for my <a href="https://github.com/jojozhuang/jojozhuang.github.io">personal website</a>.</li>
       </ul>
 
@@ -70,11 +73,16 @@
       <a href="https://twitter.com/jojozhuang">
         follow me on Twitter</a>!</p>
     </div>
+    <div class="col-sm-2">
+
+    </div>
   </div>
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>
+    &copy; 2016. All rights reserved.
+  </p>
 </footer>
 
 </body>

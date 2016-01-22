@@ -10,8 +10,12 @@ ul, ol {margin: 0; padding:0;}
 p {margin: 0;}
 html, body{
 	font-family: 'Ubuntu', sans-serif;
-	/*font-size: 100%;*/
+	font-size: 100%;
 	background: #ffffff;
+}
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
 }
 body a{
 	transition:0.5s all;
@@ -26,6 +30,10 @@ body {
 a:focus {
   outline-offset: 0px;
   text-decoration:none;
+}
+span.highlight {
+	font-style: italic;
+	font-weight: bold;
 }
 /*-- header_top --*/
 .top-header{
@@ -51,12 +59,13 @@ a:focus {
 	width:33%;
 }
 .list ul{
-		background:#000;
+		background:#11DADA;
 		padding:0.5em 1em;
 		text-align:center;
 }
 .list ul li {
 	display:inline-block;
+	font-weight: bold;
 	color:#fff;
 }
 .list ul li a{
@@ -212,7 +221,7 @@ a:focus {
 }
 .left_grid{
 	float:left;
-	width:50%;
+	width:100%;
 }
 .right_grid{
 	float:left;
@@ -278,7 +287,7 @@ ul.media_sec li img{
 }
 .header-right h2 {
   font-size: 2.5em;
-  margin-top: 44px;
+  margin-top: 24px;
 }
 .city h5 {
   font-size: 1em;
