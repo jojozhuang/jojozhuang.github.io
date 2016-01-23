@@ -168,6 +168,7 @@ span.highlight {
 .date {
   padding-left: 0;
 }
+/*
 .sub h5{
 	float:left;
 	width:35%;
@@ -175,7 +176,7 @@ span.highlight {
 	font-size:1.1em;
 	font-weight:500;
 	display:inline-block;
-}
+}*/
 .progressy1,.progressy2,.progressy3,.progressy4,.progressy6,.progressy7{
 	width:60%;
 	float:left;
