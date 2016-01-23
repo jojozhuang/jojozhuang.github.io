@@ -1,7 +1,16 @@
 name: Rong Zhuang
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+# Setup
+title: Rong Zhuang
 url: http://jojozhuang.github.io
+
+author:
+  name: 'Rong Zhuang'
+  email: 'jojozhuang@gmail.com'
+
+paginate: 1
+
 pages_list:
   Blog: '/blog'
   About: '/about'
