@@ -2,6 +2,7 @@
 layout: software
 title: "Three Layer CMS"
 date: 2016-01-22
+tags: ASP.NET, 3 Layer, Multilingual Support, Authorization, Configuration
 categories:
 - portfolio
 ---

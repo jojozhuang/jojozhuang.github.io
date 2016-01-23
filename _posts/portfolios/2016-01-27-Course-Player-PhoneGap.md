@@ -2,6 +2,7 @@
 layout: software
 title: "Course Player PhoneGap"
 date: 2016-01-27
+tags: Cross-platform, HTML5, jQuery, PhoneGap, Cordova
 categories:
 - portfolio
 ---

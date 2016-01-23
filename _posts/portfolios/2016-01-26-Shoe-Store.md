@@ -2,6 +2,7 @@
 layout: software
 title: "Shoe Store"
 date: 2016-01-26
+tags: ASP.NET MVC, Bootstrap, Responsive UI
 categories:
 - portfolio
 ---

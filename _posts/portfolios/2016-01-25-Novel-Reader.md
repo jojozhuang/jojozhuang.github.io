@@ -2,6 +2,7 @@
 layout: software
 title: "Novel Reader"
 date: 2016-01-25
+tages: Http Get and Post, Outlook Style UI
 categories:
 - portfolio
 ---

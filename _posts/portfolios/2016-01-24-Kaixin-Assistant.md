@@ -2,6 +2,7 @@
 layout: software
 title: "Kaixin Assistant"
 date: 2016-01-24
+tags: Kaixin001, Http Get and Post, Automation
 categories:
 - portfolio
 ---

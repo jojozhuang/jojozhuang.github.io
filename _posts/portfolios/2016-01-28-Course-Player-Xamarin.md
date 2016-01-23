@@ -1,7 +1,8 @@
 ---
 layout: software
-title: "Course Player PhoneGap"
-date: 2016-01-27
+title: "Course Player Xamarin"
+date: 2016-01-28
+tags: Cross-platform, C#, Xamarin
 categories:
 - portfolio
 ---
