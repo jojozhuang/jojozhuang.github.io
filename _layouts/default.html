@@ -13,17 +13,17 @@
         <span class="icon-bar"></span>
       </button>
       <ul class="nav navbar-nav">
-        <li  {% if page.title == "Rong Zhuang" %} class="active" {% endif %}><a class="navbar-brand" href="/">Rong Zhuang</a></li>
+        <li {% if page.key == "home" %} class="active" {% endif %}><a class="navbar-brand" href="/">Rong Zhuang</a></li>
       </ul>
 
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/cv">CV</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/feed">Feed</a></li>
+        <li {% if page.key == "portfolio" %} class="active" {% endif %}><a href="/portfolio">Portfolio</a></li>
+        <li {% if page.key == "blog" %} class="active" {% endif %}><a href="/blog">Blog</a></li>
+        <li {% if page.key == "cv" %} class="active" {% endif %}><a href="/cv">CV</a></li>
+        <li {% if page.key == "about" %} class="active" {% endif %}><a href="/about">About</a></li>
+        <li {% if page.key == "feed" %} class="active" {% endif %}><a href="/feed">Feed</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>
