@@ -1,33 +1,49 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li class="home"><a href="/" title="Home">{{ site.name }}</a></li>
-							{% for page in site.pages_list %}
-							  <li><a href="{{ page[1]  }}">{{ page[0] }}</a></li>
-							{% endfor %}
-	    		</ul>
-			</nav>
-			<div class="container">
+<html lang="en">
+{% include head.html %}
+{% include google_analytics.html %}
+<body>
 
-			{{ content }}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="nav navbar-nav">
+        <li class="active"><a class="navbar-brand" href="index.html">Rong Zhuang</a></li>
+      </ul>
 
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:jojozhuang@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/jojozhuang">github.com/jojozhuang</a></li>
-				</ul>
-				<p>
-          &copy; 2016. All rights reserved.
-        </p>
-			</footer>
-			{% include analytics.html %}
-		</body>
-	</html>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="feed.html">Feed</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>
+        <li><a href="contact.html"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="background:transparent !important" class="jumbotron">
+  <div class="container">
+		{{ content }}
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>
+    &copy; 2016. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>

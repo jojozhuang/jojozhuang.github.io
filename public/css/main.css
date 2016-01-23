@@ -1,0 +1,19 @@
+html, body{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 100%;
+	background: #ffffff;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+ul.posts {
+    font-size: 1.4em;
+}
+
+.right_grid{
+	float:left;
+	width:50%;
+}
