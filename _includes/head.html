@@ -11,7 +11,9 @@
   {% else %}
     <link href="../public/css/main.css" rel='stylesheet' type='text/css' />
   {% endif %}
-  <link href="../public/css/cv.css" rel='stylesheet' type='text/css' />
+  {% if page.key == "cv" %}
+    <link href="../public/css/cv.css" rel='stylesheet' type='text/css' />
+  {% endif %}
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
