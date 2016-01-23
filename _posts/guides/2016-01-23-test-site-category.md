@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Johnny's first blog"
-date: 2016-01-20
+title: "test site category"
+date: 2016-01-23
 categories:
 - guides
 ---
