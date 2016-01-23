@@ -2,13 +2,17 @@
 layout: default
 title: Rong Zhuang's Blog
 ---
-	<div class="col-sm-2"></div>
-  <div class="col-sm-8">
-    <h2>{{ page.title }}</h2>
-  	<ul class="posts">
-			{% for post in site.posts %}
-		    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-		  {% endfor %}
-  	</ul>
-  </div>
-  <div class="col-sm-2"></div>
+<div style="background:transparent !important" class="jumbotron">
+	<div class="container">
+		<div class="col-sm-2"></div>
+	  <div class="col-sm-8">
+	    <h2>{{ page.title }}</h2>
+	  	<ul class="posts">
+				{% for post in site.posts %}
+			    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+			  {% endfor %}
+	  	</ul>
+	  </div>
+	  <div class="col-sm-2"></div>
+	</div>
+</div>
