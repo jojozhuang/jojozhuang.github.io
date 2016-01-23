@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "test site category"
-date: 2016-01-23
+layout: software
+title: "Kaixin Assistant"
+date: 2016-01-24
 categories:
 - portfolio
 ---

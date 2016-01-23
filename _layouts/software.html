@@ -1,0 +1,22 @@
+---
+layout: default
+key: portfolio
+---
+<div style="background:transparent !important" class="jumbotron">
+	<div class="container">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<h1>{{ page.title }}</h1>
+			<p class="meta">{{ page.date | date_to_string }}</p>
+			<div class="post">
+				{{ content }}
+			</div>
+
+			<!-- Post comments -->
+			<div class="notecomments">
+				{% include disqus.html %}
+			</div>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</div>

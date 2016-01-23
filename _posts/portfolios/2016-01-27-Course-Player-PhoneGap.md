@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "portofolio1"
-date: 2016-01-22
+layout: software
+title: "Course Player PhoneGap"
+date: 2016-01-27
 categories:
 - portfolio
 ---
