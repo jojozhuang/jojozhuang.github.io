@@ -10,4 +10,8 @@
 	{% if page.key == "cv" %}
 		<link href="/public/css/cv.css" rel='stylesheet' type='text/css' />
 	{% endif %}
+
+	<!-- move to here, script should be inside head, otherwise doesn't work for ie -->
+	{% include google_analytics.html %}
+
 </head>
