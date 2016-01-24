@@ -19,7 +19,7 @@ This is my final projects for course CSC472-Mobile App Development for Android. 
 4. View in landscape mode
 ![landscape](/assets/resturant/landscape.png "landscape")  
 5. Pad screen is supported
-![pad](/assets/resturant/ipad.png "pad")  
+![pad](/assets/resturant/pad.png "pad")  
 6. Backend data server, which is built with ASP.NET MVC, JSON and XML.
 ![backend](/assets/resturant/backend.png "backend")  
 You can get the source code from [Github](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/Code "Source Code"). And the source code for backend server [Data Server](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/DataServer "Source Code")
