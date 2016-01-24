@@ -3,6 +3,7 @@ layout: software
 title: "Code Generator"
 date: 2016-01-23
 tags: Desktop App, Xslt+XML, Template
+image: /assets/codegenerator/cg.png
 categories:
 - portfolio
 ---
@@ -18,7 +19,7 @@ To make it work, follow the below steps:
 ![single](/assets/codegenerator/single.png "single")  
 4. Choose template and module, set namespaces, then click 'Generate' button and you will see the result immediately.  
 ![singleoutput](/assets/codegenerator/singleoutput.png "singleoutput")  
-You can also generate codes for all tables at once by using the Task function - bulk generator.
+You can also generate codes for all tables at once by using the Task function - bulk generator.  
 1. Create a new task in Task Explorer.  Choose multiple tables of your SQL server instance, select the templates, Save.
 ![taskconfig](/assets/codegenerator/taskconfig.png "taskconfig")  
 2. Right click on the task name, click 'Start' option.  
