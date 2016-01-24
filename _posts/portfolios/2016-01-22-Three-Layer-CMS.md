@@ -28,3 +28,4 @@ After the changing, reopen the login page and see what changes.
 ![login_cn](/assets/3layercms/login_cn.png "login_cn")  
 ![adminlist_cn](/assets/3layercms/adminlist_cn.png "adminlist_cn")  
 ![menu_cn](/assets/3layercms/menu_cn.png "menu_cn")  
+You can get the source code from [Github](https://github.com/jojozhuang/Projects/tree/master/CMSWeb/Src "Source Code").
