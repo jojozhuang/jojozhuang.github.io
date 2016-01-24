@@ -22,3 +22,7 @@ ul.posts {
 	float:left;
 	width:50%;
 }
+img {
+  max-width: 450px; 
+  display: block;
+}
