@@ -7,7 +7,7 @@ categories:
 - portfolio
 ---
 
-<p>This is a ASP.NET web application, the main functions are divided into 3 layers: User Interface(WebUI), Business Logic(BLL) and Data Access(DAL). The top level layer calls the lower layer to communicate and retrieve data. The Object Model(OM) defines various objects, which may represents an administrator, a blog post or a website settings.
+This is a ASP.NET web application, the main functions are divided into 3 layers: User Interface(WebUI), Business Logic(BLL) and Data Access(DAL). The top level layer calls the lower layer to communicate and retrieve data. The Object Model(OM) defines various objects, which may represents an administrator, a blog post or a website settings.
 ![Project Structure](/assets/3layercms/3layer.png "Project Structure")
 Login Page
 ![login](/assets/3layercms/login.png "login")
@@ -28,4 +28,3 @@ After the changing, reopen the login page and see what changes.
 ![login_cn](/assets/3layercms/login_cn.png "login_cn")
 ![adminlist_cn](/assets/3layercms/adminlist_cn.png "adminlist_cn")
 ![menu_cn](/assets/3layercms/menu_cn.png "menu_cn")
-</p>
