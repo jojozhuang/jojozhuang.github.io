@@ -13,12 +13,12 @@ This is one of my homework projects for course CSC435-Distributed System 1. We a
 How to launch the web server?  
 1. Open a cmd window, navigate to the directory which contains all of the files.  
 ![root](/assets/mywebserver/root.png "root")  
-2. Run 'javac \*.java' to compile source files.
-3. Run 'java MyWebServer' to launch it.
+2. Run 'javac \*.java' to compile source files.  
+3. Run 'java MyWebServer' to launch it.  
 ![startserver](/assets/mywebserver/startserver.png "startserver")  
 4. Launch your web browser, access the url address of 'http://localhost:2540/'. All of the files in the root directory will be listed out.      
 ![webserver](/assets/mywebserver/webserver.png "webserver")  
-You can try to click the links for different file, and you should get proper result.  You can navigate to the folder as deep as you want.  
+You can try to click the links for different file, and you should get proper result.  You can navigate to the folder recursively, as deep as you want.  
 ![recursive](/assets/mywebserver/recursive.png "recursive")  
 Apart from the static files and directories, this web server also supports to handle dynamical request. For example, handle number add operation.  
 ![cgi](/assets/mywebserver/cgi.png "cgi")  
