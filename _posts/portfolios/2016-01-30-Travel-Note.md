@@ -15,15 +15,16 @@ This is my final projects for course CSC471-Mobile App Development for iOS. This
 2. My Trips  
 ![trips](/assets/travelnote/trips.png "trips")  
 3. Create new trip  
-![newtrip1](/assets/travelnote/newtrip1.png "newtrip1")![newtrip2](/assets/travelnote/newtrip2.png "newtrip2")
+![newtrip1](/assets/travelnote/newtrip1.png "newtrip1")  
+![newtrip2](/assets/travelnote/newtrip2.png "newtrip2")
 4. Favorites  
 ![favorite](/assets/travelnote/favorite.png "favorite")  
-5. Search
+5. Search  
 ![search](/assets/travelnote/search.png "search")  
-![city](/assets/mywebserver/city.png "city")  
-![city2](/assets/mywebserver/city2.png "city2")  
-6. My localization
-![location](/assets/mywebserver/location.png "location")
-7. Settings
-![settings](/assets/mywebserver/settings.png "settings")
+![city](/assets/travelnote/city.png "city")  
+![city2](/assets/travelnote/city2.png "city2")  
+6. My localization  
+![location](/assets/travelnote/location.png "location")
+7. Settings  
+![settings](/assets/travelnote/settings.png "settings")
 You can get the source code from [Github](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary "Source Code").
