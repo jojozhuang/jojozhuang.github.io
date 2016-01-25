@@ -23,7 +23,7 @@ ul.posts {
 	width:50%;
 }
 img {
-  max-width: 450px;
+  max-width: 800px;
   display: block;
 }
 /*
@@ -36,9 +36,9 @@ img.software_item {
 img.software_item {
 	width:450px;
 	height: 230px;
-}*/
+}
 @media (max-width: 320px){
 img.software_item {
 	width:300px;
 	height:180px;
-}
+}*/
