@@ -24,8 +24,11 @@ ul.posts {
 }
 img {
   max-width: 800px;
+	width:450px;
+	height:200px;
   display: block;
 }
+/*
 @media (max-width: 768px){
 img.software_item {
 	width:600px;
@@ -40,4 +43,4 @@ img.software_item {
 img.software_item {
 	width:300px;
 	height:180px;
-}
+}*/
