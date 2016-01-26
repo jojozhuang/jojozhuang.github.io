@@ -14,7 +14,7 @@ title: Rong Zhuang's Portfolio
 	</div>
 	<div class="row">
 		{% for post in site.categories.[page.type] %}
-			{% if port.subcateogry == "mobile"}
+			{% if post.subcateogry == "mobile"}
 				<div class="col-md-4 portfolio-item">
 					<a href="{{ post.url }}">
 						<img class="img-responsive" src="{{ post.image }}" alt="image">
@@ -34,7 +34,7 @@ title: Rong Zhuang's Portfolio
 	</div>
 	<div class="row">
 		{% for post in site.categories.[page.type] %}
-			{% if port.subcateogry == "dotnet"}
+			{% if post.subcateogry == "dotnet"}
 				<div class="col-md-4 portfolio-item">
 					<a href="{{ post.url }}">
 						<img class="img-responsive" src="{{ post.image }}" alt="image">
