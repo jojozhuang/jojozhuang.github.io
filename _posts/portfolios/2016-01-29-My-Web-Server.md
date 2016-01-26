@@ -4,6 +4,7 @@ title: "My Web Server"
 date: 2016-01-29
 tags: Socket, Java, Http GET
 image: /assets/mywebserver/thumbnail.png
+subcateogry: dotnet
 categories:
 - portfolio
 ---

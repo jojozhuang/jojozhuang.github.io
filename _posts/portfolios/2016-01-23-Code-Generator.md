@@ -4,6 +4,7 @@ title: "Code Generator"
 date: 2016-01-23
 tags: Desktop App, Xslt+XML, Template
 image: /assets/codegenerator/cg.png
+subcateogry: dotnet
 categories:
 - portfolio
 ---

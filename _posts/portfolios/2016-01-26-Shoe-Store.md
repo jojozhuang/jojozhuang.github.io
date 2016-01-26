@@ -4,6 +4,7 @@ title: "Shoe Store"
 date: 2016-01-26
 tags: ASP.NET MVC, Bootstrap, Responsive UI
 image: /assets/shoestore/index.png
+subcateogry: dotnet
 categories:
 - portfolio
 ---

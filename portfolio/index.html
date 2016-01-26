@@ -4,30 +4,46 @@ key: portfolio
 type: portfolio
 title: Rong Zhuang's Portfolio
 ---
-<!-- Page Content -->
 <div class="container">
-	<!-- Page Header -->
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Web & Desktop Apps
-					<small>.NET, C#</small>
+			<h1 class="page-header">Mobile Apps
+				<small>iOS, Android</small>
 			</h1>
 		</div>
 	</div>
-	<!-- /.row -->
 	<div class="row">
 		{% for post in site.categories.[page.type] %}
-			<div class="col-md-4 portfolio-item">
+			{% if port.subcateogry == "mobile"}
+				<div class="col-md-4 portfolio-item">
 					<a href="{{ post.url }}">
-							<img class="img-responsive" src="{{ post.image }}" alt="image">
+						<img class="img-responsive" src="{{ post.image }}" alt="image">
 					</a>
-					<h3>
-							<a href="{{ post.url }}">{{ post.title }}</a>
-					</h3>
+					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-			</div>
+				</div>
+			{% endif%}
+		{% endfor %}
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Web & Desktop Apps
+				<small>.NET, C#</small>
+			</h1>
+		</div>
+	</div>
+	<div class="row">
+		{% for post in site.categories.[page.type] %}
+			{% if port.subcateogry == "dotnet"}
+				<div class="col-md-4 portfolio-item">
+					<a href="{{ post.url }}">
+						<img class="img-responsive" src="{{ post.image }}" alt="image">
+					</a>
+					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+				</div>
+			{% endif%}
 		{% endfor %}
 	</div>
 </div>
-<!-- /.container -->
 <br/><br/>

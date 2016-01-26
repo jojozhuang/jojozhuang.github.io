@@ -4,6 +4,7 @@ title: "Resturant"
 date: 2016-01-31
 tags: Android, Java, Android Studio, Genymotion
 image: /assets/resturant/thumbnail.png
+subcateogry: mobile
 categories:
 - portfolio
 ---

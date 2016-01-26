@@ -4,6 +4,7 @@ title: "Xamarin Course Player"
 date: 2016-02-01
 tags: C#, Visual Studio, iOS, Xamarin
 image: /assets/xamarinplayer/thumbnail.png
+subcateogry: mobile
 categories:
 - portfolio
 ---
@@ -20,4 +21,4 @@ Diagram shows how Xamarin works
 ![framework](/assets/xamarinplayer/framework.png "framework")  
 The final running iOS app
 ![iosapp](/assets/xamarinplayer/iosapp.png "iosapp")  
-You can get the source code from [Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone "Source Code"). 
+You can get the source code from [Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone "Source Code").
