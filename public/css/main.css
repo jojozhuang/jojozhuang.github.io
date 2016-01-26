@@ -22,7 +22,7 @@ ul.posts {
 	float:left;
 	width:50%;
 }
-img {
+img.software_item {
   max-width: 450px;
   display: block;
 }
