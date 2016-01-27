@@ -20,6 +20,6 @@ Codes in Visual Studio
 ![vs](/assets/xamarinplayer/vs.png "vs")  
 Diagram shows how Xamarin works
 ![framework](/assets/xamarinplayer/framework.png "framework")  
-The final running iOS app
+The final running iOS app  
 ![iosapp](/assets/xamarinplayer/iosapp.png "iosapp")  
 You can get the source code from [Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone "Source Code").

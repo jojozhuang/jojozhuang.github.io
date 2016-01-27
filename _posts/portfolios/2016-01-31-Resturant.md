@@ -11,7 +11,6 @@ categories:
 ---
 
 This is my final projects for course CSC472-Mobile App Development for Android. This app is used to search restaurants, view the details of them. After login, you can share your experience with others about the restaurant you have been. You can submit ratings and reviews. All of the data are dynamic, which means this app connects backend server to retrieve data.  
-
 1. Home screen  
 ![index](/assets/resturant/index.png "index")  
 2. Login/Register  
@@ -24,4 +23,5 @@ This is my final projects for course CSC472-Mobile App Development for Android. 
 ![pad](/assets/resturant/pad.png "pad")  
 6. Backend data server, which is built with ASP.NET MVC, JSON and XML.
 ![backend](/assets/resturant/backend.png "backend")  
+
 You can get the source code from [Github](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/Code "Source Code"). And the source code for backend server [Data Server](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/DataServer "Source Code")
