@@ -4,6 +4,7 @@ title: "Resturant"
 date: 2016-01-31
 tags: Android, Java, Android Studio, Genymotion
 image: /assets/resturant/thumbnail.png
+shortdesc: An Android mobile application for search restaurants, built in java.
 subcateogry: mobile
 categories:
 - portfolio

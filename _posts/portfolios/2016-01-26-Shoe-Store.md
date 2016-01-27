@@ -4,6 +4,7 @@ title: "Shoe Store"
 date: 2016-01-26
 tags: ASP.NET MVC, Bootstrap, Responsive UI
 image: /assets/shoestore/index.png
+shortdesc: An online shoe store built with ASP.NET MVC, has responsive UI pages to support different screen size devices.
 subcateogry: dotnet
 categories:
 - portfolio

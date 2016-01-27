@@ -4,6 +4,7 @@ title: "Kaixin Assistant"
 date: 2016-01-24
 tags: Kaixin001, Http Get and Post, Automation
 image: /assets/kaixin/thumbnail.png
+shortdesc: A 'tag-on' desktop application for playing online flash games.
 subcateogry: dotnet
 categories:
 - portfolio

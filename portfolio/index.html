@@ -20,7 +20,7 @@ title: Rong Zhuang's Portfolio
 						<img class="img-responsive" src="{{ post.image }}" alt="image">
 					</a>
 					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+					<p>{{ post.shortdesc }}</p>
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -40,7 +40,7 @@ title: Rong Zhuang's Portfolio
 						<img class="img-responsive" src="{{ post.image }}" alt="image">
 					</a>
 					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+					<p>{{ post.shortdesc }}</p>
 				</div>
 			{% endif %}
 		{% endfor %}

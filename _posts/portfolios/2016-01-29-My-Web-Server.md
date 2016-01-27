@@ -4,6 +4,7 @@ title: "My Web Server"
 date: 2016-01-29
 tags: Socket, Java, Http GET
 image: /assets/mywebserver/thumbnail.png
+shortdesc: A web server built with sockets in java, capable to handle general HTTP requests.
 subcateogry: dotnet
 categories:
 - portfolio
