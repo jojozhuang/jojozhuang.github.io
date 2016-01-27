@@ -4,7 +4,7 @@ title: "Travel Note"
 date: 2016-01-30
 tags: iOS, Swift, XCode
 image: /assets/travelnote/thumbnail.png
-shortdesc: An iOS appliation for trip management, developed in swift.
+shortdesc: An iOS application for trip management, developed in swift.
 subcateogry: mobile
 categories:
 - portfolio
