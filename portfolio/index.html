@@ -15,12 +15,14 @@ title: Rong Zhuang's Portfolio
 	<div class="row">
 		{% for post in site.categories.[page.type] %}
 			{% if post.subcateogry == "mobile" %}
-				<div class="col-md-4 portfolio-item">
-					<a href="{{ post.url }}">
-						<img class="img-responsive" src="{{ post.image }}" alt="image">
-					</a>
-					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-					<p>{{ post.shortdesc }}</p>
+				<div class="col-md-3 portfolio-item">
+					<div class="item-border">
+						<a href="{{ post.url }}">
+							<img class="img-responsive" src="{{ post.image }}" alt="image">
+						</a>
+						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+						<p>{{ post.shortdesc }}</p>
+					</div>
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -36,11 +38,13 @@ title: Rong Zhuang's Portfolio
 		{% for post in site.categories.[page.type] %}
 			{% if post.subcateogry == "dotnet" %}
 				<div class="col-md-4 portfolio-item">
-					<a href="{{ post.url }}">
-						<img class="img-responsive" src="{{ post.image }}" alt="image">
-					</a>
-					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-					<p>{{ post.shortdesc }}</p>
+					<div class="item-border">
+						<a href="{{ post.url }}">
+							<img class="img-responsive" src="{{ post.image }}" alt="image">
+						</a>
+						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+						<p>{{ post.shortdesc }}</p>
+					</div>
 				</div>
 			{% endif %}
 		{% endfor %}

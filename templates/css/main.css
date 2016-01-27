@@ -17,3 +17,10 @@ ul.posts {
 	float:left;
 	width:50%;
 }
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+.item-border {
+	border: 1px solid #e9e9e9;
+}
