@@ -1,9 +1,9 @@
 ---
 layout: software
 title: "Three Layer CMS"
-date: 2016-01-19
+date: 2016-01-16
 tags: ASP.NET, 3 Layer, Multilingual Support, Authorization, Configuration
-image: /assets/threelayercms/adminlist.png
+image: /assets/codegenerator/cg.png
 shortdesc: A Content Management System(CMS) built with classic ASP.NET webform.
 subcateogry: dotnet
 categories:
