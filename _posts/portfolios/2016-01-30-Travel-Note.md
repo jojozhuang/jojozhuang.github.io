@@ -15,7 +15,7 @@ This iOS App is used to manage itineraries. It's built for my final project of c
 ![index](/assets/travelnote/index.png "index")  
 2. Create new plan for your next trip.
 ![newtrip1](/assets/travelnote/newtrip1.png "newtrip1")  
-![newtrip2](/assets/travelnote/newtrip2.png "newtrip2")
+![newtrip2](/assets/travelnote/newtrip2.png "newtrip2")  
 3. Later find it in the 'My Trips' list.  
 ![trips](/assets/travelnote/trips.png "trips")  
 The app provides the ‘Share’ function which enables you to share your trip to others via message, email or Facebook, etc.  
@@ -25,7 +25,7 @@ The app provides the ‘Share’ function which enables you to share your trip t
 ![location](/assets/travelnote/location.png "location")
 6. Search is another main function. You would be able to search your next destination through the path continent->country->city.  
 ![search](/assets/travelnote/search.png "search")  
-In the final ‘City Detail’ screen, you will find lots of useful informations, such as map, local time, local weather, famous sights, etc. If you like, you can save the city to your favorite list.
+In the final ‘City Detail’ screen, you will find lots of useful informations, such as map, local time, local weather, famous sights, etc. If you like, you can save the city to your favorite list.  
 ![city](/assets/travelnote/city.png "city")  
 
 ![city2](/assets/travelnote/city2.png "city2")  
