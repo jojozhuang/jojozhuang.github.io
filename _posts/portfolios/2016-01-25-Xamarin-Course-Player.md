@@ -1,7 +1,7 @@
 ---
 layout: software
 title: "Xamarin Course Player"
-date: 2016-02-01
+date: 2016-01-25
 tags: C#, Visual Studio, iOS, Xamarin
 image: /assets/xamarinplayer/thumbnail.png
 shortdesc: A cross-platform mobile app built with Xamarin in C#, deployed to iOS platform.

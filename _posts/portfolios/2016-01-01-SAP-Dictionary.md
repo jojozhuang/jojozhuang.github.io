@@ -1,7 +1,7 @@
 ---
 layout: software
 title: "SAP Dictionary"
-date: 2016-02-02
+date: 2016-01-01
 tags: Windows Phone, C#
 image: /assets/sapdictionary/thumbnail.png
 shortdesc: A Windows Phone application for search SAP and ERP related word.

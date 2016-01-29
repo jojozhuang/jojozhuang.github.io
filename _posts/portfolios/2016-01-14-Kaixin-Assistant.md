@@ -1,7 +1,7 @@
 ---
 layout: software
 title: "Kaixin Assistant"
-date: 2016-01-24
+date: 2016-01-14
 tags: Kaixin001, Http Get and Post, Automation
 image: /assets/kaixin/thumbnail.png
 shortdesc: A 'tag-on' desktop application for playing online flash games.
