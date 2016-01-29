@@ -4,7 +4,7 @@ title: "My Web Server"
 date: 2016-01-10
 tags: Socket, Java, Http GET
 image: /assets/mywebserver/thumbnail.png
-shortdesc: A web server built with sockets in java, capable to handle general HTTP requests.
+shortdesc: A web server built with Java sockets, capable of handling general HTTP requests.
 subcateogry: dotnet
 categories:
 - portfolio

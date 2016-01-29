@@ -4,7 +4,7 @@ title: "Code Generator"
 date: 2016-01-18
 tags: Desktop App, Xslt+XML, Template
 image: /assets/codegenerator/cg.png
-shortdesc: A desktop application for generating codes based on database schema.
+shortdesc: A desktop application for generating codes based on database schema and templates.
 subcateogry: dotnet
 categories:
 - portfolio
