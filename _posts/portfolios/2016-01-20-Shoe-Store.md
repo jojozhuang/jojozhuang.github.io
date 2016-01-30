@@ -10,16 +10,16 @@ categories:
 - portfolio
 ---
 
-This is a CMS web application built with ASP.NET MVC in C# language. I used the template from [AdminLTE Control Panel Template](https://almsaeedstudio.com/) to design the UI pages. The whole website look very pretty and modern style.  
+This is a CMS web application built with ASP.NET MVC in C# language. I used the template from [AdminLTE Control Panel Template](https://almsaeedstudio.com/) to design the UI pages. The whole website looks very pretty and modern style.  
 1. Login Page  
 ![login](/assets/shoestore/login.png "login")
 2. User List. Other list pages have the similar layout.
-![index](/assets/shoestore/index.png "index")  
+![index](/assets/shoestore/index.png "index")
 3. Reponsive UI for different screen size.  
 Full screen size in desktop web browser.  
-![fullscreen](/assets/shoestore/responsive.png "fullscreen")  
+![fullscreen](/assets/shoestore/responsive.png "fullscreen")
 Smaller size in phone web browser.  
-![phonesize](/assets/shoestore/responsive2.png "phonesize")  
+![phonesize](/assets/shoestore/responsive2.png "phonesize")
 4. Sales order
 ![order](/assets/shoestore/order.png "order")  
 

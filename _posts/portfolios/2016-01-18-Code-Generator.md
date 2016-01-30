@@ -10,7 +10,7 @@ categories:
 - portfolio
 ---
 
-A Visual Studio look like desktop application. At the very beginning, i just thought it should be a collection of different tools which may help software developers for their coding work. Now, the main function for this tool is to generate codes based on database table definition and templates which are defined with Xslt.
+A Visual Studio style desktop application. At the very beginning, i just thought it should be a collection of different tools which may help software developers for their coding work. Now, the main function for this tool is to generate codes based on database table definition and templates which are defined with Xslt.
 ![Code Generator](/assets/codegenerator/cg.png "Code Generator")  
 To make it work, follow the below steps:  
 1. In Server Explorer, create new server connection which connects to your SQL server instance.  
