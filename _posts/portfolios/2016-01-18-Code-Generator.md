@@ -18,7 +18,7 @@ Follow the below steps to make it work.
 2. Create templates with XSLT.
 ![template](/assets/codegenerator/template.png "template")
 3. Connect server to retrieve tables, open the 'Single Generator'. The details of the table are shown here.  
-![single](/assets/codegenerator/single.png "single")  
+![single](/assets/codegenerator/single.png "single")
 4. Choose template, set namespaces, then click 'Generate' button and the result is displayed immediately.  
 ![singleoutput](/assets/codegenerator/singleoutput.png "singleoutput")  
 Use the batch function to generate codes for all tables at once.  
