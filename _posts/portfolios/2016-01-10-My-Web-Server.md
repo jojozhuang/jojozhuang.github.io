@@ -18,7 +18,7 @@ How to launch this web server?
 3. Run 'java MyWebServer' to launch it.  
 ![startserver](/assets/mywebserver/startserver.png "startserver")
 Root directory.  
-![root](/assets/mywebserver/root.png "root")  
+![root](/assets/mywebserver/root.png "root")
 4. Open web browser, access the server URL 'http://localhost:2540/'. All of the files in the root directory will be listed out.  
 ![webserver](/assets/mywebserver/webserver.png "webserver")
 You can try to click the links of different files, and you should get proper result. You can also navigate between directories recursively.  
