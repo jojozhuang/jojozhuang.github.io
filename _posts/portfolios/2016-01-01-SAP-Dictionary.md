@@ -10,8 +10,7 @@ categories:
 - portfolio
 ---
 
-This app is my work for the competition of '2011 Develop Challenge' in SAP Labs China. It is developed on Windows Phone platform with C# language. You can use it as a dictionary to search word from SAP area, and two languages are supported, English and German. The local library is small and there is a remote server which providing full library data.
-
+This app is built for the competition of '2011 Develop Challenge' in SAP Labs China. It is developed on Windows Phone platform with C# language. You can use it as a dictionary to search word from SAP area. Two languages are supported, English and German. The local dictionary is small and there is a remote server which providing full dictionary data.
 1. Home screen  
 ![index](/assets/sapdictionary/index.png "index")  
 2. Search by input  

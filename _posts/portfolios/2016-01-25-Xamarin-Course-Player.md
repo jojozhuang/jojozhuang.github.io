@@ -2,7 +2,7 @@
 layout: software
 title: "Course Player"
 date: 2016-01-25
-tags: C#, Visual Studio, iOS, Xamarin
+tags: Xamarin, C#, Visual Studio, iOS
 image: /assets/xamarinplayer/thumbnail.png
 shortdesc: An iOS app built with Xamarin in C#.
 subcateogry: mobile
@@ -20,7 +20,7 @@ From the technical respective, the two mobile apps have similar functions and so
 
 There are several approaches to setup the Xamarin development environment. I used Visual Studio + Mac as the choice and the first step is to pair them together.  
 ![pair](/assets/xamarinplayer/pair.png "pair")  
-There are two .Net projects in Visual Studio. 'COL.Core' contains the common function and 'CoursePlayeriPhone' is the UI part for iOS. If you want, we can create a similar UI project for Android.
+There are two .Net projects in Visual Studio. 'COL.Core' contains the common function and 'CoursePlayeriPhone' is the UI part for iOS. If you want, you can create a similar UI project for Android.
 ![vs](/assets/xamarinplayer/vs.png "vs")  
 Class diagram shows the design of this app based on Xamarin framework.
 ![framework](/assets/xamarinplayer/framework.png "framework")  
