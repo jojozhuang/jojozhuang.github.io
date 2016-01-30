@@ -2,7 +2,7 @@
 layout: software
 title: "Kaixin Assistant"
 date: 2016-01-14
-tags: Kaixin001, Http Get and Post, Automation
+tags: Windows Form, C#, Packet Capture, Http Get and Post, Automation
 image: /assets/kaixin/thumbnail.png
 shortdesc: A 'tag-on' desktop application for playing online flash games.
 subcateogry: dotnet
@@ -10,16 +10,16 @@ categories:
 - portfolio
 ---
 
-Another Visual Studio look like desktop application. This is not for work, but for fun. It is a 'tag-on' program used to automatically play flash games in [Kaixin](http://www.kaixin001.com/ "Kaixin")(Similar website like facebook). When this social network kind of website was popular, many people were addicted to these interactive games, like, garden planting, fishing, farming and cooking. Generally, you have to do some operations frequently to get better scores than others. With this tool, you just need to configure your user account and create tasks, it will run as configured repeatly. So you can get rid of the boring, repetitive operations, but still play better than others.  
+This desktop application is not for work, but for fun. It is a 'tag-on' program used to automatically play flash games for [Kaixin001](http://www.kaixin001.com/ "Kaixin001")(A Chinese social website, like Facebook). When this website was popular, many people were addicted to some interactive games, like, garden planting, fishing, farming and cooking. Normally, you have to open your web browser, login to the website, open the specific game and do some operations to play it. Besides, you have to spend more efforts if you want to get high scores. With this tool, however, you can get rid of the boring, repetitive operations and play better than others. You just need to import your user account and configure tasks, then this tool will play games repeatedly for you.  
 
-Technically, it simulate your manual action on the web pages or flash, sends out http get or post requests to the server, and get result to do next operations.  
+Technically, it simulates your manual operations on the web pages or flash, sends out HTTP GET/POST requests to the server, and gets result to do the next operations.  
 
 ![kaixin](/assets/kaixin/full.png "kaixin")  
-Just three steps to make it work,  
-1. In Account Explorer, add your kaixin account.  
-2. In Task Explorer, create a new task, and choose the functions you need(games you want to play)  .
-3. Right-click on the task and run.
-![task](/assets/kaixin/task.png "task")  
+Just three steps to make it work.  
+1. In Account Explorer, add your kaixin001 account.  
+2. In Task Explorer, create a new task, choose the functions and operations you need.
+3. Right-click on the task and run.  
+![task](/assets/kaixin/task.png "task")
 During execution, you can check the output log to see whether it works properly.
 ![running](/assets/kaixin/running.png "running")  
 You can get the source code from [Github](https://github.com/jojozhuang/Projects/tree/master/KaixinAssistant/Src "Source Code").

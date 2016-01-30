@@ -25,7 +25,7 @@ Many flexible settings are provided by this CMS system.
 ![shortcut](/assets/threelayercms/shortcut.png "shortcut")
 6. Besides, this CMS application provides multilingual support. For example, you can change the value of GlobalizationCulture to 'zh-cn'(zh-cn for simplified Chinese, en-us for US English) in web.config.  
 ![localization](/assets/threelayercms/localization.png "localization")
-After saving, reopen the login page and you will see the system default language(lable, button text) is switched to Chinese.  
+After saving, reopen the login page and you will see the system default language(lable, button text, system message) is switched to Chinese.  
 ![login_cn](/assets/threelayercms/login_cn.png "login_cn")  
 ![adminlist_cn](/assets/threelayercms/adminlist_cn.png "adminlist_cn")  
 ![menu_cn](/assets/threelayercms/menu_cn.png "menu_cn")  
