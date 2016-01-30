@@ -10,7 +10,7 @@ categories:
 - portfolio
 ---
 
-This Android App is used to search restaurants, rate and write comments to them. It's built for my final project of course 'CSC472-Mobile App Development for Android'. All the data for this app is dynamically retrieved from backend server.  
+This Android app is used to search restaurants, rate and write comments to them. It's built for my final project of course 'CSC472-Mobile App Development for Android'. All the data for this app is dynamically retrieved from backend server.  
 1. Home screen  
 ![index](/assets/resturant/index.png "index")
 2. Login/Register  
@@ -25,4 +25,4 @@ After login, you are able to submit rating and share your experience about the r
 6. Backend data server, which is built with ASP.NET MVC. You can simulate the register, login and logout function here.  
 ![backend](/assets/resturant/backend.png "backend")  
 
-You can get the source code from [Github](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/Code "Source Code"). And the source code for backend server [Data Server](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/DataServer "Source Code")
+You can get the source code from [Github](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/Code "Source Code"). And the [Source Code](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/DataServer "Source Code") for backend server is also available.

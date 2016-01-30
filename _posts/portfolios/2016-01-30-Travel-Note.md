@@ -10,7 +10,7 @@ categories:
 - portfolio
 ---
 
-This iOS App is used to manage itineraries. It's built for my final project of course 'CSC471-Mobile App Development for iOS'. Three tabs: Me, Search, Settings.  
+This iOS app is used to manage itineraries. It's built for my final project of course 'CSC471-Mobile App Development for iOS'. Three tabs: Me, Search, Settings.  
 1. Home screen  
 ![index](/assets/travelnote/index.png "index")
 2. Create new plan for your next trip.
