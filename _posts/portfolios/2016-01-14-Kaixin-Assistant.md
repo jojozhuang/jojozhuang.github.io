@@ -2,7 +2,7 @@
 layout: software
 title: "Kaixin Assistant"
 date: 2016-01-14
-tags: Windows Form, C#, Packet Capture, HTTP GET/POST
+tags: C#, Packet Capture, HTTP GET/POST
 image: /assets/kaixin/thumbnail.png
 shortdesc: A 'tag-on' desktop application for playing online flash games.
 subcateogry: dotnet
