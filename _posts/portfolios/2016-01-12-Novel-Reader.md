@@ -2,7 +2,7 @@
 layout: software
 title: "Novel Reader"
 date: 2016-01-12
-tags: C#, HTTP GET/POST, Outlook Style UI
+tags: C#, HTTP Outlook Style UI
 image: /assets/novelreader/thumbnail.png
 shortdesc: A MS Outlook UI desktop application for user to read online novels.
 subcateogry: dotnet
