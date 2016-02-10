@@ -1,6 +1,6 @@
 ---
 layout: software
-title: "Resturant"
+title: "Restaurant"
 date: 2016-01-27
 tags: Android, Java, Android Studio
 image: /assets/restaurant/thumbnail.png
