@@ -1,5 +1,6 @@
 ---
 layout: software
+key: portfolio
 title: "Novel Reader"
 date: 2016-01-12
 tags: C#, HTTP Outlook Style UI

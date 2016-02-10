@@ -1,5 +1,6 @@
 ---
 layout: software
+key: portfolio
 title: "Kaixin Assistant"
 date: 2016-01-14
 tags: C#, Packet Capture, HTTP

@@ -1,5 +1,6 @@
 ---
 layout: software
+key: portfolio
 title: "Shoe Store"
 date: 2016-01-20
 tags: ASP.NET MVC, C#, Bootstrap

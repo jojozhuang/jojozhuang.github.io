@@ -1,5 +1,6 @@
 ---
 layout: software
+key: portfolio
 title: "Code Generator"
 date: 2016-01-18
 tags: C#, Windows Form, XSLT+XML

@@ -1,5 +1,6 @@
 ---
 layout: software
+key: portfolio
 title: "Course Player"
 date: 2016-01-25
 tags: Xamarin, C#, Visual Studio, iOS
