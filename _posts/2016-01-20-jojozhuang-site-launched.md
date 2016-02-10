@@ -1,5 +1,6 @@
 ---
 layout: post
+key: blog
 title: "Johnny's Website Launched"
 date: 2016-01-20
 categories:
