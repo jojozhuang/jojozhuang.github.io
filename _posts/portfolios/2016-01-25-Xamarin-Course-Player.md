@@ -11,7 +11,7 @@ categories:
 - portfolio
 ---
 
-This iOS app is developed by [Xamarin](https://xamarin.com/), which is a tool for developing cross-platform mobile apps. This app is used to play course video, along with screenshot and whiteboards. It is a prototype for my investigation of cross-platform solution for online course system. You can find more details about this investigation from the [research document](https://github.com/jojozhuang/Work/blob/master/Xamarin/Doc/XamarinResearch.docx).  
+This iOS app is developed by [Xamarin](https://xamarin.com/), which is a tool for developing cross-platform mobile apps. This app is used to play course video, along with screenshot and whiteboards. It is a prototype for my investigation of cross-platform solution for online course system. There are three parts of the player: Video, Screenshot and Whiteboard. I use a slider control to simulate the playing progress of the video. The screenshot consists of 8x8 = 64 sections, which finally appear as a single image. It is refreshed along with the time line(playing progress), and only the different pieces will be drawn. The whiteboard is also drawn on a canvas. The difference with screenshot is, they are not images but lines, which is drawn according to the points data flow. Every action(pen down, pen move, pen up and erase) of the lecture's instructor on the whiteboard will be recorded into data file, and later be rebuilt here, in this canvas.
 ![iosapp](/assets/xamarinplayer/iosapp.png "iosapp")  
 
 To enable students watch course recordings, our team has released several applications, like flash player(see the below screenshot) and Silverlight player for the desktop, mobile apps for iOS and Android devices.  
@@ -26,4 +26,4 @@ There are two .Net projects in Visual Studio. 'COL.Core' contains the common fun
 Class diagram shows the design of this app based on Xamarin framework.
 ![framework](/assets/xamarinplayer/framework.png "framework")  
 
-You can get the source code from [Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone "Source Code").
+You can get the source code from [Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone "Source Code") and more details about this investigation from the [research document](https://github.com/jojozhuang/Work/blob/master/Xamarin/Doc/XamarinResearch.docx).  
