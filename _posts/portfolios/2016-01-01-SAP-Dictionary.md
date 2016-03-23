@@ -11,7 +11,8 @@ categories:
 - portfolio
 ---
 
-This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language. You can use it as a dictionary to search word from SAP area. Two languages are supported, English and German. There is a light-weight dictionary installed in the phone along with the app. This local dictionary contains partial data, and is stored in [SQLite3](https://www.sqlite.org/) database. Besides, there is a web server(built with ASP.Net) which provides service to feed full dictionary data. In case no result is matched from the local database, the app will connect to this web API for another search.
+This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language. You can use it as a dictionary to search word from SAP area. Two languages are supported, English and German. There is a light-weight dictionary installed in the phone along with the app. This local dictionary contains partial data, and is stored in [SQLite3](https://www.sqlite.org/) database. Besides, there is a web server(built with ASP.Net) which provides service to feed full dictionary data. In case no result is matched from the local database, the app will connect to this web API for another search.  
+Below are some of the screenshots of this app.  
 1. Home screen  
 ![index](/assets/sapdictionary/index.png "index")
 2. Search by input  
