@@ -10,14 +10,16 @@ categories:
 NodeJs application can be hosted by various web servers, Apache, IIS, Nginx, etc. In the post, I introduce how to deploy NodeJs application to Amazon Cloud Server, EC2.
 
 ## 1. Create AWS Account  
-1.1 Sign Up Amazons free micro instance of EC2  
+1.1 Sign Up [Amazons free micro instance of EC2](http://aws.amazon.com/ec2/)  
 1.2 Create Instance  
 ![EC2 Instance](/public/pics/ec2instance.png)  
 1.3 Create Key Pair  
+
 ## 2. Use Putty to Login EC2  
 ![Putty](/public/pics/ec2putty.png)  
 2.1 User PUTTYGEN.EXE to convert key  
 2.2 Configure PUTTY.EXE  
+
 ## 3. Setup EC2 Instance  
 ![EC2 Remote](/public/pics/ec2remote.png)  
 3.1 Update your EC2 Amazon Linux  
@@ -25,20 +27,24 @@ NodeJs application can be hosted by various web servers, Apache, IIS, Nginx, etc
 3.3 Install Node.js  
 3.4 Add node folder to secure_path  
 3.5 Install npm  
+
 ## 4. Create NodeJs Application  
 4.1 Create folder ‘site’  
 4.2 Create file ‘server.js’  
 4.3 Redirect port 8080 to 80  
 4.4 Start our Node server  
 4.5 Open browser, access the site with public ip.  
+
 ## 5. Deploy Local Node Project to EC2  
-* Install [CyberDuck](https://cyberduck.io/?l=en)  
-* Launch CyberDuck and Upload files to EC2  
+5.1 Install [CyberDuck](https://cyberduck.io/?l=en)  
+5.2 Launch CyberDuck and Upload files to EC2  
 ![CyberDuck](/public/pics/ec2cyberduck.png)  
-* In EC2, go into the folder, run npm install, npm start  
-* Open Chrome, Firefox, on different device.  
+5.3 In EC2, go into the folder, run npm install, npm start  
+5.4 Open Chrome, Firefox, on different device.  
 ![EC2 App](/public/pics/socketiopaint1.png)  
+
 ## 6. Useful command in linux  
+
 Command	| Description  
 ------------ | -------------  
 ls | Show files/directories under the current folder  
@@ -63,8 +69,10 @@ You need to uninstall and install again.
 sudo npm uninstall npm -g
 ```
 
-It doesn’t work, go the ‘npm’ folder, run:  
+If it doesn’t work, go the ‘npm’ folder, run:  
 
 ```
 sudo make uninstall
 ```
+
+At last, [here](https://github.com/jojozhuang/Study/blob/master/NodeJs/NodeOnEC2/NodeOnEC2.docx) is the detailed document.
