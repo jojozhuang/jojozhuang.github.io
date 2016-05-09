@@ -14,10 +14,12 @@ For most of web applications, we use HTTP protocol to communicate between server
 There are many implementations of WebSocket in different platforms. Here, I will introduce [Socket.IO](http://socket.io/) for node.js, [System.Web.WebSockets](https://msdn.microsoft.com/en-us/hh969243.aspx) in ASP.NET and [SignalR](http://signalr.net/).
 
 ## Socket.IO
+
 ### Full-Duplex
 
 Create a file named server.js. And add the following code. The timer invokes sockets.send method every one second.  
-```javascript  
+
+```javascript
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
@@ -56,37 +58,36 @@ Create index.html with following codes.
 </html>
 ```  
 
-Run it, you will get the below result. The time will be updated for every second.  
+Run it, you will get the below result. The time will be updated for every one second.  
 ![Server Time](/public/pics/socketiotimer.png "Server Time")  
-You can get the sample code from my github, [here](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO).  
+You can get the sample code from [my github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO).  
 
 ### Broadcasting
 Another example of Socket.IO is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/).
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
 After all opened, start to draw in the first chrome browser.  
-![In Chrome](/public/pics/socketiopaint1.png "In Chrome" =250x)  
+![In Chrome](/public/pics/socketiopaint1.png "In Chrome" =350x250)  
 Same in Firefox.  
-![Firefox](/public/pics/socketiopaint2.png "Firefox" =300x)  
+![Firefox](/public/pics/socketiopaint2.png "Firefox" =350x250)  
 Same in iPad.  
-![iPad](/public/pics/socketiopaint3.png "iPad" =250x)  
+![iPad](/public/pics/socketiopaint3.png "iPad" =350x250)  
 Same in iPhone.  
 ![iPhone](/public/pics/socketiopaint4.png "iPhone")  
 
 Apart from the original source code, I made some changes, you can get it from [here](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket).  
 
 ## WebSockets in ASP.NET
-WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket.
-Here is the [sample](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) which shows how to use it.
+WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket. Here is the [sample](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) which shows how to use it.  
 First user comes in, says 'Hi'.  
 ![MS WebSocket1](/public/pics/mswebsocket1.png "MS WebSocket1")  
-Second user comes in, says 'I'm here'.  
+Second user comes in(another page), says 'I'm here'.  
 ![MS WebSocket2](/public/pics/mswebsocket2.png "MS WebSocket2")  
-Back to the page of First user.
+Back to the page of first user.
 ![MS WebSocket3](/public/pics/mswebsocket3.png "MS WebSocket3")  
-You can also download the sample from [my github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET). I rebuilt sample, make sure it can run properly.
+You can also download the sample from [my github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET). I rebuilt the sample, make sure it can run properly.
 
-# SignalR
+## SignalR
 SignalR is popular and it can run in Windows7. The official tutorial is in [asp.net website](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
 
 This sample implements the online chatting function.  
