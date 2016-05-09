@@ -18,6 +18,7 @@ There are many implementations of WebSocket in different platforms. Here, I will
 ### Full-Duplex
 
 Create a file named server.js. And add the following code. The timer invokes sockets.send method every one second.  
+
 ```
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
@@ -70,7 +71,7 @@ After all opened, start to draw in the first chrome browser.
 Same in Firefox.  
 ![Firefox](/public/pics/socketiopaint2.png)  
 Same in iPad.  
-![iPad](/public/pics/socketiopaint3.png =250x250)  
+![iPad](/public/pics/socketiopaint3.png)  
 Same in iPhone.  
 ![iPhone](/public/pics/socketiopaint4.png)  
 
