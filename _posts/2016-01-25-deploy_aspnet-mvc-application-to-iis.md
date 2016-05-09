@@ -24,12 +24,10 @@ There are totally 4 steps:
 
     Control Panel-> Programs and Features
 
-    ![Image1](/public/pics/2016-01-25/image1.png)  
     <img src="/public/pics/2016-01-25/image1.png" width="442" height="255" />
 
     Select IIS(Internet Information Services)
 
-    ![Image1](/public/pics/2016-01-25/image2.png)
     <img src="/public/pics/2016-01-25/image2.png" width="319" height="374" />
 
 ## 2.  **Publish files to IIS**
