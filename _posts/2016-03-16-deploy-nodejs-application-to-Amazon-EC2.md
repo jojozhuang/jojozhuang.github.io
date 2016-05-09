@@ -62,8 +62,7 @@ sudo make uninstall | Uninstall, go to the folder and run it.
 
 ## 8.	Issues  
 8.1 Remove npm  
-Sometime, there is something wrong with npm, it doesn’t work.  
-You need to uninstall and install again.  
+Sometime, npm itself doesn’t work properly. Then we have to uninstall and install it again.  
 
 ```
 sudo npm uninstall npm -g
