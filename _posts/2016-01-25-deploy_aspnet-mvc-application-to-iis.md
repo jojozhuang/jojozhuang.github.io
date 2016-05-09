@@ -10,6 +10,7 @@ categories:
 > This blog guides you how to deploy your ASP.NET/MVC application to IIS web server. And make it public to internet.
 
 There are totally 4 steps:  
+
 * Install required components in IIS.
 * Publish files to IIS: copy files to server and create website in IIS.
 * Add Port Exception to Windows Firewall.
@@ -20,6 +21,7 @@ Control Panel-> Programs and Features
 ![image1](/public/pics/2016-01-25/image1.png)  
 Select IIS(Internet Information Services)  
 ![image2](/public/pics/2016-01-25/image2.png)  
+
 ## 2. Publish files to IIS  
 2.1  In Visual Studio, select project - &gt; Publish…  
 ![image3](/public/pics/2016-01-25/image3.png)  
@@ -35,7 +37,8 @@ Select IIS(Internet Information Services)
 ![image8](/public/pics/2016-01-25/image8.png)  
 Your web browser is opened automatically and accesses your website.  
 ![image9](/public/pics/2016-01-25/image9.png)  
-##  3. Add Port Exception to Firewall  
+
+## 3. Add Port Exception to Firewall  
 3.1  Control Panel -&gt; Windows Firewall  
 3.2  Advanced setting
 ![image10](/public/pics/2016-01-25/image10.png)  
@@ -53,7 +56,7 @@ Your web browser is opened automatically and accesses your website.
 ![image16](/public/pics/2016-01-25/image16.png)  
 After the above steps, your machine is exposed to the outside world.
 
-##4.  Assign Public IP address to your website.  
+## 4. Assign Public IP address to your website.  
 4.1  In IIS, add Binding to web site  
 ![image17](/public/pics/2016-01-25/image17.png)  
 4.2  Set IP Address and Port.
