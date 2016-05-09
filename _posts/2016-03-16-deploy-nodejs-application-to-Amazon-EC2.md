@@ -1,13 +1,13 @@
 ---
 layout: post
 key: blog
-title: "Deploy NodeJs Application to Amazon AWS-EC2"
+title: "Deploy NodeJs Application to Amazon EC2"
 date: 2016-03-07
 categories:
 - blog
 ---
 
-NodeJs application can be hosted by various web servers, Apache, IIS, Nginx, etc. In the post, I introduce how to deploy NodeJs application to Amazon Cloud Server, EC2.
+NodeJs application can be hosted by various web servers, Apache, IIS, Nginx, etc. In the post, I introduce how to deploy NodeJs application to the Amazon Cloud Server, EC2. For the detailed document of this post, you can download it from [my github](https://github.com/jojozhuang/Study/blob/master/NodeJs/NodeOnEC2/NodeOnEC2.docx). All the screenshots for following steps are available in this document.
 
 ## 1. Create AWS Account  
 1.1 Sign Up [Amazons free micro instance of EC2](http://aws.amazon.com/ec2/)  
@@ -74,5 +74,3 @@ If it doesn’t work, go the ‘npm’ folder, run:
 ```
 sudo make uninstall
 ```
-
-At last, [here](https://github.com/jojozhuang/Study/blob/master/NodeJs/NodeOnEC2/NodeOnEC2.docx) is the detailed document.
