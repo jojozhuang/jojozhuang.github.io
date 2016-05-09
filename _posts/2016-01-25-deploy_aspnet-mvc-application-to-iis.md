@@ -63,8 +63,7 @@ After the above steps, your machine is exposed to the outside world.
 If you choose another port, you must add the port number to firewall exception, refer to step 3.  
 ![image18](/public/pics/2016-01-25/image18.png)  
 4.3  Access website with ip address, don’t miss the last slash.  
-http://140.192.34.30/courseplayer  
 ![image19](/public/pics/2016-01-25/image19.png)  
 4.4  Try this address in another machine.  
 
-You can download the document from [my github](http://jojozhuang.github.io/public/docs/deploy_to_iis.pdf).
+Click [here](http://jojozhuang.github.io/public/docs/deploy_to_iis.pdf) to download the document.
