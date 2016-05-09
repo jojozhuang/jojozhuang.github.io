@@ -18,8 +18,7 @@ There are many implementations of WebSocket in different platforms. Here, I will
 ### Full-Duplex
 
 Create a file named server.js. And add the following code. The timer invokes sockets.send method every one second.  
-
-```javascript
+```
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
@@ -67,13 +66,13 @@ Another example of Socket.IO is online painting. This sample comes from [here](h
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
 After all opened, start to draw in the first chrome browser.  
-![In Chrome](/public/pics/socketiopaint1.png "In Chrome" =350x250)  
+![In Chrome](/public/pics/socketiopaint1.png)  
 Same in Firefox.  
-![Firefox](/public/pics/socketiopaint2.png "Firefox" =350x250)  
+![Firefox](/public/pics/socketiopaint2.png)  
 Same in iPad.  
-![iPad](/public/pics/socketiopaint3.png "iPad" =350x250)  
+![iPad](/public/pics/socketiopaint3.png =250x250)  
 Same in iPhone.  
-![iPhone](/public/pics/socketiopaint4.png "iPhone")  
+![iPhone](/public/pics/socketiopaint4.png)  
 
 Apart from the original source code, I made some changes, you can get it from [here](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket).  
 

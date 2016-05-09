@@ -39,3 +39,6 @@ img.software_item {
   max-width: 450px;
   display: block;
 }
+img {
+  border: 1px solid #e9e9e9;
+}
