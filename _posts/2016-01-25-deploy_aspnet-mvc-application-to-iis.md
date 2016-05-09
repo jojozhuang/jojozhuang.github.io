@@ -20,11 +20,11 @@ There are totally 4 steps:
 -   Assign public IP Address to your website.
 
 
-## 1.  **Install required components in IIS**
+## 1.  Install required components in IIS
 
-    Control Panel-&gt; Programs and Features
+    Control Panel-> Programs and Features
 
-    ![Image1](/public/pics/2016-01-25/image1.png)
+    ![Image1](/public/pics/2016-01-25/image1.png)  
     <img src="/public/pics/2016-01-25/image1.png" width="442" height="255" />
 
     Select IIS(Internet Information Services)
