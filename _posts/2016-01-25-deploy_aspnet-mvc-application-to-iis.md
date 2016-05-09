@@ -67,4 +67,4 @@ http://140.192.34.30/courseplayer
 ![image19](/public/pics/2016-01-25/image19.png)  
 4.4  Try this address in another machine.  
 
-You can download the document from [my github](http://jojozhuang.github.io/public/docs/deploy_to_iis.pdf)
+You can download the document from [my github](http://jojozhuang.github.io/public/docs/deploy_to_iis.pdf).
