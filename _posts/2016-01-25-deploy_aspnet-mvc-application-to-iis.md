@@ -44,15 +44,15 @@ Your web browser is opened automatically and accesses your website.
 ![image10](/public/pics/2016-01-25/image10.png)  
 3.3  Inbound Rules -&gt; New Rule…
 ![image11](/public/pics/2016-01-25/image11.png)  
-3.4  Rule Type
+3.4  Rule Type  
 ![image12](/public/pics/2016-01-25/image12.png)  
-3.5  Protocol and Ports
+3.5  Protocol and Ports  
 ![image13](/public/pics/2016-01-25/image13.png)  
-3.6  Action
+3.6  Action  
 ![image14](/public/pics/2016-01-25/image14.png)  
-3.7  Profile
+3.7  Profile  
 ![image15](/public/pics/2016-01-25/image15.png)  
-3.8  Name
+3.8  Name  
 ![image16](/public/pics/2016-01-25/image16.png)  
 After the above steps, your machine is exposed to the outside world.
 
