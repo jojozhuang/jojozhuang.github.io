@@ -47,7 +47,7 @@ Connection-&gt;Data, add user, always ‘ec2-user’.
 ![image11](/public/pics/2016-03-16/image11.png)  
 Connection -&gt;SSH -&gt;Auth, load the private key ppk file.
 ![image12](/public/pics/2016-03-16/image12.png)  
-Back to session, save the configuration.
+Back to session, save the configuration.  
 2.3 Connect to EC2 remote server
 Choose the newly created session, double click it or click the ‘Open’ button.
 ![image13](/public/pics/2016-03-16/image13.png)  
@@ -78,6 +78,7 @@ cd node
 make //it may take long time to compile
 sudo make install
 ```
+
 3.4 Add node folder to secure\_path  
 ```
 sudo su
@@ -86,41 +87,50 @@ nano /etc/sudoers
 Append :/usr/local/bin to the end of secure\_path  
 ![image15](/public/pics/2016-03-16/image15.png)  
 3.5 Install npm  
+
 ```
 git clone <https://github.com/npm/npm>
 cd npm
 sudo make install
 ```
+
 ## 4. Create simple node app and start Node server  
 4.1 Create folder ‘site’  
+
 ```
 mkdir site
 ```
+
 4.2 Create file ‘server.js’
+
 ```
 nano server.js
 ```
+
 Apend the following content to the file, save and exit.
 
 ```
-var http = require('http');                              
+var http = require('http');
 
-function onRequest(request, response) {                   
-  console.log("A user made a request" + request.url);       
-  response.writeHead(200, {"Context-Type": "text/plain"});  
-  response.write("Here is your response");                  
-  response.end();                                           
-}                                                         
+function onRequest(request, response) {
+  console.log("A user made a request" + request.url);
+  response.writeHead(200, {"Context-Type": "text/plain"});
+  response.write("Here is your response");
+  response.end();
+}
 
-http.createServer(onRequest).listen(8080);                
+http.createServer(onRequest).listen(8080);
 console.log("The server is running at 80...");
 ```
+
 ![image16](/public/pics/2016-03-16/image16.png)  
 4.3 Redirect port  
 You cannot make node server listen to port 80. Run the following command to redirect requests from port 80 of EC2 server to port 8080 of our Node server. You must run it in root role. And it need to be set each time your EC2 instnace is restarted.
+
 ```
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
 ```
+
 4.4  Start our Node server  
 ![image17](/public/pics/2016-03-16/image17.png)  
 4.5  Open web browser, access the site with public IP.  
@@ -128,7 +138,7 @@ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
 ![image19](/public/pics/2016-03-16/image19.png)  
 
 ## 5. Deploy Local Node.js application to EC2 Instance  
-5.1 Install CyberDuck
+5.1 Install CyberDuck  
 [https://cyberduck.io/?l=en](https://cyberduck.io/?l=en)  
 5.2 Launch CyberDuck and Upload
 ![image20](/public/pics/2016-03-16/image20.png)  
@@ -140,11 +150,13 @@ Select the folder, make sure delete all files in ‘node\_modules’ folder.
 ![image25](/public/pics/2016-03-16/image25.png)  
 Refresh the folder in putty, the new folder exits.  
 ![image26](/public/pics/2016-03-16/image26.png)  
-5.3 Go into the folder  
+5.3 Go into the folder, run the node application  
+
 ```
 npm install
 npm start
 ```
+
 5.4 Open Chrome, Firefox, on different device.  
 This node project is a drawing application. It uses Socket.IO to broadcast the changes from one client to other clients.  
 The first user opens it in chrome, waits others to join and draws something later.  
@@ -176,12 +188,15 @@ The forth user opens it on iPhone.
 ## 8. Issues
 8.1 Remove npm  
 Sometime, npm itself doesn’t work properly.  
-![image31](/public/pics/2016-03-16/image31.png)
+![image31](/public/pics/2016-03-16/image31.png)  
 Then we have to uninstall and install it again.
+
 ```
 sudo npm uninstall npm -g
 ```
+
 If it doesn’t work, go the ‘npm’ folder, run:  
+
 ```
 sudo make uninstall
 ```
