@@ -59,7 +59,7 @@ Create index.html with following codes.
 ```  
 
 Run it, you will get the below result. The time will be updated for every one second.  
-![Server Time](/public/pics/socketiotimer.png "Server Time")  
+![Server Time](/public/pics/2016-03-07/socketiotimer.png "Server Time")  
 You can get the sample code from [my github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO).  
 
 ### Broadcasting
