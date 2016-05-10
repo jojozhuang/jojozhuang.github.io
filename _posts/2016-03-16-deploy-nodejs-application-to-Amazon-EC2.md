@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Deploy NodeJs Application to Amazon EC2"
+title: "Deploy Node.js Application to Amazon EC2"
 date: 2016-03-16
 categories:
 - blog
@@ -80,16 +80,18 @@ sudo make install
 ```
 
 3.4 Add node folder to secure\_path  
+
 ```
 sudo su
 nano /etc/sudoers
 ```
+
 Append :/usr/local/bin to the end of secure\_path  
 ![image15](/public/pics/2016-03-16/image15.png)  
 3.5 Install npm  
 
 ```
-git clone <https://github.com/npm/npm>
+git clone https://github.com/npm/npm
 cd npm
 sudo make install
 ```
@@ -125,7 +127,7 @@ console.log("The server is running at 80...");
 
 ![image16](/public/pics/2016-03-16/image16.png)  
 4.3 Redirect port  
-You cannot make node server listen to port 80. Run the following command to redirect requests from port 80 of EC2 server to port 8080 of our Node server. You must run it in root role. And it need to be set each time your EC2 instnace is restarted.
+You cannot make node server listen to port 80. Run the following command to redirect requests from port 80 of EC2 server to port 8080 of our Node server. You must execute it in root role. And it needs to be reset each time your EC2 instnace is restarted.
 
 ```
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080

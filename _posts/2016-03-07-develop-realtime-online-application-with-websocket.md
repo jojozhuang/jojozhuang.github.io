@@ -67,28 +67,28 @@ Another example of Socket.IO is online painting. This sample comes from [here](h
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
 After all opened, start to draw in the first chrome browser.  
-![In Chrome](/public/pics/socketiopaint1.png)  
+![In Chrome](/public/pics/2016-03-07/socketiopaint1.png)  
 Same in Firefox.  
-![Firefox](/public/pics/socketiopaint2.png)  
+![Firefox](/public/pics/2016-03-07/socketiopaint2.png)  
 Same in iPad.  
-![iPad](/public/pics/socketiopaint3.png)  
+![iPad](/public/pics/2016-03-07/socketiopaint3.png)  
 Same in iPhone.  
-![iPhone](/public/pics/socketiopaint4.png)  
+![iPhone](/public/pics/2016-03-07/socketiopaint4.png)  
 
 Apart from the original source code, I made some changes, you can get it from [here](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket).  
 
 ## WebSockets in ASP.NET
 WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket. Here is the [sample](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) which shows how to use it.  
 First user comes in, says 'Hi'.  
-![MS WebSocket1](/public/pics/mswebsocket1.png "MS WebSocket1")  
+![MS WebSocket1](/public/pics/2016-03-07/mswebsocket1.png "MS WebSocket1")  
 Second user comes in(another page), says 'I'm here'.  
-![MS WebSocket2](/public/pics/mswebsocket2.png "MS WebSocket2")  
+![MS WebSocket2](/public/pics/2016-03-07/mswebsocket2.png "MS WebSocket2")  
 Back to the page of first user.
-![MS WebSocket3](/public/pics/mswebsocket3.png "MS WebSocket3")  
+![MS WebSocket3](/public/pics/2016-03-07/mswebsocket3.png "MS WebSocket3")  
 You can also download the sample from [my github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET). I rebuilt the sample, make sure it can run properly.
 
 ## SignalR
 SignalR is popular and it can run in Windows7. The official tutorial is in [asp.net website](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
 
 This sample implements the online chatting function.  
-![SignalR](/public/pics/signalrsample.png "SignalR")  
+![SignalR](/public/pics/2016-03-07/signalrsample.png "SignalR")  
