@@ -7,11 +7,12 @@ categories:
 - blog
 ---
 
-I'm building an ASP.NET MVC web application with Visual Studio 2015. When testing the app, there is a page which contains a video file doesn't work, the mp4 video is not played. If I copy the full path(eg. http://localhost:22962/204304/Video/lecture.mp4) of the video to Chrome's address bar, it can be accessed but without being played. That means the file url is correct, but something wrong because of other reasons.
+I'm building a web application with ASP.NET MVC in Visual Studio 2015. When testing the app locally, there is a page which contains a video file doesn't work. The mp4 video is unable to play. If I copy the video address(eg. http://localhost:22962/204304/Video/lecture.mp4) to Chrome's address bar, it can be accessed but without being played. That means the video URL is correct, there must be other reasons.
 
-After searching from the Intenet, I found the cause, the .mp4 MIME type is not configured in IIS. If you deployed your app to IIS, you should add .mp4 to MIME type list of your website. Restart IIS after saving the type.
-![MIME Type](/public/pics/iismime.png "MIME Type")
-![Add New MIME Type](/public/pics/iismimeadd.png "Add New MIME Type")
+After searching Internet, I found the cause, the .mp4 MIME type is not configured in IIS. If your app plays mp4 files, you should make sure .mp4 MIME type is in your IIS website. Create one if it doesn't exist.   
+![MIME Type](/public/pics/iismime.png "MIME Type")  
+![Add New MIME Type](/public/pics/iismimeadd.png "Add New MIME Type")  
+You need to restart IIS after changing the configuration.  
 
 In addition, if you are using Visual Studio which takes IIS Express for hosting and debugging, you can add mimeMap section to the web.config file of your website project.
 
