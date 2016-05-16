@@ -17,8 +17,7 @@ In Element viewer of the debug tool, you can see the action is 'Product?Length=1
 ![image2](/public/pics/2016-03-19/image2.png)  
 This issue occurs when I add some htmlAttributes(new { @class = "form-horizontal" }) to the Ajax.BeginForm. No clue why the attribute setting affects the action url.
 
-To solve this issue, you have to declare a route object to wrap the url.
-eg. new { controller = "api/Product/" } instead of using 'api/product' directory.
+To solve this issue, you have to declare a route object to wrap the url (eg. new { controller = "api/Product/" }) instead of using 'api/product' directrly.
 
 ```
  @using (Ajax.BeginForm("", new { controller = "api/Product/" }, new AjaxOptions { HttpMethod = "Post" }))
@@ -26,11 +25,10 @@ eg. new { controller = "api/Product/" } instead of using 'api/product' directory
 ![image3](/public/pics/2016-03-19/image3.png)  
 
 ## 2. Error message in ValidationSummary is not cleared after validation passed.  
-This issue occurs when using Ajax.BeginForm and Html.ValidationSummary together. In my current page, I use Ajax to update the page content after clicking the 'save' button. There is no navigation in the form submit event.
+Generally, ValidationSummary displays error message when there is any invalid input. However, here the issue is, error messages are still there even if all inputs are valid. This issue occurs when using Ajax.BeginForm and Html.ValidationSummary together. In my page, I use Ajax to send out request and update the page content after clicking the 'save' button. There is no navigation in the submit event. We are always in the same page.  
 ![image4](/public/pics/2016-03-19/image4.png)
-Generally, ValidationSummary displays error message when there is any invalid input. However, here the issue is, the last error messages are still there even all inputs are valid.
 
-To solve the issue, we need to manually clear the conent in ValidationSummary.
+To solve the issue, we need to manually clear the content in ValidationSummary.  
 First, add an handler for OnSuccess event in AjaxOptions of Ajax.BeginForm.
 ![image5](/public/pics/2016-03-19/image5.png)
 Then, in the handler function, reset the content of validation-summary-errors.
