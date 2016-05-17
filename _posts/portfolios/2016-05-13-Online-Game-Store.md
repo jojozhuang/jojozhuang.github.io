@@ -19,12 +19,13 @@ Features are described as follows:
 * Pages: Home, Consoles, Accessories, Games, Tablets
 * General Functions: View Product, Search Product, View Comments of Product
 * Membership: Register, Login, Logout
-* Role Based Functions:
+* Roles: Customer, Store Manager, Sales Manager
 
-- Roles: Customer, Store Manager, Sales Manager
-- Customer: Add Product to Cart, Checkout, View Own Orders
-- Store Manager: Create/Edit/Delete Games, Create/Edit/Delete Accessories
-- Salesman: View/Edit/Delete All Order, Create/Edit/Delete User
+Role Based Functions:
+
+* Customer: Add Product to Cart, Checkout, View Own Orders
+* Store Manager: Create/Edit/Delete Games, Create/Edit/Delete Accessories
+* Salesman: View/Edit/Delete All Order, Create/Edit/Delete User
 
 ## 1. Pages  
 1.1 Home Page  
