@@ -6,7 +6,7 @@ date: 2016-01-10
 tags: Socket, Java, HTTP, UDP
 image: /assets/mywebserver/thumbnail.png
 shortdesc: A web server built with Java sockets, capable of handling general HTTP requests.
-subcateogry: dotnet
+subcateogry: java
 categories:
 - portfolio
 ---
