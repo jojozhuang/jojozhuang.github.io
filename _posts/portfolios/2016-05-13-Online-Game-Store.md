@@ -12,13 +12,15 @@ categories:
 ---
 
 
-> This web application is developed by Servlet and JSP(Two versions) in Java.
+> This web application is developed by Servlet and JSP in Java.
 
-Features are described as follows:
+Features are described as follows:  
+
 * Pages: Home, Consoles, Accessories, Games, Tablets
 * General Functions: View Product, Search Product, View Comments of Product
 * Membership: Register, Login, Logout
 * Role Based Functions:
+
 - Roles: Customer, Store Manager, Sales Manager
 - Customer: Add Product to Cart, Checkout, View Own Orders
 - Store Manager: Create/Edit/Delete Games, Create/Edit/Delete Accessories
@@ -87,13 +89,13 @@ And you can create, edit, and delete users.
 ![image25](/assets/gamestore/image25.png)  
 
 ## 5. Source Code  
-I used NetBeans IDE 8.1 as development tool. And there two versions of this Game Store web application. The first one is developed by pure servlets. And the second developed with JSP + Beans without explicit servlets.  
+I used NetBeans IDE 8.1 as development tool. And there two versions of this Game Store web application. The first one is developed by pure servlets. And the second one is developed with JSP + Beans without explicit servlets.  
 5.1 Servlet  
 ![image26](/assets/gamestore/image26.png)  
-Data is stored in hashmap, in memory.
+For the servlet version, data is stored in hashmap, in memory.
 ![image27](/assets/gamestore/image27.png)  
 5.2 JSP + Beans
 ![image28](/assets/gamestore/image28.png)  
-Data is stored in serialized files. They are placed in WEB-INF folder. Any change to the game store will be persisted to these files.
+For the JSP version, data is serialized and stored in files. The files are placed in WEB-INF folder. Any change to the game store will be persisted to these files.
 ![image29](/assets/gamestore/image29.png)  
-You can get two versions of source code from [Serlet](https://github.com/jojozhuang/Course/tree/master/SE452/Homework2/hw2) and [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3)
+Here are the source codes for the [Servlet](https://github.com/jojozhuang/Course/tree/master/SE452/Homework2/hw2) and [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3).
