@@ -5,7 +5,7 @@ title: "Online Game Store"
 date: 2016-05-13
 tags: Java, Servlet, JSP, Beans
 image: /assets/gamestore/thumbnail.png
-shortdesc: An online game store, developed with Servlet/JSP in Java.
+shortdesc: An online eCommerce web store, developed with Servlet/JSP in Java.
 subcateogry: java
 categories:
 - portfolio
