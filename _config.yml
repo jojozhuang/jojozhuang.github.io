@@ -13,7 +13,9 @@ author:
 paginate: 1
 
 pages_list:
+  Portfolio: '/portfolio'
   Blog: '/blog'
-  About: '/about'
   CV: '/cv'
+  Course: '/course'
+  About: '/about'
   Feed: '/atom.xml'
