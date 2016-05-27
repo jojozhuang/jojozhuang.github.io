@@ -11,7 +11,7 @@ categories:
 - portfolio
 ---
 
-> This web application is developed by SignalR based on ASP.NET.
+> This web application is developed by SignalR based on ASP.NET. For the basic knowledge of WebSocket and SignalR, please refer to one of blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/)
 
 It contains four samples, named as follows:
 
@@ -107,13 +107,13 @@ This player is web based, no installation on client’s machine is required. Bes
 6.4 Cross-platform(For developer)  
 For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with our existing Flash and Silverlight player, this course player is simple and easy to maintain, since there is only one copy of the code.  
 6.5 Reuse  
-The core module(COL.Core) of this course player is shared with Xamarin solution, which is for cross-platform mobile development.  
+The core module(COL.Core) of this course player is shared with Xamarin solution, which is for cross-platform mobile development. You can take a look at [Course Player with Xamarin](http://jojozhuang.github.io/portfolio/2016/01/25/Xamarin-Course-Player/).  
 ![image14](/assets/courseplayersignalr/image14.png)  
 
-This means, we have the cross-platform solution for developing applications with only using C\#.
-First, use Xamarin to develop mobile apps for iOS and Android Platform.
-Second, use ASP.NET and SignalR to develop web application for different web browsers and platforms.
-Technically, the core module can be shared and reused by mobile and web application, even, it can be shared with winform applications.
+This means, we have the cross-platform solution for developing applications with only using C\#.  
+First, use Xamarin to develop mobile apps for iOS and Android Platform.  
+Second, use ASP.NET and SignalR to develop web application for different web browsers and platforms.  
+Technically, the core module can be shared and reused by mobile and web application, even, it can be shared with winform applications.  
 Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently. However, the business logics are same, which can be reused.  
 
 Here is the source code for this app on [Github](https://github.com/jojozhuang/Study/tree/master/DotNet/SignalR).
