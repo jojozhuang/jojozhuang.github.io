@@ -11,7 +11,7 @@ categories:
 - portfolio
 ---
 
-> This web application is developed by SignalR based on ASP.NET. For the basic knowledge of WebSocket and SignalR, please refer to one of blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/)
+> This web application is developed by SignalR based on ASP.NET. For the basic knowledge of WebSocket and SignalR, please refer to one of my blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/).
 
 It contains four samples, named as follows:
 
@@ -107,7 +107,7 @@ This player is web based, no installation on client’s machine is required. Bes
 6.4 Cross-platform(For developer)  
 For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with our existing Flash and Silverlight player, this course player is simple and easy to maintain, since there is only one copy of the code.  
 6.5 Reuse  
-The core module(COL.Core) of this course player is shared with Xamarin solution, which is for cross-platform mobile development. You can take a look at [Course Player with Xamarin](http://jojozhuang.github.io/portfolio/2016/01/25/Xamarin-Course-Player/).  
+The core module(COL.Core) of this application is shared with [Xamarin Course Player](http://jojozhuang.github.io/portfolio/2016/01/25/Xamarin-Course-Player/), which is another portfolio of mine. It is a cross-platform solution for mobile development.
 ![image14](/assets/courseplayersignalr/image14.png)  
 
 This means, we have the cross-platform solution for developing applications with only using C\#.  
