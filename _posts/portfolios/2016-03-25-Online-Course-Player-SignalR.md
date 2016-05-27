@@ -1,11 +1,11 @@
 ---
 layout: software
 key: portfolio
-title: "Online Course Player with SignalR"
+title: "Online Course Player (SignalR)"
 date: 2016-03-25
 tags: WebSocket, SignalR, Realtime
 image: /assets/courseplayersignalr/thumbnail.png
-shortdesc: An online course player, developed with SignalR.
+shortdesc: An realtime online course player, developed with SignalR and ASP.NET.
 subcateogry: dotnet
 categories:
 - portfolio
@@ -15,7 +15,7 @@ categories:
 
 It contains four samples, named as follows:
 
-* Chart: A Chatting Room
+* Chat: A Chatting Room
 * Drawing Board: A Drawing Application
 * Screen and Whiteboard: A Simulator Player without Video
 * Course Player: Full Functioned Course Player
@@ -75,7 +75,7 @@ A course player consists of three components, video, screenshot and whiteboard.
 * Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is logged and stored to a single file.
 
 For this course player, video is played independently. The content of the screen and whiteboard is synchronized with the playing process of the video. In this sample, I use a slider bar to simulate the video player.  
-4.2 UI
+4.2 UI  
 On the top of the player, there is the process bar and a Play button. There are two canvases below the process bar. The left one is for screenshot and the right one is for whiteboard.  
 ![image11](/assets/courseplayersignalr/image11.png)  
 4.3 Play  
@@ -84,13 +84,13 @@ When you click the play button, the process begins to move, the current time wil
 4.4 Under the Hood  
 How does this dummy player work?  
 1) When the page is opened, the connection is setup between server and client(web browser).  
-2) Next, the course starts to play after the Play button is clicked. At the same time, a notification is sent to the server, and the server knows that the player has begun to work.
-3) Then, server starts a timer, run the task(step 4) for every second.
-4) Server reads data for screenshot and whiteboard based on the current time.
-5) If there is any update(new image or new drawing), it will send data(JSON format) to client. Otherwise, no communication occurs from server to client.
-6) If web browser gets data, it will draw images or lines accordingly.
+2) Next, the course starts to play after the Play button is clicked. At the same time, a notification is sent to the server, and the server knows that the player has begun to work.  
+3) Then, server starts a timer, run the task(step 4) for every second.  
+4) Server reads data for screenshot and whiteboard based on the current time.  
+5) If there is any update(new image or new drawing), it will send data(JSON format) to client. Otherwise, no communication occurs from server to client.  
+6) If web browser gets data, it will draw images or lines accordingly.  
 7) The communication from client to server occurs only when the play button is click or the process bar is dragged.
-8) The communication from server to client occurs only when new data is found.
+8) The communication from server to client occurs only when new data is found.  
 
 ## 5. Course Player  
 5.1 Introduction  
@@ -99,9 +99,9 @@ Based on the previous sample, add a HTML5 Video control to make it a real course
 
 ## 6. Conclusion  
 6.1 Easy to Implement  
-If you are familiar with C\# and ASP.NET, it is really easy to develop such real time online application. Of course, you need write some javascript code to use SignalR at the client side.
+If you are familiar with C\# and ASP.NET, it is really easy to develop such real time online application. Of course, you need write some javascript code to use SignalR at the client side.  
 6.2 Low Bandwidth Consumption  
-Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.
+Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
 6.3 Cross-platform(For customers/students)  
 This player is web based, no installation on client’s machine is required. Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
 6.4 Cross-platform(For developer)  
@@ -114,8 +114,6 @@ This means, we have the cross-platform solution for developing applications with
 First, use Xamarin to develop mobile apps for iOS and Android Platform.
 Second, use ASP.NET and SignalR to develop web application for different web browsers and platforms.
 Technically, the core module can be shared and reused by mobile and web application, even, it can be shared with winform applications.
-Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently.
+Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently. However, the business logics are same, which can be reused.  
 
-However, the business logics are same, which can be reused.  
-
-Here are the source codes for this app [Course Player](https://github.com/jojozhuang/Study/tree/master/DotNet/SignalR).
+Here is the source code for this app on [Github](https://github.com/jojozhuang/Study/tree/master/DotNet/SignalR).
