@@ -1,7 +1,7 @@
 ---
 layout: software
 key: portfolio
-title: "Online Course Player (Socket.IO)"
+title: "Online Course Player (Socket.io)"
 date: 2016-04-03
 tags: WebSocket, Socket.IO, Node.js
 image: /assets/courseplayersocketio/thumbnail.png
@@ -31,7 +31,7 @@ When you click the play button, the process begins to move, the current time wil
 ![image2](/assets/courseplayersocketio/image2.png)  
 
 ## 3. Under the Hood
-How does this dummy player work?
+How does this dummy player work?  
 1) When the page is opened, the connection is setup between server and client(web browser).  
 2) Next, the course starts to play after the Play button is clicked. At the same time, a notification is sent to the server, and the server knows that the player has begun to work.  
 3) Then, server starts a timer, run the task(step 4) for every second.  
@@ -43,20 +43,20 @@ How does this dummy player work?
 
 ## 4. Codes
 1) Http Server and Socket.IO(Server side)  
-Use express to setup an http server. And use socket.io to transfer data between client and server. There are two broadcasting event, ‘draw’ for screenshot and ‘drawline’ for whiteboard.  
+Use express to setup an http server. And use socket.io to transfer data between client and server. There are two broadcasting events, ‘draw’ for screenshot and ‘drawline’ for whiteboard.  
 ![image3](/assets/courseplayersocketio/image3.png)  
 2) Unzip file (server side)  
-The data files for screenshot and whiteboard are compressed. We use the zlib module which is also provided by Node.js to decompress the file. Generally, there are two method for zip or unzip, Gzip and Inflate. Here, we use the ‘Inflate’ method. For your project, you must choose the right one for the compressed file.  
+The data files for screenshot and whiteboard are compressed. We use the zlib module which is provided by Node.js to decompress the file. Generally, there are two method for compression, Gzip and Inflate. Here, we use the ‘Inflate’ method. For your project, you must choose the right one for the compressed file.  
 ![image4](/assets/courseplayersocketio/image4.png)  
 3) Read Data File (server side)  
-Use files system and Buffer provided by Node.js to read data from files. Notice that, we read data from stream, offset and length must be specified. For each screenshot, it consists of 8\*8=64 pieces of images. For each image, we use base64 format and draw it to canvas later. All the images are converted to JSON string format and sent to client.  
+Use files system module and Buffer module provided by Node.js to read data from local files. Notice that, we read data from file stream, offset and length must be specified. For each screenshot, it consists of 8\*8=64 pieces of images. For each image, we use base64 format and draw it to canvas later. All the images are converted to JSON string format and sent to client.  
 ![image5](/assets/courseplayersocketio/image5.png)  
-4) Draw Images  
+4) Draw Images (client side)  
 On the client side, we monitor the ‘draw’ event and receive data from server side.  
-For each screenshot, there are 64 images for maximum. There will be fewer if some parts of the screenshot are not changed. First, we need to parse the data to JSON format. Then we draw the images one by one to a hidden canvas(\#workingss). After all are finished, draw the whole hidden canvas to the visible screenshot canvas(\#myss).  
+For each screenshot, there are 64 images for maximum. There will be fewer if some parts of the screenshot are not changed. First, we need to parse the data to JSON format. Then we draw the images one by one to a hidden canvas(\#workingss). At last, draw the whole hidden canvas to the visible canvas(\#myss) for screenshot.  
 ![image6](/assets/courseplayersocketio/image6.png)  
 5) Draw Lines  
-Similar with drawing images, we need to parse the data to JSON format first. Then, draw lines according to the color, width, and position.  
+Similar with drawing images, we need to parse the data to JSON format first. Then, draw lines to canvas based on the given  color, width, and position.  
 ![image7](/assets/courseplayersocketio/image7.png)  
 
 ## 5. Conclusion

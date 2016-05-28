@@ -11,7 +11,7 @@ categories:
 - portfolio
 ---
 
-> This web application is developed by SignalR based on ASP.NET. For the basic knowledge of WebSocket and SignalR, please refer to one of my blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/).
+> This online course player is developed by SignalR based on ASP.NET. [Another implementation](http://jojozhuang.github.io/portfolio/2016/04/03/Online-Course-Player-SocketIO/) is developed by Socket.IO on Node.js. Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and SignalR, please refer to one of my blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/).
 
 It contains four samples, named as follows:
 
