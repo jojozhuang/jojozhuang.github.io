@@ -71,15 +71,15 @@ The process is same with the chatting room. The only difference is, the format o
 A course player consists of three components, video, screenshot and whiteboard.  
 
 * Video is captured by a camera during the lecturing time, and saved as mp4.
-* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are saved in a single file.
-* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is logged and stored to a single file.
+* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
+* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is recorded and stored to a single file.
 
-For this course player, video is played independently. The content of the screen and whiteboard is synchronized with the playing process of the video. In this sample, I use a slider bar to simulate the video player.  
+For this course player, video is played separately. The content of the screen and whiteboard is synchronized with the playing process of the video. In this sample, I use a slider bar to simulate the video player.  
 4.2 UI  
 On the top of the player, there is the process bar and a Play button. There are two canvases below the process bar. The left one is for screenshot and the right one is for whiteboard.  
 ![image11](/assets/courseplayersignalr/image11.png)  
 4.3 Play  
-When you click the play button, the process begins to move, the current time will be refreshed as well, one second for interval. The screenshot and whiteboard canvas show the content simultaneously. You can drag the process bar forward or afterward.  
+When you click the play button, the slider bar begins to move, the current time will be refreshed as well, one second for interval. The screenshot and whiteboard canvas show the content simultaneously. You can drag the process bar forward or backward.  
 ![image12](/assets/courseplayersignalr/image12.png)  
 4.4 Under the Hood  
 How does this dummy player work?  

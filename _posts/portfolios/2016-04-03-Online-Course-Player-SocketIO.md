@@ -1,7 +1,7 @@
 ---
 layout: software
 key: portfolio
-title: "Online Course Player (Socket.io)"
+title: "Course Player (Socket.IO)"
 date: 2016-04-03
 tags: WebSocket, Socket.IO, Node.js
 image: /assets/courseplayersocketio/thumbnail.png
@@ -11,23 +11,23 @@ categories:
 - portfolio
 ---
 
-> This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionalities is developed by SignalR and ASP.NET, you can read the posting about it from [my portfolio](http://jojozhuang.github.io/portfolio/2016/03/25/Online-Course-Player-SignalR/). Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/).
+> This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, you can read the posting about it from [my portfolio](http://jojozhuang.github.io/portfolio/2016/03/25/Online-Course-Player-SignalR/). Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/).
 
 ## 1. Introduction
 A course player consists of three components, video, screenshot and whiteboard.
 
 * Video is captured by a camera during the lecturing time, and saved as mp4.
-* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are saved in a single file.
-* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is logged and stored to a single file.
+* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
+* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is recorded and stored to a single file.
 
 ## 2. UI
-For this course player, video is played independently. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this sample, I use a slider bar to simulate the video player.
+For this course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this sample, I use a slider bar to simulate the video player.
 
 On the top of the player, there is the process bar and a Play button. There are two canvases below the process bar. The left one is for screenshot and the right one is for whiteboard.
 ![image1](/assets/courseplayersocketio/image1.png)  
 
 ## 3. Play
-When you click the play button, the process begins to move, the current time will be refreshed as well, one second for interval. The screenshot and whiteboard canvas show the content simultaneously. You can drag the process bar forward or afterward.
+When you click the play button, the slider bar begins to move, the current time will be refreshed as well, one second for interval. The screenshot and whiteboard canvas show the content simultaneously. You can drag the process bar forward or backward.
 ![image2](/assets/courseplayersocketio/image2.png)  
 
 ## 3. Under the Hood
@@ -43,17 +43,19 @@ How does this dummy player work?
 
 ## 4. Codes
 1) Http Server and Socket.IO(Server side)  
-Use express to setup an http server. And use socket.io to transfer data between client and server. There are two broadcasting events, ‘draw’ for screenshot and ‘drawline’ for whiteboard.  
+Use express module to setup an http server. And use socket.io module to build up the connection between client and server. There are two broadcasting events, ‘draw’ for screenshot and ‘drawline’ for whiteboard.  
 ![image3](/assets/courseplayersocketio/image3.png)  
-2) Unzip file (server side)  
-The data files for screenshot and whiteboard are compressed. We use the zlib module which is provided by Node.js to decompress the file. Generally, there are two method for compression, Gzip and Inflate. Here, we use the ‘Inflate’ method. For your project, you must choose the right one for the compressed file.  
+2) Decompress Files (server side)  
+The data files for screenshot and whiteboard are compressed. We use the zlib module which is provided by Node.js to decompress them. Generally, there are two encoding formats for compression, Gzip and Inflate. Here, we use the ‘Inflate’ method of zlib. For your project, you must choose the corresponding method according to encoding format of your compressed file.  
 ![image4](/assets/courseplayersocketio/image4.png)  
 3) Read Data File (server side)  
-Use files system module and Buffer module provided by Node.js to read data from local files. Notice that, we read data from file stream, offset and length must be specified. For each screenshot, it consists of 8\*8=64 pieces of images. For each image, we use base64 format and draw it to canvas later. All the images are converted to JSON string format and sent to client.  
+Use files system module and Buffer module provided by Node.js to read data from local files. Notice that, we read data from stream instead of the whole file, so offset and length must be specified.  
+For each screenshot, it consists of 8\*8=64 pieces of images. For each image, we use base64 format and later draw it to canvas at client side. All the images are converted to JSON string format and sent to client.  
 ![image5](/assets/courseplayersocketio/image5.png)  
 4) Draw Images (client side)  
-On the client side, we monitor the ‘draw’ event and receive data from server side.  
-For each screenshot, there are 64 images for maximum. There will be fewer if some parts of the screenshot are not changed. First, we need to parse the data to JSON format. Then we draw the images one by one to a hidden canvas(\#workingss). At last, draw the whole hidden canvas to the visible canvas(\#myss) for screenshot.  
+At the client side, we monitor the ‘draw’ event. It is invoked if server send data to the client.  
+For each screenshot, there is a maximum number of 64 images for each-time drawing. There will be fewer images if some of them are not changed.  
+First, we need to parse the data to JSON format. Then we draw the images one by one to a hidden canvas(\#workingss). At last, draw the whole hidden canvas to the visible canvas(\#myss) for screenshot.  
 ![image6](/assets/courseplayersocketio/image6.png)  
 5) Draw Lines  
 Similar with drawing images, we need to parse the data to JSON format first. Then, draw lines to canvas based on the given  color, width, and position.  
