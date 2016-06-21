@@ -22,7 +22,7 @@ If you try to assign Integer.MAX_VALUE + 1 to a long type variable, the result m
 ```
 long var1 = Integer.MAX_VALUE + 1; //var1 = -2147483648
 ```
-You will get var1 = -2147483648 instead of 2147483648. The following statements doesn't work either.
+You will get var1 = -2147483648 instead of 2147483648. The following statement doesn't work, either.
 
 ```
 long var1 = (long)(Integer.MAX_VALUE + 1);
