@@ -110,5 +110,5 @@ For the JSP version, data is serialized and stored in files. The files are place
 Here are the source codes for the three implementations.  
 
 * [Servlet](https://github.com/jojozhuang/Course/tree/master/SE452/Homework2/hw2)
-* [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3).
-* [JSP+MySQL](https://github.com/jojozhuang/Course/tree/master/SE452/Homework4/hw4).
+* [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3)
+* [JSP+MySQL](https://github.com/jojozhuang/Course/tree/master/SE452/Homework4/hw4)
