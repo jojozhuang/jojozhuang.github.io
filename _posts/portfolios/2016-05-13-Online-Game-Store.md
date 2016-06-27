@@ -3,9 +3,9 @@ layout: software
 key: portfolio
 title: "Online Game Store"
 date: 2016-05-13
-tags: Java, Servlet, JSP, Beans
+tags: Java, Servlet, JSP, Beans, MySQL
 image: /assets/gamestore/thumbnail.png
-shortdesc: An online eCommerce web store, developed with Servlet/JSP in Java.
+shortdesc: An online eCommerce web store, developed with MySQL and Servlet/JSP in Java.
 subcateogry: java
 categories:
 - portfolio
@@ -26,6 +26,11 @@ Role Based Functions:
 * Customer: Add Product to Cart, Checkout, View Own Orders
 * Store Manager: Create/Edit/Delete Games, Create/Edit/Delete Accessories
 * Salesman: View/Edit/Delete All Order, Create/Edit/Delete User
+
+Three Different Implementations:
+* Servlet + Hard-code data in source files
+* JSP + Beans + Data files
+* JSP + MySQL
 
 ## 1. Pages  
 1.1 Home Page  
@@ -90,7 +95,7 @@ And you can create, edit, and delete users.
 ![image25](/assets/gamestore/image25.png)  
 
 ## 5. Source Code  
-I used NetBeans IDE 8.1 as development tool. And there two versions of this Game Store web application. The first one is developed by pure servlets. And the second one is developed with JSP + Beans without explicit servlets.  
+I used NetBeans IDE 8.1 as development tool. And there three versions of this Game Store web application. The first one is developed by pure servlets. The second one is developed with JSP + Beans without explicit servlets. And the third one uses MySQL as database.
 5.1 Servlet  
 ![image26](/assets/gamestore/image26.png)  
 For the servlet version, data is stored in hashmap, in memory.
@@ -99,4 +104,9 @@ For the servlet version, data is stored in hashmap, in memory.
 ![image28](/assets/gamestore/image28.png)  
 For the JSP version, data is serialized and stored in files. The files are placed in WEB-INF folder. Any change to the game store will be persisted to these files.
 ![image29](/assets/gamestore/image29.png)  
-Here are the source codes for the [Servlet](https://github.com/jojozhuang/Course/tree/master/SE452/Homework2/hw2) and [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3).
+5.2 JSP + MySQL
+![image30](/assets/gamestore/image30.png)  
+Here are the source codes for the three implementations.  
+* [Servlet](https://github.com/jojozhuang/Course/tree/master/SE452/Homework2/hw2)
+* [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3).
+* [JSP+MySQL](https://github.com/jojozhuang/Course/tree/master/SE452/Homework4/hw4).
