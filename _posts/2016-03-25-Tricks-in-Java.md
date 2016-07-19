@@ -40,6 +40,7 @@ long var1 = (long)Integer.MAX_VALUE + 1;
 
 ## 2. How a primitive float/double value can be -0.0?  
 Float is a tricky type in java.  
+
 ### 2.1 The first issue is precision.  
 You could never be able to store a floating point number of infinite precision with finite resources. You should never test if a floating point number == to some other, i.e. never write code like this:
 
@@ -73,3 +74,5 @@ I update my code to add 0.0 at the end of the line to make sure no negative zero
 ```
 slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
 ```
+
+Refer to posting [How can a primitive float value be -0.0? What does that mean?](http://stackoverflow.com/questions/6724031/how-can-a-primitive-float-value-be-0-0-what-does-that-mean) on stackoverflow.
