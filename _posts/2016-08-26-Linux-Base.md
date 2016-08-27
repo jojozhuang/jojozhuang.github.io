@@ -14,3 +14,6 @@ categories:
 
 ## 2. Bash Guide for Beginners.
 [http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)  
+
+## 3. GNU Make.
+[https://www.gnu.org/software/make/](https://www.gnu.org/software/make/)
