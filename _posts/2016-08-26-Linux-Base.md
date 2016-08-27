@@ -17,3 +17,6 @@ categories:
 
 ## 3. GNU Make.
 [https://www.gnu.org/software/make/](https://www.gnu.org/software/make/)
+
+## 4. How to set my default shell on Mac?
+[http://stackoverflow.com/questions/453236/how-to-set-my-default-shell-on-mac](http://stackoverflow.com/questions/453236/how-to-set-my-default-shell-on-mac)
