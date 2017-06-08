@@ -23,3 +23,11 @@ categories:
 
 ## 5. .bash_profile vs .bashrc
 [http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html)
+
+## 6. useful commands
+which -a ls  // list where the command locates
+output: /bin/ls
+
+su -a tony // switch to another 'tony'
+
+sudo chown -R $USER /ariba/ssp_sp/  // grant all access rights to current user.
