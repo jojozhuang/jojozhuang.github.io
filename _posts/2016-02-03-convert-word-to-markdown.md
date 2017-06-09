@@ -11,4 +11,7 @@ After I setup [this personal website](http://jojozhuang.github.io/) on github, I
 
 Writage is easy to install, just download it from [http://www.writage.com/](http://www.writage.com/). Before instill it, you need to install [Pandoc](http://pandoc.org/installing.html) first.
 
+Besides, below link shows tags for markdown.
+[Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 Hope you enjoy this tool as well.
