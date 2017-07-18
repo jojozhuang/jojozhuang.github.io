@@ -17,23 +17,104 @@ categories:
   * Install Java in Ubuntu  
   [How to Install Oracle Java on Ubuntu Linux](http://www.wikihow.com/Install-Oracle-Java-on-Ubuntu-Linux)  
   * Install Elastic Search in Ubuntu  
-  a) Go to https://www.elastic.co/downloads, click 'Download' for Elasticsearch, choose DEB.  
-  b) In terminal, navigate to the folder which contains the downloaded file, run 'sudo dpkg -i elasticsearch-5.5.0.deb'. After that, Elasticsearch is installed in /usr/share/elasticsearch/. And the configuration files are in /etc/elasticsearch. Edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot go inside to the configuration folder, run 'sudo chmod -R 755 /etc/elasticsearch'.  
-  c) run 'sudo service elasticsearch start' to start ES  
-  d) run 'sudo service elasticsearch status' to check the status  
-  e) run 'sudo service elasticsearch stop' to stop ES  
-  f) run 'curl "http://localhost:9200"' in terminal or open the link "http://localhost:9200" in web browser, either you should see some json strings returned.  
+  a) Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB.  
+  b) In terminal, navigate to the folder which contains the downloaded file, run  
+  ```
+  sudo dpkg -i elasticsearch-5.5.0.deb
+  ```
+  After that, Elasticsearch is installed in  
+  ```
+  /usr/share/elasticsearch/
+  ```
+  And the configuration files are in  
+  ```
+  /etc/elasticsearch
+  ```
+  Edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot go inside to the configuration folder, run
+  ```
+  sudo chmod -R 755 /etc/elasticsearch
+  ```
+  c) Command to start ES  
+  ```
+  sudo service elasticsearch start
+  ```
+  d) Command to check the status  
+  ```
+  sudo service elasticsearch status
+  ```
+  e) Command to stop ES  
+  ```
+  sudo service elasticsearch stop
+  ```
+  f) run in terminal
+  ```
+  curl "http://localhost:9200"
+  ```
+  or open the link in web browser,
+  ```
+  http://localhost:9200
+  ```
+  either you should see some json strings returned.  
+  ```
+  {
+    "name" : "kYY1YjJ",
+    "cluster_name" : "elasticsearch",
+    "cluster_uuid" : "aTe5itS9S_WCp348J78oaA",
+    "version" : {
+      "number" : "5.5.0",
+      "build_hash" : "260387d",
+      "build_date" : "2017-06-30T23:16:05.735Z",
+      "build_snapshot" : false,
+      "lucene_version" : "6.6.0"
+    },
+    "tagline" : "You Know, for Search"
+  }
+  ```
   * Install Kibana  
-  a) Go to https://www.elastic.co/downloads, click 'Download' for Kibana, choose DEB 64-BIT.  
-  b) In terminal, navigate to the folder which contains the downloaded file, run 'sudo dpkg -i kibana-5.5.0-amd64.deb'.  
-  c) run 'sudo service kibana start' to start kibana  
-  d) run 'sudo service kibana status' to check the status  
-  e) run 'sudo service kibana stop' to stop kibana  
-  f) Kibana configuration - Change log file  
-  stop kibana  
-  sudo nano /etc/kibana/kibana.yml, set logging.dest: /var/log/kibana/log  
-  go to /var/log/, mkdir kibana, cd kibana, touch log, sudo chmod 777 log  
-  start kibana  
+  a) Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT.  
+  b) In terminal, navigate to the folder which contains the downloaded file, run  
+  ```
+  sudo dpkg -i kibana-5.5.0-amd64.deb  
+  ```
+  c) Commands for Kibana
+  ```
+  sudo service kibana start   //start kibana  
+  sudo service kibana status  //check status  
+  sudo service kibana stop    //stop kibana  
+  ```
+  d) Kibana configuration - Change log file  
+  1. stop kibana  
+  2. edit kibana configration file
+  ```
+  sudo nano /etc/kibana/kibana.yml
+  ```
+  set new file path for the log file
+  ```
+  logging.dest: /var/log/kibana/log  
+  ```
+  3. Ceate log file and grant write permission
+  ```
+  cd /var/log/
+  mkdir kibana
+  cd kibana
+  touch log
+  sudo chmod 777 log
+  ```  
+  4. start kibana  
+  e) Kibana configuration - Remote access Kibana
+  1. stop kibana  
+  2. edit kibana configration file
+  ```
+  sudo nano /etc/kibana/kibana.yml
+  ```
+  set ip address to server.host
+  ```
+  server.host: 192.168.56.101
+  ```
+  3. access following address in guest and host.
+  ```
+  http://192.168.56.101:5601/
+  ```
   * Install Sense  
   Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
