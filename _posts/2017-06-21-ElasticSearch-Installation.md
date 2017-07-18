@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Elastic Search"
+title: "Elastic Search (Installation)"
 date: 2017-06-21
 categories:
 - blog
@@ -11,14 +11,18 @@ categories:
 
 ## 1. Basic
   * What is Elastic Search?
-  * Elastic Cloud, Kibana
-
-## 2. Install
-  * Install Java in Ubuntu  
+  [https://www.elastic.co](https://www.elastic.co)  
+  * Kibana, Elastic Cloud
+  [https://www.elastic.co/products/kibana](https://www.elastic.co/products/kibana)
+## 2. Installation
+I will use virtual box to install Ubuntu virtual machine, then install Elasticsearch and other components on Ubuntu.
+### 2.1 Install Java in Ubuntu  
   [How to Install Oracle Java on Ubuntu Linux](http://www.wikihow.com/Install-Oracle-Java-on-Ubuntu-Linux)  
-  * Install Elastic Search in Ubuntu  
-  a) Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB.  
-  b) In terminal, navigate to the folder which contains the downloaded file, run  
+### 2.2 Install Elastic Search in Ubuntu  
+  * Download Elasticsearch
+  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB.  
+  * Install  
+  In terminal, navigate to the folder which contains the downloaded file, run  
   ```
   sudo dpkg -i elasticsearch-5.5.0.deb
   ```
@@ -34,19 +38,13 @@ categories:
   ```
   sudo chmod -R 755 /etc/elasticsearch
   ```
-  c) Command to start ES  
+  *  Commands for ES  
   ```
-  sudo service elasticsearch start
+  sudo service elasticsearch start   //start elasticsearch  
+  sudo service elasticsearch status  //check status  
+  sudo service elasticsearch stop    //stop elasticsearch
   ```
-  d) Command to check the status  
-  ```
-  sudo service elasticsearch status
-  ```
-  e) Command to stop ES  
-  ```
-  sudo service elasticsearch stop
-  ```
-  f) run in terminal
+  * Start ES and test whether it is working
   ```
   curl "http://localhost:9200"
   ```
@@ -70,29 +68,22 @@ categories:
     "tagline" : "You Know, for Search"
   }
   ```
-  * Install Kibana  
-  a) Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT.  
-  b) In terminal, navigate to the folder which contains the downloaded file, run  
+### 2.2 Install Kibana  
+  * Download Kibana
+  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT.  
+  * Install  
+  In terminal, navigate to the folder which contains the downloaded file, run  
   ```
   sudo dpkg -i kibana-5.5.0-amd64.deb  
   ```
-  c) Commands for Kibana
+  * Commands for Kibana
   ```
   sudo service kibana start   //start kibana  
   sudo service kibana status  //check status  
   sudo service kibana stop    //stop kibana  
   ```
-  d) Kibana configuration - Change log file  
-  1. stop kibana  
-  2. edit kibana configration file
-  ```
-  sudo nano /etc/kibana/kibana.yml
-  ```
-  set new file path for the log file
-  ```
-  logging.dest: /var/log/kibana/log  
-  ```
-  3. Ceate log file and grant write permission
+  * Kibana configuration - Change log file (Optional)  
+  a) Ceate log file and grant write permission, /var/log/kibana/log
   ```
   cd /var/log/
   mkdir kibana
@@ -100,35 +91,31 @@ categories:
   touch log
   sudo chmod 777 log
   ```  
-  4. start kibana  
-  e) Kibana configuration - Remote access Kibana
-  1. stop kibana  
-  2. edit kibana configration file
+  b) Change logging.dest to direct it to new path
   ```
+  sudo service kibana stop  //stop kibana  
+  sudo nano /etc/kibana/kibana.yml  //open the configuration file
+  logging.dest: /var/log/kibana/log  //set new file path for the log file
+  sudo service kibana start   //restart kibana  
+  ```
+  * Kibana configuration - Remote access Kibana from host (Optional)  
+  a) Set Network connection for guest(Ubuntu)
+  [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)
+  b) Set guest's IP address to server.host for kibana
+  ```
+  sudo service kibana stop  //stop kibana  
   sudo nano /etc/kibana/kibana.yml
+  server.host: 192.168.56.101  //set ip address to server.host
+  sudo service kibana start   //restart kibana  
   ```
-  set ip address to server.host
-  ```
-  server.host: 192.168.56.101
-  ```
-  3. access following address in guest and host.
+  c) access following address in guest and host. You should be able to see kibana properly.
   ```
   http://192.168.56.101:5601/
   ```
   * Install Sense  
   Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
-## 3. Use
-  * Add Data
-  * Get Data
-  * Update Data
-  * Delete Data
-  * Search Data
-
-## 3. Conclusion
-
-## 4. Reference
-[https://www.elastic.co](https://www.elastic.co)  
+## 3. Reference
 [https://blog.coding.net/blog/elastic-search](https://blog.coding.net/blog/elastic-search)  
 [How To Install and Configure Elasticsearch on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)  
 [Installing and Running Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html)  
