@@ -19,8 +19,8 @@ categories:
 I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the host is Mac OSX and the guest is Ubuntu. All the Elasticsearch and its components are installed in Ubuntu.
 
 ### 2.1 Install Java
-  The version I used of JDK is 1.8.0_131.
-  [Oracle JDK Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+  The version I used of JDK is 1.8.0_131.  
+  [Oracle JDK Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
   [How to Install Oracle Java on Ubuntu Linux](http://www.wikihow.com/Install-Oracle-Java-on-Ubuntu-Linux)  
 
 ### 2.2 Install Elasticsearch  
@@ -31,7 +31,6 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   ```
   sudo dpkg -i elasticsearch-5.5.0.deb
   ```
-
   When finished, Elasticsearch is installed into  
   ```
   /usr/share/elasticsearch/
@@ -121,15 +120,14 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   server.host: 192.168.56.101       //set ip address to server.host
   sudo service kibana start         //restart kibana  
   ```
-
   c) Open the following link in web browser in Ubuntu, you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.
   ```
   http://192.168.56.101:5601/
   ```
-  * Install Sense  
+### 2.3 Install Sense  
   Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
 ## 3. Reference
-* [How To Install and Configure Elasticsearch on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)  
 * [Installing and Running Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html)  
+* [How To Install and Configure Elasticsearch on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)  
 * [How to Open Ports in Ubuntu and CentOS using IPtables](https://www.rosehosting.com/blog/how-to-open-ports-in-ubuntu-and-centos-using-iptables/)  
