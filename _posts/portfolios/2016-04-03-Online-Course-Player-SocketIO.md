@@ -67,7 +67,7 @@ If you are familiar with Node.js and javascript, it is not too difficult to deve
 ### 5.2 Low Bandwidth Consumption  
 Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
 ### 5.3 Cross-platform  
-This player is web based, the only required application is web browser on client’s machine. Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
+This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
 
 ## 6. Source Code Files
 * [Source code files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CoursePlayer)
