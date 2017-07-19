@@ -7,33 +7,41 @@ categories:
 - blog
 ---
 
-> Notes for Elastic Search.
+> Study notes for Elasticsearch.
 
 ## 1. Basic
-  * What is Elastic Search?
+  * What is Elastic Search?  
   [https://www.elastic.co](https://www.elastic.co)  
-  * Kibana, Elastic Cloud
+  * Kibana, Elastic Cloud  
   [https://www.elastic.co/products/kibana](https://www.elastic.co/products/kibana)
+
 ## 2. Installation
-I will use virtual box to install Ubuntu virtual machine, then install Elasticsearch and other components on Ubuntu.
-### 2.1 Install Java in Ubuntu  
+I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the host is Mac OSX and the guest is Ubuntu. All the Elasticsearch and its components are installed in Ubuntu.
+
+### 2.1 Install Java
+  The version I used of JDK is 1.8.0_131.
+  [Oracle JDK Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
   [How to Install Oracle Java on Ubuntu Linux](http://www.wikihow.com/Install-Oracle-Java-on-Ubuntu-Linux)  
-### 2.2 Install Elastic Search in Ubuntu  
-  * Download Elasticsearch
-  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB.  
+
+### 2.2 Install Elasticsearch  
+  * Download Elasticsearch  
+  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB version.  
   * Install  
   In terminal, navigate to the folder which contains the downloaded file, run  
   ```
   sudo dpkg -i elasticsearch-5.5.0.deb
   ```
-  After that, Elasticsearch is installed in  
+
+  When finished, Elasticsearch is installed into  
   ```
   /usr/share/elasticsearch/
   ```
+
   And the configuration files are in  
   ```
   /etc/elasticsearch
   ```
+
   Edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot go inside to the configuration folder, run
   ```
   sudo chmod -R 755 /etc/elasticsearch
@@ -44,15 +52,17 @@ I will use virtual box to install Ubuntu virtual machine, then install Elasticse
   sudo service elasticsearch status  //check status  
   sudo service elasticsearch stop    //stop elasticsearch
   ```
-  * Start ES and test whether it is working
+  * Start ES and test through curl
   ```
   curl "http://localhost:9200"
   ```
-  or open the link in web browser,
+
+  or open the following link in web browser,
   ```
   http://localhost:9200
   ```
-  either you should see some json strings returned.  
+
+  Either way, you should see some json strings returned from ES.  
   ```
   {
     "name" : "kYY1YjJ",
@@ -68,9 +78,10 @@ I will use virtual box to install Ubuntu virtual machine, then install Elasticse
     "tagline" : "You Know, for Search"
   }
   ```
+
 ### 2.2 Install Kibana  
-  * Download Kibana
-  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT.  
+  * Download Kibana  
+  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT version.  
   * Install  
   In terminal, navigate to the folder which contains the downloaded file, run  
   ```
@@ -83,7 +94,7 @@ I will use virtual box to install Ubuntu virtual machine, then install Elasticse
   sudo service kibana stop    //stop kibana  
   ```
   * Kibana configuration - Change log file (Optional)  
-  a) Ceate log file and grant write permission, /var/log/kibana/log
+  a) Ceate log file and grant write permission, the log file is /var/log/kibana/log.
   ```
   cd /var/log/
   mkdir kibana
@@ -91,24 +102,27 @@ I will use virtual box to install Ubuntu virtual machine, then install Elasticse
   touch log
   sudo chmod 777 log
   ```  
-  b) Change logging.dest to direct it to new path
+
+  b) Specify a file where Kibana stores log output
   ```
-  sudo service kibana stop  //stop kibana  
-  sudo nano /etc/kibana/kibana.yml  //open the configuration file
+  sudo service kibana stop           //stop kibana  
+  sudo nano /etc/kibana/kibana.yml   //open the configuration file
   logging.dest: /var/log/kibana/log  //set new file path for the log file
-  sudo service kibana start   //restart kibana  
+  sudo service kibana start          //restart kibana  
   ```
   * Kibana configuration - Remote access Kibana from host (Optional)  
-  a) Set Network connection for guest(Ubuntu)
-  [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)
+  a) Set Network connection for guest(Ubuntu)  
+  [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)  
   b) Set guest's IP address to server.host for kibana
   ```
-  sudo service kibana stop  //stop kibana  
-  sudo nano /etc/kibana/kibana.yml
-  server.host: 192.168.56.101  //set ip address to server.host
-  sudo service kibana start   //restart kibana  
+  ifconfig                          //find Ubuntu's IP address, eg 192.168.56.101, specified in DHCP server.
+  sudo service kibana stop          //stop kibana  
+  sudo nano /etc/kibana/kibana.yml  //open kibana configuration file
+  server.host: 192.168.56.101       //set ip address to server.host
+  sudo service kibana start         //restart kibana  
   ```
-  c) access following address in guest and host. You should be able to see kibana properly.
+
+  c) Open the following link in web browser in Ubuntu, you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.
   ```
   http://192.168.56.101:5601/
   ```
@@ -116,7 +130,6 @@ I will use virtual box to install Ubuntu virtual machine, then install Elasticse
   Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
 ## 3. Reference
-[https://blog.coding.net/blog/elastic-search](https://blog.coding.net/blog/elastic-search)  
-[How To Install and Configure Elasticsearch on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)  
-[Installing and Running Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html)  
-[How to Open Ports in Ubuntu and CentOS using IPtables](https://www.rosehosting.com/blog/how-to-open-ports-in-ubuntu-and-centos-using-iptables/)  
+* [How To Install and Configure Elasticsearch on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)  
+* [Installing and Running Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html)  
+* [How to Open Ports in Ubuntu and CentOS using IPtables](https://www.rosehosting.com/blog/how-to-open-ports-in-ubuntu-and-centos-using-iptables/)  
