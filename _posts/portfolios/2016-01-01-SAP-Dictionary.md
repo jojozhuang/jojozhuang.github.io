@@ -14,15 +14,15 @@ categories:
 > This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language.
 
 ## 1. Functions
-You can use it as a dictionary to search word from SAP area. Two languages are supported, English and German. There is a light-weight dictionary installed in the phone along with the app. This local dictionary contains partial data, and is stored in [SQLite3](https://www.sqlite.org/) database. Besides, there is a web server(built with ASP.Net) which provides service to feed full dictionary data. In case no result is matched from the local database, the app will connect to this web API for further search.  
-
-## 2. Home screen  
-Three options:  
+You can use it as a dictionary to search word from SAP area. Three options:  
 * Glossary: Index by Alphabets
 * Search: Search with input text
-* 3-Character Classic
-![index](/assets/sapdictionary/index.png "index")  
+* 3-Character Classic: Search abbreviation word
 
+Two languages are supported, English and German. There is a light-weight dictionary installed in the phone along with the app. This local dictionary contains partial data, and is stored in [SQLite3](https://www.sqlite.org/) database. Besides, there is a web server(built with ASP.Net) which provides service to feed full dictionary data. In case no result is matched from the local database, the app will connect to this web API for further search.  
+
+## 2. Home screen  
+![index](/assets/sapdictionary/index.png "index")  
 ### 2.1. Glossary
 Click on any letter to get the list of the words started with that letter, then click on the word to see the description.
 ![searchindex](/assets/sapdictionary/searchindex.png "searchindex")
