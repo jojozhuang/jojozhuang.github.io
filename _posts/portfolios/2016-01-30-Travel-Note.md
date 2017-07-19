@@ -24,7 +24,7 @@ Find the new created trip in the 'My Trips' list.
 The app provides the ‘Share’ function which enables you to share your trip to others via message, email or Facebook, etc.  
 ![share](/assets/travelnote/share.png "share")
 ### 1.3 Me -> My Favorites
-You can find the cities which you have added into favorite list before.  
+You can find the cities which you have added into favorite list previously.  
 ![favorite](/assets/travelnote/favorite.png "favorite")
 ### 1.4 Me -> My Location
 You can get the exact coordinates of your current location through 'My Location'.  
@@ -38,9 +38,10 @@ Search is another main function. You are able to search your next destination.
 ### 2.3 Search -> Continent-> Country -> City
 ![citylist](/assets/travelnote/citylist.png "citylist")
 ### 2.4 Search -> Continent-> Country -> City -> Details
-In the final ‘City Detail’ screen, you will find lots of useful information, such as map, local time, local weather, famous sights, etc. If you like, you can save the city to your favorite list.  
+In the final ‘City Detail’ screen, you can find lots of useful information, such as map, local time, local weather, famous sights, etc. If you like, you can add the city to your favorite list.  
 ![city](/assets/travelnote/city.png "city")  
 ![city2](/assets/travelnote/city2.png "city2")
 ## 3. Settings  
-![settings](/assets/travelnote/settings.png "settings")
-You can get the source code from [Github](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary "Source Code").
+![settings](/assets/travelnote/settings.png "settings")  
+## 4. Source Code
+You can get the source code files of this iOS App from my  [Github](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary "Source Code").
