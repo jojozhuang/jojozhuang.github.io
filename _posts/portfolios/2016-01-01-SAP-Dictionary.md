@@ -11,21 +11,32 @@ categories:
 - portfolio
 ---
 
-This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language. You can use it as a dictionary to search word from SAP area. Two languages are supported, English and German. There is a light-weight dictionary installed in the phone along with the app. This local dictionary contains partial data, and is stored in [SQLite3](https://www.sqlite.org/) database. Besides, there is a web server(built with ASP.Net) which provides service to feed full dictionary data. In case no result is matched from the local database, the app will connect to this web API for another search.  
-Below are some of the screenshots of this app.  
-1. Home screen  
-![index](/assets/sapdictionary/index.png "index")
-2. Search by input  
-![inputsearch](/assets/sapdictionary/search.png "inputsearch")
-3. Search by Index  
-![searchindex](/assets/sapdictionary/searchindex.png "searchindex")
-4. Result  
-![result](/assets/sapdictionary/result.png "result")
-5. Search abbreviation word  
-![abbreviation](/assets/sapdictionary/abbreviation.png "abbreviation")
-6. Result for abbreviation  
-![result2](/assets/sapdictionary/result2.png "result2")
-7. Settings, you can enable online search if no result found locally.  
-![settings](/assets/sapdictionary/settings.png "settings")
+> This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language.
 
-You can get the source code from [Github](https://github.com/jojozhuang/Projects/tree/master/SAPDictionary/Src "Source Code").
+## 1. Functions
+You can use it as a dictionary to search word from SAP area. Two languages are supported, English and German. There is a light-weight dictionary installed in the phone along with the app. This local dictionary contains partial data, and is stored in [SQLite3](https://www.sqlite.org/) database. Besides, there is a web server(built with ASP.Net) which provides service to feed full dictionary data. In case no result is matched from the local database, the app will connect to this web API for further search.  
+
+## 2. Home screen  
+Three options:  
+* Glossary: Index by Alphabets
+* Search: Search with input text
+* 3-Character Classic
+![index](/assets/sapdictionary/index.png "index")
+### 2.1. Glossary
+Click on any letter to get the list of the words started with that letter, then click on the word to see the description.
+![searchindex](/assets/sapdictionary/searchindex.png "searchindex")
+![result](/assets/sapdictionary/result.png "result")
+### 2.2 Search  
+Input search text through keyboard
+![inputsearch](/assets/sapdictionary/search.png "inputsearch")
+### 2.3 3-Character Classic
+Search abbreviation word, similar with Glossary.
+![abbreviation](/assets/sapdictionary/abbreviation.png "abbreviation")
+Result for abbreviation  
+![result2](/assets/sapdictionary/result2.png "result2")
+## 3. Settings
+You can choose language and enable online search if no result found locally.  
+![settings](/assets/sapdictionary/settings.png "settings")
+## 4. Source Code Files
+* [Source code files of SAP Dictionary WP7 on Github](https://github.com/jojozhuang/Projects/tree/master/SAPDictionary/Src/DictionaryPhone)
+* [Source code files of Backend Service on Github](https://github.com/jojozhuang/Projects/tree/master/SAPDictionary/Src/DictionaryService)
