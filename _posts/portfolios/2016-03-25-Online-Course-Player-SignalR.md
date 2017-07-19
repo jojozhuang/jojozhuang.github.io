@@ -41,14 +41,14 @@ Go back to the first user. The message from Mike is displayed automatically. Her
 ![image6](/assets/courseplayersignalr/image6.png)  
 ### 2.5 Under the Hood  
 How does it work?  
-1) When accessing the chatting room, a new connection is setup between your web browser and the server.
-2) Then, you provide a user name to identify yourself from others. This name is added to the chatting group.
-3) Next, you type some texts and click the ‘Send’ button, the message is sent to the server through WebSocket protocol.
-4) This server, actually is a general ASP.NET web application. The magic thing is, SignalR creates an HTTP Handler upon ASP.NET runtime to deal with the WebSocket messages. When it receives any message from client, it will notify other users within the same group. Technically, this process is called: Broadcasting.
-5) Another user’s web browser receives your input from server, and display it to the page.
-6) If no user input any text, no communication will happen.
-7) If user close the web browser, it will be removed from the chatting group.
-8) The group survives until no user in the group.
+1) When accessing the chatting room, a new connection is setup between your web browser and the server.  
+2) Then, you provide a user name to identify yourself from others. This name is added to the chatting group.  
+3) Next, you type some texts and click the ‘Send’ button, the message is sent to the server through WebSocket protocol.  
+4) This server, actually is a general ASP.NET web application. The magic thing is, SignalR creates an HTTP Handler upon ASP.NET runtime to deal with the WebSocket messages. When it receives any message from client, it will notify other users within the same group. Technically, this process is called: Broadcasting.  
+5) Another user’s web browser receives your input from server, and display it to the page.  
+6) If no user input any text, no communication will happen.  
+7) If user close the web browser, it will be removed from the chatting group.  
+8) The group survives until no user in the group.  
 
 ## 3. Drawing Board  
 ### 3.1 Introduction  
@@ -60,7 +60,8 @@ Open the second drawing board in firebox.
 ![image8](/assets/courseplayersignalr/image8.png)  
 ### 3.3 Begin drawing in chrome.  
 ![image9](/assets/courseplayersignalr/image9.png)  
-### 3.4 The drawing is synchronized to others(eg. here is Firefox) simultaneously.  
+### 3.4 Synchronizing to others
+The drawing is synchronized to others(eg. here is Firefox) simultaneously.  
 ![image10](/assets/courseplayersignalr/image10.png)  
 ### 3.5 Under the Hood  
 The process is same with the chatting room. The only difference is, the format of data used for the communication between server and client. For drawing, we send out coordinates of the points in the canvas instead of a single string message.
