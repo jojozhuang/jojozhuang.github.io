@@ -21,7 +21,7 @@ Three options:
 * Glossary: Index by Alphabets
 * Search: Search with input text
 * 3-Character Classic
-![index](/assets/sapdictionary/index.png "index")
+![index](/assets/sapdictionary/index.png "index")  
 ### 2.1. Glossary
 Click on any letter to get the list of the words started with that letter, then click on the word to see the description.
 ![searchindex](/assets/sapdictionary/searchindex.png "searchindex")
