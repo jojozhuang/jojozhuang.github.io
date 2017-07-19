@@ -11,10 +11,10 @@ categories:
 
 ## 1. Basic
 ### 1.1 What is Elastic Search?  
-  [https://www.elastic.co](https://www.elastic.co)  
+  * [https://www.elastic.co](https://www.elastic.co)  
 
 ### 1.2  Kibana, Elastic Cloud  
-  [https://www.elastic.co/products/kibana](https://www.elastic.co/products/kibana)
+  * [https://www.elastic.co/products/kibana](https://www.elastic.co/products/kibana)
 
 ## 2. Installation
 I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the host is Mac OSX and the guest is Ubuntu. All the Elasticsearch and its components are installed in Ubuntu.
@@ -29,20 +29,11 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB version.  
   2) Install  
   In terminal, navigate to the folder which contains the downloaded file, run  
-  ```
+  ```bash
   sudo dpkg -i elasticsearch-5.5.0.deb
   ```
-  When finished, Elasticsearch is installed into  
-  ```
-  /usr/share/elasticsearch/
-  ```
-
-  And the configuration files are in  
-  ```
-  /etc/elasticsearch
-  ```
-
-  Edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot go inside to the configuration folder, run
+  When finished, Elasticsearch is installed into /usr/share/elasticsearch/. And the configuration files are in /etc/elasticsearch.  
+  You can edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot access /etc/elasticsearch, run
   ```
   sudo chmod -R 755 /etc/elasticsearch
   ```
@@ -57,11 +48,7 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   curl "http://localhost:9200"
   ```
 
-  or open the following link in web browser,
-  ```
-  http://localhost:9200
-  ```
-
+  or open the link [http://localhost:9200](http://localhost:9200)in web browser.  
   Either way, you should see some json strings returned from ES.  
   ```
   {
@@ -112,7 +99,7 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   ```
   5) Kibana configuration - Remote access Kibana from host (Optional)  
   a. Set Network connection for guest(Ubuntu)  
-  [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)  
+  * [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)  
   b. Set guest's IP address to server.host for kibana
   ```
   ifconfig                          //find Ubuntu's IP address, eg 192.168.56.101, specified in DHCP server.
@@ -121,11 +108,11 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   server.host: 192.168.56.101       //set ip address to server.host
   sudo service kibana start         //restart kibana  
   ```
-  c. Open the following link in web browser in Ubuntu, you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.
+  c. Open link [http://192.168.56.101:5601/](http://192.168.56.101:5601/)in web browser in guest(Ubuntu), you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.
   ```
-  http://192.168.56.101:5601/
+
   ```
-  
+
 ### 2.3 Install Sense  
   Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
