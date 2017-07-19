@@ -3,25 +3,25 @@ layout: default
 key: portfolio
 ---
 <script>
-	$(document).ready(function(){
-		$('img').addClass('image-software');
-		$('img').addClass('img-responsive');
-	});
+  $(document).ready(function(){
+    $('img').addClass('image-software');
+    $('img').addClass('img-responsive');
+  });
 </script>
 <div style="background:transparent !important" class="jumbotron">
-	<div class="container">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
-			<h1>{{ page.title }}</br><small>{{ page.tags }}</small></h1>
-			<div class="post">
-				{{ content }}
-			</div>
+  <div class="container">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h1>{{ page.title }}</br><small>{{ page.tags }}</small></h1>
+      <div class="post">
+        {{ content }}
+      </div>
 
-			<!-- Post comments -->
-			<div class="notecomments">
-				{% include disqus.html %}
-			</div>
-		</div>
-		<div class="col-sm-2"></div>
-	</div>
+      <!-- Post comments -->
+      <div class="notecomments">
+        {% include disqus.html %}
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
 </div>
