@@ -43,5 +43,5 @@ In the final ‘City Detail’ screen, you can find lots of useful information, 
 ![city2](/assets/travelnote/city2.png "city2")
 ## 3. Settings  
 ![settings](/assets/travelnote/settings.png "settings")  
-## 4. Source Code
+## 4. Source Code Files
 You can get the source code files of this iOS App from my  [Github](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary "Source Code").
