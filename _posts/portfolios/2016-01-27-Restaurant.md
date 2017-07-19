@@ -28,5 +28,5 @@ After login, you are able to submit rating of the restaurant and share your expe
 It is built with ASP.NET MVC, which provides RESTful APIs. You can simulate the register, login and logout function here.  
 ![backend](/assets/restaurant/backend.png "backend")  
 ## 7. Source Code Files
-* [Source code files for Restaurants](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/Code)
-* [Source code files for backend server](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/DataServer)
+* [Source code files of Restaurants on Github](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/Code)
+* [Source code files of backend server on Github](https://github.com/jojozhuang/Course/tree/master/CSC472/FinalProject/DataServer)

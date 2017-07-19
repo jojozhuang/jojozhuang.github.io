@@ -45,4 +45,4 @@ In the final ‘City Detail’ screen, you can find lots of useful information, 
 ## 3. Settings  
 ![settings](/assets/travelnote/settings.png "settings")  
 ## 4. Source Code Files
-* [Source code files for Trip Planner](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary)
+* [Source code files of Trip Planner on Github](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary)
