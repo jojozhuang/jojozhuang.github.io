@@ -14,7 +14,7 @@ categories:
 > This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, you can read the posting about it from [my portfolio](http://jojozhuang.github.io/portfolio/2016/03/25/Online-Course-Player-SignalR/). Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket](http://jojozhuang.github.io/blog/2016/03/07/develop-realtime-online-application-with-websocket/).
 
 ## 1. Introduction
-A course player consists of three components, video, screenshot and whiteboard.
+A course player consists of three components: video, screenshot and whiteboard.
 
 * Video is captured by a camera during the lecturing time, and saved as mp4.
 * Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
@@ -41,32 +41,33 @@ How does this dummy player work?
 7) The communication from client to server occurs only when the play button is clicked or the process bar is dragged.  
 8) The communication from server to client occurs only when new data is found.  
 
-## 4. Codes
-1) Http Server and Socket.IO(Server side)  
+## 4. Development
+### 4.1 Http Server and Socket.IO(Server side)  
 Use express module to setup an http server. And use socket.io module to build up the connection between client and server. There are two broadcasting events, ‘draw’ for screenshot and ‘drawline’ for whiteboard.  
 ![image3](/assets/courseplayersocketio/image3.png)  
-2) Decompress Files (server side)  
+### 4.2 Decompress Files (server side)  
 The data files for screenshot and whiteboard are compressed. We use the zlib module which is provided by Node.js to decompress them. Generally, there are two encoding formats for compression, Gzip and Inflate. Here, we use the ‘Inflate’ method of zlib. For your project, you must choose the corresponding method according to encoding format of your compressed file.  
 ![image4](/assets/courseplayersocketio/image4.png)  
-3) Read Data File (server side)  
+### 4.3 Read Data File (server side)  
 Use files system module and Buffer module provided by Node.js to read data from local files. Notice that, we read data from stream instead of the whole file, so offset and length must be specified.  
 For each screenshot, it consists of 8\*8=64 pieces of images. For each image, we use base64 format and later draw it to canvas at client side. All the images are converted to JSON string format and sent to client.  
 ![image5](/assets/courseplayersocketio/image5.png)  
-4) Draw Images (client side)  
+### 4.4 Draw Images (client side)  
 At the client side, we monitor the ‘draw’ event. It is invoked if server send data to the client.  
 For each screenshot, there is a maximum number of 64 images for each-time drawing. There will be fewer images if some of them are not changed.  
 First, we need to parse the data to JSON format. Then we draw the images one by one to a hidden canvas(\#workingss). At last, draw the whole hidden canvas to the visible canvas(\#myss) for screenshot.  
 ![image6](/assets/courseplayersocketio/image6.png)  
-5) Draw Lines  
+### 4.5 Draw Lines (client side)
 Similar with drawing images, we need to parse the data to JSON format first. Then, draw lines to canvas based on the given  color, width, and position.  
 ![image7](/assets/courseplayersocketio/image7.png)  
 
 ## 5. Conclusion
-1) Easy to Implement  
+### 5.1 Easy to Implement  
 If you are familiar with Node.js and javascript, it is not too difficult to develop such real time online application.  
-2) Low Bandwidth Consumption  
+### 5.2 Low Bandwidth Consumption  
 Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
-3) Cross-platform  
-This player is web based, no installation on client’s machine is required. Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
+### 5.3 Cross-platform  
+This player is web based, the only required application is web browser on client’s machine. Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
 
-Here is the source code for this application on [Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CoursePlayer).
+## 6. Source Code Files
+* [Source code files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CoursePlayer)
