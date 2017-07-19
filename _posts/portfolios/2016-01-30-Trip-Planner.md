@@ -1,7 +1,7 @@
 ---
 layout: software
 key: portfolio
-title: "Travel Note"
+title: "Trip Planner"
 date: 2016-01-30
 tags: iOS, Swift, XCode
 image: /assets/travelnote/thumbnail.png

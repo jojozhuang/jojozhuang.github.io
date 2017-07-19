@@ -11,7 +11,7 @@ categories:
 - portfolio
 ---
 
-This Android app is used to search restaurants, rate and write comments to them. It's built for my final project of course 'CSC472-Mobile App Development for Android'. All the data for this app is dynamically retrieved from backend server.  
+This Android app is used to search restaurants, rate stars and write comments to them. It's built for my final project of course 'CSC472-Mobile App Development for Android'. All the data for this app is dynamically retrieved from backend server.  
 1. Home screen  
 ![index](/assets/restaurant/index.png "index")
 2. Login/Register  
