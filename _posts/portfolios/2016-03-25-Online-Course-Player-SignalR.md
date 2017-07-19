@@ -41,15 +41,14 @@ Go back to the first user. The message from Mike is displayed automatically. Her
 ![image6](/assets/courseplayersignalr/image6.png)  
 ### 2.5 Under the Hood  
 How does it work?  
-
-* When accessing the chatting room, a new connection is setup between your web browser and the server.
-* Then, you provide a user name to identify yourself from others. This name is added to the chatting group.
-* Next, you type some texts and click the ‘Send’ button, the message is sent to the server through WebSocket protocol.
-* This server, actually is a general ASP.NET web application. The magic thing is, SignalR creates an HTTP Handler upon ASP.NET runtime to deal with the WebSocket messages. When it receives any message from client, it will notify other users within the same group. Technically, this process is called: Broadcasting.
-* Another user’s web browser receives your input from server, and display it to the page.
-* If no user input any text, no communication will happen.
-* If user close the web browser, it will be removed from the chatting group.
-* The group survives until no user in the group.
+1) When accessing the chatting room, a new connection is setup between your web browser and the server.
+2) Then, you provide a user name to identify yourself from others. This name is added to the chatting group.
+3) Next, you type some texts and click the ‘Send’ button, the message is sent to the server through WebSocket protocol.
+4) This server, actually is a general ASP.NET web application. The magic thing is, SignalR creates an HTTP Handler upon ASP.NET runtime to deal with the WebSocket messages. When it receives any message from client, it will notify other users within the same group. Technically, this process is called: Broadcasting.
+5) Another user’s web browser receives your input from server, and display it to the page.
+6) If no user input any text, no communication will happen.
+7) If user close the web browser, it will be removed from the chatting group.
+8) The group survives until no user in the group.
 
 ## 3. Drawing Board  
 ### 3.1 Introduction  
@@ -103,18 +102,18 @@ If you are familiar with C\# and ASP.NET, it is really easy to develop such real
 ### 6.2 Low Bandwidth Consumption  
 Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
 ### 6.3 Cross-platform(For customers/students)  
-This player is web based, no installation on client’s machine is required. Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
-6.4 Cross-platform(For developer)  
+This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
+### 6.4 Cross-platform(For developer)  
 For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with our existing Flash and Silverlight player, this course player is simple and easy to maintain, since there is only one copy of the code.  
-### 6.4 Reusable  
+### 6.5 Reusable  
 The core module(COL.Core) of this application is shared with [Xamarin Course Player](http://jojozhuang.github.io/portfolio/2016/01/25/Xamarin-Course-Player/), which is another portfolio of mine. It is a cross-platform solution for mobile development.
 ![image14](/assets/courseplayersignalr/image14.png)  
 
 This means, we have the cross-platform solution for developing applications with only using C\#.  
-First, use Xamarin to develop mobile apps for iOS and Android Platform.  
-Second, use ASP.NET and SignalR to develop web application for different web browsers and platforms.  
-Technically, the core module can be shared and reused by mobile and web application, even, it can be shared with winform applications.  
-Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently. However, the business logics are same, which can be reused.  
+* First, use Xamarin to develop mobile apps for iOS and Android Platform.  
+* Second, use ASP.NET and SignalR to develop web application for different web browsers and platforms.  
+* Technically, the core module can be shared and reused by mobile and web application, even, it can be shared with winform applications.  
+* Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently. However, the business logics are same, which can be reused.  
 
-## 6. Source Code Files
+## 7. Source Code Files
 * [Source code files of Course Player (SignalR) on Github](https://github.com/jojozhuang/Study/tree/master/DotNet/SignalR)
