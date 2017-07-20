@@ -58,20 +58,20 @@ Note, the IP address here is internal IP. When using putty to connect EC2 remote
 ## 3.  Setup Node.js environment in EC2 Instance
 ### 3.1 Update your EC2 Amazon Linux  
 
-```
+```sh
 sudo yum update
 ```
 
 ### 3.2 Install GCC  
 
-```
+```sh
 sudo yum install gcc-c++ make
 sudo yum install openssl-devel
 ```
 
 ### 3.3 Install Node.js
 
-```
+```sh
 sudo yum install git
 git clone git://github.com/nodejs/node
 cd node
@@ -82,7 +82,7 @@ sudo make install
 
 ### 3.4 Add node folder to secure\_path  
 
-```
+```sh
 sudo su
 nano /etc/sudoers
 ```
@@ -91,7 +91,7 @@ Append :/usr/local/bin to the end of secure\_path
 ![image15](/public/pics/2016-03-16/image15.png)  
 ### 3.5 Install npm  
 
-```
+```sh
 git clone https://github.com/npm/npm
 cd npm
 sudo make install
@@ -100,19 +100,19 @@ sudo make install
 ## 4. Create simple node app and start Node server  
 ### 4.1 Create folder ‘site’  
 
-```
+```sh
 mkdir site
 ```
 
 ### 4.2 Create file ‘server.js’
 
-```
+```sh
 nano server.js
 ```
 
 Apend the following content to the file, save and exit.
 
-```
+```javascript
 var http = require('http');
 
 function onRequest(request, response) {
@@ -130,7 +130,7 @@ console.log("The server is running at 80...");
 ### 4.3 Redirect Port  
 You cannot make node server listen to port 80. Run the following command to redirect requests from port 80 of EC2 server to port 8080 of our Node server. You must execute it in root role. And it needs to be reset each time your EC2 instnace is restarted.
 
-```
+```sh
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
 ```
 
@@ -156,7 +156,7 @@ Refresh the folder in putty, the new folder exits.
 ![image26](/public/pics/2016-03-16/image26.png)  
 ### 5.3 Go into the folder, run the node application  
 
-```
+```sh
 npm install
 npm start
 ```
@@ -196,13 +196,13 @@ Sometime, npm itself doesn’t work properly.
 ![image31](/public/pics/2016-03-16/image31.png)  
 Then we have to uninstall and install it again.
 
-```
+```sh
 sudo npm uninstall npm -g
 ```
 
 If it doesn’t work, go the ‘npm’ folder, run:  
 
-```
+```sh
 sudo make uninstall
 ```
 

@@ -16,7 +16,7 @@ You need to restart IIS after changing the configuration.
 
 In addition, if you are using Visual Studio which takes IIS Express for hosting and debugging, you can add mimeMap section to the web.config file of your website project.
 
-```
+```xml
 <system.webServer>
   <staticContent>
     <mimeMap fileExtension=".mp4" mimeType="video/mp4" />

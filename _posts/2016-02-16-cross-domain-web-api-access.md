@@ -17,7 +17,7 @@ After searching through Google, I found Cross-Origin Resource Sharing(CORS) is t
 Here is the solution I found finally.
 ### 1. For ASP.NET Web API, add 'EnableCors' attribute to the controller.
 
-```
+```c#
 [EnableCors(origins: "http://localhost:3366, http://localhost:3000", headers: "*", methods: "*", SupportsCredentials = true)]
 public class VideoController : ApiController
 {
@@ -26,7 +26,7 @@ public class VideoController : ApiController
 
 ### 2. In react, we use superagent to send Ajax request. Just add 'withCredentials()' to the request.
 
-```
+```javascript
 request
       .get(url)
       .withCredentials()
