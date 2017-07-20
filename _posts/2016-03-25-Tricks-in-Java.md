@@ -12,6 +12,18 @@ categories:
 ## 1. Overflow when assigning Integer value.  
 As we all know, the range of Integer in java is from -2147483648(-2^31) to 2147483647(2^31 - 1). And we use constant Integer.MIN_VALUE to represent -2147483648, and Integer.MAX_VALUE to represent 2147483647. When trying to increment the max value or decrement the min value, overflow occurs. That is
 
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+
+sdfsdf
+
 ```
 Integer.MAX_VALUE + 1 = Integer.MIN_VALUE;
 Integer.MIN_VALUE - 1 = Integer.MAX_VALUE;
@@ -24,15 +36,7 @@ highlighttesting
 long var1 = Integer.MAX_VALUE + 1; //var1 = -2147483648
 {% endhighlight %}
 
-{% highlight ruby linenos %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
+
 
 You will get var1 = -2147483648 instead of 2147483648. The following statement doesn't work, either.
 
