@@ -29,24 +29,29 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB version.  
   2) Install  
   In terminal, navigate to the folder which contains the downloaded file, run  
-  ```sh
-  sudo dpkg -i elasticsearch-5.5.0.deb
-  ```
+
+```sh
+sudo dpkg -i elasticsearch-5.5.0.deb
+```
+
   When finished, Elasticsearch is installed into /usr/share/elasticsearch/. And the configuration files are in /etc/elasticsearch.  
   You can edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot access /etc/elasticsearch, run
-  ```sh
-  sudo chmod -R 755 /etc/elasticsearch
-  ```
+
+```shell
+sudo chmod -R 755 /etc/elasticsearch
+```
+
   3) Commands for ES  
-  ```sh
-  sudo service elasticsearch start   //start elasticsearch  
-  sudo service elasticsearch status  //check status  
-  sudo service elasticsearch stop    //stop elasticsearch
-  ```
+```shell
+sudo service elasticsearch start   //start elasticsearch  
+sudo service elasticsearch status  //check status  
+sudo service elasticsearch stop    //stop elasticsearch
+```
   4) Start ES and test through curl
-  ```sh
-  curl "http://localhost:9200"
-  ```
+
+```bash
+curl "http://localhost:9200"
+```
 
   or open the link [http://localhost:9200](http://localhost:9200)in web browser.  
   Either way, you should see some json strings returned from ES.  
