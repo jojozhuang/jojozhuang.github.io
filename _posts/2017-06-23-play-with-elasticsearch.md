@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Elastic Search (Usage)"
+title: "Play with Elasticsearch"
 date: 2017-06-23
 categories:
 - blog

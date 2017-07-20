@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Deploy ASP.NET/MVC Application to Azure with SQL DB"
+title: "Deploy ASP.NET MVC Application to Azure"
 date: 2016-01-28
 categories:
 - blog

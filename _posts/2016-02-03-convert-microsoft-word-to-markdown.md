@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Convert Word to Markdown"
+title: "Convert Microsoft Word to Markdown"
 date: 2016-02-03
 categories:
 - blog

@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Johnny's Website Launched"
+title: "My Website Launched"
 date: 2016-01-20
 categories:
 - blog

@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Linux Base Knowledge"
+title: "Basic Knowledge of Linux"
 date: 2016-08-26
 categories:
 - blog
