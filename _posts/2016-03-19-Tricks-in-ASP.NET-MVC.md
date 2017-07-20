@@ -25,7 +25,7 @@ To solve this issue, you have to declare a route object to wrap the url (eg. new
 ![image3](/public/pics/2016-03-19/image3.png)  
 
 ## 2. Error message in ValidationSummary is not cleared after validation passed.  
-Generally, ValidationSummary displays error message when there is any invalid input. However, here the issue is, error messages are still there even if all inputs are valid. This issue occurs when using Ajax.BeginForm and Html.ValidationSummary together. In my page, I use Ajax to send out request and update the page content after clicking the 'save' button. There is no navigation in the submit event. We are always in the same page.  
+Generally, ValidationSummary displays error message when there is any invalid input. However, there is one issue that error messages are still there even if all inputs are valid. This issue occurs when using Ajax.BeginForm and Html.ValidationSummary together. In my page, I use Ajax to send out request and update the page content after clicking the 'save' button. There is no navigation in the submit event. We are always in the same page.  
 ![image4](/public/pics/2016-03-19/image4.png)
 
 To solve the issue, we need to manually clear the content in ValidationSummary.  

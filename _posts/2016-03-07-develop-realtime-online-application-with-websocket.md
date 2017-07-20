@@ -7,16 +7,18 @@ categories:
 - blog
 ---
 
-[WebSocket](https://en.wikipedia.org/wiki/WebSocket) is a protocol which enables so-called full-duplex communications. It comes along with HTML5. The protocol itself is not mature, still under developing. Two main features of WebSocket: double direction communication and broadcasting.
+> [WebSocket](https://en.wikipedia.org/wiki/WebSocket) is a protocol which enables so-called full-duplex communications. It comes along with HTML5. The protocol itself is not mature, still under developing. Two main features of WebSocket:
+* double direction communication
+* broadcasting.
 
-For most of web applications, we use HTTP protocol to communicate between server and client. One problem is, in most cases, client sends request to server, but server is not able to send information to client at a specific time. Because HTTP is stateless, server can't response without request from client. Generally, we use the 'Pull' mode to let web browser send request regularly to check whether there is any new update on the server side. This approach wastes lots of efforts especially when nothing needs to be updated. How would be great if we can implement the 'Push' mode, let server to communicate with client by intention?! The answer is WebSocket.
+## 1. Background
+For most of web applications, we use HTTP protocol to communicate between server and client. One problem is, in most cases, client sends request to server, but server is not able to send information to client at a specific time. Because HTTP is stateless, server can't response without request from client. Generally, we use the 'Pull' mode to let web browser send request regularly to check whether there is any new update on the server side. This approach wastes lots of bandwidth especially when nothing needs to be updated. How would be great if we can implement the 'Push' mode, let server to communicate with client by intention?! The answer is WebSocket.
 
-There are many implementations of WebSocket in different platforms. Here, I will introduce [Socket.IO](http://socket.io/) for node.js, [System.Web.WebSockets](https://msdn.microsoft.com/en-us/hh969243.aspx) in ASP.NET and [SignalR](http://signalr.net/).
+There are many implementations of WebSocket in different platforms. Here, I will introduce.
+ * [Socket.IO](http://socket.io/) for node.js, * [System.Web.WebSockets](https://msdn.microsoft.com/en-us/hh969243.aspx) in ASP.NET and * [SignalR](http://signalr.net/).
 
-## Socket.IO
-
-### Full-Duplex
-
+## 2. Socket.IO
+### 2.1 Full-Duplex
 Create a file named server.js. And add the following code. The timer invokes sockets.send method every one second.  
 
 ```
@@ -60,9 +62,8 @@ Create index.html with following codes.
 
 Run it, you will get the below result. The time will be updated for every one second.  
 ![Server Time](/public/pics/2016-03-07/socketiotimer.png "Server Time")  
-You can get the sample code from [my github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO).  
 
-### Broadcasting
+### 2.2 Broadcasting
 Another example of Socket.IO is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/).
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
@@ -77,7 +78,7 @@ Same in iPhone.
 
 Apart from the original source code, I made some changes, you can get it from [here](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket).  
 
-## WebSockets in ASP.NET
+## 3. WebSockets in ASP.NET
 WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket. Here is the [sample](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) which shows how to use it.  
 First user comes in, says 'Hi'.  
 ![MS WebSocket1](/public/pics/2016-03-07/mswebsocket1.png "MS WebSocket1")  
@@ -85,10 +86,14 @@ Second user comes in(another page), says 'I'm here'.
 ![MS WebSocket2](/public/pics/2016-03-07/mswebsocket2.png "MS WebSocket2")  
 Back to the page of first user.
 ![MS WebSocket3](/public/pics/2016-03-07/mswebsocket3.png "MS WebSocket3")  
-You can also download the sample from [my github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET). I rebuilt the sample, make sure it can run properly.
 
-## SignalR
+## 4. SignalR
 SignalR is popular and it can run in Windows7. The official tutorial is in [asp.net website](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
 
 This sample implements the online chatting function.  
 ![SignalR](/public/pics/2016-03-07/signalrsample.png "SignalR")  
+
+## 5. Source Code Files
+* [Source code files of SocketIO Sample on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO)
+* [Source code files of WebSockets Sample on Github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET)
+* [Source code files of SignalR Sample on MSDN](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9)

@@ -20,15 +20,16 @@ Technically, it simulates your manual operations on the web pages or flash, send
 
 ## 2. Main Screen
 ![kaixin](/assets/kaixin/full.png "kaixin")  
+
 ## 3. Steps to Use this Tool
-## 3.1 Add kaixin001 Account
+## 3.1 Add Account
 In Account Explorer, add your kaixin001 account.  
 ## 3.2 Create Task
-In Task Explorer, create a new task, choose the functions and operations you need.  
+In Task Explorer, create a new task, add accounts, choose the functions and operations you need.  
 ![task](/assets/kaixin/task.png "task")
 ## 3.3 Run Task
-Right-click on the task and run.  
-During execution, you can check the logs to see whether it works properly.
+Right-click on the task and run. During it is running, you can check the logs to see whether it works properly.
 ![running](/assets/kaixin/running.png "running")  
-## 3. Source Code Files
+
+## 4. Source Code Files
 * [Source code files of Kaixin Assistant on Github](https://github.com/jojozhuang/Projects/tree/master/KaixinAssistant/Src)

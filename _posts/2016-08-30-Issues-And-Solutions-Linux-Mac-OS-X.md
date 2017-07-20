@@ -15,7 +15,6 @@ categories:
 $ ls
 -bash: ls: command not found
 ```
-[http://superuser.com/questions/170332/ive-broken-my-bash-profile](http://superuser.com/questions/170332/ive-broken-my-bash-profile)
 
 Use full paths to the commands until fix the PATH:
 
@@ -24,6 +23,9 @@ $ /bin/ls
 $ /usr/bin/vi ~/.bash_profile
 ```
 
+Reference:
+* [I've broken my .bash_profile](http://superuser.com/questions/170332/ive-broken-my-bash-profile)
+
 ## 2. Run Atom in command line on MAC OS X.
 execute following script
 
@@ -31,7 +33,8 @@ execute following script
 sudo ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 ```
 
-reference from [overflow](http://stackoverflow.com/questions/22390709/open-atom-editor-from-command-line)
+Reference:
+* [How to open Atom editor from command line in OS X?](http://stackoverflow.com/questions/22390709/open-atom-editor-from-command-line)
 
 ## 3. Remove mount
 execute the following script
@@ -40,4 +43,5 @@ execute the following script
 sudo umount -f /sapmnt/rc
 ```
 
-reference from [http://www.thegeekstuff.com/2013/01/mount-umount-examples/?utm_source=tuicool](http://www.thegeekstuff.com/2013/01/mount-umount-examples/?utm_source=tuicool)
+Reference:
+* [How to Mount and Unmount Filesystem / Partition in Linux ](http://www.thegeekstuff.com/2013/01/mount-umount-examples/?utm_source=tuicool)

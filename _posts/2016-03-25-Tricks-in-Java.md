@@ -74,5 +74,5 @@ I update my code to add 0.0 at the end of the line to make sure no negative zero
 ```
 slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
 ```
-
-Refer to posting [How can a primitive float value be -0.0? What does that mean?](http://stackoverflow.com/questions/6724031/how-can-a-primitive-float-value-be-0-0-what-does-that-mean) on stackoverflow.
+### 2.3 Reference
+* [How can a primitive float value be -0.0? What does that mean?](http://stackoverflow.com/questions/6724031/how-can-a-primitive-float-value-be-0-0-what-does-that-mean)
