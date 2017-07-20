@@ -18,7 +18,7 @@ $ ls
 
 Use full paths to the commands until fix the PATH:
 
-```
+```sh
 $ /bin/ls
 $ /usr/bin/vi ~/.bash_profile
 ```
@@ -29,7 +29,7 @@ Reference:
 ## 2. Run Atom in command line on MAC OS X.
 execute following script
 
-```
+```sh
 sudo ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 ```
 
@@ -39,7 +39,7 @@ Reference:
 ## 3. Remove mount
 execute the following script
 
-```
+```sh
 sudo umount -f /sapmnt/rc
 ```
 
