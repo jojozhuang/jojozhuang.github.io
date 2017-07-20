@@ -41,7 +41,8 @@ After saving, reopen the login page and you will see the system default language
 Technically, the structure of this application is divided into 3 layers:
 * User Interface(WebUI)
 * Business Logic(BLL)
-* Data Access(DAL)
+* Data Access(DAL)  
+
 The high level layer calls the low layer to communicate and retrieve data. The Object Model(OM) contains objects definition. The object can be an administrator, a blog post or a piece of website settings.  
 ![Project Structure](/assets/threetiercms/3layer.png "Project Structure")  
 
