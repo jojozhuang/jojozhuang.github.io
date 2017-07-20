@@ -50,7 +50,7 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
 
   or open the link [http://localhost:9200](http://localhost:9200)in web browser.  
   Either way, you should see some json strings returned from ES.  
-```javascript
+{% highlight javascript %}
   {
     "name" : "kYY1YjJ",
     "cluster_name" : "elasticsearch",
@@ -64,7 +64,7 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
     },
     "tagline" : "You Know, for Search"
   }
-```
+{% endhighlight %}
 
 ### 2.2 Install Kibana  
   1) Download Kibana  
