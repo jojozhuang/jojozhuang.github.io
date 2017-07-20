@@ -1,8 +1,5 @@
-highlighter: rouge
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+highlighter: rouge
 
 name: Rong Zhuang
 
@@ -26,3 +23,6 @@ pages_list:
   Course: '/course'
   About: '/about'
   Feed: '/atom.xml'
+
+#https://sacha.me/articles/jekyll-rouge/
+#https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
