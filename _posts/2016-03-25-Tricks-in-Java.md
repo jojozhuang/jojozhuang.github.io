@@ -19,9 +19,11 @@ Integer.MIN_VALUE - 1 = Integer.MAX_VALUE;
 
 If you try to assign Integer.MAX_VALUE + 1 to a long type variable, the result may be not what you want.
 
-```
+highlighttesting
+{% highlight java %}
 long var1 = Integer.MAX_VALUE + 1; //var1 = -2147483648
-```
+{% endhighlight %}
+
 You will get var1 = -2147483648 instead of 2147483648. The following statement doesn't work, either.
 
 ```
