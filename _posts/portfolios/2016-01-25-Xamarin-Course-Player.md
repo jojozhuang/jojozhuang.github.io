@@ -48,5 +48,6 @@ Class diagram shows the design of this app based on Xamarin framework.
 
 ## 6. Source Code Files
 * [Source code files of Course Player on Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone)
+
 ## 7. Document
 * [Xamarin Research Report](http://jojozhuang.github.io/public/docs/xamarin_research.pdf)
