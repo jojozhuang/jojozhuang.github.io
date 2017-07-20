@@ -31,7 +31,7 @@ Each course player, no matter whether is online application or mobile app, it al
 In reality, the video is recorded through camera in the classroom when the instructor is teaching. Each video lasts 3 and half hours. In this app, a slider control is used to simulate the playing progress of the video.  
 ### 4.2 Screenshot
 Screenshot is the PPT which is projected by the teacher in the classroom. In this app, each screenshot consists of 8x8 = 64 sections, which finally aggregates as a single image on a canvas control. It is refreshed synchronously with the time line(playing progress), and only the different sections will be drawn again.   
-### 4.3 whiteboard
+### 4.3 Whiteboard
 Whiteboard is the drawings created by instructor during his/her teaching. The whiteboard is also drawn on a canvas. The difference with screenshot is, the whiteboard is not made up of images but lines. These lines are drawn according to the points flow captured from the instructor. Every action(pen down, pen move, pen up and erase) on the whiteboard is stored into a data file, and later it is rebuilt here, in this whiteboard canvas.
 ![iosapp](/assets/xamarinplayer/iosapp.png "iosapp")  
 
@@ -48,3 +48,5 @@ Class diagram shows the design of this app based on Xamarin framework.
 
 ## 6. Source Code Files
 * [Source code files of Course Player on Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone)
+## 7. Document
+* [Xamarin Research Report](http://jojozhuang.github.io/public/docs/xamarin_research.pdf)

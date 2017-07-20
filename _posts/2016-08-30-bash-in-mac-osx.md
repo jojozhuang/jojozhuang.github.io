@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Common Issues on Linux and Mac OS X"
+title: "Bash in Mac OSX"
 date: 2016-08-30
 categories:
 - blog
