@@ -11,7 +11,7 @@ categories:
 
 ## 1. Most of the bash commands are not working, .bash_profile or .bashrc is broken.
 
-```
+```bash
 $ ls
 -bash: ls: command not found
 ```
