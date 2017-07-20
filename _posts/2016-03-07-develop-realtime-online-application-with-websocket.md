@@ -23,7 +23,7 @@ There are many implementations of WebSocket. In this article, I will introduce 3
 ### 2.1 Full-Duplex
 Create a file named server.js. And add the following code. The timer invokes sockets.send method every one second.  
 
-```
+```javascript
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
@@ -44,7 +44,7 @@ app.listen(8080);
 
 Create index.html with following codes.  
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
