@@ -11,9 +11,9 @@ After I setup [this personal website](http://jojozhuang.github.io/) on github, I
 
 I still prefer Microsoft's Office Word as my favorite text editor. I wonder whether there is a tool to convert Word format(.docx) to markdown format(.md). It's not hard to find such tool [Writage](http://www.writage.com/). Actually, it is a plugin for Office Word.
 
-How it works? You can edit docx file as usual, and save it to markdown(.md) file. The styles in the word will be kept in markdown file. So simple and easy to use. Another reason why I like it so much is that it can export images with the same size as in Word. This saves me lots of time to edit the pictures.
-
 How to get it? Download [Writage](http://www.writage.com/) from [http://www.writage.com/](http://www.writage.com/). Before install it, you need to install [Pandoc](http://pandoc.org/installing.html) first.
+
+How it works? You can edit docx file as usual, and save it to markdown(.md) file. The styles in the word will be kept in markdown file. So simple and easy to use. Another reason why I like it so much is that it can export images with the same size as in Word. This saves me lots of time to edit the pictures.
 
 Besides, [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) shows how to use Markdown to create your document.
 

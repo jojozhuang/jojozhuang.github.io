@@ -14,8 +14,10 @@ categories:
 ## 1. Background
 For most of web applications, we use HTTP protocol to communicate between server and client. One problem is, in most cases, client sends request to server, but server is not able to send information to client at a specific time. Because HTTP is stateless, server can't response without request from client. Generally, we use the 'Pull' mode to let web browser send request regularly to check whether there is any new update on the server side. This approach wastes lots of bandwidth especially when nothing needs to be updated. How would be great if we can implement the 'Push' mode, let server to communicate with client by intention?! The answer is WebSocket.
 
-There are many implementations of WebSocket in different platforms. Here, I will introduce.
- * [Socket.IO](http://socket.io/) for node.js, * [System.Web.WebSockets](https://msdn.microsoft.com/en-us/hh969243.aspx) in ASP.NET and * [SignalR](http://signalr.net/).
+There are many implementations of WebSocket. In this article, I will introduce 3 of them.
+ * [Socket.IO](http://socket.io/) for node.js
+ * [System.Web.WebSockets](https://msdn.microsoft.com/en-us/hh969243.aspx) in ASP.NET
+ * [SignalR](http://signalr.net/)
 
 ## 2. Socket.IO
 ### 2.1 Full-Duplex
@@ -76,24 +78,26 @@ Same in iPad.
 Same in iPhone.  
 ![iPhone](/public/pics/2016-03-07/socketiopaint4.png)  
 
-Apart from the original source code, I made some changes, you can get it from [here](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket).  
-
 ## 3. WebSockets in ASP.NET
-WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket. Here is the [sample](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) which shows how to use it.  
-First user comes in, says 'Hi'.  
+WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket.  
+Here is the article shows how to use it.
+* [Building an HTML5 Web Sockets Server with ASP.NET 4.5](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) .  
+
+### 3.1 First user comes in, says 'Hi'.  
 ![MS WebSocket1](/public/pics/2016-03-07/mswebsocket1.png "MS WebSocket1")  
-Second user comes in(another page), says 'I'm here'.  
+### 3.2 Second user comes in(another page), says 'I'm here'.  
 ![MS WebSocket2](/public/pics/2016-03-07/mswebsocket2.png "MS WebSocket2")  
-Back to the page of first user.
+### 3.3 Back to the page of first user.
 ![MS WebSocket3](/public/pics/2016-03-07/mswebsocket3.png "MS WebSocket3")  
 
 ## 4. SignalR
-SignalR is popular and it can run in Windows7. The official tutorial is in [asp.net website](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
+SignalR is popular and it can run in Windows7. The official tutorial is [Tutorial: Getting Started with SignalR 2](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
 
 This sample implements the online chatting function.  
 ![SignalR](/public/pics/2016-03-07/signalrsample.png "SignalR")  
 
 ## 5. Source Code Files
-* [Source code files of SocketIO Sample on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO)
+* [Source code files of SocketIO Sample1 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO)
+* [Source code files of SocketIO Sample2 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket)
 * [Source code files of WebSockets Sample on Github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET)
 * [Source code files of SignalR Sample on MSDN](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9)

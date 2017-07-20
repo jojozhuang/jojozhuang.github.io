@@ -20,6 +20,7 @@ There are totally 5 steps:
 ## 1. Create Web App in Azure  
 ### 1.1 Login Azure Portal  
 * [https://portal.azure.com/](https://portal.azure.com/)  
+
 ### 1.2 Create Resource Group  
 ![image1](/public/pics/2016-01-28/image1.png)  
 ### 1.3 Create new Web APP  

@@ -19,8 +19,9 @@ There are mainly 5 steps:
 
 ## 1. Create EC2 Instance  
 ### 1.1 Login to Amazon EC2  
-* [http://aws.amazon.com/ec2/](http://aws.amazon.com/ec2/)  
 Sign up ‘Amazons free micro instance of EC2’ if you have no AWS Account yet.  
+* [http://aws.amazon.com/ec2/](http://aws.amazon.com/ec2/)  
+
 ### 1.2 Create Instance  
 ![image1](/public/pics/2016-03-16/image1.png)  
 ![image2](/public/pics/2016-03-16/image2.png)  
@@ -142,6 +143,7 @@ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
 ## 5. Deploy Local Node.js application to EC2 Instance  
 ### 5.1 Install CyberDuck  
 * [https://cyberduck.io/?l=en](https://cyberduck.io/?l=en)  
+
 ### 5.2 Launch CyberDuck and Upload
 ![image20](/public/pics/2016-03-16/image20.png)  
 ![image21](/public/pics/2016-03-16/image21.png)  
