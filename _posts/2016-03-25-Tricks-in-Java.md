@@ -24,6 +24,16 @@ highlighttesting
 long var1 = Integer.MAX_VALUE + 1; //var1 = -2147483648
 {% endhighlight %}
 
+{% highlight ruby linenos %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+
 You will get var1 = -2147483648 instead of 2147483648. The following statement doesn't work, either.
 
 ```
