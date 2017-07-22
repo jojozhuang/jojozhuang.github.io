@@ -9,14 +9,12 @@ categories:
 
 > Notes for Elastic Search.
 
-## 1. Links
-* Elastic Search
-[http://localhost:9200](http://localhost:9200)
-* Kibana->Dev Tools
-[http://192.168.56.101:5601](http://192.168.56.101:5601)
+## 1. Links on Local ES Setup
+* Elastic Search -> [http://localhost:9200](http://localhost:9200)
+* Kibana->Dev Tools -> [http://192.168.56.101:5601](http://192.168.56.101:5601)
 
 ## 2. Usage
-* Add Data
+### 2.1 Create
 ```javascript
 POST shop/customer/1
 {
@@ -41,6 +39,7 @@ Response:
   "created": true
 }
 ```
+
 Create another two user
 ```javascript
 POST shop/customer/2
@@ -57,7 +56,8 @@ POST shop/customer/3
   "level": "Bronze"
 }
 ```
-* Get Data
+
+### 2.2 Get
 ```javascript
 GET shop/customer/1
 ```
@@ -76,7 +76,8 @@ Response:
   }
 }
 ```
-* Update Data
+
+### 2.3 Update
 ```javascript
 PUT shop/customer/1
 {
@@ -101,7 +102,7 @@ Response:
   "created": false
 }
 ```
-* Delete Data
+### 2.4 Delete
 ```javascript
 DELETE shop/customer/3
 ```
@@ -134,9 +135,9 @@ Response:
   "found": false
 }
 ```
-* Search Data
+### 2.5 Search
+a) Search all customers
 ```javascript
-// Search all customers
 GET /shop/customer/_search
 ```
 Response:
@@ -179,8 +180,8 @@ Response:
   }
 }
 ```
+a) Search the customer named 'Johnny'
 ```javascript
-// Search the customer named 'Johnny'
 GET /shop/customer/_search?q=name:Johnny
 ```
 Response:
@@ -212,8 +213,11 @@ Response:
   }
 }
 ```
+
 ## 3. Conclusion
+Query is powerful and complex.
 
 ## 4. Reference
 [https://www.tutorialspoint.com/elasticsearch/](https://www.tutorialspoint.com/elasticsearch/)
+[https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)
 [https://blog.coding.net/blog/elastic-search](https://blog.coding.net/blog/elastic-search)  
