@@ -12,6 +12,7 @@ categories:
 ## 1. Basic
 ### 1.1 What is Elastic Search?  
   * [https://www.elastic.co](https://www.elastic.co)  
+  * [http://www.elasticsearchtutorial.com/](http://www.elasticsearchtutorial.com/)
 
 ### 1.2  Kibana, Elastic Cloud  
   * [https://www.elastic.co/products/kibana](https://www.elastic.co/products/kibana)
@@ -53,7 +54,7 @@ sudo service elasticsearch stop    //stop elasticsearch
 curl "http://localhost:9200"
 ```
 
-  or open the link [http://localhost:9200](http://localhost:9200)in web browser.  
+  or open the link [http://localhost:9200](http://localhost:9200) in web browser.  
   Either way, you should see some json strings returned from ES.  
 ```javascript
   {
