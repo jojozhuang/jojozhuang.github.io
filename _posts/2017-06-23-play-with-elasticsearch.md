@@ -218,6 +218,6 @@ Response:
 Query is powerful and complex.
 
 ## 4. Reference
-[https://www.tutorialspoint.com/elasticsearch/](https://www.tutorialspoint.com/elasticsearch/)
-[https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)
-[https://blog.coding.net/blog/elastic-search](https://blog.coding.net/blog/elastic-search)  
+* [https://www.tutorialspoint.com/elasticsearch/](https://www.tutorialspoint.com/elasticsearch/)
+* [https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)
+* [https://blog.coding.net/blog/elastic-search](https://blog.coding.net/blog/elastic-search)  
