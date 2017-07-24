@@ -77,3 +77,40 @@ slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
 ```
 ### 2.3 Reference
 * [How can a primitive float value be -0.0? What does that mean?](http://stackoverflow.com/questions/6724031/how-can-a-primitive-float-value-be-0-0-what-does-that-mean)
+
+## 3. Difference between i++ and ++i in a loop?
+i++ => add 1 to a, returns the old value.
+++i => add 1 to a, returns the new value.
+```java
+String[] items = {"a","b","c","d"};
+int i = 0;
+for (String item : items) {
+		System.out.print(++i);
+}
+System.out.println();
+
+i = 0;
+for (String item : items) {
+		System.out.print(i++);
+}
+System.out.println();
+
+//output
+1234
+0123
+```
+
+The below two loops print same output
+```java
+for (int i = 0; i < 5; i++) {
+	System.out.print(i);
+}
+System.out.println();
+for (int i = 0; i < 5; ++i) {
+	System.out.print(i);
+}
+
+//output
+01234
+01234
+```

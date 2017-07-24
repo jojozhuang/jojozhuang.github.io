@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Play with Elasticsearch"
+title: "Basic Queries in Elasticsearch"
 date: 2017-06-23
 categories:
 - blog
