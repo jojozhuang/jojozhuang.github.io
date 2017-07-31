@@ -14,16 +14,14 @@ categories:
 * Kibana->Dev Tools -> [http://192.168.56.101:5601](http://192.168.56.101:5601)
 
 ## 2. Inverted Index
-https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html
+* https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html
 tokenization
 normalization
 
 ## 3. Dive to DSL
 DSL: Domain-specific Language
 
-The following queries are based on the sample employee data, created [here](https://www.elastic.co/guide/en/elasticsearch/guide/current/_indexing_employee_documents.html)
-
-And tutorial start from [here](https://www.elastic.co/guide/en/elasticsearch/guide/current/_search_with_query_dsl.html)
+The following queries are based on the sample employee data, created by [Indexing Employee Document](https://www.elastic.co/guide/en/elasticsearch/guide/current/_indexing_employee_documents.html) from ES Official Website, started from [Search with Query DSL](https://www.elastic.co/guide/en/elasticsearch/guide/current/_search_with_query_dsl.html).
 
 ### Query-string Search
 Search for employees who have “Smith” in their last name.

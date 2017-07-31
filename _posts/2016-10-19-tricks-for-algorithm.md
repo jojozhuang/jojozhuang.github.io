@@ -9,7 +9,7 @@ categories:
 > Useful tricks for algorithm, Java.
 
 ## 1. Templates
-### Define Customized Comparator
+### 1.1 Define Customized Comparator
 ```java
 private class IntervalComparator implements Comparator<Interval> {
     public int compare(Interval i1, Interval i2) {
@@ -18,7 +18,7 @@ private class IntervalComparator implements Comparator<Interval> {
 }
 ```
 
-### Binary Search
+### 1.2 Binary Search
 ```java
 int start = 0;
 int end = nums.length - 1;
@@ -35,7 +35,7 @@ while (start + 1 < end) { // avoid infinite loop, need to check nums[start] and 
 }
 ```
 
-### Subset
+### 1.3 Subset
 ```java
 public List<List<Integer>> subsets(int[] nums) {
     List<List<Integer>> res = new ArrayList<List<Integer>>();
@@ -61,7 +61,7 @@ private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>>
 }
 ```
 
-### Generate Unique Path for Each TreeNode(Preorder)
+### 1.4 Generate Unique Path for Each TreeNode(Preorder)
 Each node has a unique path in preoder/postorder/inorder.
 ```java
 // generate preoder key of each node
@@ -88,7 +88,7 @@ Based on different requirements, you can add more parameters accordingly and upd
 
 ## 2. Array and Strings
 
-### Partition of Quick Sort
+### 2.1 Partition of Quick Sort
 ```java
 // one way
 private int partition(int[] nums, int start, int end) {
@@ -109,7 +109,7 @@ private int partition(int[] nums, int start, int end) {
     return pivot;
 }
 ```
-### Rotate Array or String by Three Steps
+### 2.2 Rotate Array or String by Three Steps
 Rotate an array of n elements to the right by k steps.
 ```java
 reverse(nums, 0, nums.length - k - 1);
@@ -117,7 +117,7 @@ reverse(nums, nums.length - k, nums.length - 1);
 reverse(nums, 0, nums.length - 1);
 ```
 
-### Sort Array by Another Array's Value.
+### 2.3 Sort Array by Another Array's Value.
 ```java
 Integer[] index = new Integer[nums.length];
 for(int i = 0; i < nums.length; i++) {
@@ -133,7 +133,7 @@ Arrays.sort(index, new Comparator<Integer>() {
 
 Refer to Leetcode 506, lintcode 612.
 
-### Use An Integer Instead of An Array to Store States
+### 2.4 Use An Integer Instead of An Array to Store States
 Implement an algorithm to determine if a string has all unique characters.
 What if you can not use additional data structures?
 Assume there are only lower case letters from 'a' to 'z'.
@@ -157,7 +157,7 @@ public boolean isUniqueChars(String str) {
 }
 ```
 ## 3. Linked List
-### Reverse
+### 3.1 Reverse
 ```java
 public ListNode reverseList(ListNode head) {
     ListNode prev = null;
@@ -175,15 +175,59 @@ public ListNode reverseList(ListNode head) {
 * Dummy Node
 * Fast and Slow Point(LeetCode 19)
 
-## 4. Bit Manipulation
+## 4. Tree
+### 4.1 Create TreeNode With Level-Order String Array
+```java
+public static TreeNode createInstance(String[] arr) {
+    if(arr == null || arr.length == 0) {
+        return null;         
+    }
+
+    Queue<TreeNode> queueNode = new LinkedList<>();
+
+    TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
+    queueNode.offer(root);
+
+    int index = 0;
+    while (index < arr.length - 1) {
+        TreeNode node = queueNode.poll();
+        if (node != null) {
+            String str = arr[++index];
+            if (!str.equals("#")) {
+                node.left = new TreeNode(Integer.parseInt(str));
+                queueNode.add(node.left);
+            }
+            str = arr[++index];
+            if (!str.equals("#")) {
+                node.right = new TreeNode(Integer.parseInt(str));
+                queueNode.add(node.right);
+            }             
+        }
+    }
+
+    return root;
+}
+```
+### 4.2 Binary Tree Traversal
+* Preorder -> Recursion, Stack(Add right first, then left node to stack)
+* Inorder -> Recursion, Stack(Go to the deepest left node)
+* Postorder -> Recursion, Stack(Need to set node.left = null)
+* Level -> Queue
+
+For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
+```java
+TreeNode root = TreeNode.createInstance(new String[]{"1","#","3"});
+```
+
+## 5. Bit Manipulation
 ```java
 n & (n-1) == 0; //check if an integer is power of two
 x &= -x;        //get last 1
 ```
 
-## 5. Graph
+## 6. Graph
 
-### Union find
+### 6.1 Union find
 ```java
 // find root
 private int find(int[] parent, int node) {
@@ -201,9 +245,9 @@ private void union(int[] parent, int node1, int node2) {
 }
 ```
 
-## 6. Others
+## 7. Others
 
-### Remove Duplicated Lists
+### 7.1 Remove Duplicated Lists
 ```java
 List<List<Integer>> res = new ArrayList<List<Integer>>();
 ... // res contains duplicated list after some operation
