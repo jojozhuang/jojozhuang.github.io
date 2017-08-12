@@ -114,3 +114,41 @@ for (int i = 0; i < 5; ++i) {
 01234
 01234
 ```
+
+## 4. Is Java “pass-by-reference” or “pass-by-value”?
+Everything in Java is pass-by-value. For class object, it pass its address to method.
+```java
+public class Main{
+     public static void main(String[] args){
+         Foo f = new Foo("f");
+         changeReference(f); // It won't change the reference!
+         System.out.println(f.val); // Prints 'f'
+         modifyReference(f); // It will modify the object that the reference variable "f" refers to!
+         System.out.println(f.val); // Prints 'c'
+         setToNull(f); // f wont't be null
+         System.out.println(f.val); // Still prints 'c'
+     }
+     public static void changeReference(Foo a){
+          Foo b = new Foo("b");
+          a = b;
+     }
+     public static void modifyReference(Foo c){
+          c.setAttribute("c");
+     }
+     public static void setToNull(Foo d){
+          d = null;
+     }
+     private static class Foo {
+        public String val = "";
+        public Foo (String val) {
+            this.val = val;
+        }
+        public void setAttribute(String val) {
+            this.val = val;
+        }
+    }
+}
+```
+### 4.2 Reference
+Search the same code, there is an diagram explains why.
+https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value

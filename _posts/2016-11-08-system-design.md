@@ -15,6 +15,11 @@ Class: HashMap, HashSet, LinkedList
 
 Concurrent Collection
 
+## 2. Basis of Computer Science
+### 2.1 How Addition Is Implemented in Program?
+```java
+
+```
 ## 1. Object-Oriented Programming
 
 ## 2. Design Pattern

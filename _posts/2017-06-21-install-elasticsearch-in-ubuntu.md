@@ -7,7 +7,7 @@ categories:
 - blog
 ---
 
-> Study notes for Elasticsearch.
+> Installation of Elasticsearch.
 
 ## 1. Basic
 ### 1.1 What is Elastic Search?  
@@ -116,6 +116,7 @@ curl "http://localhost:9200"
   sudo service kibana start         //restart kibana  
   ```
   c. Open link [http://192.168.56.101:5601/](http://192.168.56.101:5601/)in web browser in guest(Ubuntu), you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.  
+
 ### 2.3 Install Sense  
   Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
