@@ -31,8 +31,8 @@ class Node {
 Adjacency Matrices
 
 ## 3. Graph Search.
-depth-first search (DFS)
- DFS is often preferred if we want to visit every node in the graph.
+### 3.1 Depth-First Search (DFS)
+DFS is often preferred if we want to visit every node in the graph.
 ```java
 void searchDFS(Node root) {
     if (root == null) {
@@ -48,7 +48,7 @@ void searchDFS(Node root) {
 }
 ```
 
-breadth-first search (BFS)
+### 3.2 Breadth-First Search (BFS)
 if we want to find the shortest path (or just any path) between two nodes, BFS is generally better. Consider representing all the friendships in the entire world in a graph and trying to find a path of friend- ships between Ash and Vanessa.
 ```java
 void searchBFS(Node root) {
@@ -71,6 +71,7 @@ void searchBFS(Node root) {
 }
 ```
 
-Bidirectional Search
+### 3.3 Bidirectional Search
+Bidirectional search is used to find the shortest path between a source and destination node.
 
-## 6. Reference
+## 4. Reference

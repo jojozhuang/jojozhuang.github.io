@@ -15,7 +15,8 @@ categories:
 * peek(): Return the top of the queue.
 * isEmpty(): Return true if and only if the queue is empty.
 
-## 2. Implement with LinkedList.
+## 2. Implementation
+### 2.1 Implement with LinkedList.
 ```java
 public class LinkedListQueue {
     private ListNode head; // the first node
@@ -60,7 +61,7 @@ public class LinkedListQueue {
 }
 ```
 
-## 3. Implement with Two Stacks.
+### 2.2 Implement with Two Stacks.
 ```java
 public class QueueStack {
     private Stack<Integer> stack1 = new Stack<Integer>(); // s1 stores new elements
@@ -99,7 +100,7 @@ public class QueueStack {
 }
 ```
 
-## 4. Implement with Array.
+### 2.3 Implement with Array.
 ```java
 public class ArrayQueue {
     private int head; // the first node
@@ -142,10 +143,11 @@ public class ArrayQueue {
     }
 }
 ```
-## 5. Implement with Array(Loop).
+
+### 2.4 Implement with Array(Loop).
 ```java
 ```
 
-## 6. Reference
+## 3. Reference
 http://blog.csdn.net/clown_zeon/article/details/51605465
 http://introcs.cs.princeton.edu/java/43stack/

@@ -21,8 +21,8 @@ A min-heap is a complete binary tree where each node is smaller than its childre
 ```
 
 ## 4. Add new item to Min-Heap.
-1) Add new element to bottom, rightmost
-2) Bubble up this new element, swap with its parent until it is larger than it parent.
+1) Add new element to bottom, rightmost  
+2) Bubble up this new element, swap with its parent until it is larger than it parent.  
 This takes O(log n) time, where n is the number of nodes in the heap.
 ```java
 ```

@@ -81,6 +81,7 @@ slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
 ## 3. Difference between i++ and ++i in a loop?
 * i++ => add 1 to a, returns the old value.
 * ++i => add 1 to a, returns the new value.
+
 ```java
 String[] items = {"a","b","c","d"};
 int i = 0;

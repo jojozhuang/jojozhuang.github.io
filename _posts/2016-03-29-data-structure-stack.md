@@ -15,7 +15,8 @@ categories:
 * peek(): Return the top of the stack.
 * isEmpty(): Return true if and only if the stack is empty.
 
-## 2. Implement with LinkedList.
+## 2. Implementation
+### 2.1 Implement with LinkedList.
 ```java
 public class LinkedListStack {
     private ListNode head; // the first node
@@ -54,7 +55,7 @@ public class LinkedListStack {
 }
 ```
 
-## 3. Implement with Two Queues.
+### 2.2 Implement with Two Queues.
 ```java
 public class QueueStack {
     Queue<Integer> queue1 = new LinkedList<Integer>(); // Q1 always has all of the elements
@@ -104,7 +105,7 @@ public class QueueStack {
 }
 ```
 
-## 4. Implement with Array.
+### 2.3 Implement with Array.
 ```java
 public class ArrayStack {
     private int top;
@@ -142,10 +143,12 @@ public class ArrayStack {
     }
 }
 ```
-## 5. Implement with Array(Loop).
+
+### 2.4 Implement with Array(Loop).
 ```java
 ```
-## 6. Sort Stack with Additional Stack.
+## 3. Implement Sort Function for Stack
+### 3.1 Sort with Additional Stack.
 ```java
 public class SortStack {
     public static Stack<Integer> sort(Stack<Integer> stack) {
@@ -171,12 +174,13 @@ public class SortStack {
     }
 }
 ```
-## 6. Sort Stack(Merge Sort)
+### 3.2 Implement Merge Sort with Stack
 ```java
 ```
-## 6. Sort Stack(Quick Sort)
+### 3.3 Implement Quick Sort with Stack
 ```java
 ```
+
 ## 6. Reference
 http://blog.csdn.net/clown_zeon/article/details/51605465
 http://introcs.cs.princeton.edu/java/43stack/
