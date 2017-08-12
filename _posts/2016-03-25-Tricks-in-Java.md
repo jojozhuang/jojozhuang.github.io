@@ -86,13 +86,13 @@ slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
 String[] items = {"a","b","c","d"};
 int i = 0;
 for (String item : items) {
-  System.out.print(++i);
+    System.out.print(++i);
 }
 System.out.println();
 
 i = 0;
 for (String item : items) {
-  System.out.print(i++);
+    System.out.print(i++);
 }
 System.out.println();
 
@@ -104,11 +104,11 @@ System.out.println();
 The below two loops print same output
 ```java
 for (int i = 0; i < 5; i++) {
-	System.out.print(i);
+    System.out.print(i);
 }
 System.out.println();
 for (int i = 0; i < 5; ++i) {
-	System.out.print(i);
+    System.out.print(i);
 }
 
 //output
@@ -120,26 +120,26 @@ for (int i = 0; i < 5; ++i) {
 Everything in Java is pass-by-value. For class object, it pass its address to method.
 ```java
 public class Main{
-     public static void main(String[] args){
-         Foo f = new Foo("f");
-         changeReference(f); // It won't change the reference!
-         System.out.println(f.val); // Prints 'f'
-         modifyReference(f); // It will modify the object that the reference variable "f" refers to!
-         System.out.println(f.val); // Prints 'c'
-         setToNull(f); // f wont't be null
-         System.out.println(f.val); // Still prints 'c'
-     }
-     public static void changeReference(Foo a){
-          Foo b = new Foo("b");
-          a = b;
-     }
-     public static void modifyReference(Foo c){
-          c.setAttribute("c");
-     }
-     public static void setToNull(Foo d){
-          d = null;
-     }
-     private static class Foo {
+    public static void main(String[] args){
+        Foo f = new Foo("f");
+        changeReference(f); // It won't change the reference!
+        System.out.println(f.val); // Prints 'f'
+        modifyReference(f); // It will modify the object that the reference variable "f" refers to!
+        System.out.println(f.val); // Prints 'c'
+        setToNull(f); // f wont't be null
+        System.out.println(f.val); // Still prints 'c'
+    }
+    public static void changeReference(Foo a){
+        Foo b = new Foo("b");
+        a = b;
+    }
+    public static void modifyReference(Foo c){
+        c.setAttribute("c");
+    }
+    public static void setToNull(Foo d){
+        d = null;
+    }
+    private static class Foo {
         public String val = "";
         public Foo (String val) {
             this.val = val;
