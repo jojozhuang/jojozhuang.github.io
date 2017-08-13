@@ -70,7 +70,7 @@ todo
 ## 4. Free License
 When you first download and install Splunk, you are automatically using an Enterprise Trial license. You can continue to use the Enterprise Trial license until it expires. After expiration, switch from Enterprise Trial license to Free license.
 
-Steps to switch to a Free License:
+Steps to switch to a Free License:  
 1) Log in to Splunk Web as a user with admin privileges and navigate to Settings > Licensing.  
 2) Click Change license group at the top of the page.  
 3) Select Free license and click Save.  

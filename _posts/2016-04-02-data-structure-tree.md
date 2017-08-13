@@ -22,6 +22,7 @@ categories:
 * Complete Binary Trees: A complete binary tree is a binary tree in which every level of the tree is fully filled, except for perhaps the last level. To the extent that the last level is filled, it is filled left to right.
 * Full Binary Trees: A full binary tree is a binary tree in which every node has either zero or two children.That is, no nodes have only one child.
 * Perfect Binary Trees A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
+
 ## 3. Binary Tree Traversal(Recursion)
 Pre-Order
 ```java
@@ -78,6 +79,7 @@ public List<Integer> postorderTraversal2(TreeNode root) {
     return res;
 }
 ```
+
 ## 4. Binary Tree Traversal(Iteration)
 Pre-Order
 ```java
@@ -143,7 +145,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
     Stack<TreeNode> stack = new Stack<TreeNode>();
     stack.push(root);
 
-    while(!stack.isEmpty()) {
+    while (!stack.isEmpty()) {
         TreeNode node = stack.peek();
         if (node.left == null) {
             if (node.right != null) {
@@ -160,7 +162,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
             }
             stack.push(node.left);
             node.left = null;
-        }            
+        }
     }
 
     return res;
