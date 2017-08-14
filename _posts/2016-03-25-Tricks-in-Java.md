@@ -77,6 +77,7 @@ slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
 ```
 ### 2.3 Reference
 * [How can a primitive float value be -0.0? What does that mean?](http://stackoverflow.com/questions/6724031/how-can-a-primitive-float-value-be-0-0-what-does-that-mean)
+* [What Every Computer Scientist Should Know About Floating-Point Arithmetic](http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
 
 ## 3. Difference between i++ and ++i in a loop?
 * i++ => add 1 to a, returns the old value.
