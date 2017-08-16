@@ -54,7 +54,7 @@ public static int repeatLogicShift(int x, int count) {
 
 ## 4. Common Bit Methods
 ### 4.1 Get Bit
-Given a number and a specific position, check whether the bit at this position of the given number is one.
+Given an integer and a specific position, check whether the bit at this position of the given number is one.
 ```java
 boolean getBit(int num, int i) { // i range is {0, 31}, 0 is the rightest
     return (num & (1 << i)) != 0; // if i = 4, (1 << i) => 00010000
@@ -62,7 +62,7 @@ boolean getBit(int num, int i) { // i range is {0, 31}, 0 is the rightest
 ```
 
 ### 4.2 Set Bit
-Given a number and a specific position, set the bit at this position of the given number to one.
+Given an integer and a specific position, set the bit at this position of the given number to one.
 ```java
 int setBit(int num, int i) {
     return num | (1 << i); // if i = 4, (1 << i) => 00010000
@@ -70,7 +70,7 @@ int setBit(int num, int i) {
 ```
 
 ### 4.3 Clear Bit
-Given a number and a specific position, set the bit at this position of the given number to zero.
+Given an integer and a specific position, set the bit at this position of the given number to zero.
 ```java
 int clearBit(int num, int i) {
     int mask = ~(1 << i); // if i = 4, (1 << i) => 00010000, mask = 11101111
@@ -79,7 +79,7 @@ int clearBit(int num, int i) {
 ```
 
 ### 4.4 Clear Bit(Left Part)
-Given a number and a specific position, clear all bits from the most significant bit through i (inclusive).
+Given an integer and a specific position, clear all bits from the most significant bit through i (inclusive).
 ```java
 int clearBitsMSthroughI(int num, int i) {
     int mask = (1 << i) - 1; // if i = 4, (1 << i) => 00010000, mask = 00001111
@@ -88,7 +88,7 @@ int clearBitsMSthroughI(int num, int i) {
 ```
 
 ### 4.5 Clear Bit(Right Part)
-Given a number and a specific position, clear all bits from i (inclusive) through 0 (inclusive).
+Given an integer and a specific position, clear all bits from i (inclusive) through 0 (inclusive).
 ```java
 int clearBitsIthrough0(int num, int i) {
     int mask = -1 << (i + 1); // if i = 4, mask = 11100000
@@ -97,12 +97,21 @@ int clearBitsIthrough0(int num, int i) {
 ```
 
 ### 4.6 Update Bit
-Given a number and a specific position, set the bit at this position of to a given value(0 or 1).
+Given an integer and a specific position, set the bit at this position of to a given value(0 or 1).
 ```java
 int updateBit(int num, int i, boolean bitIsOne) {
     int value = bitIsOne ? 1 : 0;
     int mask = ~(1 << i); // if i = 4, mask = 11101111
     return (num & mask) | (value < i); // if i = 4, and value = 1, (value < i) =  00010000
+}
+```
+
+### 4.7 Pairwise Swap
+Given an integer, swap its odd and even bits with as few instructions as possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped, and so on).
+```java
+int swapOddEvenBits(int num) { // solution based on 32-bit system
+    // a => 1010, 5 => 0101 
+    return (((num & 0xaaaaaaaa) >>> 1) | ((num & 0x55555555) << 1));
 }
 ```
 

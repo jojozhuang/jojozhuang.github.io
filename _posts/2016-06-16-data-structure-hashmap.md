@@ -17,4 +17,7 @@ categories:
 ```java
 ```
 
+## 3. HashMap in Java
+TreeMap, HashMap, LinkedHashMap
+
 ## 6. Reference

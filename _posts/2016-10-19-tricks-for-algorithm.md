@@ -318,3 +318,11 @@ Basically, we use only 128 total character which is used mostly during program. 
 
 factorial time(n!)
 exponential time(2^n)
+
+
+## 10. Common Sorting Algorithms
+* Bubble Sort: Average O(n^2), Worst Case O(n^2); Memory: O(1).
+* Selection Sort: Average O(n^2), Worst Case O(n^2); Memory: O(1).
+* Merge Sort: Average O(nlog(n)), Worst Case O(nlog(n)); Memory: Depends.
+* Quick Sort: Average O(nlog(n)), Worst Case O(n^2); Memory: O(log(n)).
+* Bucket Sort: Average O(kn), Worst Case O(kn); Memory: Depends.
