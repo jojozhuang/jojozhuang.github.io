@@ -20,7 +20,7 @@ Features are described as follows:
 * Membership: Register, Login, Logout
 
 Live Demo on Azure:
-* [http://ect583final.azurewebsites.net/](http://ect583final.azurewebsites.net/)
+* [http://ect583final.azurewebsites.net/](http://ect583final.azurewebsites.net/)  (The website would be slow when you access it for the first time. Be patient!)
 
 ## 1. Pages  
 ### 1.1 Home Page
