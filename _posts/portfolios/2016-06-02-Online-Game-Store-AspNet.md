@@ -1,7 +1,7 @@
 ---
 layout: software
 key: portfolio
-title: "Online Game Store"
+title: "Online Game Store(Live Demo)"
 date: 2016-06-02
 tags: C#, ASP.NET MVC, RESTful WebAPI, jQuery
 image: /assets/gamestoreaspnet/thumbnail.png
