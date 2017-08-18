@@ -14,7 +14,7 @@ After searching through Google, I found Cross-Origin Resource Sharing(CORS) is t
 * [Using CORS](http://www.html5rocks.com/en/tutorials/cors/)
 * [Enabling Cross-Origin Requests in ASP.NET Web API 2](http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
 
-The key is to add 'Access-Control-Allow-Origin' attribute to the http header.
+The key is to add 'Access-Control-Allow-Origin' attribute to the http request header.
 ```php
 header("Access-Control-Allow-Origin: *"); // for php
 Response.AppendHeader("Access-Control-Allow-Origin", "*") // for asp.net
