@@ -20,7 +20,14 @@ header("Access-Control-Allow-Origin: *"); // for php
 Response.AppendHeader("Access-Control-Allow-Origin", "*") // for asp.net
 ```
 
-Here is the solution I found finally.
+In Angular, add a whitelist of legal files and/or domains in the config function of application, [Sample from w3schools](https://www.w3schools.com/angular/tryit.asp?filename=try_ng_include_crossdomain).
+```javascript
+$sceDelegateProvider.resourceUrlWhitelist([
+    'https://tryit.w3schools.com/**'
+]);
+```
+
+Here is the solution I found for ASP.NET.
 ### 1. For ASP.NET Web API, add 'EnableCors' attribute to the controller.
 
 ```c#
