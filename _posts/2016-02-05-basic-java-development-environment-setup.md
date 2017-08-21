@@ -18,28 +18,28 @@ We will use the following free softwares/tools.
 
 ## 1. Install VirtualBox
 ### 1.1 Download VirtualBox
-Download the latest version of VirtualBox from https://www.virtualbox.org/wiki/Downloads.
+Download the latest version of VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
 ### 1.2 Install VirtualBox
 Nothing special, just launch the installer and Follow the steps of the setup wizard.
 
 ## 2. Install Ubuntu
 ### 2.1 Download Ubuntu Desktop
-Download the latest version of Ubuntu from https://www.ubuntu.com/download/desktop. It should be an ISO file with about 1.5 GB in size.
+Download the latest version of Ubuntu from [https://www.ubuntu.com/download/desktop](https://www.ubuntu.com/download/desktop). It should be an ISO file with about 1.5 GB in size.
 ### 2.2 Create Virtual Machine in VirtualBox
-1) In VirtualBox, Machine -> New, provide name, for example, Ubuntu. The type would be set to Linux automatically, next.
-2) Set Memory Size = 2048 MB, next.
-3) Select 'Create a virtual hard disk now', click Create button.
-4) Set 'Hard disk file type': VDI, Continue.
-5) set 'Storage on physical hard disk': Dynamically allocated, Continue.
-6) Set 'File location and size', change hard disk size to 20.00 GB. By default, it is 8 GB, which is properly not enough.
+1) In VirtualBox, Machine -> New, provide name, for example, Ubuntu. The type would be set to Linux automatically, next.  
+2) Set Memory Size = 2048 MB, next.  
+3) Select 'Create a virtual hard disk now', click Create button.  
+4) Set 'Hard disk file type': VDI, Continue.  
+5) set 'Storage on physical hard disk': Dynamically allocated, Continue.  
+6) Set 'File location and size', change hard disk size to 20.00 GB. By default, it is 8 GB, which is properly not enough.  
 ### 2.3 Install Ubuntu in VM
-The new virtual machine is created, now start to install Ubuntu OS for it.
-1) In VirtualBox, select the VM named 'Ubuntu' we just created, click Start button.
-2) Specify the location of that ISO file we just downloaded, click Start button.
-3) A new VM window is opened, choose English and click 'Install Ubuntu' button.
-4) Follow the steps in the setup wizard. Change the default settings if necessary, and provide User Name and Password for logging into Ubuntu later.
-5) The installation is started, and will take several minutes to complete.
-6) Reboot is required after installation is finished.
+The new virtual machine is created, now start to install Ubuntu OS for it.  
+1) In VirtualBox, select the VM named 'Ubuntu' we just created, click Start button.  
+2) Specify the location of that ISO file we just downloaded, click Start button.  
+3) A new VM window is opened, choose English and click 'Install Ubuntu' button.  
+4) Follow the steps in the setup wizard. Change the default settings if necessary, and provide User Name and Password for logging into Ubuntu later.  
+5) The installation is started, and will take several minutes to complete.  
+6) Reboot is required after installation is finished.  
 ### 2.4 Install Necessary Tools in Ubuntu
 To use ubuntu more efficiently, you need to install some highly recommended softwares/tools.
 1) Install Google Chrome
@@ -52,7 +52,7 @@ Note that all of the installation files for Ubuntu have the .deb extension. We a
 
 ## 3. Install JDK in Ubuntu
 ### 3.1 Download Oracle JDK
-Download the latest version of JDK from http://www.oracle.com/technetwork/java/javase/downloads/index.html. Select JDK, in the next page, accept the license and choose 'jdk-8u144-linux-x64.tar.gz' to download.
+Download the latest version of JDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Select JDK, in the next page, accept the license and choose 'jdk-8u144-linux-x64.tar.gz' to download.
 ### 3.2 Install JDK
 There is no installer, have to configure JKD manually. Unzip the package and move JDK files to /usr/local/java/
 ```
@@ -93,7 +93,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
 
 ## 4. Setup Apache Tomcat
 ### 4.1 Download Tomcat
-Download the latest version of Tomcat from https://tomcat.apache.org/.
+Download the latest version of Tomcat from [https://tomcat.apache.org/](https://tomcat.apache.org/).
 ### 4.2 Install Tomcat
 There is no installer, either, have to configure Tomcat manually. Unzip the tar file, copy to /opt/tomcat.
 ```sh
@@ -127,7 +127,7 @@ $CATALINA_HOME/bin/shutdown.sh
 
 ## 5. Install Eclipse
 ### 5.1 Download Eclipse
-Download the latest version of Eclipse from https://www.eclipse.org/downloads/.
+Download the latest version of Eclipse from [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/).
 ### 5.2 Install Eclipse
 1) Unzip the tar file.
 ```sh
