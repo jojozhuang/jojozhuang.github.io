@@ -14,7 +14,7 @@ categories:
 In MacOS, Finder->Application->VirtualBox->Show Package Content, find VBoxGuestAdditions.iso in /Contents/MacOS/, copy it to other folder, eg. ~/Downloads/  
 2) Insert the Image to Ubuntu VM  
 Ubuntu VM->Devices->Optical Drives->Choose disk image.., choose ~/Downloads/VBoxGuestAdditions.iso.  
-![MIME Type](/public/pics/2016-02-21/image1.png)  
+![MIME Type](/public/pics/2016-02-21/image5.png)  
 3) In Ubuntu, select VBoxGuestAdditions.iso, and install.
 
 ## 2. Create Shared Folder on MacOS
@@ -22,15 +22,15 @@ In MacOS host, create a new folder /UbuntuSF/, which is used to share files with
 
 ## 3. Add Shared Folder to VM's SharedFolders
 In VirtualBox, add /UbuntuSF as Ubuntu VM's SharedFolders
-![MIME Type](/public/pics/2016-02-21/image2.png)  
+![MIME Type](/public/pics/2016-02-21/image6.png)  
 
 ## 4. Add User to Group 'vboxsf' in Ubuntu
-![MIME Type](/public/pics/2016-02-21/image3.png)  
+![MIME Type](/public/pics/2016-02-21/image7.png)  
 Then, reboot Ubuntu.
 
 ## 5. Check the shared folder in Ubuntu.
 Go to directory /media/, there is a new shared folder sf_UbuntuSF.
-![MIME Type](/public/pics/2016-02-21/image4.png)  
+![MIME Type](/public/pics/2016-02-21/image8.png)  
 If you create a new file here, you will see it in /UbuntuSF on MacOS.
 
 ## 6. References
