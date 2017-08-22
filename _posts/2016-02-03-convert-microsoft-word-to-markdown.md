@@ -18,3 +18,5 @@ How it works? You can edit docx file as usual, and save it to markdown(.md) file
 Besides, [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) shows how to use Markdown to create your document.
 
 Hope you enjoy this tool as well.
+
+Please Note: Sometimes you see few images in your posting are too large and make the page looks ugly. It's better to resize these images. For example, change their width from 1024px to 600px and keep the proportion with height.
