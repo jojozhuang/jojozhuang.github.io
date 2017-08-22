@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tricks For Algorithm"
-date: 2016-10-19
+date: 2016-03-27
 categories:
 - blog
 ---

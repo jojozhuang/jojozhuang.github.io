@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Bit Manipulation"
-date: 2016-04-16
+date: 2016-04-25
 categories:
 - blog
 ---
@@ -110,7 +110,7 @@ int updateBit(int num, int i, boolean bitIsOne) {
 Given an integer, swap its odd and even bits with as few instructions as possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped, and so on).
 ```java
 int swapOddEvenBits(int num) { // solution based on 32-bit system
-    // a => 1010, 5 => 0101 
+    // a => 1010, 5 => 0101
     return (((num & 0xaaaaaaaa) >>> 1) | ((num & 0x55555555) << 1));
 }
 ```

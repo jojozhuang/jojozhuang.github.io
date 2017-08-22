@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Math For Algorithms"
-date: 2016-10-28
+date: 2016-04-28
 categories:
 - blog
 ---
