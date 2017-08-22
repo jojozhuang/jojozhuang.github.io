@@ -180,7 +180,6 @@ public class ProductService {
 ## 6. Project Structure
 This is the final structure of this tutorial project.
 ![MIME Type](/public/pics/2016-02-24/structure.png)  
-![Structure](/public/pics/2016-02-24/structure.png "Structure")  
 
 ## 7. Demo
 1) Right click project JerseyTutorial -> Run As -> Run On Server.  
