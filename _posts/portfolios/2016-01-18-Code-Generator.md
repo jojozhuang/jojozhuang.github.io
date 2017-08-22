@@ -5,7 +5,7 @@ title: "Code Generator"
 date: 2016-01-18
 tags: C#, Windows Form, XSLT+XML
 image: /assets/codegenerator/thumbnail.png
-shortdesc: A desktop application for code generation based on database schema and templates.
+shortdesc: A desktop application for generating code based on database schema and templates.
 subcateogry: dotnet
 categories:
 - portfolio
