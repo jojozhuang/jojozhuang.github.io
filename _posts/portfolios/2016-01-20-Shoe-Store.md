@@ -5,7 +5,7 @@ title: "Shoe Store"
 date: 2016-01-20
 tags: ASP.NET MVC, C#, Bootstrap
 image: /assets/shoestore/thumbnail.png
-shortdesc: An online shoe store developed with ASP.NET MVC, responsive UI.
+shortdesc: An online store website with responsive UI, developed with ASP.NET MVC.
 subcateogry: dotnet
 categories:
 - portfolio
