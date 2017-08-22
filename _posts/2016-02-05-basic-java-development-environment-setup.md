@@ -153,9 +153,27 @@ VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
 cd /home/johnny/VitualBox VMs/Ubuntu // navigate to the vm location
 VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubuntu.vdi to 20GB.
 ```
+### 6.2 Share files between MacOS Host and Ubuntu Guest
+1) Install VirtualBox Guest Additions
+Finder->Application->VirtualBox->Show Package Content, find VBoxGuestAdditions.iso in /Contents/MacOS/, copy it to other folder, eg. ~/Downloads/
+2) Insert the Image
+Ubuntu VM->Devices->Optical Drives->Choose disk image.., choose ~/Downloads/VBoxGuestAdditions.iso.
+![MIME Type](/public/pics/2016-02-05/image1.png)  
+3) In Ubuntu, select VBoxGuestAdditions.iso, and install.
+4) In MacOS host, create a new folder /UbuntuSF/, which is used to share files with Ubuntu.
+5) In VirtualBox, add /UbuntuSF as Ubuntu VM's SharedFolders
+![MIME Type](/public/pics/2016-02-05/image2.png)  
+5) In Ubuntu, Add current user to Group vboxsf
+![MIME Type](/public/pics/2016-02-05/image3.png)  
+Then, reboot Ubuntu.
+6) Check the shared folder in Ubuntu.
+Go to directory /media/, there is a new shared folder sf_UbuntuSF.
+![MIME Type](/public/pics/2016-02-05/image4.png)  
+If you create a new file here, you will see it in /UbuntuSF on MacOS.
 
 ## 7. References
 * [How to Install Oracle Java JDK on Ubuntu Linux](http://www.wikihow.com/Install-Oracle-Java-JDK-on-Ubuntu-Linux)
 * [How To Install Apache Tomcat 7 on Ubuntu 14.04](https://www.liquidweb.com/kb/how-to-install-apache-tomcat-7-on-ubuntu-14-04/)
 * [Install Eclipse IDE on Ubuntu Linux 15.04](http://linuxpitstop.com/install-eclipse-ide-on-ubuntu-linux-15-04/)
 * [How to Install The Latest Eclipse in Ubuntu 16.04, 15.10](http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/)
+* [Manually Installing VirtualBox Guest Additions](https://osquest.com/2012/11/13/tip-manually-installing-virtualbox-guest-additions/)
