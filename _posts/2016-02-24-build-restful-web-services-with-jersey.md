@@ -13,7 +13,7 @@ categories:
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Basic Java Development Environment Setup](http://jojozhuang.github.io/blog/2016/02/05/basic-java-development-environment-setup/) to setup your development environment.
 
 ## 2. Create Project
-1) In Eclipse, New -> 'Dynamic Web Project', Name: JerseyTutorial
+1) In Eclipse, New -> 'Dynamic Web Project', Name: JerseyTutorial  
 2) Right click project JerseyTutorial -> Configure -> Convert to Maven Project. You should see a new file pom.xml under the root of project.
 
 ## 3. Add Dependency
@@ -31,8 +31,8 @@ Add jersey dependency to pom.xml.
 ```
 
 ## 4. Add web.xml to project
-Right click project JerseyTutorial -> Java EE Tools -> Generate Deployment Descriptor Stub. You should see web.xml in /JerseyTutorial/WebContent/WEB-INF/.
-Register Jersey service like below.
+Right click project JerseyTutorial -> Java EE Tools -> Generate Deployment Descriptor Stub. You should see web.xml in /JerseyTutorial/WebContent/WEB-INF/.  
+Register Jersey service as follows.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
@@ -55,10 +55,10 @@ Register Jersey service like below.
 ```
 
 ## 5. Create Jersey Service
-1) Create Package
-Right click project JerseyTutorial -> New -> Package, Package Name: Johnny.Tutorials
-2) Create class Product and ProductDao
-Product.java
+1) Create Package  
+Right click project JerseyTutorial -> New -> Package, Package Name: Johnny.Tutorials  
+2) Create class Product and ProductDao  
+Product.java  
 ```java
 package Johnny.Tutorials;
 
@@ -107,7 +107,7 @@ public class Product implements Serializable {
 }
 ```
 
-ProductDao.java
+ProductDao.java  
 We create some dummy data.
 ```java
 package Johnny.Tutorials;
@@ -144,7 +144,8 @@ public class ProductDao {
 }
 ```
 
-ProductService.java
+ProductService.java  
+We use Jersey to create two APIs, one to get product list, another to get product by Id.
 ```java
 package Johnny.Tutorials;
 
@@ -186,10 +187,10 @@ Choose an existing server or create a new Tomcat server.
 ![MIME Type](/public/pics/2016-02-24/runonserver.png)  
 
 After Tomcat is started, let's test RESTful services through web browser.  
-2) Get Product List
+2) Get Product List  
 URL: http://localhost:8080/JerseyTutorial/rest/ProductService/products
 ![MIME Type](/public/pics/2016-02-24/products.png)  
-3) Get Product by ID
+3) Get Product by ID  
 URL: http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
 ![MIME Type](/public/pics/2016-02-24/oneproduct.png)  
 
@@ -221,7 +222,7 @@ URL: http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
 ```
 
 ### 8.3 Add new API to ProductService
-In ProductService.java, add the following method.
+In ProductService.java, add the following method.  
 ```java
 @GET
 @Path("/productJson/{id}")
@@ -232,7 +233,7 @@ public Product getProductJson(@PathParam("id") int id) {
 ```
 
 ### 8.4 Test Json API
-URL: http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1
+URL: http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
 ![MIME Type](/public/pics/2016-02-24/jsonapi.png)  
 
 ## 9. Source
