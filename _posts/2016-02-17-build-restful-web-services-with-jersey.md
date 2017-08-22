@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Build RESTful Web Services with Jersey(JAX-RS)"
-date: 2016-02-24
+date: 2016-02-17
 categories:
 - blog
 ---
@@ -179,20 +179,20 @@ public class ProductService {
 
 ## 6. Project Structure
 This is the final structure of this tutorial project.
-![MIME Type](/public/pics/2016-02-24/structure.png)  
+![MIME Type](/public/pics/2016-02-17/structure.png)  
 
 ## 7. Demo
 1) Right click project JerseyTutorial -> Run As -> Run On Server.  
 Choose an existing server or create a new Tomcat server.  
-![MIME Type](/public/pics/2016-02-24/runonserver.png)  
+![MIME Type](/public/pics/2016-02-17/runonserver.png)  
 
 After Tomcat is started, let's test RESTful services through web browser.  
 2) Get Product List  
 URL: http://localhost:8080/JerseyTutorial/rest/ProductService/products
-![MIME Type](/public/pics/2016-02-24/products.png)  
+![MIME Type](/public/pics/2016-02-17/products.png)  
 3) Get Product by ID  
 URL: http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
-![MIME Type](/public/pics/2016-02-24/oneproduct.png)  
+![MIME Type](/public/pics/2016-02-17/oneproduct.png)  
 
 ## 8. Support Json
 ### 8.1 Add Dependency to pom.xml
@@ -234,7 +234,7 @@ public Product getProductJson(@PathParam("id") int id) {
 
 ### 8.4 Test Json API
 URL: http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
-![MIME Type](/public/pics/2016-02-24/jsonapi.png)  
+![MIME Type](/public/pics/2016-02-17/jsonapi.png)  
 
 ## 9. Source
 [Source code files of Jersey Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JerseyTutorial)

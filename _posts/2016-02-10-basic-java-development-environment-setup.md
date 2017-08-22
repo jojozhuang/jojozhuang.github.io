@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Basic Java Development Environment Setup"
-date: 2016-02-05
+date: 2016-02-10
 categories:
 - blog
 ---
