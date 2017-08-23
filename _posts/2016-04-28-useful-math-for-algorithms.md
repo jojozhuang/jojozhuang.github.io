@@ -62,3 +62,5 @@ Look at these values in binary way.
 Sum = 2^(n+1) - 1
 
 ## 2. Slot
+
+## 3. Triangle
