@@ -7,21 +7,22 @@ categories:
 - blog
 ---
 
-> I use [Atom](https://atom.io/) for editing this website. It is great and you should try it.
+> I use [Atom](https://atom.io/) to create blogs for this website. The main reason I choose Atom is because it is a cross-platform text editor. You can have the same user experience when using it on MacBook as well as on Linux.
 
 ## 1. What is Atom?
-Atom is a free and cross-platform text editor. You can use it on OS X, Windows, or Linux. You can use Atom to edit MarkDown documents. You can also use it for software development. For example, it supports you to develop responsive website with AngularJS. The editor highlight feature in Atom makes it easy to edit different files, like javascript, html, etc.
+Atom is a free and open-source text editor with support for plug-ins. It is available on OS X, Windows, or Linux, a cross-platform editor! You can use Atom as generic text editor to edit MarkDown documents. You can also use it as IDE for software development. For example, it supports you to develop responsive website with AngularJS. The highlight feature in Atom makes easy for you to edit source code in different format, like javascript, html, etc.
+![MIME Type](/public/pics/2016-01-15/atom.png)  
 
 ## 2. Plug-In System for Atom
-There are lots of plug-ins available for Atom, which makes Atom be more powerful.
+There are lots of plug-ins available for Atom. They make Atom be more powerful.
 
 ## 2.1 Search and Install Plug-In
-Atom->Preferences->Install, search package. Click 'Install' button of which package you want to install.
+Atom->Preferences->Install, search package. Click 'Install' button of the package you want to install.
 ![MIME Type](/public/pics/2016-01-15/installplugin.png)  
 
 ## 2.2 Popular Plug-Ins
 * Compare File  
-https://atom.io/packages/compare-files  
+[https://atom.io/packages/compare-files](https://atom.io/packages/compare-files)  
 Select two files, then Command + Shift + P, search 'Compare', click command button, you will see the diff.
 ![MIME Type](/public/pics/2016-01-15/compare.png)  
 
@@ -43,14 +44,18 @@ Table is inserted to document. You can now add content into it.
 * Atom-Shortcuts
 https://atom.io/packages/atom-shortcuts
 Click and hold Ctrl Key on Mac, you will see the common shortcuts.
+The most important shortcut key is 'Command + Shift + P': Toggle command palette.
 ![MIME Type](/public/pics/2016-01-15/shortcut.png)  
 
-## 3. Short Cut Keys
-Command + Shift + P : Toggle command palette
-
 ## 3. Work with MarkDown
-## 3.1 MarkDown Preview
+## 3.1 Github MarkDown
+If you try to use MarkDown to edit documents. You should get familiar with the syntaxes defined in MarkDown.
+Some samples for [Github MarkDown](https://guides.github.com/features/mastering-markdown/)
+
+## 3.2 MarkDown Preview in Atom
+When using Atom, you can use the preview function before submitting the document.  
 Right click on the file you are editing, ->MarkDown Preview.
+![MIME Type](/public/pics/2016-01-15/preview.png)  
 
 ## 4. References
 * https://atom.io/

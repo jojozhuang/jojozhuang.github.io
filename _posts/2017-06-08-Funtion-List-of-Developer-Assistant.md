@@ -9,6 +9,9 @@ categories:
 
 > I plan to develop a tool which helps to create file, manipulate strings, etc. It should be cross-platform, using Node.js maybe. Here are the functionalities I can imagine.
 
+Take a look how Atom is built.
+[https://en.wikipedia.org/wiki/Atom_(text_editor)](https://en.wikipedia.org/wiki/Atom_(text_editor))
+
 ## 1. File Creation
   * Create files with same or similar content.
   * Create files with same or similar file name.
