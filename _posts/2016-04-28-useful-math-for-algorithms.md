@@ -17,21 +17,6 @@ Proofs:
 
 * n is even
 
-  |   |   |  
---|---|---|--
-  |   |   |  
-  |   |   |  
-  |   |   |  
-  |   |   |  
-  |   |   |  
-
-* n is odd
-
-### 1.2 Sum of Powers of 2
-Q: What is 2^0 + 2^1 + 2^2 + ... + 2^n?
-A: 2^(n+1) - 1
-
-## 2. Slot
 |#pair| a | b | sum |
 |---|---|---|---|
 | 1 | 1 | n | 1+n |
@@ -41,3 +26,33 @@ A: 2^(n+1) - 1
 | n/2 | n/2 | n/2 + 1 | 1+n |
 
 Sum = n/2 * (n + 1)
+
+* n is odd
+
+Take n out of the list, pair the rest. Use the above conclusion, 1 + 2 + 3 + ... + n = 1 + 2 + 3 + ... + (n-1) + n = (n-1)/2 * (n - 1 + 1) + n = n(n + 1)/2.  
+
+#pair| a | b | sum
+--|---|---|--
+ 1 | 1  | n-1 | n
+ 2 | 2  | n-2 | n
+ 3 | 3  | n-3 | n
+ ... | ... | ... | n
+ (n-1)/2 | (n-1)/2 | (n-1)/2 + 1 | n
+
+Sum = (n-1)/2 * n + n = n(n + 1)/2  
+
+### 1.2 Sum of Powers of 2
+Q: What is 2^0 + 2^1 + 2^2 + ... + 2^n?
+A: 2^(n+1) - 1
+
+Proofs:
+
+|#pair| a | b | sum |
+|---|---|---|---|
+| 1 | 1 | n | 1+n |
+| 2 | 2 | n-1 | 1+n |
+| 3 | 3 | n-2 | 1+n |
+| ... | ... | ... | ... |
+| n/2 | n/2 | n/2 + 1 | 1+n |
+
+## 2. Slot
