@@ -41,14 +41,14 @@ Below steps show how to insert table into markdown document.
 3) Table is inserted to document. You can now add content into it.
 ![MIME Type](/public/pics/2016-01-15/markdowntable.png)  
 
-* Atom-Shortcuts
+* Atom-Shortcuts  
 [https://atom.io/packages/atom-shortcuts](https://atom.io/packages/atom-shortcuts)  
 Click and hold Ctrl Key on Mac, you will see the common shortcuts.
 The most important shortcut key is 'Command + Shift + P'(Toggle command palette).
 ![MIME Type](/public/pics/2016-01-15/shortcut.png)  
 
 ## 3. Work with MarkDown
-## 3.1 Github MarkDown
+## 3.1 MarkDown Syntax
 Before trying to use MarkDown to edit documents, you should first get familiar with the MarkDown syntaxes.
 Some syntax samples for [Github MarkDown](https://guides.github.com/features/mastering-markdown/).
 
