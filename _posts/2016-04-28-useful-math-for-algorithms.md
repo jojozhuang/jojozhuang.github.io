@@ -8,14 +8,14 @@ categories:
 
 > Common useful math knowledge used in algorithms.
 
-## 1. Slot
-## 2. Formula
-### 2.1 Sum of Integers 1 through N
-What is 1 + 2 + 3 + ... + n?
-sum = n(n + 1)/2
+## 1. Formula
+### 1.1 Sum of Integers 1 through N
+Q: What is 1 + 2 + 3 + ... + n?  
+A: Sum = n(n + 1)/2  
+
 Proofs:
 
- **n is even**
+* n is even
 
 |#pair| a | b | sum |
 |---|---|---|---|
@@ -25,11 +25,19 @@ Proofs:
 | ... | ... | ... | ... |
 | n/2 | n/2 | n/2 + 1 | 1+n |
 
-sum = n/2 * (n + 1)
+Sum = n/2 * (n + 1)
 
-### 2.1 Sum of Powers of 2
-What is 2^0 + 2^1 + 2^2 + ... + 2^n?
-  |   |  
---|---|--
-  |   |  
-  |   |  
+* n is odd
+  |   |   |  
+--|---|---|--
+  |   |   |  
+  |   |   |  
+  |   |   |  
+  |   |   |  
+  |   |   |  
+
+### 1.2 Sum of Powers of 2
+Q: What is 2^0 + 2^1 + 2^2 + ... + 2^n?
+A: 2^(n+1) - 1
+
+## 2. Slot
