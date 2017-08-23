@@ -48,8 +48,8 @@ Q: What is 2^0 + 2^1 + 2^2 + ... + 2^n?
 A: 2^(n+1) - 1
 
 Proofs:
+Look at these values in binary way.  
 
-Look at these values in binary way.
 |   |Power  | Binary|Decimal|
 |---|-------|-------|-------|
 |   | 2^0   | 00001 | 1     |
