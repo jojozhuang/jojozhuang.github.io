@@ -22,20 +22,31 @@ Atom->Preferences->Install, search package. Click 'Install' button of which pack
 ## 2.2 Popular Plug-Ins
 * Compare File  
 https://atom.io/packages/compare-files
+Select two files, then Command + Shift + P, search 'Compare', click command button, you will see the diff.
+![MIME Type](/public/pics/2016-01-15/compare.png)  
 
 * Minimap  
 https://atom.io/packages/minimap
 After it is installed, you will see a small map at the right of the editor. This is useful when the document you are editing is very large and has many pages.
 ![MIME Type](/public/pics/2016-01-15/minimap.png)  
 
-
 * MarkDown-Writter  
 https://atom.io/packages/markdown-writer
+Insert table to markdown document.  
+Command + Shift + P, search 'markdown writer: insert table'
+![MIME Type](/public/pics/2016-01-15/inserttable.png)  
+Specify the number for rows and columns.  
+![MIME Type](/public/pics/2016-01-15/table33.png)  
+Table is inserted to document. You can now add content into it.
+![MIME Type](/public/pics/2016-01-15/markdowntable.png)  
 
-
+* Atom-Shortcuts
+https://atom.io/packages/atom-shortcuts
+Click and hold Ctrl Key on Mac, you will see the common shortcuts.
+![MIME Type](/public/pics/2016-01-15/shortcut.png)  
 
 ## 3. Short Cut Keys
-Command + Shift + P
+Command + Shift + P : Toggle command palette
 
 ## 3. Work with MarkDown
 ## 3.1 MarkDown Preview

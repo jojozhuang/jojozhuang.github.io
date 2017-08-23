@@ -27,6 +27,9 @@ Proofs:
 
 sum = n/2 * (n + 1)
 
-4
 ### 2.1 Sum of Powers of 2
 What is 2^0 + 2^1 + 2^2 + ... + 2^n?
+  |   |  
+--|---|--
+  |   |  
+  |   |  
