@@ -1,5 +1,6 @@
 ---
 layout: post
+key: blog
 title: "Useful Math For Algorithms"
 date: 2016-04-28
 categories:

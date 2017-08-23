@@ -1,5 +1,6 @@
 ---
 layout: post
+key: blog
 title: "System Design"
 date: 2016-05-01
 categories:

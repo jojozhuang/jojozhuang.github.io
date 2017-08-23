@@ -1,5 +1,6 @@
 ---
 layout: post
+key: blog
 title: "Tricks For Algorithm"
 date: 2016-03-27
 categories:
