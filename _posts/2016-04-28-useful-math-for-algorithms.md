@@ -14,7 +14,9 @@ categories:
 What is 1 + 2 + 3 + ... + n?
 sum = n(n + 1)/2
 Proofs:
-* n is even
+
+ **n is even**
+
 |#pair| a | b | sum |
 |---|---|---|---|
 | 1 | 1 | n | 1+n |
@@ -23,5 +25,8 @@ Proofs:
 | ... | ... | ... | ... |
 | n/2 | n/2 | n/2 + 1 | 1+n |
 
+sum = n/2 * (n + 1)
+
+4
 ### 2.1 Sum of Powers of 2
 What is 2^0 + 2^1 + 2^2 + ... + 2^n?
