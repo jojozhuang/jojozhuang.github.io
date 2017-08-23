@@ -35,11 +35,13 @@ After it is installed, you will see a small map at the right of the editor. This
 [https://atom.io/packages/markdown-writer](https://atom.io/packages/markdown-writer)  
 Below steps show how to insert table into markdown document.  
 1) Put the cursor to where you want to insert table, Command + Shift + P, search 'markdown writer: insert table'.  
-![MIME Type](/public/pics/2016-01-15/inserttable.png)  
+![MIME Type](/public/pics/2016-01-15/tablekey.png)  
 2) Specify the number for rows and columns.  
 ![MIME Type](/public/pics/2016-01-15/table64.png)  
-3) Table is inserted to document. You can now add content into it.
-![MIME Type](/public/pics/2016-01-15/markdowntable.png)  
+3) Table is inserted to document. You can now add content into it.  
+![MIME Type](/public/pics/2016-01-15/tablecreated.png)  
+4) Table shown in html page.  
+![MIME Type](/public/pics/2016-01-15/tablehtml.png)  
 
 * Atom-Shortcuts  
 [https://atom.io/packages/atom-shortcuts](https://atom.io/packages/atom-shortcuts)  
