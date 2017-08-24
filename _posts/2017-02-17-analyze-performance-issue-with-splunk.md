@@ -43,12 +43,14 @@ Then, sort the 'TimeSpent' column in descending order. Now, we see that field 'L
 Now, we need to dive to the next level to find how time is spent on fields in LineItems.
 The similar step how we find the logs on level 0. This time we need to find the level 1.
 ```sh
-source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=0"
+source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=1"
 ```
 ![MIME Type](/public/pics/2017-02-17/level1.png)  
 Open the csv file in Excel, eliminate the un-relevant columns.
-Notice that there are two fields consumes lots of time.
 Then, sort the 'TimeSpent' column in descending order.
-cus_SupervisorTotalMismatch
-cus_SupervisorTotalMismatchContract
 ![MIME Type](/public/pics/2017-02-17/level1sorted.png)  
+Notice that there are two fields consumes lots of time.
+* cus_SupervisorTotalMismatch
+* cus_SupervisorTotalMismatchContract
+
+Finally, we find the main cause of this issue. There are two customized fields configured in customer's system. After analyzing the definition of these two fields. I found, some duplicated calculation for these two fields. The final solution is to move these to fields from line level(line item) to header level(IR document).

@@ -7,7 +7,7 @@ categories:
 - blog
 ---
 
-> The first time I came to know Splunk is when I was taking a class about cyber security. The teacher used Splunk to analyze the logs of user login history to find out some suspicious behaviors. It is a really good tool for searching information from the unstructured documents. I use it to filter data from a log file and also use it for analyzing performance issues.
+> The first time I came to know Splunk is when I was taking a class about cyber security. The teacher used Splunk to analyze the logs of user login history to find out some suspicious behaviors. Splunk is a good tool for searching the unstructured documents. I use it to filter data from log files and also use it for analyzing performance issues.
 
 ## 1. What is Splunk?  
 Basically, Splunk is a log management tool. It makes easy to analyze machine-generated logs via a web-style interface. Official website: [https://www.splunk.com/](https://www.splunk.com/).  
@@ -25,10 +25,10 @@ sudo rpm -i splunk_package_name.rpm  // for RedHat
 sudo dpkg -i splunk_package_name.deb // for Ubuntu
 ```
 
-If no error occurs, Splunk is installed into /opt/splunk/.
+After running the commands, Splunk is installed into /opt/splunk/.
 
 3) Configure Environment Variable for Splunk  
-Set SPLUNK_HOME pointing to the top-level installation directory, and add $SPLUNK_HOME/bin to the shell's path.
+Set SPLUNK_HOME to point to the top-level installation directory, and add $SPLUNK_HOME/bin to the shell's path.
 
 ```shell
 export SPLUNK_HOME=/opt/splunk
@@ -61,12 +61,12 @@ sudo chown -R $USER /opt/splunk/
 In addition, add port number to Firewall's exception list if necessary.
 
 ### 2.3 Login to Splunk Web
-Open a web browser, access the following address. The default user is 'admin'. You need to change the password for the first time you login.
+Open a web browser, access the following address. The default user is 'admin'. You need to change the password for the first time you login.  
 [http://localhost:8081/](http://localhost:8081/)
 ![MIME Type](/public/pics/2017-02-14/login.png)  
 
 ## 3. Import Data
-To use Splunk, you need to import the log file at first.
+To use Splunk, you need to import data first.
 ### 3.1 Add Data
 In the main page, select 'Add Data'->Upload files from my computer->Choose the file.
 ![MIME Type](/public/pics/2017-02-14/main.png)  
@@ -83,7 +83,7 @@ Now, you can use the search function.
 ![MIME Type](/public/pics/2017-02-14/finished.png)  
 
 ## 4. Search
-After data is imported to splunk, we can now create queries for searching from logs.
+After data is imported to splunk, we can now create queries for searching data from logs.
 ### 4.1 Create Query
 By default, Splunk specifies three condition: source, host and sourcetype.
 ```
@@ -93,13 +93,12 @@ You can append more conditions to the end of the query. Click the Search icon to
 ![MIME Type](/public/pics/2017-02-14/search.png)  
 
 ### 4.2 Explore Features
-There are lots of functions provided by Splunk for search query and search result.
+There are lots of functions provided by Splunk for search query and search result. Some of them are listed as follows.
 * Save the query for next time use
 * Change search mode(Smart Mode, Fast Mode and Verbose Mode) to optimize the search performance
 * View result in different style(Raw, List and Table)
 * Filter columns in result
 * Export search result to csv file
-* ...
 
 ## 5. Free License
 ### 5.1 Enterprise Trial License
