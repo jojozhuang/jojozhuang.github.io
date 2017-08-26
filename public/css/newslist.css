@@ -1,0 +1,55 @@
+.dl-unsur {
+position:relative;
+float:left;
+}
+
+.dl-unsur dd {
+width:100%;
+border-top:1px solid #959595;
+display:block;
+float:left;
+padding:8px 0;
+}
+.dl-unsur dd:first-child {
+border-top:0;
+}
+
+.dl-unsur dd > a {
+width:100%;
+margin-left:5px;
+}
+.dl-unsur dd > a > h2 {
+width:10%;
+margin-top:0;
+padding-right:10px;
+color:#C71817;
+text-align:right;
+font-weight:bold;
+}
+.dl-unsur dd > a > div {
+font-family:sans-serif, serif;
+font-size:17px;
+width:89%;
+line-height:1.2em;
+}
+.dl-unsur dd> p {
+width:89%;margin:0 0 0 5px;
+}
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+
+/* en çok okunan listeleme */
+	.dl-unsur dd > a > h2 {
+	font-size:250%;
+	}
+	.dl-unsur dd > a > div {
+	font-family:sans-serif, serif;
+	font-size:15px;
+	}
+
+
+}
