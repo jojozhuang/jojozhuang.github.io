@@ -111,6 +111,6 @@ public boolean search(String word) {
 todo
 
 ## 5. Reference
-* [Trie | (Insert and Search)](http://www.geeksforgeeks.org/trie-insert-and-search/)
+* [Trie 1 Insert and Search](http://www.geeksforgeeks.org/trie-insert-and-search/)
 * [Trie Data Structure Video on Youtube](https://www.youtube.com/watch?v=AXjmTQ8LEoI&t=272s)
 * [The Trie Data Structure (Prefix Tree)](https://medium.freecodecamp.org/trie-prefix-tree-algorithm-ee7ab3fe3413)
