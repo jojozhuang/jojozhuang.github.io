@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Develop Realtime Online Application with WebSocket"
 date: 2016-03-07
-tags: WebSocket, Realtime Http
+tags: WebSocket, Realtime
 categories:
 - blog
 ---

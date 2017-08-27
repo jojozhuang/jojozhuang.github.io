@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Install Splunk on Linux"
 date: 2017-02-14
-tags: Splunk Installation
+tags: Installation
 categories:
 - blog
 ---

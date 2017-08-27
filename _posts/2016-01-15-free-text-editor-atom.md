@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Free Text Editor - Atom"
 date: 2016-01-15
-tags: Atom, Shortcut, plug-ins
+tags: Shortcut, Plug-ins
 categories:
 - blog
 ---

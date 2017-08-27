@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Queue"
 date: 2016-03-31
-tags: Queue, FIFO
+tags: FIFO, Array
 categories:
 - blog
 ---

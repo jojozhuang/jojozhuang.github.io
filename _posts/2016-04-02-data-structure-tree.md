@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Tree"
 date: 2016-04-02
-tags: Tree, BSF, DFS, Pre-Order, Post-Order, In-Order
+tags: Pre-Order, Post-Order, In-Order
 categories:
 - blog
 ---

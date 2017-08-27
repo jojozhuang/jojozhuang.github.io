@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Bash in Mac OSX"
 date: 2016-08-30
-tags: Bash, Shell, MaxOs
+tags: Bash, Shell
 categories:
 - blog
 ---

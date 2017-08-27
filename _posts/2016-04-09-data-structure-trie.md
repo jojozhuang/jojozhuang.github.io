@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Trie"
 date: 2016-04-09
-tags: Trie, Word Search
+tags: Word Search
 categories:
 - blog
 ---

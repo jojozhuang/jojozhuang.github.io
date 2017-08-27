@@ -8,7 +8,7 @@
     border-top:1px solid #959595;
     display:block;
     float:left;
-    padding:8px 0;
+    /*padding:8px 0;*/
 }
 .dl-unsur dd:first-child {
     border-top:0;
@@ -42,7 +42,11 @@
 
 /* en çok okunan listeleme */
 .dl-unsur dd > a > div {
-    font-family:sans-serif, serif;
-    font-size:20px;
-    }
+    font-size:17px;
+}
+.dl-unsur dd> div > p {
+    font-size:14px;
+}
+.dl-unsur dd> .tag {
+    font-size:14px;
 }

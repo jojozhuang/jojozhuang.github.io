@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Useful Math For Algorithms"
 date: 2016-04-28
-tags: Algorithm, Math, Sum, Slot
+tags: Math, Sum, Slot
 categories:
 - blog
 ---
