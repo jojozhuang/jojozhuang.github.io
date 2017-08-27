@@ -14,7 +14,7 @@ title: Rong Zhuang's Blog
         {% for post in site.categories.[page.type] %}
             <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
         {% endfor %}
-    </ul>-->
+      </ul>-->
 
     <!--Sample: https://bootsnipp.com/snippets/WR0r1-->
       <div class="container">
@@ -23,8 +23,8 @@ title: Rong Zhuang's Blog
               <dl class="dl-unsur">
                 {% for post in site.categories.[page.type] %}
                   <dd>
-                    <a href="{{ post.url }}" title="{{ post.title }}" class="pull-left">
-                        <div class="pull-left" >{{ post.title }}</div>
+                    <a href="{{ post.url }}" title="{{ post.title }}">
+                        <div>{{ post.title }}</div>
                     </a>
                     <div class="pull-left"><p class="small pull-left" ><span class="glyphicon glyphicon-time"></span> {{ post.date | date_to_string }}</p></div>
                     <div class="pull-right">{{ post.key }}</div>

@@ -18,21 +18,14 @@ border-top:0;
 width:100%;
 margin-left:5px;
 }
-.dl-unsur dd > a > h2 {
-width:10%;
-margin-top:0;
-padding-right:10px;
-color:#C71817;
-text-align:right;
-font-weight:bold;
-}
+
 .dl-unsur dd > a > div {
 font-family:sans-serif, serif;
-font-size:17px;
-width:89%;
+font-size:25px;
+width:100%;
 line-height:1.2em;
 }
-.dl-unsur dd> p {
+.dl-unsur dd> div > p {
 width:89%;margin:0 0 0 5px;
 }
 /* --------------------------------------
@@ -43,9 +36,6 @@ width:89%;margin:0 0 0 5px;
 @media (max-width: 480px) {
 
 /* en çok okunan listeleme */
-	.dl-unsur dd > a > h2 {
-	font-size:250%;
-	}
 	.dl-unsur dd > a > div {
 	font-family:sans-serif, serif;
 	font-size:15px;
