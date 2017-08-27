@@ -182,6 +182,6 @@ public class SortStack {
 ```java
 ```
 
-## 6. Reference
+## 4. Reference
 http://blog.csdn.net/clown_zeon/article/details/51605465
 http://introcs.cs.princeton.edu/java/43stack/

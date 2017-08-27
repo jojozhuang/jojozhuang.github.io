@@ -17,6 +17,7 @@ title: Rong Zhuang's Blog
       </ul>-->
 
     <!--Sample: https://bootsnipp.com/snippets/WR0r1-->
+    <!--/public/css/newslist.css-->
       <div class="container">
           <div class="row">
               <h2>{{ page.title }}</h2>
@@ -26,7 +27,7 @@ title: Rong Zhuang's Blog
                     <a href="{{ post.url }}" title="{{ post.title }}">
                         <div>{{ post.title }}</div>
                     </a>
-                    <div class="pull-left"><p class="small pull-left" ><span class="glyphicon glyphicon-time"></span> {{ post.date | date_to_string }}</p></div>
+                    <div class="pull-left"><p class="small pull-left" ><span class="glyphicon glyphicon-calendar"></span> {{ post.date | date_to_string }}</p></div>
                     <div class="tag pull-right">{{ post.tags }}</div>
                   </dd>
                 {% endfor %}
