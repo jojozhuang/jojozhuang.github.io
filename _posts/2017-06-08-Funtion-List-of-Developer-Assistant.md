@@ -34,5 +34,10 @@ Take a look how Atom is built.
 ## 4. Programming
   * Generate class with given fields
 
+## 5. Web
+  * HTML Preview Tool
+Three tabs: html, css, and preview. Whatever changed in html or css tab, the impact can be viewed immediately in preview tab. sample website
+https://bootsnipp.com/snippets/WR0r1
+
 Create a website which collects all classic codes as best practice.
 For example: string empty check in java, javascript, c#

@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Build RESTful Web Services with Spring"
 date: 2016-02-20
+tags: WebAPI, CRUD, Search
 categories:
 - blog
 ---

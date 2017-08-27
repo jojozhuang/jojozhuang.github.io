@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Build RESTful Web Services with Jersey(JAX-RS)"
+title: "Build RESTful Web Services with Jersey"
 date: 2016-02-17
-tags: Web API, Jersey, JAX-RS
+tags: Web API, JAX-RS
 categories:
 - blog
 ---
