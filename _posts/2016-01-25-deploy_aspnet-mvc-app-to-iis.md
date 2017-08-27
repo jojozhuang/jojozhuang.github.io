@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Deploy ASP.NET MVC Application to IIS"
 date: 2016-01-25
+tags: IIS, ASP.NET
 categories:
 - blog
 ---

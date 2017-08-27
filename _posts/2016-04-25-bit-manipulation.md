@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Bit Manipulation"
 date: 2016-04-25
+tags: Bit, XOR, Shifting, Overflow
 categories:
 - blog
 ---

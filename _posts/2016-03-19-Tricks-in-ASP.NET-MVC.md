@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Tricks in ASP.NET MVC"
 date: 2016-03-19
+tags: Action URL, ValidationSummary
 categories:
 - blog
 ---

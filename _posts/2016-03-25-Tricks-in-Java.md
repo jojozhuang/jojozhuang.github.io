@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Tricks in Java"
 date: 2016-03-25
+tags: Integer Overflow, float, pass-by-reference
 categories:
 - blog
 ---

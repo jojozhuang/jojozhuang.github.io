@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Stack"
 date: 2016-03-29
+tags: Stack, LIFO
 categories:
 - blog
 ---

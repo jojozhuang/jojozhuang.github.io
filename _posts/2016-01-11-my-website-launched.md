@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "My Website Launched"
 date: 2016-01-11
+tags: Hello World
 categories:
 - blog
 ---

@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Basic Java Development Environment Setup"
 date: 2016-02-10
+tags: VirtualBox, Ubuntu, JDK, Tomcat, Eclipse
 categories:
 - blog
 ---

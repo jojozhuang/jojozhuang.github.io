@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Basic Knowledge of Linux"
 date: 2016-08-26
+tags: Linux, Shell, Bash, Chown, scp
 categories:
 - blog
 ---

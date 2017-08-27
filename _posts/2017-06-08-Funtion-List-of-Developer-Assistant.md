@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Function List of Developer Assistant"
 date: 2017-06-08
+tags: Developer Assistant, String Search/Replace, File
 categories:
 - blog
 ---

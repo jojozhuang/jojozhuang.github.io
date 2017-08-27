@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Convert Microsoft Word to Markdown"
 date: 2016-02-03
+tags: Markdown, Writage
 categories:
 - blog
 ---

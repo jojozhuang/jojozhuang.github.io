@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Advanced Topics in Elasticsearch"
 date: 2017-06-29
+tags: Elasticsearch, DSL Query, Filter
 categories:
 - blog
 ---

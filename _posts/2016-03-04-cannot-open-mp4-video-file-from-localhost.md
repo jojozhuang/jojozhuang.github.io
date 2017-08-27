@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Cannot open mp4 video file from localhost"
 date: 2016-03-04
+tags: IIS, MIME
 categories:
 - blog
 ---

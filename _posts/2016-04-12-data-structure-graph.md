@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Graph"
 date: 2016-04-12
+tags: Graph, DFS, BFS
 categories:
 - blog
 ---

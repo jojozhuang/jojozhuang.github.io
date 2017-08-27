@@ -30,8 +30,7 @@
     margin:0 0 0 5px;
     font-size:17px;
 }
-.dl-unsur dd> div {
-    width:100%;
+.dl-unsur dd> .tag {
     font-size:17px;
 }
 /* --------------------------------------

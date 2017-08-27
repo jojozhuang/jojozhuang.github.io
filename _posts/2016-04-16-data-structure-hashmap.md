@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - HashMap"
 date: 2016-04-16
+tags: Data Structure, HashMap, HashTable
 categories:
 - blog
 ---

@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Tricks For Algorithm"
 date: 2016-03-27
+tags: Binary Search, Subset, Big O
 categories:
 - blog
 ---

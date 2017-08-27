@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Cross Domain Web Api Access"
 date: 2016-02-05
+tags: CORS
 categories:
 - blog
 ---

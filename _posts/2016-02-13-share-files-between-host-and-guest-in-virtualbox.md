@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Share files between Host and Guest in VirtualBox"
 date: 2016-02-13
+tags: VirtualBox, VM, File Sharing
 categories:
 - blog
 ---
