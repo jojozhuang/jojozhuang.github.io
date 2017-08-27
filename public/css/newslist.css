@@ -1,32 +1,38 @@
 .dl-unsur {
-position:relative;
-float:left;
+    position:relative;
+    float:left;
 }
 
 .dl-unsur dd {
-width:100%;
-border-top:1px solid #959595;
-display:block;
-float:left;
-padding:8px 0;
+    width:100%;
+    border-top:1px solid #959595;
+    display:block;
+    float:left;
+    padding:8px 0;
 }
 .dl-unsur dd:first-child {
-border-top:0;
+    border-top:0;
 }
 
 .dl-unsur dd > a {
-width:100%;
-margin-left:5px;
+    width:100%;
+    margin-left:5px;
 }
 
 .dl-unsur dd > a > div {
-font-family:sans-serif, serif;
-font-size:25px;
-width:100%;
-line-height:1.2em;
+    font-family:sans-serif, serif;
+    font-size:23px;
+    width:100%;
+    line-height:1.2em;
 }
 .dl-unsur dd> div > p {
-width:89%;margin:0 0 0 5px;
+    width:100%;
+    margin:0 0 0 5px;
+    font-size:17px;
+}
+.dl-unsur dd> div {
+    width:100%;
+    font-size:17px;
 }
 /* --------------------------------------
    Media Queries
@@ -36,10 +42,8 @@ width:89%;margin:0 0 0 5px;
 @media (max-width: 480px) {
 
 /* en çok okunan listeleme */
-	.dl-unsur dd > a > div {
-	font-family:sans-serif, serif;
-	font-size:15px;
-	}
-
-
+.dl-unsur dd > a > div {
+    font-family:sans-serif, serif;
+    font-size:20px;
+    }
 }
