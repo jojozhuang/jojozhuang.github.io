@@ -43,11 +43,11 @@
 
 /* en çok okunan listeleme */
 .dl-unsur dd > a > div {
-    font-size:17px;
+    font-size:18px;
 }
 .dl-unsur dd> div > p {
-    font-size:12px;
+    font-size:14px;
 }
 .dl-unsur dd> .tag {
-    font-size:12px;
+    font-size:14px;
 }

@@ -164,7 +164,7 @@ I've created several postings to discuss this topic separately.
 * [Data Structure - Stack](http://jojozhuang.github.io/blog/2016/03/29/data-structure-stack/)
 * [Data Structure - Queue](http://jojozhuang.github.io/blog/2016/03/31/data-structure-queue//)
 * [Data Structure - Tree](http://jojozhuang.github.io/blog/2016/04/02/data-structure-tree/)
-* [Data Structure - Segment Tree](http://jojozhuang.github.io/blog/2016/04/02/data-structure-segment-tree/)
+* [Data Structure - Segment Tree](http://jojozhuang.github.io/blog/2016/04/03/data-structure-segment-tree/)
 * [Data Structure - Heap](http://jojozhuang.github.io/blog/2016/04/05/data-structure-heap/)
 * [Data Structure - Trie](http://jojozhuang.github.io/blog/2016/04/09/data-structure-trie/)
 * [Data Structure - Graph](http://jojozhuang.github.io/blog/2016/04/12/data-structure-graph/)
