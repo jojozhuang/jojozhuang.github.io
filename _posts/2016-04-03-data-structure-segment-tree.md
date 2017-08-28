@@ -57,9 +57,10 @@ public class SegmentTreeNode {
 ```
 
 ### 2.2 Build A Minimum Segment Tree
-Minimum Segment Tree for given array {4,-1,3,0,2}.
+The digram of Minimum Segment Tree for given array {4,-1,3,0,2}.
 ![MIME Type](/public/pics/2016-04-03/min.png)  
 
+Code for the build method.
 ```java
 public SegmentTreeNode buildMin(int[] arr) {
     if (arr == null || arr.length == 0) {
@@ -88,7 +89,8 @@ private SegmentTreeNode buildMinHelpler(int[] arr, int start, int end) {
 }
 ```
 
-## 3. Search for Mininum
+## 3. Search for Minimum
+For the given segment tree and the given range, find the minimum value.
 ```java
 public int queryMin(SegmentTreeNode root, int start, int end) {
     if (root == null) {
@@ -125,6 +127,8 @@ public int queryMin(SegmentTreeNode root, int start, int end) {
 ### 4.1 Build Segment Tree
 Actually, we can build Segment Tree for minimum, maximum and sum at once.
 ![MIME Type](/public/pics/2016-04-03/minmaxsum.png)  
+
+Code for the build method.
 ```java
 public SegmentTreeNode build(int[] arr) {
     if (arr == null || arr.length == 0) {
@@ -156,7 +160,9 @@ private SegmentTreeNode buildHelpler(int[] arr, int start, int end) {
     return root;
 }
 ```
+
 ### 4.2 Search for Maximum and Sum
+For the given segment tree and the given range, find the maximum value.
 ```java
 public int queryMax(SegmentTreeNode root, int start, int end) {
     if (root == null) {
@@ -187,7 +193,10 @@ public int queryMax(SegmentTreeNode root, int start, int end) {
 
     return Math.max(leftmax, rightmax);
 }
+```
 
+For the given segment tree and the given range, get the sum.
+```java
 public int querySum(SegmentTreeNode root, int start, int end) {
     if (root == null) {
         return 0;
