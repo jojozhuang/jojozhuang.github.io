@@ -193,3 +193,4 @@ public ListNode detectCycle(ListNode head) {
 ```
 
 ## 4. Reference
+* [Data Structure and Algorithms - Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)

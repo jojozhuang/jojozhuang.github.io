@@ -223,3 +223,7 @@ exponential time(2^n)
 * Merge Sort: Average O(nlog(n)), Worst Case O(nlog(n)); Memory: Depends.
 * Quick Sort: Average O(nlog(n)), Worst Case O(n^2); Memory: O(log(n)).
 * Bucket Sort: Average O(kn), Worst Case O(kn); Memory: Depends.
+
+## 11. References
+* [Data Structures - Algorithms Basics](https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm)
+* [Data Structure and Algorithms Binary Search](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)

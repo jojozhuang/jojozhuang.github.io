@@ -1,36 +1,40 @@
 ---
 layout: post
 key: blog
-title: "Algorithm - Sorting"
+title: "Common Sorting Algorithms"
 date: 2016-03-26
 tags: Bubble, Quick, Merge
 categories:
 - blog
 ---
 
-> Most of the popular sorting algorithms.
-* 1. Bubble
-* 2. Insertion
-* 3. Selection
-* 4. Shell
-* 5. Heap
-* 6. Merge
-* 7. Quick
-* 8. Bucket
+> All of the common sorting algorithms.
+
+ Name           | Space Complexity | Time(Average) | Time(Worst) | Time (Best)
+----------------|------------------|---------------|--------------|-----------
+ Bubble Sort    | O(1) | O(n^2) | O(n^2) | O(n^2)
+ Insertion Sort |   |   |   |  
+ Shell Sort     |   |   |   |  
+ Selection Sort | O(1) | O(n^2) | O(n^2) | O(n^2)
+ Heap Sort      |   |   |   |  
+ Merge Sort     | Depends  | nlog(n)  | nlog(n)  | nlog(n)
+ Quick Sort     | O(log(n)) | O(log(n)) | O(n^2)  | O(log(n))
+ Bucket Sort    | Depends  | O(kn)  | O(kn)  | O(kn)
+ Counting Sort  |   |   |   |
+ Radix Sort     |   |   |  |
 
 ## 1. Bubble Sort
 ### 1.1 How It Works?
-Take the
+Take the last element, compare it with the previous one, swap if it is smaller(or larger). By doing this repetitively, bubble up the smallest(or the largest) to the front.
 ### 1.2 Implementation
 ```java
-public int[] BubbleSort(int[] nums) {
-    if (nums == null || nums.length == 0) {
+public int[] bubbleSort(int[] nums) {
+    if (nums == null || nums.length < 2) {
         return nums;
-    }
+    }        
 
-    //small to big
     for(int i = 0; i < nums.length; i++) {
-        for (int j = nums.length - 1 ; j > i; j--) { //find the smallest one
+        for (int j = nums.length - 1; j > i; j--) {
             if (nums[j] < nums[j - 1]) {
                 int temp = nums[j];
                 nums[j] = nums[j - 1];
@@ -40,18 +44,19 @@ public int[] BubbleSort(int[] nums) {
     }
 
     return nums;
-}
+}  
 ```
 ### 1.3 Complexity
 * Space: O(1)
-* Time: 
+* Time: Average O(n^2), Worst Case O(n^2)
 
 ## 2. Insertion Sort
 ### 2.1 How It Works?
-Take the
+Start from the second element, each time, insert the current element to the proper position.
+![MIME Type](/public/pics/2016-03-26/insertionsort.png)  
 ### 2.2 Implementation
 ```java
-public int[] InsertionSort(int[] nums) {
+public int[] insertionSort(int[] nums) {
     if (nums == null || nums.length < 2) {
         return nums;
     }
@@ -59,7 +64,7 @@ public int[] InsertionSort(int[] nums) {
     for (int i = 1; i < nums.length; i++) {
         int key = nums[i];
         int j = i;
-        while(j > 0 && nums[j - 1] > key) {
+        while (j > 0 && nums[j - 1] > key) {
             nums[j] = nums[j - 1];
             j--;
         }
@@ -70,15 +75,15 @@ public int[] InsertionSort(int[] nums) {
 }
 ```
 ### 2.3 Complexity
-* Space:
-* Time:
+* Space: O(1)
+* Time: Average O(n^2), Worst Case O(n^2)
 
 ## 3. Selection Sort
 ### 3.1 How It Works?
-Take the
+Each time, find the smallest element between the current element and the tail element, append it to the front.
 ### 3.2 Implementation
 ```java
-public int[] SelectionSort(int[] nums) {
+public int[] selectionSort(int[] nums) {
     if (nums == null || nums.length < 2) {
         return nums;
     }
@@ -102,17 +107,28 @@ public int[] SelectionSort(int[] nums) {
 }
 ```
 ### 3.3 Complexity
-* Space:
-* Time:
+* Space: O(1)
+* Time: Average O(n^2), Worst Case O(n^2)
 
 ## 4. Shell Sort
 ### 4.1 How It Works?
-Take the
+ShellSort is mainly a variation of Insertion Sort. Do a gapped insertion sort.
 ### 4.2 Implementation
 ```java
-public int[] ShellSort(int[] nums) {
-    if (nums == null || nums.length == 0) {
+public int[] shellSort(int[] nums) {
+    if (nums == null || nums.length < 2) {
         return nums;
+    }
+
+    for (int gap = nums.length/2; gap > 0; gap = gap/2) {
+        for (int i = gap; i < nums.length; i++) {
+            int temp = nums[i];
+            int j;
+            for (j = i; j >= gap && nums[j - gap] > temp; j = j-gap) {
+                nums[j] = nums[j - gap];
+            }
+            nums[j] = temp;
+        }
     }
 
     return nums;
@@ -124,15 +140,54 @@ public int[] ShellSort(int[] nums) {
 
 ## 5. Heap Sort
 ### 5.1 How It Works?
-Take the
+Build heap
 ### 5.2 Implementation
 ```java
-public int[] HeapSort(int[] nums) {
-    if (nums == null || nums.length == 0) {
+public int[] heapSort(int nums[]) {
+    if (nums == null || nums.length < 2) {
         return nums;
     }
 
+    // Build heap (rearrange array)
+    for (int i = nums.length / 2 - 1; i >= 0; i--) {
+        heapify(nums, nums.length, i);
+    }
+
+    // One by one extract an element from heap
+    for (int i= nums.length-1; i>=0; i--) {
+        int temp = nums[0];
+        nums[0] = nums[i];
+        nums[i] = temp;
+
+        heapify(nums, i, 0);
+    }
+
     return nums;
+}
+
+private void heapify(int nums[], int n, int i)
+{
+    int largest = i;  // Initialize largest as root
+    int l = 2*i + 1;  // left = 2*i + 1
+    int r = 2*i + 2;  // right = 2*i + 2
+
+    if (l < n && nums[l] > nums[largest]) {
+        largest = l;
+    }
+
+    if (r < n && nums[r] > nums[largest]) {
+        largest = r;
+    }
+
+    // If largest is not root
+    if (largest != i) {
+        int swap = nums[i];
+        nums[i] = nums[largest];
+        nums[largest] = swap;
+
+        // Recursively heapify the affected sub-tree
+        heapify(nums, n, largest);
+    }
 }
 ```
 ### 5.3 Complexity
@@ -144,68 +199,75 @@ public int[] HeapSort(int[] nums) {
 Take the
 ### 6.2 Implementation
 ```java
-public int[] MergeSort(int[] nums, int start, int end) {
-    if (nums == null || nums.length < 2 || start >= end) {
-        return nums;
-    }
+public int[] mergeSort(int[] nums) {
+     if (nums == null || nums.length < 2) {
+         return nums;
+     }
+     mergeHelper(nums, 0, nums.length - 1);
+     return nums;
+ }
 
-    int mid = 0;
+ public void mergeHelper(int[] nums, int start, int end) {
+     if (start >= end) {
+         return;
+     }
 
-    mid = start + (end - start) / 2;
-    nums = MergeSort(nums, start, mid);
-    nums = MergeSort(nums, mid + 1, end);
-    nums = Merge(nums, start, mid, end);
+     int mid = start + (end - start) / 2;
+     mergeHelper(nums, start, mid);
+     mergeHelper(nums, mid + 1, end);
+     merge(nums, start, mid, end);
+ }
 
-    return nums;
-}
+ private void merge(int[] nums, int start, int mid, int end) {
+     int[] copy = Arrays.copyOf(nums, nums.length);
 
-private int[] Merge(int[] nums, int start, int mid, int end) {
-
-    int[] copy = Arrays.copyOf(nums, nums.length);
-
-    int i = start;
-    int j = mid + 1;
-    for (int k = start; k <= end; k++) {
-        if (i > mid) { // no item in left
-            nums[k] = copy[j];
-            j++;
-        }
-        else if(j > end) { // no item in right
-            nums[k] = copy[i];
-            i++;
-        }
-        else if (copy[i] <= copy[j]) {
-            nums[k] = copy[i];
-            i++;
-        }
-        else{
-            nums[k] = copy[j];
-            j++;
-        }                
-    }
-
-    return nums;
-}
+     int left = start;
+     int right = mid + 1;
+     for (int k = start; k <= end; k++) {
+         if (left > mid) { // no item at left
+             nums[k] = copy[right];
+             right++;
+         }
+         else if(right > end) { // no item at right
+             nums[k] = copy[left];
+             left++;
+         }
+         else if (copy[left] <= copy[right]) {
+             nums[k] = copy[left];
+             left++;
+         }
+         else{
+             nums[k] = copy[right];
+             right++;
+         }                
+     }
+ }
 ```
 ### 6.3 Complexity
-* Space:
-* Time:
+* Space: O(1)
+* Time: Average O(nlog(n)), Worst Case O(nlog(n))
 
 ## 7. Quick Sort
 ### 7.1 How It Works?
 Take the
 ### 7.2 Implementation
 ```java
-public int[] QuickSort(int[] nums, int start, int end) {
-    if (nums == null || nums.length < 2 || start >= end) {
+public int[] quickSort(int[] nums) {
+    if (nums == null || nums.length < 2) {
         return nums;
+    }
+    quickHelper(nums, 0, nums.length - 1);
+    return nums;
+}
+
+public void quickHelper(int[] nums, int start, int end) {
+    if (start >= end) {
+        return;
     }
 
     int pivot = partition(nums, start, end);
-    nums = QuickSort(nums, start, pivot - 1);
-    nums = QuickSort(nums, pivot + 1, end);
-
-    return nums;
+    quickHelper(nums, start, pivot - 1);
+    quickHelper(nums, pivot + 1, end);
 }   
 
 // one way
@@ -228,8 +290,8 @@ private int partition(int[] nums, int start, int end) {
 }
 ```
 ### 7.3 Complexity
-* Space:
-* Time:
+* Space: O(log(n))
+* Time: Average O(nlog(n)), Worst Case O(n^2)
 
 ## 8. Bucket Sort
 ### 8.1 How It Works?
@@ -262,8 +324,13 @@ public int[] BucketSort(int[] nums, int maxVal) {
 }
 ```
 ### 8.3 Complexity
-* Space:
-* Time:
+* Space: Depends
+* Time: Average O(kn), Worst Case O(kn)
 
 ## 9. Reference
-*[Sorting algorithm in Wiki](https://en.wikipedia.org/wiki/Sorting_algorithm)
+* [Sorting Algorithms on Wiki](https://en.wikipedia.org/wiki/Sorting_algorithm)
+* [Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
+* [Insertion Sort](http://www.geeksforgeeks.org/insertion-sort/)
+* [Selection Sort](http://www.geeksforgeeks.org/selection-sort/)
+* [Shell Sort](http://www.geeksforgeeks.org/shellsort/)
+* [Heap Sort](http://www.geeksforgeeks.org/heap-sort/)

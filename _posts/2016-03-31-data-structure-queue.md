@@ -150,5 +150,5 @@ public class ArrayQueue {
 ```
 
 ## 3. Reference
-http://blog.csdn.net/clown_zeon/article/details/51605465
-http://introcs.cs.princeton.edu/java/43stack/
+* [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)
+* [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)

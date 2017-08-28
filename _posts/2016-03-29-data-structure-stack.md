@@ -183,5 +183,5 @@ public class SortStack {
 ```
 
 ## 4. Reference
-http://blog.csdn.net/clown_zeon/article/details/51605465
-http://introcs.cs.princeton.edu/java/43stack/
+* [Data Structure and Algorithms - Stack](https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm)
+* [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)

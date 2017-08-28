@@ -27,9 +27,12 @@ A min-heap is a complete binary tree where each node is smaller than its childre
 This takes O(log n) time, where n is the number of nodes in the heap.
 ```java
 ```
+
 ## 5. Remove the top from Min-Heap.
 1) Remove the top element.  
 2) Move the last element to top.  
 3) Bubble down this new top element. Each level, select smaller child and swap until to the bottom.  
 This also takes O(log n) time, where n is the number of nodes in the heap.
+
 ## 6. Reference
+* [Heap Data Structures](https://www.tutorialspoint.com/data_structures_algorithms/heap_data_structure.htm)
