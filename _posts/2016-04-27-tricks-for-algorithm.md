@@ -158,68 +158,17 @@ public boolean isUniqueChars(String str) {
     return true;
 }
 ```
-## 3. Linked List
-### 3.1 Reverse
-```java
-public ListNode reverseList(ListNode head) {
-    ListNode prev = null;
-    while (head != null) {
-        ListNode next = head.next;
-        head.next = prev;
-        prev = head;
-        head = next;
-    }
-    return prev;
-}
-```
-* Middle Node
-* Cycle
-* Dummy Node
-* Fast and Slow Point(LeetCode 19)
-
-## 4. Tree
-### 4.1 Create TreeNode With Level-Order String Array
-```java
-public static TreeNode createInstance(String[] arr) {
-    if(arr == null || arr.length == 0) {
-        return null;         
-    }
-
-    Queue<TreeNode> queueNode = new LinkedList<>();
-
-    TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
-    queueNode.offer(root);
-
-    int index = 0;
-    while (index < arr.length - 1) {
-        TreeNode node = queueNode.poll();
-        if (node != null) {
-            String str = arr[++index];
-            if (!str.equals("#")) {
-                node.left = new TreeNode(Integer.parseInt(str));
-                queueNode.add(node.left);
-            }
-            str = arr[++index];
-            if (!str.equals("#")) {
-                node.right = new TreeNode(Integer.parseInt(str));
-                queueNode.add(node.right);
-            }             
-        }
-    }
-
-    return root;
-}
-```
-### 4.2 Binary Tree Traversal
-* Preorder -> Recursion, Stack(Add right first, then left node to stack)
-* Inorder -> Recursion, Stack(Go to the deepest left node)
-* Postorder -> Recursion, Stack(Need to set node.left = null)
-* Level -> Queue
-
-For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
-```java
-TreeNode root = TreeNode.createInstance(new String[]{"1","#","3"});
-```
+## 3. Data Structure
+I've created several postings to discuss this topic separately.
+* [Data Structure - Linked List](http://jojozhuang.github.io/blog/2016/03/27/data-structure-linkedlist/)
+* [Data Structure - Stack](http://jojozhuang.github.io/blog/2016/03/29/data-structure-stack/)
+* [Data Structure - Queue](http://jojozhuang.github.io/blog/2016/03/31/data-structure-queue//)
+* [Data Structure - Tree](http://jojozhuang.github.io/blog/2016/04/02/data-structure-tree/)
+* [Data Structure - Segment Tree](http://jojozhuang.github.io/blog/2016/04/02/data-structure-segment-tree/)
+* [Data Structure - Heap](http://jojozhuang.github.io/blog/2016/04/05/data-structure-heap/)
+* [Data Structure - Trie](http://jojozhuang.github.io/blog/2016/04/09/data-structure-trie/)
+* [Data Structure - Graph](http://jojozhuang.github.io/blog/2016/04/12/data-structure-graph/)
+* [Data Structure - HashMap](http://jojozhuang.github.io/blog/2016/04/16/data-structure-hashmap/)
 
 ## 5. Bit Manipulation
 ### 5.1 Check If An Integer is Power of Two.

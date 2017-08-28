@@ -80,12 +80,12 @@ public class ListNode {
 ```
 
 ## 3. Common Operations
-All below topics are based on singly linked list.  
 Here are some basic approaches for linked list questions.
 * Dummy Node
 * Reverse Linked List
 * Fast and Slow Pointer
 
+All below topics are based on singly linked list.  
 ### 3.1 Reverse Linked List
 Input:  7->3->12->8->4->9  
 Output: 9->4->8->12->3->7  

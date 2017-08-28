@@ -24,7 +24,14 @@ categories:
 * Full Binary Trees: A full binary tree is a binary tree in which every node has either zero or two children.That is, no nodes have only one child.
 * Perfect Binary Trees A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
 
-## 3. Binary Tree Traversal(Recursion)
+## 3.  Binary Tree Traversal
+### 3.1 Common Approaches
+* Preorder -> Recursion or Iteration with Stack(Add right first, then left node to stack)
+* Inorder -> Recursion or Iteration with Stack(Go to the deepest left node)
+* Postorder -> Recursion or Iteration with Stack(Need to set node.left = null)
+* Level -> Queue
+
+### 3.2 Binary Tree Traversal(Recursion)
 Pre-Order
 ```java
 public List<Integer> preorderTraversal(TreeNode root) {
@@ -81,7 +88,7 @@ public List<Integer> postorderTraversal2(TreeNode root) {
 }
 ```
 
-## 4. Binary Tree Traversal(Iteration)
+### 3.3 Binary Tree Traversal(Iteration)
 Pre-Order
 ```java
 public List<Integer> preorderTraversal(TreeNode root) {
@@ -170,6 +177,92 @@ public List<Integer> postorderTraversal(TreeNode root) {
 }
 ```
 
+## 4. Level-Order in Binary Tree
+## 4.1 Create TreeNode With Level-Order String Array
+For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
+```java
+TreeNode root = TreeNode.createInstance(new String[]{"1","#","3"});
+```
+
+Implementation of the 'createInstance' method.
+```java
+public static TreeNode createInstance(String[] arr) {
+    if(arr == null || arr.length == 0) {
+        return null;         
+    }
+
+    Queue<TreeNode> queueNode = new LinkedList<>();
+
+    TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
+    queueNode.offer(root);
+
+    int index = 0;
+    while (index < arr.length - 1) {
+        TreeNode node = queueNode.poll();
+        if (node != null) {
+            String str = arr[++index];
+            if (!str.equals("#")) {
+                node.left = new TreeNode(Integer.parseInt(str));
+                queueNode.add(node.left);
+            }
+            str = arr[++index];
+            if (!str.equals("#")) {
+                node.right = new TreeNode(Integer.parseInt(str));
+                queueNode.add(node.right);
+            }             
+        }
+    }
+
+    return root;
+}
+```
+
+## 4.2 Level-Order Traversal in Binary Tree
+Given binary tree {3,9,20,#,#,15,7},  
+     3  
+    / \  
+   9  20  
+     /  \  
+    15   7  
+ return its level order traversal as:  
+
+ [  
+   [3],  
+   [9,20],  
+   [15,7]  
+ ]  
+
+```java
+public List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> res = new ArrayList<List<Integer>>();
+
+    if (root == null) {
+        return res;
+    }
+
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+        List<Integer> level = new ArrayList<Integer>();
+        int size = queue.size();
+        for (int i = 0; i < size; i++) {
+            TreeNode node = queue.poll();
+            level.add(node.val);
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        res.add(level);
+    }
+
+    return res;
+}
+```
+
 ## 5. Implement Binary Search Tree
 Methods:  
 * insert(int value)
@@ -202,4 +295,3 @@ public class BSTNode {
 ```
 
 ## 6. Reference
-Crack the Coding Interview, Edition 6.
