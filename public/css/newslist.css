@@ -28,11 +28,11 @@
 .dl-unsur dd> div > p {
     width:100%;
     margin:0 0 0 5px;
-    font-size:17px;
+    font-size:15px;
 }
 .dl-unsur dd> .tag {
     font-style:italic;
-    font-size:17px;
+    font-size:15px;
 }
 /* --------------------------------------
    Media Queries
@@ -46,8 +46,8 @@
     font-size:17px;
 }
 .dl-unsur dd> div > p {
-    font-size:14px;
+    font-size:12px;
 }
 .dl-unsur dd> .tag {
-    font-size:14px;
+    font-size:12px;
 }

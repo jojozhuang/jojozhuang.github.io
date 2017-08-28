@@ -8,14 +8,14 @@ categories:
 - blog
 ---
 
-> A linked list is represented by a sequence of nodes. It is a basic data structure and used in many other structures. For example, stack can be built with a linked list.
+> A linked list is represented by a sequence of nodes. It is a basic data structure and used in many other structures. For example, linked list can be used to build stack.
 
 ## 1. Types of Linked List
 ### 1.1 Singly Linked list
 Each node has one pointer, points to the next node in the linked list.
 ![MIME Type](/public/pics/2016-03-27/singlylinkedlist.png)  
 ### 1.2 Doubly Linked list
-Each node has two pointers, one points to the next node, another points to the previous one.
+Each node has two pointers, one points to the next node, another points to the previous node.
 ![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png)  
 
 ## 2. Implementation
@@ -49,7 +49,7 @@ public class ListNode {
 ```
 
 ### 2.2 Create Doubly Linked Node
-Each node has an attribute to store its value, and two pointers, point to the previous and the next node.
+Each node has an attribute to store its value, and two pointers, point to the previous node and the next node.
 ```java
 public class ListNode {
     public int val;
@@ -80,11 +80,10 @@ public class ListNode {
 ```
 
 ## 3. Common Operations
-All below topics are based on singly linked list.
-
-Basic Approaches for Linked List Questions.
+All below topics are based on singly linked list.  
+Here are some basic approaches for linked list questions.
 * Dummy Node
-* Reverse Node
+* Reverse Linked List
 * Fast and Slow Pointer
 
 ### 3.1 Reverse Linked List
@@ -168,7 +167,7 @@ Output: 12
 
 Use the fast and slow pointer.  
 ```java
-public ListNode detectCycle(ListNode head) {        
+public ListNode detectCycle(ListNode head) {
     if (head == null) {
         return null;
     }
