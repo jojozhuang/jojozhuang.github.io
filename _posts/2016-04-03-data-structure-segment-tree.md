@@ -13,22 +13,27 @@ categories:
 * which of these points are in a given interval
 
 ## 1. Usage of Segment Tree
-* Q1: What is the minimum number of array {4,-1,3,0,2}? A: The answer is -1.  
-* Q2: What is the minimum number of this array within the range of index {2,3}? A: The answer is 0.  
-* Q3: How to answer such question for any given range? A: We have to create a matrix to store all the minimum values for all ranges.
+### 1.1 The Original Question
+1) What is the minimum number of array {4,-1,3,0,2}? The answer is -1.  
+2) What is the minimum number of this array within the range of index {2,3}? The answer is 0.  
+3) How to answer such question for any given range?   
+We have to create a matrix to store all the minimum values for all ranges. The matrix looks as follows.
 
+Index| 0 | 1  |  2 |  3 |  4
+-----|---|----|----|--- |---
+   0 | 4 | -1 | -1 | -1 | -1
+   1 |   | -1 | -1 | -1 | -1
+   2 |   |    |  3 |  0 |  0
+   3 |   |    |    |  0 |  0
+   4 |   |    |    |    |  2
 
-   | 0 | 1  |  2 |  3 |  4
----|---|----|----|--- |---
- 0 | 4 | -1 | -1 | -1 | -1
- 1 |   | -1 | -1 | -1 | -1
- 2 |   |    |  3 |  0 |  0
- 3 |   |    |    |  0 |  0
- 4 |   |    |    |    |  2
+For example, to get the minimum number of range {2,4}, just find the cell {2,4}, which is 0.
 
+### 1.2 Performance of Matrix Approach for Range Search
 * The Space Complexity is O(n^2).
 * The Time Complexity for building the matrix is O(n^2), for searching is O(1).
 
+### 1.3 Performance of Segment Tree
 Segment Tree has less storage and better performance.
 * The Space Complexity is O(n).
 * The Time Complexity for building the tree is O(n), for searching is O(lg(n)).
