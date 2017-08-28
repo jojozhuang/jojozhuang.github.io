@@ -170,63 +170,9 @@ I've created several postings to discuss this topic separately.
 * [Data Structure - Graph](http://jojozhuang.github.io/blog/2016/04/12/data-structure-graph/)
 * [Data Structure - HashMap](http://jojozhuang.github.io/blog/2016/04/16/data-structure-hashmap/)
 
-## 5. Bit Manipulation
-### 5.1 Check If An Integer is Power of Two.
-```java
-n & (n-1) == 0;
-```
-Example:
-If n = 8, then 1000 & 111 == 0
-If n = 9, then 1001 & 1000 == 1000 != 0
-If n = 10, then 1010 & 1001 == 1000 != 0
-
-### 5.2 Get the last 1 for a number
-Or we can say find the biggest factor with power of two for number x.
-```java
-x &= -x;
-```
-Examples:
-if x = 5, then x = 0101 & (1011) = 0001 = 1 = 2^0
-if x = 6, then x = 0110 & (1010) = 0010 = 2 = 2^1
-if x = 28, then x = 00011100 & 11100100 = 00000100 = 4 = 2^2
-
-### 5.2 Implement mathematic addition.
-```java
-int add(int a, int b) {  
-    while (b != 0) {
-        int c = a & b;  // Find the carry bits
-        a = a ^ b;  // Add the bits without considering the carry
-        b = c << 1;  // Propagate the carry
-    }
-    return a;
-}
-```
-The code shown above is actually the way how we calculate sum of two numbers in decimal.
-For example:
-a = 138, b = 296
-Step 1: Calculate sum of two number without taking the carry, 138 + 296 = 324
-Step 2: Calculate sum of two number by only getting the carry, 138 + 296 = 011
-Step 3: Shift the carry result to left by 1 then add sum1, 0324 + 0110 = 434.
-
-## 6. Graph
-
-### 6.1 Union find
-```java
-// find root
-private int find(int[] parent, int node) {
-    while(parent[node] != node) {
-        parent[node] = parent[parent[node]];
-    }
-    return parent[node];
-}
-
-// union
-private void union(int[] parent, int node1, int node2) {
-    int root1 = find(parent, node1);
-    int root2 = find(parent, node2);
-    parent[root1] = root2;
-}
-```
+## 5. Other Topics
+* [Common Sorting Algorithms](http://jojozhuang.github.io/blog/2016-03-26/common-sorting-algorithms/)
+* [Bit Manipulation](http://jojozhuang.github.io/blog/2016/04/25/bit-manipulation/)
 
 ## 7. Others
 

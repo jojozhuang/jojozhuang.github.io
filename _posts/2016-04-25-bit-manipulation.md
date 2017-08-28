@@ -12,14 +12,17 @@ categories:
 
 ## 1. Operations for Bit
 * & (And)
-* | (OR)
+* \| (OR)
 * ^ (XOR)
 * ~ (Negative)
 
 ## 2. Common Facts
-x ^ 0s = x       x & 0s = 0      x | 0s = x
-x ^ 1s = ~x      x & 1s = x      x | 1s = 1
-x ^ x = 0        x & x = x       x | x = x
+     XOR     |     AND    |     OR
+-------------|------------|------------
+ x ^ 0s = x  | x & 0s = 0 | x \| 0s = x
+ x ^ 1s = ~x | x & 1s = x | x \| 1s = 1
+ x ^ x = 0   | x & x = x  | x \| x = x
+
 
 ## 3. Shifting
 * Arithmetic Right Shift (take the sign bit to most significant bit)
@@ -139,4 +142,42 @@ public int divide(int a, int b) {
     todo
 }
 ```
+
+### 5.1 Check If An Integer is Power of Two.
+```java
+n & (n-1) == 0;
+```
+Example:
+If n = 8, then 1000 & 111 == 0
+If n = 9, then 1001 & 1000 == 1000 != 0
+If n = 10, then 1010 & 1001 == 1000 != 0
+
+### 5.2 Get the last 1 for a number
+Or we can say find the biggest factor with power of two for number x.
+```java
+x &= -x;
+```
+Examples:
+if x = 5, then x = 0101 & (1011) = 0001 = 1 = 2^0
+if x = 6, then x = 0110 & (1010) = 0010 = 2 = 2^1
+if x = 28, then x = 00011100 & 11100100 = 00000100 = 4 = 2^2
+
+### 5.2 Implement mathematic addition.
+```java
+int add(int a, int b) {  
+    while (b != 0) {
+        int c = a & b;  // Find the carry bits
+        a = a ^ b;  // Add the bits without considering the carry
+        b = c << 1;  // Propagate the carry
+    }
+    return a;
+}
+```
+The code shown above is actually the way how we calculate sum of two numbers in decimal.
+For example:
+a = 138, b = 296
+Step 1: Calculate sum of two number without taking the carry, 138 + 296 = 324
+Step 2: Calculate sum of two number by only getting the carry, 138 + 296 = 011
+Step 3: Shift the carry result to left by 1 then add sum1, 0324 + 0110 = 434.
+
 ## 6. Reference

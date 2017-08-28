@@ -10,12 +10,12 @@ categories:
 
 > A graph is simply a collection of nodes with edges between (some of) them.
 
-## 1. Features of Graph.
+## 1. Features of Graph
 * Graphs can be either directed (like the following graph) or undirected. While directed edges are like a one-way street, undirected edges are like a two-way street.
 * Graph might consist of multiple isolated subgraphs. If there is a path between every pair of vertices, it is called a "connected graph.'
 * Graph can also have cycles (or not). An "acyclic graph" is one without cycles.
 
-## 2. Implement Graph.
+## 2. Implement Graph
 Adjacency List
 
 ```java
@@ -31,7 +31,7 @@ class Node {
 
 Adjacency Matrices
 
-## 3. Graph Search.
+## 3. Graph Search
 ### 3.1 Depth-First Search (DFS)
 DFS is often preferred if we want to visit every node in the graph.
 ```java
@@ -75,4 +75,22 @@ void searchBFS(Node root) {
 ### 3.3 Bidirectional Search
 Bidirectional search is used to find the shortest path between a source and destination node.
 
-## 4. Reference
+## 4. Union find
+```java
+// find root
+private int find(int[] parent, int node) {
+    while(parent[node] != node) {
+        parent[node] = parent[parent[node]];
+    }
+    return parent[node];
+}
+
+// union
+private void union(int[] parent, int node1, int node2) {
+    int root1 = find(parent, node1);
+    int root2 = find(parent, node2);
+    parent[root1] = root2;
+}
+```
+
+## 5. Reference
