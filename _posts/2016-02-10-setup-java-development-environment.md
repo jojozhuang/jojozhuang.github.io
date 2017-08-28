@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Basic Java Development Environment Setup"
+title: "Setup Java Development Environment"
 date: 2016-02-10
-tags: VitualBox, Ubuntu, JDK
+tags: VirtualBox, Ubuntu, JDK
 categories:
 - blog
 ---

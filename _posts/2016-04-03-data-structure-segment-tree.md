@@ -16,6 +16,8 @@ categories:
 * Q1: What is the minimum number of array {4,-1,3,0,2}? A: The answer is -1.  
 * Q2: What is the minimum number of this array within the range of index {2,3}? A: The answer is 0.  
 * Q3: How to answer such question for any given range? A: We have to create a matrix to store all the minimum values for all ranges.
+
+
    | 0 | 1  |  2 |  3 |  4
 ---|---|----|----|--- |---
  0 | 4 | -1 | -1 | -1 | -1
