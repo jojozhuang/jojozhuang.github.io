@@ -10,18 +10,18 @@ categories:
 
 > All of the common sorting algorithms.
 
- Name           | Space Complexity | Time(Average) | Time(Worst) | Time (Best)
-----------------|------------------|---------------|--------------|-----------
- Bubble Sort    | O(1) | O(n^2) | O(n^2) | O(n^2)
- Insertion Sort |   |   |   |  
- Shell Sort     |   |   |   |  
- Selection Sort | O(1) | O(n^2) | O(n^2) | O(n^2)
- Heap Sort      |   |   |   |  
- Merge Sort     | Depends  | nlog(n)  | nlog(n)  | nlog(n)
- Quick Sort     | O(log(n)) | O(log(n)) | O(n^2)  | O(log(n))
- Bucket Sort    | Depends  | O(kn)  | O(kn)  | O(kn)
- Counting Sort  |   |   |   |
- Radix Sort     |   |   |  |
+ Name           | Space Complexity | Time(Average) | Time(Worst) | Time (Best) | Stable
+----------------|------------------|---------------|--------------|------------|--------
+ Bubble Sort    | O(1) | O(n^2) | O(n^2) | O(n^2) | Yes
+ Insertion Sort |   |   |   |  | Yes
+ Shell Sort     |   |   |   |  | No
+ Selection Sort | O(1) | O(n^2) | O(n^2) | O(n^2) | Yes
+ Heap Sort      |   |   |   |  | Yes
+ Merge Sort     | Depends  | nlog(n)  | nlog(n)  | nlog(n) | Yes
+ Quick Sort     | O(log(n)) | O(log(n)) | O(n^2)  | O(log(n)) | No
+ Bucket Sort    | Depends  | O(kn)  | O(kn)  | O(kn) | No
+ Counting Sort  |   |   |   |  | No
+ Radix Sort     |   |   |  |  | No
 
 ## 1. Bubble Sort
 ### 1.1 How It Works?
