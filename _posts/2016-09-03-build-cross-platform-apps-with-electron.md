@@ -179,11 +179,113 @@ $ electron ./main.js
 A new window will open up, showing bootstrap UI.
 ![MIME Type](/public/pics/2016-09-03/bootstrap.png)  
 
-## 4. Debugging
-## 4.1 Dev Tools in Chrome
+## 4. Inter Process Communication
+Electron provides us with 2 IPC (Inter Process Communication) modules called ipcMain and ipcRenderer.
+* The ipcMain module is used to communicate asynchronously from the main process to renderer processes.
+* The ipcRenderer module is used to communicate asynchronously from a renderer process to the main process.
+
+## 4.1 Create index.html
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>File read using system dialogs</title>
+	  <link rel = "stylesheet"
+         href = "./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+   </head>
+   <body>
+	   <div class = "container">
+          <h1>Inter Process Communication</h1>
+            <textarea id="editor" style="width: 400px; height: 300px;"></textarea>
+            <div>
+                <button class = "btn btn-success" id = "open">Open File</button>
+                <button class = "btn btn-success" id = "save">Save File</button>
+            </div>
+          <script src = "./view_dialog.js" ></script>
+       </div>
+      <script type="text/javascript">
+
+      </script>
+   </body>
+</html>
+```
+## 4.2 Create main.js
+In this example, ipcMain receives 'openFile' request from ipcRenderer, and open a dialog to read content from file. Then, notify ipcRenderer and send data to it.
+```javascript
+const {app, BrowserWindow} = require('electron')
+const url = require('url')
+const path = require('path')
+const {ipcMain} = require('electron')
+
+let win
+
+function createWindow() {
+   win = new BrowserWindow({width: 800, height: 600})
+   win.loadURL(url.format({
+      pathname: path.join(__dirname, 'index_dialog.html'),
+      protocol: 'file:',
+      slashes: true
+   }))
+}
+
+ipcMain.on('openFile', (event, path) => {
+      const {dialog} = require('electron')
+      const fs = require('fs')
+      dialog.showOpenDialog({ filters: [{ name: 'text', extensions: ['txt']}]}, function (fileNames) {
+            // fileNames is an array that contains all the selected
+            if(fileNames === undefined){
+                  console.log("No file selected");
+            }else{
+                  readFile(fileNames[0]);
+            }
+      });
+
+      function readFile(filepath){
+            fileName = filepath
+            fs.readFile(filepath, 'utf-8', (err, data) => {
+            if(err){
+                  alert("An error ocurred reading the file :" + err.message)
+                  return
+            }
+            // handle the file content
+            event.sender.send('fileData', data)
+            })
+      }
+})
+app.on('ready', createWindow)
+```
+
+## 4.3 Create view_dialog.js
+When open button is click, ipcRenderer send a 'openFile' request to ipcMain. Later, it receives the data from ipcMain and show it in the textbox.
+```javascript
+let $ = require('jquery')
+const {ipcRenderer} = require('electron')
+
+$('#open').on('click', () => {
+    ipcRenderer.send('openFile', () => {
+        console.log("Event sent.");
+     })
+
+     ipcRenderer.on('fileData', (event, data) => {
+        $("#editor").val(data);
+     })
+})
+```
+
+## 4.4 Run
+Run this app using the following command:
+```sh
+$ electron ./main.js
+```
+A new window will open up, showing a textbox and a button. Click on that button, select a txt file, then its content would be shown in the textbox.
+![MIME Type](/public/pics/2016-09-03/ipc.png)  
+
+## 5. Debugging
+## 5.1 Dev Tools in Chrome
 First, you can use the dev tools for Electron apps. Shortcut: Command + Option + I.
 ![MIME Type](/public/pics/2016-09-03/devtools.png)  
-## 4.2 Debug with VSCode
+## 5.2 Debug with VSCode
 Second, you can also use VSCode for debugging main process.  
 1) Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
 ![MIME Type](/public/pics/2016-09-03/launch.png)  
@@ -227,7 +329,7 @@ Paste the following content to launch.json.
 2) Click the green arrow button and start to debug.
 ![MIME Type](/public/pics/2016-09-03/debuginvsc.png)  
 
-## 5. Packaging
+## 6. Packaging
 There are two modules support you to package your Electron apps.
 * electron-builder
 * electron-packager
@@ -297,10 +399,10 @@ Building DMG
 Finally, you will get the executable file and installer in dist folder.
 ![MIME Type](/public/pics/2016-09-03/packaging.png)  
 
-## 6. Source
+## 7. Source Code
 [Source code files of Electron Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ElectronTutorial)
 
-## 7. References
+## 8. References
 * [Electron Tutorial](https://www.tutorialspoint.com/electron/index.htm)
 * [Electron Gitbook](https://xwartz.gitbooks.io/electron-gitbook/content/en/tutorial/quick-start.html)
 * [Electron on Github](https://github.com/electron/electron)
