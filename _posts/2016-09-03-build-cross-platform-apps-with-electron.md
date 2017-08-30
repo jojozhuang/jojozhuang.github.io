@@ -37,17 +37,17 @@ We can use any text editor to develop Electron apps. I choose VSCode, because it
 Go to https://code.visualstudio.com/, download the installer of Visual Studio Code. And follow the wizard to install it.
 
 ## 2. Create Project for Electron Tutorial
-Generally, an Electron app is structured like this:
-your-app/
-├── package.json
-├── main.js
-└── index.html
+Generally, an Electron app is structured like this:  
+your-app/  
+├── package.json  
+├── main.js  
+└── index.html  
 ## 2.1 Create Project Folder and package.json
 ```sh
-cd ~
-mkdir ElectronTutorial
-cd ElectronTutorial
-npm init
+$ cd ~
+$ mkdir ElectronTutorial
+$ cd ElectronTutorial
+$ npm init
 ```
 
 input the following information
@@ -70,7 +70,7 @@ Install Electron globally.
 ```sh
 $ npm install -g electron-prebuilt
 ```
-check version
+Check version
 ```sh
 electron --version
 ```
@@ -119,10 +119,10 @@ app.on('ready', createWindow)
 $ electron ./main.js
 ```
 A new window will open up, showing 'Hello World'.
-![MIME Type](/public/pics/2016-09-03/virtualbox.png)  
+![MIME Type](/public/pics/2016-09-03/helloworld.png)  
 
-## 3. Import Popular Libraries
-We can leverage all the available tools for front-end web development in Electron.
+## 3. Use Popular Libraries
+We can leverage all the available tools for front-end web development in Electron. For example, you can use bootstrap, jQuery, AngularJs or ReactJs to build Electron apps.
 
 ## 3.1 Install Packages
 ```sh
@@ -175,8 +175,9 @@ A new window will open up, showing bootstrap UI.
 ## 4.1 Dev Tools in Chrome
 First, you can use the dev tools for Electron apps. Shortcut: Command + Option + I.
 ![MIME Type](/public/pics/2016-09-03/devtools.png)  
-## 4.2 Create launch.json
-Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
+## 4.2 Debug with VSCode
+Second, you can also use VSCode for debugging main process.  
+1) Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
 ![MIME Type](/public/pics/2016-09-03/launch.png)  
 
 Paste the following content to launch.json.
@@ -214,8 +215,8 @@ Paste the following content to launch.json.
     ]
 }
 ```
-## 4.3 Debug with VSCode
-Click the green arrow button and start to debug.
+
+2) Click the green arrow button and start to debug.
 ![MIME Type](/public/pics/2016-09-03/debuginvsc.png)  
 
 ## 5. Packaging
@@ -232,7 +233,7 @@ npm install electron-builder --save-dev
 
 Add the following content to package.json.
 ```javascript
-"scripts": {
+   "scripts": {
     "postinstall": "install-app-deps",
     "start": "npm install && electron ./app",
     "pack": "build --dir",
@@ -267,13 +268,14 @@ Add the following content to package.json.
   },
 ```
 
-uUse the following command to package your app into an installer:
+Use the following command to package your app into an installer:
 ```sh
-npm run dist
+$ npm run dist
 ```
 
 You will get the update from builder.
 ```sh
+$ npm run dist
 > electron-tutorial@1.0.0 dist /Tutorials/ElectronTutorial
 > build
 
