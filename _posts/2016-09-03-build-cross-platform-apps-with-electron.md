@@ -11,7 +11,8 @@ categories:
 > Electron is an open source library developed by GitHub for building cross-platform desktop applications with HTML, CSS, and JavaScript. Electron accomplishes this by combining Chromium and Node.js into a single runtime and apps can be packaged for Mac, Windows, and Linux.
 
 ## 1. Setup Development Environment
-## 1.1 Installing Homebrew on Mac
+## 1.1 Install Homebrew on Mac
+Homebrew is package manager for Macs which makes installing lots of different software like Git, Ruby, and Node simpler. Homebrew lets you avoid possible security problems associated with using the sudo command to install software like Node.
 ```sh
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update // Update Homebrew
@@ -22,21 +23,38 @@ brew update // Update Homebrew
 brew install node
 ```
 
-npm will be installed along with nodejs. Check versions:
+npm will be installed along with nodejs.   
+Run following commands in terminal to check versions, to make sure node and npm are installed properly.
 ```sh
 node -v
 npm -v
 ```
 
-Update Node and NPM
+Update node and npm
 ```sh
 brew upgrade node
 ```
-## 1.3 Install Visual Studio Code
-We can use any text editor to develop Electron apps. I choose VSCode, because it supports debugging. VSCode is a free and open source IDE released by Microsoft.
-Go to https://code.visualstudio.com/, download the installer of Visual Studio Code. And follow the wizard to install it.
 
-## 2. Create Project for Electron Tutorial
+## 1.3 Install Electron
+Install Electron globally.
+```sh
+$ npm install -g electron-prebuilt
+```
+Check version
+```sh
+electron --version
+```
+
+You can also install Electron at package level.
+```sh
+npm install electron --save-dev
+```
+
+## 1.4 Install Visual Studio Code
+We can use any text editor to develop Electron apps. I choose VSCode, because it supports debugging. VSCode is a free and open source IDE released by Microsoft.  
+Go to https://code.visualstudio.com/, download the installer and follow the wizard to install it.
+
+## 2. Build Sample Project for Electron Tutorial
 Generally, an Electron app is structured like this:  
 your-app/  
 ├── package.json  
@@ -65,18 +83,7 @@ input the following information
 
 Then, a configuration file named 'package.json' will be created with the above content.
 
-## 2.2 Install Electron Package
-Install Electron globally.
-```sh
-$ npm install -g electron-prebuilt
-```
-Check version
-```sh
-electron --version
-```
-
-## 2.3 Create Hello World
-1) Create main.js
+## 2.2 Create main.js
 ```javascript
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
@@ -96,7 +103,7 @@ function createWindow() {
 app.on('ready', createWindow)
 ```
 
-2) Create index.html
+## 2.3 Create index.html
 ```html
 <!DOCTYPE html>
 <html>
@@ -114,7 +121,8 @@ app.on('ready', createWindow)
 </html>
 ```
 
-3) Run this app using the following command:
+## 2.4 Launch Electron App
+Run this app using the following command:
 ```sh
 $ electron ./main.js
 ```
@@ -288,9 +296,6 @@ Building DMG
 
 Finally, you will get the executable file and installer in dist folder.
 ![MIME Type](/public/pics/2016-09-03/packaging.png)  
-
-You can build linux installer through docker image. Or test the application in Docker containers created in Kitematic.
-Go to https://www.docker.com/products/docker-toolbox, Download Docker Toolbox.
 
 ## 6. Source
 [Source code files of Electron Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ElectronTutorial)
