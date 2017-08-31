@@ -8,14 +8,14 @@ categories:
 - blog
 ---
 
-> Create Responsive Website with AngularJS.
+> Use Git and GitHub as source control tool to manage code revisions.
 
 ## 1. What is Git?
 Git is a distributed revision control and source code management system with an emphasis on speed.
 
 ## 2. Install Git
-## 2.1 Install Git On Mac OS
-Install [Homebrew](https://brew.sh/) if it is not installed on your Mac.
+### 2.1 Install Git on Mac OS
+Install [Homebrew](https://brew.sh/) first if it hasn't been installed yet on your Mac.
 ```sh
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
@@ -29,42 +29,44 @@ Check versions
 $ git --version
 git version 2.11.0 (Apple Git-81)
 ```
-Configure your Git username and email using the following commands
+Configure your Git username and email using the following commands:
 ```sh
 $ git config --global user.name "Johnny"
 $ git config --global user.email "jojozhuang@gmail.com"
 ```
 
-## 2.2 Install Git On Ubuntu
-Update apt-get
+### 2.2 Install Git on Ubuntu
+Update packages
 ```sh
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install -f
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install -f
 ```
 
 Install Git
 ```sh
-sudo apt-get install git
-sudo git --version
+$ sudo apt-get install git
+$ sudo git --version
 ```
 
 ## 3. Create Repository on GitHub
 To push your local git repository to remote git server, we need to use GitHub.
-1) Go to https://github.com/, register a new account if you haven't got one.
-2) After login, you will see the page like below.
+### 3.1 Create GitHub Account
+If you haven't already, go to https://github.com/ to register and create a new account.
+
+### 3.2 Repositories on GitHub
+After login, you will see the page like below. For my GitHub, there are total 9 repositories. Seven of them are mine. One of them(EthanHao/Depaul) is shared by another GitHub Account. And another repository(github-example) is forked from some one's repository.
 ![MIME Type](/public/pics/2016-02-15/github.png)  
 
-Create New Repository
-Click the green 'New repository' button.
-Provide name and description.
-Select public or private.
+### 3.3 Create New Repository
+Click the green 'New repository' button. Provide name and description, select public or private.
 ![MIME Type](/public/pics/2016-02-15/createrepo.png)  
 
-repository is created. And it shows some instructions how to submit files to this repository through command line. next, we will do that.
+After creation, some instructions show how to submit files to this repository through command line. Next, we will do that.
+![MIME Type](/public/pics/2016-02-15/repocreated.png)  
 
 ## 4. Push Local File to GitHub
-## 4.1 Create Local Repository
+### 4.1 Create Local Repository
 ```sh
 Johnny@Johnny-Mac:~$ mkdir GitTutorial
 Johnny@Johnny-Mac:~$ cd GitTutorial/
@@ -97,12 +99,13 @@ Johnny@Johnny-Mac:~$
 ```
 
 ## 4.3 Check on GitHub
-There is a file named 'hello.txt' in repository 'github-test'.
+File 'hello.txt' is added into repository 'github-test'.
 ![MIME Type](/public/pics/2016-02-15/pushed.png)  
 Click on the file, check the content of it.
 ![MIME Type](/public/pics/2016-02-15/content.png)  
 
 ## 5. Pull Files From GitHub
+Below commands show how to pull the files from GitHub repository 'github-test' to local Mac.
 ```sh
 Johnny@Johnny-Mac:~$ cd PullTest/
 Johnny@Johnny-Mac:~$ ls
