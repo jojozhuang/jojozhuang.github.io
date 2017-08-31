@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Install and Use Docker on Ubuntu"
+title: "Use Node.js Image in Docker"
 date: 2016-09-10
-tags: Docker, Docker Hub
+tags: Node.js
 categories:
 - blog
 ---

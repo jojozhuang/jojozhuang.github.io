@@ -180,7 +180,7 @@ After the push is completed, you will see the 'Pushed' status.
 ## 6.3 Check The New Image in Docker Hub
 Log into the Docker Hub, we see there is a new image.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub1.png)  
-Now, you can share this image to other and you can pull this image from Docker Hub as well.
+Now, you can share this image to others and you can pull this image from Docker Hub as well.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub2.png)  
 
 ## 7. Pull The New Image on Mac
