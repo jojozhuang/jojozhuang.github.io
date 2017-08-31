@@ -146,10 +146,10 @@ Check file on mac.
 
 ### 6.3 Push Files to GitHub
 Open the hello.txt file, add 'Pushed by SourceTree!' to the end, save the file.
-Switch to SourceTree, it detects new changes of the file.
+Switch to SourceTree, it detects the new changes.
 ![MIME Type](/public/pics/2016-02-15/sourcetree-filechanged.png)  
 
-Stage the file by clicking the checkbox just before the file name. Then, click on the Commit button on the top left, input the commit description, and commit.
+Stage the file by clicking the checkbox just in front the file name. Then, click on the Commit button on the top left, input the commit description, and commit.
 ![MIME Type](/public/pics/2016-02-15/sourcetree-stagecommit.png)  
 
 The staged file is committed. Click the Push button. You may be asked for GitHub username and password for the first time you push.
