@@ -26,8 +26,9 @@ brew install node
 npm will be installed along with nodejs.   
 Run following commands in terminal to check versions, to make sure node and npm are installed properly.
 ```sh
-node -v
-npm -v
+node -v   //mac
+nodejs -v //linux
+npm -v  
 ```
 
 Update node and npm
@@ -200,7 +201,6 @@ Electron provides us with 2 IPC (Inter Process Communication) modules called ipc
             <textarea id="editor" style="width: 400px; height: 300px;"></textarea>
             <div>
                 <button class = "btn btn-success" id = "open">Open File</button>
-                <button class = "btn btn-success" id = "save">Save File</button>
             </div>
           <script src = "./view_dialog.js" ></script>
        </div>
