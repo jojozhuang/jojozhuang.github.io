@@ -47,6 +47,7 @@ Install Git
 ```sh
 $ sudo apt-get install git
 $ sudo git --version
+git version 2.7.4
 ```
 
 ## 3. Create Repository on GitHub
@@ -122,7 +123,45 @@ hello.txt
 Johnny@Johnny-Mac:~$
 ```
 
-## 6. References
+## 6. Use Git with SourceTree
+SourceTree is a free Git client for Windows or Mac. Instead of using command line, it provides an nice visual Git GUI.
+### 6.1 Install SourceTree
+Go to https://www.sourcetreeapp.com/, download the installer, and follow the wizard to install it.
+
+### 6.2 Clone Repository from GitHub
+New Repository->Clone From URL
+![MIME Type](/public/pics/2016-02-15/sourcetree-repo.png)  
+
+Input Source URL, which is the url of your repository on GitHub. And specify the local path and name.
+![MIME Type](/public/pics/2016-02-15/sourcetree-clone.png)  
+
+Click the Pull button on the top, then click the Ok button in the prompt dialog.
+![MIME Type](/public/pics/2016-02-15/sourcetree-pull.png)  
+
+File is pulled from GitHub.
+![MIME Type](/public/pics/2016-02-15/sourcetree-pulled.png)  
+
+Check file on mac.
+![MIME Type](/public/pics/2016-02-15/sourcetree-fileonmac.png)  
+
+### 6.3 Push Files to GitHub
+Open the hello.txt file, add 'Pushed by SourceTree!' to the end, save the file.
+Switch to SourceTree, it detects new changes of the file.
+![MIME Type](/public/pics/2016-02-15/sourcetree-filechanged.png)  
+
+Stage the file by clicking the checkbox just before the file name. Then, click on the Commit button on the top left, input the commit description, and commit.
+![MIME Type](/public/pics/2016-02-15/sourcetree-stagecommit.png)  
+
+The staged file is committed. Click the Push button. You may be asked for GitHub username and password for the first time you push.
+![MIME Type](/public/pics/2016-02-15/sourcetree-push.png)  
+
+After the push, check the history. You see the second commit is there.
+![MIME Type](/public/pics/2016-02-15/sourcetree-history.png)  
+
+Switch to GitHub, find the file, you see that the content is changed. And click the commit description to see the difference of this commit.
+![MIME Type](/public/pics/2016-02-15/sourcetree-githubfile.png)  
+
+## 7. References
 * [Git Tutorial](https://www.tutorialspoint.com/git/index.htm)
 * [Install Git on Mac OS X](https://www.atlassian.com/git/tutorials/install-git)
 * [Install, Configure and Use Git on Ubuntu](http://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/)
