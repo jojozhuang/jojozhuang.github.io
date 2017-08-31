@@ -8,7 +8,7 @@ categories:
 - blog
 ---
 
-> Introduce how to install and use docker.
+> Introduce how to install and use docker
 
 ## 1. What is Docker?
 Docker is a container management service. The keywords of Docker are develop, ship and run anywhere. The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
@@ -24,36 +24,36 @@ Containers are instances of Docker images that can be run using the Docker run c
 ## 1.3 Docker Hub
 Docker Hub is a registry service on the cloud that allows you to download Docker images that are built by other communities. You can also upload your own Docker built images to Docker hub.
 
-Go to https://hub.docker.com/ to create a Docker ID. Then login, you will see currently, there is no repository/image. We will create later.
+Go to https://hub.docker.com/ to create a Docker ID, then login. You will see there is no repository/image initially. We will create our own image later.
 ![MIME Type](/public/pics/2016-09-10/hub.png)  
 
 ## 2. Install Docker on Ubuntu
-1) add the GPG key for the official Docker repository to the system:
+1) Add the GPG key for the official Docker repository to the system:
 ```sh
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 2) Add the Docker repository to APT sources:
 ```sh
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 3) Update the package database with the Docker packages from the newly added repo:
 ```sh
-sudo apt-get update
+$ sudo apt-get update
 ```
 4) Make sure you are about to install from the Docker repo instead of the default Ubuntu 16.04 repo:
 ```sh
-apt-cache policy docker-ce
+$ apt-cache policy docker-ce
 ```
 5) Install Docker:
 ```sh
-sudo apt-get install -y docker-ce
+$ sudo apt-get install -y docker-ce
 ```
 6) Check Docker is Running:
 ```sh
-sudo systemctl status docker
+$ sudo systemctl status docker
 ```
 
-## 3. Executing the Docker Command Without Sudo (Optional)
+## 3. Execute the Docker Command Without Sudo (Optional)
 By default, running the docker command requires root privileges — that is, you have to prefix the command with sudo. It can also be run by a user in the docker group, which is automatically created during the installation of Docker. If you attempt to run the docker command without prefixing it with sudo or without being in the docker group, you'll get an output like this:
 ```sh
 $ sudo usermod -aG docker ${USER}  // add the current user to the docker group
@@ -62,13 +62,13 @@ $ su - ${USER}                     // apply the new group membership
 $ id -nG                           // check user is now added to the docker group
 ```
 
-## 4. Using the Docker Commands
-Syntax
+## 4. Use Docker Commands
+Syntax of Docker Command
 ```sh
 $ docker [option] [command] [arguments]
 ```
 
-## 4.1 General Docker Commands
+## 4.1 Generic Docker Commands
 ```sh
 docker version        // check version
 docker info           // check system-wide information about Docker
@@ -94,62 +94,66 @@ docker stop $(docker ps -a -q) // stop all of Docker containers
 docker rm $(docker ps -a -q)   // remove all of Docker containers
 ```
 
-## 5. Create New Image
-I will use the ubuntu image to install node.js on it, then create new image for the container.
-## 5.1 Install Node.js in container
-First, check the current images
+## 5. Create Docker Image
+We use the office ubuntu image for this demo. We will install node.js on it, then use it to create new image.
+## 5.1 Prepare Image
+1) First, run the following command to check the existing images in the docker.
 ```sh
 docker images
 ```
 ![MIME Type](/public/pics/2016-09-10/images1.png)  
 
-Run container and go to the shell
+2) Then, run the following command to start a container and go to its shell.
 ```sh
 docker run -it ubuntu
 ```
 ![MIME Type](/public/pics/2016-09-10/shell.png)  
 
-Install nodejs in the container.
+3) Install Node.js In Ubuntu Container.
 ```sh
 $ root@7f5bdefef7ef:/# apt-get update
 $ root@7f5bdefef7ef:/# apt-get install -y nodejs
+```
+Check the node version to make sure the installation is properly completed.
+```sh
 $ root@7f5bdefef7ef:/# nodejs -v
 ```
-Check the version to make sure the installation is finished.
 ![MIME Type](/public/pics/2016-09-10/installnodejs.png)  
 
-## 5.2 Run Container for Ubuntu Image
-First, type exit to quit the container. Then check the container id.
+## 5.2 Create New Image
+1) First, type 'exit' to quit the container. Then check the container id with following command.
 ```sh
 $ docker ps -a
 ```
-You see there is only one container is running.
+This command shows all of the existing containers. As you see, there is only one ubuntu container is running, which we just install node.js on it. Note down the container id.
 ![MIME Type](/public/pics/2016-09-10/checkcontainer.png)  
 
-We are ready to create our own image.
-Syntax of create new image
+2) Now, we are ready to create our own image.  
+Syntax of creating new image.
 ```sh
 $ docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
 ```
 
-Type the following command to create the new image. Note 'jojozhuang' is my Docker ID which is used to log into Docker Hub.
+Type the following command.
 ```sh
 $ docker commit -m "added node.js" -a "Johnny" 7f5bdefef7ef jojozhuang/ubuntu-nodejs
 ```
+* 'jojozhuang' is my Docker ID which is used to log into Docker Hub.
+* '7f5bdefef7ef' is the container id of the ubuntu container.
 
-Check the new image is created
+Show the image list to check whether our new image is created.
 ```sh
 $ docker images
 ```
-A new image named jojozhuang/ubuntu-nodejs is created. See the size of the new image is bigger than the original ubuntu images, because we install node.js into it.
 ![MIME Type](/public/pics/2016-09-10/createimage.png)  
+As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notice that its size is bigger than the original ubuntu image. This is because we install node.js into it.
 
-In addition, you can use Dockerfile to create new images.
+## 5.3 Use Dockerfile to Create New Images
+todo
 
-
-## 6. Pushing Docker Images to a Docker Repository
-## 6.1 login to docker hub with user name and password
-Syntax
+## 6. Push Docker Images to Docker Hub
+## 6.1 Log into Docker Hub
+Syntax of login command.
 ```sh
 docker login -u username
 ```
@@ -159,45 +163,43 @@ docker login -u jojozhuang
 ```
 ![MIME Type](/public/pics/2016-09-10/login.png)  
 
-## 6.2 Push the image to Docker Hub
-Syntax
+## 6.2 Push the Image
+Syntax of push command.
 ```sh
 docker push docker-registry-username/docker-image-name
 ```
-
+Type command as follows, providing the full name of the new image.
 ```sh
 docker push jojozhuang/ubuntu-nodejs
 ```
-The uploading is under progress.
+Then, docker starts to upload the image to its hub.
 ![MIME Type](/public/pics/2016-09-10/push.png)  
-When the push is finished.
+After the push is completed, you will see the 'Pushed' status.
 ![MIME Type](/public/pics/2016-09-10/pushfinished.png)  
 
 ## 6.3 Check The New Image in Docker Hub
+Log into the Docker Hub, we see there is a new image.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub1.png)  
-Now, you can pull this image from Docker Hub.
-```sh
-docker pull jojozhuang/ubuntu-nodejs
-```
+Now, you can share this image to other and you can pull this image from Docker Hub as well.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub2.png)  
 
-## 7. Pull Image From Docker Hub to Local on Mac
-Launch Docker Terminal on Mac, run the following command to pull the new image to local.
+## 7. Pull The New Image on Mac
+Launch Docker Terminal on Mac, run the following command to pull the new image.
 ```sh
 docker pull jojozhuang/ubuntu-nodejs
 ```
-Run container and go to the shell
+Run the following command to start the container and go to its shell.
 ```sh
 docker run -it jojozhuang/ubuntu-nodejs
 ```
-Check the nodejs version. Yes, it's our image
+Check the nodejs version.
 ```sh
 nodejs -v
 ```
 ![MIME Type](/public/pics/2016-09-10/pull.png)  
-
+Yes, it's our image!
 
 ## 8. References
-* [https://www.docker.com/](https://www.docker.com/)
+* [Docker Official Website](https://www.docker.com/)
 * [Docker Overview](https://www.tutorialspoint.com/docker/docker_overview.htm)
 * [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
