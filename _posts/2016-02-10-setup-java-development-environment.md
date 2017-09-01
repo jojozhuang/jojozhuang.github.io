@@ -115,7 +115,28 @@ export CATALINA_HOME=/opt/tomcat
 . ~/.bashrc
 ```
 
-### 4.4 Start Tomcat  
+### 4.4 Add User for Tomcat
+```sh
+vi $CATALINA_HOME/conf/tomcat-users.xml
+```
+Add role and admin user to this file.
+```xml
+<tomcat-users>
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+-->
+
+	<role rolename="manager-gui"/>
+	<user username="admin" password="admin" roles="manager-gui"/>
+
+</tomcat-users>
+```
+
+### 4.5 Start Tomcat  
 ```sh
 $CATALINA_HOME/bin/startup.sh
 ```

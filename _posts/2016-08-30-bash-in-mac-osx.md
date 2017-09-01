@@ -46,3 +46,10 @@ sudo umount -f /sapmnt/rc
 
 Reference:
 * [How to Mount and Unmount Filesystem / Partition in Linux ](http://www.thegeekstuff.com/2013/01/mount-umount-examples/?utm_source=tuicool)
+
+## 4. Open a folder from terminal on a Mac?
+Navigate to the dir and type:
+```sh
+open .
+```
+The dot represents the current location.
