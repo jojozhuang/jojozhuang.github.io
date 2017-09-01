@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Use Mysql Container for JSP Application in Docker"
+title: "Use Mysql Docker Container for JSP Application"
 date: 2016-09-12
-tags: Mysql
+tags: Mysql, Docker
 categories:
 - blog
 ---
@@ -48,9 +48,10 @@ MySQL init process done. Ready for start up.
 2016-09-12T02:16:07.965324Z 0 [Note] mysqld: ready for connections.
 Version: '5.7.19'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
 ```
+Now, it starts without error.
 
 ### 1.2 Run Container in Background
-Now, it starts without error. Our MySQL container is now running. However, you are now stuck in the terminal and can’t do anything because the container is running in attach mode (running in foreground). This is so inconvenient. We would expect MySQL to run as a service instead. Let’s consider this as a failed deployment and stop the current container. In another terminal, stop the running container and run it again in detach mode (running as background):
+Our MySQL container is now running. However, you are now stuck in the terminal and can’t do anything because the container is running in attach mode (running in foreground). This is so inconvenient. We would expect MySQL to run as a service instead. Let’s consider this as a failed deployment and stop the current container. In another terminal, stop the running container and run it again in detach mode (running as background):
 ```sh
 $ docker stop gsmysql
 $ docker rm gsmysql
@@ -65,7 +66,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ```
 
 ### 1.3 Expose Mysql Container to Host
-Expose the MySQL container to the outside world by mapping the container’s MySQL port to the host machine port using the publish flag.
+Expose the MySQL container to the outside world by mapping the container’s MySQL port to the host machine port using the publish flag. Now, we can connect to the mysql container through port 6603.
 ```sh
 $ docker rm -f gsmysql
 $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --publish 6603:3306 mysql
@@ -81,7 +82,7 @@ docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_sales
 Open to container's terminal through Kitematic, click 'EXEC' button on the top.
 ![MIME Type](/public/pics/2016-09-12/kitematic.png)  
 
-A terminal windows opens for mysql container. Check the files.
+A terminal windows opens for mysql container. Use 'ls' to check the files. Our two db restore files are there.
 ![MIME Type](/public/pics/2016-09-12/sqlfile.png)  
 
 ### 2.2 Restore Database
