@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Use Mysql Docker Container for JSP Application"
+title: "Use Mysql Container for JSP Application"
 date: 2016-09-12
 tags: Mysql, Docker
 categories:
@@ -10,8 +10,56 @@ categories:
 
 > Introduce how to user Mysql Docker Container as database for JSP Application.
 
-## 1. Setup Mysql Container
-### 1.1 Create Mysql Container
+## 1. Project Introduction
+I have a JSP Web Application named '[Game Store](http://jojozhuang.github.io/portfolio/2016/05/13/Online-Game-Store/)'in my portfolio. It uses MySql for storing the sales orders. Currently, this application is hosted by Tomcat web server. And Mysql is running as a real instance on the same machine. Now, I want to setup a Docker container to host this Mysql database. And my JSP application would connect to this container. Later, I will share this Mysql container for others to use.
+
+### 1.1 Database
+The instance of mysql for this JSP application looks like this structure.
+mysql/  
+├── gamestore  
+├────── SalesOrder  
+├────── OrderItem  
+└── root/gspassword  
+There is one database named 'gamestore' in mysql. This database contains two tales, SalesOrder and OrderItem. To access this database, we use root user with password 'gspassword'.
+
+### 1.2 Mysql Connector
+To let our JSP application access Mysql database, we need mysql connector jar. Since, we assume that our host machine doesn't install mysql, so we need to manually install this component.
+Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download Mysql Connector/J.
+![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
+unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /GameStore/src/web/WEB-INF/lib/.
+
+I have already put this jar file to WEB-INF. So, acturally, you don't need to do again. Just need to know this knowledge.
+
+### 1.2 JSP Application
+Pull the source files for this JSP application from my GitHub repository.
+```sh
+$ cd ~
+$ mkdir Portfolio
+$ cd Portfolio
+$ git clone https://github.com/jojozhuang/Portfolio.git
+```
+The source files are located in ~/Portfolio/GameStoreMysql/GameStoreMysql.
+
+Launch your eclipse, set workspace to ~/Portfolio/.
+File->Open Projects from File System..., set path to ~/Portfolio/GameStoreMysql/GameStoreMysql. The project is imported to eclipse.
+![MIME Type](/public/pics/2016-09-12/jspproject.png)  
+Window->Show View->Server, click the link to add new server.
+![MIME Type](/public/pics/2016-09-12/eclipseserver.png)  
+Select Tomcat 9.0.
+![MIME Type](/public/pics/2016-09-12/newserver.png)  
+Add Our Project to right side.
+![MIME Type](/public/pics/2016-09-12/addresource.png)  
+In eclipse project, a new server folder for tomcat is added.
+![MIME Type](/public/pics/2016-09-12/servers.png)  
+Right click on the GameStore Project->Properties->Targeted Runtimes, check Tomcat 9.0.
+![MIME Type](/public/pics/2016-09-12/targetedruntimes.png)  
+Now, we can use 'Run on Server' to start our JSP Application.
+![MIME Type](/public/pics/2016-09-12/runonserver.png)  
+There will be browser opened in eclipse to show our jsp website. Or you can directly access http://localhost:8080/GameStoreMysql/ in browser.
+![MIME Type](/public/pics/2016-09-12/launched.png)  
+
+## 2. Setup Mysql Container
+### 2.1 Create Mysql Container
 Get official mysql image.
 ```sh
 docker pull mysql
@@ -50,7 +98,7 @@ Version: '5.7.19'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Comm
 ```
 Now, it starts without error.
 
-### 1.2 Run Container in Background
+### 2.2 Run Container in Background
 Our MySQL container is now running. However, you are now stuck in the terminal and can’t do anything because the container is running in attach mode (running in foreground). This is so inconvenient. We would expect MySQL to run as a service instead. Let’s consider this as a failed deployment and stop the current container. In another terminal, stop the running container and run it again in detach mode (running as background):
 ```sh
 $ docker stop gsmysql
@@ -65,7 +113,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 77d6f463c31e        mysql               "docker-entrypoint..."   9 seconds ago       Up 6 seconds        3306/tcp            gsmysql
 ```
 
-### 1.3 Expose Mysql Container to Host
+### 2.3 Expose Mysql Container to Host
 Expose the MySQL container to the outside world by mapping the container’s MySQL port to the host machine port using the publish flag. Now, we can connect to the mysql container through port 6603.
 ```sh
 $ docker rm -f gsmysql
@@ -73,8 +121,8 @@ $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --pu
 889aa7224b2544023069559de5bd1f214ddbda9cb327fc3a4771eddc25bb1b7b
 ```
 
-## 2. Restore Mysql Database in Container
-### 2.1 Copy Mysql backup files from host to container
+## 3. Restore Mysql Database in Container
+### 3.1 Copy Mysql backup files from host to container
 ```sh
 docker cp ~/GameStore/document/gamestore_orderitem.sql gsmysql:/gamestore_orderitem.sql
 docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_salesorder.sql
@@ -85,7 +133,7 @@ Open to container's terminal through Kitematic, click 'EXEC' button on the top.
 A terminal windows opens for mysql container. Use 'ls' to check the files. Our two db restore files are there.
 ![MIME Type](/public/pics/2016-09-12/sqlfile.png)  
 
-### 2.2 Restore Database
+### 3.2 Restore Database Schema and Data
 Create Database
 ```sh
 $ mysqladmin -u root -p create gamestore
@@ -97,12 +145,12 @@ $ mysql -u root -p gamestore < gamestore_orderitem.sql
 ```
 ![MIME Type](/public/pics/2016-09-12/restoredb.png)  
 
-## 3. Connecting to the Container
-### 3.1 Get the Connection URL
+## 4. Connect to the Container
+### 4.1 Get the Connection URL
 In Kitematic, select our mysql container, check Access URL. It's 192.168.99.100:6603.
 ![MIME Type](/public/pics/2016-09-12/accessurl.png)  
 
-### 3.2 Connect Mysql Container with Mysql Workbench
+### 4.2 Connect Mysql Container with Mysql Workbench
 Go to https://dev.mysql.com/downloads/workbench/, download the installer and install it.
 Launch MySql Workbench and add Connection with the IP address and port.
 ![MIME Type](/public/pics/2016-09-12/newconnection.png)  
@@ -115,8 +163,8 @@ A new connection is added to the workbench.
 Check the original data.
 ![MIME Type](/public/pics/2016-09-12/original.png)  
 
-### 3.3 Configure the Connection
-Edit file /GameStore/src/web/META-INF/context.xml
+### 4.3 Configure the Connection
+Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the URL, including the ip address and port to connect mysql.
 ```xml
 <Resource name="jdbc/murach" auth="Container"
         driverClassName="com.mysql.jdbc.Driver"
@@ -126,20 +174,26 @@ Edit file /GameStore/src/web/META-INF/context.xml
         logAbandoned="true" removeAbandoned="true"
         removeAbandonedTimeout="60" type="javax.sql.DataSource" />
 ```
-### 3.4 Start the JSP Application
-Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download Mysql Connector/J.
-![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
-unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /GameStore/src/web/WEB-INF/lib/.
 
-Configure tomcat and start application.
-Register a new user. Add some items to cart and place the order. check the Order.
-everything looks fine.
+### 4.4 Start the JSP Application
+Login as following user.
+* User Name: customer
+* Password:  customer
+* User Type: customer
+![MIME Type](/public/pics/2016-09-12/login.png)  
 
+Add some items, console, accessory or game to shopping cart, and place order.
+![MIME Type](/public/pics/2016-09-12/cart.png)  
 
+Order is created now.
+![MIME Type](/public/pics/2016-09-12/order.png)  
 After the above operation, check the data in mysql workbench. You see a new order is there.
 ![MIME Type](/public/pics/2016-09-12/after.png)  
 
-## 5. References
+## 5. Source Code
+[Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+
+## 6. References
 * [MySQL Docker Containers: Understanding the basics](https://severalnines.com/blog/mysql-docker-containers-understanding-basics)
 * [MySQL - Create Database](https://www.tutorialspoint.com/mysql/mysql-create-database.htm)
 * [How To Migrate a MySQL Database Between Two Servers](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-mysql-database-between-two-servers)
