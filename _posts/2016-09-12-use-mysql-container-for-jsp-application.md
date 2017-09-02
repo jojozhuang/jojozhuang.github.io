@@ -11,24 +11,24 @@ categories:
 > Introduce how to user Mysql Docker Container as database for JSP Application.
 
 ## 1. Project Introduction
-I have a JSP Web Application named '[Game Store](http://jojozhuang.github.io/portfolio/2016/05/13/Online-Game-Store/)'in my portfolio. It uses MySql for storing the sales orders. Currently, this application is hosted by Tomcat web server. And Mysql is running as a real instance on the same machine. Now, I want to setup a Docker container to host this Mysql database. And my JSP application would connect to this container. Later, I will share this Mysql container for others to use.
+There is a JSP web application named [Game Store](http://jojozhuang.github.io/portfolio/2016/05/13/Online-Game-Store/) in my portfolio. Currently, this application is hosted on Tomcat web server, and it uses Mysql for storing data. This Mysql database is running on the same machine with Tomcat. Now, I want to setup a Docker container for this Mysql database. So, it can be easily deployed to other machine/server. Some configuration of my JSP application needs to be updated to connect to new address of the Mysql container. I shared this Mysql container on Docker Hub. You can pull it to your local machine and follow the steps below to setup a Game Store.
 
 ### 1.1 Database
-The instance of mysql for this JSP application looks like this structure.
+The instance of mysql for this JSP application looks like the below structure.  
 mysql/  
 ├── gamestore  
-├────── SalesOrder  
-├────── OrderItem  
+├───── SalesOrder  
+├───── OrderItem  
 └── root/gspassword  
-There is one database named 'gamestore' in mysql. This database contains two tales, SalesOrder and OrderItem. To access this database, we use root user with password 'gspassword'.
+There is one database named 'gamestore' in mysql. This database contains two tables, SalesOrder and OrderItem. To access this database, we use root user with password 'gspassword'.
 
 ### 1.2 Mysql Connector
-To let our JSP application access Mysql database, we need mysql connector jar. Since, we assume that our host machine doesn't install mysql, so we need to manually install this component.
+To let our JSP application access Mysql database, we need mysql connector jar. It is a middleware between our JSP application and Mysql Container. Even though mysql is not required to be installed on our host machine, our JSP application needs to connect to mysql container with it.  
 Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download Mysql Connector/J.
 ![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
-unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /GameStore/src/web/WEB-INF/lib/.
+Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /GameStore/src/web/WEB-INF/lib/.
 
-I have already put this jar file to WEB-INF. So, acturally, you don't need to do again. Just need to know this knowledge.
+I have already put this jar file to WEB-INF. So, actually, you don't need to do again after you download the source files from my GitHub. But, I think it's better to understand how the application works with database. Depends on which platform the JSP application is deployed on, you needs to choose appropriate version of Mysql Connector.
 
 ### 1.2 JSP Application
 Pull the source files for this JSP application from my GitHub repository.
@@ -40,9 +40,10 @@ $ git clone https://github.com/jojozhuang/Portfolio.git
 ```
 The source files are located in ~/Portfolio/GameStoreMysql/GameStoreMysql.
 
-Launch your eclipse, set workspace to ~/Portfolio/.
+Launch your eclipse, set workspace to ~/Portfolio/.  
 File->Open Projects from File System..., set path to ~/Portfolio/GameStoreMysql/GameStoreMysql. The project is imported to eclipse.
 ![MIME Type](/public/pics/2016-09-12/jspproject.png)  
+Now, add Tomcat server to eclipse.  
 Window->Show View->Server, click the link to add new server.
 ![MIME Type](/public/pics/2016-09-12/eclipseserver.png)  
 Select Tomcat 9.0.
@@ -51,11 +52,12 @@ Add Our Project to right side.
 ![MIME Type](/public/pics/2016-09-12/addresource.png)  
 In eclipse project, a new server folder for tomcat is added.
 ![MIME Type](/public/pics/2016-09-12/servers.png)  
+Set Targeted Runtimes.  
 Right click on the GameStore Project->Properties->Targeted Runtimes, check Tomcat 9.0.
 ![MIME Type](/public/pics/2016-09-12/targetedruntimes.png)  
 Now, we can use 'Run on Server' to start our JSP Application.
 ![MIME Type](/public/pics/2016-09-12/runonserver.png)  
-There will be browser opened in eclipse to show our jsp website. Or you can directly access http://localhost:8080/GameStoreMysql/ in browser.
+There will be a browser opened in eclipse, which shows our Game Store website. Or you can directly access http://localhost:8080/GameStoreMysql/ in browser.
 ![MIME Type](/public/pics/2016-09-12/launched.png)  
 
 ## 2. Setup Mysql Container
@@ -160,11 +162,11 @@ Test Connection
 ![MIME Type](/public/pics/2016-09-12/testconnection.png)  
 A new connection is added to the workbench.
 ![MIME Type](/public/pics/2016-09-12/workbench.png)  
-Check the original data.
+Check the original data. As you see, there is no entry in table SalesOrder.
 ![MIME Type](/public/pics/2016-09-12/original.png)  
 
 ### 4.3 Configure the Connection
-Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the URL, including the ip address and port to connect mysql.
+Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the usename, password and URL, including the ip address and port to connect mysql.
 ```xml
 <Resource name="jdbc/murach" auth="Container"
         driverClassName="com.mysql.jdbc.Driver"
@@ -175,11 +177,12 @@ Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the URL, incl
         removeAbandonedTimeout="60" type="javax.sql.DataSource" />
 ```
 
-### 4.4 Start the JSP Application
+### 4.4 Restart the JSP Application
 Login as following user.
 * User Name: customer
 * Password:  customer
 * User Type: customer
+
 ![MIME Type](/public/pics/2016-09-12/login.png)  
 
 Add some items, console, accessory or game to shopping cart, and place order.
@@ -187,13 +190,41 @@ Add some items, console, accessory or game to shopping cart, and place order.
 
 Order is created now.
 ![MIME Type](/public/pics/2016-09-12/order.png)  
-After the above operation, check the data in mysql workbench. You see a new order is there.
+After the above operation, check the data in mysql workbench. You see there is one new order entry in SalesOrder table.
 ![MIME Type](/public/pics/2016-09-12/after.png)  
 
-## 5. Source Code
+## 5. Publish Mysql Container
+1) First, check the container id.
+```sh
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+889aa7224b25        mysql               "docker-entrypoint..."   24 hours ago        Up About an hour    0.0.0.0:6603->3306/tcp   gsmysql
+```
+2) Secondly, create new image based on this container.
+```sh
+$ docker commit -m "db restored" -a "Johnny" 889aa7224b25 jojozhuang/gamestore-mysql
+sha256:3437fd76186fbc0fbf3f60bfb902d19d9a735e77d827c5c424b9e99a1828a824
+```
+3) Push to Docker Hub
+```sh
+$ docker login -u jojozhuang
+Password:
+Login Succeeded
+$ docker push jojozhuang/gamestore-mysql
+The push refers to a repository [docker.io/jojozhuang/gamestore-mysql]
+197bbcc9bad0: Pushed
+```
+4) Check the new image on Docker Hub
+![MIME Type](/public/pics/2016-09-12/dockerhub.png)  
+Now, you can use the following command to install this image.
+```sh
+$ docker pull jojozhuang/gamestore-mysql
+```
+
+## 6. Source Code
 [Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
-## 6. References
+## 7. References
 * [MySQL Docker Containers: Understanding the basics](https://severalnines.com/blog/mysql-docker-containers-understanding-basics)
 * [MySQL - Create Database](https://www.tutorialspoint.com/mysql/mysql-create-database.htm)
 * [How To Migrate a MySQL Database Between Two Servers](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-mysql-database-between-two-servers)
