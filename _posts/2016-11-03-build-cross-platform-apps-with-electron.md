@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Build Cross-platform Apps with Electron"
-date: 2016-09-03
+date: 2016-11-03
 tags: Electron, Node.js
 categories:
 - blog
@@ -128,7 +128,7 @@ Run this app using the following command:
 $ electron ./main.js
 ```
 A new window will open up, showing 'Hello World'.
-![MIME Type](/public/pics/2016-09-03/helloworld.png)  
+![MIME Type](/public/pics/2016-11-03/helloworld.png)  
 
 ## 3. Use Popular Libraries
 We can leverage all the available tools for front-end web development in Electron. For example, you can use bootstrap, jQuery, AngularJs or ReactJs to build Electron apps.
@@ -178,7 +178,7 @@ $('#countbtn').on('click', () => {
 $ electron ./main.js
 ```
 A new window will open up, showing bootstrap UI.
-![MIME Type](/public/pics/2016-09-03/bootstrap.png)  
+![MIME Type](/public/pics/2016-11-03/bootstrap.png)  
 
 ## 4. Inter Process Communication
 Electron provides us with 2 IPC (Inter Process Communication) modules called ipcMain and ipcRenderer.
@@ -279,16 +279,16 @@ Run this app using the following command:
 $ electron ./main.js
 ```
 A new window will open up, showing a textbox and a button. Click on that button, select a txt file, then its content would be shown in the textbox.
-![MIME Type](/public/pics/2016-09-03/ipc.png)  
+![MIME Type](/public/pics/2016-11-03/ipc.png)  
 
 ## 5. Debugging
 ## 5.1 Dev Tools in Chrome
 First, you can use the dev tools for Electron apps. Shortcut: Command + Option + I.
-![MIME Type](/public/pics/2016-09-03/devtools.png)  
+![MIME Type](/public/pics/2016-11-03/devtools.png)  
 ## 5.2 Debug with VSCode
 Second, you can also use VSCode for debugging main process.  
 1) Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
-![MIME Type](/public/pics/2016-09-03/launch.png)  
+![MIME Type](/public/pics/2016-11-03/launch.png)  
 
 Paste the following content to launch.json.
 ```javascript
@@ -327,7 +327,7 @@ Paste the following content to launch.json.
 ```
 
 2) Click the green arrow button and start to debug.
-![MIME Type](/public/pics/2016-09-03/debuginvsc.png)  
+![MIME Type](/public/pics/2016-11-03/debuginvsc.png)  
 
 ## 6. Packaging
 There are two modules support you to package your Electron apps.
@@ -397,7 +397,7 @@ Building DMG
 ```
 
 Finally, you will get the executable file and installer in dist folder.
-![MIME Type](/public/pics/2016-09-03/packaging.png)  
+![MIME Type](/public/pics/2016-11-03/packaging.png)  
 
 ## 7. Source Code
 [Source code files of Electron Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ElectronTutorial)

@@ -46,7 +46,7 @@ Options you have here:
 * You can open a Docker-CLI terminal by clicking the whale button at the left bottom corner.
 
 ### 4.3 Login
-If you've already have a docker ID, you can use it to login now.
+If you've already registered a docker ID, you can use it to login now.
 ![MIME Type](/public/pics/2016-09-15/login.png)  
 Switch to My Repos tab, the images on your Docker Hub will show here.
 ![MIME Type](/public/pics/2016-09-15/myrepos.png)  
@@ -66,7 +66,7 @@ Now, we just need to click the 'EXEC' button on the top.
 ### 5.2 Settings of Container
 Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set by command line in docker terminal. Now, you can easily update it in Kitematic.
 ![MIME Type](/public/pics/2016-09-15/general.png)  
-In the Volumes sub tab, this feature enables you to share files between container and host machine.
+Volumes sub tab, this feature enables you to share files between container and host machine.
 ![MIME Type](/public/pics/2016-09-15/volume.png)  
 
 ## 6. References
