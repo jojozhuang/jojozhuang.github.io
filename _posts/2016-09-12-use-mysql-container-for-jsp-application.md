@@ -129,10 +129,11 @@ $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --pu
 docker cp ~/GameStore/document/gamestore_orderitem.sql gsmysql:/gamestore_orderitem.sql
 docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_salesorder.sql
 ```
-Open to container's terminal through Kitematic, click 'EXEC' button on the top.
-![MIME Type](/public/pics/2016-09-12/kitematic.png)  
-
-A terminal windows opens for mysql container. Use 'ls' to check the files. Our two db restore files are there.
+Start a terminal in a container with the following command:
+```sh
+docker exec -i -t gsmysql sh
+```
+Use 'ls' to check the files. Our two db restore files are there.
 ![MIME Type](/public/pics/2016-09-12/sqlfile.png)  
 
 ### 3.2 Restore Database Schema and Data

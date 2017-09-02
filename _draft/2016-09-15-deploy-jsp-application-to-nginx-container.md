@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Install Git on Ubuntu"
-date: 2016-02-15
-tags: GitHub, SourceTree
+title: "Deploy JSP Application to Nginx Container"
+date: 2016-09-15
+tags: Docker, Nginx
 categories:
 - blog
 ---
