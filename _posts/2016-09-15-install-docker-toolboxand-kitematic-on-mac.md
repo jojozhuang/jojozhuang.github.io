@@ -8,7 +8,7 @@ categories:
 - blog
 ---
 
-> Use Kitematic to manage docker images and containers.
+> Use Kitematic to easily manage docker containers without using Docker command-line.
 
 ## 1. What is Docker Toolbox?
 The Docker Toolbox is an installer to quickly and easily install and setup a Docker environment on your computer.  
@@ -36,25 +36,26 @@ After the installation is finished. You can launch Kitematic.
 
 ## 4. Use Kitematic
 ### 4.1 Virtual Machine for Docker Machine
-The first you start Kitematic, it will create a new virtual machine in VirtualBox.
+The first time you start Kitematic, it will create a new virtual machine in VirtualBox.
 ![MIME Type](/public/pics/2016-09-15/virtualbox.png)  
 ### 4.2 Main Screen
-Now, you see the main screen of Kitematic. Since we've used Kitematic for a while, there are already some containers list at left side. For you, it is empty at very beginning.
+Now, you see the main screen of Kitematic. Since I've used Kitematic for some time, there are already some containers listed at the left side. There is nothing if you've never created any container before.
 ![MIME Type](/public/pics/2016-09-15/mainscreen.png)  
-Things you can do here:
-* You can search images through the search box and click the CREATE button to run containers for them.
-* You can open a Docker-CLI terminal by clicking the whale button at the left corner.
+Options you have here:
+* You can search Docker images through search box at top and click CREATE button to run containers for them.
+* You can open a Docker-CLI terminal by clicking the whale button at the left bottom corner.
+
 ### 4.3 Login
-If you've already have a docker ID, you can login here.
+If you've already have a docker ID, you can use it to login now.
 ![MIME Type](/public/pics/2016-09-15/login.png)  
-Switch to My Repos tab, the images on your Docker Hub will be listed here.
+Switch to My Repos tab, the images on your Docker Hub will show here.
 ![MIME Type](/public/pics/2016-09-15/myrepos.png)  
 
 ## 5. Work with a Container
-Take the container we used for previous posting [Use Mysql Container for JSP Application](http://jojozhuang.github.io/blog/2016/09/12/use-mysql-container-for-jsp-application/) as example.
+Take gsmysql as example, which is a database container I created for previous posting [Use Mysql Container for JSP Application](http://jojozhuang.github.io/blog/2016/09/12/use-mysql-container-for-jsp-application/).
 Select gsmysql container, click the Start button.
 ![MIME Type](/public/pics/2016-09-15/gsmysql.png)  
-The container is started. And you see that Access URL, which is the public address can be accessed from outside. In this case, this is the url for remote accessing this mysql database.
+The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For mysql container, this is the url for applications to connect mysql database remotely.
 ![MIME Type](/public/pics/2016-09-15/started.png)  
 ### 5.1 Start Terminal in Container
 Previously, we have to type the following command to open terminal in container.
@@ -63,7 +64,7 @@ docker exec -i -t <container> sh
 ```
 Now, we just need to click the 'EXEC' button on the top.
 ### 5.2 Settings of Container
-Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set by command line in docker terminal. Now, you can easily set in Kitematic.
+Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set by command line in docker terminal. Now, you can easily update it in Kitematic.
 ![MIME Type](/public/pics/2016-09-15/general.png)  
 In the Volumes sub tab, this feature enables you to share files between container and host machine.
 ![MIME Type](/public/pics/2016-09-15/volume.png)  

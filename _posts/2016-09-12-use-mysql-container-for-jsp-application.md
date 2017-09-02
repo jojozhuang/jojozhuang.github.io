@@ -129,7 +129,7 @@ $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --pu
 docker cp ~/GameStore/document/gamestore_orderitem.sql gsmysql:/gamestore_orderitem.sql
 docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_salesorder.sql
 ```
-Start a terminal in a container with the following command:
+Start terminal in gsmysql container with the following command:
 ```sh
 docker exec -i -t gsmysql sh
 ```
