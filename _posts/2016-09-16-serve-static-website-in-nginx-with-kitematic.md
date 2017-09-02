@@ -22,18 +22,18 @@ In Kitematic, Search 'nginx', Click on the 'CREATE' button of the hello-world-ng
 ![MIME Type](/public/pics/2016-09-16/search.png)  
 Kitematic will download (also known as pull the image) the kitematic/hello-world-nginx image from the Docker Hub  immediately.
 ![MIME Type](/public/pics/2016-09-16/download.png)  
-Once it’s done downloading, Kitematic will then run a Docker Nginx container from this image. A tiny Nginx web server is started up, allowing it to serve website data to your Mac. You should see a quick preview of the example website that comes with the container.
+Once it’s done, Kitematic will run a Docker Nginx container for this image. A tiny Nginx web server is started up, allowing it to serve website data to your Mac.
 ![MIME Type](/public/pics/2016-09-16/running.png)  
 Click on the preview button to see the result in your own browser.
 ![MIME Type](/public/pics/2016-09-16/preview.png)  
 ### 2.2 Set Volume
-Switch to Settings tab and Volumes sub tab, click CHANGE button.
+Switch to Settings->Volumes, click CHANGE button.
 ![MIME Type](/public/pics/2016-09-16/settings.png)  
 Create a folder named 'kitematic-nginx' in your local machine.
 ![MIME Type](/public/pics/2016-09-16/createfolder.png)  
 The folder in container and the folder in your local machine are now mapping to each other. Click Restart button or just switch to the Home tab, to restart the container.
 ![MIME Type](/public/pics/2016-09-16/volume.png)  
-Go to the volume folder on your machine, there is one html file. This file is actually located in container. It is the index file shown in browser. Now, you can edit it to change the page content.
+You will find one html file in your local volume folder. This file is actually located in the container. It is the home page of Nginx you saw in browser.
 ![MIME Type](/public/pics/2016-09-16/index.png)  
 ### 2.3 Edit File
 Open this index.html in any editor, change the content as follows:
@@ -49,16 +49,16 @@ Open this index.html in any editor, change the content as follows:
 ```
 Notice, we just add another h2 tag showing 'Hello World, Kitematic!' under the original one.
 
-Refresh the home page in web browser, you see the impact.
+Refresh the home page in web browser to see the change.
 ![MIME Type](/public/pics/2016-09-16/newpreview.png)  
 This is how volume works.
 Kitematic can map Docker container volumes to directories on your Mac.
 
 ## 3. Serve Our Own Website
-Now let’s try to serve a more interesting website. [Download the zipped files](https://github.com/gabrielecirulli/2048/archive/master.zip) for 2048, a popular (and addictive) web-based tile game. Extract this zip file into the folder you just opened:
+Now let’s try to serve a more interesting website. [Download the zipped files](https://github.com/gabrielecirulli/2048/archive/master.zip) for 2048, a popular (and addictive) web-based tile game. Extract this zip file into your local volume folder.
 ![MIME Type](/public/pics/2016-09-16/2048.png)  
 
-Refresh the page in web browser, you can play it now.
+Refresh the page in web browser, you can play the game now. Cool!
 ![MIME Type](/public/pics/2016-09-16/2048preview.png)  
 
 ## 4. References
