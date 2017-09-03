@@ -11,7 +11,7 @@ categories:
 > Tutorial for how to setup remote debugging in Eclipse for tomcat in Docker.
 
 ## 1. Introduction
-After deploying the JSP application to Tomcat container, which are mentioned in the last posting [Serve JSP Application With Tomcat In Docker](http://jojozhuang.github.io/blog/2016/09/20/serve-jsp-application-with-tomcat-in-docker/), our Game Store is now hosted in tomcat container. Be aware of the following facts:
+After deploying the JSP application to Tomcat container, which is mentioned in the last posting [Serve JSP Application With Tomcat In Docker](http://jojozhuang.github.io/blog/2016/09/20/serve-jsp-application-with-tomcat-in-docker/), our Game Store is now hosted in tomcat container. Be aware of the following facts:
 * Source files are located on host machine, and copied to tomcat webapps folder through volume.
 * Tomcat container is serving the gamestore application.
 * Mysql container is used to store data.
@@ -47,7 +47,7 @@ Let's take a moment to examine this command in detail:
 
 Switch to Kitematic, the new container is running with JPDA_ADDRESS configured to 8000.
 ![MIME Type](/public/pics/2016-09-22/portenv.png)  
-And the port 8000 for debugging is configured as well.
+Apart from port 31020, port 8000 for debugging is exposed to host machine as well.
 ![MIME Type](/public/pics/2016-09-22/debugport.png)  
 To access the website, we still use port 31020. Port 8000 is only for debugging.
 ![MIME Type](/public/pics/2016-09-22/preview.png)  
@@ -75,10 +75,10 @@ Type 'customer' for user name, type 'customer' for password, and click Login but
 Switch to Eclipse, the breakpoint is activated. The remote debugging function is working now.
 ![MIME Type](/public/pics/2016-09-22/breakpointdt.png)  
 
-## 4. Source Code
+## 5. Source Code
 [Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
-## 5. References
+## 6. References
 * [Setting Up Tomcat For Remote Debugging](https://confluence.sakaiproject.org/display/BOOT/Setting+Up+Tomcat+For+Remote+Debugging)
 * [Tomcat debugging in Docker](https://www.dontpanicblog.co.uk/2017/03/12/tomcat-debugging-in-docker/)
 * [Tutorial: Debugging Java Applications in Docker](https://github.com/docker/labs/tree/master/developer-tools/java-debugging)
