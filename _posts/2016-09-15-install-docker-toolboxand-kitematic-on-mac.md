@@ -34,42 +34,59 @@ Note:
 After the installation is finished. You can launch Kitematic.
 ![MIME Type](/public/pics/2016-09-15/installfinished.png)  
 
-## 4. Use Kitematic
-### 4.1 Virtual Machine for Docker Machine
+## 4. Terminals
+It's necessary to understand the structure of dockers and what terminal are there.
+If you install docker manually, like what I did in Ubuntu, refer to the posting [Install and Use Docker on Ubuntu](http://jojozhuang.github.io/blog/2016/09/10/install-and-use-docker-on-ubuntu/), the docker is installed in host machine.
+![MIME Type](/public/pics/2016-09-15/terminal-pm.png)  
+If you install docker toolbox, the structure is different, there is one more VirtualBox VM.
+![MIME Type](/public/pics/2016-09-15/terminal-vm.png)  
+There are three types of terminal.
+
+ Type                       | Description                    |  How to launch?
+----------------------------|--------------------------------|----------------------
+ Host Terminal              | The system terminal of host OS | Spotlight Search->terminal
+ Docker QuickStart Terminal | The terminal for docker        | Spotlight Search->Docker QuickStart Terminal
+ Container Terminal         | The terminal within container  | In Docker Terminal, execute 'docker exec -it <container> sh'
+
+Whenever you want to work through command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal.
+![MIME Type](/public/pics/2016-09-15/terminal-fail.png)  
+
+## 5. Use Kitematic
+### 5.1 Virtual Machine for Docker Machine
 The first time you start Kitematic, it will create a new virtual machine in VirtualBox.
 ![MIME Type](/public/pics/2016-09-15/virtualbox.png)  
-### 4.2 Main Screen
+### 5.2 Main Screen
 Now, you see the main screen of Kitematic. Since I've used Kitematic for some time, there are already some containers listed at the left side. There is nothing if you've never created any container before.
 ![MIME Type](/public/pics/2016-09-15/mainscreen.png)  
 Options you have here:
 * You can search Docker images through search box at top and click CREATE button to run containers for them.
 * You can open a Docker-CLI terminal by clicking the whale button at the left bottom corner.
 
-### 4.3 Login
+### 5.3 Login
 If you've already registered a docker ID, you can use it to login now.
 ![MIME Type](/public/pics/2016-09-15/login.png)  
 Switch to My Repos tab, the images on your Docker Hub will show here.
 ![MIME Type](/public/pics/2016-09-15/myrepos.png)  
 
-## 5. Work with a Container
+## 6. Work with Container
 Take gsmysql as example, which is a database container I created for previous posting [Use Mysql Container for JSP Application](http://jojozhuang.github.io/blog/2016/09/12/use-mysql-container-for-jsp-application/).
 Select gsmysql container, click the Start button.
 ![MIME Type](/public/pics/2016-09-15/gsmysql.png)  
 The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For mysql container, this is the url for applications to connect mysql database remotely.
 ![MIME Type](/public/pics/2016-09-15/started.png)  
-### 5.1 Start Terminal in Container
+### 6.1 Start Terminal in Container
 Previously, we have to type the following command to open terminal in container.
 ```sh
 docker exec -i -t <container> sh
 ```
 Now, we just need to click the 'EXEC' button on the top.
-### 5.2 Settings of Container
+### 6.2 Settings of Container
 Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set by command line in docker terminal. Now, you can easily update it in Kitematic.
 ![MIME Type](/public/pics/2016-09-15/general.png)  
 Volumes sub tab, this feature enables you to share files between container and host machine.
 ![MIME Type](/public/pics/2016-09-15/volume.png)  
 
-## 6. References
+## 7. References
 * [Install Docker Toolbox on macOS](https://docs.docker.com/toolbox/toolbox_install_mac/)
 * [Get Started with Docker Quickly, using Kitematic](https://www.youtube.com/watch?v=dwMcmfZaA6Q)
 * [How to uninstall Toolbox](https://docs.docker.com/toolbox/toolbox_install_mac/#how-to-uninstall-toolbox)
