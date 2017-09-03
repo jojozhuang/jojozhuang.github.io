@@ -40,15 +40,16 @@ It's necessary to understand the structure of docker and what terminal can acces
 If you install docker manually, like what I did for Ubuntu mentioned in the posting [Install and Use Docker on Ubuntu](http://jojozhuang.github.io/blog/2016/09/10/install-and-use-docker-on-ubuntu/), the docker is hosted directly by host machine. The host terminal can access both docker and host system.
 ![MIME Type](/public/pics/2016-09-15/terminal-pm.png)  
 ## 4.2 With Virtual Machine
-If you install docker through Docker Toolbox, like what we did in step 3, the structure is different. There is one more VirtualBox VM between host machine and docker machine. In this case, you can only use Docker QuickStart Terminal to access docker.
+If you install docker through Docker Toolbox, like what we did in this posting, the structure is different. There is one more VirtualBox VM between host machine and docker machine. In this case, you can only use Docker QuickStart Terminal to access docker.
 ![MIME Type](/public/pics/2016-09-15/terminal-vm.png)  
 ## 4.3 Types of Terminal
-There are three types of terminal if docker is hosted on virtual machine.
+There are three types of terminal if docker is hosted on virtual machine.  
+
  Type                       | Description                    |  How to launch?
 ----------------------------|--------------------------------|----------------------
  Host Terminal              | The system terminal of host OS | Spotlight Search->terminal
  Docker QuickStart Terminal | The terminal for docker        | Spotlight Search->Docker QuickStart Terminal
- Container Terminal         | The terminal within container  | In Docker Terminal, execute 'docker exec -it \<container\> sh'
+ Container Terminal         | The terminal within container  | In Docker Terminal, execute 'docker exec -it &lt;container> sh'
 
 Whenever you start to work in command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal if it's in the virtual machine.
 ![MIME Type](/public/pics/2016-09-15/terminal-fail.png)  
