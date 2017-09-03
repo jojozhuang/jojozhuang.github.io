@@ -26,7 +26,7 @@ Click on the preview button to see the result in your own browser. If you see th
 There is one issue with this Tomcat container, no volume is configured.
 ![MIME Type](/public/pics/2016-09-20/novolume.png)  
 ### 2.2 Bindmount a Volume
-Let's manually create another Tomcat container for the tomcat image.
+Let's manually create another Tomcat container for the same tomcat image.
 In docker terminal, run the following command.
 ```sh
 $ docker run --name=gstomcat -d -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore -p 31020:8080 tomcat
@@ -37,6 +37,7 @@ Let's take a moment to examine this command in detail:
 * -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore Sets up a bindmount volume that links the /usr/local/tomcat/webapps/gamestore directory from inside the Tomcat container to the ~/Documents/gstomcat directory on the host machine. Docker uses a : to split the host's path from the container path, and the host path always comes first.
 * -p 31020:8080 sets up a port forward. The Tomcat container is listening on port 8080 by default. This flag maps the container's port 8080 to port 31020 on the host system.
 * tomcat specifies that the container should be built from the tomcat image
+
 Switch to Kitematic, the new container is listed there with the Volumes set.
 ![MIME Type](/public/pics/2016-09-20/gstomcat.png)  
 Click on the preview button to see the result in your own browser. If you see the below web page, it means tomcat is working properly. Notice, the port is different with the previous one.
@@ -53,8 +54,8 @@ We will use the same JSP application for [Use Mysql Container for JSP Applicatio
 Build the project, copy all of the files from /GameStoreMysql/WebContent/ to ~/Documents/gstomcat/.
 ![MIME Type](/public/pics/2016-09-20/webcontent.png)  
 And copy all of the class files from /GameStoreMysql/build/ to ~/Documents/gstomcat/WEB-INF/
-![MIME Type](/public/pics/2016-09-20/class.png)  
-The final stucture of the volume folder looks like below.
+![MIME Type](/public/pics/2016-09-20/classes.png)  
+The final stucture of the volume folder looks like below. All the files are deployed.
 ![MIME Type](/public/pics/2016-09-20/final.png)  
 
 ### 3.3 Check JSP
