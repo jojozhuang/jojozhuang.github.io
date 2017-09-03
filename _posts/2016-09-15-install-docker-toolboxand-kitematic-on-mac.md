@@ -35,20 +35,22 @@ After the installation is finished. You can launch Kitematic.
 ![MIME Type](/public/pics/2016-09-15/installfinished.png)  
 
 ## 4. Terminals
-It's necessary to understand the structure of dockers and what terminal are there.
-If you install docker manually, like what I did in Ubuntu, refer to the posting [Install and Use Docker on Ubuntu](http://jojozhuang.github.io/blog/2016/09/10/install-and-use-docker-on-ubuntu/), the docker is installed in host machine.
+It's necessary to understand the structure of docker and what terminal can access it.  
+## 4.1 Without Virtual Machine
+If you install docker manually, like what I did for Ubuntu mentioned in the posting [Install and Use Docker on Ubuntu](http://jojozhuang.github.io/blog/2016/09/10/install-and-use-docker-on-ubuntu/), the docker is hosted directly by host machine. The host terminal can access both docker and host system.
 ![MIME Type](/public/pics/2016-09-15/terminal-pm.png)  
-If you install docker toolbox, the structure is different, there is one more VirtualBox VM.
+## 4.2 With Virtual Machine
+If you install docker through Docker Toolbox, like what we did in step 3, the structure is different. There is one more VirtualBox VM between host machine and docker machine. In this case, you can only use Docker QuickStart Terminal to access docker.
 ![MIME Type](/public/pics/2016-09-15/terminal-vm.png)  
-There are three types of terminal.
-
+## 4.3 Types of Terminal
+There are three types of terminal if docker is hosted on virtual machine.
  Type                       | Description                    |  How to launch?
 ----------------------------|--------------------------------|----------------------
  Host Terminal              | The system terminal of host OS | Spotlight Search->terminal
  Docker QuickStart Terminal | The terminal for docker        | Spotlight Search->Docker QuickStart Terminal
- Container Terminal         | The terminal within container  | In Docker Terminal, execute 'docker exec -it <container> sh'
+ Container Terminal         | The terminal within container  | In Docker Terminal, execute 'docker exec -it \<container\> sh'
 
-Whenever you want to work through command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal.
+Whenever you start to work in command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal if it's in the virtual machine.
 ![MIME Type](/public/pics/2016-09-15/terminal-fail.png)  
 
 ## 5. Use Kitematic
