@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Serve Static Website in Nginx with Kitematic"
+title: "Serve Static Website With Nginx In Docker"
 date: 2016-09-16
 tags: Docker, Kitematic, Nginx
 categories:
