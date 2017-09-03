@@ -8,7 +8,7 @@ categories:
 - blog
 ---
 
-> Guide how to serve the popular 2048 game website in Nginx with Kitematic.
+> Guide how to serve static website in Nginx with Kitematic.
 * Download and run a web server container
 * Explore the container’s website data natively on your Mac
 * Use volumes to modify the website data
@@ -20,7 +20,7 @@ If you haven’t installed Docker and Kitematic, please install Docker Toolbox b
 ### 2.1 Create Nginx Container
 In Kitematic, Search 'nginx', Click on the 'CREATE' button of the hello-world-nginx image.
 ![MIME Type](/public/pics/2016-09-16/search.png)  
-Kitematic will download (also known as pull the image) the kitematic/hello-world-nginx image from the Docker Hub  immediately.
+Kitematic will download (also known as pull the image) the kitematic/hello-world-nginx image from the Docker Hub immediately.
 ![MIME Type](/public/pics/2016-09-16/download.png)  
 Once it’s done, Kitematic will run a Docker Nginx container for this image. A tiny Nginx web server is started up, allowing it to serve website data to your Mac.
 ![MIME Type](/public/pics/2016-09-16/running.png)  
