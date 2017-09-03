@@ -8,7 +8,7 @@ categories:
 - blog
 ---
 
-> Enable Tomcat Debugging in Docker for Eclipse.
+> Tutorial for how to setup remote debugging in Eclipse for tomcat in Docker.
 
 ## 1. Introduction
 In the last posting [Serve JSP Application With Tomcat In Docker](http://jojozhuang.github.io/blog/2016/09/20/serve-jsp-application-with-tomcat-in-docker/), our Game Store application is hosted in tomcat container.
@@ -16,6 +16,7 @@ In the last posting [Serve JSP Application With Tomcat In Docker](http://jojozhu
 * Tomcat container is serving the gamestore application.
 * Mysql container is used to store data.
 * Tomcat container connects Mysql container to read/write data. They are hosted in the same docker machine with same IP address but different port.
+
 ![MIME Type](/public/pics/2016-09-22/devenv.png)  
 
 ## 2. Setup Tomcat Container
@@ -27,30 +28,29 @@ export JPDA_TRANSPORT=dt_socket
 bin/catalina.sh jpda run
 ```
 ### 2.2 Create Tomcat Container with Enabling Remote Debugging
-Let's manually create another Tomcat container for the same tomcat image.
-In docker terminal, run the following command.
+Manually create Tomcat container with Remote Debugging enabled. In docker terminal, run the following command.
 ```sh
 $ docker run --name=gstomcat -d -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
 ```
-Compare with the similar command used in last post, we append '-p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run' to the end.  
+Compare with the similar command used in the last post, we append '-p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run' to the end.  
 Let's take a moment to examine this command in detail:
 * --name=gstomcat names the container so we can refer to it more easily.
 * -d detaches the process and runs in the background. Otherwise, we would just be watching an empty Tomcat prompt and wouldn't be able to use this terminal until we killed Tomcat.
 * -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore Sets up a bindmount volume that links the /usr/local/tomcat/webapps/gamestore directory from inside the Tomcat container to the ~/Documents/gstomcat directory on the host machine. Docker uses a : to split the host's path from the container path, and the host path always comes first.
 * -p 31020:8080 sets up a port forward. The Tomcat container is listening on port 8080 by default. This flag maps the container's port 8080 to port 31020 on the host system.
 * tomcat specifies that the container should be built from the tomcat image
-* -p 8000:8000 sets up another port for debugging purpose. So eclipse can connect to tomcat to get debugging information through this port.
+* -p 8000:8000 sets up another port for debugging purpose. So Eclipse can connect to tomcat container to get debugging information through this port.
 * -e JPDA_ADDRESS=8000 setups the environment variable, just like executing 'export JPDA_ADDRESS=8000' in terminal.
 * catalina.sh jpda run, tells the container to launch tomcat with this command.
 
-Switch to Kitematic, the new container is running with Volume configured. Notice, JPDA_ADDRESS is set to 8000.
+Switch to Kitematic, the new container is running with JPDA_ADDRESS configured to 8000.
 ![MIME Type](/public/pics/2016-09-22/portenv.png)  
-And the port 8000 for debugging is set as well.
+And the port 8000 for debugging is configured as well.
 ![MIME Type](/public/pics/2016-09-22/debugport.png)  
-To access the website, we still use port 31020 and 8000 is only for debugging.
-![MIME Type](/public/pics/2016-09-20/preview.png)  
+To access the website, we still use port 31020. Port 8000 is only for debugging.
+![MIME Type](/public/pics/2016-09-22/preview.png)  
 
-## 3. Setup Eclipse for Debugging
+## 3. Setup Debugging in Eclipse
 ### 3.1 Create Remote Java Application
 In Eclipse, create new remote Java Application. Set host with tomcat container's IP address, and port 8000.
 ![MIME Type](/public/pics/2016-09-22/debugconfig.png)  
@@ -60,17 +60,17 @@ Find file account_login.jsp under WebContent, set breakpoint for login method.
 ### 3.3 Enable Debugging
 Switch to debug view, enable debugging. If you don't see the Debug view, Windows->Perspective->Customize Perspective->Check the Debug option.
 ![MIME Type](/public/pics/2016-09-22/enabledebug.png)  
-If eclipse debugger can connect to tomcat container, you will see some Daemon Thread are listed in debug view.
+Then, you will see some Daemon Thread are listed in debug view.
 ![MIME Type](/public/pics/2016-09-22/afterdebug.png)  
 
 ## 4. Trigger the Breakpoint
 ### 4.1 Access Game Store Website
-Access the following URL in web browser. Then, click the login link on the top right of the page.
+Access the following URL in web browser. Then, click the Login link on the top right of the page.
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 
-Type 'customer' to user name, type 'customer' to password, and click Login button.
+Type 'customer' for user name, type 'customer' for password, and click Login button.
 ![MIME Type](/public/pics/2016-09-22/login.png)  
-The breakpoint in eclipse is working.
+Switch to Eclipse, the breakpoint is activated. The remote debugging function is working now.
 ![MIME Type](/public/pics/2016-09-22/breakpointdt.png)  
 
 ## 4. Source Code
