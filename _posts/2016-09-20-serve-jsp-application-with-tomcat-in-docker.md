@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Serve JSP Application With Tomcat In Docker"
 date: 2016-09-20
-tags: Docker, Kitematic, Tomcat
+tags: Docker, Tomcat
 categories:
 - blog
 ---
