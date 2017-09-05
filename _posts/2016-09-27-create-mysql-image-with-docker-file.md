@@ -79,20 +79,20 @@ $ docker images
 As you see, the new image is created with tag 0.1.
 ![MIME Type](/public/pics/2016-09-27/imagecreated.png)  
 
-## 3. Test The New Image
-### 3.1 Run Container
+## 4. Test The New Image
+### 4.1 Run Container
 In docker terminal, run the following command.
 ```sh
 $ docker run --detach --name=gsmysql --publish 6603:3306 gamestore-mysql:0.1
 ```
 Notice we don't need to set the environment variable MYSQL_ROOT_PASSWORD any more.
-### 3.2 Verify Container in Kitematic
+### 4.2 Verify Container in Kitematic
 A Mysql container named gsmysql is running now. Notice, it's source image is 'gamestore-mysql:0.1'. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
 ![MIME Type](/public/pics/2016-09-27/general.png)  
 Port 3306 is also exposed.
 ![MIME Type](/public/pics/2016-09-27/ports.png)  
 
-### 3.3 Verify Game Store Website
+### 4.3 Verify Game Store Website
 Open the following link in web browser. Our Game Store is running now. Then, click the Login link on the top right of the page.
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 
@@ -100,11 +100,11 @@ Type 'customer' for user name, type 'customer' for password, and click Login but
 ![MIME Type](/public/pics/2016-09-27/login.png)  
 Try to add some item to shopping cart and place the order. Order should be created.
 
-## 4. Source Code
+## 5. Source Code
 * [Database Backup File](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql)
 * [Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
-## 5. References
+## 6. References
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 * [How to Back Up and Restore a MySQL Database](http://webcheatsheet.com/sql/mysql_backup_restore.php)
 * [How can I initialize a MySQL database with schema in a Docker container?](https://stackoverflow.com/questions/29145370/how-can-i-initialize-a-mysql-database-with-schema-in-a-docker-container)
