@@ -11,10 +11,11 @@ categories:
 > Tutorial for how to define and run multiple containers with Docker Compose.
 
 ## 1. Recall What've Achieved
-Ways of creating Image/Containers:
+Three ways to create containers:
 * Run container through command line without creating our own images.
 * Create images with Dockerfile and run containers based on customized images.
 * Define and run containers with Docker Compose.
+
 We learned how to create mysql and tomcat container through the previous postings. In this posting, we will learn how to use docker compose to simplify the process.
 
 ## 2. What is Docker Compose?
@@ -27,10 +28,9 @@ Using Compose is basically a three-step process.
 
 ## 3. Create Docker Compose
 ### 3.1 Get Mysql Backup File
-Download the backup file from [My GitHub](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql), and put it to the some directory, which will be mounted to mysql container.
+Download the backup file from [My GitHub](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql), and put it to some directory, which will be mounted to mysql container.
 ### 3.2 Create Docker Compose
-Create docker compose file in any directory of your local machine.
-The name must be Dockerfile.
+Create docker compose file in any directory of your local machine. The name must be docker-compose.yml.
 ```sh
 $ cd ~/Johnny
 $ mkdir Docker
@@ -71,7 +71,7 @@ Open Docker terminal, navigate to the folder where the Docker compose file locat
 ```sh
 $ docker-compose up -d
 ```
-This command will take the docker-compose.yml file in your local directory and start building the containers in background.
+This command will take the docker-compose.yml file in your local directory and start building the containers. Option -d makes this process run in background.
 Once executed, all the images will start downloading and the containers will start automatically.
 
 Check the containers.
