@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Define And Run Multiple Containers with Docker Compose"
-date: 2016-09-30
-tags: Dockerfile, Compose
+title: "Continuous Integration with Jenkins"
+date: 2016-10-15
+tags: Link
 categories:
 - blog
 ---
