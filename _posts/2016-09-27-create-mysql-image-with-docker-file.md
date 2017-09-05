@@ -109,3 +109,4 @@ Try to add some item to shopping cart and place the order. Order should be creat
 * [How to Back Up and Restore a MySQL Database](http://webcheatsheet.com/sql/mysql_backup_restore.php)
 * [How can I initialize a MySQL database with schema in a Docker container?](https://stackoverflow.com/questions/29145370/how-can-i-initialize-a-mysql-database-with-schema-in-a-docker-container)
 * [Initializing a fresh instance of MySQL Docker image docs](https://hub.docker.com/_/mysql/)
+* [Setting up MySQL and importing dump within Dockerfile](https://stackoverflow.com/questions/25920029/setting-up-mysql-and-importing-dump-within-dockerfile)
