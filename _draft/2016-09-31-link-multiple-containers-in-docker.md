@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Link Multiple Containers in Docker"
 date: 2016-09-31
-tags: Link
+tags: Link,
 categories:
 - blog
 ---
@@ -114,6 +114,5 @@ Try to add some item to shopping cart and place the order. Order should be creat
 * [Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 6. References
-* [Docker Compose](https://docs.docker.com/compose/)
-* [Docker - Compose](https://www.tutorialspoint.com/docker/docker_compose.htm)
-* [How to name a volume using a docker-compose.yml file?](https://stackoverflow.com/questions/41303760/how-to-name-a-volume-using-a-docker-compose-yml-file)
+* [Legacy container links](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/)
+* [Docker container networking](https://docs.docker.com/engine/userguide/networking/)

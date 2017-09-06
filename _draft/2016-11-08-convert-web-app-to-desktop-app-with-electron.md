@@ -17,3 +17,5 @@ categories:
 
 ## 8. References
 https://docs.docker.com/kitematic/nginx-web-server/
+https://www.w3schools.com/nodejs/nodejs_modules.asp
+https://javascript.info

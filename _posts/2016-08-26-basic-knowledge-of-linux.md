@@ -35,4 +35,6 @@ su -a tony   // switch to another 'tony'
 sudo chown -R $USER /ariba/ssp_sp/  // grant all access rights to current user.
 
 scp username@ip:~/Work/AppInfo.xml ~ // copy file from remote server(ip) with user(username) to local home directory(~).
+
+ls | grep hosts // Find file with name=hosts
 ```

@@ -39,7 +39,7 @@ $ vim docker-compose.yml
 ```
 Edit docker-compose.yml, fill with following content.
 ```sh
-version: '3'
+version: '3.0'
 services:
   web:
     image: tomcat
