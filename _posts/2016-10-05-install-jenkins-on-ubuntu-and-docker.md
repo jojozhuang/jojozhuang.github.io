@@ -78,26 +78,29 @@ The following commands when appended to the Jenkins instance URL will carry out 
 * http://localhost:8080/jenkins/reload − to reload the configuration
 
 ## 3. Create Jenkins Container in Docker
+### 3.1 Install Docker and Kitematic
 If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to another posting [Install Docker Toolbox and Kitematic on Mac](http://jojozhuang.github.io/blog/2016/09/15/install-docker-toolboxand-kitematic-on-mac/).
-
+### 3.2 Create Jenkins Container
 Search jenkins in Kitematic, select the official image, and click Create button.
 ![MIME Type](/public/pics/2016-10-05/dockersearch.png)
-New Jenkins container will be created and running. Click the Preview button, web browser will be opened to access Jenkins application.
+New Jenkins container will be created and running.
 ![MIME Type](/public/pics/2016-10-05/dockerkitematic.png)
-Again, we need to find the password.
+### 3.3 Setup Jenkins
+Click the Preview button, web browser will be opened to access Jenkins application. Again, we need to find the password.
 ![MIME Type](/public/pics/2016-10-05/dockerunlock.png)
 The location is different. Open container terminal. Running the following commands.
 ```sh
-# cd var/jenkins_home/secrets/
-# more initialAdminPassword
+$ cd var/jenkins_home/secrets/
+$ more initialAdminPassword
 ```
-![MIME Type](/public/pics/2016-10-05/dockerpassword.png)  
+![MIME Type](/public/pics/2016-10-05/dockerpassword.png)
 Copy this password and paste it to the input box in Getting Started page, continue. The same steps as follows to setup Jenkins.
 * Install Plugins
 * Create Admin User
 * Ready For Use
 * Homepage of Jenkins
 
+Finally, we see the homepage of Jenkins, which is hosted in Docker Container.
 ![MIME Type](/public/pics/2016-10-05/dockerhomepage.png)
 
 ## 4. References
