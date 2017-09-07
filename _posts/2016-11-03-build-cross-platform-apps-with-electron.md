@@ -14,26 +14,26 @@ categories:
 ## 1.1 Install Homebrew on Mac
 Homebrew is package manager for Macs which makes installing lots of different software like Git, Ruby, and Node simpler. Homebrew lets you avoid possible security problems associated with using the sudo command to install software like Node.
 ```sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update // Update Homebrew
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew update // Update Homebrew
 ```
 
 ## 1.2 Install Node.js and NPM
 ```sh
-brew install node
+$ brew install node
 ```
 
 npm will be installed along with nodejs.   
 Run following commands in terminal to check versions, to make sure node and npm are installed properly.
 ```sh
-node -v   //mac
-nodejs -v //linux
-npm -v  
+$ node -v   //mac
+$ nodejs -v //linux
+$ npm -v  
 ```
 
 Update node and npm
 ```sh
-brew upgrade node
+$ brew upgrade node
 ```
 
 ## 1.3 Install Electron
@@ -41,14 +41,19 @@ Install Electron globally.
 ```sh
 $ npm install -g electron
 ```
+If you get permission denied error, run the following command instead.
+```sh
+$ sudo npm install -g electron --unsafe-perm=true --allow-root
+```
+
 Check version
 ```sh
-electron --version
+$ electron --version
 ```
 
 You can also install Electron at package level.
 ```sh
-npm install electron --save-dev
+$ npm install electron --save-dev
 ```
 
 ## 1.4 Install Visual Studio Code
@@ -339,8 +344,8 @@ There are two modules support you to package your Electron apps.
 I will use the electron-builder for packaging.
 
 Install electron-builder
-```javascript
-npm install electron-builder --save-dev
+```sh
+$ npm install electron-builder --save-dev
 ```
 
 Add the following content to package.json.
