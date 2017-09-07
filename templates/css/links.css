@@ -5939,11 +5939,7 @@ span.main-en-parts__label {
     line-height: 28px
 }
 .main-en-contents__description {
-    max-width: 490px;
     margin-bottom: 24px
-}
-.main-en-contents__description p {
-    margin: 0 0 8px
 }
 .main-en-contents .list {
     counter-reset: one;
