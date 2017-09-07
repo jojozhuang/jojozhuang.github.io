@@ -88,7 +88,7 @@ New Jenkins container will be created and running.
 ### 3.3 Setup Jenkins
 Click the Preview button, web browser will be opened to access Jenkins application. Again, we need to find the password.
 ![MIME Type](/public/pics/2016-10-05/dockerunlock.png)
-The location is different. Open container terminal. Running the following commands.
+Open container terminal. Running the following commands.
 ```sh
 $ cd var/jenkins_home/secrets/
 $ more initialAdminPassword

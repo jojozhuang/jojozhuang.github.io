@@ -39,7 +39,7 @@ brew upgrade node
 ## 1.3 Install Electron
 Install Electron globally.
 ```sh
-$ npm install -g electron-prebuilt
+$ npm install -g electron
 ```
 Check version
 ```sh
@@ -71,15 +71,17 @@ $ npm init
 
 input the following information
 ```javascript
-"name": "electron-tutorial",
-"version": "1.0.0",
-"description": "Develop cross-platform application with Electron",
-"main": "index.js",
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-"author": "Rong Zhuang",
-"license": "GPL-3.0"
+{
+  "name": "electron-tutorial",
+  "version": "1.0.0",
+  "description": "Develop cross-platform application with Electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rong Zhuang",
+  "license": "GPL-3.0"
+}
 ```
 
 Then, a configuration file named 'package.json' will be created with the above content.
