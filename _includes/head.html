@@ -22,6 +22,9 @@
   {% if page.blog == "list" %}
     <link href="/public/css/newslist.css" rel='stylesheet' type='text/css' />
   {% endif %}
+  {% if page.key == "favorites" %}
+    <link href="/public/css/favorites.css" rel='stylesheet' type='text/css' />
+  {% endif %}
 
   <!-- move to here, script should be inside head, otherwise doesn't work for ie -->
   {% include google_analytics.html %}

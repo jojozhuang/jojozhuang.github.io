@@ -123,6 +123,12 @@ hello.txt
 Johnny@Johnny-Mac:~$
 ```
 
+Next time, use the following commands to get latest commits from the same repository.
+```sh
+cd PullTest/
+git pull origin master
+```
+
 ## 6. Use Git with SourceTree
 SourceTree is a free Git client for Windows or Mac. Instead of using command line, it provides an nice visual Git GUI.
 ### 6.1 Install SourceTree
