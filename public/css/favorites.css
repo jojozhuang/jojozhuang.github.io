@@ -49,7 +49,7 @@
     padding: 0;
     margin: 0
 }
-.main-contents .list__title {
+.main-contents .list-title {
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -59,10 +59,7 @@
     padding-bottom: 8px;
     margin-bottom: 16px
 }
-.main-contents .list__link {
-    color: #373636
-}
-.main-contents .list__item {
+.main-contents .list-item {
     list-style: none;
     counter-increment: one
 }
@@ -89,12 +86,12 @@
         columns: 1
     }
 }
-.main-contents .list-sub__title {
+.main-contents .list-sub-title {
     position: relative;
     padding-left: 38px;
     margin-bottom: 2px
 }
-.main-contents .list-sub__title:before {
+.main-contents .list-sub-title:before {
     position: absolute;
     top: 4px;
     left: 0;
@@ -103,29 +100,12 @@
     line-height: 16px;
     content: counter(one) "." counter(two)
 }
-.main-contents .list-sub__link {
+.main-contents .list-sub-link {
     font-size: 16px;
     line-height: 23px
 }
-.main-contents .list-sub__item {
+.main-contents .list-sub-item {
     counter-increment: two;
     -webkit-column-break-inside: avoid;
     break-inside: avoid
-}
-@media (max-width: 568px) {
-    .main-contents .list-sub__item_phone_hidden {
-        display: none
-    }
-}
-.main-contents .list-sub__more {
-    cursor: pointer;
-    display: none;
-    margin-left: 38px;
-    font-size: 16px;
-    line-height: 23px
-}
-@media (max-width: 568px) {
-    .main-contents .list-sub__more {
-        display: inline-block
-    }
 }
