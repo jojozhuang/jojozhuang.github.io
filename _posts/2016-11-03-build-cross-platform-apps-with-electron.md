@@ -407,7 +407,7 @@ Finally, you will get the executable file and installer in dist folder.
 ![MIME Type](/public/pics/2016-11-03/packaging.png)  
 
 ## 7. Source Code
-[Source code files of Electron Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ElectronTutorial)
+* [Source code files of Electron Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ElectronTutorial)
 
 ## 8. References
 * [Electron Tutorial](https://www.tutorialspoint.com/electron/index.htm)
