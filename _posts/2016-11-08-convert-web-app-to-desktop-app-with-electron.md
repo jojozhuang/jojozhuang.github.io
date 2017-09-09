@@ -3,19 +3,19 @@ layout: post
 key: blog
 title: "Convert Web App to Desktop App with Electron"
 date: 2016-11-08
-tags: Electron, 2048, Cross-platform
+tags: Electron, 2048
 categories:
 - blog
 ---
 
-> Electron is used to build cross platform desktop apps with JavaScript, HTML, and CSS. We will use it to wrap famous 2048 game to.
+> Electron is used to build cross platform desktop apps with JavaScript, HTML, and CSS. We will use it to wrap a web application of game 2048 and convert it to desktop application.
 
 ## 1. Electron
 If you haven't installed Electron or you want to learn the basic knowledge of Electron, please check my previous posting [Build Cross-platform Apps with Electron](http://jojozhuang.github.io/blog/2016/11/03/build-cross-platform-apps-with-electron/) first.
 
-## 2. Game 2048
-2048 is a famous number puzzle game, you can try it online https://gabrielecirulli.github.io/2048/. It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.
-
+## 2. 2048
+2048 is a famous number puzzle game, you can try it online at https://gabrielecirulli.github.io/2048/. It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.
+![MIME Type](/public/pics/2016-11-08/2048.png)  
 ## 3. Steps for Conversion
 ### 3.1 Get Source Files for 2048
 Clone source code from github.
@@ -67,16 +67,16 @@ Create package.json.
   }
 }
 ```
-Run, you should see 2048.
+Run, you should see 2048 is running.
 ```sh
 npm install
 npm start
 ```
 ### 3.3 Beautify UI
 1) Set Window Size
-* Make Window Has the Proper Size
+* Make the window just fit the page size
 * Disable resizable
-* Set Window Title to 2048
+* Set window title to 2048
 
 ```sh
 function createWindow() {
@@ -96,11 +96,8 @@ function createWindow() {
 }
 ```
 
-2) Set menu
-Set menu for this app.
-notice during development, the first menu item is always electron.
-after build, it would be correct.
-
+2) Set Menu
+Define menu template in JSON format. If you are using Mac OS for development, the title of the first menu item is always 'electron'. After build, it would be correct. You can add menu item for specific platform.
 ```javascript
 function setMainMenu() {
     let template = [
@@ -134,17 +131,7 @@ function setMainMenu() {
                     role: 'close'
                 }
             ]
-        },
-        {
-            label: 'Help',
-            role: 'help',
-            submenu: [{
-                label: 'Learn More',
-                click: function () {
-                    electron.shell.openExternal('http://jojozhuang.github.io/blog/2016/11/03/build-cross-platform-apps-with-electron/')
-                }
-            }]
-       }
+        }
     ];
 
     if (process.platform === 'darwin') {
@@ -186,38 +173,28 @@ function setMainMenu() {
     Menu.setApplicationMenu(menu)
 }
 ```
-### 3.4 Beautify UI
+### 3.4 Test
+Run the following command to start the app.
 ```sh
 npm start
 ```
+Notice, the window title has been set to 2048. And the menu is also changed except the first one.
 ![MIME Type](/public/pics/2016-11-08/run2.png)  
-## 4. Package
-Use electron-build for packaging.
+## 4. Packaging
+We need to create installer for this app. We will use electron-build for packaging.
 ### 4.1 Set Icon
 The icons on different operating system are different.
-* icns -> OS X
-* ico -> Windows
-* png -> Linux
+* .icns -> OS X
+* .ico -> Windows
+* .png -> Linux
 
-Search 2048 image through Google, then use [online icon converter](https://iconverticons.com/online/) to create all these kinds of icon/images.
+Search 2048 image through Google, then use [Online Icon Converter](https://iconverticons.com/online/) to create all kinds of icons/images at once.
 
-For mac, create build folder and put icons into it.
-
-during development, you can change icon on mac.
-to build with icon, put all icons into build directory, name should be icon.ico, icon.icns.
+To use electron-build for building, we need to create a folder named 'build' and put all icons into it.
 ![MIME Type](/public/pics/2016-11-08/icons.png)  
 
-For linux, set icon for browser window.
-```javascript
-icon: path.join(__dirname, 'build/icons/64x64.png') })
-```
-icon will show after run
-```sh
-npm start
-electron ./main.js
-```
 ### 4.2 Settings For Linux Packaging
-1) Specify homepage in package.json
+1) Specify homepage attribute in package.json  
 2) Set name and email for author
 ```javascript
 {
@@ -237,16 +214,17 @@ electron ./main.js
 3) The final structure of the project.
 ![MIME Type](/public/pics/2016-11-08/structure.png)  
 ### 4.3 Run Packaging
-1) Run command
+1) Run following command to start packaging.
 ```sh
 npm run dist
 ```
-Output on Mac.
+2) Mac  
+Output on Mac. One executable file, one installer file and one compressed file.
 ![MIME Type](/public/pics/2016-11-08/buildmac.png)  
-Click on the icon, run 2048. Notice, we have the icon on dock and correct menu.
+Click on the executable file, run 2048. Notice, we have the icon on dock and correct menu on the top.
 ![MIME Type](/public/pics/2016-11-08/uimac.png)  
 
-Output on Ubuntu.
+3) Linux  
 Specify icon directory for linux in package.json.
 ```sh
 "linux": {
@@ -257,12 +235,14 @@ Specify icon directory for linux in package.json.
       "icon": "build/icons/"
     },
 ```
+Output on Ubuntu. One executable file, one deb installer file and one unpacked folder.
 ![MIME Type](/public/pics/2016-11-08/buildubuntu.png)  
-Click on the icon, run 2048. Notice, we have the icon on dock and correct menu.
+Click on the executable file, run 2048. Notice, we have the icon on dock and correct menu on the top.
 ![MIME Type](/public/pics/2016-11-08/uiubuntu.png)  
 
 ## 5. Source Code
-* [Source code files of 2048 on Github](https://github.com/jojozhuang/Portfolio/tree/master/Game2048)
+* [Source code files of Game 2048 on Github](https://github.com/jojozhuang/Portfolio/tree/master/Game2048)
+
 ## 6. References
 * [Electron Documentation](https://electron.atom.io/docs/all/)
 * [BrowserWindow](https://electron.atom.io/docs/api/browser-window/)
