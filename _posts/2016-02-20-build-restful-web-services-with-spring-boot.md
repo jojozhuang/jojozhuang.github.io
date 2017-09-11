@@ -3,12 +3,12 @@ layout: post
 key: blog
 title: "Build RESTful Web Services with Spring Boot"
 date: 2016-02-20
-tags: Web API, Spring Boot, Maven
+tags: RESTful, Spring Boot, Maven
 categories:
 - blog
 ---
 
-> Build RESTful Web API with Spring Boot and Maven in Java.
+> Build RESTful Web Service with Spring Boot and Maven in Java.
 
 ## 1. Prerequisites
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Basic Java Development Environment Setup](http://jojozhuang.github.io/blog/2016/02/05/basic-java-development-environment-setup/) to setup your development environment.
@@ -25,7 +25,7 @@ In the new created project, there are two main branches, one is for source code,
 ![MIME Type](/public/pics/2016-02-20/initialproject.png)  
 ## 3. Configure Maven by Editing pom.xml
 ### 3.1 Specify Java version
-Since, we will use lamda expression, specify java 8.
+Since, we will use lamda expression, specify java version to java 8.
 ```xml
 <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,7 +34,7 @@ Since, we will use lamda expression, specify java 8.
 ```
 
 ### 3.2 Add Dependency
-Add sprint boot dependency to pom.xml.
+Add spring boot dependency to pom.xml.
 ```xml
 <dependencies>
   <dependency>
@@ -50,7 +50,7 @@ Starter for using Spring Data JPA with Hibernate.
   <artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
 ```
-Use H2 in memory database
+Use H2 in-memory database.
 ```xml
 <dependency>
   <groupId>com.h2database</groupId>
@@ -60,19 +60,19 @@ Use H2 in memory database
 ```
 ## 4. Create Service
 1) Create Package  
-Right click project SprintBootTutorial->src->main->java>New->Package, Package Name: com.jojostudio.tutorial.SprintBootTutorial
+Right click project SpringBootTutorial->src->main->java>New->Package, Package Name: com.jojostudio.tutorial.SpringBootTutorial  
 2) Create Executable Application  
 RestApplication.java with dummy data.
 ```java
-package com.jojostudio.tutorial.SprintBootTutorial;
+package com.jojostudio.tutorial.SpringBootTutorial;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.jojostudio.tutorial.SprintBootTutorial.domain.Product;
-import com.jojostudio.tutorial.SprintBootTutorial.repository.ProductRepository;
+import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
+import com.jojostudio.tutorial.SpringBootTutorial.repository.ProductRepository;
 
 @SpringBootApplication
 public class RestApplication {
@@ -106,7 +106,7 @@ public class RestApplication {
 Create folder domain and create class Product in domain.  
 Product.java  
 ```java
-package com.jojostudio.tutorial.SprintBootTutorial.domain;
+package com.jojostudio.tutorial.SpringBootTutorial.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -162,11 +162,11 @@ public class Product {
 Create folder repository and create interface ProductRepository in repository.
 ProductRepository.java
 ```java
-package com.jojostudio.tutorial.SprintBootTutorial.repository;
+package com.jojostudio.tutorial.SpringBootTutorial.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.jojostudio.tutorial.SprintBootTutorial.domain.Product;
+import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
 
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
@@ -176,9 +176,9 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
 Create folder service and create interface ProductService in serice folder, and create
 ProductService.java  
 ```java
-package com.jojostudio.tutorial.SprintBootTutorial.service;
+package com.jojostudio.tutorial.SpringBootTutorial.service;
 
-import com.jojostudio.tutorial.SprintBootTutorial.domain.Product;
+import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
 
 public interface ProductService {
     Iterable<Product> list();
@@ -194,14 +194,14 @@ public interface ProductService {
 ```
 ProductServiceImpl.java
 ```java
-package com.jojostudio.tutorial.SprintBootTutorial.service;
+package com.jojostudio.tutorial.SpringBootTutorial.service;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jojostudio.tutorial.SprintBootTutorial.domain.Product;
-import com.jojostudio.tutorial.SprintBootTutorial.repository.ProductRepository;
+import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
+import com.jojostudio.tutorial.SpringBootTutorial.repository.ProductRepository;
 
 public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
@@ -245,15 +245,15 @@ public class ProductServiceImpl implements ProductService {
 ```
 Finally, create controller folder and create ProductController in controller.
 ```java
-package com.jojostudio.tutorial.SprintBootTutorial.controller;
+package com.jojostudio.tutorial.SpringBootTutorial.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jojostudio.tutorial.SprintBootTutorial.domain.Product;
-import com.jojostudio.tutorial.SprintBootTutorial.repository.ProductRepository;
+import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
+import com.jojostudio.tutorial.SpringBootTutorial.repository.ProductRepository;
 
 @RestController
 @RequestMapping("/products")
@@ -285,7 +285,7 @@ run spring boot project with maven
 ```sh
 $ mvn spring-boot:run
 ```
-then access http://localhost:8080/products/
+Use Postman to access http://localhost:8080/ for testing.  
 1) Get Product List  
 URL: http://localhost:8080/products/
 ![MIME Type](/public/pics/2016-02-20/products.png)  
@@ -307,7 +307,11 @@ URL: http://localhost:8080/product/1
 ```
 
 ### 6.2 Test
-Add Header = "application/xml".
+restart spring boot.
+```sh
+$ mvn spring-boot:run
+```
+In Postman, add Header = "application/xml".
 URL: http://localhost:8080/product/1
 ![MIME Type](/public/pics/2016-02-20/xmlproduct.png)  
 
@@ -325,7 +329,7 @@ Add dependency of Spring Dev-Tool in pom.xml
 change the name and price of product1.
 ![MIME Type](/public/pics/2016-02-20/changeproduct.png)  
 Don't restart maven. Just send request again. The new product is returned.
-![MIME Type](/public/pics/2016-02-20/changeproduct.png)  
+![MIME Type](/public/pics/2016-02-20/springdev.png)  
 ## 8. Source
 [Source code files of Spring Boot Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/SpringBootTutorial)
 
