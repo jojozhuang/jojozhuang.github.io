@@ -332,9 +332,9 @@ Don't restart maven. Just send request again. The new product is returned.
 ![MIME Type](/public/pics/2016-02-20/springdev.png)  
 
 ## 8. Debug
-1) In Eclipse, set breakpoint inside the method(eg. StringController.java->reverse()) you want to debug.
-2) Right click on the DARestApplication.java, choose "Debug As" -> "Java Application".
-3) In postman, access the url to trigger method being called. You should see breakpoint is activated.
+1) In Eclipse, set breakpoint inside the method(eg. StringController.java->reverse()) you want to debug.  
+2) Right click on the DARestApplication.java, choose "Debug As" -> "Java Application".  
+3) In postman, access the url to trigger method being called. You should see breakpoint is activated.  
 
 ## 9. Source
 [Source code files of Spring Boot Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/SpringBootTutorial)
