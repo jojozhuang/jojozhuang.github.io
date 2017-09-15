@@ -1,20 +1,31 @@
 ---
 layout: post
 key: blog
-title: "Use JPA"
+title: "Data Persistence with JPA & Eclipselink"
 date: 2016-02-21
 tags: JPA, Eclipselink, ORM
 categories:
 - blog
 ---
 
-> Build RESTful Web Service with Spring Boot and Maven in Java.
+> Use JPA and Eclipselink to persistently store the vast amounts of data into database.
 
 ## 1. JPA, JPA Provider, Eclipselink, Hibernate
-JPA is just guidelines to implement the Object Relational Mapping (ORM) and there is no underlying code for the implementation. Where as, Hibernate is the actual implementation of JPA guidelines.
+### 1.1 JPA
+JPA stands for JAVA Persistence API. JPA is a collection of classes and methods to persistently store the vast amounts of data into a database
 
-EclipseLink is the open source Eclipse Persistence Services Project from the Eclipse Foundation.
-EclipseLink is the default JPA provider implemented by oracle.
+### 1.2 JPA Providers
+JPA is an open source API, therefore various enterprise vendors such as Oracle, Redhat, Eclipse, etc. provide new products by adding the JPA persistence flavor in them. Some of these products include:
+Hibernate, Eclipselink, Toplink, Spring Data JPA, etc.
+
+### 1.3 EclipseLink
+EclipseLink is the open source Eclipse Persistence Services Project from the Eclipse Foundation. EclipseLink is the default JPA provider implemented by oracle.
+
+### 1.4 Hibernate
+Hibernate is a high-performance Object/Relational persistence and query service. Hibernate not only takes care of the mapping from Java classes to database tables (and from Java data types to SQL data types), but also provides data query and retrieval facilities.
+
+### 1.5 Difference Between JPA and Hibernate
+JPA define guidelines to implement the Object Relational Mapping (ORM) and there is no underlying code for the implementation. Where as, Hibernate is the actual implementation of JPA guidelines.
 
 ## 2. Prerequisites
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Basic Java Development Environment Setup](http://jojozhuang.github.io/blog/2016/02/05/basic-java-development-environment-setup/) to setup your development environment.
@@ -26,41 +37,65 @@ In Eclipse, File -> New -> 'JPA Project', Name: JPATutorial, and select 'Java SE
 ![MIME Type](/public/pics/2016-02-21/jpaproject.png)  
 Click on download library (if you do not have the library) in the user library section:
 ![MIME Type](/public/pics/2016-02-21/jpafacet.png)  
-Select the latest version of Eclipselink library in the Download library dialog box and click next as follows:
+Select the latest version of Eclipselink library and click Next.
 ![MIME Type](/public/pics/2016-02-21/eclipselink.png)  
-Accept the terms of license and click finish for download library as follows:You will find the process of downloading a file as follows:
+Accept the terms of license and click Finish to start downloading.
 ![MIME Type](/public/pics/2016-02-21/downloading.png)  
-After downloading, select the downloaded library in the user library section and click finish as follows:
+After downloading, click Finish.
 ![MIME Type](/public/pics/2016-02-21/finish.png)  
-Finally you get the project file in the Package Explorer in Eclipse IDE. Extract all files, you will get the folder and file hierarchy as follows:
+Finally you get the project file in the Package Explorer in Eclipse IDE. Expand all files, you will get the folder and file hierarchy as follows:
 ![MIME Type](/public/pics/2016-02-21/projectstructure.png)  
 
-## 4. Adding MySQL connector to Project
-To let our JSP application access Mysql database, we need mysql connector jar. It is a middleware between our JSP application and Mysql Container. Even though mysql is not required to be installed on our host machine, our JSP application needs to connect to mysql container with it.  
+## 4. Adding MySQL Connector to Project
+To access Mysql database, we need mysql connector jar.
 Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download Mysql Connector/J.
 ![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
-Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /JPATutorial/lib/
-
+Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /JPATutorial/lib/  
 Go to Project properties -> Java Build Path by right click on it. You will get a dialog box as follows: Click on Add External Jars.
-![MIME Type](/public/pics/2016-09-21/mysqlconnector.png)  
-## 5. Mysql Container
-Mysql Container
+![MIME Type](/public/pics/2016-02-21/mysqlconnector.png)  
+
+## 5. Setup Mysql Database
+We use docker to host our mysql database server.
+### 5.1 Create Dockerfile
+Create docker file with the following content.
 ```sh
-docker run --detach --name=mysqlJPA --env="MYSQL_ROOT_PASSWORD=jpa" --publish 11020:3306 mysql
+#Create Mysql Image for JPA Tutorial
+FROM mysql
+MAINTAINER jojozhuang@gmail.com
+
+ENV MYSQL_ROOT_PASSWORD jpa
+ADD jpa_backup.sql /docker-entrypoint-initdb.d // create database when container is started.
+
+EXPOSE 3306
+```
+This docker file is already created, which is located in /JPATutorial/docker/.
+Besides, notice that we add jpa_backup.sql file into /docker-entrypoint-initdb.d, which means the sql inside jpa_backup.sql will be executed when mysql container is started. There is only one line sql script, just create a database named 'jpadb'.
+```sql
+CREATE DATABASE  IF NOT EXISTS `jpadb`
 ```
 
-Create image:
+### 5.2 Create Image with Dockerfile
+In terminal, navigate to /JPATutorial/docker/, run command.
 ```sh
 docker build -t jpa-mysql:0.1 .
 ```
-Run container:
+Check images with following command.
+```sh
+docker images
+```
+![MIME Type](/public/pics/2016-02-21/dockerimage.png)  
+
+### 5.3 Run Mysql Container With The New Image
+In terminal, run command.
 ```sh
 docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
+You will see that mysql container is running now. And note the ip address and port. We will use it to configure the database connection in eclipse.
+![MIME Type](/public/pics/2016-02-21/kitematic.png)  
 
-
-## 6. Creating Entities
-Configure Persistence.xml
+## 6. Making Changes to JPA Project
+### 6.1 Configure Persistence.xml
+In eclipse, open Persistence.xml of JPATutorial, switch to source view. Edit it as follows:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
@@ -78,8 +113,9 @@ Configure Persistence.xml
     </persistence-unit>
 </persistence>
 ```
-create a package named ‘com.jojostudio.jpatutorial.entity’, under ‘src’ (Source) package.
-![MIME Type](/public/pics/2016-09-21/package.png)
+### 6.2 Creating Entity
+Create a package named ‘com.jojostudio.jpatutorial.entity’, under ‘src’ (Source) package.
+![MIME Type](/public/pics/2016-02-21/package.png)
 Create a class named Employee.java under given package as follows:
 ```java
 package com.jojostudio.jpatutorial.entity;
@@ -151,9 +187,9 @@ public class Employee {
     }
 }
 ```
-Persistence Operations
-create a package named ‘com.jojostudio.jpatutorial.service’, under ‘src’ (source) package.
-Create Employee
+### 6.2 Creating Persistence Operations
+Create another package named ‘com.jojostudio.jpatutorial.service’, under ‘src’ (source) package.  
+Create 'CreateEmployee.java'
 ```java
 package com.jojostudio.jpatutorial.service;
 
@@ -185,8 +221,7 @@ public class CreateEmployee {
     }
 }
 ```
-Update Employee
-UpdateEmployee.java
+Create 'UpdateEmployee.java'
 ```java
 package com.jojostudio.jpatutorial.service;
 
@@ -216,8 +251,7 @@ public class UpdateEmployee {
     }
 }
 ```
-Find Employee
-FindEmployee.java
+Create 'FindEmployee.java'
 ```java
 package com.jojostudio.jpatutorial.service;
 
@@ -241,8 +275,7 @@ public class FindEmployee {
     }
 }
 ```
-Deleting Employee
-DeleteEmployee.java
+Create 'DeleteEmployee.java'
 ```java
 package com.jojostudio.jpatutorial.service;
 
@@ -267,19 +300,22 @@ public class DeleteEmployee {
     }
 }
 ```
-After compilation and execution of the above program you will get notifications from Eclipselink library on the console panel of eclipse IDE.
 
-For result, open the MySQL workbench and type the following queries.
-```java
-use jpadb
-select * from employee
+## 7. Testing
+### 7.1 Run the Creating
+Right click on CreateEmployee.java file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
+### 7.2 Connect Mysql With MysqlWorkbench
+Add New Connection in MysqlWorkbench and open the connection.
+![MIME Type](/public/pics/2016-02-21/workbench.png)
+### 7.3 Checking Data
+Run sql query to find all rows in the Employee table.
+```sql
+SELECT * FROM jpadb.EMPLOYEE;
 ```
-The effected database named employee will have null records.
+We see the row for new employee is there.
+![MIME Type](/public/pics/2016-02-21/datacreated.png)
 
-
-## 7. Run the Creating Entities
-Right click on CreateEmployee java file -> Run AS- Java Application.
-before after.
+Test updating, finding and deleting with the same approach. Database always gets updated properly.
 
 ## 8. Other Topics
 * JPQL
