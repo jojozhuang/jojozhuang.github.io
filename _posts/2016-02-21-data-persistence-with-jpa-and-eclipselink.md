@@ -8,11 +8,11 @@ categories:
 - blog
 ---
 
-> Use JPA and Eclipselink to persistently store the vast amounts of data into database.
+> Use JPA and Eclipselink to persistent data into database.
 
 ## 1. JPA, JPA Provider, Eclipselink, Hibernate
 ### 1.1 JPA
-JPA stands for JAVA Persistence API. JPA is a collection of classes and methods to persistently store the vast amounts of data into a database
+JPA stands for JAVA Persistence API. JPA is a collection of classes and methods to persistently store the vast amounts of data into a database.
 
 ### 1.2 JPA Providers
 JPA is an open source API, therefore various enterprise vendors such as Oracle, Redhat, Eclipse, etc. provide new products by adding the JPA persistence flavor in them. Some of these products include:
@@ -28,7 +28,7 @@ Hibernate is a high-performance Object/Relational persistence and query service.
 JPA define guidelines to implement the Object Relational Mapping (ORM) and there is no underlying code for the implementation. Where as, Hibernate is the actual implementation of JPA guidelines.
 
 ## 2. Prerequisites
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Basic Java Development Environment Setup](http://jojozhuang.github.io/blog/2016/02/05/basic-java-development-environment-setup/) to setup your development environment.
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment](http://jojozhuang.github.io/blog/2016/02/10/setup-java-development-environment/) to setup your development environment.
 
 In addition, if you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac](http://jojozhuang.github.io/blog/2016/09/15/install-docker-toolboxand-kitematic-on-mac/).
 
@@ -90,7 +90,7 @@ In terminal, run command.
 ```sh
 docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
-You will see that mysql container is running now. And note the ip address and port. We will use it to configure the database connection in eclipse.
+You will see that mysql container is running now. And note the ip address and port. We will use them to configure the database connection in eclipse.
 ![MIME Type](/public/pics/2016-02-21/kitematic.png)  
 
 ## 6. Making Changes to JPA Project
@@ -302,7 +302,7 @@ public class DeleteEmployee {
 ```
 
 ## 7. Testing
-### 7.1 Run the Creating
+### 7.1 Run CreateEmployee Method
 Right click on CreateEmployee.java file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
 ### 7.2 Connect Mysql With MysqlWorkbench
 Add New Connection in MysqlWorkbench and open the connection.
@@ -315,7 +315,7 @@ SELECT * FROM jpadb.EMPLOYEE;
 We see the row for new employee is there.
 ![MIME Type](/public/pics/2016-02-21/datacreated.png)
 
-Test updating, finding and deleting with the same approach. Database always gets updated properly.
+Test updating, finding and deleting with the same approach. Data should always get updated properly in mysql.
 
 ## 8. Other Topics
 * JPQL
@@ -323,7 +323,7 @@ Test updating, finding and deleting with the same approach. Database always gets
 * Criteria API
 
 ## 9. Source
-[Source code files of JPA Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JPATutorials)
+[Source code files of JPA Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JPATutorial)
 
 ## 10. Reference
 * [JPA Tutorial](https://www.tutorialspoint.com/jpa/index.htm)
