@@ -11,20 +11,18 @@ title: Notes of Books/Articles
       <div class="container">
           <div class="row">
               <h2>{{ page.title }}</h2>
-              <div class="col-md-12">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Javascript</h3>
-                    </div>
-                    <ul class="list-group">
-                        {% for post in site.categories.[page.type] %}
-                            <a href="{{ post.url }}" title="{{ post.title }}" class="list-group-item">
-                                <div>{{ post.title }}</div>
-                            </a>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
+              <div class="panel panel-info">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Javascript</h3>
+                  </div>
+                  <ul class="list-group">
+                      {% for post in site.categories.[page.type] %}
+                          <a href="{{ post.url }}" title="{{ post.title }}" class="list-group-item">
+                              <div>{{ post.title }}</div>
+                          </a>
+                      {% endfor %}
+                  </ul>
+              </div>
           </div>
       </div>
     </div>
