@@ -14,7 +14,7 @@ categories:
 * Use volumes to modify the website data
 
 ## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({{ site.baseurl }}{% link _posts/2016-09-15-install-docker-toolbox-and-kitematic-on-mac.md %}).
+If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac](http://jojozhuang.github.io/blog/2016/09/15/install-docker-toolboxand-kitematic-on-mac/).
 
 ## 2. Run Nginx Web Server Container
 ### 2.1 Create Nginx Container

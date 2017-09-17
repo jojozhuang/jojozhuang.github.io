@@ -14,7 +14,7 @@ categories:
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
 
 ## 2. What We've Done Until Now?
-In posting [Use Mysql Container for JSP Application]({{ site.baseurl }}{% link _posts/2016-09-12-use-mysql-container-for-jsp-application.md %}), we created a mysql container to store data for our Game Store application.  
+In posting [Use Mysql Container for JSP Application](http://jojozhuang.github.io/blog/2016/09/12/use-mysql-container-for-jsp-application/), we created a mysql container to store data for our Game Store application.  
 Previously, we used the following command to create mysql container.
 ```sh
 $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --publish 6603:3306 mysql
