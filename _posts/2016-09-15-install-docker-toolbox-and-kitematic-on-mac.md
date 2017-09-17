@@ -37,7 +37,7 @@ After the installation is finished. You can launch Kitematic.
 ## 4. Terminals
 It's necessary to understand the structure of docker and what terminal can access it.  
 ## 4.1 Without Virtual Machine
-If you install docker manually, like what I did for Ubuntu mentioned in the posting [Install and Use Docker on Ubuntu](http://jojozhuang.github.io/blog/2016/09/10/install-and-use-docker-on-ubuntu/), the docker is hosted directly by host machine. The host terminal can access both docker and host system.
+If you install docker manually, like what I did for Ubuntu mentioned in the posting [Install and Use Docker on Ubuntu]({{ site.baseurl }}{% link _posts/2016-09-10-install-and-use-docker-on-ubuntu.md %}), the docker is hosted directly by host machine. The host terminal can access both docker and host system.
 ![MIME Type](/public/pics/2016-09-15/terminal-pm.png)  
 ## 4.2 With Virtual Machine
 If you install docker through Docker Toolbox, like what we did in this posting, the structure is different. There is one more VirtualBox VM between host machine and docker machine. In this case, you can only use Docker QuickStart Terminal to access docker.
@@ -72,7 +72,7 @@ Switch to My Repos tab, the images on your Docker Hub will show here.
 ![MIME Type](/public/pics/2016-09-15/myrepos.png)  
 
 ## 6. Work with Container
-Take gsmysql as example, which is a database container I created for previous posting [Use Mysql Container for JSP Application](http://jojozhuang.github.io/blog/2016/09/12/use-mysql-container-for-jsp-application/).
+Take gsmysql as example, which is a database container I created for previous posting [Use Mysql Container for JSP Application]({{ site.baseurl }}{% link _posts/2016-09-12-use-mysql-container-for-jsp-application.md %}).
 Select gsmysql container, click the Start button.
 ![MIME Type](/public/pics/2016-09-15/gsmysql.png)  
 The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For mysql container, this is the url for applications to connect mysql database remotely.
