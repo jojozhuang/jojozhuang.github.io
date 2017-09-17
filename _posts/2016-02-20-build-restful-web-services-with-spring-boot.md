@@ -11,7 +11,7 @@ categories:
 > Build RESTful Web Service with Spring Boot and Maven in Java.
 
 ## 1. Prerequisites
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Basic Java Development Environment Setup](http://jojozhuang.github.io/blog/2016/02/05/basic-java-development-environment-setup/) to setup your development environment.
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Basic Java Development Environment Setup]({{ site.baseurl }}{% link _posts/2016/02/05/basic-java-development-environment-setup/.md %}) to setup your development environment.
 
 In addition, we will use maven as build tool. So Maven is also required to be installed.
 ```sh
