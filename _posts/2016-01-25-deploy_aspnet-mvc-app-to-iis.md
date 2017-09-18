@@ -74,4 +74,4 @@ If you choose another port, you must add the port number to firewall exception, 
 ### 4.4 Try this address in another machine.  
 
 ## 5. Document
-* [Deploy ASP.NET Application to local IIS](http://jojozhuang.github.io/public/docs/deploy_to_iis.pdf)
+* [Deploy ASP.NET Application to local IIS]({% link public/docs/deploy_to_iis.pdf %})

@@ -74,4 +74,4 @@ Provide the connection string of Azure Database.
 ![image17](/public/pics/2016-01-28/image17.png)  
 
 ## 6. Document
-* [Deploy ASP.NET Application to Azure](http://jojozhuang.github.io/public/docs/deploy_to_azure_with_sqldb.pdf)
+* [Deploy ASP.NET Application to Azure]({% link /public/docs/deploy_to_azure_with_sqldb.pdf %})
