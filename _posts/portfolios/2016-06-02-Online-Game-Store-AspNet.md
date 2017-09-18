@@ -5,7 +5,7 @@ title: "Online Game Store(Live Demo)"
 date: 2016-06-02
 tags: C#, ASP.NET MVC, RESTful WebAPI, jQuery
 image: /assets/gamestoreaspnet/thumbnail.png
-shortdesc: An online eCommerce web store, developed with ASP.NET MVC in C#.
+excerpt: An online eCommerce web store, developed with ASP.NET MVC in C#.
 subcateogry: dotnet
 categories: portfolio
 ---

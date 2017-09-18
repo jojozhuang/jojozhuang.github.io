@@ -5,7 +5,7 @@ title: "Novel Reader"
 date: 2016-01-12
 tags: C#, HTTP, Web Scraping, Outlook Style UI
 image: /assets/novelreader/thumbnail.png
-shortdesc: A MS Outlook UI desktop application for user to read online novels.
+excerpt: A MS Outlook UI desktop application for user to read online novels.
 subcateogry: dotnet
 categories:
 - portfolio

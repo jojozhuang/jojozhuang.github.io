@@ -5,7 +5,7 @@ title: "Course Player"
 date: 2016-01-25
 tags: Xamarin, C#, Visual Studio, iOS
 image: /assets/xamarinplayer/thumbnail.png
-shortdesc: An iOS App for playing course, built with Xamarin in C#.
+excerpt: An iOS App for playing course, built with Xamarin in C#.
 subcateogry: mobile
 categories: portfolio
 ---

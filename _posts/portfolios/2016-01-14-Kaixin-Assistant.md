@@ -5,7 +5,7 @@ title: "Kaixin Assistant"
 date: 2016-01-14
 tags: C#, Web Scraping, HTTP
 image: /assets/kaixin/thumbnail.png
-shortdesc: A 'tag-on' desktop application for playing online flash games automatically.
+excerpt: A 'tag-on' desktop application for playing online flash games automatically.
 subcateogry: dotnet
 categories: portfolio
 ---

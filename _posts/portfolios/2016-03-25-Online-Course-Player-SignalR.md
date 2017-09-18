@@ -5,7 +5,7 @@ title: "Online Course Player (SignalR)"
 date: 2016-03-25
 tags: WebSocket, SignalR, Realtime
 image: /assets/courseplayersignalr/thumbnail.png
-shortdesc: A realtime online course player, developed with SignalR and ASP.NET.
+excerpt: A realtime online course player, developed with SignalR and ASP.NET.
 subcateogry: dotnet
 categories: portfolio
 ---

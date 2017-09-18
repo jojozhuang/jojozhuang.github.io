@@ -36,6 +36,10 @@ Refresh the page. The highlighting is working now.
 
 ## 2. Link File
 
-
+## 3. Post Excerpt
+https://jekyllrb.com/docs/posts/
+1) post.excerpt
+2) Customized excerpt(short description)
+3) excerpt section
 ## 3. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)

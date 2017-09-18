@@ -5,7 +5,7 @@ title: "Course Player (Socket.IO)"
 date: 2016-04-03
 tags: WebSocket, Socket.IO, Node.js
 image: /assets/courseplayersocketio/thumbnail.png
-shortdesc: A realtime online course player, developed with Socket.IO and Node.js
+excerpt: A realtime online course player, developed with Socket.IO and Node.js
 subcateogry: java
 categories: portfolio
 ---

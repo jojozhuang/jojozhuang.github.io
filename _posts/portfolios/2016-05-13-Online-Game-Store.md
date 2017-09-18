@@ -5,7 +5,7 @@ title: "Online Game Store"
 date: 2016-05-13
 tags: Java, Servlet, JSP, Beans, MySQL
 image: /assets/gamestore/thumbnail.png
-shortdesc: An online eCommerce web store, developed with MySQL and Servlet/JSP in Java.
+excerpt: An online eCommerce web store, developed with MySQL and Servlet/JSP in Java.
 subcateogry: java
 categories: portfolio
 ---

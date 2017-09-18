@@ -5,7 +5,7 @@ title: "Trip Planner"
 date: 2016-01-30
 tags: iOS, Swift, XCode
 image: /assets/travelnote/thumbnail.png
-shortdesc: An iOS App for managing itineraries, built with Swift.
+excerpt: An iOS App for managing itineraries, built with Swift.
 subcateogry: mobile
 categories: portfolio
 ---

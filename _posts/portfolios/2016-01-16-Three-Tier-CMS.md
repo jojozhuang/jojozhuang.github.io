@@ -5,7 +5,7 @@ title: "3-Tier CMS"
 date: 2016-01-16
 tags: ASP.NET, C#, Configurable
 image: /assets/threetiercms/thumbnail.png
-shortdesc: A Content Management System(CMS) built with classic ASP.NET Webform.
+excerpt: A Content Management System(CMS) built with classic ASP.NET Webform.
 subcateogry: dotnet
 categories: portfolio
 ---
