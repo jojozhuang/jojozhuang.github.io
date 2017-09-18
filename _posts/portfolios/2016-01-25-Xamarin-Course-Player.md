@@ -7,8 +7,7 @@ tags: Xamarin, C#, Visual Studio, iOS
 image: /assets/xamarinplayer/thumbnail.png
 shortdesc: An iOS App for playing course, built with Xamarin in C#.
 subcateogry: mobile
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This iOS app is developed by [Xamarin](https://xamarin.com/), which is a tool for developing cross-platform mobile apps. The core function of this app is to play course video with screenshot and whiteboard refreshed synchronously. It is a prototype for my investigation of cross-platform solution for online course system.

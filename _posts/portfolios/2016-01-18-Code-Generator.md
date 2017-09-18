@@ -7,8 +7,7 @@ tags: C#, Windows Form, XSLT+XML
 image: /assets/codegenerator/thumbnail.png
 shortdesc: A desktop application for generating code based on database schema and templates.
 subcateogry: dotnet
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > A Visual Studio style desktop application used for software development assistant.

@@ -4,8 +4,7 @@ key: blog
 title: "Deploy Node.js Application to Amazon EC2"
 date: 2016-03-16
 tags: EC2, Node.js, Putty, CyberDuck
-categories:
-- blog
+categories: blog
 ---
 
 > Node.js application can be hosted by various web servers, Apache, IIS, Nginx, etc. In this post, I introduce how to deploy Node.js application to Amazon Cloud Server, EC2.

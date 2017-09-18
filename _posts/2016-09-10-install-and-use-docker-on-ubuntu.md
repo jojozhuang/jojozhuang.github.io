@@ -4,8 +4,7 @@ key: blog
 title: "Install and Use Docker on Ubuntu"
 date: 2016-09-10
 tags: Docker, Docker Hub
-categories:
-- blog
+categories: blog
 ---
 
 > Introduce how to install and use docker

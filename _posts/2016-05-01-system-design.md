@@ -4,8 +4,7 @@ key: blog
 title: "System Design"
 date: 2016-05-01
 tags: OOP, Database, MapReduce
-categories:
-- blog
+categories: blog
 ---
 
 > Best Practice and Common Questions for System Design.

@@ -4,8 +4,7 @@ key: blog
 title: "Basic Queries in Elasticsearch"
 date: 2017-06-23
 tags: CRUD, Search
-categories:
-- blog
+categories: blog
 ---
 
 > Notes for Elastic Search.

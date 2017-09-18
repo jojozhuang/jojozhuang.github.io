@@ -4,8 +4,7 @@ key: blog
 title: "Useful Math For Algorithm"
 date: 2016-04-28
 tags: Math, Sum, Slot
-categories:
-- blog
+categories: blog
 ---
 
 > Common useful math knowledge used in algorithms.

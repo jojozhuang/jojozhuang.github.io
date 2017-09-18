@@ -7,8 +7,7 @@ tags: Windows Phone, C#
 image: /assets/sapdictionary/thumbnail.png
 shortdesc: A WP App for searching SAP & ERP related words.
 subcateogry: mobile
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language.

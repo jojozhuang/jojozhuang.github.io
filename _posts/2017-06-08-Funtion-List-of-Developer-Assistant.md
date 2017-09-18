@@ -4,8 +4,7 @@ key: blog
 title: "Function List of Developer Assistant"
 date: 2017-06-08
 tags: String, File
-categories:
-- blog
+categories: blog
 ---
 
 > I plan to develop a tool which helps to create file, manipulate strings, etc. It should be cross-platform, using Node.js maybe. Here are the functionalities I can imagine.

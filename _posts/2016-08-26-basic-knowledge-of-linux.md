@@ -4,8 +4,7 @@ key: blog
 title: "Basic Knowledge of Linux"
 date: 2016-08-26
 tags: Shell, Bash, scp
-categories:
-- blog
+categories: blog
 ---
 
 > This blog records some base knowledge of linux and tools.

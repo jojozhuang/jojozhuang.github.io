@@ -7,8 +7,7 @@ tags: ASP.NET, C#, Configurable
 image: /assets/threetiercms/thumbnail.png
 shortdesc: A Content Management System(CMS) built with classic ASP.NET Webform.
 subcateogry: dotnet
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This web application is a backend content management system and built with classic ASP.NET webform in C# language.  

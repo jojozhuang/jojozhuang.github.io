@@ -4,8 +4,7 @@ key: blog
 title: "Data Structure - Heap"
 date: 2016-04-05
 tags: MinHeap, MaxHeap
-categories:
-- blog
+categories: blog
 ---
 
 > Heap

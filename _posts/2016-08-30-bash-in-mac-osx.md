@@ -4,8 +4,7 @@ key: blog
 title: "Bash in Mac OSX"
 date: 2016-08-30
 tags: Bash, Shell
-categories:
-- blog
+categories: blog
 ---
 
 > This blog records some common settings or issues when dealing with Bash or other shell tools on Linux or Mac OS X.

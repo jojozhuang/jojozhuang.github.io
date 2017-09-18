@@ -4,8 +4,7 @@ key: blog
 title: "Create Mysql Image with Docker File"
 date: 2016-09-27
 tags: Dockerfile, Mysql
-categories:
-- blog
+categories: blog
 ---
 
 > Tutorial for how to create Mysql image with Dockerfile.

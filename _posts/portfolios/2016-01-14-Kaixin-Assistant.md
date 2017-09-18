@@ -7,8 +7,7 @@ tags: C#, Web Scraping, HTTP
 image: /assets/kaixin/thumbnail.png
 shortdesc: A 'tag-on' desktop application for playing online flash games automatically.
 subcateogry: dotnet
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This desktop application is not for work, but for fun.

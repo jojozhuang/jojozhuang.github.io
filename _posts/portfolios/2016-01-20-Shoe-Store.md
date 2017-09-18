@@ -7,8 +7,7 @@ tags: ASP.NET MVC, C#, Bootstrap
 image: /assets/shoestore/thumbnail.png
 shortdesc: An online store website with responsive UI, developed with ASP.NET MVC.
 subcateogry: dotnet
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This is a CMS web application built with ASP.NET MVC in C# language. I used the template from [AdminLTE Control Panel Template](https://almsaeedstudio.com/) to design the UI pages. The whole website looks very pretty and modern style.  

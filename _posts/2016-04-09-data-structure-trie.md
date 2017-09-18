@@ -4,8 +4,7 @@ key: blog
 title: "Data Structure - Trie"
 date: 2016-04-09
 tags: Word Search
-categories:
-- blog
+categories: blog
 ---
 
 > A Trie (pronounced try) or Prefix Tree is an ordered tree in which characters are stored at each node. Each path down the tree may

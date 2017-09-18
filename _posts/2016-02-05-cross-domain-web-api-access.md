@@ -4,8 +4,7 @@ key: blog
 title: "Cross Domain Web Api Access"
 date: 2016-02-05
 tags: CORS
-categories:
-- blog
+categories: blog
 ---
 
 We are building a web application with React, which fetches data from an ASP.NET server. One issue we encountered is the client side is not able to get the json data from the Web API. Similar issue can be found on stackoverflow.  

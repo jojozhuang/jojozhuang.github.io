@@ -7,9 +7,9 @@ tags: WebSocket, Socket.IO, Node.js
 image: /assets/courseplayersocketio/thumbnail.png
 shortdesc: A realtime online course player, developed with Socket.IO and Node.js
 subcateogry: java
-categories:
-- portfolio
+categories: portfolio
 ---
+
 > This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, you can read the posting about it from [my portfolio]({% link _posts/portfolios/2016-03-25-Online-Course-Player-SignalR.md %}). Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket]({% link _posts/2016-03-07-develop-realtime-online-application-with-websocket.md %}).
 
 ## 1. Introduction

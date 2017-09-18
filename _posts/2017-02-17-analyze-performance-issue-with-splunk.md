@@ -4,8 +4,7 @@ key: blog
 title: "Analyze Performance Issue with Splunk"
 date: 2017-02-17
 tags: Log Analysis
-categories:
-- blog
+categories: blog
 ---
 
 > Recently, I was working on a performance issue which occurs in our procurement system on the cloud. I reproduced the issue locally and added logs to get the time spent information at runtime. Later, I imported these logs into Splunk for analyzing.

@@ -7,8 +7,7 @@ tags: C#, ASP.NET MVC, RESTful WebAPI, jQuery
 image: /assets/gamestoreaspnet/thumbnail.png
 shortdesc: An online eCommerce web store, developed with ASP.NET MVC in C#.
 subcateogry: dotnet
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This web application is developed by ASP.NET MVC & Web API in C\#.

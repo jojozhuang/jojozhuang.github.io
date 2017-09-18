@@ -4,8 +4,7 @@ key: blog
 title: "Develop Realtime Online Application with WebSocket"
 date: 2016-03-07
 tags: WebSocket, Realtime
-categories:
-- blog
+categories: blog
 ---
 
 > [WebSocket](https://en.wikipedia.org/wiki/WebSocket) is a protocol which enables so-called full-duplex communications. It comes along with HTML5. The protocol itself is not mature, still under developing. Two main features of WebSocket:

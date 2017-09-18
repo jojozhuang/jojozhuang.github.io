@@ -7,8 +7,7 @@ tags: iOS, Swift, XCode
 image: /assets/travelnote/thumbnail.png
 shortdesc: An iOS App for managing itineraries, built with Swift.
 subcateogry: mobile
-categories:
-- portfolio
+categories: portfolio
 ---
 
 > This iOS app is used to manage itineraries. It's built for my final project of course 'CSC471-Mobile App Development for iOS'. Classic layout with three tabs: Me, Search and Settings.  
