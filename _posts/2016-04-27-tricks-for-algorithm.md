@@ -161,8 +161,8 @@ public boolean isUniqueChars(String str) {
 ## 3. Data Structure
 I've created several postings to discuss this topic separately.
 * [Data Structure - Linked List]({% link _posts/2016-03-27-data-structure-linkedlist.md %})
-* [Data Structure - Stack]({% link _posts/2016-03-27-data-structure-linkedlist.md %})
-* [Data Structure - Queue]({% link _posts/2016-03-29-data-structure-stack.md %})
+* [Data Structure - Stack]({% link _posts/2016-03-27-data-structure-stack.md %})
+* [Data Structure - Queue]({% link _posts/2016-03-29-data-structure-queue.md %})
 * [Data Structure - Tree]({% link _posts/2016-04-02-data-structure-tree.md %})
 * [Data Structure - Segment Tree]({% link _posts/2016-04-03-data-structure-segment-tree.md %})
 * [Data Structure - Heap]({% link _posts/2016-04-05-data-structure-heap.md %})
