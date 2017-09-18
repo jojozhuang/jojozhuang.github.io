@@ -8,7 +8,7 @@ permalink: /:categories/:year/:month/:day/:title/
 # Setup
 title: Rong Zhuang
 url: http://jojozhuang.github.io
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
 
 author:
   name: 'Rong Zhuang'
