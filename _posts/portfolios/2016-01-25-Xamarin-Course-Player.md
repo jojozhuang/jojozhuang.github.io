@@ -23,7 +23,7 @@ And we also provide mobile apps for iOS and Android devices.
 The two version mobile apps have the same functionalities and mechanisms how they work. They both need to download the course components to local(phone memory), manage the course list, play video, synchronize screenshot and whiteboard. From technical perspective, their source codes are trying to implement the same logic, but in different programming language(Java and Swift). Currently, we have to develop and maintain them separately. Our technical director wonders whether there is any cross-platform solution for developing mobile applications, so that we can avoid maintaining two copies of the codes and reduce the development cost. After investigating, I found [Xamarin](https://xamarin.com/) is one of the options.
 
 ## 3. Xamarin
-Xamarin is based on [Mono](http://www.mono-project.com/) and .NET framework, written in C#. With the help of Xamarin platform, we can use C# to develop iOS and Android Apps. The benefit by using it is obvious, the development and maintenance cost is reduced, since the common libraries can be put together and reused by others, and it saves developers' time, so they can focus on UI of iOS and Android. For the details of the Xamarin, you can check my [Xamarin Research Report](http://jojozhuang.github.io/public/docs/xamarin_research.pdf).
+Xamarin is based on [Mono](http://www.mono-project.com/) and .NET framework, written in C#. With the help of Xamarin platform, we can use C# to develop iOS and Android Apps. The benefit by using it is obvious, the development and maintenance cost is reduced, since the common libraries can be put together and reused by others, and it saves developers' time, so they can focus on UI of iOS and Android. For the details of the Xamarin, you can check my [Xamarin Research Report]({% link /public/docs/xamarin_research.pdf %}).
 
 ## 4. Course Player
 Each course player, no matter whether is online application or mobile app, it always contains three components: Video, Screenshot and Whiteboard.  
@@ -50,4 +50,4 @@ Class diagram shows the design of this app based on Xamarin framework.
 * [Source code files of Course Player on Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone)
 
 ## 7. Document
-* [Xamarin Research Report](http://jojozhuang.github.io/public/docs/xamarin_research.pdf)
+* [Xamarin Research Report]({% link /public/docs/xamarin_research.pdf %})

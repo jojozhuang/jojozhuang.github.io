@@ -11,7 +11,7 @@ categories:
 > Introduce how to user Mysql Docker Container as database for JSP Application.
 
 ## 1. Project Introduction
-There is a JSP web application named [Game Store](http://jojozhuang.github.io/portfolio/2016/05/13/Online-Game-Store/) in my portfolio. Currently, this application is hosted on Tomcat web server, and it uses Mysql for storing data. This Mysql database is running on the same machine with Tomcat. Now, I want to setup a Docker container for this Mysql database. So, it can be easily deployed to other machine/server. Some configuration of my JSP application needs to be updated to connect to new address of the Mysql container. I shared this Mysql container on Docker Hub. You can pull it to your local machine and follow the steps below to setup a Game Store.
+There is a JSP web application named [Game Store]({% link _posts/portfolios/2016-05-13-Online-Game-Store.md %}) in my portfolio. Currently, this application is hosted on Tomcat web server, and it uses Mysql for storing data. This Mysql database is running on the same machine with Tomcat. Now, I want to setup a Docker container for this Mysql database. So, it can be easily deployed to other machine/server. Some configuration of my JSP application needs to be updated to connect to new address of the Mysql container. I shared this Mysql container on Docker Hub. You can pull it to your local machine and follow the steps below to setup a Game Store.
 
 ### 1.1 Database
 The instance of mysql for this JSP application looks like the below structure.  

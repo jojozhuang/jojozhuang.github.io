@@ -160,22 +160,21 @@ public boolean isUniqueChars(String str) {
 ```
 ## 3. Data Structure
 I've created several postings to discuss this topic separately.
-* [Data Structure - Linked List](http://jojozhuang.github.io/blog/2016/03/27/data-structure-linkedlist/)
-* [Data Structure - Stack](http://jojozhuang.github.io/blog/2016/03/29/data-structure-stack/)
-* [Data Structure - Queue](http://jojozhuang.github.io/blog/2016/03/31/data-structure-queue//)
-* [Data Structure - Tree](http://jojozhuang.github.io/blog/2016/04/02/data-structure-tree/)
-* [Data Structure - Segment Tree](http://jojozhuang.github.io/blog/2016/04/03/data-structure-segment-tree/)
-* [Data Structure - Heap](http://jojozhuang.github.io/blog/2016/04/05/data-structure-heap/)
-* [Data Structure - Trie](http://jojozhuang.github.io/blog/2016/04/09/data-structure-trie/)
-* [Data Structure - Graph](http://jojozhuang.github.io/blog/2016/04/12/data-structure-graph/)
-* [Data Structure - HashMap](http://jojozhuang.github.io/blog/2016/04/16/data-structure-hashmap/)
+* [Data Structure - Linked List]({% link _posts/2016-03-27-data-structure-linkedlist.md %})
+* [Data Structure - Stack]({% link _posts/2016-03-27-data-structure-linkedlist.md %})
+* [Data Structure - Queue]({% link _posts/2016-03-29-data-structure-stack.md %})
+* [Data Structure - Tree]({% link _posts/2016-04-02-data-structure-tree.md %})
+* [Data Structure - Segment Tree]({% link _posts/2016-04-03-data-structure-segment-tree.md %})
+* [Data Structure - Heap]({% link _posts/2016-04-05-data-structure-heap.md %})
+* [Data Structure - Trie]({% link _posts/2016-04-09-data-structure-trie.md %})
+* [Data Structure - Graph]({% link _posts/2016-04-12-data-structure-graph.md %})
+* [Data Structure - HashMap]({% link _posts/2016-04-16-data-structure-hashmap.md %})
 
 ## 5. Other Topics
-* [Common Sorting Algorithms](http://jojozhuang.github.io/blog/2016-03-26/common-sorting-algorithms/)
-* [Bit Manipulation](http://jojozhuang.github.io/blog/2016/04/25/bit-manipulation/)
+* [Common Sorting Algorithms]({% link _posts/2016-03-26-common-sorting-algorithms.md %})
+* [Bit Manipulation]({% link _posts/2016-04-25-bit-manipulation.md %})
 
 ## 7. Others
-
 ### 7.1 Remove Duplicated Lists
 ```java
 List<List<Integer>> res = new ArrayList<List<Integer>>();
