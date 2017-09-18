@@ -41,5 +41,9 @@ https://jekyllrb.com/docs/posts/
 1) post.excerpt
 2) Customized excerpt(short description)
 3) excerpt section
+
+## 3. Collection
+
 ## 3. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)
+* [3 Easy Steps To Implement Jekyll Collections!](https://blog.webjeda.com/jekyll-collections/)

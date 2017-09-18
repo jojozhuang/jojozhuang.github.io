@@ -24,5 +24,11 @@ pages_list:
   About: '/about'
   Feed: '/atom.xml'
 
+collections:
+  favorite:
+    output: true
+  themes:
+    output: true
+
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
