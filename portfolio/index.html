@@ -13,7 +13,7 @@ title: Rong Zhuang's Portfolio
     </div>
   </div>
   <div class="row">
-    {% for post in site.categories.[page.type] %}
+    {% for post in site.categories[page.type] %}
       {% if post.subcateogry == "mobile" %}
         <div class="col-md-3 portfolio-item">
           <div class="item-border">
@@ -37,7 +37,7 @@ title: Rong Zhuang's Portfolio
     </div>
   </div>
   <div class="row">
-    {% for post in site.categories.[page.type] %}
+    {% for post in site.categories[page.type] %}
       {% if post.subcateogry == "java" %}
         <div class="col-md-4 portfolio-item">
           <div class="item-border">
@@ -61,7 +61,7 @@ title: Rong Zhuang's Portfolio
     </div>
   </div>
   <div class="row">
-    {% for post in site.categories.[page.type] %}
+    {% for post in site.categories[page.type] %}
       {% if post.subcateogry == "dotnet" %}
         <div class="col-md-4 portfolio-item">
           <div class="item-border">
