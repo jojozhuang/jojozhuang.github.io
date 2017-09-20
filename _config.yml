@@ -25,10 +25,6 @@ pages_list:
   Feed: '/atom.xml'
 
 collections:
-  favorite:
-    output: true
-  themes:
-    output: true
   portfolio:
     output: true
 #https://sacha.me/articles/jekyll-rouge/

@@ -1,5 +1,5 @@
----
 title: My Favorites
+description: List of famous websites, popular opensource projects and useful online tools for software development.
 bookmarks:
   - category: "Online Tools"
     links:
@@ -115,4 +115,3 @@ bookmarks:
         url: "https://atom.io/"
       - title: "Visual Studio Code(Web)"
         url: "https://code.visualstudio.com/"
----
