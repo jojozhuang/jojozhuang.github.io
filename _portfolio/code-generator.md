@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Code Generator"
-date: 2016-01-18
+index: 20
 tags: C#, Windows Form, XSLT+XML
 image: /assets/codegenerator/thumbnail.png
 excerpt: A desktop application for generating code based on database schema and templates.
-subcateogry: dotnet
-categories: portfolio
+category: dotnet
 ---
 
 > A Visual Studio style desktop application used for software development assistant.
@@ -41,5 +40,5 @@ The real-time logs are displayed in the Output window.
 ### 4.3 Check the Outputs
 Finally, all files are generated in the working folder.
 ![taskoutfiles](/assets/codegenerator/taskoutfiles.png "taskoutfiles")  
-## 5. Source Code Files
-* [Source code files of Code Generator on Github](https://github.com/jojozhuang/Projects/tree/master/DeveloperAssistant/Src)
+## 5. Source Files
+* [Source files of Code Generator on Github](https://github.com/jojozhuang/Portfolio/tree/master/CodeGenerator)

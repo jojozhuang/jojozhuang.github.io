@@ -13,8 +13,9 @@ title: Rong Zhuang's Portfolio
     </div>
   </div>
   <div class="row">
-    {% for post in site.categories[page.type] %}
-      {% if post.subcateogry == "mobile" %}
+    {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
+    {% for post in sorted %}
+      {% if post.category == "mobile" %}
         <div class="col-md-3 portfolio-item">
           <div class="item-border">
             <a href="{{ post.url }}">
@@ -37,8 +38,9 @@ title: Rong Zhuang's Portfolio
     </div>
   </div>
   <div class="row">
-    {% for post in site.categories[page.type] %}
-      {% if post.subcateogry == "java" %}
+    {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
+    {% for post in sorted %}
+      {% if post.category == "java" %}
         <div class="col-md-4 portfolio-item">
           <div class="item-border">
             <a href="{{ post.url }}">
@@ -61,8 +63,9 @@ title: Rong Zhuang's Portfolio
     </div>
   </div>
   <div class="row">
-    {% for post in site.categories[page.type] %}
-      {% if post.subcateogry == "dotnet" %}
+    {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
+    {% for post in sorted %}
+      {% if post.category == "dotnet" %}
         <div class="col-md-4 portfolio-item">
           <div class="item-border">
             <a href="{{ post.url }}">

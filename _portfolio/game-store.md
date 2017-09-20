@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Online Game Store"
-date: 2016-05-13
+index: 55
 tags: Java, Servlet, JSP, Beans, MySQL
 image: /assets/gamestore/thumbnail.png
 excerpt: An online eCommerce web store, developed with MySQL and Servlet/JSP in Java.
-subcateogry: java
-categories: portfolio
+category: java
 ---
 
 > This web application is developed by Servlet and JSP in Java.
@@ -106,7 +105,7 @@ For the JSP version, data is serialized and stored in files. The files are place
 ### 5.3 JSP + MySQL
 ![image30](/assets/gamestore/image30.png)  
 
-## 6. Source Code Files
-* [Servlet](https://github.com/jojozhuang/Course/tree/master/SE452/Homework2/hw2)
-* [JSP+Beans](https://github.com/jojozhuang/Course/tree/master/SE452/Homework3/hw3)
-* [JSP+MySQL](https://github.com/jojozhuang/Course/tree/master/SE452/Homework4/hw4)
+## 6. Source Files
+* [Servlet](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreServlet)
+* [JSP+Beans](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreBeans)
+* [JSP+MySQL](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)

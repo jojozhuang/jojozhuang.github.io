@@ -29,6 +29,7 @@ collections:
     output: true
   themes:
     output: true
-
+  portfolio:
+    output: true
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml

@@ -1,16 +1,15 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Course Player (Socket.IO)"
-date: 2016-04-03
+index: 50
 tags: WebSocket, Socket.IO, Node.js
 image: /assets/courseplayersocketio/thumbnail.png
 excerpt: A realtime online course player, developed with Socket.IO and Node.js
-subcateogry: java
-categories: portfolio
+category: java
 ---
 
-> This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, you can read the posting about it from [my portfolio]({% link _posts/portfolios/2016-03-25-Online-Course-Player-SignalR.md %}). Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket]({% link _posts/2016-03-07-develop-realtime-online-application-with-websocket.md %}).
+> This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, check [Course Player (SignalR)]({% link _portfolio/course-player-signalr.md %}) for more details. Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket]({% link _posts/2016-03-07-develop-realtime-online-application-with-websocket.md %}).
 
 ## 1. Introduction
 A course player consists of three components: video, screenshot and whiteboard.
@@ -68,5 +67,5 @@ Communication occurs only when necessary. Unlike traditional web application, We
 ### 5.3 Cross-platform  
 This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
 
-## 6. Source Code Files
-* [Source code files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CoursePlayer)
+## 6. Source Files
+* [Source files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)

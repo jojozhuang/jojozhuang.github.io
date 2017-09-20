@@ -1,13 +1,12 @@
 ---
-layout: software
-key: portfolio222
+layout: portfolio
+key: portfolio
 title: "Web Server"
-date: 2016-01-10
+index: 5
 tags: Socket, Java, HTTP, UDP
 image: /assets/mywebserver/thumbnail.png
 excerpt: A web server built with sockets in Java, capable of handling general HTTP requests.
-subcateogry: java
-categories: portfolio222
+category: java222
 ---
 
 > This is one of my homework projects for course 'CSC435-Distributed System'. We are asked to write a web server with Java socket. The web server shall be able to respond properly to HTTP requests from client and it should handle requests simultaneously.The challenge for this task is that I have to take care of the whole process by my own, including retrieving the input message, parsing it, identifying the request, applying the correct operation, outputting correct HTTP response and sending back feedback to the client. Besides, I must be careful to handle the exceptions and deal with unexpected inputs.  
@@ -37,5 +36,5 @@ Apart from handling the requests to static files and directories, this web serve
 ![cgi](/assets/mywebserver/cgi.png "cgi")  
 ![cgiresult](/assets/mywebserver/cgiresult.png "cgiresult")  
 
-## 5. Source Code Files
-* [Source code files of Web Server on Github](https://github.com/jojozhuang/Course/tree/master/CSC435/MyWebServer)
+## 5. Source Files
+* [Source files of Web Server on Github](https://github.com/jojozhuang/Portfolio/tree/master/WebServer)

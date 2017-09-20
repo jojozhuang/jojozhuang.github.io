@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Trip Planner"
-date: 2016-01-30
+index: 40
 tags: iOS, Swift, XCode
 image: /assets/travelnote/thumbnail.png
 excerpt: An iOS App for managing itineraries, built with Swift.
-subcateogry: mobile
-categories: portfolio
+category: mobile
 ---
 
 > This iOS app is used to manage itineraries. It's built for my final project of course 'CSC471-Mobile App Development for iOS'. Classic layout with three tabs: Me, Search and Settings.  
@@ -43,5 +42,5 @@ In the final ‘City Detail’ screen, you can find lots of useful information, 
 ![city2](/assets/travelnote/city2.png "city2")
 ## 3. Settings  
 ![settings](/assets/travelnote/settings.png "settings")  
-## 4. Source Code Files
-* [Source code files of Trip Planner on Github](https://github.com/jojozhuang/Course/tree/master/CSC471/Project/RZHUANG.TourItinerary)
+## 4. Source Files
+* [Source files of Trip Planner on Github](https://github.com/jojozhuang/Portfolio/tree/master/TripPlanner)

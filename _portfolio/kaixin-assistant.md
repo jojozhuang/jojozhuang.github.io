@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Kaixin Assistant"
-date: 2016-01-14
+index: 10
 tags: C#, Web Scraping, HTTP
 image: /assets/kaixin/thumbnail.png
 excerpt: A 'tag-on' desktop application for playing online flash games automatically.
-subcateogry: dotnet
-categories: portfolio
+category: dotnet
 ---
 
 > This desktop application is not for work, but for fun.
@@ -30,5 +29,5 @@ In Task Explorer, create a new task, add accounts, choose the functions and oper
 Right-click on the task and run. During it is running, you can check the logs to see whether it works properly.
 ![running](/assets/kaixin/running.png "running")  
 
-## 4. Source Code Files
-* [Source code files of Kaixin Assistant on Github](https://github.com/jojozhuang/Projects/tree/master/KaixinAssistant/Src)
+## 4. Source Files
+* [Source files of Kaixin Assistant on Github](https://github.com/jojozhuang/Portfolio/tree/master/KaixinAssistant)

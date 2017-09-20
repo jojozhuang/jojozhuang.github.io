@@ -57,6 +57,7 @@ cd jojozhuang.github.io
 
 Build and launch the website. All of the files will be deployed to a new folder named '\_site'. Open web browser and access  http://127.0.0.1:4000/.
 ```sh
+jekyll build
 jekyll serve
 ```
 If you want jekyll to start at different port, add port option when using jekyll serve.

@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Course Player"
-date: 2016-01-25
+index: 30
 tags: Xamarin, C#, Visual Studio, iOS
 image: /assets/xamarinplayer/thumbnail.png
 excerpt: An iOS App for playing course, built with Xamarin in C#.
-subcateogry: mobile
-categories: portfolio
+category: mobile
 ---
 
 > This iOS app is developed by [Xamarin](https://xamarin.com/), which is a tool for developing cross-platform mobile apps. The core function of this app is to play course video with screenshot and whiteboard refreshed synchronously. It is a prototype for my investigation of cross-platform solution for online course system.
@@ -45,8 +44,8 @@ There are two .Net projects in Visual Studio. 'COL.Core' contains the common fun
 Class diagram shows the design of this app based on Xamarin framework.
 ![framework](/assets/xamarinplayer/framework.png "framework")  
 
-## 6. Source Code Files
-* [Source code files of Course Player on Github](https://github.com/jojozhuang/Work/tree/master/Xamarin/XamarinPlayeriPhone)
+## 6. Source Files
+* [Source files of Course Player on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerXamarin)
 
 ## 7. Document
 * [Xamarin Research Report]({% link /public/docs/xamarin_research.pdf %})

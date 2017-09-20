@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
-title: "3-Tier CMS"
-date: 2016-01-16
+title: "Three-Tier CMS"
+index: 15
 tags: ASP.NET, C#, Configurable
 image: /assets/threetiercms/thumbnail.png
 excerpt: A Content Management System(CMS) built with classic ASP.NET Webform.
-subcateogry: dotnet
-categories: portfolio
+category: dotnet
 ---
 
 > This web application is a backend content management system and built with classic ASP.NET webform in C# language.  
@@ -45,5 +44,5 @@ Technically, the structure of this application is divided into 3 layers:
 The high level layer calls the low layer to communicate and retrieve data. The Object Model(OM) contains objects definition. The object can be an administrator, a blog post or a piece of website settings.  
 ![Project Structure](/assets/threetiercms/3layer.png "Project Structure")  
 
-## 7. Source Code Files
-* [Source code files of 3-Tier CMS on Github](https://github.com/jojozhuang/Projects/tree/master/CMSWeb/Src)
+## 7. Source Files
+* [Source files of 3-Tier CMS on Github](https://github.com/jojozhuang/Portfolio/tree/master/ThreeTierCMS)

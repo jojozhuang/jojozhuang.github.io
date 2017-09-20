@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "SAP Dictionary"
-date: 2016-01-01
+index: 1
 tags: Windows Phone, C#
 image: /assets/sapdictionary/thumbnail.png
 excerpt: A WP App for searching SAP & ERP related words.
-subcateogry: mobile
-categories: portfolio
+category: mobile
 ---
 
 > This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language.
@@ -37,6 +36,5 @@ Result for abbreviation
 ## 3. Settings
 You can choose language and enable online search if no result found locally.  
 ![settings](/assets/sapdictionary/settings.png "settings")
-## 4. Source Code Files
-* [Source code files of SAP Dictionary WP7 on Github](https://github.com/jojozhuang/Projects/tree/master/SAPDictionary/Src/DictionaryPhone)
-* [Source code files of Backend Service on Github](https://github.com/jojozhuang/Projects/tree/master/SAPDictionary/Src/DictionaryService)
+## 4. Source Files
+* [Source files of SAP Dictionary on Github](https://github.com/jojozhuang/Portfolio/tree/master/SAPDictionary)

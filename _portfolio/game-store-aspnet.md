@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Online Game Store(Live Demo)"
-date: 2016-06-02
+index: 60
 tags: C#, ASP.NET MVC, RESTful WebAPI, jQuery
 image: /assets/gamestoreaspnet/thumbnail.png
 excerpt: An online eCommerce web store, developed with ASP.NET MVC in C#.
-subcateogry: dotnet
-categories: portfolio
+category: dotnet
 ---
 
 > This web application is developed by ASP.NET MVC & Web API in C\#.
@@ -159,5 +158,5 @@ You can view and delete order, view detail items of the order.
 * Bootstrap, jQuery
 * Third-party Payment Gateway
 
-## 8. Source Code Files
-* [Source code files of Game Store on Github](https://github.com/jojozhuang/Course/tree/master/ECT583/Final/GameStore)
+## 8. Source Files
+* [Source files of Game Store on Github](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreASPNETMVC)

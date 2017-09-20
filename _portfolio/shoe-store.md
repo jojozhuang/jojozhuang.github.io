@@ -1,13 +1,12 @@
 ---
-layout: software
+layout: portfolio
 key: portfolio
 title: "Shoe Store"
-date: 2016-01-20
+index: 25
 tags: ASP.NET MVC, C#, Bootstrap
 image: /assets/shoestore/thumbnail.png
 excerpt: An online store website with responsive UI, developed with ASP.NET MVC.
-subcateogry: dotnet
-categories: portfolio
+category: dotnet
 ---
 
 > This is a CMS web application built with ASP.NET MVC in C# language. I used the template from [AdminLTE Control Panel Template](https://almsaeedstudio.com/) to design the UI pages. The whole website looks very pretty and modern style.  
@@ -25,5 +24,5 @@ Smaller size in phone web browser.
 ## 4. Sales order
 ![order](/assets/shoestore/order.png "order")  
 
-## 5. Source Code Files
-* [Source code files of Shoe Store on Github](https://github.com/jojozhuang/Projects/tree/master/ShoeStoreMVC/Src)
+## 5. Source Files
+* [Source files of Shoe Store on Github](https://github.com/jojozhuang/Portfolio/tree/master/ShoeStoreMVC)
