@@ -1,117 +1,117 @@
 title: My Favorites
 description: List of famous websites, popular opensource projects and useful online tools for software development.
 bookmarks:
-  - category: "Online Tools"
+  - category: Online Tools
     links:
-      - title: "Markdown Cheatsheet"
-        url: "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
-      - title: "XML Formatter"
-        url: "https://www.freeformatter.com/xml-formatter.html"
-      - title: "HTML Formatter"
-        url: "https://www.freeformatter.com/html-formatter.html"
-      - title: "HTML Escape/Unescape"
-        url: "https://www.freeformatter.com/html-escape.html"
-      - title: "JSON Formatter"
-        url: "https://www.freeformatter.com/json-formatter.html"
-      - title: "CSS Formatter"
-        url: "https://www.cleancss.com/css-beautify/"
-      - title: "Icon Converter"
-        url: "https://iconverticons.com/online/"
-  - category: "Online Learning"
+      - title: Markdown Cheatsheet
+        url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+      - title: XML Formatter
+        url: https://www.freeformatter.com/xml-formatter.html
+      - title: HTML Formatter
+        url: https://www.freeformatter.com/html-formatter.html
+      - title: HTML Escape/Unescape
+        url: https://www.freeformatter.com/html-escape.html
+      - title: JSON Formatter
+        url: https://www.freeformatter.com/json-formatter.html
+      - title: CSS Formatter
+        url: https://www.cleancss.com/css-beautify/
+      - title: Icon Converter
+        url: https://iconverticons.com/online/
+  - category: Online Learning
     links:
-      - title: "w3schools"
-        url: "https://www.w3schools.com/"
-      - title: "tutorialspoint"
-        url: "https://www.tutorialspoint.com/"
-      - title: "The Modern JavaScript Tutorial"
-        url: "https://javascript.info/"
-      - title: "Leetcode(Algorithms)"
-        url: "https://leetcode.com/problemset/algorithms/"
-      - title: "Lintcode(Algorithms)"
-        url: "http://www.lintcode.com/en/problem/"
-      - title: "jiuzhang"
-        url: "http://www.jiuzhang.com/"
-  - category: "Open Source/Popular Projects"
+      - title: w3schools
+        url: https://www.w3schools.com/
+      - title: tutorialspoint
+        url: https://www.tutorialspoint.com/
+      - title: The Modern JavaScript Tutorial
+        url: https://javascript.info/
+      - title: Leetcode(Algorithms)
+        url: https://leetcode.com/problemset/algorithms/
+      - title: Lintcode(Algorithms)
+        url: http://www.lintcode.com/en/problem/
+      - title: jiuzhang
+        url: http://www.jiuzhang.com/
+  - category: Open Source/Popular Projects
     links:
-      - title: "Docker"
-        url: "https://www.docker.com/"
-      - title: "kitematic"
-        url: "https://kitematic.com/"
-      - title: "Node.js"
-        url: "https://nodejs.org/"
-      - title: "Jenkins"
-        url: "https://jenkins.io/"
-      - title: "Splunk(Log)"
-        url: "https://www.splunk.com/"
-      - title: "Electron"
-        url: "https://electron.atom.io/"
-      - title: "Xamarin"
-        url: "https://www.xamarin.com/"
-      - title: "Cordova"
-        url: "https://cordova.apache.org/"
-      - title: "Socket.IO"
-        url: "https://socket.io/"
-      - title: "ASP.NET SignalR"
-        url: "https://www.asp.net/signalr"
-      - title: "Elasticsearch"
-        url: "https://www.elastic.co/"
-      - title: "Ubuntu"
-        url: "https://www.ubuntu.com/"
-      - title: "VirtualBox"
-        url: "https://www.virtualbox.org/"
-      - title: "Dynatrace"
-        url: "https://www.dynatrace.com/"
-      - title: "Apache Tomcat"
-        url: "https://tomcat.apache.org/"
-      - title: "Nginx"
-        url: "https://nginx.org"
-      - title: "Mysql"
-        url: "https://www.mysql.com/"
-      - title: "Jersey"
-        url: "https://jersey.github.io/"
-      - title: "React JS"
-        url: "https://facebook.github.io/react/"
-      - title: "AngularJs"
-        url: "https://angularjs.org/"
-      - title: "Bootstrap"
-        url: "http://getbootstrap.com/"
-      - title: "Jquery"
-        url: "https://jquery.com/"
-      - title: "Less"
-        url: "http://lesscss.org/"
-      - title: "Sass"
-        url: "http://sass-lang.com/"
-      - title: "JSON"
-        url: "http://www.json.org/"
-      - title: "Type Script"
-        url: "https://www.typescriptlang.org/"
-      - title: "Maven"
-        url: "https://maven.apache.org/"
-      - title: "Gradle"
-        url: "https://gradle.org/"
-      - title: "Scala"
-        url: "https://www.scala-lang.org/"
-      - title: "Groovy"
-        url: "http://groovy-lang.org/"
-      - title: "SDKMAN"
-        url: "http://sdkman.io/"
-      - title: "Log4j"
-        url: "https://logging.apache.org/log4j/2.x/"
-      - title: "Bootstrap Templates"
-        url: "https://bootsnipp.com"
-      - title: "Generate Bootstrap Navbar"
-        url: "https://work.smarchal.com/twbscolor/"
-      - title: "highlight.js"
-        url: "https://highlightjs.org/"
-  - category: "Free Text Editor/IDE"
+      - title: Docker
+        url: https://www.docker.com/
+      - title: kitematic
+        url: https://kitematic.com/
+      - title: Node.js
+        url: https://nodejs.org/
+      - title: Jenkins
+        url: https://jenkins.io/
+      - title: Splunk(Log)
+        url: https://www.splunk.com/
+      - title: Electron
+        url: https://electron.atom.io/
+      - title: Xamarin
+        url: https://www.xamarin.com/
+      - title: Cordova
+        url: https://cordova.apache.org/
+      - title: Socket.IO
+        url: https://socket.io/
+      - title: ASP.NET SignalR
+        url: https://www.asp.net/signalr
+      - title: Elasticsearch
+        url: https://www.elastic.co/
+      - title: Ubuntu
+        url: https://www.ubuntu.com/
+      - title: VirtualBox
+        url: https://www.virtualbox.org/
+      - title: Dynatrace
+        url: https://www.dynatrace.com/
+      - title: Apache Tomcat
+        url: https://tomcat.apache.org/
+      - title: Nginx
+        url: https://nginx.org
+      - title: Mysql
+        url: https://www.mysql.com/
+      - title: Jersey
+        url: https://jersey.github.io/
+      - title: React JS
+        url: https://facebook.github.io/react/
+      - title: AngularJs
+        url: https://angularjs.org/
+      - title: Bootstrap
+        url: http://getbootstrap.com/
+      - title: Jquery
+        url: https://jquery.com/
+      - title: Less
+        url: http://lesscss.org/
+      - title: Sass
+        url: http://sass-lang.com/
+      - title: JSON
+        url: http://www.json.org/
+      - title: Type Script
+        url: https://www.typescriptlang.org/
+      - title: Maven
+        url: https://maven.apache.org/
+      - title: Gradle
+        url: https://gradle.org/
+      - title: Scala
+        url: https://www.scala-lang.org/
+      - title: Groovy
+        url: http://groovy-lang.org/
+      - title: SDKMAN
+        url: http://sdkman.io/
+      - title: Log4j
+        url: https://logging.apache.org/log4j/2.x/
+      - title: Bootstrap Templates
+        url: https://bootsnipp.com
+      - title: Generate Bootstrap Navbar
+        url: https://work.smarchal.com/twbscolor/
+      - title: highlight.js
+        url: https://highlightjs.org/
+  - category: Free Text Editor/IDE
     links:
-      - title: "Notepad++"
-        url: "https://notepad-plus-plus.org/"
-      - title: "Eclipse(Java)"
-        url: "https://eclipse.org"
-      - title: "Netbeans(Java)"
-        url: "https://netbeans.org/"
-      - title: "Atom"
-        url: "https://atom.io/"
-      - title: "Visual Studio Code(Web)"
-        url: "https://code.visualstudio.com/"
+      - title: Notepad++
+        url: https://notepad-plus-plus.org/
+      - title: Eclipse(Java)
+        url: https://eclipse.org
+      - title: Netbeans(Java)
+        url: https://netbeans.org/
+      - title: Atom
+        url: https://atom.io/
+      - title: Visual Studio Code(Web)
+        url: https://code.visualstudio.com/

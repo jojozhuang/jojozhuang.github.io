@@ -1,0 +1,97 @@
+name: Rong <br>Zhuang
+email: jojozhuang@gmail.com
+cell: (650) 380 4437
+role: Software Developer
+summary: 10+ years of software development experience, with 5 years in product maintenance. Familiar with software development life cycle(SDLC), strong passion in new technologies, good at quick prototyping. A collaborative team player with excellent communication and documentation skills. Proficient in both SAP(5 years) and Microsoft .NET(7 years) platform. 6 years of web application development, 1 year of iOS, Android and hybrid mobile app development experience.
+experience:
+  - company: SAP Ariba
+    location: Palo Alto, CA
+    title: Developer
+    period: Aug 2016 - present
+    achievement: Working in Procurement Team, focus on Invoicing function of Ariba Procure-to-Pay(Buyer), using Java on Linux. Communicated frequently with stakeholders, worked independently and provided effective fix in time. Replicated one non-reproducible performance issue and solved it through log analysis with Splunk. Resolved one Go-live block issue(S1&P1), fixed it rapidly to keep SAP’s promise to the customer.
+  - company: DePaul University
+    location: Chicago, IL
+    title: Senior Developer(Part Time)
+    period: Sep 2014 - Jun 2016
+    achievement: Quickly designed and built 3 prototypes with Html5, PhoneGap and Xamarin within 5 weeks to evaluate cross-platform mobile development solutions. Created the investigation document for director to make decision. Designed and built framework of an online video sharing website with Facebook React and ASP.NET Web API. Implemented online course player with two different technologies, SignalR in ASP.NET and Socket.IO in Node.js.
+  - company: SAP Labs China
+    location: Shanghai, China
+    title: Senior Developer/Architect
+    period: Oct 2009 - Aug 2014
+    achievement: Led team(8 members) to finish development for China localization of SAP GTS, worked in lean/scrum model. Collected requirements and finalized design by discussing with customers, partners and product owner. Released more than 60 notes for bug fixing and function enhancement. Independently developed a complicate SAP Process Control Dashboard(contains 8 charts) with BOBJ Xcelsius.
+  - company: Infosys Technologies China
+    location: Shanghai, China
+    title: Senior Software Engineer
+    period: Nov 2007 - Sep 2009
+    achievement: Developed modules with WPF & WCF for Microsoft MSSolve project. Led team(3 members) to develop a newsletter subscription web application with ASP.NET, finished all development and testing tasks within three weeks. Smoothly took over tough maintenance tasks from India colleagues of support team within 2 months.
+  - company: Amano Software Engineering Co., Ltd
+    location: Shanghai, China
+    title: Software Engineer
+    period: Oct 2006 - Nov 2007
+    achievement: Improved quality and performance of Amano Attendance System by refining the .NET source codes. Investigated and solved the compatible issues in the new environment (OS, Web Browser, .NET Framework etc.).
+education:
+  - school: DePaul University
+    location: Chicago, IL, US
+    degree: Master Degree in Computer Science (Full Scholarship), GPA 3.9
+    period: Sep 2014 - Jun 2016
+    coursework: Graduate Coursework - Algorithms; Concepts of Programming Languages; OO Software Development; Database Technologies; Mining Big Data; iOS Development; Android Development; Distributed System; Intelligent Information Retrieval; Software Security Assessment; Database Programming(PL/SQL); Advanced Scripting Technologies(ASP.NET MVC); Object-Oriented Enterprise Computing(Java/JSP)
+  - school: East China University of Science & Technology
+    location: Shanghai, China
+    degree: Bachelar Degree in Computer Science and Technology
+    period: Sep 2000 – Jun 2004
+    coursework: Undergraduate Coursework - Computer Mathematics, Operating Systems; Algorithms; Programming Languages; Database; Data Structure, Principle of Software Engineering, Computer Networks, Computer Architecture, Parallel and Distributed Computing, System Software Design.
+skills:
+  - name: Java/Sevrlet/JSP, DataBase - PL/SQL
+    proficiency: 85
+  - name: Javascript, HTML5, jQuery, Bootstrap, Node.js, AngularJS, ReactJs
+    proficiency: 80
+  - name: iOS(Swift), Android(Java), Xamarin
+    proficiency: 70
+  - name: Microsoft, C#, ASP.NET MVC, Windows Form, SQL Server
+    proficiency: 95
+  - name: SAP, ABAP, GTS
+    proficiency: 95
+language:
+  - name: Chinese
+    proficiency: 95
+  - name: English
+    proficiency: 85
+  - name: Japanese
+    proficiency: 25
+portfolio:
+  - name: Game 2048
+    link: http://jojozhuang.github.io/portfolio/game-2048/
+    description: A cross-platform desktop application for game 2048, built with <span class="highlight">Electron and Node.js</span>.
+  - name: Trip Planner
+    link: http://jojozhuang.github.io/portfolio/trip-planner/
+    description: An <span class="highlight">iOS</span> app for itinerary management, built with <span class="highlight">Swift</span>.
+  - name: Restaurant
+    link: http://jojozhuang.github.io/portfolio/restaurant/
+    description: An <span class="highlight">Android</span> app for searching restaurants, built with <span class="highlight">Java</span>. And there is a backend server built with <span class="highlight">ASP.NET</span>.
+  - name: Course Player
+    link: http://jojozhuang.github.io/portfolio/course-player-xamarin/
+    description: An <span class="highlight">iOS</span> app built with <span class="highlight">Xamarin</span> in <span class="highlight">C#</span>, one of the <span class="highlight">cross-platform</span> solutions for mobile app development.
+  - name: Game Store
+    link: http://jojozhuang.github.io/portfolio/game-store/
+    description: An online website built with <span class="highlight">ASP.NETMVC & Web API</span> in <span class="highlight">C#</span>, another similar <a href="http://jojozhuang.github.io/portfolio/game-store/">Game Store</a> implemented with <span class="highlight">JSP</span>.
+  - name: Online Course Player
+    link: http://jojozhuang.github.io/portfolio/course-player-socketio/
+    description: A player built with <span class="highlight">Node.js</span>, based on <span class="highlight">Socket.IO, WebSocket</span>, another similar <a href="http://jojozhuang.github.io/portfolio/course-player-signalr/">Course Player</a> implemented with <span class="highlight">C#</span>, based on <span class="highlight">SignalR</span>.
+  - name: Shoe Store
+    link: http://jojozhuang.github.io/portfolio/shoe-store/
+    description: An online store developed with <span class="highlight">ASP.NET MVC</span>, supports different screen size devices.
+  - name: Code Generator
+    link: http://jojozhuang.github.io/portfolio/code-generator/
+    description: A <span class="highlight">Windows Form(C#)</span> application for code generation based on database schema and templates.
+  - name: 3-Tier CMS
+    link: http://jojozhuang.github.io/portfolio/three-tier-cms/
+    description: A Content Management System(CMS) built with classic <span class="highlight">ASP.NET Web Form</span>.
+  - name: Kaixin Assistant
+    link: http://jojozhuang.github.io/portfolio/kaixin-assistant/
+    description: A 'tag-on' desktop application for playing online games, built with <span class="highlight">C#</span> and <span class="highlight">Windows Form</span>.
+  - name: Web Server
+    link: http://jojozhuang.github.io/portfolio/web-server/
+    description: A web server built with <span class="highlight">Java</span> sockets, capable of handling general HTTP requests.
+  - name: SAP Dictionary
+    link: http://jojozhuang.github.io/portfolio/sap-dictionary/
+    description: A <span class="highlight">Windows Phone</span> app for searching SAP & ERP related words.

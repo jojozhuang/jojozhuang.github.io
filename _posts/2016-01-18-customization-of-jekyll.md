@@ -104,8 +104,12 @@ title: Jekyll Themes
 ```
 Open browser, access /themes/
 
+## looping-in-liquid
+{% if forloop.first %}grid1{% endif %}
+
 ## 4. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)
 * [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
 * [Links](https://jekyllrb.com/docs/templates/#links)
 * [3 Easy Steps To Implement Jekyll Collections!](https://blog.webjeda.com/jekyll-collections/)
+* [Looping in Liquid](https://learn.cloudcannon.com/jekyll/looping-in-liquid/)
