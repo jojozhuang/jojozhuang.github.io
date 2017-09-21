@@ -7,6 +7,16 @@ bookmarks:
         url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
       - name: XML Formatter
         url: https://www.freeformatter.com/xml-formatter.html
+      - name: HTML Formatter
+        url: https://www.freeformatter.com/html-formatter.html
+      - name: HTML Escape/Unescape
+        url: https://www.freeformatter.com/html-escape.html
+      - name: JSON Formatter
+        url: https://www.freeformatter.com/json-formatter.html
+      - name: CSS Formatter
+        url: https://www.cleancss.com/css-beautify/
+      - name: Icon Converter
+        url: https://iconverticons.com/online/
   - category: Online Learning
     links:
       - name: w3schools
@@ -15,6 +25,12 @@ bookmarks:
         url: https://www.tutorialspoint.com/
       - name: The Modern JavaScript Tutorial
         url: https://javascript.info/
+      - name: Leetcode(Algorithms)
+        url: https://leetcode.com/problemset/algorithms/
+      - name: Lintcode(Algorithms)
+        url: http://www.lintcode.com/en/problem/
+      - name: jiuzhang
+        url: http://www.jiuzhang.com/
   - category: Open Source/Popular Projects
     links:
       - name: Docker
@@ -23,6 +39,72 @@ bookmarks:
         url: https://kitematic.com/
       - name: Node.js
         url: https://nodejs.org/
+      - name: Jenkins
+        url: https://jenkins.io/
+      - name: Splunk(Log)
+        url: https://www.splunk.com/
+      - name: Electron
+        url: https://electron.atom.io/
+      - name: Xamarin
+        url: https://www.xamarin.com/
+      - name: Cordova
+        url: https://cordova.apache.org/
+      - name: Socket.IO
+        url: https://socket.io/
+      - name: ASP.NET SignalR
+        url: https://www.asp.net/signalr
+      - name: Elasticsearch
+        url: https://www.elastic.co/
+      - name: Ubuntu
+        url: https://www.ubuntu.com/
+      - name: VirtualBox
+        url: https://www.virtualbox.org/
+      - name: Dynatrace
+        url: https://www.dynatrace.com/
+      - name: Apache Tomcat
+        url: https://tomcat.apache.org/
+      - name: Nginx
+        url: https://nginx.org
+      - name: Mysql
+        url: https://www.mysql.com/
+      - name: Jersey
+        url: https://jersey.github.io/
+      - name: React JS
+        url: https://facebook.github.io/react/
+      - name: AngularJs
+        url: https://angularjs.org/
+      - name: Bootstrap
+        url: http://getbootstrap.com/
+      - name: Jquery
+        url: https://jquery.com/
+      - name: Less
+        url: http://lesscss.org/
+      - name: Sass
+        url: http://sass-lang.com/
+      - name: JSON
+        url: http://www.json.org/
+      - name: Type Script
+        url: https://www.typescriptlang.org/
+      - name: Maven
+        url: https://maven.apache.org/
+      - name: Gradle
+        url: https://gradle.org/
+      - name: Scala
+        url: https://www.scala-lang.org/
+      - name: Groovy
+        url: http://groovy-lang.org/
+      - name: SDKMAN
+        url: http://sdkman.io/
+      - name: Log4j
+        url: https://logging.apache.org/log4j/2.x/
+      - name: Bootstrap Templates
+        url: https://bootsnipp.com
+      - name: Generate Bootstrap Navbar
+        url: https://work.smarchal.com/twbscolor/
+      - name: highlight.js
+        url: https://highlightjs.org/
+      - name: Liquid
+        url: https://shopify.github.io/liquid/
   - category: Free Text Editor/IDE
     links:
       - name: Notepad++

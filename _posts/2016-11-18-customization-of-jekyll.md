@@ -148,7 +148,7 @@ bookmarks:
       - name: Visual Studio Code(Web)
         url: https://code.visualstudio.com/
 ```
-Finally, create favorite.html in the root directory, add codes to read data from `favorite.yml` data file.
+Finally, create `favorite.html` in the root directory, add codes to read data from `favorite.yml` data file.
 ```html
 {%- raw -%}
 ---
@@ -179,6 +179,9 @@ title: Rong Zhuang's Favorite Bookmarks
 </div>
 {% endraw %}
 ```
+Open browser, access the favorite page.
+![MIME Type](/public/pics/2016-11-18/favorite.png)  
+
 ## 6. Collection
 Use `Collection` to create similar pages. The [portfolio index page](http://jojozhuang.github.io/portfolio/) is created by collection.
 Edit `_config.yml`, add following lines.
@@ -227,56 +230,10 @@ At last, create portfolio.html in the root directory, add codes to read data fro
 ```
 Open browser, access the collection page.
 ![MIME Type](/public/pics/2016-11-18/portfolio.png)  
-## looping-in-liquid
-{% if forloop.first %}grid1{% endif %}
-reversed
 
-## Whitespace
-{% assign my_variable = "tomato" %}
-{{ my_variable }}
-{%- assign my_variable = "tomato" -%}
-{{ my_variable }}
-
-## Comment
-```
-Anything you put between {% comment %} and {% endcomment %} tags
-is turned into a comment.
-```
-```
-Anything you put between  tags
-is turned into a comment.
-```
-
-Raw
-{% raw %}
-  In Handlebars, {{ this }} will be HTML-escaped, but
-  {{{ that }}} will not.
-{% endraw %}
-In Handlebars, {{ this }} will be HTML-escaped, but {{{ that }}} will not.
-
-
-iteration
-limits
-limit
-
-Limits the loop to the specified number of iterations.
-
-Input
-
-<!-- if array = [1,2,3,4,5,6] -->
-{% for item in array limit:2 %}
-  {{ item }}
-{% endfor %}
-
-Output
-1 2
-
-
-## 4. References
+## 7. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)
 * [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
 * [Links](https://jekyllrb.com/docs/templates/#links)
 * [3 Easy Steps To Implement Jekyll Collections!](https://blog.webjeda.com/jekyll-collections/)
-* [Liquid](https://shopify.github.io/liquid/)
-* [Whitespace control](https://shopify.github.io/liquid/basics/whitespace/)
 * [Get Pagination working in Jekyll Collection in Github pages](http://anjesh.github.io/2015/01/25/collection-pagination-working-github-pages/)
