@@ -1,84 +1,45 @@
 ---
 layout: default
 key: portfolio
-type: portfolio
 title: Rong Zhuang's Portfolio
+categories:
+  - name: Mobile Apps
+    description: iOS, Android, Windows Phone, Xamarin
+    type: mobile
+  - name: Java & Node Apps
+    description: Java, Servlet, JSP, MySql, Node.js, Electron
+    type: java
+  - name: Web & Desktop Apps
+    description: .NET, C#, ASP.MVC, Web API, WebSocket, SignalR
+    type: dotnet
 ---
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Mobile Apps
-        <small>iOS, Android, Windows Phone, Xamarin</small>
-      </h1>
+  {% for category in page.categories %}
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
-    {% for post in sorted %}
-      {% if post.category == "mobile" %}
-        <div class="col-md-3 portfolio-item">
+    <div class="row">
+    {% assign list = (site.portfolio | where: "category", {{category.type}}) | sort: 'index') | reverse %}
+    {% for portfl in list %}
+        {% if category.type == 'mobile' %}
+          <div class="col-md-3 portfolio-item">
+        {% else %}
+          <div class="col-md-4 portfolio-item">
+        {% endif %}
           <div class="item-border">
-            <a href="{{ post.url }}">
-              <img class="img-responsive" src="{{ post.image }}" alt="image">
+            <a href="{{ portfl.url }}">
+              <img class="img-responsive" src="{{ portfl.image }}" alt="image">
             </a>
             <div class="item-title">
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              <p>{{ post.excerpt }}</p>
+              <h3><a href="{{ post.url }}">{{ portfl.title }}</a></h3>
+              <p>{{ portfl.excerpt }}</p>
             </div>
           </div>
         </div>
-      {% endif %}
     {% endfor %}
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Java & Node Apps
-        <small>Java, Servlet, JSP, MySql, Node.js, Electron</small>
-      </h1>
     </div>
-  </div>
-  <div class="row">
-    {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
-    {% for post in sorted %}
-      {% if post.category == "java" %}
-        <div class="col-md-4 portfolio-item">
-          <div class="item-border">
-            <a href="{{ post.url }}">
-              <img class="img-responsive" src="{{ post.image }}" alt="image">
-            </a>
-            <div class="item-title">
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              <p>{{ post.excerpt }}</p>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Web & Desktop Apps
-        <small>.NET, C#, ASP.MVC, Web API, WebSocket, SignalR</small>
-      </h1>
-    </div>
-  </div>
-  <div class="row">
-    {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
-    {% for post in sorted %}
-      {% if post.category == "dotnet" %}
-        <div class="col-md-4 portfolio-item">
-          <div class="item-border">
-            <a href="{{ post.url }}">
-              <img class="img-responsive" src="{{ post.image }}" alt="image">
-            </a>
-            <div class="item-title">
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-              <p>{{ post.excerpt }}</p>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+  {% endfor %}
 </div>
 <br/><br/>
