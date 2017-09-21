@@ -104,7 +104,82 @@ Out-of-excerpt
 Pass the `| strip_html` filter to remove any html tags in the output.
 ![MIME Type](/public/pics/2016-11-18/excerpt.png)  
 
-## 5. Collection
+## 5. Data File
+All the links in [favorite page](http://jojozhuang.github.io/favorite/) are from `Data File`.  
+Create `_data` folder in the root directory, add create a data file named `favorite.yml`.
+![MIME Type](/public/pics/2016-11-18/datafile.png)  
+Add following content to `favorite.yml`.
+```
+title: My Favorites
+description: List of famous websites, popular opensource projects and useful online tools for software development.
+bookmarks:
+  - category: Online Tools
+    links:
+      - name: Markdown Cheatsheet
+        url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+      - name: XML Formatter
+        url: https://www.freeformatter.com/xml-formatter.html
+  - category: Online Learning
+    links:
+      - name: w3schools
+        url: https://www.w3schools.com/
+      - name: tutorialspoint
+        url: https://www.tutorialspoint.com/
+      - name: The Modern JavaScript Tutorial
+        url: https://javascript.info/
+  - category: Open Source/Popular Projects
+    links:
+      - name: Docker
+        url: https://www.docker.com/
+      - name: kitematic
+        url: https://kitematic.com/
+      - name: Node.js
+        url: https://nodejs.org/
+  - category: Free Text Editor/IDE
+    links:
+      - name: Notepad++
+        url: https://notepad-plus-plus.org/
+      - name: Eclipse(Java)
+        url: https://eclipse.org
+      - name: Netbeans(Java)
+        url: https://netbeans.org/
+      - name: Atom
+        url: https://atom.io/
+      - name: Visual Studio Code(Web)
+        url: https://code.visualstudio.com/
+```
+Finally, create favorite.html in the root directory, add codes to read data from `favorite.yml` data file.
+```html
+{%- raw -%}
+---
+layout: default
+key: favorite
+title: Rong Zhuang's Favorite Bookmarks
+---
+<div class="main-contents">
+    <div class="main-contents-inner">
+        {%- assign favorite = site.data.favorite -%}
+        <div class="main-contents-title"><h2>{{favorite.title}}</h2></div>
+        <div class="main-contents-description">{{favorite.description}}</div>
+        <div class="list">
+            {%- for bookmark in favorite.bookmarks -%}
+                <div class="list-item">
+                    <div class="list-title">{{ bookmark.category }}</div>
+                    <ul class="list-sub">
+                        {%- for link in bookmark.links -%}
+                            <li class="list-sub-item">
+                               <div class="list-sub-title"><a href="{{ link.url }}" class="list-sub-link">{{ link.name }}</a></div>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{% endraw %}
+```
+## 6. Collection
 Use `Collection` to create similar pages. The [portfolio index page](http://jojozhuang.github.io/portfolio/) is created by collection.
 Edit `_config.yml`, add following lines.
 ```
@@ -112,26 +187,46 @@ collections:
   portfolio:
     output: true
 ```
-Create new folder named `_portfolio` in root directory.
-Create two files in this new folder.
-Create new file in root directory.
+Create new folder named `_portfolio` in root directory, and put all portfolio postings into it.
+![MIME Type](/public/pics/2016-11-18/collection.png)  
+Each posting Markdown file contains following attributes.
 ```
-layout: default
-title: Jekyll Themes
 ---
-{% for themes in site.themes %}
-
-
-<a href="{{ themes.url | prepend: site.baseurl }}">
-        <h2>{{ themes.title }}</h2>
-</a>
-
-<p class="post-excerpt">{{ themes.description | truncate: 160 }}</p>
-
-{% endfor %}
+layout: portfolio
+key: portfolio
+title: "Trip Planner"
+index: 40
+tags: iOS, Swift, XCode
+image: /assets/travelnote/thumbnail.png
+excerpt: An iOS App for managing itineraries, built with Swift.
+category: mobile
+---
 ```
-Open browser, access /themes/
-
+At last, create portfolio.html in the root directory, add codes to read data from portfolio collection(Markdown Files).
+```html
+{%- raw -%}
+<div class="row">
+  {% assign sorted = (site.portfolio | sort: 'index') | reverse %}
+  {% for post in sorted %}
+    {% if post.category == "mobile" %}
+      <div class="col-md-3 portfolio-item">
+        <div class="item-border">
+          <a href="{{ post.url }}">
+            <img class="img-responsive" src="{{ post.image }}" alt="image">
+          </a>
+          <div class="item-title">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endraw %}
+```
+Open browser, access the collection page.
+![MIME Type](/public/pics/2016-11-18/portfolio.png)  
 ## looping-in-liquid
 {% if forloop.first %}grid1{% endif %}
 reversed
