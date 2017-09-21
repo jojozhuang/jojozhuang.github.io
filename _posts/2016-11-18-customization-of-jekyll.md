@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Customization of Jekyll"
-date: 2016-01-18
+date: 2016-11-18
 tags: Jekyll
 categories: blog
 ---
@@ -28,6 +28,7 @@ Add the following codes to post.html, which is the template of posting.
 {% endraw %}
 ```
 Previous and Next buttons are added to the posting. Now, you can click on either of them to navigate to another posting.
+![MIME Type](/public/pics/2016-11-18/pagination.png)  
 
 ## 2. Code Snippet Highlighting
 When insert codes to markdown, you can specify the programming language of the code. For example:
@@ -38,9 +39,9 @@ java code
 ````
 
 Be default, there is only a grey rectangle as background, no highlighting on the codes. See the below screenshot.
-![MIME Type](/public/pics/2016-01-18/withouthighlight.png)  
+![MIME Type](/public/pics/2016-11-18/withouthighlight.png)  
 
-To enable the highlighting, you need to edit \_config.yml file which is located in the root directory of the website, add following lines.
+To enable the highlighting, you need to edit `_config.yml` file which is located in the root directory of the website, add following lines.
 ```
 markdown: kramdown
 highlighter: rouge
@@ -50,9 +51,9 @@ Then, create css file, for example, [highlight.css]({% link /public/css/highligh
 <link href="/public/css/highlight.css" rel="stylesheet" />
 ```
 Refresh the page. The highlighting is working now.
-![MIME Type](/public/pics/2016-01-18/javahighlight.png)  
+![MIME Type](/public/pics/2016-11-18/javahighlight.png)  
 
-## 2. Links
+## 3. Links
 In Markdown, we can create hyperlinks to the pages of our own website or external website with the following codes:
 ````
 ```
@@ -72,11 +73,11 @@ The good news is, in Jekyll, you can use `link` tag to create hyperlink for a po
 [Link to a file]({{ site.baseurl }}{% link /assets/files/doc.pdf %})
 {% endraw %}
 ```
-Notice, `{%- raw -%}{{ site.baseurl }}{% endraw %}` is optional. It depends on whether you want to preface the page URL with the baseurl value.
+Notice, `{%- raw -%}{{ site.baseurl }}{% endraw %}` is optional. It depends on whether you want to preface the page URL with the baseurl value. The benefits of using `link` is that build will fail if the link is not available any more.
 
-## 3. Post Excerpt
-1) post.excerpt
-Each post automatically takes the first block of text, from the beginning of the content to the first occurrence of excerpt_separator, and sets it as the post.excerpt. To include a little hint about the post’s content, you can add the first paragraph of each of your posts.
+## 4. Post Excerpt
+1) post.excerpt  
+Each post automatically takes the first block of text, from the beginning of the content to the first occurrence of excerpt_separator, and sets it as the `post.excerpt`. To include a little hint about the post’s content, you can add the first paragraph of each of your posts.
 ```
 {%- raw -%}
 <ul>
@@ -89,7 +90,7 @@ Each post automatically takes the first block of text, from the beginning of the
 </ul>
 {% endraw %}
 ```
-2) Customized excerpt(short description)
+2) Customized excerpt(short description)  
 If you don’t like the automatically-generated post excerpt, it can be explicitly overridden by adding an excerpt value to your post’s YAML Front Matter. Alternatively, you can choose to define a custom excerpt_separator in the post’s YAML front matter:
 ```
 ---
@@ -101,16 +102,17 @@ Excerpt
 Out-of-excerpt
 ```
 Pass the `| strip_html` filter to remove any html tags in the output.
+![MIME Type](/public/pics/2016-11-18/excerpt.png)  
 
-## 3. Collection
-Use `Collection` to create similar pages.  
-Edit \_config.yml, add following lines.
+## 5. Collection
+Use `Collection` to create similar pages. The [portfolio index page](http://jojozhuang.github.io/portfolio/) is created by collection.
+Edit `_config.yml`, add following lines.
 ```
 collections:
-  themes:
+  portfolio:
     output: true
 ```
-Create new folder named '\_themes' in root directory.
+Create new folder named `_portfolio` in root directory.
 Create two files in this new folder.
 Create new file in root directory.
 ```

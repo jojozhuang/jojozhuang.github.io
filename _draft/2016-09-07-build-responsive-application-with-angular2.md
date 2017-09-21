@@ -90,3 +90,4 @@ The Angular2 application will be launched. Access the address http://localhost:3
 ## 9. References
 * [Official website](https://angular.io/)
 * [Angular QuickStart Source](https://github.com/angular/quickstart)
+* [Angular 2 Tutorial](https://www.tutorialspoint.com/angular2/)

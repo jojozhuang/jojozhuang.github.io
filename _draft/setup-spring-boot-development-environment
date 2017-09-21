@@ -1,0 +1,51 @@
+
+##1. Install Maven
+```sh
+$ brew install maven
+```
+Johnny@Johnny-Mac:~$ mvn -version
+Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2017-04-03T12:39:06-07:00)
+Maven home: /usr/local/Cellar/maven/3.5.0/libexec
+Java version: 1.8.0_101, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "10.12.6", arch: "x86_64", family: "mac"
+
+Step 1: Create a new folder
+mkdir my-docker-test
+cd my-docker-test
+Step 2: Build the sample app
+You could test the image with our sample app: sample-app
+
+git clone https://github.com/Bankmonitor/sample-app .
+```
+cd sample-app
+mvn -f pom.xml clean package
+cp /target/app.jar ~/Documents/docker-springboot/app.jar
+```
+
+Step 3: Create a new Dockerfile
+```sh
+$ cd ~/Johnny
+$ mkdir Docker
+$ cd Docker
+$ vim Dockerfile
+```
+
+```sh
+FROM bankmonitor/spring-boot
+```
+
+Step 4: Build the new image
+```sh
+docker build -t spring-boot-hello:0.1 .
+```
+
+Step 5: Run the new image
+docker run --name=boothello -v ~/Documents/docker-springboot:/app/ -p 31030:8080 spring-boot-hello:0.1
+Step 6: Test the app is started
+The following command should return 'OK':
+
+curl http://localhost:31030/status
+
+https://www.mkyong.com/maven/install-maven-on-mac-osx/
