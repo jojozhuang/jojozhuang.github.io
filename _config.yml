@@ -14,8 +14,6 @@ author:
   name: 'Rong Zhuang'
   email: 'jojozhuang@gmail.com'
 
-paginate: 1
-
 pages_list:
   Portfolio: '/portfolio'
   Blog: '/blog'

@@ -3,115 +3,117 @@ description: List of famous websites, popular opensource projects and useful onl
 bookmarks:
   - category: Online Tools
     links:
-      - title: Markdown Cheatsheet
+      - name: Markdown Cheatsheet
         url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-      - title: XML Formatter
+      - name: XML Formatter
         url: https://www.freeformatter.com/xml-formatter.html
-      - title: HTML Formatter
+      - name: HTML Formatter
         url: https://www.freeformatter.com/html-formatter.html
-      - title: HTML Escape/Unescape
+      - name: HTML Escape/Unescape
         url: https://www.freeformatter.com/html-escape.html
-      - title: JSON Formatter
+      - name: JSON Formatter
         url: https://www.freeformatter.com/json-formatter.html
-      - title: CSS Formatter
+      - name: CSS Formatter
         url: https://www.cleancss.com/css-beautify/
-      - title: Icon Converter
+      - name: Icon Converter
         url: https://iconverticons.com/online/
   - category: Online Learning
     links:
-      - title: w3schools
+      - name: w3schools
         url: https://www.w3schools.com/
-      - title: tutorialspoint
+      - name: tutorialspoint
         url: https://www.tutorialspoint.com/
-      - title: The Modern JavaScript Tutorial
+      - name: The Modern JavaScript Tutorial
         url: https://javascript.info/
-      - title: Leetcode(Algorithms)
+      - name: Leetcode(Algorithms)
         url: https://leetcode.com/problemset/algorithms/
-      - title: Lintcode(Algorithms)
+      - name: Lintcode(Algorithms)
         url: http://www.lintcode.com/en/problem/
-      - title: jiuzhang
+      - name: jiuzhang
         url: http://www.jiuzhang.com/
   - category: Open Source/Popular Projects
     links:
-      - title: Docker
+      - name: Docker
         url: https://www.docker.com/
-      - title: kitematic
+      - name: kitematic
         url: https://kitematic.com/
-      - title: Node.js
+      - name: Node.js
         url: https://nodejs.org/
-      - title: Jenkins
+      - name: Jenkins
         url: https://jenkins.io/
-      - title: Splunk(Log)
+      - name: Splunk(Log)
         url: https://www.splunk.com/
-      - title: Electron
+      - name: Electron
         url: https://electron.atom.io/
-      - title: Xamarin
+      - name: Xamarin
         url: https://www.xamarin.com/
-      - title: Cordova
+      - name: Cordova
         url: https://cordova.apache.org/
-      - title: Socket.IO
+      - name: Socket.IO
         url: https://socket.io/
-      - title: ASP.NET SignalR
+      - name: ASP.NET SignalR
         url: https://www.asp.net/signalr
-      - title: Elasticsearch
+      - name: Elasticsearch
         url: https://www.elastic.co/
-      - title: Ubuntu
+      - name: Ubuntu
         url: https://www.ubuntu.com/
-      - title: VirtualBox
+      - name: VirtualBox
         url: https://www.virtualbox.org/
-      - title: Dynatrace
+      - name: Dynatrace
         url: https://www.dynatrace.com/
-      - title: Apache Tomcat
+      - name: Apache Tomcat
         url: https://tomcat.apache.org/
-      - title: Nginx
+      - name: Nginx
         url: https://nginx.org
-      - title: Mysql
+      - name: Mysql
         url: https://www.mysql.com/
-      - title: Jersey
+      - name: Jersey
         url: https://jersey.github.io/
-      - title: React JS
+      - name: React JS
         url: https://facebook.github.io/react/
-      - title: AngularJs
+      - name: AngularJs
         url: https://angularjs.org/
-      - title: Bootstrap
+      - name: Bootstrap
         url: http://getbootstrap.com/
-      - title: Jquery
+      - name: Jquery
         url: https://jquery.com/
-      - title: Less
+      - name: Less
         url: http://lesscss.org/
-      - title: Sass
+      - name: Sass
         url: http://sass-lang.com/
-      - title: JSON
+      - name: JSON
         url: http://www.json.org/
-      - title: Type Script
+      - name: Type Script
         url: https://www.typescriptlang.org/
-      - title: Maven
+      - name: Maven
         url: https://maven.apache.org/
-      - title: Gradle
+      - name: Gradle
         url: https://gradle.org/
-      - title: Scala
+      - name: Scala
         url: https://www.scala-lang.org/
-      - title: Groovy
+      - name: Groovy
         url: http://groovy-lang.org/
-      - title: SDKMAN
+      - name: SDKMAN
         url: http://sdkman.io/
-      - title: Log4j
+      - name: Log4j
         url: https://logging.apache.org/log4j/2.x/
-      - title: Bootstrap Templates
+      - name: Bootstrap Templates
         url: https://bootsnipp.com
-      - title: Generate Bootstrap Navbar
+      - name: Generate Bootstrap Navbar
         url: https://work.smarchal.com/twbscolor/
-      - title: highlight.js
+      - name: highlight.js
         url: https://highlightjs.org/
+      - name: Liquid
+        url: https://shopify.github.io/liquid/
   - category: Free Text Editor/IDE
     links:
-      - title: Notepad++
+      - name: Notepad++
         url: https://notepad-plus-plus.org/
-      - title: Eclipse(Java)
+      - name: Eclipse(Java)
         url: https://eclipse.org
-      - title: Netbeans(Java)
+      - name: Netbeans(Java)
         url: https://netbeans.org/
-      - title: Atom
+      - name: Atom
         url: https://atom.io/
-      - title: Visual Studio Code(Web)
+      - name: Visual Studio Code(Web)
         url: https://code.visualstudio.com/
