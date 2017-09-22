@@ -9,7 +9,25 @@ categories: blog
 
 > Several useful approaches used to customize Jekyll for my personal website hosted on GitHub Pages.
 
-## 1. Pagination
+## 1. Get Entries from List
+Suppose site.portfolio is the list of all portfolios, use the following pipes to get desired entries from this list.
+* filtering: add where condition with column name and value
+* order: add sort with column name
+* ascending/descending: add reverse for descending order.
+
+Usage sample as follows:  
+```html
+{%- raw -%}
+{% assign list = (site.portfolio | where: "category", {{category.type}}) | sort: 'index') | reverse %}
+<ul>
+{% for portfl in list %}
+  <li>{{portfl.name}}</li>
+{% endfor %}
+</ul>
+{% endraw %}
+```
+
+## 2. Pagination
 Add the following codes to post.html, which is the template of posting.
 ```html
 {%- raw -%}
@@ -30,7 +48,7 @@ Add the following codes to post.html, which is the template of posting.
 Previous and Next buttons are added to the posting. Now, you can click on either of them to navigate to another posting.
 ![MIME Type](/public/pics/2016-11-18/pagination.png)  
 
-## 2. Code Snippet Highlighting
+## 3. Code Snippet Highlighting
 When insert codes to markdown, you can specify the programming language of the code. For example:
 ````
 ```java
@@ -53,7 +71,7 @@ Then, create css file, for example, [highlight.css]({% link /public/css/highligh
 Refresh the page. The highlighting is working now.
 ![MIME Type](/public/pics/2016-11-18/javahighlight.png)  
 
-## 3. Links
+## 4. Links
 In Markdown, we can create hyperlinks to the pages of our own website or external website with the following codes:
 ````
 ```
@@ -75,8 +93,7 @@ The good news is, in Jekyll, you can use `link` tag to create hyperlink for a po
 ```
 Notice, `{%- raw -%}{{ site.baseurl }}{% endraw %}` is optional. It depends on whether you want to preface the page URL with the baseurl value. The benefits of using `link` is that build will fail if the link is not available any more.
 
-## 4. Post Excerpt
-1) post.excerpt  
+## 5. Post Excerpt
 Each post automatically takes the first block of text, from the beginning of the content to the first occurrence of excerpt_separator, and sets it as the `post.excerpt`. To include a little hint about the post’s content, you can add the first paragraph of each of your posts.
 ```
 {%- raw -%}
@@ -90,21 +107,23 @@ Each post automatically takes the first block of text, from the beginning of the
 </ul>
 {% endraw %}
 ```
-2) Customized excerpt(short description)  
-If you don’t like the automatically-generated post excerpt, it can be explicitly overridden by adding an excerpt value to your post’s YAML Front Matter. Alternatively, you can choose to define a custom excerpt_separator in the post’s YAML front matter:
+If you don’t like the automatically-generated post excerpt, it can be explicitly overridden by adding an excerpt value to your post’s YAML Front Matter.
 ```
 ---
-excerpt_separator: <!--more-->
+layout: portfolio
+key: portfolio
+title: "2048"
+index: 65
+tags: Electron, Node.js, Cross-platform
+image: /assets/2048/thumbnail.png
+excerpt: A cross-platform desktop app for 2048, developed with Electron and Node.js
+category: java
 ---
-
-Excerpt
-<!--more-->
-Out-of-excerpt
 ```
-Pass the `| strip_html` filter to remove any html tags in the output.
+Again, use `post.excerpt` to get customized excerpt and display it on page.
 ![MIME Type](/public/pics/2016-11-18/excerpt.png)  
 
-## 5. Data File
+## 6. Data File
 All the links in [favorite page](http://jojozhuang.github.io/favorite/) are from `Data File`.  
 Create `_data` folder in the root directory, add create a data file named `favorite.yml`.
 ![MIME Type](/public/pics/2016-11-18/datafile.png)  
@@ -182,7 +201,7 @@ title: Rong Zhuang's Favorite Bookmarks
 Open browser, access the favorite page.
 ![MIME Type](/public/pics/2016-11-18/favorite.png)  
 
-## 6. Collection
+## 7. Collection
 Use `Collection` to create similar pages. The [portfolio index page](http://jojozhuang.github.io/portfolio/) is created by collection.
 Edit `_config.yml`, add following lines.
 ```
@@ -231,7 +250,7 @@ At last, create portfolio.html in the root directory, add codes to read data fro
 Open browser, access the collection page.
 ![MIME Type](/public/pics/2016-11-18/portfolio.png)  
 
-## 7. References
+## 8. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)
 * [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
 * [Links](https://jekyllrb.com/docs/templates/#links)
