@@ -3,7 +3,10 @@ layout: portfolio
 key: portfolio
 title: "Course Player (Socket.IO)"
 index: 50
-tags: WebSocket, Socket.IO, Node.js
+tags:
+  - WebSocket
+  - Socket.IO
+  - Node.js
 image: /assets/courseplayersocketio/thumbnail.png
 excerpt: A realtime online course player, developed with Socket.IO and Node.js
 category: java

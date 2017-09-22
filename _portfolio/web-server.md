@@ -3,7 +3,11 @@ layout: portfolio
 key: portfolio
 title: "Web Server"
 index: 5
-tags: Socket, Java, HTTP, UDP
+tags:
+  - Socket
+  - Java
+  - HTTP
+  - UDP
 image: /assets/mywebserver/thumbnail.png
 excerpt: A web server built with sockets in Java, capable of handling general HTTP requests.
 category: java222

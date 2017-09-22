@@ -3,7 +3,10 @@ layout: portfolio
 key: portfolio
 title: "Course Player"
 index: 30
-tags: Xamarin, C#, Visual Studio, iOS
+tags:
+  - Xamarin
+  - C#
+  - Cross-platform
 image: /assets/xamarinplayer/thumbnail.png
 excerpt: An iOS App for playing course, built with Xamarin in C#.
 category: mobile

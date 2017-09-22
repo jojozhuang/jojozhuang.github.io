@@ -3,7 +3,10 @@ layout: portfolio
 key: portfolio
 title: "Kaixin Assistant"
 index: 10
-tags: C#, Web Scraping, HTTP
+tags:
+  - C#
+  - Web Scraping
+  - HTTP
 image: /assets/kaixin/thumbnail.png
 excerpt: A 'tag-on' desktop application for playing online flash games automatically.
 category: dotnet

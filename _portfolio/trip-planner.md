@@ -3,13 +3,16 @@ layout: portfolio
 key: portfolio
 title: "Trip Planner"
 index: 40
-tags: iOS, Swift, XCode
+tags:
+  - iOS
+  - Swift
+  - XCode
 image: /assets/travelnote/thumbnail.png
 excerpt: An iOS App for managing itineraries, built with Swift.
 category: mobile
 ---
 
-> This iOS app is used to manage itineraries. It's built for my final project of course 'CSC471-Mobile App Development for iOS'. Classic layout with three tabs: Me, Search and Settings.  
+> This iOS app is used to manage itineraries, built with Swift. The layout contains three tabs: Me, Search and Settings.  
 
 ## 1. Home screen  
 ![index](/assets/travelnote/index.png "index")  
@@ -18,18 +21,18 @@ Create new plan for your next trip.
 ![newtrip1](/assets/travelnote/newtrip1.png "newtrip1")  
 ![newtrip2](/assets/travelnote/newtrip2.png "newtrip2")  
 ### 1.2 Me -> My Trips
-Find the new created trip in the 'My Trips' list.  
+A list shows all your previous and current trip plans.
 ![trips](/assets/travelnote/trips.png "trips")
-The app provides the ‘Share’ function which enables you to share your trip to others via message, email or Facebook, etc.  
+‘Share’ function is available to enable you to share your trip to others via message, email or Facebook, etc.  
 ![share](/assets/travelnote/share.png "share")
 ### 1.3 Me -> My Favorites
-You can find the cities which you have added into favorite list previously.  
+A list contains the cities which you added into favorite list previously.  
 ![favorite](/assets/travelnote/favorite.png "favorite")
 ### 1.4 Me -> My Location
 You can get the exact coordinates of your current location through 'My Location'.  
 ![location](/assets/travelnote/location.png "location")  
 ## 2. Search
-Search is another main function. You are able to search your next destination.  
+Search is another main function of this app. You are able to search your next destination.  
 ### 2.1 Search -> Continent
 ![search](/assets/travelnote/search.png "search")  
 ### 2.2 Search -> Continent-> Country
@@ -37,7 +40,7 @@ Search is another main function. You are able to search your next destination.
 ### 2.3 Search -> Continent-> Country -> City
 ![citylist](/assets/travelnote/citylist.png "citylist")
 ### 2.4 Search -> Continent-> Country -> City -> Details
-In the final ‘City Detail’ screen, you can find lots of useful information, such as map, local time, local weather, famous sights, etc. If you like, you can add the city to your favorite list.  
+In the ‘City Detail’ screen, you can find lots of useful information, such as map, local time, local weather, famous sights, etc. If you like, you can add the city to your favorite list.  
 ![city](/assets/travelnote/city.png "city")  
 ![city2](/assets/travelnote/city2.png "city2")
 ## 3. Settings  

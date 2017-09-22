@@ -31,7 +31,7 @@ GET /megacorp/employee/_search?q=last_name:Smith
 
 ### DSL Query
 Same with the above one.
-```javascript
+```java
 GET /megacorp/employee/_search
 {
     "query" : {
@@ -43,7 +43,7 @@ GET /megacorp/employee/_search
 ```
 
 ### DSL Query with Filter
-```javascript
+```java
 GET /megacorp/employee/_search
 {
     "query" : {
@@ -64,7 +64,7 @@ GET /megacorp/employee/_search
 ```
 
 ### Full-Text Search
-```javascript
+```java
 GET /megacorp/employee/_search
 {
     "query" : {
@@ -76,7 +76,7 @@ GET /megacorp/employee/_search
 ```
 
 Response:
-```javascript
+```java
 {
    ...
    "hits": {
@@ -113,7 +113,7 @@ The scores of each hit are different. Hits are sorted by score in descending ord
 
 ### Phrase Search
 Match exact sequences of words or phrases. The below query only returns one hit, the first one in above sample.
-```javascript
+```java
 GET /megacorp/employee/_search
 {
     "query" : {
@@ -125,7 +125,7 @@ GET /megacorp/employee/_search
 ```
 
 ### Highlight the Result
-```javascript
+```java
 GET /megacorp/employee/_search
 {
     "query" : {
@@ -142,7 +142,7 @@ GET /megacorp/employee/_search
 ```
 
 Response:
-```javascript
+```java
 {
    ...
    "hits": {
@@ -172,7 +172,7 @@ Response:
 
 ### Aggregations
 find the most popular interests enjoyed by our employees:
-```javascript
+```java
 GET /megacorp/employee/_search
 {
   "aggs": {
@@ -184,7 +184,7 @@ GET /megacorp/employee/_search
 ```
 
 Response:
-```javascript
+```java
 {
    ...
    "hits": { ... },

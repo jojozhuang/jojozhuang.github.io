@@ -15,7 +15,7 @@ categories: blog
 
 ## 2. Usage
 ### 2.1 Create
-```javascript
+```java
 POST shop/customer/1
 {
   "name": "Johnny",
@@ -24,7 +24,7 @@ POST shop/customer/1
 }
 ```
 Response:
-```javascript
+```java
 {
   "_index": "shop",
   "_type": "customer",
@@ -41,7 +41,7 @@ Response:
 ```
 
 Create another two user
-```javascript
+```java
 POST shop/customer/2
 {
   "name": "Sean",
@@ -58,11 +58,11 @@ POST shop/customer/3
 ```
 
 ### 2.2 Get
-```javascript
+```java
 GET shop/customer/1
 ```
 Response:
-```javascript
+```java
 {
   "_index": "shop",
   "_type": "customer",
@@ -78,7 +78,7 @@ Response:
 ```
 
 ### 2.3 Update
-```javascript
+```java
 PUT shop/customer/1
 {
   "name": "Johnny",
@@ -87,7 +87,7 @@ PUT shop/customer/1
 }
 ```
 Response:
-```javascript
+```java
 {
   "_index": "shop",
   "_type": "customer",
@@ -103,11 +103,11 @@ Response:
 }
 ```
 ### 2.4 Delete
-```javascript
+```java
 DELETE shop/customer/3
 ```
 Response:
-```javascript
+```java
 {
   "found": true,
   "_index": "shop",
@@ -127,7 +127,7 @@ Search
 Get shop/customer/3
 ```
 Response:
-```javascript
+```java
 {
   "_index": "shop",
   "_type": "customer",
@@ -141,7 +141,7 @@ a) Search all customers
 GET /shop/customer/_search
 ```
 Response:
-```javascript
+```java
 {
   "took": 4,
   "timed_out": false,
@@ -185,7 +185,7 @@ a) Search the customer named 'Johnny'
 GET /shop/customer/_search?q=name:Johnny
 ```
 Response:
-```javascript
+```java
 {
   "took": 3,
   "timed_out": false,

@@ -3,7 +3,10 @@ layout: portfolio
 key: portfolio
 title: "Code Generator"
 index: 20
-tags: C#, Windows Form, XSLT+XML
+tags:
+  - C#
+  - Windows Form
+  - XSLT+XML
 image: /assets/codegenerator/thumbnail.png
 excerpt: A desktop application for generating code based on database schema and templates.
 category: dotnet

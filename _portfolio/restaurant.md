@@ -3,7 +3,10 @@ layout: portfolio
 key: portfolio
 title: "Restaurant"
 index: 35
-tags: Android, Java, Android Studio
+tags:
+  - Android
+  - Java
+  - Android Studio
 image: /assets/restaurant/thumbnail.png
 excerpt: An Android App for searching restaurants, built with Java.
 category: mobile

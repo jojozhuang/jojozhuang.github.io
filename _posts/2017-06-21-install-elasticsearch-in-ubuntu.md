@@ -56,20 +56,20 @@ curl "http://localhost:9200"
 
   or open the link [http://localhost:9200](http://localhost:9200) in web browser.  
   Either way, you should see some json strings returned from ES.  
-```javascript
-  {
-    "name" : "kYY1YjJ",
-    "cluster_name" : "elasticsearch",
-    "cluster_uuid" : "aTe5itS9S_WCp348J78oaA",
-    "version" : {
-      "number" : "5.5.0",
-      "build_hash" : "260387d",
-      "build_date" : "2017-06-30T23:16:05.735Z",
-      "build_snapshot" : false,
-      "lucene_version" : "6.6.0"
-    },
-    "tagline" : "You Know, for Search"
-  }
+```java
+{
+  "name" : "kYY1YjJ",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "aTe5itS9S_WCp348J78oaA",
+  "version" : {
+    "number" : "5.5.0",
+    "build_hash" : "260387d",
+    "build_date" : "2017-06-30T23:16:05.735Z",
+    "build_snapshot" : false,
+    "lucene_version" : "6.6.0"
+  },
+  "tagline" : "You Know, for Search"
+}
 ```
 
 ### 2.2 Install Kibana  
