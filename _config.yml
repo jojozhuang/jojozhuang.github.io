@@ -6,13 +6,17 @@ name: Rong Zhuang
 #permalink: /blog/:year/:month/:day/:title
 permalink: /:categories/:year/:month/:day/:title/
 # Setup
-title: Rong Zhuang
-url: http://jojozhuang.github.io
+#title: Rong Zhuang
+#url: http://jojozhuang.github.io
+copyright: '&copy; 2017 jojozhuang.github.io, All rights reserved.'
 #theme: jekyll-theme-cayman
 
 author:
   name: 'Rong Zhuang'
   email: 'jojozhuang@gmail.com'
+  phone: '(+1) 650 380 4437'
+  linkedin: https://www.linkedin.com/in/rongzhuang
+
 
 pages_list:
   Portfolio: '/portfolio'

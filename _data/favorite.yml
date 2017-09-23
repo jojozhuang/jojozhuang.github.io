@@ -25,51 +25,47 @@ bookmarks:
         url: https://www.tutorialspoint.com/
       - name: The Modern JavaScript Tutorial
         url: https://javascript.info/
-      - name: Leetcode(Algorithms)
-        url: https://leetcode.com/problemset/algorithms/
-      - name: Lintcode(Algorithms)
-        url: http://www.lintcode.com/en/problem/
-      - name: jiuzhang
-        url: http://www.jiuzhang.com/
-  - category: Open Source/Popular Projects
+  - category: Basis
     links:
-      - name: Docker
-        url: https://www.docker.com/
-      - name: kitematic
-        url: https://kitematic.com/
-      - name: Node.js
-        url: https://nodejs.org/
-      - name: Jenkins
-        url: https://jenkins.io/
-      - name: Splunk(Log)
-        url: https://www.splunk.com/
-      - name: Electron
-        url: https://electron.atom.io/
-      - name: Xamarin
-        url: https://www.xamarin.com/
-      - name: Cordova
-        url: https://cordova.apache.org/
-      - name: Socket.IO
-        url: https://socket.io/
-      - name: ASP.NET SignalR
-        url: https://www.asp.net/signalr
-      - name: Elasticsearch
-        url: https://www.elastic.co/
       - name: Ubuntu
         url: https://www.ubuntu.com/
       - name: VirtualBox
         url: https://www.virtualbox.org/
-      - name: Dynatrace
-        url: https://www.dynatrace.com/
-      - name: Apache Tomcat
-        url: https://tomcat.apache.org/
-      - name: Nginx
-        url: https://nginx.org
-      - name: Mysql
-        url: https://www.mysql.com/
-      - name: Jersey
-        url: https://jersey.github.io/
-      - name: React JS
+  - category: Algorithm
+    links:
+      - name: Leetcode
+        url: https://leetcode.com/problemset/algorithms/
+      - name: Lintcode
+        url: http://www.lintcode.com/en/problem/
+      - name: jiuzhang(Chinese)
+        url: http://www.jiuzhang.com/
+  - category: Cloud
+    links:
+      - name: Amazon EC2
+        url: https://aws.amazon.com/ec2/
+      - name: Google Cloud
+        url: https://cloud.google.com/
+      - name: Microsoft Azure
+        url: https://azure.microsoft.com
+      - name: Heroku
+        url: https://www.heroku.com/
+  - category: Big Data/AI
+    links:
+      - name: IBM Watson
+        url: https://www.ibm.com/watson
+  - category: Mobile Development
+    links:
+      - name: Android
+        url: https://www.android.com/
+      - name: Genymotion
+        url: https://www.genymotion.com/
+      - name: Xamarin
+        url: https://www.xamarin.com/
+      - name: Cordova
+        url: https://cordova.apache.org/
+  - category: Frontend
+    links:
+      - name: ReactJS
         url: https://facebook.github.io/react/
       - name: AngularJs
         url: https://angularjs.org/
@@ -85,6 +81,48 @@ bookmarks:
         url: http://www.json.org/
       - name: Type Script
         url: https://www.typescriptlang.org/
+      - name: Bootstrap Templates
+        url: https://bootsnipp.com
+      - name: Generate Bootstrap Navbar
+        url: https://work.smarchal.com/twbscolor/
+      - name: highlight.js
+        url: https://highlightjs.org/
+      - name: Github Page
+        url: https://pages.github.com/
+      - name: Jekyll
+        url: https://jekyllrb.com/
+      - name: Liquid
+        url: https://shopify.github.io/liquid/
+      - name: Electron
+        url: https://electron.atom.io/
+      - name: Socket.IO
+        url: https://socket.io/
+      - name: ASP.NET SignalR
+        url: https://www.asp.net/signalr
+  - category: Open Source/Popular Projects
+    links:
+      - name: Docker
+        url: https://www.docker.com/
+      - name: kitematic
+        url: https://kitematic.com/
+      - name: Node.js
+        url: https://nodejs.org/
+      - name: Jenkins
+        url: https://jenkins.io/
+      - name: Splunk(Log)
+        url: https://www.splunk.com/
+      - name: Elasticsearch
+        url: https://www.elastic.co/
+      - name: Dynatrace
+        url: https://www.dynatrace.com/
+      - name: Apache Tomcat
+        url: https://tomcat.apache.org/
+      - name: Nginx
+        url: https://nginx.org
+      - name: Mysql
+        url: https://www.mysql.com/
+      - name: Jersey
+        url: https://jersey.github.io/
       - name: Maven
         url: https://maven.apache.org/
       - name: Gradle
@@ -97,23 +135,21 @@ bookmarks:
         url: http://sdkman.io/
       - name: Log4j
         url: https://logging.apache.org/log4j/2.x/
-      - name: Bootstrap Templates
-        url: https://bootsnipp.com
-      - name: Generate Bootstrap Navbar
-        url: https://work.smarchal.com/twbscolor/
-      - name: highlight.js
-        url: https://highlightjs.org/
-      - name: Liquid
-        url: https://shopify.github.io/liquid/
-  - category: Free Text Editor/IDE
+  - category: Free Text Editor
     links:
+      - name: Atom
+        url: https://atom.io/
       - name: Notepad++
         url: https://notepad-plus-plus.org/
+  - category: Integrated Development Environment(IDE)
+    links:
       - name: Eclipse(Java)
         url: https://eclipse.org
       - name: Netbeans(Java)
         url: https://netbeans.org/
-      - name: Atom
-        url: https://atom.io/
       - name: Visual Studio Code(Web)
         url: https://code.visualstudio.com/
+      - name: Xcode
+        url: https://developer.apple.com/xcode/
+      - name: Android Studio
+        url: https://developer.android.com/studio/index.html

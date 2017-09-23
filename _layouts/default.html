@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
       </button>
       <ul class="nav navbar-nav">
-        <li {% if page.key == "home" %} class="active" {% endif %}><a class="navbar-brand" href="/">Rong Zhuang</a></li>
+        <li {% if page.key == "home" %} class="active" {% endif %}><a class="navbar-brand" href="/">{{site.author.name}}</a></li>
       </ul>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -37,7 +37,7 @@
 {{ content }}
 
 <footer class="container-fluid text-center">
-  <p>&copy; 2017 jojozhuang.github.io, All rights reserved.</p>
+  <p>{{site.copyright}}</p>
 </footer>
 
 </body>
