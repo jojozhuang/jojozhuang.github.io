@@ -41,7 +41,7 @@ navlist:
     url: /#
     visible: true
     subkeys: library,note
-    more:
+    sublist:
       - key: library
         url: /library
       - key: note
