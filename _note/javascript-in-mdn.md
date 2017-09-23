@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: note
 key: note
 title: "Javascript In MDN"
 index: 1
