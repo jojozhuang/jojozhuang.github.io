@@ -13,35 +13,13 @@ key: note
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1>{{ page.title }}</h1>
-      <ul class="pager">
-        {% if page.previous.url %}
-            <li class="previous"><a href="{{page.previous.url}}">Previous</a></li>
-        {% else %}
-            <li class="previous disabled"><a href="#">Previous</a></li>
-        {% endif %}
-        {% if page.next.url %}
-            <li class="next"><a href="{{page.next.url}}">Next</a></li>
-        {% else %}
-            <li class="next disabled"><a href="#">Next</a></li>
-        {% endif %}
-      </ul>
+      {% include pagination.html %}
       <hr>
       <div class="post">
         {{ content }}
       </div>
       <hr>
-      <ul class="pager">
-        {% if page.previous.url %}
-            <li class="previous"><a href="{{page.previous.url}}">Previous</a></li>
-        {% else %}
-            <li class="previous disabled"><a href="#">Previous</a></li>
-        {% endif %}
-        {% if page.next.url %}
-            <li class="next"><a href="{{page.next.url}}">Next</a></li>
-        {% else %}
-            <li class="next disabled"><a href="#">Next</a></li>
-        {% endif %}
-      </ul>
+      {% include pagination.html %}
       <!-- Post comments -->
       <div class="notecomments">
         {% include disqus.html %}
