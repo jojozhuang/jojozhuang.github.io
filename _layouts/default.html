@@ -6,11 +6,6 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <ul class="nav navbar-nav">
         <li {% if page.key == "home" %} class="active" {% endif %}><a class="navbar-brand" href="/">{{site.author.name}}</a></li>
       </ul>
@@ -25,6 +20,13 @@
         <li {% if page.key == "favorite" %} class="active" {% endif %}><a href="/favorite">Favorite</a></li>
         <li {% if page.key == "about" %} class="active" {% endif %}><a href="/about">About</a></li>
         <!--<li {% if page.key == "feed" %} class="active" {% endif %}><a href="/blog/atom.xml">Feed</a></li>-->
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li {% if page.key == "note" %} class="active" {% endif %}><a href="/note">Note</a></li>
+            <li {% if page.key == "about" %} class="active" {% endif %}><a href="/about">About</a></li>
+            <li {% if page.key == "favorite" %} class="active" {% endif %}><a href="/favorite">Favorite</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!--<li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>-->
@@ -37,7 +39,7 @@
 {{ content }}
 
 <footer class="container-fluid text-center">
-  <p>{{site.copyright}}</p>
+  <p>{{site.config.copyright}}</p>
 </footer>
 
 </body>

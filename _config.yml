@@ -7,8 +7,9 @@ name: Rong Zhuang
 permalink: /:categories/:year/:month/:day/:title/
 # Setup
 #title: Rong Zhuang
-#url: http://jojozhuang.github.io
-copyright: '&copy; 2017 jojozhuang.github.io, All rights reserved.'
+config:
+  url: http://jojozhuang.github.io
+  copyright: '&copy; 2017 jojozhuang.github.io, All rights reserved.'
 #theme: jekyll-theme-cayman
 
 author:
