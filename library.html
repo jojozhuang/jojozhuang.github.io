@@ -1,0 +1,26 @@
+---
+layout: default
+key: library
+title: Rong Zhuang's Library
+---
+<div class="main-contents">
+    <div class="main-contents-inner">
+        {%- assign favorite = site.data.favorite -%}
+        <div class="main-contents-title"><h2>{{favorite.librarytitle}}</h2></div>
+        <div class="main-contents-description">{{favorite.librarydesc}}</div>
+        <div class="list">
+            {%- for bookmark in favorite.bookmarks -%}
+                <div class="list-item">
+                    <div class="list-title">{{ bookmark.category }}</div>
+                    <ul class="list-sub">
+                        {%- for link in bookmark.links -%}
+                            <li class="list-sub-item">
+                               <div class="list-sub-title"><a href="{{ link.url }}" class="list-sub-link">{{ link.name }}</a></div>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>

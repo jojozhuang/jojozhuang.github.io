@@ -17,21 +17,21 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li {% if page.key == "portfolio" %} class="active" {% endif %}><a href="/portfolio">Portfolio</a></li>
-        <li {% if page.key == "blog" %} class="active" {% endif %}><a href="/blog">Blog</a></li>
-        <!--<li {% if page.key == "cv" %} class="active" {% endif %}><a href="/cv">CV</a></li>
-        <li {% if page.key == "course" %} class="active" {% endif %}><a href="/course">Course</a></li>-->
-        <li {% if page.key == "note" %} class="active" {% endif %}><a href="/note">Note</a></li>
-        <li {% if page.key == "favorite" %} class="active" {% endif %}><a href="/favorite">Favorite</a></li>
-        <li {% if page.key == "about" %} class="active" {% endif %}><a href="/about">About</a></li>
-        <!--<li {% if page.key == "feed" %} class="active" {% endif %}><a href="/blog/atom.xml">Feed</a></li>-->
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li {% if page.key == "note" %} class="active" {% endif %}><a href="/note">Note</a></li>
-            <li {% if page.key == "about" %} class="active" {% endif %}><a href="/about">About</a></li>
-            <li {% if page.key == "favorite" %} class="active" {% endif %}><a href="/favorite">Favorite</a></li>
-          </ul>
-        </li>
+        {% for link in site.navlist %}
+          {% if link.visible == true %}
+            {% if link.more %}
+            <li class="dropdown {% if link.subkeys contains page.key %} active {% endif %}"><a class="dropdown-toggle" data-toggle="dropdown" href="{{ link.url }}">More <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                {% for sublink in link.more %}
+                  <li {% if page.key == sublink.key %} class="active" {% endif %}><a href="{{ sublink.url }}">{{ sublink.key | capitalize }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+              <li {% if page.key == link.key %} class="active" {% endif %}><a href="{{ link.url }}">{{ link.key | capitalize }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!--<li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>-->

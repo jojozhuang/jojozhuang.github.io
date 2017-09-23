@@ -2,13 +2,11 @@
 layout: post
 key: note
 title: "Javascript In MDN"
-date: 2017-01-01
-subcateogry: javascript
-categories:
-- note
+index: 1
+category: javascript
 ---
 
-> Nodes for javascript
+> Nodes for javascript222
 
 JavaScript has a prototype-based object model instead of the more common class-based object model.
 

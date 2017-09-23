@@ -1,5 +1,7 @@
 title: My Favorites
 description: List of famous websites, popular opensource projects and useful online tools for software development.
+librarytitle: My Library
+librarydesc: Combination of my posting and portfolio with the favorite list.
 bookmarks:
   - category: Online Tools
     links:

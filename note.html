@@ -1,7 +1,6 @@
 ---
 layout: default
 key: note
-type: note
 title: Rong Zhuang's Notes
 ---
 <div style="background:transparent !important" class="jumbotron">
@@ -16,9 +15,10 @@ title: Rong Zhuang's Notes
                       <h3 class="panel-title">Javascript</h3>
                   </div>
                   <ul class="list-group">
-                      {% for post in site.categories[page.type] %}
-                          <a href="{{ post.url }}" title="{{ post.title }}" class="list-group-item">
-                              <div>{{ post.title }}</div>
+                      {% assign list = (site.note | sort: 'index') | reverse %}
+                      {% for note in list %}
+                          <a href="{{ note.url }}" title="{{ note.title }}" class="list-group-item">
+                              <div>{{ note.title }}</div>
                           </a>
                       {% endfor %}
                   </ul>

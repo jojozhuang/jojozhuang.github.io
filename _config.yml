@@ -5,8 +5,8 @@ name: Rong Zhuang
 
 #permalink: /blog/:year/:month/:day/:title
 permalink: /:categories/:year/:month/:day/:title/
+
 # Setup
-#title: Rong Zhuang
 config:
   url: http://jojozhuang.github.io
   copyright: '&copy; 2017 jojozhuang.github.io, All rights reserved.'
@@ -18,17 +18,42 @@ author:
   phone: '(+1) 650 380 4437'
   linkedin: https://www.linkedin.com/in/rongzhuang
 
-
-pages_list:
-  Portfolio: '/portfolio'
-  Blog: '/blog'
-  CV: '/cv'
-  Course: '/course'
-  About: '/about'
-  Feed: '/atom.xml'
+navlist:
+  - key: portfolio
+    url: /portfolio
+    visible: true
+  - key: blog
+    url: /blog
+    visible: true
+  - key: cv
+    url: /cv
+    visible: false
+  - key: course
+    url: /course
+    visible: false
+  - key: favorite
+    url: /favorite
+    visible: true
+  - key: feed
+    url: /blog/atom.xml"
+    visible: false
+  - key: more
+    url: /#
+    visible: true
+    subkeys: library,note
+    more:
+      - key: library
+        url: /library
+      - key: note
+        url: /note
+  - key: about
+    url: /about
+    visible: true
 
 collections:
   portfolio:
+    output: true
+  note:
     output: true
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
