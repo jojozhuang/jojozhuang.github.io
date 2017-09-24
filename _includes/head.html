@@ -21,8 +21,11 @@
   {% if page.blog == "list" %}
     <link href="/public/css/newslist.css" rel='stylesheet' />
   {% endif %}
-  {% if page.key == "favorite" or page.key == "library" %}
+  {% if page.key == "favorite" %}
     <link href="/public/css/favorite.css" rel='stylesheet' />
+  {% endif %}
+  {% if page.key == "library" %}
+    <link href="/public/css/library.css" rel='stylesheet' />
   {% endif %}
 
   <!-- move to here, script should be inside head, otherwise doesn't work for ie -->

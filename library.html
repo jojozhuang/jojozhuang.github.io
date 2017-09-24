@@ -10,17 +10,57 @@ title: Rong Zhuang's Library
         <div class="main-contents-description">{{favorite.librarydesc}}</div>
         <div class="list">
             {%- for bookmark in favorite.bookmarks -%}
-                <div class="list-item">
+                {% assign idx1 = forloop.index %}
+                <div class="">
                     <div class="list-title">{{ bookmark.category }}</div>
-                    <ul class="list-sub">
+                    <div class="list-category">
                         {%- for link in bookmark.links -%}
-                            <li class="list-sub-item">
-                               <div class="list-sub-title"><a href="{{ link.url }}" class="list-sub-link">{{ link.name }}</a></div>
-                            </li>
+                            {% assign col = forloop.index0 | modulo: 3 %}
+                            {% if col == 0 %}
+                                <div class="row">
+                            {% endif %}
+                                <div class="col-sm-4">
+                                {{ idx1 }}.{{ forloop.index }}
+                                {% if link.postings %}
+                                    {% assign template = "<a href='url' title='name'>name</a><br/>" %}
+                                    {% assign strlink = "" %}
+                                    {%- for posting in link.postings -%}
+                                        {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.name%}
+                                        {% assign strlink = strlink | append: currlink %}
+                                    {%- endfor -%}
+                                {% else %}
+                                    {% assign strlink = "Empty" %}
+                                {% endif %}
+                                <a href="{{ link.url }}" role="button" data-container="body" class="btn popovers pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="test title">{{ link.name }} <span class="badge">{{link.postings.size}}</span></a>
+                                </div>
+
+                            {% if col == 2 or forloop.last == true %}
+                                </div>
+                            {% endif %}
                         {%- endfor -%}
-                    </ul>
+                    </div>
                 </div>
             {%- endfor -%}
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+    //$('[data-toggle="popover"]').popover({html:true});
+    $(".pop").popover({ trigger: "manual" , html: true, animation:false})
+        .on("mouseenter", function () {
+            var _this = this;
+            $(this).popover("show");
+            $(".popover").on("mouseleave", function () {
+                $(_this).popover('hide');
+            });
+        }).on("mouseleave", function () {
+            var _this = this;
+            setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide");
+                }
+            }, 300);
+    });
+});
+</script>
