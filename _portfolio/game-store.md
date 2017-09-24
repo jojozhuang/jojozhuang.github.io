@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Online Game Store"
+title: "Online Game Store(JSP)"
 index: 55
 tags:
   - Java

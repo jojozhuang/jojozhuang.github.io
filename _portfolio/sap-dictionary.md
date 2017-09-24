@@ -11,9 +11,9 @@ excerpt: A WP App for searching SAP & ERP related words.
 category: mobile
 ---
 
-> This app is built for the competition of '2011 Develop Challenge' in SAP Labs. It is developed on Windows Phone platform with C# language.
+> This app is developed on Windows Phone platform with C# language.
 
-## 1. Functions
+## 1. Function
 You can use it as a dictionary to search word from SAP area. Three options:  
 * Glossary: Index by Alphabets
 * Search: Search with input text
@@ -24,11 +24,11 @@ Two languages are supported, English and German. There is a light-weight diction
 ## 2. Home screen  
 ![index](/assets/sapdictionary/index.png "index")  
 ### 2.1. Glossary
-Click on any letter to get the list of the words started with that letter, then click on the word to see the description.
+Click on any alphabet to get the list of the words started with that letter, then click on the word to see the description.
 ![searchindex](/assets/sapdictionary/searchindex.png "searchindex")
 ![result](/assets/sapdictionary/result.png "result")
 ### 2.2 Search  
-Input search text through keyboard
+Input free text for searching through keyboard
 ![inputsearch](/assets/sapdictionary/search.png "inputsearch")
 ### 2.3 3-Character Classic
 Search abbreviation word, similar with Glossary.

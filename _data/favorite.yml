@@ -33,6 +33,10 @@ bookmarks:
         url: https://www.ubuntu.com/
       - name: VirtualBox
         url: https://www.virtualbox.org/
+  - category: Database
+    links:
+      - name: SQLite
+        url: https://www.sqlite.org/
   - category: Algorithm
     links:
       - name: Leetcode
@@ -142,6 +146,9 @@ bookmarks:
         url: http://sdkman.io/
       - name: Log4j
         url: https://logging.apache.org/log4j/2.x/
+      - name: Mono
+        description: Cross platform, open source .NET framework
+        url: http://www.mono-project.com/
   - category: Free Text Editor
     links:
       - name: Atom
