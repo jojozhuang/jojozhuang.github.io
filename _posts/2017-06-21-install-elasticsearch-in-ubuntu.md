@@ -4,7 +4,6 @@ key: blog
 title: "Install Elasticsearch in Ubuntu"
 date: 2017-06-21
 tags: ES Installation
-categories: blog
 ---
 
 > Installation of Elasticsearch.

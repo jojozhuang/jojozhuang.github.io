@@ -4,7 +4,6 @@ key: blog
 title: "Dynamic Debugging with Dynatrace"
 date: 2017-03-05
 tags: Injection, Client
-categories: blog
 ---
 
 > Performance diagnosis tool.

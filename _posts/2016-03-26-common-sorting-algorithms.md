@@ -4,7 +4,6 @@ key: blog
 title: "Common Sorting Algorithms"
 date: 2016-03-26
 tags: Bubble, Quick, Merge
-categories: blog
 ---
 
 > All of the common sorting algorithms.

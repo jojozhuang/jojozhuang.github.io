@@ -4,7 +4,6 @@ key: blog
 title: "Convert Web App to Desktop App with Electron"
 date: 2016-11-08
 tags: Electron, 2048
-categories: blog
 ---
 
 > Electron is used to build cross platform desktop apps with JavaScript, HTML, and CSS. We will use it to wrap a web application of game 2048 and convert it to desktop application.

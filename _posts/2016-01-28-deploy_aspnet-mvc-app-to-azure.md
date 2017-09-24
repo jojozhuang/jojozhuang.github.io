@@ -4,7 +4,6 @@ key: blog
 title: "Deploy ASP.NET MVC Application to Azure"
 date: 2016-01-28
 tags: Azure, ASP.NET
-categories: blog
 ---
 
 > This blog guides you how to deploy your ASP.NET/MVC application to Microsoft Azure Cloud Server with Azure SQL database, and how to connect Azure DB server from local machine.

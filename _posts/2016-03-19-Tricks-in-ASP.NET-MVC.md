@@ -4,7 +4,6 @@ key: blog
 title: "Tricks in ASP.NET MVC"
 date: 2016-03-19
 tags: Action URL, ValidationSummary
-categories: blog
 ---
 
 > ASP.NET MVC is a great framework for developing MVC web applications. However, there are some tricky "bugs" you may encounter.

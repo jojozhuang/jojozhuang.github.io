@@ -4,7 +4,6 @@ key: blog
 title: "Data Structure - Segment Tree"
 date: 2016-04-03
 tags: Range Search
-categories: blog
 ---
 
 > Segment Tree (a.k.a Interval Tree) is an advanced data structure which can support queries like:

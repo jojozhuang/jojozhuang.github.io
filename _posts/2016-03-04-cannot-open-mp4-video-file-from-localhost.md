@@ -4,7 +4,6 @@ key: blog
 title: "Cannot open mp4 video file from localhost"
 date: 2016-03-04
 tags: IIS, MIME
-categories: blog
 ---
 
 I'm building a web application with ASP.NET MVC in Visual Studio 2015. When testing the app locally, there is a page which contains a video file doesn't work. Web browser is unable to play the mp4 video. If I copy the video URL(eg. http://localhost:22962/204304/Video/lecture.mp4) to Chrome's address bar, it can be accessed but without being played. That means the video URL is correct, there must be other reasons.

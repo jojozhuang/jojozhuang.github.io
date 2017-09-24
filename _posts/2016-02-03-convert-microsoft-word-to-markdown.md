@@ -4,7 +4,6 @@ key: blog
 title: "Convert Microsoft Word to Markdown"
 date: 2016-02-03
 tags: Markdown, Writage
-categories: blog
 ---
 
 After I setup [this personal website](http://jojozhuang.github.io/) on github, I post blogs and portfolios aperiodically. It's great to use markdown to edit page content. However, it is not easy to add images into the page.

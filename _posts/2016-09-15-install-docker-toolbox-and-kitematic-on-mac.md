@@ -4,7 +4,6 @@ key: blog
 title: "Install Docker Toolbox and Kitematic on Mac"
 date: 2016-09-15
 tags: Docker, Kitematic
-categories: blog
 ---
 
 > Use Kitematic to easily manage docker containers without using Docker command-line.

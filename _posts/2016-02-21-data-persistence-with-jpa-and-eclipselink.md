@@ -4,7 +4,6 @@ key: blog
 title: "Data Persistence with JPA & Eclipselink"
 date: 2016-02-21
 tags: JPA, Eclipselink, ORM
-categories: blog
 ---
 
 > Use JPA and Eclipselink to persistent data into database.

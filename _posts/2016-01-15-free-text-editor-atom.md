@@ -4,7 +4,6 @@ key: blog
 title: "Free Text Editor - Atom"
 date: 2016-01-15
 tags: Shortcut, Plug-ins
-categories: blog
 ---
 
 > I use [Atom](https://atom.io/) to create blogs for this website. The main reason I choose Atom is because it is a cross-platform text editor. You can have the same user experience when using it on MacBook as well as on Linux.

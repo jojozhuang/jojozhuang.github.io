@@ -1,7 +1,6 @@
 ---
 layout: default
 key: blog
-type: blog
 blog: list
 title: Rong Zhuang's Blog
 ---
@@ -23,7 +22,7 @@ title: Rong Zhuang's Blog
           <div class="row">
               <h2>{{ page.title }}</h2>
               <dl class="dl-unsur">
-                {% for post in site.categories[page.type] %}
+                {% for post in site.posts %}
                   <dd>
                     <a href="{{ post.url }}" title="{{ post.title }}">
                         <div>{{ post.title }}</div>

@@ -4,7 +4,6 @@ key: blog
 title: "Run Multiple Containers with Docker Compose"
 date: 2016-09-30
 tags: Docker, Compose
-categories: blog
 ---
 
 > Tutorial for how to define and run multiple containers with Docker Compose.

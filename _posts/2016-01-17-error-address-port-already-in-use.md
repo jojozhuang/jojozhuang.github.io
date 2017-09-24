@@ -4,7 +4,6 @@ key: blog
 title: "Error: Address/Port Already in Use"
 date: 2016-01-17
 tags: Jekyll, Port
-categories: blog
 ---
 
 > Unable to run Jekyll at port 4000.

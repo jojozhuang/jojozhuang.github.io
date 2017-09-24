@@ -51,4 +51,4 @@ Class diagram shows the design of this app based on Xamarin framework.
 * [Source files of Course Player on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerXamarin)
 
 ## 7. Document
-* [Xamarin Research Report]({% link /public/docs/xamarin_research.pdf %})
+* [Xamarin Research Document]({% link /public/docs/xamarin_research.pdf %})

@@ -4,7 +4,6 @@ key: blog
 title: "Enable Tomcat Debugging in Docker for Eclipse"
 date: 2016-09-22
 tags: Docker, Debug
-categories: blog
 ---
 
 > Tutorial for how to setup remote debugging in Eclipse for tomcat in Docker.

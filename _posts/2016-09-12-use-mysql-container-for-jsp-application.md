@@ -4,7 +4,6 @@ key: blog
 title: "Use Mysql Container for JSP Application"
 date: 2016-09-12
 tags: Mysql, Docker
-categories: blog
 ---
 
 > Introduce how to user Mysql Docker Container as database for JSP Application.

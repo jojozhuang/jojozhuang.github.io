@@ -4,7 +4,6 @@ key: blog
 title: "Install and Use Git"
 date: 2016-02-15
 tags: GitHub, SourceTree
-categories: blog
 ---
 
 > Use Git and GitHub as source control tool to manage code revisions.

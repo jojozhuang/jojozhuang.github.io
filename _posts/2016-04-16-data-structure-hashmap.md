@@ -4,7 +4,6 @@ key: blog
 title: "Data Structure - HashMap"
 date: 2016-04-16
 tags: HashKey, Equals
-categories: blog
 ---
 
 > HashMap

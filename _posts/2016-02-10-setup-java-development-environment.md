@@ -4,7 +4,6 @@ key: blog
 title: "Setup Java Development Environment"
 date: 2016-02-10
 tags: VirtualBox, Ubuntu, JDK
-categories: blog
 ---
 
 > Setup JAVA development environment with the most popular OS, web server, IDE, etc.

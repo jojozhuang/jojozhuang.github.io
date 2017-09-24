@@ -4,7 +4,6 @@ key: blog
 title: "Bit Manipulation"
 date: 2016-04-25
 tags: XOR, Shifting
-categories: blog
 ---
 
 > Bit Manipulation

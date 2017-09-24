@@ -4,7 +4,6 @@ key: blog
 title: "Advanced Topics in Elasticsearch"
 date: 2017-06-29
 tags: DSL Query, Filter
-categories: blog
 ---
 
 > Advanced Search Queries in Elastic Search.

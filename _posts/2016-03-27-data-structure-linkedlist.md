@@ -4,7 +4,6 @@ key: blog
 title: "Data Structure - Linked List"
 date: 2016-03-27
 tags: Reverse, Middle
-categories: blog
 ---
 
 > A linked list is represented by a sequence of nodes. It is a basic data structure and used in many other structures. For example, linked list can be used to build stack.

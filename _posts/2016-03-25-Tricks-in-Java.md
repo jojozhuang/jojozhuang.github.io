@@ -4,7 +4,6 @@ key: blog
 title: "Tricks in Java"
 date: 2016-03-25
 tags: Pass-by-reference
-categories: blog
 ---
 
 > This blog records some tricky cases when using Java.

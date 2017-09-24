@@ -4,7 +4,6 @@ key: blog
 title: "Data Structure - Stack"
 date: 2016-03-29
 tags: LIFO, LinkedList
-categories: blog
 ---
 
 > A stack uses LIFO (last-in first-out) ordering.

@@ -4,7 +4,6 @@ key: blog
 title: "Liquid for Jekyll"
 date: 2016-01-19
 tags: Jekyll, Liquid
-categories: blog
 ---
 
 > Useful tricks of Liquid, which are used along with Jekyll for GitHub Page.
