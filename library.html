@@ -22,19 +22,20 @@ title: Rong Zhuang's Library
                                 <div class="col-sm-4">
                                 {{ idx1 }}.{{ forloop.index }}
                                 {% assign template = "<a href='url' title='name'>name</a><br/>" %}
-                                {% assign list = (site.posts | where: "category", {{category.type}}) | sort: 'index') | reverse %}
-                                {% if link.postings %}
-                                    {% assign strlink = "" %}
-                                    {%- for posting in link.postings -%}
-                                        {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.name%}
+                                {% assign strlink = "" %}
+                                {% assign tag = link.name | downcase %}
+                                {% assign counter = 0 %}
+                                {% for posting in site.posts %}
+                                    {% assign posttag = posting.tags | downcase %}
+                                    {% if posttag contains tag %}
+                                        {% assign counter = counter | plus:1 %}
+                                        {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.title%}
                                         {% assign strlink = strlink | append: currlink %}
-                                    {%- endfor -%}
-                                {% else %}
-                                    {% assign strlink = "Empty" %}
-                                {% endif %}
+                                    {% endif %}
+                                {%- endfor -%}
                                 {% assign popoverlink = template | replace: "url", link.url | replace: "name", link.url%}
                                 {% assign strlink = strlink | append: "<hr>" | append: popoverlink %}
-                                <a href="{{ link.url }}" role="button" data-container="body" class="btn popovers pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge">{{link.postings.size}}</span></a>
+                                <a href="{{ link.url }}" role="button" data-container="body" class="btn popovers pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge">{% if counter > 0 %}{{counter}}{% endif %}</span></a>
                                 </div>
 
                             {% if col == 2 or forloop.last == true %}
