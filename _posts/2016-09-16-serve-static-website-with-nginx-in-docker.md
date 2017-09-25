@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Serve Static Website With Nginx In Docker"
 date: 2016-09-16
-tags: Docker, Nginx
+tags: [Docker, Nginx]
 ---
 
 > Guide how to serve static website in Nginx with Kitematic.

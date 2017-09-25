@@ -3,10 +3,7 @@ layout: portfolio
 key: portfolio
 title: "Trip Planner"
 index: 40
-tags:
-  - iOS
-  - Swift
-  - XCode
+tags: [iOS, Swift, XCode]
 image: /assets/travelnote/thumbnail.png
 excerpt: An iOS App for managing itineraries, built with Swift.
 category: mobile

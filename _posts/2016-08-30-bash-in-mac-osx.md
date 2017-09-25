@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Bash in Mac OSX"
 date: 2016-08-30
-tags: Bash, Shell
+tags: [Mac, Bash, Shell]
 ---
 
 > This blog records some common settings or issues when dealing with Bash or other shell tools on Linux or Mac OS X.

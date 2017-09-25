@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Setup Java Development Environment"
 date: 2016-02-10
-tags: VirtualBox, Ubuntu, JDK
+tags: [VirtualBox, Ubuntu, Tomcat, Eclipse, JDK]
 ---
 
 > Setup JAVA development environment with the most popular OS, web server, IDE, etc.

@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Queue"
 date: 2016-03-31
-tags: FIFO, Array
+tags: [FIFO, Array]
 ---
 
 > A queue implements FIFO (first-in first-out) ordering.

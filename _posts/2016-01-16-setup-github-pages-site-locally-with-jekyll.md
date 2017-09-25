@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Setup GitHub Pages Site Locally With Jekyll"
 date: 2016-01-16
-tags: Ruby, Jekyll
+tags: [GitHub Pages, Jekyll, Ruby]
 ---
 
 > Set up a local version of Jekyll GitHub Pages site to test changes before submitting to github.

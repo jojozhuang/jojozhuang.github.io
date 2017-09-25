@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Deploy ASP.NET MVC Application to IIS"
 date: 2016-01-25
-tags: IIS, ASP.NET
+tags: [IIS, ASP.NET]
 ---
 
 > This blog guides you how to deploy your ASP.NET/MVC application to local IIS web server. And make it public to internet.

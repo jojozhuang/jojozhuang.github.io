@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Tree"
 date: 2016-04-02
-tags: Pre-Order, Post-Order, In-Order
+tags: [Pre-Order, Post-Order, In-Order]
 ---
 
 > A tree is a data structure composed of nodes.The tree cannot contain cycles. The nodes mayor may not be in a particular order, they could have any data type as values, and they mayor may not have links back to their parent nodes.

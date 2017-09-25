@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Run Multiple Containers with Docker Compose"
 date: 2016-09-30
-tags: Docker, Compose
+tags: [Docker, Compose]
 ---
 
 > Tutorial for how to define and run multiple containers with Docker Compose.

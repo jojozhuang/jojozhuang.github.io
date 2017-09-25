@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Tricks in Java"
 date: 2016-03-25
-tags: Pass-by-reference
+tags: [Java]
 ---
 
 > This blog records some tricky cases when using Java.

@@ -28,7 +28,7 @@ title: Rong Zhuang's Blog
                         <div>{{ post.title }}</div>
                     </a>
                     <div class="pull-left"><p class="small pull-left" ><span class="glyphicon glyphicon-calendar"></span> {{ post.date | date_to_string }}</p></div>
-                    <div class="tag pull-right">{{ post.tags }}</div>
+                    <div class="tag pull-right">{{ post.tags | array_to_sentence_string}}</div>
                   </dd>
                 {% endfor %}
               </dl>

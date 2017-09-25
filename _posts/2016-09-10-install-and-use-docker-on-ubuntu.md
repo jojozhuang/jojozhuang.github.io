@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Install and Use Docker on Ubuntu"
 date: 2016-09-10
-tags: Docker, Docker Hub
+tags: [Docker, Docker Hub]
 ---
 
 > Introduce how to install and use docker

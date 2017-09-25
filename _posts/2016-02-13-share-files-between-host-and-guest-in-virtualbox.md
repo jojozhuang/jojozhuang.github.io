@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Share files between Host and Guest in VirtualBox"
 date: 2016-02-13
-tags: VM, File Sharing
+tags: [VirtualBox, Ubuntu, Mac]
 ---
 
 > When using VirtualBox, we properly need to share files between the host machine and the guest machine. This posting guides you how to achieve bidirectional file sharing between MacOS host and Ubuntu guest.

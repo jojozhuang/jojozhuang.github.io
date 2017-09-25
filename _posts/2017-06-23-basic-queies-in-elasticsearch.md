@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Basic Queries in Elasticsearch"
 date: 2017-06-23
-tags: CRUD, Search
+tags: [Elasticsearch]
 ---
 
 > Notes for Elastic Search.

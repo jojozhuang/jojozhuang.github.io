@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Create Tomcat Image with Docker File"
 date: 2016-09-25
-tags: Dockerfile, Tomcat
+tags: [Docker, Dockerfile, Tomcat]
 ---
 
 > Tutorial for how to create tomcat image with Dockerfile.

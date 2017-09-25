@@ -37,6 +37,11 @@ bookmarks:
       - name: The Modern JavaScript Tutorial
         description: A good tutorial for javascript
         url: https://javascript.info/
+  - category: Knowledge
+    links:
+      - name: WebSocket
+        description: A computer communications protocol
+        url: https://en.wikipedia.org/wiki/WebSocket
   - category: Basis
     links:
       - name: Ubuntu
@@ -135,9 +140,24 @@ bookmarks:
       - name: highlight.js
         description: Javascript syntax highlighter
         url: https://highlightjs.org/
+      - name: Git
+        description: A free and open source distributed version control system
+        url: https://git-scm.com/
+      - name: SourceTree
+        description: A free Git client for Windows and Mac
+        url: https://www.sourcetreeapp.com/
+      - name: GitHub
+        description: A web-based Git or version control repository
+        url: https://github.com/
       - name: Github Page
-        description: Free website hoster
+        description: Free internet hosting service
         url: https://pages.github.com/
+      - name: Putty
+        description: A free SSH and telnet client for Windows
+        url: http://www.putty.org/
+      - name: Cyberduck
+        description: A free FTP clients for Mac and Windows
+        url: https://jekyllrb.com/
       - name: Jekyll
         description: A blog-aware, static site generator in Ruby.
         url: https://jekyllrb.com/
@@ -150,7 +170,7 @@ bookmarks:
       - name: Socket.IO
         description: Real-time bidirectional event-based communication
         url: https://socket.io/
-      - name: ASP.NET SignalR
+      - name: SignalR
         description: Allow bi-directional communication between server and client
         url: https://www.asp.net/signalr
   - category: Open Source/Popular Projects
@@ -158,11 +178,6 @@ bookmarks:
       - name: Docker
         description: A software technology providing containers
         url: https://www.docker.com/
-        postings:
-          - name: Install and Use Docker on Ubuntu
-            url: /blog/2016/09/10/install-and-use-docker-on-ubuntu/
-          - name: Create Mysql Image with Docker File
-            url: /blog/2016/09/27/create-mysql-image-with-docker-file/
       - name: Kitematic
         description: A tool to maintain docker containers through GUI
         url: https://kitematic.com/
@@ -181,7 +196,10 @@ bookmarks:
       - name: Dynatrace
         description: A performance monitoring tool
         url: https://www.dynatrace.com/
-      - name: Apache Tomcat
+      - name: IIS
+        description: Internet Information Services, Microsoft's web server
+        url: https://tomcat.apache.org/
+      - name: Tomcat
         description: An open source web server
         url: https://tomcat.apache.org/
       - name: Nginx
@@ -211,6 +229,9 @@ bookmarks:
       - name: Mono
         description: A cross-platform, open-source .NET framework
         url: http://www.mono-project.com/
+      - name: Writage
+        description: Markdown plugin for Microsoft Word
+        url: http://www.writage.com/
   - category: Free Text Editor
     links:
       - name: Atom

@@ -130,3 +130,15 @@
 #example {
     position:relative;
 }
+.popover{
+    max-width:600px;
+}
+ul {
+    padding-left: 10px;
+}
+.icon-blog {
+    color: #3366ff;
+}
+.icon-portfolio {
+    color: #5CB85C;
+}

@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Liquid for Jekyll"
 date: 2016-01-19
-tags: Jekyll, Liquid
+tags: [Jekyll, Liquid]
 ---
 
 > Useful tricks of Liquid, which are used along with Jekyll for GitHub Page.

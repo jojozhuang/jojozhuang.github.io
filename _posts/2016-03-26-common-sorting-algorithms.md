@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Common Sorting Algorithms"
 date: 2016-03-26
-tags: Bubble, Quick, Merge
+tags: [Bubble, Quick, Merge]
 ---
 
 > All of the common sorting algorithms.

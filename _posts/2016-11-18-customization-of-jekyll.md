@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Customization of Jekyll"
 date: 2016-11-18
-tags: Jekyll
+tags: [Jekyll]
 ---
 
 > Several useful approaches used to customize Jekyll for my personal website hosted on GitHub Pages.

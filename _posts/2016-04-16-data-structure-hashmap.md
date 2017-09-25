@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - HashMap"
 date: 2016-04-16
-tags: HashKey, Equals
+tags: [HashKey, Equals]
 ---
 
 > HashMap

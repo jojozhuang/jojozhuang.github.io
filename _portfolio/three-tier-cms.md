@@ -3,10 +3,7 @@ layout: portfolio
 key: portfolio
 title: "Three-Tier CMS"
 index: 15
-tags:
-  - BLL/DAL/Model
-  - ASP.NET
-  - C#
+tags: [BLL/DAL/Model, ASP.NET, C#]
 image: /assets/threetiercms/thumbnail.png
 excerpt: A Content Management System(CMS) built with classic ASP.NET Webform.
 category: dotnet

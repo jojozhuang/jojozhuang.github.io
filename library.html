@@ -3,14 +3,6 @@ layout: default
 key: library
 title: Rong Zhuang's Library
 ---
-<style type="text/css">
-    .popover{
-        max-width:600px;
-    }
-    ul {
-        padding-left: 10px;
-    }
-</style>
 <div class="main-contents">
     <div class="main-contents-inner">
         {%- assign favorite = site.data.favorite -%}
@@ -29,7 +21,7 @@ title: Rong Zhuang's Library
                             {% endif %}
                                 <div class="col-sm-4">
                                 {{ idx1 }}.{{ forloop.index }}
-                                {% assign template = "<li><a href='url' title='name'>name</a></li>" %}
+                                {% assign template = "<li><a href='url' title='name' >name </a><span class='glyphicon glyphicon-file icon-blog'></span></li>" %}
                                 {% assign strlink = "<ul>" %}
                                 {% assign tag = link.name | downcase %}
                                 {% assign counter = 0 %}
@@ -38,6 +30,15 @@ title: Rong Zhuang's Library
                                     {% if posttag contains tag %}
                                         {% assign counter = counter | plus:1 %}
                                         {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.title%}
+                                        {% assign strlink = strlink | append: currlink %}
+                                    {% endif %}
+                                {%- endfor -%}
+                                {% assign template = "<li><a href='url' title='name' >name </a><span class='glyphicon glyphicon-briefcase icon-portfolio'></span></li>" %}
+                                {% for portfl in site.portfolio %}
+                                    {% assign portfltag = portfl.tags | downcase %}
+                                    {% if portfltag contains tag %}
+                                        {% assign counter = counter | plus:1 %}
+                                        {% assign currlink = template | replace: "url", portfl.url | replace: "name", portfl.title%}
                                         {% assign strlink = strlink | append: currlink %}
                                     {% endif %}
                                 {%- endfor -%}

@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Install Jenkins On Ubuntu and Docker"
 date: 2016-10-05
-tags: Jenkins, Docker
+tags: [Docker, Ubuntu, Jenkins]
 ---
 
 > Introduce how to install Jenkins on Ubuntu and create Jenkins container in Docker.

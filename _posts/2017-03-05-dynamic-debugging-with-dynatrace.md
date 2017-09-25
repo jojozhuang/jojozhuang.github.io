@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Dynamic Debugging with Dynatrace"
 date: 2017-03-05
-tags: Injection, Client
+tags: [Dynatrace]
 ---
 
 > Performance diagnosis tool.

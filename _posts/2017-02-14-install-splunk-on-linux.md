@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Install Splunk on Linux"
 date: 2017-02-14
-tags: Installation
+tags: [RedHat, Ubuntu, Splunk]
 ---
 
 > The first time I came to know Splunk is when I was taking a class about cyber security. The teacher used Splunk to analyze the logs of user login history to find out some suspicious behaviors. Splunk is a good tool for searching the unstructured documents. I use it to filter data from log files and also use it for analyzing performance issues.

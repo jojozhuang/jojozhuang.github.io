@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Tricks For Algorithm"
 date: 2016-04-27
-tags: Binary Search, Subset, Big O
+tags: [Binary Search, Subset, Big O]
 ---
 
 > Useful tricks for algorithm, Java.

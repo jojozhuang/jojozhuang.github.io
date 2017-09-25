@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Java Remote Debug with Eclipse"
 date: 2016-03-22
-tags: Remote Debugging
+tags: [Eclipse, Remote Debugging]
 ---
 
   |   |  

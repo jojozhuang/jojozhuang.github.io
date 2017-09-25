@@ -3,10 +3,7 @@ layout: portfolio
 key: portfolio
 title: "Shoe Store"
 index: 25
-tags:
-  - ASP.NET MVC
-  - C#
-  - Bootstrap
+tags: [ASP.NET MVC, C#, Bootstrap]
 image: /assets/shoestore/thumbnail.png
 excerpt: An online store website with responsive UI, developed with ASP.NET MVC.
 category: dotnet

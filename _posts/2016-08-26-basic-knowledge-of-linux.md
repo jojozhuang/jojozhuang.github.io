@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Basic Knowledge of Linux"
 date: 2016-08-26
-tags: Shell, Bash, scp
+tags: [Linx, Shell, Bash, scp]
 ---
 
 > This blog records some base knowledge of linux and tools.

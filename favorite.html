@@ -15,7 +15,7 @@ title: Rong Zhuang's Favorite Bookmarks
                     <ul class="list-sub">
                         {%- for link in bookmark.links -%}
                             <li class="list-sub-item">
-                               <div class="list-sub-title"><a href="{{ link.url }}" class="list-sub-link">{{ link.name }}</a></div>
+                               <div class="list-sub-title"><a href="{{ link.url }}" class="list-sub-link" data-container="body" data-toggle="tooltip" data-placement="right" title="{{ link.description }}">{{ link.name }}</a></div>
                             </li>
                         {%- endfor -%}
                     </ul>
@@ -24,3 +24,8 @@ title: Rong Zhuang's Favorite Bookmarks
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>

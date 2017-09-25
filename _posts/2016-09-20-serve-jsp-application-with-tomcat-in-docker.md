@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Serve JSP Application With Tomcat In Docker"
 date: 2016-09-20
-tags: Docker, Tomcat
+tags: [Docker, Tomcat]
 ---
 
 > Guide how to serve Java Servlet/JSP website in Apache Tomcat Container with Kitematic.
