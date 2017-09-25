@@ -21,8 +21,9 @@ title: Rong Zhuang's Library
                             {% endif %}
                                 <div class="col-sm-4">
                                 {{ idx1 }}.{{ forloop.index }}
+                                {% assign template = "<a href='url' title='name'>name</a><br/>" %}
+                                {% assign list = (site.posts | where: "category", {{category.type}}) | sort: 'index') | reverse %}
                                 {% if link.postings %}
-                                    {% assign template = "<a href='url' title='name'>name</a><br/>" %}
                                     {% assign strlink = "" %}
                                     {%- for posting in link.postings -%}
                                         {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.name%}
@@ -31,7 +32,9 @@ title: Rong Zhuang's Library
                                 {% else %}
                                     {% assign strlink = "Empty" %}
                                 {% endif %}
-                                <a href="{{ link.url }}" role="button" data-container="body" class="btn popovers pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="test title">{{ link.name }} <span class="badge">{{link.postings.size}}</span></a>
+                                {% assign popoverlink = template | replace: "url", link.url | replace: "name", link.url%}
+                                {% assign strlink = strlink | append: "<hr>" | append: popoverlink %}
+                                <a href="{{ link.url }}" role="button" data-container="body" class="btn popovers pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge">{{link.postings.size}}</span></a>
                                 </div>
 
                             {% if col == 2 or forloop.last == true %}
@@ -47,6 +50,7 @@ title: Rong Zhuang's Library
 <script>
 $(document).ready(function(){
     //$('[data-toggle="popover"]').popover({html:true});
+    // keep bootstrap popover alive while the popover is being hovered
     $(".pop").popover({ trigger: "manual" , html: true, animation:false})
         .on("mouseenter", function () {
             var _this = this;

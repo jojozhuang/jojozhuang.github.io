@@ -1,10 +1,7 @@
 markdown: kramdown
 highlighter: rouge
 
-name: Rong Zhuang
-
-#permalink: /blog/:year/:month/:day/:title
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 # Setup
 config:

@@ -6,164 +6,233 @@ bookmarks:
   - category: Online Tools
     links:
       - name: Markdown Cheatsheet
+        description: Quick reference and showcase for Markdown
         url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
       - name: XML Formatter
+        description: Format XML string
         url: https://www.freeformatter.com/xml-formatter.html
       - name: HTML Formatter
+        description: Format HTML string
         url: https://www.freeformatter.com/html-formatter.html
       - name: HTML Escape/Unescape
+        description: Escapes/unescapes HTML
         url: https://www.freeformatter.com/html-escape.html
       - name: JSON Formatter
+        description: Format JSON string
         url: https://www.freeformatter.com/json-formatter.html
       - name: CSS Formatter
+        description: Format CSS string
         url: https://www.cleancss.com/css-beautify/
       - name: Icon Converter
+        description: Convert PNG to ICO/ICNS
         url: https://iconverticons.com/online/
   - category: Online Learning
     links:
-      - name: w3schools
+      - name: W3Schools
+        description: A popular web site for learning web technologies
         url: https://www.w3schools.com/
-      - name: tutorialspoint
+      - name: TutorialsPoint
+        description: Huge amount of tutorials for different technologies
         url: https://www.tutorialspoint.com/
       - name: The Modern JavaScript Tutorial
+        description: A good tutorial for javascript
         url: https://javascript.info/
   - category: Basis
     links:
       - name: Ubuntu
+        description: An open source operating system
         url: https://www.ubuntu.com/
+      - name: RedHat
+        description: Another linux-based operating system
+        url: https://www.redhat.com
       - name: VirtualBox
+        description: A free virtual machine box
         url: https://www.virtualbox.org/
   - category: Database
     links:
+      - name: Mysql
+        description: The most popular Open Source RDBMS
+        url: https://www.mysql.com/
       - name: SQLite
+        description: A light-weight embedded database
         url: https://www.sqlite.org/
   - category: Algorithm
     links:
       - name: Leetcode
+        description: Practice algorithms online
         url: https://leetcode.com/problemset/algorithms/
       - name: Lintcode
+        description: Practice algorithms online
         url: http://www.lintcode.com/en/problem/
-      - name: jiuzhang(Chinese)
+      - name: JiuZhang(Chinese)
+        description: A chinese algorithms training website
         url: http://www.jiuzhang.com/
   - category: Cloud
     links:
       - name: Amazon EC2
+        description: World largest cloud platform
         url: https://aws.amazon.com/ec2/
       - name: Google Cloud
+        description: Google's cloud platform
         url: https://cloud.google.com/
       - name: Microsoft Azure
+        description: Microsoft's cloud platform
         url: https://azure.microsoft.com
       - name: Heroku
+        description: A PaaS platform supported by Salesforce
         url: https://www.heroku.com/
   - category: Big Data/AI
     links:
       - name: IBM Watson
+        description: An AI system developed by IBM
         url: https://www.ibm.com/watson
   - category: Mobile Development
     links:
       - name: Android
+        description: A mobile OS based on Linux kernel
         url: https://www.android.com/
       - name: Genymotion
+        description: An Android emulation tool
         url: https://www.genymotion.com/
       - name: Xamarin
+        description: Cross-platform solution for mobile apps
         url: https://www.xamarin.com/
       - name: Cordova
+        description: Cross-platform solution for mobile apps
         url: https://cordova.apache.org/
   - category: Frontend
     links:
       - name: ReactJS
+        description: A javascript library maintained by Facebook
         url: https://facebook.github.io/react/
       - name: AngularJs
+        description: A javascript library maintained by Google
         url: https://angularjs.org/
       - name: Bootstrap
+        description: A free framework for developing responsive, mobile-first web sites.
         url: http://getbootstrap.com/
       - name: Jquery
+        description: A popular JavaScript library
         url: https://jquery.com/
       - name: Less
+        description: A dynamic style sheet language
         url: http://lesscss.org/
       - name: Sass
+        description: Another style sheet language
         url: http://sass-lang.com/
       - name: JSON
+        description: A lightweight data-interchange format
         url: http://www.json.org/
       - name: Type Script
+        description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
       - name: Bootstrap Templates
+        description: Free Bootstrap themes and templates
         url: https://bootsnipp.com
       - name: Generate Bootstrap Navbar
+        description: Generate your own Bootstrap navbar
         url: https://work.smarchal.com/twbscolor/
       - name: highlight.js
+        description: Javascript syntax highlighter
         url: https://highlightjs.org/
       - name: Github Page
+        description: Free website hoster
         url: https://pages.github.com/
       - name: Jekyll
+        description: A blog-aware, static site generator in Ruby.
         url: https://jekyllrb.com/
       - name: Liquid
+        description: An open-source template language written in Ruby
         url: https://shopify.github.io/liquid/
       - name: Electron
+        description: Build cross-platform desktop apps with JavaScript, HTML, and CSS.
         url: https://electron.atom.io/
       - name: Socket.IO
+        description: Real-time bidirectional event-based communication
         url: https://socket.io/
       - name: ASP.NET SignalR
+        description: Allow bi-directional communication between server and client
         url: https://www.asp.net/signalr
   - category: Open Source/Popular Projects
     links:
       - name: Docker
+        description: A software technology providing containers
         url: https://www.docker.com/
         postings:
           - name: Install and Use Docker on Ubuntu
             url: /blog/2016/09/10/install-and-use-docker-on-ubuntu/
           - name: Create Mysql Image with Docker File
             url: /blog/2016/09/27/create-mysql-image-with-docker-file/
-      - name: kitematic
+      - name: Kitematic
+        description: A tool to maintain docker containers through GUI
         url: https://kitematic.com/
       - name: Node.js
+        description: A JavaScript runtime built on Chrome's V8 JavaScript engine
         url: https://nodejs.org/
       - name: Jenkins
+        description: An open source automation server written in Java
         url: https://jenkins.io/
-      - name: Splunk(Log)
+      - name: Splunk
+        description: Search, analyze and visualize the machine-generated data
         url: https://www.splunk.com/
       - name: Elasticsearch
+        description: A distributed, RESTful search and analytics engine
         url: https://www.elastic.co/
       - name: Dynatrace
+        description: A performance monitoring tool
         url: https://www.dynatrace.com/
       - name: Apache Tomcat
+        description: An open source web server
         url: https://tomcat.apache.org/
       - name: Nginx
+        description: A free, open-source, high-performance HTTP server
         url: https://nginx.org
-      - name: Mysql
-        url: https://www.mysql.com/
       - name: Jersey
+        description: An open-source RESTful Web Services framework
         url: https://jersey.github.io/
-      - name: Maven
+      - name: Apache Maven
+        description: A software project management and comprehension tool
         url: https://maven.apache.org/
       - name: Gradle
+        description: An open source build automation system
         url: https://gradle.org/
       - name: Scala
+        description: A programming language based on Java
         url: https://www.scala-lang.org/
       - name: Groovy
+        description: A powerful, optionally typed and dynamic languag
         url: http://groovy-lang.org/
       - name: SDKMAN
+        description: A tool for managing parallel versions of multiple SDKs
         url: http://sdkman.io/
       - name: Log4j
+        description: A popular logging package written in Java
         url: https://logging.apache.org/log4j/2.x/
       - name: Mono
-        description: Cross platform, open source .NET framework
+        description: A cross-platform, open-source .NET framework
         url: http://www.mono-project.com/
   - category: Free Text Editor
     links:
       - name: Atom
+        description: A free source code editor for macOS, Linux, and Windows
         url: https://atom.io/
       - name: Notepad++
+        description: a free source code editor for Microsoft Windows
         url: https://notepad-plus-plus.org/
   - category: Integrated Development Environment(IDE)
     links:
-      - name: Eclipse(Java)
+      - name: Eclipse
+        description: A free Java IDE
         url: https://eclipse.org
-      - name: Netbeans(Java)
+      - name: Netbeans
+        description: Another free Java IDE
         url: https://netbeans.org/
-      - name: Visual Studio Code(Web)
+      - name: Visual Studio Code
+        description: A free code editor for web and cloud applications
         url: https://code.visualstudio.com/
       - name: Xcode
+        description: An IDE for macOS
         url: https://developer.apple.com/xcode/
       - name: Android Studio
+        description: The official IDE for Android
         url: https://developer.android.com/studio/index.html
