@@ -3,6 +3,14 @@ layout: default
 key: library
 title: Rong Zhuang's Library
 ---
+<style type="text/css">
+    .popover{
+        max-width:600px;
+    }
+    ul {
+        padding-left: 10px;
+    }
+</style>
 <div class="main-contents">
     <div class="main-contents-inner">
         {%- assign favorite = site.data.favorite -%}
@@ -21,8 +29,8 @@ title: Rong Zhuang's Library
                             {% endif %}
                                 <div class="col-sm-4">
                                 {{ idx1 }}.{{ forloop.index }}
-                                {% assign template = "<a href='url' title='name'>name</a><br/>" %}
-                                {% assign strlink = "" %}
+                                {% assign template = "<li><a href='url' title='name'>name</a></li>" %}
+                                {% assign strlink = "<ul>" %}
                                 {% assign tag = link.name | downcase %}
                                 {% assign counter = 0 %}
                                 {% for posting in site.posts %}
@@ -33,8 +41,12 @@ title: Rong Zhuang's Library
                                         {% assign strlink = strlink | append: currlink %}
                                     {% endif %}
                                 {%- endfor -%}
-                                {% assign popoverlink = template | replace: "url", link.url | replace: "name", link.url%}
-                                {% assign strlink = strlink | append: "<hr>" | append: popoverlink %}
+                                {% assign strlink = strlink | append: "</ul>" %}
+                                {% assign popoverlink = "<a href='url' title='name'>name</a>" | replace: "url", link.url | replace: "name", link.url%}
+                                {% if counter > 0 %}
+                                    {% assign strlink = strlink | append: "<hr>" %}
+                                {% endif %}
+                                {% assign strlink = strlink | append: popoverlink %}
                                 <a href="{{ link.url }}" role="button" data-container="body" class="btn popovers pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge">{% if counter > 0 %}{{counter}}{% endif %}</span></a>
                                 </div>
 
