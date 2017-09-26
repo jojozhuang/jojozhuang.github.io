@@ -12,7 +12,7 @@ I'm trying to run my [GitHub website](http://jojozhuang.github.io/) locally with
 ```sh
 jekyll 3.5.2 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
 ```
-Port 4000 has already been occupied. To solve, kill the process that is using this port, which is 4000.
+Port 4000 has already been occupied. To solve this issue, kill the process that is using this port.  
 Find the process which is using port 4000.
 ```sh
 lsof -i :4000

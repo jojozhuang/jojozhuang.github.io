@@ -39,9 +39,15 @@ bookmarks:
         url: https://javascript.info/
   - category: Knowledge
     links:
+      - name: Markdown
+        description: A lightweight markup language with plain text formatting syntax
+        url: https://en.wikipedia.org/wiki/Markdown
       - name: WebSocket
         description: A computer communications protocol
         url: https://en.wikipedia.org/wiki/WebSocket
+      - name: CORS
+        description: Cross-origin resource sharing
+        url: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
   - category: Basis
     links:
       - name: Ubuntu

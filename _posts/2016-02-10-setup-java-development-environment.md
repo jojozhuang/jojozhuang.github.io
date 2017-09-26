@@ -15,22 +15,28 @@ We will use the following free softwares/tools.
 * Apache Tomcat - An open source web server.
 * Eclipse - One of the most widely used Java IDEs.
 
-## 1. Install VirtualBox
+## 1. Install VirtualBox on Mac or Windows
 ### 1.1 Download VirtualBox
 Download the latest version of VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
 ### 1.2 Install VirtualBox
-Nothing special, just launch the installer and Follow the steps of the setup wizard.
+Run the installer and follow the wizard to install it.
 
 ## 2. Install Ubuntu
 ### 2.1 Download Ubuntu Desktop
 Download the latest version of Ubuntu from [https://www.ubuntu.com/download/desktop](https://www.ubuntu.com/download/desktop). It should be an ISO file with about 1.5 GB in size.
 ### 2.2 Create Virtual Machine in VirtualBox
 1) In VirtualBox, Machine -> New, provide name, for example, Ubuntu. The type would be set to Linux automatically, next.  
+![Create_VM_OS](/public/pics/2016-02-10/Create_VM_OS.png)  
 2) Set Memory Size = 2048 MB, next.  
+![Create_VM_Memory](/public/pics/2016-02-10/Create_VM_Memory.png)  
 3) Select 'Create a virtual hard disk now', click Create button.  
+![Create_VM_Harddisk](/public/pics/2016-02-10/Create_VM_Harddisk.png)  
 4) Set 'Hard disk file type': VDI, Continue.  
+![Create_VM_VDI](/public/pics/2016-02-10/Create_VM_VDI.png)  
 5) set 'Storage on physical hard disk': Dynamically allocated, Continue.  
+![Create_VM_Dynamically](/public/pics/2016-02-10/Create_VM_Dynamically.png)  
 6) Set 'File location and size', change hard disk size to 20.00 GB. By default, it is 8 GB, which is properly not enough.  
+![Create_VM_Location](/public/pics/2016-02-10/Create_VM_Location.png)  
 ### 2.3 Install Ubuntu in VM
 The new virtual machine is created, now start to install Ubuntu OS for it.  
 1) In VirtualBox, select the VM named 'Ubuntu' we just created, click Start button.  

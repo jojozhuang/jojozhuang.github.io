@@ -6,7 +6,7 @@ date: 2016-01-25
 tags: [IIS, ASP.NET]
 ---
 
-> This blog guides you how to deploy your ASP.NET/MVC application to local IIS web server. And make it public to internet.
+> This posting guides you how to deploy your ASP.NET/MVC application to local IIS web server. And make it public to internet.
 
 There are totally 4 steps:  
 

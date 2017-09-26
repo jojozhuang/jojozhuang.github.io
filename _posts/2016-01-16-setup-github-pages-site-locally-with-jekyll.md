@@ -9,7 +9,7 @@ tags: [GitHub Pages, Jekyll, Ruby]
 > Set up a local version of Jekyll GitHub Pages site to test changes before submitting to github.
 
 ## 1. What is Jekyll?
-[Jekyll](https://jekyllrb.com) is a simple, blog-aware, static site generator. Jekyll is the engine behind [GitHub Pages](https://pages.github.com/), which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
+[Jekyll](https://jekyllrb.com) is a simple, blog-aware, static site generator. Jekyll is the engine behind [GitHub Pages](https://pages.github.com/), which means you can use Jekyll to host your page, blog, or website from GitHub’s servers for free.
 
 ## 2. Installing Jekyll on Ubuntu
 Make sure gcc and make are installed. Check version of them with the following commands.
@@ -59,7 +59,7 @@ Build and launch the website. All of the files will be deployed to a new folder 
 jekyll build
 jekyll serve
 ```
-If you want jekyll to start at different port, add port option when using jekyll serve.
+If you want jekyll to start at different port, add port option when using `jekyll serve`.
 ```sh
 jekyll serve --port 12001
 ```
