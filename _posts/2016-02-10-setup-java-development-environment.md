@@ -20,14 +20,16 @@ We will use the following free softwares/tools.
 Download the latest version of VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
 ### 1.2 Install VirtualBox
 Run the installer and follow the wizard to install it.
-
+### 1.3 VirtualBox
+After the installation is finished, launch VirtualBox. In my virtualbox, I have three virtual machines.
+![VirtualBox](/public/pics/2016-02-10/VirtualBox.png)  
 ## 2. Install Ubuntu
 ### 2.1 Download Ubuntu Desktop
 Download the latest version of Ubuntu from [https://www.ubuntu.com/download/desktop](https://www.ubuntu.com/download/desktop). It should be an ISO file with about 1.5 GB in size.
 ### 2.2 Create Virtual Machine in VirtualBox
 1) In VirtualBox, Machine -> New, provide name, for example, Ubuntu. The type would be set to Linux automatically, next.  
 ![Create_VM_OS](/public/pics/2016-02-10/Create_VM_OS.png)  
-2) Set Memory Size = 2048 MB, next.  
+2) Set Memory Size = 4096 MB, next.  
 ![Create_VM_Memory](/public/pics/2016-02-10/Create_VM_Memory.png)  
 3) Select 'Create a virtual hard disk now', click Create button.  
 ![Create_VM_Harddisk](/public/pics/2016-02-10/Create_VM_Harddisk.png)  
@@ -37,17 +39,23 @@ Download the latest version of Ubuntu from [https://www.ubuntu.com/download/desk
 ![Create_VM_Dynamically](/public/pics/2016-02-10/Create_VM_Dynamically.png)  
 6) Set 'File location and size', change hard disk size to 20.00 GB. By default, it is 8 GB, which is properly not enough.  
 ![Create_VM_Location](/public/pics/2016-02-10/Create_VM_Location.png)  
+7) VM Created
+![UbuntuVM](/public/pics/2016-02-10/UbuntuVM.png)  
 ### 2.3 Install Ubuntu in VM
 The new virtual machine is created, now start to install Ubuntu OS for it.  
 1) In VirtualBox, select the VM named 'Ubuntu' we just created, click Start button.  
 2) Specify the location of that ISO file we just downloaded, click Start button.  
+![Ubuntu_File](/public/pics/2016-02-10/Ubuntu_File.png)  
 3) A new VM window is opened, choose English and click 'Install Ubuntu' button.  
+![Ubuntu_Install](/public/pics/2016-02-10/Ubuntu_Install.png)  
 4) Follow the steps in the setup wizard. Change the default settings if necessary, and provide User Name and Password for logging into Ubuntu later.  
+![Ubuntu_UserPwd](/public/pics/2016-02-10/Ubuntu_UserPwd.png)  
 5) The installation is started, and will take several minutes to complete.  
+![Ubuntu_Installing](/public/pics/2016-02-10/Ubuntu_Installing.png)  
 6) Reboot is required after installation is finished.  
 ### 2.4 Install Necessary Tools in Ubuntu
-To use ubuntu more efficiently, you need to install some highly recommended softwares/tools.
-1) Install Google Chrome
+To use ubuntu more efficiently, you need to install some highly recommended softwares/tools.  
+1) Install Google Chrome  
 By default, Ubuntu has Firefox installed as default web browser, but I prefer Chrome.
 Go to Google's website, search Chrome and download the installation file. It should have the extension .deb
 ```sh
@@ -57,7 +65,7 @@ Note that all of the installation files for Ubuntu have the .deb extension. We a
 
 ## 3. Install JDK in Ubuntu
 ### 3.1 Download Oracle JDK
-Download the latest version of JDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Select JDK, in the next page, accept the license and choose 'jdk-8u144-linux-x64.tar.gz' to download.
+In Ubuntu VM, download the latest version of JDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Select JDK, in the next page, accept the license and choose 'jdk-8u144-linux-x64.tar.gz' to download.
 ### 3.2 Install JDK
 There is no installer, have to configure JKD manually. Unzip the package and move JDK files to /usr/local/java/
 ```
@@ -98,9 +106,9 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
 
 ## 4. Setup Apache Tomcat
 ### 4.1 Download Tomcat
-Download the latest version of Tomcat from [https://tomcat.apache.org/](https://tomcat.apache.org/).
+In Ubuntu VM, download the latest version of Tomcat from [https://tomcat.apache.org/](https://tomcat.apache.org/).
 ### 4.2 Install Tomcat
-There is no installer, either, have to configure Tomcat manually. Unzip the tar file, copy to /opt/tomcat.
+There is no installer, have to configure Tomcat manually. Unzip the tar file, copy to /opt/tomcat.
 ```sh
 tar xvzf apache-tomcat-9.0.0.M26.tar.gz
 sudo mv apache-tomcat-9.0.0.M26 /opt/tomcat
@@ -145,7 +153,7 @@ Add role and admin user to this file.
 $CATALINA_HOME/bin/startup.sh
 ```
 Verify that Tomcat is working by visiting http://localhost:8080.
-
+![tomcat](/public/pics/2016-02-10/tomcat.png)  
 Tomcat can be stopped by executing the following command:
 ```sh
 $CATALINA_HOME/bin/shutdown.sh
@@ -170,6 +178,10 @@ Launch Eclipse through UI or run command as follows.
 ```sh
 /opt/jee-oxygen/eclipse/eclipse
 ```
+Set workspace.
+![eclipse_workspace](/public/pics/2016-02-10/eclipse_workspace.png)  
+Close the welcome page, you will get Eclipse ready for use.
+![eclipse_launched](/public/pics/2016-02-10/eclipse_launched.png)  
 
 ## 6. Others
 ### 6.1 Increase Hard Disk Size of Virtual Machine
