@@ -15,12 +15,12 @@ tags: [XOR, Shifting]
 * ~ (Negative)
 
 ## 2. Common Facts
-     XOR     |     AND    |     OR
--------------|------------|------------
- x ^ 0s = x  | x & 0s = 0 | x \| 0s = x
- x ^ 1s = ~x | x & 1s = x | x \| 1s = 1
- x ^ x = 0   | x & x = x  | x \| x = x
 
+ XOR        | AND        | OR
+------------|------------|-----------
+x ^ 0s = x  | x & 0s = 0 | x \| 0s = x
+x ^ 1s = ~x | x & 1s = x | x \| 1s = 1
+x ^ x = 0   | x & x = x  | x \| x = x
 
 ## 3. Shifting
 * Arithmetic Right Shift (take the sign bit to most significant bit)

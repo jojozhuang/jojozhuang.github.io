@@ -109,9 +109,9 @@ Type 'customer' for user name, type 'customer' for password, and click Login but
 ![MIME Type](/public/pics/2016-09-30/login.png)  
 Try to add some item to shopping cart and place the order. Order should be created.
 
-## 5. Source Code
+## 5. Source Files
 * [Database Backup File](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql)
-* [Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Source Files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 6. References
 * [Docker Compose](https://docs.docker.com/compose/)

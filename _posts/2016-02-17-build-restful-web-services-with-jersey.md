@@ -3,19 +3,19 @@ layout: post
 key: blog
 title: "Build RESTful Web Services with Jersey"
 date: 2016-02-17
-tags: [Jersey, Web API, JAX-RS]
+tags: [Jersey, RESTful Web Services, Maven]
 ---
 
-> Build RESTful Web API with Jersey in Java.
+> Build RESTful web services with Jersey in Java.
 
 ## 1. Prerequisites
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setup-java-development-environment.md %}) to setup your development environment.
 
-## 2. Create Project
+## 2. Jersey Project
+### 2.1 Create Maven Project
 1) In Eclipse, New -> 'Dynamic Web Project', Name: JerseyTutorial  
 2) Right click project JerseyTutorial -> Configure -> Convert to Maven Project. You should see a new file pom.xml under the root of project.
-
-## 3. Add Dependency
+### 2.2 Add Dependency
 Add jersey dependency to pom.xml.
 ```xml
 <dependencies>
@@ -28,9 +28,8 @@ Add jersey dependency to pom.xml.
     </dependency>
 </dependencies>
 ```
-
-## 4. Add web.xml to project
-Right click project JerseyTutorial -> Java EE Tools -> Generate Deployment Descriptor Stub. You should see web.xml in /JerseyTutorial/WebContent/WEB-INF/.  
+### 2.3 Add web.xml to project
+Right click on project JerseyTutorial -> Java EE Tools -> Generate Deployment Descriptor Stub. You should see web.xml in /JerseyTutorial/WebContent/WEB-INF/.  
 Register Jersey service as follows.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -52,10 +51,9 @@ Register Jersey service as follows.
   </servlet-mapping>
 </web-app>
 ```
-
-## 5. Create Jersey Service
+### 2.4 Create Jersey Service
 1) Create Package  
-Right click project JerseyTutorial -> New -> Package, Package Name: Johnny.Tutorials  
+Right click on project JerseyTutorial -> New -> Package, Package Name: Johnny.Tutorials  
 2) Create class Product and ProductDao  
 Product.java  
 ```java
@@ -107,7 +105,7 @@ public class Product implements Serializable {
 ```
 
 ProductDao.java  
-We create some dummy data.
+Here, we create some dummy data.
 ```java
 package Johnny.Tutorials;
 
@@ -175,26 +173,26 @@ public class ProductService {
     }
 }
 ```
-
-## 6. Project Structure
+### 2.5 Project Structure
 This is the final structure of this tutorial project.
 ![MIME Type](/public/pics/2016-02-17/structure.png)  
-
-## 7. Demo
+### 2.6 Run and Test
 1) Right click project JerseyTutorial -> Run As -> Run On Server.  
 Choose an existing server or create a new Tomcat server.  
 ![MIME Type](/public/pics/2016-02-17/runonserver.png)  
 
 After Tomcat is started, let's test RESTful services through web browser.  
 2) Get Product List  
-URL: http://localhost:8080/JerseyTutorial/rest/ProductService/products
+* http://localhost:8080/JerseyTutorial/rest/ProductService/products
+
 ![MIME Type](/public/pics/2016-02-17/products.png)  
 3) Get Product by ID  
-URL: http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
+* http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
+
 ![MIME Type](/public/pics/2016-02-17/oneproduct.png)  
 
-## 8. Support Json
-### 8.1 Add Dependency to pom.xml
+## 3. Support Json
+### 3.1 Add Dependency to pom.xml
 ```xml
 <dependencies>
     ...
@@ -207,7 +205,7 @@ URL: http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
 </dependencies>
 ```
 
-### 8.2 Add init param to web.xml
+### 3.2 Add init param to web.xml
 ```xml
 <servlet>
     ...
@@ -220,7 +218,7 @@ URL: http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
 </servlet>
 ```
 
-### 8.3 Add new API to ProductService
+### 3.3 Add new API to ProductService
 In ProductService.java, add the following method.  
 ```java
 @GET
@@ -231,14 +229,16 @@ public Product getProductJson(@PathParam("id") int id) {
 }
 ```
 
-### 8.4 Test Json API
-URL: http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
+### 3.4 Test Json API
+Get product by id, data is returned in JSON format.
+* http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
+
 ![MIME Type](/public/pics/2016-02-17/jsonapi.png)  
 
-## 9. Source
-[Source code files of Jersey Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JerseyTutorial)
+## 4. Source Files
+* [Source files of Jersey Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JerseyTutorial)
 
-## 10. Reference
+## 5. Reference
 * [Jersey Official Website](https://jersey.github.io/)
 * [RESTful Web Services - Java (JAX-RS)](https://www.tutorialspoint.com/restful/restful_jax_rs.htm)
 * [JAX-RS Tutorial](http://www.mkyong.com/tutorials/jax-rs-tutorials/)

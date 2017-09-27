@@ -238,8 +238,8 @@ Output on Ubuntu. One executable file, one deb installer file and one unpacked f
 Click on the executable file, run 2048. Notice, we have the icon on dock and correct menu on the top.
 ![MIME Type](/public/pics/2016-11-08/uiubuntu.png)  
 
-## 5. Source Code
-* [Source code files of Game 2048 on Github](https://github.com/jojozhuang/Portfolio/tree/master/Game2048)
+## 5. Source Files
+* [Source files of Game 2048 on Github](https://github.com/jojozhuang/Portfolio/tree/master/Game2048)
 
 ## 6. References
 * [Electron Documentation](https://electron.atom.io/docs/all/)

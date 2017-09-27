@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Persistence with JPA & Eclipselink"
 date: 2016-02-21
-tags: [JPA, Eclipse, Eclipselink, ORM]
+tags: [JPA, Eclipse, Eclipselink, ORM, Hibernate, Mysql]
 ---
 
 > Use JPA and Eclipselink to persistent data into database.
@@ -320,8 +320,8 @@ Test updating, finding and deleting with the same approach. Data should always g
 * Entity Relationships
 * Criteria API
 
-## 9. Source
-[Source code files of JPA Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JPATutorial)
+## 9. Source Files
+* [Source files of JPA Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JPATutorial)
 
 ## 10. Reference
 * [JPA Tutorial](https://www.tutorialspoint.com/jpa/index.htm)

@@ -3,12 +3,12 @@ layout: post
 key: blog
 title: "Develop Realtime Online Application with WebSocket"
 date: 2016-03-07
-tags: [WebSocket, Realtime, SignalR]
+tags: [WebSocket, Socket.IO, SignalR]
 ---
 
 > [WebSocket](https://en.wikipedia.org/wiki/WebSocket) is a protocol which enables so-called full-duplex communications. It comes along with HTML5. The protocol itself is not mature, still under developing. Two main features of WebSocket:
 * double direction communication
-* broadcasting.
+* broadcasting
 
 ## 1. Background
 For most of web applications, we use HTTP protocol to communicate between server and client. One problem is, in most cases, client sends request to server, but server is not able to send information to client at a specific time. Because HTTP is stateless, server can't response without request from client. Generally, we use the 'Pull' mode to let web browser send request regularly to check whether there is any new update on the server side. This approach wastes lots of bandwidth especially when nothing needs to be updated. How would be great if we can implement the 'Push' mode, let server to communicate with client by intention?! The answer is WebSocket.
@@ -95,8 +95,8 @@ SignalR is popular and it can run in Windows7. The official tutorial is [Tutoria
 This sample implements the online chatting function.  
 ![SignalR](/public/pics/2016-03-07/signalrsample.png "SignalR")  
 
-## 5. Source Code Files
-* [Source code files of SocketIO Sample1 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO)
-* [Source code files of SocketIO Sample2 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket)
-* [Source code files of WebSockets Sample on Github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET)
-* [Source code files of SignalR Sample on MSDN](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9)
+## 5. Source Files
+* [Source files of SocketIO Sample1 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO)
+* [Source files of SocketIO Sample2 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket)
+* [Source files of WebSockets Sample on Github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET)
+* [Source files of SignalR Sample on MSDN](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9)

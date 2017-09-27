@@ -73,8 +73,8 @@ Type 'customer' for user name, type 'customer' for password, and click Login but
 Switch to Eclipse, the breakpoint is activated. The remote debugging function is working now.
 ![MIME Type](/public/pics/2016-09-22/breakpointdt.png)  
 
-## 5. Source Code
-[Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+## 5. Source Files
+[Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 6. References
 * [Setting Up Tomcat For Remote Debugging](https://confluence.sakaiproject.org/display/BOOT/Setting+Up+Tomcat+For+Remote+Debugging)

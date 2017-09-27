@@ -74,8 +74,8 @@ Access the following URL in web browser. Game Store is launched successfully!
 
 ![MIME Type](/public/pics/2016-09-20/deployed.png)  
 
-## 4. Source Code
-[Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+## 4. Source Files
+[Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 5. References
 * [How To Share Data between the Docker Container and the Host](https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host)

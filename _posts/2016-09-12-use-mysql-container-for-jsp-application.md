@@ -220,8 +220,8 @@ Now, you can use the following command to install this image.
 $ docker pull jojozhuang/gamestore-mysql
 ```
 
-## 6. Source Code
-[Source Code for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+## 6. Source Files
+[Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 7. References
 * [MySQL Docker Containers: Understanding the basics](https://severalnines.com/blog/mysql-docker-containers-understanding-basics)

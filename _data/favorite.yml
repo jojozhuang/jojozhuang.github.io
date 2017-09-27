@@ -42,6 +42,9 @@ bookmarks:
       - name: Markdown
         description: A lightweight markup language with plain text formatting syntax
         url: https://en.wikipedia.org/wiki/Markdown
+      - name: ORM
+        description: Object-relational mapping
+        url: https://en.wikipedia.org/wiki/Object-relational_mapping
       - name: WebSocket
         description: A computer communications protocol
         url: https://en.wikipedia.org/wiki/WebSocket
@@ -214,7 +217,16 @@ bookmarks:
       - name: Jersey
         description: An open-source RESTful Web Services framework
         url: https://jersey.github.io/
-      - name: Apache Maven
+      - name: JPA
+        description: Java Persistence API
+        url: https://en.wikipedia.org/wiki/Java_Persistence_API
+      - name: EclipseLink
+        description: Comprehensive open-source Java persistence solution
+        url: http://www.eclipse.org/eclipselink/
+      - name: Hibernate
+        description: A high-performance Object/Relational persistence and query service
+        url: http://hibernate.org/
+      - name: Maven
         description: A software project management and comprehension tool
         url: https://maven.apache.org/
       - name: Gradle

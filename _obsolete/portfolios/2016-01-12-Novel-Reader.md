@@ -23,5 +23,5 @@ Technically, it sends out HTTP GET and POST requests to the website, then gets r
 
 To make it work again, you need to find a novel website, replace with new URLs for category list and content, then recompile the source code.  
 
-## 3. Source Code Files
-* [Source code files of Novel Reader on Github](https://github.com/jojozhuang/Projects/tree/master/NovelReader/Src)
+## 3. Source Files
+* [Source files of Novel Reader on Github](https://github.com/jojozhuang/Projects/tree/master/NovelReader/Src)
