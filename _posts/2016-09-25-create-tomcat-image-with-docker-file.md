@@ -96,7 +96,7 @@ Switch to Eclipse, the breakpoint is activated. The remote debugging function is
 ![MIME Type](/public/pics/2016-09-22/breakpointdt.png)  
 
 ## 4. Source Files
-[Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 5. References
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)

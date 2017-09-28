@@ -29,7 +29,7 @@ Switch to Settings->Volumes, click CHANGE button.
 ![MIME Type](/public/pics/2016-09-16/settings.png)  
 Create a folder named 'kitematic-nginx' in your local machine.
 ![MIME Type](/public/pics/2016-09-16/createfolder.png)  
-The folder in container and the folder in your local machine are now mapping to each other. Click Restart button or just switch to the Home tab, to restart the container.
+The folder in container and the folder in your local machine are now mapping to each other. Click Restart button to restart the container.
 ![MIME Type](/public/pics/2016-09-16/volume.png)  
 You will find one html file in your local volume folder. This file is actually located in the container. It is the home page of Nginx you saw in browser.
 ![MIME Type](/public/pics/2016-09-16/index.png)  

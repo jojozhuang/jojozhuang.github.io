@@ -8,7 +8,7 @@ tags: [Java]
 
 > This blog records some tricky cases when using Java.
 
-## 1. Overflow when assigning Integer value.  
+## 1. Overflow when assigning Integer value
 As we all know, the range of Integer in java is from -2147483648(-2^31) to 2147483647(2^31 - 1). And we use constant Integer.MIN_VALUE to represent -2147483648, and Integer.MAX_VALUE to represent 2147483647. When trying to increment the max value or decrement the min value, overflow occurs. That is
 
 ```java
@@ -16,19 +16,19 @@ Integer.MAX_VALUE + 1 = Integer.MIN_VALUE;
 Integer.MIN_VALUE - 1 = Integer.MAX_VALUE;
 ```
 
-If you try to assign Integer.MAX_VALUE + 1 to a long type variable, the result may be not what you want.
+If you try to assign Integer.MAX_VALUE + 1 to a long type variable, the result may not be what you want.
 
 ```java
 long var1 = Integer.MAX_VALUE + 1; //var1 = -2147483648
 ```
 
-You will get var1 = -2147483648 instead of 2147483648. The following statement doesn't work, either.
+You will get var1 = -2147483648 instead of desired 2147483648. The following statement doesn't work, either.
 
 ```java
 long var1 = (long)(Integer.MAX_VALUE + 1);
 ```
 
-The correct way to do this is:
+The correct way is to cast the variable to long type before adding. The following two approaches will work.
 
 ```java
 long var1 = Integer.MAX_VALUE;
@@ -41,7 +41,7 @@ long var1 = (long)Integer.MAX_VALUE + 1;
 ## 2. How a primitive float/double value can be -0.0?  
 Float is a tricky type in java.  
 
-### 2.1 The first issue is precision.  
+### 2.1 The first issue is precision of float
 You could never be able to store a floating point number of infinite precision with finite resources. You should never test if a floating point number == to some other, i.e. never write code like this:
 
 ```java
@@ -61,7 +61,7 @@ if (Math.abs(a - b) < epsilon)
 ```
 
 ### 2.2 The second is the negative zero value, -0.0.  
-When I work on an algorithm problem [149. Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) in leetcode.com, I need to calculate the slope of two points, below are the original codes.
+When I working on an algorithm problem [149. Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) in leetcode.com, I need to calculate the slope of two points, below are the original codes.
 
 ```java
 slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x);
@@ -69,7 +69,7 @@ slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x);
 
 My program runs failed for one test case: [2,3],[3,3],[-5,3]. After debugging, I found the root cause is because of negative -0.0. The slope between point[2,3] and point[3,3] is <span style='color:red'>-0.0</span>. And the slope between point[2,3] and point[-5,3] is <span style='color:red'>0.0</span>. But actually they are all in the same line with slope <span style='color:red'>0.0</span>.
 
-I update my code to add 0.0 at the end of the line to make sure no negative zero appears. The problem is solved, and my program passed all test cases.
+I updated my code to add 0.0 at the end of the line to make sure no negative zero appears. The problem is solved, and my solution passed all test cases.
 
 ```java
 slope = (double)(points[i].y - points[j].y) / (points[i].x - points[j].x) + 0.0;
@@ -101,7 +101,7 @@ System.out.println();
 0123
 ```
 
-The below two loops print same output
+The below two `for` loops print the same output.
 ```java
 for (int i = 0; i < 5; i++) {
     System.out.print(i);
@@ -150,6 +150,8 @@ public class Main{
     }
 }
 ```
+Notice, method `setToNull(Foo d)` won't work, object 'f' is still a non-null object.
+
 ### 4.2 Reference
-Search the same code, there is an diagram explains why.
-https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
+Search the same code in the page of below link, there is an diagram explains why.
+* [Is Java “pass-by-reference” or “pass-by-value”?](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)

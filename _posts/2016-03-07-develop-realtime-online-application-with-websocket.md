@@ -65,7 +65,7 @@ Run it, you will get the below result. The time will be updated for every one se
 ![Server Time](/public/pics/2016-03-07/socketiotimer.png "Server Time")  
 
 ### 2.2 Broadcasting
-Another example of Socket.IO is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/).
+Another example of Socket.IO usage is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/).
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
 After all opened, start to draw in the first chrome browser.  

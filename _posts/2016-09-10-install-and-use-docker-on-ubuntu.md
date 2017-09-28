@@ -9,7 +9,7 @@ tags: [Docker, Docker Hub]
 > Introduce how to install and use docker
 
 ## 1. What is Docker?
-Docker is a container management service. The keywords of Docker are develop, ship and run anywhere. The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
+[Docker](https://www.docker.com/) is a container management service. The keywords of Docker are develop, ship and run anywhere. The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
 
 Key concepts of Docker: Image, Container and Docker Hub.
 
@@ -68,28 +68,28 @@ $ docker [option] [command] [arguments]
 
 ## 4.1 Generic Docker Commands
 ```sh
-docker version        // check version
-docker info           // check system-wide information about Docker
-docker search ubuntu  // search image which is named 'ubuntu' from Docker Hub
-docker pull ubuntu    // download image from Docker Hub to local
+$ docker version        // check version
+$ docker info           // check system-wide information about Docker
+$ docker search ubuntu  // search image which is named 'ubuntu' from Docker Hub
+$ docker pull ubuntu    // download image from Docker Hub to local
 ```
 
 ## 4.2 Commands for Images:
 ```sh
-docker images         // list images
-docker rmi image_name // delete image by name
-docker rmi image_id   // delete image by id
+$ docker images         // list images
+$ docker rmi image_name // delete image by name
+$ docker rmi image_id   // delete image by id
 ```
 
 ## 4.3 Commands for Containers
 ```sh
-docker ps                      // list all active docker containers
-docker ps -a                   // list all docker containers
-docker run ubuntu              // run a container with the selected image
-docker run -it ubuntu          // run a container with the selected image, and access the interactive shell
-docker stop container-id       // stop a running or active container
-docker stop $(docker ps -a -q) // stop all of Docker containers
-docker rm $(docker ps -a -q)   // remove all of Docker containers
+$ docker ps                      // list all active docker containers
+$ docker ps -a                   // list all docker containers
+$ docker run ubuntu              // run a container with the selected image
+$ docker run -it ubuntu          // run a container with the selected image, and access the interactive shell
+$ docker stop container-id       // stop a running or active container
+$ docker stop $(docker ps -a -q) // stop all of Docker containers
+$ docker rm $(docker ps -a -q)   // remove all of Docker containers
 ```
 
 ## 5. Create Docker Image
@@ -97,13 +97,13 @@ We use the office ubuntu image for this demo. We will install node.js on it, the
 ## 5.1 Prepare Image
 1) First, run the following command to check the existing images in the docker.
 ```sh
-docker images
+$ docker images
 ```
 ![MIME Type](/public/pics/2016-09-10/images1.png)  
 
 2) Then, run the following command to start a container and go to its shell.
 ```sh
-docker run -it ubuntu
+$ docker run -it ubuntu
 ```
 ![MIME Type](/public/pics/2016-09-10/shell.png)  
 
@@ -147,28 +147,30 @@ $ docker images
 As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notice that its size is bigger than the original ubuntu image. This is because we install node.js into it.
 
 ## 5.3 Use Dockerfile to Create New Images
-todo
+Refer to the following blogs:
+* [Create Tomcat Image with Docker File]({% link _posts/2016-09-25-create-tomcat-image-with-docker-file.md %})
+* [Create Mysql Image with Docker File]({% link _posts/2016-09-27-create-mysql-image-with-docker-file.md %})
 
 ## 6. Push Docker Images to Docker Hub
 ## 6.1 Log into Docker Hub
 Syntax of login command.
 ```sh
-docker login -u username
+$ docker login -u username
 ```
 Type command as follows, then input password.
 ```sh
-docker login -u jojozhuang
+$ docker login -u jojozhuang
 ```
 ![MIME Type](/public/pics/2016-09-10/login.png)  
 
 ## 6.2 Push the Image
 Syntax of push command.
 ```sh
-docker push docker-registry-username/docker-image-name
+$ docker push docker-registry-username/docker-image-name
 ```
 Type command as follows, providing the full name of the new image.
 ```sh
-docker push jojozhuang/ubuntu-nodejs
+$ docker push jojozhuang/ubuntu-nodejs
 ```
 Then, docker starts to upload the image to its hub.
 ![MIME Type](/public/pics/2016-09-10/push.png)  
@@ -181,18 +183,18 @@ Log into the Docker Hub, we see there is a new image.
 Now, you can share this image to others and you can pull this image from Docker Hub as well.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub2.png)  
 
-## 7. Pull The New Image on Mac
+## 7. Pull The New Image from Hub to Mac
 Launch Docker Terminal on Mac, run the following command to pull the new image.
 ```sh
-docker pull jojozhuang/ubuntu-nodejs
+$ docker pull jojozhuang/ubuntu-nodejs
 ```
 Run the following command to start the container and go to its shell.
 ```sh
-docker run -it jojozhuang/ubuntu-nodejs
+$ docker run -it jojozhuang/ubuntu-nodejs
 ```
 Check the nodejs version.
 ```sh
-nodejs -v
+$ nodejs -v
 ```
 ![MIME Type](/public/pics/2016-09-10/pull.png)  
 Yes, it's our image!

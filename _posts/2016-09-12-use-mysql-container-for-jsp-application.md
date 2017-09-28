@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Use Mysql Container for JSP Application"
 date: 2016-09-12
-tags: [Mysql, Docker]
+tags: [JSP, Mysql, Docker]
 ---
 
 > Introduce how to user Mysql Docker Container as database for JSP Application.
@@ -62,7 +62,7 @@ There will be a browser opened in eclipse, which shows our Game Store website. O
 ### 2.1 Create Mysql Container
 Get official mysql image.
 ```sh
-docker pull mysql
+$ docker pull mysql
 ```
 
 Run a mysql container.
@@ -124,12 +124,12 @@ $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --pu
 ## 3. Restore Mysql Database in Container
 ### 3.1 Copy Mysql backup files from host to container
 ```sh
-docker cp ~/GameStore/document/gamestore_orderitem.sql gsmysql:/gamestore_orderitem.sql
-docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_salesorder.sql
+$ docker cp ~/GameStore/document/gamestore_orderitem.sql gsmysql:/gamestore_orderitem.sql
+$ docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_salesorder.sql
 ```
 Start terminal in gsmysql container with the following command:
 ```sh
-docker exec -i -t gsmysql sh
+$ docker exec -i -t gsmysql sh
 ```
 Use 'ls' to check the files. Our two db restore files are there.
 ![MIME Type](/public/pics/2016-09-12/sqlfile.png)  
@@ -177,7 +177,7 @@ Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the usename, 
 ```
 
 ### 4.4 Restart the JSP Application
-Login as following user.
+Login as follows:
 * User Name: customer
 * Password:  customer
 * User Type: customer
@@ -221,7 +221,7 @@ $ docker pull jojozhuang/gamestore-mysql
 ```
 
 ## 6. Source Files
-[Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 7. References
 * [MySQL Docker Containers: Understanding the basics](https://severalnines.com/blog/mysql-docker-containers-understanding-basics)

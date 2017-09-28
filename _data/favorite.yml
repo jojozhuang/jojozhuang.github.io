@@ -39,9 +39,15 @@ bookmarks:
         url: https://javascript.info/
   - category: Knowledge
     links:
+      - name: Debugging
+        description: The process of finding and resolving of defects
+        url: https://en.wikipedia.org/wiki/Debugging
       - name: Markdown
         description: A lightweight markup language with plain text formatting syntax
         url: https://en.wikipedia.org/wiki/Markdown
+      - name: JSP
+        description: JavaServer Pages
+        url: https://en.wikipedia.org/wiki/JavaServer_Pages
       - name: ORM
         description: Object-relational mapping
         url: https://en.wikipedia.org/wiki/Object-relational_mapping
@@ -97,6 +103,9 @@ bookmarks:
         url: https://www.heroku.com/
   - category: Big Data/AI
     links:
+      - name: MapReduce
+        description: A programming model and an associated implementation for processing and generating big data sets
+        url: https://en.wikipedia.org/wiki/MapReduce
       - name: IBM Watson
         description: An AI system developed by IBM
         url: https://www.ibm.com/watson
@@ -187,6 +196,9 @@ bookmarks:
       - name: Docker
         description: A software technology providing containers
         url: https://www.docker.com/
+      - name: Docker Hub
+        description: A repository where open Docker images are stored
+        url: https://hub.docker.com/
       - name: Kitematic
         description: A tool to maintain docker containers through GUI
         url: https://kitematic.com/

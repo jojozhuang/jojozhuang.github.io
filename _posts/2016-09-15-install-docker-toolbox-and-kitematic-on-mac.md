@@ -78,7 +78,7 @@ The container is started. And you see that Access URL, which is the public addre
 ### 6.1 Start Terminal in Container
 Previously, we have to type the following command to open terminal in container.
 ```sh
-docker exec -i -t <container> sh
+$ docker exec -i -t <container> sh
 ```
 Now, we just need to click the 'EXEC' button on the top.
 ### 6.2 Settings of Container

@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Enable Tomcat Debugging in Docker for Eclipse"
 date: 2016-09-22
-tags: [Docker, Eclipse, Tomcat]
+tags: [Docker, Debugging, Eclipse, Tomcat]
 ---
 
 > Tutorial for how to setup remote debugging in Eclipse for tomcat in Docker.
@@ -23,9 +23,9 @@ Now, one question is how to debug this application, which is deployed in Tomcat 
 ## 2.1 Remote Debugging in Tomcat
 In general, tomcat can be configured to allow a program such as eclipse to connect remotely using JPDA and see debugging information. To configure tomcat to allow remote debugging, start tomcat using the catalina startup script (from your tomcat home) instead of the normal startup script like so (tomcat must be stopped before you can change over):
 ```sh
-export JPDA_ADDRESS=8000
-export JPDA_TRANSPORT=dt_socket
-bin/catalina.sh jpda run
+$ export JPDA_ADDRESS=8000
+$ export JPDA_TRANSPORT=dt_socket
+$ bin/catalina.sh jpda run
 ```
 ### 2.2 Create Tomcat Container with Enabling Remote Debugging
 Manually create Tomcat container with Remote Debugging enabled. In docker terminal, run the following command.
@@ -74,7 +74,7 @@ Switch to Eclipse, the breakpoint is activated. The remote debugging function is
 ![MIME Type](/public/pics/2016-09-22/breakpointdt.png)  
 
 ## 5. Source Files
-[Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
 
 ## 6. References
 * [Setting Up Tomcat For Remote Debugging](https://confluence.sakaiproject.org/display/BOOT/Setting+Up+Tomcat+For+Remote+Debugging)
