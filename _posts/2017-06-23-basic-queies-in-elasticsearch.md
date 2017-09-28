@@ -14,8 +14,10 @@ tags: [Elasticsearch]
 
 ## 2. Usage
 ### 2.1 Create
-```java
+```
 POST shop/customer/1
+```
+```json
 {
   "name": "Johnny",
   "address": "1234 Hillview Ave, Palo Alto",
@@ -23,7 +25,7 @@ POST shop/customer/1
 }
 ```
 Response:
-```java
+```json
 {
   "_index": "shop",
   "_type": "customer",
@@ -39,16 +41,21 @@ Response:
 }
 ```
 
-Create another two user
-```java
+Create another two users.  
+```
 POST shop/customer/2
+```
+```json
 {
   "name": "Sean",
   "address": "1010 Steven Creek Ave, Cupertino",
   "level": "Bronze"
 }
-
+```
+```
 POST shop/customer/3
+```
+```json
 {
   "name": "Norah",
   "address": "340 Lawrence Station Rd, Sunnyvale",
@@ -57,11 +64,11 @@ POST shop/customer/3
 ```
 
 ### 2.2 Get
-```java
+```
 GET shop/customer/1
 ```
 Response:
-```java
+```json
 {
   "_index": "shop",
   "_type": "customer",
@@ -77,16 +84,18 @@ Response:
 ```
 
 ### 2.3 Update
-```java
+```
 PUT shop/customer/1
+```
+```json
 {
   "name": "Johnny",
   "address": "1234 Hillview Ave, Palo Alto",
-  "level": "Golden" // Change from 'Silver' to 'Golden'
+  "level": "Golden"
 }
 ```
 Response:
-```java
+```json
 {
   "_index": "shop",
   "_type": "customer",
@@ -106,7 +115,7 @@ Response:
 DELETE shop/customer/3
 ```
 Response:
-```java
+```json
 {
   "found": true,
   "_index": "shop",
@@ -126,7 +135,7 @@ Search
 Get shop/customer/3
 ```
 Response:
-```java
+```json
 {
   "_index": "shop",
   "_type": "customer",
@@ -140,7 +149,7 @@ a) Search all customers
 GET /shop/customer/_search
 ```
 Response:
-```java
+```json
 {
   "took": 4,
   "timed_out": false,
@@ -180,11 +189,11 @@ Response:
 }
 ```
 a) Search the customer named 'Johnny'
-```javascript
+```
 GET /shop/customer/_search?q=name:Johnny
 ```
 Response:
-```java
+```json
 {
   "took": 3,
   "timed_out": false,
@@ -213,10 +222,7 @@ Response:
 }
 ```
 
-## 3. Conclusion
-Query is powerful and complex.
-
-## 4. Reference
-* [https://www.tutorialspoint.com/elasticsearch/](https://www.tutorialspoint.com/elasticsearch/)
-* [https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)
+## 3. Reference
+* [Elasticsearch Tutorial](https://www.tutorialspoint.com/elasticsearch/)
+* [Elasticsearch Reference - Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)
 * [https://blog.coding.net/blog/elastic-search](https://blog.coding.net/blog/elastic-search)  

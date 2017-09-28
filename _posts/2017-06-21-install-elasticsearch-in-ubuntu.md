@@ -31,31 +31,31 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   In terminal, navigate to the folder which contains the downloaded file, run  
 
 ```sh
-sudo dpkg -i elasticsearch-5.5.0.deb
+$ sudo dpkg -i elasticsearch-5.5.0.deb
 ```
 
   When finished, Elasticsearch is installed into /usr/share/elasticsearch/. And the configuration files are in /etc/elasticsearch.  
   You can edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot access /etc/elasticsearch, run
 
 ```shell
-sudo chmod -R 755 /etc/elasticsearch
+$ sudo chmod -R 755 /etc/elasticsearch
 ```
 
   3) Commands for ES  
 ```shell
-sudo service elasticsearch start   //start elasticsearch  
-sudo service elasticsearch status  //check status  
-sudo service elasticsearch stop    //stop elasticsearch
+$ sudo service elasticsearch start   //start elasticsearch  
+$ sudo service elasticsearch status  //check status  
+$ sudo service elasticsearch stop    //stop elasticsearch
 ```
   4) Start ES and test through curl
 
 ```bash
-curl "http://localhost:9200"
+$ curl "http://localhost:9200"
 ```
 
   or open the link [http://localhost:9200](http://localhost:9200) in web browser.  
   Either way, you should see some json strings returned from ES.  
-```java
+```json
 {
   "name" : "kYY1YjJ",
   "cluster_name" : "elasticsearch",
@@ -72,52 +72,52 @@ curl "http://localhost:9200"
 ```
 
 ### 2.2 Install Kibana  
-  1) Download Kibana  
-  Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT version.  
-  2) Install  
-  In terminal, navigate to the folder which contains the downloaded file, run  
-  ```sh
-  sudo dpkg -i kibana-5.5.0-amd64.deb  
-  ```
-  3) Commands for Kibana
-  ```sh
-  sudo service kibana start   //start kibana  
-  sudo service kibana status  //check status  
-  sudo service kibana stop    //stop kibana  
-  ```
-  4) Kibana configuration - Change log file (Optional)  
-  a. Ceate log file and grant write permission, the log file is /var/log/kibana/log.
-  ```sh
-  cd /var/log/
-  mkdir kibana
-  cd kibana
-  touch log
-  sudo chmod 777 log
-  ```  
+1) Download Kibana  
+Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT version.  
+2) Install  
+In terminal, navigate to the folder which contains the downloaded file, run  
+```sh
+$ sudo dpkg -i kibana-5.5.0-amd64.deb  
+```
+3) Commands for Kibana
+```sh
+$ sudo service kibana start   //start kibana  
+$ sudo service kibana status  //check status  
+$ sudo service kibana stop    //stop kibana  
+```
+4) Kibana configuration - Change log file (Optional)  
+a. Ceate log file and grant write permission, the log file is /var/log/kibana/log.
+```sh
+$ cd /var/log/
+$ mkdir kibana
+$ cd kibana
+$ touch log
+$ sudo chmod 777 log
+```  
 
-  b. Specify a file where Kibana stores log output
-  ```sh
-  sudo service kibana stop           //stop kibana  
-  sudo nano /etc/kibana/kibana.yml   //open the configuration file
+b. Specify a file where Kibana stores log output
+```sh
+$ sudo service kibana stop           //stop kibana  
+$ sudo nano /etc/kibana/kibana.yml   //open the configuration file
   logging.dest: /var/log/kibana/log  //set new file path for the log file
-  sudo service kibana start          //restart kibana  
-  ```
-  5) Kibana configuration - Remote access Kibana from host (Optional)  
-  a. Set Network connection for guest(Ubuntu)  
-  * [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)  
+$ sudo service kibana start          //restart kibana  
+```
+5) Kibana configuration - Remote access Kibana from host (Optional)  
+a. Set Network connection for guest(Ubuntu)  
+* [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)  
 
-  b. Set guest's IP address to server.host for kibana
-  ```sh
-  ifconfig                          //find Ubuntu\'s IP address, eg 192.168.56.101, specified in DHCP server.
-  sudo service kibana stop          //stop kibana  
-  sudo nano /etc/kibana/kibana.yml  //open kibana configuration file
+b. Set guest's IP address to server.host for kibana
+```sh
+$ ifconfig                          //find Ubuntu\'s IP address, eg 192.168.56.101, specified in DHCP server.
+$ sudo service kibana stop          //stop kibana  
+$ sudo nano /etc/kibana/kibana.yml  //open kibana configuration file
   server.host: 192.168.56.101       //set ip address to server.host
-  sudo service kibana start         //restart kibana  
-  ```
-  c. Open link [http://192.168.56.101:5601/](http://192.168.56.101:5601/)in web browser in guest(Ubuntu), you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.  
+$ sudo service kibana start         //restart kibana  
+```
+c. Open link [http://192.168.56.101:5601/](http://192.168.56.101:5601/)in web browser in guest(Ubuntu), you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.  
 
 ### 2.3 Install Sense  
-  Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
+Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
 ## 3. Reference
 * [Installing and Running Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html)  

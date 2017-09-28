@@ -20,8 +20,8 @@ Go to [https://www.splunk.com/en_us/products.html](https://www.splunk.com/en_us/
 In terminal, go to the folder where the installer file locates. Run the commands below.  
 
 ```sh
-sudo rpm -i splunk_package_name.rpm  // for RedHat
-sudo dpkg -i splunk_package_name.deb // for Ubuntu
+$ sudo rpm -i splunk_package_name.rpm  // for RedHat
+$ sudo dpkg -i splunk_package_name.deb // for Ubuntu
 ```
 
 After running the commands, Splunk is installed into /opt/splunk/.
@@ -30,14 +30,14 @@ After running the commands, Splunk is installed into /opt/splunk/.
 Set SPLUNK_HOME to point to the top-level installation directory, and add $SPLUNK_HOME/bin to the shell's path.
 
 ```shell
-export SPLUNK_HOME=/opt/splunk
-export PATH=$SPLUNK_HOME/bin:$PATH
+$ export SPLUNK_HOME=/opt/splunk
+$ export PATH=$SPLUNK_HOME/bin:$PATH
 ```
 
 ### 2.2 Launch Splunk Web
 1) Start Splunk
 ```sh
-sudo $SPLUNK_HOME/bin/splunk start
+$ sudo $SPLUNK_HOME/bin/splunk start
 ```
 For the first time launching Splunk, you need to accept its license agreement.
 
@@ -51,11 +51,11 @@ $ splunk status
 
 3) You can change web server from the default port 8000 to other ports.
 ```sh
-splunk set web-port 8081
+$ splunk set web-port 8081
 ```
 If you get 'Permission denied' error, grant whole access to the entire splunk folder.
 ```sh
-sudo chown -R $USER /opt/splunk/
+$ sudo chown -R $USER /opt/splunk/
 ```
 In addition, add port number to Firewall's exception list if necessary.
 

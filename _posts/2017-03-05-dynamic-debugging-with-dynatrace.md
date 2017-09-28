@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Dynamic Debugging with Dynatrace"
+title: "Dynamic Debugging with Dynatrace[Draft]"
 date: 2017-03-05
-tags: [Dynatrace]
+tags: [Dynatrace, Debugging]
 ---
 
 > Performance diagnosis tool.
@@ -21,18 +21,18 @@ The downloaded file is a jar package.
 In terminal, navigate to the folder which contains the downloaded file, run  
 
 ```sh
-cd /home/Downloads
-java -jar dynatrace-full-linux-x86-64.jar
+$ cd /home/Downloads
+$ java -jar dynatrace-full-linux-x86-64.jar
 ```
 
 By default, it should be installed to the home directory.  
 
 3) start the Dynatrace AppMon server process and Dynatrace AppMon collector process
 ```sh
-cd /~/dynatrace-7.0
-./dtserver -bg
-./dtfrontendserver -bg
-./dtcollector -bg
+$ cd /~/dynatrace-7.0
+$ ./dtserver -bg
+$ ./dtfrontendserver -bg
+$ ./dtcollector -bg
 ```
 4) Verify the Installation
 

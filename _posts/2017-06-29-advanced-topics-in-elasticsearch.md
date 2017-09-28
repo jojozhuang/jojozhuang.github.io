@@ -24,14 +24,16 @@ The following queries are based on the sample employee data, created by [Indexin
 
 ### Query-string Search
 Search for employees who have “Smith” in their last name.
-```javascript
+```
 GET /megacorp/employee/_search?q=last_name:Smith
 ```
 
 ### DSL Query
 Same with the above one.
-```java
+```
 GET /megacorp/employee/_search
+```
+```json
 {
     "query" : {
         "match" : {
@@ -42,8 +44,10 @@ GET /megacorp/employee/_search
 ```
 
 ### DSL Query with Filter
-```java
+```
 GET /megacorp/employee/_search
+```
+```java
 {
     "query" : {
         "bool" : {

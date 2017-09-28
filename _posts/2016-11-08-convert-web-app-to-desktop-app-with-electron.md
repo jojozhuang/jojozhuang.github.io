@@ -8,19 +8,20 @@ tags: [Electron, 2048]
 
 > Electron is used to build cross platform desktop apps with JavaScript, HTML, and CSS. We will use it to wrap a web application of game 2048 and convert it to desktop application.
 
-## 1. Electron
-If you haven't installed Electron or you want to learn the basic knowledge of Electron, please check my previous posting [Build Cross-platform Apps with Electron]({% link _posts/2016-11-03-build-cross-platform-apps-with-electron.md %}) first.
+## 1. Install Electron
+If you haven't installed [Electron](https://electron.atom.io/) or you want to learn the basic knowledge of Electron, please check my previous posting [Build Cross-platform Apps with Electron]({% link _posts/2016-11-03-build-cross-platform-desktop-apps-with-electron.md %}) first.
 
 ## 2. 2048
 2048 is a famous number puzzle game, you can try it online at https://gabrielecirulli.github.io/2048/. It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.
 ![MIME Type](/public/pics/2016-11-08/2048.png)  
+
 ## 3. Steps for Conversion
 ### 3.1 Get Source Files for 2048
 Clone source code from github.
 ```sh
-mkdir Game2048
-cd Game2048
-git clone https://github.com/gabrielecirulli/2048
+$ mkdir Game2048
+$ cd Game2048
+$ git clone https://github.com/gabrielecirulli/2048
 ```
 ### 3.2 Create Files
 Create main.js
@@ -48,7 +49,7 @@ function createWindow () {
 app.on('ready', createWindow)
 ```
 Create package.json.
-```javascript
+```json
 {
   "name": "2048",
   "version": "1.0.0",
@@ -67,8 +68,8 @@ Create package.json.
 ```
 Run, you should see 2048 is running.
 ```sh
-npm install
-npm start
+$ npm install
+$ npm start
 ```
 ### 3.3 Beautify UI
 1) Set Window Size
@@ -137,14 +138,14 @@ function setMainMenu() {
         template.unshift({
           label: name,
           submenu: [{
-            label: `About ${name}`,
+            label: 'About ${name}',
             role: 'about'
           }, {
             type: 'separator'
           }, {
             type: 'separator'
           }, {
-            label: `Hide ${name}`,
+            label: 'Hide ${name}',
             accelerator: 'Command+H',
             role: 'hide'
           }, {
@@ -171,10 +172,10 @@ function setMainMenu() {
     Menu.setApplicationMenu(menu)
 }
 ```
-### 3.4 Test
+### 3.4 Run and Test
 Run the following command to start the app.
 ```sh
-npm start
+$ npm start
 ```
 Notice, the window title has been set to 2048. And the menu is also changed except the first one.
 ![MIME Type](/public/pics/2016-11-08/run2.png)  
@@ -194,7 +195,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 ### 4.2 Settings For Linux Packaging
 1) Specify homepage attribute in package.json  
 2) Set name and email for author
-```javascript
+```json
 {
   "name": "2048",
   "windowtitle": "2048",
@@ -205,8 +206,8 @@ To use electron-build for building, we need to create a folder named 'build' and
   "author": {
     "name": "Rong Zhuang",
     "email": "jojozhuang@gmail.com"
-  },
-  ...
+  }
+
 }
 ```
 3) The final structure of the project.
@@ -214,7 +215,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 ### 4.3 Run Packaging
 1) Run following command to start packaging.
 ```sh
-npm run dist
+$ npm run dist
 ```
 2) Mac  
 Output on Mac. One executable file, one installer file and one compressed file.
