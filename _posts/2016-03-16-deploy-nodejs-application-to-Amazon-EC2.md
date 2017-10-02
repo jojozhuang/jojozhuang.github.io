@@ -55,62 +55,50 @@ Choose the newly created session, double click it or click the ‘Open’ button
 Note, the IP address here is internal IP. When using putty to connect EC2 remote server, make sure launch the instance first. You have to change the IP in putty every time if you reboot the instance. The Public IP address of the EC2 instance changes to different value once it restarts.
 
 ## 3.  Setup Node.js environment in EC2 Instance
-### 3.1 Update your EC2 Amazon Linux  
-
+### 3.1 Update your EC2 Amazon Linux
 ```sh
-sudo yum update
+$ sudo yum update
 ```
-
 ### 3.2 Install GCC  
-
 ```sh
-sudo yum install gcc-c++ make
-sudo yum install openssl-devel
+$ sudo yum install gcc-c++ make
+$ sudo yum install openssl-devel
 ```
-
 ### 3.3 Install Node.js
-
 ```sh
-sudo yum install git
-git clone git://github.com/nodejs/node
-cd node
-./configure
-make //it may take long time to compile
-sudo make install
+$ sudo yum install git
+$ git clone git://github.com/nodejs/node
+$ cd node
+$ ./configure
+$ make //it may take long time to compile
+$ sudo make install
 ```
-
 ### 3.4 Add node folder to secure\_path  
-
 ```sh
-sudo su
-nano /etc/sudoers
+$ sudo su
+$ nano /etc/sudoers
 ```
 
 Append :/usr/local/bin to the end of secure\_path  
 ![image15](/public/pics/2016-03-16/image15.png)  
 ### 3.5 Install npm  
-
 ```sh
-git clone https://github.com/npm/npm
-cd npm
-sudo make install
+$ git clone https://github.com/npm/npm
+$ cd npm
+$ sudo make install
 ```
 
 ## 4. Create simple node app and start Node server  
-### 4.1 Create folder ‘site’  
-
+### 4.1 Create folder ‘site’
 ```sh
-mkdir site
+$ mkdir site
 ```
-
 ### 4.2 Create file ‘server.js’
-
 ```sh
-nano server.js
+$ nano server.js
 ```
 
 Apend the following content to the file, save and exit.
-
 ```javascript
 var http = require('http');
 
@@ -130,7 +118,7 @@ console.log("The server is running at 80...");
 You cannot make node server listen to port 80. Run the following command to redirect requests from port 80 of EC2 server to port 8080 of our Node server. You must execute it in root role. And it needs to be reset each time your EC2 instnace is restarted.
 
 ```sh
-iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
+$ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
 ```
 
 ### 4.4  Start Node Server  
@@ -153,13 +141,11 @@ Select the folder, make sure delete all files in ‘node\_modules’ folder.
 ![image25](/public/pics/2016-03-16/image25.png)  
 Refresh the folder in putty, the new folder exits.  
 ![image26](/public/pics/2016-03-16/image26.png)  
-### 5.3 Go into the folder, run the node application  
-
+### 5.3 Go into the folder, run the node application
 ```sh
-npm install
-npm start
+$ npm install
+$ npm start
 ```
-
 ### 5.4 Test the Node.js Application
 This Node.js project is a drawing application. It uses Socket.IO to broadcast the changes from one client to other clients.  
 1) The first user opens it in Chrome, waits others to join and draws something later.  
@@ -194,15 +180,12 @@ Until now, the application is running properly.
 Sometime, npm itself doesn’t work properly.  
 ![image31](/public/pics/2016-03-16/image31.png)  
 Then we have to uninstall and install it again.
-
 ```sh
-sudo npm uninstall npm -g
+$ sudo npm uninstall npm -g
 ```
-
 If it doesn’t work, go the ‘npm’ folder, run:  
-
 ```sh
-sudo make uninstall
+$ sudo make uninstall
 ```
 
 ## 9. Document

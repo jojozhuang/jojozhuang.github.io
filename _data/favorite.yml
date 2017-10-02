@@ -51,6 +51,15 @@ bookmarks:
       - name: ORM
         description: Object-relational mapping
         url: https://en.wikipedia.org/wiki/Object-relational_mapping
+      - name: HTTP
+        description: Hypertext Transfer Protocol
+        url: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+      - name: TCP
+        description: Transmission Control Protocol
+        url: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+      - name: UDP
+        description: User Datagram Protocol
+        url: https://en.wikipedia.org/wiki/User_Datagram_Protocol
       - name: WebSocket
         description: A computer communications protocol
         url: https://en.wikipedia.org/wiki/WebSocket
@@ -205,6 +214,9 @@ bookmarks:
       - name: Node.js
         description: A JavaScript runtime built on Chrome's V8 JavaScript engine
         url: https://nodejs.org/
+      - name: NPM
+        description: The package manager for JavaScript and the world’s largest software registry
+        url: https://www.npmjs.com/
       - name: Jenkins
         description: An open source automation server written in Java
         url: https://jenkins.io/
