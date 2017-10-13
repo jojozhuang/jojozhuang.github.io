@@ -14,54 +14,54 @@ tags: [GitHub Pages, Jekyll, Ruby]
 ## 2. Installing Jekyll on Ubuntu
 Make sure gcc and make are installed. Check version of them with the following commands.
 ```sh
-gcc -v
-make -v
+$ gcc -v
+$ make -v
 ```
 Run the following command to install Jekyll.
 ```sh
-sudo apt install jekyll
+$ sudo apt install jekyll
 ```
 Check version.
 ```sh
-jekyll --version
+$ jekyll --version
 ```
 
 ## 3. Install Jekyll on Mac
 Make sure gcc and make are installed. Check version of them with the following commands.
 ```sh
-gcc -v
-make -v
+$ gcc -v
+$ make -v
 ```
 Install Ruby.
 ```sh
-brew install ruby
+$ brew install ruby
 ```
 
 Install Jekyll.
 ```sh
-sudo gem install jekyll
+$ sudo gem install jekyll
 ```
 Check version.
 ```sh
-jekyll --version
+$ jekyll --version
 ```
 
 ## 4. Run Website with Jekyll
 Get source files of my person website from Github.
 ```sh
-cd /Johnny/Github/
-git clone https://github.com/jojozhuang/jojozhuang.github.io
-cd jojozhuang.github.io
+$ cd /Johnny/Github/
+$ git clone https://github.com/jojozhuang/jojozhuang.github.io
+$ cd jojozhuang.github.io
 ```
 
 Build and launch the website. All of the files will be deployed to a new folder named '\_site'. Open web browser and access  http://127.0.0.1:4000/.
 ```sh
-jekyll build
-jekyll serve
+$ jekyll build
+$ jekyll serve
 ```
 If you want jekyll to start at different port, add port option when using `jekyll serve`.
 ```sh
-jekyll serve --port 12001
+$ jekyll serve --port 12001
 ```
 
 Open web browser to access your local jekyll website.

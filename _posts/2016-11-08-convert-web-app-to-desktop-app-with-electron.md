@@ -12,7 +12,7 @@ tags: [Electron, 2048]
 If you haven't installed [Electron](https://electron.atom.io/) or you want to learn the basic knowledge of Electron, please check my previous posting [Build Cross-platform Apps with Electron]({% link _posts/2016-11-03-build-cross-platform-desktop-apps-with-electron.md %}) first.
 
 ## 2. 2048
-2048 is a famous number puzzle game, you can try it online at https://gabrielecirulli.github.io/2048/. It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.
+2048 is a famous number puzzle game, you can try it online at [https://gabrielecirulli.github.io/2048/](https://gabrielecirulli.github.io/2048/). It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.
 ![MIME Type](/public/pics/2016-11-08/2048.png)  
 
 ## 3. Steps for Conversion

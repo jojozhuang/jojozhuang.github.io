@@ -15,12 +15,12 @@ jekyll 3.5.2 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
 Port 4000 has already been occupied. To solve this issue, kill the process that is using this port.  
 Find the process which is using port 4000.
 ```sh
-lsof -i :4000
+$ lsof -i :4000
 ```
 
 Kill the process with its process id.
 ```sh
-kill -9 <PID>
+$ kill -9 <PID>
 ```
 ![MIME Type](/public/pics/2016-01-17/port.png)  
 

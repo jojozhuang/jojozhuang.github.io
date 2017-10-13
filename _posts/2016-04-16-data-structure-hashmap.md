@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Data Structure - HashMap"
+title: "Data Structure - HashMap[Draft]"
 date: 2016-04-16
 tags: [HashKey, Equals]
 ---

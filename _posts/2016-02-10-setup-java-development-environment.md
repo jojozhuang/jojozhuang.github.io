@@ -59,7 +59,7 @@ To use ubuntu more efficiently, you need to install some highly recommended soft
 By default, Ubuntu has Firefox installed as default web browser, but I prefer Chrome.
 Go to Google's website, search Chrome and download the installation file. It should have the extension .deb
 ```sh
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+$ sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 Note that all of the installation files for Ubuntu have the .deb extension. We always use dpkg to install them.
 
@@ -68,16 +68,16 @@ Note that all of the installation files for Ubuntu have the .deb extension. We a
 In Ubuntu VM, download the latest version of JDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Select JDK, in the next page, accept the license and choose 'jdk-8u144-linux-x64.tar.gz' to download.
 ### 3.2 Install JDK
 There is no installer, have to configure JKD manually. Unzip the package and move JDK files to /usr/local/java/
-```
-sudo cp -r jdk-8u144-linux-i586.tar.gz /usr/local/java/
-cd /usr/local/java
-tar xvzf jdk-8u144-linux-x64.tar.gz
+```sh
+$ sudo cp -r jdk-8u144-linux-i586.tar.gz /usr/local/java/
+$ cd /usr/local/java
+$ tar xvzf jdk-8u144-linux-x64.tar.gz
 ```
 Finally, JDK is installed to /usr/local/java/jdk1.8.0_144/.
 ### 3.3 Setup Environment Variables for Java
 Create new environment variable of JAVA_HOME and add it to PATH.
 ```sh
-sudo nano /etc/profile
+$ sudo nano /etc/profile
 ```
 Add the following contents to the end.
 ```sh
@@ -88,14 +88,14 @@ export PATH
 ```
 ### 3.4 Inform Ubuntu where Java JDK is located.
 ```sh
-sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.8.0_144/bin/java" 1
-sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.8.0_144/bin/javac" 1
-sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jdk1.8.0_144/bin/javaws" 1
+$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.8.0_144/bin/java" 1
+$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.8.0_144/bin/javac" 1
+$ sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jdk1.8.0_144/bin/javaws" 1
 ```
 
 ### 3.5 Check Java Version
 ```sh
-java -version
+$ java -version
 ```
 You should be able to see the java information like below.
 ```sh
@@ -110,26 +110,26 @@ In Ubuntu VM, download the latest version of Tomcat from [https://tomcat.apache.
 ### 4.2 Install Tomcat
 There is no installer, have to configure Tomcat manually. Unzip the tar file, copy to /opt/tomcat.
 ```sh
-tar xvzf apache-tomcat-9.0.0.M26.tar.gz
-sudo mv apache-tomcat-9.0.0.M26 /opt/tomcat
+$ tar xvzf apache-tomcat-9.0.0.M26.tar.gz
+$ sudo mv apache-tomcat-9.0.0.M26 /opt/tomcat
 ```
 ### 4.3 Setup Environment Variables for Tomcat
 1) Open .bashrc for editing
 ```sh
-vim ~/.bashrc
+$ vim ~/.bashrc
 ```
 2) Set CATALINA_HOME environment variable pointing to the installation locations. Add this information to the end of the file:
 ```sh
-export CATALINA_HOME=/opt/tomcat
+$ export CATALINA_HOME=/opt/tomcat
 ```
 3) Simply save and exit .bashrc, then make the changes effective by running the following command:
 ```sh
-. ~/.bashrc
+$ . ~/.bashrc
 ```
 
 ### 4.4 Add User for Tomcat
 ```sh
-vi $CATALINA_HOME/conf/tomcat-users.xml
+$ vi $CATALINA_HOME/conf/tomcat-users.xml
 ```
 Add role and admin user to this file.
 ```xml
@@ -142,21 +142,21 @@ Add role and admin user to this file.
   <user username="role1" password="tomcat" roles="role1"/>
 -->
 
-	<role rolename="manager-gui"/>
-	<user username="admin" password="admin" roles="manager-gui"/>
+    <role rolename="manager-gui"/>
+    <user username="admin" password="admin" roles="manager-gui"/>
 
 </tomcat-users>
 ```
 
 ### 4.5 Start Tomcat  
 ```sh
-$CATALINA_HOME/bin/startup.sh
+$ $CATALINA_HOME/bin/startup.sh
 ```
 Verify that Tomcat is working by visiting http://localhost:8080.
 ![tomcat](/public/pics/2016-02-10/tomcat.png)  
 Tomcat can be stopped by executing the following command:
 ```sh
-$CATALINA_HOME/bin/shutdown.sh
+$ $CATALINA_HOME/bin/shutdown.sh
 ```
 
 ## 5. Install Eclipse
@@ -165,18 +165,18 @@ Download the latest version of Eclipse from [https://www.eclipse.org/downloads/]
 ### 5.2 Install Eclipse
 1) Unzip the tar file.
 ```sh
-tar xvzf eclipse-inst-linux64.tar.gz
+$ tar xvzf eclipse-inst-linux64.tar.gz
 ```
 2) Run Eclipse Installer
 Go to the uncompressed folder 'eclipse-installer', double click the installation file 'eclipse-inst'. In the wizard, select 'Eclipse IDE for Java EE Developers', change location to /opt/jee-oxygen/. If you see  'read-only' error, run the following command.
 ```sh
-sudo chown -R $USER /opt/  // grant all access of rights for folder /opt/ to current user.
+$ sudo chown -R $USER /opt/  // grant all access of rights for folder /opt/ to current user.
 ```
 Installation should start and wait until it is finished.
 ### 5.3 Start Eclipse
 Launch Eclipse through UI or run command as follows.
 ```sh
-/opt/jee-oxygen/eclipse/eclipse
+$ /opt/jee-oxygen/eclipse/eclipse
 ```
 Set workspace.
 ![eclipse_workspace](/public/pics/2016-02-10/eclipse_workspace.png)  
@@ -188,8 +188,8 @@ Close the welcome page, you will get Eclipse ready for use.
 Sometimes, hard disk of your VM is out of storage. You need to increase the storage.
 VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
 ```sh
-cd /home/johnny/VitualBox VMs/Ubuntu // navigate to the vm location
-VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubuntu.vdi to 20GB.
+$ cd /home/johnny/VitualBox VMs/Ubuntu // navigate to the vm location
+$ VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubuntu.vdi to 20GB.
 ```
 
 ## 7. References

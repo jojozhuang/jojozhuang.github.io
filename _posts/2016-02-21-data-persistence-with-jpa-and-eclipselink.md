@@ -46,7 +46,7 @@ Finally you get the project file in the Package Explorer in Eclipse IDE. Expand 
 
 ## 4. Adding MySQL Connector to Project
 To access Mysql database, we need mysql connector jar.
-Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download Mysql Connector/J.
+Go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download Mysql Connector/J.
 ![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
 Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /JPATutorial/lib/  
 Go to Project properties -> Java Build Path by right click on it. You will get a dialog box as follows: Click on Add External Jars.
@@ -75,18 +75,18 @@ CREATE DATABASE  IF NOT EXISTS `jpadb`
 ### 5.2 Create Image with Dockerfile
 In terminal, navigate to /JPATutorial/docker/, run command.
 ```sh
-docker build -t jpa-mysql:0.1 .
+$ docker build -t jpa-mysql:0.1 .
 ```
 Check images with following command.
 ```sh
-docker images
+$ docker images
 ```
 ![MIME Type](/public/pics/2016-02-21/dockerimage.png)  
 
 ### 5.3 Run Mysql Container With The New Image
 In terminal, run command.
 ```sh
-docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
+$ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
 You will see that mysql container is running now. And note the ip address and port. We will use them to configure the database connection in eclipse.
 ![MIME Type](/public/pics/2016-02-21/kitematic.png)  

@@ -79,11 +79,11 @@ Open browser, access http://127.0.0.1:8080/. The time will be updated for every 
 Another example of Socket.IO usage is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/). This sample shows the Broadcasting feature of Socket.IO.  
 Download the source files from [SocketIOCanvas from GitHub](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOCanvas), run
 ```sh
-npm install
+$ npm install
 ```
 Then start it with:
 ```sh
-npm start
+$ npm start
 ```
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 

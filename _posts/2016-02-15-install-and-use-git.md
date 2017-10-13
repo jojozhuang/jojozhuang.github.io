@@ -51,7 +51,7 @@ git version 2.7.4
 ## 3. Create Repository on GitHub
 To push your local git repository to remote git server, we need to use GitHub.
 ### 3.1 Create GitHub Account
-If you haven't already, go to https://github.com/ to register and create a new account.
+If you haven't already, go to [https://github.com/](https://github.com/) to register and create a new account.
 
 ### 3.2 Repositories on GitHub
 After login, you will see the page like below. For my GitHub, there are total 9 repositories. Seven of them are mine. One of them(EthanHao/Depaul) is shared by another GitHub Account. And another repository(github-example) is forked from some one's repository.
@@ -67,25 +67,25 @@ After creation, some instructions show how to submit files to this repository th
 ## 4. Push Local File to GitHub
 ### 4.1 Create Local Repository
 ```sh
-Johnny@Johnny-Mac:~$ mkdir GitTutorial
-Johnny@Johnny-Mac:~$ cd GitTutorial/
-Johnny@Johnny-Mac:~$ vi hello.txt // input 'Hello Git!'
-Johnny@Johnny-Mac:~$ git init
+$ mkdir GitTutorial
+$ cd GitTutorial/
+$ vi hello.txt // input 'Hello Git!'
+$ git init
 Initialized empty Git repository in /Users/i857285/Johnny/GitHub/GitTutorial/.git/
-Johnny@Johnny-Mac:~$ git status -s
+$ git status -s
 ?? hello.txt
-Johnny@Johnny-Mac:~$ git add hello.txt
-Johnny@Johnny-Mac:~$ git status -s
+$ git add hello.txt
+$ git status -s
 A  hello.txt
-Johnny@Johnny-Mac:~$ git commit -m "first commit"
+$ git commit -m "first commit"
 [master (root-commit) 92b8723] first commit
  1 file changed, 1 insertion(+)
  create mode 100644 hello.txt
 ```
 ## 4.2 Push to GitHub
 ```sh
-Johnny@Johnny-Mac:~$ git remote add origin https://github.com/jojozhuang/github-test.git
-Johnny@Johnny-Mac:~$ git push -u origin master
+$ git remote add origin https://github.com/jojozhuang/github-test.git
+$ git push -u origin master
 Username for 'https://github.com': jojozhuang
 Password for 'https://jojozhuang@github.com':
 Counting objects: 3, done.
@@ -94,7 +94,6 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/jojozhuang/github-test.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
-Johnny@Johnny-Mac:~$
 ```
 
 ## 4.3 Check on GitHub
@@ -106,31 +105,30 @@ Click on the file, check the content of it.
 ## 5. Pull Files From GitHub
 Below commands show how to pull the files from GitHub repository 'github-test' to local Mac.
 ```sh
-Johnny@Johnny-Mac:~$ cd PullTest/
-Johnny@Johnny-Mac:~$ ls
-Johnny@Johnny-Mac:~$ git clone https://github.com/jojozhuang/github-test.git
+$ cd PullTest/
+$ ls
+$ git clone https://github.com/jojozhuang/github-test.git
 Cloning into 'github-test'...
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-Johnny@Johnny-Mac:~$ ls
+$ ls
 github-test
-Johnny@Johnny-Mac:~$ cd github-test/
-Johnny@Johnny-Mac:~$ ls
+$ cd github-test/
+$ ls
 hello.txt
-Johnny@Johnny-Mac:~$
 ```
 
 Next time, use the following commands to get latest commits from the same repository.
 ```sh
-cd PullTest/
-git pull origin master
+$ cd PullTest/
+$ git pull origin master
 ```
 
 ## 6. Use Git with SourceTree
 SourceTree is a free Git client for Windows or Mac. Instead of using command line, it provides an nice visual Git GUI.
 ### 6.1 Install SourceTree
-Go to https://www.sourcetreeapp.com/, download the installer, and follow the wizard to install it.
+Go to [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/), download the installer, and follow the wizard to install it.
 
 ### 6.2 Clone Repository from GitHub
 New Repository->Clone From URL

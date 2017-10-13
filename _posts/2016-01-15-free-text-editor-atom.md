@@ -15,8 +15,8 @@ Atom is a free and open-source text editor with plug-ins supported. It is availa
 ## 2. Install Atom
 Go to [https://atom.io/](https://atom.io/), download the proper installer of different versions. For Mac or Windows, just click the installer and follow the wizard to install it. For linux, run the following commands in terminal to install it.
 ```sh
-sudo rpm -i atom_amd64.rpm  // for RedHat
-sudo dpkg -i atom_amd64.deb // for Ubuntu
+$ sudo rpm -i atom_amd64.rpm  // for RedHat
+$ sudo dpkg -i atom_amd64.deb // for Ubuntu
 ```
 
 ## 3. Plug-In System for Atom
