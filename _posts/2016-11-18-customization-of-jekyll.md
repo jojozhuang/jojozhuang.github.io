@@ -79,7 +79,15 @@ In Markdown, we can create hyperlinks to the pages of our own website or externa
 ````
 Here is the result after Markdown file is converted to web page: [My Website](http://jojozhuang.github.io/).
 
-The problem of this approach is the url is hard-coded. Suppose we rename our internal page or the external URL is obsolete, then this link would be unreachable, which means it becomes 'dead'. It is impossible for you to know if all your hyperlinks are alive.
+We can also add `{:target="_blank"}` at end, which makes the browser open a new tab when the link is clicked.
+````
+```
+[My Website](http://jojozhuang.github.io/){:target="_blank"}
+```
+````
+Here is the result after Markdown file is converted to web page: [My Website](http://jojozhuang.github.io/){:target="\_blank"}.
+
+The problem of above approach is the url is hard-coded. Suppose we rename our internal page or the external URL is obsolete, then this link would be unreachable, which means it becomes 'dead'. It is impossible for you to know if all your hyperlinks are alive.
 
 The good news is, in Jekyll, you can use `link` tag to create hyperlink for a post, a page, collection item, or file.
 ```

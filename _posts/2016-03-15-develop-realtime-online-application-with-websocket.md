@@ -19,8 +19,11 @@ There are many implementations of WebSocket. In this article, I will introduce 3
  * [SignalR](http://signalr.net/)
 
 ## 2. Socket.IO
-### 2.1 Full-Duplex
-Create a file named server.js. And add the following code. The timer invokes sockets.send method every one second.  
+### 2.1 Prerequisite
+If you haven’t installed Node.js and NPM, please install them by referring to posting [Install Node.js and NPM]({% link _posts/2016-03-06-install-nodejs-and-npm.md %}).
+### 2.2 Server Clock
+This sample shows the Full-Duplex feature of Socket.IO.
+Create a file named `clock-server.js`. And add the following code. The timer invokes sockets.send method every one second.  
 
 ```javascript
 var app = require('http').createServer(handler);
@@ -35,13 +38,17 @@ function handler (req, res) {
 }
 function tick () {
   var now = new Date().toUTCString();
+  now=now.setMonth(now.getMonth() - 7);
   io.sockets.send(now);
 }
 setInterval(tick, 1000);
 app.listen(8080);
+
+// Console will print the message
+console.log('Server running at http://127.0.0.1:8080/');
 ```  
 
-Create index.html with following codes.  
+Create `index.html` with following codes.  
 
 ```html
 <!DOCTYPE html>
@@ -61,21 +68,33 @@ Create index.html with following codes.
 </html>
 ```  
 
-Run it, you will get the below result. The time will be updated for every one second.  
-![Server Time](/public/pics/2016-03-07/socketiotimer.png "Server Time")  
+In terminal, execute clock-server.js with node command.
+```sh
+$ node clock-server.js
+```
+Open browser, access http://127.0.0.1:8080/. The time will be updated for every one second.  
+![Server Time](/public/pics/2016-03-15/socketiotimer.png "Server Time")  
 
-### 2.2 Broadcasting
-Another example of Socket.IO usage is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/).
+### 2.2 Online Painting Application
+Another example of Socket.IO usage is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/). This sample shows the Broadcasting feature of Socket.IO.  
+Download the source files from [SocketIOCanvas from GitHub](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOCanvas), run
+```sh
+npm install
+```
+Then start it with:
+```sh
+npm start
+```
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
 After all opened, start to draw in the first chrome browser.  
-![In Chrome](/public/pics/2016-03-07/socketiopaint1.png)  
-Same in Firefox.  
-![Firefox](/public/pics/2016-03-07/socketiopaint2.png)  
+![In Chrome](/public/pics/2016-03-15/socketiopaint1.png)  
+After drawing is finished, switch to Firefox. Same drawing in Firefox.  
+![Firefox](/public/pics/2016-03-15/socketiopaint2.png)  
 Same in iPad.  
-![iPad](/public/pics/2016-03-07/socketiopaint3.png)  
+![iPad](/public/pics/2016-03-15/socketiopaint3.png)  
 Same in iPhone.  
-![iPhone](/public/pics/2016-03-07/socketiopaint4.png)  
+![iPhone](/public/pics/2016-03-15/socketiopaint4.png)  
 
 ## 3. WebSockets in ASP.NET
 WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket.  
@@ -83,20 +102,20 @@ Here is the article shows how to use it.
 * [Building an HTML5 Web Sockets Server with ASP.NET 4.5](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) .  
 
 ### 3.1 First user comes in, says 'Hi'.  
-![MS WebSocket1](/public/pics/2016-03-07/mswebsocket1.png "MS WebSocket1")  
+![MS WebSocket1](/public/pics/2016-03-15/mswebsocket1.png "MS WebSocket1")  
 ### 3.2 Second user comes in(another page), says 'I'm here'.  
-![MS WebSocket2](/public/pics/2016-03-07/mswebsocket2.png "MS WebSocket2")  
+![MS WebSocket2](/public/pics/2016-03-15/mswebsocket2.png "MS WebSocket2")  
 ### 3.3 Back to the page of first user.
-![MS WebSocket3](/public/pics/2016-03-07/mswebsocket3.png "MS WebSocket3")  
+![MS WebSocket3](/public/pics/2016-03-15/mswebsocket3.png "MS WebSocket3")  
 
 ## 4. SignalR
 SignalR is popular and it can run in Windows7. The official tutorial is [Tutorial: Getting Started with SignalR 2](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
 
 This sample implements the online chatting function.  
-![SignalR](/public/pics/2016-03-07/signalrsample.png "SignalR")  
+![SignalR](/public/pics/2016-03-15/signalrsample.png "SignalR")  
 
 ## 5. Source Files
-* [Source files of SocketIO Sample1 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/NodejsAction/SocketIO)
-* [Source files of SocketIO Sample2 on Github](https://github.com/jojozhuang/Study/tree/master/NodeJs/CanvasWebSocket)
+* [Source files of SocketIO Clock Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOClock)
+* [Source files of SocketIO Online Painting on Github](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOCanvas)
 * [Source files of WebSockets Sample on Github](https://github.com/jojozhuang/Study/tree/master/DotNet/WebSockets/ASP.NET)
 * [Source files of SignalR Sample on MSDN](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9)
