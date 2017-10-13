@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Run Multiple Containers with Docker Compose"
+title: "Running Multiple Containers with Docker Compose"
 date: 2016-09-30
 tags: [Docker, Compose]
 ---

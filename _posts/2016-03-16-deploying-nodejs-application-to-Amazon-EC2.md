@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Deploy Node.js Application to Amazon EC2"
+title: "Deploying Node.js Application to Amazon EC2"
 date: 2016-03-16
 tags: [Amazon EC2, Node.js, Putty, Cyberduck]
 ---

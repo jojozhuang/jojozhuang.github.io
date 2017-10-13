@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Setup GitHub Pages Site Locally With Jekyll"
+title: "Setting up GitHub Pages Site Locally With Jekyll"
 date: 2016-01-16
 tags: [GitHub Pages, Jekyll, Ruby]
 ---

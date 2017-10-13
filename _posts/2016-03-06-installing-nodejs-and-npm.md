@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Install Node.js and NPM"
+title: "Installing Node.js and NPM"
 date: 2016-03-06
 tags: [Node.js, NPM]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Enable Tomcat Debugging in Docker for Eclipse"
+title: "Enabling Tomcat Debugging in Docker for Eclipse"
 date: 2016-09-22
 tags: [Docker, Debugging, Eclipse, Tomcat]
 ---
@@ -9,7 +9,7 @@ tags: [Docker, Debugging, Eclipse, Tomcat]
 > Tutorial for how to setup remote debugging in Eclipse for tomcat in Docker.
 
 ## 1. Introduction
-After deploying the JSP application to Tomcat container, which is mentioned in the last posting [Serve JSP Application With Tomcat In Docker]({% link _posts/2016-09-20-serve-jsp-application-with-tomcat-in-docker.md %}), our Game Store is now hosted in tomcat container. Be aware of the following facts:
+After deploying the JSP application to Tomcat container, which is mentioned in the last posting [Serve JSP Application With Tomcat In Docker]({% link _posts/2016-09-20-serving-jsp-application-with-tomcat-in-docker.md %}), our Game Store is now hosted in tomcat container. Be aware of the following facts:
 * Source files are located on host machine, and copied to tomcat webapps folder through volume.
 * Tomcat container is serving the gamestore application.
 * Mysql container is used to store data.

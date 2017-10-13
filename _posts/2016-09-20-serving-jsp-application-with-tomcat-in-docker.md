@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Serve JSP Application With Tomcat In Docker"
+title: "Serving JSP Application With Tomcat In Docker"
 date: 2016-09-20
 tags: [Docker, Tomcat]
 ---
@@ -9,7 +9,7 @@ tags: [Docker, Tomcat]
 > Guide how to serve Java Servlet/JSP website in Apache Tomcat Container with Kitematic.
 
 ## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-install-docker-toolbox-and-kitematic-on-mac.md %}).
+If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
 ## 2. Setup Tomcat Container
 ### 2.1 Create Tomcat Container
@@ -47,7 +47,7 @@ In your host machine, create new folder gstomcat under ~/Documents.
 ![MIME Type](/public/pics/2016-09-20/volume.png)  
 
 ### 3.2 Publish JSP Application
-We will use the same JSP application for [Use Mysql Container for JSP Application]({% link _posts/2016-09-12-use-mysql-container-for-jsp-application.md %}).
+We will use the same JSP application for [Use Mysql Container for JSP Application]({% link _posts/2016-09-12-using-mysql-container-for-jsp-application.md %}).
 
 Build the project first, and copy all of the files from /GameStoreMysql/WebContent/ to ~/Documents/gstomcat/.
 ![MIME Type](/public/pics/2016-09-20/webcontent.png)  

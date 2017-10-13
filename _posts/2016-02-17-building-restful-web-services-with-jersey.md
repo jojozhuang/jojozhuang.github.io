@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Build RESTful Web Services with Jersey"
+title: "Building RESTful Web Services with Jersey"
 date: 2016-02-17
 tags: [Jersey, RESTful Web Services, Maven]
 ---
@@ -9,7 +9,7 @@ tags: [Jersey, RESTful Web Services, Maven]
 > Build RESTful web services with Jersey in Java.
 
 ## 1. Prerequisites
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setup-java-development-environment.md %}) to setup your development environment.
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
 
 ## 2. Jersey Project
 ### 2.1 Create Maven Project

@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Install and Use Docker on Ubuntu"
+title: "Installing and Using Docker on Ubuntu"
 date: 2016-09-10
 tags: [Docker, Docker Hub]
 ---
@@ -148,8 +148,8 @@ As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notic
 
 ## 5.3 Use Dockerfile to Create New Images
 Refer to the following blogs:
-* [Create Tomcat Image with Docker File]({% link _posts/2016-09-25-create-tomcat-image-with-docker-file.md %})
-* [Create Mysql Image with Docker File]({% link _posts/2016-09-27-create-mysql-image-with-docker-file.md %})
+* [Create Tomcat Image with Docker File]({% link _posts/2016-09-25-creating-tomcat-image-with-docker-file.md %})
+* [Create Mysql Image with Docker File]({% link _posts/2016-09-27-creating-mysql-image-with-docker-file.md %})
 
 ## 6. Push Docker Images to Docker Hub
 ## 6.1 Log into Docker Hub

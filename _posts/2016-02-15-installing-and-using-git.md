@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Install and Use Git"
+title: "Installing and Using Git"
 date: 2016-02-15
 tags: [Git, GitHub, SourceTree]
 ---

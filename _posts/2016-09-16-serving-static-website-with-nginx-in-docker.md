@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Serve Static Website With Nginx In Docker"
+title: "Serving Static Website With Nginx In Docker"
 date: 2016-09-16
 tags: [Docker, Nginx]
 ---
@@ -12,7 +12,7 @@ tags: [Docker, Nginx]
 * Use volumes to modify the website data
 
 ## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-install-docker-toolbox-and-kitematic-on-mac.md %}).
+If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
 ## 2. Run Nginx Web Server Container
 ### 2.1 Create Nginx Container

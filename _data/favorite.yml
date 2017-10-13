@@ -118,6 +118,9 @@ bookmarks:
       - name: IBM Watson
         description: An AI system developed by IBM
         url: https://www.ibm.com/watson
+      - name: Spark
+        description: A fast and general engine for large-scale data processing
+        url: https://spark.apache.org/
   - category: Mobile Development
     links:
       - name: Android

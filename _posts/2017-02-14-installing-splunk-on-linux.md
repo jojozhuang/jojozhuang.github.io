@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Install Splunk on Linux"
+title: "Installing Splunk on Linux"
 date: 2017-02-14
 tags: [RedHat, Ubuntu, Splunk]
 ---

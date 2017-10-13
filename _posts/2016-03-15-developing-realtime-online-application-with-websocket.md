@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Develop Realtime Online Application with WebSocket"
+title: "Developing Realtime Online Application with WebSocket"
 date: 2016-03-15
 tags: [WebSocket, Socket.IO, SignalR]
 ---
@@ -20,7 +20,7 @@ There are many implementations of WebSocket. In this article, I will introduce 3
 
 ## 2. Socket.IO
 ### 2.1 Prerequisite
-If you haven’t installed Node.js and NPM, please install them by referring to posting [Install Node.js and NPM]({% link _posts/2016-03-06-install-nodejs-and-npm.md %}).
+If you haven’t installed Node.js and NPM, please install them by referring to posting [Install Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}).
 ### 2.2 Server Clock
 This sample shows the Full-Duplex feature of Socket.IO.
 Create a file named `clock-server.js`. And add the following code. The timer invokes sockets.send method every one second.  

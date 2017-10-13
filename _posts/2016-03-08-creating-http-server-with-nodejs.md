@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Create Http Server with Node.js"
+title: "Creating Http Server with Node.js"
 date: 2016-03-08
 tags: [Node.js]
 ---
@@ -9,7 +9,7 @@ tags: [Node.js]
 > Tutorial for how to create Node.js applications.
 
 ## 1. Prerequisite
-If you haven’t installed Node.js and NPM, please install them by referring to my previous posting [Install Node.js and NPM]({% link _posts/2016-03-06-install-nodejs-and-npm.md %}).
+If you haven’t installed Node.js and NPM, please install them by referring to my previous posting [Install Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}).
 
 ## 2. Create Server
 Create a file named `main.js` having following codes:

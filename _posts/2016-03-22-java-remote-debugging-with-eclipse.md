@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Java Remote Debug with Eclipse[Draft]"
+title: "Java Remote Debugging with Eclipse[Draft]"
 date: 2016-03-22
 tags: [Eclipse, Debugging]
 ---
