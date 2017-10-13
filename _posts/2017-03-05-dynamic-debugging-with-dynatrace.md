@@ -13,7 +13,7 @@ tags: [Dynatrace, Debugging]
   * [https://www.dynatrace.com](https://www.dynatrace.com)  
 
 ## 2. Installation on Linux(Server) and MaxOS(Client)
-### 2.1 Install Dynatrace Application Monitor on Linux  
+### 2.1 Installing Dynatrace Application Monitor on Linux  
 1) Download Dynatrace  
 Go to [https://community.dynatrace.com/community/display/EVAL/My+dynaTrace+Trial](https://community.dynatrace.com/community/display/EVAL/My+dynaTrace+Trial), click 'Download the Installers', select Linux version.
 2) Install  
@@ -53,7 +53,7 @@ tcp        0      0 :::6699     :::*     LISTEN    (port for Dynatrace collector
 tcp        0      0 :::9998     :::*     LISTEN    (port for Dynatrace agent connections)
 ```
 
-### 2.2 Install Dynatrace Client on MacOS
+### 2.2 Installing Dynatrace Client on MacOS
 
 
 ## 3. Reference

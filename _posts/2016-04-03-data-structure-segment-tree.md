@@ -36,7 +36,7 @@ Segment Tree has less storage and better performance.
 * The Space Complexity is O(n).
 * The Time Complexity for building the tree is O(n), for searching is O(lg(n)).
 
-## 2. Implement Segment Tree
+## 2. Implementing Segment Tree
 ### 2.1 Definition of Segment Tree Node
 Attributes start and end define the range. Pointers left and right define the left child and right child.
 ```java
@@ -54,7 +54,7 @@ public class SegmentTreeNode {
 }
 ```
 
-### 2.2 Build A Minimum Segment Tree
+### 2.2 Building A Minimum Segment Tree
 The digram of Minimum Segment Tree for given array {4,-1,3,0,2}.
 ![MIME Type](/public/pics/2016-04-03/min.png)  
 
@@ -87,7 +87,7 @@ private SegmentTreeNode buildMinHelpler(int[] arr, int start, int end) {
 }
 ```
 
-## 3. Search for Minimum
+## 3. Searching for Minimum
 For the given segment tree and the given range, find the minimum value.
 ```java
 public int queryMin(SegmentTreeNode root, int start, int end) {
@@ -122,7 +122,7 @@ public int queryMin(SegmentTreeNode root, int start, int end) {
 ```
 
 ## 4. Maximum and Sum
-### 4.1 Build Segment Tree
+### 4.1 Building Segment Tree
 Actually, we can build Segment Tree for minimum, maximum and sum at once.
 ![MIME Type](/public/pics/2016-04-03/minmaxsum.png)  
 
@@ -159,7 +159,7 @@ private SegmentTreeNode buildHelpler(int[] arr, int start, int end) {
 }
 ```
 
-### 4.2 Search for Maximum and Sum
+### 4.2 Searching for Maximum and Sum
 For the given segment tree and the given range, find the maximum value.
 ```java
 public int queryMax(SegmentTreeNode root, int start, int end) {

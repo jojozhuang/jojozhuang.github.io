@@ -13,7 +13,7 @@ tags: [Elasticsearch]
 * Kibana->Dev Tools -> [http://192.168.56.101:5601](http://192.168.56.101:5601)
 
 ## 2. Usage
-### 2.1 Create
+### 2.1 Creating
 ```
 POST shop/customer/1
 ```
@@ -63,7 +63,7 @@ POST shop/customer/3
 }
 ```
 
-### 2.2 Get
+### 2.2 Getting
 ```
 GET shop/customer/1
 ```
@@ -83,7 +83,7 @@ Response:
 }
 ```
 
-### 2.3 Update
+### 2.3 Updating
 ```
 PUT shop/customer/1
 ```
@@ -110,7 +110,7 @@ Response:
   "created": false
 }
 ```
-### 2.4 Delete
+### 2.4 Deleting
 ```java
 DELETE shop/customer/3
 ```
@@ -143,7 +143,7 @@ Response:
   "found": false
 }
 ```
-### 2.5 Search
+### 2.5 Searching
 a) Search all customers
 ```javascript
 GET /shop/customer/_search

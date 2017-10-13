@@ -15,7 +15,7 @@ Very commonly, a trie is used to store the entire (English) language for quick p
 Below picture shows how words are stored in trie. This trie stores five words: dog, dot, pump, fat, fire. Each node has a hashmap and a flag to indicate whether the current node is a leaf(a complete path for a word).
 ![MIME Type](/public/pics/2017-04-09/trie.png)  
 
-## 2. Implement Trie
+## 2. Implementing Trie
 ### 2.1 Trie Node Definition
 ```java
 class TrieNode {
@@ -38,7 +38,7 @@ public Trie() {
 }
 ```
 
-### 2.2 Insert Word
+### 2.2 Inserting Word
 The below picture shows how trie looks like after word 'dog' is inserted to trie.
 ![MIME Type](/public/pics/2017-04-09/insert.png)  
 
@@ -59,12 +59,12 @@ public void insert(String word) {
     current.leaf = true;
 }
 ```
-## 3. Search in Trie
+## 3. Searching in Trie
 There are two kinds of search in trie.
 * Find whether the given word exists.
 * Find whether any word starts with the given prefix exists.
 
-### 3.1 Search Prefix
+### 3.1 Searching Prefix
 ```java
 // Returns if there is any word in the trie that starts with the given prefix.
 public boolean startsWith(String prefix) {
@@ -91,7 +91,7 @@ private TrieNode searchNode(String str){
 }
 ```
 
-### 3.2 Search Entire Word
+### 3.2 Searching Entire Word
 Similar with prefix search, add additional check whether the node is leaf.
 ```java
 // Returns if the word is in the trie.
@@ -105,8 +105,8 @@ public boolean search(String word) {
 }
 ```
 ## 4. Deletion in Trie
-### 4.1 Delete Word
-### 4.2 Delete Words with Prefix
+### 4.1 Deleting Word
+### 4.2 Deleting Words with Prefix
 todo
 
 ## 5. Reference

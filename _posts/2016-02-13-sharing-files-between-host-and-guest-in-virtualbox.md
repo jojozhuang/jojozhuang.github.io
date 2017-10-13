@@ -8,7 +8,7 @@ tags: [VirtualBox, Ubuntu, Mac]
 
 > When using VirtualBox, we properly need to share files between the host machine and the guest machine. This posting guides you how to achieve bidirectional file sharing between MacOS host and Ubuntu guest.
 
-## 1. Install VirtualBox Guest Additions
+## 1. Installing VirtualBox Guest Additions
 1) Get VBoxGuestAdditions.iso  
 In MacOS, Finder->Application->VirtualBox->Show Package Content
 ![MIME Type](/public/pics/2016-02-13/virtualbox.png)  
@@ -21,14 +21,14 @@ Ubuntu VM->Devices->Optical Drives->Choose disk image..., locate to ~/Downloads/
 3) In Ubuntu, select VBoxGuestAdditions.iso, and install.
 After Guest Additions are installed, a new user group 'vboxsf' has been created.  
 
-## 2. Create Shared Folder on MacOS
+## 2. Creating Shared Folder on MacOS
 In MacOS, create a new folder /UbuntuSF/, which is used to share files with Ubuntu.
 
-## 3. Add Shared Folder to VM's SharedFolders
+## 3. Adding Shared Folder to VM's SharedFolders
 In VirtualBox, add /UbuntuSF as Ubuntu VM's SharedFolders, set Auto-mount to Yes.
 ![MIME Type](/public/pics/2016-02-13/sharedfolders.png)  
 
-## 4. Add User to Group 'vboxsf' in Ubuntu
+## 4. Adding User to Group 'vboxsf' in Ubuntu
 Run the following command in terminal.
 ```sh
 sudo adduser johnny vboxsf
@@ -36,7 +36,7 @@ sudo adduser johnny vboxsf
 ![MIME Type](/public/pics/2016-02-13/adduser.png)  
 Then, reboot Ubuntu.
 
-## 5. Check the Shared Folder in Ubuntu.
+## 5. Checking the Shared Folder in Ubuntu.
 Go to directory /media/, there should be a new shared folder sf_UbuntuSF.
 ![MIME Type](/public/pics/2016-02-13/ubuntusf.png)  
 Create a new file here.

@@ -11,7 +11,7 @@ tags: [Splunk, Log Analysis]
 ## 1. About the Issue
 In our cloud-based procurement system, the customer has to wait for one minute to get response after he clicks the 'Save' button on Invoice Reconciliation(IR) document. This IR contains over one hundred line items. There is no available tools for debugging on the cloud. I have to reproduce the issue locally by copying the configuration from cloud to my local sandbox, importing some master data and creating a similar IR document. The root cause is because of the validation on the fields of IR. However, I couldn't narrow down what exact field caused this issue. There are hundreds of fields on IR and on each line item. It seems there is no single bottleneck. Instead, it's an accumulated performance issue. To get the whole picture of how exactly the time is consumed, I added logs to the validation method to capture the time spent for each field. Later, I imported these logs to Splunk for analyzing.
 
-## 2. Create Logging Function
+## 2. Creating Logging Function
 For IR document, it has two level attributes. The first level is the fields on itself, we call it header level. The second level is the line items, we call it line level. We need to get the logs for both two levels.
 * Level_0: Time consumed by fields on header level of IR document  
 * Level_1: Time consumed by fields on line level of IR document  
@@ -29,27 +29,27 @@ Wed Feb 8 17:14:31 PDT 2017  (fieldTiming:DEBUG) : Level=1, Class=ariba.invoicin
 ```
 
 ## 3. Steps for Analyzing
-### 3.1 Get the Logs
+### 3.1 Getting the Logs
 Turn on the logging function, reproduce the issue, export the log file.
-### 3.2 Import Log File to Splunk
+### 3.2 Importing Log File to Splunk
 In Splunk, import log file.
-### 3.3 Search the Logs for Header Level
+### 3.3 Searching the Logs for Header Level
 Get the logs for level=0(header level).
 ```sh
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=0"
 ```
 ![MIME Type](/public/pics/2017-02-17/level0.png)  
-### 3.4 Export to CSV File
+### 3.4 Exporting to CSV File
 Export the search result to csv file.  
 ![MIME Type](/public/pics/2017-02-17/export.png)  
-### 3.5 Process the CSV File
+### 3.5 Processing the CSV File
 Use Microsoft Excel for the rest steps, since Excel is good at handling csv files.  
 Open the csv file, eliminate all other columns except Level, Class, FieldName and TimeSpent.
 ![MIME Type](/public/pics/2017-02-17/eliminate.png)  
 Then, sort the 'TimeSpent' column in descending order. Now, we see that field 'LineItems' on IR consumes 19.7 seconds. We find the bottleneck.
 ![MIME Type](/public/pics/2017-02-17/level0sorted.png)  
 
-### 3.6 Search the Logs for Line Level
+### 3.6 Searching the Logs for Line Level
 Now, we take the same steps to get the logs for level=1(line level).
 ```sh
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=1"

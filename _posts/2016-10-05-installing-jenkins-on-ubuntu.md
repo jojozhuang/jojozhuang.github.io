@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Install Jenkins On Ubuntu"
+title: "Installing Jenkins On Ubuntu"
 date: 2016-10-05
 tags: [Ubuntu, Jenkins]
 ---
@@ -11,9 +11,9 @@ tags: [Ubuntu, Jenkins]
 ## 1. What is Jenkins?
 [Jenkins](https://jenkins.io/index.html) is a powerful application that allows continuous integration and continuous delivery of projects, regardless of the platform you are working on. It is a free source that can handle any kind of build or continuous integration. You can integrate Jenkins with a number of testing and deployment technologies.
 
-## 2. Install Jenkins
+## 2. Installing Jenkins
 To use Jenkins, you can either install it on a physical/virtual machine, or create Jenkins container in Docker.
-### 2.1 Install and Setup Jenkins on Ubuntu
+### 2.1 Installing and Setting up Jenkins on Ubuntu
 Go to https://jenkins.io/download/, choose 'Ubuntu/Debian' for Long-term Support (LTS) version. Follow the steps mentioned in the page.  
 1) Add the key to your system:
 ```sh
@@ -39,7 +39,7 @@ After running above command, this package installation will:
 * Populate /etc/default/jenkins with configuration parameters for the launch, e.g JENKINS_HOME
 * Set Jenkins to listen on port 8080. Access this port with your browser to start configuration.
 
-### 2.2 Launch Jenkins Web
+### 2.2 Launching Jenkins Web
 Open a web browser, access http://localhost:8080/. You need to find the password in the given file to unlock Jenkins.
 ![MIME Type](/public/pics/2016-10-05/unlock.png)  
 

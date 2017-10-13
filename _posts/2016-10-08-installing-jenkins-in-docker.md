@@ -11,15 +11,15 @@ tags: [Docker, Jenkins]
 ## 1. What is Jenkins?
 [Jenkins](https://jenkins.io/index.html) is a powerful application that allows continuous integration and continuous delivery of projects, regardless of the platform you are working on. It is a free source that can handle any kind of build or continuous integration. You can integrate Jenkins with a number of testing and deployment technologies.
 
-## 2. Create Jenkins Container in Docker
-### 2.1 Install Docker and Kitematic
+## 2. Creating Jenkins Container in Docker
+### 2.1 Installing Docker and Kitematic
 If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to another posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
-### 2.2 Create Jenkins Container
+### 2.2 Creating Jenkins Container
 Search jenkins in Kitematic, select the official image, and click Create button.
 ![MIME Type](/public/pics/2016-10-08/dockersearch.png)
 New Jenkins container will be created and running.
 ![MIME Type](/public/pics/2016-10-08/dockerkitematic.png)
-### 2.3 Setup Jenkins
+### 2.3 Setting up Jenkins
 Click the Preview button, web browser will be opened to access Jenkins application. You need to find the password in the given file to unlock Jenkins.
 ![MIME Type](/public/pics/2016-10-08/dockerunlock.png)
 Open container terminal. Running the following commands to get the password from secret file.

@@ -13,7 +13,7 @@ tags: [Pre-Order, Post-Order, In-Order]
 * The root node has zero or more child nodes.
 * Each child node has zero or more child nodes, and so on.
 
-## 2. Distinguish the following Concepts
+## 2. Distinguishing the following Concepts
 * Graphs vs. Trees: A tree is a connected graph without cycles.
 * Trees vs. Binary Trees: Each node in binary tree has no more than 2 children nodes.
 * Binary Tree vs. Binary Search Tree: Every node in BST fits a specific ordering property: all left descendents <= current node < all right descendents.
@@ -176,7 +176,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
 ```
 
 ## 4. Level-Order in Binary Tree
-## 4.1 Create TreeNode With Level-Order String Array
+## 4.1 Creating TreeNode With Level-Order String Array
 For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
 ```java
 TreeNode root = TreeNode.createInstance(new String[]{"1","#","3"});
@@ -261,7 +261,7 @@ public List<List<Integer>> levelOrder(TreeNode root) {
 }
 ```
 
-## 5. Implement Binary Search Tree
+## 5. Implementing Binary Search Tree
 Methods:  
 * insert(int value)
 * find(int value)

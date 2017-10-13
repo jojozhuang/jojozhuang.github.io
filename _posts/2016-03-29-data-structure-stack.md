@@ -8,14 +8,14 @@ tags: [LIFO, LinkedList]
 
 > A stack uses LIFO (last-in first-out) ordering.
 
-## 1. Operations for Stack.
+## 1. Operations for Stack
 * push(item): Add an item to the top of the stack.
 * pop(): Remove the top item from the stack.
 * peek(): Return the top of the stack.
 * isEmpty(): Return true if and only if the stack is empty.
 
 ## 2. Implementation
-### 2.1 Implement with LinkedList.
+### 2.1 Implementing with LinkedList
 ```java
 public class LinkedListStack {
     private ListNode head; // the first node
@@ -54,7 +54,7 @@ public class LinkedListStack {
 }
 ```
 
-### 2.2 Implement with Two Queues.
+### 2.2 Implementing with Two Queues
 ```java
 public class QueueStack {
     Queue<Integer> queue1 = new LinkedList<Integer>(); // Q1 always has all of the elements
@@ -104,7 +104,7 @@ public class QueueStack {
 }
 ```
 
-### 2.3 Implement with Array.
+### 2.3 Implementing with Array
 ```java
 public class ArrayStack {
     private int top;
@@ -143,11 +143,11 @@ public class ArrayStack {
 }
 ```
 
-### 2.4 Implement with Array(Loop).
+### 2.4 Implementing with Array(Loop)
 ```java
 ```
-## 3. Implement Sort Function for Stack
-### 3.1 Sort with Additional Stack.
+## 3. Implementing Sort Function for Stack
+### 3.1 Sorting with Additional Stack.
 ```java
 public class SortStack {
     public static Stack<Integer> sort(Stack<Integer> stack) {
@@ -173,10 +173,10 @@ public class SortStack {
     }
 }
 ```
-### 3.2 Implement Merge Sort with Stack
+### 3.2 Implementing Merge Sort with Stack
 ```java
 ```
-### 3.3 Implement Quick Sort with Stack
+### 3.3 Implementing Quick Sort with Stack
 ```java
 ```
 

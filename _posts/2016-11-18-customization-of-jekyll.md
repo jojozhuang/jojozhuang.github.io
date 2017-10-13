@@ -8,7 +8,7 @@ tags: [Jekyll]
 
 > Several useful approaches used to customize Jekyll for my personal website hosted on GitHub Pages.
 
-## 1. Get Entries from List
+## 1. Getting Entries from List
 Suppose site.portfolio is the list of all portfolios, use the following pipes to get desired entries from this list.
 * filtering: add where condition with column name and value
 * order: add sort with column name

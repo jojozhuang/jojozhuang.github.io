@@ -11,7 +11,7 @@ tags: [Node.js]
 ## 1. Prerequisite
 If you haven’t installed Node.js and NPM, please install them by referring to my previous posting [Install Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}).
 
-## 2. Create Server
+## 2. Creating Server
 Create a file named `main.js` having following codes:
 ```javascript
 var http = require("http");
@@ -35,7 +35,7 @@ The following points need to be noted about the above file.
 * Call http.createServer() method to create a server instance and then bind it at port 8086 using the listen method associated with the server instance. Pass it a function with parameters request and response. Write the sample implementation to always return "Hello World from Node Server".
 * Print log in console indicating server is running.
 
-## 3. Run and Test
+## 3. Running and Testing
 In terminal, execute main.js with `node` command.
 ```sh
 $ node main.js

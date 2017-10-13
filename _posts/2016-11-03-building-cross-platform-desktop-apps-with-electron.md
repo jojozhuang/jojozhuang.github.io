@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Build Cross-platform Desktop Apps with Electron"
+title: "Building Cross-platform Desktop Apps with Electron"
 date: 2016-11-03
 tags: [Electron, Node.js, Visual Studio Code]
 ---
@@ -11,15 +11,15 @@ tags: [Electron, Node.js, Visual Studio Code]
 ## 1. What is Electron?
 [Electron](https://electron.atom.io/) is an open source library developed by GitHub for building cross-platform desktop applications with HTML, CSS, and JavaScript. Electron accomplishes this by combining Chromium and Node.js into a single runtime and apps can be packaged for Mac, Windows, and Linux.
 
-## 2. Setup Development Environment
-## 2.1 Install Homebrew on Mac
+## 2. Setting up Development Environment
+## 2.1 Installing Homebrew on Mac
 Homebrew is package manager for Macs which makes installing lots of different software like Git, Ruby, and Node simpler. Homebrew lets you avoid possible security problems associated with using the sudo command to install software like Node.
 ```sh
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew update // Update Homebrew
 ```
 
-## 2.2 Install Node.js and NPM
+## 2.2 Installing Node.js and NPM
 ```sh
 $ brew install node
 ```
@@ -37,7 +37,7 @@ Update node and npm
 $ brew upgrade node
 ```
 
-## 2.3 Install Electron
+## 2.3 Installing Electron
 Install Electron globally.
 ```sh
 $ npm install -g electron
@@ -57,17 +57,17 @@ You can also install Electron at package level.
 $ npm install electron --save-dev
 ```
 
-## 2.4 Install Visual Studio Code
+## 2.4 Installing Visual Studio Code
 We can use any text editor to develop Electron apps. I choose Visual Studio Code, because it supports debugging. VSCode is a free and open source IDE released by Microsoft.  
 Go to https://code.visualstudio.com/, download the installer and follow the wizard to install it.
 
-## 3. Build Sample Project for Electron Tutorial
+## 3. Building Sample Project for Electron Tutorial
 Generally, an Electron app is structured like this:  
 your-app/  
 ├── package.json  
 ├── main.js  
 └── index.html  
-## 3.1 Create Project Folder and package.json
+## 3.1 Creating Project Folder and package.json
 ```sh
 $ cd ~
 $ mkdir ElectronTutorial
@@ -92,7 +92,7 @@ input the following information
 
 Then, a configuration file named 'package.json' will be created with the above content.
 
-## 3.2 Create main.js
+## 3.2 Creating main.js
 ```javascript
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
@@ -112,7 +112,7 @@ function createWindow() {
 app.on('ready', createWindow)
 ```
 
-## 3.3 Create index.html
+## 3.3 Creating index.html
 ```xml
 <!DOCTYPE html>
 <html>
@@ -130,7 +130,7 @@ app.on('ready', createWindow)
 </html>
 ```
 
-## 3.4 Launch Electron App
+## 3.4 Launching Electron App
 Run this app using the following command:
 ```sh
 $ electron ./main.js
@@ -138,17 +138,17 @@ $ electron ./main.js
 A new window will open up, showing 'Hello World'.
 ![MIME Type](/public/pics/2016-11-03/helloworld.png)  
 
-## 4. Use Popular Libraries
+## 4. Using Popular Libraries
 We can leverage all the available tools for front-end web development in Electron. For example, you can use bootstrap, jQuery, AngularJs or ReactJs to build Electron apps.
 
-## 4.1 Install Packages
+## 4.1 Installing Packages
 ```sh
 $ npm install -g bower       //Install Bower
 $ bower install bootstrap    //Install bootstrap
 $ npm install --save jquery  //Install jQuery
 ```
 
-## 4.2 Build UI
+## 4.2 Building UI
 1) Update index.html with the following content.
 ```xml
 <!DOCTYPE html>
@@ -193,7 +193,7 @@ Electron provides us with 2 IPC (Inter Process Communication) modules called ipc
 * The ipcMain module is used to communicate asynchronously from the main process to renderer processes.
 * The ipcRenderer module is used to communicate asynchronously from a renderer process to the main process.
 
-## 5.1 Create index.html
+## 5.1 Creating index.html
 ```xml
 <!DOCTYPE html>
 <html>
@@ -215,7 +215,7 @@ Electron provides us with 2 IPC (Inter Process Communication) modules called ipc
    </body>
 </html>
 ```
-## 5.2 Create main.js
+## 5.2 Creating main.js
 In this example, ipcMain receives 'openFile' request from ipcRenderer, and open a dialog to read content from file. Then, notify ipcRenderer and send data to it.
 ```javascript
 const {app, BrowserWindow} = require('electron')
@@ -261,7 +261,7 @@ ipcMain.on('openFile', (event, path) => {
 app.on('ready', createWindow)
 ```
 
-## 5.3 Create view_dialog.js
+## 5.3 Creating view_dialog.js
 When open button is click, ipcRenderer send a 'openFile' request to ipcMain. Later, it receives the data from ipcMain and show it in the textbox.
 ```javascript
 let $ = require('jquery')
@@ -278,7 +278,7 @@ $('#open').on('click', () => {
 })
 ```
 
-## 5.4 Run
+## 5.4 Running
 Run this app using the following command:
 ```sh
 $ electron ./main.js
@@ -290,7 +290,7 @@ A new window will open up, showing a textbox and a button. Click on that button,
 ## 6.1 Dev Tools in Chrome
 First, you can use the dev tools for Electron apps. Shortcut: Command + Option + I.
 ![MIME Type](/public/pics/2016-11-03/devtools.png)  
-## 6.2 Debug with VSCode
+## 6.2 Debugging with VSCode
 Second, you can also use VSCode for debugging main process.  
 1) Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
 ![MIME Type](/public/pics/2016-11-03/launch.png)  

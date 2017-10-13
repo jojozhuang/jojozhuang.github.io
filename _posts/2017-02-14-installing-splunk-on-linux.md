@@ -13,7 +13,7 @@ Basically, Splunk is a log management tool. It makes easy to analyze machine-gen
 ![MIME Type](/public/pics/2017-02-14/splunk.png)  
 
 ## 2. Installation on Linux
-### 2.1 Install Splunk Enterprise
+### 2.1 Installing Splunk Enterprise
 1) Download Splunk  
 Go to [https://www.splunk.com/en_us/products.html](https://www.splunk.com/en_us/products.html), click 'Free Download' for Splunk Enterprise, choose RPM(For RedHat) or DEB(For Ubuntu) version.  
 2) Install Splunk  
@@ -34,7 +34,7 @@ $ export SPLUNK_HOME=/opt/splunk
 $ export PATH=$SPLUNK_HOME/bin:$PATH
 ```
 
-### 2.2 Launch Splunk Web
+### 2.2 Launching Splunk Web
 1) Start Splunk
 ```sh
 $ sudo $SPLUNK_HOME/bin/splunk start
@@ -59,31 +59,31 @@ $ sudo chown -R $USER /opt/splunk/
 ```
 In addition, add port number to Firewall's exception list if necessary.
 
-### 2.3 Login to Splunk Web
+### 2.3 Logging into Splunk Web
 Open a web browser, access the following address. The default user is 'admin'. You need to change the password for the first time you login.  
 [http://localhost:8081/](http://localhost:8081/)
 ![MIME Type](/public/pics/2017-02-14/login.png)  
 
-## 3. Import Data
+## 3. Importing Data
 To use Splunk, you need to import data first.
-### 3.1 Add Data
+### 3.1 Adding Data
 In the main page, select 'Add Data'->Upload files from my computer->Choose the file.
 ![MIME Type](/public/pics/2017-02-14/main.png)  
-### 3.2 Set Source Type
+### 3.2 Setting Source Type
 Choose the source type, eg. log4j, csv, etc.
 ![MIME Type](/public/pics/2017-02-14/sourcetype.png)  
-### 3.3 Input Settings
+### 3.3 Inputing Settings
 Leave as it is.
 ![MIME Type](/public/pics/2017-02-14/inputsettings.png)  
-### 3.4 Review and Submit
+### 3.4 Reviewing and Submitting
 ![MIME Type](/public/pics/2017-02-14/review.png)  
 ### 3.5 Done
 Now, you can use the search function.
 ![MIME Type](/public/pics/2017-02-14/finished.png)  
 
-## 4. Search
+## 4. Searching
 After data is imported to splunk, we can now create queries for searching data from logs.
-### 4.1 Create Query
+### 4.1 Creating Query
 By default, Splunk specifies three condition: source, host and sourcetype.
 ```
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j"
@@ -91,7 +91,7 @@ source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j"
 You can append more conditions to the end of the query. Click the Search icon to execute the query. You will see the result immediately.
 ![MIME Type](/public/pics/2017-02-14/search.png)  
 
-### 4.2 Explore Features
+### 4.2 Exploring Features
 There are lots of functions provided by Splunk for search query and search result. Some of them are listed as follows.
 * Save the query for next time use
 * Change search mode(Smart Mode, Fast Mode and Verbose Mode) to optimize the search performance

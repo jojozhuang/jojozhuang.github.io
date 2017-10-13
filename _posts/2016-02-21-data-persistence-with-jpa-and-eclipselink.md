@@ -30,7 +30,7 @@ Development environment has been setup. JDK, Eclipse and Tomcat are all installe
 
 In addition, if you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
-## 3. Install Eclipselink in Eclipse
+## 3. Installing Eclipselink in Eclipse
 In Eclipse, File -> New -> 'JPA Project', Name: JPATutorial, and select 'Java SE 8' for target runtime, click Next.  
 ![MIME Type](/public/pics/2016-02-21/jpaproject.png)  
 Click on download library (if you do not have the library) in the user library section:
@@ -52,9 +52,9 @@ Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /JPATutorial/lib/
 Go to Project properties -> Java Build Path by right click on it. You will get a dialog box as follows: Click on Add External Jars.
 ![MIME Type](/public/pics/2016-02-21/mysqlconnector.png)  
 
-## 5. Setup Mysql Database
+## 5. Setting up Mysql Database
 We use docker to host our mysql database server.
-### 5.1 Create Dockerfile
+### 5.1 Creating Dockerfile
 Create docker file with the following content.
 ```sh
 #Create Mysql Image for JPA Tutorial
@@ -72,7 +72,7 @@ Besides, notice that we add jpa_backup.sql file into /docker-entrypoint-initdb.d
 CREATE DATABASE  IF NOT EXISTS `jpadb`
 ```
 
-### 5.2 Create Image with Dockerfile
+### 5.2 Creating Image with Dockerfile
 In terminal, navigate to /JPATutorial/docker/, run command.
 ```sh
 $ docker build -t jpa-mysql:0.1 .
@@ -83,7 +83,7 @@ $ docker images
 ```
 ![MIME Type](/public/pics/2016-02-21/dockerimage.png)  
 
-### 5.3 Run Mysql Container With The New Image
+### 5.3 Running Mysql Container With The New Image
 In terminal, run command.
 ```sh
 $ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
@@ -92,7 +92,7 @@ You will see that mysql container is running now. And note the ip address and po
 ![MIME Type](/public/pics/2016-02-21/kitematic.png)  
 
 ## 6. Making Changes to JPA Project
-### 6.1 Configure Persistence.xml
+### 6.1 Configuring Persistence.xml
 In eclipse, open Persistence.xml of JPATutorial, switch to source view. Edit it as follows:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -300,9 +300,9 @@ public class DeleteEmployee {
 ```
 
 ## 7. Testing
-### 7.1 Run CreateEmployee Method
+### 7.1 Running CreateEmployee Method
 Right click on CreateEmployee.java file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
-### 7.2 Connect Mysql With MysqlWorkbench
+### 7.2 Connecting Mysql With MysqlWorkbench
 Add New Connection in MysqlWorkbench and open the connection.
 ![MIME Type](/public/pics/2016-02-21/workbench.png)
 ### 7.3 Checking Data

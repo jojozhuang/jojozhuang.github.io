@@ -8,7 +8,7 @@ tags: [Docker, Compose]
 
 > Tutorial for how to define and run multiple containers with Docker Compose.
 
-## 1. Recall What've Achieved
+## 1. Recalling What've Achieved
 Three ways to create containers:
 * Run container through command line without creating our own images.
 * Create images with Dockerfile and run containers based on customized images.
@@ -24,10 +24,10 @@ Using Compose is basically a three-step process.
 * Define the services that make up your app in docker-compose.yml so they can be run together in an isolated environment.
 * Lastly, run docker-compose up and Compose will start and run your entire app.
 
-## 3. Create Docker Compose
-### 3.1 Get Mysql Backup File
+## 3. Creating Docker Compose
+### 3.1 Getting Mysql Backup File
 Download the backup file from [My GitHub](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql), and put it to some directory, which will be mounted to mysql container.
-### 3.2 Create Docker Compose
+### 3.2 Creating Docker Compose
 Create docker compose file in any directory of your local machine. The name must be docker-compose.yml.
 ```sh
 $ cd ~/Johnny
@@ -64,7 +64,7 @@ The following points need to be noted about the above file.
 * The ports keyword is used to mention the ports that need to be exposed for the container.
 * The volumes keyword is used to define volumes between local machine and containers.
 
-### 3.3 Run Docker Compose file
+### 3.3 Running Docker Compose file
 Open Docker terminal, navigate to the folder where the Docker compose file locates. Run the following command.
 ```sh
 $ docker-compose up -d
@@ -83,8 +83,8 @@ Use the following command to stop the containers.
 ```sh
 $ docker-compose down
 ```
-## 4. Test the Container
-### 4.1 Check Container in Kitematic
+## 4. Testing the Container
+### 4.1 Checking Container in Kitematic
 There are two new containers are running now. Let's check their settings.  
 First, the tomcat container. Environment variable for tomcat is set correctly.
 ![MIME Type](/public/pics/2016-09-30/tomcatgeneral.png)  
@@ -99,7 +99,7 @@ Ports are also configured.
 Volume is also configured correctly.
 ![MIME Type](/public/pics/2016-09-30/mysqlvolume.png)  
 
-### 4.2 Access Game Store Website
+### 4.2 Accessing Game Store Website
 Access the following URL in web browser. Then, click the Login link on the top right of the page.
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 

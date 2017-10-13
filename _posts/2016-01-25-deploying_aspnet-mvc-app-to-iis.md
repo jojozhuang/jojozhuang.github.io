@@ -15,17 +15,17 @@ There are totally 4 steps:
 * Add Port Exception to Windows Firewall.
 * Assign public IP Address to your website.
 
-## 1. Install required components in IIS
+## 1. Installing required components in IIS
 Control Panel-> Programs and Features  
 ![image1](/public/pics/2016-01-25/image1.png)  
 Select IIS(Internet Information Services)  
 ![image2](/public/pics/2016-01-25/image2.png)  
 
-## 2. Publish files to IIS  
-### 2.1 Start to Publish
+## 2. Publishing files to IIS  
+### 2.1 Starting to Publish
 In Visual Studio, select project - &gt; Publish…  
 ![image3](/public/pics/2016-01-25/image3.png)  
-### 2.2 Create a new profile  
+### 2.2 Creating a new profile  
 ![image4](/public/pics/2016-01-25/image4.png)  
 ### 2.3 Connection
 Configure server and website. Here we choose the default website.  
@@ -42,8 +42,8 @@ Your web browser will be opened automatically to access your website.
 All of files for the published website are copied to ‘C:\\inetpub\\wwwroot\\CoursePlayer’.  
 ![image8](/public/pics/2016-01-25/image8.png)  
 
-## 3. Add Port Exception to Firewall  
-### 3.1 Open Firewall
+## 3. Adding Port Exception to Firewall  
+### 3.1 Opening Firewall
 Control Panel -&gt; Windows Firewall  
 ### 3.2 Advanced setting
 ![image10](/public/pics/2016-01-25/image10.png)  
@@ -61,15 +61,15 @@ Control Panel -&gt; Windows Firewall
 ![image16](/public/pics/2016-01-25/image16.png)  
 After the above steps, your machine is exposed to the outside world.
 
-## 4. Assign Public IP address to your website.  
+## 4. Assigning Public IP address to your website.  
 ### 4.1 In IIS, add Binding to website  
 ![image17](/public/pics/2016-01-25/image17.png)  
-### 4.2 Set IP Address and Port.
+### 4.2 Setting IP Address and Port.
 If you choose another port, you must add the port number to firewall exception, refer to step 3.  
 ![image18](/public/pics/2016-01-25/image18.png)  
-### 4.3 Access website with ip address, don’t miss the last slash.  
+### 4.3 Accessing website with ip address, don’t miss the last slash.  
 ![image19](/public/pics/2016-01-25/image19.png)  
-### 4.4 Try this address in another machine.  
+### 4.4 Trying this address in another machine.  
 
 ## 5. Document
 * [Deploy ASP.NET Application to local IIS]({% link public/docs/deploy_to_iis.pdf %})

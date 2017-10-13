@@ -13,7 +13,7 @@ tags: [DFS, BFS]
 * Graph might consist of multiple isolated subgraphs. If there is a path between every pair of vertices, it is called a "connected graph.'
 * Graph can also have cycles (or not). An "acyclic graph" is one without cycles.
 
-## 2. Implement Graph
+## 2. Implementing Graph
 Adjacency List
 
 ```java

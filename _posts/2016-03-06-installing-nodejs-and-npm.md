@@ -13,7 +13,7 @@ tags: [Node.js, NPM]
 
 [NPM](https://www.npmjs.com/) is a package manager that makes installing Node 'packages' fast and easy.
 
-## 2. Install Node.js and NPM on Ubuntu
+## 2. Installing Node.js and NPM on Ubuntu
 Update your local package index:
 ```sh
 $ sudo apt-get update
@@ -39,7 +39,7 @@ Check NPM version:
 $ npm -v  
 ```
 
-## 3. Install Node.js and NPM on Mac
+## 3. Installing Node.js and NPM on Mac
 Updates Homebrew with a list of the latest version of Node.
 ```sh
 $ brew update
@@ -60,7 +60,7 @@ Use the following command to update node and npm if necessary.
 $ brew upgrade node
 ```
 
-## 4. Verify Installation
+## 4. Verifying Installation
 Use 'Hello World' application to verify Node.js is installed properly.  
 Create a file named main.js having the following codes.
 ```javascript

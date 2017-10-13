@@ -22,7 +22,7 @@ Toolbox includes these Docker tools:
 [Kitematic](https://kitematic.com/) is an open source project built to simplify and streamline using Docker on a Mac or Windows PC. Kitematic automates the Docker installation and setup process and provides an intuitive graphical user interface (GUI) for running Docker containers. Kitematic integrates with Docker Machine to provision a VirtualBox VM and install the Docker Engine locally on your machine.  
 You can find its source files repository on [GitHub](https://github.com/docker/kitematic).
 
-## 3. Install Docker Toolbox
+## 3. Installing Docker Toolbox
 Go to https://www.docker.com/products/docker-toolbox, select the installer for Mac. Download and follow the wizard to install.
 ![MIME Type](/public/pics/2016-09-15/installationtype.png)  
 Note:
@@ -52,7 +52,7 @@ There are three types of terminal if docker is hosted on virtual machine.
 Whenever you start to work in command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal if it's in the virtual machine.
 ![MIME Type](/public/pics/2016-09-15/terminal-fail.png)  
 
-## 5. Use Kitematic
+## 5. Using Kitematic
 ### 5.1 Virtual Machine for Docker Machine
 The first time you start Kitematic, it will create a new virtual machine in VirtualBox.
 ![MIME Type](/public/pics/2016-09-15/virtualbox.png)  
@@ -63,19 +63,19 @@ Options you have here:
 * You can search Docker images through search box at top and click CREATE button to run containers for them.
 * You can open a Docker-CLI terminal by clicking the whale button at the left bottom corner.
 
-### 5.3 Login
+### 5.3 Logging In
 If you've already registered a docker ID, you can use it to login now.
 ![MIME Type](/public/pics/2016-09-15/login.png)  
 Switch to My Repos tab, the images on your Docker Hub will show here.
 ![MIME Type](/public/pics/2016-09-15/myrepos.png)  
 
-## 6. Work with Container
+## 6. Working with Container
 Take gsmysql as example, which is a database container I created for previous posting [Use Mysql Container for JSP Application]({% link _posts/2016-09-12-using-mysql-container-for-jsp-application.md %}).
 Select gsmysql container, click the Start button.
 ![MIME Type](/public/pics/2016-09-15/gsmysql.png)  
 The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For mysql container, this is the url for applications to connect mysql database remotely.
 ![MIME Type](/public/pics/2016-09-15/started.png)  
-### 6.1 Start Terminal in Container
+### 6.1 Starting Terminal in Container
 Previously, we have to type the following command to open terminal in container.
 ```sh
 $ docker exec -i -t <container> sh

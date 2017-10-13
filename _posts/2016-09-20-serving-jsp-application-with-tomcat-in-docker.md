@@ -11,8 +11,8 @@ tags: [Docker, Tomcat]
 ## 1. Prerequisite
 If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
-## 2. Setup Tomcat Container
-### 2.1 Create Tomcat Container
+## 2. Setting up Tomcat Container
+### 2.1 Creating Tomcat Container
 In Kitematic, Search 'tomcat', Click on the 'CREATE' button of the official Tomcat image.
 ![MIME Type](/public/pics/2016-09-20/search.png)  
 Kitematic will download (also known as pull the image) the tomcat image from the Docker Hub immediately.
@@ -23,7 +23,7 @@ Click on the preview button to see the result in web browser. If you see the fol
 ![MIME Type](/public/pics/2016-09-20/preview.png)  
 There is one issue with this Tomcat container, volume is not configured.
 ![MIME Type](/public/pics/2016-09-20/novolume.png)  
-### 2.2 Create Tomcat Container with Bindmounting a Volume
+### 2.2 Creating Tomcat Container with Bindmounting a Volume
 Let's manually create another Tomcat container for the same tomcat image.
 In docker terminal, run the following command.
 ```sh
@@ -41,12 +41,12 @@ Switch to Kitematic, the new container is running with Volume configured.
 Click on the preview button of the new container. You will see a same Tomcat welcome page. Notice, the port is different with the previous one. They are running in different tomcat containers.
 ![MIME Type](/public/pics/2016-09-20/newpreview.png)  
 
-## 3. Prepare JSP Application
-### 3.1 Create Folder for Volume in Host
+## 3. Preparing JSP Application
+### 3.1 Creating Folder for Volume in Host
 In your host machine, create new folder gstomcat under ~/Documents.
 ![MIME Type](/public/pics/2016-09-20/volume.png)  
 
-### 3.2 Publish JSP Application
+### 3.2 Publishing JSP Application
 We will use the same JSP application for [Use Mysql Container for JSP Application]({% link _posts/2016-09-12-using-mysql-container-for-jsp-application.md %}).
 
 Build the project first, and copy all of the files from /GameStoreMysql/WebContent/ to ~/Documents/gstomcat/.
@@ -56,7 +56,7 @@ Then, copy the entire 'classes' folder from /GameStoreMysql/build/ to ~/Document
 The final structure of the volume folder looks like below. All the files are deployed.
 ![MIME Type](/public/pics/2016-09-20/final.png)  
 
-### 3.3 Check webapps Directory in Tomcat Container
+### 3.3 Checking webapps Directory in Tomcat Container
 Inspect to tomcat container, and navigate to the default web folder of tomcat.
 ```sh
 $ docker exec -it gstomcat sh
@@ -68,7 +68,7 @@ $ pwd
 All files are under webapps/gamestore directory now.
 ![MIME Type](/public/pics/2016-09-20/webapps.png)  
 
-### 3.4 Access JSP Application
+### 3.4 Accessing JSP Application
 Access the following URL in web browser. Game Store is launched successfully!
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 

@@ -29,13 +29,13 @@ In this posting, we will use Dockerfile to simplify the way how to create mysql 
 Before moving forward, make sure you've already setup folder ~/Documents/gstomcat in local machine, which will be volumed to tomcat container later. And all necessary jsp files and classes are put into this folder.
 ![MIME Type](/public/pics/2016-09-27/foldermapping.png)  
 
-## 3. Create Mysql Image with Dockerfile
-### 3.1 Back Up Mysql Schema
+## 3. Creating Mysql Image with Dockerfile
+### 3.1 Backing Up Mysql Schema
 Use mysqldump command to dump Mysql schema to a file. You can download the backup file from [My GitHub](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql), and put it to the same directory of Dockerfile.
 ```sh
 $ mysqldump -u root -p gamestore > gs_backup.sql
 ```
-### 3.2 Create Docker File
+### 3.2 Creating Docker File
 Create docker file in any directory of your local machine. The name of the docker file must be Dockerfile.
 ```sh
 $ cd ~/Johnny
@@ -63,7 +63,7 @@ The following points need to be noted about the above file.
 * The ADD command copy the database backup file to /docker-entrypoint-initdb.d directory in the Docker container. The docker-entrypoint.sh file will run any files in this directory ending with ".sql" against the MySQL database.
 * The EXPOSE command exposes port of the image.
 
-### 2.2 Create Image with Dockerfile
+### 3.3 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile and Mysql backup file locates. Run the following command.
 ```sh
 $ docker build -t gamestore-mysql:0.1 .
@@ -77,20 +77,20 @@ $ docker images
 As you see, the new image is created with tag 0.1.
 ![MIME Type](/public/pics/2016-09-27/imagecreated.png)  
 
-## 4. Test The New Image
-### 4.1 Run Container
+## 4. Testing The New Image
+### 4.1 Running Container
 In docker terminal, run the following command.
 ```sh
 $ docker run --detach --name=gsmysql --publish 6603:3306 gamestore-mysql:0.1
 ```
 Notice we don't need to set the environment variable MYSQL_ROOT_PASSWORD any more.
-### 4.2 Verify Container in Kitematic
+### 4.2 Verifying Container in Kitematic
 A Mysql container named gsmysql is running now. Notice, it's source image is 'gamestore-mysql:0.1'. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
 ![MIME Type](/public/pics/2016-09-27/general.png)  
 Port 3306 is also exposed.
 ![MIME Type](/public/pics/2016-09-27/ports.png)  
 
-### 4.3 Verify Game Store Website
+### 4.3 Verifying Game Store Website
 Open the following link in web browser. Our Game Store is running now. Then, click the Login link on the top right of the page.
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 

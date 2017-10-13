@@ -8,7 +8,7 @@ tags: [Electron, 2048]
 
 > Electron is used to build cross platform desktop apps with JavaScript, HTML, and CSS. We will use it to wrap a web application of game 2048 and convert it to desktop application.
 
-## 1. Install Electron
+## 1. Installing Electron
 If you haven't installed [Electron](https://electron.atom.io/) or you want to learn the basic knowledge of Electron, please check my previous posting [Build Cross-platform Apps with Electron]({% link _posts/2016-11-03-building-cross-platform-desktop-apps-with-electron.md %}) first.
 
 ## 2. 2048
@@ -16,14 +16,14 @@ If you haven't installed [Electron](https://electron.atom.io/) or you want to le
 ![MIME Type](/public/pics/2016-11-08/2048.png)  
 
 ## 3. Steps for Conversion
-### 3.1 Get Source Files for 2048
+### 3.1 Getting Source Files for 2048
 Clone source code from github.
 ```sh
 $ mkdir Game2048
 $ cd Game2048
 $ git clone https://github.com/gabrielecirulli/2048
 ```
-### 3.2 Create Files
+### 3.2 Creating Files
 Create main.js
 ```javascript
 const electron = require('electron')
@@ -71,7 +71,7 @@ Run, you should see 2048 is running.
 $ npm install
 $ npm start
 ```
-### 3.3 Beautify UI
+### 3.3 Beautifying UI
 1) Set Window Size
 * Make the window just fit the page size
 * Disable resizable
@@ -172,7 +172,7 @@ function setMainMenu() {
     Menu.setApplicationMenu(menu)
 }
 ```
-### 3.4 Run and Test
+### 3.4 Running and Testing
 Run the following command to start the app.
 ```sh
 $ npm start
@@ -181,7 +181,7 @@ Notice, the window title has been set to 2048. And the menu is also changed exce
 ![MIME Type](/public/pics/2016-11-08/run2.png)  
 ## 4. Packaging
 We need to create installer for this app. We will use electron-build for packaging.
-### 4.1 Set Icon
+### 4.1 Setting Icon
 The icons on different operating system are different.
 * .icns -> OS X
 * .ico -> Windows
@@ -212,7 +212,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 ```
 3) The final structure of the project.
 ![MIME Type](/public/pics/2016-11-08/structure.png)  
-### 4.3 Run Packaging
+### 4.3 Running Packaging
 1) Run following command to start packaging.
 ```sh
 $ npm run dist

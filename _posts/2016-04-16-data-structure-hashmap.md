@@ -12,7 +12,7 @@ tags: [HashKey, Equals]
 * put(key, item): Add an item to map.
 * get(key): Get the item of specific key.
 
-## 2. Implement HashMap.
+## 2. Implementing HashMap.
 ```java
 ```
 

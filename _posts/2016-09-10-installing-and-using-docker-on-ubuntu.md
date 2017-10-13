@@ -25,7 +25,7 @@ Docker Hub is a registry service on the cloud that allows you to download Docker
 Go to [https://hub.docker.com/](https://hub.docker.com/) to create a Docker ID, then login. You will see there is no repository/image initially. We will create our own image later.
 ![MIME Type](/public/pics/2016-09-10/hub.png)  
 
-## 2. Install Docker on Ubuntu
+## 2. Installing Docker on Ubuntu
 1) Add the GPG key for the official Docker repository to the system:
 ```sh
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -51,7 +51,7 @@ $ sudo apt-get install -y docker-ce
 $ sudo systemctl status docker
 ```
 
-## 3. Execute the Docker Command Without Sudo (Optional)
+## 3. Executing the Docker Command Without Sudo (Optional)
 By default, running the docker command requires root privileges — that is, you have to prefix the command with sudo. It can also be run by a user in the docker group, which is automatically created during the installation of Docker. If you attempt to run the docker command without prefixing it with sudo or without being in the docker group, you'll get an output like this:
 ```sh
 $ sudo usermod -aG docker ${USER}  // add the current user to the docker group
@@ -60,7 +60,7 @@ $ su - ${USER}                     // apply the new group membership
 $ id -nG                           // check user is now added to the docker group
 ```
 
-## 4. Use Docker Commands
+## 4. Using Docker Commands
 Syntax of Docker Command
 ```sh
 $ docker [option] [command] [arguments]
@@ -92,9 +92,9 @@ $ docker stop $(docker ps -a -q) // stop all of Docker containers
 $ docker rm $(docker ps -a -q)   // remove all of Docker containers
 ```
 
-## 5. Create Docker Image
+## 5. Creating Docker Image
 We use the office ubuntu image for this demo. We will install node.js on it, then use it to create new image.
-## 5.1 Prepare Image
+## 5.1 Preparing Image
 1) First, run the following command to check the existing images in the docker.
 ```sh
 $ docker images
@@ -118,7 +118,7 @@ $ root@7f5bdefef7ef:/# nodejs -v
 ```
 ![MIME Type](/public/pics/2016-09-10/installnodejs.png)  
 
-## 5.2 Create New Image
+## 5.2 Creating New Image
 1) First, type 'exit' to quit the container. Then check the container id with following command.
 ```sh
 $ docker ps -a
@@ -146,13 +146,13 @@ $ docker images
 ![MIME Type](/public/pics/2016-09-10/createimage.png)  
 As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notice that its size is bigger than the original ubuntu image. This is because we install node.js into it.
 
-## 5.3 Use Dockerfile to Create New Images
+## 5.3 Using Dockerfile to Create New Images
 Refer to the following blogs:
 * [Create Tomcat Image with Docker File]({% link _posts/2016-09-25-creating-tomcat-image-with-docker-file.md %})
 * [Create Mysql Image with Docker File]({% link _posts/2016-09-27-creating-mysql-image-with-docker-file.md %})
 
-## 6. Push Docker Images to Docker Hub
-## 6.1 Log into Docker Hub
+## 6. Pushing Docker Images to Docker Hub
+## 6.1 Logging into Docker Hub
 Syntax of login command.
 ```sh
 $ docker login -u username
@@ -163,7 +163,7 @@ $ docker login -u jojozhuang
 ```
 ![MIME Type](/public/pics/2016-09-10/login.png)  
 
-## 6.2 Push the Image
+## 6.2 Pushing the Image
 Syntax of push command.
 ```sh
 $ docker push docker-registry-username/docker-image-name
@@ -177,13 +177,13 @@ Then, docker starts to upload the image to its hub.
 After the push is completed, you will see the 'Pushed' status.
 ![MIME Type](/public/pics/2016-09-10/pushfinished.png)  
 
-## 6.3 Check The New Image in Docker Hub
+## 6.3 Checking The New Image in Docker Hub
 Log into the Docker Hub, we see there is a new image.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub1.png)  
 Now, you can share this image to others and you can pull this image from Docker Hub as well.
 ![MIME Type](/public/pics/2016-09-10/newimageonhub2.png)  
 
-## 7. Pull The New Image from Hub to Mac
+## 7. Pulling The New Image from Hub to Mac
 Launch Docker Terminal on Mac, run the following command to pull the new image.
 ```sh
 $ docker pull jojozhuang/ubuntu-nodejs

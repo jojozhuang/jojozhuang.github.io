@@ -18,12 +18,12 @@ $ sudo apt-get install maven // Linux
 ```
 
 ## 2. SpringBoot Project
-### 2.1 Create Maven Project
+### 2.1 Creating Maven Project
 1) In Eclipse, New -> 'Maven Project', Name: SpringBootTutorial  
 ![MIME Type](/public/pics/2016-02-20/mavenproject.png)  
 In the new created project, there are two main branches, one is for source code, another is for test.
 ![MIME Type](/public/pics/2016-02-20/initialproject.png)  
-### 2.2 Specify Java version
+### 2.2 Specifying Java Version
 Since, we will use lamda expression, specify java version to java 8 in pom.xml.
 ```xml
 <properties>
@@ -31,7 +31,7 @@ Since, we will use lamda expression, specify java version to java 8 in pom.xml.
   <java.version>1.8</java.version>
 </properties>
 ```
-### 2.3 Add Dependency
+### 2.3 Adding Dependency
 Add spring boot dependency to pom.xml.
 ```xml
 <dependencies>
@@ -56,7 +56,7 @@ Use H2 in-memory database.
   <scope>runtime</scope>
 </dependency>
 ```
-### 2.4 Create Service
+### 2.4 Creating Service
 1) Create Package  
 Right click project SpringBootTutorial->src->main->java>New->Package, Package Name: com.jojostudio.tutorial.SpringBootTutorial  
 2) Create Executable Application  
@@ -278,7 +278,7 @@ public class ProductController {
 This is the final structure of this tutorial project.
 ![MIME Type](/public/pics/2016-02-20/structure.png)  
 
-### 2.6 Run and Test
+### 2.6 Running and Testing
 run spring boot project with maven
 ```sh
 $ mvn spring-boot:run
@@ -291,8 +291,8 @@ URL: http://localhost:8080/products/
 URL: http://localhost:8080/product/1
 ![MIME Type](/public/pics/2016-02-20/oneproduct.png)  
 
-## 3. Support XML
-### 3.1 Add Dependency to pom.xml
+## 3. Supporting XML
+### 3.1 Adding Dependency to pom.xml
 ```xml
 <dependencies>
     ...
@@ -304,7 +304,7 @@ URL: http://localhost:8080/product/1
 </dependencies>
 ```
 
-### 3.2 Run and Test
+### 3.2 Running and Testing
 restart spring boot.
 ```sh
 $ mvn spring-boot:run
@@ -313,7 +313,7 @@ In Postman, add Header = "application/xml".
 URL: http://localhost:8080/product/1
 ![MIME Type](/public/pics/2016-02-20/xmlproduct.png)  
 
-## 4. Enable Autoload
+## 4. Enabling Autoload
 Add dependency of Spring Dev-Tool in pom.xml
 ```xml
 <dependencies>
@@ -329,7 +329,7 @@ change the name and price of product1.
 Don't restart maven. Just send request again. The new product is returned.
 ![MIME Type](/public/pics/2016-02-20/springdev.png)  
 
-## 5. Debug
+## 5. Debugging
 1) In Eclipse, set breakpoint inside the method(eg. StringController.java->reverse()) you want to debug.  
 2) Right click on the DARestApplication.java, choose "Debug As" -> "Java Application".  
 3) In postman, access the url to trigger method being called. You should see breakpoint is activated.  

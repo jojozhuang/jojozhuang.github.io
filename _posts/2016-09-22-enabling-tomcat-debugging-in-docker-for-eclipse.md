@@ -19,7 +19,7 @@ After deploying the JSP application to Tomcat container, which is mentioned in t
 
 Now, one question is how to debug this application, which is deployed in Tomcat container. Actually, Tomcat supports remote debugging, the following steps introduce how to enable debugging in Eclipse.
 
-## 2. Setup Tomcat Container
+## 2. Setting up Tomcat Container
 ## 2.1 Remote Debugging in Tomcat
 In general, tomcat can be configured to allow a program such as eclipse to connect remotely using JPDA and see debugging information. To configure tomcat to allow remote debugging, start tomcat using the catalina startup script (from your tomcat home) instead of the normal startup script like so (tomcat must be stopped before you can change over):
 ```sh
@@ -27,7 +27,7 @@ $ export JPDA_ADDRESS=8000
 $ export JPDA_TRANSPORT=dt_socket
 $ bin/catalina.sh jpda run
 ```
-### 2.2 Create Tomcat Container with Enabling Remote Debugging
+### 2.2 Creating Tomcat Container with Enabling Remote Debugging
 Manually create Tomcat container with Remote Debugging enabled. In docker terminal, run the following command.
 ```sh
 $ docker run --name=gstomcat -d -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
@@ -50,21 +50,21 @@ Apart from port 31020, port 8000 for debugging is exposed to host machine as wel
 To access the website, we still use port 31020. Port 8000 is only for debugging.
 ![MIME Type](/public/pics/2016-09-22/preview.png)  
 
-## 3. Setup Debugging in Eclipse
-### 3.1 Create Remote Java Application
+## 3. Setting up Debugging in Eclipse
+### 3.1 Creating Remote Java Application
 In Eclipse, create new remote Java Application. Set host with tomcat container's IP address, and port 8000.
 ![MIME Type](/public/pics/2016-09-22/debugconfig.png)  
-### 3.2 Set Breakpoint
+### 3.2 Setting Breakpoint
 Find file account_login.jsp under WebContent, set breakpoint for login method.
 ![MIME Type](/public/pics/2016-09-22/breakpoint.png)  
-### 3.3 Enable Debugging
+### 3.3 Enabling Debugging
 Switch to debug view, enable debugging. If you don't see the Debug view, Windows->Perspective->Customize Perspective->Check the Debug option.
 ![MIME Type](/public/pics/2016-09-22/enabledebug.png)  
 Then, you will see some Daemon Thread are listed in debug view.
 ![MIME Type](/public/pics/2016-09-22/afterdebug.png)  
 
-## 4. Trigger the Breakpoint
-### 4.1 Access Game Store Website
+## 4. Triggering the Breakpoint
+### 4.1 Accessing Game Store Website
 Access the following URL in web browser. Then, click the Login link on the top right of the page.
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 

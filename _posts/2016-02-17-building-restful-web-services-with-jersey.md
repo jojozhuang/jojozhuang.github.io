@@ -12,10 +12,10 @@ tags: [Jersey, RESTful Web Services, Maven]
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
 
 ## 2. Jersey Project
-### 2.1 Create Maven Project
+### 2.1 Creating Maven Project
 1) In Eclipse, New -> 'Dynamic Web Project', Name: JerseyTutorial  
 2) Right click project JerseyTutorial -> Configure -> Convert to Maven Project. You should see a new file pom.xml under the root of project.
-### 2.2 Add Dependency
+### 2.2 Adding Dependency
 Add jersey dependency to pom.xml.
 ```xml
 <dependencies>
@@ -28,7 +28,7 @@ Add jersey dependency to pom.xml.
     </dependency>
 </dependencies>
 ```
-### 2.3 Add web.xml to project
+### 2.3 Adding web.xml to project
 Right click on project JerseyTutorial -> Java EE Tools -> Generate Deployment Descriptor Stub. You should see web.xml in /JerseyTutorial/WebContent/WEB-INF/.  
 Register Jersey service as follows.
 ```xml
@@ -51,7 +51,7 @@ Register Jersey service as follows.
   </servlet-mapping>
 </web-app>
 ```
-### 2.4 Create Jersey Service
+### 2.4 Creating Jersey Service
 1) Create Package  
 Right click on project JerseyTutorial -> New -> Package, Package Name: Johnny.Tutorials  
 2) Create class Product and ProductDao  
@@ -176,7 +176,7 @@ public class ProductService {
 ### 2.5 Project Structure
 This is the final structure of this tutorial project.
 ![MIME Type](/public/pics/2016-02-17/structure.png)  
-### 2.6 Run and Test
+### 2.6 Running and Testing
 1) Right click project JerseyTutorial -> Run As -> Run On Server.  
 Choose an existing server or create a new Tomcat server.  
 ![MIME Type](/public/pics/2016-02-17/runonserver.png)  
@@ -191,8 +191,8 @@ After Tomcat is started, let's test RESTful services through web browser.
 
 ![MIME Type](/public/pics/2016-02-17/oneproduct.png)  
 
-## 3. Support Json
-### 3.1 Add Dependency to pom.xml
+## 3. Supporting Json
+### 3.1 Adding Dependency to pom.xml
 ```xml
 <dependencies>
     ...
@@ -205,7 +205,7 @@ After Tomcat is started, let's test RESTful services through web browser.
 </dependencies>
 ```
 
-### 3.2 Add init param to web.xml
+### 3.2 Adding init param to web.xml
 ```xml
 <servlet>
     ...
@@ -218,7 +218,7 @@ After Tomcat is started, let's test RESTful services through web browser.
 </servlet>
 ```
 
-### 3.3 Add new API to ProductService
+### 3.3 Adding new API to ProductService
 In ProductService.java, add the following method.  
 ```java
 @GET
@@ -229,7 +229,7 @@ public Product getProductJson(@PathParam("id") int id) {
 }
 ```
 
-### 3.4 Test Json API
+### 3.4 Testing Json API
 Get product by id, data is returned in JSON format.
 * http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
 

@@ -26,7 +26,7 @@ Check version.
 $ jekyll --version
 ```
 
-## 3. Install Jekyll on Mac
+## 3. Installing Jekyll on Mac
 Make sure gcc and make are installed. Check version of them with the following commands.
 ```sh
 $ gcc -v
@@ -46,7 +46,7 @@ Check version.
 $ jekyll --version
 ```
 
-## 4. Run Website with Jekyll
+## 4. Running Website with Jekyll
 Get source files of my person website from Github.
 ```sh
 $ cd /Johnny/Github/

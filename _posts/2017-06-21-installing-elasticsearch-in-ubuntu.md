@@ -13,18 +13,18 @@ tags: [Elasticsearch]
   * [https://www.elastic.co](https://www.elastic.co)  
   * [http://www.elasticsearchtutorial.com/](http://www.elasticsearchtutorial.com/)
 
-### 1.2  Kibana, Elastic Cloud  
+### 1.2 Kibana, Elastic Cloud  
   * [https://www.elastic.co/products/kibana](https://www.elastic.co/products/kibana)
 
 ## 2. Installation
 I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the host is Mac OSX and the guest is Ubuntu. All the Elasticsearch and its components are installed in Ubuntu.
 
-### 2.1 Install Java
+### 2.1 Installing Java
   The version I used of JDK is 1.8.0_131.  
   * [Oracle JDK Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
   * [How to Install Oracle Java on Ubuntu Linux](http://www.wikihow.com/Install-Oracle-Java-on-Ubuntu-Linux)  
 
-### 2.2 Install Elasticsearch  
+### 2.2 Installing Elasticsearch  
   1) Download Elasticsearch  
   Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Elasticsearch, choose DEB version.  
   2) Install  
@@ -71,7 +71,7 @@ $ curl "http://localhost:9200"
 }
 ```
 
-### 2.2 Install Kibana  
+### 2.2 Installing Kibana  
 1) Download Kibana  
 Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT version.  
 2) Install  
@@ -116,7 +116,7 @@ $ sudo service kibana start         //restart kibana
 ```
 c. Open link [http://192.168.56.101:5601/](http://192.168.56.101:5601/)in web browser in guest(Ubuntu), you should be able to see that kibana is working properly. Then, open the same link in host(Mac OSX), you should also be able to get the same kibana page.  
 
-### 2.3 Install Sense  
+### 2.3 Installing Sense  
 Sense was renamed to Console and it is already available on Kibana 5.\*. In Kibana, just click on Dev Tools.  
 
 ## 3. Reference

@@ -8,14 +8,14 @@ tags: [FIFO, Array]
 
 > A queue implements FIFO (first-in first-out) ordering.
 
-## 1. Operations for Queue.
+## 1. Operations for Queue
 * enqueue(item): Add an item to the end of the list.
 * dequeue(): Pull the first item out of the list.
 * peek(): Return the top of the queue.
 * isEmpty(): Return true if and only if the queue is empty.
 
 ## 2. Implementation
-### 2.1 Implement with LinkedList.
+### 2.1 Implementing with LinkedList
 ```java
 public class LinkedListQueue {
     private ListNode head; // the first node
@@ -60,7 +60,7 @@ public class LinkedListQueue {
 }
 ```
 
-### 2.2 Implement with Two Stacks.
+### 2.2 Implementing with Two Stacks
 ```java
 public class QueueStack {
     private Stack<Integer> stack1 = new Stack<Integer>(); // s1 stores new elements
@@ -99,7 +99,7 @@ public class QueueStack {
 }
 ```
 
-### 2.3 Implement with Array.
+### 2.3 Implementing with Array
 ```java
 public class ArrayQueue {
     private int head; // the first node
@@ -143,7 +143,7 @@ public class ArrayQueue {
 }
 ```
 
-### 2.4 Implement with Array(Loop).
+### 2.4 Implement with Array(Loop)
 ```java
 ```
 

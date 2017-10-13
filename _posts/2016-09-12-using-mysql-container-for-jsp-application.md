@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Use Mysql Container for JSP Application"
+title: "Using Mysql Container for JSP Application"
 date: 2016-09-12
 tags: [JSP, Mysql, Docker]
 ---
@@ -58,8 +58,8 @@ Now, we can use 'Run on Server' to start our JSP Application.
 There will be a browser opened in eclipse, which shows our Game Store website. Or you can directly access http://localhost:8080/GameStoreMysql/ in browser.
 ![MIME Type](/public/pics/2016-09-12/launched.png)  
 
-## 2. Setup Mysql Container
-### 2.1 Create Mysql Container
+## 2. Setting up Mysql Container
+### 2.1 Creating Mysql Container
 Get official mysql image.
 ```sh
 $ docker pull mysql
@@ -98,7 +98,7 @@ Version: '5.7.19'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Comm
 ```
 Now, it starts without error.
 
-### 2.2 Run Container in Background
+### 2.2 Running Container in Background
 Our MySQL container is now running. However, you are now stuck in the terminal and can’t do anything because the container is running in attach mode (running in foreground). This is so inconvenient. We would expect MySQL to run as a service instead. Let’s consider this as a failed deployment and stop the current container. In another terminal, stop the running container and run it again in detach mode (running as background):
 ```sh
 $ docker stop gsmysql
@@ -113,7 +113,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 77d6f463c31e        mysql               "docker-entrypoint..."   9 seconds ago       Up 6 seconds        3306/tcp            gsmysql
 ```
 
-### 2.3 Expose Mysql Container to Host
+### 2.3 Exposing Mysql Container to Host
 Expose the MySQL container to the outside world by mapping the container’s MySQL port to the host machine port using the publish flag. Now, we can connect to the mysql container through port 6603.
 ```sh
 $ docker rm -f gsmysql
@@ -121,8 +121,8 @@ $ docker run --detach --name=gsmysql --env="MYSQL_ROOT_PASSWORD=gspassword" --pu
 889aa7224b2544023069559de5bd1f214ddbda9cb327fc3a4771eddc25bb1b7b
 ```
 
-## 3. Restore Mysql Database in Container
-### 3.1 Copy Mysql backup files from host to container
+## 3. Restoring Mysql Database in Container
+### 3.1 Copying Mysql backup files from host to container
 ```sh
 $ docker cp ~/GameStore/document/gamestore_orderitem.sql gsmysql:/gamestore_orderitem.sql
 $ docker cp ~/GameStore/document/gamestore_salesorder.sql gsmysql:/gamestore_salesorder.sql
@@ -134,7 +134,7 @@ $ docker exec -i -t gsmysql sh
 Use 'ls' to check the files. Our two db restore files are there.
 ![MIME Type](/public/pics/2016-09-12/sqlfile.png)  
 
-### 3.2 Restore Database Schema and Data
+### 3.2 Restoring Database Schema and Data
 Create Database
 ```sh
 $ mysqladmin -u root -p create gamestore
@@ -146,12 +146,12 @@ $ mysql -u root -p gamestore < gamestore_orderitem.sql
 ```
 ![MIME Type](/public/pics/2016-09-12/restoredb.png)  
 
-## 4. Connect to the Container
-### 4.1 Get the Connection URL
+## 4. Connecting to the Container
+### 4.1 Getting the Connection URL
 In Kitematic, select our mysql container, check Access URL. It's 192.168.99.100:6603.
 ![MIME Type](/public/pics/2016-09-12/accessurl.png)  
 
-### 4.2 Connect Mysql Container with Mysql Workbench
+### 4.2 Connecting Mysql Container with Mysql Workbench
 Go to https://dev.mysql.com/downloads/workbench/, download the installer and install it.
 Launch MySql Workbench and add Connection with the IP address and port.
 ![MIME Type](/public/pics/2016-09-12/newconnection.png)  
@@ -164,7 +164,7 @@ A new connection is added to the workbench.
 Check the original data. As you see, there is no entry in table SalesOrder.
 ![MIME Type](/public/pics/2016-09-12/original.png)  
 
-### 4.3 Configure the Connection
+### 4.3 Configuring the Connection
 Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the usename, password and URL, including the ip address and port to connect mysql.
 ```xml
 <Resource name="jdbc/murach" auth="Container"
@@ -176,7 +176,7 @@ Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the usename, 
         removeAbandonedTimeout="60" type="javax.sql.DataSource" />
 ```
 
-### 4.4 Restart the JSP Application
+### 4.4 Restarting the JSP Application
 Login as follows:
 * User Name: customer
 * Password:  customer
@@ -192,7 +192,7 @@ Order is created now.
 After the above operation, check the data in mysql workbench. You see there is one new order entry in SalesOrder table.
 ![MIME Type](/public/pics/2016-09-12/after.png)  
 
-## 5. Publish Mysql Container
+## 5. Publishing Mysql Container
 1) First, check the container id.
 ```sh
 $ docker ps

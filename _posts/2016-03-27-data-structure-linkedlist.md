@@ -17,7 +17,7 @@ Each node has two pointers, one points to the next node, another points to the p
 ![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png)  
 
 ## 2. Implementation
-### 2.1 Create Singly Linked Node
+### 2.1 Creating Singly Linked Node
 Each node has an attribute to store its value, and one pointer points to the next node.
 ```java
 public class ListNode {
@@ -46,7 +46,7 @@ public class ListNode {
 }
 ```
 
-### 2.2 Create Doubly Linked Node
+### 2.2 Creating Doubly Linked Node
 Each node has an attribute to store its value, and two pointers, point to the previous node and the next node.
 ```java
 public class ListNode {
@@ -84,7 +84,7 @@ Here are some basic approaches for linked list questions.
 * Fast and Slow Pointer
 
 All below topics are based on singly linked list.  
-### 3.1 Reverse Linked List
+### 3.1 Reversing Linked List
 Input:  7->3->12->8->4->9  
 Output: 9->4->8->12->3->7  
 ```java
@@ -100,7 +100,7 @@ public ListNode reverseList(ListNode head) {
 }
 ```
 
-### 3.2 Find The Middle Node in Linked List
+### 3.2 Finding The Middle Node in Linked List
 Input:  7->3->12->8->4  
 Output: 12  
 Input:  7->3->12->8->4->9  
@@ -125,7 +125,7 @@ public ListNode findMiddle(ListNode head) {
 }
 ```
 
-### 3.3 Detect Cycle in Linked List
+### 3.3 Detecting Cycle in Linked List
 Input:  7->3->12->8->4->9  
 Output: False
 Input:  7->3->12->8->4->9->12  
@@ -159,7 +159,7 @@ public boolean hasCycle(ListNode head) {
 }
 ```
 
-### 3.4 Find the Node Where Cycle Begins
+### 3.4 Finding the Node Where Cycle Begins
 Input:  7->3->12->8->4->9->12  
 Output: 12
 

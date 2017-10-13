@@ -11,8 +11,8 @@ tags: [Git, GitHub, SourceTree]
 ## 1. What is Git?
 Git is a distributed revision control and source code management system with an emphasis on speed.
 
-## 2. Install Git
-### 2.1 Install Git on Mac OS
+## 2. Installing Git
+### 2.1 Installing Git on Mac OS
 Install [Homebrew](https://brew.sh/) first if it hasn't been installed yet on your Mac.
 ```sh
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -33,7 +33,7 @@ $ git config --global user.name "Johnny"
 $ git config --global user.email "jojozhuang@gmail.com"
 ```
 
-### 2.2 Install Git on Ubuntu
+### 2.2 Installing Git on Ubuntu
 Update packages
 ```sh
 $ sudo apt-get update
@@ -48,24 +48,24 @@ $ sudo git --version
 git version 2.7.4
 ```
 
-## 3. Create Repository on GitHub
+## 3. Creating Repository on GitHub
 To push your local git repository to remote git server, we need to use GitHub.
-### 3.1 Create GitHub Account
+### 3.1 Creating GitHub Account
 If you haven't already, go to [https://github.com/](https://github.com/) to register and create a new account.
 
 ### 3.2 Repositories on GitHub
 After login, you will see the page like below. For my GitHub, there are total 9 repositories. Seven of them are mine. One of them(EthanHao/Depaul) is shared by another GitHub Account. And another repository(github-example) is forked from some one's repository.
 ![MIME Type](/public/pics/2016-02-15/github.png)  
 
-### 3.3 Create New Repository
+### 3.3 Creating New Repository
 Click the green 'New repository' button. Provide name and description, select public or private.
 ![MIME Type](/public/pics/2016-02-15/createrepo.png)  
 
 After creation, some instructions show how to submit files to this repository through command line. Next, we will do that.
 ![MIME Type](/public/pics/2016-02-15/repocreated.png)  
 
-## 4. Push Local File to GitHub
-### 4.1 Create Local Repository
+## 4. Pushing Local File to GitHub
+### 4.1 Creating Local Repository
 ```sh
 $ mkdir GitTutorial
 $ cd GitTutorial/
@@ -82,7 +82,7 @@ $ git commit -m "first commit"
  1 file changed, 1 insertion(+)
  create mode 100644 hello.txt
 ```
-## 4.2 Push to GitHub
+## 4.2 Pushing to GitHub
 ```sh
 $ git remote add origin https://github.com/jojozhuang/github-test.git
 $ git push -u origin master
@@ -96,13 +96,13 @@ To https://github.com/jojozhuang/github-test.git
 Branch master set up to track remote branch master from origin.
 ```
 
-## 4.3 Check on GitHub
+## 4.3 Checking on GitHub
 File 'hello.txt' is added into repository 'github-test'.
 ![MIME Type](/public/pics/2016-02-15/pushed.png)  
 Click on the file, check the content of it.
 ![MIME Type](/public/pics/2016-02-15/content.png)  
 
-## 5. Pull Files From GitHub
+## 5. Pulling Files From GitHub
 Below commands show how to pull the files from GitHub repository 'github-test' to local Mac.
 ```sh
 $ cd PullTest/
@@ -125,12 +125,12 @@ $ cd PullTest/
 $ git pull origin master
 ```
 
-## 6. Use Git with SourceTree
+## 6. Using Git with SourceTree
 SourceTree is a free Git client for Windows or Mac. Instead of using command line, it provides an nice visual Git GUI.
-### 6.1 Install SourceTree
+### 6.1 Installing SourceTree
 Go to [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/), download the installer, and follow the wizard to install it.
 
-### 6.2 Clone Repository from GitHub
+### 6.2 Cloning Repository from GitHub
 New Repository->Clone From URL
 ![MIME Type](/public/pics/2016-02-15/sourcetree-repo.png)  
 
@@ -146,7 +146,7 @@ File is pulled from GitHub.
 Check file on mac.
 ![MIME Type](/public/pics/2016-02-15/sourcetree-fileonmac.png)  
 
-### 6.3 Push Files to GitHub
+### 6.3 Pushing Files to GitHub
 Open the hello.txt file, add 'Pushed by SourceTree!' to the end, save the file.
 Switch to SourceTree, it detects the new changes.
 ![MIME Type](/public/pics/2016-02-15/sourcetree-filechanged.png)  

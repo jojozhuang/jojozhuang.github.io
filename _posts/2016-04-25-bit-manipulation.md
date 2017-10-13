@@ -55,7 +55,7 @@ public static int repeatLogicShift(int x, int count) {
 ```
 
 ## 4. Common Bit Methods
-### 4.1 Get Bit
+### 4.1 Getting Bit
 Given an integer and a specific position, check whether the bit at this position of the given number is one.
 ```java
 boolean getBit(int num, int i) { // i range is {0, 31}, 0 is the rightest
@@ -63,7 +63,7 @@ boolean getBit(int num, int i) { // i range is {0, 31}, 0 is the rightest
 }
 ```
 
-### 4.2 Set Bit
+### 4.2 Setting Bit
 Given an integer and a specific position, set the bit at this position of the given number to one.
 ```java
 int setBit(int num, int i) {
@@ -71,7 +71,7 @@ int setBit(int num, int i) {
 }
 ```
 
-### 4.3 Clear Bit
+### 4.3 Clearing Bit
 Given an integer and a specific position, set the bit at this position of the given number to zero.
 ```java
 int clearBit(int num, int i) {
@@ -80,7 +80,7 @@ int clearBit(int num, int i) {
 }
 ```
 
-### 4.4 Clear Bit(Left Part)
+### 4.4 Clearing Bit(Left Part)
 Given an integer and a specific position, clear all bits from the most significant bit through i (inclusive).
 ```java
 int clearBitsMSthroughI(int num, int i) {
@@ -89,7 +89,7 @@ int clearBitsMSthroughI(int num, int i) {
 }
 ```
 
-### 4.5 Clear Bit(Right Part)
+### 4.5 Clearing Bit(Right Part)
 Given an integer and a specific position, clear all bits from i (inclusive) through 0 (inclusive).
 ```java
 int clearBitsIthrough0(int num, int i) {
@@ -98,7 +98,7 @@ int clearBitsIthrough0(int num, int i) {
 }
 ```
 
-### 4.6 Update Bit
+### 4.6 Updating Bit
 Given an integer and a specific position, set the bit at this position of to a given value(0 or 1).
 ```java
 int updateBit(int num, int i, boolean bitIsOne) {
@@ -141,7 +141,7 @@ public int divide(int a, int b) {
 }
 ```
 
-### 5.1 Check If An Integer is Power of Two.
+### 5.1 Checking If An Integer is Power of Two.
 ```java
 n & (n-1) == 0;
 ```
@@ -150,7 +150,7 @@ If n = 8, then 1000 & 111 == 0
 If n = 9, then 1001 & 1000 == 1000 != 0
 If n = 10, then 1010 & 1001 == 1000 != 0
 
-### 5.2 Get the last 1 for a number
+### 5.2 Getting the last 1 for a number
 Or we can say find the biggest factor with power of two for number x.
 ```java
 x &= -x;
@@ -160,7 +160,7 @@ if x = 5, then x = 0101 & (1011) = 0001 = 1 = 2^0
 if x = 6, then x = 0110 & (1010) = 0010 = 2 = 2^1
 if x = 28, then x = 00011100 & 11100100 = 00000100 = 4 = 2^2
 
-### 5.2 Implement mathematic addition.
+### 5.2 Implementing mathematic addition
 ```java
 int add(int a, int b) {  
     while (b != 0) {

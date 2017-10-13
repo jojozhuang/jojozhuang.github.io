@@ -14,8 +14,8 @@ tags: [Docker, Nginx]
 ## 1. Prerequisite
 If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
-## 2. Run Nginx Web Server Container
-### 2.1 Create Nginx Container
+## 2. Running Nginx Web Server Container
+### 2.1 Creating Nginx Container
 In Kitematic, Search 'nginx', Click on the 'CREATE' button of the hello-world-nginx image.
 ![MIME Type](/public/pics/2016-09-16/search.png)  
 Kitematic will download (also known as pull the image) the kitematic/hello-world-nginx image from the Docker Hub immediately.
@@ -24,7 +24,7 @@ Once it’s done, Kitematic will run a Docker Nginx container for this image. A 
 ![MIME Type](/public/pics/2016-09-16/running.png)  
 Click on the preview button to see the result in your own browser.
 ![MIME Type](/public/pics/2016-09-16/preview.png)  
-### 2.2 Set Volume
+### 2.2 Setting Volume
 Switch to Settings->Volumes, click CHANGE button.
 ![MIME Type](/public/pics/2016-09-16/settings.png)  
 Create a folder named 'kitematic-nginx' in your local machine.
@@ -33,7 +33,7 @@ The folder in container and the folder in your local machine are now mapping to 
 ![MIME Type](/public/pics/2016-09-16/volume.png)  
 You will find one html file in your local volume folder. This file is actually located in the container. It is the home page of Nginx you saw in browser.
 ![MIME Type](/public/pics/2016-09-16/index.png)  
-### 2.3 Edit File
+### 2.3 Editing File
 Open this index.html in any editor, change the content as follows:
 ```html
 <div style="color: #35393B; margin-top: 100px; text-align: center; font-family: HelveticaNeue-Light, sans-serif;">
@@ -52,7 +52,7 @@ Refresh the home page in web browser to see the change.
 This is how volume works.
 Kitematic can map Docker container volumes to directories on your Mac.
 
-## 3. Serve Our Own Website
+## 3. Serving Our Own Website
 Now let’s try to serve a more interesting website. [Download the zipped files](https://github.com/gabrielecirulli/2048/archive/master.zip) for 2048, a popular (and addictive) web-based tile game. Extract this zip file into your local volume folder.
 ![MIME Type](/public/pics/2016-09-16/2048.png)  
 

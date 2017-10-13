@@ -9,7 +9,7 @@ tags: [Binary Search, Subset, Big O]
 > Useful tricks for algorithm, Java.
 
 ## 1. Templates
-### 1.1 Define Customized Comparator
+### 1.1 Defining Customized Comparator
 ```java
 private class IntervalComparator implements Comparator<Interval> {
     public int compare(Interval i1, Interval i2) {
@@ -61,7 +61,7 @@ private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>>
 }
 ```
 
-### 1.4 Generate Unique Path for Each TreeNode(Preorder)
+### 1.4 Generating Unique Path for Each TreeNode(Preorder)
 Each node has a unique path in preoder/postorder/inorder.
 ```java
 // generate preoder key of each node
@@ -109,7 +109,7 @@ private int partition(int[] nums, int start, int end) {
     return pivot;
 }
 ```
-### 2.2 Rotate Array or String by Three Steps
+### 2.2 Rotating Array or String by Three Steps
 Rotate an array of n elements to the right by k steps.
 ```java
 reverse(nums, 0, nums.length - k - 1);
@@ -117,7 +117,7 @@ reverse(nums, nums.length - k, nums.length - 1);
 reverse(nums, 0, nums.length - 1);
 ```
 
-### 2.3 Sort Array by Another Array's Value.
+### 2.3 Sorting Array by Another Array's Value.
 ```java
 Integer[] index = new Integer[nums.length];
 for(int i = 0; i < nums.length; i++) {
@@ -133,7 +133,7 @@ Arrays.sort(index, new Comparator<Integer>() {
 
 Refer to Leetcode 506, lintcode 612.
 
-### 2.4 Use An Integer Instead of An Array to Store States
+### 2.4 Using An Integer Instead of An Array to Store States
 Implement an algorithm to determine if a string has all unique characters.
 What if you can not use additional data structures?
 Assume there are only lower case letters from 'a' to 'z'.
@@ -173,7 +173,7 @@ I've created several postings to discuss this topic separately.
 * [Bit Manipulation]({% link _posts/2016-04-25-bit-manipulation.md %})
 
 ## 7. Others
-### 7.1 Remove Duplicated Lists
+### 7.1 Removing Duplicated Lists
 ```java
 List<List<Integer>> res = new ArrayList<List<Integer>>();
 ... // res contains duplicated list after some operation
