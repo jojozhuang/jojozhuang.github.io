@@ -1,0 +1,104 @@
+---
+layout: post
+key: blog
+title: "Running JavaScript at Server Side with Rhino"
+date: 2017-10-11
+tags: [Rhino, Javascript, Servlet]
+---
+
+> Use Rhino to run javascript at server side which is built with Java Servlet.
+
+## 1. Prerequisite
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
+
+In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Setting up Rhino]({% link _posts/2017-10-10-setting-up-rhino.md %}) to get Rhino installed on your local machine.
+
+## 2. Creating Server
+### 2.1 Creating Servlet Project
+In Eclipse, File->New->Dynamic Web Project, specify project name as 'RhinoWebsite'.
+### 2.2 Creating index.html
+In Project Explorer, right-click on RhinoWebsite->WebContent, New->HTML File. Specify file name `index.html` and add following content into it.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function sendCode() {
+        var code = $("#code").val();
+        $("#output").load("/RhinoWebsite/RhinoServlet", {"code": code});
+      }
+    </script>
+    <title>Server-side JavaScript demo</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Server-side JavaScript demo</h1>
+      <form>
+        <div class="form-group">
+          <label for="email">Javascript:</label>
+          <textarea class="form-control" rows="5" id="code"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="sendCode();" >Submit</button>
+        <div class="form-group">
+          <label for="email">Output:</label>
+          <div class="well well-sm" id="output">&nbsp;</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+```
+### 2.3 Adding Reference of Rhino
+Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive), select the latest version to download, for example, rhino1_7R4.zip. Extract the file `js.jar` from the downloaded zip, and copy it to the `/WebContent/WEB-INF/lib` subdirectory of 'RhinoWebsite' project.
+### 2.4 Creating Servlet
+Right-click on RhinoWebsite->Java Resources->src, create package named 'Johnny.Tutorials'. Then, create java file named `RhinoServlet.java`. Modify the `doPost` method in RhinoServlet.java as follows:
+```java
+/**
+ * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+ */
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // TODO Auto-generated method stub
+    response.setContentType("text/plain");
+    String code = request.getParameter("code");
+    Context ctx = Context.enter();
+    try {
+        Scriptable scope = ctx.initStandardObjects();
+        Object result = ctx.evaluateString(scope, code, "<code>", 1, null);
+        response.getWriter().print(Context.toString(result));
+    } catch(RhinoException ex) {
+        response.getWriter().println(ex.getMessage());
+    } finally {
+        Context.exit();
+    }
+}
+```
+### 2.5 Project Structure
+Finally, the project structure looks like this.
+![MIME Type](/public/pics/2017-10-11/project.png)
+
+## 3. Testing
+Right-click on RhinoWebsite->WebContent->index.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.
+![MIME Type](/public/pics/2017-10-11/tomcat.png)
+Open web browser, access http://localhost:8080/RhinoWebsite/index.html.
+![MIME Type](/public/pics/2017-10-11/indexpage.png)
+
+Input following content to the javascript textbox.
+```javascript
+function hello(str) {
+    var name=str;
+    return "hello," + name + "!";
+}
+hello('johnny')
+```
+Click the 'Run' button, the string returned from javascript function will be displayed in the output box.
+![MIME Type](/public/pics/2017-10-11/runjs.png)
+
+## 4. Reference
+* [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
+* [Rhino on Github](https://github.com/mozilla/rhino)
+* [Server-side JavaScript with Rhino](http://blog.notdot.net/2009/10/Server-side-JavaScript-with-Rhino)
