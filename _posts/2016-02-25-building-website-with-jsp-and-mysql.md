@@ -49,7 +49,7 @@ Create an xml file named `context.xml` in `\WebContent\META-INF` with following 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/jsptutorial">
-    <Resource name="jdbc/datafix" auth="Container"
+    <Resource name="jdbc/jsptutorial" auth="Container"
         driverClassName="com.MySQL.jdbc.Driver"
         url="jdbc:MySQL://192.168.99.100:10201/jsptutorial"
         username="root" password="jsppassword"
@@ -115,7 +115,7 @@ public class ConnectionPool {
     private ConnectionPool() {
         try {
             InitialContext ic = new InitialContext();
-            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/datafix");
+            dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/jsptutorial");
         } catch (NamingException e) {
             System.out.println(e);
         }
