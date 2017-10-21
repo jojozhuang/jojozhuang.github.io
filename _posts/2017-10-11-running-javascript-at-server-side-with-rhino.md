@@ -11,7 +11,7 @@ tags: [Rhino, Javascript, Servlet]
 ## 1. Prerequisite
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
 
-In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Setting up Rhino]({% link _posts/2017-10-10-setting-up-rhino.md %}) to get Rhino installed on your local machine.
+In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Scripting Java With Rhino]({% link _posts/2017-10-10-scripting-java-with-rhino.md %}) to get Rhino installed on your local machine.
 
 ## 2. Creating Server
 ### 2.1 Creating Servlet Project
@@ -98,7 +98,11 @@ hello('johnny')
 Click the 'Run' button, the string returned from javascript function will be displayed in the output box.
 ![MIME Type](/public/pics/2017-10-11/runjs.png)
 
-## 4. Reference
+## 4. Source Files
+* [Source files of RhinoWebsite on Github](https://github.com/jojozhuang/Tutorials/tree/master/RhinoWebsite)
+
+## 5. Reference
 * [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
 * [Rhino on Github](https://github.com/mozilla/rhino)
 * [Server-side JavaScript with Rhino](http://blog.notdot.net/2009/10/Server-side-JavaScript-with-Rhino)
+* [Scripting in Java Tutorial - Java in Scripting Languages](http://www.java2s.com/Tutorials/Java/Scripting_in_Java/0200__Java_in_Scripting_Languages.htm)

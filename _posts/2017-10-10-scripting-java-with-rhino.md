@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Setting up Rhino"
+title: "Scripting Java With Rhino"
 date: 2017-10-10
 tags: [Rhino, Javascript]
 ---
@@ -127,7 +127,11 @@ hello from js function!
 ```
 ![MIME Type](/public/pics/2017-10-10/embedding.png)
 
+## 5. Source Files
+* [Source files of Scripting Java on Github](https://github.com/jojozhuang/Tutorials/tree/master/RhinoScriptingJava)
+
 ## 6. Reference
 * [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
 * [Rhino on Github](https://github.com/mozilla/rhino)
+* [Scripting in Java Tutorial - Scripting in Java Intro](http://www.java2s.com/Tutorials/Java/Scripting_in_Java/index.htm)
 * [Rhino -- 基于java的javascript实现](http://www.cnblogs.com/cczw/archive/2012/07/16/2593957.html)

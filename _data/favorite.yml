@@ -274,6 +274,9 @@ bookmarks:
       - name: Mono
         description: A cross-platform, open-source .NET framework
         url: http://www.mono-project.com/
+      - name: Rhino
+        description: An open-source implementation of JavaScript written entirely in Java
+        url: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
       - name: Writage
         description: Markdown plugin for Microsoft Word
         url: http://www.writage.com/
