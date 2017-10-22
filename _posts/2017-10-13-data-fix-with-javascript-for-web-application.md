@@ -9,21 +9,21 @@ tags: [Rhino, Javascript]
 > Use Rhino to run javascript to fix data for a web application.
 
 ## 1. Introduction
-In the previous posting [Building Website with JSP and MySQL]({% link _posts/2016-02-25-building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service. Customer is using it now. However, there are some issues with this web application, and some data is incorrect. Customer requests to fix the wrong data. One problem is, for cloud service, it is not allowed to stop it. We have to fix it while the application is still running. One approach is to create scripts with javascript and run it at server side.
+In the previous posting [Building Website with JSP and MySQL]({% link _posts/2016-02-25-building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service and Customer is using it right now. However, there are some issues with this web application, the price of the product is incorrect. Customer requests us to fix the wrong price. The problem is, for cloud service, you are not allowed to shut it down and apply any java patch to fix the data. We have to fix the data while the application is still running. One approach is to call Java from javascript and run the script at server side.
 
 ## 2. Setting Up Project
 Get the source file of JSP application from [here](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial), rename it to `RhinoDataFix`.
-The project in Eclipse looks like as follows.
+The project in Eclipse looks like this.
 ![MIME Type](/public/pics/2017-10-13/originalproject.png)
 Run it in Tomcat. Access http://localhost:8080/RhinoDataFix/productlist.jsp in web browser.
 ![MIME Type](/public/pics/2017-10-13/originalproductlist.png)
 
-## 3. Enhancing Project to Add Data Fix Function
-Suppose the price is not correct for the listed products. We need to double the price through data fix.
-### 3.1 Adding Reference of Rhino
+## 3. Enhancing Project by Adding Data Fix Function
+Suppose the prices of the these products are incorrect, as customer requests, we need to double it through data fix.
+### 3.1 Adding Reference of Rhino to Project
 Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive), select the latest version to download, for example, rhino1_7R4.zip. Extract the file `js.jar` from the downloaded zip, and copy it to the `/WebContent/WEB-INF/lib` subdirectory of 'RhinoDataFix' project.
 ### 3.2 Creating Servlet For Running Javascript
-Right-click on RhinoDataFix->Java Resources->src, create package named 'Johnny.RhinoDataFix.Servlet'. Then, create java file named `JavascriptServlet.java`. Modify the `doPost` method in JavascriptServlet.java as follows:
+Right-click on RhinoDataFix->Java Resources->src, create a new package named 'Johnny.RhinoDataFix.Servlet'. Then, right click on this package, New->Servlet, set name `JavascriptServlet.java`. Modify the `doPost()` method in JavascriptServlet.java as follows:
 ```java
 /**
  * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -144,7 +144,7 @@ function logDebug(msg) {
 
 show = gDebugText;
 ```
-Click the 'Run' button, the string returned from javascript function will be displayed in the output box.
+Click the 'Run' button, the log of the data fix will be displayed in the output box.
 ```
 Data Fix with JS: Update products by doubling their prices: START
 [fixProduct]: #1 out of 3, Before fix: ProductId=1, ProductName=Xbox, Price=100.0
@@ -158,7 +158,7 @@ Data Fix with JS: Update products by doubling their prices: END
 ```
 ![MIME Type](/public/pics/2017-10-13/datafix.png)
 
-Switch to Product List Page, the prices have been doubled.
+Switch to Product List page, the prices have been doubled successfully.
 ![MIME Type](/public/pics/2017-10-13/afterdfproductlist.png)
 
 ## 5. Source Files
@@ -166,6 +166,4 @@ Switch to Product List Page, the prices have been doubled.
 
 ## 6. Reference
 * [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
-* [Rhino on Github](https://github.com/mozilla/rhino)
 * [Server-side JavaScript with Rhino](http://blog.notdot.net/2009/10/Server-side-JavaScript-with-Rhino)
-* [How to wrap Custom Java classes in Rhino?](http://www.dreamincode.net/forums/topic/146360-rhino-java-javascript-engine-how-to-wrap-normal-java-classes/)

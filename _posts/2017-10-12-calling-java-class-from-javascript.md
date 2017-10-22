@@ -9,7 +9,7 @@ tags: [Rhino, Javascript, Java]
 > Use Rhino to call java class and its method with javascript at server side.
 
 ## 1. Introduction
-In the previous posting [Running JavaScript at Server Side with Rhino]({% link _posts/2017-10-11-running-javascript-at-server-side-with-rhino.md %}), we learned how to run javascript at server side. In this posting, we will learn how to let javascript call java classes and methods. We will re-use the servlet project from the previous posting, but it will be renamed to `RhinoWebsiteJava`.
+In the previous posting [Running JavaScript at Server Side with Rhino]({% link _posts/2017-10-11-running-javascript-at-server-side-with-rhino.md %}), we learned how to run javascript at server side. In this posting, we will learn how to call java classes and methods from javascript. We will re-use the servlet project from the previous posting, but it will be renamed to `RhinoWebsiteJava`.
 
 ## 2. Start Testing Page
 Right-click on RhinoWebsiteJava->WebContent->index.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.
@@ -17,7 +17,7 @@ Open web browser, access http://localhost:8080/RhinoWebsiteJava/index.html.
 ![MIME Type](/public/pics/2017-10-12/indexpage.png)
 
 ## 3. Calling Native Java Class
-Input following content to the javascript textbox.
+Input following script to the javascript input box, and click Run button.
 ```javascript
 function getTime() {
     var date = new java.util.Date();
@@ -33,7 +33,7 @@ Thu Oct 12 10:28:13 PDT 2017
 
 ## 4. Calling Custom Class
 ### 4.1 Creating Custom Class
-Create a class named `CustomClass` in the package 'Johnny.Tutorials' as follows. There are two methods, one is static level, another is instance level.
+Create a class named `CustomClass` in the package 'Johnny.Tutorials' as follows. There are two methods defined in this class, `greet()` is an instance method and `greetStatic()` is a static method.
 ```java
 package Johnny.Tutorials;
 
@@ -48,20 +48,7 @@ public class CustomClass {
     }
 }
 ```
-
-### 4.2 Calling Static Method of Custom Class
-Input following content to the javascript textbox. Notice that we have to add `Packages` prefix to access custom class.
-```javascript
-var cs = Packages.Johnny.Tutorials.CustomClass;
-cs.greetStatic('johnny');
-```
-Output:
-```
-Hello johnny, greetings from CustomClass.greetStatic().
-```
-![MIME Type](/public/pics/2017-10-12/staticmethod.png)
-
-### 4.3 Calling Instance Method of Custom Class
+### 4.2 Calling Instance Method of Custom Class
 Input following content to the javascript textbox. Notice that we have to add `Packages` prefix to access custom class.
 ```javascript
 var cs = new Packages.Johnny.Tutorials.CustomClass;
@@ -72,22 +59,31 @@ Output:
 Hello johnny, greetings from CustomClass.greet().
 ```
 ![MIME Type](/public/pics/2017-10-12/instancemethod.png)
-
+### 4.3 Calling Static Method of Custom Class
+Input following content to the javascript textbox. Notice that we have to add `Packages` prefix to access custom class.
+```javascript
+var cs = Packages.Johnny.Tutorials.CustomClass;
+cs.greetStatic('johnny');
+```
+Output:
+```
+Hello johnny, greetings from CustomClass.greetStatic().
+```
+![MIME Type](/public/pics/2017-10-12/staticmethod.png)
 ### 4.4 Calling Custom Class Without Packages Prefix
-Input following content to the javascript textbox. Notice that we define a global package named 'Johnny'.
+To avoid adding `Packages` prefix when calling custom class, we can define a global package named 'Johnny', and use it to access custom packages and classes. Input following content to the javascript textbox.
 ```javascript
 var Johnny = Packages.Johnny;
 var cs = Johnny.Tutorials.CustomClass;
 cs.greet('johnny');
 ```
-Same result for the Output:
+Same output:
 ```
 Hello johnny, greetings from CustomClass.greet().
 ```
 ![MIME Type](/public/pics/2017-10-12/globalpackage.png)
-
 ### 4.5 Optimizing Servlet
-Edit 'doPost' of 'RhinoServlet.java', add `var Johnny = Packages.Johnny;` before running the script submitted from client.
+Edit the 'doPost()' method of 'RhinoServlet.java', add `var Johnny = Packages.Johnny;` before running the script submitted from client. By doing this, there is no need to use `Packages` prefix in the client scripts.
 ```java
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     // TODO Auto-generated method stub
@@ -107,12 +103,12 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     }
 }
 ```
-Input following content to the javascript textbox. Notice that we haven't defined a global package or added `Packages` prefix.
+Input following content to the javascript textbox. This time, we don't need to define a global package or added `Packages` prefix.
 ```javascript
 var cs = Johnny.Tutorials.CustomClass;
 cs.greetStatic('johnny');
 ```
-Same result for the Output:
+Same output:
 ```
 Hello johnny, greetings from CustomClass.greet().
 ```
@@ -123,6 +119,6 @@ Hello johnny, greetings from CustomClass.greet().
 
 ## 6. Reference
 * [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
-* [Rhino on Github](https://github.com/mozilla/rhino)
-* [Server-side JavaScript with Rhino](http://blog.notdot.net/2009/10/Server-side-JavaScript-with-Rhino)
+* [Scripting Java](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Scripting_Java)
 * [Scripting in Java Tutorial - Java in Scripting Languages](http://www.java2s.com/Tutorials/Java/Scripting_in_Java/0200__Java_in_Scripting_Languages.htm)
+* [How to wrap Custom Java classes in Rhino?](http://www.dreamincode.net/forums/topic/146360-rhino-java-javascript-engine-how-to-wrap-normal-java-classes/)

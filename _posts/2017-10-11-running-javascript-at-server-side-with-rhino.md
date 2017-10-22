@@ -103,6 +103,4 @@ Click the 'Run' button, the string returned from javascript function will be dis
 
 ## 5. Reference
 * [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
-* [Rhino on Github](https://github.com/mozilla/rhino)
 * [Server-side JavaScript with Rhino](http://blog.notdot.net/2009/10/Server-side-JavaScript-with-Rhino)
-* [Scripting in Java Tutorial - Java in Scripting Languages](http://www.java2s.com/Tutorials/Java/Scripting_in_Java/0200__Java_in_Scripting_Languages.htm)
