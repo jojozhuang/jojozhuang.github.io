@@ -6,7 +6,7 @@ date: 2016-02-10
 tags: [VirtualBox, Ubuntu, Tomcat, Eclipse, JDK]
 ---
 
-> Setup JAVA development environment with the most popular OS, web server, IDE, etc.
+> Setup Java development environment with the most popular OS, web server, IDE, etc.
 
 We will use the following free softwares/tools.
 * VirtualBox - Oracle VirtualBox is a cross-platform virtualization application. We will use it to host our Ubuntu system.

@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Building Website with JSP and MySQL"
-date: 2016-02-25
+date: 2016-02-26
 tags: [JSP, MySQL]
 categories:
 - blog
@@ -18,9 +18,12 @@ Java Server Pages (JSP) is a server-side programming technology that enables the
 MySQL is the most popular Open Source Relational SQL Database Management System. MySQL is one of the best RDBMS being used for developing various web-based software applications.
 
 ## 2. Prerequisites
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setup Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
+### 2.1 Java Development Environment
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
+### 2.2 MySQL Database
+MySQL database has been installed. Otherwise, refer to [Installing MySQL and Workbench on Mac]({% link _posts/2016-02-25-installing-mysql-and-workbench-on-mac.md %}) to install MySQL database and MySQL Workbench.
 
-## 3. JSP Project
+## 3. Setting up JSP Project
 ### 3.1 Creating Dynamic Web Project
 In Eclipse, File->New->Dynamic Web Project, specify project name as 'JSPTutorial'.
 ### 3.2 Adding Libraries to the Project
@@ -50,9 +53,9 @@ Create an xml file named `context.xml` in `\WebContent\META-INF` with following 
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/jsptutorial">
     <Resource name="jdbc/jsptutorial" auth="Container"
-        driverClassName="com.MySQL.jdbc.Driver"
-        url="jdbc:MySQL://192.168.99.100:10201/jsptutorial"
-        username="root" password="jsppassword"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://127.0.0.1:3306/jsptutorial"
+        username="root" password="abc123"
         maxActive="100" maxIdle="30" maxWait="10000"
         logAbandoned="true" removeAbandoned="true"
         removeAbandonedTimeout="60" type="javax.sql.DataSource" />
@@ -678,10 +681,18 @@ Create another JSP file named `productedel.jsp` with following content.
 ```
 ### 3.7 Project Structure
 Finally, the project structure looks like this.
-![MIME Type](/public/pics/2016-02-25/project.png)
+![MIME Type](/public/pics/2016-02-26/project.png)
 
-## 4. Creating Database and Table
-In MySQL Workbench, create a connection to MySQL database. Create a new database named `jsptutorial`, run the following script to create a table named 'Product'.
+## 4. Setting up MySQL Database
+### 4.1 Creating Connection
+In MySQL Workbench, create a new connection to MySQL database, specify the connection name `JSP Tutorial`.
+![MIME Type](/public/pics/2016-02-26/addconnection.png)
+### 4.2 Creating Database and Table
+In Query tab, execute following sql script to create a new database named `jsptutorial`.
+```sql
+CREATE DATABASE  IF NOT EXISTS `jsptutorial`
+```
+Create a table named `Product`, which contains three columns.
 ```sql
 USE `jsptutorial`;
 CREATE TABLE `Product` (
@@ -691,33 +702,50 @@ CREATE TABLE `Product` (
   PRIMARY KEY (`ProductId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 ```
-Add run the following sql script to create some initial data.
+Create initial data.
 ```sql
 INSERT INTO `Product` VALUES (1,'Xbox',100),(2,'PS4',400),(3,'iPhone',699);
 ```
-![MIME Type](/public/pics/2016-02-25/mysqlworkbench.png)
+Run the following script to show all data in table `Product`.
+```sql
+SELECT * FROM jsptutorial.Product;
+```
+![MIME Type](/public/pics/2016-02-26/mysqlworkbench.png)
 
-## 5. Testing
-Right-click on JSPTutorial->WebContent->productlist.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.
-![MIME Type](/public/pics/2016-02-25/tomcat.png)
-Open web browser, access http://localhost:8080/JSPTutorial/productlist.jsp.
-![MIME Type](/public/pics/2016-02-25/productlist.png)
+## 5. Launching JSP Application
+In Eclipse, add Tomcat server. Window->Show View->Server, click the link to add new server.
+![MIME Type](/public/pics/2016-02-26/eclipseserver.png)  
+Select Tomcat 9.0.
+![MIME Type](/public/pics/2016-02-26/newserver.png)  
+Add Our Project to right side.
+![MIME Type](/public/pics/2016-02-26/addresource.png)  
+In eclipse project, a new server folder for tomcat is added.
+![MIME Type](/public/pics/2016-02-26/servers.png)  
+Set Targeted Runtimes.  
+Right click on the JSPTutorial Project->Properties->Targeted Runtimes, check Tomcat 9.0.
+![MIME Type](/public/pics/2016-02-26/targetedruntimes.png)  
+Now, we can use 'Run on Server' to start our JSP Application.
+![MIME Type](/public/pics/2016-02-26/runonserver.png)  
+There will be a browser opened in eclipse, which shows our JSP website. Or you can directly access http://localhost:8080/JSPTutorial/productlist.jsp in browser.
+![MIME Type](/public/pics/2016-02-26/productlist.png)
+
+## 6. Testing
 Click the 'Create' button, input product name and price.
-![MIME Type](/public/pics/2016-02-25/productadd.png)
+![MIME Type](/public/pics/2016-02-26/productadd.png)
 Click 'Save' button, product is saved.
-![MIME Type](/public/pics/2016-02-25/productlistafteradd.png)
+![MIME Type](/public/pics/2016-02-26/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![MIME Type](/public/pics/2016-02-25/productedit.png)
+![MIME Type](/public/pics/2016-02-26/productedit.png)
 Click 'Save' button, product is updated.
-![MIME Type](/public/pics/2016-02-25/productlistafteredit.png)
+![MIME Type](/public/pics/2016-02-26/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![MIME Type](/public/pics/2016-02-25/deleteconfirm.png)
+![MIME Type](/public/pics/2016-02-26/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![MIME Type](/public/pics/2016-02-25/productlistafterdel.png)
+![MIME Type](/public/pics/2016-02-26/productlistafterdel.png)
 
-## 6. Source Files
+## 7. Source Files
 * [Source files of JSP Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial)
 
-## 7. References
+## 8. References
 * [JSP Tutorial](https://www.tutorialspoint.com/jsp/)
 * [JSP - Standard Tag Library (JSTL) Tutorial](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm)

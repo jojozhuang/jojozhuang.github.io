@@ -9,7 +9,7 @@ tags: [Rhino, Javascript]
 > Use Rhino to run javascript to fix data for a web application.
 
 ## 1. Introduction
-In the previous posting [Building Website with JSP and MySQL]({% link _posts/2016-02-25-building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service and Customer is using it right now. However, there are some issues with this web application, the price of the product is incorrect. Customer requests us to fix the wrong price. The problem is, for cloud service, you are not allowed to shut it down and apply any java patch to fix the data. We have to fix the data while the application is still running. One approach is to call Java from javascript and run the script at server side.
+In the previous posting [Building Website with JSP and MySQL]({% link _posts/2016-02-26-building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service and Customer is using it right now. However, there are some issues with this web application, the price of the product is incorrect. Customer requests us to fix the wrong price. The problem is, for cloud service, you are not allowed to shut it down and apply any java patch to fix the data. We have to fix the data while the application is still running. One approach is to call Java from javascript and run the script at server side.
 
 ## 2. Setting Up Project
 Get the source file of JSP application from [here](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial), rename it to `RhinoDataFix`.
