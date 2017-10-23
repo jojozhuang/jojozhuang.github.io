@@ -19,11 +19,10 @@ Toolbox includes these Docker tools:
 * Oracle VirtualBox
 
 ## 2. What is Kitematic?
-[Kitematic](https://kitematic.com/) is an open source project built to simplify and streamline using Docker on a Mac or Windows PC. Kitematic automates the Docker installation and setup process and provides an intuitive graphical user interface (GUI) for running Docker containers. Kitematic integrates with Docker Machine to provision a VirtualBox VM and install the Docker Engine locally on your machine.  
-You can find its source files repository on [GitHub](https://github.com/docker/kitematic).
+[Kitematic](https://kitematic.com/) is an open source project built to simplify and streamline using Docker on a Mac or Windows PC. Kitematic automates the Docker installation and setup process and provides an intuitive graphical user interface (GUI) for running Docker containers. Kitematic integrates with Docker Machine to provision a VirtualBox VM and install the Docker Engine locally on your machine. You can find its source files repository on [GitHub](https://github.com/docker/kitematic).
 
 ## 3. Installing Docker Toolbox
-Go to https://www.docker.com/products/docker-toolbox, select the installer for Mac. Download and follow the wizard to install.
+Go to [https://www.docker.com/products/docker-toolbox](https://www.docker.com/products/docker-toolbox), select the installer for Mac. Download and follow the wizard to install.
 ![MIME Type](/public/pics/2016-09-15/installationtype.png)  
 Note:
 * If you've already installed Oracle VirtualBox on your Mac, then this component won't be installed.
@@ -70,7 +69,7 @@ Switch to My Repos tab, the images on your Docker Hub will show here.
 ![MIME Type](/public/pics/2016-09-15/myrepos.png)  
 
 ## 6. Working with Container
-Take gsmysql as example, which is a database container I created for previous posting [Use Mysql Container for JSP Application]({% link _posts/2016-09-12-using-mysql-container-for-jsp-application.md %}).
+Take gsmysql as example, which is a database container I created for previous posting [Using MySQL Container for GameStore]({% link _posts/2016-09-12-using-mysql-container-for-gamestore.md %}).
 Select gsmysql container, click the Start button.
 ![MIME Type](/public/pics/2016-09-15/gsmysql.png)  
 The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For mysql container, this is the url for applications to connect mysql database remotely.

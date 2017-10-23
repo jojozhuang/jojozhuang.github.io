@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Using Mysql Container for JSP Application"
+title: "Using MySQL Container for GameStore"
 date: 2016-09-12
 tags: [JSP, Mysql, Docker]
 ---

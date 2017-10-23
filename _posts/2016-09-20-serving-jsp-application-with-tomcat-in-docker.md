@@ -47,7 +47,7 @@ In your host machine, create new folder gstomcat under ~/Documents.
 ![MIME Type](/public/pics/2016-09-20/volume.png)  
 
 ### 3.2 Publishing JSP Application
-We will use the same JSP application for [Use Mysql Container for JSP Application]({% link _posts/2016-09-12-using-mysql-container-for-jsp-application.md %}).
+We will use the same JSP application for [Use Mysql Container for GameStore]({% link _posts/2016-09-12-using-mysql-container-for-gamestore.md %}).
 
 Build the project first, and copy all of the files from /GameStoreMysql/WebContent/ to ~/Documents/gstomcat/.
 ![MIME Type](/public/pics/2016-09-20/webcontent.png)  
