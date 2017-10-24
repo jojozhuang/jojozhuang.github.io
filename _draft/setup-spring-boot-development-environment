@@ -1,3 +1,19 @@
+Move source code to tutorial for http://localhost:12001/blog/2016/03/07/develop-realtime-online-application-with-websocket/.
+
+Separate portfolio http://localhost:12001/portfolio/course-player-signalr/ into two, one portfolio, another posting for signalR.
+
+http://plnkr.co/edit/x2VMhh?p=preview
+
+<div class="btn-group button-item">
+<button type="button" class="btn btn-default">{{ link.name }}</button>
+<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+<ul class="dropdown-menu">
+	<li><a href="#">Action</a></li>
+	<li><a href="#">Another action</a></li>
+	<li class="divider"></li>
+	<li><a href="#">Separated link</a></li>
+</ul>
+</div>
 
 ##1. Install Maven
 ```sh

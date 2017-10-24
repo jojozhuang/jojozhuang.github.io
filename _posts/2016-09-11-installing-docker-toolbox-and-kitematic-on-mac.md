@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Installing Docker Toolbox and Kitematic on Mac"
-date: 2016-09-15
+date: 2016-09-11
 tags: [Docker, Kitematic]
 ---
 
@@ -23,22 +23,22 @@ Toolbox includes these Docker tools:
 
 ## 3. Installing Docker Toolbox
 Go to [https://www.docker.com/products/docker-toolbox](https://www.docker.com/products/docker-toolbox), select the installer for Mac. Download and follow the wizard to install.
-![MIME Type](/public/pics/2016-09-15/installationtype.png)  
+![MIME Type](/public/pics/2016-09-11/installationtype.png)  
 Note:
 * If you've already installed Oracle VirtualBox on your Mac, then this component won't be installed.
 * You don't need to install Kitematic separately, it is installed as you install Docker Toolbox.
 
 After the installation is finished. You can launch Kitematic.
-![MIME Type](/public/pics/2016-09-15/installfinished.png)  
+![MIME Type](/public/pics/2016-09-11/installfinished.png)  
 
 ## 4. Terminals
 It's necessary to understand the structure of docker and what terminal can access it.  
 ## 4.1 Without Virtual Machine
 If you install docker manually, like what I did for Ubuntu mentioned in the posting [Install and Use Docker on Ubuntu]({% link _posts/2016-09-10-installing-and-using-docker-on-ubuntu.md %}), the docker is hosted directly by host machine. The host terminal can access both docker and host system.
-![MIME Type](/public/pics/2016-09-15/terminal-pm.png)  
+![MIME Type](/public/pics/2016-09-11/terminal-pm.png)  
 ## 4.2 With Virtual Machine
 If you install docker through Docker Toolbox, like what we did in this posting, the structure is different. There is one more VirtualBox VM between host machine and docker machine. In this case, you can only use Docker QuickStart Terminal to access docker.
-![MIME Type](/public/pics/2016-09-15/terminal-vm.png)  
+![MIME Type](/public/pics/2016-09-11/terminal-vm.png)  
 ## 4.3 Types of Terminal
 There are three types of terminal if docker is hosted on virtual machine.  
 
@@ -49,42 +49,41 @@ There are three types of terminal if docker is hosted on virtual machine.
  Container Terminal         | The terminal within container  | In Docker Terminal, execute 'docker exec -it &lt;container> sh'
 
 Whenever you start to work in command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal if it's in the virtual machine.
-![MIME Type](/public/pics/2016-09-15/terminal-fail.png)  
+![MIME Type](/public/pics/2016-09-11/terminalfail.png)  
 
 ## 5. Using Kitematic
 ### 5.1 Virtual Machine for Docker Machine
 The first time you start Kitematic, it will create a new virtual machine in VirtualBox.
-![MIME Type](/public/pics/2016-09-15/virtualbox.png)  
+![MIME Type](/public/pics/2016-09-11/virtualbox.png)  
 ### 5.2 Main Screen
 Now, you see the main screen of Kitematic. Since I've used Kitematic for some time, there are already some containers listed at the left side. There is nothing if you've never created any container before.
-![MIME Type](/public/pics/2016-09-15/mainscreen.png)  
+![MIME Type](/public/pics/2016-09-11/mainscreen.png)  
 Options you have here:
 * You can search Docker images through search box at top and click CREATE button to run containers for them.
 * You can open a Docker-CLI terminal by clicking the whale button at the left bottom corner.
 
 ### 5.3 Logging In
 If you've already registered a docker ID, you can use it to login now.
-![MIME Type](/public/pics/2016-09-15/login.png)  
+![MIME Type](/public/pics/2016-09-11/login.png)  
 Switch to My Repos tab, the images on your Docker Hub will show here.
-![MIME Type](/public/pics/2016-09-15/myrepos.png)  
+![MIME Type](/public/pics/2016-09-11/myrepos.png)  
 
 ## 6. Working with Container
-Take gsmysql as example, which is a database container I created for previous posting [Using MySQL Container for GameStore]({% link _posts/2016-09-12-using-mysql-container-for-gamestore.md %}).
-Select gsmysql container, click the Start button.
-![MIME Type](/public/pics/2016-09-15/gsmysql.png)  
-The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For mysql container, this is the url for applications to connect mysql database remotely.
-![MIME Type](/public/pics/2016-09-15/started.png)  
+Take gsmysql as example, which is a MySQL container. Select it and click the Start button.
+![MIME Type](/public/pics/2016-09-11/gsmysql.png)  
+The container is started. And you see that Access URL, which is the public address can be accessed from outside of the container. For MySQL container, this is the url for applications to connect MySQL database remotely.
+![MIME Type](/public/pics/2016-09-11/started.png)  
 ### 6.1 Starting Terminal in Container
-Previously, we have to type the following command to open terminal in container.
+To open the container terminal, we can type the following command in docker terminal.
 ```sh
 $ docker exec -i -t <container> sh
 ```
-Now, we just need to click the 'EXEC' button on the top.
+In Kitematic, we just need to click the 'EXEC' button on the top.
 ### 6.2 Settings of Container
-Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set by command line in docker terminal. Now, you can easily update it in Kitematic.
-![MIME Type](/public/pics/2016-09-15/general.png)  
-Volumes sub tab, this feature enables you to share files between container and host machine.
-![MIME Type](/public/pics/2016-09-15/volume.png)  
+Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set initially when this container was created. Now, you can easily update it in Kitematic.
+![MIME Type](/public/pics/2016-09-11/general.png)  
+In Volumes tab, you are able set local and docker folder to share files between container and host machine.
+![MIME Type](/public/pics/2016-09-11/volume.png)  
 
 ## 7. References
 * [Install Docker Toolbox on macOS](https://docs.docker.com/toolbox/toolbox_install_mac/)

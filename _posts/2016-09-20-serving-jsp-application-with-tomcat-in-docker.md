@@ -9,7 +9,7 @@ tags: [Docker, Tomcat]
 > Guide how to serve Java Servlet/JSP website in Apache Tomcat Container with Kitematic.
 
 ## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
+If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
 ## 2. Setting up Tomcat Container
 ### 2.1 Creating Tomcat Container

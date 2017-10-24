@@ -30,7 +30,7 @@ In Eclipse, File->New->Dynamic Web Project, specify project name as 'JSPTutorial
 1) JSTL  
 Go to [https://tomcat.apache.org/taglibs/index.html](https://tomcat.apache.org/taglibs/index.html), download JSP Standard Tag Library(JSTL). Put the jar file to `\WebContent\WEB-INF\lib`.  
 2) MySQL Connector  
-MySQL Connector/J is the official JDBC driver for MySQL. Go to [https://dev.MySQL.com/downloads/connector/j/](https://dev.MySQL.com/downloads/connector/j/), download MySQL Connector/J. Extract MySQL connector jar from the zip file, put it to `\WebContent\WEB-INF\lib`.
+To let our JSP application access MySQL database, we need MySQL connector jar. It is a middleware between our JSP application and MySQL Database. MySQL Connector has many versions. `MySQL Connector/J` is the official JDBC driver for Java. Go to [https://dev.MySQL.com/downloads/connector/j/](https://dev.MySQL.com/downloads/connector/j/), download MySQL Connector/J. Extract MySQL connector jar from the zip file, put it to `\WebContent\WEB-INF\lib`.
 ### 3.3 Creating web.xml
 Create an xml file named `web.xml` in `\WebContent\WEB-INF` with following content.
 ```xml

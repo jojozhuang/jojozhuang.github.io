@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Data Persistence with JPA & Eclipselink"
-date: 2016-02-21
+date: 2016-12-21
 tags: [JPA, Eclipse, Eclipselink, ORM, Hibernate, Mysql]
 ---
 
@@ -28,29 +28,29 @@ JPA define guidelines to implement the Object Relational Mapping (ORM) and there
 ## 2. Prerequisites
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to setup your development environment.
 
-In addition, if you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-15-installing-docker-toolbox-and-kitematic-on-mac.md %}).
+In addition, if you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
 ## 3. Installing Eclipselink in Eclipse
 In Eclipse, File -> New -> 'JPA Project', Name: JPATutorial, and select 'Java SE 8' for target runtime, click Next.  
-![MIME Type](/public/pics/2016-02-21/jpaproject.png)  
+![MIME Type](/public/pics/2016-12-21/jpaproject.png)  
 Click on download library (if you do not have the library) in the user library section:
-![MIME Type](/public/pics/2016-02-21/jpafacet.png)  
+![MIME Type](/public/pics/2016-12-21/jpafacet.png)  
 Select the latest version of Eclipselink library and click Next.
-![MIME Type](/public/pics/2016-02-21/eclipselink.png)  
+![MIME Type](/public/pics/2016-12-21/eclipselink.png)  
 Accept the terms of license and click Finish to start downloading.
-![MIME Type](/public/pics/2016-02-21/downloading.png)  
+![MIME Type](/public/pics/2016-12-21/downloading.png)  
 After downloading, click Finish.
-![MIME Type](/public/pics/2016-02-21/finish.png)  
+![MIME Type](/public/pics/2016-12-21/finish.png)  
 Finally you get the project file in the Package Explorer in Eclipse IDE. Expand all files, you will get the folder and file hierarchy as follows:
-![MIME Type](/public/pics/2016-02-21/projectstructure.png)  
+![MIME Type](/public/pics/2016-12-21/projectstructure.png)  
 
 ## 4. Adding MySQL Connector to Project
 To access Mysql database, we need mysql connector jar.
 Go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download Mysql Connector/J.
-![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
+![MIME Type](/public/pics/2016-12-21/mysqlconnectordownload.png)  
 Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /JPATutorial/lib/  
 Go to Project properties -> Java Build Path by right click on it. You will get a dialog box as follows: Click on Add External Jars.
-![MIME Type](/public/pics/2016-02-21/mysqlconnector.png)  
+![MIME Type](/public/pics/2016-12-21/mysqlconnector.png)  
 
 ## 5. Setting up Mysql Database
 We use docker to host our mysql database server.
@@ -81,7 +81,7 @@ Check images with following command.
 ```sh
 $ docker images
 ```
-![MIME Type](/public/pics/2016-02-21/dockerimage.png)  
+![MIME Type](/public/pics/2016-12-21/dockerimage.png)  
 
 ### 5.3 Running Mysql Container With The New Image
 In terminal, run command.
@@ -89,7 +89,7 @@ In terminal, run command.
 $ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
 You will see that mysql container is running now. And note the ip address and port. We will use them to configure the database connection in eclipse.
-![MIME Type](/public/pics/2016-02-21/kitematic.png)  
+![MIME Type](/public/pics/2016-12-21/kitematic.png)  
 
 ## 6. Making Changes to JPA Project
 ### 6.1 Configuring Persistence.xml
@@ -113,7 +113,7 @@ In eclipse, open Persistence.xml of JPATutorial, switch to source view. Edit it 
 ```
 ### 6.2 Creating Entity
 Create a package named ‘com.jojostudio.jpatutorial.entity’, under ‘src’ (Source) package.
-![MIME Type](/public/pics/2016-02-21/package.png)
+![MIME Type](/public/pics/2016-12-21/package.png)
 Create a class named Employee.java under given package as follows:
 ```java
 package com.jojostudio.jpatutorial.entity;
@@ -304,14 +304,14 @@ public class DeleteEmployee {
 Right click on CreateEmployee.java file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
 ### 7.2 Connecting Mysql With MysqlWorkbench
 Add New Connection in MysqlWorkbench and open the connection.
-![MIME Type](/public/pics/2016-02-21/workbench.png)
+![MIME Type](/public/pics/2016-12-21/workbench.png)
 ### 7.3 Checking Data
 Run sql query to find all rows in the Employee table.
 ```sql
 SELECT * FROM jpadb.EMPLOYEE;
 ```
 We see the row for new employee is there.
-![MIME Type](/public/pics/2016-02-21/datacreated.png)
+![MIME Type](/public/pics/2016-12-21/datacreated.png)
 
 Test updating, finding and deleting with the same approach. Data should always get updated properly in mysql.
 
