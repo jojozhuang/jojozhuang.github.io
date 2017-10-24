@@ -51,6 +51,9 @@ There are three types of terminal if docker is hosted on virtual machine.
 Whenever you start to work in command lines, be sure you are in the right terminal. For example, you cannot access docker in host terminal if it's in the virtual machine.
 ![MIME Type](/public/pics/2016-09-11/terminalfail.png)  
 
+When Docker Terminal is started, you will see there is an IP address, eg. `192.168.99.100`. Be aware that all your containers created on Docker machine have this same IP address. They are running at different ports. With this IP address and port, container can be accessed from the outside world.
+![MIME Type](/public/pics/2016-09-11/dockerterminal.png)  
+
 ## 5. Using Kitematic
 ### 5.1 Virtual Machine for Docker Machine
 The first time you start Kitematic, it will create a new virtual machine in VirtualBox.
@@ -78,7 +81,7 @@ To open the container terminal, we can type the following command in docker term
 ```sh
 $ docker exec -i -t <container> sh
 ```
-In Kitematic, we just need to click the 'EXEC' button on the top.
+In Kitematic, we just need to click the 'EXEC' button on the top, which is more convenient.
 ### 6.2 Settings of Container
 Switch to Settings tab. In general sub tab, you can set environment variables here. See that MYSQL_ROOT_PASSWORD, it was set initially when this container was created. Now, you can easily update it in Kitematic.
 ![MIME Type](/public/pics/2016-09-11/general.png)  
