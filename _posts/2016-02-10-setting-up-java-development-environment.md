@@ -20,6 +20,7 @@ We will use the following free softwares/tools.
 Download the latest version of VirtualBox from [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads).
 ### 1.2 Installing VirtualBox
 Run the installer and follow the wizard to install it.
+![VirtualBox](/public/pics/2016-02-10/installvirtualbox.png)  
 ### 1.3 Launching VirtualBox
 After the installation is finished, launch VirtualBox. In my virtualbox, I have three virtual machines.
 ![VirtualBox](/public/pics/2016-02-10/VirtualBox.png)  

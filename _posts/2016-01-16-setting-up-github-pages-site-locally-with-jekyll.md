@@ -16,6 +16,7 @@ Make sure gcc and make are installed. Check version of them with the following c
 ```sh
 $ gcc -v
 $ make -v
+$ ruby -v //version must be 2.1 or above
 ```
 Run the following command to install Jekyll.
 ```sh
@@ -31,6 +32,7 @@ Make sure gcc and make are installed. Check version of them with the following c
 ```sh
 $ gcc -v
 $ make -v
+$ ruby -v //version must be 2.1 or above
 ```
 Install Ruby.
 ```sh
