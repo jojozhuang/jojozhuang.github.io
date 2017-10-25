@@ -13,7 +13,7 @@ tags: [Spark, Scala]
 
 ## 2. Installing Java and Scala
 ### 2.1 Installing JDK
-Refer to [Setting up Java Development Environment]({% link _posts/2016-02-10-setting-up-java-development-environment.md %}) to install JDK on Linux.
+Refer to [Setting up Java Development Environment on Ubuntu]({% link _posts/2016-02-10-setting-up-java-development-environment-on-ubuntu.md %}) to install JDK on Linux.
 Check java version with the following command.
 ```sh
 $ java -version

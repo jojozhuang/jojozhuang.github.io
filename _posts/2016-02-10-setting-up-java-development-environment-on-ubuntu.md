@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Setting up Java Development Environment"
+title: "Setting up Java Development Environment on Ubuntu"
 date: 2016-02-10
 tags: [VirtualBox, Ubuntu, Tomcat, Eclipse, JDK]
 ---
