@@ -45,7 +45,8 @@ $ sudo gem install jekyll
 ```
 Check version.
 ```sh
-$ jekyll --version
+$ jekyll -v
+jekyll 3.6.2
 ```
 
 ## 4. Running Website with Jekyll

@@ -57,6 +57,7 @@ When Docker Terminal is started, you will see there is an IP address, eg. `192.1
 ## 5. Using Kitematic
 ### 5.1 Virtual Machine for Docker Machine
 The first time you start Kitematic, it will create a new virtual machine in VirtualBox.
+![MIME Type](/public/pics/2016-09-11/initialkitematic.png)  
 ![MIME Type](/public/pics/2016-09-11/virtualbox.png)  
 ### 5.2 Main Screen
 Now, you see the main screen of Kitematic. Since I've used Kitematic for some time, there are already some containers listed at the left side. There is nothing if you've never created any container before.
