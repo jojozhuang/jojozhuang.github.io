@@ -27,7 +27,7 @@ There is one issue with this Tomcat container, volume is not configured.
 Let's manually create another Tomcat container for the same tomcat image.
 In docker terminal, run the following command.
 ```sh
-$ docker run --name=gstomcat -d -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore -p 31020:8080 tomcat
+$ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 tomcat
 ```
 Let's take a moment to examine this command in detail:
 * --name=gstomcat names the container so we can refer to it more easily.
@@ -37,7 +37,7 @@ Let's take a moment to examine this command in detail:
 * tomcat specifies that the container should be built from the tomcat image
 
 Switch to Kitematic, the new container is running with Volume configured.
-![MIME Type](/public/pics/2016-09-20/gstomcat.png)  
+![MIME Type](/public/pics/2016-09-20/jsptomcat.png)  
 Click on the preview button of the new container. You will see a same Tomcat welcome page. Notice, the port is different with the previous one. They are running in different tomcat containers.
 ![MIME Type](/public/pics/2016-09-20/newpreview.png)  
 
@@ -47,7 +47,7 @@ In your host machine, create new folder gstomcat under ~/Documents.
 ![MIME Type](/public/pics/2016-09-20/volume.png)  
 
 ### 3.2 Publishing JSP Application
-We will use the same JSP application for [Use Mysql Container for GameStore]({% link _posts/2016-09-12-using-mysql-container-for-gamestore.md %}).
+We will use the same JSP application for [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}).
 
 Build the project first, and copy all of the files from /GameStoreMysql/WebContent/ to ~/Documents/gstomcat/.
 ![MIME Type](/public/pics/2016-09-20/webcontent.png)  
