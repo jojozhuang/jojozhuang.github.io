@@ -51,3 +51,16 @@ Navigate to the dir and type:
 open .
 ```
 The dot represents the current location.
+
+## 5. How to Change Your Default Terminal Prompt in Mac OS X?
+Navigate to the dir and type:
+```sh
+cd ~
+vi .bash_profile
+```
+Add the following line (press i)
+```sh
+export PS1="Johnny@Johnny-Mac:~$ "
+```
+Save the file (press Escape, type :wq and hit Enter), restart Terminal.
+![MIME Type](/public/pics/2016-08-30/terminalname.png)  
