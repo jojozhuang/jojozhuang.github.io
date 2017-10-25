@@ -4,7 +4,7 @@ highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 
 # Setup
-config:
+mywebsite:
   url: http://jojozhuang.github.io
   copyright: '&copy; 2017 jojozhuang.github.io, All rights reserved.'
 #theme: jekyll-theme-cayman
