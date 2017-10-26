@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Sharing files between Host and Guest in VirtualBox"
-date: 2016-02-13
+date: 2016-02-11
 tags: [VirtualBox, Ubuntu, Mac]
 ---
 
@@ -11,38 +11,42 @@ tags: [VirtualBox, Ubuntu, Mac]
 ## 1. Installing VirtualBox Guest Additions
 1) Get VBoxGuestAdditions.iso  
 In MacOS, Finder->Application->VirtualBox->Show Package Content
-![MIME Type](/public/pics/2016-02-13/virtualbox.png)  
+![MIME Type](/public/pics/2016-02-11/virtualbox.png)  
 Find VBoxGuestAdditions.iso in /Contents/MacOS/.
-![MIME Type](/public/pics/2016-02-13/iso.png)  
+![MIME Type](/public/pics/2016-02-11/iso.png)  
 Copy it to another folder, eg. ~/Downloads/  
 2) Insert the Image to Ubuntu VM  
 Ubuntu VM->Devices->Optical Drives->Choose disk image..., locate to ~/Downloads/VBoxGuestAdditions.iso.  
-![MIME Type](/public/pics/2016-02-13/addimage.png)  
+![MIME Type](/public/pics/2016-02-11/addimage.png)  
 3) In Ubuntu, select VBoxGuestAdditions.iso, and install.
+![MIME Type](/public/pics/2016-02-11/installguestadditions.png)  
 After Guest Additions are installed, a new user group 'vboxsf' has been created.  
 
 ## 2. Creating Shared Folder on MacOS
 In MacOS, create a new folder /UbuntuSF/, which is used to share files with Ubuntu.
+![MIME Type](/public/pics/2016-02-11/createsharedfolder.png)  
 
 ## 3. Adding Shared Folder to VM's SharedFolders
-In VirtualBox, add /UbuntuSF as Ubuntu VM's SharedFolders, set Auto-mount to Yes.
-![MIME Type](/public/pics/2016-02-13/sharedfolders.png)  
+In VirtualBox, select Ubuntu VM->Settings->SharedFolders, click 'Add Folder' at the right side. Set path to `/UbuntuSF`, check 'Auto-mount' and 'Make Permanent'.
+![MIME Type](/public/pics/2016-02-11/addshare.png)  
+The shared folder is created for VM now.
+![MIME Type](/public/pics/2016-02-11/sharedfolders.png)  
 
 ## 4. Adding User to Group 'vboxsf' in Ubuntu
-Run the following command in terminal.
+In Ubuntu VM, run the following command in terminal.
 ```sh
 sudo adduser johnny vboxsf
 ```
-![MIME Type](/public/pics/2016-02-13/adduser.png)  
+![MIME Type](/public/pics/2016-02-11/adduser.png)  
 Then, reboot Ubuntu.
 
-## 5. Checking the Shared Folder in Ubuntu.
+## 5. Checking the Shared Folder in Ubuntu
 Go to directory /media/, there should be a new shared folder sf_UbuntuSF.
-![MIME Type](/public/pics/2016-02-13/ubuntusf.png)  
+![MIME Type](/public/pics/2016-02-11/ubuntusf.png)  
 Create a new file here.
-![MIME Type](/public/pics/2016-02-13/sharedfile.png)  
+![MIME Type](/public/pics/2016-02-11/sharedfile.png)  
 You will see it in /UbuntuSF on MacOS.
-![MIME Type](/public/pics/2016-02-13/macsf.png)  
+![MIME Type](/public/pics/2016-02-11/macsf.png)  
 
 ## 6. References
 * [Manually Installing VirtualBox Guest Additions](https://osquest.com/2012/11/13/tip-manually-installing-virtualbox-guest-additions/)
