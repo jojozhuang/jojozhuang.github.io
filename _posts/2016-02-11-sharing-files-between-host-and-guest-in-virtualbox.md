@@ -35,7 +35,7 @@ The shared folder is created for VM now.
 ## 4. Adding User to Group 'vboxsf' in Ubuntu
 In Ubuntu VM, run the following command in terminal.
 ```sh
-sudo adduser johnny vboxsf
+$ sudo adduser johnny vboxsf
 ```
 ![MIME Type](/public/pics/2016-02-11/adduser.png)  
 Then, reboot Ubuntu.

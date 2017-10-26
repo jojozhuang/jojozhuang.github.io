@@ -20,7 +20,7 @@ In Docker, everything is based on Images. An image is a combination of a file sy
 Containers are instances of Docker images that can be run using the Docker run command. The basic purpose of Docker is to run containers.
 
 ## 1.3 Docker Hub
-Docker Hub is a registry service on the cloud that allows you to download Docker images that are built by other communities. You can also upload your own Docker built images to Docker hub.
+[Docker Hub](https://hub.docker.com/) is a registry service on the cloud that allows you to download Docker images that are built by other communities. You can also upload your own Docker built images to Docker hub.
 
 Go to [https://hub.docker.com/](https://hub.docker.com/) to create a Docker ID, then login. You will see there is no repository/image initially. We will create our own image later.
 ![MIME Type](/public/pics/2016-09-10/hub.png)  
