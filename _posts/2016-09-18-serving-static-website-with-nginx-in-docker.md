@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Serving Static Website With Nginx In Docker"
-date: 2016-09-16
+date: 2016-09-18
 tags: [Docker, Nginx]
 ---
 
@@ -17,22 +17,22 @@ If you haven’t installed Docker and Kitematic, please install Docker Toolbox b
 ## 2. Running Nginx Web Server Container
 ### 2.1 Creating Nginx Container
 In Kitematic, Search 'nginx', Click on the CREATE button of the `hello-world-nginx` image.
-![MIME Type](/public/pics/2016-09-16/search.png)  
+![MIME Type](/public/pics/2016-09-18/search.png)  
 Kitematic will download (also known as pull the image) the kitematic/hello-world-nginx image from the Docker Hub immediately.
-![MIME Type](/public/pics/2016-09-16/download.png)  
+![MIME Type](/public/pics/2016-09-18/download.png)  
 Once it’s done, Kitematic will run a Docker Nginx container for this image. A tiny Nginx web server is started up, allowing it to serve website data to your Mac.
-![MIME Type](/public/pics/2016-09-16/running.png)  
+![MIME Type](/public/pics/2016-09-18/running.png)  
 Click on the preview button to see the result in your own browser.
-![MIME Type](/public/pics/2016-09-16/preview.png)  
+![MIME Type](/public/pics/2016-09-18/preview.png)  
 ### 2.2 Setting Volume
 Switch to Settings->Volumes, click CHANGE button.
-![MIME Type](/public/pics/2016-09-16/settings.png)  
+![MIME Type](/public/pics/2016-09-18/settings.png)  
 Create a folder named `kitematic-nginx` in ~/Documents/.
-![MIME Type](/public/pics/2016-09-16/createfolder.png)  
+![MIME Type](/public/pics/2016-09-18/createfolder.png)  
 The folder in container and the folder in your local machine are now mapping to each other. Click Restart button to restart the container.
-![MIME Type](/public/pics/2016-09-16/volume.png)  
+![MIME Type](/public/pics/2016-09-18/volume.png)  
 You will find one html file in your local volume folder. This file is actually located in the container. It is the home page of Nginx you saw in browser.
-![MIME Type](/public/pics/2016-09-16/index.png)  
+![MIME Type](/public/pics/2016-09-18/index.png)  
 ### 2.3 Editing File
 Open this index.html in any editor, change the content as follows:
 ```html
@@ -48,16 +48,16 @@ Open this index.html in any editor, change the content as follows:
 Notice, we just add another h2 tag showing `Hello World, Kitematic!` under the original one.
 
 Refresh the home page in web browser to see the change.
-![MIME Type](/public/pics/2016-09-16/newpreview.png)  
+![MIME Type](/public/pics/2016-09-18/newpreview.png)  
 This is how volume works.
 Kitematic can map Docker container volumes to directories on your Mac.
 
 ## 3. Serving Our Own Website
 Now let’s try to serve a more interesting website. [Download the zipped files](https://github.com/gabrielecirulli/2048/archive/master.zip) for 2048, a popular (and addictive) web-based tile game. Extract this zip file into your local volume folder.
-![MIME Type](/public/pics/2016-09-16/2048files.png)  
+![MIME Type](/public/pics/2016-09-18/2048files.png)  
 
 Refresh the page in web browser, you can play the game now. Cool!
-![MIME Type](/public/pics/2016-09-16/2048.png)  
+![MIME Type](/public/pics/2016-09-18/2048.png)  
 
 ## 4. References
 * [Kitematic tutorial: Serve a static website with NGINX](https://docs.docker.com/kitematic/nginx-web-server/)

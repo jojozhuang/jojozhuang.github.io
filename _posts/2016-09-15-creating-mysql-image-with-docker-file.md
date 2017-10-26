@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Creating Mysql Image with Docker File"
-date: 2016-09-27
-tags: [Docker, Dockerfile, Mysql]
+title: "Creating MySQL Image with Docker File"
+date: 2016-09-15
+tags: [Docker, Dockerfile, MySQL]
 ---
 
 > Tutorial for how to create Mysql image with Dockerfile.
@@ -27,7 +27,7 @@ In addition, we manually restored the database, and created tables for the new d
 In this posting, we will use Dockerfile to simplify the way how to create mysql container for our Game Store application.
 
 Before moving forward, make sure you've already setup folder ~/Documents/gstomcat in local machine, which will be volumed to tomcat container later. And all necessary jsp files and classes are put into this folder.
-![MIME Type](/public/pics/2016-09-27/foldermapping.png)  
+![MIME Type](/public/pics/2016-09-15/foldermapping.png)  
 
 ## 3. Creating Mysql Image with Dockerfile
 ### 3.1 Backing Up Mysql Schema
@@ -75,7 +75,7 @@ Check whether the image is created.
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
-![MIME Type](/public/pics/2016-09-27/imagecreated.png)  
+![MIME Type](/public/pics/2016-09-15/imagecreated.png)  
 
 ## 4. Testing The New Image
 ### 4.1 Running Container
@@ -86,16 +86,16 @@ $ docker run --detach --name=gsmysql --publish 6603:3306 gamestore-mysql:0.1
 Notice we don't need to set the environment variable MYSQL_ROOT_PASSWORD any more.
 ### 4.2 Verifying Container in Kitematic
 A Mysql container named gsmysql is running now. Notice, it's source image is 'gamestore-mysql:0.1'. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
-![MIME Type](/public/pics/2016-09-27/general.png)  
+![MIME Type](/public/pics/2016-09-15/general.png)  
 Port 3306 is also exposed.
-![MIME Type](/public/pics/2016-09-27/ports.png)  
+![MIME Type](/public/pics/2016-09-15/ports.png)  
 
 ### 4.3 Verifying Game Store Website
 Open the following link in web browser. Our Game Store is running now. Then, click the Login link on the top right of the page.
 * [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
 
 Type 'customer' for user name, type 'customer' for password, and click Login button.
-![MIME Type](/public/pics/2016-09-27/login.png)  
+![MIME Type](/public/pics/2016-09-15/login.png)  
 Try to add some item to shopping cart and place the order. Order should be created.
 
 ## 5. Source Files
