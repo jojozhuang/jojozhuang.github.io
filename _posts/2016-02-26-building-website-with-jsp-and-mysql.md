@@ -749,3 +749,4 @@ Click 'OK' button, product will be deleted.
 ## 8. References
 * [JSP Tutorial](https://www.tutorialspoint.com/jsp/)
 * [JSP - Standard Tag Library (JSTL) Tutorial](https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm)
+* [JDBC Driver class not found: com.MySQL.jdbc.Driver](https://stackoverflow.com/questions/8779631/jdbc-driver-class-not-found-com-MySQL-jdbc-driver)

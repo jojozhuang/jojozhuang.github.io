@@ -156,6 +156,7 @@ You see there is one new product in Product table.
 ![MIME Type](/public/pics/2016-09-13/after.png)  
 
 ## 6. Publishing MySQL Container
+By default, MySQL container doesn't persists data. The data is actually stored in volume. You can't get a new container with database and data set from image published to hub.  
 1) First, check the container id.
 ```sh
 $ docker ps
@@ -190,4 +191,4 @@ $ docker pull jojozhuang/jsptutorial-mysql
 * [MySQL Docker Containers: Understanding the basics](https://severalnines.com/blog/MySQL-docker-containers-understanding-basics)
 * [MySQL - Create Database](https://www.tutorialspoint.com/MySQL/MySQL-create-database.htm)
 * [How To Migrate a MySQL Database Between Two Servers](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-MySQL-database-between-two-servers)
-* [JDBC Driver class not found: com.MySQL.jdbc.Driver](https://stackoverflow.com/questions/8779631/jdbc-driver-class-not-found-com-MySQL-jdbc-driver)
+* [Commit data in a mysql container](https://stackoverflow.com/questions/30740828/commit-data-in-a-mysql-container)
