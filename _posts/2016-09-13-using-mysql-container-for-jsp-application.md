@@ -155,40 +155,10 @@ In product list page, the new product shows up.
 You see there is one new product in Product table.
 ![MIME Type](/public/pics/2016-09-13/after.png)  
 
-## 6. Publishing MySQL Container
-By default, MySQL container doesn't persists data. The data is actually stored in volume. You can't get a new container with database and data set from image published to hub.  
-1) First, check the container id.
-```sh
-$ docker ps
-CONTAINER ID   IMAGE   COMMAND                  CREATED        STATUS             PORTS                   NAMES
-43129d44a6ab   mysq    "docker-entrypoint..."   24 hours ago   Up About an hour   0.0.0.0:6603->3306/tcp  jspmysql
-```
-2) Secondly, create new image based on this container.
-```sh
-$ docker commit -m "db restored" -a "Johnny" 43129d44a6ab jojozhuang/jsptutorial-mysql
-sha256:d02e63d982550a711824a4c6af172cf5c07ed55d260fc826135465e0f2bb9d52
-```
-3) Push to Docker Hub
-```sh
-$ docker login -u jojozhuang
-Password:
-Login Succeeded
-$ docker push jojozhuang/jsptutorial-mysql
-The push refers to a repository [docker.io/jojozhuang/jsptutorial-mysql]
-0ad8052b5d54: Pushed
-```
-4) Check the new image on Docker Hub
-![MIME Type](/public/pics/2016-09-13/dockerhub.png)  
-Now, you can use the following command to install this image.
-```sh
-$ docker pull jojozhuang/jsptutorial-mysql
-```
-
-## 7. Source Files
+## 6. Source Files
 * [Source files for JSPTutorialContainer on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialContainer)
 
-## 8. References
+## 7. References
 * [MySQL Docker Containers: Understanding the basics](https://severalnines.com/blog/MySQL-docker-containers-understanding-basics)
 * [MySQL - Create Database](https://www.tutorialspoint.com/MySQL/MySQL-create-database.htm)
 * [How To Migrate a MySQL Database Between Two Servers](https://www.digitalocean.com/community/tutorials/how-to-migrate-a-MySQL-database-between-two-servers)
-* [Commit data in a mysql container](https://stackoverflow.com/questions/30740828/commit-data-in-a-mysql-container)

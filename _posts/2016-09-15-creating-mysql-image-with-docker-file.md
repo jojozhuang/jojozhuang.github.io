@@ -3,25 +3,25 @@ layout: post
 key: blog
 title: "Creating MySQL Image with Docker File"
 date: 2016-09-15
-tags: [Docker, Dockerfile, MySQL]
+tags: [Dockerfile, Docker, MySQL]
 ---
 
-> Tutorial for how to create MySQL image with Dockerfile.
+> Tutorial for creating MySQL image with Dockerfile.
 
 ## 1. What is Dockerfile?
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. By using 'docker build', users can create an automated build that executes several command-line instructions in succession.
 
 ## 2. What We've Done Until Now?
-In posting [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}), we created a mysql container to store data for our JSP Tutorial application. Previously, we used the following command to create mysql container.
+In the previous posting [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}), we created a MySQL container to store data for our JSP Tutorial application. Previously, we used the following command to create MySQL container.
 ```sh
 $ docker run --detach --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" --publish 6603:3306 mysql
 ```
 What is this command doing?
-* Create a mysql container named `jspmysql`.
+* Create a MySQL container named `jspmysql`.
 * Set environment variable MYSQL_ROOT_PASSWORD to `jsppassword`.
 * Expose 3306 and map to `6603` for outside world to connect to this MySQL database.
 
-In addition, we manually created the database `jsptutorial` and table `Product`.
+In addition, we manually created database `jsptutorial` and table `Product`.
 ```sh
 $ mysqladmin -u root -p create jsptutorial
 $ mysql -u root -p jsptutorial < jsp_backup.sql
@@ -29,12 +29,9 @@ $ mysql -u root -p jsptutorial < jsp_backup.sql
 
 In this posting, we will use Dockerfile to simplify the way how to create MySQL container for our JSP Tutorial application.
 
-Before moving forward, make sure you've already setup folder ~/Documents/gstomcat in local machine, which will be volumed to tomcat container later. And all necessary jsp files and classes are put into this folder.
-![MIME Type](/public/pics/2016-09-15/foldermapping.png)  
-
 ## 3. Creating MySQL Image with Dockerfile
 ### 3.1 Creating Docker File
-Create docker file in any directory of your local machine. The name of the docker file must be `Dockerfile`.
+Create one file named `Dockerfile` in any directory on local machine.
 ```sh
 $ cd ~/Johnny
 $ mkdir Docker
@@ -61,17 +58,15 @@ The following points need to be noted about the above file.
 * The EXPOSE command exposes port `3306` of the image.
 
 ### 3.2 Getting MySQL Backup File
-Download the backup file `jsp_backup.sql` from [My GitHub](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql), and put it to the same directory with Dockerfile.
+Download the backup file `jsp_backup.sql` from [My GitHub](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/jsp_backup.sql), and put it to the same directory with Dockerfile.
 ![MIME Type](/public/pics/2016-09-15/dockerfiles.png)  
 
 ### 3.3 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile and MySQL backup file locates. Run the following command.
 ```sh
-$ docker build -t jsptutorial-mysql:0.1 .
+$ docker build -t jspmysql:0.1 .
 ```
-Here, `jsptutorial-mysql` is the name we are giving to the Image and 0.1 is the tag number.
-
-Check whether the image is created.
+Here, `jspmysql` is the name we are giving to the Image and `0.1` is the tag number. The last dot `.` indicates the current location. Check whether the image is created.
 ```sh
 $ docker images
 ```
@@ -82,33 +77,69 @@ As you see, the new image is created with tag 0.1.
 ### 4.1 Running Container
 In docker terminal, run the following command.
 ```sh
-$ docker run --detach --name=jspmysql --publish 6603:3306 jsptutorial-mysql:0.1
+$ docker run --detach --name=jspmysql --publish 6603:3306 jspmysql:0.1
 ```
 Notice we don't need to set the environment variable MYSQL_ROOT_PASSWORD any more.
 ### 4.2 Verifying Container in Kitematic
-A Mysql container named gsmysql is running now. Notice, it's source image is 'gamestore-mysql:0.1'. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
+A Mysql container named `jspmysql` is running now. Notice, it's source image is `jspmysql:0.1`. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
 ![MIME Type](/public/pics/2016-09-15/general.png)  
-Port 3306 is also exposed.
+Port 3306 is also exposed and mapped to 6603.
 ![MIME Type](/public/pics/2016-09-15/ports.png)  
 
 ### 4.3 Verifying From MySQL Workbench
+In MySQL workbench, create a connection to `192.168.99.100:6603` with user `root` and password `jsppassword`. You will see the database `jsptutorial` and the data in table `Product`.
 ![MIME Type](/public/pics/2016-09-15/workbench.png)  
 
 ### 4.4 Verifying JSP Tutorial Website
-Open the JSP project which we used for [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}) in Eclipse, launch itthe following link in web browser. Our Game Store is running now.
-* [http://localhost:8080/JSPTutorialContainer/productlist.jsp](http://localhost:8080/JSPTutorialContainer/productlist.jsp)
-
-Type 'customer' for user name, type 'customer' for password, and click Login button.
+In Eclipse, open the JSP Tutorial project which we created for [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}). Run it and access
+http://localhost:8080/JSPTutorialContainer/productlist.jsp. Our JSP Tutorial Website is back. Products are displayed properly.
 ![MIME Type](/public/pics/2016-09-15/productlist.png)  
-Try to add some item to shopping cart and place the order. Order should be created.
+Try to add, edit or delete product. Then, verify the data in workbench, you will see the changes.
 
-## 5. Source Files
-* [Database Backup File](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql)
-* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+## 5. Publishing MySQL Container
+### 5.1 Creating Image from Current Container
+Check the container id.
+```sh
+$ docker ps
+CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS         PORTS                   NAMES
+86ee0d3f44d0  jspmysql:0.1  "docker-entrypoint..."  8 minutes ago  Up 8 minutes   0.0.0.0:6603->3306/tcp  jspmysql
+```
+Create new image based on this container. Notice `86ee0d3f44d0` is the container id, `jojozhuang/jspmysql` is the name of the new image. `jojozhuang` is my user name of Docker Hub.
+```sh
+$ docker commit -m "db restored" -a "Johnny" 86ee0d3f44d0 jojozhuang/jspmysql
+sha256:8a21ddddbf57ce23d02bc2cf8637ac3ac5fc602f47ebcad2861741d0226fcdf6
+```
+Check the new image.
+```sh
+$ docker images
+```
+![MIME Type](/public/pics/2016-09-15/newimage.png)  
+### 5.2 Publishing New Image to Docker Hub
+Push to Docker Hub
+```sh
+$ docker login -u jojozhuang
+Password:
+Login Succeeded
+$ docker push jojozhuang/jspmysql
+The push refers to a repository [docker.io/jojozhuang/jspmysql]
+c57a0098f25a: Pushed
+```
+### 5.3 Checking New Image on Docker Hub
+![MIME Type](/public/pics/2016-09-15/dockerhub.png)  
+Now, you can use the following command to install this image.
+```sh
+$ docker pull jojozhuang/jspmysql
+```
 
-## 6. References
+## 6. Source Files
+* [Database Backup File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/jsp_backup.sql)
+* [MySQL Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/Dockerfile)
+* [Source files for JSP Tutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
+
+## 7. References
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 * [How to Back Up and Restore a MySQL Database](http://webcheatsheet.com/sql/mysql_backup_restore.php)
 * [How can I initialize a MySQL database with schema in a Docker container?](https://stackoverflow.com/questions/29145370/how-can-i-initialize-a-mysql-database-with-schema-in-a-docker-container)
 * [Initializing a fresh instance of MySQL Docker image docs](https://hub.docker.com/_/mysql/)
 * [Setting up MySQL and importing dump within Dockerfile](https://stackoverflow.com/questions/25920029/setting-up-mysql-and-importing-dump-within-dockerfile)
+* [Commit data in a mysql container](https://stackoverflow.com/questions/30740828/commit-data-in-a-mysql-container)
