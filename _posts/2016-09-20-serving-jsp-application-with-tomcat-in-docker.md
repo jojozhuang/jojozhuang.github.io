@@ -6,10 +6,10 @@ date: 2016-09-20
 tags: [Docker, Tomcat]
 ---
 
-> Guide how to serve Java Servlet/JSP website in Apache Tomcat Container with Kitematic.
+> Guide how to serve Java Servlet/JSP website in Tomcat Container.
 
-## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
+## 1. Introduction
+In posting [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}), we created a MySQL container with Dockerfile. But we are still using local Tomcat to serve our website. In this tutorial, I will introduce how to serve our JSP Tutorial application in Docker.
 
 ## 2. Setting up Tomcat Container
 ### 2.1 Creating Tomcat Container
@@ -30,11 +30,11 @@ In docker terminal, run the following command.
 $ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 tomcat
 ```
 Let's take a moment to examine this command in detail:
-* --name=gstomcat names the container so we can refer to it more easily.
+* --name=`jsptomcat` names the container so we can refer to it more easily.
 * -d detaches the process and runs in the background. Otherwise, we would just be watching an empty Tomcat prompt and wouldn't be able to use this terminal until we killed Tomcat.
-* -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore Sets up a bindmount volume that links the /usr/local/tomcat/webapps/gamestore directory from inside the Tomcat container to the ~/Documents/gstomcat directory on the host machine. Docker uses a : to split the host's path from the container path, and the host path always comes first.
-* -p 31020:8080 sets up a port forward. The Tomcat container is listening on port 8080 by default. This flag maps the container's port 8080 to port 31020 on the host system.
-* tomcat specifies that the container should be built from the tomcat image
+* -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial Sets up a bindmount volume that links the `/usr/local/tomcat/webapps/jsptutorial` directory from inside the Tomcat container to the `~/Documents/jsptomcat` directory on the host machine. Docker uses a `:` to split the host's path from the container path, and the host path always comes first.
+* -p 31020:8080 sets up a port forward. The Tomcat container is listening on port `8080` by default. This flag maps the container's port 8080 to port `31020` on the host system.
+* tomcat specifies that the container should be built from the tomcat image.
 
 Switch to Kitematic, the new container is running with Volume configured.
 ![MIME Type](/public/pics/2016-09-20/jsptomcat.png)  
@@ -43,39 +43,37 @@ Click on the preview button of the new container. You will see a same Tomcat wel
 
 ## 3. Preparing JSP Application
 ### 3.1 Creating Folder for Volume in Host
-In your host machine, create new folder gstomcat under ~/Documents.
-![MIME Type](/public/pics/2016-09-20/volume.png)  
+Open directory `~/Documents/` in your host machine, you will find `jsptomcat` is created automatically.
+![MIME Type](/public/pics/2016-09-20/localfolder.png)  
 
 ### 3.2 Publishing JSP Application
-We will use the same JSP application for [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}).
-
-Build the project first, and copy all of the files from /GameStoreMysql/WebContent/ to ~/Documents/gstomcat/.
-![MIME Type](/public/pics/2016-09-20/webcontent.png)  
-Then, copy the entire 'classes' folder from /GameStoreMysql/build/ to ~/Documents/gstomcat/WEB-INF/
-![MIME Type](/public/pics/2016-09-20/classes.png)  
-The final structure of the volume folder looks like below. All the files are deployed.
+We will use the same JSP application for [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}). Download the source files from [My Github](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile), and build the project.  
+1) Copy all of the files from /JSPTutorialDockerfile/WebContent/ to ~/Documents/jsptomcat/.  
+2) Copy the entire 'classes' folder from /JSPTutorialDockerfile/build/ to ~/Documents/jsptomcat/WEB-INF/.  
+3) The final structure of the volume folder looks like below. All the files are deployed.  
 ![MIME Type](/public/pics/2016-09-20/final.png)  
 
 ### 3.3 Checking webapps Directory in Tomcat Container
 Inspect to tomcat container, and navigate to the default web folder of tomcat.
 ```sh
-$ docker exec -it gstomcat sh
-$ cd webapps\gamestore
+$ docker exec -it jsptomcat sh
+$ cd webapps/jsptutorial
 $ ls
+META-INF  WEB-INF  header.jsp  productadd.jsp  productdel.jsp  productedit.jsp	productlist.jsp
 $ pwd
-/usr/local/tomcat/webapps/gamestore
+/usr/local/tomcat/webapps/jsptutorial
 ```
-All files are under webapps/gamestore directory now.
+All files are under webapps/jsptutorial directory now.
 ![MIME Type](/public/pics/2016-09-20/webapps.png)  
 
 ### 3.4 Accessing JSP Application
-Access the following URL in web browser. Game Store is launched successfully!
-* [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
+Access the following URL in web browser. JSP Tutorial application is launched successfully!
+* [http://192.168.99.100:31020/jsptutorial/productlist.jsp](http://192.168.99.100:31020/jsptutorial/productlist.jsp)
 
 ![MIME Type](/public/pics/2016-09-20/deployed.png)  
 
 ## 4. Source Files
-* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
 
 ## 5. References
 * [How To Share Data between the Docker Container and the Host](https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host)
