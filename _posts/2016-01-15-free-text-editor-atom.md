@@ -10,6 +10,7 @@ tags: [Atom, Markdown]
 
 ## 1. What is Atom?
 Atom is a free and open-source text editor with plug-ins supported. It is available on OS X, Windows, or Linux, a cross-platform editor! You can use Atom as generic text editor to edit Markdown documents. You can also use it as IDE for software development. For example, it supports you to develop responsive website with AngularJS. The highlight feature in Atom makes easy for you to edit source code in different formats, like javascript, html, etc.
+![MIME Type](/public/pics/2016-01-15/atom.png)  
 
 ## 2. Installing Atom
 Go to [https://atom.io/](https://atom.io/), download the proper installer of different versions. For Mac or Windows, just click the installer and follow the wizard to install it. For linux, run the following commands in terminal to install it.
