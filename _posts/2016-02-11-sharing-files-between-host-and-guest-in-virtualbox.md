@@ -11,9 +11,9 @@ tags: [VirtualBox, Ubuntu, Mac]
 ## 1. Installing VirtualBox Guest Additions
 1) Get VBoxGuestAdditions.iso  
 In MacOS, Finder->Application->VirtualBox->Show Package Content
-![MIME Type](/public/pics/2016-02-11/virtualbox.png)  
+![MIME Type](/public/pics/2016-02-11/virtualbox.png){:width="700px"}  
 Find VBoxGuestAdditions.iso in /Contents/MacOS/.
-![MIME Type](/public/pics/2016-02-11/iso.png)  
+![MIME Type](/public/pics/2016-02-11/iso.png){:width="700px"}  
 Copy it to another folder, eg. ~/Downloads/  
 2) Insert the Image to Ubuntu VM  
 Ubuntu VM->Devices->Optical Drives->Choose disk image..., locate to ~/Downloads/VBoxGuestAdditions.iso.  

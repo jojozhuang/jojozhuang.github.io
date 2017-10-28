@@ -9,7 +9,7 @@ tags: [Docker, Tomcat]
 > Guide how to serve Java Servlet/JSP website in Tomcat Container.
 
 ## 1. Introduction
-In posting [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}), we created a MySQL container with Dockerfile. But we are still using local Tomcat to serve our website. In this tutorial, I will introduce how to serve our JSP Tutorial application in Docker.
+In posting [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}), we created a MySQL container with Dockerfile. But we are still using local Tomcat to serve our website. In this tutorial, I will introduce how to serve our JSP Tutorial application in Docker Container.
 
 ## 2. Setting up Tomcat Container
 ### 2.1 Creating Tomcat Container
@@ -17,7 +17,7 @@ In Kitematic, Search 'tomcat', Click on the 'CREATE' button of the official Tomc
 ![MIME Type](/public/pics/2016-09-20/search.png)  
 Kitematic will download (also known as pull the image) the tomcat image from the Docker Hub immediately.
 ![MIME Type](/public/pics/2016-09-20/download.png)  
-Once it’s done, Kitematic will run a Docker Tomcat container for this image. A Tomcat web server is started up, allowing it to serve website data to your Mac.
+Once it’s done, Kitematic will run a Docker Tomcat container with this image. A Tomcat web server starts up, it is ready to serve website data to your Mac.
 ![MIME Type](/public/pics/2016-09-20/running.png)  
 Click on the preview button to see the result in web browser. If you see the following web page, it means tomcat is working properly.
 ![MIME Type](/public/pics/2016-09-20/preview.png)  
@@ -44,13 +44,14 @@ Click on the preview button of the new container. You will see a same Tomcat wel
 ## 3. Preparing JSP Application
 ### 3.1 Creating Folder for Volume in Host
 Open directory `~/Documents/` in your host machine, you will find `jsptomcat` is created automatically.
-![MIME Type](/public/pics/2016-09-20/localfolder.png)  
+![MIME Type](/public/pics/2016-09-20/localfolder.png){:width="700px"}
+
 
 ### 3.2 Publishing JSP Application
 We will use the same JSP application for [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}). Download the source files from [My Github](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile), and build the project.  
-1) Copy all of the files from /JSPTutorialDockerfile/WebContent/ to ~/Documents/jsptomcat/.  
-2) Copy the entire 'classes' folder from /JSPTutorialDockerfile/build/ to ~/Documents/jsptomcat/WEB-INF/.  
-3) The final structure of the volume folder looks like below. All the files are deployed.  
+1) Copy all of the files from `/JSPTutorialDockerfile/WebContent/` to `~/Documents/jsptomcat/`.  
+2) Copy the entire 'classes' folder from `/JSPTutorialDockerfile/build/` to `~/Documents/jsptomcat/WEB-INF/`.  
+3) The final structure of the volume folder looks like below. All the files for this JSP Tutorial application are deployed.  
 ![MIME Type](/public/pics/2016-09-20/final.png)  
 
 ### 3.3 Checking webapps Directory in Tomcat Container
@@ -67,9 +68,7 @@ All files are under webapps/jsptutorial directory now.
 ![MIME Type](/public/pics/2016-09-20/webapps.png)  
 
 ### 3.4 Accessing JSP Application
-Access the following URL in web browser. JSP Tutorial application is launched successfully!
-* [http://192.168.99.100:31020/jsptutorial/productlist.jsp](http://192.168.99.100:31020/jsptutorial/productlist.jsp)
-
+Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully!
 ![MIME Type](/public/pics/2016-09-20/deployed.png)  
 
 ## 4. Source Files

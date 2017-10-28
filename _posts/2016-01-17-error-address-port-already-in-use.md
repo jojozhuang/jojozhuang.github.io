@@ -22,6 +22,6 @@ Kill the process with its process id.
 ```sh
 $ kill -9 <PID>
 ```
-![MIME Type](/public/pics/2016-01-17/port.png)  
+![MIME Type](/public/pics/2016-01-17/port.png){:width="800px"}  
 
 Retry 'jekyll serve', the error 'Port Already in Use' is gone.
