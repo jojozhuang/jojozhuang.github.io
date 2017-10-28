@@ -14,7 +14,7 @@ Three ways to create containers:
 * Create images with Dockerfile and run containers based on customized images.
 * Define and run containers with Docker Compose.
 
-We learned how to create mysql and tomcat container through the previous postings. In this posting, we will learn how to use docker compose to simplify the process.
+We've learned how to create mysql and tomcat container with the above first two ways. In this posting, we will learn how to use `Docker Compose` to simplify the process.
 
 ## 2. What is Docker Compose?
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.
@@ -25,14 +25,18 @@ Using Compose is basically a three-step process.
 * Lastly, run docker-compose up and Compose will start and run your entire app.
 
 ## 3. Creating Docker Compose
-### 3.1 Getting Mysql Backup File
-Download the backup file from [My GitHub](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql), and put it to some directory, which will be mounted to mysql container.
-### 3.2 Creating Docker Compose
-Create docker compose file in any directory of your local machine. The name must be docker-compose.yml.
+### 3.1 Getting MySQL Backup File
+Download the backup file for MySQL from [My GitHub](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/jsp_backup.sql), and put it into `~/Documents/jspmysql/`. This folder will be mounted to MySQL container later.
+![MIME Type](/public/pics/2016-09-30/mysqlbackup.png){:width="800px"}  
+### 3.2 Getting JSP Tutorial Application
+Download the source files of JSP Tutorial application from [My GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile), compile and deploy all jsp and class files into `~/Documents/jsptomcat/`. This folder will be mounted to Tomcat container later.
+![MIME Type](/public/pics/2016-09-30/tomcatdeploy.png){:width="800px"}  
+### 3.3 Creating Compose File
+Create one file named `docker-compose.yml` in any directory on local machine.
 ```sh
 $ cd ~/Johnny
-$ mkdir Docker
-$ cd Docker
+$ mkdir DockerCompose
+$ cd DockerCompose
 $ vim docker-compose.yml
 ```
 Edit docker-compose.yml, fill with following content.
@@ -47,25 +51,25 @@ services:
     - "31020:8080"
     - "8000:8000"
     volumes:
-    - /Users/Johnny/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore
+    - ~/Documents/jsptomcat/:/usr/local/tomcat/webapps/jsptutorial
   database:
     image: mysql
     environment:
-    - MYSQL_ROOT_PASSWORD=gspassword
+    - MYSQL_ROOT_PASSWORD=jsppassword
     ports:
     - "6603:3306"
     volumes:
-    - /Users/Johnny/Docker/dump:/docker-entrypoint-initdb.d
+    - ~/Documents/jspmysql/:/docker-entrypoint-initdb.d
 ```
 The following points need to be noted about the above file.
-* The web and database keywords are used to define two separate containers. One will be running our tomcat web server and the other will be our mysql database.
+* The web and database keywords are used to define two separate containers. One will be running our tomcat web server and the other will be our MySQL database.
 * The image keyword is used to specify the image from Docker Hub for our tomcat and mysql containers.
 * The environment keyword is used to configure environment variables.
 * The ports keyword is used to mention the ports that need to be exposed for the container.
 * The volumes keyword is used to define volumes between local machine and containers.
 
-### 3.3 Running Docker Compose file
-Open Docker terminal, navigate to the folder where the Docker compose file locates. Run the following command.
+### 3.4 Running Docker Compose file
+Open Docker terminal, navigate to the folder where the Docker compose file locates. Run the following command. (Make sure remove or stop the existing MySQL and Tomcat container first.)
 ```sh
 $ docker-compose up -d
 ```
@@ -83,33 +87,30 @@ Use the following command to stop the containers.
 ```sh
 $ docker-compose down
 ```
-## 4. Testing the Container
-### 4.1 Checking Container in Kitematic
-There are two new containers are running now. Let's check their settings.  
-First, the tomcat container. Environment variable for tomcat is set correctly.
+
+## 4. Verifying the Containers
+### 4.1 Checking Tomcat Container
+Environment variable for tomcat is set correctly.
 ![MIME Type](/public/pics/2016-09-30/tomcatgeneral.png)  
 Ports are also configured.
 ![MIME Type](/public/pics/2016-09-30/tomcatport.png)  
 Volume is also configured correctly.
 ![MIME Type](/public/pics/2016-09-30/tomcatvolume.png)  
-Second, the mysql container. Environment variable for tomcat is set correctly.
+### 4.2 Checking Tomcat Container
+Environment variable for mysql is set correctly.
 ![MIME Type](/public/pics/2016-09-30/mysqlgeneral.png)  
 Ports are also configured.
 ![MIME Type](/public/pics/2016-09-30/mysqlport.png)  
 Volume is also configured correctly.
 ![MIME Type](/public/pics/2016-09-30/mysqlvolume.png)  
-
-### 4.2 Accessing Game Store Website
-Access the following URL in web browser. Then, click the Login link on the top right of the page.
-* [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
-
-Type 'customer' for user name, type 'customer' for password, and click Login button.
-![MIME Type](/public/pics/2016-09-30/login.png)  
-Try to add some item to shopping cart and place the order. Order should be created.
+### 4.3 Accessing Game Store Website
+Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully!
+![MIME Type](/public/pics/2016-09-30/jsptutorial.png)  
 
 ## 5. Source Files
-* [Database Backup File](https://github.com/jojozhuang/Portfolio/blob/master/GameStoreMysql/document/gs_backup.sql)
-* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Docker Compose File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/docker-compose.yml)
+* [MySQL Backup File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/jsp_backup.sql)
+* [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
 
 ## 6. References
 * [Docker Compose](https://docs.docker.com/compose/)
