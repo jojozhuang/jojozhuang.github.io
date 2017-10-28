@@ -11,46 +11,46 @@ tags: [Docker, Dockerfile, Tomcat]
 ## 1. What is Dockerfile?
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
 
-## 2. Creating Tomcat Image with Dockerfile
-Previous, we use the following command to create tomcat container.
+## 2. What We've Done Until Now?
+In posting [Serving JSP Application With Tomcat In Docker]({% link _posts/2016-09-20-serving-jsp-application-with-tomcat-in-docker.md %}) and [Enabling Tomcat Debugging in Docker for Eclipse]({% link _posts/2016-09-22-enabling-tomcat-debugging-in-docker-for-eclipse.md %}), we deployed the JSP Tutorial application to Tomcat container with enabling the remote debugging. Below is the command we used.
 ```sh
-$ docker run --name=gstomcat -d -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
+$ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
 ```
 What is this command doing?
-* Create a tomcat container named gstomcat.
-* Mount the folder ~/Documents/gstomcat from host machine to /usr/local/tomcat/webapps/gamestore in container.
-* Expose 8080 for outside world to connect to the website.
-* Expose 8000 to enable remote debugging for tools like eclipse.
-* Set environment variable JPDA_ADDRESS to 8000.
-* Start tomcat via command 'catalina.sh jpda run'.
+* Create a tomcat container named `jsptomcat`.
+* Map local folder `~/Documents/jsptomcat` to `/usr/local/tomcat/webapps/jsptutorial` in Tomcat container.
+* Expose `8080` for outside world to connect to the website.
+* Expose `8000` to enable remote debugging for tools like eclipse.
+* Set environment variable `JPDA_ADDRESS` to 8000.
+* Start tomcat via command `catalina.sh jpda run`.
 
-We will use Dockerfile to create a tomcat image which containers some of the configuration mentioned above. And use a shorter 'docker run' command later to create a tomcat container with same functionalities.
+In this posting, we will use Dockerfile to create a tomcat image with the same configuration mentioned above. Before moving forward, make sure you’ve already setup folder ~/Documents/jsptomcat in local machine, which will be volumed to tomcat container later. And all jsp and class files have been deployed into this folder.
+![MIME Type](/public/pics/2016-09-25/localfolder.png){:width="800px"}  
 
-Before moving forward, make sure you've already setup folder ~/Documents/gstomcat in local machine, which will be volumed to tomcat container later. And all necessary jsp files and classes are put into this folder.
-![MIME Type](/public/pics/2016-09-25/foldermapping.png)  
-### 2.1 Creating Docker File
-Create docker file in any directory of your local machine. The name of the docker file must be Dockerfile.
+## 3. Creating Tomcat Image with Dockerfile
+### 3.1 Creating Docker File
+Create one file named `Dockerfile` in any directory on local machine.
 ```sh
 $ cd ~/Johnny
-$ mkdir Docker
-$ cd Docker
+$ mkdir DockerTomcat
+$ cd DockerTomcat
 $ vim Dockerfile
 ```
 Edit Dockerfile, fill with following content.
 ```sh
-#Create Tomcat Image for Game Store Application
-FROM tomcat AS gstomcat
+#Create Tomcat Image for JSP Tutorial Application
+FROM tomcat
 MAINTAINER jojozhuang@gmail.com
 
 ENV JPDA_ADDRESS 8000
 EXPOSE 8000
 EXPOSE 8080
 ENTRYPOINT ["catalina.sh", "jpda","run"]
-CMD echo "gstomcat is launched"
+CMD echo "jsptomcat is launched"
 ```
 The following points need to be noted about the above file.
 * The first line is a comment. You can add comments to the Docker File with the help of the # command
-* The FROM keyword tells which base image you want to use. In our example, we are creating an image from the tomcat image. The AS keyword define the name of the image.
+* The FROM keyword tells which base image you want to use. In our example, we are creating an image from the tomcat image.
 * The next command is the person who is going to maintain this image.
 * The ENV command is used to set environment variable. We set JPDA_ADDRESS to 8000 to enable remote debugging in tomcat container.
 * The EXPOSE command exposes port of the image.
@@ -60,43 +60,39 @@ The following points need to be noted about the above file.
 ### 2.2 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile locates. Run the following command.
 ```sh
-$ docker build -t gamestore-tomcat:0.1 .
+$ docker build -t jsptomcat:0.2 .
 ```
-Here, gamestore-tomcat is the name we are giving to the Image and 0.1 is the tag number.
-
-Check whether the image is created.
+Here, `jsptomcat` is the name we are giving to the Image and `0.2` is the tag number. The last dot `.` indicates the current location. Check whether the image is created.
 ```sh
 $ docker images
 ```
-As you see, the new image is created with tag 0.1.
-![MIME Type](/public/pics/2016-09-25/imagecreated.png)  
+As you see, the new image is created with tag 0.2.
+![MIME Type](/public/pics/2016-09-25/imagecreated.png){:width="800px"}  
 
 ## 3. Testing Tomcat Image
 ### 3.1 Running Container
-In docker terminal, run the following command.
+In docker terminal, run the following command. (Make sure remove the tomcat container we created before.)
 ```sh
-$ docker run --name=gstomcat -d -v ~/Documents/gstomcat:/usr/local/tomcat/webapps/gamestore -p 31020:8080 -p 8000:8000 gamestore-tomcat:0.1
+$ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 -p 8000:8000 jsptomcat:0.2
 ```
-Notice we don't need to set the environment variable JPDA_ADDRESS, and execute 'catalina.sh jpda run' any more.
+Notice we don't need to set the environment variable `JPDA_ADDRESS`, and execute `catalina.sh jpda run` any more. They are already set in the Dockerfile.
 ### 3.2 Verifying Container in Kitematic
-A Tomcat container named gstomcat is running now. Notice, it's source image is 'gamestore-tomcat:0.1'. And environment variable JPDA_ADDRESS has been added to the container.
+A tomcat container named jsptomcat is running now. Notice, its source image is 'jsptomcat:0.2'. And environment variable JPDA_ADDRESS has been added to the container.
 ![MIME Type](/public/pics/2016-09-25/general.png)  
 Port 8000 and port 8080 are also exposed.
 ![MIME Type](/public/pics/2016-09-25/ports.png)  
 Volume is also configured correctly.
 ![MIME Type](/public/pics/2016-09-25/volume.png)  
 
-### 3.3 Verifying Game Store Website
-Open the following link in web browser. Our Game Store is running now. Then, click the Login link on the top right of the page.
-* [http://192.168.99.100:31020/gamestore/index.jsp](http://192.168.99.100:31020/gamestore/index.jsp)
+### 3.3 Verifying JSP Tutorial Website
+Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully!
+![MIME Type](/public/pics/2016-09-25/deployed.png)  
 
-Type 'customer' for user name, type 'customer' for password, and click Login button.
-![MIME Type](/public/pics/2016-09-22/login.png)  
-Switch to Eclipse, the breakpoint is activated. The remote debugging function is working as well.
-![MIME Type](/public/pics/2016-09-22/breakpointdt.png)  
+In Eclipse, enable debugging and set breakpoint to `productlist.jsp`. Refresh the page in web browser. Switch back to Eclipse, the breakpoint is activated. The remote debugging function is working now.
+![MIME Type](/public/pics/2016-09-25/breakpointdt.png)  
 
 ## 4. Source Files
-* [Source files for Game Store Mysql on GitHub](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMysql)
+* [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
 
 ## 5. References
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
