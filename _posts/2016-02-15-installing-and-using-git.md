@@ -71,7 +71,7 @@ $ mkdir GitTutorial
 $ cd GitTutorial/
 $ vi hello.txt // input 'Hello Git!'
 $ git init
-Initialized empty Git repository in /Users/i857285/Johnny/GitHub/GitTutorial/.git/
+Initialized empty Git repository in /Users/johnny/GitHub/GitTutorial/.git/
 $ git status -s
 ?? hello.txt
 $ git add hello.txt
