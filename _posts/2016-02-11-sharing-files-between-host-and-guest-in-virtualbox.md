@@ -18,35 +18,35 @@ Copy it to another folder, eg. ~/Downloads/
 2) Insert the Image to Ubuntu VM  
 Ubuntu VM->Devices->Optical Drives->Choose disk image..., locate to ~/Downloads/VBoxGuestAdditions.iso.  
 ![MIME Type](/public/pics/2016-02-11/addimage.png)  
-3) In Ubuntu, select VBoxGuestAdditions.iso, and install.
+3) In Ubuntu, select VBoxGuestAdditions.iso, and click 'Run Software' to install.
 ![MIME Type](/public/pics/2016-02-11/installguestadditions.png)  
 After Guest Additions are installed, a new user group 'vboxsf' has been created.  
 
 ## 2. Creating Shared Folder on MacOS
 In MacOS, create a new folder /UbuntuSF/, which is used to share files with Ubuntu.
-![MIME Type](/public/pics/2016-02-11/createsharedfolder.png)  
+![MIME Type](/public/pics/2016-02-11/createsharedfolder.png){:width="800px"}  
 
 ## 3. Adding Shared Folder to VM's SharedFolders
 In VirtualBox, select Ubuntu VM->Settings->SharedFolders, click 'Add Folder' at the right side. Set path to `/UbuntuSF`, check 'Auto-mount' and 'Make Permanent'.
-![MIME Type](/public/pics/2016-02-11/addshare.png)  
+![MIME Type](/public/pics/2016-02-11/addshare.png){:width="800px"}  
 The shared folder is created for VM now.
-![MIME Type](/public/pics/2016-02-11/sharedfolders.png)  
+![MIME Type](/public/pics/2016-02-11/sharedfolders.png){:width="800px"}  
 
 ## 4. Adding User to Group 'vboxsf' in Ubuntu
 In Ubuntu VM, run the following command in terminal.
 ```sh
 $ sudo adduser johnny vboxsf
 ```
-![MIME Type](/public/pics/2016-02-11/adduser.png)  
+![MIME Type](/public/pics/2016-02-11/adduser.png){:width="700px"}  
 Then, reboot Ubuntu.
 
 ## 5. Checking the Shared Folder in Ubuntu
-Go to directory /media/, there should be a new shared folder sf_UbuntuSF.
+Go to directory /media/, there should be a new shared folder `sf_UbuntuSF`.
 ![MIME Type](/public/pics/2016-02-11/ubuntusf.png)  
 Create a new file here.
 ![MIME Type](/public/pics/2016-02-11/sharedfile.png)  
 You will see it in /UbuntuSF on MacOS.
-![MIME Type](/public/pics/2016-02-11/macsf.png)  
+![MIME Type](/public/pics/2016-02-11/macsf.png){:width="800px"}  
 
 ## 6. References
 * [Manually Installing VirtualBox Guest Additions](https://osquest.com/2012/11/13/tip-manually-installing-virtualbox-guest-additions/)
