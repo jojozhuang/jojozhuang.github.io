@@ -233,7 +233,7 @@ public Product getProductJson(@PathParam("id") int id) {
 Get product by id, data is returned in JSON format.
 * http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
 
-![MIME Type](/public/pics/2016-02-17/jsonapi.png){:width="600px"}   
+![MIME Type](/public/pics/2016-02-17/jsonapi.png){:width="600px"}  
 
 ## 4. Source Files
 * [Source files of Jersey Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JerseyTutorial)

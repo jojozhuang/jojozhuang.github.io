@@ -18,11 +18,18 @@ $ sudo apt-get install maven // Linux
 ```
 
 ## 2. SpringBoot Project
-### 2.1 Creating Maven Project
-1) In Eclipse, New -> 'Maven Project', Name: SpringBootTutorial  
-![MIME Type](/public/pics/2016-02-20/mavenproject.png)  
+### 2.1 Enabling Maven Index
+In Eclipse, top menu Eclipse -> Preferences, and then choose Maven in the left side. Check the box `Download repository index updates on startup`. Optionally, check the boxes Download Artifact Sources and Download Artifact JavaDoc.
+![MIME Type](/public/pics/2016-02-20/mavenindex.png){:width="700px"}  
+### 2.2 Rebuilding Index
+In Eclipse, Window -> Show View -> Other -> Maven -> Maven Repositories, tick 'Full Index Enabled' and then 'Rebuild Index' for 'Global Repositories'.
+![MIME Type](/public/pics/2016-02-20/rebuildindex.png){:width="700px"}  
+
+### 2.2 Creating Maven Project
+1) In Eclipse, File -> New -> 'Maven Project', check the box 'Create a simple project'-> Next, Name: SpringBootTutorial  
+![MIME Type](/public/pics/2016-02-20/mavenproject.png){:width="700px"}  
 In the new created project, there are two main branches, one is for source code, another is for test.
-![MIME Type](/public/pics/2016-02-20/initialproject.png)  
+![MIME Type](/public/pics/2016-02-20/initialproject.png){:width="400px"}  
 ### 2.2 Specifying Java Version
 Since, we will use lamda expression, specify java version to java 8 in pom.xml.
 ```xml
@@ -58,19 +65,19 @@ Use H2 in-memory database.
 ```
 ### 2.4 Creating Service
 1) Create Package  
-Right click project SpringBootTutorial->src->main->java>New->Package, Package Name: com.jojostudio.tutorial.SpringBootTutorial  
+Right click project SpringBootTutorial->src->main->java>New->Package, Package Name: johnny.tutorial.SpringBootTutorial  
 2) Create Executable Application  
 RestApplication.java with dummy data.
 ```java
-package com.jojostudio.tutorial.SpringBootTutorial;
+package johnny.tutorial.SpringBootTutorial;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
-import com.jojostudio.tutorial.SpringBootTutorial.repository.ProductRepository;
+import johnny.tutorial.SpringBootTutorial.domain.Product;
+import johnny.tutorial.SpringBootTutorial.repository.ProductRepository;
 
 @SpringBootApplication
 public class RestApplication {
@@ -104,7 +111,7 @@ public class RestApplication {
 Create folder domain and create class Product in domain.  
 Product.java  
 ```java
-package com.jojostudio.tutorial.SpringBootTutorial.domain;
+package johnny.tutorial.SpringBootTutorial.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -160,11 +167,11 @@ public class Product {
 Create folder repository and create interface ProductRepository in repository.
 ProductRepository.java
 ```java
-package com.jojostudio.tutorial.SpringBootTutorial.repository;
+package johnny.tutorial.SpringBootTutorial.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
+import johnny.tutorial.SpringBootTutorial.domain.Product;
 
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
@@ -174,9 +181,9 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
 Create folder service and create interface ProductService in serice folder, and create
 ProductService.java  
 ```java
-package com.jojostudio.tutorial.SpringBootTutorial.service;
+package johnny.tutorial.SpringBootTutorial.service;
 
-import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
+import johnny.tutorial.SpringBootTutorial.domain.Product;
 
 public interface ProductService {
     Iterable<Product> list();
@@ -192,14 +199,14 @@ public interface ProductService {
 ```
 ProductServiceImpl.java
 ```java
-package com.jojostudio.tutorial.SpringBootTutorial.service;
+package johnny.tutorial.SpringBootTutorial.service;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
-import com.jojostudio.tutorial.SpringBootTutorial.repository.ProductRepository;
+import johnny.tutorial.SpringBootTutorial.domain.Product;
+import johnny.tutorial.SpringBootTutorial.repository.ProductRepository;
 
 public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
@@ -243,15 +250,15 @@ public class ProductServiceImpl implements ProductService {
 ```
 Finally, create controller folder and create ProductController in controller.
 ```java
-package com.jojostudio.tutorial.SpringBootTutorial.controller;
+package johnny.tutorial.SpringBootTutorial.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jojostudio.tutorial.SpringBootTutorial.domain.Product;
-import com.jojostudio.tutorial.SpringBootTutorial.repository.ProductRepository;
+import johnny.tutorial.SpringBootTutorial.domain.Product;
+import johnny.tutorial.SpringBootTutorial.repository.ProductRepository;
 
 @RestController
 @RequestMapping("/products")
@@ -276,7 +283,7 @@ public class ProductController {
 ```
 ### 2.5 Project Structure
 This is the final structure of this tutorial project.
-![MIME Type](/public/pics/2016-02-20/structure.png)  
+![MIME Type](/public/pics/2016-02-20/structure.png){:width="400px"}  
 
 ### 2.6 Running and Testing
 run spring boot project with maven
@@ -309,8 +316,8 @@ restart spring boot.
 ```sh
 $ mvn spring-boot:run
 ```
-In Postman, add Header = "application/xml".
-URL: http://localhost:8080/product/1
+In Postman, add Accept = "application/xml" to Header.  
+URL: http://localhost:8080/products/1
 ![MIME Type](/public/pics/2016-02-20/xmlproduct.png)  
 
 ## 4. Enabling Autoload
@@ -327,7 +334,7 @@ Add dependency of Spring Dev-Tool in pom.xml
 change the name and price of product1.
 ![MIME Type](/public/pics/2016-02-20/changeproduct.png)  
 Don't restart maven. Just send request again. The new product is returned.
-![MIME Type](/public/pics/2016-02-20/springdev.png)  
+![MIME Type](/public/pics/2016-02-20/newprice.png)  
 
 ## 5. Debugging
 1) In Eclipse, set breakpoint inside the method(eg. StringController.java->reverse()) you want to debug.  

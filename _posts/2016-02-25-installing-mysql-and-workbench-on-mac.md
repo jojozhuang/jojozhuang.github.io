@@ -16,25 +16,28 @@ categories:
 ### 2.1 Downloading MySQL
 Go to [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/), choose free MySQL Community Server,  select 'Mac OS X' and download the DMG Archive.
 ### 2.2 Installing MySQL
-![MIME Type](/public/pics/2016-02-25/downloadmysql.png)
-Then, follow the wizard to install MySQL. At the end of the installation, there will be a popup dialog with showing the database connection information. Note down the password for root user, `root@localhost: 0kz(jy*gs;qJ`.
+![MIME Type](/public/pics/2016-02-25/downloadmysql.png){:width="800px"}
+Then, follow the wizard to install MySQL.
+![MIME Type](/public/pics/2016-02-25/installmysql.png){:width="600px"}
+At the end of the installation, there will be a popup dialog with showing the database connection information. Note down the password for root user, `root@localhost: VAJJ&kNor7y<`.
 ```
-[Note] A temporary password is generated for root@localhost: 0kz(jy*gs;qJ
+[Note] A temporary password is generated for root@localhost: VAJJ&kNor7y<
 
 If you lose this password, please consult the section How to Reset the Root Password in the MySQL reference manual.
 ```
+![MIME Type](/public/pics/2016-02-25/initialpassword.png){:width="400px"}  
 ### 2.3 Starting MySQL Instance
 Go to System Preferences->MySQL.
-![MIME Type](/public/pics/2016-02-25/mysqlservice.png)
+![MIME Type](/public/pics/2016-02-25/mysqlservice.png){:width="700px"}
 Click the 'Start MySQL Server' button to launch MySQL database.
-![MIME Type](/public/pics/2016-02-25/mysqlstart.png)
+![MIME Type](/public/pics/2016-02-25/mysqlstart.png){:width="600px"}
 You should see the status of MySQL is 'running'.
-![MIME Type](/public/pics/2016-02-25/mysqlrunning.png)
+![MIME Type](/public/pics/2016-02-25/mysqlrunning.png){:width="600px"}
 
 ## 3. Installing MySQL Workbench
 ### 3.1 Downloading MySQL Workbench
 MySQL Workbench is a client tool to manage MySQL database. Go to [https://dev.mysql.com/downloads/workbench/](https://dev.mysql.com/downloads/workbench/), select 'Mac OS X' and download MySQL Workbench.
-![MIME Type](/public/pics/2016-02-25/downloadworkbench.png)
+![MIME Type](/public/pics/2016-02-25/downloadworkbench.png){:width="800px"}
 ### 3.2 Installing MySQL Workbench
 Then, follow the wizard to install MySQL Workbench.  
 ![MIME Type](/public/pics/2016-02-25/installworkbench.png)
