@@ -396,7 +396,7 @@ In Project Explorer, right-click on JSPTutorial->WebContent, New->JSP File. Spec
 <hr/>
 ```
 Create another JSP file named `productlist.jsp` with following content.
-```html
+```raw
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -462,7 +462,7 @@ Create another JSP file named `productlist.jsp` with following content.
 </html>
 ```
 Create another JSP file named `productadd.jsp` with following content.
-```html
+```raw
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -544,7 +544,7 @@ Create another JSP file named `productadd.jsp` with following content.
 </html>
 ```
 Create another JSP file named `productedit.jsp` with following content.
-```html
+```raw
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -638,7 +638,7 @@ Create another JSP file named `productedit.jsp` with following content.
 </html>
 ```
 Create another JSP file named `productedel.jsp` with following content.
-```html
+```raw
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
