@@ -681,12 +681,12 @@ Create another JSP file named `productedel.jsp` with following content.
 ```
 ### 3.7 Project Structure
 Finally, the project structure looks like this.
-![MIME Type](/public/pics/2016-02-26/project.png)
+![MIME Type](/public/pics/2016-02-26/project.png){:width="400px"}
 
 ## 4. Setting up MySQL Database
 ### 4.1 Creating Connection
 In MySQL Workbench, create a new connection to MySQL database, specify the connection name `JSP Tutorial`.
-![MIME Type](/public/pics/2016-02-26/addconnection.png)
+![MIME Type](/public/pics/2016-02-26/addconnection.png){:width="800px"}
 ### 4.2 Creating Database and Table
 In Query tab, execute following sql script to create a new database named `jsptutorial`.
 ```sql
@@ -714,16 +714,16 @@ SELECT * FROM jsptutorial.Product;
 
 ## 5. Launching JSP Application
 In Eclipse, add Tomcat server. Window->Show View->Server, click the link to add new server.
-![MIME Type](/public/pics/2016-02-26/eclipseserver.png)  
+![MIME Type](/public/pics/2016-02-26/eclipseserver.png){:width="600px"}
 Select Tomcat 9.0.
-![MIME Type](/public/pics/2016-02-26/newserver.png)  
+![MIME Type](/public/pics/2016-02-26/newserver.png){:width="600px"}
 Add Our Project to right side.
-![MIME Type](/public/pics/2016-02-26/addresource.png)  
+![MIME Type](/public/pics/2016-02-26/addresource.png){:width="600px"}
 In eclipse project, a new server folder for tomcat is added.
-![MIME Type](/public/pics/2016-02-26/servers.png)  
+![MIME Type](/public/pics/2016-02-26/servers.png){:width="400px"}
 Set Targeted Runtimes.  
 Right click on the JSPTutorial Project->Properties->Targeted Runtimes, check Tomcat 9.0.
-![MIME Type](/public/pics/2016-02-26/targetedruntimes.png)  
+![MIME Type](/public/pics/2016-02-26/targetedruntimes.png){:width="800px"}
 Now, we can use 'Run on Server' to start our JSP Application.
 ![MIME Type](/public/pics/2016-02-26/runonserver.png)  
 There will be a browser opened in eclipse, which shows our JSP website. Or you can directly access http://localhost:8080/JSPTutorial/productlist.jsp in browser.
@@ -736,7 +736,7 @@ Click 'Save' button, product is saved.
 ![MIME Type](/public/pics/2016-02-26/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
 ![MIME Type](/public/pics/2016-02-26/productedit.png)
-Click 'Save' button, product is updated.
+Click 'Save' button, product(ID=4) is updated.
 ![MIME Type](/public/pics/2016-02-26/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
 ![MIME Type](/public/pics/2016-02-26/deleteconfirm.png)
