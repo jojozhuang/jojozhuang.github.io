@@ -40,18 +40,21 @@ MySQL Workbench is a client tool to manage MySQL database. Go to [https://dev.my
 ![MIME Type](/public/pics/2016-02-25/downloadworkbench.png){:width="800px"}
 ### 3.2 Installing MySQL Workbench
 Then, follow the wizard to install MySQL Workbench.  
-![MIME Type](/public/pics/2016-02-25/installworkbench.png)
 ### 3.3 Creating New Connection
 After installation, launch MySQL Workbench.
-![MIME Type](/public/pics/2016-02-25/mysqlworkbench.png)
+![MIME Type](/public/pics/2016-02-25/mysqlworkbench.png){:width="800px"}
 Click the Plus button to add a new connection, specify the connection name.
-![MIME Type](/public/pics/2016-02-25/addnewconnection.png)
+![MIME Type](/public/pics/2016-02-25/addnewconnection.png){:width="800px"}
 Set Username to 'root', click 'Store in Keychain ...', provide the password which was noted down in Step 2.2.
-![MIME Type](/public/pics/2016-02-25/password.png)
-Click the 'Test Connection' button. The connection between MySQL Workbench and MySQL database is created successfully.
-![MIME Type](/public/pics/2016-02-25/testconnection.png)
-In case you get the 'Password Expired' error, you need to reset the initial password. Click the connection again, in the 'Password Expired' popup dialog, provide the new password(eg.abc123).
+![MIME Type](/public/pics/2016-02-25/password.png){:width="500px"}
+Click the 'Test Connection' button. Unfortunately, fail to connect.
+![MIME Type](/public/pics/2016-02-25/failconnect.png){:width="500px"}
+Save the connection any way. Then, double click on this connection, in the 'Password Expired' popup dialog, provide the new password(eg.abc123), click Enter.
 ![MIME Type](/public/pics/2016-02-25/resetpassword.png)
+Input the new password, and click OK.
+![MIME Type](/public/pics/2016-02-25/newpassword.png)
+If you test the connection again. You will see the connection between MySQL Workbench and MySQL database is created successfully.
+![MIME Type](/public/pics/2016-02-25/testconnection.png){:width="500px"}
 Once the connection is successfully setup, double click on it or right-click on it -> Open connection. You will see a new window where you can manage your MySQL database.
 ![MIME Type](/public/pics/2016-02-25/workbenchconnected.png)
 
