@@ -32,7 +32,7 @@ console.log('Server running at http://127.0.0.1:8086/');
 ```
 The following points need to be noted about the above file.
 * Use `require` directive to load the http module and store the returned HTTP instance into a variable
-* Call http.createServer() method to create a server instance and then bind it at port 8086 using the listen method associated with the server instance. Pass it a function with parameters request and response. Write the sample implementation to always return "Hello World from Node Server".
+* Call `http.createServer()` method to create a server instance and then bind it at port `8086` using the listen method associated with the server instance. Pass it a function with parameters request and response. Write the sample implementation to always return "Hello World from Node Server".
 * Print log in console indicating server is running.
 
 ## 3. Running and Testing
@@ -44,11 +44,9 @@ You should see the following log.
 ```sh
 Server running at http://127.0.0.1:8086/
 ```
-![startserver](/public/pics/2016-03-08/startserver.png)
-Now the HTTP server is running on the local machine and waiting for a request at port 8086.
-
-Open web browser, access http://127.0.0.1:8086/.
-![browser](/public/pics/2016-03-08/browser.png)
+![startserver](/public/pics/2016-03-08/startserver.png){:width="600px"}  
+Now the HTTP server is running on the local machine and waiting for a request at port 8086. Open web browser, access http://127.0.0.1:8086/.
+![browser](/public/pics/2016-03-08/browser.png){:width="600px"}  
 
 ## 4. References
 * [Node.js - First Application](https://www.tutorialspoint.com/nodejs/nodejs_first_application.htm)
