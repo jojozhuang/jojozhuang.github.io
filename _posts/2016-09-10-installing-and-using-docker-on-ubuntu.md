@@ -28,6 +28,8 @@ Go to [https://hub.docker.com/](https://hub.docker.com/) to create a Docker ID, 
 ## 2. Installing Docker on Ubuntu
 1) Add the GPG key for the official Docker repository to the system:
 ```sh
+$ sudo apt-get update
+$ sudo apt-get install curl
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 2) Add the Docker repository to APT sources:
@@ -58,6 +60,7 @@ $ sudo usermod -aG docker ${USER}  // add the current user to the docker group
 $ sudo usermod -aG docker username // add a particular user to the docker group
 $ su - ${USER}                     // apply the new group membership
 $ id -nG                           // check user is now added to the docker group
+johnny adm cdrom sudo dip plugdev lpadmin sambashare docker vboxsf
 ```
 
 ## 4. Using Docker Commands
@@ -95,38 +98,40 @@ $ docker rm $(docker ps -a -q)   // remove all of Docker containers
 ## 5. Creating Docker Image
 We use the office ubuntu image for this demo. We will install node.js on it, then use it to create new image.
 ## 5.1 Preparing Image
-1) First, run the following command to check the existing images in the docker.
+Pull the `ubuntu` image from Docker Hub.
+```sh
+$ docker pull ubuntu
+```
+![MIME Type](/public/pics/2016-09-10/pullubuntu.png){:width="800px"}  
+Check the existing images in the docker.
 ```sh
 $ docker images
 ```
-![MIME Type](/public/pics/2016-09-10/images1.png)  
-
-2) Then, run the following command to start a container and go to its shell.
+![MIME Type](/public/pics/2016-09-10/images1.png){:width="800px"}  
+Start a Ubuntu container and go inside to its shell.
 ```sh
 $ docker run -it ubuntu
 ```
-![MIME Type](/public/pics/2016-09-10/shell.png)  
-
-3) Install Node.js In Ubuntu Container.
+![MIME Type](/public/pics/2016-09-10/shell.png){:width="800px"}  
+Install Node.js in Ubuntu container.
 ```sh
-$ root@7f5bdefef7ef:/# apt-get update
-$ root@7f5bdefef7ef:/# apt-get install -y nodejs
+$ root@98116ebd10e5:/# apt-get update
+$ root@98116ebd10e5:/# apt-get install -y nodejs
 ```
 Check the node version to make sure the installation is properly completed.
 ```sh
-$ root@7f5bdefef7ef:/# nodejs -v
+$ root@98116ebd10e5:/# nodejs -v
 ```
-![MIME Type](/public/pics/2016-09-10/installnodejs.png)  
+![MIME Type](/public/pics/2016-09-10/installnodejs.png){:width="800px"}   
 
 ## 5.2 Creating New Image
-1) First, type 'exit' to quit the container. Then check the container id with following command.
+First, type 'exit' to quit the container. Then check the container id with following command.
 ```sh
 $ docker ps -a
 ```
 This command shows all of the existing containers. As you see, there is only one ubuntu container is running, which we just install node.js on it. Note down the container id.
-![MIME Type](/public/pics/2016-09-10/checkcontainer.png)  
-
-2) Now, we are ready to create our own image.  
+![MIME Type](/public/pics/2016-09-10/checkcontainer.png){:width="800px"}  
+Now, we are ready to create our own image.  
 Syntax of creating new image.
 ```sh
 $ docker commit -m "What did you do to the image" -a "Author Name" container-id repository/new_image_name
@@ -134,16 +139,17 @@ $ docker commit -m "What did you do to the image" -a "Author Name" container-id 
 
 Type the following command.
 ```sh
-$ docker commit -m "added node.js" -a "Johnny" 7f5bdefef7ef jojozhuang/ubuntu-nodejs
+$ docker commit -m "added node.js" -a "Johnny" 98116ebd10e5 jojozhuang/ubuntu-nodejs
 ```
+* '98116ebd10e5' is the container id of the ubuntu container.
 * 'jojozhuang' is my Docker ID which is used to log into Docker Hub.
-* '7f5bdefef7ef' is the container id of the ubuntu container.
+* 'ubuntu-nodejs' is the new image name.
 
 Show the image list to check whether our new image is created.
 ```sh
 $ docker images
 ```
-![MIME Type](/public/pics/2016-09-10/createimage.png)  
+![MIME Type](/public/pics/2016-09-10/createimage.png){:width="800px"}  
 As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notice that its size is bigger than the original ubuntu image. This is because we install node.js into it.
 
 ## 5.3 Using Dockerfile to Create New Images
@@ -161,7 +167,7 @@ Type command as follows, then input password.
 ```sh
 $ docker login -u jojozhuang
 ```
-![MIME Type](/public/pics/2016-09-10/login.png)  
+![MIME Type](/public/pics/2016-09-10/login.png){:width="700px"}  
 
 ## 6.2 Pushing the Image
 Syntax of push command.
@@ -196,7 +202,7 @@ Check the nodejs version.
 ```sh
 $ nodejs -v
 ```
-![MIME Type](/public/pics/2016-09-10/pull.png)  
+![MIME Type](/public/pics/2016-09-10/pull.png){:width="700px"}  
 Yes, it's our image!
 
 ## 8. References
