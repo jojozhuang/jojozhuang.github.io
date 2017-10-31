@@ -202,7 +202,7 @@ Check the nodejs version.
 ```sh
 $ nodejs -v
 ```
-![MIME Type](/public/pics/2016-09-10/pull.png){:width="700px"}  
+![MIME Type](/public/pics/2016-09-10/pull.png){:width="600px"}  
 Yes, it's our image!
 
 ## 8. References
