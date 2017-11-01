@@ -74,7 +74,7 @@ Hello johnny, greetings from CustomClass.greetStatic().
 To avoid adding `Packages` prefix when calling custom class, we can define a global package named 'Johnny', and use it to access custom packages and classes. Input following content to the javascript textbox.
 ```javascript
 var Johnny = Packages.Johnny;
-var cs = Johnny.Tutorials.CustomClass;
+var cs = new Johnny.Tutorials.CustomClass;
 cs.greet('johnny');
 ```
 Same output:
@@ -105,8 +105,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 ```
 Input following content to the javascript textbox. This time, we don't need to define a global package or added `Packages` prefix.
 ```javascript
-var cs = Johnny.Tutorials.CustomClass;
-cs.greetStatic('johnny');
+var cs = new Johnny.Tutorials.CustomClass;
+cs.greet('johnny');
 ```
 Same output:
 ```
