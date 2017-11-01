@@ -22,7 +22,7 @@ There is one database named `jsptutorial`. This database contains one table `Pro
 ### 1.2 Setting Up JSP Project
 Get the source files of [JSPTutorial from GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial), rename it to `JSPTutorialContainer`.
 The project in Eclipse looks like this.
-![MIME Type](/public/pics/2016-09-13/project.png)
+![MIME Type](/public/pics/2016-09-13/project.png){:width="400px"}
 Run it in Tomcat. Access http://localhost:8080/JSPTutorialContainer/productlist.jsp in web browser.
 ![MIME Type](/public/pics/2016-09-13/productlist.png)
 
@@ -100,31 +100,31 @@ Start terminal in jspmysql container with the following command:
 $ docker exec -i -t jspmysql sh
 ```
 Use 'ls' to display all files. 'jsp_backup.sql' is there.
-![MIME Type](/public/pics/2016-09-13/sqlfile.png)  
+![MIME Type](/public/pics/2016-09-13/sqlfile.png){:width="600px"}  
 
 ### 3.2 Restoring Database Schema and Data
-Create Database
+Create Database, password 'jsppassword'.
 ```sh
 $ mysqladmin -u root -p create jsptutorial
 ```
-Restore Tables and Data
+Restore Tables and Data, password 'jsppassword'.
 ```sh
 $ mysql -u root -p jsptutorial < jsp_backup.sql
 ```
-![MIME Type](/public/pics/2016-09-13/restoredb.png)  
+![MIME Type](/public/pics/2016-09-13/restoredb.png){:width="600px"}  
 
 ## 4. Connecting to the Container
 ### 4.1 Getting the Connection URL
-In Kitematic, select our MySQL container, check Access URL. It's 192.168.99.100:6603.
+In Kitematic, select our MySQL container, check Access URL. It's `192.168.99.100:6603`.
 ![MIME Type](/public/pics/2016-09-13/accessurl.png)  
 
 ### 4.2 Connecting MySQL Container with MySQL Workbench
 Launch MySQL Workbench and add Connection with the IP address(192.168.99.100) and port(6603).
-![MIME Type](/public/pics/2016-09-13/newconnection.png)  
+![MIME Type](/public/pics/2016-09-13/newconnection.png){:width="800px"}  
 Store the password `jsppassword` for root to keychain.
-![MIME Type](/public/pics/2016-09-13/benchpassword.png)  
+![MIME Type](/public/pics/2016-09-13/benchpassword.png){:width="400px"}  
 Test Connection
-![MIME Type](/public/pics/2016-09-13/testconnection.png)  
+![MIME Type](/public/pics/2016-09-13/testconnection.png){:width="400px"}  
 A new connection is added to the workbench.
 ![MIME Type](/public/pics/2016-09-13/workbench.png)  
 Check the original data. As you see, there are initially three rows in table Product.
