@@ -54,7 +54,7 @@ In Project Explorer, right-click on RhinoWebsite->WebContent, New->HTML File. Sp
 </html>
 ```
 ### 2.3 Adding Reference of Rhino
-Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive), select the latest version to download, for example, rhino1_7R4.zip. Extract the file `js.jar` from the downloaded zip, and copy it to the `/WebContent/WEB-INF/lib` subdirectory of 'RhinoWebsite' project.
+Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino), select the latest version to download, for example, rhino1.7.7.2.zip. Extract the file `rhino-1.7.7.2.jar` from the downloaded zip, and copy it to the `/WebContent/WEB-INF/lib` subdirectory of 'RhinoWebsite' project.
 ### 2.4 Creating Servlet
 Right-click on RhinoWebsite->Java Resources->src, create package named 'Johnny.Tutorials'. Then, create java file named `RhinoServlet.java`. Modify the `doPost` method in RhinoServlet.java as follows:
 ```java
@@ -79,12 +79,12 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 ```
 ### 2.5 Project Structure
 Finally, the project structure looks like this.
-![MIME Type](/public/pics/2017-10-11/project.png)
+![MIME Type](/public/pics/2017-10-11/project.png){:width="400px"}
 
 ## 3. Testing
 Right-click on RhinoWebsite->WebContent->index.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.
-![MIME Type](/public/pics/2017-10-11/tomcat.png)
-Open web browser, access http://localhost:8080/RhinoWebsite/index.html.
+![MIME Type](/public/pics/2017-10-11/tomcat.png){:width="600px"}
+Open web browser, access http://localhost:8080/RhinoWebsite/index.html
 ![MIME Type](/public/pics/2017-10-11/indexpage.png)
 
 Input following content to the javascript textbox.

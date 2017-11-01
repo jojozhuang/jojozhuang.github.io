@@ -16,9 +16,9 @@ Scripting Java has many uses. It allows us to write powerful scripts quickly by 
 
 ## 3. Setting up Rhino
 ### 3.1 Downloading Rhino
-Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive), select the latest version to download, for example, rhino1_7R4.zip.
+Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino), select the latest version to download, for example, rhino1.7.7.2.zip.
 ### 3.2 Configuring Rhino
-Extract rhino1_7R4.zip, copy js.jar to Java's extension folder.
+Extract rhino1.7.7.2.zip, copy `rhino-1.7.7.2.jar` from /rhino1.7.7.2/lib to Java's extension folder.
 ```sh
 Library/Java/Extensions/   // On Mac
 java\jdk1.8.2\jre\lib\ext  // On Windows
