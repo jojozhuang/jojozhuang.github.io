@@ -28,11 +28,11 @@ Click on the preview button to see the result in your own browser.
 Switch to Settings->Volumes, click CHANGE button.
 ![MIME Type](/public/pics/2016-09-18/settings.png)  
 Create a folder named `kitematic-nginx` in ~/Documents/.
-![MIME Type](/public/pics/2016-09-18/createfolder.png)  
+![MIME Type](/public/pics/2016-09-18/createfolder.png){:width="800px"}  
 The folder in container and the folder in your local machine are now mapping to each other. Click Restart button to restart the container.
 ![MIME Type](/public/pics/2016-09-18/volume.png)  
 You will find one html file in your local volume folder. This file is actually located in the container. It is the home page of Nginx you saw in browser.
-![MIME Type](/public/pics/2016-09-18/index.png)  
+![MIME Type](/public/pics/2016-09-18/index.png){:width="800px"}  
 ### 2.3 Editing File
 Open this index.html in any editor, change the content as follows:
 ```html
@@ -45,19 +45,17 @@ Open this index.html in any editor, change the content as follows:
   </div>
 </div>
 ```
-Notice, we just add another h2 tag showing `Hello World, Kitematic!` under the original one.
-
-Refresh the home page in web browser to see the change.
+Notice, we just add another h2 tag showing `Hello World, Kitematic!` under the original one. Refresh the home page in web browser to see the change.
 ![MIME Type](/public/pics/2016-09-18/newpreview.png)  
 This is how volume works.
 Kitematic can map Docker container volumes to directories on your Mac.
 
 ## 3. Serving Our Own Website
 Now let’s try to serve a more interesting website. [Download the zipped files](https://github.com/gabrielecirulli/2048/archive/master.zip) for 2048, a popular (and addictive) web-based tile game. Extract this zip file into your local volume folder.
-![MIME Type](/public/pics/2016-09-18/2048files.png)  
+![MIME Type](/public/pics/2016-09-18/2048files.png){:width="800px"}  
 
 Refresh the page in web browser, you can play the game now. Cool!
-![MIME Type](/public/pics/2016-09-18/2048.png)  
+![MIME Type](/public/pics/2016-09-18/2048.png){:width="700px"}  
 
 ## 4. References
 * [Kitematic tutorial: Serve a static website with NGINX](https://docs.docker.com/kitematic/nginx-web-server/)
