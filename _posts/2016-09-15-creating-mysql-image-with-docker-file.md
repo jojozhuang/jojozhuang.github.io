@@ -34,8 +34,8 @@ In this posting, we will use Dockerfile to simplify the way how to create MySQL 
 Create one file named `Dockerfile` in any directory on local machine.
 ```sh
 $ cd ~/Johnny
-$ mkdir Docker
-$ cd Docker
+$ mkdir DockerMySQL
+$ cd DockerMySQL
 $ vim Dockerfile
 ```
 Edit Dockerfile, fill with following content.
@@ -59,7 +59,7 @@ The following points need to be noted about the above file.
 
 ### 3.2 Getting MySQL Backup File
 Download the backup file `jsp_backup.sql` from [My GitHub](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/jsp_backup.sql), and put it to the same directory with Dockerfile.
-![MIME Type](/public/pics/2016-09-15/dockerfiles.png)  
+![MIME Type](/public/pics/2016-09-15/dockerfiles.png){:width="600px"}  
 
 ### 3.3 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile and MySQL backup file locates. Run the following command.
@@ -71,7 +71,7 @@ Here, `jspmysql` is the name we are giving to the Image and `0.1` is the tag num
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
-![MIME Type](/public/pics/2016-09-15/imagecreated.png)  
+![MIME Type](/public/pics/2016-09-15/imagecreated.png){:width="800px"}  
 
 ## 4. Testing The New Image
 ### 4.1 Running Container
@@ -102,12 +102,12 @@ Check the container id.
 ```sh
 $ docker ps
 CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS         PORTS                   NAMES
-86ee0d3f44d0  jspmysql:0.1  "docker-entrypoint..."  8 minutes ago  Up 8 minutes   0.0.0.0:6603->3306/tcp  jspmysql
+f91d97a62086  jspmysql:0.1  "docker-entrypoint..."  5 minutes ago  Up 5 minutes   0.0.0.0:6603->3306/tcp  jspmysql
 ```
-Create new image based on this container. Notice `86ee0d3f44d0` is the container id, `jojozhuang/jspmysql` is the name of the new image. `jojozhuang` is my user name of Docker Hub.
+Create new image based on this container. Notice `f91d97a62086` is the container id, `jojozhuang/jspmysql` is the name of the new image. `jojozhuang` is my user name of Docker Hub.
 ```sh
-$ docker commit -m "db restored" -a "Johnny" 86ee0d3f44d0 jojozhuang/jspmysql
-sha256:8a21ddddbf57ce23d02bc2cf8637ac3ac5fc602f47ebcad2861741d0226fcdf6
+$ docker commit -m "db restored" -a "Johnny" f91d97a62086 jojozhuang/jspmysql
+sha256:e939b88d1cec5781a96b5b46c5426b9f0a8334e1f06da69f599882eb3f0f5139
 ```
 Check the new image.
 ```sh
@@ -122,7 +122,10 @@ Password:
 Login Succeeded
 $ docker push jojozhuang/jspmysql
 The push refers to a repository [docker.io/jojozhuang/jspmysql]
-c57a0098f25a: Pushed
+8073dd0df0a5: Pushed
+159c9b761a3b: Pushed
+fa01c5c192a6: Mounted from library/mysql
+latest: digest: sha256:7294344f8f94cb4018368a8f3171b1052ebaac84f1776e5d5d4a544c1f45708b size: 2824
 ```
 ### 5.3 Checking New Image on Docker Hub
 ![MIME Type](/public/pics/2016-09-15/dockerhub.png)  
@@ -132,9 +135,9 @@ $ docker pull jojozhuang/jspmysql
 ```
 
 ## 6. Source Files
-* [Database Backup File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/jsp_backup.sql)
-* [MySQL Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/Dockerfile)
-* [Source files for JSP Tutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
+* [Database Backup File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/jsp_backup.sql)
+* [MySQL Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/Dockerfile)
+* [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
 
 ## 7. References
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
