@@ -48,12 +48,12 @@ In terminal, navigate to the given directory.
 $ cd /var/lib/jenkins/secrets/
 ```
 If you encounter the permission denied error, use 'sudo su' command (without another user name) to allow you to run commands as the super-user (root).
-![MIME Type](/public/pics/2016-10-05/secretfile.png)
+![MIME Type](/public/pics/2016-10-05/secretfile.png){:width="700px"}
 Use any text editor to open file initialAdminPassword, you should see the password.
 ```sh
 $ nano initialAdminPassword
 ```
-![MIME Type](/public/pics/2016-10-05/password.png)
+![MIME Type](/public/pics/2016-10-05/password.png){:width="700px"}
 Copy this password and paste it to the input box in Getting Started page, continue.
 ![MIME Type](/public/pics/2016-10-05/setpassword.png)
 In the next page, select Install Suggested Plugins.
