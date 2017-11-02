@@ -135,8 +135,8 @@ $ docker pull jojozhuang/jspmysql
 ```
 
 ## 6. Source Files
-* [Database Backup File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/jsp_backup.sql)
 * [MySQL Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/Dockerfile)
+* [Database Backup File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/jsp_backup.sql)
 * [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)
 
 ## 7. References

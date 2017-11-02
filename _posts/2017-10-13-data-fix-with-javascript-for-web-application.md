@@ -11,18 +11,29 @@ tags: [Rhino, Javascript]
 ## 1. Introduction
 In the previous posting [Building Website with JSP and MySQL]({% link _posts/2016-02-26-building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service and Customer is using it right now. However, there are some issues with this web application, the price of the product is incorrect. Customer requests us to fix the wrong price. The problem is, for cloud service, you are not allowed to shut it down and apply any java patch to fix the data. We have to fix the data while the application is still running. One approach is to call Java from javascript and run the script at server side.
 
-## 2. Setting Up Project
+## 2. Prerequisite
+If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}). We will use Docker to host MySQL database for this JSP Tutorial Application. Refer [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}) to learn how to use Dockerfile to create image.
+
+## 3. Setting Up MySQL Container
+I've already created the Dockerfile to quickly setup MySQL container in docker. Download it from [here](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/Dockerfile), save it to you local machine. Besides, download the MySQL backup file from [here](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/df_backup.sql) and put it with the Dockerfile in the same folder. In Docker terminal, run the following script to launch a MySQL container.
+```sh
+$ docker build -t datafix-mysql:0.1 .
+$ docker run --detach --name=dfmysql --publish 10202:3306 datafix-mysql:0.1
+```
+![MIME Type](/public/pics/2017-10-13/mysqlcontainer.png){:width="700px"}
+
+## 4. Setting Up Project
 Get the source file of JSP application from [here](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial), rename it to `RhinoDataFix`.
 The project in Eclipse looks like this.
-![MIME Type](/public/pics/2017-10-13/originalproject.png)
-Run it in Tomcat. Access http://localhost:8080/RhinoDataFix/productlist.jsp in web browser.
+![MIME Type](/public/pics/2017-10-13/originalproject.png){:width="400px"}
+Start this application and access http://localhost:8080/RhinoDataFix/productlist.jsp in web browser. Initially, there are three products.
 ![MIME Type](/public/pics/2017-10-13/originalproductlist.png)
 
-## 3. Enhancing Project by Adding Data Fix Function
+## 5. Enhancing Project by Adding Data Fix Function
 Suppose the prices of the these products are incorrect, as customer requests, we need to double it through data fix.
-### 3.1 Adding Reference of Rhino to Project
-Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Downloads_archive), select the latest version to download, for example, rhino1_7R4.zip. Extract the file `js.jar` from the downloaded zip, and copy it to the `/WebContent/WEB-INF/lib` subdirectory of 'RhinoDataFix' project.
-### 3.2 Creating Servlet For Running Javascript
+### 5.1 Adding Reference of Rhino to Project
+Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino), select the latest version to download, for example, rhino1.7.7.2.zip. Extract the file `rhino-1.7.7.2.jar` from the downloaded zip, and copy it to the `/WebContent/WEB-INF/lib` subdirectory of 'RhinoDataFix' project.
+### 5.2 Creating Servlet For Running Javascript
 Right-click on RhinoDataFix->Java Resources->src, create a new package named 'Johnny.RhinoDataFix.Servlet'. Then, right click on this package, New->Servlet, set name `JavascriptServlet.java`. Modify the `doPost()` method in JavascriptServlet.java as follows:
 ```java
 /**
@@ -46,7 +57,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     }
 }
 ```
-### 3.3 Create JSP Page for Data Fix
+### 5.3 Create JSP Page for Data Fix
 In Project Explorer, right-click on RhinoDataFix->WebContent, New->JSP File. Specify file name `datafix.jsp` and add following content into it.
 ```html
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -85,7 +96,7 @@ In Project Explorer, right-click on RhinoDataFix->WebContent, New->JSP File. Spe
   </body>
 </html>
 ```
-### 3.4 Adding Link
+### 5.4 Adding Link
 Edit 'header.jsp' in RhinoDataFix->WebContent. Add link for 'datafix.jsp'.
 ```html
 <div class="container">
@@ -96,11 +107,11 @@ Edit 'header.jsp' in RhinoDataFix->WebContent. Add link for 'datafix.jsp'.
 </div>
 <hr/>
 ```
-### 3.5 Project Structure
+### 5.5 Project Structure
 Finally, the project structure looks like this.
-![MIME Type](/public/pics/2017-10-13/projectstructure.png)
+![MIME Type](/public/pics/2017-10-13/projectstructure.png){:width="400px"}
 
-## 4. Running Data Fix
+## 6. Running Data Fix
 Right-click on RhinoDataFix->WebContent->datafix.jsp, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it. Open web browser, access http://localhost:8080/RhinoDataFix/datafix.jsp.
 
 Input following content to the javascript textbox.
@@ -161,9 +172,11 @@ Data Fix with JS: Update products by doubling their prices: END
 Switch to Product List page, the prices have been doubled successfully.
 ![MIME Type](/public/pics/2017-10-13/afterdfproductlist.png)
 
-## 5. Source Files
+## 7. Source Files
+* [MySQL Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/Dockerfile)
+* [Database Backup File](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/df_backup.sql)
 * [Source files of RhinoDataFix on Github](https://github.com/jojozhuang/Tutorials/tree/master/RhinoDataFix)
 
-## 6. Reference
+## 8. Reference
 * [Official Document of Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino)
 * [Server-side JavaScript with Rhino](http://blog.notdot.net/2009/10/Server-side-JavaScript-with-Rhino)
