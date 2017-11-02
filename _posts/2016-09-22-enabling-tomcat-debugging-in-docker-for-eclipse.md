@@ -15,7 +15,7 @@ In posting [Serving JSP Application With Tomcat In Docker]({% link _posts/2016-0
 * Data is persisted into the MySQL container.
 * Tomcat container connects MySQL container to read/write data. They are hosted in the same docker machine with same IP address but different ports.
 
-![MIME Type](/public/pics/2016-09-22/devenv.png)  
+![MIME Type](/public/pics/2016-09-22/devenv.png){:width="700px"}  
 
 Now, one question is how to debug this JSP application? Actually, Tomcat supports remote debugging, the following steps introduce how to enable debugging in Eclipse.
 
