@@ -14,7 +14,7 @@ tags: [Ubuntu, Jenkins]
 ## 2. Installing Jenkins
 To use Jenkins, you can either install it on a physical/virtual machine, or create Jenkins container in Docker.
 ### 2.1 Installing and Setting up Jenkins on Ubuntu
-Go to https://jenkins.io/download/, choose 'Ubuntu/Debian' for Long-term Support (LTS) version. Follow the steps mentioned in the page.  
+Go to [https://jenkins.io/download/](https://jenkins.io/download/), choose 'Ubuntu/Debian' for Long-term Support (LTS) version. Follow the steps mentioned in the page.  
 1) Add the key to your system:
 ```sh
 $ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
