@@ -211,7 +211,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 }
 ```
 3) The final structure of the project.
-![MIME Type](/public/pics/2016-11-08/structure.png)  
+![MIME Type](/public/pics/2016-11-08/structure.png){:width="400px"}  
 ### 4.3 Running Packaging
 1) Run following command to start packaging.
 ```sh
