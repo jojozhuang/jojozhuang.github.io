@@ -50,6 +50,7 @@ $ sudo npm install -g electron --unsafe-perm=true --allow-root
 Check version
 ```sh
 $ electron --version
+v1.7.9
 ```
 
 You can also install Electron at package level.
@@ -59,7 +60,7 @@ $ npm install electron --save-dev
 
 ## 2.4 Installing Visual Studio Code
 We can use any text editor to develop Electron apps. I choose Visual Studio Code, because it supports debugging. VSCode is a free and open source IDE released by Microsoft.  
-Go to https://code.visualstudio.com/, download the installer and follow the wizard to install it.
+Go to [https://code.visualstudio.com/](https://code.visualstudio.com/), download the installer and follow the wizard to install it.
 
 ## 3. Building Sample Project for Electron Tutorial
 Generally, an Electron app is structured like this:  
@@ -177,6 +178,7 @@ let count = 0
 $('#click-counter').text(count.toString())
 $('#countbtn').on('click', () => {
    count ++
+   console.log(count)
    $('#click-counter').text(count)
 })
 ```
@@ -284,14 +286,14 @@ Run this app using the following command:
 $ electron ./main.js
 ```
 A new window will open up, showing a textbox and a button. Click on that button, select a txt file, then its content would be shown in the textbox.
-![MIME Type](/public/pics/2016-11-03/ipc.png)  
+![MIME Type](/public/pics/2016-11-03/ipc.png){:width="600px"}  
 
 ## 6. Debugging
-## 6.1 Dev Tools in Chrome
-First, you can use the dev tools for Electron apps. Shortcut: Command + Option + I.
+## 6.1 Developer Tools in Chrome
+You can use the chrome's developer tools for Electron apps. Shortcut: Command + Option + I.
 ![MIME Type](/public/pics/2016-11-03/devtools.png)  
 ## 6.2 Debugging with VSCode
-Second, you can also use VSCode for debugging main process.  
+You can also use VSCode for debugging main process.  
 1) Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
 ![MIME Type](/public/pics/2016-11-03/launch.png)  
 
@@ -330,7 +332,7 @@ Paste the following content to launch.json.
 }
 ```
 
-2) Click the green arrow button and start to debug.
+2) In VSCopde, Debug->Start Debugging.
 ![MIME Type](/public/pics/2016-11-03/debuginvsc.png)  
 
 ## 7. Packaging
@@ -402,7 +404,7 @@ Building macOS zip
 Building DMG
 ```
 
-Finally, you will get the executable file and installer in dist folder.
+Finally, you will get the executable file `electron-tutorial` and installer in `dist` folder.
 ![MIME Type](/public/pics/2016-11-03/packaging.png)  
 
 ## 8. Source Files
