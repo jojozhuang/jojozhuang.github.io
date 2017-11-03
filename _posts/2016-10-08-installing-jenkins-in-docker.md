@@ -17,17 +17,17 @@ If you haven’t installed Docker and Kitematic, please install Docker Toolbox b
 ### 2.2 Creating Jenkins Container
 Search jenkins in Kitematic, select the official image, and click Create button.
 ![MIME Type](/public/pics/2016-10-08/dockersearch.png)
-New Jenkins container will be created and running.
+Jenkins image will be downloaded and a Jenkins container will be created and running.
 ![MIME Type](/public/pics/2016-10-08/dockerkitematic.png)
 ### 2.3 Setting up Jenkins
 Click the Preview button, web browser will be opened to access Jenkins application. You need to find the password in the given file to unlock Jenkins.
 ![MIME Type](/public/pics/2016-10-08/dockerunlock.png)
-Open container terminal. Running the following commands to get the password from secret file.
+Open container terminal by clicking on the 'EXEC' button in Kitematic. Run the following commands to get the password from secret file `initialAdminPassword`.
 ```sh
 $ cd var/jenkins_home/secrets/
 $ more initialAdminPassword
 ```
-![MIME Type](/public/pics/2016-10-08/dockerpassword.png)
+![MIME Type](/public/pics/2016-10-08/dockerpassword.png){:width="600px"}
 Copy this password and paste it to the input box in Getting Started page, continue.
 ![MIME Type](/public/pics/2016-10-08/dockersetpassword.png)
 In the next page, select 'Install Suggested Plugins'.
