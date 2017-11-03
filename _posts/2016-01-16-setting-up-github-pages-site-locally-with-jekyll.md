@@ -67,6 +67,14 @@ If you want jekyll to start at different port, add port option when using `jekyl
 $ jekyll serve --port 12001
 ```
 
+If you used bundle command, then you need to install the bundler.
+```sh
+$ gem install bundler
+```
+And prepending `bundle exec` to the jekyll command.
+```sh
+$ bundle exec jekyll serve --port 12001
+```
 Open web browser to access your local jekyll website.
 ![MIME Type](/public/pics/2016-01-16/local.png)  
 
