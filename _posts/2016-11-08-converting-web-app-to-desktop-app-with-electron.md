@@ -211,7 +211,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 }
 ```
 3) The final structure of the project.
-![MIME Type](/public/pics/2016-11-08/structure.png){:width="500px"}  
+![MIME Type](/public/pics/2016-11-08/structure.png){:width="400px"}  
 ### 4.3 Running Packaging
 1) Run following command to start packaging.
 ```sh
@@ -236,7 +236,7 @@ Specify icon directory for linux in package.json.
 ```
 Output on Ubuntu. One executable file, one deb installer file and one unpacked folder.
 ![MIME Type](/public/pics/2016-11-08/buildubuntu.png)  
-Click on the executable file, run 2048. Notice, we have the icon on dock and correct menu on the top.
+Click on installer file(2048_1.0.0_amd64.deb) to install this app on Ubuntu, then run it. Notice, we have the icon on dock and correct menu on the top.
 ![MIME Type](/public/pics/2016-11-08/uiubuntu.png)  
 
 ## 5. Source Files
