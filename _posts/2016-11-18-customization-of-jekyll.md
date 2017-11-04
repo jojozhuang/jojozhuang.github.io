@@ -217,7 +217,7 @@ collections:
     output: true
 ```
 Create new folder named `_portfolio` in root directory, and put all portfolio postings into it.
-![MIME Type](/public/pics/2016-11-18/collection.png)  
+![MIME Type](/public/pics/2016-11-18/collection.png){:width="400px"}  
 Each posting Markdown file contains following attributes.
 ```
 ---
