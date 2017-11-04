@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Persistence with JPA & Eclipselink"
 date: 2016-12-21
-tags: [JPA, Eclipse, Eclipselink, ORM, Hibernate, Mysql]
+tags: [JPA, Eclipse, Eclipselink, ORM]
 ---
 
 > Use JPA and Eclipselink to persistent data into database.
@@ -26,79 +26,82 @@ Hibernate is a high-performance Object/Relational persistence and query service.
 JPA define guidelines to implement the Object Relational Mapping (ORM) and there is no underlying code for the implementation. Where as, Hibernate is the actual implementation of JPA guidelines.
 
 ## 2. Prerequisites
+### 2.1 Java Development Environment
 Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _posts/2016-02-13-setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
-
-In addition, if you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
+### 2.2 Docker Toolbox
+Docker and Kitematic have been setup. Otherwise, please install Docker Toolbox by referring to posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
+### 2.3 MySQL Workbench
+MySQL database has been installed. Otherwise, refer to [Installing MySQL and Workbench on Mac]({% link _posts/2016-02-25-installing-mysql-and-workbench-on-mac.md %}) to install MySQL database and MySQL Workbench.
 
 ## 3. Installing Eclipselink in Eclipse
-In Eclipse, File -> New -> 'JPA Project', Name: JPATutorial, and select 'Java SE 8' for target runtime, click Next.  
-![MIME Type](/public/pics/2016-12-21/jpaproject.png)  
-Click on download library (if you do not have the library) in the user library section:
-![MIME Type](/public/pics/2016-12-21/jpafacet.png)  
+In Eclipse, File -> New -> 'JPA Project', Name: `JPATutorial`, and select 'Java SE 8' for target runtime, click Next.  
+![MIME Type](/public/pics/2016-12-21/jpaproject.png){:width="500px"}  
+In JPA Facet, click on download library (if you do not have the library) in the user library section:
+![MIME Type](/public/pics/2016-12-21/jpafacet.png){:width="500px"}   
 Select the latest version of Eclipselink library and click Next.
-![MIME Type](/public/pics/2016-12-21/eclipselink.png)  
+![MIME Type](/public/pics/2016-12-21/eclipselink.png){:width="600px"}  
 Accept the terms of license and click Finish to start downloading.
-![MIME Type](/public/pics/2016-12-21/downloading.png)  
-After downloading, click Finish.
-![MIME Type](/public/pics/2016-12-21/finish.png)  
-Finally you get the project file in the Package Explorer in Eclipse IDE. Expand all files, you will get the folder and file hierarchy as follows:
-![MIME Type](/public/pics/2016-12-21/projectstructure.png)  
+![MIME Type](/public/pics/2016-12-21/downloading.png){:width="600px"}  
+After downloading, check the box of 'EclipseLink 2.5.2' and click Finish.
+![MIME Type](/public/pics/2016-12-21/finish.png){:width="500px"}  
+Finally you get the JPA project in Eclipse IDE. Expand all files, you will get the folder and file hierarchy as follows:
+![MIME Type](/public/pics/2016-12-21/projectstructure.png){:width="400px"}  
 
 ## 4. Adding MySQL Connector to Project
-To access Mysql database, we need mysql connector jar.
-Go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download Mysql Connector/J.
+To access MySQL database, we need mysql connector jar.
+Go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download MySQL Connector/J(ZIP Archive).
 ![MIME Type](/public/pics/2016-12-21/mysqlconnectordownload.png)  
-Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /JPATutorial/lib/  
-Go to Project properties -> Java Build Path by right click on it. You will get a dialog box as follows: Click on Add External Jars.
-![MIME Type](/public/pics/2016-12-21/mysqlconnector.png)  
+Extract `mysql-connector-java-5.1.44-bin.jar` from the the downloaded zip file, and copy it to /JPATutorial/lib/. In Eclipse, right click on Project -> Properties -> Java Build Path, click on 'Add External Jars...', add mysql connector into the build path.
+![MIME Type](/public/pics/2016-12-21/mysqlconnector.png){:width="700px"}
 
-## 5. Setting up Mysql Database
-We use docker to host our mysql database server.
+## 5. Setting up MySQL Container
+We use docker container to host our MySQL database.
 ### 5.1 Creating Dockerfile
-Create docker file with the following content.
+Create a file named `Dockerfile` with the following content.
 ```sh
-#Create Mysql Image for JPA Tutorial
+#Create MySQL Image for JPA Tutorial
 FROM mysql
 MAINTAINER jojozhuang@gmail.com
 
 ENV MYSQL_ROOT_PASSWORD jpa
-ADD jpa_backup.sql /docker-entrypoint-initdb.d // create database when container is started.
+ADD jpa_backup.sql /docker-entrypoint-initdb.d
 
 EXPOSE 3306
 ```
-This docker file is already created, which is located in /JPATutorial/docker/.
-Besides, notice that we add jpa_backup.sql file into /docker-entrypoint-initdb.d, which means the sql inside jpa_backup.sql will be executed when mysql container is started. There is only one line sql script, just create a database named 'jpadb'.
+Notice that we set environment variable MYSQL_ROOT_PASSWORD to `jpa`. Later, we can access this MySQL database with user `root` and password `jpa`. We also add `jpa_backup.sql` file into /docker-entrypoint-initdb.d, which means the sql scripts inside jpa_backup.sql will be executed when the MySQL container is started. There is only one line in jpa_backup.sql, just to create a database named `jpadb`.
 ```sql
-CREATE DATABASE  IF NOT EXISTS `jpadb`
+CREATE DATABASE IF NOT EXISTS `jpadb`
 ```
-
 ### 5.2 Creating Image with Dockerfile
-In terminal, navigate to /JPATutorial/docker/, run command.
+In Docker Terminal, navigate to /JPATutorial/Docker/, run the following command the create MySQL image.
 ```sh
 $ docker build -t jpa-mysql:0.1 .
 ```
-Check images with following command.
+The new image is created with named `jpa-mysql` and tag `0.1`.
 ```sh
 $ docker images
 ```
-![MIME Type](/public/pics/2016-12-21/dockerimage.png)  
-
-### 5.3 Running Mysql Container With The New Image
-In terminal, run command.
+![MIME Type](/public/pics/2016-12-21/dockerimage.png){:width="700px"}  
+### 5.3 Running MySQL Container
+In Docker Terminal, run command to launch MySQL container with the new image 'jpa-mysql:0.1'.
 ```sh
 $ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
-You will see that mysql container is running now. And note the ip address and port. We will use them to configure the database connection in eclipse.
+You will see that a container named `jpamysql` is running now. Note the IP address `192.168.99.100` and port `11020`. We will use them to configure the database connection in eclipse and MySQL Workbench later.
 ![MIME Type](/public/pics/2016-12-21/kitematic.png)  
-
+### 5.4 Connecting MySQL Container With MySQL Workbench
+In MySQL Workbench, create a new connection with name 'JPA Tutorial'. Set IP address to `192.168.99.100` and port to `11020`. And set password `jpa` for user `root`.
+![MIME Type](/public/pics/2016-12-21/newconnection.png){:width="800px"}
+Test the connection and connect the MySQL container. You will see there is no table created yet in database jpadb.
+![MIME Type](/public/pics/2016-12-21/workbench.png)
 ## 6. Making Changes to JPA Project
 ### 6.1 Configuring Persistence.xml
-In eclipse, open Persistence.xml of JPATutorial, switch to source view. Edit it as follows:
+In eclipse, open `Persistence.xml` of JPATutorial, switch to source view. Edit it as follows:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="JPATutorial">
-        <class>com.jojostudio.jpatutorial.entity.Employee</class>
+        <class>Johnny.JPATutorial.Entity.Employee</class>
 
         <properties>
            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.99.100:11020/jpadb"/>
@@ -110,13 +113,14 @@ In eclipse, open Persistence.xml of JPATutorial, switch to source view. Edit it 
         </properties>
     </persistence-unit>
 </persistence>
+
 ```
 ### 6.2 Creating Entity
-Create a package named ‘com.jojostudio.jpatutorial.entity’, under ‘src’ (Source) package.
-![MIME Type](/public/pics/2016-12-21/package.png)
-Create a class named Employee.java under given package as follows:
+Create a package named `Johnny.JPATutorial.Entity`, under ‘src’ (Source) package.
+![MIME Type](/public/pics/2016-12-21/package.png){:width="500px"}  
+Create a class named `Employee.java` under given package as follows:
 ```java
-package com.jojostudio.jpatutorial.entity;
+package Johnny.JPATutorial.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -186,16 +190,16 @@ public class Employee {
 }
 ```
 ### 6.2 Creating Persistence Operations
-Create another package named ‘com.jojostudio.jpatutorial.service’, under ‘src’ (source) package.  
-Create 'CreateEmployee.java'
+Create another package named `Johnny.JPATutorial.Service`, under ‘src’ (source) package.  
+Create `CreateEmployee.java`
 ```java
-package com.jojostudio.jpatutorial.service;
+package Johnny.JPATutorial.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.jojostudio.jpatutorial.entity.Employee;
+import Johnny.JPATutorial.Entity.Employee;
 
 public class CreateEmployee {
     public static void main(String[] args) {
@@ -219,15 +223,15 @@ public class CreateEmployee {
     }
 }
 ```
-Create 'UpdateEmployee.java'
+Create `UpdateEmployee.java`
 ```java
-package com.jojostudio.jpatutorial.service;
+package Johnny.JPATutorial.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.jojostudio.jpatutorial.entity.Employee;
+import Johnny.JPATutorial.Entity.Employee;
 
 public class UpdateEmployee {
     public static void main(String[] args) {
@@ -249,15 +253,15 @@ public class UpdateEmployee {
     }
 }
 ```
-Create 'FindEmployee.java'
+Create `FindEmployee.java`
 ```java
-package com.jojostudio.jpatutorial.service;
+package Johnny.JPATutorial.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.jojostudio.jpatutorial.entity.Employee;
+import Johnny.JPATutorial.Entity.Employee;
 
 public class FindEmployee {
     public static void main(String[] args) {
@@ -273,15 +277,15 @@ public class FindEmployee {
     }
 }
 ```
-Create 'DeleteEmployee.java'
+Create `DeleteEmployee.java`
 ```java
-package com.jojostudio.jpatutorial.service;
+package Johnny.JPATutorial.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.jojostudio.jpatutorial.entity.Employee;
+import Johnny.JPATutorial.Entity.Employee;
 
 public class DeleteEmployee {
     public static void main(String[] args) {
@@ -301,12 +305,9 @@ public class DeleteEmployee {
 
 ## 7. Testing
 ### 7.1 Running CreateEmployee Method
-Right click on CreateEmployee.java file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
-### 7.2 Connecting Mysql With MysqlWorkbench
-Add New Connection in MysqlWorkbench and open the connection.
-![MIME Type](/public/pics/2016-12-21/workbench.png)
-### 7.3 Checking Data
-Run sql query to find all rows in the Employee table.
+In Eclipse, right click on `CreateEmployee.java` file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
+### 7.2 Checking Data
+In MySQL Workbench, refresh database `jpadb`, you will see table `EMPLOYEE` is created. Run sql query to find all rows in the Employee table. You will see one new entry has been created.
 ```sql
 SELECT * FROM jpadb.EMPLOYEE;
 ```
