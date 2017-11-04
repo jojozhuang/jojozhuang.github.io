@@ -128,12 +128,12 @@ category: java
 ---
 ```
 Again, use `post.excerpt` to get customized excerpt and display it on page.
-![MIME Type](/public/pics/2016-11-18/excerpt.png)  
+![MIME Type](/public/pics/2016-11-18/excerpt.png){:width="400px"}  
 
 ## 6. Data File
 All the links in [favorite page](http://jojozhuang.github.io/favorite/) are from `Data File`.  
 Create `_data` folder in the root directory, add create a data file named `favorite.yml`.
-![MIME Type](/public/pics/2016-11-18/datafile.png)  
+![MIME Type](/public/pics/2016-11-18/datafile.png){:width="400px"}  
 Add following content to `favorite.yml`.
 ```
 title: My Favorites
