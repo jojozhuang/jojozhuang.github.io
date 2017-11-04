@@ -302,6 +302,9 @@ public class DeleteEmployee {
     }
 }
 ```
+### 6.3 Final Project Structure
+Finally, the project looks as follows.
+![MIME Type](/public/pics/2016-12-21/finalstructure.png){:width="400px"}  
 
 ## 7. Testing
 ### 7.1 Running CreateEmployee Method
