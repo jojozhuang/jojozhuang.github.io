@@ -26,7 +26,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
 Go to [http://www.scala-lang.org/download/](http://www.scala-lang.org/download/), download scala-2.12.3.deb.
 Navigate to the folder where the new installation file locates. Install Scala with following command.
 ```sh
-$ sudo dpkg -i cala-2.12.3.deb
+$ sudo dpkg -i scala-2.12.3.deb
 ```
 Verify Scala installation by checking Scala version.
 ```sh
@@ -36,7 +36,7 @@ Scala code runner version 2.12.3 -- Copyright 2002-2017, LAMP/EPFL and Lightbend
 
 ## 3. Installing Spark
 ### 3.1 Downloading Spark
-Go to [https://spark.apache.org/downloads.html](https://spark.apache.org/downloads.html), select release and package type, download  spark-2.2.0-bin-hadoop2.7.tgz.
+Go to [https://spark.apache.org/downloads.html](https://spark.apache.org/downloads.html), select release and package type, download spark-2.2.0-bin-hadoop2.7.tgz.
 
 Extract the spark tar file with the following command.
 ```sh
@@ -55,7 +55,7 @@ $ nano ~/.bashrc
 
 Add the following line to ~/.bashrc file.
 ```sh
-export PATH = $PATH:/usr/local/spark/bin
+export PATH=$PATH:/usr/local/spark/bin
 ```
 
 Source the bash file
@@ -69,8 +69,7 @@ Launch Spark Shell with following command.
 $ spark-shell
 ```
 You will get the following output if spark is installed successfully.
-![MIME Type](/public/pics/2017-04-03/sparklaunched.png)
-
+![MIME Type](/public/pics/2017-04-03/sparklaunched.png){:width="700px"}  
 Access [http://10.0.2.15:4040/jobs/](http://10.0.2.15:4040/jobs/) in web browser to open Spark Web UI.
 ![MIME Type](/public/pics/2017-04-03/sparkwebui.png)
 
