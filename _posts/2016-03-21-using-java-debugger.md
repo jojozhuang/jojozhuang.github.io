@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Using Java Debugger(JDB)"
+title: "Using Java Debugger"
 date: 2016-03-21
 tags: [JDB, Debugging]
 ---
