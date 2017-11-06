@@ -16,10 +16,20 @@ In addition, we will use maven as build tool. So Maven is also required to be in
 $ brew install maven // Mac OS
 $ sudo apt-get install maven // Linux
 ```
+Check maven version.
+```sh
+$ mvn -version
+Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2016-02-20T12:39:06-07:00)
+Maven home: /usr/local/Cellar/maven/3.5.0/libexec
+Java version: 1.8.0_101, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "10.12.6", arch: "x86_64", family: "mac"
+```
 
 ## 2. SpringBoot Project
 ### 2.1 Enabling Maven Index
-In Eclipse, top menu Eclipse -> Preferences, and then choose Maven in the left side. Check the box `Download repository index updates on startup`. Optionally, check the boxes Download Artifact Sources and Download Artifact JavaDoc.
+In Eclipse, top menu Eclipse -> Preferences, and then choose Maven in the left side. Check the box 'Download repository index updates on startup'. Optionally, check the boxes 'Download Artifact Sources' and 'Download Artifact JavaDoc'.
 ![MIME Type](/public/pics/2016-02-20/mavenindex.png){:width="700px"}  
 ### 2.2 Rebuilding Index
 In Eclipse, Window -> Show View -> Other -> Maven -> Maven Repositories, tick 'Full Index Enabled' and then 'Rebuild Index' for 'Global Repositories'.

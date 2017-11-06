@@ -88,7 +88,7 @@ In Eclipse, you will see the debugging is working now. The breakpoint in `update
 ![debugperspective](/public/pics/2016-03-23/debugperspective.png)
 Click the `Step Over` button(F6) in the tool bar to step the execution to the next line. Meanwhile, you see the value of variable `query` is 'UPDATE Product SET ProductName = ?, Price = 0 `WHERE ProductName = ?`'. However, the correct query should be 'UPDATE Product SET ProductName = ?, Price = 0 `WHERE ProductId = ?`'. We find the root cause.
 ![stepover](/public/pics/2016-03-23/stepover.png)
-Stop debugging, try to fix the bug by replacing `ProductName` with `ProductId` in the 'Where' clause. Restart tomcat, then try to update the third product again. Refresh the product list page. You will see the product name and price have been updated properly.
+Stop debugging, try to fix the bug by replacing `ProductName` with `ProductId` in the 'Where' clause. Compile the project and deploy the new classes into `/webapps/jspdeployed/`. Restart tomcat, then try to update the third product again. Refresh the product list page. You will see the product name and price have been updated properly.
 ![afterfix](/public/pics/2016-03-23/afterfix.png)
 
 ## 5. Source Files

@@ -48,5 +48,8 @@ Server running at http://127.0.0.1:8086/
 Now the HTTP server is running on the local machine and waiting for a request at port 8086. Open web browser, access http://127.0.0.1:8086/.
 ![browser](/public/pics/2016-03-08/browser.png){:width="600px"}  
 
-## 4. References
+## 4. Source Files
+* [Source files of Nodejs Http Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/NodeHttpServer)
+
+## 5. References
 * [Node.js - First Application](https://www.tutorialspoint.com/nodejs/nodejs_first_application.htm)
