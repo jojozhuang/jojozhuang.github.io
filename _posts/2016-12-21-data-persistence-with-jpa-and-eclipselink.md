@@ -6,7 +6,7 @@ date: 2016-12-21
 tags: [JPA, Eclipse, Eclipselink, ORM]
 ---
 
-> Use JPA and Eclipselink to persistent data into database.
+> Use JPA and Eclipselink to persist data into database.
 
 ## 1. JPA, JPA Provider, Eclipselink, Hibernate
 ### 1.1 JPA
