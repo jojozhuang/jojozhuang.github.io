@@ -48,7 +48,7 @@ $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=
 ![rundebugmode](/public/pics/2016-03-22/rundebugmode.png){:width="600px"}
 
 ### 3.4 Debugging
-In Eclipse, click the `Debug As..` toolbar button and select `Sum Debugging`.
+In Eclipse, click the `Debug As..` button on toolbar and select `Sum Debugging`.
 ![attach](/public/pics/2016-03-22/attach.png)
 You will see the debugging is working now. The first breakpoint is activated.
 ![debugperspective](/public/pics/2016-03-22/debugperspective.png)
