@@ -3,12 +3,30 @@ layout: post
 key: blog
 title: "Data Structure - Stack"
 date: 2016-03-29
-tags: [LIFO, LinkedList]
+tags: [Stack, LIFO]
 ---
 
-> A stack uses LIFO (last-in first-out) ordering.
+> Stack is an abstract data type that serves as a collection of elements, with two principal operations:
+* push, which adds an element to the collection, and
+* pop, which removes the most recently added element that was not yet removed.
 
-## 1. Operations for Stack
+
+## 1. Introduction
+### 1.1 Real-life Example
+Stack is just like a pile of plates kept on top of each other. You can only take out a plate from the top and put a plate on top of the other plates.
+![MIME Type](/public/pics/2016-03-29/plates.jpg)
+Think about the things you can do with such a pile of plates.
+* Put a new plate on top
+* Remove the top plate
+
+If you want the plate at the bottom, you have to first remove all the plates on top.
+
+### 1.2 Stack in Programming Terms
+In programming terms, putting an item on top of the stack is called `push` and removing an item is called `pop`.
+![MIME Type](/public/pics/2016-03-29/lifo.jpg)
+Stack implement the principal of `LIFO`(Last In First Out). The last item that was placed is the first item to go out.
+
+### 1.3 Common Operations on Stack
 * push(item): Add an item to the top of the stack.
 * pop(): Remove the top item from the stack.
 * peek(): Return the top of the stack.
@@ -183,3 +201,4 @@ public class SortStack {
 ## 4. Reference
 * [Data Structure and Algorithms - Stack](https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
+* [Stack](https://www.programiz.com/dsa/stack)
