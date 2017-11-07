@@ -6,9 +6,18 @@ date: 2016-03-31
 tags: [FIFO, Array]
 ---
 
-> A queue implements FIFO (first-in first-out) ordering.
+> A queue is an object or more specifically an abstract data structure(ADT) that follows FIFO (first-in first-out) rule.
 
-## 1. Operations for Queue
+## 1. Introduction
+### 1.1 Real-life Example
+Queue is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+
+### 1.2 Queue in Programming Terms
+In programming terms, putting an item into the queue is called `enqueue` and removing an item from the queue is called `dequeue`.
+![MIME Type](/public/pics/2016-03-31/queue.png){:width="800px"}  
+Queue follows the `FIFO`(First In First Out) rule. The item that goes in first is the item that comes out first too.
+
+### 1.3 Common Operations on Queue
 * enqueue(item): Add an item to the end of the list.
 * dequeue(): Pull the first item out of the list.
 * peek(): Return the top of the queue.
@@ -26,7 +35,7 @@ public class LinkedListQueue {
         tail = null;
     }
 
-    // Add value to the tail of the list
+    // Add item to the tail of the list
     public void enqueue(int value) {
         if (tail == null) {
             tail = new ListNode(value);
@@ -37,7 +46,7 @@ public class LinkedListQueue {
         }
     }
 
-    // Poll value from the beginning of the list
+    // Remove the head from the list and return its value
     public int dequeue() throws Exception {
         if (head == null) {
             throw new Exception();
@@ -47,6 +56,7 @@ public class LinkedListQueue {
         return value;
     }
 
+    // Get the value of the head
     public int peek() throws Exception {
         if (head == null) {
             throw new Exception();
@@ -54,6 +64,7 @@ public class LinkedListQueue {
         return head.val;
     }
 
+    // Return whether the queue is empty
     public boolean isEmpty() {
         return head == null;
     }
@@ -62,15 +73,23 @@ public class LinkedListQueue {
 
 ### 2.2 Implementing with Two Stacks
 ```java
-public class QueueStack {
-    private Stack<Integer> stack1 = new Stack<Integer>(); // s1 stores new elements
-    private Stack<Integer> stack2 = new Stack<Integer>(); // s2 stores old elements
+import java.util.Stack;
 
-    public void enqueue(int x) {
-        stack1.push(x);
+public class StackQueue {
+    private Stack<Integer> stack1; // s1 stores new items
+    private Stack<Integer> stack2; // s2 stores old items
+
+    public StackQueue() {
+        stack1 = new Stack<Integer>();
+        stack2 = new Stack<Integer>();
     }
 
-    // Removes the element from in front of queue and returns that element.
+    // Add new item onto queue
+    public void enqueue(int value) {
+        stack1.push(value);
+    }
+
+    // Remove the first item from the queue and return its value
     public int dequeue() {
         if (!stack2.isEmpty()) {
             return stack2.pop();
@@ -81,7 +100,7 @@ public class QueueStack {
         return stack2.pop();
     }
 
-    // Get the front element.
+    // Get the first element
     public int peek() {
         if (!stack2.isEmpty()) {
             return stack2.peek();
@@ -92,7 +111,7 @@ public class QueueStack {
         return stack2.peek();
     }
 
-    // Return whether the queue is empty.
+    // Return whether the queue is empty
     public boolean isEmpty() {
         return stack1.isEmpty() && stack2.empty();
     }
@@ -112,7 +131,7 @@ public class ArrayQueue {
         tail = -1;
     }
 
-    // Add value to the array
+    // Add item to the end of the array
     public void enqueue(int value) {
         arr[++tail] = value;
         if (head == -1) {
@@ -120,7 +139,7 @@ public class ArrayQueue {
         }
     }
 
-    // Remove value from the array
+    // Remove the first item from the array and return its value
     public int dequeue() throws Exception {
         if (isEmpty()) {
             throw new Exception();
@@ -130,6 +149,7 @@ public class ArrayQueue {
         return value;
     }
 
+    // Get the first item
     public int peek() throws Exception {
         if (isEmpty()) {
             throw new Exception();
@@ -137,6 +157,7 @@ public class ArrayQueue {
         return arr[head];
     }
 
+    // Return whether the queue is empty
     public boolean isEmpty() {
         return (head > tail) || (head == -1);
     }
@@ -147,6 +168,11 @@ public class ArrayQueue {
 ```java
 ```
 
-## 3. Reference
+## 3. Source Files
+* [Source files for Queue on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Queue)
+* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1scNOPMlC4kNb2FiyDhlhX8R7fCx3tkGC01J7ljYREWg/edit?usp=sharing)
+
+## 4. Reference
 * [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
+* [Queue](https://www.programiz.com/dsa/queue)

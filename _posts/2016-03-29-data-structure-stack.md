@@ -24,7 +24,7 @@ If you want the plate at the bottom, you have to first remove all the plates on 
 ### 1.2 Stack in Programming Terms
 In programming terms, putting an item on top of the stack is called `push` and removing an item is called `pop`.
 ![MIME Type](/public/pics/2016-03-29/stack.png){:width="800px"}  
-Stack implement the principal of `LIFO`(Last In First Out). The last item that was placed is the first item to go out.
+Stack follows the `LIFO`(Last In First Out) rule. The last item that was placed is the first item to go out.
 
 ### 1.3 Common Operations on Stack
 * push(item): Add an item to the top of the stack.
