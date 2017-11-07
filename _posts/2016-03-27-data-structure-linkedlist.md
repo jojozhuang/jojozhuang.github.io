@@ -3,22 +3,22 @@ layout: post
 key: blog
 title: "Data Structure - Linked List"
 date: 2016-03-27
-tags: [Reverse, Middle]
+tags: [Singly Linked List, Doubly Linked List]
 ---
 
-> A linked list is represented by a sequence of nodes. It is a basic data structure and used in many other structures. For example, linked list can be used to build stack.
+> A linked list is represented by a sequence of nodes. Each node contains a link to another node. Linked list is one of the most-used data structure.
 
 ## 1. Types of Linked List
-### 1.1 Singly Linked list
-Each node has one pointer, points to the next node in the linked list.
+### 1.1 Singly Linked List
+Each node has an attribute to represent its value. It also has one pointer, linking it to the next node in the linked list.
 ![MIME Type](/public/pics/2016-03-27/singlylinkedlist.png){:width="800px"}  
-### 1.2 Doubly Linked list
-Each node has two pointers, one points to the next node, another points to the previous node.
+### 1.2 Doubly Linked List
+Each node has an attribute to represent its value. Meanwhile, it has two pointers, the first pointer links to the next node, and the second pointer links to the previous node.
 ![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png){:width="800px"}  
 
 ## 2. Implementation
 ### 2.1 Creating Singly Linked Node
-Each node has an attribute to store its value, and one pointer points to the next node.
+Each `ListNode` has an attribute `val` to store the value of the node. And it also has one pointer `next` pointing to the next node.
 ```java
 public class ListNode {
     public int val;
@@ -28,7 +28,7 @@ public class ListNode {
         next = null;
     }
 
-    // create a singly linked list by the given array
+    // create a singly linked list with the given array
     public static ListNode create(int[] values) {  
         if (values == null || values.length == 0) {
             return null;
@@ -47,7 +47,7 @@ public class ListNode {
 ```
 
 ### 2.2 Creating Doubly Linked Node
-Each node has an attribute to store its value, and two pointers, point to the previous node and the next node.
+Each `ListNode` has an attribute `val` to store the value of the node. And it has two pointers `previous` and `next`, pointing to the previous node and the next node.
 ```java
 public class ListNode {
     public int val;
@@ -59,6 +59,7 @@ public class ListNode {
         next = null;
     }
 
+    // create a singly linked list with the given array
     public static ListNode create(int[] values) {  
         if (values == null || values.length == 0) {
             return null;
@@ -78,12 +79,12 @@ public class ListNode {
 ```
 
 ## 3. Common Operations
-Here are some basic approaches for linked list questions.
+Here are some basic approaches for solving linked list problems.
 * Dummy Node
-* Reverse Linked List
-* Fast and Slow Pointer
+* Reversing Linked List
+* Fast and Slow Pointers
 
-All below topics are based on singly linked list.  
+All below questions/codes are based on singly linked list.  
 ### 3.1 Reversing Linked List
 Input:  7->3->12->8->4->9  
 Output: 9->4->8->12->3->7  
@@ -100,7 +101,7 @@ public ListNode reverseList(ListNode head) {
 }
 ```
 
-### 3.2 Finding The Middle Node in Linked List
+### 3.2 Finding the Middle Node in Linked List
 Input:  7->3->12->8->4  
 Output: 12  
 Input:  7->3->12->8->4->9  
@@ -113,7 +114,7 @@ public ListNode findMiddle(ListNode head) {
         return null;
     }
 
-    // find middle
+    // define fast and slow
     ListNode fast = head.next;
     ListNode slow = head;
     while(fast != null && fast.next != null) {
@@ -149,7 +150,7 @@ public boolean hasCycle(ListNode head) {
         } else {
             fast = fast.next.next;
             slow = slow.next;
-            if (fast == slow) { // notice we are comparing the object not the value, which means there may be duplicated values in the linked list.
+            if (fast == slow) { // Compare object, not its value. Nodes with same value may exist.
                 return true;
             }
         }
