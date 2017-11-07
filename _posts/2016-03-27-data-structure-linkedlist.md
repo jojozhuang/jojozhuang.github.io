@@ -17,27 +17,31 @@ Each node has an attribute to represent its value. Meanwhile, it has two pointer
 ![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png){:width="800px"}  
 
 ## 2. Implementation
-### 2.1 Creating Singly Linked Node
-Each `ListNode` has an attribute `val` to store the value of the node. And it also has one pointer `next` pointing to the next node.
+### 2.1 Creating Singly Linked List
+First, define the structure of `SinglyLinkedNode`. Each node has an attribute `val`, storing the value of the node. And it also has one pointer `next`, storing the address of the next node.
 ```java
-public class ListNode {
+public class SinglyLinkedNode {
     public int val;
-    public ListNode next;
-    public ListNode(int x) {
-        val = x;
-        next = null;
+    public SinglyLinkedNode next;
+    public SinglyLinkedNode(int val) {
+        this.val = val;
+        this.next = null;
     }
-
+}
+```
+Next, create a class named `SinglyLinkedList` with one static method `create`. This method reads values from an array and constructs a list with `SinglyLinkedNode`. Be aware of the fact that, for the last node, its next is always NULL.
+```java
+public class SinglyLinkedList {
     // create a singly linked list with the given array
-    public static ListNode create(int[] values) {  
-        if (values == null || values.length == 0) {
+    public static SinglyLinkedNode create(int[] arr) {  
+        if (arr == null || arr.length == 0) {
             return null;
         }
 
-        ListNode dummy = new ListNode(0);
-        ListNode curr = dummy;
-        for (int i = 0; i < values.length; i++) {
-            curr.next = new ListNode(values[i]);
+        SinglyLinkedNode dummy = new SinglyLinkedNode(0);
+        SinglyLinkedNode curr = dummy;
+        for (int i = 0; i < arr.length; i++) {
+            curr.next = new SinglyLinkedNode(arr[i]);
             curr = curr.next;
         }
 
@@ -46,29 +50,33 @@ public class ListNode {
 }
 ```
 
-### 2.2 Creating Doubly Linked Node
-Each `ListNode` has an attribute `val` to store the value of the node. And it has two pointers `previous` and `next`, pointing to the previous node and the next node.
+### 2.2 Creating Doubly Linked List
+First, define the structure of `DoublyLinkedNode`. Each node has an attribute `val`, storing the value of the node. And it has two pointers `previous` and `next`, storing the addresses of the previous node and the next node.
 ```java
-public class ListNode {
+public class DoublyLinkedNode {
     public int val;
-    public ListNode previous;
-    public ListNode next;
-    public ListNode(int x) {
-        val = x;
-        previous = null;
-        next = null;
+    public DoublyLinkedNode previous;
+    public DoublyLinkedNode next;
+    public DoublyLinkedNode(int val) {
+        this.val = val;
+        this.previous = null;
+        this.next = null;
     }
-
-    // create a singly linked list with the given array
-    public static ListNode create(int[] values) {  
-        if (values == null || values.length == 0) {
+}
+```
+Next, create a class named `DoublyLinkedList` with one static method `create`. This method reads values from an array and constructs a list with `DoublyLinkedNode`. During creation of DoublyLinkedNode, set its `previous` and `next` accordingly.
+```java
+public class DoublyLinkedList {
+    // create a doubly linked list with the given array
+    public static DoublyLinkedNode create(int[] arr) {  
+        if (arr == null || arr.length == 0) {
             return null;
         }
 
-        ListNode dummy = new ListNode(0);
-        ListNode curr = dummy;
-        for (int i = 0; i < values.length; i++) {
-            curr.next = new ListNode(values[i]);
+        DoublyLinkedNode dummy = new DoublyLinkedNode(0);
+        DoublyLinkedNode curr = dummy;
+        for (int i = 0; i < arr.length; i++) {
+            curr.next = new DoublyLinkedNode(arr[i]);
             curr.next.previous = curr;
             curr = curr.next;
         }
@@ -76,6 +84,7 @@ public class ListNode {
         return dummy.next;
     }
 }
+
 ```
 
 ## 3. Common Operations
@@ -86,10 +95,18 @@ Here are some basic approaches for solving linked list problems.
 
 All below questions/codes are based on singly linked list.  
 ### 3.1 Reversing Linked List
-Input:  7->3->12->8->4->9  
-Output: 9->4->8->12->3->7  
+Reverse a linked list and return the head of the new reversed list.
 ```java
-public ListNode reverseList(ListNode head) {
+/**
+ * @param head of the original linked list
+ * @return reversed linked list
+ *
+ * Sample
+ * Input:  7->3->12->8->4->9
+ * Output: 9->4->8->12->3->7
+ *
+ */
+public ListNode reverse(ListNode head) {
     ListNode prev = null;
     while (head != null) {
         ListNode next = head.next;
@@ -102,22 +119,28 @@ public ListNode reverseList(ListNode head) {
 ```
 
 ### 3.2 Finding the Middle Node in Linked List
-Input:  7->3->12->8->4  
-Output: 12  
-Input:  7->3->12->8->4->9  
-Output: 12  
-
-Use the fast and slow pointer.  
+Find the middle node of the given linked list and return it.
 ```java
+/**
+ * @param head of the original linked list
+ * @return middle node of the linked list
+ *
+ * Sample
+ * Input:  7->3->12->8->4
+ * Output: 12
+ * Input:  7->3->12->8->4->9
+ * Output: 12
+ *
+ */
 public ListNode findMiddle(ListNode head) {
     if (head == null) {
         return null;
     }
 
-    // define fast and slow
+    // define fast and slow pointers
     ListNode fast = head.next;
     ListNode slow = head;
-    while(fast != null && fast.next != null) {
+    while (fast != null && fast.next != null) {
         fast = fast.next.next; // two steps for each pace
         slow = slow.next;      // one step for each pace
     }
@@ -127,13 +150,19 @@ public ListNode findMiddle(ListNode head) {
 ```
 
 ### 3.3 Detecting Cycle in Linked List
-Input:  7->3->12->8->4->9  
-Output: False
-Input:  7->3->12->8->4->9->12  
-Output: True
-
-Use the fast and slow pointer.  
+Check whether there is any cycle exists in a given linked list.
 ```java
+/**
+ * @param head of the original linked list
+ * @return middle node of the linked list
+ *
+ * Sample
+ * Input:  7->3->12->8->4->9
+ * Output: false
+ * Input:  7->3->12->8->4->9->12
+ * Output: true (12->8->4->9->12 is the loop)
+ *
+ */
 public boolean hasCycle(ListNode head) {
     if (head == null) {
         return false;
@@ -161,11 +190,19 @@ public boolean hasCycle(ListNode head) {
 ```
 
 ### 3.4 Finding the Node Where Cycle Begins
-Input:  7->3->12->8->4->9->12  
-Output: 12
-
-Use the fast and slow pointer.  
+Find the node where cycle begins in a given linked list. If there is no cycle, return null.
 ```java
+/**
+ * @param head of the original linked list
+ * @return middle node of the linked list
+ *
+ * Sample
+ * Input:  7->3->12->8->4->9->12
+ * Output: 12
+ * Input:  7->3->12->8->4
+ * Output: null
+ *
+ */
 public ListNode detectCycle(ListNode head) {
     if (head == null) {
         return null;
@@ -191,5 +228,11 @@ public ListNode detectCycle(ListNode head) {
 }
 ```
 
-## 4. Reference
+## 4. Source Files
+* [Source files for Linked List on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LinkedList)
+* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1qXW9wig6XkCCm2Bgd-9UOW7fHfyUmCF4FDEeLEdsxUQ/edit?usp=sharing)
+
+## 5. Reference
 * [Data Structure and Algorithms - Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
+* [Linked List](https://www.programiz.com/dsa/linked-list)
+* [Linked List Operations](https://www.programiz.com/dsa/linked-list-operations)
