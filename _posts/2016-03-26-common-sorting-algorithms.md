@@ -8,23 +8,25 @@ tags: [Bubble, Quick, Merge]
 
 > All of the common sorting algorithms.
 
- Name           | Space Complexity | Time(Average) | Time(Worst) | Time (Best) | Stable
-----------------|------------------|---------------|--------------|------------|--------
- Bubble Sort    | O(1) | O(n^2) | O(n^2) | O(n^2) | Yes
- Insertion Sort |   |   |   |  | Yes
- Shell Sort     |   |   |   |  | No
- Selection Sort | O(1) | O(n^2) | O(n^2) | O(n^2) | Yes
- Heap Sort      |   |   |   |  | Yes
- Merge Sort     | Depends  | nlog(n)  | nlog(n)  | nlog(n) | Yes
- Quick Sort     | O(log(n)) | O(log(n)) | O(n^2)  | O(log(n)) | No
- Bucket Sort    | Depends  | O(kn)  | O(kn)  | O(kn) | No
- Counting Sort  |   |   |   |  | No
- Radix Sort     |   |   |  |  | No
+## 1. Common Sorting Algorithms
 
-## 1. Bubble Sort
-### 1.1 How It Works?
+ Name           | Time(Average) | Time (Best)   | Time(Worst)   | Space Complexity | Stable
+----------------|---------------|---------------|---------------|------------------|--------
+ Bubble Sort    | n<sup>2</sup> | n             | n<sup>2</sup> | 1                | Yes
+ Insertion Sort | n<sup>2</sup> | n             | n<sup>2</sup> | 1                | Yes
+ Shell Sort     | n<sup>2</sup> | nlog(n)       | n<sup>2</sup> | 1                | No
+ Selection Sort | n<sup>2</sup> | n<sup>2</sup> | n<sup>2</sup> | 1                | No
+ Heap Sort      | nlog(n)       | nlog(n)       | nlog(n)       | 1                | No
+ Merge Sort     | nlog(n)       | nlog(n)       | nlog(n)       | Depends          | Yes
+ Quick Sort     | nlog(n)       | nlog(n)       | n<sup>2</sup> | log(n)           | No
+ Bucket Sort    | --            | n + r         | n + r         | n + r            | Yes
+ Counting Sort  | --            | n + r         | n + r         | n + r            | Yes
+ Radix Sort     | --            | nk/d          | nk/d          | n + 2<sup>d</sup>| Yes
+
+## 2. Bubble Sort
+### 2.1 How It Works?
 Take the last element, compare it with the previous one, swap if it is smaller(or larger). By doing this repetitively, bubble up the smallest(or the largest) to the front.
-### 1.2 Implementation
+### 2.2 Implementation
 ```java
 public int[] bubbleSort(int[] nums) {
     if (nums == null || nums.length < 2) {
@@ -44,12 +46,12 @@ public int[] bubbleSort(int[] nums) {
     return nums;
 }  
 ```
-### 1.3 Complexity
+### 2.3 Complexity
 * Space: O(1)
 * Time: Average O(n^2), Worst Case O(n^2)
 
-## 2. Insertion Sort
-### 2.1 How It Works?
+## 3. Insertion Sort
+### 3.1 How It Works?
 Start from the second element, each time, insert the current element to the proper position.
 ![MIME Type](/public/pics/2016-03-26/insertionsort.png)  
 ### 2.2 Implementation
@@ -67,38 +69,6 @@ public int[] insertionSort(int[] nums) {
             j--;
         }
         nums[j] = key;
-    }
-
-    return nums;
-}
-```
-### 2.3 Complexity
-* Space: O(1)
-* Time: Average O(n^2), Worst Case O(n^2)
-
-## 3. Selection Sort
-### 3.1 How It Works?
-Each time, find the smallest element between the current element and the tail element, append it to the front.
-### 3.2 Implementation
-```java
-public int[] selectionSort(int[] nums) {
-    if (nums == null || nums.length < 2) {
-        return nums;
-    }
-
-    for(int i = 0; i < nums.length; i++) {
-        int min = i;
-        for (int j = i + 1; j < nums.length; j++) {
-            if (nums[j] < nums[min]) {
-                min = j;
-            }
-        }
-
-        if (min > i) {
-            int temp = nums[i];
-            nums[i] = nums[min];
-            nums[min] = temp;
-        }
     }
 
     return nums;
@@ -136,10 +106,42 @@ public int[] shellSort(int[] nums) {
 * Space:
 * Time:
 
-## 5. Heap Sort
+## 5. Selection Sort
 ### 5.1 How It Works?
-Build heap
+Each time, find the smallest element between the current element and the tail element, append it to the front.
 ### 5.2 Implementation
+```java
+public int[] selectionSort(int[] nums) {
+    if (nums == null || nums.length < 2) {
+        return nums;
+    }
+
+    for(int i = 0; i < nums.length; i++) {
+        int min = i;
+        for (int j = i + 1; j < nums.length; j++) {
+            if (nums[j] < nums[min]) {
+                min = j;
+            }
+        }
+
+        if (min > i) {
+            int temp = nums[i];
+            nums[i] = nums[min];
+            nums[min] = temp;
+        }
+    }
+
+    return nums;
+}
+```
+### 5.3 Complexity
+* Space: O(1)
+* Time: Average O(n^2), Worst Case O(n^2)
+
+## 6. Heap Sort
+### 6.1 How It Works?
+Build heap
+### 6.2 Implementation
 ```java
 public int[] heapSort(int nums[]) {
     if (nums == null || nums.length < 2) {
@@ -188,12 +190,12 @@ private void heapify(int nums[], int n, int i)
     }
 }
 ```
-### 5.3 Complexity
+### 6.3 Complexity
 * Space:
 * Time:
 
-## 6. Merge Sort
-### 6.1 How It Works?
+## 7. Merge Sort
+### 7.1 How It Works?
 Take the
 ### 6.2 Implementation
 ```java
@@ -241,14 +243,14 @@ public int[] mergeSort(int[] nums) {
      }
  }
 ```
-### 6.3 Complexity
+### 7.3 Complexity
 * Space: O(1)
 * Time: Average O(nlog(n)), Worst Case O(nlog(n))
 
-## 7. Quick Sort
-### 7.1 How It Works?
+## 8. Quick Sort
+### 8.1 How It Works?
 Take the
-### 7.2 Implementation
+### 8.2 Implementation
 ```java
 public int[] quickSort(int[] nums) {
     if (nums == null || nums.length < 2) {
@@ -287,14 +289,14 @@ private int partition(int[] nums, int start, int end) {
     return pivot;
 }
 ```
-### 7.3 Complexity
+### 8.3 Complexity
 * Space: O(log(n))
 * Time: Average O(nlog(n)), Worst Case O(n^2)
 
-## 8. Bucket Sort
-### 8.1 How It Works?
+## 9. Bucket Sort
+### 9.1 How It Works?
 Take the
-### 8.2 Implementation
+### 9.2 Implementation
 ```java
 public int[] BucketSort(int[] nums, int maxVal) {
     if (nums == null || nums.length == 0) {
@@ -321,12 +323,13 @@ public int[] BucketSort(int[] nums, int maxVal) {
     return nums;
 }
 ```
-### 8.3 Complexity
+### 9.3 Complexity
 * Space: Depends
 * Time: Average O(kn), Worst Case O(kn)
 
-## 9. Reference
+## 10. Reference
 * [Sorting Algorithms on Wiki](https://en.wikipedia.org/wiki/Sorting_algorithm)
+* [Data Structure - Sorting Techniques](https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms.htm)
 * [Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
 * [Insertion Sort](http://www.geeksforgeeks.org/insertion-sort/)
 * [Selection Sort](http://www.geeksforgeeks.org/selection-sort/)
