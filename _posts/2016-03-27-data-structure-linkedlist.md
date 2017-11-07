@@ -11,10 +11,10 @@ tags: [Reverse, Middle]
 ## 1. Types of Linked List
 ### 1.1 Singly Linked list
 Each node has one pointer, points to the next node in the linked list.
-![MIME Type](/public/pics/2016-03-27/singlylinkedlist.png)  
+![MIME Type](/public/pics/2016-03-27/singlylinkedlist.png){:width="800px"}  
 ### 1.2 Doubly Linked list
 Each node has two pointers, one points to the next node, another points to the previous node.
-![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png)  
+![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png){:width="800px"}  
 
 ## 2. Implementation
 ### 2.1 Creating Singly Linked Node
