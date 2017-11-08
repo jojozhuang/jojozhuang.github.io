@@ -22,14 +22,29 @@ tags: [Tree, Pre-Order, Post-Order, In-Order]
 * Full Binary Trees: A full binary tree is a binary tree in which every node has either zero or two children.That is, no nodes have only one child.
 * Perfect Binary Trees A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
 
-## 3.  Binary Tree Traversal
-### 3.1 Common Approaches
+## 3. Binary Tree Traversal
+### 3.1 Definition of Binary Tree
+A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
+### 3.2 Implementing Tree Node
+```java
+public class TreeNode {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode(int val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+```
+### 3.3 Common Traversal Approaches On Binary Tree
 * Preorder -> Recursion or Iteration with Stack(Add right first, then left node to stack)
 * Inorder -> Recursion or Iteration with Stack(Go to the deepest left node)
 * Postorder -> Recursion or Iteration with Stack(Need to set node.left = null)
 * Level -> Queue
 
-### 3.2 Binary Tree Traversal(Recursion)
+### 3.4 Binary Tree Traversal(Recursion)
 Pre-Order
 ```java
 /**
@@ -100,7 +115,7 @@ public List<Integer> postorderRecursion(TreeNode root) {
 }
 ```
 
-### 3.3 Binary Tree Traversal(Iteration)
+### 3.5 Binary Tree Traversal(Iteration)
 Pre-Order
 ```java
 /**
@@ -248,7 +263,7 @@ public class TreeFactory {
 
 ```
 
-## 4.2 Level-Order Traversal in Binary Tree
+## 4.2 Level-Order Traversal on Binary Tree
 Given binary tree {3,9,20,#,#,15,7},  
      3  
     / \  
@@ -334,3 +349,4 @@ public class BSTNode {
 
 ## 7. Reference
 * [Data Structure and Algorithms - Tree](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
+* [Binary Tree Data Structure](http://www.geeksforgeeks.org/binary-tree-data-structure/)
