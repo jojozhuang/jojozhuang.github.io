@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Data Structure - Queue"
 date: 2016-03-31
-tags: [FIFO, Array]
+tags: [Queue, FIFO]
 ---
 
 > A queue is an object or more specifically an abstract data structure(ADT) that follows FIFO (first-in first-out) rule.
