@@ -57,9 +57,12 @@ public class SegmentTreeNode {
 ### 2.2 Building A Minimum Segment Tree
 The digram of Minimum Segment Tree for given array {4,-1,3,0,2}.
 ![MIME Type](/public/pics/2016-04-03/min.png)  
-
-Code for the build method.
+Define a method named `buildMin()`.
 ```java
+/**
+ * @param arr, array of integer
+ * @return root node of the minimum segment tree
+ */
 public SegmentTreeNode buildMin(int[] arr) {
     if (arr == null || arr.length == 0) {
         return null;
@@ -68,6 +71,12 @@ public SegmentTreeNode buildMin(int[] arr) {
     return buildMinHelpler(arr, 0, arr.length - 1);
 }
 
+/**
+ * @param arr, array of integer
+ * @param start, first index of the array
+ * @param end, last index of the array
+ * @return root node of the minimum segment tree
+ */
 private SegmentTreeNode buildMinHelpler(int[] arr, int start, int end) {
     if (start > end) {
         return null;
@@ -87,9 +96,111 @@ private SegmentTreeNode buildMinHelpler(int[] arr, int start, int end) {
 }
 ```
 
-## 3. Searching for Minimum
-For the given segment tree and the given range, find the minimum value.
+Create query method `queryMin`. For the given segment tree and range, find the minimum value.
 ```java
+/**
+ * @param root, root node of the segment tree
+ * @param start, start of the search range
+ * @param end, end of the search range
+ * @return the minimum value of the given range
+ */
+public int queryMin(SegmentTreeNode root, int start, int end) {
+    if (root == null) {
+        return 0;
+    }
+
+    if (root.start == start && root.end == end) {
+        return root.min;
+    }
+
+    int mid = root.start + (root.end - root.start) / 2;
+    int leftmin = Integer.MAX_VALUE;
+    int rightmin = Integer.MAX_VALUE;
+    if (start <= mid) {
+        if (mid < end) {
+            leftmin = queryMin(root.left, start, mid);
+        } else {
+            leftmin = queryMin(root.left, start, end);
+        }
+    }
+
+    if (mid < end) {
+        if (start <= mid) {
+            rightmin = queryMin(root.right, mid + 1, end);
+        } else {
+            rightmin = queryMin(root.right, start, end);
+        }
+    }
+
+    return Math.min(leftmin, rightmin);
+}
+```
+
+## 3. Including Maximum and Sum
+### 3.1 Building Segment Tree
+Actually, we can build Segment Tree for minimum, maximum and sum at once.
+![MIME Type](/public/pics/2016-04-03/minmaxsum.png)  
+
+  | Range  | Min | Max | Sum
+--|--------|-----|-----|-----
+  | (0,4)  | -1  | 4   |  8
+  | (2,3)  | 0   | 3   |  3
+  | (0,1)  | -1  | 4   |  3
+  | (1,4)  | -1  | 3   |  4
+
+
+Refine the `build` method to include minimum, maximum and sum all together.
+```java
+/**
+ * @param arr, array of integer
+ * @return root node of the segment tree
+ */
+public SegmentTreeNode build(int[] arr) {
+    if (arr == null || arr.length == 0) {
+        return null;
+    }
+
+    return buildHelpler(arr, 0, arr.length - 1);
+}
+
+/**
+ * @param arr, array of integer
+ * @param start, first index of the array
+ * @param end, last index of the array
+ * @return root node of the segment tree
+ */
+private SegmentTreeNode buildHelpler(int[] arr, int start, int end) {
+    if (start > end) {
+        return null;
+    }
+
+    SegmentTreeNode root = new SegmentTreeNode(start, end);
+    if (start == end) {
+        root.min = arr[start];
+        root.max = arr[start];
+        root.sum = arr[start];
+        return root;
+    }
+
+    int mid = start + (end - start) / 2;
+    root.left = buildHelpler(arr, start, mid);
+    root.right = buildHelpler(arr, mid + 1, end);
+    root.min = Math.min(root.left.min, root.right.min);
+    root.max = Math.max(root.left.max, root.right.max);
+    root.sum = root.left.sum + root.right.sum;
+    return root;
+}
+```
+
+### 3.2 Query Methods
+Create three query methods named `queryMin`, `queryMax` and `querySum`. For the given segment tree and range, find the minimum value, maximum value and sum accordingly.
+```java
+/**
+ * @param root, root node of the segment tree
+ * @param start, start of the search range
+ * @param end, end of the search range
+ * @return the minimum value of the given range
+ */
 public int queryMin(SegmentTreeNode root, int start, int end) {
     if (root == null) {
         return 0;
@@ -119,49 +230,13 @@ public int queryMin(SegmentTreeNode root, int start, int end) {
 
     return Math.min(leftmin, rightmin);
 }
-```
 
-## 4. Maximum and Sum
-### 4.1 Building Segment Tree
-Actually, we can build Segment Tree for minimum, maximum and sum at once.
-![MIME Type](/public/pics/2016-04-03/minmaxsum.png)  
-
-Code for the build method.
-```java
-public SegmentTreeNode build(int[] arr) {
-    if (arr == null || arr.length == 0) {
-        return null;
-    }
-
-    return buildHelpler(arr, 0, arr.length - 1);
-}
-
-private SegmentTreeNode buildHelpler(int[] arr, int start, int end) {
-    if (start > end) {
-        return null;
-    }
-
-    SegmentTreeNode root = new SegmentTreeNode(start, end);
-    if (start == end) {
-        root.min = arr[start];
-        root.max = arr[start];
-        root.sum = arr[start];
-        return root;
-    }
-
-    int mid = start + (end - start) / 2;
-    root.left = buildHelpler(arr, start, mid);
-    root.right = buildHelpler(arr, mid + 1, end);
-    root.min = Math.min(root.left.min, root.right.min);
-    root.max = Math.max(root.left.max, root.right.max);
-    root.sum = root.left.sum + root.right.sum;
-    return root;
-}
-```
-
-### 4.2 Searching for Maximum and Sum
-For the given segment tree and the given range, find the maximum value.
-```java
+/**
+ * @param root, root node of the segment tree
+ * @param start, start of the search range
+ * @param end, end of the search range
+ * @return the maximum value of the given range
+ */
 public int queryMax(SegmentTreeNode root, int start, int end) {
     if (root == null) {
         return 0;
@@ -191,10 +266,13 @@ public int queryMax(SegmentTreeNode root, int start, int end) {
 
     return Math.max(leftmax, rightmax);
 }
-```
 
-For the given segment tree and the given range, get the sum.
-```java
+/**
+ * @param root, root node of the segment tree
+ * @param start, start of the search range
+ * @param end, end of the search range
+ * @return the sum of the given range
+ */
 public int querySum(SegmentTreeNode root, int start, int end) {
     if (root == null) {
         return 0;
@@ -214,6 +292,7 @@ public int querySum(SegmentTreeNode root, int start, int end) {
             leftsum = querySum(root.left, start, end);
         }
     }
+
     if (mid < end) {
         if (start <= mid) {
             rightsum = querySum(root.right, mid + 1, end);
@@ -226,9 +305,9 @@ public int querySum(SegmentTreeNode root, int start, int end) {
 }
 ```
 
-## 5. Source Files
+## 4. Source Files
 * [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/SegmentTree)
 
-## 6. Reference
+## 5. Reference
 * [Segment Tree Range Minimum Query(Video on Youtube)](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 * [Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/)
