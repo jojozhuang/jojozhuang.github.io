@@ -27,18 +27,21 @@ Index| 0 | 1  |  2 |  3 |  4
 
 For example, to get the minimum number of range {2,4}, just find the cell {2,4}, which is 0.
 
-### 1.2 Performance of Matrix Approach for Range Search
+### 1.2 Performance of Matrix Approach for Range Searching
 * The Space Complexity is O(n<sup>2</sup>).
 * The Time Complexity for building the matrix is O(n<sup>2</sup>), for searching is O(1).
 
-### 1.3 Performance of Segment Tree
+### 1.3 Performance of Segment Tree for Range Searching
 Segment Tree has less storage and better performance.
 * The Space Complexity is O(n).
 * The Time Complexity for building the tree is O(n), for searching is O(lg(n)).
 
-## 2. Implementing Segment Tree
-### 2.1 Definition of Segment Tree Node
-Attributes start and end define the range. Pointers left and right define the left child and right child.
+## 2. Minimum Segment Tree
+### 2.1 Definition of Minimum Segment Tree
+The digram below shows what Minimum Segment Tree for given array {4,-1,3,0,2} looks like.
+![MIME Type](/public/pics/2016-04-03/min.png){:width="800px"}  
+### 2.2 Creating Segment Tree Node
+Create a class named `SegmentTreeNode`. Attributes `start` and `end` define the range. Attributes `left` and `right` are the children of the current node.
 ```java
 public class SegmentTreeNode {
     public int start, end;
@@ -54,10 +57,8 @@ public class SegmentTreeNode {
 }
 ```
 
-### 2.2 Building A Minimum Segment Tree
-The digram of Minimum Segment Tree for given array {4,-1,3,0,2}.
-![MIME Type](/public/pics/2016-04-03/min.png)  
-Define a method named `buildMin()`.
+### 2.3 Constructing Minimum Segment Tree
+Define a method named `buildMin()`. It recursively constructs the segment tree from top to bottom.
 ```java
 /**
  * @param arr, array of integer
@@ -96,7 +97,8 @@ private SegmentTreeNode buildMinHelpler(int[] arr, int start, int end) {
 }
 ```
 
-Create query method `queryMin`. For the given segment tree and range, find the minimum value.
+### 2.4 Searching on Minimum Segment Tree
+Create a method named `queryMin()`. It searches the minimum value for the given segment tree and range.
 ```java
 /**
  * @param root, root node of the segment tree
@@ -137,9 +139,10 @@ public int queryMin(SegmentTreeNode root, int start, int end) {
 ```
 
 ## 3. Including Maximum and Sum
-### 3.1 Building Segment Tree
-Actually, we can build Segment Tree for minimum, maximum and sum at once.
-![MIME Type](/public/pics/2016-04-03/minmaxsum.png)  
+### 3.1 Definition of Minimum/Maximum/Sum Segment Tree
+Actually, we can build Segment Tree for minimum, maximum and sum all at once.
+![MIME Type](/public/pics/2016-04-03/minmaxsum.png){:width="800px"}  
+For each node, it contains min, max and sum value. Here are the samples for different ranges.
 
   | Range  | Min | Max | Sum
 --|--------|-----|-----|-----
@@ -148,7 +151,7 @@ Actually, we can build Segment Tree for minimum, maximum and sum at once.
   | (0,1)  | -1  | 4   |  3
   | (1,4)  | -1  | 3   |  4
 
-
+### 3.2 Constructing Segment Tree
 Refine the `build` method to include minimum, maximum and sum all together.
 ```java
 /**
@@ -192,7 +195,7 @@ private SegmentTreeNode buildHelpler(int[] arr, int start, int end) {
 }
 ```
 
-### 3.2 Query Methods
+### 3.3 Searching on Segment Tree
 Create three query methods named `queryMin`, `queryMax` and `querySum`. For the given segment tree and range, find the minimum value, maximum value and sum accordingly.
 ```java
 /**
@@ -307,6 +310,7 @@ public int querySum(SegmentTreeNode root, int start, int end) {
 
 ## 4. Source Files
 * [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/SegmentTree)
+* [Diagrams on Google Slides](https://docs.google.com/presentation/d/19Rnp5BcdG8wDIsqiGBNpjmDueBKOV7bVJvaDiGS-318/edit?usp=sharing)
 
 ## 5. Reference
 * [Segment Tree Range Minimum Query(Video on Youtube)](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
