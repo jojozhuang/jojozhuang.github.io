@@ -28,8 +28,8 @@ Index| 0 | 1  |  2 |  3 |  4
 For example, to get the minimum number of range {2,4}, just find the cell {2,4}, which is 0.
 
 ### 1.2 Performance of Matrix Approach for Range Search
-* The Space Complexity is O(n^2).
-* The Time Complexity for building the matrix is O(n^2), for searching is O(1).
+* The Space Complexity is O(n<sup>2</sup>).
+* The Time Complexity for building the matrix is O(n<sup>2</sup>), for searching is O(1).
 
 ### 1.3 Performance of Segment Tree
 Segment Tree has less storage and better performance.
@@ -226,6 +226,9 @@ public int querySum(SegmentTreeNode root, int start, int end) {
 }
 ```
 
-## 5. Reference
+## 5. Source Files
+* [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/SegmentTree)
+
+## 6. Reference
 * [Segment Tree Range Minimum Query(Video on Youtube)](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 * [Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/)
