@@ -204,10 +204,13 @@ $ cp /home/johnny/eclipse/jee-oxygen/eclipse/icon.xpm /usr/share/pixmaps/eclipse
 
 ## 6. Others
 ### 6.1 Increasing Hard Disk Size of Virtual Machine
-Sometimes, hard disk of your VM is out of storage. You need to increase the storage.
-VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
+Sometimes, hard disk of your VM is out of storage. You need to manually increase the storage. Here is the syntax in VirtualBox.
 ```sh
-$ cd /home/johnny/VitualBox VMs/Ubuntu // navigate to the vm location
+VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
+```
+Issue the following command to increase the disk storage of VM Ubuntu to 20GB.
+```sh
+$ cd /home/johnny/VitualBox VMs/Ubuntu          // navigate to the location of VM
 $ VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubuntu.vdi to 20GB.
 ```
 
@@ -216,3 +219,4 @@ $ VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubu
 * [How To Install Apache Tomcat 7 on Ubuntu 14.04](https://www.liquidweb.com/kb/how-to-install-apache-tomcat-7-on-ubuntu-14-04/)
 * [Install Eclipse IDE on Ubuntu Linux 15.04](http://linuxpitstop.com/install-eclipse-ide-on-ubuntu-linux-15-04/)
 * [How to Install The Latest Eclipse in Ubuntu 16.04, 15.10](http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/)
+* [How To Increase Virtualbox Disk Size For Dynamically Allocated Disks](https://www.linuxbabe.com/virtualbox/how-to-increase-virtualbox-disk-size-for-dynamically-allocated-disks)

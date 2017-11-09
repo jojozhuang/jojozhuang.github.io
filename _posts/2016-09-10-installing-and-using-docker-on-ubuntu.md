@@ -12,14 +12,11 @@ tags: [Docker, Docker Hub]
 [Docker](https://www.docker.com/) is a container management service. The keywords of Docker are develop, ship and run anywhere. The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
 
 Key concepts of Docker: Image, Container and Docker Hub.
-
-## 1.1 Image
+### 1.1 Image
 In Docker, everything is based on Images. An image is a combination of a file system, tools and configurations.
-
-## 1.2 Container
+### 1.2 Container
 Containers are instances of Docker images that can be run using the Docker run command. The basic purpose of Docker is to run containers.
-
-## 1.3 Docker Hub
+### 1.3 Docker Hub
 [Docker Hub](https://hub.docker.com/) is a registry service on the cloud that allows you to download Docker images that are built by other communities. You can also upload your own Docker built images to Docker hub.
 
 Go to [https://hub.docker.com/](https://hub.docker.com/) to create a Docker ID, then login. You will see there is no repository/image initially. We will create our own image later.
