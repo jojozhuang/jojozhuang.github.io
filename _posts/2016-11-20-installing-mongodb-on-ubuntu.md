@@ -39,31 +39,12 @@ $ sudo apt-get install -y mongodb-org
 5) Check MongoDB version.
 ```sh
 $ mongo -version
-MongoDB shell version v3.4.10
-git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
-OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
-allocator: tcmalloc
-modules: none
-build environment:
-    distmod: ubuntu1604
-    distarch: x86_64
-    target_arch: x86_64
 ```
 ![MIME Type](/public/pics/2016-11-20/checkversion.png){:width="600px"}  
-6) Start MongoDB service.
+6) Start MongoDB service and using it with `mongo` command.
 ```sh
 $ sudo service mongod start
-[sudo] password for johnny:
 $ mongo
-MongoDB shell version v3.4.10
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.4.10
-Welcome to the MongoDB shell.
-For interactive help, type "help".
-For more comprehensive documentation, see
-    http://docs.mongodb.org/
-Questions? Try the support group
-    http://groups.google.com/group/mongodb-user
 >
 ```
 
