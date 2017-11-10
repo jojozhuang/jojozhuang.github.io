@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Installing MongoDB on Ubuntu"
+title: "Installing MongoDB on Ubuntu and Mac"
 date: 2016-11-20
 tags: [MongoDB]
 ---
@@ -40,19 +40,45 @@ $ sudo apt-get install -y mongodb-org
 ```sh
 $ mongo -version
 ```
-![MIME Type](/public/pics/2016-11-20/checkversion.png){:width="600px"}  
+![MIME Type](/public/pics/2016-11-20/versionubuntu.png){:width="600px"}  
 6) Start MongoDB service and using it with `mongo` command.
 ```sh
 $ sudo service mongod start
 $ mongo
 >
 ```
-
-## 3. Generic Commands
+7) Generic Commands
 ```sh
 $ sudo service mongod start       // Start MongoDB
 $ sudo service mongod stop        // Stop MongoDB
 $ sudo service mongod restart     // Restart MongoDB
+```
+## 3. Installing MongoDB on MacOS with Homebrew
+1) Update Homebrew’s package database.
+```sh
+$ brew update
+```
+2) Installing MongoDB.
+```sh
+$ brew install mongodb
+```
+3) Check MongoDB version.
+```sh
+$ mongo -version
+```
+![MIME Type](/public/pics/2016-11-20/versionmac.png){:width="600px"}  
+4) Create the data directory.
+```sh
+$ mkdir -p /data/db
+```
+5) Start MongoDB service.
+```sh
+$ sudo mongod
+```
+6) Open another terminal, launch MongoDB Shell with `mongo` command.
+```sh
+$ mongo
+>
 ```
 
 ## 4. References
