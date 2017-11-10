@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Using MongoDB"
+title: "Using MongoDB in Shell"
 date: 2016-11-21
-tags: [MongoDB]
+tags: [MongoDB, CRUD]
 ---
 
 > Tutorial for how to create database, collections and documents in MongoDB.

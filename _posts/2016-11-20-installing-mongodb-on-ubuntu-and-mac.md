@@ -80,8 +80,13 @@ $ sudo mongod
 $ mongo
 >
 ```
+## 4. Others
+### 4.1 How to clear console in MongoDB?
+* Ubuntu: CTRL + L
+* MacOS:  Command + K
 
-## 4. References
+## 5. References
 * [MongoDB Official Website](https://www.mongodb.com)
 * [MongoDB Overview](https://www.tutorialspoint.com/mongodb/mongodb_overview.htm)
 * [Install MongoDB Community Edition on Ubuntu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Install MongoDB Community Edition on macOS](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
