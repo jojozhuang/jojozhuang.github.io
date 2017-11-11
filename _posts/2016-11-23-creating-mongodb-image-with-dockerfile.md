@@ -44,7 +44,7 @@ Here, `jspmongo` is the name we are giving to the Image and `0.1` is the tag num
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
-![MIME Type](/public/pics/2016-11-23/imagecreated.png){:width="800px"}  
+![MIME Type](/public/pics/2016-11-23/imagecreated.png){:width="750px"}  
 
 ## 3. Testing The New Image
 ### 3.1 Running Container
@@ -65,9 +65,10 @@ In container terminal, launch MongoDB Shell with `mongo` command.
 ```
 Create a database named `mongodbtutorial` and three documents for collection `product`.
 ```sh
+> use mongodbtutorial
 > db.product.insert([{name: 'Xbox', price: 100},{name: 'PS4',price: 400},{name: 'iPhone',price: 699}])
 ```
-![MIME Type](/public/pics/2016-11-23/createdata.png){:width="800px"}  
+![MIME Type](/public/pics/2016-11-23/createdata.png){:width="750px"}  
 
 ## 4. Testing
 ### 4.1 Getting MongoDB Tutorial Application
@@ -96,11 +97,11 @@ Edit `web.xml`, change the host to `192.168.99.100`, and port to `37017`.
     </session-config>
 </web-app>
 ```
-### 4.3 Verifying
+### 4.3 Verifying MongoDB Connection
 Run the project and access
 http://localhost:8080/MongoDBDockerfile/productlist.jsp. Products are displayed properly.
 ![MIME Type](/public/pics/2016-11-23/productlist.png)  
-Try to add, edit or delete product. Then, verify the data in workbench, you will see the changes.
+Try to add, edit or delete product. Then, verify the data in MongoDB Shell, you will see the changes.
 
 ## 5. Source Files
 * [MongoDB Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/MongoDBDockerfile/Docker/Dockerfile)
