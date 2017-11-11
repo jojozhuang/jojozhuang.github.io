@@ -9,9 +9,7 @@ tags: [MongoDB]
 > Introduce how to install MongoDB Community Edition on Ubuntu.
 
 ## 1. What is MongoDB?
-[MongoDB](https://www.mongodb.com) is a cross-platform, document oriented database that provides, high performance, high availability, and easy scalability. MongoDB works on concept of collection and document.
-
-Key concepts of Docker: Database, Collection and Document.
+[MongoDB](https://www.mongodb.com) is a cross-platform, document oriented database that provides, high performance, high availability, and easy scalability. Key concepts of MongoDB: Database, Collection and Document.
 ### 1.1 Database
 Database is a physical container for collections. Each database gets its own set of files on the file system. A single MongoDB server typically has multiple databases.
 ### 1.2 Collection

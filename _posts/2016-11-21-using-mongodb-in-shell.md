@@ -6,7 +6,7 @@ date: 2016-11-21
 tags: [MongoDB, CRUD]
 ---
 
-> Tutorial for how to create database, collections and documents in MongoDB.
+> Tutorial for introducing how to create database, collection and documents in MongoDB.
 
 ## 1. Start MongoDB
 Start MongoDB service.
@@ -18,21 +18,21 @@ Launch MongoDB Shell with `mongo` command.
 $ mongo
 >
 ```
-To exit the Shell, type `quit()` or use the `<Ctrl-C>` shortcut.
+To exit the Shell, type `quit()` or use the `<Ctrl+C>` shortcut.
 ```sh
 > quit()
 ```
 
 ## 2. Database
 ### 2.1 Show Existing Database
-Check the current databases list with `show dbs` command.
+Check the current databases with `show dbs` command.
 ```sh
 > show dbs
 admin  0.000GB
 local  0.000GB
 ```
 ### 2.2 Create Database
-Create a database named `mymdb` with `use DATABASE` command.
+Create a database named `mymdb` with `use <DATABASE>` command.
 ```sh
 > use mymdb
 switched to db mymdb
@@ -42,7 +42,7 @@ To check your currently selected database, use the command `db`.
 > db
 mymdb
 ```
-If you use `show dbs` command to show the databases, `mymdb` is not present in list. To display database, you need to insert at least one document into it.
+If you use `show dbs` command to show the databases, `mymdb` is not present in list. To display the database, you need to insert at least one document into it.
 ```sh
 > db.mymdb.insert({"name":"iPhone 8"})
 WriteResult({ "nInserted" : 1 })
@@ -91,7 +91,7 @@ Check the created collection with `show collection` command.
 product
 ```
 ### 3.3 Creating Collection With Options
-Create collection with explicit options.
+Create collection named `productOptions` with explicit options.
 ```
 >db.createCollection("productOptions", { capped : true, autoIndexId : true, size : 2000000, max : 10000 } )
 { "ok" : 1 }
@@ -103,8 +103,8 @@ Check the collection list.
 product
 productOptions
 ```
-### 3.3 Creating Collection Implicitly
-MongoDB creates collection automatically, when you insert document into it.
+### 3.4 Creating Collection Implicitly
+Collection named `productImplicit` is created automatically, when document is inserted into it.
 ```sh
 > db.productImplicit.insert({"name":"iPhone 8"})
 WriteResult({ "nInserted" : 1 })
@@ -115,7 +115,7 @@ productOptions
 >
 ```
 
-### 3.4 Dropping Collection
+### 3.5 Dropping Collection
 Drop a collection from the database `store` with `db.<Collection>.drop()` command.
 ```sh
 > use store
@@ -130,9 +130,9 @@ productOptions
 
 ## 4. Document
 ### 4.1 Creating Document
-Syntax:
+Syntax for creating document.
 ```sh
-> db.<Collection>.insert(document)
+db.<Collection>.insert(document)
 ```
 
 Create a document with two attributes in collection `product`.
@@ -141,13 +141,13 @@ Create a document with two attributes in collection `product`.
 WriteResult({ "nInserted" : 1 })
 ```
 
-Use `<Collection>.find()` command to show the documents.
+Use `db.<Collection>.find()` command to show the documents.
 ```
 > db.product.find()
 { "_id" : ObjectId("5a04df9a4ddc534948a491a6"), "name" : "Xbox", "price" : 100 }
 ```
 
-Use `db.product.find().pretty()` command to show the documents in a formatted way.
+Use `pretty()` command to show the documents in a formatted way.
 ```sh
 > db.product.find().pretty()
 {
@@ -174,9 +174,9 @@ BulkWriteResult({
 })
 ```
 ### 4.2 Updating Document
-Syntax:
+Syntax for updating document.
 ```sh
-> db.<Collection>.update(SELECTION_CRITERIA, UPDATED_DATA)
+db.<Collection>.update(SELECTION_CRITERIA, UPDATED_DATA)
 ```
 Check the existing documents.
 ```
@@ -186,7 +186,7 @@ Check the existing documents.
 { "_id" : ObjectId("5a04e0b14ddc534948a491a8"), "name" : "iPhone", "price" : 699 }
 >
 ```
-Update the price to '888' for 'iPhone'.
+Update the price to '888' for the product whose name is 'iPhone'.
 ```sh
 > db.product.update({'name':'iPhone'},{$set:{'price':'888'}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
@@ -202,9 +202,9 @@ Check the updated document.
 ![MIME Type](/public/pics/2016-11-21/update.png){:width="700px"}  
 
 ### 4.3 Deleting Document
-Syntax:
+Syntax for deleting document.
 ```sh
-> db.<Collection>.remove(DELLETION_CRITTERIA)
+db.<Collection>.remove(DELLETION_CRITTERIA)
 ```
 Check the existing documents.
 ```
@@ -214,7 +214,7 @@ Check the existing documents.
 { "_id" : ObjectId("5a04e0b14ddc534948a491a8"), "name" : "iPhone", "price" : "888" }
 >
 ```
-Delete the documents whose name is 'iPhone'.
+Delete the document whose name is 'iPhone'.
 ```sh
 > db.product.remove({'name':'iPhone'})
 WriteResult({ "nRemoved" : 1 })
@@ -228,7 +228,7 @@ Check the documents again.
 ```
 ![MIME Type](/public/pics/2016-11-21/delete.png){:width="700px"}  
 
-Specify '1' in the delete method to delete only the first record if there are multiple records.
+Specify '1' in the delete method to delete only the first one if there are multiple records.
 ```sh
 > db.<Collection>.remove(DELETION_CRITERIA,1)
 ```
@@ -248,12 +248,12 @@ Display all the documents in formatted way with `pretty()`;
 ```sh
 > db.<Collection>.find().pretty()
 ```
-Return only one document from the result.
+Return only one document from the collection.
 ```sh
 > db.<Collection>.findOne()
 ```
 ### 5.2 Where Clause
-Use following operations to query the document with some conditions.
+Use following operations to query documents with some conditions.
 
  Operation           | Syntax                     | Example                               | Equivalent
 ---------------------|----------------------------|---------------------------------------|-------------------
