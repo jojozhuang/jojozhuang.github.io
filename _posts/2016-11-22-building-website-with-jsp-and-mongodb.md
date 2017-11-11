@@ -18,7 +18,7 @@ MongoDB database has been installed. Otherwise, refer to [Installing MongoDB on 
 ### 2.1 Creating Dynamic Web Project
 In Eclipse, File->New->Dynamic Web Project, specify project name as 'MongoDBTutorial'.  
 Right click project MongoDBTutorial -> Configure -> Convert to Maven Project.
-![MIME Type](/public/pics/2016-11-22/converttomaven.png){:width="600px"}  
+![MIME Type](/public/pics/2016-11-22/converttomaven.png){:width="550px"}  
 ### 2.2 Adding Libraries to the Project
 1) JSTL  
 Go to [https://tomcat.apache.org/taglibs/index.html](https://tomcat.apache.org/taglibs/index.html), download JSP Standard Tag Library(JSTL). Put the jar file to `\WebContent\WEB-INF\lib`.  
@@ -628,19 +628,19 @@ Create a database named `mongodbtutorial` and three documents for collection `pr
 
 ## 4. Testing
 Launch the MongoDB Tutorial application, access http://localhost:8080/MongoDBTutorial/productlist.jsp in browser.
-![MIME Type](/public/pics/2016-02-26/productlist.png)
+![MIME Type](/public/pics/2016-11-22/productlist.png)
 Click the 'Create' button, input product name and price.
-![MIME Type](/public/pics/2016-02-26/productadd.png)
+![MIME Type](/public/pics/2016-11-22/productadd.png)
 Click 'Save' button, product is saved.
-![MIME Type](/public/pics/2016-02-26/productlistafteradd.png)
+![MIME Type](/public/pics/2016-11-22/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![MIME Type](/public/pics/2016-02-26/productedit.png)
+![MIME Type](/public/pics/2016-11-22/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![MIME Type](/public/pics/2016-02-26/productlistafteredit.png)
+![MIME Type](/public/pics/2016-11-22/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![MIME Type](/public/pics/2016-02-26/deleteconfirm.png)
+![MIME Type](/public/pics/2016-11-22/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![MIME Type](/public/pics/2016-02-26/productlistafterdel.png)
+![MIME Type](/public/pics/2016-11-22/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of MongoDB Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/MongoDBTutorial)
