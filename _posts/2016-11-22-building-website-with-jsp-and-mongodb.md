@@ -16,16 +16,15 @@ MongoDB database has been installed. Otherwise, refer to [Installing MongoDB on 
 
 ## 2. Setting up JSP Project
 ### 2.1 Creating Dynamic Web Project
-In Eclipse, File->New->Dynamic Web Project, specify project name as 'MongoDBTutorial'.  
-Right click project MongoDBTutorial -> Configure -> Convert to Maven Project.
+In Eclipse, File->New->Dynamic Web Project, specify project name as 'MongoDBTutorial'. Then, right click project MongoDBTutorial -> Configure -> Convert to Maven Project.
 ![MIME Type](/public/pics/2016-11-22/converttomaven.png){:width="550px"}  
 ### 2.2 Adding Libraries to the Project
 1) JSTL  
 Go to [https://tomcat.apache.org/taglibs/index.html](https://tomcat.apache.org/taglibs/index.html), download JSP Standard Tag Library(JSTL). Put the jar file to `\WebContent\WEB-INF\lib`.  
-2) MongoDB Java Driver
-To let our JSP application access MongoDB database, we need MongoDB Driver. It is a middleware between our JSP application and MongoDB Database. Go to [https://mongodb.github.io/mongo-java-driver/](https://mongodb.github.io/mongo-java-driver/), download mongodb driver, eg. 'mongodb-driver-3.1.1.jar', put it to `\WebContent\WEB-INF\lib`.
+2) MongoDB Java Driver  
+To let our JSP application access MongoDB database, we need MongoDB Driver. It is a bridge between our JSP application and MongoDB Database. Go to [https://mongodb.github.io/mongo-java-driver/](https://mongodb.github.io/mongo-java-driver/), download mongodb driver, eg. 'mongodb-driver-3.1.1.jar', put it to `\WebContent\WEB-INF\lib`.
 ### 2.3 Creating web.xml
-Create an xml file named `web.xml` in `\WebContent\WEB-INF` with following content. Notice, we set the 'MONGODB_HOST' and 'MONGODB_PORT'.
+Create a file named `web.xml` in `\WebContent\WEB-INF` with following content. Notice, we set the 'MONGODB_HOST' and 'MONGODB_PORT'.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
@@ -48,63 +47,28 @@ Create an xml file named `web.xml` in `\WebContent\WEB-INF` with following conte
     </session-config>
 </web-app>
 ```
-### 2.4 Updating pom.xml
-Update `pom.xml` with following content.
+### 2.4 Adding Dependencies in pom.xml
+Edit `pom.xml`, add dependencies for MongoDB and JSTL.
 ```xml
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>MongoTutorial</groupId>
-  <artifactId>MongoTutorial</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <dependencies>
-    <!-- MongoDB Java Driver -->
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongo-java-driver</artifactId>
-      <version>3.1.1</version>
-    </dependency>
-    <!-- JSTL libraries for JSP pages -->
-    <dependency>
-      <groupId>jstl</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>taglibs</groupId>
-      <artifactId>standard</artifactId>
-      <version>1.1.2</version>
-    </dependency>
-  </dependencies>
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.0.0</version>
-        <configuration>
-          <warSourceDirectory>WebContent</warSourceDirectory>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-</project>
+<dependencies>
+  <!-- MongoDB Java Driver -->
+  <dependency>
+    <groupId>org.mongodb</groupId>
+    <artifactId>mongo-java-driver</artifactId>
+    <version>3.1.1</version>
+  </dependency>
+  <!-- JSTL libraries for JSP pages -->
+  <dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+  </dependency>
+  <dependency>
+    <groupId>taglibs</groupId>
+    <artifactId>standard</artifactId>
+    <version>1.1.2</version>
+  </dependency>
+</dependencies>
 ```
 ### 2.5 Creating Java Files
 Right-click on MongoDBTutorial->Java Resources->src, create package named `johnny.mongodbtutorial.model`. Then, create java file named `Product.java` with the following content.
