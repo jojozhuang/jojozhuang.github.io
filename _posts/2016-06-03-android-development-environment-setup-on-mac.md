@@ -11,7 +11,6 @@ tags: [Android Studio, Genymotion, JDK]
 ## 1. Development of Android
 In order to develop Android applications, you must have the following software installed on your system:
 * Java Development Kit (JDK)
-* Xcode (OS X/macOS only)
 * Android Studio
 * Genymotion(Emulator, it is optional)
 
@@ -20,7 +19,7 @@ In order to develop Android applications, you must have the following software i
 Download the latest version of JDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Select JDK, in the next page, accept the license and choose 'jdk-8u151-macosx-x64.dmg' to download.
 ### 2.2 Installing JDK
 After downloading finish, double click on the installer. Follow the wizard to install JDK.
-![installjdk](/public/pics/2016-02-13/installjdk.png){:width="600px"}  
+![MIME Type](/public/pics/2016-06-03/installjdk.png){:width="600px"}  
 Finally, JDK is installed to /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/.
 ### 2.3 Checking Java Version
 ```sh
@@ -33,19 +32,15 @@ Java(TM) SE Runtime Environment (build 1.8.0_151-b12)
 Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)
 ```
 
-## 3. Installing Xcode
-Search `xcode` in App Store, click to install it.
-![MIME Type](/public/pics/2016-06-03/searchxcode.png){:width="800px"}  
-
-## 4. Installing Android Studio
-### 4.1 Downloading Android Studio for Mac
+## 3. Installing Android Studio
+### 3.1 Downloading Android Studio for Mac
 Go to https://developer.android.com/studio/index.html, download Android Studio for Mac, eg. 'android-studio-ide-171.4408382-mac.dmg'.
-### 4.2 Installing Android Studio
+### 3.2 Installing Android Studio
 Installation is simple, just double click on the installer file, and move the Android Studio to Applications folder.
 ![MIME Type](/public/pics/2016-06-03/installandroidstudio.png){:width="600px"}  
-### 4.3 Launch Android Studio
+### 3.3 Launch Android Studio
 ![MIME Type](/public/pics/2016-06-03/launch.png){:width="600px"}  
-### 4.4 Configuration of Android Studio
+### 3.4 Configuration of Android Studio
 Android SDK
 Virtual Devices
 
