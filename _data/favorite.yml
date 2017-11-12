@@ -173,6 +173,9 @@ bookmarks:
       - name: Git
         description: A free and open source distributed version control system
         url: https://git-scm.com/
+      - name: GitIgnore
+        description: Create useful .gitignore files for your project
+        url: https://www.gitignore.io/
       - name: SourceTree
         description: A free Git client for Windows and Mac
         url: https://www.sourcetreeapp.com/
