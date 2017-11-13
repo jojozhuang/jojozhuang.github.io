@@ -43,4 +43,4 @@ In the ‘City Detail’ screen, you can find lots of useful information, such a
 ## 3. Settings  
 ![settings](/assets/travelnote/settings.png "settings")  
 ## 4. Source Files
-* [Source files of Trip Planner on Github](https://github.com/jojozhuang/Portfolio/tree/master/TripPlanner)
+* [Source files of Trip Planner on Github](https://github.com/jojozhuang/Portfolio/tree/master/TripPlanner/TripPlanneriOS)
