@@ -37,4 +37,4 @@ Result for abbreviation
 You can choose language and enable online search if no result found locally.  
 ![settings](/assets/sapdictionary/settings.png "settings")
 ## 4. Source Files
-* [Source files of SAP Dictionary on Github](https://github.com/jojozhuang/Portfolio/tree/master/SAPDictionary)
+* [Source files of SAP Dictionary on Github](https://github.com/jojozhuang/Portfolio/tree/master/SAPDictionary/Src/DictionaryPhone)
