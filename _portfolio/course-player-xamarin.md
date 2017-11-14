@@ -9,7 +9,7 @@ excerpt: An iOS App for playing course, built with Xamarin in C#.
 category: mobile
 ---
 
-> This `iOS` app is developed by [Xamarin](https://xamarin.com/), which is a tool for developing cross-platform mobile apps. The core function of this app is to play course video with screenshot and whiteboard refreshed synchronously. It is a prototype for my investigation of cross-platform solution for online course system.
+> This `iOS` app is developed by [Xamarin](https://xamarin.com/). It's a tool for developing cross-platform mobile apps. The core function of this app is to play course video with screenshot and whiteboard synchronized. It is a prototype for my investigation of cross-platform solution for mobile app development.
 
 ## 1. Background
 DePaul University has an internal developed Course OnLine (COL) system. It captures the essential components of an in-class lecture, which contains audios, videos, whiteboard notes and PPTs. Afterwards, all of them are synchronized into a single and flexible online interface. Our team is responsible for supporting students to watch these recordings. We have already released several tools, like the flash player(see the below screenshot) and Silverlight player, which are used through web browser.
@@ -39,7 +39,9 @@ The screenshots are the recording of PPTs. Each screenshot consists of 8x8 = 64 
 ### 4.3 Whiteboard
 Whiteboard is recording of the drawings on classroom whiteboard. Each action(pen down, pen move, pen up and erase) on the whiteboard is captured and stored into a data file. In this app, the whiteboard is also drawn on a canvas control. The difference with screenshot is, whiteboard is made up of lines but not images.
 ### 4.4 Player in Simulator
-![iosapp](/assets/xamarinplayer/iosapp.png "iosapp")  
+![iosapp](/assets/xamarinplayer/iosapp.png){:width="400px"}  
+Drag the slider bar.
+![iosapp](/assets/xamarinplayer/iosapp2.png){:width="400px"}
 
 ## 5.Installation and Coding
 ### 5.1 Setup Xamarin Development Environment
