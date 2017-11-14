@@ -4,7 +4,7 @@ key: portfolio
 title: "Course Player"
 index: 30
 tags: [Xamarin, C#, Cross-platform]
-image: /assets/xamarinplayer/thumbnail.png
+image: /assets/courseplayerxamarin/thumbnail.png
 excerpt: An iOS App for playing course, built with Xamarin in C#.
 category: mobile
 ---
@@ -13,9 +13,9 @@ category: mobile
 
 ## 1. Background
 DePaul University has an internal developed Course OnLine (COL) system. It captures the essential components of an in-class lecture, which contains audios, videos, whiteboard notes and PPTs. Afterwards, all of them are synchronized into a single and flexible online interface. Our team is responsible for supporting students to watch these recordings. We have already released several tools, like the flash player(see the below screenshot) and Silverlight player, which are used through web browser.
-![flash](/assets/xamarinplayer/flash.png "flash")
+![flash](/assets/courseplayerxamarin/flash.png)
 And we also provide mobile apps for iOS and Android devices.  
-![coliphone](/assets/xamarinplayer/col_iphone.jpeg "coliphone")
+![coliphone](/assets/courseplayerxamarin/coliphone.jpeg)
 
 ## 2. Problems with the Mobile Apps
 Both the iOS and Android apps have the same functionalities.  
@@ -39,20 +39,20 @@ The screenshots are the recording of PPTs. Each screenshot consists of 8x8 = 64 
 ### 4.3 Whiteboard
 Whiteboard is recording of the drawings on classroom whiteboard. Each action(pen down, pen move, pen up and erase) on the whiteboard is captured and stored into a data file. In this app, the whiteboard is also drawn on a canvas control. The difference with screenshot is, whiteboard is made up of lines but not images.
 ### 4.4 Player in Simulator
-![iosapp](/assets/xamarinplayer/iosapp.png){:width="400px"}  
+![iosapp](/assets/courseplayerxamarin/iosapp.png){:width="400px"}  
 Drag the slider bar.
-![iosapp](/assets/xamarinplayer/iosapp2.png){:width="400px"}
+![iosapp](/assets/courseplayerxamarin/iosapp2.png){:width="400px"}
 
 ## 5.Installation and Coding
 ### 5.1 Setup Xamarin Development Environment
 There are several approaches to setup the Xamarin development environment. I used two desktops, one is Windows with Visual Studio installed, another is Mac with iOS simulator installed. The first step is to pair them together, then you can start coding in VS on Windows, and send the app to simulator on Mac to see the result.
-![pair](/assets/xamarinplayer/pair.png "pair")  
+![pair](/assets/courseplayerxamarin/pair.png)  
 ### 5.2 Project Structure
 There are two .Net projects in Visual Studio. 'COL.Core' contains the common function and 'CoursePlayeriPhone' is the UI part for iOS. If you need to develop Android Course Player, you can create a similar UI project for Android.
-![vs](/assets/xamarinplayer/vs.png "vs")  
+![vs](/assets/courseplayerxamarin/vs.png)  
 ### 5.3 Architecture
 Class diagram shows the design of this app based on Xamarin framework.
-![framework](/assets/xamarinplayer/framework.png "framework")  
+![framework](/assets/courseplayerxamarin/framework.png)  
 
 ## 6. Source Files
 * [Source files of Course Player(Xamarin) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerXamarin)

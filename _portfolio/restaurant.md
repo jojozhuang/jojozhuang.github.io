@@ -45,8 +45,10 @@ Though it is not necessary to sign in to use this app, you have to login first i
 Rotate the screen to landscape mode, the layout still looks pretty.
 ![landscape](/assets/restaurant/landscape.png){:width="700px"}  
 ## 5. View in Tablet
-Large Screen size is supported by default. The biggest difference is that the details screen is displayed along with the list view screen. You are able to see all of the contents on one screen. If you change the rating value at the right side, you will see the effect at the left side immediately.
+Large Screen size is supported by default. The biggest difference is that the details screen is displayed along with the list view screen. You are able to see all of the contents on one screen.
 ![pad](/assets/restaurant/pad.png){:width="900px"}  
+If you change the rating value at the right side, you will see the effect at the left side immediately.
+![pad2](/assets/restaurant/pad2.png){:width="900px"}  
 
 ## 6. RESTful Services
 The backend data server is built with ASP.NET MVC, which provides RESTful APIs. You can simulate the register, login and logout function here. And four main APIs are available.
