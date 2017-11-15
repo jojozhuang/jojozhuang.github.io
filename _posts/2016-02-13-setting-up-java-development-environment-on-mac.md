@@ -3,10 +3,10 @@ layout: post
 key: blog
 title: "Setting up Java Development Environment on Mac"
 date: 2016-02-13
-tags: [JDK, Eclipse, Tomcat]
+tags: [JDK, Tomcat, Eclipse]
 ---
 
-> Setup Java development environment with the most popular web server, IDE, etc.
+> Install JDK, Apache Tomcat and Eclipse on Mac.
 
 We will use the following free softwares/tools.
 * JDK - Java SE Development Kit, a free integrated development kit used to build, test, and deploy Java applications.

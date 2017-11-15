@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Sharing files between Host and Guest in VirtualBox"
-date: 2016-02-11
+date: 2016-02-09
 tags: [VirtualBox, Ubuntu, Mac]
 ---
 
