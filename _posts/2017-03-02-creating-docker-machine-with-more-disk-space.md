@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Creating Docker Machine with More Disk Space"
 date: 2017-03-02
-tags: [Docker]
+tags: [Docker Machine, Docker]
 ---
 
 > Create new Docker Machine with more memory and disk space assigned.
@@ -99,5 +99,6 @@ If you get any error, try to regenerate certificates one more time.
 ## 5. References
 * [Managing disk space in your Docker VM](http://support.divio.com/local-development/docker/managing-disk-space-in-your-docker-vm)
 * [Docker Machine: No space left on device](https://stackoverflow.com/questions/31909979/docker-machine-no-space-left-on-device)
+* [Running out of space](https://github.com/docker/kitematic/wiki/Common-Issues-and-Fixes#running-out-of-space)
 * [Docker for Mac vs. Docker Toolbox](https://docs.docker.com/docker-for-mac/docker-toolbox/#the-docker-for-mac-environment)
 * [Is there a way to force docker-machine to create vm with a specific ip?](https://stackoverflow.com/questions/34336218/is-there-a-way-to-force-docker-machine-to-create-vm-with-a-specific-ip)
