@@ -6,42 +6,43 @@ date: 2017-03-02
 tags: [Docker]
 ---
 
-> Create new Docker Machine with more disk space.
+> Create new Docker Machine with more memory and disk space assigned.
 
 ## 1. Introduction
-When I try to install the image of `SQL Server for Linux` in Kitematic, error occurs as follows.
+When trying to install the image of `mssql-server-linux`(Official SQL Server image from Microsoft) in Kitematic, I got the following error.
 ```sh
 failed to register layer: Error processing tar file(exit status 1): write /opt/mssql/lib/system.common.sfp: no space left on device
 ```
 ![MIME Type](/public/pics/2017-03-02/error.png)
 
-## 2. Cause
+## 2. Diagnosis
 The cause is obvious - disk in docker machine is out of space.
-### 2.1 Check Storage of Virtual Machine
-In VirtualBox, select the `default` VM, then Settings -> Storage. You see the virtual size is 19.53GB. This VM is initially created when we installing the Docker Toolbox.
-![MIME Type](/public/pics/2017-03-02/vmstorageold.png){:width="600px"}  
-### 2.2 Check Disk Space of Docker Machine
+### 2.1 Storage of Virtual Machine
+In VirtualBox, you see the VM named `default`. It was initially created when we install the Docker Toolbox. The storage size is 19.53GB.
+![MIME Type](/public/pics/2017-03-02/vmstorageold.png){:width="800px"}  
+You can also check this size by selecting the `default` VM, then Settings -> Storage.
+![MIME Type](/public/pics/2017-03-02/vmstorageold2.png){:width="600px"}  
+### 2.2 Disk Space of Docker Machine
 The docker machine is actually hosted by the `default` virtual machine. In terminal, SSH into docker VM.
 ```sh
 $ docker-machine ssh default
 ```
-Inside the docker VM, run `df -h` or `df -i` to get an overview of the disk space.
+Inside the docker VM, run `df -h` or `df -i` to get an overview of the disk space. `/dev/sda1` is used by docker.
 ```sh
 docker@default:~$ df -h
 ```
 ![MIME Type](/public/pics/2017-03-02/diskspaceold.png){:width="700px"}  
 ### 2.3 Solution
-Now we are running out of space in the Docker machine, we will need to delete some Docker images and containers. This is just a workaround solution.
+Now we are running out of space in the Docker machine, we can delete some Docker images and containers to save some room. However, this is just a workaround.
 
-The better way is to have more storage for our docker machine. Unfortunately, there is no easy way to increase the disk space for our existing docker machine. Instead, we have to create a new docker machine with more space. Since Kitematic doesn't support change the docker machine, it always connecting to the VM named 'default'. We have to delete the old one and create a VM with the same name 'default'.
+The better solution is to have more storage for our docker machine. Unfortunately, there is no easy way to increase the disk space for the existing docker machine. Instead, we have to create a new docker machine with more space assigned initially. One limitation of Kitematic is, it always connects to the VM named `default`. There is no way to make Kitematic use another docker machine, so we have to delete the old one and create a VM with the same name 'default'.
 
 ## 3. Re-creating Docker Machine
 `Warning: The operations below will destroy all docker images and container in 'default' VM. Backup them before proceeding!!!`
 ### 3.1 Cloning Virtual Machine
-Clone the current default VM in case we need to restore the docker machine with it.
+Clone the current default VM in case we need to restore the docker machine. Backup data if you are using sort of database containers, like MySQL, MongoDB, etc.
 ### 3.2 Deleting Virtual Machine
 In VirtualBox, delete the 'default' VM.
-![MIME Type](/public/pics/2017-03-02/deletevm.png){:width="800px"}  
 ### 3.3 Deleting Docker Machine
 Check all existing docker machines.
 ```sh
@@ -59,19 +60,19 @@ Create a new docker machine with name=`default`, memory size=`8GB` and disk size
 ```sh
 $ docker-machine -D create -d virtualbox --virtualbox-memory 8096 --virtualbox-disk-size "100000" default
 ```
-Check in VirtualBox, a new default VM is created. Notice that the storage of it is changed to `97.66`GB.
-![MIME Type](/public/pics/2017-03-02/vmnew.png){:width="800px"}  
-Open Kitematic, docker machine is back.
-![MIME Type](/public/pics/2017-03-02/kitematic.png)
-Check the disk space of the new docker machine, now it has 88GB free space.
+After the creation is done, check the disk space of the new docker machine. Now it has 88GB free space.
 ![MIME Type](/public/pics/2017-03-02/diskspacenew.png){:width="700px"}  
-### 3.5 Creating New Docker Machine
-Install 'mssql-serveer-linux' again. See, it is successfully installed.
-![MIME Type](/public/pics/2017-03-02/containercreated.png)
-Add new Environment Variable ACCEPT_EULA=Y, save.
-![MIME Type](/public/pics/2017-03-02/accepteula.png)
-Now, the container for MSSQL Server is running. One issue is, the IP address of docker machine becomes 192.168.99.106.
-![MIME Type](/public/pics/2017-03-02/mssqlrunning.png)
+In VirtualBox, a new default VM is created. Notice that the storage of it is changed to `97.66`GB.
+![MIME Type](/public/pics/2017-03-02/vmnew.png){:width="800px"}  
+Open Kitematic, it is running properly and ready for use.
+![MIME Type](/public/pics/2017-03-02/kitematic.png)  
+### 3.5 Installing MSSQL Server
+Try to install 'mssql-serveer-linux' again. This time, it is successfully installed.
+![MIME Type](/public/pics/2017-03-02/containercreated.png)  
+Switch to Settings tab, add new Environment Variable `ACCEPT_EULA = Y`, save.
+![MIME Type](/public/pics/2017-03-02/accepteula.png)  
+Now, the container for MSSQL Server is running. One issue is, the IP address of docker machine becomes 192.168.99.101.
+![MIME Type](/public/pics/2017-03-02/mssqlrunning.png)  
 If you check with `docker-machine ls` command, you will see the same IP address.
 ![MIME Type](/public/pics/2017-03-02/dockermachineip.png){:width="700px"}  
 
@@ -89,10 +90,11 @@ $ docker-machine regenerate-certs default
 ```
 ![MIME Type](/public/pics/2017-03-02/resetip.png){:width="700px"}  
 ### 4.3 Verifying IP Address
-Restart the default virtual machine. Check with `docker-machine ls` command, you will see the IP address is changed to `192.168.99.100`.
+Reboot the virtual machine. Check the docker machine again, you will see the IP address is changed to `192.168.99.100`.
 ![MIME Type](/public/pics/2017-03-02/newipaddress.png){:width="700px"}  
 In Kitematic, same original IP.
-![MIME Type](/public/pics/2017-03-02/newipaddress2.png)
+![MIME Type](/public/pics/2017-03-02/newipaddress2.png)  
+If you get any error, try to regenerate certificates one more time.
 
 ## 5. References
 * [Managing disk space in your Docker VM](http://support.divio.com/local-development/docker/managing-disk-space-in-your-docker-vm)
