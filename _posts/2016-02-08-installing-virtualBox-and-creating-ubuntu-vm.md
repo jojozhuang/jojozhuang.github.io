@@ -71,8 +71,12 @@ $ Icon=/opt/google/chrome/product_logo_64.png
 ```
 ![chromeicon](/public/pics/2016-02-10/chromeicon.png){:width="700px"}  
 
-## 3. Others
-### 3.1 Increasing Hard Disk Size of Virtual Machine
+## 3. Commands for VirtualBox
+### 3.1 List Existing Virtual Machines
+```sh
+$ VBoxManage list vms
+```
+### 3.2 Increasing Hard Disk Size of Virtual Machine
 Sometimes, hard disk of your VM is out of storage. You need to manually increase the storage. Here is the syntax in VirtualBox.
 ```sh
 VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
@@ -85,3 +89,4 @@ $ VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubu
 
 ## 4. References
 * [How To Increase Virtualbox Disk Size For Dynamically Allocated Disks](https://www.linuxbabe.com/virtualbox/how-to-increase-virtualbox-disk-size-for-dynamically-allocated-disks)
+* [Controlling VirtualBox from the Command Line](http://www.oracle.com/technetwork/articles/servers-storage-admin/manage-vbox-cli-2264359.html)

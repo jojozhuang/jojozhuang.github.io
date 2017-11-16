@@ -47,14 +47,13 @@ Check all existing docker machines.
 ```sh
 $ docker-machine ls
 ```
-![MIME Type](/public/pics/2017-03-02/dockermachine.png)
+![MIME Type](/public/pics/2017-03-02/dockermachine.png){:width="700px"}  
 
 Delete the docker machine named `default`.
 ```sh
 $ docker-machine rm default
 ```
-![MIME Type](/public/pics/2017-03-02/deletedockermachine.png)
-
+![MIME Type](/public/pics/2017-03-02/deletedockermachine.png){:width="700px"}  
 ### 3.4 Creating New Docker Machine
 Create a new docker machine with name=`default`, memory size=`8GB` and disk size=`100GB`.
 ```sh
@@ -66,8 +65,37 @@ Open Kitematic, docker machine is back.
 ![MIME Type](/public/pics/2017-03-02/kitematic.png)
 Check the disk space of the new docker machine, now it has 88GB free space.
 ![MIME Type](/public/pics/2017-03-02/diskspacenew.png){:width="700px"}  
+### 3.5 Creating New Docker Machine
+Install 'mssql-serveer-linux' again. See, it is successfully installed.
+![MIME Type](/public/pics/2017-03-02/containercreated.png)
+Add new Environment Variable ACCEPT_EULA=Y, save.
+![MIME Type](/public/pics/2017-03-02/accepteula.png)
+Now, the container for MSSQL Server is running. One issue is, the IP address of docker machine becomes 192.168.99.106.
+![MIME Type](/public/pics/2017-03-02/mssqlrunning.png)
+If you check with `docker-machine ls` command, you will see the same IP address.
+![MIME Type](/public/pics/2017-03-02/dockermachineip.png){:width="700px"}  
 
-## 4. References
+## 4. Resetting IP Address for Docker Machine
+If you want the original IP address 192.168.99.100 back for the docker machine, take the following actions.
+### 4.1 Resetting IP Address
+Run the following command to reset the IP address of `default` docker machine to `192.168.99.100`.
+```sh
+$ echo "ifconfig eth1 192.168.99.100 netmask 255.255.255.0 broadcast 192.168.99.255 up" | docker-machine ssh default sudo tee /var/lib/boot2docker/bootsync.sh > /dev/null
+```
+### 4.2 Regenerating Certificates
+Regenerate TLS certificates and update the machine with new certs.
+```sh
+$ docker-machine regenerate-certs default
+```
+![MIME Type](/public/pics/2017-03-02/resetip.png){:width="700px"}  
+### 4.3 Verifying IP Address
+Restart the default virtual machine. Check with `docker-machine ls` command, you will see the IP address is changed to `192.168.99.100`.
+![MIME Type](/public/pics/2017-03-02/newipaddress.png){:width="700px"}  
+In Kitematic, same original IP.
+![MIME Type](/public/pics/2017-03-02/newipaddress2.png)
+
+## 5. References
 * [Managing disk space in your Docker VM](http://support.divio.com/local-development/docker/managing-disk-space-in-your-docker-vm)
 * [Docker Machine: No space left on device](https://stackoverflow.com/questions/31909979/docker-machine-no-space-left-on-device)
 * [Docker for Mac vs. Docker Toolbox](https://docs.docker.com/docker-for-mac/docker-toolbox/#the-docker-for-mac-environment)
+* [Is there a way to force docker-machine to create vm with a specific ip?](https://stackoverflow.com/questions/34336218/is-there-a-way-to-force-docker-machine-to-create-vm-with-a-specific-ip)
