@@ -14,26 +14,17 @@ Download Visual Studio Community Installer. Go to [https://www.visualstudio.com/
 ![MIME Type](/public/pics/2017-03-15/install_vs.png)  
 
 ----------------------------------------------------------------------------------------------------------------
-SQL Client for Mac OS X that works with MS SQL Server [closed]
-https://stackoverflow.com/questions/3452/sql-client-for-mac-os-x-that-works-with-ms-sql-server
-https://sourceforge.net/projects/jtds/files/
-Run SQL Developer
-go to this menu item: Oracle SQL Developer/Preferences/Database/Third-party JDBC Drivers
+docker cp ShoeStore5.db mssql:/ShoeStore5.bak
+docker cp mycontainer:/foo.txt foo.txt
 
-----------------------------------------------------------------------------------------------------------------
-Run the SQL Server 2017 container image with Docker
-https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker
-docker pull microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Abc%123456789' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux
-docker ps -a
-docker logs <containerid>
+https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-migrate-restore-database
+RESTORE DATABASE ShoeStore5
+FROM DISK = '/ShoeStore5.bak'
+WITH MOVE 'ShoeStore5' TO '/var/opt/mssql/data/ShoeStore5.mdf',
+MOVE 'ShoeStore5_Log' TO '/var/opt/mssql/data/ShoeStore5_Log.ldf'
+GO
 
-start an interactive bash shell
-docker exec -it sql1 "bash"
-
-connect locally with sqlcmd
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Abc%123456789'
-
-CREATE DATABASE TestDB
-SELECT Name from sys.Databases
+USE master ;  
+GO  
+DROP DATABASE ShoeStore5;  
 GO

@@ -12,18 +12,20 @@ category: dotnet
 > This is a CMS web application built with ASP.NET MVC in C# language. I used the template from [AdminLTE Control Panel Template](https://almsaeedstudio.com/) to design the UI pages. The whole website looks very pretty and modern style.  
 
 ## 1. Login Page  
-![login](/assets/shoestoreaspmvc/login.png "login")
-## 2. User List
-Other list pages have the similar layout.
-![index](/assets/shoestoreaspmvc/index.png "index")
-## 3. Responsive UI for different screen size
-Full screen size in desktop web browser.  
-![fullscreen](/assets/shoestoreaspmvc/responsive.png "fullscreen")
-Smaller size in phone web browser.  
-![phonesize](/assets/shoestoreaspmvc/responsive2.png "phonesize")
-## 4. Sales order
-![order](/assets/shoestoreaspmvc/orderlist.png "order")  
-![order](/assets/shoestoreaspmvc/order.png "order")  
+![image](/assets/shoestoreaspmvc/login.png)
+## 2. List View
+In list view, we can view all of the items, and add/edit/delete item. Other list pages have the similar layout.
+![image](/assets/shoestoreaspmvc/listview.png)
+## 3. Responsive UI for Different Screen Size
+View in large size screen.
+![image](/assets/shoestoreaspmvc/responsive.png)
+View in small size screen, eg. mobile phone.  
+![image](/assets/shoestoreaspmvc/responsive2.png)
+## 4. Sales Order
+Order list.
+![image](/assets/shoestoreaspmvc/orderlist.png)  
+Add order.
+![image](/assets/shoestoreaspmvc/addorder.png)  
 
 ## 5. Source Files
-* [Source files of Shoe Store on Github](https://github.com/jojozhuang/Portfolio/tree/master/ShoeStoreMVC)
+* [Source files of Shoe Store on Github](https://github.com/jojozhuang/Portfolio/tree/master/ShoeStoreMVC/Src)
