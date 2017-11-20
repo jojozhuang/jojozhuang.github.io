@@ -156,6 +156,7 @@ You can view and delete order, view detail items of the order.
 * Authentication and Authorization
 * Cache: Output Caching, ASP.NET Cache
 * Bootstrap, jQuery
+* Ninject for Dependency Injection
 * Third-party Payment Gateway
 
 ## 8. Source Files

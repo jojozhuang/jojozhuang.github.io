@@ -9,23 +9,44 @@ excerpt: An online store website with responsive UI, developed with ASP.NET MVC.
 category: dotnet
 ---
 
-> This is a CMS web application built with ASP.NET MVC in C# language. I used the template from [AdminLTE Control Panel Template](https://almsaeedstudio.com/) to design the UI pages. The whole website looks very pretty and modern style.  
+> This web application is a content management system(CMS), built with ASP.NET MVC in C# language. SQL Server is used for data persistence.
 
-## 1. Login Page  
+## 1. Function Features
+* Responsive UI for different screen size
+* Uniform page for 'List' Page and 'Add' Page
+* Mass Edit on list page
+* Many flexible settings are provided, menu control, access control, etc.
+* Dynamic Access Control with Role and Permission Bindings
+
+## 2. Technical Features
+* C\#, ASP.NET MVC
+* Entity Framework (Database First)
+* SQL Server for persistence
+* ASP.Net Identity: User and Role, Admin Area
+* Authentication and Authorization
+* Bootstrap, jQuery
+* Ninject for Dependency Injection
+
+## 3. UI Pages
+### 3.1 Login Page  
 ![image](/assets/shoestoreaspmvc/login.png)
-## 2. List View
+### 3.2 List View
 In list view, we can view all of the items, and add/edit/delete item. Other list pages have the similar layout.
 ![image](/assets/shoestoreaspmvc/listview.png)
-## 3. Responsive UI for Different Screen Size
+### 3.3 Responsive UI for Different Screen Size
 View in large size screen.
 ![image](/assets/shoestoreaspmvc/responsive.png)
 View in small size screen, eg. mobile phone.  
 ![image](/assets/shoestoreaspmvc/responsive2.png)
-## 4. Sales Order
-Order list.
+### 3.4 List of Sales Order
+Add, edit, delete and search order.
 ![image](/assets/shoestoreaspmvc/orderlist.png)  
-Add order.
+### 3.5 New Order
+Add order items.
 ![image](/assets/shoestoreaspmvc/addorder.png)  
+
+## 4. References
+* [AdminLTE Control Panel Template](https://almsaeedstudio.com/)
 
 ## 5. Source Files
 * [Source files of Shoe Store on Github](https://github.com/jojozhuang/Portfolio/tree/master/ShoeStoreMVC/Src)
