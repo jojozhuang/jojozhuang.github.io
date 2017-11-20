@@ -45,4 +45,4 @@ The high level layer calls the low layer to communicate and retrieve data. The O
 ![Project Structure](/assets/threetiercmsaspnet/3layer.png "Project Structure")  
 
 ## 7. Source Files
-* [Source files of 3-Tier CMS on Github](https://github.com/jojozhuang/Portfolio/tree/master/ThreeTierCMS)
+* [Source files of Three-Tier CMS on Github](https://github.com/jojozhuang/Portfolio/tree/master/ThreeTierCMS/Src)
