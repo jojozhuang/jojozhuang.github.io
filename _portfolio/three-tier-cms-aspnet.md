@@ -3,37 +3,29 @@ layout: portfolio
 key: portfolio
 title: "Three-Tier CMS"
 index: 15
-tags: [BLL/DAL/Model, ASP.NET, C#]
+tags: [ASP.NET, C#]
 image: /assets/threetiercmsaspnet/thumbnail.png
-excerpt: A Content Management System(CMS) built with classic ASP.NET Webform.
+excerpt: A Content Management System(CMS) built with ASP.NET in C#.
 category: dotnet
 ---
 
-> This web application is a backend content management system and built with classic ASP.NET webform in C# language.  
+> This web application is a content management system, built with classic ASP.NET webform in C# language.  
 
 ## 1. Login Page  
-![login](/assets/threetiercmsaspnet/login.png "login")
+![image](/assets/threetiercmsaspnet/login.png)
 ## 2. Administrator List Page
 Other list pages have the same layout.  
-![admin](/assets/threetiercmsaspnet/adminlist.png "admin")  
+![image](/assets/threetiercmsaspnet/adminlist.png)  
 Many flexible settings are provided by this CMS system.  
 ## 3. Menu Configuration
 Top Menus and menu categories under them are configurable.  
-![topmenu](/assets/threetiercmsaspnet/menutop.png "topmenu")  
-![menu config](/assets/threetiercmsaspnet/menuconfig.png "menu config")
+![image](/assets/threetiercmsaspnet/topmenu.png)  
+![image](/assets/threetiercmsaspnet/topmenubinding.png)
 ## 4. Access Control
 Access permission to each menu can also be configured.  
-![role permission](/assets/threetiercmsaspnet/rolepermission.png "role permission")
-## 5. Customize Favorite Menu
-You can create a shortcut top menu which contains frequent used functions.  
-![shortcut](/assets/threetiercmsaspnet/shortcut.png "shortcut")
-## 6. Globalization
-Besides, this CMS application provides multilingual support. For example, you can change the value of GlobalizationCulture to 'zh-cn'(zh-cn for simplified Chinese, en-us for US English) in web.config.  
-![localization](/assets/threetiercmsaspnet/localization.png "localization")
-After saving, reopen the login page and you will see the system default language(lable, button text, system message) is switched to Chinese.  
-![login_cn](/assets/threetiercmsaspnet/login_cn.png "login_cn")  
-![adminlist_cn](/assets/threetiercmsaspnet/adminlist_cn.png "adminlist_cn")  
-![menu_cn](/assets/threetiercmsaspnet/menu_cn.png "menu_cn")  
+![image](/assets/threetiercmsaspnet/rolepermission.png)
+## 5. Add Article
+![image](/assets/threetiercmsaspnet/addarticle.png)
 
 ## 6. Development
 Technically, the structure of this application is divided into 3 layers:
@@ -41,8 +33,8 @@ Technically, the structure of this application is divided into 3 layers:
 * Business Logic(BLL)
 * Data Access(DAL)  
 
-The high level layer calls the low layer to communicate and retrieve data. The Object Model(OM) contains objects definition. The object can be an administrator, a blog post or a piece of website settings.  
-![Project Structure](/assets/threetiercmsaspnet/3layer.png "Project Structure")  
+The high level layer calls the low layer to communicate and retrieve data. The Object Model(OM) contains objects definition. The object can be an administrator or a blog posting.
+![image](/assets/threetiercmsaspnet/project.png)  
 
 ## 7. Source Files
 * [Source files of Three-Tier CMS on Github](https://github.com/jojozhuang/Portfolio/tree/master/ThreeTierCMS/Src)

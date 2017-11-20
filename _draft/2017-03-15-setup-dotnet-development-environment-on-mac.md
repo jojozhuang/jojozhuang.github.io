@@ -28,3 +28,14 @@ USE master ;
 GO  
 DROP DATABASE ShoeStore5;  
 GO
+
+RESTORE DATABASE ShoeStore5
+FROM DISK = '/var/opt/mssql/backup/ShoeStore5.bak'
+WITH MOVE 'ShoeStore5' TO '/var/opt/mssql/data/ShoeStore5.mdf',
+MOVE 'ShoeStore5_Log' TO '/var/opt/mssql/data/ShoeStore5_Log.ldf'
+GO
+
+RESTORE DATABASE ShoeStore5 FROM DISK = '/ShoeStore5.bak' WITH MOVE 'ShoeStore5' TO '/var/opt/mssql/data/ShoeStore5.mdf', MOVE 'ShoeStore5_Log' TO '/var/opt/mssql/data/ShoeStore5_Log.ldf'
+GO
+
+<add name="EFDbContext" connectionString="server=192.168.99.100,1401;database=ShoeStore5;uid=sa;pwd=Abc%123456789;MultipleActiveResultSets=true;" providerName="System.Data.SqlClient" />
