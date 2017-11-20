@@ -9,22 +9,35 @@ excerpt: A Content Management System(CMS) built with ASP.NET in C#.
 category: dotnet
 ---
 
-> This web application is a content management system, built with classic ASP.NET webform in C# language.  
+> This web application is a content management system, built with classic ASP.NET webform in C# language. SQL Server is used for data persistence.
 
-## 1. Login Page  
+Features are described as follows:  
+* Login with captcha
+* Uniform page for 'List' Page and 'Add' Page
+* Mass Edit on list page
+* Many flexible settings are provided, menu control, access control, etc.
+* Dynamic Access Control with Role and Permission Bindings
+* WYSIWYG html editor
+* Globalization, multilingual is supported.
+
+## 1. Login Page
+Using captcha for login page makes the website more secure, it effectively blocks spam bots.
 ![image](/assets/threetiercmsaspnet/login.png)
+
 ## 2. Administrator List Page
-Other list pages have the same layout.  
+In list view, we can view all of the items, and add/edit/delete item. Other list pages have the similar layout.
 ![image](/assets/threetiercmsaspnet/adminlist.png)  
-Many flexible settings are provided by this CMS system.  
+
 ## 3. Menu Configuration
-Top Menus and menu categories under them are configurable.  
+Define top menus and their default pages.
 ![image](/assets/threetiercmsaspnet/topmenu.png)  
+Top Menus and menu categories are dynamically bound.
 ![image](/assets/threetiercmsaspnet/topmenubinding.png)
 ## 4. Access Control
-Access permission to each menu can also be configured.  
+Access permission to each menu can also be configured for different roles.
 ![image](/assets/threetiercmsaspnet/rolepermission.png)
-## 5. Add Article
+## 5. WYSIWYG Editor
+You can use WYSIWYG(what you see is what you get) html editor for creating new articles.
 ![image](/assets/threetiercmsaspnet/addarticle.png)
 
 ## 6. Development
