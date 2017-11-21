@@ -4,7 +4,7 @@ key: portfolio
 title: "Online Game Store(Live Demo)"
 index: 60
 tags: [ASP.NET MVC, RESTful WebAPI, jQuery]
-image: /assets/gamestoreaspnet/thumbnail2.png
+image: /assets/gamestoreaspnet/thumbnail.png
 excerpt: An online eCommerce web store, developed with ASP.NET MVC in C#.
 category: dotnet
 ---
