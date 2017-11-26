@@ -123,6 +123,9 @@ bookmarks:
         url: https://spark.apache.org/
   - category: Mobile Development
     links:
+      - name: iOS
+        description: A mobile OS released by Apple.
+        url: https://developer.apple.com/ios/
       - name: Android
         description: A mobile OS based on Linux kernel
         url: https://www.android.com/
@@ -135,6 +138,9 @@ bookmarks:
       - name: Cordova
         description: Cross-platform solution for mobile apps
         url: https://cordova.apache.org/
+      - name: Icons8
+        description: Free Icons
+        url: https://icons8.com
   - category: Frontend
     links:
       - name: ReactJS
