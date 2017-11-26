@@ -796,11 +796,14 @@ Product list.
 ![MIME Type](/public/pics/2017-07-16/runproductlist.png){:width="400px"}  
 Edit product.
 ![MIME Type](/public/pics/2017-07-16/runproductedit.png){:width="400px"}  
-Delete product in Edit mode.
+Delete product in Edit mode. Select the items first and click 'Delete' button.
 ![MIME Type](/public/pics/2017-07-16/runproductdelete.png){:width="400px"}  
 Add product.
 ![MIME Type](/public/pics/2017-07-16/runproductadd.png){:width="400px"}  
-
+Tap to choose image from gallery for the product.
+![MIME Type](/public/pics/2017-07-16/runchooseimage.png){:width="400px"}  
+Image is loaded.
+![MIME Type](/public/pics/2017-07-16/runimageloaded.png){:width="400px"}  
 In landscape view.
 ![MIME Type](/public/pics/2017-07-16/runlandscape.png){:width="800px"}  
 
