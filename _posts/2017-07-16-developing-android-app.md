@@ -702,8 +702,7 @@ public class ProductDbHelper extends SQLiteOpenHelper {
     public Integer deleteProduct (Integer id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(ProductContract.ProductEntry.TABLE,
-                "_id = ? ",
-                new String[] { Integer.toString(id) });
+                "_id = ? ", new String[]{Integer.toString(id)});
     }
 
     public Product getProduct(int id) {
@@ -807,7 +806,6 @@ Image is loaded.
 In landscape view.
 ![MIME Type](/public/pics/2017-07-16/runlandscape.png){:width="800px"}  
 
-
 ## 5. Source Files
 * [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAndroid)
 
@@ -817,5 +815,4 @@ In landscape view.
 * [Android Tutorial](https://www.tutorialspoint.com/android/index.htm)
 * [Android - SQLite Database](https://www.tutorialspoint.com/android/android_sqlite_database.htm)
 * [ListView Tutorial— Android #12](https://appsandbiscuits.com/listview-tutorial-android-12-ccef4ead27cc)
-* [Add image into android emulator gallery](https://stackoverflow.com/questions/40681200/add-image-into-android-emulator-gallery
-)
+* [Add image into android emulator gallery](https://stackoverflow.com/questions/40681200/add-image-into-android-emulator-gallery)
