@@ -125,10 +125,37 @@ SELECT * FROM Inventory;
 ```
 ![MIME Type](/public/pics/2017-03-05/runquery.png)
 
-## 7. References
+## 7. Others
+### 7.1 Restoring Database with Backup File
+The following command copies the backup file named `ShoeStore.bak` to the root directory of SQLServer container named `mssql`.
+```sh
+$ docker cp ShoeStore.bak mssql:/ShoeStore.bak
+```
+
+Go to interactive bash shell and connect to SQL Server.
+```sh
+$ docker exec -it mssql "bash"
+$ /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Abc%123456789'
+```
+
+Use the following sql script to restore the database.
+```sh
+RESTORE DATABASE ShoeStore
+FROM DISK = '/ShoeStore.bak'
+WITH MOVE 'ShoeStore' TO '/var/opt/mssql/data/ShoeStore.mdf',
+MOVE 'ShoeStore_Log' TO '/var/opt/mssql/data/ShoeStore_Log.ldf'
+GO
+```
+For .Net Applications, the connectionString looks like below. `1401` is the port number.
+```xml
+<add name="EFDbContext" connectionString="server=192.168.99.100,1401;database=ShoeStore;uid=sa;pwd=Abc%123456789;MultipleActiveResultSets=true;" providerName="System.Data.SqlClient" />
+```
+
+## 8. References
 * [SQL Server at Microsoft](https://www.microsoft.com/en-us/sql-server/)
 * [MS SQL Server Tutorial](https://www.tutorialspoint.com/ms_sql_server/)
 * [mssql-server-linux on Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 * [Installation guidance for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup)
 * [Run the SQL Server 2017 container image with Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 * [SQL Client for Mac OS X that works with MS SQL Server](https://stackoverflow.com/questions/3452/sql-client-for-mac-os-x-that-works-with-ms-sql-server)
+* [Migrate a SQL Server database from Windows to Linux using backup and restore](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-migrate-restore-database)
