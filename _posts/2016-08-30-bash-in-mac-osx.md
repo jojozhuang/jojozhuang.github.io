@@ -64,3 +64,9 @@ export PS1="Johnny@Johnny-Mac:~$ "
 ```
 Save the file (press Escape, type :wq and hit Enter), restart Terminal.
 ![MIME Type](/public/pics/2016-08-30/terminalname.png)  
+
+## 6. Can I open two solutions with Visual Studio for Mac at the same time?
+Navigate to the folder where Visual Studio Solution file locates. Type the following command.
+```sh
+open -n MySolution.sln
+```
