@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Android Development Environment Setup on Mac"
+title: "Setting up Android Development Environment on Mac"
 date: 2017-07-13
 tags: [Android Studio, Genymotion, JDK]
 ---

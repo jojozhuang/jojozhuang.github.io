@@ -12,7 +12,7 @@ Build a simple product management app called GameStore. This app shows a list of
 
 ## 1. Prerequisite
 ### 1.1 JDK and Android Studio Installed
-Refer to [Android Development Environment Setup on Mac]({% link _posts/2017-07-13-android-development-environment-setup-on-mac.md %}) to install JDK and Android Studio on Mac.
+Refer to [Setting up Android Development Environment on Mac]({% link _posts/2017-07-13-setting-up-android-development-environment-on-mac.md %}) to install JDK and Android Studio on Mac.
 ### 1.2 Android Emulator Installed
 Android Emulator will be installed along with Android Studio. You can also use third-party emulator, like Genymotion.
 

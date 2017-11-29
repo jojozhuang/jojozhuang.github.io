@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Setup DotNet Development Environment on Mac"
+title: "Setting up .Net Development Environment on Mac"
 date: 2017-07-19
-tags: [Visual Studio Community for Mac]
+tags: [Visual Studio]
 ---
 
 > Install Visual Studio on Mac.
