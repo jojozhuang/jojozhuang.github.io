@@ -11,11 +11,10 @@ tags: [iOS, Swift, Xcode]
 Build a simple product management app called GameStore. This app shows a list of products, including a product name, price, and photo. User can add, remove, or edit a product. To add a new product or edit an existing one, users navigate to a different screen where they can specify a name, price, and photo for a particular product.
 
 ## 1. Prerequisite
-### 1.1 Xcode installed
-Xcode includes all the features you need to design, develop, and debug an app. It also contains the iOS SDK, which extends Xcode to include the tools, compilers, and frameworks you need specifically for iOS development.
-Go to App Store, search 'xcode', install.
+### 1.1 Xcode Installed
+Xcode includes all the features you need to design, develop, and debug an app. It also contains the iOS SDK, which extends Xcode to include the tools, compilers, and frameworks you need specifically for iOS development. Go to App Store, search 'xcode', install.
 ![MIME Type](/public/pics/2017-07-10/appstore.png)  
-### 1.2 iOS simulator installed
+### 1.2 iOS Simulator Installed
 iOS simulator will be installed along with Xcode.
 ### 1.3 Knowledge of Swift
 Go to [The Swift Programming Language (Swift 4)](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/) to learn the basic concepts of Swift.

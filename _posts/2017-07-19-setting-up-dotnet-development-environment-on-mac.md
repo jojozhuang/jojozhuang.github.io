@@ -6,14 +6,14 @@ date: 2017-07-19
 tags: [Visual Studio]
 ---
 
-> Install Visual Studio on Mac.
+> Install Visual Studio Community on Mac.
 
 ## 1. Introduction
 * .NET Framework
 * C#
 * Visual Studio
 
-## 2. What can DotNet platform do?
+## 2. What Can .Net Platform Do?
 * Web Applications
 * Desktop Applications
 * Mobile Applications
@@ -60,3 +60,5 @@ There will be a new file named 'package.config' added to the project. The packag
 
 ## 5. References
 * [Setup and Install Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/installation)
+* [Creating new Projects and Solutions](https://docs.microsoft.com/en-us/visualstudio/mac/create-new-projects)
+* [Including a NuGet package in your project](https://docs.microsoft.com/en-us/visualstudio/mac/nuget-walkthrough)
