@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Setting up .Net Development Environment on Mac"
 date: 2017-07-19
-tags: [Visual Studio]
+tags: [Visual Studio, NuGet]
 ---
 
 > Install Visual Studio Community on Mac.

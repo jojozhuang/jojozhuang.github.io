@@ -50,6 +50,8 @@ In Visual Studio, Tools->SDK Manager->Android. First, select the Android API ver
 ![MIME Type](/public/pics/2017-07-20/android_sdk.png){:width="800px"}  
 Second, choose the SDK Tools and Build Tools, Apply Changes.
 ![MIME Type](/public/pics/2017-07-20/android_tools.png){:width="800px"}  
+Accept the license, the selected items will be installed.
+![MIME Type](/public/pics/2017-07-20/android_license.png){:width="600px"}  
 ### 4.3 Android Emulator
 In Visual Studio, Tools->Devices->Android. You can start or create Emulators.
 ![MIME Type](/public/pics/2017-07-20/android_devices.png){:width="400px"}  
