@@ -148,7 +148,7 @@ namespace GameStoreXamarin.Core.Data
     }
 }
 ```
-### 2.3 Project Structure
+### 2.3 Final Project Structure
 The final structure of the portable project.
 ![MIME Type](/public/pics/2017-07-21/portable_project.png){:width="320px"}  
 
@@ -541,7 +541,7 @@ Manually perform the Segue in the Save event.
 ```c#
 this.PerformSegue("UnwindSave", btnSave);
 ```
-### 3.12 Final Project
+### 3.12 Final Project Structure
 The final structure of the portable project.
 ![MIME Type](/public/pics/2017-07-21/ios_project.png){:width="320px"}  
 
