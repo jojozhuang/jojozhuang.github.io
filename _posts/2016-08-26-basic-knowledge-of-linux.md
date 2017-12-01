@@ -36,3 +36,10 @@ scp username@ip:~/Work/AppInfo.xml ~ // copy file from remote server(ip) with us
 
 ls | grep hosts // Find file with name=hosts
 ```
+
+## 7. Turn Off Screen Saver on Redhat
+Steps to disable the GNOME Lock Screen:
+Applications->System Tools->Settings->Privacy->Screen Lock, Set to Off.
+Side effect:
+Black screen is issued when connected to a Linux physical desktop while the lock screen is active.
+https://nomachine.com/TR10L04587
