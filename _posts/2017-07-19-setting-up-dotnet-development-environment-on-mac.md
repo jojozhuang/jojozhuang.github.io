@@ -29,8 +29,7 @@ Accept the license, select the items, Install.
 ![MIME Type](/public/pics/2017-07-19/install_components.png){:width="800px"}  
 The installer starts the download and install process of the selected items.
 ![MIME Type](/public/pics/2017-07-19/install_downloading.png){:width="800px"}  
-
-Once the installation is finished. There is a new logo named 'Visual Studio' in your desktop. Click on it, Visual Studio is now running on Mac.
+Once the installation is finished, there will be a new logo named 'Visual Studio' in your desktop. Click on it to launch Visual Studio.
 ![MIME Type](/public/pics/2017-07-19/visualstudio_workspace.png)
 
 ## 4. Using Visual Studio

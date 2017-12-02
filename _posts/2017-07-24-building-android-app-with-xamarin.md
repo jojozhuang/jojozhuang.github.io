@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Building Android App with Xamarin"
 date: 2017-07-24
-tags: [Xamarin, Android, C#]
+tags: [Xamarin, Android, SQLite, C#]
 ---
 
 > Tutorial for how to build Android App with Xamarin and C#. We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Android and Java. See more details in the posting [Developing Android App]({% link _posts/2017-07-16-developing-android-app.md %}).
@@ -624,14 +624,14 @@ The final structure of the portable project.
 In Visual Studio, click the arrow button(or Run->Start Without Debugging) to run the app in Android Emulator.
 ![MIME Type](/public/pics/2017-07-24/emulator.png){:width="400px"}  
 Product list.
-![MIME Type](/public/pics/2017-07-24/runproductlist.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-24/runproductlist.png){:width="350px"}  
 Edit product.
-![MIME Type](/public/pics/2017-07-24/runproductadd.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-24/runproductadd.png){:width="350px"}  
 Select photo.
-![MIME Type](/public/pics/2017-07-24/runphotochooser.png){:width="400px"}  
-![MIME Type](/public/pics/2017-07-24/runphotochooser2.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-24/runphotochooser.png){:width="350px"}  
+![MIME Type](/public/pics/2017-07-24/runphotochooser2.png){:width="350px"}  
 Delete product.
-![MIME Type](/public/pics/2017-07-24/runproductdelete.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-24/runproductdelete.png){:width="350px"}  
 In landscape view.
 ![MIME Type](/public/pics/2017-07-24/runlandscape.png){:width="700px"}  
 
@@ -642,10 +642,5 @@ In landscape view.
 * [Hello, Android: Quickstart](https://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_quickstart/)
 * [Todo Sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
 * [Xamarin Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
-* [Introduction to Storyboards](https://developer.xamarin.com/guides/ios/user_interface/storyboards/)
-* [Customizing a Table's Appearance](https://developer.xamarin.com/guides/ios/user_interface/controls/tables/customizing-table-appearance/)
-* [Creating User Interface Objects](https://developer.xamarin.com/guides/ios/user_interface/ios-ui/creating-ui-objects/)
-* [Creating an Unwind Segue](https://developer.xamarin.com/recipes/ios/general/storyboard/unwind_segue/)
-* [How to assign an action for UIImageView object in Swift](https://stackoverflow.com/questions/27880607/how-to-assign-an-action-for-uiimageview-object-in-swift)
-* [Choose a Photo From the Gallery](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/)
+* [Xamarin Recipes](https://github.com/xamarin/recipes)
 * [Introduction to DependencyService](https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/dependency-service/introduction/)

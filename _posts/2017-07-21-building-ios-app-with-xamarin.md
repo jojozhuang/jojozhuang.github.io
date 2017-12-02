@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Building iOS App with Xamarin"
 date: 2017-07-21
-tags: [Xamarin, Xcode, C#]
+tags: [Xamarin, Xcode, SQLite, C#]
 ---
 
 > Tutorial for how to build iOS App with Xamarin and C#. We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Xcode and Swift. See more details in the posting [Developing iOS App]({% link _posts/2017-07-10-developing-ios-app.md %}).
@@ -549,23 +549,22 @@ The final structure of the portable project.
 In Visual Studio, click the arrow button(or Run->Start Without Debugging) to run the app in iOS Simulator.
 ![MIME Type](/public/pics/2017-07-21/simulator.png){:width="400px"}  
 Product list.
-![MIME Type](/public/pics/2017-07-21/runproductlist.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-21/runproductlist.png){:width="350px"}  
 Edit product.
-![MIME Type](/public/pics/2017-07-21/runproductadd.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-21/runproductadd.png){:width="350px"}  
 Select photo.
-![MIME Type](/public/pics/2017-07-21/runimagepicker.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-21/runimagepicker.png){:width="350px"}  
 Delete product.
-![MIME Type](/public/pics/2017-07-21/runproductdelete.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-21/runproductdelete.png){:width="350px"}  
 In landscape view.
-![MIME Type](/public/pics/2017-07-21/runlandscape.png){:width="800px"}  
+![MIME Type](/public/pics/2017-07-21/runlandscape.png){:width="700px"}  
 
 ## 5. Source Files
 * [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreXamarin)
 
 ## 6. References
-* [Hello, Android: Quickstart](https://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_quickstart/)
-* [Todo Sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
 * [Xamarin Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
+* [Xamarin Recipes](https://github.com/xamarin/recipes)
 * [Introduction to Storyboards](https://developer.xamarin.com/guides/ios/user_interface/storyboards/)
 * [Customizing a Table's Appearance](https://developer.xamarin.com/guides/ios/user_interface/controls/tables/customizing-table-appearance/)
 * [Creating User Interface Objects](https://developer.xamarin.com/guides/ios/user_interface/ios-ui/creating-ui-objects/)

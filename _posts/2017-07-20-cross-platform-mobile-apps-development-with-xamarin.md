@@ -83,3 +83,4 @@ Tap on the button to see the effect.
 * [Getting Started](https://developer.xamarin.com/guides/cross-platform/getting_started/)
 * [Introducing Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/)
 * [Visual Studio with Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/)
+* [Using the Xamarin Android SDK Manager](https://developer.xamarin.com/guides/android/application_fundamentals/using-the-sdk-manager/)

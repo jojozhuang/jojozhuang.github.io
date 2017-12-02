@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Developing Android App"
 date: 2017-07-16
-tags: [Android, Android Studio]
+tags: [Android, Android Studio, SQLite]
 ---
 
 > Tutorial for how to develop Android App with Android Studio on Mac.
@@ -792,19 +792,19 @@ When creating or editing product, we need to access the photo gallery. By defaul
 In Android Studio, Run -> Run 'app'. App is running in Android emulator.
 ![MIME Type](/public/pics/2017-07-16/emulator.png){:width="500px"}  
 Product list.
-![MIME Type](/public/pics/2017-07-16/runproductlist.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-16/runproductlist.png){:width="350px"}  
 Edit product.
-![MIME Type](/public/pics/2017-07-16/runproductedit.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-16/runproductedit.png){:width="350px"}  
 Delete product in Edit mode. Select the items first and click 'Delete' button.
-![MIME Type](/public/pics/2017-07-16/runproductdelete.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-16/runproductdelete.png){:width="350px"}  
 Add product.
-![MIME Type](/public/pics/2017-07-16/runproductadd.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-16/runproductadd.png){:width="350px"}  
 Tap to choose image from gallery for the product.
-![MIME Type](/public/pics/2017-07-16/runchooseimage.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-16/runchooseimage.png){:width="350px"}  
 Image is loaded.
-![MIME Type](/public/pics/2017-07-16/runimageloaded.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-16/runimageloaded.png){:width="350px"}  
 In landscape view.
-![MIME Type](/public/pics/2017-07-16/runlandscape.png){:width="800px"}  
+![MIME Type](/public/pics/2017-07-16/runlandscape.png){:width="700px"}  
 
 ## 5. Source Files
 * [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAndroid)

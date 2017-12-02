@@ -471,13 +471,13 @@ Add three images to Assets.xcassets.
 In Xcode, click the arrow button to run the app in simulator.
 ![MIME Type](/public/pics/2017-07-10/simulator.png){:width="400px"}  
 Product list.
-![MIME Type](/public/pics/2017-07-10/runproductlist.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-10/runproductlist.png){:width="350px"}  
 Edit product.
-![MIME Type](/public/pics/2017-07-10/runproductadd.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-10/runproductadd.png){:width="350px"}  
 Delete product.
-![MIME Type](/public/pics/2017-07-10/runproductdelete.png){:width="400px"}  
+![MIME Type](/public/pics/2017-07-10/runproductdelete.png){:width="350px"}  
 In landscape view.
-![MIME Type](/public/pics/2017-07-10/runlandscape.png){:width="800px"}  
+![MIME Type](/public/pics/2017-07-10/runlandscape.png){:width="700px"}  
 
 ## 7. Source Files
 * [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreiOS)
