@@ -27,7 +27,10 @@ After downloading, click the 'VisualStudioforMacInstaller.dmg' file. In the inst
 ![MIME Type](/public/pics/2017-07-19/install_vs.png){:width="400px"}  
 Accept the license, select the items, Install.
 ![MIME Type](/public/pics/2017-07-19/install_components.png){:width="800px"}  
-The installer starts the download and install process of the selected items. Once the installation is finished. There is a new logo named 'Visual Studio' in your desktop. Click on it, Visual Studio is now running on Mac.
+The installer starts the download and install process of the selected items.
+![MIME Type](/public/pics/2017-07-19/install_downloading.png){:width="800px"}  
+
+Once the installation is finished. There is a new logo named 'Visual Studio' in your desktop. Click on it, Visual Studio is now running on Mac.
 ![MIME Type](/public/pics/2017-07-19/visualstudio_workspace.png)
 
 ## 4. Using Visual Studio
