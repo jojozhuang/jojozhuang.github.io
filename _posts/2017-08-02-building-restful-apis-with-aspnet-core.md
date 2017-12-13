@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Building Restful APIs with ASP.NET Core"
+title: "Building RESTful APIs with ASP.NET Core"
 date: 2017-08-02
-tags: [ASP.NET Core, Restful, WebAPI 2.0]
+tags: [ASP.NET Core, RESTful, WebAPI 2.0]
 categories:
 - blog
 ---
@@ -53,7 +53,7 @@ namespace Johnny.Tutorials.RestfulAspNet.Models
 }
 ```
 
-### 2.4 DbContext Class for EntityFramework
+### 2.4 DbContext for EntityFramework
 Create a folder named `Data` under the project, and create a file named 'SqliteContext.cs'. Class `SqliteContext` inherits `DbContext` with DbSet Products. Notice, we manually create table `products` if it's not existing.
 ```c#
 using System;
@@ -226,7 +226,7 @@ public class ProductsController : Controller
 }
 ```
 
-## 3. Upload Images
+## 3. Uploading Images
 When creating or updating product, user can upload an image for the product.
 ### 3.1 Model Class
 Create a file named 'ResponseResult.cs' under folder 'Models'. Class 'ResponseResult' has two properties, status code and message.
@@ -350,7 +350,6 @@ public class ProductsController : Controller
     // ...
 }
 ```
-
 ### 4.2 Serving Static Files
 1) Install package `Microsoft.AspNetCore.StaticFiles`.  
 2) Copy images into 'wwwroot' folder of the project.  
@@ -408,11 +407,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 When accessing the URL 'http://localhost:5000/images/'. All the images in '~/wwwwroot/images/' folder are displayed.
 ![MIME Type](/public/pics/2017-08-02/directory browsing.png){:width="700px"}  
-
-### 4.4 Get Base URL in .NET Core
+### 4.4 Getting Base URL in .NET Core
 Base URL is the 'root' of the RESTful service. Take the API of getting all products as example, the full URL address is 'http://localhost:5000/api/products'. Here, 'http://localhost:5000/' is the base URL, which includes the host name(or ip address) and port number. It looks like a prefix for all APIs. We need this base URL to generate the full URL after image is uploaded to service. We will rely on the HttpContext to get the host and port number.
 
-1) Register HttpContextAccessor in the Startup:
+Register HttpContextAccessor in the Startup:
 ```c#
 public void ConfigureServices(IServiceCollection services)
 {
@@ -445,7 +443,6 @@ public string GetBaseUrl()
     return $"{request.Scheme}://{host}{pathBase}";
 }
 ```
-
 ### 4.5 Final Project Structure
 The final structure of the Web API project.
 ![MIME Type](/public/pics/2017-08-02/project_final.png){:width="320px"}  
