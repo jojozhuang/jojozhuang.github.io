@@ -6,7 +6,7 @@ date: 2017-07-21
 tags: [Xamarin, Xcode, SQLite, C#]
 ---
 
-> Tutorial for how to build iOS App with Xamarin and C#. We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Xcode and Swift. See more details in the posting [Developing iOS App]({% link _posts/2017-07-10-developing-ios-app.md %}).
+> Tutorial for how to build iOS App with Xamarin and C#. We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Xcode and Swift. See more details in the posting [Building iOS App with Xcode]({% link _posts/2017-07-10-building-ios-app-with-xcode.md %}).
 
 ## 1. Creating Project
 In Visual Studio, File->New Solution, select Multiplatform->App->Blank Native App(iOS, Android), Next.

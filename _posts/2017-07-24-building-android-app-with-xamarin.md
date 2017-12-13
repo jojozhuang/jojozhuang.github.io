@@ -6,7 +6,7 @@ date: 2017-07-24
 tags: [Xamarin, Android, SQLite, C#]
 ---
 
-> Tutorial for how to build Android App with Xamarin and C#. We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Android and Java. See more details in the posting [Developing Android App]({% link _posts/2017-07-16-developing-android-app.md %}).
+> Tutorial for how to build Android App with Xamarin and C#. We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Android and Java. See more details in the posting [Building Android App with Android Studio]({% link _posts/2017-07-16-building-android-app-with-android-studio.md %}).
 
 ## 1. Android Project
 In the blog [Building iOS App with Xamarin]({% link _posts/2017-07-21-building-ios-app-with-xamarin.md %}), I introduce how to build iOS App with Xamarin. At that time, we created the Xamarin Android project along with the Core Portable project and Xamarin iOS project. In this blog, I will use this Android project to build the Game Store app.
