@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Building RESTful Web Services with Jersey"
+title: "Creating RESTful Web Services with Jersey"
 date: 2016-02-17
-tags: [Jersey, RESTful Web Services, Maven]
+tags: [Jersey, RESTful, Maven]
 ---
 
 > Build RESTful web services with Jersey in Java.

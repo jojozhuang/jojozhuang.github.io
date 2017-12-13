@@ -4,8 +4,6 @@ key: blog
 title: "Building RESTful APIs with ASP.NET Core"
 date: 2017-08-02
 tags: [ASP.NET Core, RESTful, WebAPI 2.0]
-categories:
-- blog
 ---
 
 > Create Restful Web Service with ASP.NET Core for Angular/ReactJS App to consume.

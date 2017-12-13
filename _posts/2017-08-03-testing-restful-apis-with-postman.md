@@ -4,8 +4,6 @@ key: blog
 title: "Testing RESTful APIs with Postman"
 date: 2017-08-03
 tags: [HTTP, Postman]
-categories:
-- blog
 ---
 
 > Test RESTful APIs with Postman.

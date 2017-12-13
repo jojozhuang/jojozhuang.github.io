@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Building RESTful Web Services with Spring Boot"
+title: "Creating RESTful Web Services with Spring Boot"
 date: 2016-02-20
-tags: [RESTful, Spring Boot, Maven]
+tags: [Spring Boot, RESTful, Maven]
 ---
 
 > Build RESTful Web Service with Spring Boot and Maven in Java.
