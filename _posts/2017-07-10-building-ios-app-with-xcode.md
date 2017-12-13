@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Developing iOS App"
+title: "Building iOS App with Xcode"
 date: 2017-07-10
 tags: [iOS, Swift, Xcode]
 ---

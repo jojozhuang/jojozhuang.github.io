@@ -348,7 +348,7 @@ Don't restart maven. Just send request again. The new product is returned.
 
 ## 5. Debugging
 1) In Eclipse, set breakpoint inside the method(eg. StringController.java->reverse()) you want to debug.  
-2) Right click on the DARestApplication.java, choose "Debug As" -> "Java Application".  
+2) Right click on the RestApplication.java, choose "Debug As" -> "Java Application".  
 3) In postman, access the url to trigger method being called. You should see breakpoint is activated.  
 
 ## 6. Source Files

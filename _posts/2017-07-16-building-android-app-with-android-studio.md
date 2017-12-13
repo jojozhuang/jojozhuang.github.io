@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Developing Android App"
+title: "Building Android App with Android Studio"
 date: 2017-07-16
 tags: [Android, Android Studio, SQLite]
 ---
