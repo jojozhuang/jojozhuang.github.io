@@ -70,3 +70,13 @@ Navigate to the folder where Visual Studio Solution file locates. Type the follo
 ```sh
 open -n MySolution.sln
 ```
+
+## 7. Change File's Created Date and Modified Date.
+In terminal, change created date with 'SetFile' command.
+```sh
+SetFile -d '05/30/2017 02:15:49' default.png
+```
+In terminal, change modified date with 'touch' command.
+```sh
+touch -m -t201607081029.44 default.png
+```

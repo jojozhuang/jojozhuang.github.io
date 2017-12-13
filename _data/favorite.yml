@@ -167,6 +167,9 @@ bookmarks:
       - name: Type Script
         description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
+      - name: Postman
+        description: A lightweight tool for testing web APIs
+        url: https://www.getpostman.com/
       - name: Bootstrap Templates
         description: Free Bootstrap themes and templates
         url: https://bootsnipp.com
