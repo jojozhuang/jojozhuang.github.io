@@ -164,6 +164,9 @@ bookmarks:
       - name: JSON
         description: A lightweight data-interchange format
         url: http://www.json.org/
+      - name: JSON Server
+        description: A dummy server providing fake JSON data
+        url: https://github.com/typicode/json-server
       - name: Type Script
         description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
