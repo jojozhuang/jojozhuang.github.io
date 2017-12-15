@@ -39,7 +39,23 @@ Check NPM version:
 $ npm -v  
 ```
 
-## 3. Installing Node.js and NPM on Mac
+## 3. Installing Node.js and NPM on RedHat
+Enter the following command to download the scripts that are required to set up Node.js:
+```sh
+$ sudo rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
+```
+Install Node.js:
+```sh
+$ sudo yum install -y nodejs
+```
+
+Check versions to make sure nodejs and npm are both installed properly.
+```sh
+$ node -v   // check node.js version
+$ npm -v    // check npm version
+```
+
+## 4. Installing Node.js and NPM on Mac
 Updates Homebrew with a list of the latest version of Node.
 ```sh
 $ brew update
@@ -60,7 +76,7 @@ Use the following command to update node and npm if necessary.
 $ brew upgrade node
 ```
 
-## 4. Verifying Installation
+## 5. Verifying Installation
 Use 'Hello World' application to verify Node.js is installed properly.  
 Create a file named main.js having the following codes.
 ```javascript
@@ -77,7 +93,8 @@ Hello, World!
 ```
 ![MIME Type](/public/pics/2016-03-06/testnode.png){:width="600px"}
 
-## 5. References
+## 6. References
 * [Node.js Tutorial](https://www.tutorialspoint.com/nodejs/index.htm)
 * [Install Node.js - Ubuntu](https://www.godaddy.com/help/install-nodejs-ubuntu-17395)
 * [Installing Node.js and NPM on Mac](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+* [Installing Node.js for Red Hat Enterprise Linux](http://www.brocade.com/content/html/en/sdn-controller/3.0.0/software-installation/GUID-623FE4DD-4209-406B-8322-C48A5C8385B8.html)
