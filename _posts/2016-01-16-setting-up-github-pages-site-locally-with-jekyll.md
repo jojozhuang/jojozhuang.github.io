@@ -79,7 +79,7 @@ Open web browser to access your local jekyll website.
 ![MIME Type](/public/pics/2016-01-16/local.png)  
 
 ## 5. References
-* [Installation](https://jekyllrb.com/docs/installation/)
+* [Official Installation Guide](https://jekyllrb.com/docs/installation/)
 * [Setting up your GitHub Pages site locally with Jekyll
 ](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 * [Building a static website with Jekyll and GitHub Pages](https://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages)
