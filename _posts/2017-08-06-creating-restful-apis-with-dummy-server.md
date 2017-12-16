@@ -26,7 +26,7 @@ $ cd dummyserver
 ```
 Then, create a file named 'products.json' with json object.
 ```sh
-$ vi products.json
+$ touch products.json
 ```
 ```json
 {
