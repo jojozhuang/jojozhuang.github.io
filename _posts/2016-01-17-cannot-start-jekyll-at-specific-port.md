@@ -1,14 +1,14 @@
 ---
 layout: post
 key: blog
-title: "Error: Address/Port Already in Use"
+title: "Cannot Start Jekyll at Specific Port"
 date: 2016-01-17
 tags: [Jekyll, Port]
 ---
 
-> Unable to run Jekyll at port 4000.
+> Handle error 'Address Already in Use' when starting Jekyll.
 
-I'm trying to run my [GitHub website](http://jojozhuang.github.io/) locally with Jekyll. However, I keep getting the following error after running 'jekyll serve' command.
+I've set up my [GitHub Page website](http://jojozhuang.github.io/) locally. It works as expected. But sometimes, I'm unable to start Jekyll. I keep getting the following error after running 'jekyll serve' command.
 ```sh
 jekyll 3.5.2 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
 ```
@@ -18,10 +18,10 @@ Find the process which is using port 4000.
 $ lsof -i :4000
 ```
 
-Kill the process with its process id.
+Kill the process with its id.
 ```sh
 $ kill -9 <PID>
 ```
-![MIME Type](/public/pics/2016-01-17/port.png){:width="800px"}  
+![MIME Type](/public/pics/2016-01-17/port.png){:width="700px"}  
 
 Retry 'jekyll serve', the error 'Port Already in Use' is gone.
