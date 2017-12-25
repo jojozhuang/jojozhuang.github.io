@@ -8,6 +8,12 @@ tags: [ReactJS]
 
 > Build web application with ReactJS.
 
+## 1. React
+React is fast. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.
+
+
+
+## 2. Create React App
 npm install -g create-react-app
 create-react-app react-app
 
@@ -15,9 +21,92 @@ npm start
 
 open http://localhost:3000 in the browser.
 
-http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/
+## 3. Usage
+### 3.1 Style in React
+Four ways to style react components
+https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
+### 3.2 Using Bootstrap in React : React-Bootstrap
+npm install --save react-bootstrap
+https://react-bootstrap.github.io/introduction.html
+https://react-bootstrap.github.io/components.html
 
-https://github.com/SophieDeBenedetto/catbook-redux/tree/blog-post
+### 3.3 Install React Developer Tools
+https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html#installation
+
+### 3.4 Redux
+React + Redux Structure
+Key concepts: Actions, Store, Reducers, Components.
+
+index.html and index.js
+
+Configuring React + Redux with Webpack
+
+create new nodejs app
+```sh
+mkdir GameStoreReact
+cd GameStoreReact
+npm init
+```
+
+### 3.5 Http Request
+
+
+## 4. App
+### 4.1 Packages
+packages
+npm install npm-run-all -g
+
+npm install react -save
+npm install react-dom -save
+npm install react-redux -save
+npm install react-router -save
+npm install react-router-dom -save
+npm install express -save
+npm install babel-polyfill -save
+npm install redux -save
+npm install redux-thunk -save
+
+npm install webpack -D
+npm install webpack-dev-middleware -D
+npm install open -D
+npm install babel-cli -D
+npm install eslint -D
+npm install eslint-watch -D
+npm install babel-preset-es2015 -D
+npm install babel-preset-react-hmre -D
+npm install babel-preset-react -D
+npm install serve-favicon -D
+npm install eventsource-polyfill -D
+npm install eslint-plugin-react -D
+npm install eslint-plugin-import -D
+npm install babel-loader -D
+
+### 4.2 Lint
+We need to set up a `.babelrc` file to tell our app to use React and ES2016.
+Set up linting rules with `.eslintrc`.
+
+### 4.3 Routes
+A Simple React Router v4 Tutorial
+https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
+https://codesandbox.io/s/vVoQVk78
+
+
+## 8. Others
+### 8.1 Include Package
+CommonJS
+var Alert = require('react-bootstrap/lib/Alert');
+// or
+var Alert = require('react-bootstrap').Alert;
+#ES6
+Es6 modules aren't supported natively yet, but you can use the syntax now with the help of a transpiler like Babel.
+
+import Button from 'react-bootstrap/lib/Button';
+// or
+import { Button } from 'react-bootstrap';
+#
+
+
+
 
 ## 1. Game Store Web Application
 Previously, I introduced how to use JSP and MySQL/MongoDB to create a website, which is used to manage products. In this tutorial, we will learn how to use Angular and RESTful web service build such web application.
@@ -646,8 +735,21 @@ Click 'OK' button, product will be deleted.
 * [Official website](https://reactjs.org/)
 * [Tutorial: Intro To React](https://reactjs.org/tutorial/tutorial.html)
 * [ReactJS Tutorial](https://www.tutorialspoint.com/reactjs/index.htm)
-* [Angular 4 Tutorial](https://www.tutorialspoint.com/angular4/index.htm)
-* [How to add bootstrap to an angular-cli project](https://stackoverflow.com/questions/37649164/how-to-add-bootstrap-to-an-angular-cli-project)
-* [Angular 4 CRUD Example](https://www.concretepage.com/angular-2/angular-4-crud-example)
-* [Intercept HTTP Requests in Angular](https://juristr.com/blog/2017/08/intercept-http-requests-in-angular/)
-* [How to include a file upload control in an Angular2 reactive form?](https://stackoverflow.com/questions/43444440/how-to-include-a-file-upload-control-in-an-angular2-reactive-form)
+* [Handling Events](https://reactjs.org/docs/handling-events.html)
+* [File Upload Sample](https://gist.github.com/AshikNesin/e44b1950f6a24cfcd85330ffc1713513)
+* [A Simple React Router v4 Tutorial](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf)
+* [Building a Simple CRUD App with React + Redux: Part I Intro](http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/)
+* [Source Code](https://github.com/SophieDeBenedetto/catbook-redux/tree/blog-post)
+* [New React Developer Tools](https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html)
+* [Official Components](https://react-bootstrap.github.io/components.html)
+* [Four ways to style react components](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
+* [Redux-Official Doc](https://redux.js.org/)
+* [Redux-Usage with React](https://redux.js.org/docs/basics/UsageWithReact.html)
+* [React AJAX Best practices](https://www.andrewhfarmer.com/react-ajax-best-practices/)
+* [Simple React File Upload · GitHub](https://gist.github.com/AshikNesin/e44b1950f6a24cfcd85330ffc1713513)
+* [React Workshop](https://reacttraining.com/react-router/web/example/basic)
+* [How to get "create-react-app" to work with your API](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/)
+* [Routing React Apps: The Complete Guide](https://scotch.io/tutorials/routing-react-apps-the-complete-guide)
+* [react-router-redux](https://github.com/reactjs/react-router-redux)
+* [React Router v4 Unofficial Migration Guide](https://codeburst.io/react-router-v4-unofficial-migration-guide-5a370b8905a)
+* [React + Redux - User Registration and Login Tutorial & Example](http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example)
