@@ -90,6 +90,9 @@ A Simple React Router v4 Tutorial
 https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
 https://codesandbox.io/s/vVoQVk78
 
+### 4.4 PropTypes
+For performance reasons, propTypes is only checked in development mode.
+https://reactjs.org/docs/typechecking-with-proptypes.html
 
 ## 8. Others
 ### 8.1 Include Package
@@ -106,7 +109,57 @@ import { Button } from 'react-bootstrap';
 #
 
 
+## 9. redux
+### 9.1 install package
+* react-redux
+* redux
+* redux-thunk
 
+### 9.2 folder
+actions, reducers, store
+### 9.3 files
+index.js
+productList.js
+
+### 9.4 history in action.
+Install the history npm module - yarn add history or npm install history --save
+create a file called history.js in your App.js level folder (this was my preference)
+
+// src/history.js
+
+import createHistory from 'history/createBrowserHistory';
+export default createHistory();`
+Add this history object to your Router component like so
+
+// src/App.js
+
+import history from '../your/path/to/history.js;'
+<Router history={history}>
+// Route tags here
+</Router>
+Adjust the URL just like before by importing your global history object:
+
+import history from '../your/path/to/history.js;'
+history.push('new/path/here/');
+
+https://stackoverflow.com/questions/42123261/programmatically-navigate-using-react-router-v4
+
+### 9.5 Handle error globally.
+errorReducer
+mapStateToProps, componentWillReceiveProps
+preserve state
+
+```javascript
+export function fetchResoucesFail(error, product) {
+  let wrapperRes =  Object.assign({}, {
+    error: error
+  });
+   wrapperRes =  Object.assign({}, wrapperRes, {
+    product: product
+  });
+  return {type: types.FETCH_RESOURCES_FAIL, wrapperRes}
+}
+```
 
 ## 1. Game Store Web Application
 Previously, I introduced how to use JSP and MySQL/MongoDB to create a website, which is used to manage products. In this tutorial, we will learn how to use Angular and RESTful web service build such web application.
@@ -734,6 +787,7 @@ Click 'OK' button, product will be deleted.
 ## 7. References
 * [Official website](https://reactjs.org/)
 * [Tutorial: Intro To React](https://reactjs.org/tutorial/tutorial.html)
+* [Official Docs](https://reactjs.org/docs/hello-world.html)
 * [ReactJS Tutorial](https://www.tutorialspoint.com/reactjs/index.htm)
 * [Handling Events](https://reactjs.org/docs/handling-events.html)
 * [File Upload Sample](https://gist.github.com/AshikNesin/e44b1950f6a24cfcd85330ffc1713513)
@@ -753,3 +807,4 @@ Click 'OK' button, product will be deleted.
 * [react-router-redux](https://github.com/reactjs/react-router-redux)
 * [React Router v4 Unofficial Migration Guide](https://codeburst.io/react-router-v4-unofficial-migration-guide-5a370b8905a)
 * [React + Redux - User Registration and Login Tutorial & Example](http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example)
+* [React.createClass versus extends React.Component](https://toddmotto.com/react-create-class-versus-component/)
