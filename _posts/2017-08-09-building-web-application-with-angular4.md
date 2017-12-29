@@ -9,7 +9,7 @@ tags: [Angular]
 > Build web application with Angular4 and Angular CLI.
 
 ## 1. Game Store Web Application
-Previously, I introduced how to use JSP and MySQL/MongoDB to create a website, which is used to manage products. In this tutorial, we will learn how to use Angular and RESTful web service build such web application.
+Previously, I introduced how to use JSP and MySQL/MongoDB to build web application to manage products. In this tutorial, we will learn how to use Angular and RESTful web service to build such web application.
 
 ## 2. Angular Project
 ### 2.1 Creating New Project
@@ -607,7 +607,7 @@ upload(): void {
 Method filechanged() shows file name after user selects local image. Method upload() calls remote API to upload image.
 
 ## 5. Running and Testing
-Start the RESTful service first, and start this Angular app, server it in web server.
+Start the RESTful service first, and start this Angular app, serve it in web server.
 ```sh
 $ ng serve
 ```
@@ -630,6 +630,7 @@ Click 'OK' button, product will be deleted.
 
 ## 6. Source Files
 * [Source files of Game Store(Angular 4) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAngular4)
+* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
 
 ## 7. References
 * [Official website](https://angular.io/)
