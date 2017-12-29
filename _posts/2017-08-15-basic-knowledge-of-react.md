@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Basic Knowledge of React"
 date: 2017-08-15
-tags: [React]
+tags: [React, Developer Tools]
 ---
 
 > Basic Knowledge to use ReactJS.
@@ -78,6 +78,16 @@ class App extends React.Component {
 }
 export default App;
 ```
+Get state value.
+```javascript
+let products = this.state.products;
+```
+Set state value.
+```javascript
+this.setState({products: this.props.products});
+```
+It's important to note that `setState` method is asynchronous. Don't check state value after calling it. 'this.state' may return the old value.
+
 ### 1.4 Props
 The main difference between state and props is that props are immutable. This is why the container component should define the state that can be updated and changed, while the child components should only pass data from the state using props.
 App.js
@@ -107,6 +117,23 @@ ReactDOM.render(<App headerProp = "Header from props..." contentProp = "Content
 
 export default App;
 ```
+Typechecking With PropTypes.
+```javascript
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired
+};
+```
+For performance reasons, propTypes is only checked in development mode.
 
 ## 2. Style in React
 ### 2.1 CSS Stylesheet
@@ -240,3 +267,4 @@ You will see a tab called `React` in Chrome Developer Tools.
 * [React-Bootstrap Components](https://react-bootstrap.github.io/components.html)
 * [Handling Events](https://reactjs.org/docs/handling-events.html)
 * [New React Developer Tools](https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html)
+* [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
