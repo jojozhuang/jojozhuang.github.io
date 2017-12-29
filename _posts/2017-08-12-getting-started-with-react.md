@@ -52,3 +52,4 @@ Run 'npm start' again. Now, this application is served at port '12090'.
 * [Tutorial: Intro To React](https://reactjs.org/tutorial/tutorial.html)
 * [React Official Docs](https://reactjs.org/docs/hello-world.html)
 * [ReactJS Tutorial](https://www.tutorialspoint.com/reactjs/index.htm)
+* [How to get "create-react-app" to work with your API](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/)
