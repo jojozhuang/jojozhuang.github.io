@@ -780,6 +780,8 @@ class FileApi {
 
 export default FileApi;
 ```
+### 3.4 Final Project Structure
+![MIME Type](/public/pics/2017-08-16/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
