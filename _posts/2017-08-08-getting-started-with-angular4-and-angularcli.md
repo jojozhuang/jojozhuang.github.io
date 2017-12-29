@@ -6,7 +6,7 @@ date: 2017-08-08
 tags: [Angular4, Angular CLI]
 ---
 
-> Create responsive web application with Angular4.
+> Build web application with Angular4.
 
 ## 1. Angular4 and Angular CLI
 [Angular 4](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc. The code is written in TypeScript, which compiles to JavaScript and displays the same in the browser.

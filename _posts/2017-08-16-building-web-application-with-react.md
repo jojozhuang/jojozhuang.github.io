@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "Building Web Application with ReactJS(Draft)"
-date: 2017-08-12
-tags: [ReactJS]
+title: "Building Web Application with React"
+date: 2017-08-16
+tags: [React]
 ---
 
 > Build web application with ReactJS.
@@ -160,6 +160,9 @@ export function fetchResoucesFail(error, product) {
   return {type: types.FETCH_RESOURCES_FAIL, wrapperRes}
 }
 ```
+
+### 9.6 Don't check state after setState
+setState is an asynchronous method.
 
 ## 1. Game Store Web Application
 Previously, I introduced how to use JSP and MySQL/MongoDB to create a website, which is used to manage products. In this tutorial, we will learn how to use Angular and RESTful web service build such web application.
