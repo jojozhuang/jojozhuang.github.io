@@ -91,6 +91,19 @@ Create a file in project root folder with name `.babelrc` to tell our app to use
   }
 }
 ```
+CommonJS
+```javascript
+var Alert = require('react-bootstrap/lib/Alert');
+// or
+var Alert = require('react-bootstrap').Alert;
+```
+Es6 modules aren't supported natively yet, but you can use the syntax now with the help of a transpiler like Babel.
+```javascript
+import Button from 'react-bootstrap/lib/Button';
+// or
+import { Button } from 'react-bootstrap';
+```
+
 ### 2.4 ESLint
 [ESLint](https://eslint.org/) is a pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Create a file in project root folder with name `.eslintrc` to setup linting rules.
 ```json
@@ -272,7 +285,7 @@ ReactDOM.render((
 ```
 ### 2.8 Main Components
 Create a folder 'components' in 'src'.  
-App.js. Routing is also defined.
+App.js. Routes/Routing is also defined.
 ```javascript
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
@@ -698,7 +711,7 @@ AlertSimple.propTypes = {
 export default AlertSimple;
 ```
 ## 3. APIs
-### 3.1 Http Service
+### 3.1 Http Request
 Create 'api' folder in 'src'.  
 HttpHelper.js
 ```javascript
