@@ -79,7 +79,7 @@ bookmarks:
         url: https://www.virtualbox.org/
   - category: Database
     links:
-      - name: Mysql
+      - name: MySQL
         description: The most popular Open Source RDBMS
         url: https://www.mysql.com/
       - name: SQLite
@@ -143,10 +143,10 @@ bookmarks:
         url: https://icons8.com
   - category: Frontend
     links:
-      - name: ReactJS
+      - name: React
         description: A javascript library maintained by Facebook
         url: https://facebook.github.io/react/
-      - name: AngularJs
+      - name: Angular
         description: A javascript library maintained by Google
         url: https://angularjs.org/
       - name: Bootstrap

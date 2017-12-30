@@ -6,11 +6,12 @@ date: 2017-08-15
 tags: [React, Developer Tools]
 ---
 
-> Basic Knowledge to use ReactJS.
+> Useful Knowledge for using ReactJS.
 
-## 1. Key Concepts in React
+## 1. Core Concepts of React
 ### 1.1 Component
-```javascript
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. Define App component and include three other components, Header, Main and Footer.
+```jsx
 import React from 'react';
 
 class App extends React.Component {
@@ -18,7 +19,8 @@ class App extends React.Component {
       return (
          <div>
             <Header/>
-            <Content/>
+            <Main/>
+            <Footer/>
          </div>
       );
    }
@@ -36,8 +38,17 @@ class Content extends React.Component {
    render() {
       return (
          <div>
-            <h2>Content</h2>
-            <p>The content text!!!</p>
+            <h2>Main</h2>
+            <p>Welcome to React Components!</p>
+         </div>
+      );
+   }
+}
+class Footer extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Footer</h1>
          </div>
       );
    }
@@ -45,6 +56,7 @@ class Content extends React.Component {
 export default App;
 ```
 ### 1.2 Component LifeCycle
+Each component has following lifecycle methods.
 * `componentWillMount` is executed before rendering, on both the server and the client side.
 * `componentDidMount` is executed after the first render only on the client side.
 * `componentWillReceiveProps` is invoked as soon as the props are updated before another render is called.
@@ -55,7 +67,7 @@ export default App;
 
 ### 1.3 State
 State is the place where the data comes from.
-```javascript
+```jsx
 import React from 'react';
 
 class App extends React.Component {
@@ -65,6 +77,7 @@ class App extends React.Component {
       this.state = {
          header: "Header from state...",
          content: "Content from state..."
+         footer: "Footer from state..."
       }
    }
    render() {
@@ -72,115 +85,151 @@ class App extends React.Component {
          <div>
             <h1>{this.state.header}</h1>
             <h2>{this.state.content}</h2>
+            <h2>{this.state.footer}</h2>
          </div>
       );
    }
 }
 export default App;
 ```
-Get state value.
+To get state value, just read the attribute from the state.
 ```javascript
 let products = this.state.products;
 ```
-Set state value.
+To set state value, we need to call `setState()` method.
 ```javascript
 this.setState({products: this.props.products});
 ```
-It's important to note that `setState` method is asynchronous. Don't check state value after calling it. 'this.state' may return the old value.
+It's important to note that `setState()` method is asynchronous. Don't try to get state value right after calling it.
+```javascript
+this.setState({title: this.props.tile});
+let title = this.state.title; // title may still have the old value.
+```
 
 ### 1.4 Props
-The main difference between state and props is that props are immutable. This is why the container component should define the state that can be updated and changed, while the child components should only pass data from the state using props.
-App.js
-```javascript
+Props are also used to store data for component. The main difference between state and props is that props are immutable. This is why the container component should define the state that can be updated and changed, while the child components should only pass data from the state using props.   
+Take a look the following example. We define three state attributes in App component, header, content and footer. And pass them to child components through `headerProp`, `contentProp` and `footerProp` as props.
+```jsx
 import React from 'react';
 
 class App extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = {
+         header: "Header from props...",
+         content: "Content from props..."
+         footer: "Footer from state..."
+      }
+   }
+   render() {
+      return (
+         <div>
+            <Header headerProp={this.state.header}/>
+            <Content contentProp={this.state.content}/>
+            <Content footerProp={this.state.footer}/>
+         </div>
+      );
+   }
+}
+class Header extends React.Component {
    render() {
       return (
          <div>
             <h1>{this.props.headerProp}</h1>
+         </div>
+      );
+   }
+}
+class Content extends React.Component {
+   render() {
+      return (
+         <div>
             <h2>{this.props.contentProp}</h2>
          </div>
       );
    }
 }
+class Footer extends React.Component {
+   render() {
+      return (
+         <div>
+            <h2>{this.props.footerProp}</h2>
+         </div>
+      );
+   }
+}
 export default App;
 ```
-index.js
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.jsx';
-
-ReactDOM.render(<App headerProp = "Header from props..." contentProp = "Content
-   from props..."/>, document.getElementById('app'));
-
-export default App;
-```
-Typechecking With PropTypes.
-```javascript
+We can apply Typechecking with PropTypes. 'title: PropTypes.string.isRequired' validates that props `title` must be string type and with value assigned.
+```jsx
 import PropTypes from 'prop-types';
 
-class Greeting extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <h1>Hello, {this.props.name}</h1>
+      <h1>{this.props.title}</h1>
     );
   }
 }
 
-Greeting.propTypes = {
-  name: PropTypes.string.isRequired
+App.propTypes = {
+  title: PropTypes.string.isRequired
 };
 ```
-For performance reasons, propTypes is only checked in development mode.
+For performance reasons, PropTypes is only checked in development mode.
 
 ## 2. Style in React
-### 2.1 CSS Stylesheet
-```javascript
-import React from 'react';
-import './DottedBox.css';
-
-const DottedBox = () => (
-  <div className="DottedBox">
-    <p className="DottedBox_content">Get started with CSS styling</p>
-  </div>
-);
-
-export default DottedBox;
-```
-### 2.2 Inline Styling
-```javascript
+We can apply css style to components in four ways.
+### 2.1 Inline Styling
+```jsx
 import React from 'react';
 
 const divStyle = {
   margin: '40px',
   border: '5px solid pink'
 };
+const pStyle = {
+  fontSize: '15px',
+  textAlign: 'center'
+};
 
 const Box = () => (
   <div style={divStyle}>
+    <p style={pStyle}>Get started with inline style</p>
   </div>
 );
 
 export default Box;
 ```
-### 2.3 CSS Modules
-```javascript
+### 2.2 CSS Stylesheet
+```jsx
 import React from 'react';
-import styles from './DashedBox.css';
+import './Box.css';
 
-const DashedBox = () => (
-  <div className={styles.container}>
-    <p className={styles.content}>Get started with CSS Modules style</p>
+const Box = () => (
+  <div className="divStyle">
+    <p className="pStyle">Get started with CSS styling</p>
   </div>
 );
 
-export default DashedBox;
+export default DottedBox;
+```
+### 2.3 CSS Modules
+```jsx
+import React from 'react';
+import styles from './Box.css';
+
+const Box = () => (
+  <div className={styles.divStyle}>
+    <p className={styles.pStyle}>Get started with CSS Modules style</p>
+  </div>
+);
+
+export default Box;
 ```
 ### 2.4 Styled-components
 [Styled-components](https://github.com/styled-components/styled-components) is a library for React and React Native that allows you to use component-level styles in your application that are written with a mixture of JavaScript and CSS
-```javascript
+```jsx
 import React from 'react';
 import styled from 'styled-components';
 
@@ -197,19 +246,19 @@ const Paragraph = styled.p`
   text-align: center;
 `;
 
-const OutsetBox = () => (
-  <div>
-    <Paragraph>Get started with styled-components 💅</Paragraph>
-  </div>
+const Box = () => (
+  <Div>
+    <Paragraph>Get started with styled-components </Paragraph>
+  </Div>
 );
 
-export default OutsetBox;
+export default Box;
 ```
 
 ## 3. Using Bootstrap in React
-[Bootstrap](https://getbootstrap.com/) is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites. It is completely free to download and use!
+[Bootstrap](https://getbootstrap.com/) is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.
 ### 3.1 Using Bootstrap Directly
-First, add Bootstrap reference to the index page.
+First, add Bootstrap CDN link to the index page.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -236,7 +285,7 @@ First, install 'react-bootstrap'.
 ```sh
 $ npm install react-bootstrap --saves
 ```
-And, include 'react-bootstrap' in React component.
+And, import 'react-bootstrap' to React component.
 ```javascript
 import {Button} from 'react-bootstrap';
 ```
@@ -255,7 +304,7 @@ You will get a new tab called React in your Chrome DevTools. This shows you the 
 
 You can install it as Chrome extension.
 ![MIME Type](/public/pics/2017-08-15/extensions.png){:width="800px"}
-You will see a tab called `React` in Chrome Developer Tools.
+View your React app in Chrome. You will see a tab called `React` in Chrome Developer Tools.
 ![MIME Type](/public/pics/2017-08-15/devtools.png)
 
 ## 5. References
@@ -263,8 +312,9 @@ You will see a tab called `React` in Chrome Developer Tools.
 * [React.Component](https://reactjs.org/docs/react-component.html)
 * [ReactJS Tutorial](https://www.tutorialspoint.com/reactjs/index.htm)
 * [React.createClass versus extends React.Component](https://toddmotto.com/react-create-class-versus-component/)
+* [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 * [Four ways to style react components](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
 * [React-Bootstrap Components](https://react-bootstrap.github.io/components.html)
 * [Handling Events](https://reactjs.org/docs/handling-events.html)
 * [New React Developer Tools](https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html)
-* [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+* [React Developer Tools](https://github.com/facebook/react-devtools)
