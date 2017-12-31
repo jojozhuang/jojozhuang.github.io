@@ -77,7 +77,7 @@ Then install packages defined in 'package.json' with the following command.
 $ npm install
 ```
 ### 2.3 ES2015
-Create a file in project root folder with name `.babelrc` to tell our app to use React and ES2015.
+Create file named `.babelrc` in project root folder to tell our app to use React and ES2015.
 ```json
 {
   "presets": ["react", "es2015"],
@@ -105,7 +105,7 @@ import { Button } from 'react-bootstrap';
 ```
 
 ### 2.4 ESLint
-[ESLint](https://eslint.org/) is a pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Create a file in project root folder with name `.eslintrc` to setup linting rules.
+[ESLint](https://eslint.org/) is a pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Create file named `.eslintrc` in project root folder to setup linting rules.
 ```json
 {
   "extends": [
@@ -178,7 +178,7 @@ import { Button } from 'react-bootstrap';
 }
 ```
 ### 2.5 Webpack
-[Webpack](https://webpack.js.org/) is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset. Create a file named `webpack.config.dev.js` with following content.
+[Webpack](https://webpack.js.org/) is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset. Create file named `webpack.config.dev.js` with following content.
 ```javascript
 import webpack from 'webpack';
 import path from 'path';
@@ -221,7 +221,7 @@ export default {
 };
 ```
 ### 2.6 Server
-Create file '`tools/server.js`'. We setup a web server with `express`. This server will serve our app at port `12090`.
+Create file '`tools/server.js`'. Setup web server with `express` and serve our app at port `12090`.
 ```javascript
 import express from 'express';
 import webpack from 'webpack';

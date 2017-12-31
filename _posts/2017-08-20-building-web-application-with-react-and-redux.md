@@ -15,15 +15,14 @@ In the posting [Building Web Application with React]({% link _posts/2017-08-16-b
 ### 2.1 Source Files
 Download the source files from [Game Store(React) on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReact), open the project in Visual Studio Code.
 ### 2.2 Installing Packages
-Install package `redux`, `redux-thunk` and `react-redux`.
+Install new packages `redux`, `redux-thunk` and `react-redux`.
 ```sh
 $ npm install redux -save
 $ npm install redux-thunk -save
 $ npm install react-redux -save
 ```
 ### 2.3 Actions
-Create new folder 'actions' in 'src'. Then, create three js files.  
-`actionTypes.js`, which defines the action types.
+Create file '`src/acions/actionTypes.js`'. Define the action types.
 ```javascript
 export const LOAD_PRODUCTS_SUCCESS = 'LOAD_PRODUCTS_SUCCESS';
 export const CREATE_PRODUCT_SUCCESS = 'CREATE_PRODUCT_SUCCESS';
@@ -32,7 +31,7 @@ export const DELETE_PRODUCT_SUCCESS = 'DELETE_PRODUCT_SUCCESS';
 export const UPLOAD_FILE_SUCCESS = 'UPLOAD_FILE_SUCCESS';
 export const FETCH_RESOURCES_FAIL = 'FETCH_RESOURCES_FAIL';
 ```
-`fileActions.js`
+Create file '`src/acions/fileActions.js`'.
 ```javascript
 import * as types from './actionTypes';
 import fileApi from '../api/FileApi';
@@ -57,11 +56,11 @@ export function uploadFile(file, product) {
 }
 ```
 The following points need to be noted about the above code.
-* Function `uploadFile(file, product)` will call the `fileApi` to upload images.
+* Function `uploadFile(file, product)` calls `fileApi` to upload image.
 * Use `uploadFileSuccess(response)` to get the response from API service and dispatch to corresponding reducer.
 * Use `fetchResoucesFail(error)` to handle error.
 
-`productActions.js`
+Create file '`src/acions/productActions.js`'.
 ```javascript
 import * as types from './actionTypes';
 import productApi from '../api/ProductApi';
@@ -127,7 +126,6 @@ export function updateProduct(product) {
 export function deleteProduct(product, products) {
   return function(dispatch) {
     return productApi.deleteProduct(product).then(() => {
-      //console.log(`Deleted ${product.id}`)
       dispatch(deleteProductSuccess(product));
     }).catch(error => {
       dispatch(fetchResoucesFail(Object.assign(error, {products: products})));
@@ -136,13 +134,16 @@ export function deleteProduct(product, products) {
 }
 ```
 The following points need to be noted about the above code.
-* Four actions are defined for get, create, update and delete products.
+* Four actions are defined for CRUD operations on products.
 * Use `fetchResoucesFail(error)` to handle error.
-* USe `history.push('/products');` to navigate to `products` page if there is no error for creating and updating product.
+* Use `history.push('/products');` to navigate to products list page if there is no error when creating or updating product.
 
 ### 2.4 Reducers
-Create new folder 'reducers' in 'src'. Then, create five js files.  
-`initialState.js`, which defines the data model. `products` is an array, it stores all products. `response` is an object, it store the info for file upload. `error` is an object, it is set to null by default. If error occurs when actions calling APIs, this `error` should store the error and pass to reducer for further processing.
+Create file '`src/reducers/initialState.js`'. Here, we define the data model as initial state.
+* `products` is an array, it stores all products.
+* `response` is an object, it stores the image info if file is uploaded.
+* `error` is an object, it is set to null by default. If error occurs when calling RESTful APIs, we should set error info to it and pass to reducer for further processing.
+
 ```javascript
 export default {
   products: [],
@@ -150,7 +151,7 @@ export default {
   error: null
 };
 ```
-`fileReducer.js`
+Create file '`src/reducers/fileReducer.js`'.
 ```javascript
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
@@ -164,7 +165,7 @@ export default function fileReducer(state = initialState.response, action) {
   }
 }
 ```
-`productsReducer.js`
+Create file '`src/reducers/productsReducer.js`'.
 ```javascript
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
@@ -194,7 +195,7 @@ export default function productsReducer(state = initialState.products, action) {
   }
 }
 ```
-`errorReducer.js`
+Create file '`src/reducers/errorReducer.js`'.
 ```javascript
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
@@ -209,7 +210,7 @@ export default function errorReducer(state = initialState.error, action) {
   }
 }
 ```
-`rootReducer.js`, which defines a combined reducer, including the above three reducers.
+Create file '`src/reducers/rootReducer.js`'. It defines a combined reducer, including the above three reducers.
 ```javascript
 import {combineReducers} from 'redux';  
 import products from './productReducer';
@@ -225,7 +226,7 @@ const rootReducer = combineReducers({
 export default rootReducer;
 ```
 ### 2.5 Store
-Create new folder 'store' in 'src'. Then, create `configureStore.js` file.  
+Create file '`src/store/configureStore.js`'.
 ```javascript
 import {createStore, applyMiddleware} from 'redux';
 import rootReducer from '../reducers/rootReducer';
@@ -238,9 +239,9 @@ export default function configureStore() {
   );
 }
 ```
-### 2.6 Applying Redux
-`index.js`
-```javascript
+### 2.6 Redux Setup
+Update '`src/index.js`'.
+```jsx
 import React from 'react';  
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
@@ -263,16 +264,15 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-The following points need to be noted about the above code.
+Following changes are made to this component.
 * Use `configureStore()` to get store.
 * Use `loadProducts()` to get all products once this app is launched.
-* Set `store` attribute to `Provider` to apply redux.
+* Set `store` attribute on `Provider` to setup redux on this app.
 * Use `Router` instead of `BrowserRouter` and set `history` attribute.
 
 ### 2.7 Components
-Three components files needs to be updated, ProductList, ProductPage and ImageUpload.
-`ProductList.js`
-```javascript
+Update file '`src/components/product/ProductList.js`'.
+```jsx
 import React from 'react';  
 import PropTypes from 'prop-types';
 import { Button, ButtonToolbar} from 'react-bootstrap';
@@ -390,15 +390,15 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
 ```
-The following points need to be noted about the above code.
+Following changes are made to this component.
 * Use `connect()` to connect this component to store.
-* Use `mapDispatchToProps` to receives the dispatch() method and returns callback props.
+* Use `mapDispatchToProps(dispatch)` to receives the dispatch() method and returns callback props.
 * Use `mapStateToProps(state, ownProps)` to get `state` from reducer and create `props` for this component.
-* In `componentWillReceiveProps`, convert `props` to `state`.
-* Call `deleteProduct()` from `this.props.productActions` instead of `productApi` directly.
+* Use `componentWillReceiveProps(nextProps)` to convert `props` to `state`. 'nextProps' comes from 'mapStateToProps'.
+* Call `deleteProduct()` from `this.props.productActions` instead of `productApi`.
 
-`ProductPage.js`
-```javascript
+Update file '`src/components/product/ProductPage.js`'.
+```jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import AlertSimple from '../controls/AlertSimple';
@@ -549,15 +549,15 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);  
 ```
-The following points need to be noted about the above code.
+Following changes are made to this component.
 * Use `connect()` to connect this component to store.
-* Use `mapDispatchToProps` to receives the dispatch() method and returns callback props.
+* Use `mapDispatchToProps(dispatch)` to receives the dispatch() method and returns callback props.
 * Use `mapStateToProps(state, ownProps)` to get `state` from reducer and create `props` for this component.
-* In `componentWillReceiveProps`, convert `props` to `state`.
-* Call `createProduct()` and `updateProduct` from `this.props.productActions` instead of `productApi` directly.
+* Use `componentWillReceiveProps(nextProps)` to convert `props` to `state`. 'nextProps' comes from 'mapStateToProps'.
+* Call `createProduct()` and `updateProduct()` from `this.props.productActions` instead of `productApi`.
 
-`ImageUpload.js`
-```javascript
+Update file '`src/components/product/ImageUpload.js`'.
+```jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormGroup, Col, ControlLabel, FormControl, Button, Image, Label} from 'react-bootstrap';
@@ -597,7 +597,7 @@ class ImageUpload extends React.Component {
       <div>
         <Image src={this.props.image} thumbnail width="80" height="80" />&nbsp;
         <ControlLabel className="btn btn-success" htmlFor="fileSelector">
-          <FormControl id="fileSelector" type="file" style={{display: 'none'}} onChange={this.handleFileChange}/>Choose Image
+          <FormControl id="fileSelector" type="file" style="display: none" onChange={this.handleFileChange}/>Choose Image
         </ControlLabel>&nbsp;
         <Label bsStyle="info">{this.state.filename}</Label>&nbsp;
         <Button bsStyle="primary" type="button" onClick={this.handleFileUpload}>Upload</Button>
@@ -633,31 +633,32 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ImageUpload);
 ```
-The following points need to be noted about the above code.
+Following changes are made to this component.
 * Use `connect()` to connect this component to store.
-* Use `mapDispatchToProps` to receives the dispatch() method and returns callback props.
+* Use `mapDispatchToProps(dispatch)` to receives the dispatch() method and returns callback props.
 * Use `mapStateToProps(state, ownProps)` to get `state` from reducer and create `props` for this component.
-* In `componentWillReceiveProps`, convert `props` to `state`.
-* Call `uploadFile()` from `this.props.fileActions` instead of `fileApi` directly.
+* Use `componentWillReceiveProps(nextProps)` to convert `props` to `state`. 'nextProps' comes from 'mapStateToProps'.
+* Call `uploadFile()` from `this.props.fileActions` instead of `fileApi`.
 
-### 2.8 Programmatically Navigate in Actions
-Install the `history` module
+### 2.8 Navigation in Actions
+Though we can define routes in components, we still need to navigate programmatically with javascript for some cases. To achieve this, we need to use history.  
+Install the `history` module.
 ```sh
 $ npm install history --save
 ```
-Create a file called `history.js` in `src`, `src/history.js`
+Create file `src/history.js`.
 ```javascript
 import createHistory from 'history/createBrowserHistory';
 export default createHistory();
 ```
-Add this history object to your Router component, `index.js`.
-```javascript
+In `src/index.js`, add this history to Router component.
+```jsx
 import history from './history.js';
 <Router history={history}>
 // Route tags here
 </Router>
 ```
-In `src/actions/productActions.js`, import history and use `history.push(path)` method.
+In `src/actions/productActions.js`, import history and use `history.push(path)` method for navigation.
 ```javascript
 import history from '../history.js';
 
@@ -697,7 +698,7 @@ export function loadProducts() {
   };
 }
 ```
-Create additional reducer `errorReducer` to receive error from action and forward it to component.
+Create additional reducer `errorReducer` to receive error from actions and forward it to components.
 ```javascript
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
@@ -712,7 +713,7 @@ export default function errorReducer(state = initialState.error, action) {
   }
 }
 ```
-In mapStateToProps, check if error exists and set it to props and set to component's state.
+In component's `mapStateToProps()` method, check if error exists and set it to props.
 ```javascript
 function mapStateToProps(state, ownProps) {
   let products = state.products;
@@ -729,10 +730,17 @@ function mapStateToProps(state, ownProps) {
   };
 }
 ```
-Finally, display the error in `AlertSimple` component.
+Then, in `componentWillReceiveProps()` method, set error to component's state.
 ```javascript
+componentWillReceiveProps(nextProps) {
+  this.setState({hasError: nextProps.hasError});
+  this.setState({error: nextProps.error});
+  this.setState({products: nextProps.products});
+}
+```
+Finally, display the error in `AlertSimple` component.
+```jsx
 render() {
-    //console.log('ProductList.render')
     let alert = '';
     if (this.state.hasError) {
       alert = (<AlertSimple error={this.state.error}/>);
@@ -751,7 +759,7 @@ render() {
   }
 }
 ```
-In some cases, we need to preserve the component state when displaying the error. So, we need to pass the current state to reducer. The below sample code shows we append `product` state to the error object and pass them together to component finally.
+In some cases, we need to preserve the component state when displaying the error. So, we need to pass the current state to reducer. The below sample code shows we append `product` state to the error object and pass them together to component.
 ```javascript
 dispatch(fetchResoucesFail(Object.assign(error, {product: product})));
 ```
@@ -788,7 +796,7 @@ Click 'OK' button, product will be deleted.
 ## 6. References
 * [Redux-Official Doc](https://redux.js.org/)
 * [Redux-Usage with React](https://redux.js.org/docs/basics/UsageWithReact.html)
-* [React + Redux Tutorial Part III: Async Redux](http://www.thegreatcodeadventure.com/react-redux-tutorial-part-iii-async-redux/)
 * [React Router v4 Unofficial Migration Guide](https://codeburst.io/react-router-v4-unofficial-migration-guide-5a370b8905a)
+* [React + Redux Tutorial Part III: Async Redux](http://www.thegreatcodeadventure.com/react-redux-tutorial-part-iii-async-redux/)
 * [React + Redux - User Registration and Login Tutorial & Example](http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example)
 * [Programmatically navigate using react router V4](https://stackoverflow.com/questions/42123261/programmatically-navigate-using-react-router-v4)
