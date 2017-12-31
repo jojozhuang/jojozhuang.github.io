@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Building Web Application with Angular 4"
+title: "Building Web Application with Angular"
 date: 2017-08-09
 tags: [Angular]
 ---
@@ -629,7 +629,7 @@ Click 'OK' button, product will be deleted.
 ![MIME Type](/public/pics/2017-08-09/productlistafterdel.png)
 
 ## 6. Source Files
-* [Source files of Game Store(Angular 4) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAngular4)
+* [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAngular)
 * [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
 
 ## 7. References
