@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Basic Knowledge of React"
 date: 2017-08-15
-tags: [React, Developer Tools]
+tags: [React, React Developer Tools]
 ---
 
 > Useful Knowledge for using ReactJS.

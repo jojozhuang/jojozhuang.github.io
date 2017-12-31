@@ -9,11 +9,11 @@ tags: [React, ESLint, Webpack]
 > Build web application with ReactJS.
 
 ## 1. Game Store Web Application
-Previously, I introduced how to use Angular and RESTful web service to build web application to manage products. In this tutorial, we will learn how to use React to build such web application with the same RESTful web service.
+In the posting [Building Web Application with Angular 4]({% link _posts/2017-08-09-building-web-application-with-angular4.md %}), I introduced how to use Angular and RESTful web service to create a web application to manage products. In this tutorial, we will learn how to use React to build such web application with the same UI and functions.
 
 ## 2. React Project
 ### 2.1 Creating New Project
-Create new nodejs app
+Create new Node.js app named `GameStoreReact`.
 ```sh
 $ mkdir GameStoreReact
 $ cd GameStoreReact
@@ -72,7 +72,7 @@ Open `package.json`, update it as follows.
   }
 }
 ```
-Install packages with the following command.
+Then install packages defined in 'package.json' with the following command.
 ```sh
 $ npm install
 ```
@@ -91,13 +91,13 @@ Create a file in project root folder with name `.babelrc` to tell our app to use
   }
 }
 ```
-CommonJS
+Thus, we can use ES6 Syntax. Previously, we use CommonJS syntax to include packages.
 ```javascript
 var Alert = require('react-bootstrap/lib/Alert');
 // or
 var Alert = require('react-bootstrap').Alert;
 ```
-Es6 modules aren't supported natively yet, but you can use the syntax now with the help of a transpiler like Babel.
+ES6 modules aren't supported natively yet, but now you can use the syntax with the help of a transpiler like Babel.
 ```javascript
 import Button from 'react-bootstrap/lib/Button';
 // or
@@ -221,7 +221,7 @@ export default {
 };
 ```
 ### 2.6 Server
-Create a folder named 'tools' and create a file named 'server.js'. This server will serve our app at port `12090`.
+Create file '`tools/server.js`'. We setup a web server with `express`. This server will serve our app at port `12090`.
 ```javascript
 import express from 'express';
 import webpack from 'webpack';
@@ -247,15 +247,13 @@ app.get('*', function(req, res) {
 
 app.listen(port, function(err) {
   if (err) {
-    //console.log(err);
   } else {
     open(`http://localhost:${port}`);
   }
 });
 ```
 ### 2.7 Page
-Create 'src' folder.  
-index.html
+Create file '`src/index.html`'. This is the default page for this app.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -270,8 +268,8 @@ index.html
   </body>
 </html>
 ```
-index.js
-```javascript
+Create file '`src/index.js`'.
+```jsx
 import React from 'react';  
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -284,9 +282,8 @@ ReactDOM.render((
 ), document.getElementById('root'));
 ```
 ### 2.8 Main Components
-Create a folder 'components' in 'src'.  
-App.js. Routes/Routing is also defined.
-```javascript
+Create file '`src/components/App.js`'. We define the `App` component here. It contains two child components, `Header` and `Footer`. In addition, we also define the Routes for this app, `Home`, `ProductList` and `ProductPage`.
+```jsx
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
@@ -310,8 +307,8 @@ const App = () => (
 
 export default App;
 ```
-Header.js
-```javascript
+Create file '`src/components/Header.js`'. We define three buttons with `React-Bootstrap`. `href` attribute contains the paths defined in Routes. When these buttons are clicked, web page will be navigated to corresponding components.
+```jsx
 import React from 'react';
 import { Button, ButtonToolbar} from 'react-bootstrap';
 
@@ -331,8 +328,8 @@ const Header = () => (
 
 export default Header;
 ```
-Footer.js
-```javascript
+Create file '`src/components/Footer.js`'.
+```jsx
 import React from 'react';
 
 const Footer = () => {  
@@ -348,8 +345,8 @@ const Footer = () => {
 
 export default Footer;
 ```
-Home.js
-```javascript
+Create file '`src/components/Home.js`'.
+```jsx
 import React from 'react';
 
 const Home = () => (
@@ -362,9 +359,8 @@ const Home = () => (
 export default Home;
 ```
 ### 2.9 Product List Component
-Create 'product' folder in 'src/components'.  
-ProductList.js
-```javascript
+Create file '`src/components/product/ProductList.js`'.
+```jsx
 import React from 'react';  
 import PropTypes from 'prop-types';
 import { Button, ButtonToolbar} from 'react-bootstrap';
@@ -392,7 +388,7 @@ class ProductList extends React.Component {
     });
   }
 
-  deleteRow (event, id) {
+  deleteRow(event, id) {
     if(window.confirm('Are you sure to delete this product?')){
       let oldProduct = this.state.products.find(product => product.id == id);
       return productApi.deleteProduct(oldProduct).then(() => {
@@ -412,7 +408,6 @@ class ProductList extends React.Component {
   }
 
   render() {
-    //console.log('ProductList.render')
     let alert = '';
     if (this.state.hasError) {
       alert = (<AlertSimple error={this.state.error}/>);
@@ -460,9 +455,16 @@ class ProductList extends React.Component {
 
 export default ProductList;
 ```
+The following points need to be noted about the above code.
+* In `componentDidMount()` method, call productApi to get products.
+* Use `deleteRow(event, id)` to delete product.
+* In `render()` method, render a table to display all products.
+* For each product row, append `Edit` and `Delete` buttons to allow user to edit and delete product.
+
 ### 2.10 Product Detail Components
-ProductPage.js
-```javascript
+We separate the detail page to three components, ProductPage, ProductForm and ImageUpload.  
+1) Create file '`src/components/product/ProductPage.js`'.
+```jsx
 import React from 'react';  
 import PropTypes from 'prop-types';
 import AlertSimple from '../controls/AlertSimple';
@@ -519,7 +521,6 @@ class ProductPage extends React.Component {
   handleSave(event) {
     event.preventDefault();
     let product = this.state.product;
-    //console.log(product);
     if (this.state.isnew) {
       productApi.createProduct(product).then(response => {
         this.props.history.push('/products');
@@ -536,7 +537,6 @@ class ProductPage extends React.Component {
   }
 
   handleError(error) {
-    //console.log(error);
     this.setState({ error: error });
     this.setState({ hasError: true });
   }
@@ -573,8 +573,16 @@ ProductPage.propTypes = {
 
 export default ProductPage;
 ```
-ProductForm.js
-```javascript
+The following points need to be noted about the above code.
+* In `componentDidMount()` method, call productApi to get product by id.
+* In `render()` method, render component `AlertSimple` and `ProductForm`. Pass state and function from ProductPage to ProductForm.
+* Use `updateProductState(event)` to handle the value(product name, price, etc) change from ProductForm.
+* Use `handleImageChange(image)` to update image of product if new image is uploaded.
+* In `handleSave(event)` method, call productApi to create or update product. Use `history.push('/products')` to navigate to product list page once product is saved.
+* Use `PropTypes` for type checking.
+
+2) Create file '`src/components/product/ProductForm.js`'.
+```jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, FormGroup, Col, ControlLabel, FormControl, Button} from 'react-bootstrap';
@@ -633,8 +641,13 @@ ProductForm.propTypes = {
 
 export default ProductForm;
 ```
-ImageUpload.js
-```javascript
+The following points need to be noted about the above code.
+* This component has no its own state. It accepts `product` props from parent component ProductPage.
+* In `render()` method, we use controls from `react-bootstrap` to render the form, including `ImageUpload` component.
+* Use `PropTypes` for type checking.
+
+3) Create file '`src/components/product/ImageUpload.js`'.
+```jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormGroup, Col, ControlLabel, FormControl, Button, Image, Label} from 'react-bootstrap';
@@ -671,7 +684,7 @@ class ImageUpload extends React.Component {
       <div>
         <Image src={this.props.image} thumbnail width="80" height="80" />&nbsp;
         <ControlLabel className="btn btn-success" htmlFor="fileSelector">
-          <FormControl id="fileSelector" type="file" style={{display: 'none'}} onChange={this.handleFileChange}/>Choose Image
+          <FormControl id="fileSelector" type="file" style="display: none" onChange={this.handleFileChange}/>Choose Image
         </ControlLabel>&nbsp;
         <Label bsStyle="info">{this.state.filename}</Label>&nbsp;
         <Button bsStyle="primary" type="button" onClick={this.handleFileUpload}>Upload</Button>
@@ -688,10 +701,15 @@ ImageUpload.propTypes = {
 
 export default ImageUpload;
 ```
+The following points need to be noted about the above code.
+* In `render()` method, we use controls from `react-bootstrap` to render the form.
+* Use `handleFileChange(event)` method to update file name if user select one image which is ready for uploading.
+* In `handleFileUpload(event)` method, call fileApi to upload image file to server, and notify parent component after image is uploaded.
+* Use `PropTypes` for type checking.
+
 ### 2.10 Control Components
-Create 'controls' folder in 'src/components'.  
-AlertSimple.js
-```javascript
+Create file '`src/components/controls/AlertSimple.js`'.
+```jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'react-bootstrap';
@@ -712,8 +730,7 @@ export default AlertSimple;
 ```
 ## 3. APIs
 ### 3.1 Http Request
-Create 'api' folder in 'src'.  
-HttpHelper.js
+Create file '`src/api/HttpHelper.js`'. `HttpHelper` is the wrapper class for `fetch`.
 ```javascript
 class HttpHelper {
   static fetch(url, method, headers, body) {
@@ -740,8 +757,12 @@ class HttpHelper {
 
 export default HttpHelper;
 ```
+The following points need to be noted about the above code.
+* Method `fetch()` sends out http request to the given url.
+* If the response status is between 200 and 300, we assume proper response is returned. Otherwise, we returns the details of the error.
+
 ### 3.2 Product API
-ProductsApi.js
+Create file '`src/api/ProductsApi.js`'.
 ```javascript
 import HttpHelper from './HttpHelper';
 
@@ -779,7 +800,7 @@ The following points need to be noted about the above code.
 * Define 5 CRUD methods(GetAll, GetOne, Create, Update and Delete).
 
 ### 3.3 File API
-FileApi.js
+Create file '`src/api/FileApi.js`'.
 ```javascript
 import HttpHelper from './HttpHelper';
 
@@ -809,7 +830,7 @@ Click the 'Create' button, input product name and price. And click 'Choose Image
 ![MIME Type](/public/pics/2017-08-16/productadd.png)
 Click 'Save' button, product is saved.
 ![MIME Type](/public/pics/2017-08-16/productlistafteradd.png)
-Click 'Edit' button of the new added product. Change the product name and price.
+Click 'Edit' button of the new product. Change the product name and price.
 ![MIME Type](/public/pics/2017-08-16/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
 ![MIME Type](/public/pics/2017-08-16/productlistafteredit.png)
