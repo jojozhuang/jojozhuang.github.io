@@ -1,8 +1,8 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Restaurant"
-index: 35
+title: "Restaurant(Anroid)"
+index: 90
 tags: [Android, Java, Android Studio, Genymotion]
 image: /assets/restaurantandroid/thumbnail.png
 excerpt: An Android App for searching restaurants, built with Java.

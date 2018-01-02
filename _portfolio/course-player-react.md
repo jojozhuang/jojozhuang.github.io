@@ -1,12 +1,12 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Course Player (React)"
-index: 61
+title: "Course Player(React)"
+index: 200
 tags: [React, Socket.IO]
 image: /assets/courseplayerreact/thumbnail.png
 excerpt: A realtime online course player, developed with React and Socket.IO.
-category: java
+category: web
 ---
 
 > Online course player built with React and Socket.IO.

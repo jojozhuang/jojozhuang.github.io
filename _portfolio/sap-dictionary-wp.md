@@ -1,8 +1,8 @@
 ---
 layout: portfolio
 key: portfolio
-title: "SAP Dictionary"
-index: 1
+title: "SAP Dictionary(WP)"
+index: 70
 tags: [Windows Phone, C#]
 image: /assets/sapdictionarywp/thumbnail.png
 excerpt: A WP App for searching SAP & ERP related words.

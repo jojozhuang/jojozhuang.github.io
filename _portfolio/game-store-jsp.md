@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Online Game Store(JSP)"
-index: 55
+index: 290
 tags: [Java, Servlet, JSP, Beans, MySQL]
 image: /assets/gamestorejsp/thumbnail.png
 excerpt: An online eCommerce web store, developed with MySQL and Servlet/JSP in Java.
-category: java
+category: dotnet
 ---
 
 > This web application is developed by Servlet and JSP in Java.

@@ -1,8 +1,8 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Course Player (SignalR)"
-index: 45
+title: "Course Player(SignalR)"
+index: 280
 tags: [WebSocket, SignalR, ASP.NET]
 image: /assets/courseplayersignalr/thumbnail.png
 excerpt: A realtime online course player, developed with SignalR and ASP.NET.

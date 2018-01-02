@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Game Store(Angular)"
-index: 63
+index: 170
 tags: [Angular, TypeScript]
 image: /assets/gamestoreangular/thumbnail.png
 excerpt: A web app to manage products, developed with Angular.
-category: java
+category: web
 ---
 
 > Build web app with Angular.

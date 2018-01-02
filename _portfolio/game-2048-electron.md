@@ -1,12 +1,12 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Game 2048"
-index: 65
+title: "Game 2048(Electron)"
+index: 180
 tags: [Electron, Node.js, Cross-platform]
 image: /assets/game2048electron/thumbnail.png
 excerpt: A cross-platform desktop app for 2048, developed with Electron and Node.js
-category: java
+category: web
 ---
 
 > Convert 2048 from a web application to desktop application for all platforms, OS X, Windows and Linux.

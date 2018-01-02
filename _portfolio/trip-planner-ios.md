@@ -1,8 +1,8 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Trip Planner"
-index: 40
+title: "Trip Planner(iOS)"
+index: 100
 tags: [iOS, Swift, XCode]
 image: /assets/tripplannerios/thumbnail.png
 excerpt: An iOS App for managing itineraries, built with Swift.

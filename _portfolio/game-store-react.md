@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Game Store(React)"
-index: 64
+index: 160
 tags: [React, Redux]
 image: /assets/gamestorereact/thumbnail.png
 excerpt: A web app to manage products, developed with React and Redux.
-category: java
+category: web
 ---
 
 > Build web app with React and Redux.

@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Three-Tier CMS"
-index: 15
+index: 250
 tags: [ASP.NET, C#]
 image: /assets/threetiercmsaspnet/thumbnail.png
 excerpt: A Content Management System(CMS) built with ASP.NET in C#.
-category: dotnet
+category: dotnetaaa
 ---
 
 > This web application is a content management system(CMS), built with classic ASP.NET webform in C# language. SQL Server is used for data persistence.
