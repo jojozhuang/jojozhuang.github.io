@@ -9,7 +9,7 @@ excerpt: A realtime online course player, developed with Socket.IO and Node.js
 category: web
 ---
 
-> This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, check [Course Player (SignalR)]({% link _portfolio/course-player-signalr.md %}) for more details. Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Develop Realtime Online Application with WebSocket]({% link _posts/2016-03-15-developing-realtime-online-application-with-websocket.md %}).
+> This online course player is implemented with [Socket.IO](http://socket.io/) and [Node.js](https://nodejs.org/en/). Another implementation with the same functionality is developed by SignalR and ASP.NET, check [Course Player (SignalR)]({% link _portfolio/course-player-signalr.md %}) for more details. Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and Socket.IO, please refer to my blog posting [Building Realtime Web Application with WebSocket]({% link _posts/2016-03-15-building-realtime-web-application-with-websocket.md %}).
 
 ## 1. Introduction
 A course player consists of three components: video, screenshot and whiteboard.

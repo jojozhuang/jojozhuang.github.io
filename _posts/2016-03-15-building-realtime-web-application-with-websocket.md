@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Developing Realtime Online Application with WebSocket"
+title: "Building Realtime Web Application with WebSocket"
 date: 2016-03-15
 tags: [WebSocket, Socket.IO, SignalR]
 ---
