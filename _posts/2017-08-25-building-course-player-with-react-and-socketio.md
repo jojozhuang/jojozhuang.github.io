@@ -1246,12 +1246,12 @@ $ npm start
 Open web browser, access 'http://localhost:12100/'.
 ![MIME Type](/public/pics/2017-08-25/homepage.png)
 Click the `Play` button, course will be played. Both screenshot and Whiteboard will be synced with current time.
-![MIME Type](/public/pics/2017-08-25/playing.png)
+![MIME Type](/public/pics/2017-08-25/play.png)
 You can also drag the slider bar to forward or backward.
-![MIME Type](/public/pics/2017-08-25/playing2.png)
+![MIME Type](/public/pics/2017-08-25/drag.png)
 
 ## 5. Source Files
-* [Source files of Course Player(React) on Github](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOPlayer)
+* [Source files of Course Player(React) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerReact)
 
 ## 6. References
 * [Range Sliders](https://www.w3schools.com/howto/howto_js_rangeslider.asp)
