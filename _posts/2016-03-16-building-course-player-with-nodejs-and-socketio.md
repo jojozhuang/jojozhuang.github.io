@@ -276,7 +276,8 @@ exports.getWBSequenceData = function(wbSequenceDataFile, wbSequenceIndex, indexL
 };
 ```
 The following points need to be noted about the above code.
-* Screenshot is stored in two files, one contains index another contains image data.
+* Use native files system module `fs` provided by Node.js to read data from local files. Notice, we use `zlib` to decompress the index files and data files. Notice, we first use index to get offset and length. Then user them to read data from stream instead of the whole file.
+* Screenshot is stored in two files, one contains index, another contains image data. For each screenshot, it consists of 8*8=64 pieces of images. Each image has base64 format.
 * For Screenshot, first, decompress the index file and get the index list. Then, use index to read image data by time(in second).
 * Whiteboard has two parts, one is the static lines, another is dynamic drawing events. Technically, it has the same structure as Screenshot. Both line and event contains two files, index file and data file.
 * For lines of Whiteboard, first, decompress the index file and get the index list. Then, use index to read line data by time(in second).
@@ -684,11 +685,12 @@ function getReadableTimeText(totalseconds) {
 ```
 The following points need to be noted about the above code.
 * Use `playCourse()` to start or stop the player. When player is started, we setup a timer to increment the time by second and emit `updatetime` event to notify server.
-* Use `drawScreenshot(ssdata, workingss, ss)` to draw images on screenshot canvas. Notice, we draw 64 images one by one on the working canvas. Then, draw the screenshot canvas with the entire working canvas. Thus, to avoid flashing.
-* Use `drawWhiteboard(wbdata, workingwb, wb)` to draw lines and events on whiteboard canvas. Notice, we draw them first on the working canvas. Then, draw the whiteboard canvas with the entire working canvas. Thus, to avoid flashing.
+* Use `drawScreenshot(ssdata, workingss, ss)` to draw images on screenshot canvas. Notice, for each screenshot, there is a maximum number of 64 images for each-time drawing. There will be fewer images if some of them are not changed. We draw the images one by one on the hidden working canvas. Then, draw the screenshot canvas with the entire working canvas. Thus, we can prevent canvas from flashing during drawing.
+* Use `drawWhiteboard(wbdata, workingwb, wb)` to draw lines and events on whiteboard canvas with the given color, width, and position. Notice, we draw them first on the working canvas. Then, draw the whiteboard canvas with the entire working canvas. Thus, we can prevent canvas from flashing during drawing.
 
 ### 2.9 Others
 1) Decompress file.  
+The data files for screenshot and whiteboard are compressed. We use `zlib` to decompress them. Generally, there are two encoding formats for compression, Gzip and Inflate. Here, we use the `Inflate` method of zlib. In addition, there are two approaches to decompress files, asynchronous and synchronous, see the below sample codes. For this course player, we use the synchronous approach.  
 Asynchronous approach.
 ```js
 var inflate = zlib.createInflateSync();
