@@ -6,16 +6,18 @@ date: 2016-03-16
 tags: [Node.js, Socket.IO, jQuery]
 ---
 
-> Build realtime course player with Node.js and Socket.IO.
+> Build a realtime web application to play course recordings with [Node.js](https://nodejs.org/), [Socket.IO](https://socket.io/) and [jQuery](https://jquery.com/).
 
-## 1. Realtime Course Player
-In this tutorial, I will introduce how to use Node.js and Socket.IO to build a realtime course player. A course player consists of three components: video, screenshot and whiteboard.
+## 1. Realtime Online Course Player
+A course player consists of three components: video, screenshot and whiteboard.
 
 * Video is captured by a camera during the lecturing time, and saved as mp4.
 * Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
 * Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is recorded and stored to a single file.
 
-## 2. Node.js Project
+Check the posting [Course Player]({% link _posts/2016-03-12-course-player.md %}) to learn the details of course player.
+
+## 2. Course Player Project
 ### 2.1 Creating New Project
 Create new Node.js app named `CoursePlayerSocketIO`.
 ```sh
@@ -24,14 +26,343 @@ $ cd CoursePlayerSocketIO
 $ npm init
 ```
 ### 2.2 Installing Packages
-Install packages `express` and `socket.io` locally.
+Install `express` and `socket.io` locally.
 ```sh
 $ npm install express --save
 $ npm install socket.io --save
 ```
-### 2.3 Server
-Create file '`server.js`'. Setup web server with `express` and serve our app at port `12103`.
-```javascript
+### 2.3 Data Model
+Create file '`model/index.js`'.
+```js
+function Index(timestamp, grid, offset, length) {
+  this.timestamp = timestamp;
+  this.grid = grid;
+  this.offset = offset;
+  this.length = length;
+  this.row = function() {
+    return this.grid >> 4;
+  }
+  this.col = function() {
+    return this.grid & 0xf;
+  }
+}
+
+module.exports = Index;
+```
+Create file '`model/screenimage.js`'.
+```js
+function ScreenImage(row, col, imagestream) {
+  this.row = row;
+  this.col = col;
+  this.imagestream = imagestream;
+}
+
+module.exports = ScreenImage;
+```
+Create file '`model/wbdata.js`'.
+```js
+function WBData(second, wblines, wbevents) {
+  this.second = second;
+  this.wblines = wblines;
+  this.wbevents = wbevents;
+}
+
+module.exports = WBData;
+```
+Create file '`model/wbevent.js`'.
+```js
+function WBEvent(timestamp, reserved, x, y) {
+  this.timestamp = timestamp;
+  this.reserved = reserved;
+  this.x = x;
+  this.y = y;
+}
+
+module.exports = WBEvent;
+```
+Create file '`model/wbline.js`'.
+```js
+function WBLine(x0, y0, x1, y1, color, reserved) {
+  this.x0 = x0;
+  this.y0 = y0;
+  this.x1 = x1;
+  this.y1 = y1;
+  this.color = color;
+  this.reserved = reserved;
+}
+
+module.exports = WBLine;
+```
+### 2.4 File Api(Server side)
+Create file '`api/fileapi.js`'.
+```js
+var fs = require('fs');
+var zlib = require('zlib');
+var Index = require('../model/index');
+var ScreenImage = require('../model/screenimage');
+var WBLine = require('../model/wbline');
+var WBEvent = require('../model/wbevent');
+var MAX_ROW_NO = 8;
+var MAX_COL_NO = 8;
+
+exports.getIndexFile = function(originalFile, unzippedFile) {
+  // unzip the index file if it doesn't exist
+  if (!fs.existsSync(unzippedFile)) {
+    unzipIndexFile(originalFile, unzippedFile);
+  }
+  // read the unzipped file to buffer
+  return fs.readFileSync(unzippedFile);
+};
+
+exports.unzipIndexFile = function(originalFile, unzippedFile) {
+  var buffer = fs.readFileSync(originalFile);
+  var inflate = zlib.inflateSync(buffer);
+  fs.writeFileSync(unzippedFile, inflate);
+};
+
+exports.getIndexArray = function(buffer){
+  var arr = [];
+  var ix = 0;
+  var pos = 0;
+  while (pos < buffer.length) {
+    arr[ix] = new Index(buffer.readUInt16LE(pos), buffer.readInt8(pos+2), buffer.readInt32LE(pos+3), buffer.readUInt32LE(pos+7));
+    ix++;
+    pos = pos + 11;
+  }
+
+  for (var j = 0; j < arr.length; j++) {
+    if (arr[j].offset == -1 && j > 0) {
+    arr[j].offset = arr[j - 1].offset;
+    arr[j].length = arr[j - 1].length;
+    }
+  }
+  // sort by timestamp and grid
+  arr.sort((a, b) => {
+    var compare = a.timestamp - b.timestamp;
+    if (compare == 0) {
+    compare = a.grid - b.grid;
+    }
+    return compare;
+  });
+
+  return arr;
+};
+
+exports.getSSIndex = function(hm, indexarr, second) {
+  var foundset = [];
+  for(var i = 0; i < MAX_ROW_NO * MAX_COL_NO; i++) {
+    foundset[i] = false;
+  }
+  var res = [];
+  var index = 0;
+  var firstItem = 0;
+  var firstSecond = second;
+  for (; firstSecond >= 0; firstSecond--) {
+    if(hm[firstSecond]) {
+      firstItem = hm[firstSecond];
+      break;
+    }
+  }
+
+  while (firstItem < indexarr.length && indexarr[firstItem].timestamp == firstSecond) {
+    firstItem++;
+  }
+
+  if (firstItem > 0) {
+    for (var i = firstItem - 1; i >= 0; i--) {
+      var row = indexarr[i].grid >> 4;
+      var col = indexarr[i].grid & 0xf;
+      var value = row * MAX_ROW_NO + col;
+
+      if (!foundset[value]) {
+        foundset[value] = true;
+        res[index]=indexarr[i];
+        index++;
+      }
+      if (res.length == MAX_ROW_NO * MAX_COL_NO) {
+        break;
+      }
+    }
+  }
+
+  return res;
+};
+
+exports.getSSData = function(imagedatafile, imageindex) {
+  var res = [];
+  var index = 0;
+  var fd = fs.openSync(imagedatafile, 'r');
+  var i = 0;
+  for (i = 0; i < imageindex.length; i++) {
+    var imageobj = imageindex[i];
+    var row = imageobj.grid >> 4;
+    var col = imageobj.grid & 0xf;
+
+    var offset = imageindex[i].offset;
+    var length = imageindex[i].length;
+    var buffer = new Buffer(length);
+    fs.readSync(fd, buffer, 0, length, offset);
+    // image in base64 format
+    var image = "data:image/png;base64," + buffer.toString('base64');
+    res[index]= new ScreenImage(row, col, image);
+    index++;
+  }
+
+  return JSON.stringify(res);
+};
+
+exports.getWBIndex = function(indexarr) {
+  var res = [];
+  for (var i = 0; i < indexarr.length; i++) {
+    if(!res[indexarr[i].timestamp]) {
+      res[indexarr[i].timestamp] = i;
+    }
+  }
+  return res;
+};
+
+exports.getWBImageData = function(wbImageDataFile, wbImageIndex, indexList, second) {
+  var res = [];
+  var indeximage;
+  var minutes = Math.floor(second / 60);
+
+  if (wbImageIndex[minutes]) {
+    indeximage = indexList[wbImageIndex[minutes]];
+  }
+
+  if (indeximage && indeximage.length>0) {
+    var fd = fs.openSync(wbImageDataFile, 'r');
+    var length = indeximage.length;
+    var buffer = new Buffer(length);
+    fs.readSync(fd, buffer, 0, length, indeximage.offset);
+
+    var ix = 0;
+    var pos = 0;
+    while (pos < buffer.length) {
+      res[ix] = new WBLine(buffer.readUInt16LE(pos), buffer.readUInt16LE(pos+2), buffer.readUInt16LE(pos+4), buffer.readUInt16LE(pos+6),buffer.readInt16LE(pos+8), buffer.readUInt16LE(pos+10));
+      ix++;
+      pos = pos + 12;
+    }
+  }
+
+  return res;
+};
+
+exports.getWBSequenceData = function(wbSequenceDataFile, wbSequenceIndex, indexList, second) {
+  var res = [];
+  var indexsequence;
+  var minutes = Math.floor(second / 60);
+
+  if (wbSequenceIndex[minutes]) {
+    indexsequence = indexList[wbSequenceIndex[minutes]];
+  }
+
+  if (indexsequence && indexsequence.length>0) {
+    var fd = fs.openSync(wbSequenceDataFile, 'r');
+    var length = indexsequence.length;
+    var buffer = new Buffer(length);
+    fs.readSync(fd, buffer, 0, length, indexsequence.offset);
+
+    var ix = 0;
+    var pos = 0;
+    while (pos < buffer.length) {
+      res[ix] = new WBEvent(buffer.readUInt16LE(pos), buffer.readUInt16LE(pos+2), buffer.readInt16LE(pos+4), buffer.readInt16LE(pos+6));
+      ix++;
+      pos = pos + 8;
+    }
+  }
+
+  return res;
+};
+```
+The following points need to be noted about the above code.
+* Screenshot is stored in two files, one contains index another contains image data.
+* For Screenshot, first, decompress the index file and get the index list. Then, use index to read image data by time(in second).
+* Whiteboard has two parts, one is the static lines, another is dynamic drawing events. Technically, it has the same structure as Screenshot. Both line and event contains two files, index file and data file.
+* For lines of Whiteboard, first, decompress the index file and get the index list. Then, use index to read line data by time(in second).
+* For events of Whiteboard, first, decompress the index file and get the index list. Then, use index to read event data by time(in second).
+
+### 2.5 Course Api(Server side)
+Create file '`api/courseapi.js`'.
+```js
+var path = require("path");
+var WBData = require('../model/wbdata');
+var fileApi = require('./fileapi');
+
+const ssIndexFile = path.join(__dirname, '../204304/ScreenShot/High/package.pak');
+const unzippedSsIndexFile = path.join(__dirname, '../204304/ScreenShot/High/unzippedindex.pak');
+const ssScreenshotDataFile = path.join(__dirname, '../204304/ScreenShot/High/1.pak');
+const wbImageIndexFile = path.join(__dirname, '../204304/WB/1/VectorImage/package.pak');
+const unzippedWbImageIndexFile = path.join(__dirname, '../204304/WB/1/VectorImage/unzippedindex.pak');
+const wbImageDataFile = path.join(__dirname, '../204304/WB/1/VectorImage/1.pak');
+const wbSequenceIndexFile = path.join(__dirname, '../204304/WB/1/VectorSequence/package.pak');
+const unzippedWbSequenceIndexFile = path.join(__dirname, '../204304/WB/1/VectorSequence/unzippedindex.pak');
+const wbSequenceDataFile = path.join(__dirname, '../204304/WB/1/VectorSequence/1.pak');
+
+// Screenshot Cache
+var ssIndexArray = null;
+var ssHashmap = [];
+// Whiteboard Cache
+var wbImageIndexArray = null;
+var wbImageIndex = null;
+var wbSequenceIndexArray = null;
+var wbSequenceIndex = null;
+
+exports.getScreenshotData = function(second) {
+  if (ssIndexArray===null) {
+    var buffer = fileApi.getIndexFile(ssIndexFile, unzippedSsIndexFile);
+    ssIndexArray = fileApi.getIndexArray(buffer);
+    ssHashmap = [];
+    for (var i = 0; i < ssIndexArray.length; i++)
+    {
+      if(!ssHashmap[ssIndexArray[i].timestamp]) {
+        ssHashmap[ssIndexArray[i].timestamp] = i;
+      }
+    }
+  }
+
+  var ssIndex = fileApi.getSSIndex(ssHashmap, ssIndexArray, second);
+  return fileApi.getSSData(ssScreenshotDataFile, ssIndex);
+};
+
+exports.getWhiteBoardData = function(second) {
+  // get lines
+  var lines = this.getWBImageData(second);
+  // get events
+  var events = this.getWBSequenceData(second);
+  // combine them to whiteboard data
+  var res = new WBData(second, lines, events);
+
+  return JSON.stringify(res);
+};
+
+exports.getWBImageData = function(second) {
+  if (wbImageIndex===null) {
+    var buffer = fileApi.getIndexFile(wbImageIndexFile, unzippedWbImageIndexFile);
+    wbImageIndexArray = fileApi.getIndexArray(buffer);
+    wbImageIndex = fileApi.getWBIndex(wbImageIndexArray);
+  }
+  return fileApi.getWBImageData(wbImageDataFile, wbImageIndex, wbImageIndexArray, second);
+};
+
+exports.getWBSequenceData = function(second) {
+  if (wbSequenceIndex===null) {
+    var buffer = fileApi.getIndexFile(wbSequenceIndexFile, unzippedWbSequenceIndexFile);
+    wbSequenceIndexArray = fileApi.getIndexArray(buffer);
+    wbSequenceIndex = fileApi.getWBIndex(wbSequenceIndexArray);
+  }
+  return fileApi.getWBSequenceData(wbSequenceDataFile, wbSequenceIndex, wbSequenceIndexArray, second);  
+};
+```
+The following points need to be noted about the above code.
+* Define constants for paths of data files.
+* Use `getScreenshotData()` to get the Screenshot data by second.
+* Use `getWhiteBoardData()` to get the Whiteboard data by second.
+* Use local variables to `cache` index files to improve performance.
+
+### 2.6 Server(Server side)
+Create file '`server.js`'.
+```js
 var http = require('http');
 var path = require('path');
 var express = require('express');
@@ -67,13 +398,13 @@ function tick () {
 setInterval(tick, 1000);
 ```
 The following points need to be noted about the above code.
-* Setup server at http://localhost:12103/.
-* Setup timer to notify client with the server time.
-* Setup connection for `Socket.IO`, monitoring `updatetime` event.
-* Once receive the time from client, fetch course data for screenshot and whiteboard. Then, send data back to client via `playCourse`.
+* Setup web server with `express` at port `12103`.
+* Create a timer to repeatedly notify the client of the server time.
+* Open socket connection with `Socket.IO`, monitoring `updatetime` event.
+* Once receive the time(data.second) from client, fetch course data for screenshot and whiteboard. Then, emit `playCourse` event to send data back to client.
 
-### 2.4 Page
-Create file '`index.html`'. This is the default page for this app. We add socket.io script.
+### 2.7 Home Page(Client Side)
+Create file '`index.html`'. It is the default page for this app.
 ```html
 <!DOCTYPE html>
 <html>
@@ -157,16 +488,17 @@ Create file '`index.html`'. This is the default page for this app. We add socket
 </html>
 ```
 The following points need to be noted about the above code.
-* Import `/socket.io/socket.io.js` and call `io.connect()` to create socket object.
-* Monitor `message` event and get the time from server.
-* Create `Video`, `Screenshot` and `Whiteboard` for course player with jQuery slider bar and canvas.
-* Use jQuery slider bar to simulate progress bar of the video player.
-* The unit value of slider bar is second. And the max value is 4 * 60 * 60 - 30 * 60 = 12600 seconds, since each course lasts 3 and half hours.
+* Import `'/socket.io/socket.io.js'` and call `io.connect()` to create socket connection.
+* Monitor `message` event and get the server time.
+* Create `Video`, `Screenshot` and `Whiteboard` with canvas and jQuery slider bar. The slider bar is to simulate progress bar of the video player. We define two canvas controls `playerss` and `workingss` for screenshot. `workingss` is invisible. We draw images first on the working canvas. Then, draw the entire image on the `playerss` canvas for only one time to avoid flashing. Same for whiteboard.
+* The max value is 4 * 60 * 60 - 30 * 60 = 12600 seconds, since each course lasts 3 and half hours.
 * Monitor `playCourse` event and get the data from server.
 * Use `drawScreenshot(data)` and `drawWhiteboard(data)` to draw screenshot and whiteboard.
+* For the jQuery slider bar, use `slide` event to update the time when user is dragging the slider bar. And use `stop` event to update the time when user finishes dragging. Meanwhile, call `clearScreenshot()` and `clearWhiteboard()` methods to clear both screenshot and whiteboard.
 
-Create file '`client/player.js`'. This is the default page for this app. We add socket.io script.
-```javascript
+### 2.8 Player(Client Side)
+Create file '`client/player.js`'. All the functions of course player are defined here.
+```js
 function playCourse(playstate, btnplay, processbar, currenttime, workingss, ss, workingwb, wb) {
     if (playstate == 'stopped') {
         interval = setInterval(function () {
@@ -351,335 +683,65 @@ function getReadableTimeText(totalseconds) {
 }
 ```
 The following points need to be noted about the above code.
-* We define two canvas controls for screenshot. We draw 64 images one by one on the working canvas. Then draw the entire canvas with this working one. Thus, to avoid flashing.
+* Use `playCourse()` to start or stop the player. When player is started, we setup a timer to increment the time by second and emit `updatetime` event to notify server.
+* Use `drawScreenshot(ssdata, workingss, ss)` to draw images on screenshot canvas. Notice, we draw 64 images one by one on the working canvas. Then, draw the screenshot canvas with the entire working canvas. Thus, to avoid flashing.
+* Use `drawWhiteboard(wbdata, workingwb, wb)` to draw lines and events on whiteboard canvas. Notice, we draw them first on the working canvas. Then, draw the whiteboard canvas with the entire working canvas. Thus, to avoid flashing.
 
+### 2.9 Others
+1) Decompress file.  
+Asynchronous approach.
+```js
+var inflate = zlib.createInflateSync();
+var input = fs.createReadStream(originalFile);
+var output = fs.createWriteStream(unzippedFile);
 
-* We define two canvas controls for screenshot. We draw 64 images one by one on the working canvas. Then draw the entire canvas with this working one. Thus, to avoid flashing.
-
-
-* Use `onChange` event to update the time when user is dragging the slider bar.
-* Use `onMouseUp` event to update the time when user finishes dragging. Meanwhile, call parent's `this.props.onTimeChange(time, clear)` method to notify server to send data for drawing.
-* Use `handlePlay` to handle the event when user click the `Play` button. When player is started, we setup a timer to increment the time by second and notify server to send data for drawing.
-
-## 3. APIs
-Create file '`api/fileapi.js`'.
-```javascript
-var fs = require('fs');
-var zlib = require('zlib');
-var Index = require('../model/index');
-var ScreenImage = require('../model/screenimage');
-var WBLine = require('../model/wbline');
-var WBEvent = require('../model/wbevent');
-var MAX_ROW_NO = 8;
-var MAX_COL_NO = 8;
-
-exports.getIndexFile = function(originalFile, unzippedFile) {
-  // unzip the index file if it doesn't exist
-  if (!fs.existsSync(unzippedFile)) {
-    unzipIndexFile(originalFile, unzippedFile);
-  }
-  // read the unzipped file to buffer
-  return fs.readFileSync(unzippedFile);
-};
-
-exports.unzipIndexFile = function(originalFile, unzippedFile) {
-  var buffer = fs.readFileSync(originalFile);
-  var inflate = zlib.inflateSync(buffer);
-  fs.writeFileSync(unzippedFile, inflate);
-};
-
-exports.getIndexArray = function(buffer){
-  var arr = [];
-  var ix = 0;
-  var pos = 0;
-  while (pos < buffer.length) {
-    arr[ix] = new Index(buffer.readUInt16LE(pos), buffer.readInt8(pos+2), buffer.readInt32LE(pos+3), buffer.readUInt32LE(pos+7));
-    ix++;
-    pos = pos + 11;
-  }
-
-  for (var j = 0; j < arr.length; j++) {
-    if (arr[j].offset == -1 && j > 0) {
-    arr[j].offset = arr[j - 1].offset;
-    arr[j].length = arr[j - 1].length;
-    }
-  }
-  // sort by timestamp and grid
-  arr.sort((a, b) => {
-    var compare = a.timestamp - b.timestamp;
-    if (compare == 0) {
-    compare = a.grid - b.grid;
-    }
-    return compare;
-  });
-
-  return arr;
-};
-
-exports.getSSIndex = function(hm, indexarr, second) {
-  var foundset = [];
-  for(var i = 0; i < MAX_ROW_NO * MAX_COL_NO; i++) {
-    foundset[i] = false;
-  }
-  var res = [];
-  var index = 0;
-  var firstItem = 0;
-  var firstSecond = second;
-  for (; firstSecond >= 0; firstSecond--) {
-    if(hm[firstSecond]) {
-      firstItem = hm[firstSecond];
-      break;
-    }
-  }
-
-  while (firstItem < indexarr.length && indexarr[firstItem].timestamp == firstSecond) {
-    firstItem++;
-  }
-
-  if (firstItem > 0) {
-    for (var i = firstItem - 1; i >= 0; i--) {
-      var row = indexarr[i].grid >> 4;
-      var col = indexarr[i].grid & 0xf;
-      var value = row * MAX_ROW_NO + col;
-
-      if (!foundset[value]) {
-        foundset[value] = true;
-        res[index]=indexarr[i];
-        index++;
-      }
-      if (res.length == MAX_ROW_NO * MAX_COL_NO) {
-        break;
-      }
-    }
-  }
-
-  return res;
-};
-
-exports.getSSData = function(imagedatafile, imageindex) {
-  var res = [];
-  var index = 0;
-  var fd = fs.openSync(imagedatafile, 'r');
-  var i = 0;
-  for (i = 0; i < imageindex.length; i++) {
-    var imageobj = imageindex[i];
-    var row = imageobj.grid >> 4;
-    var col = imageobj.grid & 0xf;
-
-    var offset = imageindex[i].offset;
-    var length = imageindex[i].length;
-    var buffer = new Buffer(length);
-    fs.readSync(fd, buffer, 0, length, offset);
-    // image in base64 format
-    var image = "data:image/png;base64," + buffer.toString('base64');
-    res[index]= new ScreenImage(row, col, image);
-    index++;
-  }
-
-  return JSON.stringify(res);
-};
-
-exports.getWBIndex = function(indexarr) {
-  var res = [];
-  for (var i = 0; i < indexarr.length; i++) {
-    if(!res[indexarr[i].timestamp]) {
-      res[indexarr[i].timestamp] = i;
-    }
-  }
-  return res;
-};
-
-exports.getWBImageData = function(wbImageDataFile, wbImageIndex, indexList, second) {
-  var res = [];
-  var indeximage;
-  var minutes = Math.floor(second / 60);
-
-  if (wbImageIndex[minutes]) {
-    indeximage = indexList[wbImageIndex[minutes]];
-  }
-
-  if (indeximage && indeximage.length>0) {
-    var fd = fs.openSync(wbImageDataFile, 'r');
-    var length = indeximage.length;
-    var buffer = new Buffer(length);
-    fs.readSync(fd, buffer, 0, length, indeximage.offset);
-
-    var ix = 0;
-    var pos = 0;
-    while (pos < buffer.length) {
-      res[ix] = new WBLine(buffer.readUInt16LE(pos), buffer.readUInt16LE(pos+2), buffer.readUInt16LE(pos+4), buffer.readUInt16LE(pos+6),buffer.readInt16LE(pos+8), buffer.readUInt16LE(pos+10));
-      ix++;
-      pos = pos + 12;
-    }
-  }
-
-  return res;
-};
-
-exports.getWBSequenceData = function(wbSequenceDataFile, wbSequenceIndex, indexList, second) {
-  var res = [];
-  var indexsequence;
-  var minutes = Math.floor(second / 60);
-
-  if (wbSequenceIndex[minutes]) {
-    indexsequence = indexList[wbSequenceIndex[minutes]];
-  }
-
-  if (indexsequence && indexsequence.length>0) {
-    var fd = fs.openSync(wbSequenceDataFile, 'r');
-    var length = indexsequence.length;
-    var buffer = new Buffer(length);
-    fs.readSync(fd, buffer, 0, length, indexsequence.offset);
-
-    var ix = 0;
-    var pos = 0;
-    while (pos < buffer.length) {
-      res[ix] = new WBEvent(buffer.readUInt16LE(pos), buffer.readUInt16LE(pos+2), buffer.readInt16LE(pos+4), buffer.readInt16LE(pos+6));
-      ix++;
-      pos = pos + 8;
-    }
-  }
-
-  return res;
-};
-```
-The following points need to be noted about the above code.
-* Screenshot is stored in two files, one contains index another contains image data.
-* For Screenshot, first, decompress the index file and get the index list. Then, read image data by time(second).
-* Whiteboard has two parts, one is the static lines, another is dynamic drawing events. Technically, it has same structure as Screenshot. Both line and event contains two files, index file and data file.
-* For lines of Whiteboard, first, decompress the index file and get the index list. Then, read image data by time(second).
-* For events of Whiteboard, first, decompress the index file and get the index list. Then, read image data by time(second).
-
-Create file '`api/courseapi.js`'.
-```javascript
-var path = require("path");
-var WBData = require('../model/wbdata');
-var fileApi = require('./fileapi');
-
-const ssIndexFile = path.join(__dirname, '../204304/ScreenShot/High/package.pak');
-const unzippedSsIndexFile = path.join(__dirname, '../204304/ScreenShot/High/unzippedindex.pak');
-const ssScreenshotDataFile = path.join(__dirname, '../204304/ScreenShot/High/1.pak');
-const wbImageIndexFile = path.join(__dirname, '../204304/WB/1/VectorImage/package.pak');
-const unzippedWbImageIndexFile = path.join(__dirname, '../204304/WB/1/VectorImage/unzippedindex.pak');
-const wbImageDataFile = path.join(__dirname, '../204304/WB/1/VectorImage/1.pak');
-const wbSequenceIndexFile = path.join(__dirname, '../204304/WB/1/VectorSequence/package.pak');
-const unzippedWbSequenceIndexFile = path.join(__dirname, '../204304/WB/1/VectorSequence/unzippedindex.pak');
-const wbSequenceDataFile = path.join(__dirname, '../204304/WB/1/VectorSequence/1.pak');
-
-// Screenshot Cache
-var ssIndexArray = null;
-var ssHashmap = [];
-// Whiteboard Cache
-var wbImageIndexArray = null;
-var wbImageIndex = null;
-var wbSequenceIndexArray = null;
-var wbSequenceIndex = null;
-
-exports.getScreenshotData = function(second) {
-  if (ssIndexArray===null) {
-    var buffer = fileApi.getIndexFile(ssIndexFile, unzippedSsIndexFile);
-    ssIndexArray = fileApi.getIndexArray(buffer);
-    ssHashmap = [];
-    for (var i = 0; i < ssIndexArray.length; i++)
-    {
-      if(!ssHashmap[ssIndexArray[i].timestamp]) {
-        ssHashmap[ssIndexArray[i].timestamp] = i;
-      }
-    }
-  }
-
-  var ssIndex = fileApi.getSSIndex(ssHashmap, ssIndexArray, second);
-  return fileApi.getSSData(ssScreenshotDataFile, ssIndex);
-};
-
-exports.getWhiteBoardData = function(second) {
-  // get lines
-  var lines = this.getWBImageData(second);
-  // get events
-  var events = this.getWBSequenceData(second);
-  // combine them to whiteboard data
-  var res = new WBData(second, lines, events);
-
-  return JSON.stringify(res);
-};
-
-exports.getWBImageData = function(second) {
-  if (wbImageIndex===null) {
-    var buffer = fileApi.getIndexFile(wbImageIndexFile, unzippedWbImageIndexFile);
-    wbImageIndexArray = fileApi.getIndexArray(buffer);
-    wbImageIndex = fileApi.getWBIndex(wbImageIndexArray);
-  }
-  return fileApi.getWBImageData(wbImageDataFile, wbImageIndex, wbImageIndexArray, second);
-};
-
-exports.getWBSequenceData = function(second) {
-  if (wbSequenceIndex===null) {
-    var buffer = fileApi.getIndexFile(wbSequenceIndexFile, unzippedWbSequenceIndexFile);
-    wbSequenceIndexArray = fileApi.getIndexArray(buffer);
-    wbSequenceIndex = fileApi.getWBIndex(wbSequenceIndexArray);
-  }
-  return fileApi.getWBSequenceData(wbSequenceDataFile, wbSequenceIndex, wbSequenceIndexArray, second);  
-};
-```
-The following points need to be noted about the above code.
-* Define constants for data files.
-* Use `getScreenshotData` to get the Screenshot data in second.
-* Use `getWhiteBoardData` to get the Whiteboard data in second.
-* Use local variables to `cache` index files to improve performance.
-
-### 3.4 Others
-1) server.js is running at server side. All components are running at client side.
-2) Decompress file.
-Asynchronous
-```javascript
-let inflate = zlib.createInflateSync();
-let input = fs.createReadStream(originalFile);
-let output = fs.createWriteStream(unzippedFile);
-
-//output.on('finish', function(){
+output.on('finish', function(){
   console.log("finish");
 };
 
-input.pipe(inflate).pipe(output);*/
+input.pipe(inflate).pipe(output);
 ```
-Synchronous.
-```javascipt
-let buffer = fs.readFileSync(originalFile);
-let inflate = zlib.inflateSync(buffer);
+Synchronous approach.
+```js
+var buffer = fs.readFileSync(originalFile);
+var inflate = zlib.inflateSync(buffer);
 fs.writeFileSync(unzippedFile, inflate);
 ```
-
-3) Read buffer.
-```javascript
-let buffer = new Buffer([3,0,51,0,0,0,0,212,0,0,0])
+2) Read buffer.
+```js
+let buffer = new Buffer([3,0,51,2,0,0,0,212,0,0,0])
 var pos = 0;
-console.log(buffer.readUInt16LE(0));
+console.log(buffer.readUInt16LE(0)); // print 3
 pos = pos+2;
-console.log(buffer.readInt8(2));
+console.log(buffer.readInt8(2)); // print 51
 pos= pos+1;
-console.log(buffer.readInt32LE(3));
+console.log(buffer.readInt32LE(3)); //print 2
 pos = pos+4;
-console.log(buffer.readUInt32LE(7));*/
+console.log(buffer.readUInt32LE(7)); // print 212
 ```
+3) Image in Base64 format.  
+Append `data:image/png;base64` to image data and set it to src of html image control to diaplay it.
 
-### 3.5 Final Project Structure
+### 2.10 Final Project Structure
 ![MIME Type](/public/pics/2016-03-16/projectstructure.png){:width="350px"}
+Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
-## 4. Running and Testing
-Start the RESTful service first, and start this React app, serve it in web server.
+## 3. Running and Testing
+Start the app.
 ```sh
 $ npm start
 ```
-Open web browser, access 'http://localhost:12103/'.
+View the course player at http://localhost:12103/ in chrome.
 ![MIME Type](/public/pics/2016-03-16/homepage.png)
-Click the `Play` button, course will be played. Both screenshot and Whiteboard will be synced with current time.
+Click the `Play` button to start watching the course. Both screenshot and whiteboard are showing the data received from server.
 ![MIME Type](/public/pics/2016-03-16/playing.png)
-You can also drag the slider bar to forward or backward.
+You can also drag the slider bar to move forward or backward.
 ![MIME Type](/public/pics/2016-03-16/playing2.png)
 
-## 5. Source Files
+## 4. Source Files
 * [Source files of Course Player(Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)
 
-## 6. References
+## 5. References
+* [Get Started: Chat application](https://socket.io/get-started/chat/)
 * [jQuery Slider](https://jqueryui.com/slider/)
 * [Sample code for socket.emit and socket.on](https://github.com/socketio/socket.io/issues/2800)

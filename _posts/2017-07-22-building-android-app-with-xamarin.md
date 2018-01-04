@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Building Android App with Xamarin"
-date: 2017-07-24
+date: 2017-07-22
 tags: [Xamarin, Android, SQLite, C#]
 ---
 
