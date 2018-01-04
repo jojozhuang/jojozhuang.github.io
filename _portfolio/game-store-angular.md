@@ -5,11 +5,11 @@ title: "Game Store(Angular)"
 index: 170
 tags: [Angular, TypeScript]
 image: /assets/gamestoreangular/thumbnail.png
-excerpt: A web app to manage products, developed with Angular.
+excerpt: A web app to manage products, built with Angular.
 category: web
 ---
 
-> Build web app with Angular.
+> A web app to manage products, built with Angular.
 
 ## 1. Angular
 [Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc.

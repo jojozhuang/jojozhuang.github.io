@@ -9,7 +9,9 @@ excerpt: An Android App for searching restaurants, built with Java.
 category: mobile
 ---
 
-> This app is used to search restaurants, view the details of them. After login, you can share your experience with others about the restaurant you have been. You can submit ratings and reviews. All of the data are dynamic, which means this app connects backend server to retrieve data.
+> An Android App for searching restaurants, built with Java.
+
+This app is used to search restaurants, view the details of them. After login, you can share your experience with others about the restaurant you have been. You can submit ratings and reviews. All of the data are dynamic, which means this app connects backend server to retrieve data.
 
 ## 1. Restaurant List
 ### 1.1 Home screen  

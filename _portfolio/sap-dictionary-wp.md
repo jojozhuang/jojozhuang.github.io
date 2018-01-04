@@ -5,11 +5,11 @@ title: "SAP Dictionary(WP)"
 index: 70
 tags: [Windows Phone, C#]
 image: /assets/sapdictionarywp/thumbnail.png
-excerpt: A WP App for searching SAP & ERP related words.
+excerpt: A WP App for searching SAP & ERP related words, built in C#.
 category: mobile
 ---
 
-> This app is developed on Windows Phone platform with C# language.
+> A WP App for searching SAP & ERP related words, built in C#.
 
 ## 1. Function
 You can use it as a dictionary to search word from SAP area. Three options:  

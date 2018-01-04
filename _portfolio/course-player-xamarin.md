@@ -9,7 +9,9 @@ excerpt: An iOS App for playing course, built with Xamarin in C#.
 category: mobile
 ---
 
-> This `iOS` app is developed by [Xamarin](https://xamarin.com/). It's a tool for developing cross-platform mobile apps. The core function of this app is to play course video with screenshot and whiteboard synchronized. It is a prototype for my investigation of cross-platform solution for mobile app development.
+> An iOS App for playing course, built with Xamarin in C#.
+
+This `iOS` app is developed by [Xamarin](https://xamarin.com/). It's a tool for developing cross-platform mobile apps. The core function of this app is to play course video with screenshot and whiteboard synchronized. It is a prototype for my investigation of cross-platform solution for mobile app development.
 
 ## 1. Native Course Player
 ### 1.1 Current Mobile Apps

@@ -5,11 +5,11 @@ title: "Online Game Store(ASP.NET)"
 index: 300
 tags: [ASP.NET MVC, RESTful WebAPI, jQuery]
 image: /assets/gamestoreaspnet/thumbnail.png
-excerpt: An online eCommerce web store, developed with ASP.NET MVC in C#.
+excerpt: An online eCommerce web store, built with ASP.NET MVC in C#.
 category: dotnet
 ---
 
-> This web application is developed by ASP.NET MVC & Web API in C\#.
+> An online eCommerce web store, built with ASP.NET MVC in C#.
 
 ## 1. Introduction
 ### 1.1 Function Features

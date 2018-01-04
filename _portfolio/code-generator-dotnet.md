@@ -9,10 +9,10 @@ excerpt: A desktop application for generating code based on database schema and 
 category: dotnet
 ---
 
-> A Visual Studio style desktop application used for software development assistant.
+> A desktop application for generating code based on database schema and templates.
 
 ## 1. Function
-The core function for this tool is to generate codes based on database schema and templates. The table definition from the database schema is converted to XML. And the templates are defined with XSLT. Then, these XML and XSLT files are combined and transformed to code(C#, java, etc), HTML or other format files.
+This is a Visual Studio style desktop application used to assistant software development. The core function for this tool is to generate codes based on database schema and templates. The table definition from the database schema is converted to XML. And the templates are defined with XSLT. Then, these XML and XSLT files are combined and transformed to code(C#, java, etc), HTML or other format files.
 ## 2. Main Screen
 ![Code Generator](/assets/codegeneratordotnet/cg.png "Code Generator")
 ## 3. Steps to Generate Codes

@@ -5,11 +5,11 @@ title: "Online Game Store(JSP)"
 index: 290
 tags: [Java, Servlet, JSP, Beans, MySQL]
 image: /assets/gamestorejsp/thumbnail.png
-excerpt: An online eCommerce web store, developed with MySQL and Servlet/JSP in Java.
+excerpt: An online eCommerce web store, built with MySQL and Servlet/JSP in Java.
 category: dotnet
 ---
 
-> This web application is developed by Servlet and JSP in Java.
+> An online eCommerce web store, built with MySQL and Servlet/JSP in Java.
 
 Features are described as follows:  
 

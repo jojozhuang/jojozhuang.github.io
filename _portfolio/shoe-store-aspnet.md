@@ -5,12 +5,13 @@ title: "Shoe Store(ASP.NET)"
 index: 270
 tags: [ASP.NET MVC, C#, Bootstrap]
 image: /assets/shoestoreaspnet/thumbnail.png
-excerpt: An online store website with responsive UI, developed with ASP.NET MVC.
+excerpt: An online store website with responsive UI, built with ASP.NET MVC in C#.
 category: dotnet
 ---
 
-> This web application is a content management system(CMS), built with ASP.NET MVC in C# language. SQL Server is used for data persistence.
+> An online store website with responsive UI, built with ASP.NET MVC in C#.
 
+This web application is a content management system(CMS), built with ASP.NET MVC in C# language. SQL Server is used for data persistence.
 ## 1. Function Features
 * Responsive UI for different screen size
 * Uniform page for 'List' Page and 'Add' Page

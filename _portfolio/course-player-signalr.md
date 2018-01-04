@@ -5,11 +5,13 @@ title: "Course Player(SignalR)"
 index: 280
 tags: [WebSocket, SignalR, ASP.NET]
 image: /assets/courseplayersignalr/thumbnail.png
-excerpt: A realtime online course player, developed with SignalR and ASP.NET.
+excerpt: A realtime online course player, built with SignalR and ASP.NET.
 category: dotnet
 ---
 
-> This online course player is developed by SignalR based on ASP.NET. Another implementation is developed by Socket.IO on Node.js, check [Course Player (Socket.IO)]({% link _portfolio/course-player-socketio.md %}) for more details. Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and SignalR, please refer to one of my blog posting [Building Realtime Web Application with WebSocket]({% link _posts/2016-03-15-building-realtime-web-application-with-websocket.md %}).
+> A realtime online course player, built with SignalR and ASP.NET.
+
+This online course player is developed by SignalR based on ASP.NET. Another implementation is developed by Socket.IO on Node.js, check [Course Player (Socket.IO)]({% link _portfolio/course-player-socketio.md %}) for more details. Both of the implementations are based on [WebSocket](https://en.wikipedia.org/wiki/WebSocket). For the basic knowledge of WebSocket and SignalR, please refer to one of my blog posting [Building Realtime Web Application with WebSocket]({% link _posts/2016-03-15-building-realtime-web-application-with-websocket.md %}).
 
 It contains four samples, named as follows:
 

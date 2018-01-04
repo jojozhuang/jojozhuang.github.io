@@ -5,11 +5,11 @@ title: "Course Player(Socket.IO)"
 index: 190
 tags: [WebSocket, Socket.IO, Node.js, jQuery]
 image: /assets/courseplayersocketio/thumbnail.png
-excerpt: A realtime online course player, developed with Socket.IO, Node.js and jQuery.
+excerpt: A realtime online course player, built with Socket.IO, Node.js and jQuery.
 category: web
 ---
 
-> A realtime online course player, developed with Socket.IO, Node.js and jQuery.
+> A realtime online course player, built with Socket.IO, Node.js and jQuery.
 
 ## 1. Introduction
 This online course player is implemented with [Socket.IO](http://socket.io/), [Node.js](https://nodejs.org/en/) and [jQuery](https://jquery.com/). Another implementation with the same functionality is developed by SignalR and ASP.NET, check [Course Player (SignalR)]({% link _portfolio/course-player-signalr.md %}) for more details.
