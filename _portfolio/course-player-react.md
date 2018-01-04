@@ -11,26 +11,26 @@ category: web
 
 > A realtime online course player, built with React and Socket.IO.
 
-## 1. ReactJS
-[ReactJS](https://reactjs.org/) is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.
-
-## 2. Course Player
+## 1. Course Player
 A course player consists of three components: video, screenshot and whiteboard.
+* Video is captured by a camera during the lecturing time. It is in mp4 format.
+* Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
+* Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-* Video is captured by a camera during the lecturing time, and saved as mp4.
-* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
-* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is recorded and stored to a single file.
+Check the posting [Course Player]({% link _posts/2016-03-12-course-player.md %}) to learn the details.
 
-## 3. UI
-Home page.
-![MIME Type](/assets/courseplayerreact/homepage.png)
-Click the `Play` button, course will be played. Both screenshot and Whiteboard will be synced with current time.
-![MIME Type](/assets/courseplayerreact/play.png)
-You can also drag the slider bar to forward or backward.
-![MIME Type](/assets/courseplayerreact/drag.png)
+## 2. UI
+For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
 
-## 4. Under the Hood
-Check posting [Building Course Player with React and Socket.IO]({% link _posts/2017-08-25-building-course-player-with-react-and-socketio.md %}) to learn the details of React and Socket.IO.
+On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
+![image](/assets/courseplayerreact/homepage.png)  
+Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
+![image](/assets/courseplayerreact/play.png)  
+You can drag the slider bar to move forward or backward.
+![image](/assets/courseplayerreact/drag.png)  
 
-## 5. Source Files
+## 3. Under the Hood
+Check posting [Building Course Player with React and Socket.IO]({% link _posts/2017-08-25-building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
+
+## 4. Source Files
 * [Source files of Course Player(React) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerReact)

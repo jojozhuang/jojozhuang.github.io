@@ -3,19 +3,18 @@ layout: post
 key: blog
 title: "Building Course Player with Node.js and Socket.IO"
 date: 2016-03-16
-tags: [Node.js, Socket.IO, jQuery]
+tags: [Node.js, Socket.IO, HTML5 Canvas, jQuery]
 ---
 
-> Build a realtime web application to play course recordings with [Node.js](https://nodejs.org/), [Socket.IO](https://socket.io/) and [jQuery](https://jquery.com/).
+> Build a realtime web application to play course recordings with [Socket.IO](https://socket.io/), HTML5 Canvas and [jQuery](https://jquery.com/) based on [Node.js](https://nodejs.org/).
 
-## 1. Realtime Online Course Player
+## 1. Course Player
 A course player consists of three components: video, screenshot and whiteboard.
+* Video is captured by a camera during the lecturing time. It is in mp4 format.
+* Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
+* Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-* Video is captured by a camera during the lecturing time, and saved as mp4.
-* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
-* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is recorded and stored to a single file.
-
-Check the posting [Course Player]({% link _posts/2016-03-12-course-player.md %}) to learn the details of course player.
+Check the posting [Course Player]({% link _posts/2016-03-12-course-player.md %}) to learn the details.
 
 ## 2. Course Player Project
 ### 2.1 Creating New Project
@@ -276,12 +275,9 @@ exports.getWBSequenceData = function(wbSequenceDataFile, wbSequenceIndex, indexL
 };
 ```
 The following points need to be noted about the above code.
-* Use native files system module `fs` provided by Node.js to read data from local files. Notice, we use `zlib` to decompress the index files and data files. Notice, we first use index to get offset and length. Then user them to read data from stream instead of the whole file.
-* Screenshot is stored in two files, one contains index, another contains image data. For each screenshot, it consists of 8*8=64 pieces of images. Each image has base64 format.
-* For Screenshot, first, decompress the index file and get the index list. Then, use index to read image data by time(in second).
-* Whiteboard has two parts, one is the static lines, another is dynamic drawing events. Technically, it has the same structure as Screenshot. Both line and event contains two files, index file and data file.
-* For lines of Whiteboard, first, decompress the index file and get the index list. Then, use index to read line data by time(in second).
-* For events of Whiteboard, first, decompress the index file and get the index list. Then, use index to read event data by time(in second).
+* Use native files system module `fs` provided by Node.js to read data from local files. Notice, we use `zlib` to decompress the index files. And use the index to get offset and length. Then, use them to read small parts of the data from data file instead of reading the whole file.
+* For Screenshot, read the decompressed index file `ScreenShot/High/unzippedindex.pak` to get the index list. Then, get offset and length of index to read image data by time(in second) from `ScreenShot/High/1.pak`.
+* Whiteboard has two parts, one is the static lines `VectorImage`, another is dynamic drawing events `VectorSequence`. To get data for Whiteboard's lines, first, read the decompressed index file `WB/1/VectorImage/unzippedindex.pak` to get the index list. Then, get offset and length of index to read line data by time(in second) from `WB/1/VectorImage/1.pak`. The same operations to get Whiteboard's events.
 
 ### 2.5 Course Api(Server side)
 Create file '`api/courseapi.js`'.
@@ -492,7 +488,7 @@ The following points need to be noted about the above code.
 * Import `'/socket.io/socket.io.js'` and call `io.connect()` to create socket connection.
 * Monitor `message` event and get the server time.
 * Create `Video`, `Screenshot` and `Whiteboard` with canvas and jQuery slider bar. The slider bar is to simulate progress bar of the video player. We define two canvas controls `playerss` and `workingss` for screenshot. `workingss` is invisible. We draw images first on the working canvas. Then, draw the entire image on the `playerss` canvas for only one time to avoid flashing. Same for whiteboard.
-* The max value is 4 * 60 * 60 - 30 * 60 = 12600 seconds, since each course lasts 3 and half hours.
+* The max value of slider bar is 4 * 60 * 60 - 30 * 60 = 12600 seconds, since each course lasts 3 and half hours.
 * Monitor `playCourse` event and get the data from server.
 * Use `drawScreenshot(data)` and `drawWhiteboard(data)` to draw screenshot and whiteboard.
 * For the jQuery slider bar, use `slide` event to update the time when user is dragging the slider bar. And use `stop` event to update the time when user finishes dragging. Meanwhile, call `clearScreenshot()` and `clearWhiteboard()` methods to clear both screenshot and whiteboard.
@@ -697,9 +693,9 @@ var inflate = zlib.createInflateSync();
 var input = fs.createReadStream(originalFile);
 var output = fs.createWriteStream(unzippedFile);
 
-output.on('finish', function(){
+/*output.on('finish', function(){
   console.log("finish");
-};
+};*/
 
 input.pipe(inflate).pipe(output);
 ```
@@ -733,11 +729,11 @@ Start the app.
 ```sh
 $ npm start
 ```
-View the course player at http://localhost:12103/ in chrome.
+View the course player at http://localhost:12103/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
 ![MIME Type](/public/pics/2016-03-16/homepage.png)
-Click the `Play` button to start watching the course. Both screenshot and whiteboard are showing the data received from server.
+Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
 ![MIME Type](/public/pics/2016-03-16/playing.png)
-You can also drag the slider bar to move forward or backward.
+You can drag the slider bar to move forward or backward.
 ![MIME Type](/public/pics/2016-03-16/playing2.png)
 
 ## 4. Source Files
