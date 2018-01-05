@@ -6,14 +6,10 @@ date: 2017-08-25
 tags: [React, Socket.IO]
 ---
 
-> Build realtime course player with React and Socket.IO.
+> Build a realtime course player with React and Socket.IO.
 
-## 1. Realtime Course Player
-In this tutorial, I will introduce how to use React and Socket.IO to build a realtime course player. A course player consists of three components: video, screenshot and whiteboard.
-
-* Video is captured by a camera during the lecturing time, and saved as mp4.
-* Screenshot is captured from computer monitor through which teachers share their handouts/materials to the students. Screenshot are images which are compressed and saved to a single file.
-* Whiteboard is captured from special pens and boards. Any operation on the board, such as writing, drawing or brushing is recorded and stored to a single file.
+## 1.Course Player
+In the posting [Building Course Player with Node.js and Socket.IO]({% link _posts/2016-03-16-building-course-player-with-nodejs-and-socketio.md %}), I introduced how to use Socket.IO, HTML5 canvas and jQuery to build an online course player. In this tutorial, we will learn how enhance it with React. We will divide the UI pages and functions to smaller React components.
 
 ## 2. React Project
 ### 2.1 Creating New Project
@@ -114,7 +110,6 @@ import Button from 'react-bootstrap/lib/Button';
 // or
 import { Button } from 'react-bootstrap';
 ```
-
 ### 2.4 ESLint
 [ESLint](https://eslint.org/) is a pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Create file named `.eslintrc` in project root folder to setup linting rules.
 ```json
@@ -231,679 +226,81 @@ export default {
   }
 };
 ```
-### 2.6 Server
-Create file '`tools/server.js`'. Setup web server with `express` and serve our app at port `12090`.
-```javascript
-import express from 'express';
-import webpack from 'webpack';
-import path from 'path';
-import config from '../webpack.config.dev';
-import open from 'open';
-import favicon from 'serve-favicon';
-import courseApi from '../src/api/CourseApi';
-import dateTimeApi from '../src/api/DateTimeApi';
 
-const port = 12100;
-const app = express();
-const compiler = webpack(config);
-
-app.use(require('webpack-dev-middleware')(compiler, {
-  publicPath: config.output.publicPath
-}));
-
-app.use(require('webpack-hot-middleware')(compiler));
-app.use(favicon(path.join(__dirname,'../public','assets','favicon.ico')));
-
-app.get('*', function(req, res) {
-  res.sendFile(path.join( __dirname, '../src/index.html'));
-});
-
-
-const server = app.listen(port, function(err) {
-  if (err) {
-    //console.log(err);
-  } else {
-    open(`http://localhost:${port}`);
+## 3. Building Course Player
+### 3.1 Data Model
+Create file '`src/model/Index.js`'.
+```js
+class Index {
+  constructor (timestamp, grid, offset, length) {
+    this.timestamp = timestamp;
+    this.grid = grid;
+    this.offset = offset;
+    this.length = length;  
   }
-});
-
-const io = require('socket.io')(server);
-
-io.on('connection', (socket) => {
-  socket.on('updateTime', function(data) {
-    let second = data.time;
-    if (second > 0 && second < 12600) {
-      // Screenshot
-      const ssdata = courseApi.getScreenshotData(second);
-      // Whiteboard
-      const wbdata = courseApi.getWhiteBoardData(second);
-
-      // Notify client through emit with data
-      io.sockets.emit('playCourse', {time: second, ssdata: ssdata, wbdata:wbdata});
-    }
-  });
-});
-
-function tick () {
-  let dt = new Date();
-  dt = dt.toLocaleString();
-  io.sockets.emit("realtime", dt);
-}
-setInterval(tick, 1000);
-```
-The following points need to be noted about the above code.
-* Setup server at http://localhost:12100/.
-* Setup connection for `Socket.IO`, monitoring `updateTime` event.
-* Setup timer to notify client with the server time.
-
-### 2.7 Page
-Create file '`src/index.html`'. This is the default page for this app. We add socket.io script.
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Course Player - React</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/bundle.js"></script>
-  </body>
-</html>
-```
-Create file '`src/index.js`'.
-```jsx
-import React from 'react';  
-import ReactDOM from 'react-dom';
-import App from './components/App';
-
-ReactDOM.render((
-  <App />
-), document.getElementById('root'));
-```
-### 2.8 Main Components
-Create file '`src/components/App.js`'. We define the `App` component here. It contains three child components, `Header` `Home` and `Footer`.
-```jsx
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Home from './Home';
-
-const App = () => (
-  <div>
-    <Header />
-    <Home />
-    <Footer />
-  </div>
-);
-
-export default App;
-```
-Create file '`src/components/Header.js`'.
-```jsx
-import React from 'react';
-import { Button, ButtonToolbar} from 'react-bootstrap';
-
-const io = require('socket.io-client');
-const socket = io();
-
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      time: 0
-    };
-    socket.on('realtime', (time) => this.setTime(time));
+  row() {
+    return this.grid >> 4;
   }
-
-  setTime(time) {
-    this.setState({time: time});
-  }
-
-  render() {
-    return (
-      <div>
-        <div className="container text-center">
-          <h1>Course Player</h1>
-          <p>Built with React and Socket.IO</p>
-          <p>Current server time is: <span id="time">{this.state.time}</span></p>
-        </div>
-        <hr/>
-      </div>
-    );
+  col() {
+    return this.grid & 0xf;
   }
 }
 
-export default Header;
+export default Index;
 ```
-The following points need to be noted about the above code.
-* Import `socket.io-client` and create socket object with it.
-* Monitor `realtime` event and get the time from server.
-* Display the time by updating the state.
-
-Create file '`src/components/Footer.js`'.
-```jsx
-import React from 'react';
-
-const Footer = () => {  
-  return (
-    <div>
-      <hr />
-      <footer className="container-fluid text-center">
-        <p>&copy; 2017 jojozhuang.github.io, All rights reserved.</p>
-      </footer>
-    </div>
-  );
-};
-
-export default Footer;
-```
-Create file '`src/components/Home.js`'.
-```jsx
-import React from 'react';
-import { Grid, Row, Col} from 'react-bootstrap';
-import Video from './player/Video';
-import Screenshot from './player/Screenshot';
-import Whiteboard from './player/Whiteboard';
-
-const playerStyle = {
-  backgroundColor: '#ffe3ad',
-  border: 'thick solid #808080'
-};
-
-const videoStyle = {
-  marginTop: '10px'
-};
-
-const io = require('socket.io-client');
-const socket = io();
-
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      time: 0
-    };
-
-    socket.on('playCourse', (data) => this.playCourse(data));
-
-    this.handleTimeChange = this.handleTimeChange.bind(this);
-    this.handlePlayerStop = this.handlePlayerStop.bind(this);
-  }
-
-  playCourse(data) {
-    //console.log('playCourse');
-    this.refs.ss.drawScreenShot(data.ssdata);
-    this.refs.wb.drawWhiteboard(data.wbdata);
-  }
-
-  handlePlayerStop() {
-    this.refs.ss.clearScreenshot();
-    this.refs.wb.clearWhiteboard();
-  }
-
-  handleTimeChange(time, clear) {
-    this.setState({ time: time });
-    if (clear) {
-      this.refs.wb.clearWhiteboard();
-    }
-    socket.emit('updateTime', { time: time });
-  }
-
-  render() {
-    return(
-      <Grid style={playerStyle}>
-        <Row className="show-grid" style={videoStyle}>
-          <Col><Video ref="video" onTimeChange={this.handleTimeChange} onStop={this.handlePlayerStop}/></Col>
-        </Row>
-        <Row className="show-grid">
-          <Col sm={6} style={{textAlign: 'left'}}><Screenshot ref="ss" /></Col>
-          <Col sm={6} style={{textAlign: 'right'}}><Whiteboard ref="wb" /></Col>
-        </Row>
-      </Grid>
-    );
+Create file '`src/model/ScreenImage.js`'.
+```js
+class ScreenImage {
+  constructor (row, col, image) {
+    this.row = row;
+    this.col = col;
+    this.image = image;  
   }
 }
 
-export default Home;
+export default ScreenImage;
 ```
-The following points need to be noted about the above code.
-* Home component contains three sub components, `Video`, `Screenshot` and `Whiteboard`.
-* Import `socket.io-client` and create socket object with it.
-* Monitor `playCourse` event and get the data from server.
-* Use `playCourse(data)` to draw screenshot and whiteboard in sub components.
-* Use `handleTimeChange` as callback from `Video` component and emit `updateTime` event to server.
-
-### 2.9 Player Components
-Create file '`src/components/player/Video.js`'.
-```jsx
-import React from 'react';  
-import PropTypes from 'prop-types';
-import RangeSlider from '../controls/RangeSlider';
-
-class Video extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // empty
-    };
-  }
-
-  render() {
-    return (
-      <RangeSlider min={0} max={4 * 60 * 60 - 30 * 60} value={0} onTimeChange={this.props.onTimeChange} onStop={this.props.onStop}/>
-    );
+Create file '`src/model/WBData.js`'.
+```js
+class WBData {
+  constructor (second, wblines, wbevents) {
+    this.second = second;
+    this.wblines = wblines;
+    this.wbevents = wbevents;
   }
 }
 
-Video.propTypes = {
-  onTimeChange: PropTypes.func.isRequired,
-  onStop: PropTypes.func.isRequired
-};
-
-export default Video;
+export default WBData;
 ```
-The following points need to be noted about the above code.
-* Use `RangeSlider`(slider bar) to simulate progress bar of the video player.
-* The unit of the value is second.
-* The max value is 4 * 60 * 60 - 30 * 60 = 12600 seconds. Each course lasts 3 and half hours.
-* Pass function `onTimeChange` and `onStop` from parent to RangeSlider component.
-
-Create file '`src/components/player/Screenshot.js`'.
-```jsx
-import React from 'react';  
-import PropTypes from 'prop-types';
-import Canvas from '../controls/Canvas';
-
-class Screenshot extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // state
-    };
-  }
-
-  drawScreenShot(ssdata) {
-    //console.log('Screenshot.drawScreenShot');
-    const cellWidth = this.myss.width / 8;
-    const cellHeight = this.myss.height / 8;
-    let left, top, width, height = 0;
-    const ctxss = this.myss.getContext('2d');
-    const ctxworkingss = this.workingss.getContext('2d');
-    let imageList = JSON.parse(ssdata);
-    for (let i = 0; i < imageList.length; i++) {
-      left = cellWidth * imageList[i].col;
-      top = cellHeight * imageList[i].row;
-      width = cellWidth;
-      height = cellHeight;
-      // use hidden canvas to avoid refreshing
-      this.drawImageOnCanvas(ctxworkingss, left, top, width, height, imageList[i].image);
-    }
-    ctxss.drawImage(this.workingss, 0, 0);
-  }
-
-  drawImageOnCanvas(ctx, left, top, width, height, image) {
-    let img = new Image();
-    img.onload = function () {
-        ctx.drawImage(img, left, top, width, height);
-    };
-    img.src = image;
-  }
-
-  clearScreenshot() {
-    // reset screen
-    const ctxss = this.myss.getContext('2d');
-    const ctxworkingss = this.workingss.getContext('2d');
-    ctxss.clearRect(0, 0, this.myss.width, this.myss.height);
-    ctxworkingss.clearRect(0, 0, this.workingss.width, this.workingss.height);
-  }
-
-  render() {
-    //console.log('Screenshot.render');
-    return (
-      <div>
-        <Canvas canvasRef={el => this.myss = el} display="block"/>
-        <Canvas canvasRef={el => this.workingss = el} display="none"/>
-        <h4 style={{textAlign: 'center'}}>Screenshot</h4>
-      </div>
-    );
+Create file '`src/model/WBEvent.js`'.
+```js
+class WBEvent {
+  constructor (x, y, timestamp, reserved) {
+    this.x = x;
+    this.y = y;
+    this.timestamp = timestamp;
+    this.reserved = reserved;
   }
 }
 
-export default Screenshot;
+export default WBEvent;
 ```
-The following points need to be noted about the above code.
-* We define two canvas controls for screenshot. We draw 64 images one by one on the working canvas. Then draw the entire canvas with this working one. Thus, to avoid flashing.
-
-Create file '`src/components/product/ProductForm.js`'.
-```jsx
-import React from 'react';  
-import PropTypes from 'prop-types';
-import Canvas from '../controls/Canvas';
-
-class Whiteboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      canvasIsDrawing: false
-    };
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    //console.log(this.state);
-    //console.log(nextState);
-    return this.state.canvasIsDrawing != nextState.canvasIsDrawing;
-  }
-
-  drawWhiteboard(wbdata) {
-    //console.log('Whiteboard.drawWhiteboard');
-    this.setState({'canvasIsDrawing': true});
-    let lastPoint; //use state to preserve the value
-    let currentColor = -10;
-    let currentWidth = 1;
-    const ctxwb = this.mywb.getContext('2d');
-    const ctxworkingwb = this.workingwb.getContext('2d');
-    let xRate = this.workingwb.width / 9600;
-    let yRate = this.workingwb.height / 4800;
-    ctxworkingwb.fillStyle = "solid";
-    let wbobj = JSON.parse(wbdata);
-    if (wbobj.wblines) {
-      for (let i = 0; i < wbobj.wblines.length; i++) {
-        let line = wbobj.wblines[i];
-        this.drawline(ctxworkingwb, this.getColor(line.color), this.getWidth(line.color), line.x0, line.y0,line.x1, line.y1, xRate, yRate);
-      }
-      ctxwb.drawImage(this.workingwb, 0, 0);
-    }
-    if (wbobj.wbevents) {
-      //lastPoint = this.state.lastPoint;
-      //console.log(lastPoint)
-      let endMilliseconds = wbobj.second * 1000 % 60000;
-      for (let i = 0; i < endMilliseconds; i++) {
-        for (let j = 0; j < wbobj.wbevents.length; j++) {
-          let event = wbobj.wbevents[j];
-          if (event&&event.timestamp == i) {
-            if (event.x >=0) {
-              if (!lastPoint) {
-                lastPoint = event;
-              } else {
-                //console.log(lastPoint);
-                this.drawline(ctxworkingwb, this.getColor(currentColor), currentWidth, lastPoint.x, lastPoint.y, event.x, event.y, xRate, yRate);
-                lastPoint = event;
-              }
-            } else {
-              switch (event.x) {
-                 case -100: //Pen Up
-                   currentColor = -8;
-                   lastPoint = null;
-                   break;
-                 case -200: //Clear event
-                    this.clearWhiteboard();
-                    lastPoint = null;
-                    break;
-                 default:
-                    currentColor = event.x;
-                    currentWidth = this.getWidth(currentColor);
-                    break;
-               }
-               lastPoint = null;
-            }
-            //this.setState({lastPoint, lastPoint});
-          }
-        }
-      }
-      ctxwb.drawImage(this.workingwb, 0, 0);
-    }
-    //this.setState({'canvasIsDrawing': false});
-  }
-
-  drawline(workingwb, color, width, x0, y0, x1, y1, xRate, yRate) {
-    workingwb.beginPath();
-    workingwb.strokeStyle = color;
-    workingwb.lineWidth = width;
-    workingwb.moveTo(x0 * xRate, y0 * yRate);
-    workingwb.lineTo(x1 * xRate, y1 * yRate);
-    workingwb.closePath();
-    workingwb.stroke();
-  }
-  getColor(color) {
-    switch (color) {
-      case -1:
-          return '#FF0000';
-      case -2:
-          return '#0000FF';
-      case -3:
-          return '#00FF00';
-      case -8:
-          return '#000000';
-      case -9:
-          return '#FFFFFF';
-      case -10:
-          return '#FFFFFF';
-      default:
-          return '#FFFFFF';
-    }
-  }
-
-  getWidth(color) {
-    switch (color) {
-      case -1:
-          return 1;
-      case -2:
-          return 1;
-      case -3:
-          return 1;
-      case -8:
-          return 1;
-      case -9:
-          return 8 * 10 / 12;
-      case -10:
-          return 39 * 10 / 12;
-      default:
-          return 1;
-    }
-  }
-
-  clearWhiteboard() {
-    // reset whiteboard
-    //console.log('clearWhiteboard');
-    const ctxwb = this.mywb.getContext('2d');
-    const ctxworkingwb = this.workingwb.getContext('2d');
-    ctxwb.clearRect(0, 0, this.mywb.width, this.mywb.height);
-    ctxworkingwb.clearRect(0, 0, this.workingwb.width, this.workingwb.height);
-  }
-
-  render() {
-    //console.log('Whiteboard.render');
-    return (
-      <div>
-        <Canvas canvasRef={el => this.mywb = el} display="block"/>
-        <Canvas canvasRef={el => this.workingwb = el} display="none"/>
-        <h4 style={{textAlign: 'center'}}>Whiteboard</h4>
-      </div>
-    );
+Create file '`src/model/WBLine.js`'.
+```js
+class WBLine {
+  constructor (x0, y0, x1, y1, color, reserved) {
+    this.x0 = x0;
+    this.y0 = y0;
+    this.x1 = x1;
+    this.y1 = y1;
+    this.color = color;
+    this.reserved = reserved;
   }
 }
 
-export default Whiteboard;
+export default WBLine;
 ```
-The following points need to be noted about the above code.
-* We define two canvas controls for screenshot. We draw 64 images one by one on the working canvas. Then draw the entire canvas with this working one. Thus, to avoid flashing.
-
-### 2.10 Control Components
-Create file '`src/components/controls/Canvas.js`'.
-Create file '`src/components/controls/RangeSlider.js`'.
-```jsx
-import React from 'react';  
-import PropTypes from 'prop-types';
-import { Button, Grid, Row, Col} from 'react-bootstrap';
-import styled from 'styled-components';
-import dateTimeApi from '../../api/DateTimeApi';
-
-const Div = styled.div`
-  width: 100%;
-`;
-
-const Input = styled.input`
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-  }
-  &::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-  }
-`;
-
-class RangeSlider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      buttonText: 'Play',
-      bsStyle: 'primary',
-      value: 0
-    };
-
-    this.handlePlay = this.handlePlay.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleMouseUp = this.handleMouseUp.bind(this);
-  }
-
-  componentWillUnmount(){
-    clearInterval(this.intervalId);
-    this.setTimeState(0, false);
-  }
-
-  timer() {
-    if(this.state.value >= this.props.max) {
-      clearInterval(this.intervalId);
-      this.setTimeState(0, false);
-      this.setState({buttonText: 'Play'});
-      this.setState({bsStyle: 'primary'});
-      this.props.onStop();
-      return;
-    }
-
-    this.setTimeState(parseInt(this.state.value) + 1, false);
-  }
-
-  handlePlay(event) {
-    if (this.state.buttonText == 'Play') {
-      this.setState({buttonText: 'Stop'});
-      this.setState({bsStyle: 'danger'});
-      this.intervalId = setInterval(this.timer.bind(this), 1000);
-    } else {
-      this.setState({buttonText: 'Play'});
-      this.setState({bsStyle: 'primary'});
-      clearInterval(this.intervalId);
-      this.setTimeState(0, false);
-      this.props.onStop();
-    }
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleMouseUp(event) {
-    this.setTimeState(event.target.value, true);
-  }
-
-  setTimeState(time, clear) {
-    //console.log('setTimeState');
-    //console.log(time);
-    this.setState({value: time});
-    this.props.onTimeChange(time, clear);
-  }
-
-  render() {
-    return (
-      <Grid>
-        <Row className="show-grid">
-          <Col xs={6} md={4}><h5 style={{textAlign: 'left'}}>Current Time: {dateTimeApi.getReadableTimeText(this.state.value)}</h5></Col>
-          <Col xs={6} md={4}><p style={{textAlign: 'center'}}><Button bsStyle={this.state.bsStyle} type="button" onClick={this.handlePlay}>{this.state.buttonText}</Button></p></Col>
-          <Col xsHidden md={4}><h5 style={{textAlign: 'right'}}>Total Time: {dateTimeApi.getReadableTimeText(12600)}</h5></Col>
-        </Row>
-        <Row className="show-grid">
-          <Col xs={12}><Div>
-          <Input type="range" min={this.props.min} max={this.props.max} value={this.state.value} onChange={this.handleChange} onMouseUp={this.handleMouseUp}/>
-        </Div></Col>
-        </Row>
-      </Grid>      
-    );
-  }
-}
-
-RangeSlider.propTypes = {
-  min: PropTypes.number.isRequired,
-  max: PropTypes.number.isRequired,
-  onTimeChange: PropTypes.func.isRequired,
-  onStop: PropTypes.func.isRequired
-};
-
-export default RangeSlider;
-```
-The following points need to be noted about the above code.
-* Use `styled-components` to define styled component.
-* There are two rows in the grid. The first row contains a button to play and stop the course. The second row contains the range control(slider bar).
-* Use `onChange` event to update the time when user is dragging the slider bar.
-* Use `onMouseUp` event to update the time when user finishes dragging. Meanwhile, call parent's `this.props.onTimeChange(time, clear)` method to notify server to send data for drawing.
-* Use `handlePlay` to handle the event when user click the `Play` button. When player is started, we setup a timer to increment the time by second and notify server to send data for drawing.
-
-```jsx
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-let canvasStyle = {
-  background: '#fffbf4',
-  margin: '20px auto',
-  border: '5px solid #E8E8E8',
-  width: 500,
-  height: 300,
-};
-
-class Canvas extends Component {
-  render() {
-    return(
-      <div>
-        <canvas ref={this.props.canvasRef} width="500" height="300" style={Object.assign({},canvasStyle,{display:this.props.display})}/>
-       </div>
-    );
-  }
-}
-
-Canvas.propTypes = {
-  canvasRef: PropTypes.func.isRequired,
-  display: PropTypes.string.isRequired
-};
-
-export default Canvas;
-```
-
-## 3. APIs
+### 3.2 File Api(Server Side)
 Create file '`src/api/FileApi.js`'.
 ```javascript
 import fs from 'fs';
@@ -1089,14 +486,13 @@ class FileApi {
 export default FileApi;
 ```
 The following points need to be noted about the above code.
-* Screenshot is stored in two files, one contains index another contains image data.
-* For Screenshot, first, decompress the index file and get the index list. Then, read image data by time(second).
-* Whiteboard has two parts, one is the static lines, another is dynamic drawing events. Technically, it has same structure as Screenshot. Both line and event contains two files, index file and data file.
-* For lines of Whiteboard, first, decompress the index file and get the index list. Then, read image data by time(second).
-* For events of Whiteboard, first, decompress the index file and get the index list. Then, read image data by time(second).
+* Use native files system module `fs` provided by Node.js to read data from local files. Notice, we use `zlib` to decompress the index files. And use the index to get offset and length. Then, use them to read small parts of the data from data file instead of reading the whole file.
+* For Screenshot, read the decompressed index file `ScreenShot/High/unzippedindex.pak` to get the index list. Then, get offset and length of index to read image data by time(in second) from `ScreenShot/High/1.pak`.
+* Whiteboard has two parts, one is the static lines `VectorImage`, another is dynamic drawing events `VectorSequence`. To get data for Whiteboard's lines, first, read the decompressed index file `WB/1/VectorImage/unzippedindex.pak` to get the index list. Then, get offset and length of index to read line data by time(in second) from `WB/1/VectorImage/1.pak`. The same operations to get Whiteboard's events.
 
+### 3.3 Course Api(Server Side)
 Create file '`src/api/CourseApi.js`'.
-```jsx
+```js
 import path from 'path';
 import Index from '../model/Index';
 import WBData from '../model/WBData';
@@ -1178,76 +574,682 @@ The following points need to be noted about the above code.
 * Use `getWhiteBoardData` to the Whiteboard data in second.
 * Use local variables to `cache` index files to improve performance.
 
-### 3.4 Others
-1) server.js is running at server side. All components are running at client side.
-2) Decompress file.
-Asynchronous
+### 3.4 HTTP Server(Server Side)
+Create file '`tools/server.js`'.
 ```javascript
-let inflate = zlib.createInflateSync();
-let input = fs.createReadStream(originalFile);
-let output = fs.createWriteStream(unzippedFile);
+import express from 'express';
+import webpack from 'webpack';
+import path from 'path';
+import config from '../webpack.config.dev';
+import open from 'open';
+import favicon from 'serve-favicon';
+import courseApi from '../src/api/CourseApi';
+import dateTimeApi from '../src/api/DateTimeApi';
 
-//output.on('finish', function(){
-  console.log("finish");
-};
+const port = 12100;
+const app = express();
+const compiler = webpack(config);
 
-input.pipe(inflate).pipe(output);*/
-```
-Synchronous.
-```javascipt
-let buffer = fs.readFileSync(originalFile);
-let inflate = zlib.inflateSync(buffer);
-fs.writeFileSync(unzippedFile, inflate);
-```
+app.use(require('webpack-dev-middleware')(compiler, {
+  publicPath: config.output.publicPath
+}));
 
-3) Read buffer.
-```javascript
-let buffer = new Buffer([3,0,51,0,0,0,0,212,0,0,0])
-var pos = 0;
-console.log(buffer.readUInt16LE(0));
-pos = pos+2;
-console.log(buffer.readInt8(2));
-pos= pos+1;
-console.log(buffer.readInt32LE(3));
-pos = pos+4;
-console.log(buffer.readUInt32LE(7));*/
-```
+app.use(require('webpack-hot-middleware')(compiler));
+app.use(favicon(path.join(__dirname,'../public','assets','favicon.ico')));
 
-4) Access child ref
-```javascript
-function CustomTextInput(props) {
-  return (
-    <div>
-      <input ref={props.inputRef} />
-    </div>
-  );
+app.get('*', function(req, res) {
+  res.sendFile(path.join( __dirname, '../src/index.html'));
+});
+
+
+const server = app.listen(port, function(err) {
+  if (err) {
+    //console.log(err);
+  } else {
+    open(`http://localhost:${port}`);
+  }
+});
+
+const io = require('socket.io')(server);
+
+io.on('connection', (socket) => {
+  socket.on('updateTime', function(data) {
+    let second = data.time;
+    if (second > 0 && second < 12600) {
+      // Screenshot
+      const ssdata = courseApi.getScreenshotData(second);
+      // Whiteboard
+      const wbdata = courseApi.getWhiteBoardData(second);
+
+      // Notify client through emit with data
+      io.sockets.emit('playCourse', {time: second, ssdata: ssdata, wbdata:wbdata});
+    }
+  });
+});
+
+function tick () {
+  let dt = new Date();
+  dt = dt.toLocaleString();
+  io.sockets.emit("realtime", dt);
 }
+setInterval(tick, 1000);
+```
+The following points need to be noted about the above code.
+* Setup web server with `express` at port `12100`.
+* Create a timer to repeatedly notify the client of the server time.
+* Open socket connection with `Socket.IO`, monitoring `updatetime` event.
+* Once receive the time(data.second) from client, fetch course data for screenshot and whiteboard. Then, emit `playCourse` event to send data back to client.
 
-class Parent extends React.Component {
+### 3.5 Home Page(Client Side)
+Create file '`src/index.html`'. Import `'/socket.io/socket.io.js'` to create socket connection later.
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Course Player - React</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/bundle.js"></script>
+  </body>
+</html>
+```
+Create file '`src/index.js`'.
+```jsx
+import React from 'react';  
+import ReactDOM from 'react-dom';
+import App from './components/App';
+
+ReactDOM.render((
+  <App />
+), document.getElementById('root'));
+```
+### 3.6 Main Components(Client Side)
+Create file '`src/components/App.js`'. This `App` component contains three child components, `Header`, `Home` and `Footer`.
+```jsx
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Home';
+
+const App = () => (
+  <div>
+    <Header />
+    <Home />
+    <Footer />
+  </div>
+);
+
+export default App;
+```
+Create file '`src/components/Header.js`'.
+```jsx
+import React from 'react';
+import { Button, ButtonToolbar} from 'react-bootstrap';
+
+const io = require('socket.io-client');
+const socket = io();
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: 0
+    };
+    socket.on('realtime', (time) => this.setTime(time));
+  }
+
+  setTime(time) {
+    this.setState({time: time});
+  }
+
   render() {
     return (
-      <CustomTextInput
-        inputRef={el => this.inputElement = el}
-      />
+      <div>
+        <div className="container text-center">
+          <h1>Course Player</h1>
+          <p>Built with React and Socket.IO</p>
+          <p>Current server time is: <span id="time">{this.state.time}</span></p>
+        </div>
+        <hr/>
+      </div>
     );
   }
 }
-```
-https://reactjs.org/docs/refs-and-the-dom.html
 
-### 3.5 Final Project Structure
+export default Header;
+```
+The following points need to be noted about the above code.
+* Import `socket.io-client` and create socket connection with it.
+* Monitor `realtime` event and get the server time.
+* Display the time by updating the state.
+
+Create file '`src/components/Footer.js`'.
+```jsx
+import React from 'react';
+
+const Footer = () => {  
+  return (
+    <div>
+      <hr />
+      <footer className="container-fluid text-center">
+        <p>&copy; 2017 jojozhuang.github.io, All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
+
+export default Footer;
+```
+Create file '`src/components/Home.js`'.
+```jsx
+import React from 'react';
+import { Grid, Row, Col} from 'react-bootstrap';
+import Video from './player/Video';
+import Screenshot from './player/Screenshot';
+import Whiteboard from './player/Whiteboard';
+
+const playerStyle = {
+  backgroundColor: '#ffe3ad',
+  border: 'thick solid #808080'
+};
+
+const videoStyle = {
+  marginTop: '10px'
+};
+
+const io = require('socket.io-client');
+const socket = io();
+
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: 0
+    };
+
+    socket.on('playCourse', (data) => this.playCourse(data));
+
+    this.handleTimeChange = this.handleTimeChange.bind(this);
+    this.handlePlayerStop = this.handlePlayerStop.bind(this);
+  }
+
+  playCourse(data) {
+    //console.log('playCourse');
+    this.refs.ss.drawScreenShot(data.ssdata);
+    this.refs.wb.drawWhiteboard(data.wbdata);
+  }
+
+  handlePlayerStop() {
+    this.refs.ss.clearScreenshot();
+    this.refs.wb.clearWhiteboard();
+  }
+
+  handleTimeChange(time, clear) {
+    this.setState({ time: time });
+    if (clear) {
+      this.refs.wb.clearWhiteboard();
+    }
+    socket.emit('updateTime', { time: time });
+  }
+
+  render() {
+    return(
+      <Grid style={playerStyle}>
+        <Row className="show-grid" style={videoStyle}>
+          <Col><Video ref="video" onTimeChange={this.handleTimeChange} onStop={this.handlePlayerStop}/></Col>
+        </Row>
+        <Row className="show-grid">
+          <Col sm={6} style="textAlign: 'left'"><Screenshot ref="ss" /></Col>
+          <Col sm={6} style="textAlign: 'right'"><Whiteboard ref="wb" /></Col>
+        </Row>
+      </Grid>
+    );
+  }
+}
+
+export default Home;
+```
+The following points need to be noted about the above code.
+* Home component contains three sub components, `Video`, `Screenshot` and `Whiteboard`.
+* Import `socket.io-client` and create socket connection with it.
+* Monitor `playCourse` event and get the data from server.
+* Use `playCourse(data)` to draw screenshot and whiteboard in sub components.
+* Use `handleTimeChange` as callback from `Video` component and emit `updateTime` event to server.
+
+### 3.6 Player Components(Client Side)
+Create file '`src/components/player/Video.js`'.
+```jsx
+import React from 'react';  
+import PropTypes from 'prop-types';
+import RangeSlider from '../controls/RangeSlider';
+
+class Video extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // empty
+    };
+  }
+
+  render() {
+    return (
+      <RangeSlider min={0} max={4 * 60 * 60 - 30 * 60} value={0} onTimeChange={this.props.onTimeChange} onStop={this.props.onStop}/>
+    );
+  }
+}
+
+Video.propTypes = {
+  onTimeChange: PropTypes.func.isRequired,
+  onStop: PropTypes.func.isRequired
+};
+
+export default Video;
+```
+The following points need to be noted about the above code.
+* Use `RangeSlider`(slider bar) to simulate progress bar of the video player.
+* The max value of slider bar is 4 * 60 * 60 - 30 * 60 = 12600 seconds, since each course lasts 3 and half hours.
+* Pass function `onTimeChange` and `onStop` from parent component `App` to child component `RangeSlider`.
+
+Create file '`src/components/player/Screenshot.js`'.
+```jsx
+import React from 'react';  
+import PropTypes from 'prop-types';
+import Canvas from '../controls/Canvas';
+
+class Screenshot extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // state
+    };
+  }
+
+  drawScreenShot(ssdata) {
+    //console.log('Screenshot.drawScreenShot');
+    const cellWidth = this.playerss.width / 8;
+    const cellHeight = this.playerss.height / 8;
+    let left, top, width, height = 0;
+    const ctxss = this.playerss.getContext('2d');
+    const ctxworkingss = this.workingss.getContext('2d');
+    let imageList = JSON.parse(ssdata);
+    for (let i = 0; i < imageList.length; i++) {
+      left = cellWidth * imageList[i].col;
+      top = cellHeight * imageList[i].row;
+      width = cellWidth;
+      height = cellHeight;
+      // use hidden canvas to avoid refreshing
+      this.drawImageOnCanvas(ctxworkingss, left, top, width, height, imageList[i].image);
+    }
+    ctxss.drawImage(this.workingss, 0, 0);
+  }
+
+  drawImageOnCanvas(ctx, left, top, width, height, image) {
+    let img = new Image();
+    img.onload = function () {
+        ctx.drawImage(img, left, top, width, height);
+    };
+    img.src = image;
+  }
+
+  clearScreenshot() {
+    // reset screen
+    const ctxss = this.playerss.getContext('2d');
+    const ctxworkingss = this.workingss.getContext('2d');
+    ctxss.clearRect(0, 0, this.playerss.width, this.playerss.height);
+    ctxworkingss.clearRect(0, 0, this.workingss.width, this.workingss.height);
+  }
+
+  render() {
+    //console.log('Screenshot.render');
+    return (
+      <div>
+        <Canvas canvasRef={el => this.playerss = el} display="block"/>
+        <Canvas canvasRef={el => this.workingss = el} display="none"/>
+        <h4 style="textAlign: 'center'">Screenshot</h4>
+      </div>
+    );
+  }
+}
+
+export default Screenshot;
+```
+The following points need to be noted about the above code.
+* We define two canvas controls `playerss` and `workingss` for screenshot. `workingss` is invisible. We draw images first on the working canvas. Then, draw the entire image on the `playerss` canvas for only one time to avoid flashing.
+
+Create file '`src/components/player/Whiteboard.js`'.
+```jsx
+import React from 'react';  
+import PropTypes from 'prop-types';
+import Canvas from '../controls/Canvas';
+
+class Whiteboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      canvasIsDrawing: false
+    };
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.canvasIsDrawing != nextState.canvasIsDrawing;
+  }
+
+  drawWhiteboard(wbdata) {
+    //console.log('Whiteboard.drawWhiteboard');
+    this.setState({'canvasIsDrawing': true});
+    let lastPoint; //use state to preserve the value
+    let currentColor = -10;
+    let currentWidth = 1;
+    const ctxwb = this.playerwb.getContext('2d');
+    const ctxworkingwb = this.workingwb.getContext('2d');
+    let xRate = this.workingwb.width / 9600;
+    let yRate = this.workingwb.height / 4800;
+    ctxworkingwb.fillStyle = "solid";
+    let wbobj = JSON.parse(wbdata);
+    if (wbobj.wblines) {
+      for (let i = 0; i < wbobj.wblines.length; i++) {
+        let line = wbobj.wblines[i];
+        this.drawline(ctxworkingwb, this.getColor(line.color), this.getWidth(line.color), line.x0, line.y0,line.x1, line.y1, xRate, yRate);
+      }
+      ctxwb.drawImage(this.workingwb, 0, 0);
+    }
+    if (wbobj.wbevents) {
+      lastPoint = this.state.lastPoint;
+      let endMilliseconds = wbobj.second * 1000 % 60000;
+      for (let i = 0; i < endMilliseconds; i++) {
+        for (let j = 0; j < wbobj.wbevents.length; j++) {
+          let event = wbobj.wbevents[j];
+          if (event&&event.timestamp == i) {
+            if (event.x >=0) {
+              if (!lastPoint) {
+                lastPoint = event;
+              } else {
+                this.drawline(ctxworkingwb, this.getColor(currentColor), currentWidth, lastPoint.x, lastPoint.y, event.x, event.y, xRate, yRate);
+                lastPoint = event;
+              }
+            } else {
+              switch (event.x) {
+                 case -100: //Pen Up
+                   currentColor = -8;
+                   lastPoint = null;
+                   break;
+                 case -200: //Clear event
+                    this.clearWhiteboard();
+                    lastPoint = null;
+                    break;
+                 default:
+                    currentColor = event.x;
+                    currentWidth = this.getWidth(currentColor);
+                    break;
+               }
+               lastPoint = null;
+            }
+          }
+        }
+      }
+      ctxwb.drawImage(this.workingwb, 0, 0);
+    }
+  }
+
+  drawline(workingwb, color, width, x0, y0, x1, y1, xRate, yRate) {
+    workingwb.beginPath();
+    workingwb.strokeStyle = color;
+    workingwb.lineWidth = width;
+    workingwb.moveTo(x0 * xRate, y0 * yRate);
+    workingwb.lineTo(x1 * xRate, y1 * yRate);
+    workingwb.closePath();
+    workingwb.stroke();
+  }
+  getColor(color) {
+    switch (color) {
+      case -1:
+          return '#FF0000';
+      case -2:
+          return '#0000FF';
+      case -3:
+          return '#00FF00';
+      case -8:
+          return '#000000';
+      case -9:
+          return '#FFFFFF';
+      case -10:
+          return '#FFFFFF';
+      default:
+          return '#FFFFFF';
+    }
+  }
+
+  getWidth(color) {
+    switch (color) {
+      case -1:
+          return 1;
+      case -2:
+          return 1;
+      case -3:
+          return 1;
+      case -8:
+          return 1;
+      case -9:
+          return 8 * 10 / 12;
+      case -10:
+          return 39 * 10 / 12;
+      default:
+          return 1;
+    }
+  }
+
+  clearWhiteboard() {
+    // reset whiteboard
+    const ctxwb = this.playerwb.getContext('2d');
+    const ctxworkingwb = this.workingwb.getContext('2d');
+    ctxwb.clearRect(0, 0, this.playerwb.width, this.playerwb.height);
+    ctxworkingwb.clearRect(0, 0, this.workingwb.width, this.workingwb.height);
+  }
+
+  render() {
+    //console.log('Whiteboard.render');
+    return (
+      <div>
+        <Canvas canvasRef={el => this.playerwb = el} display="block"/>
+        <Canvas canvasRef={el => this.workingwb = el} display="none"/>
+        <h4 style="textAlign: 'center'">Whiteboard</h4>
+      </div>
+    );
+  }
+}
+
+export default Whiteboard;
+```
+The following points need to be noted about the above code.
+* We define two canvas controls `playerwb` and `workingwb` for screenshot. `workingwb` is invisible. We draw lines and events first on the working canvas. Then, draw the entire working canvas on the `playerwb` canvas for only one time to avoid flashing.
+
+### 3.7 Control Components(Client Side)
+Create file '`src/components/controls/RangeSlider.js`'.
+```jsx
+import React from 'react';  
+import PropTypes from 'prop-types';
+import { Button, Grid, Row, Col} from 'react-bootstrap';
+import styled from 'styled-components';
+import dateTimeApi from '../../api/DateTimeApi';
+
+const Div = styled.div`
+  width: 100%;
+`;
+
+const Input = styled.input`
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+`;
+
+class RangeSlider extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttonText: 'Play',
+      bsStyle: 'primary',
+      value: 0
+    };
+
+    this.handlePlay = this.handlePlay.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleMouseUp = this.handleMouseUp.bind(this);
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.intervalId);
+    this.setTimeState(0, false);
+  }
+
+  timer() {
+    if(this.state.value >= this.props.max) {
+      clearInterval(this.intervalId);
+      this.setTimeState(0, false);
+      this.setState({buttonText: 'Play'});
+      this.setState({bsStyle: 'primary'});
+      this.props.onStop();
+      return;
+    }
+
+    this.setTimeState(parseInt(this.state.value) + 1, false);
+  }
+
+  handlePlay(event) {
+    if (this.state.buttonText == 'Play') {
+      this.setState({buttonText: 'Stop'});
+      this.setState({bsStyle: 'danger'});
+      this.intervalId = setInterval(this.timer.bind(this), 1000);
+    } else {
+      this.setState({buttonText: 'Play'});
+      this.setState({bsStyle: 'primary'});
+      clearInterval(this.intervalId);
+      this.setTimeState(0, false);
+      this.props.onStop();
+    }
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleMouseUp(event) {
+    this.setTimeState(event.target.value, true);
+  }
+
+  setTimeState(time, clear) {
+    //console.log('setTimeState');
+    this.setState({value: time});
+    this.props.onTimeChange(time, clear);
+  }
+
+  render() {
+    return (
+      <Grid>
+        <Row className="show-grid">
+          <Col xs={6} md={4}><h5 style="textAlign: 'left'">Current Time: {dateTimeApi.getReadableTimeText(this.state.value)}</h5></Col>
+          <Col xs={6} md={4}><p style="textAlign: 'center'"><Button bsStyle={this.state.bsStyle} type='button' onClick={this.handlePlay}>{this.state.buttonText}</Button></p></Col>
+          <Col xsHidden md={4}><h5 style="textAlign: 'right'">Total Time: {dateTimeApi.getReadableTimeText(12600)}</h5></Col>
+        </Row>
+        <Row className="show-grid">
+          <Col xs={12}><Div>
+          <Input type="range" min={this.props.min} max={this.props.max} value={this.state.value} onChange={this.handleChange} onMouseUp={this.handleMouseUp}/>
+        </Div></Col>
+        </Row>
+      </Grid>      
+    );
+  }
+}
+
+RangeSlider.propTypes = {
+  min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  onTimeChange: PropTypes.func.isRequired,
+  onStop: PropTypes.func.isRequired
+};
+
+export default RangeSlider;
+```
+The following points need to be noted about the above code.
+* Use `styled-components` to define styled component.
+* There are two rows in the grid. The first row contains a button to play and stop the course. The second row contains the range control(slider bar).
+* Use `onChange` event to update the time when user is dragging the slider bar.
+* Use `onMouseUp` event to update the time when user finishes dragging. Meanwhile, call parent's `this.props.onTimeChange(time, clear)` method to notify server to send data for drawing.
+* Use `handlePlay` to handle the event when user click the `Play` button. When player is started, we setup a timer to increment the time by second and notify server to send data for drawing.
+
+Create file '`src/components/controls/Canvas.js`'.
+```jsx
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+let canvasStyle = {
+  background: '#fffbf4',
+  margin: '20px auto',
+  border: '5px solid #E8E8E8',
+  width: 500,
+  height: 300,
+};
+
+class Canvas extends Component {
+  render() {
+    return(
+      <div>
+        <canvas ref={this.props.canvasRef} width="500" height="300" style={Object.assign({},canvasStyle,{display:this.props.display})}/>
+       </div>
+    );
+  }
+}
+
+Canvas.propTypes = {
+  canvasRef: PropTypes.func.isRequired,
+  display: PropTypes.string.isRequired
+};
+
+export default Canvas;
+```
+### 3.8 Final Project Structure
 ![MIME Type](/public/pics/2017-08-25/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
-Start the RESTful service first, and start this React app, serve it in web server.
+Start this React app, serve it in web server.
 ```sh
 $ npm start
 ```
-Open web browser, access 'http://localhost:12100/'.
+View the course player at http://localhost:12100/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
 ![MIME Type](/public/pics/2017-08-25/homepage.png)
-Click the `Play` button, course will be played. Both screenshot and Whiteboard will be synced with current time.
+Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
 ![MIME Type](/public/pics/2017-08-25/play.png)
-You can also drag the slider bar to forward or backward.
+You can drag the slider bar to move forward or backward.
 ![MIME Type](/public/pics/2017-08-25/drag.png)
 
 ## 5. Source Files
@@ -1259,4 +1261,3 @@ You can also drag the slider bar to forward or backward.
 * [Call child method from parent](https://stackoverflow.com/questions/37949981/call-child-method-from-parent)
 * [basic idea how to use socket io in react](https://stackoverflow.com/questions/17663589/socket-emit-and-socket-on-do-not-work-in-node-js)
 * [Sample code for socket.emit and socket.on](https://github.com/socketio/socket.io/issues/2800)
-* [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)

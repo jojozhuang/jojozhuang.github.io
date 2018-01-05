@@ -106,7 +106,7 @@ this.setState({title: this.props.tile});
 let title = this.state.title; // title may still have the old value.
 ```
 
-### 1.4 Props
+### 1.3 Props
 Props are also used to store data for component. The main difference between state and props is that props are immutable. This is why the container component should define the state that can be updated and changed, while the child components should only pass data from the state using props.   
 Take a look the following example. We define three state attributes in App component, header, content and footer. And pass them to child components through `headerProp`, `contentProp` and `footerProp` as props.
 ```jsx
@@ -177,6 +177,27 @@ App.propTypes = {
 };
 ```
 For performance reasons, PropTypes is only checked in development mode.
+### 1.4 Refs and the DOM
+Use `ref` to access controls defined in child component from parent component.
+```jsx
+function CustomTextInput(props) {
+  return (
+    <div>
+      <input ref={props.inputRef} />
+    </div>
+  );
+}
+
+class Parent extends React.Component {
+  render() {
+    return (
+      <CustomTextInput
+        inputRef={el => this.inputElement = el}
+      />
+    );
+  }
+}
+```
 
 ## 2. Style in React
 We can apply css style to components in four ways.
@@ -318,3 +339,4 @@ View your React app in Chrome. You will see a tab called `React` in Chrome Devel
 * [Handling Events](https://reactjs.org/docs/handling-events.html)
 * [New React Developer Tools](https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html)
 * [React Developer Tools](https://github.com/facebook/react-devtools)
+* [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)

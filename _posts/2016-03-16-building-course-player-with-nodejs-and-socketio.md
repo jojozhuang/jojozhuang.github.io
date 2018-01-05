@@ -732,9 +732,9 @@ $ npm start
 View the course player at http://localhost:12103/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
 ![MIME Type](/public/pics/2016-03-16/homepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![MIME Type](/public/pics/2016-03-16/playing.png)
+![MIME Type](/public/pics/2016-03-16/play.png)
 You can drag the slider bar to move forward or backward.
-![MIME Type](/public/pics/2016-03-16/playing2.png)
+![MIME Type](/public/pics/2016-03-16/drag.png)
 
 ## 4. Source Files
 * [Source files of Course Player(Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)
