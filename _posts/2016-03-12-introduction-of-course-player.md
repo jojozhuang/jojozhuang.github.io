@@ -28,7 +28,9 @@ For each course player, no matter whether it is an online application or a mobil
 Video is recorded by camera with audios throughout the whole class, and saved to file in `mp4` format. Each video lasts 3 and half hours(12,600 seconds).
 ### 2.2 Screenshot
 During class, teachers shares course handouts/materials of PPT or PDF through computer monitor. And they will be captured and saved as screenshots for the course. Screenshots are actually images and each image has base64 format. Each screenshot consists of 8x8 = 64 small images, which finally aggregates to a single image.
-![image](/public/pics/2016-03-12/screenshot.png){:width="550px"}  
+![image](/public/pics/2016-03-12/screenshot.png){:width="550px"}
+* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1dy1h3lmJh-vskUyPUWAeqCxNT0-YSHfioo4VwwcTdpM/edit?usp=sharing)
+
 Screenshots are displayed simultaneously when the course is playing, and only the different sections will be refreshed.
 ### 2.3 Whiteboard
 Teachers also write or draw something on the whiteboard. Each action(pen down, pen move, pen up and erase) on the whiteboard is captured by special pens and brushes and persisted into files.
