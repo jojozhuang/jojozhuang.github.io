@@ -14,7 +14,7 @@ A course player consists of three components: video, screenshot and whiteboard.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-Check the posting [Course Player]({% link _posts/2016-03-12-course-player.md %}) to learn the details.
+Check the posting [Introduction of Course Player]({% link _posts/2016-03-12-introduction-of-course-player.md %}) to learn the details.
 
 ## 2. Course Player Project
 ### 2.1 Creating New Project

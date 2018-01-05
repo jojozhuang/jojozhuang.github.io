@@ -11,7 +11,7 @@ category: mobile
 
 > An iOS App for managing itineraries, built with Swift.
 
-This iOS app is used to manage itineraries, built with Swift. The layout contains three tabs: Me, Search and Settings.  
+This app contains three tabs: Me, Search and Settings.  
 
 ## 1. Home screen  
 ![index](/assets/tripplannerios/index.png "index")  

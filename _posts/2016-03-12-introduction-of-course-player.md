@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Course Player"
+title: "Introduction of Course Player"
 date: 2016-03-12
 tags: [Course Player]
 ---
@@ -9,7 +9,7 @@ tags: [Course Player]
 > Introduction of the course players used in DePaul University.
 
 ## 1. Course Online System
-DePaul University has a powerful course online system named COL, which supports remote learning. Several recording devices, like camera, screen capturers are installed in each classroom. These devices capture all the audios, videos, screenshots and whiteboard contents, then, save them to COL system as course files. Later, students can use various course players to watch the recordings. COL team released two types of players, online course player and mobile app player.
+DePaul University has a powerful course online system called COL, which supports remote learning. Several recording devices, like camera, screen capturers are installed in each classroom. These devices capture all the audios, videos, screenshots and whiteboard contents, then, save them to COL system as course files. Later, students can use various course players to watch the recordings. COL team released two types of players, online course player and mobile app player.
 * Online Player
   - Flash Player
   - Silverlight Player
@@ -18,9 +18,9 @@ DePaul University has a powerful course online system named COL, which supports 
   - Android Player
 
 `Online players` are developed by Adobe Flash and Microsoft Silverlight. They are installed as plug-ins on web browsers. Below is the screenshot that flash player is working on Microsoft IE. Notice, the video is sent in a continuous stream of data from server to client web browser.
-![flash](/assets/courseplayerxamarin/flash.png)
+![image](/public/pics/2016-03-12/flash.png)
 `Mobile players` are native apps for iOS and Android platforms. Below is the screenshot that iOS player is working on iPhone 5s. Notice that all the data, including video, screenshot, whiteboard are downloaded to mobile devices before playing.
-![coliphone](/assets/courseplayerxamarin/coliphone.jpeg)
+![image](/public/pics/2016-03-12/coliphone.jpeg)
 
 ## 2. Course Player
 For each course player, no matter whether it is an online application or a mobile app, each contains three components: Video, Screenshot and Whiteboard.  
