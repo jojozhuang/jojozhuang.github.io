@@ -34,13 +34,5 @@ Check posting [Building Course Player with Node.js and Socket.IO]({% link _posts
 
 Besides, check another blog post [Building Realtime Web Application with WebSocket]({% link _posts/2016-03-15-building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind Socket.IO.
 
-## 5. Conclusion
-### 5.1 Easy to Implement  
-If you are familiar with Node.js and javascript, it is not too difficult to develop such real time online application.  
-### 5.2 Low Bandwidth Consumption  
-Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
-### 5.3 Cross-platform  
-This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
-
-## 6. Source Files
+## 5. Source Files
 * [Source files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)

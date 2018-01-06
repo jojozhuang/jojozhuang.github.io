@@ -736,10 +736,18 @@ Click the `Play` button, the slider bar begins to move and the current time will
 You can drag the slider bar to move forward or backward.
 ![MIME Type](/public/pics/2016-03-16/drag.png)
 
-## 4. Source Files
+## 4. Conclusion
+### 4.1 Easy to Implement  
+If you are familiar with Node.js and javascript, it is not too difficult to develop such real time online application.  
+### 4.2 Low Bandwidth Consumption  
+Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
+### 4.3 Cross-platform  
+This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
+
+## 5. Source Files
 * [Source files of Course Player(Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)
 
-## 5. References
+## 6. References
 * [Get Started: Chat application](https://socket.io/get-started/chat/)
 * [jQuery Slider](https://jqueryui.com/slider/)
 * [Sample code for socket.emit and socket.on](https://github.com/socketio/socket.io/issues/2800)
