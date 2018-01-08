@@ -24,7 +24,7 @@ There are three approaches to setup the Xamarin development environment. The cho
 On the Windows machine, install Visual Studio, Android SDK or Android Studio. For Android App development, you can install third party simulator. You can't develop iOS App in this approach, since there is no iOS simulator.
 ### 2.2 Windows + Mac
 On the Windows machine, install Visual Studio, Android SDK or Android Studio. On the Mac machine, install Xcode and iOS simulator. For the iOS App development, you can code with Xamarin in VS on Windows, and send the app to simulator on Mac to see the result. The first step is to pair the Windows machine with the Mac machine.
-![pair](/assets/courseplayerxamarin/pair.png)  
+![pair](/public/pics/2017-07-20/pair.png)  
 For Android App development, both coding and simulation can be done through Visual Studio.
 ### 2.3 Mac Only
 On the Mac machine, install Xcode, Visual Studio(Mac Version), Android SDK or Android Studio. For iOS and Android App development, coding and simulation can both be done in Visual Studio. You can't develop Windows Phone App in this approach.

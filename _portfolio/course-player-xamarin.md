@@ -51,6 +51,9 @@ You can drag the slider bar to move forward or backward.
 ![image](/assets/courseplayerxamarin/drag.png){:width="400px"}  
 
 ## 3. Under the Hood
+Class diagram shows the design of this app based on Xamarin framework.
+![framework](/assets/courseplayerxamarin/framework.png)  
+
 Check the blog post [Building Course Player with Xamarin]({% link _posts/2017-07-24-building-course-player-with-xamarin.md %}) to learn the details of Xamarin and how this app is built.
 
 ## 4. Source Files

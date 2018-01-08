@@ -1239,6 +1239,7 @@ export default Canvas;
 ```
 ### 3.8 Final Project Structure
 ![MIME Type](/public/pics/2017-08-25/projectstructure.png){:width="350px"}
+Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ## 4. Running and Testing
 Start this React app, serve it in web server.

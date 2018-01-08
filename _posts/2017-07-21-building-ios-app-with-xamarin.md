@@ -542,7 +542,7 @@ Manually perform the Segue in the Save event.
 this.PerformSegue("UnwindSave", btnSave);
 ```
 ### 3.12 Final Project Structure
-The final structure of the portable project.
+The final structure of the iOS project.
 ![MIME Type](/public/pics/2017-07-21/ios_project.png){:width="320px"}  
 
 ## 4. Testing
