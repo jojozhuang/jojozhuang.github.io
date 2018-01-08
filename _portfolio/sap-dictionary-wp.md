@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "SAP Dictionary(WP)"
-index: 70
+index: 60
 tags: [Windows Phone, C#]
 image: /assets/sapdictionarywp/thumbnail.png
 excerpt: A WP App for searching SAP & ERP related words, built in C#.
-category: mobile
+category: mobileaa
 ---
 
 > A WP App for searching SAP & ERP related words, built in C#.
