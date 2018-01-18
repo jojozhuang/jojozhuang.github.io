@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Basic Knowledge of React"
-date: 2017-08-15
+date: 2017-08-13
 tags: [React, React Developer Tools]
 ---
 

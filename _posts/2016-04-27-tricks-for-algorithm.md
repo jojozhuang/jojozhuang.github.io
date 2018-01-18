@@ -23,8 +23,24 @@ private class IntervalComparator implements Comparator<Interval> {
 int start = 0;
 int end = nums.length - 1;
 
+while (start < end) {
+    int mid = (start + end) / 2;
+    if (nums[mid] == target) {
+        return mid;
+    } else if (nums[mid] < target) {
+        start = mid;
+    } else {
+        end = mid;
+    }
+}
+```
+Optimized Version.
+```java
+int start = 0;
+int end = nums.length - 1;
+
 while (start + 1 < end) { // avoid infinite loop, need to check nums[start] and nums[end] after the while loop
-    int mid = start + (end - start) / 2; //avoid overflow
+    int mid = start + (end - start) / 2; // avoid overflow, assuming start is not negative and end is not very large positive.
     if (nums[mid] == target) {
         return mid;
     } else if (nums[mid] < target) {
