@@ -93,6 +93,54 @@ Steps to disable the GNOME Lock Screen:
 
 Side effect: Black screen is issued when connected to a Linux physical desktop while the lock screen is active. Details at https://nomachine.com/TR10L04587.
 
+## 6. Gnome is Not available on Red Hat
+1) How to Open Terminal?
+Right-click the Desktop, select 'Open in Terminal'.  
+2) How to start virtual machine?
+```sh
+$ VBoxManage startvm "Oracle 12c"
+```
+3) Start Chrome in Terminal
+```sh
+$ google-chrome
+```
+4) Restart Red Hat in Terminal
+```sh
+sudo reboot
+```
+5) Which graphics card is installed?
+```sh
+$ lspci
+```
+Then, check the 'VGA' line.
+```sh
+01:00.0 VGA compatible controller: NVIDIA Corporation GM107GL [Quadro K1200] (rev a2)
+```
+![MIME Type](/public/pics/2016-08-26/download_drivers_nvidia.png)
+6) Switch Between console and GUI mode.
+```sh
+sudo init 3 //console
+sudo init 5 //Gnome
+```
+7) Check how many kernels are Installed
+```sh
+rpm -q kernel
+kernel-2.6.32-279.el6.x86_64
+kernel-2.6.32-279.2.1.el6.x86_64
+```
+Remove kernal
+```sh
+yum remove kernel-2.6.32-279.el6.x86_64
+```
+8)
+To switch from GNOME Classic to GNOME from within the user session, run the following command:
+```sh
+$ gnome-shell --mode=user -r &
+```
+To switch back to GNOME Classic from within the same user session, run the following command:
+```sh
+$ gnome-shell --mode=classic -r &
+```
 ## 99. References
 * [UNIX / LINUX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 * [Bash Command Basics](https://www.unr.edu/it/research-resources/research-computing/hpc/the-grid/using-the-grid/bash-commands)
