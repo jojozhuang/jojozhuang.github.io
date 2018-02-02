@@ -94,9 +94,14 @@ Steps to disable the GNOME Lock Screen:
 Side effect: Black screen is issued when connected to a Linux physical desktop while the lock screen is active. Details at https://nomachine.com/TR10L04587.
 
 ## 6. Gnome is Not available on Red Hat
-1) How to Open Terminal?
+1) How to Open Terminal?  
 Right-click the Desktop, select 'Open in Terminal'.  
-2) How to start virtual machine?
+2) VirtualBox  
+Open VirtualBox GUI
+```sh
+$ virtualbox
+```
+Start virtual machine
 ```sh
 $ VBoxManage startvm "Oracle 12c"
 ```

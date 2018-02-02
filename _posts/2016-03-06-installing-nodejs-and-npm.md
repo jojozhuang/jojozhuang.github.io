@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Installing Node.js and NPM"
+title: "Installing Node.js and NPM[Draft]"
 date: 2016-03-06
 tags: [Node.js, NPM]
 ---
@@ -13,7 +13,10 @@ tags: [Node.js, NPM]
 
 [NPM](https://www.npmjs.com/) is a package manager that makes installing Node 'packages' fast and easy.
 
-## 2. Installing Node.js and NPM on Ubuntu
+## 2. Key Concepts[Draft]
+Single thread, Event Loop, async function calls.
+
+## 3. Installing Node.js and NPM on Ubuntu
 Update your local package index:
 ```sh
 $ sudo apt-get update
@@ -39,7 +42,7 @@ Check NPM version:
 $ npm -v  
 ```
 
-## 3. Installing Node.js and NPM on RedHat
+## 4. Installing Node.js and NPM on RedHat
 Enter the following command to download the scripts that are required to set up Node.js:
 ```sh
 $ sudo rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
@@ -55,7 +58,7 @@ $ node -v   // check node.js version
 $ npm -v    // check npm version
 ```
 
-## 4. Installing Node.js and NPM on Mac
+## 5. Installing Node.js and NPM on Mac
 Updates Homebrew with a list of the latest version of Node.
 ```sh
 $ brew update
@@ -76,7 +79,7 @@ Use the following command to update node and npm if necessary.
 $ brew upgrade node
 ```
 
-## 5. Verifying Installation
+## 6. Verifying Installation
 Use 'Hello World' application to verify Node.js is installed properly.  
 Create a file named main.js having the following codes.
 ```javascript
@@ -93,7 +96,7 @@ Hello, World!
 ```
 ![MIME Type](/public/pics/2016-03-06/testnode.png){:width="600px"}
 
-## 6. References
+## 7. References
 * [Node.js Tutorial](https://www.tutorialspoint.com/nodejs/index.htm)
 * [Install Node.js - Ubuntu](https://www.godaddy.com/help/install-nodejs-ubuntu-17395)
 * [Installing Node.js and NPM on Mac](https://treehouse.github.io/installation-guides/mac/node-mac.html)
