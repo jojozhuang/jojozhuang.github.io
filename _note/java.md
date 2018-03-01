@@ -2,8 +2,8 @@
 layout: note
 key: note
 title: "Java"
-index: 2
-category: java
+index: 201
+category: language
 ---
 
 > Java

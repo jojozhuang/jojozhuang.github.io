@@ -32,6 +32,11 @@ tags: [Unix, Linux, Shell, Bash]
 * `gzip/gunzip`: Run gzip compression on a file.
 * `lzma/unlzma`: Run LZMA compression on a file.
 
+### 1.3 Others
+* `date`: Show current date and time
+* `cal`: Show calendar
+* `clear`: Clear content in the terminal prompt
+
 ## 2. Basic vi Commands
 The vi editor (short for visual editor) is a screen editor which is available on almost all Unix systems. It is extremely powerful and efficient. There may be times when vi is the only text editor available, so it helps to at least know the basics.
 ### 2.1 Typical vi session

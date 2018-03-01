@@ -2,6 +2,15 @@
 layout: default
 key: note
 title: Rong Zhuang's Notes
+categories:
+  - name: Basic Knowledge
+    type: basic
+  - name: Programming Language
+    type: language
+  - name: Tools
+    type: tools
+  - name: Architecture
+    type: architecture
 ---
 <div style="background:transparent !important" class="jumbotron">
   <div class="container">
@@ -10,19 +19,21 @@ title: Rong Zhuang's Notes
       <div class="container">
           <div class="row">
               <h2>{{ page.title }}</h2>
-              <div class="panel panel-info">
-                  <div class="panel-heading">
-                      <h3 class="panel-title">Javascript</h3>
+              {% for category in page.categories %}
+                  <div class="panel panel-info">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">{{ category.name }}</h3>
+                      </div>
+                      <ul class="list-group">
+                          {% assign list = (site.note | where: "category", {{category.type}}) | sort: 'index') %}
+                          {% for note in list %}
+                              <a href="{{ note.url }}" title="{{ note.title }}" class="list-group-item">
+                                  <div>{{ note.title }}</div>
+                              </a>
+                          {% endfor %}
+                      </ul>
                   </div>
-                  <ul class="list-group">
-                      {% assign list = (site.note | sort: 'index') | reverse %}
-                      {% for note in list %}
-                          <a href="{{ note.url }}" title="{{ note.title }}" class="list-group-item">
-                              <div>{{ note.title }}</div>
-                          </a>
-                      {% endfor %}
-                  </ul>
-              </div>
+              {% endfor %}
           </div>
       </div>
     </div>
