@@ -6,50 +6,51 @@ index: 101
 category: basic
 ---
 
-> • Linux is an implementation of UNIX.
-• The Linux operating system is written in the C programming language.
-• Linux uses GNU tools, a set of freely available standard tools for handling the operating system.
+> Book: Introduction to Linux - A beginner's Guide  
+Author: Machtelt Garrels  
+![MIME Type](/public/notes/introduction-to-linux/cover.jpg){:width="300px"}  
 
-Book: Introduction to Linux
-Author: Machtelt Garrels
+Summary:
+* Linux is an implementation of UNIX.
+* The Linux operating system is written in the C programming language.
+* Linux uses GNU tools, a set of freely available standard tools for handling the operating system.
 
-Chapter 1. What is Linux?
-UNIX: Invented by Bell Labs to solve compatibility issues on software.
-Linus: Linus Torvalds, from university of Helsinki, Finland
-Linux: Linux is a full UNIX clone, fit for use on workstations as well as on middle−range and high−end servers.
-POSIX: Standard for linux and unix.
-SAMBA:
-SMB: Server Message Block
-CIFS: Common Internet File System
-GNU:
-GPL: Public License from GNU
-RPM: RedHat Package Manager
-dpkg: Debian package management system, deb
-apt-get:
-Ximian Red Carpet: A third party implementation of RPM with a graphical front−end.
-Gnome:
-KDE:
+## Chapter 1. What is Linux?
+Terminology:
+* `UNIX`: Invented by Bell Labs to solve compatibility issues on software.
+* `Linus`: Linus Torvalds, from university of Helsinki, Finland
+* `Linux`: Linux is a full UNIX clone, fit for use on workstations as well as on middle−range and high−end servers.
+* `POSIX`: Standard for linux and unix.
+* `SAMBA`: Samba is the standard Windows interoperability suite of programs for Linux and Unix
+* `SMB`: Server Message Block
+* `CIFS`: Common Internet File System
+* `GNU`: GNU is an operating system and an extensive collection of computer software. GNU is composed wholly of free software, most of which is licensed under the GNU Project's own GPL.
+* `GPL`: Public License from GNU
+* `RPM`: RedHat Package Manager
+* `dpkg`: Debian package management system, deb
+* `apt-get`: APT package handling utility - command-line interface. apt-get is a tool to automatically update your Debian machine and get and install debian packages/programs!
+* `Ximian Red Carpet`: A third party implementation of RPM with a graphical front−end.
+* `Gnome`: GNOME is a desktop environment composed of free and open-source software that runs on Linux and most BSD derivatives.
 
 A list of common GNU software:
-• Bash: The GNU shell
-• GCC: The GNU C Compiler
-• GDB: The GNU Debugger
-• coreutils: a set of basic UNIX−style utilities, such as ls, cat and chmod
-• Findutils: to search and find files
-• Fontutils: to convert fonts from one format to another or make new fonts
-• The Gimp: GNU Image Manipulation Program
-• Gnome: the GNU desktop environment
-• Emacs: a very powerful editor
-• Ghostscript and Ghostview: interpreter and graphical frontend for PostScript files.
-• GNU Photo: software for interaction with digital cameras
-• Octave: a programming language, primarily intended to perform numerical computations and image
+* Bash: The GNU shell
+*  GCC: The GNU C Compiler
+* GDB: The GNU Debugger
+* coreutils: a set of basic UNIX−style utilities, such as ls, cat and chmod
+* Findutils: to search and find files
+* Fontutils: to convert fonts from one format to another or make new fonts
+* The Gimp: GNU Image Manipulation Program
+* Gnome: the GNU desktop environment
+* Emacs: a very powerful editor
+* Ghostscript and Ghostview: interpreter and graphical frontend for PostScript files.
+* GNU Photo: software for interaction with digital cameras
+* Octave: a programming language, primarily intended to perform numerical computations and image
 processing.
-• GNU SQL: relational database system
-• Radius: a remote authentication and accounting server
+* GNU SQL: relational database system
+* Radius: a remote authentication and accounting server
 
-Chapter 2. Quickstart
+## Chapter 2. Quickstart
 Terminal Window, Command Prompt
-
 
 ```
 [user@host dir]
@@ -72,7 +73,6 @@ In the above example, user will be your login name, hosts the name of the machin
  `Tab` |  Command or filename completion; when multiple choices are possible, the system will either signal with an audio or visual bell, or, if too many choices are possible, ask you if you want to see them all.
  `Tab Tab` |  Shows file or command completion possibilities.
 
-
 Get help
 The man pages
 ```sh
@@ -80,8 +80,8 @@ man man
 man ls
 ```
 * space bar -> next page
-* b−key -> previous page
-* q-key -> quit
+* b key -> previous page
+* q key -> quit
 
 The Info pages
 ```sh
@@ -101,41 +101,41 @@ cat −−help
 Konqueror as help browser
 gnome−help
 
-Chapter 3. About files and the file system
+## Chapter 3. About files and the file system
 Special files:
-• Directories: files that are lists of other files.
-• Special files: the mechanism used for input and output. Most special files are in /dev, we will
+* Directories: files that are lists of other files.
+* Special files: the mechanism used for input and output. Most special files are in /dev, we will
 discuss them later.
-• Links: a system to make a file or directory visible in multiple parts of the system's file tree. We will
+* Links: a system to make a file or directory visible in multiple parts of the system's file tree. We will
 talk about links in detail.
-• (Domain) sockets: a special file type, similar to TCP/IP sockets, providing inter−process networking
+* (Domain) sockets: a special file type, similar to TCP/IP sockets, providing inter−process networking
 protected by the file system's access control.
-• Named pipes: act more or less like sockets and form a way for processes to communicate with each
+* Named pipes: act more or less like sockets and form a way for processes to communicate with each
 other, without using network socket semantics.
 
  Symbol |  Meaning
---------|--
- -  |  Regular file
- d |  Directory
- l |  Link
- c |  Special file
-s  |  Socket
-p | Named pipe
-b | Block device
+--------|-----------
+ -      | Regular file
+ d      | Directory
+ l      | Link
+ c      | Special file
+ s      | Socket
+ p      | Named pipe
+ b      | Block device
 
-Partition layout and types
-• data partition: normal Linux system data, including the root partition containing all the data to start up and run the system; and
-• swap partition: expansion of the computer's physical memory, extra memory on hard disk.
+Partition layout and types:
+* data partition: normal Linux system data, including the root partition containing all the data to start up and run the system; and
+* swap partition: expansion of the computer's physical memory, extra memory on hard disk.
 
 ```sh
 fdisk
 ```
 
 Samples:
-• a partition for user programs (/usr)
-• a partition containing the users' personal data (/home)
-• a partition to store temporary data like print− and mail−queues (/var)
-• a partition for third party and extra software (/opt)
+* a partition for user programs (/usr)
+* a partition containing the users' personal data (/home)
+* a partition to store temporary data like print− and mail−queues (/var)
+* a partition for third party and extra software (/opt)
 
 Mount points
 file /etc/fstab
@@ -146,27 +146,26 @@ df
 http://fibrevillage.com/sysadmin/403-understanding-linux-filesystem-layout-directories-structuries
 
 
-Directory | Content
-----------|--------
-/bin | Common programs, shared by the system, the system administrator and the users.
-/boot | The startup files and the kernel, vmlinuz. In some recent distributions also grub data. Grub is the GRand Unified Boot loader and is an attempt to get rid of the many different boot-loaders we know today.
-/dev | Contains references to all the CPU peripheral hardware, which are represented as files with special properties.
-/etc | Most important system configuration files are in /etc, this directory contains data similar to those in the Control Panel in Windows
-/home | Home directories of the common users.
-/initrd | (on some distributions) Information for booting. Do not remove!
-/lib | Library files, includes files for all kinds of programs needed by the system and the users.
+Directory   | Content
+------------|--------
+/bin        | Common programs, shared by the system, the system administrator and the users.
+/boot       | The startup files and the kernel, vmlinuz. In some recent distributions also grub data. Grub is the GRand Unified Boot loader and is an attempt to get rid of the many different boot-loaders we know today.
+/dev        | Contains references to all the CPU peripheral hardware, which are represented as files with special properties.
+/etc        | Most important system configuration files are in /etc, this directory contains data similar to those in the Control Panel in Windows
+/home       | Home directories of the common users.
+/initrd     | (on some distributions) Information for booting. Do not remove!
+/lib        | Library files, includes files for all kinds of programs needed by the system and the users.
 /lost+found | Every partition has a lost+found in its upper directory. Files that were saved during failures are here.
-/misc | For miscellaneous purposes.
-/mnt | Standard mount point for external file systems, e.g. a CD-ROM or a digital camera.
-/net | Standard mount point for entire remote file systems
-/opt | Typically contains extra and third party software.
-/proc | A virtual file system containing information about system resources. More information about the meaning of the files in proc is obtained by entering the command man proc in a terminal window. The file proc.txt discusses the virtual file system in detail.
-/root | The administrative user's home directory. Mind the difference between /, the root directory and /root, the home directory of the root user.
-/sbin | Programs for use by the system and the system administrator.
-/tmp | Temporary space for use by the system, cleaned upon reboot, so don't use this for saving any work!
-/usr | Programs, libraries, documentation etc. for all user-related programs.
-/var | Storage for all variable files and temporary files created by users, such as log files, the mail queue, the print spooler area, space for temporary storage of files downloaded from the Internet, or to keep an image of a CD before burning it.
-
+/misc       | For miscellaneous purposes.
+/mnt        | Standard mount point for external file systems, e.g. a CD-ROM or a digital camera.
+/net        | Standard mount point for entire remote file systems
+/opt        | Typically contains extra and third party software.
+/proc       | A virtual file system containing information about system resources. More information about the meaning of the files in proc is obtained by entering the command man proc in a terminal window. The file proc.txt discusses the virtual file system in detail.
+/root       | The administrative user's home directory. Mind the difference between /, the root directory and /root, the home directory of the root user.
+/sbin       | Programs for use by the system and the system administrator.
+/tmp        | Temporary space for use by the system, cleaned upon reboot, so don't use this for saving any work!
+/usr        | Programs, libraries, documentation etc. for all user-related programs.
+/var        | Storage for all variable files and temporary files created by users, such as log files, the mail queue, the print spooler area, space for temporary storage of files downloaded from the Internet, or to keep an image of a CD before burning it.
 
 find out which partition a directory is on
 ```sh
@@ -176,13 +175,13 @@ Filesystem Size Used Avail Use% Mounted on
 ```
 
 At the time a new file is created, it gets a free `inode`. In that inode is the following information:
-• Owner and group owner of the file.
-• File type (regular, directory, ...)
-• Permissions on the file Section 3.4.1
-• Date and time of creation, last read and change.
-• Date and time this information has been changed in the inode. • Number of links to this file (see later in this chapter).
-• File size
-• An address defining the actual location of the file data.
+* Owner and group owner of the file.
+* File type (regular, directory, ...)
+* Permissions on the file Section 3.4.1
+* Date and time of creation, last read and change.
+* Date and time this information has been changed in the inode. • Number of links to this file (see later in this chapter).
+* File size
+* An address defining the actual location of the file data.
 
 The only information not included in an inode, is the file name and directory. These are stored in the special directory files. By comparing file names and inode numbers, the system can make up a tree−structure that the user understands. Users can display inode numbers using the −i option to ls. The inodes have their own separate space on the disk.
 ```sh
@@ -202,12 +201,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin:\ /usr/bin:/usr/sbin:/
 Note that when using the export command in a shell, the changes are temporary and only valid for this session (until you log out). Opening new sessions, even while the current one is still running, will not result in a new path in the new session.
 
 
-Shell types
-`sh` or Bourne Shell: the original shell still used on UNIX systems and in UNIX related environments. This is the basic shell, a small program with few features. When in POSIX−compatible mode, bash will emulate this shell.
-• `bash` or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, bash is the standard shell for common users. This shell is a so−called superset of the Bourne shell, a set of add−ons and plug−ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in sh, also work in bash. However, the reverse is not always the case. All examples and exercises in this book use bash.
-• `csh` or C shell: the syntax of this shell resembles that of the C programming language. Sometimes asked for by programmers.
-• `tcsh` or Turbo C shell: a superset of the common C shell, enhancing user−friendliness and speed.
-• `ksh` or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the
+Shell types:
+* `sh` or Bourne Shell: the original shell still used on UNIX systems and in UNIX related environments. This is the basic shell, a small program with few features. When in POSIX−compatible mode, bash will emulate this shell.
+* `bash` or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, bash is the standard shell for common users. This shell is a so−called superset of the Bourne shell, a set of add−ons and plug−ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in sh, also work in bash. However, the reverse is not always the case. All examples and exercises in this book use bash.
+* `csh` or C shell: the syntax of this shell resembles that of the C programming language. Sometimes asked for by programmers.
+* `tcsh` or Turbo C shell: a superset of the common C shell, enhancing user−friendliness and speed.
+* `ksh` or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the
 Bourne shell; with standard configuration a nightmare for beginning users.
 
 ```sh
@@ -239,7 +238,7 @@ echo $HOME
 Most common configuration files
 
 File | Information/service
------|----------------
+--------|----------------
 aliases | Mail aliases file for use with the Sendmail and Postfix mail server. Running a mail server on each and every system has long been common use in the UNIX world, and almost every Linux distribution still comes with a Sendmail package. In this file local user names are matched with real names as they occur in E-mail addresses, or with other local addresses.
 apache | Config files for the Apache web server.
 bashrc | The system-wide configuration file for the Bourne Again SHell. Defines functions and aliases for all users. Other shells may have their own system-wide config files, like cshrc.
@@ -350,14 +349,11 @@ more running.log
 less running.log
 ```
 
-
- Link types
-Symbolic link, Hard link
-
-• Hard link: Associate two or more file names with the same inode. Hard links share the same data blocks on the hard disk, while they continue to behave as independent files.
+Link types:
+* Hard link: Associate two or more file names with the same inode. Hard links share the same data blocks on the hard disk, while they continue to behave as independent files.
 There is an immediate disadvantage: hard links can't span partitions, because inode numbers are only
 unique within a given partition.
-• Soft link or symbolic link (or for short: symlink): a small file that is a pointer to another file. A
+* Soft link or symbolic link (or for short: symlink): a small file that is a pointer to another file. A
 symbolic link contains the path to the target file instead of a physical location on the hard disk. Since inodes are not used in this system, soft links can span across partitions.
 
 - inode number, ls -i, ls -i /, ls -l
@@ -383,8 +379,8 @@ root to change it.
 
 Access mode codes
 
-Code | Meaning
------|--------
+Code   | Meaning
+-------|--------
 0 or − | The access right that is supposed to be on this place is not granted.
 4 or r | read access is granted to the user category defined in this place
 2 or w | write permission is granted to the user category defined in this place
@@ -403,25 +399,24 @@ id
 echo $USER
 ```
 
-Change permission: chmod
+Change permission: `chmod`
 ```sh
-Johnny@Johnny-Mac:~$ hello
+$ hello
 -bash: ./hello: Permission denied
-Johnny@Johnny-Mac:~$ cat hello
+$ cat hello
 echo "Hello, World"
-Johnny@Johnny-Mac:~$ ls -l hello
+$ ls -l hello
 -rw-r--r--  1 i857285  GLOBAL\Domain Users  20 Mar  6 15:17 hello
-Johnny@Johnny-Mac:~$ chmod u+x hello
-Johnny@Johnny-Mac:~$ ls -l hello
+$ chmod u+x hello
+$ ls -l hello
 -rwxr--r--  1 i857285  GLOBAL\Domain Users  20 Mar  6 15:17 hello
-Johnny@Johnny-Mac:~$ hello
+$ hello
 Hello, World
-Johnny@Johnny-Mac:~$ chmod u-rwx,go+rwx hello
-Johnny@Johnny-Mac:~$ ls -l hello
+$ chmod u-rwx,go+rwx hello
+$ ls -l hello
 ----rwxrwx  1 i857285  GLOBAL\Domain Users  20 Mar  6 15:17 hello
-Johnny@Johnny-Mac:~$ hello
+$ hello
 -bash: ./hello: Permission denied
-Johnny@Johnny-Mac:~$
 ```
 
 Command             | Meaning
@@ -453,8 +448,10 @@ asim:/var/www/html> ls −l test
 ```
 
 Default permissions by root.
-Johnny@Johnny-Mac:~$ umask
+```sh
+$ umask
 0022
+```
 
 chown, chgrp
 ```sh
@@ -467,14 +464,14 @@ sudo chgrp `id -g` /ariba
 sudo chgrp `id -g` /ariba/ezone
 ```
 
-Chapter 4. Processes
+## Chapter 4. Processes
 Display process.
 ```sh
-ps
-pstree
+$ ps
+$ pstree
 ```
 
-kill
+Kill process.
 
 Signal name | Signal number | Meaning
 ------------|---------------|------------------------------
@@ -536,36 +533,36 @@ sleep, at,
 
 Process handling commands
 
-Command   | Meaning
-----------|-------------
-`at`      | Queue jobs for later execution.
-`atq`     | Lists the user's pending jobs.
-`atrm`    | Deletes jobs, determined by their job number.
-`batch`   | Executes commands when system load level permits.
-`crontab` | Maintain crontab files for individual users.
-`halt`    | Stop the system.
+Command    | Meaning
+-----------|-------------
+`at`       | Queue jobs for later execution.
+`atq`      | Lists the user's pending jobs.
+`atrm`     | Deletes jobs, determined by their job number.
+`batch`    | Executes commands when system load level permits.
+`crontab`  | Maintain crontab files for individual users.
+`halt`     | Stop the system.
 `init runlevel` | Process control initialization.
-`jobs`    | Lists currently executing jobs.
-`kill`    | Terminate a process.
-`mesg`    | Control write access to your terminal.
-`netstat` | Display network connections, routing tables, interface statistics, masquerade connections and multicast memberships.
-`nice`    | Run a program with modified scheduling priority.
-`ps`      | Report process status.
-`pstree`  | Display a tree of processes.
-`reboot`  | Stop the system.
-`renice`  | Alter priority of running processes.
+`jobs`     | Lists currently executing jobs.
+`kill`     | Terminate a process.
+`mesg`     | Control write access to your terminal.
+`netstat`  | Display network connections, routing tables, interface statistics, masquerade connections and multicast memberships.
+`nice`     | Run a program with modified scheduling priority.
+`ps`       | Report process status.
+`pstree`   | Display a tree of processes.
+`reboot`   | Stop the system.
+`renice`   | Alter priority of running processes.
 `shutdown` | Bring the system down.
-`sleep`   | Delay for a specified time.
-`time`    | Time a command or report resource usage.
-`top`     | Display top CPU processes.
-`uptime`  | Show how long the system has been running.
-`vmstat`  | Report virtual memory statistics.
-`w`       | Show who is logged on and what they are doing.
-`wall`    | Send a message to everybody's terminals.
-`who`     | Show who is logged on.
-`write`   | Send a message to another user.
+`sleep`    | Delay for a specified time.
+`time`     | Time a command or report resource usage.
+`top`      | Display top CPU processes.
+`uptime`   | Show how long the system has been running.
+`vmstat`   | Report virtual memory statistics.
+`w`        | Show who is logged on and what they are doing.
+`wall`     | Send a message to everybody's terminals.
+`who`      | Show who is logged on.
+`write`    | Send a message to another user.
 
-Chapter 5. I/O redirection
+## Chapter 5. I/O redirection
 Output redirection with > and |
 ```sh
 nancy:~> cat test1
@@ -612,7 +609,7 @@ Get the file list and output to dirlist
 ls 2>&1 > dirlist
 ```
 
-Chapter 6. Text editors
+## Chapter 6. Text editors
 Using the Vim editor  
 Moving through the text in command mode.
 * `h` to move the cursor to the left
@@ -648,7 +645,7 @@ Vim tutorial.
 vimtutor
 ```
 
-Chapter 7. Home sweet /home
+## Chapter 7. Home sweet /home
 The process of reducing an existing file to a file with the same name that is 0 bytes large is called "truncating."
 empty file 'placeholder'.
 ```sh
@@ -746,8 +743,10 @@ mount /dev/cdrom /mnt/cdrom
 /dev/cdrom /mnt/cdrom iso9660 noauto,owner,ro 0 0
 ```
 
-Chapter 8. Printers and printing
-Chapter 9. Fundamental Backup Techniques
+## Chapter 8. Printers and printing
+Empty.
+
+## Chapter 9. Fundamental Backup Techniques
 Archiving with tar. In Linux, this is commonly done with the tar command. tar was originally designed to archive data on tapes, but it can also make archives, known as tarballs.
 
 Compress a directory
@@ -806,8 +805,8 @@ Command      | Meaning
 `tar`        | Tape archiving utility, also used for making archives on disk instead of on tape.
 `umount`     | Unmount file systems.
 
-Chapter 10. Networking
-Networking protocols: TCP/IP, TCP/IPv6, PPP, SLIP, PLIP, PPPOE, ISDN, smbd, nmbd
+## Chapter 10. Networking
+Networking protocols: TCP/IP, TCP/IPv6, PPP, SLIP, PLIP, PPPOE, ISDN, smbd, nmbd  
 Network configuration files:
 * /etc/hosts: always contains the localhost IP address, 127.0.0.1
 * /etc/resolv.conf: configure access to a DNS server.
@@ -817,12 +816,13 @@ Network configuration commands: ip, ifconfig, netstat, ping, whois
 
 On Linux systems, the server configuration is usually done in the `/etc/httpd` directory. The most important configuration file is `httpd.conf`.
 
-ssh, Secure SHell
+ssh, Secure SHell  
 Secure remote copying: scp
 
-Chapter 11. Sound and Video
+## Chapter 11. Sound and Video
+Empty.
 
-Appendix B: DOS versus Linux commands
+## Appendix B: DOS versus Linux commands
 
 DOS commands    | Linux command
 ----------------|------------------
@@ -847,7 +847,7 @@ move         | mv
 ren          | mv
 time         | date
 
-Appendix C. Shell Features
+## Appendix C. Shell Features
 
 Command  | Meaning
 ---------|-------
@@ -890,8 +890,6 @@ time     | Time a command
 umask    | Set or list file permissions
 unset    | Erase variable or function definitions
 wait     | Wait for a background job to finish
-
-P120/249
 
 Need to read more.
 * bash scripts. Page 130, 7.2.5.2.
