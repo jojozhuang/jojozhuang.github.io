@@ -36,6 +36,7 @@ tags: [Unix, Linux, Shell, Bash]
 * `date`: Show current date and time
 * `cal`: Show calendar
 * `clear`: Clear content in the terminal prompt
+* `exit`: 
 
 ## 2. Basic vi Commands
 The vi editor (short for visual editor) is a screen editor which is available on almost all Unix systems. It is extremely powerful and efficient. There may be times when vi is the only text editor available, so it helps to at least know the basics.

@@ -21,7 +21,7 @@ There is one core functionality for the store administrator, managing products.
 Compared with the existing web application of Game Store, this mobile app has only one simple function, product management.
 
 ## 2. Apps
-I built four mobile apps with multiple different technologies. Except the native apps(iOS and Android), there are another two apps(also targeting iOS and Android) built with cross-platform mobile development tool - [Xamarin](https://xamarin.com/).
+I built four mobile apps with multiple different technologies. Apart from the native apps(iOS and Android), there are another two apps(also targeting iOS and Android) built with cross-platform mobile development tool - [Xamarin](https://xamarin.com/).
 * Native iOS App
 * Native Android App
 * Xamarin iOS App
