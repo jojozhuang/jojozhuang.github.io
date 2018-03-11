@@ -102,11 +102,11 @@ Here is the article shows how to use it.
 * [Building an HTML5 Web Sockets Server with ASP.NET 4.5](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) .  
 
 ### 3.1 First user comes in, says 'Hi'.  
-![MS WebSocket1](/public/pics/2016-03-15/mswebsocket1.png "MS WebSocket1")  
-### 3.2 Second user comes in(another page), says 'I'm here'.  
-![MS WebSocket2](/public/pics/2016-03-15/mswebsocket2.png "MS WebSocket2")  
+![MS WebSocket1](/public/pics/2016-03-15/mswebsocket1.png "MS WebSocket1"){:width="550px"}    
+### 3.2 Second user comes in(another page), says 'I'm here, too'.  
+![MS WebSocket2](/public/pics/2016-03-15/mswebsocket2.png "MS WebSocket2"){:width="550px"}    
 ### 3.3 Back to the page of first user.
-![MS WebSocket3](/public/pics/2016-03-15/mswebsocket3.png "MS WebSocket3")  
+![MS WebSocket3](/public/pics/2016-03-15/mswebsocket3.png "MS WebSocket3"){:width="550px"}    
 
 ## 4. SignalR
 SignalR is popular and it can run in Windows7. The official tutorial is [Tutorial: Getting Started with SignalR 2](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
