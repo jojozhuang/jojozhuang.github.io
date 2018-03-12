@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Building Realtime Applications with SignalR"
+title: "Building Realtime Application with SignalR"
 date: 2016-03-14
 tags: [Chat Room, Sketch Pad, SignalR]
 ---
