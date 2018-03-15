@@ -6,7 +6,7 @@ date: 2016-03-15
 tags: [SignalR, ASP.NET HTML5 Canvas, jQuery]
 ---
 
-> Build a realtime web application to play course recordings with [SignalR](https://www.asp.net/signalr), HTML5 Canvas and [jQuery](https://jquery.com/) based on [Node.js](https://nodejs.org/).
+> Build a realtime web application to play course recordings with [SignalR](https://www.asp.net/signalr), HTML5 Canvas and [jQuery](https://jquery.com/) based on ASP.NET MVC.
 
 ## 1. Course Player
 A course player consists of three components: video, screenshot and whiteboard.
@@ -17,13 +17,13 @@ A course player consists of three components: video, screenshot and whiteboard.
 Check the posting [Introduction of Course Player]({% link _posts/2016-03-12-introduction-of-course-player.md %}) to learn the details.
 
 ## 2. Course Player Project
-### 2.1 Creating New Project
-In Visual Studio, create a new Web Application project named `CoursePlayer.SignalR`. Create another Class project named `CoursePlayer.Core`.
+### 2.1 Creating New Projects
+In Visual Studio, create a 'Web Application' project named `CoursePlayer.SignalR`, and create another 'Class' project named `CoursePlayer.Core`.
 
-### 2.2 Course Player Core Project
-I will reuse the Course Player Core project, which was created for the portfolio Course Player Xamarin. Check the posting [Building Course Player with Xamarin]({% link _posts/2017-07-24-building-course-player-with-xamarin.md %})  for more details.
-Copy all files except the interface file 'IFileHelper' from 'Johnny.Portfolio.CoursePlayer.Core'.
+### 2.2 Core Project
+Reuse the Course Player Core project, copy all files except the interface file 'IFileHelper' from 'Johnny.Portfolio.CoursePlayer.Core'.
 ![MIME Type](/public/pics/2016-03-15/coreproject.png){:width="350px"}
+Project 'Johnny.Portfolio.CoursePlayer.Core' was created for the portfolio `Course Player Xamarin`. Check the posting [Building Course Player with Xamarin]({% link _posts/2017-07-24-building-course-player-with-xamarin.md %})  for more details.
 
 In `CourseApi.cs`, we define two methods. One is for fetching the data of screenshot, another is for fetching the data of whiteboard.
 ```c#
@@ -31,16 +31,16 @@ public static List<SSImage> GetScreenshotData(int second) { }
 public static WBData GetWhiteboardData(int second) { }
 ```
 
-When reading the data from course files, we need decompress them. Here, I use `SharpZipLib` library, see https://github.com/icsharpcode/SharpZipLib for more details.
+When reading the data from course files, we need to decompress them first. Here, I'm using `SharpZipLib` library, visit https://github.com/icsharpcode/SharpZipLib for more details.
 ![MIME Type](/public/pics/2016-03-15/zipproject.png){:width="350px"}
 
 ### 2.3 Web Project
-Create new project, select 'ASP.NET Web Application' as the template, give the name 'CoursePlayer.SignalR'.
+Open the web project, it looks as follows.
 ![MIME Type](/public/pics/2016-03-15/webproject.png){:width="350px"}
-Install package `Microsoft.AspNet.SignalR` and its dependency through NuGet Package Manager.  
-To enable SignalR in your application, create a class called Startup. Righ click on 'App_Start'->New Item, then select Web->General->OWIN Startup class.
-![MIME Type](/public/pics/2016-03-15/startup.png){:width="600px"}
-Update it with the following content.
+1) Install package `Microsoft.AspNet.SignalR` and its dependency through NuGet Package Manager. To enable SignalR in your application, create a class named Startup. Right click on `/App_Start` folder, choose 'New Item', then select Web->General->OWIN Startup class.
+![MIME Type](/public/pics/2016-03-15/startupproject.png){:width="350px"}
+![MIME Type](/public/pics/2016-03-15/startup.png){:width="800px"}
+Update its content as follows.
 ```c#
 using Microsoft.Owin;
 using Owin;
@@ -57,9 +57,9 @@ namespace CoursePlayer.SignalR
         }
     }
 }
-
 ```
-Update site style 'Content/Site.css'.
+
+2) Update `/Content/Site.css` to style the whole website.
 ```css
 body {
     padding-top: 50px;
@@ -97,7 +97,7 @@ canvas, video {
     padding: 0;
 }
 ```
-Disable bundle by commenting out the 'RegisterBundles' method in `Global.asax`.
+3) Disable bundling by commenting out the 'RegisterBundles()' method in `Global.asax`.
 ```c#
 using System;
 using System.Collections.Generic;
@@ -121,7 +121,7 @@ namespace CoursePlayer.SignalR
     }
 }
 ```
-Create a javascript in 'Scripts' folder named `player.js`.
+4) Create a javascript in '/Scripts' folder named `player.js`.
 ```js
 function playCourse(hub, playerHub, playstate, btnplay, processbar, currenttime, videoplayer, workingss, ss, workingwb, wb) {
     if (playstate == 'stopped') {
@@ -319,8 +319,7 @@ function getReadableTimeText(totalseconds) {
 ```
 Actually, this file is copied from the portfolio 'Course Player(Socket.IO)'.
 
-Remove About() and Contact() methods in HomeController.cs. And remove `About.cshtml` and `Contact.cshtml` in Views/Home.
-Update file 'Views/Home/Index.cshtml' with following content.
+5) Remove the auto generated About() and Contact() methods from `HomeController.cs`. And remove their views `About.cshtml` and `Contact.cshtml` in `/Views/Home/`. Update file `/Views/Home/Index.cshtml` as follows.
 ```html
 @{
     ViewBag.Title = "Home";
@@ -342,7 +341,7 @@ Update file 'Views/Home/Index.cshtml' with following content.
 </ul>
 ```
 
-Update the layout file `Views/Shared/_Layout.cshtml`.
+Update the layout file `/Views/Shared/_Layout.cshtml` as follows.
 ```html
 <!DOCTYPE html>
 <html>
@@ -404,7 +403,7 @@ Update the layout file `Views/Shared/_Layout.cshtml`.
 </html>
 ```
 
-Create a controller named 'DummyPlayerController'.
+6) Create a controller named `DummyPlayerController`.
 ```c#
 using System.Web.Mvc;
 
@@ -420,7 +419,7 @@ namespace CoursePlayer.SignalR.Controllers
     }
 }
 ```
-Create view for this controller. Create view in folder 'Views/DummyPlayer' with name .
+Create view for this controller in folder `/Views/DummyPlayer` with the name `Index.cshtml`.
 ```html
 
 @{
@@ -492,10 +491,9 @@ Create view for this controller. Create view in folder 'Views/DummyPlayer' with 
     });
 </script>
 ```
-
-Include folder '204304' to the project. It contains all of the data files for one course.
-
-Create class ScreenImage in folder 'Models' with following content.
+7) Include folder `/204304` to the project. This folder contains all of the data files for screenshot and whiteboard of one course recording.
+![MIME Type](/public/pics/2016-03-15/recordingfiles.png){:width="350px"}
+8) Create a model class `ScreenImage` in folder `/Models` with following content.
 ```c#
 namespace CoursePlayer.SignalR.Models
 {
@@ -509,7 +507,7 @@ namespace CoursePlayer.SignalR.Models
 }
 ```
 
-Create folder named 'SignalR', then create class named 'PlayerHub'.
+Create folder named `/SignalR`, then create class named `PlayerHub`. This hub class read data for the course and send back to client.
 ```c#
 using CoursePlayer.Core;
 using CoursePlayer.Core.Models;
@@ -553,9 +551,8 @@ namespace CoursePlayer.SignalR
     }
 }
 ```
-
-### 2.10 Running and Testing
-Start the web project.
+### 2.4 Running and Testing
+Start the web project. Home page contains some useful information related to SignalR.
 ![MIME Type](/public/pics/2016-03-15/homepage.png)
 Switch to 'Dummy Player'. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
 ![MIME Type](/public/pics/2016-03-15/dummyhomepage.png)
@@ -564,17 +561,18 @@ Click the `Play` button, the slider bar begins to move and the current time will
 You can drag the slider bar to move forward or backward.
 ![MIME Type](/public/pics/2016-03-15/dummydrag.png)
 
-## 3. Enhance with Video
-### 3.1 Add video control
-Add the reference of the video player to layout file `Views/Shared/_Layout.cshtml`.
+## 3. Enhancement with Video Player
+Enhance the dummy player by replacing the slider bar with video player.
+### 3.1 Reference for Video Control
+Add the referencse of the video player into layout file `/Views/Shared/_Layout.cshtml`.
 ```html
 <!--http://videojs.com/-->
 <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
 <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
 <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
 ```
-### 3.2 Create controller and view
-Create a new controller named 'CoursePlaye'.
+### 3.2 Controller and View
+Create a new controller named `CoursePlayerController`.
 ```c#
 using System;
 using System.Collections.Generic;
@@ -594,7 +592,7 @@ namespace CoursePlayer.SignalR.Controllers
     }
 }
 ```
-Add view for this controller.
+Create view for this controller in folder `/Views/CoursePlayer` with the name `Index.cshtml`.
 ```html
 
 @{
@@ -697,41 +695,35 @@ Add link for this new view in layout file.
     </ul>
 </div>
 ```
-### 3.9 Final Project Structure
-![MIME Type](/public/pics/2016-03-16/projectstructure.png){:width="350px"}
-Notice, folder `204304` contains the data files for screenshot and whiteboard.
+### 3.3 Final Project Structure
+![MIME Type](/public/pics/2016-03-15/projectstructure.png){:width="350px"}
+Notice, folder `/204304` contains the data files for screenshot and whiteboard.
 
-### 3.10 Running and Testing
-Start the web project.
-![MIME Type](/public/pics/2016-03-15/homepage.png)
-Switch to 'Dummy Player'. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![MIME Type](/public/pics/2016-03-15/dummyhomepage.png)
+### 3.4 Running and Testing
+Start the web project and switch to 'Course Player'. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The upper one is for screenshot and the lower one is for whiteboard. And there is a video player at the left side.
+![MIME Type](/public/pics/2016-03-15/playerhomepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![MIME Type](/public/pics/2016-03-15/dummyplay.png)
+![MIME Type](/public/pics/2016-03-15/playing.png)
 You can drag the slider bar to move forward or backward.
-![MIME Type](/public/pics/2016-03-15/dummydrag.png)
-
-
-Based on the previous sample, add a HTML5 Video control to make it a real course player. Here is the js video control for html5, http://videojs.com/.  
-![image13](/assets/courseplayersignalr/image13.png)  
+![image13](/public/pics/2016-03-15/drag.png)  
 
 ## 4. Conclusion  
 ### 4.1 Easy to Implement  
 If you are familiar with C\# and ASP.NET, it is really easy to develop such real time online application. Of course, you need write some javascript code to use SignalR at the client side.  
 ### 4.2 Low Bandwidth Consumption  
-Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and system performance at server side.  
+Communication occurs only when necessary. Unlike traditional web application, WebSocket makes the web application react at real time. This improve the user experience at client side and the system performance at server side.  
 ### 4.3 Cross-platform(For customers/students)  
-This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
+This player is web based, the only required tool on client’s machine to watch the recording is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
 ### 4.4 Cross-platform(For developer)  
-For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with our existing Flash and Silverlight player, this course player is simple and easy to maintain, since there is only one copy of the code.  
+For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with the Flash player and Silverlight player, this SignalR player is simple and easy to maintain, since there is only one copy of the code.  
 ### 4.5 Reusable  
-The core module(COL.Core) of this application is shared with [Xamarin Course Player]({% link _portfolio/course-player-xamarin.md %}), which is another portfolio of mine. It is a cross-platform solution for mobile development.
-![image14](/assets/courseplayersignalr/image14.png)  
+The core module(CoursePlayer.Core) of this application is shared with [Xamarin Course Player]({% link _portfolio/course-player-xamarin.md %}), which is another portfolio of mine. That is a cross-platform solution for mobile development.
+![MIME Type](/public/pics/2016-03-15/coreproject.png){:width="350px"}
 
-This means, we have the cross-platform solution for developing applications with only using C\#.  
-* First, use Xamarin to develop mobile apps for iOS and Android Platform.  
+This means, we have the cross-platform solution for developing applications by only using C\#.  
+* First, use Xamarin to develop mobile apps for iOS and Android platform.  
 * Second, use ASP.NET and SignalR to develop web application for different web browsers and platforms.  
-* Technically, the core module can be shared and reused by mobile and web application, even, it can be shared with winform applications.  
+* Technically, the core module can be shared and reused by mobile and web application, even more, it can be shared with winform applications.  
 * Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently. However, the business logics are same, which can be reused.  
 
 ## 5. Source Files
@@ -739,3 +731,4 @@ This means, we have the cross-platform solution for developing applications with
 
 ## 6. References
 * [jQuery Slider](https://jqueryui.com/slider/)
+* [Video Player Control](http://videojs.com/)
