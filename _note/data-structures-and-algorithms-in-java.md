@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Data Structures and Algorithms"
+title: "Data Structures and Algorithms in Java"
 index: 102
 category: basic
 ---
