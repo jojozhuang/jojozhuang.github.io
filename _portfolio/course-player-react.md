@@ -4,7 +4,7 @@ key: portfolio
 title: "Course Player(React)"
 index: 200
 tags: [React, Socket.IO]
-image: /assets/courseplayerreact/thumbnail.png
+image: /public/portfolio/courseplayerreact/thumbnail.png
 excerpt: A realtime online course player, built with React and Socket.IO.
 category: web
 ---
@@ -23,11 +23,11 @@ Check the posting [Introduction of Course Player]({% link _posts/2016-03-12-intr
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
 
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![image](/assets/courseplayerreact/homepage.png)  
+![image](/public/portfolio/courseplayerreact/homepage.png)  
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/assets/courseplayerreact/play.png)  
+![image](/public/portfolio/courseplayerreact/play.png)  
 You can drag the slider bar to move forward or backward.
-![image](/assets/courseplayerreact/drag.png)  
+![image](/public/portfolio/courseplayerreact/drag.png)  
 
 ## 3. Under the Hood
 Check posting [Building Course Player with React and Socket.IO]({% link _posts/2017-08-25-building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
