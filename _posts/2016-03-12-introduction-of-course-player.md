@@ -18,9 +18,9 @@ DePaul University has a powerful course online system called COL, which supports
   - Android Player
 
 `Online players` are developed by Adobe Flash and Microsoft Silverlight. They are installed as plug-ins on web browsers. Below is the screenshot that flash player is working on Microsoft IE. Notice, the video is sent in a continuous stream of data from server to client web browser.
-![image](/public/pics/2016-03-12/flash.png)
+![image](/public/posts/2016-03-12/flash.png)
 `Mobile players` are native apps for iOS and Android platforms. Below is the screenshot that iOS player is working on iPhone 5s. Notice that all the data, including video, screenshot, whiteboard are downloaded to mobile devices before playing.
-![image](/public/pics/2016-03-12/coliphone.jpeg)
+![image](/public/posts/2016-03-12/coliphone.jpeg)
 
 ## 2. Course Player
 For each course player, no matter whether it is an online application or a mobile app, each contains three components: Video, Screenshot and Whiteboard.  
@@ -28,7 +28,7 @@ For each course player, no matter whether it is an online application or a mobil
 Video is recorded by camera with audios throughout the whole class, and saved to file in `mp4` format. Each video lasts 3 and half hours(12,600 seconds).
 ### 2.2 Screenshot
 During class, teachers shares course handouts/materials of PPT or PDF through computer monitor. And they will be captured and saved as screenshots for the course. Screenshots are actually images and each image has base64 format. Each screenshot consists of 8x8 = 64 small images, which finally aggregates to a single image.
-![image](/public/pics/2016-03-12/screenshot.png){:width="550px"}
+![image](/public/posts/2016-03-12/screenshot.png){:width="550px"}
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1dy1h3lmJh-vskUyPUWAeqCxNT0-YSHfioo4VwwcTdpM/edit?usp=sharing)
 
 Screenshots are displayed simultaneously when the course is playing, and only the different sections will be refreshed.
@@ -36,7 +36,7 @@ Screenshots are displayed simultaneously when the course is playing, and only th
 Teachers also write or draw something on the whiteboard. Each action(pen down, pen move, pen up and erase) on the whiteboard is captured by special pens and brushes and persisted into files.
 
 ## 3. Course Structure
-![image](/public/pics/2016-03-12/datafiles.png){:width="550px"}  
+![image](/public/posts/2016-03-12/datafiles.png){:width="550px"}  
 The following points need to be noted about these files.
 * Each course has a unique id. For the above course, the course id is `204304`.
 * Video is simple, just a mp4 file.

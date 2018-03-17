@@ -49,13 +49,13 @@ cordova run android
 cordova platform add browser
 cordova run browser
 ```
-![MIME Type](/public/pics/2017-07-26/run_browser.png)
+![image](/public/posts/2017-07-26/run_browser.png)
 
 ### 3. ios
 Install Xcode.
 
 Then, set command line tools. In xcode, go in Preferences > Location > Command Line Tools. It's blank by default. Select Xcode version.
-![MIME Type](/public/pics/2017-07-26/xcode_commandlinetools.png){:width="800px"}  
+![image](/public/posts/2017-07-26/xcode_commandlinetools.png){:width="800px"}  
 
 Install xcode-select.
 ```sh
@@ -77,8 +77,8 @@ Open the workspace file (platforms/ios/HelloWorld.xcworkspace) from Xcode, or fr
 ```sh
 open ./platforms/ios/HelloCordova.xcworkspace
 ```
-![MIME Type](/public/pics/2017-07-26/xcode_project.png)  
-![MIME Type](/public/pics/2017-07-26/run_ios.png){:width="400px"}  
+![image](/public/posts/2017-07-26/xcode_project.png)  
+![image](/public/posts/2017-07-26/run_ios.png){:width="400px"}  
 
 ### 4. android
 JDK, Android SDK, AVD.
@@ -98,7 +98,7 @@ then in command line.
 ```sh
 cordova run android
 ```
-![MIME Type](/public/pics/2017-07-26/run_android.png){:width="400px"}  
+![image](/public/posts/2017-07-26/run_android.png){:width="400px"}  
 
 ## 5. cordova
 config.xml

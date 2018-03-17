@@ -11,9 +11,9 @@ tags: [Jekyll, Windows10]
 
 ## 1. Setup Ruby and Ruby Dev Kit.
 Get Ruby Installer from https://rubyinstaller.org/downloads/. Execute it to start the installation, check the option 'Add Ruby executables to your PATH'.
-![MIME Type](/public/pics/2018-03-01/setupruby.png){:width="600px"}
+![image](/public/posts/2018-03-01/setupruby.png){:width="600px"}
 After Ruby is installed, check the option 'Run 'ridk install' to install MSYS2 and development toolchain.'
-![MIME Type](/public/pics/2018-03-01/installmsys2.png){:width="500px"}
+![image](/public/posts/2018-03-01/installmsys2.png){:width="500px"}
 A new command windows will be opened. Select the first option '1 - MSYS2 base installation'.
 ```raw
 _____       _           _____           _        _ _         ___
@@ -35,7 +35,7 @@ Which components shall be installed? If unsure press ENTER [1,2,3] 1
 You can also go to http://www.msys2.org/ to download the installer and install it manually.
 
 After the installation, MSYS2 is installed to folder `C:\msys64\`. You can start it by running `msys2_shell.cmd`.
-![MIME Type](/public/pics/2018-03-01/msys.png){:width="500px"}
+![image](/public/posts/2018-03-01/msys.png){:width="500px"}
 
 ## 2. Install Jekyll gem
 Run `gem install jekyll` to install jekyll. However, there is an error, see below.
@@ -109,7 +109,7 @@ Configuration file: d:/test/blog/_config.yml
   Server running... press ctrl-c to stop.
 ```
 Access http://127.0.0.1:4000/ in web browser. The new 'blog' website is live now.
-![MIME Type](/public/pics/2018-03-01/jekyllsite.png)
+![image](/public/posts/2018-03-01/jekyllsite.png)
 
 ## 4. Hosting Existing GitHub Page Website
 Clone the source code of your GitHub Page Website from GitHub to your local directory. Run 'bundle exec jekyll serve \-\-port 12001'.
@@ -123,8 +123,6 @@ Configuration file: d:/Johnny/GitHub/jojozhuang.github.io/_config.yml
  Incremental build: disabled. Enable with --incremental
       Generating...
      Build Warning: Layout 'nil' requested in blog/atom.xml does not exist.
-    Liquid Warning: Liquid syntax error (line 14): Unexpected character { in "{{(site.note | where: "category", {{category.type}}) | sort: 'index') }}" in note.html
-    Liquid Warning: Liquid syntax error (line 9): Unexpected character { in "{{(site.portfolio | where: "category", {{category.type}}) | sort: 'index') | reverse }}" in portfolio.html
                     done in 11.595 seconds.
   Please add the following to your Gemfile to avoid polling for changes:
     gem 'wdm', '>= 0.1.0' if Gem.win_platform?
@@ -132,7 +130,7 @@ Configuration file: d:/Johnny/GitHub/jojozhuang.github.io/_config.yml
     Server address: http://127.0.0.1:12001
 ```
 Access http://127.0.0.1:12001 in web browser. GitHub Page website is live in local.
-![MIME Type](/public/pics/2018-03-01/githubpage.png)
+![image](/public/posts/2018-03-01/githubpage.png)
 
 ## 5. Hosting GitHub Page on Ubuntu
 Another option to run Jekyll on Windows is to install Ubuntu on Windows 10. Check the link https://jekyllrb.com/docs/windows/.
@@ -144,7 +142,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 Then, restart your computer when prompted.
 
 ### 5.2 Installing Ubuntu from Microsoft Store
-![MIME Type](/public/pics/2018-03-01/ubuntuapp.png){:width="800px"}
+![image](/public/posts/2018-03-01/ubuntuapp.png){:width="800px"}
 
 ### 5.3 Installing Jekyll on Ubuntu
 Follow the steps mentioned in Jekyll official site https://jekyllrb.com/docs/windows/.

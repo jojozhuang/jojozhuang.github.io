@@ -73,7 +73,7 @@ $ git clone https://github.com/angular/quickstart .
 ```
 
 Open the folder Angular2Tutorial in Visual Studio Code
-![MIME Type](/public/pics/2016-09-07/initial.png)  
+![image](/public/posts/2016-09-07/initial.png)  
 
 Install all dependencies
 ```sh
@@ -84,7 +84,7 @@ npm install
 npm start
 ```
 The Angular2 application will be launched. Access the address http://localhost:3000/ in browser.
-![MIME Type](/public/pics/2016-09-07/helloworld.png)  
+![image](/public/posts/2016-09-07/helloworld.png)  
 
 
 ## 9. References

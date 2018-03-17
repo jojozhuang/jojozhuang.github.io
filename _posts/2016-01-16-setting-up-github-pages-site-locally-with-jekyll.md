@@ -76,7 +76,7 @@ And prepending `bundle exec` to the jekyll command.
 $ bundle exec jekyll serve --port 12001
 ```
 Open web browser to access your local jekyll website.
-![MIME Type](/public/pics/2016-01-16/local.png)  
+![image](/public/posts/2016-01-16/local.png)  
 
 ## 5. References
 * [Official Installation Guide](https://jekyllrb.com/docs/installation/)

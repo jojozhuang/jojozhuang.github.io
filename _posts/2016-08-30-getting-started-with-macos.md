@@ -55,7 +55,7 @@ Add the following line (press i)
 export PS1="Johnny@Johnny-Mac:~$ "
 ```
 Save the file (press ESC, type :wq and hit Enter), restart Terminal.
-![MIME Type](/public/pics/2016-08-30/terminalname.png){:width="500px"}
+![image](/public/posts/2016-08-30/terminalname.png){:width="500px"}
 
 ## 6. Open Two or More Windows of Visual Studio for Mac
 Navigate to the folder where Visual Studio Solution file(.sln) locates. Type the following command.

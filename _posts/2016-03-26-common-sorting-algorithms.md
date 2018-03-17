@@ -53,7 +53,7 @@ public int[] bubbleSort(int[] nums) {
 ## 3. Insertion Sort
 ### 3.1 How It Works?
 Start from the second element, each time, insert the current element to the proper position.
-![MIME Type](/public/pics/2016-03-26/insertionsort.png)  
+![image](/public/posts/2016-03-26/insertionsort.png)  
 ### 2.2 Implementation
 ```java
 public int[] insertionSort(int[] nums) {

@@ -59,7 +59,7 @@ The following points need to be noted about the above file.
 
 ### 3.2 Getting MySQL Backup File
 Download the backup file `jsp_backup.sql` from [My GitHub](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/jsp_backup.sql), and put it to the same directory with Dockerfile.
-![MIME Type](/public/pics/2016-09-15/dockerfiles.png){:width="600px"}  
+![image](/public/posts/2016-09-15/dockerfiles.png){:width="600px"}  
 
 ### 3.3 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile and MySQL backup file locates. Run the following command.
@@ -71,7 +71,7 @@ Here, `jspmysql` is the name we are giving to the Image and `0.1` is the tag num
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
-![MIME Type](/public/pics/2016-09-15/imagecreated.png){:width="800px"}  
+![image](/public/posts/2016-09-15/imagecreated.png){:width="800px"}  
 
 ## 4. Testing The New Image
 ### 4.1 Running Container
@@ -82,18 +82,18 @@ $ docker run --detach --name=jspmysql --publish 6603:3306 jspmysql:0.1
 Notice we don't need to set the environment variable MYSQL_ROOT_PASSWORD any more.
 ### 4.2 Verifying Container in Kitematic
 A Mysql container named `jspmysql` is running now. Notice, it's source image is `jspmysql:0.1`. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
-![MIME Type](/public/pics/2016-09-15/general.png)  
+![image](/public/posts/2016-09-15/general.png)  
 Port 3306 is also exposed and mapped to 6603.
-![MIME Type](/public/pics/2016-09-15/ports.png)  
+![image](/public/posts/2016-09-15/ports.png)  
 
 ### 4.3 Verifying From MySQL Workbench
 In MySQL workbench, create a connection to `192.168.99.100:6603` with user `root` and password `jsppassword`. You will see the database `jsptutorial` and the data in table `Product`.
-![MIME Type](/public/pics/2016-09-15/workbench.png)  
+![image](/public/posts/2016-09-15/workbench.png)  
 
 ### 4.4 Verifying JSP Tutorial Website
 In Eclipse, open the JSP Tutorial project which we created for [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}). Run it and access
 http://localhost:8080/JSPTutorialContainer/productlist.jsp. Our JSP Tutorial Website is back. Products are displayed properly.
-![MIME Type](/public/pics/2016-09-15/productlist.png)  
+![image](/public/posts/2016-09-15/productlist.png)  
 Try to add, edit or delete product. Then, verify the data in workbench, you will see the changes.
 
 ## 5. Publishing MySQL Container
@@ -113,7 +113,7 @@ Check the new image.
 ```sh
 $ docker images
 ```
-![MIME Type](/public/pics/2016-09-15/newimage.png)  
+![image](/public/posts/2016-09-15/newimage.png)  
 ### 5.2 Publishing New Image to Docker Hub
 Push to Docker Hub
 ```sh
@@ -128,7 +128,7 @@ fa01c5c192a6: Mounted from library/mysql
 latest: digest: sha256:7294344f8f94cb4018368a8f3171b1052ebaac84f1776e5d5d4a544c1f45708b size: 2824
 ```
 ### 5.3 Checking New Image on Docker Hub
-![MIME Type](/public/pics/2016-09-15/dockerhub.png)  
+![image](/public/posts/2016-09-15/dockerhub.png)  
 Now, you can use the following command to install this image.
 ```sh
 $ docker pull jojozhuang/jspmysql

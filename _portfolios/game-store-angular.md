@@ -16,21 +16,21 @@ category: web
 
 ## 2. UI
 Home page.
-![MIME Type](/public/portfolios/gamestoreangular/homepage.png)
+![image](/public/portfolios/gamestoreangular/homepage.png)
 Click the List button. There are three products with images.
-![MIME Type](/public/portfolios/gamestoreangular/productlist.png)
+![image](/public/portfolios/gamestoreangular/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![MIME Type](/public/portfolios/gamestoreangular/productadd.png)
+![image](/public/portfolios/gamestoreangular/productadd.png)
 Click 'Save' button, product is saved.
-![MIME Type](/public/portfolios/gamestoreangular/productlistafteradd.png)
+![image](/public/portfolios/gamestoreangular/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![MIME Type](/public/portfolios/gamestoreangular/productedit.png)
+![image](/public/portfolios/gamestoreangular/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![MIME Type](/public/portfolios/gamestoreangular/productlistafteredit.png)
+![image](/public/portfolios/gamestoreangular/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![MIME Type](/public/portfolios/gamestoreangular/deleteconfirm.png)
+![image](/public/portfolios/gamestoreangular/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![MIME Type](/public/portfolios/gamestoreangular/productlistafterdel.png)
+![image](/public/portfolios/gamestoreangular/productlistafterdel.png)
 
 ## 3. Under the Hood
 Check posting [Building Web Application with Angular]({% link _posts/2017-08-09-building-web-application-with-angular.md %}) to learn the details of Angular.

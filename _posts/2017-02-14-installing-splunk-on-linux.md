@@ -10,7 +10,7 @@ tags: [RedHat, Ubuntu, Splunk]
 
 ## 1. What is Splunk?  
 Basically, Splunk is a log management tool. It makes easy to analyze machine-generated logs via a web-style interface. Official website: [https://www.splunk.com/](https://www.splunk.com/).  
-![MIME Type](/public/pics/2017-02-14/splunk.png)  
+![image](/public/posts/2017-02-14/splunk.png)  
 
 ## 2. Installation on Linux
 ### 2.1 Installing Splunk Enterprise
@@ -62,24 +62,24 @@ In addition, add port number to Firewall's exception list if necessary.
 ### 2.3 Logging into Splunk Web
 Open a web browser, access the following address. The default user is 'admin'. You need to change the password for the first time you login.  
 [http://localhost:8081/](http://localhost:8081/)
-![MIME Type](/public/pics/2017-02-14/login.png)  
+![image](/public/posts/2017-02-14/login.png)  
 
 ## 3. Importing Data
 To use Splunk, you need to import data first.
 ### 3.1 Adding Data
 In the main page, select 'Add Data'->Upload files from my computer->Choose the file.
-![MIME Type](/public/pics/2017-02-14/main.png)  
+![image](/public/posts/2017-02-14/main.png)  
 ### 3.2 Setting Source Type
 Choose the source type, eg. log4j, csv, etc.
-![MIME Type](/public/pics/2017-02-14/sourcetype.png)  
+![image](/public/posts/2017-02-14/sourcetype.png)  
 ### 3.3 Inputing Settings
 Leave as it is.
-![MIME Type](/public/pics/2017-02-14/inputsettings.png)  
+![image](/public/posts/2017-02-14/inputsettings.png)  
 ### 3.4 Reviewing and Submitting
-![MIME Type](/public/pics/2017-02-14/review.png)  
+![image](/public/posts/2017-02-14/review.png)  
 ### 3.5 Done
 Now, you can use the search function.
-![MIME Type](/public/pics/2017-02-14/finished.png)  
+![image](/public/posts/2017-02-14/finished.png)  
 
 ## 4. Searching
 After data is imported to splunk, we can now create queries for searching data from logs.
@@ -89,7 +89,7 @@ By default, Splunk specifies three condition: source, host and sourcetype.
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j"
 ```
 You can append more conditions to the end of the query. Click the Search icon to execute the query. You will see the result immediately.
-![MIME Type](/public/pics/2017-02-14/search.png)  
+![image](/public/posts/2017-02-14/search.png)  
 
 ### 4.2 Exploring Features
 There are lots of functions provided by Splunk for search query and search result. Some of them are listed as follows.
@@ -106,9 +106,9 @@ When you first download and install Splunk, you are automatically using an Enter
 ### 5.2 Steps to switch to a Free License:  
 1) Log in to Splunk Web as a user with admin privileges and navigate to Settings > Licensing.  
 2) Click Change license group at the top of the page.  
-![MIME Type](/public/pics/2017-02-14/license.png)  
+![image](/public/posts/2017-02-14/license.png)  
 3) Select Free license and click Save.  
-![MIME Type](/public/pics/2017-02-14/free.png)  
+![image](/public/posts/2017-02-14/free.png)  
 4) You are prompted to restart.  
 
 ## 6. Reference

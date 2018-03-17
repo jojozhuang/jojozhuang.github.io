@@ -9,8 +9,8 @@ tags: [IIS, MIME Type]
 I'm building a web application with ASP.NET MVC in Visual Studio 2015. When testing the app, I found one page can't load a video file. Web browser is unable to play the mp4 video. If I copy the video URL(eg. http://localhost:22962/204304/Video/lecture.mp4) to Chrome's address bar, it can be accessed but without being played. That means the URL is correct, but somehow there is another cause which stops the video from being played.
 
 After Google searching, I found the cause--the .mp4 MIME type is not configured in IIS. If your app needs to deal with mp4 files, you should make sure `.mp4` is in the MIME type list of IIS website. Create one if it doesn't exist.   
-![MIME Type](/public/pics/2016-03-04/iismime.png)  
-![Add New MIME Type](/public/pics/2016-03-04/iismimeadd.png)  
+![image](/public/posts/2016-03-04/iismime.png)  
+![Add New MIME Type](/public/posts/2016-03-04/iismimeadd.png)  
 You need to restart IIS after changing the configuration.  
 
 In addition, if you are using Visual Studio which takes IIS Express for hosting and debugging, you can add mimeMap section to the web.config file of your website project.

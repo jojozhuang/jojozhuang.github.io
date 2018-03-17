@@ -14,7 +14,7 @@ Queue is similar to the ticket queue outside a cinema hall, where the first pers
 
 ### 1.2 Queue in Programming Terms
 In programming terms, putting an item into the queue is called `enqueue` and removing an item from the queue is called `dequeue`.
-![MIME Type](/public/pics/2016-03-31/queue.png){:width="800px"}  
+![image](/public/posts/2016-03-31/queue.png){:width="800px"}  
 Queue follows the `FIFO`(First In First Out) rule. The item that goes in first is the item that comes out first too.
 
 ### 1.3 Common Operations on Queue

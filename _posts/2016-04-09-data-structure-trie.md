@@ -13,7 +13,7 @@ represent a word.
 Very commonly, a trie is used to store the entire (English) language for quick prefix lookups. While a hash table can quickly look up whether a string is a valid word, however it cannot tell us if a string is a prefix of any valid words. A trie can do this very quickly.
 
 Below picture shows how words are stored in trie. This trie stores five words: dog, dot, pump, fat, fire. Each node has a hashmap and a flag to indicate whether the current node is a leaf(a complete path for a word).
-![MIME Type](/public/pics/2017-04-09/trie.png)  
+![image](/public/posts/2017-04-09/trie.png)  
 
 ## 2. Implementing Trie
 ### 2.1 Trie Node Definition
@@ -40,7 +40,7 @@ public Trie() {
 
 ### 2.2 Inserting Word
 The below picture shows how trie looks like after word 'dog' is inserted to trie.
-![MIME Type](/public/pics/2017-04-09/insert.png)  
+![image](/public/posts/2017-04-09/insert.png)  
 
 And here is the code for 'insert' method.
 ```java

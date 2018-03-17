@@ -39,7 +39,7 @@ Segment Tree has less storage and better performance.
 ## 2. Minimum Segment Tree
 ### 2.1 Definition of Minimum Segment Tree
 The digram below shows what Minimum Segment Tree for given array {4,-1,3,0,2} looks like.
-![MIME Type](/public/pics/2016-04-03/min.png){:width="800px"}  
+![image](/public/posts/2016-04-03/min.png){:width="800px"}  
 ### 2.2 Creating Segment Tree Node
 Create a class named `SegmentTreeNode`. Attributes `start` and `end` define the range. Attributes `left` and `right` are the children of the current node.
 ```java
@@ -141,7 +141,7 @@ public int queryMin(SegmentTreeNode root, int start, int end) {
 ## 3. Including Maximum and Sum
 ### 3.1 Definition of Minimum/Maximum/Sum Segment Tree
 Actually, we can build Segment Tree for minimum, maximum and sum all at once.
-![MIME Type](/public/pics/2016-04-03/minmaxsum.png){:width="800px"}  
+![image](/public/posts/2016-04-03/minmaxsum.png){:width="800px"}  
 For each node, it contains min, max and sum value. Here are the samples for different ranges.
 
   | Range  | Min | Max | Sum

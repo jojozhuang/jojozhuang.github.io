@@ -612,21 +612,21 @@ Start the RESTful service first, and start this Angular app, serve it in web ser
 $ ng serve
 ```
 Open web browser, access 'http://localhost:12080/'.
-![MIME Type](/public/pics/2017-08-09/homepage.png)
+![image](/public/posts/2017-08-09/homepage.png)
 Click the List button. There are three products with images.
-![MIME Type](/public/pics/2017-08-09/productlist.png)
+![image](/public/posts/2017-08-09/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![MIME Type](/public/pics/2017-08-09/productadd.png)
+![image](/public/posts/2017-08-09/productadd.png)
 Click 'Save' button, product is saved.
-![MIME Type](/public/pics/2017-08-09/productlistafteradd.png)
+![image](/public/posts/2017-08-09/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![MIME Type](/public/pics/2017-08-09/productedit.png)
+![image](/public/posts/2017-08-09/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![MIME Type](/public/pics/2017-08-09/productlistafteredit.png)
+![image](/public/posts/2017-08-09/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![MIME Type](/public/pics/2017-08-09/deleteconfirm.png)
+![image](/public/posts/2017-08-09/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![MIME Type](/public/pics/2017-08-09/productlistafterdel.png)
+![image](/public/posts/2017-08-09/productlistafterdel.png)
 
 ## 6. Source Files
 * [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAngular)

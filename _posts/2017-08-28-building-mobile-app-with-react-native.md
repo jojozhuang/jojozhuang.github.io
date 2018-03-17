@@ -63,9 +63,9 @@ sudo sysctl -w kern.maxfilesperproc=524288
 yarn start
 ```
 QR code in terminal prompt.
-![MIME Type](/public/pics/2017-08-28/qrcode.png){:width="800px"}
+![image](/public/posts/2017-08-28/qrcode.png){:width="800px"}
 Click `i` to open iOS simulator. It will install [expo](https://expo.io/) first. Then launch the react native app. App is running in the simulator.
-![MIME Type](/public/pics/2017-08-28/iphonex.png){:width="400px"}
+![image](/public/posts/2017-08-28/iphonex.png){:width="400px"}
 
 How to run specific iPhone version with create-react-native-app?
 https://stackoverflow.com/questions/47100990/how-to-run-specific-iphone-version-with-create-react-native-app
@@ -883,7 +883,7 @@ class FileApi {
 export default FileApi;
 ```
 ### 3.4 Final Project Structure
-![MIME Type](/public/pics/2017-08-16/projectstructure.png){:width="350px"}
+![image](/public/posts/2017-08-16/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
@@ -891,21 +891,21 @@ Start the RESTful service first, and start this React app, serve it in web serve
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.
-![MIME Type](/public/pics/2017-08-16/homepage.png)
+![image](/public/posts/2017-08-16/homepage.png)
 Click the List button. There are three products with images.
-![MIME Type](/public/pics/2017-08-16/productlist.png)
+![image](/public/posts/2017-08-16/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![MIME Type](/public/pics/2017-08-16/productadd.png)
+![image](/public/posts/2017-08-16/productadd.png)
 Click 'Save' button, product is saved.
-![MIME Type](/public/pics/2017-08-16/productlistafteradd.png)
+![image](/public/posts/2017-08-16/productlistafteradd.png)
 Click 'Edit' button of the new product. Change the product name and price.
-![MIME Type](/public/pics/2017-08-16/productedit.png)
+![image](/public/posts/2017-08-16/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![MIME Type](/public/pics/2017-08-16/productlistafteredit.png)
+![image](/public/posts/2017-08-16/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![MIME Type](/public/pics/2017-08-16/deleteconfirm.png)
+![image](/public/posts/2017-08-16/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![MIME Type](/public/pics/2017-08-16/productlistafterdel.png)
+![image](/public/posts/2017-08-16/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of Game Store(React) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReact)

@@ -94,7 +94,7 @@ If everything is fine with your installation, this should produce the following 
 ```sh
 Hello, World!
 ```
-![MIME Type](/public/pics/2016-03-06/testnode.png){:width="600px"}
+![image](/public/posts/2016-03-06/testnode.png){:width="600px"}
 
 ## 7. References
 * [Node.js Tutorial](https://www.tutorialspoint.com/nodejs/index.htm)

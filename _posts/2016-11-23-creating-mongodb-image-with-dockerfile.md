@@ -44,7 +44,7 @@ Here, `jspmongo` is the name we are giving to the Image and `0.1` is the tag num
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
-![MIME Type](/public/pics/2016-11-23/imagecreated.png){:width="750px"}  
+![image](/public/posts/2016-11-23/imagecreated.png){:width="750px"}  
 
 ## 3. Testing The New Image
 ### 3.1 Running Container
@@ -54,9 +54,9 @@ $ docker run --detach --name=jspmongo --publish 37017:27017 jspmongo:0.1
 ```
 ### 3.2 Verifying Container in Kitematic
 A MongoDB container named `jspmongo` is running now. Notice, it's source image is `jspmongo:0.1`.
-![MIME Type](/public/pics/2016-11-23/general.png)  
+![image](/public/posts/2016-11-23/general.png)  
 Port 27017 is also exposed and mapped to 37017.
-![MIME Type](/public/pics/2016-11-23/port.png)  
+![image](/public/posts/2016-11-23/port.png)  
 ### 3.3 Creating Sample Data
 In container terminal, launch MongoDB Shell with `mongo` command.
 ```raw
@@ -68,7 +68,7 @@ Create a database named `mongodbtutorial` and three documents for collection `pr
 > use mongodbtutorial
 > db.product.insert([{name: 'Xbox', price: 100},{name: 'PS4',price: 400},{name: 'iPhone',price: 699}])
 ```
-![MIME Type](/public/pics/2016-11-23/createdata.png){:width="750px"}  
+![image](/public/posts/2016-11-23/createdata.png){:width="750px"}  
 
 ## 4. Testing
 ### 4.1 Getting MongoDB Tutorial Application
@@ -100,7 +100,7 @@ Edit `web.xml`, change the host to `192.168.99.100`, and port to `37017`.
 ### 4.3 Verifying MongoDB Connection
 Run the project and access
 http://localhost:8080/MongoDBDockerfile/productlist.jsp. Products are displayed properly.
-![MIME Type](/public/pics/2016-11-23/productlist.png)  
+![image](/public/posts/2016-11-23/productlist.png)  
 Try to add, edit or delete product. Then, verify the data in MongoDB Shell, you will see the changes.
 
 ## 5. Source Files

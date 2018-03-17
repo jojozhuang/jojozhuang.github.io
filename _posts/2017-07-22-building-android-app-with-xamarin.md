@@ -10,11 +10,11 @@ tags: [Xamarin, Android, SQLite, C#]
 
 ## 1. Android Project
 In the blog [Building iOS App with Xamarin]({% link _posts/2017-07-21-building-ios-app-with-xamarin.md %}), I introduce how to build iOS App with Xamarin. At that time, we created the Xamarin Android project along with the Core Portable project and Xamarin iOS project. In this blog, I will use this Android project to build the Game Store app.
-![MIME Type](/public/pics/2017-07-22/project_stucture.png){:width="320px"}  
+![image](/public/posts/2017-07-22/project_stucture.png){:width="320px"}  
 Delete file 'Main.axml' and 'MainActivity.cs'.
 ### 1.1 Layouts
 Right click on Resources->layout, Add->New File. Select Android->Layout, set name to 'ProductList'.
-![MIME Type](/public/pics/2017-07-22/layout_productlist.png){:width="700px"}  
+![image](/public/posts/2017-07-22/layout_productlist.png){:width="700px"}  
 Modify its content as follows.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -109,7 +109,7 @@ Create another layout named 'ProductDetail'. It is used to display and edit prod
 ### 1.2 Activities
 Activity works with layout. It control the behaviors of the layout.  
 Right click the ‘GameStoreXamarin.Android' project, Add->New File. Select Android->Activity, set name to 'ProductListActivity'.
-![MIME Type](/public/pics/2017-07-22/activity_productlist.png){:width="700px"}  
+![image](/public/posts/2017-07-22/activity_productlist.png){:width="700px"}  
 Add `'MainLauncher = true'` to the Activity attribute to inform Android to run 'ProductListActivity' first when the app is launched.
 ```c#
 [Activity(Label = "ProductListActivity", MainLauncher = true)]
@@ -158,7 +158,7 @@ Project->Add NuGet Packages, search and install two packages, 'sqlite-net-pcl' a
 ```
 ### 1.4 Importing Images
 Add three images to Resources->drawable folder. These images are used as product's photo.
-![MIME Type](/public/pics/2017-07-22/drawable_images.png){:width="320px"}  
+![image](/public/posts/2017-07-22/drawable_images.png){:width="320px"}  
 ### 1.5 Dummy Data
 Create three products with images in drawable folder. If there is no data in SQLite database, call this method get initial products.
 ```c#
@@ -618,22 +618,22 @@ public override Boolean OnOptionsItemSelected(IMenuItem item)
 
 ### 4.5 Final Project Structure
 The final structure of the portable project.
-![MIME Type](/public/pics/2017-07-22/android_project.png){:width="320px"}  
+![image](/public/posts/2017-07-22/android_project.png){:width="320px"}  
 
 ## 5. Testing
 In Visual Studio, click the arrow button(or Run->Start Without Debugging) to run the app in Android Emulator.
-![MIME Type](/public/pics/2017-07-22/emulator.png){:width="400px"}  
+![image](/public/posts/2017-07-22/emulator.png){:width="400px"}  
 Product list.
-![MIME Type](/public/pics/2017-07-22/runproductlist.png){:width="350px"}  
+![image](/public/posts/2017-07-22/runproductlist.png){:width="350px"}  
 Edit product.
-![MIME Type](/public/pics/2017-07-22/runproductadd.png){:width="350px"}  
+![image](/public/posts/2017-07-22/runproductadd.png){:width="350px"}  
 Select photo.
-![MIME Type](/public/pics/2017-07-22/runphotochooser.png){:width="350px"}  
-![MIME Type](/public/pics/2017-07-22/runphotochooser2.png){:width="350px"}  
+![image](/public/posts/2017-07-22/runphotochooser.png){:width="350px"}  
+![image](/public/posts/2017-07-22/runphotochooser2.png){:width="350px"}  
 Delete product.
-![MIME Type](/public/pics/2017-07-22/runproductdelete.png){:width="350px"}  
+![image](/public/posts/2017-07-22/runproductdelete.png){:width="350px"}  
 In landscape view.
-![MIME Type](/public/pics/2017-07-22/runlandscape.png){:width="700px"}  
+![image](/public/posts/2017-07-22/runlandscape.png){:width="700px"}  
 
 ## 6. Source Files
 * [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreXamarin)

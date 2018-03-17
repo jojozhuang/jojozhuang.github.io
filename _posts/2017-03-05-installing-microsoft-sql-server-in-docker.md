@@ -20,22 +20,22 @@ The SQL Server container requires at least 3.25 GB of RAM and large storage. If 
 ## 3. Creating SQL Server Container in Kitematic
 ### 3.1 Creating SQL Server Container
 Search `mssql-server-linux`(Released by Microsoft) in Kitematic, click Create button.
-![MIME Type](/public/pics/2017-03-05/dockersearch.png)  
+![image](/public/posts/2017-03-05/dockersearch.png)  
 Kitematic will start to download the image and create container for it.
-![MIME Type](/public/pics/2017-03-05/installing.png)  
+![image](/public/posts/2017-03-05/installing.png)  
 The installation takes several minutes. Finally, the container is created but it's in 'stopped' status. We have to make some changes before using it.
-![MIME Type](/public/pics/2017-03-05/containercreated.png)  
+![image](/public/posts/2017-03-05/containercreated.png)  
 ### 3.2 Environment Variables
 Switch to Settings tab, add two environment variables. Accept the license by setting ACCEPT_EULA to Y. And create password for default user `sa`.
 * ACCEPT_EULA=Y
 * MSSQL_SA_PASSWORD=Abc%123456789
 
-![MIME Type](/public/pics/2017-03-05/env.png)
+![image](/public/posts/2017-03-05/env.png)
 ### 3.3 Interactive Shell
 Click the 'EXEC' button to start an interactive shell.
-![MIME Type](/public/pics/2017-03-05/exec.png)
+![image](/public/posts/2017-03-05/exec.png)
 Now, we are in the bash shell for sql server.
-![MIME Type](/public/pics/2017-03-05/terminalmssql.png){:width="600px"}  
+![image](/public/posts/2017-03-05/terminalmssql.png){:width="600px"}  
 
 ## 4. Creating SQL Server Container in Command Line
 ### 4.1 Creating SQL Server Container
@@ -55,9 +55,9 @@ Check the running containers with following command.
 ```sh
 $ docker ps -a
 ```
-![MIME Type](/public/pics/2017-03-05/createcontainer.png)  
+![image](/public/posts/2017-03-05/createcontainer.png)  
 In Kitematic, we also see a new container.
-![MIME Type](/public/pics/2017-03-05/containercreated2.png)  
+![image](/public/posts/2017-03-05/containercreated2.png)  
 If the container is not launched properly, check logs with following command to get some clues.
 ```sh
 $ docker logs <containerid>
@@ -67,7 +67,7 @@ Start an interactive bash shell with following command.
 ```sh
 docker exec -it mssql "bash"
 ```
-![MIME Type](/public/pics/2017-03-05/terminalmssql2.png){:width="600px"}  
+![image](/public/posts/2017-03-05/terminalmssql2.png){:width="600px"}  
 
 ## 5. Using SQL Server
 ### 5.1 Connecting SQL Server
@@ -82,7 +82,7 @@ CREATE DATABASE TestDB
 SELECT Name from sys.Databases
 GO
 ```
-![MIME Type](/public/pics/2017-03-05/createdb.png){:width="600px"}  
+![image](/public/posts/2017-03-05/createdb.png){:width="600px"}  
 ### 5.3 Creating Table and Inserting Data
 Run the following sql script to create new table named `Inventory`, and create two rows for it.
 ```sql
@@ -91,14 +91,14 @@ CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
 INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
 GO
 ```
-![MIME Type](/public/pics/2017-03-05/createtable.png){:width="600px"}  
+![image](/public/posts/2017-03-05/createtable.png){:width="600px"}  
 ### 5.4 Querying Data
 Run the following sql script to find rows whose quantity is larger than 152.
 ```sql
 SELECT * FROM Inventory WHERE quantity > 152;
 GO
 ```
-![MIME Type](/public/pics/2017-03-05/selectdata.png){:width="600px"}  
+![image](/public/posts/2017-03-05/selectdata.png){:width="600px"}  
 
 ## 6. SQL Client Tool
 It's more convenient to use UI client tool to manipulate database.
@@ -108,22 +108,22 @@ Go to http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/
 Go to https://sourceforge.net/projects/jtds/files/, downland `jtds-1.3.1-dist.zip`. Extract `jtds-1.3.1.jar` from the package file. It is a plugin module for SQL Server and Sybase JDBC.
 ### 6.3 Importing Plugin to SQL Developer
 Launch SQL Developer, go to -> Preferences -> Database -> Third-party JDBC Drivers, add the jar file.
-![MIME Type](/public/pics/2017-03-05/addjtds.png){:width="800px"}  
+![image](/public/posts/2017-03-05/addjtds.png){:width="800px"}  
 ### 6.4 Creating Connection
 In SQL Developer, New Connection.., provide the user, password, host and port mentioned when we create the SQL Server container. Test and Connect.
-![MIME Type](/public/pics/2017-03-05/createconnection.png){:width="800px"}  
+![image](/public/posts/2017-03-05/createconnection.png){:width="800px"}  
 Connection is created. After expanding the nodes by level, you will see the database and table we created through bash shell.
-![MIME Type](/public/pics/2017-03-05/sqldeveloper.png)
+![image](/public/posts/2017-03-05/sqldeveloper.png)
 ### 6.5 Running Query
 Right-click on the `TestDB` database, and choose `Select Default Database`.
-![MIME Type](/public/pics/2017-03-05/defaultdatabase.png){:width="300px"}  
+![image](/public/posts/2017-03-05/defaultdatabase.png){:width="300px"}  
 Then, apply.
-![MIME Type](/public/pics/2017-03-05/apply.png){:width="350px"}  
+![image](/public/posts/2017-03-05/apply.png){:width="350px"}  
 In the worksheet, input the following sql script and run. You will see all rows in table `Inventory`.
 ```sql
 SELECT * FROM Inventory;
 ```
-![MIME Type](/public/pics/2017-03-05/runquery.png)
+![image](/public/posts/2017-03-05/runquery.png)
 
 ## 7. Others
 ### 7.1 Restoring Database with Backup File

@@ -79,13 +79,13 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 ```
 ### 2.5 Project Structure
 Finally, the project structure looks like this.
-![MIME Type](/public/pics/2017-10-11/project.png){:width="400px"}
+![image](/public/posts/2017-10-11/project.png){:width="400px"}
 
 ## 3. Testing
 Right-click on RhinoWebsite->WebContent->index.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.
-![MIME Type](/public/pics/2017-10-11/tomcat.png){:width="600px"}
+![image](/public/posts/2017-10-11/tomcat.png){:width="600px"}
 Open web browser, access http://localhost:8080/RhinoWebsite/index.html
-![MIME Type](/public/pics/2017-10-11/indexpage.png)
+![image](/public/posts/2017-10-11/indexpage.png)
 
 Input following content to the javascript textbox.
 ```javascript
@@ -96,7 +96,7 @@ function hello(str) {
 hello('johnny')
 ```
 Click the 'Run' button, the string returned from javascript function will be displayed in the output box.
-![MIME Type](/public/pics/2017-10-11/runjs.png)
+![image](/public/posts/2017-10-11/runjs.png)
 
 ## 4. Source Files
 * [Source files of RhinoWebsite on Github](https://github.com/jojozhuang/Tutorials/tree/master/RhinoWebsite)

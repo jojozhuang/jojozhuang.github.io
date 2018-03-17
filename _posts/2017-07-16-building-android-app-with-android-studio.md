@@ -18,20 +18,20 @@ Android Emulator will be installed along with Android Studio. You can also use t
 
 ## 2. Creating New Project
 In Android Studio, 'Start a new Android Studio project'.
-![MIME Type](/public/pics/2017-07-16/welcome.png){:width="700px"}  
+![image](/public/posts/2017-07-16/welcome.png){:width="700px"}  
 In the dialog that appears, use the following values for your project and select a location to save your project, Next.
 * Application name: Game Store Android
 * Company domain: tutorial.johnny
 
-![MIME Type](/public/pics/2017-07-16/createnewproject.png){:width="700px"}  
+![image](/public/posts/2017-07-16/createnewproject.png){:width="700px"}  
 Select 'API 15' as the minimum SDK for target devices, Next.
-![MIME Type](/public/pics/2017-07-16/targetdevice.png){:width="700px"}  
+![image](/public/posts/2017-07-16/targetdevice.png){:width="700px"}  
 Select 'Empty Activity', Next.
-![MIME Type](/public/pics/2017-07-16/emptyactivity.png){:width="700px"}  
+![image](/public/posts/2017-07-16/emptyactivity.png){:width="700px"}  
 Keep the default values unchanged, Next.
-![MIME Type](/public/pics/2017-07-16/configureactivity.png){:width="700px"}  
+![image](/public/posts/2017-07-16/configureactivity.png){:width="700px"}  
 Project is created.
-![MIME Type](/public/pics/2017-07-16/androidstudio.png)  
+![image](/public/posts/2017-07-16/androidstudio.png)  
 
 ## 3. Updating Project
 ### 3.1 Product List View
@@ -787,24 +787,24 @@ Add following settings to `AndroidManifest.xml`.
 ## 4. Testing in Emulator
 ### 4.1 Adding Images into Android Emulator Gallery
 When creating or editing product, we need to access the photo gallery. By default, there is no phone in the Android emulator. You can send any file into it via drag-and-drop action. And then go to Settings -> Storage and re-mount the sdcard.
-![MIME Type](/public/pics/2017-07-16/sdcard.png){:width="400px"}  
+![image](/public/posts/2017-07-16/sdcard.png){:width="400px"}  
 ### 4.2 Running App
 In Android Studio, Run -> Run 'app'. App is running in Android emulator.
-![MIME Type](/public/pics/2017-07-16/emulator.png){:width="500px"}  
+![image](/public/posts/2017-07-16/emulator.png){:width="500px"}  
 Product list.
-![MIME Type](/public/pics/2017-07-16/runproductlist.png){:width="350px"}  
+![image](/public/posts/2017-07-16/runproductlist.png){:width="350px"}  
 Edit product.
-![MIME Type](/public/pics/2017-07-16/runproductedit.png){:width="350px"}  
+![image](/public/posts/2017-07-16/runproductedit.png){:width="350px"}  
 Delete product in Edit mode. Select the items first and click 'Delete' button.
-![MIME Type](/public/pics/2017-07-16/runproductdelete.png){:width="350px"}  
+![image](/public/posts/2017-07-16/runproductdelete.png){:width="350px"}  
 Add product.
-![MIME Type](/public/pics/2017-07-16/runproductadd.png){:width="350px"}  
+![image](/public/posts/2017-07-16/runproductadd.png){:width="350px"}  
 Tap to choose image from gallery for the product.
-![MIME Type](/public/pics/2017-07-16/runchooseimage.png){:width="350px"}  
+![image](/public/posts/2017-07-16/runchooseimage.png){:width="350px"}  
 Image is loaded.
-![MIME Type](/public/pics/2017-07-16/runimageloaded.png){:width="350px"}  
+![image](/public/posts/2017-07-16/runimageloaded.png){:width="350px"}  
 In landscape view.
-![MIME Type](/public/pics/2017-07-16/runlandscape.png){:width="700px"}  
+![image](/public/posts/2017-07-16/runlandscape.png){:width="700px"}  
 
 ## 5. Source Files
 * [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAndroid)

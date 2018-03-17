@@ -30,16 +30,16 @@ OS name: "mac os x", version: "10.12.6", arch: "x86_64", family: "mac"
 ## 2. SpringBoot Project
 ### 2.1 Enabling Maven Index
 In Eclipse, top menu Eclipse -> Preferences, and then choose Maven in the left side. Check the box 'Download repository index updates on startup'. Optionally, check the boxes 'Download Artifact Sources' and 'Download Artifact JavaDoc'.
-![MIME Type](/public/pics/2016-02-20/mavenindex.png){:width="700px"}  
+![image](/public/posts/2016-02-20/mavenindex.png){:width="700px"}  
 ### 2.2 Rebuilding Index
 In Eclipse, Window -> Show View -> Other -> Maven -> Maven Repositories, tick 'Full Index Enabled' and then 'Rebuild Index' for 'Global Repositories'.
-![MIME Type](/public/pics/2016-02-20/rebuildindex.png){:width="700px"}  
+![image](/public/posts/2016-02-20/rebuildindex.png){:width="700px"}  
 
 ### 2.2 Creating Maven Project
 1) In Eclipse, File -> New -> 'Maven Project', check the box 'Create a simple project'-> Next, Name: SpringBootTutorial  
-![MIME Type](/public/pics/2016-02-20/mavenproject.png){:width="700px"}  
+![image](/public/posts/2016-02-20/mavenproject.png){:width="700px"}  
 In the new created project, there are two main branches, one is for source code, another is for test.
-![MIME Type](/public/pics/2016-02-20/initialproject.png){:width="400px"}  
+![image](/public/posts/2016-02-20/initialproject.png){:width="400px"}  
 ### 2.2 Specifying Java Version
 Since, we will use lamda expression, specify java version to java 8 in pom.xml.
 ```xml
@@ -293,7 +293,7 @@ public class ProductController {
 ```
 ### 2.5 Project Structure
 This is the final structure of this tutorial project.
-![MIME Type](/public/pics/2016-02-20/structure.png){:width="400px"}  
+![image](/public/posts/2016-02-20/structure.png){:width="400px"}  
 
 ### 2.6 Running and Testing
 run spring boot project with maven
@@ -303,10 +303,10 @@ $ mvn spring-boot:run
 Use Postman to access http://localhost:8080/ for testing.  
 1) Get Product List  
 URL: http://localhost:8080/products/
-![MIME Type](/public/pics/2016-02-20/products.png)  
+![image](/public/posts/2016-02-20/products.png)  
 2) Get Product by ID  
 URL: http://localhost:8080/product/1
-![MIME Type](/public/pics/2016-02-20/oneproduct.png)  
+![image](/public/posts/2016-02-20/oneproduct.png)  
 
 ## 3. Supporting XML
 ### 3.1 Adding Dependency to pom.xml
@@ -328,7 +328,7 @@ $ mvn spring-boot:run
 ```
 In Postman, add Accept = "application/xml" to Header.  
 URL: http://localhost:8080/products/1
-![MIME Type](/public/pics/2016-02-20/xmlproduct.png)  
+![image](/public/posts/2016-02-20/xmlproduct.png)  
 
 ## 4. Enabling Autoload
 Add dependency of Spring Dev-Tool in pom.xml
@@ -342,9 +342,9 @@ Add dependency of Spring Dev-Tool in pom.xml
 </dependencies>
 ```
 change the name and price of product1.
-![MIME Type](/public/pics/2016-02-20/changeproduct.png)  
+![image](/public/posts/2016-02-20/changeproduct.png)  
 Don't restart maven. Just send request again. The new product is returned.
-![MIME Type](/public/pics/2016-02-20/newprice.png)  
+![image](/public/posts/2016-02-20/newprice.png)  
 
 ## 5. Debugging
 1) In Eclipse, set breakpoint inside the method(eg. StringController.java->reverse()) you want to debug.  

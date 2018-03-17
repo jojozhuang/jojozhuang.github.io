@@ -8,7 +8,7 @@ category: basic
 
 > Book: Introduction to Linux - A beginner's Guide  
 Author: Machtelt Garrels  
-![MIME Type](/public/notes/introduction-to-linux/cover.jpg){:width="300px"}  
+![image](/public/notes/introduction-to-linux/cover.jpg){:width="300px"}  
 
 Summary:
 * Linux is an implementation of UNIX.
@@ -142,7 +142,7 @@ file /etc/fstab
 mount command
 df
 
-![MIME Type](/public/notes/introduction-to-linux/fs-layout.png){:width="700px"}  
+![image](/public/notes/introduction-to-linux/fs-layout.png){:width="700px"}  
 http://fibrevillage.com/sysadmin/403-understanding-linux-filesystem-layout-directories-structuries
 
 

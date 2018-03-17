@@ -23,11 +23,11 @@ POST /api/upload          | Upload an image     | Image File   | Image URL
 ## 2. Web API Project
 ### 2.1 Creating Project
 In Visual Studio, File->New Solution, select .NET Core->App->ASP.NET Core Web API, Next.
-![MIME Type](/public/pics/2017-08-02/project_create.png){:width="800px"}  
+![image](/public/posts/2017-08-02/project_create.png){:width="800px"}  
 Specify the Project Name, Solution Name and Location, Create.
-![MIME Type](/public/pics/2017-08-02/project_location.png){:width="800px"}  
+![image](/public/posts/2017-08-02/project_location.png){:width="800px"}  
 One solution and one project are created. This Web API project is based on ASP.NET Core. There is one default controller 'ValuesController' in the new project.
-![MIME Type](/public/pics/2017-08-02/project_stucture.png){:width="320px"}  
+![image](/public/posts/2017-08-02/project_stucture.png){:width="320px"}  
 
 ### 2.2 Installing Packages
 Since we will use SQLite as database and EntityFramework as data access engine, we first need to install the relevant packages.
@@ -89,11 +89,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 When this web api service is started, a SQLite database file named `SQLiteProduct.db` will be created in the root folder of the project.
-![MIME Type](/public/pics/2017-08-02/sqlitedb_file.png){:width="400px"}  
+![image](/public/posts/2017-08-02/sqlitedb_file.png){:width="400px"}  
 
 ### 2.5 Controller
 In 'Controller' folder, delete the auto-generated 'ValuesController.cs'. Then, create a new controller named 'ProductsController'.
-![MIME Type](/public/pics/2017-08-02/newfile_controller.png){:width="700px"}  
+![image](/public/posts/2017-08-02/newfile_controller.png){:width="700px"}  
 Edit its content as follows.
 ```c#
 using System;
@@ -351,7 +351,7 @@ public class ProductsController : Controller
 ### 4.2 Serving Static Files
 1) Install package `Microsoft.AspNetCore.StaticFiles`.  
 2) Copy images into 'wwwroot' folder of the project.  
-![MIME Type](/public/pics/2017-08-02/images_wwwroot.png){:width="700px"}  
+![image](/public/posts/2017-08-02/images_wwwroot.png){:width="700px"}  
 3) In Program.cs, call UseContentRoot() with the current directory in BuildWebHost method.
 ```c#
 public static IWebHost BuildWebHost(string[] args) =>
@@ -378,7 +378,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 }
 ````
 When accessing the URL 'http://localhost:5000/images/controller.jpg'. The image with name 'controller.jpg' is displayed in the browser.
-![MIME Type](/public/pics/2017-08-02/images_serving.png){:width="700px"}  
+![image](/public/posts/2017-08-02/images_serving.png){:width="700px"}  
 ### 4.3 Enabling Directory Browsing
 In Startup.cs, make the changes as follows.
 ```
@@ -404,7 +404,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 }
 ```
 When accessing the URL 'http://localhost:5000/images/'. All the images in '~/wwwwroot/images/' folder are displayed.
-![MIME Type](/public/pics/2017-08-02/directory browsing.png){:width="700px"}  
+![image](/public/posts/2017-08-02/directory browsing.png){:width="700px"}  
 ### 4.4 Getting Base URL in .NET Core
 Base URL is the 'root' of the RESTful service. Take the API of getting all products as example, the full URL address is 'http://localhost:5000/api/products'. Here, 'http://localhost:5000/' is the base URL, which includes the host name(or ip address) and port number. It looks like a prefix for all APIs. We need this base URL to generate the full URL after image is uploaded to service. We will rely on the HttpContext to get the host and port number.
 
@@ -443,7 +443,7 @@ public string GetBaseUrl()
 ```
 ### 4.5 Final Project Structure
 The final structure of the Web API project.
-![MIME Type](/public/pics/2017-08-02/project_final.png){:width="320px"}  
+![image](/public/posts/2017-08-02/project_final.png){:width="320px"}  
 We created 6 APIs and will test them through Postman, see next blog.
 
 API                       | Description         | URL

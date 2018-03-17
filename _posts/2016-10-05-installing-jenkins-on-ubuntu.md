@@ -41,31 +41,31 @@ After running above command, this package installation will:
 
 ### 2.2 Launching Jenkins Web
 Open a web browser, access http://localhost:8080/. You need to find the password in the given file to unlock Jenkins.
-![MIME Type](/public/pics/2016-10-05/unlock.png)  
+![image](/public/posts/2016-10-05/unlock.png)  
 
 In terminal, navigate to the given directory.
 ```sh
 $ cd /var/lib/jenkins/secrets/
 ```
 If you encounter the permission denied error, use 'sudo su' command (without another user name) to allow you to run commands as the super-user (root).
-![MIME Type](/public/pics/2016-10-05/secretfile.png){:width="700px"}
+![image](/public/posts/2016-10-05/secretfile.png){:width="700px"}
 Use any text editor to open file initialAdminPassword, you should see the password.
 ```sh
 $ nano initialAdminPassword
 ```
-![MIME Type](/public/pics/2016-10-05/password.png){:width="700px"}
+![image](/public/posts/2016-10-05/password.png){:width="700px"}
 Copy this password and paste it to the input box in Getting Started page, continue.
-![MIME Type](/public/pics/2016-10-05/setpassword.png)
+![image](/public/posts/2016-10-05/setpassword.png)
 In the next page, select Install Suggested Plugins.
-![MIME Type](/public/pics/2016-10-05/plugin.png)
+![image](/public/posts/2016-10-05/plugin.png)
 Jenkins starts to install plugins.
-![MIME Type](/public/pics/2016-10-05/installplugin.png)
+![image](/public/posts/2016-10-05/installplugin.png)
 In the next page, you need to create an admin user.
-![MIME Type](/public/pics/2016-10-05/createuser.png)
+![image](/public/posts/2016-10-05/createuser.png)
 Setup is complete, ready for use.
-![MIME Type](/public/pics/2016-10-05/ready.png)
+![image](/public/posts/2016-10-05/ready.png)
 Finally, we see the homepage of Jenkins.
-![MIME Type](/public/pics/2016-10-05/homepage.png)
+![image](/public/posts/2016-10-05/homepage.png)
 
 ### 2.3 Commands for Jenkins
 The following commands when appended to the Jenkins instance URL will carry out the relevant actions on the Jenkins instance.

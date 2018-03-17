@@ -324,9 +324,9 @@ View the React-Bootstrap library on the [components page](https://react-bootstra
 You will get a new tab called React in your Chrome DevTools. This shows you the root React components that were rendered on the page, as well as the subcomponents that they ended up rendering.
 
 You can install it as Chrome extension.
-![MIME Type](/public/pics/2017-08-15/extensions.png){:width="800px"}
+![image](/public/posts/2017-08-15/extensions.png){:width="800px"}
 View your React app in Chrome. You will see a tab called `React` in Chrome Developer Tools.
-![MIME Type](/public/pics/2017-08-15/devtools.png)
+![image](/public/posts/2017-08-15/devtools.png)
 
 ## 5. References
 * [Official Docs](https://reactjs.org/docs/hello-world.html)

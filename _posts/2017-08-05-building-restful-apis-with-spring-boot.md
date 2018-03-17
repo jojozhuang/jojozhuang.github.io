@@ -23,9 +23,9 @@ POST /api/upload          | Upload an image     | Image File   | Image URL
 ## 2. Maven Project
 ### 2.1 Creating Project
 1) In Eclipse, File -> New -> 'Maven Project', check the box 'Create a simple project'-> Next, Name: SpringBootTutorial  
-![MIME Type](/public/pics/2017-08-05/mavenproject.png){:width="650px"}  
+![image](/public/posts/2017-08-05/mavenproject.png){:width="650px"}  
 In the new created project, there are two main branches, one is for source code, another is for test.
-![MIME Type](/public/pics/2017-08-05/initialproject.png){:width="350px"}  
+![image](/public/posts/2017-08-05/initialproject.png){:width="350px"}  
 ### 2.2 Specifying Java Version
 Since, we will use lamda expression, specify java version to java 8 in pom.xml.
 ```xml
@@ -456,11 +456,11 @@ class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 }
 ```
 When accessing the URL 'http://localhost:8080/images/controller.jpg'. The image with name 'controller.jpg' is displayed in the browser.
-![MIME Type](/public/pics/2017-08-05/images_serving.png){:width="700px"}  
+![image](/public/posts/2017-08-05/images_serving.png){:width="700px"}  
 
 ### 4.5 Final Project Structure
 The final structure of the Web API project.
-![MIME Type](/public/pics/2017-08-05/project_final.png){:width="350px"}  
+![image](/public/posts/2017-08-05/project_final.png){:width="350px"}  
 We created 6 APIs and will test them through Postman, see next blog.
 
 API                       | Description         | URL
@@ -480,10 +480,10 @@ $ mvn spring-boot:run
 Use Postman to access http://localhost:8080/ for testing. Create new collection named 'RESTfulSpringBoot', all requests will be saved to this collection.
 ### 5.1 Get All Products
 Create a request, choose 'GET' method and specify 'http://localhost:8080/api/products' as the URL, click the Send button. All three products are returned in the response body.
-![MIME Type](/public/pics/2017-08-05/getall.png)
+![image](/public/posts/2017-08-05/getall.png)
 ### 5.2 Get a product by ID
 Create a new request, choose the 'GET' method and specify 'http://localhost:8080/api/products/1' as the URL, click the Send button. Product with ID equals to '1' is returned in the response body.
-![MIME Type](/public/pics/2017-08-05/getone.png)
+![image](/public/posts/2017-08-05/getone.png)
 ### 5.3 Add New Product
 Create another request, choose the 'POST' method and specify 'http://localhost:8080/api/products/' as the URL. In the Request Body, select 'raw', provide the new product information in JSON format, and choose 'JSON(application/json)'.
 ```json
@@ -495,9 +495,9 @@ Create another request, choose the 'POST' method and specify 'http://localhost:8
 }
 ```
 Click the Send button. In the response body, we see the new product.
-![MIME Type](/public/pics/2017-08-05/add.png)
+![image](/public/posts/2017-08-05/add.png)
 Run the 'Get all products' request to verify whether the new product is created. We see there is a new product with ID equals to 4.
-![MIME Type](/public/pics/2017-08-05/addcheck.png)
+![image](/public/posts/2017-08-05/addcheck.png)
 ### 5.4 Update Product
 Create a new request, choose 'PUT' method and specify 'http://localhost:8080/api/products/4' as the URL. In the Request Body, select 'raw', provide the new product information in JSON format, and choose 'JSON(application/json)'.
 ```json
@@ -509,21 +509,21 @@ Create a new request, choose 'PUT' method and specify 'http://localhost:8080/api
 }
 ```
 Click the Send button. In the response body, we see the product has new name and price.
-![MIME Type](/public/pics/2017-08-05/update.png)
+![image](/public/posts/2017-08-05/update.png)
 Run the 'Get all products' request to verify whether the product is updated. We see product 4 has new name and price.
-![MIME Type](/public/pics/2017-08-05/updatecheck.png)
+![image](/public/posts/2017-08-05/updatecheck.png)
 ### 5.5 Delete Product
 Create a new request, choose 'DELETE' method and specify 'http://localhost:8080/api/products/4' as the URL, click the Send button. There is no response body returned, but we see the status is '200 OK'. Product 4 should be deleted.
-![MIME Type](/public/pics/2017-08-05/delete.png)
+![image](/public/posts/2017-08-05/delete.png)
 Run the 'Get all products' request to verify whether product4 is deleted. We see product 4 is no longer existing.
-![MIME Type](/public/pics/2017-08-05/deletecheck.png)
+![image](/public/posts/2017-08-05/deletecheck.png)
 ### 5.5 Upload Image
 Create a new request, choose the 'POST' method and specify 'http://localhost:8080/api/upload' as the URL. In the Request Body, select 'form-data', add new key named 'file', select 'File' type, you will see the 'Choose Files' button. Select one image from your local disk, and click the Send button. In the response body, we see the status code and message. This message actually contains the URL of the uploaded image.
-![MIME Type](/public/pics/2017-08-05/upload.png)
+![image](/public/posts/2017-08-05/upload.png)
 Click on the image link. A new request is created automatically, click the Send button, you will see the image displayed in the response body.
-![MIME Type](/public/pics/2017-08-05/uploadcheck.png)
+![image](/public/posts/2017-08-05/uploadcheck.png)
 If you go to the project's image folder '/src/main/resources/images/', you will see this image.
-![MIME Type](/public/pics/2017-08-05/imageonserver.png){:width="700px"}  
+![image](/public/posts/2017-08-05/imageonserver.png){:width="700px"}  
 
 ## 6. Source Files
 * [Source files of RESTful API(Spring Boot) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulSpringBoot)

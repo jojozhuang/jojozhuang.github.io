@@ -23,7 +23,7 @@ There is one database named 'gamestore' in mysql. This database contains two tab
 ### 1.2 Mysql Connector
 To let our JSP application access Mysql database, we need mysql connector jar. It is a middleware between our JSP application and Mysql Container. Even though mysql is not required to be installed on our host machine, our JSP application needs to connect to mysql container with it.  
 Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download Mysql Connector/J.
-![MIME Type](/public/pics/2016-09-12/mysqlconnectordownload.png)  
+![image](/public/posts/2016-09-12/mysqlconnectordownload.png)  
 Unzip it, and copy mysql-connector-java-5.1.44-bin.jar to /GameStore/src/web/WEB-INF/lib/.
 
 I have already put this jar file to WEB-INF. So, actually, you don't need to do again after you download the source files from my GitHub. But, I think it's better to understand how the application works with database. Depends on which platform the JSP application is deployed on, you needs to choose appropriate version of Mysql Connector.
@@ -40,23 +40,23 @@ The source files are located in ~/Portfolio/GameStoreMysql/GameStoreMysql.
 
 Launch your eclipse, set workspace to ~/Portfolio/.  
 File->Open Projects from File System..., set path to ~/Portfolio/GameStoreMysql/GameStoreMysql. The project is imported to eclipse.
-![MIME Type](/public/pics/2016-09-12/jspproject.png)  
+![image](/public/posts/2016-09-12/jspproject.png)  
 Now, add Tomcat server to eclipse.  
 Window->Show View->Server, click the link to add new server.
-![MIME Type](/public/pics/2016-09-12/eclipseserver.png)  
+![image](/public/posts/2016-09-12/eclipseserver.png)  
 Select Tomcat 9.0.
-![MIME Type](/public/pics/2016-09-12/newserver.png)  
+![image](/public/posts/2016-09-12/newserver.png)  
 Add Our Project to right side.
-![MIME Type](/public/pics/2016-09-12/addresource.png)  
+![image](/public/posts/2016-09-12/addresource.png)  
 In eclipse project, a new server folder for tomcat is added.
-![MIME Type](/public/pics/2016-09-12/servers.png)  
+![image](/public/posts/2016-09-12/servers.png)  
 Set Targeted Runtimes.  
 Right click on the GameStore Project->Properties->Targeted Runtimes, check Tomcat 9.0.
-![MIME Type](/public/pics/2016-09-12/targetedruntimes.png)  
+![image](/public/posts/2016-09-12/targetedruntimes.png)  
 Now, we can use 'Run on Server' to start our JSP Application.
-![MIME Type](/public/pics/2016-09-12/runonserver.png)  
+![image](/public/posts/2016-09-12/runonserver.png)  
 There will be a browser opened in eclipse, which shows our Game Store website. Or you can directly access http://localhost:8080/GameStoreMysql/ in browser.
-![MIME Type](/public/pics/2016-09-12/launched.png)  
+![image](/public/posts/2016-09-12/launched.png)  
 
 ## 2. Setting up Mysql Container
 ### 2.1 Creating Mysql Container
@@ -132,7 +132,7 @@ Start terminal in gsmysql container with the following command:
 $ docker exec -i -t gsmysql sh
 ```
 Use 'ls' to check the files. Our two db restore files are there.
-![MIME Type](/public/pics/2016-09-12/sqlfile.png)  
+![image](/public/posts/2016-09-12/sqlfile.png)  
 
 ### 3.2 Restoring Database Schema and Data
 Create Database
@@ -144,25 +144,25 @@ Restore Tables and Data
 $ mysql -u root -p gamestore < gamestore_salesorder.sql
 $ mysql -u root -p gamestore < gamestore_orderitem.sql
 ```
-![MIME Type](/public/pics/2016-09-12/restoredb.png)  
+![image](/public/posts/2016-09-12/restoredb.png)  
 
 ## 4. Connecting to the Container
 ### 4.1 Getting the Connection URL
 In Kitematic, select our mysql container, check Access URL. It's 192.168.99.100:6603.
-![MIME Type](/public/pics/2016-09-12/accessurl.png)  
+![image](/public/posts/2016-09-12/accessurl.png)  
 
 ### 4.2 Connecting Mysql Container with Mysql Workbench
 Go to https://dev.mysql.com/downloads/workbench/, download the installer and install it.
 Launch MySql Workbench and add Connection with the IP address and port.
-![MIME Type](/public/pics/2016-09-12/newconnection.png)  
+![image](/public/posts/2016-09-12/newconnection.png)  
 Store the password for root to keychain.
-![MIME Type](/public/pics/2016-09-12/benchpassword.png)  
+![image](/public/posts/2016-09-12/benchpassword.png)  
 Test Connection
-![MIME Type](/public/pics/2016-09-12/testconnection.png)  
+![image](/public/posts/2016-09-12/testconnection.png)  
 A new connection is added to the workbench.
-![MIME Type](/public/pics/2016-09-12/workbench.png)  
+![image](/public/posts/2016-09-12/workbench.png)  
 Check the original data. As you see, there is no entry in table SalesOrder.
-![MIME Type](/public/pics/2016-09-12/original.png)  
+![image](/public/posts/2016-09-12/original.png)  
 
 ### 4.3 Configuring the Connection
 Edit file /GameStoreMysql/WebContent/META-INF/context.xml. Specify the usename, password and URL, including the ip address and port to connect mysql.
@@ -182,15 +182,15 @@ Login as follows:
 * Password:  customer
 * User Type: customer
 
-![MIME Type](/public/pics/2016-09-12/login.png)  
+![image](/public/posts/2016-09-12/login.png)  
 
 Add some items, console, accessory or game to shopping cart, and place order.
-![MIME Type](/public/pics/2016-09-12/cart.png)  
+![image](/public/posts/2016-09-12/cart.png)  
 
 Order is created now.
-![MIME Type](/public/pics/2016-09-12/order.png)  
+![image](/public/posts/2016-09-12/order.png)  
 After the above operation, check the data in mysql workbench. You see there is one new order entry in SalesOrder table.
-![MIME Type](/public/pics/2016-09-12/after.png)  
+![image](/public/posts/2016-09-12/after.png)  
 
 ## 5. Publishing Mysql Container
 1) First, check the container id.
@@ -214,7 +214,7 @@ The push refers to a repository [docker.io/jojozhuang/gamestore-mysql]
 197bbcc9bad0: Pushed
 ```
 4) Check the new image on Docker Hub
-![MIME Type](/public/pics/2016-09-12/dockerhub.png)  
+![image](/public/posts/2016-09-12/dockerhub.png)  
 Now, you can use the following command to install this image.
 ```sh
 $ docker pull jojozhuang/gamestore-mysql

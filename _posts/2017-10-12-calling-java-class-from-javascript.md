@@ -14,7 +14,7 @@ In the previous posting [Running JavaScript at Server Side with Rhino]({% link _
 ## 2. Start Testing Page
 Right-click on RhinoWebsiteJava->WebContent->index.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.
 Open web browser, access http://localhost:8080/RhinoWebsiteJava/index.html.
-![MIME Type](/public/pics/2017-10-12/indexpage.png)
+![image](/public/posts/2017-10-12/indexpage.png)
 
 ## 3. Calling Native Java Class
 Input following script to the javascript input box, and click Run button.
@@ -29,7 +29,7 @@ Output:
 ```
 Thu Oct 12 10:28:13 PDT 2017
 ```
-![MIME Type](/public/pics/2017-10-12/gettime.png)
+![image](/public/posts/2017-10-12/gettime.png)
 
 ## 4. Calling Custom Class
 ### 4.1 Creating Custom Class
@@ -58,7 +58,7 @@ Output:
 ```
 Hello johnny, greetings from CustomClass.greet().
 ```
-![MIME Type](/public/pics/2017-10-12/instancemethod.png)
+![image](/public/posts/2017-10-12/instancemethod.png)
 ### 4.3 Calling Static Method of Custom Class
 Input following content to the javascript textbox. Notice that we have to add `Packages` prefix to access custom class.
 ```javascript
@@ -69,7 +69,7 @@ Output:
 ```
 Hello johnny, greetings from CustomClass.greetStatic().
 ```
-![MIME Type](/public/pics/2017-10-12/staticmethod.png)
+![image](/public/posts/2017-10-12/staticmethod.png)
 ### 4.4 Calling Custom Class Without Packages Prefix
 To avoid adding `Packages` prefix when calling custom class, we can define a global package named 'Johnny', and use it to access custom packages and classes. Input following content to the javascript textbox.
 ```javascript
@@ -81,7 +81,7 @@ Same output:
 ```
 Hello johnny, greetings from CustomClass.greet().
 ```
-![MIME Type](/public/pics/2017-10-12/globalpackage.png)
+![image](/public/posts/2017-10-12/globalpackage.png)
 ### 4.5 Optimizing Servlet
 Edit the 'doPost()' method of 'RhinoServlet.java', add `var Johnny = Packages.Johnny;` before running the script submitted from client. By doing this, there is no need to use `Packages` prefix in the client scripts.
 ```java
@@ -112,7 +112,7 @@ Same output:
 ```
 Hello johnny, greetings from CustomClass.greet().
 ```
-![MIME Type](/public/pics/2017-10-12/withoutpackages.png)
+![image](/public/posts/2017-10-12/withoutpackages.png)
 
 ## 5. Source Files
 * [Source files of RhinoWebsiteJava on Github](https://github.com/jojozhuang/Tutorials/tree/master/RhinoWebsiteJava)

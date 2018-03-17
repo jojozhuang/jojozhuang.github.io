@@ -24,7 +24,7 @@ There are three approaches to setup the Xamarin development environment. The cho
 On the Windows machine, install Visual Studio, Android SDK or Android Studio. For Android App development, you can install third party simulator. You can't develop iOS App in this approach, since there is no iOS simulator.
 ### 2.2 Windows + Mac
 On the Windows machine, install Visual Studio, Android SDK or Android Studio. On the Mac machine, install Xcode and iOS simulator. For the iOS App development, you can code with Xamarin in VS on Windows, and send the app to simulator on Mac to see the result. The first step is to pair the Windows machine with the Mac machine.
-![pair](/public/pics/2017-07-20/pair.png)  
+![pair](/public/posts/2017-07-20/pair.png)  
 For Android App development, both coding and simulation can be done through Visual Studio.
 ### 2.3 Mac Only
 On the Mac machine, install Xcode, Visual Studio(Mac Version), Android SDK or Android Studio. For iOS and Android App development, coding and simulation can both be done in Visual Studio. You can't develop Windows Phone App in this approach.
@@ -33,7 +33,7 @@ On the Mac machine, install Xcode, Visual Studio(Mac Version), Android SDK or An
 I choose the third approach to setup Xamarin development environment, since I like Mac and I don't want to develop Windows Phone apps.
 ### 3.1 Installing Xcode
 Go to App Store, search 'xcode', install.
-![MIME Type](/public/pics/2017-07-20/appstore.png)  
+![image](/public/posts/2017-07-20/appstore.png)  
 ### 3.2 Installing Visual Studio
 Refer to [Setting up .Net Development Environment on Mac]({% link _posts/2017-07-19-setting-up-dotnet-development-environment-on-mac.md %}) to install Visual Studio on Mac.
 ### 3.3 Installing JDK and Android Studio
@@ -42,41 +42,41 @@ Refer to [Setting up Android Development Environment on Mac]({% link _posts/2017
 ## 4. SDK Configuration in Visual Studio
 ### 4.1 iOS SDK
 In Visual Studio, Tools->SDK Manager->Apple. The default path is the location of Xcode.
-![MIME Type](/public/pics/2017-07-20/ios_sdk.png){:width="800px"}  
+![image](/public/posts/2017-07-20/ios_sdk.png){:width="800px"}  
 In the tool bar, the iOS simulator is available.
-![MIME Type](/public/pics/2017-07-20/ios_simulator.png){:width="600px"}  
+![image](/public/posts/2017-07-20/ios_simulator.png){:width="600px"}  
 ### 4.2 Android SDK
 In Visual Studio, Tools->SDK Manager->Android. First, select the Android API versions.
-![MIME Type](/public/pics/2017-07-20/android_sdk.png){:width="800px"}  
+![image](/public/posts/2017-07-20/android_sdk.png){:width="800px"}  
 Second, choose the SDK Tools and Build Tools, Apply Changes.
-![MIME Type](/public/pics/2017-07-20/android_tools.png){:width="800px"}  
+![image](/public/posts/2017-07-20/android_tools.png){:width="800px"}  
 Accept the license, the selected items will be installed.
-![MIME Type](/public/pics/2017-07-20/android_license.png){:width="600px"}  
+![image](/public/posts/2017-07-20/android_license.png){:width="600px"}  
 ### 4.3 Android Emulator
 In Visual Studio, Tools->Devices->Android. You can start or create Emulators.
-![MIME Type](/public/pics/2017-07-20/android_devices.png){:width="400px"}  
+![image](/public/posts/2017-07-20/android_devices.png){:width="400px"}  
 In Visual Studio, Tools->Devices->Create Emulator or Tools->Google Emulator Manager. You can create and start new AVD.
-![MIME Type](/public/pics/2017-07-20/avd_manager.png){:width="700px"}  
+![image](/public/posts/2017-07-20/avd_manager.png){:width="700px"}  
 In the tool bar, the Android emulator is available.
-![MIME Type](/public/pics/2017-07-20/android_emulator.png){:width="600px"}  
+![image](/public/posts/2017-07-20/android_emulator.png){:width="600px"}  
 
 ## 5. Creating Xamarin Project
 In Visual Studio, File->New Solution, select Multiplatform->App->Blank Native App(iOS, Android), Next.
-![MIME Type](/public/pics/2017-07-20/xamarin_create.png){:width="800px"}  
+![image](/public/posts/2017-07-20/xamarin_create.png){:width="800px"}  
 Specify the name and Organization Identifier, Next.
-![MIME Type](/public/pics/2017-07-20/xamarin_appname.png){:width="800px"}  
+![image](/public/posts/2017-07-20/xamarin_appname.png){:width="800px"}  
 Specify the location where the source files will locate, Create.
-![MIME Type](/public/pics/2017-07-20/xamarin_location.png){:width="800px"}  
+![image](/public/posts/2017-07-20/xamarin_location.png){:width="800px"}  
 Three projects are created. 'XamarinTutorial' is a Portable .NET project, which contains common functions. 'XamarinTutorial.Droid' and 'XamarinTutorial.iOS' are responsible for UI, one for Android and another for iOS.
-![MIME Type](/public/pics/2017-07-20/xamarin_project.png){:width="350px"}  
+![image](/public/posts/2017-07-20/xamarin_project.png){:width="350px"}  
 Right click on the 'XamarinTutorial.iOS' project, select 'Set As Startup Project' and Build. Then, run the app in simulator by clicking the Arrow button or Run->Start Without Debugging.
-![MIME Type](/public/pics/2017-07-20/ios_running1.png){:width="400px"}  
+![image](/public/posts/2017-07-20/ios_running1.png){:width="400px"}  
 Tap on the button to see the effect.
-![MIME Type](/public/pics/2017-07-20/ios_running2.png){:width="400px"}  
+![image](/public/posts/2017-07-20/ios_running2.png){:width="400px"}  
 Right click on the 'XamarinTutorial.Droid' project, select 'Set As Startup Project' and Build. Then, run the app in simulator by clicking the Arrow button or Run->Start Without Debugging.
-![MIME Type](/public/pics/2017-07-20/android_running1.png){:width="400px"}  
+![image](/public/posts/2017-07-20/android_running1.png){:width="400px"}  
 Tap on the button to see the effect.
-![MIME Type](/public/pics/2017-07-20/android_running2.png){:width="400px"}  
+![image](/public/posts/2017-07-20/android_running2.png){:width="400px"}  
 
 ## 6. References
 * [Xamarin Developers](https://developer.xamarin.com/)

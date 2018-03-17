@@ -16,21 +16,21 @@ category: web
 
 ## 2. UI
 Home page.
-![MIME Type](/public/portfolios/gamestorereact/homepage.png)
+![image](/public/portfolios/gamestorereact/homepage.png)
 Click the List button. There are three products with images.
-![MIME Type](/public/portfolios/gamestorereact/productlist.png)
+![image](/public/portfolios/gamestorereact/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![MIME Type](/public/portfolios/gamestorereact/productadd.png)
+![image](/public/portfolios/gamestorereact/productadd.png)
 Click 'Save' button, product is saved.
-![MIME Type](/public/portfolios/gamestorereact/productlistafteradd.png)
+![image](/public/portfolios/gamestorereact/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![MIME Type](/public/portfolios/gamestorereact/productedit.png)
+![image](/public/portfolios/gamestorereact/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![MIME Type](/public/portfolios/gamestorereact/productlistafteredit.png)
+![image](/public/portfolios/gamestorereact/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![MIME Type](/public/portfolios/gamestorereact/deleteconfirm.png)
+![image](/public/portfolios/gamestorereact/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![MIME Type](/public/portfolios/gamestorereact/productlistafterdel.png)
+![image](/public/portfolios/gamestorereact/productlistafterdel.png)
 
 ## 3. Under the Hood
 Check posting [Building Web Application with React]({% link _posts/2017-08-16-building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _posts/2017-08-20-building-web-application-with-react-and-redux.md %}) to learn the details of React and Redux.

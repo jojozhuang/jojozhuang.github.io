@@ -11,10 +11,10 @@ tags: [Singly Linked List, Doubly Linked List]
 ## 1. Types of Linked List
 ### 1.1 Singly Linked List
 Each node has an attribute to represent its value. It also has one pointer, linking it to the next node in the linked list.
-![MIME Type](/public/pics/2016-03-27/singlylinkedlist.png){:width="800px"}  
+![image](/public/posts/2016-03-27/singlylinkedlist.png){:width="800px"}  
 ### 1.2 Doubly Linked List
 Each node has an attribute to represent its value. Meanwhile, it has two pointers, the first pointer links to the next node, and the second pointer links to the previous node.
-![MIME Type](/public/pics/2016-03-27/doublylinkedlist.png){:width="800px"}  
+![image](/public/posts/2016-03-27/doublylinkedlist.png){:width="800px"}  
 
 ## 2. Implementation
 ### 2.1 Creating Singly Linked List
