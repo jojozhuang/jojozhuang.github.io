@@ -4,7 +4,7 @@ key: portfolio
 title: "Three-Tier CMS"
 index: 250
 tags: [ASP.NET, C#]
-image: /public/portfolio/threetiercmsaspnet/thumbnail.png
+image: /public/portfolios/threetiercmsaspnet/thumbnail.png
 excerpt: A Content Management System(CMS) built with ASP.NET in C#.
 category: dotnetaaa
 ---
@@ -28,21 +28,21 @@ category: dotnetaaa
 ## 3. UI Pages
 ### 3.1 Login Page
 Using captcha for login page makes the website more secure, it effectively blocks spam bots.
-![image](/public/portfolio/threetiercmsaspnet/login.png)
+![image](/public/portfolios/threetiercmsaspnet/login.png)
 ### 3.2 Administrator List
 In list view, we can view all of the items, and add/edit/delete item. Other list pages have the similar layout.
-![image](/public/portfolio/threetiercmsaspnet/adminlist.png)  
+![image](/public/portfolios/threetiercmsaspnet/adminlist.png)  
 ### 3.3 Menu Configuration
 Define top menus and their default pages.
-![image](/public/portfolio/threetiercmsaspnet/topmenu.png)  
+![image](/public/portfolios/threetiercmsaspnet/topmenu.png)  
 Top Menus and menu categories are dynamically bound.
-![image](/public/portfolio/threetiercmsaspnet/topmenubinding.png)
+![image](/public/portfolios/threetiercmsaspnet/topmenubinding.png)
 ### 3.4 Access Control
 Access permission to each menu can also be configured for different roles.
-![image](/public/portfolio/threetiercmsaspnet/rolepermission.png)
+![image](/public/portfolios/threetiercmsaspnet/rolepermission.png)
 ### 3.5 WYSIWYG Editor
 You can use WYSIWYG(what you see is what you get) html editor for creating new articles.
-![image](/public/portfolio/threetiercmsaspnet/addarticle.png)
+![image](/public/portfolios/threetiercmsaspnet/addarticle.png)
 
 ## 4. Three Tiers
 The structure of this application is divided into 3 layers:
@@ -51,7 +51,7 @@ The structure of this application is divided into 3 layers:
 * Data Access(DAL)  
 
 The high level layer calls the low layer to communicate and retrieve data. The Object Model(OM) contains objects definition. The object can be an administrator or a blog posting.
-![image](/public/portfolio/threetiercmsaspnet/project.png)  
+![image](/public/portfolios/threetiercmsaspnet/project.png)  
 
 ## 5. Source Files
 * [Source files of Three-Tier CMS on Github](https://github.com/jojozhuang/Portfolio/tree/master/ThreeTierCMS/Src)

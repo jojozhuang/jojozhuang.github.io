@@ -4,7 +4,7 @@ key: portfolio
 title: "Trip Planner(iOS)"
 index: 100
 tags: [iOS, Swift, XCode]
-image: /public/portfolio/tripplannerios/thumbnail.png
+image: /public/portfolios/tripplannerios/thumbnail.png
 excerpt: An iOS App for managing itineraries, built with Swift.
 category: mobile
 ---
@@ -14,35 +14,35 @@ category: mobile
 This app contains three tabs: Me, Search and Settings.  
 
 ## 1. Home screen  
-![index](/public/portfolio/tripplannerios/index.png "index")  
+![index](/public/portfolios/tripplannerios/index.png "index")  
 ### 1.1 Me -> New Trip
 Create new plan for your next trip.
-![newtrip1](/public/portfolio/tripplannerios/newtrip1.png "newtrip1")  
-![newtrip2](/public/portfolio/tripplannerios/newtrip2.png "newtrip2")  
+![newtrip1](/public/portfolios/tripplannerios/newtrip1.png "newtrip1")  
+![newtrip2](/public/portfolios/tripplannerios/newtrip2.png "newtrip2")  
 ### 1.2 Me -> My Trips
 A list shows all your previous and current trip plans.
-![trips](/public/portfolio/tripplannerios/trips.png "trips")
+![trips](/public/portfolios/tripplannerios/trips.png "trips")
 ‘Share’ function is available to enable you to share your trip to others via message, email or Facebook, etc.  
-![share](/public/portfolio/tripplannerios/share.png "share")
+![share](/public/portfolios/tripplannerios/share.png "share")
 ### 1.3 Me -> My Favorites
 A list contains the cities which you added into favorite list previously.  
-![favorite](/public/portfolio/tripplannerios/favorite.png "favorite")
+![favorite](/public/portfolios/tripplannerios/favorite.png "favorite")
 ### 1.4 Me -> My Location
 You can get the exact coordinates of your current location through 'My Location'.  
-![location](/public/portfolio/tripplannerios/location.png "location")  
+![location](/public/portfolios/tripplannerios/location.png "location")  
 ## 2. Search
 Search is another main function of this app. You are able to search your next destination.  
 ### 2.1 Search -> Continent
-![search](/public/portfolio/tripplannerios/search.png "search")  
+![search](/public/portfolios/tripplannerios/search.png "search")  
 ### 2.2 Search -> Continent-> Country
-![countrylist](/public/portfolio/tripplannerios/countrylist.png "countrylist")  
+![countrylist](/public/portfolios/tripplannerios/countrylist.png "countrylist")  
 ### 2.3 Search -> Continent-> Country -> City
-![citylist](/public/portfolio/tripplannerios/citylist.png "citylist")
+![citylist](/public/portfolios/tripplannerios/citylist.png "citylist")
 ### 2.4 Search -> Continent-> Country -> City -> Details
 In the ‘City Detail’ screen, you can find lots of useful information, such as map, local time, local weather, famous sights, etc. If you like, you can add the city to your favorite list.  
-![city](/public/portfolio/tripplannerios/city.png "city")  
-![city2](/public/portfolio/tripplannerios/city2.png "city2")
+![city](/public/portfolios/tripplannerios/city.png "city")  
+![city2](/public/portfolios/tripplannerios/city2.png "city2")
 ## 3. Settings  
-![settings](/public/portfolio/tripplannerios/settings.png "settings")  
+![settings](/public/portfolios/tripplannerios/settings.png "settings")  
 ## 4. Source Files
 * [Source files of Trip Planner on Github](https://github.com/jojozhuang/Portfolio/tree/master/TripPlanner/TripPlanneriOS)

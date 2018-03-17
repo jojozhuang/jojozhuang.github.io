@@ -4,7 +4,7 @@ key: portfolio
 title: "Shoe Store(ASP.NET)"
 index: 270
 tags: [ASP.NET MVC, C#, Bootstrap]
-image: /public/portfolio/shoestoreaspnet/thumbnail.png
+image: /public/portfolios/shoestoreaspnet/thumbnail.png
 excerpt: An online store website with responsive UI, built with ASP.NET MVC in C#.
 category: dotnet
 ---
@@ -30,21 +30,21 @@ This web application is a content management system(CMS), built with ASP.NET MVC
 
 ## 3. UI Pages
 ### 3.1 Login Page  
-![image](/public/portfolio/shoestoreaspnet/login.png)
+![image](/public/portfolios/shoestoreaspnet/login.png)
 ### 3.2 List View
 In list view, we can view all of the items, and add/edit/delete item. Other list pages have the similar layout.
-![image](/public/portfolio/shoestoreaspnet/listview.png)
+![image](/public/portfolios/shoestoreaspnet/listview.png)
 ### 3.3 Responsive UI for Different Screen Size
 View in large size screen.
-![image](/public/portfolio/shoestoreaspnet/responsive.png)
+![image](/public/portfolios/shoestoreaspnet/responsive.png)
 View in small size screen, eg. mobile phone.  
-![image](/public/portfolio/shoestoreaspnet/responsive2.png)
+![image](/public/portfolios/shoestoreaspnet/responsive2.png)
 ### 3.4 List of Sales Order
 Add, edit, delete and search order.
-![image](/public/portfolio/shoestoreaspnet/orderlist.png)  
+![image](/public/portfolios/shoestoreaspnet/orderlist.png)  
 ### 3.5 New Order
 Add order items.
-![image](/public/portfolio/shoestoreaspnet/addorder.png)  
+![image](/public/portfolios/shoestoreaspnet/addorder.png)  
 
 ## 4. References
 * [AdminLTE Control Panel Template](https://almsaeedstudio.com/)

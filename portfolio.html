@@ -21,7 +21,7 @@ categories:
       </div>
     </div>
     <div class="row">
-    {% assign list = (site.portfolio | where: "category", {{category.type}}) | sort: 'index') | reverse %}
+    {% assign list = (site.portfolios | where: "category", {{category.type}}) | sort: 'index') | reverse %}
     {% for portfl in list %}
         {% if category.type == 'mobile' %}
           <div class="col-md-3 portfolio-item">

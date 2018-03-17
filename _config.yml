@@ -47,9 +47,9 @@ navlist:
     visible: true
 
 collections:
-  portfolio:
+  portfolios:
     output: true
-  note:
+  notes:
     output: true
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml

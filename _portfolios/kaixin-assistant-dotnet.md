@@ -4,7 +4,7 @@ key: portfolio
 title: "Kaixin Assistant"
 index: 240
 tags: [C#, Web Scraping, HTTP]
-image: /public/portfolio/kaixinassistantdotnet/thumbnail.png
+image: /public/portfolios/kaixinassistantdotnet/thumbnail.png
 excerpt: A 'tag-on' desktop application for playing online flash games automatically.
 category: dotnetaaa
 ---
@@ -17,17 +17,17 @@ It is a 'tag-on' program used to automatically play flash games for [Kaixin001](
 Technically, it simulates your manual operations on the web pages or flash, sends out HTTP GET/POST requests to the server, and gets result to do the next operations.  
 
 ## 2. Main Screen
-![kaixin](/public/portfolio/kaixinassistantdotnet/full.png "kaixin")  
+![kaixin](/public/portfolios/kaixinassistantdotnet/full.png "kaixin")  
 
 ## 3. Steps to Use this Tool
 ## 3.1 Add Account
 In Account Explorer, add your kaixin001 account.  
 ## 3.2 Create Task
 In Task Explorer, create a new task, add accounts, choose the functions and operations you need.  
-![task](/public/portfolio/kaixinassistantdotnet/task.png "task")
+![task](/public/portfolios/kaixinassistantdotnet/task.png "task")
 ## 3.3 Run Task
 Right-click on the task and run. During it is running, you can check the logs to see whether it works properly.
-![running](/public/portfolio/kaixinassistantdotnet/running.png "running")  
+![running](/public/portfolios/kaixinassistantdotnet/running.png "running")  
 
 ## 4. Source Files
 * [Source files of Kaixin Assistant on Github](https://github.com/jojozhuang/Portfolio/tree/master/KaixinAssistant)

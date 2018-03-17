@@ -4,7 +4,7 @@ key: portfolio
 title: "Web Server(Java)"
 index: 230
 tags: [Socket, Java, HTTP, UDP]
-image: /public/portfolio/webserverjava/thumbnail.png
+image: /public/portfolios/webserverjava/thumbnail.png
 excerpt: A web server built with sockets in Java, capable of handling general HTTP requests.
 category: dotnet
 ---
@@ -25,18 +25,18 @@ javac \*.java
 java MyWebServer
 ```
 
-![startserver](/public/portfolio/webserverjava/startserver.png "startserver")
+![startserver](/public/portfolios/webserverjava/startserver.png "startserver")
 ## 2. Files in Root Directory.  
-![root](/public/portfolio/webserverjava/root.png "root")
+![root](/public/portfolios/webserverjava/root.png "root")
 ## 3. Access the Home of Web Server
 Open web browser, access the server URL [http://localhost:2540/](http://localhost:2540/). All of the files in the root directory will be listed out.  
-![webserver](/public/portfolio/webserverjava/webserver.png "webserver")
+![webserver](/public/portfolios/webserverjava/webserver.png "webserver")
 You can try to click the links of different files, and you should get proper result. You can also navigate between directories recursively.  
-![recursive](/public/portfolio/webserverjava/recursive.png "recursive")
+![recursive](/public/portfolios/webserverjava/recursive.png "recursive")
 ## 4. Handle Post Request
 Apart from handling the requests to static files and directories, this web server also supports to handle dynamical requests. For example, it has a fake CGI page which can calculate the sum of two given numbers.  
-![cgi](/public/portfolio/webserverjava/cgi.png "cgi")  
-![cgiresult](/public/portfolio/webserverjava/cgiresult.png "cgiresult")  
+![cgi](/public/portfolios/webserverjava/cgi.png "cgi")  
+![cgiresult](/public/portfolios/webserverjava/cgiresult.png "cgiresult")  
 
 ## 5. Source Files
 * [Source files of Web Server on Github](https://github.com/jojozhuang/Portfolio/tree/master/WebServer)
