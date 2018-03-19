@@ -6,9 +6,8 @@ index: 102
 category: basic
 ---
 
-> Note
+> Book: Data Structures and Algorithms in Java  
+Author: Robert Lafore
+![image](/public/notes/data-structures-and-algorithms-in-java/cover.jpg){:width="300px"}  
 
-Book: Data Structures and Algorithms
-Author: Granville Barnett, and Luca Del Tongo
-
-Symbolic link, Hard link
+1.

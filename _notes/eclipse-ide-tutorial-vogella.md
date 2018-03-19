@@ -6,9 +6,9 @@ index: 301
 category: tools
 ---
 
-> Go through the usage of Eclipse IDE.
-
-
+> Book: Eclipse IDE  
+Author: Lars Vogel
+![image](/public/notes/eclipse-ide-tutorial-vogella/cover.jpg){:width="300px"}  
 
 ## 1. Shortcuts in Eclipse:
 

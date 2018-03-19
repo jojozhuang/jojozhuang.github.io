@@ -6,6 +6,9 @@ index: 202
 category: language
 ---
 
+A Smarter Way to Learn JavaScript
+https://www.amazon.com/Smarter-JavaScript-tech-assisted-approach-requires/dp/1497408180/ref=sr_1_14?s=books&ie=UTF8&qid=1521418986&sr=1-14&keywords=json
+
 > Nodes for javascript
 
 JavaScript has a prototype-based object model instead of the more common class-based object model.
