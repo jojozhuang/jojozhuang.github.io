@@ -86,7 +86,7 @@ public static void main(String[] args) {
 
 Java is a `strongly typed` language.
 
-Four Integer Types
+### 3.3.1 Four Integer Types
 
  Type | Storage Requirement | Range (Inclusive)
 ------|---------------------|----------------------
@@ -99,7 +99,7 @@ byte  | 1 byte              | –128 to 127
 
 Starting with Java SE 7, you can write numbers in binary, with a prefix `0b` or `0B`. For example, 0b1001 is 9. Also starting with Java SE 7, you can add underscores to number literals, such as `1_000_000` (or 0b1111_0100_0010_0100_0000) to denote one million. The underscores are for human eyes only. The Java compiler simply removes them.
 
-Floating-Point Types
+### 3.3.2 Floating-Point Types
 
 Type  | Storage Requirement | Range (Inclusive)
 ------|---------------------|----------------------
@@ -120,7 +120,247 @@ if (Double.isNaN(x)) // check whether x is "not a number"
 
 Floating-point numbers are not suitable for  financial calculations in which roundoff errors cannot be tolerated. For example, the command `System.out.println(2.0 - 1.1)` prints `0.8999999999999999`, not 0.9 as you would expect. Such roundoff errors are caused by the fact that floating-point numbers are represented in the binary number system. There is no precise binary representation of the fraction 1/10, just as there is no accurate representation of the fraction 1/3 in the decimal system. If you need precise numerical computations without roundoff errors, use the `BigDecimal` class, which is introduced later in this chapter.
 
-P75/1038
+### 3.3.3 The char Type
+```java
+'A' //char
+"A" //string
+```
+Values of type char can be expressed as hexadecimal values that run from `\u0000` to `\uFFFF`.
+
+Unicode Explained: Internationalize Documents, Programs, and Web Sites
+https://www.amazon.com/Unicode-Explained-Internationalize-Documents-Programs/dp/059610121X/
+
+`strictfp` keyword
+```java`
+public static strictfp void main(String[] args)
+```
+
+The methods in the Math class use the routines in the computer’s floating- point unit for fastest performance. If completely predictable results are more important than performance, use the `StrictMath` class instead.
+
+### 3.5.3 Casts
+```java
+double x = 9.997;
+int nx = (int) x; // nx = 9;
+int nx = (int) Math.round(x); // nx = 10;
+```
+
+```java
+int m=7;
+int n=7;
+int a=2*++m; //now a is 16, m is 8
+int b=2*n++; //now b is 14, n is 8
+```
+
+### 3.6.6 Code Points and Code Units
+```java
+String greeting = "Hello";
+int n = greeting.length(); // is 5.
+int cpCount = greeting.codePointCount(0, greeting.length());
+```
+
+StringBuilder, StringBuffer
+Input, Scanner
+```java
+import java.util.*;
+
+public class InputTest
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+
+        // get first input
+        System.out.print("What is your name? ");
+        String name = in.nextLine();
+
+        // get second input
+        System.out.print("How old are you? ");
+        int age = in.nextInt();
+
+        // display output on console
+        System.out.println("Hello, " + name + ". Next year, you'll be " + (age + 1));
+    }
+}
+```
+`Console.readPassword()` for reading password from concole.
+```java
+import java.io.Console;
+
+public class PasswordTest {
+    public static void main(String[] args)
+    {
+        Console cons = System.console();
+        try {
+            if (cons != null) {
+                String username = cons.readLine("User name: ");
+                // prints
+                System.out.println("User name: " + username);
+                // read password into the char array
+                char[] pwd = cons.readPassword("Password: ");
+                // prints
+                System.out.println("Password is: "+ String.valueOf(pwd));
+            }
+        } catch(Exception ex) {
+             ex.printStackTrace();
+        }
+
+    }
+}
+```
+Run this program in terminal.
+```
+Johnny@Johnny-Mac:~$ java PasswordTest
+User name: Johnny
+User name: Johnny
+Password:
+Password is: 123
+Johnny@Johnny-Mac:~$
+```
+If you run this program in Eclipse IDE through Run As-> Java Application, `System.console()` always return null. See the discussion on StackOverflow [System.console() returns null from Eclipse but fine with Command Prompt
+](https://stackoverflow.com/questions/8969990/system-console-returns-null-from-eclipse-but-fine-with-command-prompt).
+It's bug of Eclipse, https://bugs.eclipse.org/bugs/show_bug.cgi?id=122429.
+
+### 3.7.3 File Input and Output
+Read
+```java
+Scanner in = new Scanner(Paths.get("myfile.txt"), "UTF-8");
+```
+Write
+```java
+PrintWriter out = new PrintWriter("myfile.txt", "UTF-8");
+```
+
+### 3.8.4 Determinate Loops
+Caution: For loop may never end when using floating-point numbers for comparison.
+```java
+public class DoubleLoop {
+    public static void main(String[] args)
+    {
+        for (double x = 0; x != 1.0; x += 0.1) {
+            System.out.println(x);
+        }
+    }
+}
+```
+See the below output that before x gets bigger than 2. `x` jumps from `0.9999999999999999` to `1.0999999999999999`. It never equals to `1.0`.
+```sh
+0.0
+0.1
+0.2
+0.30000000000000004
+0.4
+0.5
+0.6
+0.7
+0.7999999999999999
+0.8999999999999999
+0.9999999999999999
+1.0999999999999999
+1.2
+1.3
+1.4000000000000001
+1.5000000000000002
+1.6000000000000003
+1.7000000000000004
+1.8000000000000005
+1.9000000000000006
+2.0000000000000004
+```
+
+BigInteger and BigDecimal.
+
+```java
+BigInteger c = a.add(b); // c = a + b
+BigInteger d = c.multiply(b.add(BigInteger.valueOf(2))); // d = c * (b + 2)
+```
+
+
+Increase the size of an array with `Arrays.copyOf`.
+```java
+int[] arr = new int[3];
+arr = Arrays.copyOf(arr, 2 * arr.length);
+```
+
+## 4. Objects and Classes
+Procedural vs. OO programming  
+Encapsulation, Inheritance
+
+
+The most common relationships between classes are:
+* Dependence (“uses–a”)
+* Aggregation (“has–a”)
+* Inheritance (“is–a”)
+
+The expression new Date() makes an object of type Date, and its value is a reference to that newly created object. That reference is then stored in the deadline variable.
+```java
+Date deadline = new Date();
+```
+
+`Constructor`
+* A constructor has the same name as the class.
+* A class can have more than one constructor.
+* A constructor can take zero, one, or more parameters.
+* A constructor has no return value.
+* A constructor is always called with the new operator.
+
+Accessor Method:  
+Do not write accessor methods that return references to mutable objects.
+```java
+class Employee {
+    private Date hireDay;
+    public Date getHireDay() {
+        return hireDay; // Bad
+    }
+}
+```
+As a rule of thumb, always use `clone()` whenever you need to return a copy of a mutable field.
+```java
+class Employee {
+    private Date hireDay;
+    public Date getHireDay() {
+        return (Date) hireDay.clone(); // Ok
+    }
+}
+```
+
+A method of the Employee class is permitted to access the `private` fields of any object of type Employee.
+```java
+public class PrivateAccess {
+    public static void main(String[] args)
+    {
+        Employee johnny = new Employee("Johnny");
+        Employee cindy = new Employee("Cindy");
+
+        if (johnny.equals(cindy)) {
+            System.out.println("Same employee!");
+        } else {
+            System.out.println("They are not the same employee!");
+        }
+    }
+}
+
+class Employee {
+    private String name;
+
+    public Employee(String name) {
+        super();
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean equals(Employee other) {
+        return name.equals(other.name); }  // equals method accesses private attribute name of other.
+
+}
+```
+P185/1038
 
 Reference:
 Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
