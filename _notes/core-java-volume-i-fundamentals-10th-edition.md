@@ -283,7 +283,7 @@ arr = Arrays.copyOf(arr, 2 * arr.length);
 
 ## 4. Objects and Classes
 Procedural vs. OO programming  
-Encapsulation, Inheritance
+Encapsulation, Inheritance, Polymorphism
 
 
 The most common relationships between classes are:
@@ -360,7 +360,216 @@ class Employee {
 
 }
 ```
-P185/1038
+
+Method Parameters  
+The term `call by value` means that the method gets just the value that the caller provides. In contrast, `call by reference` means that the method gets the location of the variable that the caller provides. The Java programming language `always` uses call by value. That means that the method gets a copy of all parameter values.
+
+Here is a summary of what you can and cannot do with method parameters in Java:
+* A method cannot modify a parameter of a primitive type (that is, numbers or boolean values).
+* A method can change the state of an object parameter.
+* A method cannot make an object parameter refer to a new object.
+
+For the third one, see the example below.
+```java
+public static void main(String[] args) {
+    Employee a = new Employee("Alice");
+    Employee b = new Employee("Bob");
+    swap(a, b);
+    // now, does a refer to Bob, b to Alice? No.
+    System.out.println("After: a=" + a.getName()); //After: a=Alice
+    System.out.println("After: b=" + b.getName()); //After: b=Bob
+}
+
+public void swap(Employee x, Employee y) {
+    // x refers to Alice, y to Bob  
+    Employee temp = x;
+    x=y;
+    y = temp;
+    // now x refers to Bob, y to Alice
+    System.out.println("End of method: x=" + x.getName());  //End of method: x=Bob
+    System.out.println("End of method: x=" + x.getName());  //End of method: y=Alice
+}
+```
+The parameter variables x and y in swap method are swapped. But ultimately, this is a wasted effort. When the method ends, the parameter variables x and y are abandoned. The original variables a and b still refer to the same objects as they did before the method call.
+
+For Integer, it won't work either, even if Integer is object type. Because Integer objects are immutable.
+```java
+public static void main(String[] args)
+{
+    int x = 2;
+    System.out.println("Before: x=" + x); // Before: x=2
+    triple(x);
+    System.out.println("After: x=" + x); // After: x=2
+}
+
+private static void triple(Integer x) {
+    x = 3 * x;
+}
+```
+Class Importation
+```java
+import java.time.LocalDate;
+import java.util.*;
+LocalDate today = LocalDate.now();
+```
+Static Imports
+```java
+import static java.lang.System.*;
+out.println("Goodbye, World!"); // i.e., System.out
+exit(0); // i.e., System.exit
+```
+
+## 5. Inheritance
+Java does not support multiple inheritance.
+5.1.9 Abstract Classes
+A class with one or more abstract methods must itself be declared abstract.
+```java
+public abstract class Person {
+...
+public abstract String getDescription(); }
+```
+
+Abstract methods act as placeholders for methods that are implemented in the subclasses. When you extend an abstract class, you have two choices. You can leave some or all of the abstract methods undefined; then you must tag the subclass as `abstract as well`. Or you can define all methods, and the subclass is `no longer` abstract.
+
+* A class can even be declared as abstract though it has no abstract methods.
+* Abstract classes cannot be instantiated.
+
+Here is a summary of the four access modifiers in Java that control visibility:
+* Visible to the class only (private).
+* Visible to the world (public).
+* Visible to the package and all subclasses (protected).
+* Visible to the package—the (unfortunate) default. No modifiers are needed.
+
+5.2 Object: The Cosmic Superclass
+The `equals` method  
+The Java Language Specification requires that the `equals` method has the following properties:
+* It is `reflexive`: For any non-null reference x, x.equals(x) should return true.
+* It is `symmetric`: For any references x and y, x.equals(y) should return true if and
+only if y.equals(x) returns true.
+* It is `transitive`: For any references x, y, and z, if x.equals(y) returns true and
+y.equals(z) returns true, then x.equals(z) should return true.
+* It is` consisten`t: If the objects to which x and y refer haven’t changed, then
+repeated calls to x.equals(y) return the same value.
+* For any `non-null` reference x, x.equals(null) should return false.
+
+Here is a recipe for writing the perfect equals method:
+1. Name the explicit parameter otherObject—later, you will need to cast it to another variable that you should call other.
+2. Test whether this happens to be identical to otherObject:
+```java
+ if (this == otherObject) return true;
+```
+This statement is just an optimization. In practice, this is a common case. It is much cheaper to check for identity than to compare the  elds.
+3. Test whether otherObject is null and return false if it is. This test is required.
+```java
+if (otherObject == null) return false;
+```
+4. Compare the classes of this and otherObject. If the semantics of equals can change in subclasses, use the getClass test:
+```java
+if (getClass() != otherObject.getClass()) return false;
+```
+If the same semantics holds for all subclasses, you can use an instanceof test:
+```java
+if (!(otherObject instanceof ClassName)) return false;
+```
+
+5. Cast otherObject to a variable of your class type:
+```java
+ ClassName other \= (ClassName) otherObject
+```
+6. Now compare the fields, as required by your notion of equality. Use == for primitive type fields, Objects.equals for object fields. Return true if all fields match, false otherwise.
+```java
+return field1 == other.field1
+&& Objects.equals(field2, other.field2)
+&&...;
+```
+If you redefine equals in a subclass, include a call to super.equals(other).
+
+Wrong
+```java
+public class Employee {
+    public boolean equals(Employee other) {
+    }
+}
+```
+Correct
+```java
+public class Employee {
+    @Override // 1. should be override
+    public boolean equals(Object other) { // should use Object as input parameter
+    }
+}
+```
+
+5.2.3 The hashCode Method
+The String class uses the following algorithm to compute the hash code:
+```java
+int hash = 0;
+for (int i = 0; i < length(); i++) {
+    hash = 31 * hash + charAt(i);
+}
+```
+
+```java
+String s = "Ok";
+StringBuilder sb = new StringBuilder(s);
+System.out.println(s.hashCode() + " " + sb.hashCode()); // s=2556, sb=20526976
+String t = new String("Ok");
+StringBuilder tb = new StringBuilder(t);
+System.out.println(t.hashCode() + " " + tb.hashCode()); // t=2556, tb=20527144
+```
+Note that the strings s and t have the same hash code because, `for strings, the hash codes are derived from their contents`. The string builders sb and tb have different hash codes because no hashCode method has been de ned for the StringBuilder class and the default hashCode method in the Object class derives `the hash code from the object’s memory address`.
+
+If you redefine the equals method, you will also need to redefine the hashCode method for objects.
+```java
+public class Employee {
+    public int hashCode() {
+        return 7 * Objects.hashCode(name)
+               + 11 * Double.hashCode(salary)
+               + 13 * Objects.hashCode(hireDay);
+    }
+}
+```
+Or much simpler.
+```java
+public class Employee {
+    public int hashCode() {
+        return Objects.hash(name, salary, hireDay);
+    }
+}
+```
+Your definitions of `equals` and `hashCode` must be compatible: If x.equals(y) is true, then x.hashCode() must return the same value as y.hashCode().
+5.2.4 The toString Method
+`toString` method returns a string representing the value of this object.
+```java
+public String toString() {
+    return getClass().getName() + "[name=" + name
+    + ",salary=" + salary
+    + ",hireDay=" + hireDay + "]";
+}
+```
+```java
+Point p = new Point(10, 20);
+System.out.println(p); // java.awt.Point[x=10,y=20], toString() has been overrided
+
+System.out.println(System.out) // java.io.PrintStream@2f6684, toString() hasn't been overrided
+```
+
+5.3 Generic Array Lists
+Initial the capacity.
+```java
+ArrayList<Employee> staff = new ArrayList<>();
+staff.ensureCapacity(100);
+
+//or
+ArrayList<Employee> staff = new ArrayList<>(100);
+```
+The first 100 calls to add will not involve any costly reallocation.
+
+5.4 Object Wrappers and Autoboxing
+Boxing: Convert primary type to object type.
+Unboxing: Convert object type to primary type.
+
+P283/1038
 
 Reference:
 Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
