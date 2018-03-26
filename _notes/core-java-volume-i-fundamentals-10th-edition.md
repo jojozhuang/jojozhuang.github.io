@@ -569,7 +569,384 @@ The first 100 calls to add will not involve any costly reallocation.
 Boxing: Convert primary type to object type.
 Unboxing: Convert object type to primary type.
 
-P283/1038
+5.7 Reflection
+'getClass', 'getName'
+```java
+Employee e;
+System.out.println(e.getClass().getName() + " " + e.getName()); // Employee Harry Hacker
+```
+Use `newInstance` to create a new instance of the same class type as object.
+```java
+object.getClass().newInstance();
+```
+Create a new instance with the given class name.
+```java
+String s = "java.util.Random";
+Object m = Class.forName(s).newInstance();
+```
+
+Use `setAccessible` to change access permission.
+```java
+Employee harry = new Employee("Harry Hacker", 35000, 10, 1, 1989);
+Class cl = harry.getClass();
+// the class object representing Employee
+Field f = cl.getDeclaredField("name");
+// the name field of the Employee class, it is private.
+f.setAccessible(true);
+// now OK to call f.get(harry);
+Object v = f.get(harry);
+// the value of the name field of the harry object, i.e., the String object "Harry Hacker"
+```
+
+5.7.6 Invoking Arbitrary Methods
+```java
+Employee harry = new Employee("Harry Hacker", 35000, 10, 1, 1989);
+Method m1 = Employee.class.getMethod("getName");
+String n = (String) m1.invoke(harry);
+```
+
+## 6. Interfaces, Lambda Expressions, and Inner Classes
+### 6.1 The `Comparable` interface.
+Use Integer.compare or Double.compare to compare two variables to avoid overflowing.
+```java
+public int compareTo(Employee other) {
+    return Double.compare(salary, other.salary);
+}
+```
+The documentation of the Comparable interface suggests that the compareTo method should be compatible with the equals method. `That is, x.compareTo(y) should be zero exactly when x.equals(y).` Most classes in the Java API that implement Comparable follow this advice. A notable exception is BigDecimal. `Consider x = new BigDecimal("1.0") and y = new BigDecimal("1.00"). Then x.equals(y) is false because the numbers differ in precision.` But x.compareTo(y) is zero. Ideally, it shouldn’t be, but there was no obvious way of deciding which one should come first.
+
+`Default Methods In Interface`
+Before Java 8, interfaces could have only abstract methods. The implementation of these methods has to be provided in a separate class. So, if a new method is to be added in an interface then its implementation code has to be provided in the class implementing the same interface. To overcome this issue, Java 8 has introduced the concept of default methods which allow the interfaces to have methods with implementation without affecting the classes that implement the interface.
+https://www.geeksforgeeks.org/default-methods-java/
+
+### 6.2.2 The Comparator Interface
+```java
+public interface Comparator<T> {
+    int compare(T first, T second);
+}
+```
+### 6.2.3 The Cloneable interface
+```java
+protected Object clone() throws CloneNotSupportedException  
+```
+6.3 Lambda Expressions
+```java
+Arrays.sort(words, (first, second) -> first.length() - second.length());
+```
+6.3.4 Method References
+```java
+Timer t = new Timer(1000, event -> System.out.println(event));
+Timer t = new Timer(1000, System.out::println);
+```
+The `::` operator separates the method name from the name of an object or class. There are three principal cases:
+* object::instanceMethod
+* Class::staticMethod
+* Class::instanceMethod
+
+6.3.5 Constructor References
+`Class::new`
+```java
+ArrayList<String> names = . . .;
+Stream<Person> stream = names.stream().map(Person::new);
+List<Person> people = stream.collect(Collectors.toList());
+```
+6.3.8 More about Comparators
+```java
+Arrays.sort(people, Comparator.comparing(Person::getName));
+Arrays.sort(people, Comparator.comparing(Person::getLastName).thenComparing(Person::getFirstName));
+```
+
+6.4 Inner Classes
+6.5 Proxies
+An `invocation handler` is an object of any class that implements the `InvocationHandler` interface. That interface has a single method:
+```java
+Object invoke(Object proxy, Method method, Object[] args)
+```
+
+Sample
+https://dzone.com/articles/java-dynamic-proxy
+```java
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+public class JdkProxyDemo {
+    interface If {
+        void originalMethod(String s);
+    }
+    static class Original implements If {
+        public void originalMethod(String s) {
+            System.out.println(s);
+        }
+    }
+    static class Handler implements InvocationHandler {
+        private final If original;
+        public Handler(If original) {
+            this.original = original;
+        }
+        public Object invoke(Object proxy, Method method, Object[] args)
+                throws IllegalAccessException, IllegalArgumentException,
+                InvocationTargetException {
+            System.out.println("BEFORE");
+            method.invoke(original, args);
+            System.out.println("AFTER");
+            return null;
+        }
+    }
+    public static void main(String[] args){
+        Original original = new Original();
+        Handler handler = new Handler(original);
+        If f = (If) Proxy.newProxyInstance(If.class.getClassLoader(),
+                new Class[] { If.class },
+                handler);
+        f.originalMethod("Hello");
+        f.originalMethod("SecondCall");
+    }
+}
+```
+Output
+```sh
+BEFORE
+Hello
+AFTER
+BEFORE
+SecondCall
+AFTER
+```
+More:
+https://opencredo.com/dynamic-proxies-java-part-2/
+https://opencredo.com/dynamic-proxies-java/
+
+## Chapter 7 Exceptions, Assertions, and Logging In this chapter
+Throwable: Error and Exception.
+
+As a general rule, you should catch those exceptions that you know how to handle and propagate those that you do not know how to handle.
+```java
+try {
+    //code that might throw exceptions
+}
+catch (FileNotFoundException | UnknownHostException e) {
+    //emergency action for missing files and unknown hosts
+}
+catch (IOException e) {
+    //emergency action for all other I/O problems
+}
+```
+Decouple try/catch and try/finally blocks.
+```java
+InputStream in = . . .;
+try
+{
+    try {
+        //code that might throw exceptions
+    }
+    finally {
+        in.close();
+    }
+}
+catch (IOException e) {
+    //show error message
+}
+```
+The inner try block has a single responsibility: to make sure that the input stream is closed. The outer try block has a single responsibility: to ensure that errors are reported. Not only is this solution clearer, it is also more functional: Errors in the finally clause are reported.
+
+Caution: A finally clause can yield unexpected results when it contains return statements.
+```java
+
+public class Finally {
+    public static void main(String[] args)
+    {
+        int res = foo(2);
+        System.out.println("res=" + res);    // res = 0
+        int res2 = foo2(2);
+        System.out.println("res2=" + res2);  // res2 = 4
+        int res3 = foo3(2);
+        System.out.println("res3=" + res3);  // res3 = 4
+        int res4 = foo4(2);
+        System.out.println("res4=" + res4);  // res3 = 4
+    }
+
+    public static int foo(int n) {
+        try {
+            int res = n * n;
+            return res;
+        }
+        finally {
+            return 0; // override the value in try block.
+        }
+    }
+
+    public static int foo2(int n) {
+        int res = 1;
+        try {
+            res = n * n;
+        }
+        finally {
+            return res;
+        }
+    }
+
+    public static int foo3(int n) {
+        int res = 1;
+        try
+        {
+            try {
+                res = n * n;
+                res = n / 0;
+                return res;
+            }
+            finally {
+                return res; // if return statement exists in finally, exception will be hidden.
+            }
+        }
+        catch (Exception e) {
+            //show error message
+            System.out.println("exception occurs in foo3:" + e);  // no exception caught because of return in finally block.
+        }
+        return res;
+    }
+
+    public static int foo4(int n) {
+        int res = 1;
+        try
+        {
+            try {
+                res = n * n;
+                res = n / 0;
+                return res;
+            }
+            finally {
+                //return res; // if return statement exists in finally, exception will be hidden.
+            }
+        }
+        catch (Exception e) {
+            //show error message
+            System.out.println("exception occurs in foo4:" + e);
+        }
+        return res;
+    }
+}
+```
+The output:
+```sh
+res=0
+res2=4
+res3=4
+exception occurs in foo4:java.lang.ArithmeticException: / by zero
+res4=4
+```
+7.2.5 The Try-with-Resources Statement
+
+When the try block exits, then res.close() is called automatically. Here is a typical example—reading all words of a file:
+```
+try (Scanner in = new Scanner(new FileInputStream("/usr/share/dict/words")), "UTF-8")
+{
+    while (in.hasNext()) {
+        System.out.println(in.next());
+    }
+}
+```
+
+7.2.6 Analyzing Stack Trace Elements
+`Throwable.getStackTrace`, `Thread.getAllStackTraces`, `StackTraceElement`.
+```java
+
+Map<Thread, StackTraceElement[]> map = Thread.getAllStackTraces();
+for (Thread t : map.keySet())
+{
+    StackTraceElement[] frames = map.get(t);
+    //analyze frames
+}
+```
+
+7.4 Using Assertions
+Has better performance and throwing exceptions.
+```java
+assert x >= 0;
+double y = Math.sqrt(x);
+```
+Enable/Disable assertion
+```sh
+java -enableassertions MyApp  // enable MyApp
+java -ea:MyClass -ea:com.mycompany.mylib... MyApp // enable MyClass, and classes in package com.mycompany.mylib
+java -ea:... -da:MyClass MyApp // disable MyClass
+```
+
+The Java language gives you three mechanisms to deal with system failures:
+* Throwing an exception
+* Logging
+* Using assertions
+
+When should you choose assertions? Keep these points in mind:
+* Assertion failures are intended to be fatal, unrecoverable errors.
+* Assertion checks are turned on only during development and testing.
+Assertions should only be used to locate internal program errors during testing.
+
+7.5 Logging
+7.6 Debugging Tips
+```java
+Thread.dumpStack();
+```
+
+## Chapter 8. Generic Programming
+Restrict T to a class that implements the Comparable interface—a standard interface with a single method, compareTo.
+The notation of giving a bound for the type variable T:
+```java
+<T extends BoundingType>
+```
+Sample.
+```java
+public static <T extends Comparable> T min(T[] a) . . .
+```
+
+In summary, you need to remember these facts about translation of Java generics:
+* There are no generics in the virtual machine, only ordinary classes and methods.
+* All type parameters are replaced by their bounds.
+* Bridge methods are synthesized to preserve polymorphism.
+* Casts are inserted as necessary to preserve type safety.
+
+8.6 Restrictions and Limitations
+Type Parameters Cannot Be Instantiated with Primitive Types, there is no Pair<double>, only Pair<Double>. The reason is, of course, `type erasure`. After erasure, the Pair class has fields of type `Object`, and you can’t use them to store double values.
+
+```java
+if (a instanceof Pair<String>) // Error, Runtime Type Inquiry Only Works with Raw Types
+Pair<String>[] table = new Pair<String>[10]; // Error. cannot Create Arrays of Parameterized Types
+public Pair() { first = new T(); second = new T(); } // Error, Cannot Instantiate Type Variables
+public static <T extends Comparable> T[] minmax(T[] a) { T[] mm = new T[2]; . . . } // Error, Cannot Construct a Generic Array
+```
+
+8.8 Wildcard Types
+```java
+Pair<? extends Employee>
+```
+Unbounded Wildcards
+```java
+public static boolean hasNulls(Pair<?> p)
+{
+    return p.getFirst() == null || p.getSecond() == null;
+}
+```
+Using Class<T> Parameters for Type Matching
+```java
+public static <T> Pair<T> makePair(Class<T> c) throws InstantiationException, IllegalAccessException
+{
+    return new Pair<>(c.newInstance(), c.newInstance());
+}
+```
+
+## 9. Collections
+The `for each` loop works with any object that implements the `Iterable` interface, an interface with a single abstract method:
+```java
+public interface Iterable<T> {
+    Iterator<T> iterator();
+    ...
+}
+```
+
+The `Collection` interface extends the `Iterable` interface.
+
+P497/1038
 
 Reference:
 Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
