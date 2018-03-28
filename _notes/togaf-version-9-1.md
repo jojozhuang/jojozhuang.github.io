@@ -10,7 +10,6 @@ category: architecture
 
 http://pubs.opengroup.org/architecture/togaf9-doc/arch/
 
-
 Architecture Development Method (ADM)
 
 four architecture domains
@@ -28,7 +27,7 @@ Figure 2-3 Enter prise Continuum
 
 Establishing the Architecture Capability
 Financial Management
-* Perfor mance Management (see Section 3.52)
+* Performance Management (see Section 3.52)
 * Service Management
 * Risk Management (see Section A.75)
 * Resource Management

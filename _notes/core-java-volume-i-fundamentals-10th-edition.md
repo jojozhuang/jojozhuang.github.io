@@ -944,9 +944,445 @@ public interface Iterable<T> {
 }
 ```
 
-The `Collection` interface extends the `Iterable` interface.
+* The `Collection` interface extends the `Iterable` interface.
+* A List is an ordered collection.
 
-P497/1038
+![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/collections.png){:width="800px"}  
+* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1JQm4fmR0wIOm11OqS4H4qyhb_z96WnDzaLI0u28CYWc/edit?usp=sharing)
+
+9.2.1 Linked Lists
+Add item to Linked List. The add method adds the new element before the iterator position.
+```java
+public static void main(String[] args)
+{
+    List<String> staff = new LinkedList<>();
+    staff.add("Amy");
+    staff.add("Bob");
+    staff.add("Carl");
+    ListIterator<String> iter = staff.listIterator();
+    iter.next(); // skip past first element
+    iter.add("Juliet");
+    iter.add("John");
+
+    for(String item: staff) {
+        System.out.println(item);
+    }
+}
+```
+If you call the add method multiple times, the elements are simply added in the order in which you supplied them. They are all added in turn before the current iterator position(eg. 'Bob').
+```sh
+Amy
+Juliet
+John
+Bob
+Carl
+```
+`ConcurrentModificationException` exception may occur.
+
+The only reason to use a linked list is to minimize the cost of insertion and removal in the middle of the list. If you have only a few elements, you can just use an ArrayList. If you want random access into a collection, use an array or ArrayList, not a linked list.
+
+9.2.2 Array Lists
+We recommend that you use an `ArrayList` instead of a `Vector` whenever you don’t need synchronization.
+9.2.3 Hash Sets
+In Java, hash tables are implemented as arrays of linked lists.  
+hash collision, rehash,  load factor at 0.75,
+![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/hashtable.png){:width="800px"}  
+* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1JQm4fmR0wIOm11OqS4H4qyhb_z96WnDzaLI0u28CYWc/edit#slide=id.g35eabee3aa_0_0?usp=sharing)
+9.2.4 Tree Sets
+A tree set is a sorted collection. It is implemented by red-black tree.
+
+```java
+SortedSet<String> sorter = new TreeSet<>(); // TreeSet implements SortedSet
+sorter.add("Bob");
+sorter.add("Amy");
+sorter.add("Carl");
+for (String s : sorter) System.println(s); // output: Amy Bob Carl.
+```
+
+9.2.6 Priority Queues
+Implemented by heap. The iteration does not visit the elements in sorted order. However, removal always yields the smallest remaining element.
+```java
+PriorityQueue<LocalDate> pq = new PriorityQueue<>();
+pq.add(LocalDate.of(1906, 12, 9)); // G. Hopper
+pq.add(LocalDate.of(1815, 12, 10)); // A. Lovelace
+pq.add(LocalDate.of(1903, 12, 3)); // J. von Neumann
+pq.add(LocalDate.of(1910, 6, 22)); // K. Zuse
+System.out.println("Iterating over elements...");
+for (LocalDate date : pq) {
+    System.out.println(date); // not in order
+}
+System.out.println("Removing elements...");
+while (!pq.isEmpty()) {
+    System.out.println(pq.remove()); // in order
+}
+```
+output
+```sh
+Iterating over elements...
+1815-12-10
+1906-12-09
+1903-12-03
+1910-06-22
+Removing elements...
+1815-12-10
+1903-12-03
+1906-12-09
+1910-06-22
+```
+
+9.3 Maps
+HashMap, TreeMap
+```java
+// construct hashmap
+Map<String, Employee> staff = new HashMap<>(); // HashMap implements Map
+Employee harry = new Employee("Harry Hacker");
+staff.put("987-98-9996", harry);
+// get value by key
+String id = "987-98-9996";
+Employee emp = staff.get(id); // gets harry
+```
+`getOrDefault` method.
+```java
+HashMap<Integer, String> mapStudent = new HashMap<>();
+// put contents to our HashMap
+mapStudent.put(12001, "Eric");
+mapStudent.put(12002, "Johnny");
+
+String name = mapStudent.getOrDefault(12003, "DefaultName");
+System.out.println(name);
+
+mapStudent.forEach((k, v) -> System.out.println("key=" + k + ", value=" + v));
+```
+Update. getOrDefault and putIfAbsent.
+```java
+counts.put(word, counts.getOrDefault(word, 0) + 1);
+//or
+counts.putIfAbsent(word, 0);
+counts.put(word, counts.get(word) + 1); // Now we know that get will succeed
+/or
+counts.merge(word, 1, Integer::sum);
+```
+9.3.3 Map Views
+* Set<K> keySet()
+* Collection<V> values()
+* Set<Map.Entry<K, V>> entrySet()
+
+```java
+// iterate keys
+Set<String> keys = map.keySet();
+for (String key : keys)
+{
+    //do something with key
+}
+
+// iterate pairs
+for (Map.Entry<String, Employee> entry : staff.entrySet()) {
+    String k = entry.getKey();
+    Employee v = entry.getValue();
+    //do something with k, v
+}
+
+//or
+counts.forEach((k, v) -> {
+    //do something with k, v
+});
+```
+9.3.4 Weak Hash Maps
+The `WeakHashMap` class was designed to solve an interesting problem. What happens with a value whose key is no longer used anywhere in your program? Suppose the last reference to a key has gone away. Then, there is no longer any way to refer to the value object. But, as no part of the program has the key any more, the key/value pair cannot be removed from the map. Why can’t the garbage collector remove it? Isn’t it the job of the garbage collector to remove unused objects?  
+Unfortunately, it isn’t quite so simple. The garbage collector traces live objects. As long as the map object is live, all buckets in it are live and won’t be reclaimed. Thus, your program should take care to remove unused values from long-lived maps. Or, you can use a WeakHashMap instead. This data structure cooperates with the garbage collector to remove key/value pairs when the only reference to the key is the one from the hash table entry.  
+Here are the inner workings of this mechanism. The WeakHashMap uses `weak references` to hold keys. A `WeakReference` object holds a reference to another object—in our case, a hash table key. Objects of this type are treated in a special way by the garbage collector. Normally, if the garbage collector finds that a particular object has no references to it, it simply reclaims the object. However, if the object is reachable only by a WeakReference, the garbage collector still reclaims the object, but places the weak reference that led to it into a queue. The operations of the WeakHashMap periodically check that queue for newly arrived weak references. The arrival of a weak reference in the queue signifies that the key was no longer used by anyone and has been collected. The WeakHashMap then removes the associated entry.
+
+HashMap                      | WeakHashMap
+-----------------------------|-------------------
+Map h = new HashMap(); <br />     Object key = new Object;<br />   h.put(key, "xyz");<br />         key = null; | Map h = new WeakHashMap(); <br /> Object key = new Object; <br /> h.put(key, "xyz");<br /> key = null; <br /> //Conceptually, this is similar to inserting a line before the put() call like this: <br /> key = new WeakReferenkey(key); <br />
+The key is referenced directly by the HashMap. | The key is not referenced directly by the WeakHashMap. Instead, a WeakReference object is referenced directly by the WeakHashMap, and the key is referenced weakly from the WeakReference object.
+The value is referenced directly by the HashMap. | The value is referenced directly by the HashMap.
+The key is not garbage collectable, since the map contains a strong reference to the key. The key could be obtained by iterating over the keys of the HashMap. | The key is garbage collectable, as nothing else in the application refers to it, and the WeakReference only holds the key weakly. Iterating over the keys of the WeakHashMap might obtain the key, but might not, if the key has been garbage collected.
+The value is similarly not garbage collectable. | The value is not directly garbage collectable. However, when the key is collected by the garbage collector, the WeakReference object is subsequently removed from the WeakHashMap as a key, thus making the value garbage collectable too.
+
+http://www.onjava.com/pub/a/onjava/2001/07/09/optimization.html?page=2
+Sample:
+```java
+public static void main(String[] args) {
+    try {
+        testHashMap();
+        testWeakHashMap();
+    }
+    catch (InterruptedException iex) {
+        System.out.println(iex);
+    }
+}
+
+private static void testHashMap() throws InterruptedException {
+    Map<Object, String> hm = new HashMap<Object, String>();
+
+    Object key = new Object();
+    hm.put(key, "xyz");
+    System.out.println(hm.size());  // 1
+    key = null;
+    System.gc();
+    Thread.sleep(2000);
+    System.out.println(hm.size());  // 1
+}
+
+private static void testWeakHashMap() throws InterruptedException {
+    Map<Object, String> whm = new WeakHashMap<Object, String>();
+
+    Object key = new Object();
+    whm.put(key, "xyz");
+
+    System.out.println(whm.size()); // 1
+    key = null;
+    System.gc();
+    Thread.sleep(2000);
+    System.out.println(whm.size()); // 0, the only item has been garbage collected
+}
+```
+9.3.5 Linked Hash Sets and Maps
+Insertion Order, Access Order.  
+Syntax
+```java
+LinkedHashMap<K, V>(initialCapacity, loadFactor, true)
+```
+Samples
+```java
+public static void main(String[] args) {
+    testInsertionOrder();
+    testAccessOrder();
+}
+
+private static void testInsertionOrder() {
+    System.out.println("Insertion Order of LinkedHashMap...");
+    LinkedHashMap<Integer, String> lhm = new LinkedHashMap<Integer, String>();
+    lhm.put(1, "Peter");
+    lhm.put(2, "Mike");
+    lhm.put(3, "Johnny");
+    lhm.put(4, "Cindy");
+
+    lhm.forEach((k, v) -> System.out.println("key=" + k + ", value=" + v));
+}
+
+private static void testAccessOrder() {
+    System.out.println("Access Order of LinkedHashMap...");
+    LinkedHashMap<Integer, String> lru = new LinkedHashMap<Integer, String>(16, .75f, true); // LRU
+    lru.put(1, "Peter");
+    lru.put(2, "Mike");
+    lru.put(3, "Johnny");
+    lru.put(4, "Cindy");
+
+    // initial sequence
+    lru.forEach((k, v) -> System.out.println("initial sequence: key=" + k + ", value=" + v));
+    System.out.println("Keys1:" + lru.keySet().toString());
+
+    lru.get(3);
+    System.out.println("Keys2:" + lru.keySet().toString());
+
+    lru.get(1);
+    System.out.println("Keys3:" + lru.keySet().toString());
+}
+```
+Output:
+```sh
+Insertion Order of LinkedHashMap...
+key=1, value=Peter
+key=2, value=Mike
+key=3, value=Johnny
+key=4, value=Cindy
+Access Order of LinkedHashMap...
+initial sequence: key=1, value=Peter
+initial sequence: key=2, value=Mike
+initial sequence: key=3, value=Johnny
+initial sequence: key=4, value=Cindy
+Keys1:[1, 2, 3, 4]
+Keys2:[1, 2, 4, 3]
+Keys3:[2, 4, 3, 1]
+```
+9.3.6 Enumeration Sets and Maps
+```java
+import java.util.EnumSet;
+
+public class EnumerationSetAndMapDemo {
+    enum Weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY };
+    static EnumSet<Weekday> always = EnumSet.allOf(Weekday.class);
+    static EnumSet<Weekday> never = EnumSet.noneOf(Weekday.class);
+    static EnumSet<Weekday> workday = EnumSet.range(Weekday.MONDAY, Weekday.FRIDAY);
+    static EnumSet<Weekday> mwf = EnumSet.of(Weekday.MONDAY, Weekday.WEDNESDAY, Weekday.FRIDAY);
+
+    public static void main(String[] args) {
+        System.out.println(java.util.Arrays.asList(Weekday.values())); // [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY]
+        System.out.println(always);  // [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY]
+        System.out.println(never);   // []
+        System.out.println(workday); // [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY]
+        System.out.println(mwf);     // [MONDAY, WEDNESDAY, FRIDAY]
+    }
+}
+```
+9.3.7 Identity Hash Maps
+The hash values for the keys should not be computed by the `hashCode` method but by the `System.identityHashCode` method. That’s the method that Object.hashCode uses to compute a hash code from the object’s memory address. Also, for comparison of objects, the IdentityHashMap uses `==`, not `equals`.
+```java
+// HashMap
+Map hm = new HashMap();
+hm.put("hmkey","hmvalue");
+hm.put(new String("hmkey"),"hmvalue1"); // same key but different value
+
+// prints 1 since it compares the objects logically and both the keys are same
+System.out.println("Size of HashMap--"+hm.size()); // 1
+
+// IdentityHashMap
+Map ihm = new IdentityHashMap();
+ihm.put("ihmkey","ihmvalue");
+ihm.put(new String("ihmkey"),"ihmvalue1"); // same key but different value
+
+//ihm.size() will print 2 since it compares the objects by reference
+System.out.println("Size of IdentityHashMap--"+ihm.size());  // 2
+```
+It is faster and uses less memory than HashMap or TreeMap.
+9.4 Views and Wrappers
+9.4.1 Lightweight Collection Wrappers
+The returned object by `Arrays.asList` is not an ArrayList.  
+All methods that would change the size of the array (such as the add and remove methods of the associated iterator) throw an UnsupportedOperationException.
+```java
+Card[] cardDeck = new Card[52];
+List<Card> cardList = Arrays.asList(cardDeck); // The returned object is not an ArrayList.
+cardList.add(new Card(1, 3));  // java.lang.UnsupportedOperationException will be thrown
+```
+The following call creates a List containing 100 strings, all set to "DEFAULT":
+```java
+List<String> settings = Collections.nCopies(100, "DEFAULT");
+```
+Use `Collections.singleton()` to get an immutable single-element.
+```java
+String[] numbers = {"1", "2", "4", "2", "1", "2", "3", "1", "3", "4", "3", "3"};
+
+/* Creating list and removing its elements */
+List numList = new ArrayList(Arrays.asList(numbers));
+System.out.println("Original: " + numList);
+numList.remove("1");
+System.out.println("numList after removal of 1 " + numList);
+numList.remove("1");
+System.out.println("numList after removal of 1  " + numList);
+numList.remove("2");
+System.out.println("numList after removal of 2 " + numList);
+
+/* Creating another list and removing its elements using singleton() method */
+List numList2 = new ArrayList(Arrays.asList(numbers));
+System.out.println("Original: " + numList2);
+
+// Selectively delete "1" from all it's occurrences
+numList2.removeAll(Collections.singleton("1"));
+System.out.println("numList2 after removal of 1 with singleton:" + numList2);
+
+// Selectively delete "4" from all it's occurrences
+numList2.removeAll(Collections.singleton("4"));
+System.out.println("numList2 after removal of 4 with singleton:" + numList2);
+
+// Selectively delete "3" from all it's occurrences
+numList2.removeAll(Collections.singleton("3"));
+System.out.println("numList2 after removal of 3 with singleton: " + numList2);
+```
+Output:
+```sh
+Original: [1, 2, 4, 2, 1, 2, 3, 1, 3, 4, 3, 3]
+numList after removal of 1 [2, 4, 2, 1, 2, 3, 1, 3, 4, 3, 3]
+numList after removal of 1  [2, 4, 2, 2, 3, 1, 3, 4, 3, 3]
+numList after removal of 2 [4, 2, 2, 3, 1, 3, 4, 3, 3]
+Original: [1, 2, 4, 2, 1, 2, 3, 1, 3, 4, 3, 3]
+numList2 after removal of 1 with singleton:[2, 4, 2, 2, 3, 3, 4, 3, 3]
+numList2 after removal of 4 with singleton:[2, 2, 2, 3, 3, 3, 3]
+numList2 after removal of 3 with singleton: [2, 2, 2]
+```
+9.4.2 Subranges
+The first index is inclusive, the second exclusive—just like the parameters for the substring operation of the String class.
+```java
+// list
+List group2 = staff.subList(10, 20);
+// set
+SortedSet<E> subSet(E from, E to)
+SortedSet<E> headSet(E to)
+SortedSet<E> tailSet(E from)
+// map
+SortedMap<K, V> subMap(K from, K to)
+SortedMap<K, V> headMap(K to)
+SortedMap<K, V> tailMap(K from)
+// NavigableSet
+NavigableSet<E> subSet(E from, boolean fromInclusive, E to, boolean toInclusive)
+NavigableSet<E> headSet(E to, boolean toInclusive)
+NavigableSet<E> tailSet(E from, boolean fromInclusive)
+```
+9.4.3 Unmodi able Views
+```java
+Collections.unmodifiableCollection
+Collections.unmodifiableList
+Collections.unmodifiableSet
+Collections.unmodifiableSortedSet
+Collections.unmodifiableNavigableSet
+Collections.unmodifiableMap
+Collections.unmodifiableSortedMap
+Collections.unmodifiableNavigableMap
+```
+Create a untouchable list.
+```java
+List<Card> cardList = new LinkedList<>();
+List<Card> unml = Collections.unmodifiableList(cardList);
+```
+9.4.4 Synchronized Views
+```java
+Map<String, Employee> map = Collections.synchronizedMap(new HashMap<String, Employee>());
+```
+9.4.5 Checked Views
+Use `Collections.checkedList` to create a safe list.
+```java
+// Example 1
+ArrayList<String> strings = new ArrayList<>();
+ArrayList rawList = strings; // warning only, not an error, for compatibility with legacy code
+rawList.add(new Date()); // now strings contains a Date object!
+// Example 2
+List myList = new ArrayList();
+myList.add("one");
+myList.add("two");
+myList.add("three");
+myList.add("four");
+//you can add any type of elements to myList object
+myList.add(10);
+
+List chkList = Collections.checkedList(myList, String.class);
+System.out.println("Checked list content: "+chkList); // [one, two, three, four, 10]
+chkList.add(10); //throws java.lang.ClassCastException: Attempt to insert class java.lang.Integer element into collection with element type class java.lang.String
+```
+9.5.1 Sorting and Shuffling
+```java
+Collections.sort(cards);
+Collections.shuffle(cards);
+```
+9.5.2 Binary Search
+```java
+i = Collections.binarySearch(c, element);
+i = Collections.binarySearch(c, element, comparator);
+```
+9.5.3 Simple Algorithms
+```java
+Collections.replaceAll("C++", "Java");
+words.removeIf(w -> w.length() <= 3);
+words.replaceAll(String::toLowerCase);
+```
+9.5.4 Bulk Operations
+```java
+coll1.removeAll(coll2); // removes all elements from coll1 that are present in coll2
+coll1.retainAll(coll2); // removes all elements from coll1 that are not present in coll2
+```
+Find the intersection of two sets—the elements that two sets have in common.
+```java
+String[] nameA = new String[] {"Peter","Mike","Johnny","Cindy"};
+String[] nameB = new String[] {"Mike","Eric","Cindy","Allan","Talor"};
+List<String> listA = Arrays.asList(nameA);
+List<String> listB = Arrays.asList(nameB);
+Set<String> result = new HashSet<>(listA);
+result.retainAll(listB);
+System.out.println(result); // [Mike, Cindy]
+````
+9.5.5 Converting between Collections and Arrays
+
+P552/1038
 
 Reference:
 Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
