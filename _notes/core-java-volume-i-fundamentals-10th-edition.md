@@ -1381,8 +1381,263 @@ result.retainAll(listB);
 System.out.println(result); // [Mike, Cindy]
 ````
 9.5.5 Converting between Collections and Arrays
+```java
+// convert array to hashset
+String[] values = new String[10];
+HashSet<String> staff = new HashSet<>(Arrays.asList(values));
 
-P552/1038
+// Convert list to array
+List<Employee> staff = new ArrayList<Employee>();
+Object[] values = staff.toArray();  // the type can only be Object.
+String[] values = (String[]) staff.toArray(); // Error!
+
+// Convert list to typed array
+String[] values = staff.toArray(new String[0]);
+// or
+String[] values = staff.toArray(new String[staff.size()]);
+````
+9.5.6 Writing Your Own Algorithms
+If you write your own algorithm (or, in fact, any method that has a collection as a parameter), you should work with interfaces, not concrete implementations, whenever possible.
+```java
+// using concrete class, bad
+void fillMenu(JMenu menu, ArrayList<JMenuItem> items) {
+    for (JMenuItem item : items) {
+        menu.add(item);
+    }
+}
+// using interface, good
+void fillMenu(JMenu menu, Collection<JMenuItem> items) {
+    for (JMenuItem item : items) {
+        menu.add(item);
+    }
+}
+```
+9.6 Legacy Collections  
+Legacy classes in the collections framework
+![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/legacycollections.png){:width="800px"}  
+
+9.6.1 TheHashtableClass  
+Hashtable, HashMap, ConcurrentHashMap.
+
+  Property         | HashMap        | Hashtable            | ConcurrentHashMap |  
+-------------------|----------------|----------------------|-------------------|--
+ Null  values/keys | allowed        | not allowed          | not allowed       |  
+ Is thread-safe    | no             | yes                  | yes               |  
+ Lock mechanism    | not applicable | locks the whole map  | locks the portion |  
+ Iterator          | fail-fast      | fail-fast            | weakly consistent |  
+
+https://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
+9.6.2 Enumerations
+Interface.
+```java
+public interface Enumeration<E> {
+    boolean hasMoreElements();
+    E nextElement();
+}
+```
+Example.
+```java
+Enumeration<Employee> e = staff.elements();
+while (e.hasMoreElements())
+{
+    Employee e = e.nextElement();
+    ...
+}
+```
+9.6.4 Stacks
+push, pop, peek, empty.
+9.6.5 Bit Sets
+```java
+public static void main(String args[]) {
+    BitSet bits1 = new BitSet(16);
+    BitSet bits2 = new BitSet(16);
+
+    // set some bits
+    for(int i = 0; i < 16; i++) {
+        if((i % 2) == 0) bits1.set(i);
+        if((i % 5) != 0) bits2.set(i);
+    }
+
+    System.out.println("Initial pattern in bits1: ");
+    System.out.println(toBinaryString(bits1) + "," + bits1);
+    System.out.println("Initial pattern in bits2: ");
+    System.out.println(toBinaryString(bits2) + "," + bits2);
+
+    // AND bits
+    bits2.and(bits1);
+    System.out.println("bits2 AND bits1: ");
+    System.out.println(toBinaryString(bits2) + "," + bits2);
+
+    // OR bits
+    bits2.or(bits1);
+    System.out.println("bits2 OR bits1: ");
+    System.out.println(toBinaryString(bits2) + "," + bits2);
+
+    // XOR bits
+    bits2.xor(bits1);
+    System.out.println("bits2 XOR bits1: ");
+    System.out.println(toBinaryString(bits2) + "," + bits2);
+}
+
+private static String toBinaryString(BitSet bi) {
+    StringBuilder sb = new StringBuilder();
+    for( int i = 0; i <= bi.length();  i++ )
+    {
+        sb.append(bi.get(i) == true ? 1: 0 );
+    }
+
+    return sb.reverse().toString();
+}
+```
+Output
+```sh
+Initial pattern in bits1:
+0101010101010101,{0, 2, 4, 6, 8, 10, 12, 14}
+Initial pattern in bits2:
+0111101111011110,{1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14}
+bits2 AND bits1:
+0101000101010100,{2, 4, 6, 8, 12, 14}
+bits2 OR bits1:
+0101010101010101,{0, 2, 4, 6, 8, 10, 12, 14}
+bits2 XOR bits1:
+0,{}
+```
+## CHAPTER 10 Graphics Programming
+Skipped.
+## CHAPTER 11 Event Handling
+Skipped.
+## CHAPTER 12 User Interface Components with Swing
+Skipped.
+## CHAPTER 13 Deploying Java Applications
+13.1 JAR Files
+A Java Archive(JAR) file can contain both class files and other file types such as image and sound files. Moreover, JAR files are compressed, using the familiar ZIP compression format.
+13.1.1 Creating JAR files
+```sh
+// syntax
+jar options File1 File2 . . .
+// Example
+jar cvf CalculatorClasses.jar *.class icon.gif
+```
+The options are similar to the options of the UNIX `tar` command.
+13.1.2 The Manifest
+MANIFEST.MF, META-INF subdirectory, main section  
+Make a new JAR file with a manifest.
+```sh
+jar cfm MyArchive.jar manifest.mf com/mycompany/mypkg/*.class
+```
+13.1.3 Executable JAR Files
+Create an executable JAR file. Need to add `e` option and specify the entry point main class.
+```sh
+jar cvfe MyProgram.jar com.mycompany.mypkg.MainAppClass com/mycompany/mypkg/*.class
+```
+Or, use manifest file.
+```sh
+Main-Class: com.mycompany.mypkg.MainAppClass
+```
+Start the program.
+```sh
+java -jar MyProgram.jar
+```
+13.1.4 Resources  
+getResource,
+```java
+// Get image
+URL url = ResourceTest.class.getResource("about.gif");
+Image img = new ImageIcon(url).getImage();
+
+// Get file content
+InputStream stream = ResourceTest.class.getResourceAsStream("about.txt");
+Scanner in = new Scanner(stream, "UTF-8");
+```
+Pacakge.
+```sh
+jar cvfm ResourceTest.jar resource/ResourceTest.mf resource/*.class resource/*.gif resource/*.txt
+```
+13.1.5 Sealing
+```manifest
+Name: com/mycompany/util/
+Sealed: true
+```
+then, package.
+```sh
+jar cvfm MyArchive.jar manifest.mf *.class
+```
+13.2 Storage of Application Preferences
+13.2.1 Property Maps
+A `property map` is a data structure that stores key/value pairs. Property maps are often used for storing configuration information. Property maps have three particular characteristics:
+* The keys and values are strings.
+* The map can easily be saved to a file and loaded from a file.
+* There is a secondary table for default values.
+The Java class that implements a property map is called `Properties`.
+```java
+// Create properties
+Properties settings = new Properties();
+settings.setProperty("width", "200");
+settings.setProperty("title", "Hello, World!");
+
+// Write to file, storing
+OutputStream out = new FileOutputStream("program.properties");
+settings.store(out, "Program Properties");
+
+// File content
+#Program Properties
+#Mon Apr 30 07:22:52 2007
+width=200
+title=Hello, World!
+```
+Load the properties from a file.
+```java
+// Loading
+InputStream in = new FileInputStream("program.properties");
+settings.load(in);
+
+// Get with default value in case property doesn't exist.
+String title = settings.getProperty("title", "Default title");
+```
+13.2.2 The Preferences API
+```java
+// user root
+Preferences root = Preferences.userRoot();
+// system root
+Preferences root = Preferences.systemRoot();
+
+// by path
+Preferences node = root.node("/com/mycompany/myapp");
+// use class name as path
+Preferences node = Preferences.userNodeForPackage(obj.getClass());
+Preferences node = Preferences.systemNodeForPackage(obj.getClass());
+```
+Sample preference file.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
+<preferences EXTERNAL_XML_VERSION="1.0">
+   <root type="user">
+      <map />
+      <node name="com">
+         <map />
+         <node name="horstmann">
+            <map />
+            <node name="corejava">
+               <map>
+                  <entry key="left" value="11" />
+                  <entry key="top" value="9" />
+                  <entry key="width" value="453" />
+                  <entry key="height" value="365" />
+                  <entry key="title" value="Hello, World!" />
+               </map>
+            </node>
+         </node>
+      </node>
+   </root>
+</preferences>
+```
+13.3 Service Loaders
+The ServiceLoader class makes it easy to load plug-ins that conform to a common interface.
+## CHAPTER 14 Concurrency
+
+
+P866/1038
 
 Reference:
 Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
