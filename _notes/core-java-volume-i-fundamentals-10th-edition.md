@@ -12,62 +12,59 @@ Author: Cay S. Horstmann
 
 ## 1. An Introduction to Java
 The Java “White Paper” Buzzwords
-
-* 1. Simple
-* 2. Object-Oriented
-* 3. Distributed
-* 4. Robust
-* 5. Secure
-* 6. Architecture-Neutral
-* 7. Portable
-* 8. Interpreted
-* 9. High-Performance
-* 10. Multithreaded
-* 11. Dynamic
+1. Simple
+2. Object-Oriented
+3. Distributed
+4. Robust
+5. Secure
+6. Architecture-Neutral
+7. Portable
+8. Interpreted
+9. High-Performance
+10. Multithreaded
+11. Dynamic
 
 Java programs that work on web pages are called `applets`. It is replaced by Adobe Flash later.
 Java history: Green Project in Sun by Patrick Naughton and `James Gosling`. Name: Oak -> Java.
 
-Evolution of the Java Language
+Evolution of the Java Language.
 
- Version | Year | New Language Features  | Number of Classes and Interfaces
----------|------|------------------------|-----------------------------------
- 1.0     | 1996 | The language itself    | 211
- 1.1     | 1997 | Inner classes          | 477
- 1.2     | 1998 | The strictfp modifier  | 1,524
- 1.3     | 2000 | None                   | 1,840
- 1.4     | 2002 | Assertions             | 2,723
- 5.0     | 2004 | Generic classes, “for each” loop, varargs, autoboxing, metadata, enumerations, static import | 3,279
- 6       | 2006 | None                   | 3,793
- 7       | 2011 | Switch with strings, diamond operator, binary literals, exception handling enhancements | 4,024
- 8       | 2014 | Lambda expressions, interfaces with default methods, stream and date/time libraries | 4,240
+Version | Year | New Language Features  | Number of Classes and Interfaces
+--------|------|------------------------|-----------------------------------
+1.0     | 1996 | The language itself    | 211
+1.1     | 1997 | Inner classes          | 477
+1.2     | 1998 | The strictfp modifier  | 1,524
+1.3     | 2000 | None                   | 1,840
+1.4     | 2002 | Assertions             | 2,723
+5.0     | 2004 | Generic classes, “for each” loop, varargs, autoboxing, metadata, enumerations, static import | 3,279
+6       | 2006 | None                   | 3,793
+7       | 2011 | Switch with strings, diamond operator, binary literals, exception handling enhancements | 4,024 8       | 2014 | Lambda expressions, interfaces with default methods, stream and date/time libraries | 4,240
 
-
-In the early days of Java, the language was interpreted. Nowadays, the Java vir- tual machine uses a just-in-time compiler. hot spot, hot swap.
+In the early days of Java, the language was interpreted. Nowadays, the Java virtual machine uses a just-in-time compiler. hot spot, hot swap.
 
 ## 2. The Java Programming Environment
-Download Java Development Kit(JDK), http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+Download Java Development Kit(JDK) from http://www.oracle.com/technetwork/java/javase/downloads/index.html.
 
-Fortunately, in 2006, the numbering was simpli ed. The next version of the Java Standard Edition was called Java SE 6, followed by Java SE 7 and Java SE 8. However, the “internal” version numbers are 1.6.0, 1.7.0, and 1.8.0.
+Fortunately, in 2006, the numbering was simplified. The next version of the Java Standard Edition was called Java SE 6, followed by Java SE 7 and Java SE 8. However, the “internal” version numbers are 1.6.0, 1.7.0, and 1.8.0.
 
 When Oracle makes a minor version change to  x urgent issues, it refers to the change as an update. For example, Java SE `8u31` is the 31st update of Java SE 8, and it has the internal version number `1.8.0_31`. An update does not need to be installed over a prior version—it contains the most current version of the whole JDK. Also, not all updates are released to the public, so don’t panic if update 31 isn’t followed by update 32.
 
 Java Jargon
 
- Name                     | Acronym | Explanation
---------------------------|---------|-----------
- Java Development Kit     | JDK     | The software for programmers who want to write Java programs
- Java Runtime Environment | JRE     | The software for consumers who want to run Java programs
- Server JRE               | —       | The software for running Java programs on servers
- Standard Edition         | SE      | The Java platform for use on desktops and simple server applications
- Enterprise Edition       | EE      | The Java platform for complex server applications
- Micro Edition            | ME      | The Java platform for use on cell phones and other small devices
- Java FX                  | —       | An alternate toolkit for graphical user interfaces that is included in Oracle’s Java SE distribution
- OpenJDK                  | —       | A free and open source implementation of Java SE. It does not include browser integration or JavaFX.
- Java 2                   | J2      | An outdated term that described Java versions from 1998 until 2006
- Software Development Kit | SDK     | An outdated term that described the JDK from 1998 until 2006
- Update                   | u       | Oracle’s term for a bug  x release
- NetBeans                 | -       | Oracle’s integrated development environment
+Name                     | Acronym | Explanation
+-------------------------|---------|--------------------------------------------------------------
+Java Development Kit     | JDK     | The software for programmers who want to write Java programs
+Java Runtime Environment | JRE     | The software for consumers who want to run Java programs
+Server JRE               | —       | The software for running Java programs on servers
+Standard Edition         | SE      | The Java platform for use on desktops and simple server applications
+Enterprise Edition       | EE      | The Java platform for complex server applications
+Micro Edition            | ME      | The Java platform for use on cell phones and other small devices
+Java FX                  | —       | An alternate toolkit for graphical user interfaces that is included in Oracle’s Java SE distribution
+OpenJDK                  | —       | A free and open source implementation of Java SE. It does not include browser integration or JavaFX.
+Java 2                   | J2      | An outdated term that described Java versions from 1998 until 2006
+Software Development Kit | SDK     | An outdated term that described the JDK from 1998 until 2006
+Update                   | u       | Oracle’s term for a bug  x release
+NetBeans                 | -       | Oracle’s integrated development environment
 
 Building and Running Applets
 ```sh
@@ -76,19 +73,21 @@ jar cvfm RoadApplet.jar RoadApplet.mf *.class
 appletviewer RoadApplet.html
 ```
 ## 3. Fundamental Programming Structures in Java
-Camel Case
+Hello world of Java application.
 ```java
 public class FirstSample {
-public static void main(String[] args) {
-    System.out.println("We will not use 'Hello, World!'"); }
+    public static void main(String[] args) {
+        System.out.println("We will not use 'Hello, World!'");
+    }
 }
 ```
+Camel Case: The standard naming convention is that class names are nouns that start with an uppercase letter. If a name consists of multiple words, use an initial uppercase letter in each of the words.
 
-Java is a `strongly typed` language.
+### 3.3 Data Types
+Java is a `strongly typed` language.  
+#### 3.3.1 Four Integer Types  
 
-### 3.3.1 Four Integer Types
-
- Type | Storage Requirement | Range (Inclusive)
+Type  | Storage Requirement | Range (Inclusive)
 ------|---------------------|----------------------
 int   | 4 bytes             | –2,147,483,648 to 2,147,483, 647 (just over 2 billion)
 short | 2 bytes             | –32,768 to 32,767
@@ -99,7 +98,7 @@ byte  | 1 byte              | –128 to 127
 
 Starting with Java SE 7, you can write numbers in binary, with a prefix `0b` or `0B`. For example, 0b1001 is 9. Also starting with Java SE 7, you can add underscores to number literals, such as `1_000_000` (or 0b1111_0100_0010_0100_0000) to denote one million. The underscores are for human eyes only. The Java compiler simply removes them.
 
-### 3.3.2 Floating-Point Types
+#### 3.3.2 Floating-Point Types
 
 Type  | Storage Requirement | Range (Inclusive)
 ------|---------------------|----------------------
@@ -109,9 +108,9 @@ long  | 8 bytes             | Approximately ±1.79769313486231570E+308 (15 signi
 * Numbers of type float have a suffix F or f (for example, 3.14F). `Floating-point numbers without an F suffix (such as 3.14) are always considered to be of type double.` You can optionally supply the D or d suffix (for example, 3.14D).
 
 There are three special floating-point values to denote overflows and errors:
-* Positive infinity  // 5/0
+* Positive infinity  // eg. 5/0
 * Negative infinity  
-* NaN (not a number) // 0/0 or square root of a negative number.
+* NaN (not a number) // eg. 0/0 or square root of a negative number.
 
 ```java
 if (x == Double.NaN) // is never true
@@ -120,22 +119,33 @@ if (Double.isNaN(x)) // check whether x is "not a number"
 
 Floating-point numbers are not suitable for  financial calculations in which roundoff errors cannot be tolerated. For example, the command `System.out.println(2.0 - 1.1)` prints `0.8999999999999999`, not 0.9 as you would expect. Such roundoff errors are caused by the fact that floating-point numbers are represented in the binary number system. There is no precise binary representation of the fraction 1/10, just as there is no accurate representation of the fraction 1/3 in the decimal system. If you need precise numerical computations without roundoff errors, use the `BigDecimal` class, which is introduced later in this chapter.
 
-### 3.3.3 The char Type
+#### 3.3.3 The char Type
 ```java
 'A' //char
 "A" //string
 ```
 Values of type char can be expressed as hexadecimal values that run from `\u0000` to `\uFFFF`.
 
-Unicode Explained: Internationalize Documents, Programs, and Web Sites
-https://www.amazon.com/Unicode-Explained-Internationalize-Documents-Programs/dp/059610121X/
+To learn more about the Unicode, read book [Unicode Explained: Internationalize Documents, Programs, and Web Sites](https://www.amazon.com/Unicode-Explained-Internationalize-Documents-Programs/dp/059610121X/).
+
+### 3.4 Variables
+```java
+// declare and initialize a variable on the same line.
+int vacationDays = 12;
+double salary = 65000.0;
+// define a constant
+public static final double CM_PER_INCH = 2.54;
+```
+### 3.5 Operators
+The usual arithmetic operators +, -, \*, / are used in Java for addition, subtraction, multiplication, and division.
 
 `strictfp` keyword
-```java`
+```java
 public static strictfp void main(String[] args)
 ```
+Then all instructions inside the main method will use strict floating-point computa- tions. If you tag a class as strictfp, then all of its methods must use strict floating-point computations.
 
-The methods in the Math class use the routines in the computer’s floating- point unit for fastest performance. If completely predictable results are more important than performance, use the `StrictMath` class instead.
+The methods in the `Math` class use the routines in the computer’s floating- point unit for fastest performance. If completely predictable results are more important than performance, use the `StrictMath` class instead.
 
 ### 3.5.3 Casts
 ```java
@@ -1635,9 +1645,547 @@ Sample preference file.
 13.3 Service Loaders
 The ServiceLoader class makes it easy to load plug-ins that conform to a common interface.
 ## CHAPTER 14 Concurrency
+Runnable interface
+```java
+public interface Runnable {
+    void run();
+}
 
+// lambda expression:
+Runnable r = () -> { task code };
 
-P866/1038
+// construct a thread object
+Thread t = new Thread(r);
+t.start();
+```
+Thread class.
+```java
+class MyThread extends Thread {
+    public void run() {
+        //task code
+    }
+}
+```
+14.2 Interrupting Threads  
+```java
+Runnable r = () -> {
+    try
+    {
+        //...
+        while(!Thread.currentThread().isInterrupted()&& more work to do)
+        {
+            //do more work
+        }
+    }
+    catch(InterruptedException e) {
+        // thread was interrupted during sleep or wait
+        // Thread.currentThread().interrupt()
+    }
+    finally
+    {
+        // cleanup, if required
+    }
+    // exiting the run method terminates the thread
+};
+```
+14.3 Thread States
+Threads can be in one of six states:
+* New
+* Runnable
+* Blocked
+* Waiting
+* Timed waiting
+
+![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/threadstate.png){:width="800px"}  
+preemptive scheduling, cooperative scheduling
+
+Always keep in mind that a runnable thread may or may not be running at any given time. (This is why the state is called “runnable” and not “running”.)
+14.3.4 Terminated Threads
+A thread is terminated for one of two reasons:
+* It dies a natural death because the run method exits normally.
+* It dies abruptly because an uncaught exception terminates the run method.
+
+14.4 Thread Properties
+14.4.1 Thread Priorities
+MIN_PRIORITY (defined as 1 in the Thread class) and MAX_PRIORITY (defined as 10). NORM_PRIORITY is defined as 5.
+Thread priorities are `highly system dependent`. When the virtual machine relies on the thread implementation of the host platform, the Java thread priorities are mapped to the priority levels of the host platform, which may have more or fewer thread priority levels. For example, Windows has seven priority levels. Some of the Java priorities will map to the same operating system level. In the Oracle JVM for Linux, thread priorities are ignored altogether—all threads have the same priority.
+14.4.2 Daemon Threads  
+A daemon is simply a thread that has no other role in life than to serve others. Examples are timer threads that send regular “timer ticks” to other threads or threads that clean up stale cache entries.
+```java
+t.setDaemon(true);
+```
+14.4.3 Handlers for Uncaught Exceptions
+Thread.UncaughtExceptionHandler
+14.5 Synchronization
+14.5.3 Lock Objects
+synchronized, ReentrantLock
+```java
+Lock myLock = new ReentrantLock(); // ReentrantLock implements the Lock interface
+myLock.lock(); // a ReentrantLock object
+try
+{
+    //critical section
+}
+finally {
+    myLock.unlock(); // make sure the lock is unlocked even if an exception is thrown
+}
+```
+14.5.4 Condition Objects
+await, signalAll, or signal
+```java
+private Condition sufficientFunds = bankLock.newCondition();
+
+public void transfer(int from, int to, int amount)
+{
+    bankLock.lock();
+    try
+    {
+        while (accounts[from] < amount) {
+            sufficientFunds.await();
+        }
+        // transfer funds
+        // ...
+        sufficientFunds.signalAll();
+    }
+    finally {
+        bankLock.unlock();
+    }
+}
+```
+14.5.5 The synchronized Keyword
+```java
+public synchronized void method()
+{
+    //method body
+}
+
+// equivalent to
+public void method() {
+    this.intrinsicLock.lock();
+    try
+    {
+        //method body
+    }
+    finally
+    {
+        this.intrinsicLock.unlock();
+    }
+}
+```
+```java
+intrinsicCondition.await();     // equivalent to wait
+intrinsicCondition.signalAll(); // equivalent to notifyAll
+```
+NOTE: The `wait`, `notifyAll`, and `notify` methods are final methods of the Object class. The Condition methods had to be named `await`, `signalAll`, and `signal` so that they don’t conflict with those methods.
+Example.
+```java
+class Bank {
+    private double[] accounts;
+    public synchronized void transfer(int from, int to, int amount) throws InterruptedException {
+        while (accounts[from] < amount) {
+            wait(); // wait on intrinsic object lock's single condition
+        }
+        accounts[from] -= amount;
+        accounts[to] += amount;
+        notifyAll(); // notify all threads waiting on the condition
+    }
+    public synchronized double getTotalBalance() { . . . }
+}
+```
+Each object has an intrinsic lock, and the lock has an intrinsic condition. The lock manages the threads that try to enter a `synchronized` method. The condition manages the threads that have called `wait`.
+14.5.6 Synchronized Blocks
+```java
+public void transfer(int from, int to, int amount) {
+    synchronized (lock) // an ad-hoc lock
+    {
+        accounts[from] -= amount;
+        accounts[to] += amount;
+    }
+}
+```
+14.5.7 The Monitor Concept
+In the terminology of Java, a monitor has these properties:
+* A monitor is a class with only private fields.
+* Each object of that class has an associated lock.
+* All methods are locked by that lock. In other words, if a client calls obj.method(), then the lock for obj is automatically acquired at the beginning of the method call and relinquished when the method returns. Since all fields are private, this arrangement ensures that no thread can access the fields while another thread manipulates them.
+* The lock can have any number of associated conditions.
+
+`Every object` in Java has an intrinsic lock and an intrinsic condition. If a method is declared with the `synchronized` keyword, it acts like a monitor method. The condition variable is accessed by calling `wait/notifyAll/notify`.
+
+However, a Java object differs from a monitor in three important ways, compromising thread safety:
+* Fields are not required to be private.
+* Methods are not required to be synchronized.
+* The intrinsic lock is available to clients.
+
+14.5.8 Volatile Fields
+```java
+private volatile boolean done;
+public boolean isDone() { return done; }
+public void setDone() { done = true; }
+```
+Volatile variables do not provide any atomicity. For example, the method is not guaranteed to flip the value of the field.
+```java
+public void flipDone() { done = !done; } // not atomic
+```
+14.5.9 Final Variables
+`final` guarantees that other threads would see the updated value of accounts. Of course, the operations on the map are not thread safe. If multiple threads mutate and read the map, you still need synchronization.
+```java
+final Map<String, Double> accounts = new HashMap<>();
+```
+14.5.10 Atomics
+tomicInteger, AtomicIntegerArray, AtomicIntegerFieldUpdater, AtomicLongArray, AtomicLongFieldUpdater, AtomicReference, AtomicReferenceArray, and AtomicReferenceFieldUpdater.
+```java
+do{
+    oldValue = largest.get();
+    newValue = Math.max(oldValue, observed);
+} while (!largest.compareAndSet(oldValue, newValue));
+
+// java 8
+largest.updateAndGet(x -> Math.max(x, observed));
+//or
+largest.accumulateAndGet(observed, Math::max);
+```
+LongAdder, LongAccumulator, DoubleAdder, DoubleAccumulator
+14.5.11 Deadlocks
+14.5.12 Thread-Local Variables
+`ThreadLocal`
+```java
+// construct one instance per thread
+public static final ThreadLocal<SimpleDateFormat> dateFormat =
+ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd"));
+// access the actual formatter
+String dateStamp = dateFormat.get().format(new Date());
+```
+14.5.13 Lock Testing and Timeouts
+```java
+if (myLock.tryLock(100, TimeUnit.MILLISECONDS)) {
+    // now the thread owns the lock
+    try{...}
+    finally { myLock.unlock(); }
+}
+else {
+    // do something else
+}
+
+myCondition.await(100, TimeUnit.MILLISECONDS))
+```
+14.5.14 Read/Write Locks
+The `java.util.concurrent.locks` package defines two lock classes, the `ReentrantLock` that we already discussed and the `ReentrantReadWriteLock`. The latter is useful when there are many threads that read from a data structure and fewer threads that modify it.
+```java
+// Construct a ReentrantReadWriteLock object:
+private ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
+// Extract the read and write locks:
+private Lock readLock = rwl.readLock();
+private Lock writeLock = rwl.writeLock();
+// Use the read lock in all accessors:
+public double getTotalBalance() {
+    readLock.lock();
+    try{...}
+    finally { readLock.unlock(); }
+}
+// Use the write lock in all mutators:
+public void transfer(. . .) {
+    writeLock.lock();
+    try{...}
+    finally { writeLock.unlock(); }
+}
+```
+14.5.15 Why the stop and suspend Methods Are Deprecated
+`stop`: This method terminates all pending methods, including the run method. When a thread is stopped, it immediately gives up the locks on all objects that it has locked. This can leave objects in an inconsistent state. `Object is damaged.`  
+`suspend`: Unlike stop, suspend won’t damage objects. However, if you suspend a thread that owns a lock, then the lock is unavailable until the thread is resumed. If the thread that calls the suspend method tries to acquire the same lock, the program `deadlocks`: The suspended thread waits to be resumed, and the suspending thread waits for the lock.
+14.6 Blocking Queues  
+Blocking Queue Methods
+
+Method  | Normal Action                        | Action in Special Circumstances
+--------|--------------------------------------|------------------------------------------------------
+add     | Adds an element                      | Throws an IllegalStateException if the queue is full
+element | Returns the head element             | Throws a NoSuchElementException if the queue is empty
+offer   | Adds an element and returns true     | Returns false if the queue is full
+peek    | Returns the head element             | Returns null if the queue is empty
+poll    | Removes and returns the head element | Returns null if the queue is empty
+put     | Adds an element                      | Blocks if the queue is full
+remove  | Removes and returns the head element | Throws a NoSuchElementException if the queue is empty
+take    | Removes and returns the head element | Blocks if the queue is empty
+
+```java
+//  tries for 100 milliseconds to insert an element to the tail of the queue. If it succeeds, it returns true; otherwise, it returns false when it times out.
+boolean success = q.offer(x, 100, TimeUnit.MILLISECONDS);
+// tries for 100 milliseconds to remove the head of the queue. If it succeeds, it returns the head; otherwise, it returns null when it times out.
+Object head = q.poll(100, TimeUnit.MILLISECONDS);
+```
+LinkedBlockingQueue, ArrayBlockingQueue, DelayQueue, PriorityBlockingQueue.
+14.7 Thread-Safe Collections
+14.7.1 Efficient Maps, Sets, and Queues
+ConcurrentHashMap, ConcurrentSkipListMap, ConcurrentSkipListSet, and ConcurrentLinkedQueue.
+
+The collections return `weakly consistent` iterators. That means that the iterators may or may not reflect all modifications that are made after they were constructed, but they will not return a value twice and they will not throw a ConcurrentModificationException.
+
+The concurrent hash map can efficiently support a large number of readers and a fixed number of writers. By default, it is assumed that there are up to 16 simultaneous writer threads. There can be many more writer threads, but if more than 16 write at the same time, the others are temporarily blocked. You can specify a higher number in the constructor, but it is unlikely that you will need to.
+
+As of Java SE 8, the concurrent hash map organizes the buckets as trees, not lists, when the key type implements Comparable, guaranteeing O(log(n)) performance.
+
+14.7.2 Atomic Update of Map Entries
+```java
+ConcurrentHashMap<String, Long> map = new ConcurrentHashMap<>();
+Long oldValue = map.get(word);
+Long newValue = oldValue == null ? 1 : oldValue + 1;
+map.put(word, newValue); // Error--might not replace oldValue
+```
+NOTE: Some programmers are surprised that a supposedly thread-safe data structure permits operations that are not thread safe. But there are two entirely different considerations. If multiple threads modify a plain HashMap, they can destroy the internal structure (an array of linked lists). Some of the links may go missing, or even go in circles, rendering the data structure unusable. That will never happen with a ConcurrentHashMap. In the example above, the code for get and put will never corrupt the data structure. But, since the sequence of operations is not atomic, the result is not predictable.
+
+Use the `replace` operation to atomically replaces an old value with a new one.
+```java
+do {
+    oldValue = map.get(word);
+    newValue = oldValue == null ? 1 : oldValue + 1;
+} while (!map.replace(word, oldValue, newValue));
+```
+Alternatively, use AtomicLong or LongAdder for ConcurrentHashMap.
+```java
+ConcurrentHashMap<String, AtomicLong> map = new ConcurrentHashMap<>(); // or use ConcurrentHashMap<String,LongAdder>
+map.putIfAbsent(word, new LongAdder());
+map.get(word).increment();
+
+// or
+map.compute(word, (k, v) -> v == null ? 1 : v + 1);
+```
+14.7.3 Bulk Operations on Concurrent Hash Maps
+There are three kinds of operations:
+* `search` applies a function to each key and/or value, until the function yields a non-null result. Then the search terminates and the function’s result is returned.
+* `reduce` combines all keys and/or values, using a provided accumulation function.
+* `forEach` applies a function to all keys and/or values.
+
+Each operation has four versions:
+* operationKeys: operates on keys.
+* operationValues: operates on values.
+* operation: operates on keys and values.
+* operationEntries: operates on Map.Entry objects.
+
+With each of the operations, you need to specify a `parallelism threshold`.
+* If the map contains more elements than the threshold, the bulk operation is parallelized.
+* If you want the bulk operation to run in a single thread, use a threshold of Long.MAX_VALUE.
+* If you want the maximum number of threads to be made available for the bulk operation, use a threshold of 1.
+
+```java
+// find the first word that occurs more than 1,000 times.
+String result = map.search(threshold, (k, v) -> v > 1000 ? k : null);
+// for each, consumer
+map.forEach(threshold, (k, v) -> System.out.println(k + " -> " + v));
+// for each, an additional transformer function
+map.forEach(threshold,
+(k, v) -> k + " -> " + v, // Transformer
+System.out::println); // Consumer
+```
+14.7.4 Concurrent Set Views
+There is no `ConcurrentHashSet` class. Instead, you can create concurrent set with map.
+```java
+// Prior to Java 8
+Set<String> mySet = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
+// In Java 8
+Set<String> myConcurrentSet = ConcurrentHashMap.<String>newKeySet();
+```
+14.7.5 Copy on Write Arrays
+CopyOnWriteArrayList, CopyOnWriteArraySet
+14.7.6 Parallel Array Algorithms
+```java
+String contents = new String(Files.readAllBytes(
+    Paths.get("alice.txt")), StandardCharsets.UTF_8); // Read file into string
+String[] words = contents.split("[\\P{L}]+"); // Split along nonletters
+Arrays.parallelSort(words);
+```
+14.7.7 Older Thread-Safe Collections
+Vector and Hashtable are replaced by ArrayList and HashMap classes.
+Any collection class can be made thread safe by means of a `synchronization wrapper`:
+```java
+List<E> synchArrayList = Collections.synchronizedList(new ArrayList<E>());
+Map<K, V> synchHashMap = Collections.synchronizedMap(new HashMap<K, V>());
+```
+14.8 Callables and Futures
+A `Runnable` encapsulates a task that runs asynchronously; you can think of it as an asynchronous method with no parameters and no return value. A `Callable` is similar to a Runnable, but it returns a value. The Callable interface is a parameterized type, with a single method `call`.
+```java
+public interface Callable<V>
+{
+    V call() throws Exception; // V is the type of the returned value.
+}
+```
+
+A `Future` holds the result of an asynchronous computation. The Future interface has the following methods:
+```java
+public interface Future<V>
+{
+    V get() throws . . .;
+    V get(long timeout, TimeUnit unit) throws . . .;
+    void cancel(boolean mayInterrupt);
+    boolean isCancelled();
+    boolean isDone();
+}
+```
+14.9 Executors
+If your program creates a large number of short-lived threads, it should use a `thread pool` instead.
+Executors Factory Methods
+
+Method                           | Description
+---------------------------------|----------------------------
+newCachedThreadPool              | New threads are created as needed; idle threads are kept for 60 seconds.
+newFixedThreadPool               | The pool contains a fixed set of threads; idle threads are kept indefinitely.
+newSingleThreadExecutor          | A “pool” with a single thread that executes the submitted tasks sequentially (similar to the Swing event dispatch thread).
+newScheduledThreadPool           | A fixed-thread pool for scheduled execution; a replacement for java.util.Timer.
+newSingleThreadScheduledExecutor | A single-thread “pool” for scheduled execution.
+
+14.9.1 Thread Pools
+Here, in summary, is what you do to use a thread pool:
+1. Call the static newCachedThreadPool or newFixedThreadPool method of the Executors class.
+2. Call submit to submit Runnable or Callable objects.
+3. If you want to be able to cancel a task, or if you submit Callable objects, hang on to the returned Future objects.
+4. Call shutdown when you no longer want to submit any tasks.
+```java
+public static void main(String... args) throws InterruptedException, ExecutionException{
+    //creates cached thread pool
+    ExecutorService exService = Executors.newCachedThreadPool();
+    // runnable thread start to execute.
+    exService.execute(new NewCachedThreadPoolTest().new RunnableThread());
+    //callable thread starts to execute
+    Future<Integer> future=exService.submit(new NewCachedThreadPoolTest().new CallableThread());
+    //gets value of callable thread
+    int val=future.get();
+    System.out.println(val);
+    //checks for thread termination
+    boolean isTerminated=exService.isTerminated();
+    System.out.println(isTerminated);
+    // waits for termination for 30 seconds only
+    exService.awaitTermination(30,TimeUnit.SECONDS);
+    exService.shutdownNow();
+}
+
+//Callable thread
+class CallableThread implements Callable<Integer> {
+    @Override
+    public Integer call() {
+        int cnt = 0;
+        for (; cnt < 5; cnt++) {
+            System.out.println("call:" + cnt);
+        }
+        return cnt;
+    }
+}
+
+//Runnable thread
+class RunnableThread implements Runnable {
+    @Override
+    public void run() {
+        int cnt = 0;
+        for (; cnt < 5; cnt++) {
+            System.out.println("run:" + cnt);
+        }
+    }
+}
+```
+Output:
+```sh
+run:0
+run:1
+run:2
+run:3
+run:4
+call:0
+call:1
+call:2
+call:3
+call:4
+5
+false
+```
+14.9.3 Controlling Groups of Tasks
+```java
+List<Callable<T>> tasks = . . .;
+List<Future<T>> results = executor.invokeAll(tasks); // A disadvantage of this approach is that you may wait needlessly if the first task happens to take a long time
+for (Future<T> result : results) {
+    processFurther(result.get());
+}
+
+// The service manages a blocking queue of Future objects, containing the results of the submitted tasks as they become available.
+ExecutorCompletionService<T> service = new ExecutorCompletionService<>(executor);
+for (Callable<T> task : tasks) {
+    service.submit(task);
+}
+for (int i = 0; i < tasks.size(); i++) {
+    processFurther(service.take().get());    
+}
+
+```
+14.9.4 The Fork-Join Framework
+RecursiveTask<T>, RecursiveAction
+Create an array with random numbers. Counter how many numbers are larger than 0.5.
+```java
+public static void main(String[] args) {
+    final int size = 1000000;
+    double[] numbers = new double[size];
+    for (int i = 0; i < size; i++) numbers[i] = Math.random();
+    Counter counter = new Counter(numbers, 0, numbers.length, new Filter() {
+        public boolean accept(double x) {
+            return x > 0.5;
+        }
+    });
+    ForkJoinPool pool = new ForkJoinPool();
+    pool.invoke(counter);
+    System.out.println(counter.join()); // output: 500305
+}
+
+interface Filter {
+    boolean accept(double t);
+}
+
+static class Counter extends RecursiveTask<Integer> {
+    public static final int THRESHOLD = 1000;
+    private double[] values;
+    private int from;
+    private int to;
+    private Filter filter;
+
+    public Counter(double[] numbers, int i, int length, Filter filter) {
+        this.values = numbers;
+        this.from = i;
+        this.to = length;
+        this.filter = filter;
+    }
+
+    @Override
+    protected Integer compute() {
+        if (to - from < THRESHOLD) {
+            int count = 0;
+            for (int i = from; i < to; i++) {
+                if (filter.accept(values[i])) count++;
+            }
+            return count;
+        } else {
+            int mid = (from + to) / 2;
+            Counter first = new Counter(values, from, mid, filter);
+            Counter second = new Counter(values, mid, to, filter);
+            invokeAll(first, second);
+            return first.join() + second.join();
+        }
+    }
+}
+```
+14.9.5 Completable Futures
+```java
+CompletableFuture<String> contents = readPage(url);
+CompletableFuture<List<URL>> links = contents.thenApply(Parser::getLinks); // only call the getLinks method when contents are available.
+```
+14.10 Synchronizers
+
+Class            | What It Does | Notes
+-----------------|--------------|-----------------------------------------------
+CyclicBarrier    | Allows a set of threads to wait until a predefined count of them has reached a common barrier, and then optionally executes a barrier action.  | Use when a number of threads need to complete before their results can be used. The barrier can be reused after the waiting threads have been released.
+Phaser           | Like a cyclic barrier, but with a mutable party count.  | Introduced in Java SE 7.
+CountDownLatch   | Allows a set of threads to wait until a count has been decremented to 0.  | Use when one or more threads need to wait until a specified number of events have occurred.
+Exchanger        | Allows two threads to exchange objects when both are ready for the exchange.  | Use when two threads work on two instances of the same data structure, with the first thread filling one instance and the second thread emptying the other.
+Semaphore        | Allows a set of threads to wait until permits are available for proceeding.  | Use to restrict the total number of threads that can access a resource. If the permit count is one, use to block threads until another thread gives permission.
+SynchronousQueue | Allows a thread to hand off an object to another thread. | Use to send an object from one thread to another when both are ready, without explicit synchronization.
+
+14.10.1 Semaphores
+14.11 Threads and Swing
+Skipped.
 
 Reference:
 Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
