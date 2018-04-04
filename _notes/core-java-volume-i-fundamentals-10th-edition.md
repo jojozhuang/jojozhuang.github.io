@@ -641,25 +641,54 @@ public int compareTo(Employee other) {
 ```
 The documentation of the Comparable interface suggests that the compareTo method should be compatible with the equals method. `That is, x.compareTo(y) should be zero exactly when x.equals(y).` Most classes in the Java API that implement Comparable follow this advice. A notable exception is BigDecimal. `Consider x = new BigDecimal("1.0") and y = new BigDecimal("1.00"). Then x.equals(y) is false because the numbers differ in precision.` But x.compareTo(y) is zero. Ideally, it shouldn’t be, but there was no obvious way of deciding which one should come first.
 
-`Default Methods In Interface`
-Before Java 8, interfaces could have only abstract methods. The implementation of these methods has to be provided in a separate class. So, if a new method is to be added in an interface then its implementation code has to be provided in the class implementing the same interface. To overcome this issue, Java 8 has introduced the concept of default methods which allow the interfaces to have methods with implementation without affecting the classes that implement the interface.
-https://www.geeksforgeeks.org/default-methods-java/
+#### 6.1.5 Default Methods
+You can supply a default implementation for any interface method. You must tag such a method with the `default` modifier.  
+Default Methods In Interface: Before Java 8, interfaces could have only abstract methods. The implementation of these methods has to be provided in a separate class. So, if a new method is to be added in an interface then its implementation code has to be provided in the class implementing the same interface. To overcome this issue, Java 8 has introduced the concept of default methods which allow the interfaces to have methods with implementation without affecting the classes that implement the interface. See https://www.geeksforgeeks.org/default-methods-java/.
+```java
+// A simple program to Test Interface default
+// methods in java
+interface TestInterface
+{
+    // abstract method
+    public void square(int a);
 
-### 6.2.2 The Comparator Interface
+    // default method
+    default void show()
+    {
+        System.out.println("Default Method Executed");
+    }
+}
+
+class TestClass implements TestInterface
+{
+    // implementation of square abstract method
+    public void square(int a)
+    {
+        System.out.println(a*a);
+    }
+
+    // method show() is not mandatory to be implemented.
+}
+```
+### 6.2 Examples of Interfaces
+#### 6.2.2 The Comparator Interface
 ```java
 public interface Comparator<T> {
     int compare(T first, T second);
 }
 ```
-### 6.2.3 The Cloneable interface
+#### 6.2.3 Object Cloning
+The Cloneable interface
 ```java
 protected Object clone() throws CloneNotSupportedException  
 ```
-6.3 Lambda Expressions
+### 6.3 Lambda Expressions
+#### 6.3.1 Why Lambdas?
+Sort strings by length.
 ```java
 Arrays.sort(words, (first, second) -> first.length() - second.length());
 ```
-6.3.4 Method References
+#### 6.3.4 Method References
 ```java
 Timer t = new Timer(1000, event -> System.out.println(event));
 Timer t = new Timer(1000, System.out::println);
@@ -669,21 +698,28 @@ The `::` operator separates the method name from the name of an object or class.
 * Class::staticMethod
 * Class::instanceMethod
 
-6.3.5 Constructor References
+#### 6.3.5 Constructor References
 `Class::new`
 ```java
 ArrayList<String> names = . . .;
-Stream<Person> stream = names.stream().map(Person::new);
+Stream<Person> stream = names.stream().map(Person::new); // Person::new is a reference to a Person constructor.
 List<Person> people = stream.collect(Collectors.toList());
 ```
-6.3.8 More about Comparators
+#### 6.3.8 More about Comparators
+The `Comparator` interface has a number of convenient static methods for creating comparators. These methods are intended to be used with lambda expressions or method references.
 ```java
-Arrays.sort(people, Comparator.comparing(Person::getName));
-Arrays.sort(people, Comparator.comparing(Person::getLastName).thenComparing(Person::getFirstName));
+Arrays.sort(people, Comparator.comparing(Person::getName)); // no need to implement a Comparator by hand
+Arrays.sort(people, Comparator.comparing(Person::getLastName).thenComparing(Person::getFirstName)); // chain comparators with the thenComparing method
 ```
+### 6.4 Inner Classes
+An `inner class` is a class that is defined inside another class.
+* Inner class methods can access the data from the scope in which they are defined—including the data that would otherwise be private.
+* Inner classes can be hidden from other classes in the same package.
+* Anonymous inner classes are handy when you want to define callbacks without writing a lot of code.
 
-6.4 Inner Classes
-6.5 Proxies
+### 6.5 Proxies
+You can use a `proxy` to create, at runtime, new classes that implement a given set of interfaces. Proxies are only necessary when you don’t yet know at compile time which interfaces you need to implement.
+#### 6.5.1 When to Use Proxies
 An `invocation handler` is an object of any class that implements the `InvocationHandler` interface. That interface has a single method:
 ```java
 Object invoke(Object proxy, Method method, Object[] args)
@@ -744,9 +780,12 @@ More:
 https://opencredo.com/dynamic-proxies-java-part-2/
 https://opencredo.com/dynamic-proxies-java/
 
-## Chapter 7 Exceptions, Assertions, and Logging In this chapter
-Throwable: Error and Exception.
-
+## 7. Exceptions, Assertions, and Logging In this chapter
+### 7.1 Dealing with Errors
+#### 7.1.1 The Classification of Exceptions
+In the Java programming language, an exception object is always an instance of a class derived from `Throwable`. All exceptions descend from Throwable, but the hierarchy immediately splits into two branches: `Error` and `Exception`.
+### 7.2 Catching Exceptions
+#### 7.2.2 Catching Multiple Exceptions
 As a general rule, you should catch those exceptions that you know how to handle and propagate those that you do not know how to handle.
 ```java
 try {
@@ -759,6 +798,7 @@ catch (IOException e) {
     //emergency action for all other I/O problems
 }
 ```
+#### 7.2.4 The finally Clause
 Decouple try/catch and try/finally blocks.
 ```java
 InputStream in = . . .;
@@ -862,8 +902,7 @@ res3=4
 exception occurs in foo4:java.lang.ArithmeticException: / by zero
 res4=4
 ```
-7.2.5 The Try-with-Resources Statement
-
+#### 7.2.5 The Try-with-Resources Statement
 When the try block exits, then res.close() is called automatically. Here is a typical example—reading all words of a file:
 ```
 try (Scanner in = new Scanner(new FileInputStream("/usr/share/dict/words")), "UTF-8")
@@ -873,11 +912,9 @@ try (Scanner in = new Scanner(new FileInputStream("/usr/share/dict/words")), "UT
     }
 }
 ```
-
-7.2.6 Analyzing Stack Trace Elements
+#### 7.2.6 Analyzing Stack Trace Elements
 `Throwable.getStackTrace`, `Thread.getAllStackTraces`, `StackTraceElement`.
 ```java
-
 Map<Thread, StackTraceElement[]> map = Thread.getAllStackTraces();
 for (Thread t : map.keySet())
 {
@@ -885,8 +922,7 @@ for (Thread t : map.keySet())
     //analyze frames
 }
 ```
-
-7.4 Using Assertions
+### 7.4 Using Assertions
 Has better performance and throwing exceptions.
 ```java
 assert x >= 0;
@@ -909,14 +945,16 @@ When should you choose assertions? Keep these points in mind:
 * Assertion checks are turned on only during development and testing.
 Assertions should only be used to locate internal program errors during testing.
 
-7.5 Logging
-7.6 Debugging Tips
+### 7.5 Logging
+### 7.6 Debugging Tips
 ```java
 Thread.dumpStack();
 ```
-
-## Chapter 8. Generic Programming
-Restrict T to a class that implements the Comparable interface—a standard interface with a single method, compareTo.
+## 8. Generic Programming
+### 8.1 Why Generic Programming?
+`Generic programming` means writing code that can be reused for objects of many different types.
+### 8.4 Bounds for Type Variables
+Restrict `T` to a class that implements the `Comparable` interface—a standard interface with a single method, `compareTo`.
 The notation of giving a bound for the type variable T:
 ```java
 <T extends BoundingType>
@@ -925,24 +963,47 @@ Sample.
 ```java
 public static <T extends Comparable> T min(T[] a) . . .
 ```
-
+### 8.5 Generic Code and the Virtual Machine
+The raw type replaces type variables with the first bound, or Object if no bounds are given.
+```java
+public class Interval<T extends Comparable & Serializable> implements Serializable
+{
+    private T lower;
+    private T upper;
+    ...
+    public Interval(T first, T second)
+    {
+        if (first.compareTo(second) <= 0) { lower = first; upper = second; }
+        else { lower = second; upper = first; }
+    }
+}
+```
+The raw type Interval looks like this:
+```java
+public class Interval implements Serializable
+{
+    private Comparable lower;
+    private Comparable upper;
+    ...
+    public Interval(Comparable first, Comparable second) { . . . }
+}
+```
 In summary, you need to remember these facts about translation of Java generics:
 * There are no generics in the virtual machine, only ordinary classes and methods.
 * All type parameters are replaced by their bounds.
 * Bridge methods are synthesized to preserve polymorphism.
 * Casts are inserted as necessary to preserve type safety.
 
-8.6 Restrictions and Limitations
-Type Parameters Cannot Be Instantiated with Primitive Types, there is no Pair<double>, only Pair<Double>. The reason is, of course, `type erasure`. After erasure, the Pair class has fields of type `Object`, and you can’t use them to store double values.
-
+### 8.6 Restrictions and Limitations
+Type parameters cannot be instantiated with primitive types. There is no Pair\<double\>, only Pair\<Double\>. The reason is, of course, `type erasure`. After erasure, the Pair class has fields of type `Object`, and you can’t use them to store double values.
 ```java
 if (a instanceof Pair<String>) // Error, Runtime Type Inquiry Only Works with Raw Types
 Pair<String>[] table = new Pair<String>[10]; // Error. cannot Create Arrays of Parameterized Types
 public Pair() { first = new T(); second = new T(); } // Error, Cannot Instantiate Type Variables
 public static <T extends Comparable> T[] minmax(T[] a) { T[] mm = new T[2]; . . . } // Error, Cannot Construct a Generic Array
 ```
-
-8.8 Wildcard Types
+### 8.7 Inheritance Rules for Generic Types
+### 8.8 Wildcard Types
 ```java
 Pair<? extends Employee>
 ```
@@ -960,8 +1021,27 @@ public static <T> Pair<T> makePair(Class<T> c) throws InstantiationException, Il
     return new Pair<>(c.newInstance(), c.newInstance());
 }
 ```
+### 8.9 Reflection and Generics
 
 ## 9. Collections
+### 9.1 The Java Collections Framework
+#### 9.1.2 TheCollectionInterface
+```java
+public interface Collection<E> {
+    boolean add(E element);
+    Iterator<E> iterator();
+    ...
+}
+```
+#### 9.1.3 Iterators
+```java
+public interface Iterator<E> {
+    E next();
+    boolean hasNext();
+    void remove();
+    default void forEachRemaining(Consumer<? super E> action);
+}
+```
 The `for each` loop works with any object that implements the `Iterable` interface, an interface with a single abstract method:
 ```java
 public interface Iterable<T> {
@@ -969,14 +1049,14 @@ public interface Iterable<T> {
     ...
 }
 ```
-
 * The `Collection` interface extends the `Iterable` interface.
 * A List is an ordered collection.
 
 ![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/collections.png){:width="800px"}  
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1JQm4fmR0wIOm11OqS4H4qyhb_z96WnDzaLI0u28CYWc/edit?usp=sharing)
 
-9.2.1 Linked Lists
+### 9.2 Concrete Collections
+#### 9.2.1 Linked Lists
 Add item to Linked List. The add method adds the new element before the iterator position.
 ```java
 public static void main(String[] args)
@@ -1006,17 +1086,15 @@ Carl
 `ConcurrentModificationException` exception may occur.
 
 The only reason to use a linked list is to minimize the cost of insertion and removal in the middle of the list. If you have only a few elements, you can just use an ArrayList. If you want random access into a collection, use an array or ArrayList, not a linked list.
-
-9.2.2 Array Lists
+#### 9.2.2 Array Lists
 We recommend that you use an `ArrayList` instead of a `Vector` whenever you don’t need synchronization.
-9.2.3 Hash Sets
-In Java, hash tables are implemented as arrays of linked lists.  
-hash collision, rehash,  load factor at 0.75,
+#### 9.2.3 Hash Sets
+In Java, hash tables are implemented as arrays of linked lists. Key concepts: hash collision, rehash, load factor at 0.75.
 ![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/hashtable.png){:width="800px"}  
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1JQm4fmR0wIOm11OqS4H4qyhb_z96WnDzaLI0u28CYWc/edit#slide=id.g35eabee3aa_0_0?usp=sharing)
-9.2.4 Tree Sets
-A tree set is a sorted collection. It is implemented by red-black tree.
 
+#### 9.2.4 Tree Sets
+A tree set is a sorted collection. It is implemented by red-black tree.
 ```java
 SortedSet<String> sorter = new TreeSet<>(); // TreeSet implements SortedSet
 sorter.add("Bob");
@@ -1024,8 +1102,7 @@ sorter.add("Amy");
 sorter.add("Carl");
 for (String s : sorter) System.println(s); // output: Amy Bob Carl.
 ```
-
-9.2.6 Priority Queues
+#### 9.2.6 Priority Queues
 Implemented by heap. The iteration does not visit the elements in sorted order. However, removal always yields the smallest remaining element.
 ```java
 PriorityQueue<LocalDate> pq = new PriorityQueue<>();
@@ -1055,9 +1132,9 @@ Removing elements...
 1906-12-09
 1910-06-22
 ```
-
-9.3 Maps
+### 9.3 Maps
 HashMap, TreeMap
+#### 9.3.1 Basic Map Operations
 ```java
 // construct hashmap
 Map<String, Employee> staff = new HashMap<>(); // HashMap implements Map
@@ -1067,6 +1144,7 @@ staff.put("987-98-9996", harry);
 String id = "987-98-9996";
 Employee emp = staff.get(id); // gets harry
 ```
+#### 9.3.2 Updating Map Entries
 `getOrDefault` method.
 ```java
 HashMap<Integer, String> mapStudent = new HashMap<>();
@@ -1088,7 +1166,7 @@ counts.put(word, counts.get(word) + 1); // Now we know that get will succeed
 /or
 counts.merge(word, 1, Integer::sum);
 ```
-9.3.3 Map Views
+#### 9.3.3 Map Views
 * Set<K> keySet()
 * Collection<V> values()
 * Set<Map.Entry<K, V>> entrySet()
@@ -1113,10 +1191,10 @@ counts.forEach((k, v) -> {
     //do something with k, v
 });
 ```
-9.3.4 Weak Hash Maps
+#### 9.3.4 Weak Hash Maps
 The `WeakHashMap` class was designed to solve an interesting problem. What happens with a value whose key is no longer used anywhere in your program? Suppose the last reference to a key has gone away. Then, there is no longer any way to refer to the value object. But, as no part of the program has the key any more, the key/value pair cannot be removed from the map. Why can’t the garbage collector remove it? Isn’t it the job of the garbage collector to remove unused objects?  
 Unfortunately, it isn’t quite so simple. The garbage collector traces live objects. As long as the map object is live, all buckets in it are live and won’t be reclaimed. Thus, your program should take care to remove unused values from long-lived maps. Or, you can use a WeakHashMap instead. This data structure cooperates with the garbage collector to remove key/value pairs when the only reference to the key is the one from the hash table entry.  
-Here are the inner workings of this mechanism. The WeakHashMap uses `weak references` to hold keys. A `WeakReference` object holds a reference to another object—in our case, a hash table key. Objects of this type are treated in a special way by the garbage collector. Normally, if the garbage collector finds that a particular object has no references to it, it simply reclaims the object. However, if the object is reachable only by a WeakReference, the garbage collector still reclaims the object, but places the weak reference that led to it into a queue. The operations of the WeakHashMap periodically check that queue for newly arrived weak references. The arrival of a weak reference in the queue signifies that the key was no longer used by anyone and has been collected. The WeakHashMap then removes the associated entry.
+Here are the inner workings of this mechanism. The WeakHashMap uses `weak references` to hold keys. A `WeakReference` object holds a reference to another object—in our case, a hash table key. Objects of this type are treated in a special way by the garbage collector. Normally, if the garbage collector finds that a particular object has no references to it, it simply reclaims the object. However, if the object is reachable only by a WeakReference, the garbage collector still reclaims the object, but places the weak reference that led to it into a queue. The operations of the WeakHashMap periodically check that queue for newly arrived weak references. The arrival of a weak reference in the queue signifies that the key was no longer used by anyone and has been collected. The WeakHashMap then removes the associated entry. See more [here](http://www.onjava.com/pub/a/onjava/2001/07/09/optimization.html?page=2).  
 
 HashMap                      | WeakHashMap
 -----------------------------|-------------------
@@ -1126,8 +1204,7 @@ The value is referenced directly by the HashMap. | The value is referenced direc
 The key is not garbage collectable, since the map contains a strong reference to the key. The key could be obtained by iterating over the keys of the HashMap. | The key is garbage collectable, as nothing else in the application refers to it, and the WeakReference only holds the key weakly. Iterating over the keys of the WeakHashMap might obtain the key, but might not, if the key has been garbage collected.
 The value is similarly not garbage collectable. | The value is not directly garbage collectable. However, when the key is collected by the garbage collector, the WeakReference object is subsequently removed from the WeakHashMap as a key, thus making the value garbage collectable too.
 
-http://www.onjava.com/pub/a/onjava/2001/07/09/optimization.html?page=2
-Sample:
+WeakHashMap Sample:  
 ```java
 public static void main(String[] args) {
     try {
@@ -1164,13 +1241,13 @@ private static void testWeakHashMap() throws InterruptedException {
     System.out.println(whm.size()); // 0, the only item has been garbage collected
 }
 ```
-9.3.5 Linked Hash Sets and Maps
+#### 9.3.5 Linked Hash Sets and Maps
 Insertion Order, Access Order.  
-Syntax
+Syntax:
 ```java
 LinkedHashMap<K, V>(initialCapacity, loadFactor, true)
 ```
-Samples
+Samples:
 ```java
 public static void main(String[] args) {
     testInsertionOrder();
@@ -1223,7 +1300,7 @@ Keys1:[1, 2, 3, 4]
 Keys2:[1, 2, 4, 3]
 Keys3:[2, 4, 3, 1]
 ```
-9.3.6 Enumeration Sets and Maps
+#### 9.3.6 Enumeration Sets and Maps
 ```java
 import java.util.EnumSet;
 
@@ -1243,7 +1320,7 @@ public class EnumerationSetAndMapDemo {
     }
 }
 ```
-9.3.7 Identity Hash Maps
+#### 9.3.7 Identity Hash Maps
 The hash values for the keys should not be computed by the `hashCode` method but by the `System.identityHashCode` method. That’s the method that Object.hashCode uses to compute a hash code from the object’s memory address. Also, for comparison of objects, the IdentityHashMap uses `==`, not `equals`.
 ```java
 // HashMap
@@ -1263,8 +1340,8 @@ ihm.put(new String("ihmkey"),"ihmvalue1"); // same key but different value
 System.out.println("Size of IdentityHashMap--"+ihm.size());  // 2
 ```
 It is faster and uses less memory than HashMap or TreeMap.
-9.4 Views and Wrappers
-9.4.1 Lightweight Collection Wrappers
+### 9.4 Views and Wrappers
+#### 9.4.1 Lightweight Collection Wrappers
 The returned object by `Arrays.asList` is not an ArrayList.  
 All methods that would change the size of the array (such as the add and remove methods of the associated iterator) throw an UnsupportedOperationException.
 ```java
@@ -1317,7 +1394,7 @@ numList2 after removal of 1 with singleton:[2, 4, 2, 2, 3, 3, 4, 3, 3]
 numList2 after removal of 4 with singleton:[2, 2, 2, 3, 3, 3, 3]
 numList2 after removal of 3 with singleton: [2, 2, 2]
 ```
-9.4.2 Subranges
+#### 9.4.2 Subranges
 The first index is inclusive, the second exclusive—just like the parameters for the substring operation of the String class.
 ```java
 // list
@@ -1335,7 +1412,7 @@ NavigableSet<E> subSet(E from, boolean fromInclusive, E to, boolean toInclusive)
 NavigableSet<E> headSet(E to, boolean toInclusive)
 NavigableSet<E> tailSet(E from, boolean fromInclusive)
 ```
-9.4.3 Unmodi able Views
+#### 9.4.3 Unmodi able Views
 ```java
 Collections.unmodifiableCollection
 Collections.unmodifiableList
@@ -1351,11 +1428,11 @@ Create a untouchable list.
 List<Card> cardList = new LinkedList<>();
 List<Card> unml = Collections.unmodifiableList(cardList);
 ```
-9.4.4 Synchronized Views
+#### 9.4.4 Synchronized Views
 ```java
 Map<String, Employee> map = Collections.synchronizedMap(new HashMap<String, Employee>());
 ```
-9.4.5 Checked Views
+#### 9.4.5 Checked Views
 Use `Collections.checkedList` to create a safe list.
 ```java
 // Example 1
@@ -1375,23 +1452,24 @@ List chkList = Collections.checkedList(myList, String.class);
 System.out.println("Checked list content: "+chkList); // [one, two, three, four, 10]
 chkList.add(10); //throws java.lang.ClassCastException: Attempt to insert class java.lang.Integer element into collection with element type class java.lang.String
 ```
-9.5.1 Sorting and Shuffling
+### 9.5 Algorithms
+#### 9.5.1 Sorting and Shuffling
 ```java
 Collections.sort(cards);
 Collections.shuffle(cards);
 ```
-9.5.2 Binary Search
+#### 9.5.2 Binary Search
 ```java
 i = Collections.binarySearch(c, element);
 i = Collections.binarySearch(c, element, comparator);
 ```
-9.5.3 Simple Algorithms
+#### 9.5.3 Simple Algorithms
 ```java
 Collections.replaceAll("C++", "Java");
 words.removeIf(w -> w.length() <= 3);
 words.replaceAll(String::toLowerCase);
 ```
-9.5.4 Bulk Operations
+#### 9.5.4 Bulk Operations
 ```java
 coll1.removeAll(coll2); // removes all elements from coll1 that are present in coll2
 coll1.retainAll(coll2); // removes all elements from coll1 that are not present in coll2
@@ -1406,7 +1484,7 @@ Set<String> result = new HashSet<>(listA);
 result.retainAll(listB);
 System.out.println(result); // [Mike, Cindy]
 ````
-9.5.5 Converting between Collections and Arrays
+#### 9.5.5 Converting between Collections and Arrays
 ```java
 // convert array to hashset
 String[] values = new String[10];
@@ -1422,7 +1500,7 @@ String[] values = staff.toArray(new String[0]);
 // or
 String[] values = staff.toArray(new String[staff.size()]);
 ````
-9.5.6 Writing Your Own Algorithms
+#### 9.5.6 Writing Your Own Algorithms
 If you write your own algorithm (or, in fact, any method that has a collection as a parameter), you should work with interfaces, not concrete implementations, whenever possible.
 ```java
 // using concrete class, bad
@@ -1438,12 +1516,11 @@ void fillMenu(JMenu menu, Collection<JMenuItem> items) {
     }
 }
 ```
-9.6 Legacy Collections  
+### 9.6 Legacy Collections  
 Legacy classes in the collections framework
 ![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/legacycollections.png){:width="800px"}  
-
-9.6.1 TheHashtableClass  
-Hashtable, HashMap, ConcurrentHashMap.
+#### 9.6.1 The Hashtable Class  
+Hashtable, HashMap, ConcurrentHashMap. See more about [What's the difference between ConcurrentHashMap and Collections.synchronizedMap(Map)?](https://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap)
 
   Property         | HashMap        | Hashtable            | ConcurrentHashMap |  
 -------------------|----------------|----------------------|-------------------|--
@@ -1452,8 +1529,7 @@ Hashtable, HashMap, ConcurrentHashMap.
  Lock mechanism    | not applicable | locks the whole map  | locks the portion |  
  Iterator          | fail-fast      | fail-fast            | weakly consistent |  
 
-https://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
-9.6.2 Enumerations
+#### 9.6.2 Enumerations
 Interface.
 ```java
 public interface Enumeration<E> {
@@ -1470,9 +1546,15 @@ while (e.hasMoreElements())
     ...
 }
 ```
-9.6.4 Stacks
+#### 9.6.3 Property Maps
+A `property map` is a map structure of a very special type. It has three particular characteristics:
+* The keys and values are strings.
+* The table can be saved to a file and loaded from a file.
+* A secondary table for defaults is used.
+
+#### 9.6.4 Stacks
 push, pop, peek, empty.
-9.6.5 Bit Sets
+#### 9.6.5 Bit Sets
 ```java
 public static void main(String args[]) {
     BitSet bits1 = new BitSet(16);
@@ -1528,16 +1610,16 @@ bits2 OR bits1:
 bits2 XOR bits1:
 0,{}
 ```
-## CHAPTER 10 Graphics Programming
+## 10. Graphics Programming
 Skipped.
-## CHAPTER 11 Event Handling
+## 11. Event Handling
 Skipped.
-## CHAPTER 12 User Interface Components with Swing
+## 12. User Interface Components with Swing
 Skipped.
-## CHAPTER 13 Deploying Java Applications
-13.1 JAR Files
+## 13. Deploying Java Applications
+### 13.1 JAR Files
 A Java Archive(JAR) file can contain both class files and other file types such as image and sound files. Moreover, JAR files are compressed, using the familiar ZIP compression format.
-13.1.1 Creating JAR files
+#### 13.1.1 Creating JAR files
 ```sh
 // syntax
 jar options File1 File2 . . .
@@ -1545,13 +1627,13 @@ jar options File1 File2 . . .
 jar cvf CalculatorClasses.jar *.class icon.gif
 ```
 The options are similar to the options of the UNIX `tar` command.
-13.1.2 The Manifest
+#### 13.1.2 The Manifest
 MANIFEST.MF, META-INF subdirectory, main section  
 Make a new JAR file with a manifest.
 ```sh
 jar cfm MyArchive.jar manifest.mf com/mycompany/mypkg/*.class
 ```
-13.1.3 Executable JAR Files
+#### 13.1.3 Executable JAR Files
 Create an executable JAR file. Need to add `e` option and specify the entry point main class.
 ```sh
 jar cvfe MyProgram.jar com.mycompany.mypkg.MainAppClass com/mycompany/mypkg/*.class
@@ -1564,7 +1646,7 @@ Start the program.
 ```sh
 java -jar MyProgram.jar
 ```
-13.1.4 Resources  
+#### 13.1.4 Resources  
 getResource,
 ```java
 // Get image
@@ -1579,7 +1661,7 @@ Pacakge.
 ```sh
 jar cvfm ResourceTest.jar resource/ResourceTest.mf resource/*.class resource/*.gif resource/*.txt
 ```
-13.1.5 Sealing
+#### 13.1.5 Sealing
 ```manifest
 Name: com/mycompany/util/
 Sealed: true
@@ -1588,8 +1670,8 @@ then, package.
 ```sh
 jar cvfm MyArchive.jar manifest.mf *.class
 ```
-13.2 Storage of Application Preferences
-13.2.1 Property Maps
+### 13.2 Storage of Application Preferences
+#### 13.2.1 Property Maps
 A `property map` is a data structure that stores key/value pairs. Property maps are often used for storing configuration information. Property maps have three particular characteristics:
 * The keys and values are strings.
 * The map can easily be saved to a file and loaded from a file.
@@ -1620,7 +1702,7 @@ settings.load(in);
 // Get with default value in case property doesn't exist.
 String title = settings.getProperty("title", "Default title");
 ```
-13.2.2 The Preferences API
+#### 13.2.2 The Preferences API
 ```java
 // user root
 Preferences root = Preferences.userRoot();
@@ -1658,9 +1740,10 @@ Sample preference file.
    </root>
 </preferences>
 ```
-13.3 Service Loaders
+### 13.3 Service Loaders
 The ServiceLoader class makes it easy to load plug-ins that conform to a common interface.
-## CHAPTER 14 Concurrency
+## 14. Concurrency
+### 14.1 What Are Threads?
 Runnable interface
 ```java
 public interface Runnable {
@@ -1682,7 +1765,7 @@ class MyThread extends Thread {
     }
 }
 ```
-14.2 Interrupting Threads  
+### 14.2 Interrupting Threads  
 ```java
 Runnable r = () -> {
     try
@@ -1704,7 +1787,7 @@ Runnable r = () -> {
     // exiting the run method terminates the thread
 };
 ```
-14.3 Thread States
+### 14.3 Thread States
 Threads can be in one of six states:
 * New
 * Runnable
@@ -1713,27 +1796,28 @@ Threads can be in one of six states:
 * Timed waiting
 
 ![image](/public/notes/core-java-volume-i-fundamentals-10th-edition/threadstate.png){:width="800px"}  
-preemptive scheduling, cooperative scheduling
-
+#### 14.3.2 Runnable Threads
+preemptive scheduling, cooperative scheduling  
 Always keep in mind that a runnable thread may or may not be running at any given time. (This is why the state is called “runnable” and not “running”.)
-14.3.4 Terminated Threads
+#### 14.3.3 Blocked and Waiting Threads
+#### 14.3.4 Terminated Threads
 A thread is terminated for one of two reasons:
 * It dies a natural death because the run method exits normally.
 * It dies abruptly because an uncaught exception terminates the run method.
 
-14.4 Thread Properties
-14.4.1 Thread Priorities
+### 14.4 Thread Properties
+#### 14.4.1 Thread Priorities
 MIN_PRIORITY (defined as 1 in the Thread class) and MAX_PRIORITY (defined as 10). NORM_PRIORITY is defined as 5.
 Thread priorities are `highly system dependent`. When the virtual machine relies on the thread implementation of the host platform, the Java thread priorities are mapped to the priority levels of the host platform, which may have more or fewer thread priority levels. For example, Windows has seven priority levels. Some of the Java priorities will map to the same operating system level. In the Oracle JVM for Linux, thread priorities are ignored altogether—all threads have the same priority.
-14.4.2 Daemon Threads  
+#### 14.4.2 Daemon Threads  
 A daemon is simply a thread that has no other role in life than to serve others. Examples are timer threads that send regular “timer ticks” to other threads or threads that clean up stale cache entries.
 ```java
 t.setDaemon(true);
 ```
-14.4.3 Handlers for Uncaught Exceptions
+#### 14.4.3 Handlers for Uncaught Exceptions
 Thread.UncaughtExceptionHandler
-14.5 Synchronization
-14.5.3 Lock Objects
+### 14.5 Synchronization
+#### 14.5.3 Lock Objects
 synchronized, ReentrantLock
 ```java
 Lock myLock = new ReentrantLock(); // ReentrantLock implements the Lock interface
@@ -1746,7 +1830,7 @@ finally {
     myLock.unlock(); // make sure the lock is unlocked even if an exception is thrown
 }
 ```
-14.5.4 Condition Objects
+#### 14.5.4 Condition Objects
 await, signalAll, or signal
 ```java
 private Condition sufficientFunds = bankLock.newCondition();
@@ -1768,7 +1852,7 @@ public void transfer(int from, int to, int amount)
     }
 }
 ```
-14.5.5 The synchronized Keyword
+#### 14.5.5 The synchronized Keyword
 ```java
 public synchronized void method()
 {
@@ -1809,7 +1893,7 @@ class Bank {
 }
 ```
 Each object has an intrinsic lock, and the lock has an intrinsic condition. The lock manages the threads that try to enter a `synchronized` method. The condition manages the threads that have called `wait`.
-14.5.6 Synchronized Blocks
+#### 14.5.6 Synchronized Blocks
 ```java
 public void transfer(int from, int to, int amount) {
     synchronized (lock) // an ad-hoc lock
@@ -1819,7 +1903,7 @@ public void transfer(int from, int to, int amount) {
     }
 }
 ```
-14.5.7 The Monitor Concept
+#### 14.5.7 The Monitor Concept
 In the terminology of Java, a monitor has these properties:
 * A monitor is a class with only private fields.
 * Each object of that class has an associated lock.
@@ -1833,7 +1917,7 @@ However, a Java object differs from a monitor in three important ways, compromis
 * Methods are not required to be synchronized.
 * The intrinsic lock is available to clients.
 
-14.5.8 Volatile Fields
+#### 14.5.8 Volatile Fields
 ```java
 private volatile boolean done;
 public boolean isDone() { return done; }
@@ -1843,12 +1927,12 @@ Volatile variables do not provide any atomicity. For example, the method is not 
 ```java
 public void flipDone() { done = !done; } // not atomic
 ```
-14.5.9 Final Variables
+#### 14.5.9 Final Variables
 `final` guarantees that other threads would see the updated value of accounts. Of course, the operations on the map are not thread safe. If multiple threads mutate and read the map, you still need synchronization.
 ```java
 final Map<String, Double> accounts = new HashMap<>();
 ```
-14.5.10 Atomics
+#### 14.5.10 Atomics
 tomicInteger, AtomicIntegerArray, AtomicIntegerFieldUpdater, AtomicLongArray, AtomicLongFieldUpdater, AtomicReference, AtomicReferenceArray, and AtomicReferenceFieldUpdater.
 ```java
 do{
@@ -1862,8 +1946,8 @@ largest.updateAndGet(x -> Math.max(x, observed));
 largest.accumulateAndGet(observed, Math::max);
 ```
 LongAdder, LongAccumulator, DoubleAdder, DoubleAccumulator
-14.5.11 Deadlocks
-14.5.12 Thread-Local Variables
+#### 14.5.11 Deadlocks
+#### 14.5.12 Thread-Local Variables
 `ThreadLocal`
 ```java
 // construct one instance per thread
@@ -1872,7 +1956,7 @@ ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd"));
 // access the actual formatter
 String dateStamp = dateFormat.get().format(new Date());
 ```
-14.5.13 Lock Testing and Timeouts
+#### 14.5.13 Lock Testing and Timeouts
 ```java
 if (myLock.tryLock(100, TimeUnit.MILLISECONDS)) {
     // now the thread owns the lock
@@ -1885,7 +1969,7 @@ else {
 
 myCondition.await(100, TimeUnit.MILLISECONDS))
 ```
-14.5.14 Read/Write Locks
+#### 14.5.14 Read/Write Locks
 The `java.util.concurrent.locks` package defines two lock classes, the `ReentrantLock` that we already discussed and the `ReentrantReadWriteLock`. The latter is useful when there are many threads that read from a data structure and fewer threads that modify it.
 ```java
 // Construct a ReentrantReadWriteLock object:
@@ -1906,7 +1990,7 @@ public void transfer(. . .) {
     finally { writeLock.unlock(); }
 }
 ```
-14.5.15 Why the stop and suspend Methods Are Deprecated
+#### 14.5.15 Why the stop and suspend Methods Are Deprecated
 `stop`: This method terminates all pending methods, including the run method. When a thread is stopped, it immediately gives up the locks on all objects that it has locked. This can leave objects in an inconsistent state. `Object is damaged.`  
 `suspend`: Unlike stop, suspend won’t damage objects. However, if you suspend a thread that owns a lock, then the lock is unavailable until the thread is resumed. If the thread that calls the suspend method tries to acquire the same lock, the program `deadlocks`: The suspended thread waits to be resumed, and the suspending thread waits for the lock.
 14.6 Blocking Queues  
@@ -1930,8 +2014,8 @@ boolean success = q.offer(x, 100, TimeUnit.MILLISECONDS);
 Object head = q.poll(100, TimeUnit.MILLISECONDS);
 ```
 LinkedBlockingQueue, ArrayBlockingQueue, DelayQueue, PriorityBlockingQueue.
-14.7 Thread-Safe Collections
-14.7.1 Efficient Maps, Sets, and Queues
+### 14.7 Thread-Safe Collections
+#### 14.7.1 Efficient Maps, Sets, and Queues
 ConcurrentHashMap, ConcurrentSkipListMap, ConcurrentSkipListSet, and ConcurrentLinkedQueue.
 
 The collections return `weakly consistent` iterators. That means that the iterators may or may not reflect all modifications that are made after they were constructed, but they will not return a value twice and they will not throw a ConcurrentModificationException.
@@ -1940,7 +2024,7 @@ The concurrent hash map can efficiently support a large number of readers and a 
 
 As of Java SE 8, the concurrent hash map organizes the buckets as trees, not lists, when the key type implements Comparable, guaranteeing O(log(n)) performance.
 
-14.7.2 Atomic Update of Map Entries
+#### 14.7.2 Atomic Update of Map Entries
 ```java
 ConcurrentHashMap<String, Long> map = new ConcurrentHashMap<>();
 Long oldValue = map.get(word);
@@ -1965,7 +2049,7 @@ map.get(word).increment();
 // or
 map.compute(word, (k, v) -> v == null ? 1 : v + 1);
 ```
-14.7.3 Bulk Operations on Concurrent Hash Maps
+#### 14.7.3 Bulk Operations on Concurrent Hash Maps
 There are three kinds of operations:
 * `search` applies a function to each key and/or value, until the function yields a non-null result. Then the search terminates and the function’s result is returned.
 * `reduce` combines all keys and/or values, using a provided accumulation function.
@@ -1992,7 +2076,7 @@ map.forEach(threshold,
 (k, v) -> k + " -> " + v, // Transformer
 System.out::println); // Consumer
 ```
-14.7.4 Concurrent Set Views
+#### 14.7.4 Concurrent Set Views
 There is no `ConcurrentHashSet` class. Instead, you can create concurrent set with map.
 ```java
 // Prior to Java 8
@@ -2000,23 +2084,23 @@ Set<String> mySet = Collections.newSetFromMap(new ConcurrentHashMap<String, Bool
 // In Java 8
 Set<String> myConcurrentSet = ConcurrentHashMap.<String>newKeySet();
 ```
-14.7.5 Copy on Write Arrays
+#### 14.7.5 Copy on Write Arrays
 CopyOnWriteArrayList, CopyOnWriteArraySet
-14.7.6 Parallel Array Algorithms
+#### 14.7.6 Parallel Array Algorithms
 ```java
 String contents = new String(Files.readAllBytes(
     Paths.get("alice.txt")), StandardCharsets.UTF_8); // Read file into string
 String[] words = contents.split("[\\P{L}]+"); // Split along nonletters
 Arrays.parallelSort(words);
 ```
-14.7.7 Older Thread-Safe Collections
+#### 14.7.7 Older Thread-Safe Collections
 Vector and Hashtable are replaced by ArrayList and HashMap classes.
 Any collection class can be made thread safe by means of a `synchronization wrapper`:
 ```java
 List<E> synchArrayList = Collections.synchronizedList(new ArrayList<E>());
 Map<K, V> synchHashMap = Collections.synchronizedMap(new HashMap<K, V>());
 ```
-14.8 Callables and Futures
+### 14.8 Callables and Futures
 A `Runnable` encapsulates a task that runs asynchronously; you can think of it as an asynchronous method with no parameters and no return value. A `Callable` is similar to a Runnable, but it returns a value. The Callable interface is a parameterized type, with a single method `call`.
 ```java
 public interface Callable<V>
@@ -2036,7 +2120,7 @@ public interface Future<V>
     boolean isDone();
 }
 ```
-14.9 Executors
+### 14.9 Executors
 If your program creates a large number of short-lived threads, it should use a `thread pool` instead.
 Executors Factory Methods
 
@@ -2048,12 +2132,13 @@ newSingleThreadExecutor          | A “pool” with a single thread that execut
 newScheduledThreadPool           | A fixed-thread pool for scheduled execution; a replacement for java.util.Timer.
 newSingleThreadScheduledExecutor | A single-thread “pool” for scheduled execution.
 
-14.9.1 Thread Pools
+#### 14.9.1 Thread Pools
 Here, in summary, is what you do to use a thread pool:
 1. Call the static newCachedThreadPool or newFixedThreadPool method of the Executors class.
 2. Call submit to submit Runnable or Callable objects.
 3. If you want to be able to cancel a task, or if you submit Callable objects, hang on to the returned Future objects.
 4. Call shutdown when you no longer want to submit any tasks.
+
 ```java
 public static void main(String... args) throws InterruptedException, ExecutionException{
     //creates cached thread pool
@@ -2111,7 +2196,7 @@ call:4
 5
 false
 ```
-14.9.3 Controlling Groups of Tasks
+#### 14.9.3 Controlling Groups of Tasks
 ```java
 List<Callable<T>> tasks = . . .;
 List<Future<T>> results = executor.invokeAll(tasks); // A disadvantage of this approach is that you may wait needlessly if the first task happens to take a long time
@@ -2129,7 +2214,7 @@ for (int i = 0; i < tasks.size(); i++) {
 }
 
 ```
-14.9.4 The Fork-Join Framework
+#### 14.9.4 The Fork-Join Framework
 RecursiveTask<T>, RecursiveAction
 Create an array with random numbers. Counter how many numbers are larger than 0.5.
 ```java
@@ -2183,12 +2268,12 @@ static class Counter extends RecursiveTask<Integer> {
     }
 }
 ```
-14.9.5 Completable Futures
+#### 14.9.5 Completable Futures
 ```java
 CompletableFuture<String> contents = readPage(url);
 CompletableFuture<List<URL>> links = contents.thenApply(Parser::getLinks); // only call the getLinks method when contents are available.
 ```
-14.10 Synchronizers
+### 14.10 Synchronizers
 
 Class            | What It Does | Notes
 -----------------|--------------|-----------------------------------------------
@@ -2199,9 +2284,9 @@ Exchanger        | Allows two threads to exchange objects when both are ready fo
 Semaphore        | Allows a set of threads to wait until permits are available for proceeding.  | Use to restrict the total number of threads that can access a resource. If the permit count is one, use to block threads until another thread gives permission.
 SynchronousQueue | Allows a thread to hand off an object to another thread. | Use to send an object from one thread to another when both are ready, without explicit synchronization.
 
-14.10.1 Semaphores
-14.11 Threads and Swing
+#### 14.10.1 Semaphores
+### 14.11 Threads and Swing
 Skipped.
 
-Reference:
-Java Home at Oracle: http://www.oracle.com/technetwork/java/index.html
+## Reference:
+* [Java Home at Oracle](http://www.oracle.com/technetwork/java/index.html)
