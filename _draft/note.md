@@ -52,3 +52,5 @@ for(int i = 0; i < someArray.length; i++) {
    System.out.println(someArray[i]);
 }
 ```
+
+Use `compareTo` method instead of 'equals' to compare two BigDecimal variables. Consider x = new BigDecimal("1.0") and y = new BigDecimal("1.00"). Then x.equals(y) is false because the numbers differ in precision.

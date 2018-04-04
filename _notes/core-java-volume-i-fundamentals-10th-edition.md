@@ -147,7 +147,7 @@ Then all instructions inside the main method will use strict floating-point comp
 
 The methods in the `Math` class use the routines in the computer’s floating- point unit for fastest performance. If completely predictable results are more important than performance, use the `StrictMath` class instead.
 
-### 3.5.3 Casts
+#### 3.5.3 Casts
 ```java
 double x = 9.997;
 int nx = (int) x; // nx = 9;
@@ -161,14 +161,14 @@ int a=2*++m; //now a is 16, m is 8
 int b=2*n++; //now b is 14, n is 8
 ```
 
-### 3.6.6 Code Points and Code Units
+#### 3.6.6 Code Points and Code Units
 ```java
 String greeting = "Hello";
 int n = greeting.length(); // is 5.
 int cpCount = greeting.codePointCount(0, greeting.length());
 ```
 
-StringBuilder, StringBuffer
+StringBuilder, StringBuffer  
 Input, Scanner
 ```java
 import java.util.*;
@@ -213,7 +213,6 @@ public class PasswordTest {
         } catch(Exception ex) {
              ex.printStackTrace();
         }
-
     }
 }
 ```
@@ -230,7 +229,7 @@ If you run this program in Eclipse IDE through Run As-> Java Application, `Syste
 ](https://stackoverflow.com/questions/8969990/system-console-returns-null-from-eclipse-but-fine-with-command-prompt).
 It's bug of Eclipse, https://bugs.eclipse.org/bugs/show_bug.cgi?id=122429.
 
-### 3.7.3 File Input and Output
+#### 3.7.3 File Input and Output
 Read
 ```java
 Scanner in = new Scanner(Paths.get("myfile.txt"), "UTF-8");
@@ -239,8 +238,8 @@ Write
 ```java
 PrintWriter out = new PrintWriter("myfile.txt", "UTF-8");
 ```
-
-### 3.8.4 Determinate Loops
+### 3.8 Control Flow
+#### 3.8.4 Determinate Loops
 Caution: For loop may never end when using floating-point numbers for comparison.
 ```java
 public class DoubleLoop {
@@ -284,7 +283,6 @@ BigInteger c = a.add(b); // c = a + b
 BigInteger d = c.multiply(b.add(BigInteger.valueOf(2))); // d = c * (b + 2)
 ```
 
-
 Increase the size of an array with `Arrays.copyOf`.
 ```java
 int[] arr = new int[3];
@@ -293,20 +291,24 @@ arr = Arrays.copyOf(arr, 2 * arr.length);
 
 ## 4. Objects and Classes
 Procedural vs. OO programming  
-Encapsulation, Inheritance, Polymorphism
-
+### 4.1 Introduction to Object-Oriented Programming
+OOP
+* Encapsulation
+* Inheritance
+* Polymorphism
 
 The most common relationships between classes are:
 * Dependence (“uses–a”)
 * Aggregation (“has–a”)
 * Inheritance (“is–a”)
 
+### 4.2 Using Predefined Classes
 The expression new Date() makes an object of type Date, and its value is a reference to that newly created object. That reference is then stored in the deadline variable.
 ```java
 Date deadline = new Date();
 ```
-
-`Constructor`
+### 4.3 Defining Your Own Classes
+`Constructor` has following features.
 * A constructor has the same name as the class.
 * A class can have more than one constructor.
 * A constructor can take zero, one, or more parameters.
@@ -370,8 +372,7 @@ class Employee {
 
 }
 ```
-
-Method Parameters  
+### 4.5 Method Parameters
 The term `call by value` means that the method gets just the value that the caller provides. In contrast, `call by reference` means that the method gets the location of the variable that the caller provides. The Java programming language `always` uses call by value. That means that the method gets a copy of all parameter values.
 
 Here is a summary of what you can and cannot do with method parameters in Java:
@@ -430,8 +431,9 @@ exit(0); // i.e., System.exit
 ```
 
 ## 5. Inheritance
+### 5.1 Classes, Superclasses, and Subclasses
 Java does not support multiple inheritance.
-5.1.9 Abstract Classes
+#### 5.1.9 Abstract Classes
 A class with one or more abstract methods must itself be declared abstract.
 ```java
 public abstract class Person {
@@ -450,8 +452,10 @@ Here is a summary of the four access modifiers in Java that control visibility:
 * Visible to the package and all subclasses (protected).
 * Visible to the package—the (unfortunate) default. No modifiers are needed.
 
-5.2 Object: The Cosmic Superclass
-The `equals` method  
+### 5.2 Object: The Cosmic Superclass
+#### 5.2.1 The equals Method
+The `equals` method in the `Object` class tests whether one object is considered equal to another. The equals method, as implemented in the Object class, determines whether two object references are identical.
+#### 5.2.2 Equality Testing and Inheritance
 The Java Language Specification requires that the `equals` method has the following properties:
 * It is `reflexive`: For any non-null reference x, x.equals(x) should return true.
 * It is `symmetric`: For any references x and y, x.equals(y) should return true if and
@@ -484,7 +488,7 @@ if (!(otherObject instanceof ClassName)) return false;
 
 5. Cast otherObject to a variable of your class type:
 ```java
- ClassName other \= (ClassName) otherObject
+ClassName other = (ClassName) otherObject;
 ```
 6. Now compare the fields, as required by your notion of equality. Use == for primitive type fields, Objects.equals for object fields. Return true if all fields match, false otherwise.
 ```java
@@ -492,6 +496,7 @@ return field1 == other.field1
 && Objects.equals(field2, other.field2)
 &&...;
 ```
+
 If you redefine equals in a subclass, include a call to super.equals(other).
 
 Wrong
@@ -509,9 +514,8 @@ public class Employee {
     }
 }
 ```
-
-5.2.3 The hashCode Method
-The String class uses the following algorithm to compute the hash code:
+#### 5.2.3 The hashCode Method
+A hash code is an integer that is derived from an object. The `String` class uses the following algorithm to compute the hash code:
 ```java
 int hash = 0;
 for (int i = 0; i < length(); i++) {
@@ -527,7 +531,7 @@ String t = new String("Ok");
 StringBuilder tb = new StringBuilder(t);
 System.out.println(t.hashCode() + " " + tb.hashCode()); // t=2556, tb=20527144
 ```
-Note that the strings s and t have the same hash code because, `for strings, the hash codes are derived from their contents`. The string builders sb and tb have different hash codes because no hashCode method has been de ned for the StringBuilder class and the default hashCode method in the Object class derives `the hash code from the object’s memory address`.
+Note that the strings s and t have the same hash code because, `for strings, the hash codes are derived from their contents`. The string builders sb and tb have different hash codes because no hashCode method has been defined for the StringBuilder class and the default hashCode method in the Object class derives `the hash code from the object’s memory address`.
 
 If you redefine the equals method, you will also need to redefine the hashCode method for objects.
 ```java
@@ -548,7 +552,7 @@ public class Employee {
 }
 ```
 Your definitions of `equals` and `hashCode` must be compatible: If x.equals(y) is true, then x.hashCode() must return the same value as y.hashCode().
-5.2.4 The toString Method
+#### 5.2.4 The toString Method
 `toString` method returns a string representing the value of this object.
 ```java
 public String toString() {
@@ -563,26 +567,39 @@ System.out.println(p); // java.awt.Point[x=10,y=20], toString() has been overrid
 
 System.out.println(System.out) // java.io.PrintStream@2f6684, toString() hasn't been overrided
 ```
-
-5.3 Generic Array Lists
-Initial the capacity.
+### 5.3 Generic Array Lists
+Initial the capacity. The first 100 calls to add will not involve any costly reallocation.
 ```java
 ArrayList<Employee> staff = new ArrayList<>();
 staff.ensureCapacity(100);
 
-//or
+// or
 ArrayList<Employee> staff = new ArrayList<>(100);
 ```
-The first 100 calls to add will not involve any costly reallocation.
-
-5.4 Object Wrappers and Autoboxing
-Boxing: Convert primary type to object type.
+### 5.4 Object Wrappers and Autoboxing
+Boxing: Convert primary type to object type.  
 Unboxing: Convert object type to primary type.
+### 5.5 Methods with a Variable Number of Parameters
+```java
+// printf is a “varargs” method
+System.out.printf("%d %s", n, "widgets");  
 
-5.7 Reflection
+// definition of printf
+public class PrintStream {
+    public PrintStream printf(String fmt, Object... args) // variable number of parameters
+    {
+        return format(fmt, args);
+    }
+}
+```
+### 5.6 Enumeration Classes
+```java
+public enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };
+```
+### 5.7 Reflection
 'getClass', 'getName'
 ```java
-Employee e;
+Employee e = new Employee("Harry Hacker");
 System.out.println(e.getClass().getName() + " " + e.getName()); // Employee Harry Hacker
 ```
 Use `newInstance` to create a new instance of the same class type as object.
@@ -607,8 +624,7 @@ f.setAccessible(true);
 Object v = f.get(harry);
 // the value of the name field of the harry object, i.e., the String object "Harry Hacker"
 ```
-
-5.7.6 Invoking Arbitrary Methods
+#### 5.7.6 Invoking Arbitrary Methods
 ```java
 Employee harry = new Employee("Harry Hacker", 35000, 10, 1, 1989);
 Method m1 = Employee.class.getMethod("getName");
