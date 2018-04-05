@@ -15,7 +15,7 @@ Summary:
 * The Linux operating system is written in the C programming language.
 * Linux uses GNU tools, a set of freely available standard tools for handling the operating system.
 
-## Chapter 1. What is Linux?
+## 1. What is Linux?
 Terminology:
 * `UNIX`: Invented by Bell Labs to solve compatibility issues on software.
 * `Linus`: Linus Torvalds, from university of Helsinki, Finland
@@ -34,7 +34,7 @@ Terminology:
 
 A list of common GNU software:
 * Bash: The GNU shell
-*  GCC: The GNU C Compiler
+* GCC: The GNU C Compiler
 * GDB: The GNU Debugger
 * coreutils: a set of basic UNIX−style utilities, such as ls, cat and chmod
 * Findutils: to search and find files
@@ -49,60 +49,62 @@ processing.
 * GNU SQL: relational database system
 * Radius: a remote authentication and accounting server
 
-## Chapter 2. Quickstart
+## 2. Quickstart
+### 2.1. Logging in, activating the user interface and logging out
 Terminal Window, Command Prompt
-
+### 2.2. Absolute basics
 ```
 [user@host dir]
 ```
 In the above example, user will be your login name, hosts the name of the machine you are working on, and dir an indication of your current location in the file system.
 
- Key or key combination |  Function
+Key or key combination  |  Function
 ------------------------|----------------------------------
- `Ctrl+A` | Move cursor to the beginning of the command line.
- `Ctrl+C` | End a running program and return the prompt.
- `Ctrl+D` | Log out of the current shell session, equal to typing exit or logout.
- `Ctrl+E` | Move cursor to the end of the command line.
- `Ctrl+H` | Generate backspace character.
- `Ctrl+L` | Clear this terminal.
- `Ctrl+R` | Search command history.
- `Ctrl+Z` | Suspend a program.
- `ArrowLeft and ArrowRight` | Move the cursor one place to the left or right on the command line, so that you can insert characters at other places than just at the beginning and the end.
- `ArrowUp and ArrowDown` | Browse history. Go to the line that you want to repeat, eventually edit details, and press Enter to save time.
- `Shift+PageUp and Shift+PageDown` | Browse terminal buffer (to see text that has "scrolled off" the screen).
- `Tab` |  Command or filename completion; when multiple choices are possible, the system will either signal with an audio or visual bell, or, if too many choices are possible, ask you if you want to see them all.
- `Tab Tab` |  Shows file or command completion possibilities.
+`Ctrl+A`  | Move cursor to the beginning of the command line.
+`Ctrl+C`  | End a running program and return the prompt.
+`Ctrl+D`  | Log out of the current shell session, equal to typing exit or logout.
+`Ctrl+E`  | Move cursor to the end of the command line.
+`Ctrl+H`  | Generate backspace character.
+`Ctrl+L`  | Clear this terminal.
+`Ctrl+R`  | Search command history.
+`Ctrl+Z`  | Suspend a program.
+`ArrowLeft and ArrowRight` | Move the cursor one place to the left or right on the command line, so that you can insert characters at other places than just at the beginning and the end.
+`ArrowUp and ArrowDown` | Browse history. Go to the line that you want to repeat, eventually edit details, and press Enter to save time.
+`Shift+PageUp and Shift+PageDown` | Browse terminal buffer (to see text that has "scrolled off" the screen).
+`Tab`     |  Command or filename completion; when multiple choices are possible, the system will either signal with an audio or visual bell, or, if too many choices are possible, ask you if you want to see them all.
+`Tab Tab` |  Shows file or command completion possibilities.
 
-Get help
-The man pages
+### 2.3. Getting help
+#### 2.3.2. The man pages
+Find official manual pages with `man` command.
 ```sh
 man man
 man ls
 ```
+Navigation in man.
 * space bar -> next page
 * b key -> previous page
 * q key -> quit
 
+#### 2.3.3. More info
 The Info pages
 ```sh
 info info
 info ls
 ```
-
+A short index of explanations for commands is available using the `whatis` command.
 ```sh
 whatis ls
 apropos browser
 ```
-
 The −−help option
 ```sh
 cat −−help
 ```
-Konqueror as help browser
-gnome−help
-
-## Chapter 3. About files and the file system
-Special files:
+## 3. About files and the file system
+### 3.1. General overview of the Linux file system
+#### 3.1.1. Files
+Most files are just files, called `regular files`; they contain normal data, for example text files, executable files or programs, input for or output from a program and so on. And there are some `special files`:
 * Directories: files that are lists of other files.
 * Special files: the mechanism used for input and output. Most special files are in /dev, we will
 discuss them later.
@@ -113,38 +115,45 @@ protected by the file system's access control.
 * Named pipes: act more or less like sockets and form a way for processes to communicate with each
 other, without using network socket semantics.
 
- Symbol |  Meaning
---------|-----------
- -      | Regular file
- d      | Directory
- l      | Link
- c      | Special file
- s      | Socket
- p      | Named pipe
- b      | Block device
+File types in a long list:
 
-Partition layout and types:
+Symbol |  Meaning
+-------|-----------
+-      | Regular file
+d      | Directory
+l      | Link
+c      | Special file
+s      | Socket
+p      | Named pipe
+b      | Block device
+
+#### 3.1.2. About partitioning
+There are two kinds of major partitions on a Linux system:
 * data partition: normal Linux system data, including the root partition containing all the data to start up and run the system; and
 * swap partition: expansion of the computer's physical memory, extra memory on hard disk.
 
+Use `fdisk` to set the partition type.
 ```sh
 fdisk
 ```
 
-Samples:
+Partition Samples:
 * a partition for user programs (/usr)
 * a partition containing the users' personal data (/home)
 * a partition to store temporary data like print− and mail−queues (/var)
 * a partition for third party and extra software (/opt)
 
-Mount points
+Mount points: All partitions are attached to the system via a mount point. The mount point defines the place of a particular data set in the file system.
+```sh
 file /etc/fstab
 mount command
 df
-
+```
+#### 3.1.3. More file system layout
+For convenience, the Linux file system is usually thought of in a tree structure. On a standard Linux system you will find the layout generally follows the scheme presented below.
 ![image](/public/notes/introduction-to-linux/fs-layout.png){:width="700px"}  
-http://fibrevillage.com/sysadmin/403-understanding-linux-filesystem-layout-directories-structuries
 
+Subdirectories of the root directory:
 
 Directory   | Content
 ------------|--------
@@ -167,7 +176,7 @@ Directory   | Content
 /usr        | Programs, libraries, documentation etc. for all user-related programs.
 /var        | Storage for all variable files and temporary files created by users, such as log files, the mail queue, the print spooler area, space for temporary storage of files downloaded from the Internet, or to keep an image of a CD before burning it.
 
-find out which partition a directory is on
+Find out which partition a directory is on?
 ```sh
 df −h .
 Filesystem Size Used Avail Use% Mounted on
@@ -185,22 +194,26 @@ At the time a new file is created, it gets a free `inode`. In that inode is the 
 
 The only information not included in an inode, is the file name and directory. These are stored in the special directory files. By comparing file names and inode numbers, the system can make up a tree−structure that the user understands. Users can display inode numbers using the −i option to ls. The inodes have their own separate space on the disk.
 ```sh
-ls -i
+ls -i  // use -i option to print the file serial number (inode number)
 ```
-
-The `PATH` environment variable
+### 3.2. Orientation in the file system
+#### 3.2.1. The path
+The `PATH` environment variable. Use `echo` command to display the content ("$") of the variable PATH:
 ```sh
-Johnny@Johnny-Mac:~$ echo $PATH
+$ echo $PATH
 /mnt/rc/ez:/usr/local/ActivePerl-5.10/bin:.:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
-
+Use `export` to change the environment variable.
 ```sh
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin:\ /usr/bin:/usr/sbin:/bin:/sbin:/home/jumper/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin: /usr/bin:/usr/sbin:/bin:/sbin:/home/jumper/bin
 ```
-
 Note that when using the export command in a shell, the changes are temporary and only valid for this session (until you log out). Opening new sessions, even while the current one is still running, will not result in a new path in the new session.
-
-
+#### 3.2.2. Absolute and relative paths
+Paths that don't start with a slash are always relative.
+```sh
+cd /  // go to the root directory.
+```
+#### 3.2.3. The most important files and directories
 Shell types:
 * `sh` or Bourne Shell: the original shell still used on UNIX systems and in UNIX related environments. This is the basic shell, a small program with few features. When in POSIX−compatible mode, bash will emulate this shell.
 * `bash` or Bourne Again shell: the standard GNU shell, intuitive and flexible. Probably most advisable for beginning users while being at the same time a powerful tool for the advanced and professional user. On Linux, bash is the standard shell for common users. This shell is a so−called superset of the Bourne shell, a set of add−ons and plug−ins. This means that the Bourne Again shell is compatible with the Bourne shell: commands that work in sh, also work in bash. However, the reverse is not always the case. All examples and exercises in this book use bash.
@@ -209,8 +222,9 @@ Shell types:
 * `ksh` or the Korn shell: sometimes appreciated by people with a UNIX background. A superset of the
 Bourne shell; with standard configuration a nightmare for beginning users.
 
+The file /etc/shells gives an overview of known shells on a Linux system:
 ```sh
-Johnny@Johnny-Mac:~$ cat /etc/shells
+$ cat /etc/shells
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
 # one of these shells.
@@ -225,17 +239,17 @@ Johnny@Johnny-Mac:~$ cat /etc/shells
 
 Which shell am I using?
 ```sh
-Johnny@Johnny-Mac:~$ echo $SHELL
+$ echo $SHELL
 /bin/bash
 ```
 
-Home Directory
+Find out home directory.
 ```sh
-echo $HOME
+$ echo $HOME
 /Users/johnny
 ```
-
-Most common configuration files
+#### 3.2.4. The most important configuration files
+Most common configuration files, see [here](http://www.linuxtopia.org/online_books/introduction_to_linux/linux_The_most_important_configuration_files.html).
 
 File | Information/service
 --------|----------------
@@ -273,111 +287,114 @@ sysconfig | Directory containing the system configuration files: mouse, keyboard
 X11 | Settings for the graphical server, X. RedHat uses XFree, which is reflected in the name of the main configuration file, XFree86Config. Also contains the general directions for the window managers available on the system, for example gdm, fvwm, twm, etc.
 xinetd.* or inetd.conf | Configuration files for Internet services that are run from the system's (extended) Internet services daemon (servers that don't run an independent daemon).
 
-http://www.linuxtopia.org/online_books/introduction_to_linux/linux_The_most_important_configuration_files.html
-
-The most common variable files.  
+### 3.3. Manipulating files
 The default location of all logs is `/var/log`.  
-
+#### 3.3.1. Viewing file properties
 Show hidden files.
 ```sh
-ls -a
+$ ls -a
 ```
-file command: Find which kind of file.
+Find which kind of file with `file` command.
 ```sh
-mike:~> file Documents/
+$ file Documents/
 Documents/: directory
-mike:~> file high−tech−stats.pdf
+$ file high−tech−stats.pdf
 high−tech−stats.pdf: PDF document, version 1.2
 ```
-
-file manager: nautilus, konqueror, mc
-
+Open file manager with `nautilus` command.
+```sh
+$ nautilus
+```
 File manipulation:
 ```sh
-mkdir folder1
-cd folder1
-touch file1
-touch file2
-ls
-rm file2
-ls
-cd ..
-mv folder1 folder2
-cp -r folder2 folder3
+$ mkdir folder1
+$ cd folder1
+$ touch file1
+$ touch file2
+$ ls
+$ rm file2
+$ ls
+$ cd ..
+$ mv folder1 folder2
+$ cp -r folder2 folder3
 ```
-
+#### 3.3.3. Finding files
+Use `which` command to look up files. The which command is useful when troubleshooting "Command not Found" problems. Suppose user cannot use acroread command. Use `which acroread` to find out that none of the directories in the PATH environment variable contains this command.
 ```sh
- tina:~> which acroread
- /usr/bin/which: no acroread in (/bin:/usr/bin:/usr/bin/X11)
-
-gerrit:~> which −a ls
+$ which acroread
+/usr/bin/which: no acroread in (/bin:/usr/bin:/usr/bin/X11)
+```
+Using the which command also checks to see if a command is an alias for another command:
+```sh
+$ which −a ls
 ls is aliased to 'ls −F −−color=auto'
 ls is /bin/ls
 ```
-
-Find files:
-Find all files in the current directory or one of its subdirectories, that are bigger than 50 MB
+Find all files in the current directory or one of its subdirectories, that are bigger than 50 MB.
 ```sh
-find . -size +50000k
+$ find . -size +50000k
 ./EBooks/CareerCup-Cracking_The_Coding_Interview_Ed6_712pages-2016.pdf
 ```
-
 Find all files in the current directory or one of its subdirectories, that their name contains string 'Interview'.
 ```sh
-Johnny@Johnny-Mac:~$ find . -name '*Interview*'
+$ find . -name '*Interview*'
 ./EBooks/CareerCup-Cracking_The_Coding_Interview_Ed6_712pages-2016.pdf
 ./EBooks/Cracking the Coding Interview.pdf
 ./EBooks/Programming Interviews Exposed.pdf
 ```
-
-locate, slocate
+`locate` command is easier to use, but more restricted than find, since its output is based on a file index database that is updated only once every day. On the other hand, a search in the locate database uses less resources than find and therefore shows the results nearly instantly.
 ```sh
-ls −l /usr/bin/locate
+$ locate Working_RH.txt
+/home/johnny/work/Working_RH.txt
 ```
-
-`grep`
+Most Linux distributions use `slocate` these days, security enhanced locate, the modern version of locate that prevents users from getting output they have no right to read. On most systems, locate is a symbolic link to the slocate program:
 ```sh
-grep −a find .bash_history
-grep penguin /usr/share/dict/words
+$ ls −l /usr/bin/locate
+-rwx--s--x. 1 root slocate 40504 Feb  4  2016 /usr/bin/locate
 ```
-
-`less is more`
+`grep` is used for filtering input lines and returning certain patterns to the output.  
+Quickly check the correct spelling of word 'penguin'.
+```sh
+$ grep penguin /usr/share/dict/words
+penguin
+penguinery
+```
+#### 3.3.4. More ways to view file content
 Show the content of the file.
 ```sh
 cat running.log
 more running.log
-less running.log
+less running.log  //less is more
 ```
-
+#### 3.3.5. Linking files
 Link types:
-* Hard link: Associate two or more file names with the same inode. Hard links share the same data blocks on the hard disk, while they continue to behave as independent files.
-There is an immediate disadvantage: hard links can't span partitions, because inode numbers are only
-unique within a given partition.
+* Hard link: Associate two or more file names with the same inode. Hard links share the same data blocks on the hard disk, while they continue to behave as independent files. There is an immediate disadvantage: hard links can't span partitions, because inode numbers are only unique within a given partition.
 * Soft link or symbolic link (or for short: symlink): a small file that is a pointer to another file. A
 symbolic link contains the path to the target file instead of a physical location on the hard disk. Since inodes are not used in this system, soft links can span across partitions.
 
+Hardlink and softlink:
 - inode number, ls -i, ls -i /, ls -l
 - hardlink, ln orignal hardlink1(create a new hard link to original)
 - softlink, ln -s orginal hardlink1(create a new soft link to original)
 - you can create soft link to directory, but not able to create hard link for directory.
 
-Access rights
+### 3.4. File security
+#### 3.4.1. Access rights: Linux's first line of defense
 The first character is the file type indicator. The next nine characters display the file permissions(read, write, execute) for these three user categories(the user, the group and the others).
-
 ```sh
-marise:~> ls −l To_Do
-−rw−rw−r−− 1 marise users 5 Jan 15 12:39 To_Do
+$ ls −l To_Do
+−rw−rw−r−− 1 johnny users 5 Jan 15 12:39 To_Do
 ```
-The first file is a regular file (first dash). Users with user name marise or users belonging to the group users can read and write (change/move/delete) the file, but they can't execute it (second and third dash). All other users are only allowed to read this file, but they can't write or execute it (fourth and fifth dash).
+The first file is a regular file (first dash). Users with user name johnny or users belonging to the group users can read and write (change/move/delete) the file, but they can't execute it (second and third dash). All other users are only allowed to read this file, but they can't write or execute it (fourth and fifth dash).
 
 ```sh
-marise:~> ls −l /bin/ls
+$ ls −l /bin/ls
 −rwxr−xr−x 1 root root 45948 Aug 9 15:01 /bin/ls*
 ```
 The second example is an executable file, the difference: everybody can read and run this program, but you need to be
 root to change it.
 
-Access mode codes
+Access mode codes:
 
 Code   | Meaning
 -------|--------
@@ -386,7 +403,7 @@ Code   | Meaning
 2 or w | write permission is granted to the user category defined in this place
 1 or x | execute permission is granted to the user category defined in this place
 
-User group codes
+User group codes:
 
 Code | Meaning
 -----|---------
@@ -394,30 +411,33 @@ u    | user permissions
 g    | group permissions
 o    | permissions for others
 
+Use `id` command and USER environment variable to find out the current user name.
 ```sh
-id
-echo $USER
+$ id
+$ echo $USER
 ```
-
-Change permission: `chmod`
+#### 3.4.2. The tools
+Use `chmod` command to change permissions.
 ```sh
 $ hello
 -bash: ./hello: Permission denied
 $ cat hello
 echo "Hello, World"
 $ ls -l hello
--rw-r--r--  1 i857285  GLOBAL\Domain Users  20 Mar  6 15:17 hello
+-rw-r--r--  1 johnny  GLOBAL\Domain Users  20 Mar  6 15:17 hello
 $ chmod u+x hello
 $ ls -l hello
--rwxr--r--  1 i857285  GLOBAL\Domain Users  20 Mar  6 15:17 hello
+-rwxr--r--  1 johnny  GLOBAL\Domain Users  20 Mar  6 15:17 hello
 $ hello
 Hello, World
 $ chmod u-rwx,go+rwx hello
 $ ls -l hello
-----rwxrwx  1 i857285  GLOBAL\Domain Users  20 Mar  6 15:17 hello
+----rwxrwx  1 johnny  GLOBAL\Domain Users  20 Mar  6 15:17 hello
 $ hello
 -bash: ./hello: Permission denied
 ```
+
+File protection with chmod:
 
 Command             | Meaning
 --------------------|---------------------------
@@ -431,7 +451,7 @@ chmod 755 directory | For files that should be readable and executable by others
 chmod 775 file      | Standard file sharing mode for a group.
 chmod 777 file      | Everybody can do everything to this file.
 
-File permissions
+File permissions:
 
 Who\What | r(ead) | w(rite) | (e)x(ecute)
 ---------|--------|---------|------------
@@ -439,21 +459,20 @@ u(ser)   | 4      | 2       | 1
 g(roup)  | 4      | 2       | 1
 o(ther)  | 4      | 2       | 1
 
-logging on to Another group.
+Use `newgrp` command to log into another group.  
 ```sh
-newgrp web
+asim:/var/www/html> newgrp web  // User asim use the `newgrp` to log into group `web`.
 asim:/var/www/html> touch test
 asim:/var/www/html> ls −l test
-−rw−rw−r−− 1 asim web 0 Jun 10 15:38 test
+−rw−rw−r−− 1 asim web 0 Jun 10 15:38 test  // When asim creates new files, they will be in group web instead of group asim.
 ```
 
-Default permissions by root.
+When a new file is saved somewhere, it is first subjected to the standard security procedure. The standard file permission is determined by the `mask` for new file creation. The value of this mask can be displayed using the umask command:
 ```sh
 $ umask
 0022
 ```
-
-chown, chgrp
+chown and chgrp.
 ```sh
 # Changes ownership of the directories from root to yourself
 sudo chown $USER /ariba
@@ -464,43 +483,42 @@ sudo chgrp `id -g` /ariba
 sudo chgrp `id -g` /ariba/ezone
 ```
 
-## Chapter 4. Processes
+## 4. Processes
+### 4.1. Processes inside out
+#### 4.1.4. Displaying process information
 Display process.
 ```sh
 $ ps
 $ pstree
 ```
-
-Kill process.
+#### 4.1.5. Life and death of a process
+Common signals:
 
 Signal name | Signal number | Meaning
-------------|---------------|------------------------------
+------------|---------------|------------------------------------------------------
 SIGTERM     | 15            | Terminate the process in an orderly way.
 SIGINT      | 2             | Interrupt the process. A process can ignore this signal.
 SIGKILL     | 9             | Interrupt the process. A process can not ignore this signal.
 SIGHUP      | 1             | For daemons: reread the configuration file.
 
-SUID
-Enable a common user to edit the password file which is owned by the system admin.
-
-SGID
+#### 4.1.6. SUID and SGID
+SUID: set user ID. Enable a common user to edit the password file which is owned by the system admin.  
+SGID: set group ID.
 ```sh
-which write
-who
 Johnny@Johnny-Mac:~$ who
-i857285  console  Mar  7 13:26
-i857285  ttys000  Mar  7 13:26
-i857285  ttys001  Mar  7 13:26
-i857285  ttys002  Mar  7 13:26
-Johnny@Johnny-Mac:~$ write i857285 ttys001
+Johnny  console  Mar  7 13:26
+Johnny  ttys000  Mar  7 13:26
+Johnny  ttys001  Mar  7 13:26
+Johnny  ttys002  Mar  7 13:26
+Johnny@Johnny-Mac:~$ write Johnny ttys001
 hello
 
-Message from i857285@PALM00634007A on ttys000 at 16:45 ...
+Message from Johnny@jojostudio on ttys000 at 16:45 ...
 hello
-
 ```
 
-GRUB, MBR
+### 4.2. Boot process, Init and shutdown
+GRUB, MBR  
 init, /etc/inittab, run level
 ```raw
 #
@@ -518,20 +536,25 @@ init, /etc/inittab, run level
 id:5:initdefault:
 <−−cut−−>
 ```
-
 Commonly, `run level 3` is configured to be text mode on a Linux machine, and `run level 5` initializes the graphical login and environment.
 
 /etc/X11/prefdm, X display manager, in run level 5
 
-
-shutdown
-
-IO/Resourses
+#### 4.2.6. Shutdown
+shutdown, reboot, halt
+### 4.3. Managing processes
+IO/Resourses  
 ps, vmstat, top
 
-sleep, at,
-
-Process handling commands
+Kill process.
+```sh
+$ ps −ef | grep mozilla
+$ kill −9 25915
+```
+### 4.4. Scheduling processes
+sleep, at
+### 4.5. Summary
+Process handling commands:
 
 Command    | Meaning
 -----------|-------------
@@ -562,15 +585,17 @@ Command    | Meaning
 `who`      | Show who is logged on.
 `write`    | Send a message to another user.
 
-## Chapter 5. I/O redirection
-Output redirection with > and |
+## 5. I/O redirection
+### 5.1. Simple redirections
+#### 5.1.2. The redirection operators
+Output redirection with > and |. Use `cat` command to concatenate content from two files and put them all together to the third file.
 ```sh
-nancy:~> cat test1
+$ cat test1
 some words
-nancy:~> cat test2
+$ cat test2
 some other words
-nancy:~> cat test1 test2 > test3
-nancy:~> cat test3
+$ cat test1 test2 > test3
+$ cat test3
 some words
 some other words
 ```
@@ -592,7 +617,7 @@ Find the lines with containing 'level=0' in file logFieldTimingSummary.txt, and 
 ```sh
 less logFieldTimingSummary.txt | grep -i level=0 > levelzero.txt
 ```
-The `−i` option is used for case−insensitive searches.
+* The `−i` option is used for case−insensitive searches.
 
 Append text to existing file.
 ```sh
@@ -603,14 +628,16 @@ mike:~> cat wishlist
 more money
 less work
 ```
-
-Get the file list and output to dirlist
+### 5.2. Advanced redirection features
+Get the file list and output to dirlist.
 ```sh
 ls 2>&1 > dirlist
 ```
 
-## Chapter 6. Text editors
-Using the Vim editor  
+## 6. Text editors
+### 6.1. Text editors
+ed, edemacs, vi
+### 6.2. Using the Vim editor
 Moving through the text in command mode.
 * `h` to move the cursor to the left
 * `l` to move it to the right
@@ -645,38 +672,38 @@ Vim tutorial.
 vimtutor
 ```
 
-## Chapter 7. Home sweet /home
+## 7. Home sweet /home
+### 7.1. General good housekeeping
+#### 7.1.2. Make space
 The process of reducing an existing file to a file with the same name that is 0 bytes large is called "truncating."
 empty file 'placeholder'.
 ```sh
-andy:~> ls −la placeholder
+$ ls −la placeholder
 −rw−rw−r−− 1 andy andy 200 Jun 12 13:34 placeholder
-andy:~> > placeholder
-andy:~> ls −la placeholder
+$ > placeholder
+$ ls −la placeholder
 −rw−rw−r−− 1 andy andy 0 Jun 12 13:35 placeholder
 ```
-
 Keep the last five items.
 ```sh
-andy:~> tail −5 wishlist > newlist
-andy:~> cat newlist > wishlist
-andy:~> rm newlist
+$ tail −5 wishlist > newlist
+$ cat newlist > wishlist
+$ rm newlist
 ```
-
-export environment variable
+### 7.2. Your text environment
+#### 7.2.1. Environment variables
 ```sh
-debby:~> echo $PATH
+$ echo $PATH
 /usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin:/usr/local/bin
-debby:~> PATH=$PATH:/opt/FlightGear/bin
-debby:~> echo $PATH
+$ PATH=$PATH:/opt/FlightGear/bin
+$ echo $PATH
 /usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin:/usr/local/bin:/opt/FlightGear/bin
 ```
-
+export environment variable
 ```sh
 debby:~> export PATH=$PATH:/opt/FlightGear/man
 ```
-
-Common environment variables
+Common environment variables:
 
 Variable name     | Stored information
 ------------------|-------------------------
@@ -707,23 +734,28 @@ Variable name     | Stored information
 `XENVIRONMENT`    | location of your personal settings for X behavior
 `XFILESEARCHPATH` | paths to search for graphical libraries
 
-Bash scripts often begin with `#! /bin/bash`
-If the first line of a script begins with the two characters `#!`, the remainder of the line specifies an interpreter for the program. Thus, you can specify bash, awk, perl or some other interpreter or shell and write the rest of the script file in that language.
+#### 7.2.5. Shell scripts
+Bash scripts often begin with `#! /bin/bash`. If the first line of a script begins with the two characters `#!`, the remainder of the line specifies an interpreter for the program. Thus, you can specify bash, awk, perl or some other interpreter or shell and write the rest of the script file in that language.
 
 run 'bash filename ARGUMENTS' to execute the bash script.
 ```raw
-[jerry@nowhere ~] cat hello.sh
+$ cat hello.sh
 #!/bin/bash
 echo "Hello $USER"
-[jerry@nowhere ~] bash hello.sh
+$ bash hello.sh
 Hello jerry
 ```
-
-The X Window System
+### 7.3. The graphical environment
+#### 7.3.2. The X Window System
+#### 7.3.3. X server configuration
 /etc/X11
-
+### 7.5. Installing new software
 Package formats
-rpm, deb, apt(Advanced Package Tool), Yellowdog's Updater Modified (yum)
+* rpm
+* deb
+* apt(Advanced Package Tool)
+* Yellowdog's Updater Modified (yum)
+
 ```sh
 apt-get update
 apt-get upgrade
@@ -739,21 +771,23 @@ mount /dev/cdrom /mnt/cdrom
 
 /etc/fstab
 ```sh
-[david@jupiter ~] grep cdrom /etc/fstab
+$ grep cdrom /etc/fstab
 /dev/cdrom /mnt/cdrom iso9660 noauto,owner,ro 0 0
 ```
 
-## Chapter 8. Printers and printing
-Empty.
+## 8. Printers and printing
+Skipped.
 
-## Chapter 9. Fundamental Backup Techniques
-Archiving with tar. In Linux, this is commonly done with the tar command. tar was originally designed to archive data on tapes, but it can also make archives, known as tarballs.
+## 9. Fundamental Backup Techniques
+### 9.1. Introduction
+#### 9.1.1. Preparing your data
+Archive with `tar` command. In Linux, this is commonly done with the tar command. tar was originally designed to archive data on tapes, but it can also make archives, known as tarballs.
 
 Compress a directory
 ```sh
-gaby:~> ls images/
+$ ls images/
 me+tux.jpg nimf.jpg
-gaby:~> tar cvf images−in−a−dir.tar images/
+$ tar cvf images−in−a−dir.tar images/
 images/
 images/nimf.jpg
 images/me+tux.jpg
@@ -761,33 +795,30 @@ images/me+tux.jpg
 
 Compress files without directory.
 ```sh
-gaby:~> cd images
-gaby:~/images> tar cvf images−without−a−dir.tar *.jpg
+$ cd images
+$ tar cvf images−without−a−dir.tar *.jpg
 me+tux.jpg
 nimf.jpg
 ```
 
 Compressing and unpacking with gzip or bzip2
-
 ```sh
-jimmy:~> ls −la | grep tar
+$ ls −la | grep tar
 −rw−rw−r−− 1 jimmy jimmy 61440 Jun 6 14:08 images−without−dir.tar
-jimmy:~> gzip images−without−dir.tar
-jimmy:~> ls −la images−without−dir.tar.gz
+$ gzip images−without−dir.tar
+$ ls −la images−without−dir.tar.gz
 −rw−rw−r−− 1 jimmy jimmy 50562 Jun 6 14:08 images−without−dir.tar.gz
 ```
-
 The GNU tar command is aware of gzipped files. Use the following command for unzipping and untarring `.tar.gz` or `.tgz` files.
 ```sh
 tar zxvf file.tar.gz
 ```
-
 Use the following command for unpacking tar archives that were compressed with bzip2.
 ```sh
 tar jxvf file.tar.bz2
 ```
-
-Backup commands
+### 9.4. Summary
+Backup commands:
 
 Command      | Meaning
 -------------|---------
@@ -805,7 +836,8 @@ Command      | Meaning
 `tar`        | Tape archiving utility, also used for making archives on disk instead of on tape.
 `umount`     | Unmount file systems.
 
-## Chapter 10. Networking
+## 10. Networking
+### 10.1. Networking Overview
 Networking protocols: TCP/IP, TCP/IPv6, PPP, SLIP, PLIP, PPPOE, ISDN, smbd, nmbd  
 Network configuration files:
 * /etc/hosts: always contains the localhost IP address, 127.0.0.1
@@ -813,14 +845,14 @@ Network configuration files:
 * /etc/nsswitch.conf: defines the order in which to contact different name services.
 
 Network configuration commands: ip, ifconfig, netstat, ping, whois
-
+### 10.2. Internet/Intranet applications
 On Linux systems, the server configuration is usually done in the `/etc/httpd` directory. The most important configuration file is `httpd.conf`.
-
+### 10.3. Remote execution of applications
 ssh, Secure SHell  
 Secure remote copying: scp
 
-## Chapter 11. Sound and Video
-Empty.
+## 11. Sound and Video
+Skipped.
 
 ## Appendix B: DOS versus Linux commands
 

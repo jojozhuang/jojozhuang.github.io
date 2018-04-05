@@ -70,7 +70,7 @@ Insertion Sort > Selection Sort > Bubble Sort
 
 ## 4. Stacks and Queues
 
-P102/801
+P140/801
 
-References:
-Sample code can be downloaded from http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536.
+## References
+* [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)
