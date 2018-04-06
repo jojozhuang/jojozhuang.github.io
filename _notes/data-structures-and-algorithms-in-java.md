@@ -69,8 +69,172 @@ The insertion sort is the most versatile of the three and is the best bet in mos
 Insertion Sort > Selection Sort > Bubble Sort
 
 ## 4. Stacks and Queues
+### Stacks
+A stack is said to be a Last-In-First-Out (LIFO) storage mechanism because the last item inserted is the first one to be removed.  
+Methods of stack: push, pop, peek, isEmpty(), isFull()  
+Efficiency of Stacks: Items can be both pushed and popped from the stack in constant O(1) time.
+### Queues
+In computer science a queue is a data structure that is some- what like a stack, except that in a queue the first item inserted is the first to be removed (First-In-First-Out, FIFO), while in a stack, as we’ve seen, the last item inserted is the first to be removed (LIFO).
+Methods of queue: insert, remove, peekFront, isEmpty(), isFull()
+Efficiency of Queues: As with a stack, items can be inserted and removed from a queue in O(1) time.
+### Deques
+A deque is a double-ended queue. You can insert items at either end and delete them from either end.
+### Priority Queues
+A priority queue has a front and a rear, and items are removed from the front. In a priority queue, items are ordered by key value so that the item with the lowest key (or in some implementations the highest key) is always at the front. Items are inserted in the proper position to maintain the order.
+Methods of priority queue: insert, remove, peekMin, isEmpty(), isFull()
+Efficiency of Priority Queues: In the priority-queue, insertion runs in O(N) time(array), while deletion takes O(1) time.
 
-P140/801
+## 5. Linked Lists
+### Simple Linked List
+List Node.
+```java
+class Link
+{
+    public inventoryItem iI; // object holding data
+    public Link next; // reference to next link
+}
+```
+LinkList
+```java
+class LinkList
+{
+    private Link first; // ref to first link on list
+    public void LinkList() // constructor
+    {
+        first = null; // no items on list yet
+    }
+    public boolean isEmpty() // true if list is empty
+    {
+        return (first==null);
+    }
+    // ... other methods
+}
+```
+### Double-Ended Lists
+Double-Ended List has one additional feature: a reference to the last link as well as to the first.
+```java
+class FirstLastList
+{
+    private Link first; // ref to first link
+    private Link last;  // ref to last link
+    public void FirstLastList() // constructor
+    {
+        first = null; // no items on list yet
+        last = null;
+    }
+    public boolean isEmpty() // true if list is empty
+    {
+        return (first==null);
+    }
+    // ... other methods
+}
+```
+### Linked-List Efficiency
+Search: O(N), N/2
+Insertion and Deletion: O(1)
+### Abstract Data Types
+What is ADT? Roughly speaking, it’s a way of looking at a data structure: focusing on what it does and ignoring how it does its job. Stacks and queues are examples of ADTs. An ADT specification is often called an `interface`.
+### Sorted Lists
+### Efficiency of Sorted Linked Lists
+* Search: O(N), N/2, Min=O(1)
+* Insertion and Deletion: O(1)
+If an application frequently accesses the minimum item, and fast insertion isn’t critical, then a sorted linked list is an effective choice. A `priority queue` might be implemented by a sorted linked list.
+
+### Doubly Linked Lists
+Node.
+```java
+class Link {
+    public long dData;    // data item
+    public Link next;     // next link in list
+    public Link previous; // previous link in list
+}
+```
+List.
+```java
+class DoublyLinkedList
+{
+    private Link first; // ref to first item
+    private Link last; // ref to last item
+    public DoublyLinkedList() // constructor
+    {
+        first = null; // no items on list yet
+        last = null;
+    }
+    public boolean isEmpty() // true if no links
+    {
+        return (first==null);
+    }
+    public void insertFirst(long dd){...}              // insert at front of list
+    public void insertLast(long dd){...}               // insert at end of list
+    public Link deleteFirst(){...}                     // delete first link
+    public Link deleteLast(){...}                      // delete last link
+    public boolean insertAfter(long key, long dd){...} // insert dd just after key
+    public Link deleteKey(long key){...}               // delete item with given key
+}
+```
+### Doubly Linked List as Basis for Deques
+A doubly linked list can be used as the basis for a `deque`. In a deque you can insert and delete at either end, and the doubly linked list provides this capability.
+### Iterators
+An `iterator` can be used to traverse through a list, performing some operation on selected links (or all links).
+```java
+class ListIterator() {
+    private Link current;     // reference to current link
+    private Link previous;    // reference to previous link
+    private LinkList ourList; // reference to “parent” list
+
+    public void reset()               // set to start of list
+    {
+        current = ourList.getFirst(); // current -> first
+        previous = null;              // previous -> null
+    }
+    public void nextLink()      // go to next link
+    {
+        previous = current;     // set previous to this
+        current = current.next; // set this to next
+    }
+    ...
+}
+```
+Iterator Methods:
+* reset()—Sets the iterator to the start of the list
+* nextLink()—Moves the iterator to the next link
+* getCurrent()—Returns the link at the iterator
+* atEnd()—Returns true if the iterator is at the end of the list
+* insertAfter()—Inserts a new link after the iterator
+* insertBefore()—Inserts a new link before the iterator
+* deleteCurrent()—Deletes the link at the iterator
+
+## 6. Recursion
+### Triangular Numbers
+Triangular Numbers: 1, 3, 6, 10, 15, 21, ...  
+```java
+int triangle(int n) {
+    if(n==1) {
+        return 1;
+    }
+    else {
+        return n + triangle(n-1);
+    }
+}
+```
+input 1000, output 500500.  
+Formula: n(n+1)/2  
+### Characteristics of Recursive Methods
+key features common to all recursive routines:
+* It calls itself.
+* When it calls itself, it does so to solve a smaller problem.
+* There’s some version of the problem that is simple enough that the routine can solve it, and return, without calling itself.
+### Is Recursion Efficient?
+Recursion is usually used because it simplifies a problem conceptually, not because it’s inherently more efficient.
+### Factorials
+```java
+int factorial(int n) {
+if(n==0) return 1;
+else
+return (n * factorial(n-1) );
+}
+```
+P284/801
 
 ## References
 * [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)

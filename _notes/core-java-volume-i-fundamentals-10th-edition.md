@@ -2289,4 +2289,5 @@ SynchronousQueue | Allows a thread to hand off an object to another thread. | Us
 Skipped.
 
 ## Reference:
+* [Sample Source Codes](https://github.com/jojozhuang/Note/tree/master/CoreJavaVolume1)
 * [Java Home at Oracle](http://www.oracle.com/technetwork/java/index.html)
