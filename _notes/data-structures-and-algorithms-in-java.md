@@ -229,12 +229,165 @@ Recursion is usually used because it simplifies a problem conceptually, not beca
 ### Factorials
 ```java
 int factorial(int n) {
-if(n==0) return 1;
-else
-return (n * factorial(n-1) );
+    if(n==0) {
+        return 1;
+    }
+    else {
+        return n * factorial(n-1);
+    }
 }
 ```
-P284/801
+### Anagrams
+### A Recursive Binary Search
+Convert loop to recursion. The recursive binary search has the same big O efficiency as the non-recursive version: O(logN). It is somewhat more elegant, but may be slightly slower.
+### Divide-and-Conquer Algorithms
+### The Towers of Hanoi
+### The Recursive Algorithm
+The solution to the Towers of Hanoi puzzle can be expressed recursively using the notion of subtrees. Suppose you want to move all the disks from a source tower (call it S) to a destination tower (call it D). You have an intermediate tower available (call it I). Assume there are n disks on tower S. Here’s the algorithm:
+1. Move the subtree consisting of the top n-1 disks from S to I.
+2. Move the remaining (largest) disk from S to D.
+3. Move the subtree from I to D.
+
+```java
+static int nDisks = 3; // initial disks
+public static void main(String[] args) {
+    doTowers(nDisks, 'A', 'B', 'C');
+}
+// suppose we have only three tower A(Source), B(Intermediate) and C(Destination)
+public static void doTowers(int topN, char from, char inter, char to) {
+    if(topN==1) {
+        System.out.println("Disk 1 from " + from + " to "+ to);
+    }
+    else {
+        doTowers(topN-1, from, to, inter); // from-->inter
+        System.out.println("Disk " + topN + " from " + from + " to "+ to); // move largest from -> to
+        doTowers(topN-1, inter, from, to); // inter-->to
+    }
+}
+```
+Output:
+```sh
+Disk 1 from A to C
+Disk 2 from A to B
+Disk 1 from C to B
+Disk 3 from A to C
+Disk 1 from B to A
+Disk 2 from B to C
+Disk 1 from A to C
+```
+### mergesort
+### Eliminating Recursion
+Often an algorithm is easy to conceptualize as a recursive method, but in practice the recursive approach proves to be inefficient. In such cases, it’s useful to transform the recursive approach into a non-recursive approach. Such a transformation can often make use of a `stack`.
+```java
+public static void main(String[] args) {
+    int recursion = triangle(5);
+    System.out.println(recursion);
+    int stack = triangleStatck(5);
+    System.out.println(stack);
+}
+
+static int triangle(int n) {
+    if(n==1) {
+        return 1;
+    }
+    else {
+        return n + triangle(n-1);
+    }
+}
+
+static int triangleStatck(int n) { // calculate triangle number with explicit stack.
+    if (n == 1) {
+        return 1;
+    }
+    Stack<Integer> stack = new Stack<Integer>();
+    while (n > 0) {
+        stack.push(n);
+        n--;
+    }
+    int res = 0;
+    while (!stack.isEmpty()) {
+        res += stack.pop();
+    }
+    return res;
+}
+```
+### Some Interesting Recursive Applications
+[Todo]
+* raising a number to a power
+* fitting items into a knapsack
+* choosing members of a mountain-climbing team
+
+## 7. Advanced Sorting
+### Shellsort
+It’s based on the insertion sort, but adds a new feature that dramatically improves the insertion sort’s performance.
+### N-Sorting
+The combination of the 4-sort and the 1-sort is much faster than simply applying the ordinary insertion sort without the preliminary 4-sort.
+### Diminishing Gaps
+interval sequence or gap sequence
+
+[Todo]P342/801
+## 8. Binary Tree
+Each node in a binary tree has a maximum of two children.
+### Why Use Binary Trees?
+* Slow Insertion in an Ordered Array
+* Slow Searching in a Linked List
+
+### Tree Terminology
+![image](/public/notes/data-structures-and-algorithms-in-java/treeterminology.png){:width="800px"}  
+### Binary Trees
+binary search tree, unbalanced tree
+
+### Representing the Tree in Java Code
+The Node class.
+```java
+class Node {
+    int iData;          // data used as key value
+    double fData;       // other data
+    Node leftChild;     // this node’s left child
+    Node rightChild;    // this node’s right child
+    public void displayNode() {
+        ...
+    }
+}
+```
+The Tree Class.
+```java
+class Tree {
+    private Node root;  // the only data field in Tree
+    public void find(int key)
+    {
+    }
+    public void insert(int id, double dd)
+    {
+    }
+    public void delete(int id)
+    {
+    }
+    // various other methods
+} // end class Tree
+```
+### Tree Efficiency
+Find node in binary search tree: O(logN).
+### Traversing the Tree
+preorder, inorder, and postorder.
+### Deleting a Node
+1. The node to be deleted is a leaf (has no children).
+2. The node to be deleted has one child.
+3. The node to be deleted has two children.
+
+### Trees Represented as Arrays
+![image](/public/notes/data-structures-and-algorithms-in-java/treeinarray.png){:width="800px"}  
+Suppose a node’s index number is index.
+* left child: 2*index + 1
+* right child: 2*index + 2
+* parent: (index-1) / 2
+
+### The Huffman Code
+Rule: No code can be the prefix of any other code.
+## 9. Red-Black Trees
+
+P454/801
 
 ## References
 * [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)
+* [Additional Source Codes](https://github.com/jojozhuang/Note/tree/master/DSAInJava)
