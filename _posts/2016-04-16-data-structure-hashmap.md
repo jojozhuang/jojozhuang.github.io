@@ -25,7 +25,12 @@ If multiple keys has same hashCode, then collision occurs. Approaches to solve c
 * Open Addressing: move to an empty cell. `clustering` issue may happen.
 * Separate Chaining: store values in linked list instead of themselves.
 
-### 1.4 Load Factor and Rehashing
+### 1.4 Open Addressing VS Separate Chaining  
+If open addressing is to be used, double hashing seems to be the preferred system by a small margin over quadratic probing. The exception is the situation in which plenty of memory is available and the data won’t expand after the table is created; in this case linear probing is somewhat simpler to implement and, if load factors below 0.5 are used, causes little performance penalty.  
+If the number of items that will be inserted in a hash table is `unknown` when the table is created, `separate chaining is preferable` to open addressing. Increasing the load factor causes major performance penalties in open addressing, but performance degrades only linearly in separate chaining.
+When in doubt, use separate chaining. Its drawback is the need for a linked list class, but the payoff is that adding more data than you anticipated won’t cause performance to slow to a crawl.
+
+### 1.5 Load Factor and Rehashing
 `Load Factor` is the ratio of the number of items in a hash table to its size. If the total number of buckets is 10 and 7 of them got filled now, the load factor is 7/10=0.7.
 
 In our implementation whenever we add a key value pair to the Hash Table we check the load factor if it is greater than 0.7 we double the size of our hash table.

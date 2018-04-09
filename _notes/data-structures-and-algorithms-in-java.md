@@ -385,8 +385,45 @@ Suppose a node’s index number is index.
 ### The Huffman Code
 Rule: No code can be the prefix of any other code.
 ## 9. Red-Black Trees
+[Todo]
+## 10. 2-3-4 Trees and External Storage
+[Todo]
+## 11. Hash Tables
+### Introduction to Hashing
+`Hash function` hashes (converts) a number in a large range into a number in a smaller range. This smaller range corresponds to the index numbers in an array. An array into which data is inserted using a hash function is called a `hash table`.
+### Collisions
+Approach to solve collision:
+* open addressing: move to an empty cell. clustering may happen.
+* separate chaining: store values in linked list instead of themselves.
 
-P454/801
+### Open Addressing
+Three methods:
+* linear probing: x+1, x+2, x+3, ...
+* quadratic probing: x+1, x+4, x+9, x+16, x+25, ...  // Square of the Step Number
+* double hashing: stepSize = constant - (key % constant), eg. stepSize = 5 - (key % 5);
+
+### Separate Chaining
+Install a linked list at each index in the hash table. A data item’s key is hashed to the index in the usual way, and the item is inserted into the linked list at that index. Other items that hash to the same index are simply added to the linked list.
+
+Load Factors: the ratio of the number of items in a hash table to its size. The Load Factor is a measure that when rehashing should be done. Rehashing is a process of increasing the capacity.
+
+### Hash Functions
+* Quick Computation
+* Random Keys
+* Non-Random Keys
+* Use a Prime Number for the Modulo Base
+* Hashing Strings
+* Folding
+
+### Hashing Efficiency
+Open Addressing Versus Separate Chaining  
+If open addressing is to be used, double hashing seems to be the preferred system by a small margin over quadratic probing. The exception is the situation in which plenty of memory is available and the data won’t expand after the table is created; in this case linear probing is somewhat simpler to implement and, if load factors below 0.5 are used, causes little performance penalty.
+If the number of items that will be inserted in a hash table isn’t known when the table is created, separate chaining is preferable to open addressing. Increasing the load factor causes major performance penalties in open addressing, but performance degrades only linearly in separate chaining.
+When in doubt, use separate chaining. Its drawback is the need for a linked list class, but the payoff is that adding more data than you anticipated won’t cause performance to slow to a crawl.
+
+## 12. Heap
+
+P605/801
 
 ## References
 * [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)
