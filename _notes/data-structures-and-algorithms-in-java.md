@@ -422,8 +422,44 @@ If the number of items that will be inserted in a hash table isn’t known when 
 When in doubt, use separate chaining. Its drawback is the need for a linked list class, but the payoff is that adding more data than you anticipated won’t cause performance to slow to a crawl.
 
 ## 12. Heap
+A heap is a binary tree with these characteristics:
+* It’s complete. This means it’s completely filled in, reading from left to right across each row, although the last row need not be full.
+* It’s (usually) implemented as an array. Binary trees can be stored in arrays, rather than using references to connect the nodes.
+* Each node in a heap satisfies the `heap condition`, which states that every node’s key is larger than (or equal to) the keys of its children.
+![image](/public/notes/data-structures-and-algorithms-in-java/heap.png){:width="800px"}  
 
-P605/801
+Heap can be implemented with array. A heap is a complete binary tree implies that there are no “holes” in the
+array used to represent it.
+![image](/public/notes/data-structures-and-algorithms-in-java/heaparray.png){:width="800px"}  
+### Remove
+Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
+1. Remove the root.
+2. Move the last node into the root.
+3. Trickle the last node down until it’s below a larger node and above a smaller one.
+
+![image](/public/notes/data-structures-and-algorithms-in-java/heapremove.png){:width="800px"}  
+* 1->a), 2->b), 3->c),d),e)
+
+### Insertion
+Insertion uses `trickle up`, rather than `trickle down`. Initially, the node to be inserted is placed in the first open position at the end of the array, increasing the array size by one.
+![image](/public/notes/data-structures-and-algorithms-in-java/heapinsert.png){:width="800px"}  
+
+If you remove a node and then insert the same node the result is `not` necessarily the restoration of the original heap. A given set of nodes can be arranged in `many` valid heaps, depending on the `order` in which nodes are inserted.
+
+### Java Code for Heaps
+For a node at index x in the array,
+* Its parent is (x-1) / 2.
+* Its left child is 2*x + 1.
+* Its right child is 2*x + 2.
+
+### Efficiency of Heap Operations
+A heap is a special kind of binary tree, the number of levels `L` in a binary tree equals log2(N+1), where N is the number of nodes. The trickleUp() and trickleDown() routines cycle through their loops L-1 times, so the first takes time proportional to log2N, and the second somewhat more because of the extra comparison. Thus, the heap operations we’ve talked about here all operate in `O(logN)` time.
+
+### A Tree-based Heap
+### Heapsort
+
+## 13. Graphs
+P640/801
 
 ## References
 * [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)
