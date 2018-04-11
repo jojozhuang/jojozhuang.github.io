@@ -459,7 +459,58 @@ A heap is a special kind of binary tree, the number of levels `L` in a binary tr
 ### Heapsort
 
 ## 13. Graphs
-P640/801
+vertices, edges
+* Adjacency: Two vertices are said to be adjacent to one another if they are connected by a single edge. The vertices adjacent to a given vertex are sometimes said to be its `neighbors`.  
+* Paths: A path is a sequence of edges.  
+* Connected Graphs: A graph is said to be connected if there is at least one path from every vertex to every other vertex.
+![image](/public/notes/data-structures-and-algorithms-in-java/graphconnected.png){:width="800px"}  
+* Directed and Weighted Graphs: The edges in `non-directed` graphs don’t have a `direction`; you can go either way on them. In `directed graph`, you can go in only one direction along an edge. In `weighted` graphs, edges are given a weight.
+
+### Representing a Graph in a Program
+Vertices, Edges
+
+Adjacency Matrix
+
+Vertex | A | B | C | D
+-------|---|---|---|---
+A      | 0 | 1 | 1 | 1
+B      | 1 | 0 | 0 | 1
+C      | 1 | 0 | 0 | 0
+D      | 1 | 1 | 0 | 0
+
+* The diagonal from upper left to lower right, A-A to D-D, which is called the `identity diagonal`.
+
+Adjacency Lists
+
+Vertex | List Containing Adjacent Vertices
+-------|----------------------------------
+A      | B->C->D
+B      | A->D
+C      | A
+D      | A->B
+
+### Searches
+There are two common approaches to searching a graph: `depth-first search` (DFS) and `breadth-first search` (BFS). The depth-first search is implemented with a `stack`, whereas the breadth-first search is implemented with a `queue`.
+### Depth-First Search
+* Rule 1: If possible, visit an adjacent unvisited vertex, mark it, and push it on the stack.
+* Rule 2: If you can’t follow Rule 1, then, if possible, pop a vertex off the stack.
+* Rule 3: If you can’t follow Rule 1 or Rule 2, you’re done.
+
+### Breadth-First Search
+* Rule 1: Visit the next unvisited vertex (if there is one) that’s adjacent to the current vertex, mark it,
+and insert it into the queue.
+* Rule 2: If you can’t carry out Rule 1 because there are no more unvisited vertices, remove a vertex
+from the queue (if possible) and make it the current vertex.
+* Rule 3: If you can’t carry out Rule 2 because the queue is empty, you’re done.
+
+### Minimum Spanning Trees
+P668/801
+
+## 14. Weighted Graphs
+
+## 15. When to Use What
+
+P643/801
 
 ## References
 * [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)
