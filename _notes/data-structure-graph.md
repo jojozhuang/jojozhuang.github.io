@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Data Structure - Graph"
-date: 2016-04-12
-tags: [DFS, BFS]
+index: 508
+date: 2016-05-08
+category: dsa
 ---
 
 > A graph is simply a collection of nodes with edges between (some of) them.

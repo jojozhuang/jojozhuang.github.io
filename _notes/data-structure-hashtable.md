@@ -1,12 +1,13 @@
 ---
-layout: post
-key: blog
-title: "Data Structure - HashMap"
-date: 2016-04-16
-tags: [Hash Code, Hash Function, Rehashing]
+layout: note
+key: note
+title: "Data Structure - HashTable"
+index: 506
+date: 2016-05-06
+category: dsa
 ---
 
-> Implement a generic HashMap with Separate Chaining technique by using linked list.
+> Implement a generic HashTable/HashMap with Separate Chaining technique by using linked list.
 
 ## 1. Concepts in Hash Table(or HashMap)
 ### 1.1 Hash code and a Compressor
@@ -38,7 +39,7 @@ In our implementation whenever we add a key value pair to the Hash Table we chec
 ## 2. Implementing HashMap
 ### 2.1 Structure of HashMap
 An array list contains Hash Nodes. Each node can have none or multiple descendant nodes. They have the same index, but contains different hashcode.
-![image](/public/posts/2016-04-16/hashmap.png){:width="800px"}  
+![image](/public/notes/data-structure-hashtable/hashmap.png){:width="800px"}  
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1B0kYSS92tQ98Y7WsAcY9ypafoKf9QYSiUkc0_hK20pQ/edit?usp=sharing)
 
 ### 2.2 Common Operations for HashMap

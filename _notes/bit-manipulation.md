@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Bit Manipulation"
-date: 2016-04-25
-tags: [XOR, Shifting]
+index: 523
+date: 2016-05-23
+category: dsa
 ---
 
 > Bit Manipulation

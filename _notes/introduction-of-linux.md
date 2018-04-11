@@ -3,6 +3,7 @@ layout: note
 key: note
 title: "Introduction to Linux"
 index: 101
+date: 2016-01-01
 category: basic
 ---
 

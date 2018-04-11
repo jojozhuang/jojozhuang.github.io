@@ -2,8 +2,9 @@
 layout: note
 key: note
 title: "Data Structures and Algorithms in Java"
-index: 102
-category: basic
+index: 501
+date: 2016-05-01
+category: dsa
 ---
 
 > Book: Data Structures and Algorithms in Java  

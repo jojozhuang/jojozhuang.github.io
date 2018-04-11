@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Tricks For Algorithm"
-date: 2016-04-27
-tags: [Binary Search, Subset, Big O]
+index: 522
+date: 2016-05-22
+category: dsa
 ---
 
 > Useful tricks for algorithm, Java.
@@ -174,19 +175,19 @@ public boolean isUniqueChars(String str) {
 ```
 ## 3. Data Structure
 I've created several postings to discuss this topic separately.
-* [Data Structure - Linked List]({% link _posts/2016-03-27-data-structure-linkedlist.md %})
-* [Data Structure - Stack]({% link _posts/2016-03-29-data-structure-stack.md %})
-* [Data Structure - Queue]({% link _posts/2016-03-31-data-structure-queue.md %})
-* [Data Structure - Tree]({% link _posts/2016-04-02-data-structure-tree.md %})
-* [Data Structure - Segment Tree]({% link _posts/2016-04-03-data-structure-segment-tree.md %})
-* [Data Structure - Heap]({% link _posts/2016-04-05-data-structure-heap.md %})
-* [Data Structure - Trie]({% link _posts/2016-04-09-data-structure-trie.md %})
-* [Data Structure - Graph]({% link _posts/2016-04-12-data-structure-graph.md %})
-* [Data Structure - HashMap]({% link _posts/2016-04-16-data-structure-hashmap.md %})
+* [Data Structure - Linked List]({% link _notes/data-structure-linkedlist.md %})
+* [Data Structure - Stack]({% link _notes/data-structure-stack.md %})
+* [Data Structure - Queue]({% link _notes/data-structure-queue.md %})
+* [Data Structure - Tree]({% link _notes/data-structure-tree.md %})
+* [Data Structure - HashTable]({% link _notes/data-structure-hashtable.md %})
+* [Data Structure - Heap]({% link _notes/data-structure-heap.md %})
+* [Data Structure - Graph]({% link _notes/data-structure-graph.md %})
+* [Data Structure - Trie]({% link _notes/data-structure-trie.md %})
+* [Data Structure - Segment Tree]({% link _notes/data-structure-segmenttree.md %})
 
 ## 5. Other Topics
-* [Common Sorting Algorithms]({% link _posts/2016-03-26-common-sorting-algorithms.md %})
-* [Bit Manipulation]({% link _posts/2016-04-25-bit-manipulation.md %})
+* [Common Sorting Algorithms]({% link _notes/common-sorting-algorithms.md %})
+* [Bit Manipulation]({% link _notes/bit-manipulation.md %})
 
 ## 7. Others
 ### 7.1 Removing Duplicated Lists

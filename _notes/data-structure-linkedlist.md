@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Data Structure - Linked List"
-date: 2016-03-27
-tags: [Singly Linked List, Doubly Linked List]
+index: 502
+date: 2016-05-02
+category: dsa
 ---
 
 > A linked list is represented by a sequence of nodes. Each node contains a link to another node. Linked list is one of the most-used data structure.
@@ -11,10 +12,10 @@ tags: [Singly Linked List, Doubly Linked List]
 ## 1. Types of Linked List
 ### 1.1 Singly Linked List
 Each node has an attribute to represent its value. It also has one pointer, linking it to the next node in the linked list.
-![image](/public/posts/2016-03-27/singlylinkedlist.png){:width="800px"}  
+![image](/public/notes/data-structure-linkedlist/singlylinkedlist.png){:width="800px"}  
 ### 1.2 Doubly Linked List
 Each node has an attribute to represent its value. Meanwhile, it has two pointers, the first pointer links to the next node, and the second pointer links to the previous node.
-![image](/public/posts/2016-03-27/doublylinkedlist.png){:width="800px"}  
+![image](/public/notes/data-structure-linkedlist/doublylinkedlist.png){:width="800px"}  
 
 ## 2. Implementation
 ### 2.1 Creating Singly Linked List

@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Data Structure - Heap"
-date: 2016-04-05
-tags: [MaxHeap, MinHeap]
+index: 507
+date: 2016-05-07
+category: dsa
 ---
 
 > Implement generic Max Heap and Min Heap with array.
@@ -13,11 +14,11 @@ A heap is a binary tree with these characteristics:
 * It’s complete. This means it’s completely filled in, reading from left to right across each row, although the last row need not be full.
 * It’s (usually) implemented as an array. Binary trees can be stored in arrays, rather than using references to connect the nodes.
 * Each node in a heap satisfies the `heap condition`, which states that every node’s key is larger/smaller than the keys of its children.
-![image](/public/posts/2016-04-05/heap.png){:width="800px"}  
+![image](/public/notes/data-structure-heap/heap.png){:width="800px"}  
 
 Heap can be implemented with array. A heap is a complete binary tree implies that there are no “holes” in the
 array used to represent it.
-![image](/public/posts/2016-04-05/heaparray.png){:width="800px"}  
+![image](/public/notes/data-structure-heap/heaparray.png){:width="800px"}  
 
 ## 2. Binary Max Heap
 A max-heap is a complete binary tree where each node is larger than its children. The root, therefore, is the maximum element in the heap.
@@ -25,14 +26,14 @@ A max-heap is a complete binary tree where each node is larger than its children
 Insertion means add new element to the heap. Initially, the new element is placed in the first open position at the end of the array. Insertion increases the array size by one. Here are the steps for adding the new element to max heap:
 1. Add new element to bottom, rightmost  
 2. Bubble up this new element, swap with its parent until it is smaller than its parent.  
-![image](/public/posts/2016-04-05/heapinsert.png){:width="800px"}  
+![image](/public/notes/data-structure-heap/heapinsert.png){:width="800px"}  
 
 ## 2.2 Removal
 Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
 1. Remove the top element.  
 2. Move the last element(bottom, rightmost) to top.  
 3. Bubble down this new top element. Each level, select smaller child and swap until to the bottom.  
-![image](/public/posts/2016-04-05/heapremove.png){:width="800px"}  
+![image](/public/notes/data-structure-heap/heapremove.png){:width="800px"}  
 * 1->a), 2->b), 3->c),d),e)
 
 ## 2.3 Efficiency of Heap Operations

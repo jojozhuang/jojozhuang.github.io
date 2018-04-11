@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Data Structure - Stack"
-date: 2016-03-29
-tags: [Stack, LIFO]
+index: 503
+date: 2016-05-03
+category: dsa
 ---
 
 > Stack is an abstract data type that serves as a collection of elements, with two principal operations:
@@ -14,7 +15,7 @@ tags: [Stack, LIFO]
 ## 1. Introduction
 ### 1.1 Real-life Example
 Stack is just like a pile of plates kept on top of each other. You can only take out a plate from the top and put a plate on top of the other plates.
-![image](/public/posts/2016-03-29/plates.png){:width="400px"}  
+![image](/public/notes/data-structure-stack/plates.png){:width="400px"}  
 Think about the things you can do with such a pile of plates.
 * Put a new plate on top
 * Remove the top plate
@@ -23,7 +24,7 @@ If you want the plate at the bottom, you have to first remove all the plates on 
 
 ### 1.2 Stack in Programming Terms
 In programming terms, putting an item on top of the stack is called `push` and removing an item is called `pop`.
-![image](/public/posts/2016-03-29/stack.png){:width="800px"}  
+![image](/public/notes/data-structure-stack/stack.png){:width="800px"}  
 Stack follows the `LIFO`(Last In First Out) rule. The last item that was placed is the first item to go out.
 
 ### 1.3 Common Operations on Stack

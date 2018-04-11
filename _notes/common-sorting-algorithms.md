@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Common Sorting Algorithms"
-date: 2016-03-26
-tags: [Bubble, Quick, Merge]
+index: 521
+date: 2016-05-21
+category: dsa
 ---
 
 > All of the common sorting algorithms.
@@ -53,7 +54,7 @@ public int[] bubbleSort(int[] nums) {
 ## 3. Insertion Sort
 ### 3.1 How It Works?
 Start from the second element, each time, insert the current element to the proper position.
-![image](/public/posts/2016-03-26/insertionsort.png)  
+![image](/public/notes/common-sorting-algorithms/insertionsort.png)  
 ### 2.2 Implementation
 ```java
 public int[] insertionSort(int[] nums) {

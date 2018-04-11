@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: note
+key: note
 title: "Data Structure - Segment Tree"
-date: 2016-04-03
-tags: [Segment Tree]
+index: 510
+date: 2016-05-10
+category: dsa
 ---
 
 > Segment Tree (a.k.a Interval Tree) is an advanced data structure which can support queries like:
@@ -39,7 +40,7 @@ Segment Tree has less storage and better performance.
 ## 2. Minimum Segment Tree
 ### 2.1 Definition of Minimum Segment Tree
 The digram below shows what Minimum Segment Tree for given array {4,-1,3,0,2} looks like.
-![image](/public/posts/2016-04-03/min.png){:width="800px"}  
+![image](/public/notes/data-structure-segmenttree/min.png){:width="800px"}  
 ### 2.2 Creating Segment Tree Node
 Create a class named `SegmentTreeNode`. Attributes `start` and `end` define the range. Attributes `left` and `right` are the children of the current node.
 ```java
@@ -141,7 +142,7 @@ public int queryMin(SegmentTreeNode root, int start, int end) {
 ## 3. Including Maximum and Sum
 ### 3.1 Definition of Minimum/Maximum/Sum Segment Tree
 Actually, we can build Segment Tree for minimum, maximum and sum all at once.
-![image](/public/posts/2016-04-03/minmaxsum.png){:width="800px"}  
+![image](/public/notes/data-structure-segmenttree/minmaxsum.png){:width="800px"}  
 For each node, it contains min, max and sum value. Here are the samples for different ranges.
 
   | Range  | Min | Max | Sum
