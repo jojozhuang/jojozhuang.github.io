@@ -272,3 +272,12 @@ describe('Inbox', () => {
 });
 ```
 ![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/deploymentassert.png)
+
+50. Deployment with Infura
+Register on https://infura.io/.
+```sh
+npm install truffle-hdwallet-provider --save
+```
+https://rinkeby.etherscan.io/
+
+51.
