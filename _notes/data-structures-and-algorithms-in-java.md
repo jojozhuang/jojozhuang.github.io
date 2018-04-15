@@ -505,14 +505,73 @@ from the queue (if possible) and make it the current vertex.
 * Rule 3: If you can’t carry out Rule 2 because the queue is empty, you’re done.
 
 ### Minimum Spanning Trees
-P668/801
+A `minimum spanning tree` (MST) is a graph with the minimum number of edges necessary to connect the vertices.
+
+### Topological Sorting with Directed Graphs
+Directed Graphs: In a directed graph you can proceed only one way along an edge.
+![image](/public/notes/data-structures-and-algorithms-in-java/directedgraph.png){:width="800px"}  
+Both the following topologically sorted list are valid.
+* BAEDGCFH
+* CFBAEDGH
+
+The idea behind the topological sorting algorithm is unusual but simple. Two steps are necessary:
+* Step 1: Find a vertex that has no successors.
+* Step 2: Delete this vertex from the graph, and insert its label at the beginning of a list.
+* Step 3: Repeat step 1 and step 2 until all the vertices are gone. Finally, the list shows the vertices arranged in topological order.
+
+### Cycles and Trees
+A graph with no cycles is called a tree.
+
+A topological sort must be carried out on a directed graph with no cycles. Such a graph is called a `directed acyclic graph`, often abbreviated DAG.
+
+### Connectivity in Directed Graphs
+### The Connectivity Table, Warshall’s Algorithm.
 
 ## 14. Weighted Graphs
-
+P694/801
 ## 15. When to Use What
+### General-Purpose Data Structures
+Arrays, linked lists, trees, and hash tables.
+![image](/public/notes/data-structures-and-algorithms-in-java/generaldatastructures.png){:width="800px"}  
 
-P643/801
+General-Purpose Data Storage Structures
 
-## References
+Data Structure           | Search  | Insertion | Deletion | Traversal
+-------------------------|---------|-----------|----------|-----------
+Array                    | O(N)    | O(1)      | O(N)     | —
+Ordered array            | O(logN) | O(N)      | O(N)     | O(N)  
+Linked list              | O(N)    | O(1)      | O(N)     | -
+Ordered linked list      | O(N)    | O(N)      | O(N)     | O(N)
+Binary tree (average)    | O(logN) | O(logN)   | O(logN)  | O(N)   
+Binary tree (worst case) | O(N)    | O(N)      | O(N)     | O(N)
+Balanced tree (average and worst case)  | O(logN) | O(logN)   | O(logN)  | O(N)   
+Hash table               | O(1)    | O(1)      | O(1)     | -
+
+### Special-Purpose Data Structures
+Stack, queue, priority queue(array or heap)
+
+Special-Purpose Data Storage Structures
+
+Data Structure                 | Insertion | Deletion | Comment
+-------------------------------|-----------|----------|------------------------------------
+Stack (array or linked list)   | O(1)      | O(1)     | Deletes most recently inserted item
+Queue (array or linked list)   | O(1)      | O(1)     | Deletes least recently inserted item
+Priority queue (ordered array) | O(N)      | O(1)     | Deletes highest-priority item
+Priority queue (heap)          | O(logN)   | O(logN)  | Deletes highest-priority item
+
+### Sorting
+Comparison of Sorting Algorithms
+
+Sort      | Average   | Worst     | Comparison | Extra Memory
+----------|-----------|-----------|------------|------------------
+Bubble    | O(N2)     | O(N2)     | Poor       | No
+Selection | O(N2)     | O(N2)     | Fair       | No
+Insertion | O(N2)     | O(N2)     | Good       | No
+Shellsort | O(N3/2)   | O(N3/2)   | -          | No
+Quicksort | O(N*logN) | O(N2)     | Good       | No
+Mergesort | O(N*logN) | O(N*logN) | Fair       | Yes
+Heapsort  | O(N*logN) | O(N*logN) | Fair       | No
+
+## 16. References
 * [Sample code used for this book](http://www.informit.com/store/data-structures-and-algorithms-in-java-9780672324536)
 * [Additional Source Codes](https://github.com/jojozhuang/Note/tree/master/DSAInJava)
