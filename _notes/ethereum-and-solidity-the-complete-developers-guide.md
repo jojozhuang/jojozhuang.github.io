@@ -68,6 +68,7 @@ Mnemonic Phrases:
 Mnemonic Code Converter: https://iancoleman.io/bip39/
 
 Get more ether.
+rinkeby-faucet.com
 https://faucet.rinkeby.io/
 plus.google.com
 
@@ -280,4 +281,24 @@ npm install truffle-hdwallet-provider --save
 ```
 https://rinkeby.etherscan.io/
 
-51.
+54. Deployment to Rinkeby
+```sh
+Johnny@Johnny-Mac:~$ node deploy.js
+Attempting to deploy from account 0xC0413358d6C103f0cdf7f50BA8EEf83bBDA70051
+Contract deployed to 0x672DBd70e0E4AD5FB59f1B1269535cB03f06Eb8A
+```
+If you get this Error: insufficient funds for gas * price + value, go to http://rinkeby-faucet.com/ to request more eth.
+Find you contract.
+https://rinkeby.etherscan.io/address/0xc0413358d6c103f0cdf7f50ba8eef83bbda70051
+![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/findcontract.png)
+
+55. Deployed Contracts in remix
+![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/deployedcontract.png)
+
+56.
+
+## Source Files
+* [Fist Smart Contract](https://github.com/jojozhuang/Note/tree/master/EthereumSolidity/SmartContract)
+
+## Reference
+* [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider)
