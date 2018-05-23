@@ -151,7 +151,7 @@ public ListNode findMiddle(ListNode head) {
 ```
 
 ### 3.3 Detecting Cycle in Linked List
-Check whether there is any cycle exists in a given linked list.
+Check whether there is any cycle exists in a given linked list. The below approach adapts the `Floyd's Cycle Detection Algorithm`, Tortoise & Hare or two pointers.
 ```java
 /**
  * @param head of the original linked list
@@ -237,3 +237,4 @@ public ListNode detectCycle(ListNode head) {
 * [Data Structure and Algorithms - Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
 * [Linked List](https://www.programiz.com/dsa/linked-list)
 * [Linked List Operations](https://www.programiz.com/dsa/linked-list-operations)
+* [Detecting a Loop in Singly Linked List - Tortoise & Hare](http://codingfreak.blogspot.com/2012/09/detecting-loop-in-singly-linked-list_22.html)

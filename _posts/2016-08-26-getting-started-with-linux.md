@@ -153,6 +153,16 @@ To switch back to GNOME Classic from within the same user session, run the follo
 ```sh
 $ gnome-shell --mode=classic -r &
 ```
+## 7. Install and Upgrade RPM Package
+1) Install VirtualBox 5.2.6
+```sh
+rpm -ivh VirtualBox-5.2-5.2.6_122088_el7-1.x86_64.rpm
+```
+2) Upgrade VirtualBox to 5.2.10
+```sh
+rpm -Uvh VirtualBox-5.2-5.2.10_122088_el7-1.x86_64.rpm
+```
+
 ## 99. References
 * [UNIX / LINUX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 * [Bash Command Basics](https://www.unr.edu/it/research-resources/research-computing/hpc/the-grid/using-the-grid/bash-commands)

@@ -210,6 +210,11 @@ int x = Character.getNumericValue(s.charAt(2)); // x = 5
 ```
 
 * otheres
+Direction Array used in Grid Traversal, DFS & BFS.  
+```java
+int[] dr = new int[]{-1, 0, 1, 0};
+int[] dc = new int[]{0, -1, 0, 1};
+```
 
 ## 8. Time Complexity
 O(Big O): Upper Bound on Time
