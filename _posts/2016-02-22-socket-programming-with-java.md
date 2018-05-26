@@ -120,7 +120,7 @@ Enter any string now, (quit) to end:
 ```
 
 In the terminal for TCP Client(Right one of the following screenshot), input any string and Enter. You will see the response from TCP Server.
-![image](/public/posts/2016-02-24/tcpserver.png)  
+![image](/public/posts/2016-02-22/tcpserver.png)  
 
 ## 3. UDP Example
 Create UDP Server and UDP Client with same function as TCP Server and TCP Client.
@@ -226,7 +226,7 @@ Enter any string now, (quit) to end:
 ```
 
 In the terminal for UDP Client(Right one of the following screenshot), input any string and Enter. You will see the response from UDP Server.
-![image](/public/posts/2016-02-24/udpserver.png)  
+![image](/public/posts/2016-02-22/udpserver.png)  
 
 ## 4. Source Files
 * [Source files of TCP Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/TCPServer)
