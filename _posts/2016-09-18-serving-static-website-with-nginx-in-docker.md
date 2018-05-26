@@ -28,11 +28,11 @@ Click on the preview button to see the result in your own browser.
 Switch to Settings->Volumes, click CHANGE button.
 ![image](/public/posts/2016-09-18/settings.png)  
 Create a folder named `kitematic-nginx` in ~/Documents/.
-![image](/public/posts/2016-09-18/createfolder.png){:width="800px"}  
+![image](/public/posts/2016-09-18/createfolder.png){:width="650px"}  
 The folder in container and the folder in your local machine are now mapping to each other. Click Restart button to restart the container.
 ![image](/public/posts/2016-09-18/volume.png)  
 You will find one html file in your local volume folder. This file is actually located in the container. It is the home page of Nginx you saw in browser.
-![image](/public/posts/2016-09-18/index.png){:width="800px"}  
+![image](/public/posts/2016-09-18/index.png){:width="650px"}  
 ### 2.3 Editing File
 Open this index.html in any editor, change the content as follows:
 ```html
@@ -52,7 +52,7 @@ Kitematic can map Docker container volumes to directories on your Mac.
 
 ## 3. Serving Our Own Website
 Now let’s try to serve a more interesting website. [Download the zipped files](https://github.com/gabrielecirulli/2048/archive/master.zip) for 2048, a popular (and addictive) web-based tile game. Extract this zip file into your local volume folder.
-![image](/public/posts/2016-09-18/2048files.png){:width="800px"}  
+![image](/public/posts/2016-09-18/2048files.png){:width="650px"}  
 
 Refresh the page in web browser, you can play the game now. Cool!
 ![image](/public/posts/2016-09-18/2048.png){:width="700px"}  

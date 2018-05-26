@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Using ExpressJS to Serve Static Files"
-date: 2016-03-10
+date: 2016-03-11
 tags: [Node.js, Express]
 ---
 
@@ -77,7 +77,7 @@ Update `server.js` with following content.
 </html>
 ```
 And put some static files, images to the both root folder and sub folder.
-![image](/public/posts/2016-03-10/folder_structure.png){:width="500px"}  
+![image](/public/posts/2016-03-11/folder_structure.png){:width="500px"}  
 
 ## 3. Running and Testing
 In terminal, start the server with `node` command.
@@ -89,19 +89,19 @@ You should see the following log.
 Server running at http://localhost:12000/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 12000.
-![image](/public/posts/2016-03-10/startserver.png){:width="550px"}  
+![image](/public/posts/2016-03-11/startserver.png){:width="550px"}  
 Open web browser, access http://127.0.0.1:12000/.
-![image](/public/posts/2016-03-10/index.png)
+![image](/public/posts/2016-03-11/index.png)
 1) Static Html
-![image](/public/posts/2016-03-10/statichtml.png)
+![image](/public/posts/2016-03-11/statichtml.png)
 2) Html in Sub Folder
-![image](/public/posts/2016-03-10/htmlsubfolder.png)
+![image](/public/posts/2016-03-11/htmlsubfolder.png)
 3) Image
-![image](/public/posts/2016-03-10/image.png)
+![image](/public/posts/2016-03-11/image.png)
 4) Image in Sub Folder
-![image](/public/posts/2016-03-10/imagesubfolder.png)
+![image](/public/posts/2016-03-11/imagesubfolder.png)
 5) Game 2048
-![image](/public/posts/2016-03-10/game2048.png)
+![image](/public/posts/2016-03-11/game2048.png)
 
 ## 4. Source Files
 * [Source files of Static Web Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/StaticWebServer)

@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Installing Node.js and NPM[Draft]"
+title: "Installing Node.js and NPM"
 date: 2016-03-06
 tags: [Node.js, NPM]
 ---
@@ -13,8 +13,10 @@ tags: [Node.js, NPM]
 
 [NPM](https://www.npmjs.com/) is a package manager that makes installing Node 'packages' fast and easy.
 
-## 2. Key Concepts[Draft]
-Single thread, Event Loop, async function calls.
+## 2. Core Concepts of Node.js
+* Blocking and Non-blocking Calls
+* Single thread, Event Loop
+* Timers
 
 ## 3. Installing Node.js and NPM on Ubuntu
 Update your local package index:
@@ -97,6 +99,7 @@ Hello, World!
 ![image](/public/posts/2016-03-06/testnode.png){:width="600px"}
 
 ## 7. References
+* [Nodejs Guides](https://nodejs.org/en/docs/guides/)
 * [Node.js Tutorial](https://www.tutorialspoint.com/nodejs/index.htm)
 * [Install Node.js - Ubuntu](https://www.godaddy.com/help/install-nodejs-ubuntu-17395)
 * [Installing Node.js and NPM on Mac](https://treehouse.github.io/installation-guides/mac/node-mac.html)
