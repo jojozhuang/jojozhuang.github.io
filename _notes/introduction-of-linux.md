@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Introduction to Linux"
+title: "Introduction to Linux(Book)"
 index: 101
 date: 2016-01-01
 category: basic

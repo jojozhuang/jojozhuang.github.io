@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
-title: "System Design[Draft]"
-date: 2016-05-01
-tags: [OOP, Database, MapReduce]
+layout: note
+key: note
+title: "System Design(Draft)"
+index: 110
+date: 2016-01-10
+category: basic
 ---
 
 > Best Practice and Common Questions for System Design.
@@ -40,6 +41,7 @@ Denormalization means adding redundant information into a database to speed up r
 * Need to solve the problem: data consistency. Constraints on tables.
 * Can speed-up reads(SELECT in SQL) while slowing down writes(INSERT, UPDATE and DELETE). So use Denormalization only when reading frequency is more than writing frequency.
 * One approach in practice is to use view in database.
+
 ### 3.5 Database Partitioning (Sharding)
 Sharding means splitting the data across multiple machines while ensuring you have a way of figuring out
 which data is on which machine.
@@ -56,4 +58,4 @@ which data is on which machine.
 * Map takes in some data and emits a <key J value> pair.
 * Reduce takes a key and a set of associated values and "reduces"them in some way, emitting a new key and value.
 
-## 4. System Design
+## 6. References
