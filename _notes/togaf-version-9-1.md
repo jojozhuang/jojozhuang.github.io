@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "TOGAF Version 9.1"
+title: "TOGAF Version 9.1(Draft)"
 index: 401
 date: 2016-04-01
 category: architecture

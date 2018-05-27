@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Ethereum and Solidity: The Complete Developer's Guide"
+title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 302
 date: 2016-03-02
 category: tools

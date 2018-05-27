@@ -1,9 +1,9 @@
 ---
 layout: note
 key: note
-title: "Technologies Used in Ariba"
-index: 205
-date: 2016-02-05
+title: "Technologies Used in Ariba(Draft)"
+index: 221
+date: 2016-02-21
 category: language
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: note
 key: note
-title: "Introduction to JavaScript Object Notation"
-index: 204
-date: 2016-02-04
+title: "Introduction to JavaScript Object Notation(Draft)"
+index: 214
+date: 2016-02-14
 category: language
 ---
 
