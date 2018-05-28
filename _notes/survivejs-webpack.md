@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "SurviveJS - Webpack(Draft)"
+title: "SurviveJS - Webpack(Online Doc)"
 index: 303
 date: 2016-03-03
 category: tools
