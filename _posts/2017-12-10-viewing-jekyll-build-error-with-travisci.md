@@ -11,7 +11,7 @@ tags: [Github Pages, Travis CI]
 ## 1. GitHub Pages & Jekyll
 I have my person website http://jojozhuang.github.io/ hosted in [Github Pages](https://pages.github.com/). I post new blogs by creating Markdown files(.md) and submit them to the Github Pages repository on Github. Then, Github Pages( powered by [Jekyll](https://jekyllrb.com/)) starts to compile the entire website and publish it. In some cases, however, the compilation fails, and the new changes are not published. Then, GitHub Page will send a notification email to the author. This email just reminds me that there is one build failure, but doesn't tell what is the root cause.
 
-One approach to figure out what is exactly happening with this issue is to setup Github Page website locally. I introduced the steps in blog [Setting up GitHub Pages Site Locally With Jekyll](_posts/2016-01-16-setting-up-github-pages-site-locally-with-jekyll.md).
+One approach to figure out what is exactly happening with this issue is to setup Github Page website locally. I introduced the steps in blog [Setting up GitHub Pages Site Locally With Jekyll]({% link _posts/2016-01-16-setting-up-github-pages-site-locally-with-jekyll.md %}).
 
 Another approach is to use third-party service(eg. Travis CI) to display Jekyll build error messages, which is also recommended by Github Pages. I will introduce this approach in the current posting.
 

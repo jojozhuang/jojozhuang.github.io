@@ -287,13 +287,15 @@ module.exports = mode => {
   return merge(commonConfig, developmentConfig, { mode });
 };
 ```
-package.json
+package.json  
 ```javascript
 "scripts": {
   "start": "webpack-dev-server --env development",
   "build": "webpack --env production"
 },
 ```
+* Instead of returning a configuration directly, a function capturing the passed `env` is returned. The function returns configuration based on it and also maps webpack `mode` to it.
+
 Run.
 ```sh
 $ PORT=1234 npm start
