@@ -888,7 +888,10 @@ Click the Run button. The execution result will be printed out if there is no er
 Otherwise, the error will be printed out instead.
 ![image](/public/posts/2018-01-25/error.png)
 
-## 6. Reference
+## 6. Source Files
+* [Source files of Online Code Editor on Github](https://github.com/jojozhuang/Tutorials/tree/master/OnlineCodeEditorReact)
+
+## 7. Reference
 * [How do I create online compiler for C, C++ and Java using node.js as server language?](https://www.quora.com/How-do-I-create-online-compiler-for-C-C++-and-Java-using-node-js-as-server-language)
 * [Making a code compiler using Hackerrank API and ACE editor](http://blog.arpitdubey.com/making-a-code-compiler-using-hackerrank-api-and-ace-editor/)
 * [How to use properly ACE Editor in ReactJS](https://ourcodeworld.com/articles/read/562/how-to-use-properly-ace-editor-in-reactjs)
