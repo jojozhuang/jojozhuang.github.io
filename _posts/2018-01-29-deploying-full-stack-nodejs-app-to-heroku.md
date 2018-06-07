@@ -1,15 +1,15 @@
 ---
 layout: post
 key: blog
-title: "Deploying Full Stack Node.js App to Heroku(Draft)"
+title: "Deploying Full Stack Node.js App to Heroku"
 date: 2018-01-29
 tags: [Nodejs, Heroku]
 ---
 
-> Introduce how to deploy React and Node.js app to Heroku.
+> Introduce how to deploy a Full Stack app to Heroku.
 
 ## 1. Full Stack App
-In the posting [Building Online Code Editor]({% link _posts/2018-01-25-building-online-code-editor.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(React) and backend(Node.js) to [Heroku](https://www.heroku.com/).
+In the posting [Building Online Code Editor]({% link _posts/2018-01-25-building-online-code-editor.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
 
 ## 2. Heroku
 [Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -18,8 +18,7 @@ Go to https://signup.heroku.com/ create a free Heroku account.
 ### 2.2 Installing Heroku CLI
 Go to https://devcenter.heroku.com/articles/heroku-cli#download-and-install to download proper installer.
 ### 2.3 Getting Started
-Follow the official document [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to finish the tutorial.
-Below are some of the highlights.  
+First, read the official tutorial [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to get familiar with the basic functions of Heroku. Below are some of the highlights from the tutorial.  
 1) Log into Heroku
 ```sh
 $ heroku login
@@ -27,43 +26,48 @@ Enter your Heroku credentials.
 Email: jojozhuang@gmail.com
 Password: **********
 ```
-2) View logs
+2) Create Heroku App
 ```sh
-heroku logs --tail
+$ heroku create                        // no name, a random name will be assigned to the app
+$ heroku create online-code-editor-api // create app with the given name
 ```
-3) Scale the app
+3) View logs
 ```sh
-heroku ps //check how many dynos are running
-heroku ps:scale web=0 // scale down
-heroku ps:scale web=1 // scale up
+$ heroku logs --tail
 ```
-4) Run the app locally
+4) Scale the app
 ```sh
-heroku local web // same to 'npm start'
+$ heroku ps //check how many dynos are running
+$ heroku ps:scale web=0 // scale down
+$ heroku ps:scale web=1 // scale up
 ```
-5) Heroku Console
+5) Run the app locally
+```sh
+$ heroku local web // same as 'npm start'
+```
+6) Heroku Console
 ```sh
 $ heroku run bash
 Running bash on ⬢ damp-springs-52045... up, run.3598 (Free)
 ~ $ ls
 Procfile  README.md  app.json  index.js  node_modules  package-lock.json  package.json	public	test.js  views
 ```
-Type 'exit' to quit the console.
+* Type 'exit' to quit the console.
 
 ## 3. Deployment
 ### 3.1 Server
-**Clone Source Code**
+1) Clone Source Code
 ```sh
 $ git clone https://github.com/jojozhuang/Tutorials/tree/master/OnlineCodeEditorReact
 $ cd OnlineCodeEditorReact
 ```
-**Create App on Heroku**
+2) Create App on Heroku
 ```sh
 $ heroku create online-code-editor-api
 ```
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
-Deploy code to Heroku.
+3) Push files to Heroku
 ```sh
 $ git push heroku master
 Counting objects: 7, done.
@@ -107,7 +111,7 @@ To https://git.heroku.com/online-code-editor-api.git
  ! [remote rejected] master -> master (pre-receive hook declined)
 error: failed to push some refs to 'https://git.heroku.com/online-code-editor-api.git'
 ```
-When the React App was created, both yarn lock file and npm lock file were generated. To fix the error, we need to decide which lock file to use. I decide to use npm, so remove yarn.lock from git and try to push again.
+Error occurs, we need to decide whether to use `npm` or `yarn` to manage dependencies. Notice that when the React App was created, both yarn lock file `yarn.lock` and npm lock file `package-lock.json` were generated. I decide to use npm, so remove yarn.lock from git staging and try to push again.
 ```sh
 $ git rm yarn.lock
 rm 'yarn.lock'
@@ -117,45 +121,49 @@ git commit -m "remove yarn.lock"
  delete mode 100644 yarn.lock
 $ git push heroku master
 ```
-**Testing Server**
+4) Testing Server  
 Open web browser, access 'https://online-code-editor-api.herokuapp.com/api/file/Java'. The API is working now.
 ![image](/public/posts/2018-01-29/api.png)
 
 ### 3.2 Client
-Build react app.
+1) Build react app.
 ```sh
 $ npm run build
 ```
-The front end React app is built and exported to dist folder. All are static files(html, js and images).
-![image](/public/posts/2018-01-29/build.png){:width="800px"}
-
-Create App on Heroku
+The React app is built and exported to dist folder. All are static files(html, js and images).
+![image](/public/posts/2018-01-29/build.png){:width="800px"}  
+2) Create App on Heroku
 ```sh
-heroku create online-code-editor
+$ heroku create online-code-editor
 ```
-
-Create git repository.
+3) Create git repository.
 ```sh
-cd dist
-git init
-git add .
-git commit -m "initial"
-git push heroku master
+$ cd dist
+$ git init
+$ git add .
+$ git commit -m "initial"
+$ git push heroku master
 ```
-
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
 ```sh
-git remote rm heroku
-heroku git:remote -a online-code-editor
+$ git remote rm heroku
+$ heroku git:remote -a online-code-editor
 ```
-
-**Testing Server**  
+4) Testing Server  
 Open web browser, access 'https://online-code-editor.herokuapp.com/'. The React app is working now.
 ![image](/public/posts/2018-01-29/client.png)
+* Notice, because the Client Side Routing doesn't work properly, I changed to the router rules to show editor in the root path /.
 
-## 4. Heroku Dashboard
-Manage sites through UI.
-https://dashboard.heroku.com/
+## 4. Heroku UI
+### 4.1 Dashboard
+Log into Heroku and go to https://dashboard.heroku.com/. The dashboard shows all the app we have created.
+![image](/public/posts/2018-01-29/dashboard.png)
+### 4.2 Overview
+Click one of the app and check the overview.
+![image](/public/posts/2018-01-29/overview.png)
+### 4.3 Deploy
+In the deploy tab, notice that we can connect GitHub and deploy projects.
+![image](/public/posts/2018-01-29/deploy.png)
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
