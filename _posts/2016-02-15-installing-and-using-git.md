@@ -164,6 +164,7 @@ Switch to GitHub, find the file, you see that the content is changed. And click 
 ![image](/public/posts/2016-02-15/sourcetree-githubfile.png)  
 
 ## 7. References
+* [Try Git](https://try.github.io/)
 * [Git Tutorial](https://www.tutorialspoint.com/git/index.htm)
 * [Install Git on Mac OS X](https://www.atlassian.com/git/tutorials/install-git)
 * [Install, Configure and Use Git on Ubuntu](http://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/)
