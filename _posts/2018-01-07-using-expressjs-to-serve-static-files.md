@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Using ExpressJS to Serve Static Files"
-date: 2016-03-11
+date: 2018-01-07
 tags: [Node.js, Express]
 ---
 
@@ -49,7 +49,7 @@ The following points need to be noted about the above file.
 * Use `express.static(path.join(__dirname, '/')` to serve all static files under the root folder '/', including the files in sub folder.
 * Call `app.listen()` method to start the server and listen at port `12000`.
 
-Update `server.js` with following content.
+Update `index.html` with following content.
 ```html
 <!DOCTYPE html>
 <html lang="en">
