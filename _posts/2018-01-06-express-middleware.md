@@ -32,8 +32,9 @@ An Express application can use the following types of middleware:
 * Third-party middleware
 
 ### 3.1 Application-Level Middleware
-1) Logging.
+1) Logging for each request
 ```javascript
+// logging.js
 var express = require("express");
 var app = express();
 
@@ -50,12 +51,13 @@ app.listen(3000, function() {
   console.log("Web server started on port 3000.");
 });
 ```
-After starting the express server, we can access http://localhost:3000/ in browser. In the terminal, we see the log for accessing the homepage.
+After starting the express server, we can access http://localhost:3000/ in browser. In the console, we see the log for accessing the homepage.
 ![image](/public/posts/2018-01-06/logging.png){:width="600px"}  
 
-2) Authentication  
-We add a check on the request url. It must start with '/hello', otherwise, 403 error will be returned.
+2) Authorization  
+We add a check to the request url. It must start with '/hello', otherwise, 403 error will be returned.
 ```javascript
+// authorization.js
 var express = require("express");
 var app = express();
 
@@ -65,7 +67,7 @@ app.use(function(request, response, next) {
   next();
 });
 
-// authentication
+// authorization
 app.use(function(request, response, next) {
   if (request.url.startsWith("/hello")) {
     next();
@@ -95,6 +97,7 @@ Now, let's try to access http://localhost:3000/hello/johnny. You passed the auth
 ### 3.3 Router-Level Middleware
 Use different routing URLs.
 ```javascript
+// routing.js
 var express = require("express");
 var path = require("path");
 var app = express();
@@ -121,8 +124,9 @@ app.get("/image", function(request, response) {
 * Note, we can use express Router to get the same routing as above.
 
 ### 3.3 Error-Handling Middleware
-The below code defines a web server, which allows to return the specified image to client. However, if any error occurs, it will return 500(Internal server error) to the client. Meanwhile, logs will be printed in the server terminal.
+The below code defines a web server, which allows to return the specified image to client. However, if any error occurs, it will return 500(Internal server error) to the client. Meanwhile, logs will be printed in the server console.
 ```javascript
+// error.js
 var express = require("express");
 var path = require("path");
 var app = express();
@@ -149,7 +153,7 @@ app.listen(3000, function() {
 ```
 Start the server and access http://localhost:3000/ in browser. You will see the error instead of the image.
 ![image](/public/posts/2018-01-06/internalerror.png){:width="600px"}
-In the terminal, we see the error log.
+In the console, we see the error log.
 ```sh
 $ node error.js
 Web Server started on port 3000
@@ -166,6 +170,7 @@ Error: Failed to send file: Error: ENOENT: no such file or directory, stat '/Use
 ### 3.4 Built-In Middleware
 1) Serve static files such as HTML files, images, and so on.
 ```javascript
+// staticmanual.js
 var express = require("express");
 var path = require("path");
 var fs = require("fs");
@@ -193,7 +198,7 @@ app.use(function(req, res) {
 });
 
 app.listen(3000, function() {
-  console.log("App started on port 3000");
+  console.log("Web Server started on port 3000");
 });
 ```
 Start the server and access http://localhost:3000/ in browser. You will see the 'file not found' error.
@@ -203,6 +208,7 @@ But if you try access http://localhost:3000/index.html, you will get the page pr
 
 2) Use `express.static` to serve static files. It is much simpler than the previous approach.
 ```javascript
+// static.js
 var express = require("express");
 var path = require("path");
 var app = express();
@@ -228,6 +234,7 @@ app.use(morgan("short"));
 ```
 Full example.
 ```javascript
+// morgan.js
 var express = require("express");
 var morgan = require("morgan");
 var path = require("path");
@@ -252,7 +259,7 @@ Start the server and access the following URL in browser. Notice, the first and 
 * http://localhost:3000/index.html
 * http://localhost:3000/johnny
 
-Let's check the logs in terminal.
+Let's check the logs in console.
 ![image](/public/posts/2018-01-06/morgan.png){:width="600px"}  
 
 ## 4. More Middlewares

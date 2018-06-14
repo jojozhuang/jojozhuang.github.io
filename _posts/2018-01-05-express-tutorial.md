@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Express Tutorial"
+title: "Express - Tutorial"
 date: 2018-01-05
 tags: [Express]
 ---
@@ -14,6 +14,7 @@ tags: [Express]
 ### 1.1 Hello World
 A standard way to setup web server with express.
 ```javascript
+// helloworld.js
 // Requires Express and puts it in a variable
 var express = require("express");
 // Calls express() and puts new Express application inside the app variable
@@ -21,12 +22,12 @@ var app = express();
 
 // Sends “Hello, world!”
 app.get("/", function(request, response) {
-    response.send("Hello, world!");
+  response.send("Hello, world!");
 });
 
 //Starts the Express server on port 3000 and logs that it has started
 app.listen(3000, function() {
-    console.log("Express app started on port 3000.");
+  console.log("Express app started on port 3000.");
 });
 ```
 ![image](/public/posts/2018-01-05/helloworld.png){:width="600px"}  
@@ -42,6 +43,7 @@ Express has four major features:
 ### 3.1 Node Http Module
 Actually, we can create web server with node `http` module without using express.
 ```javascript
+// httpserver.js
 var http = require("http");
 
 function requestHandler(request, response) {
@@ -56,6 +58,7 @@ server.listen(3000, function() {
 ```
 ### 3.2 Http + Express
 ```javascript
+// httpexpress.js
 var express = require("express");
 var http = require("http");
 var app = express();
@@ -71,6 +74,7 @@ http.createServer(app).listen(3000, function() {
 ```
 ### 3.3 Express Only
 ```javascript
+// expressserver.js
 var express = require("express");
 var app = express();
 
@@ -84,10 +88,62 @@ app.listen(3000, function() {
 });
 ```
 
-## 4. Source Files
+## 4. Other Usage
+1) Query arguments, /search?q=javascript  
+```javascript
+app.get("/search", function(req, res) {
+    req.query.q == "best restaurant"
+// ...
+});
+```
+2) Redirect  
+```javascript
+response.redirect("/hello/world");
+response.redirect("http://expressjs.com");
+```
+3) Https  
+```javascript
+// https
+var express = require("express");
+var https = require("https");
+var fs = require("fs");
+var app = express();
+// ... define your app ...
+var httpsOptions = {
+  key: fs.readFileSync("path/to/private/key.pem"),
+  cert: fs.readFileSync("path/to/certificate.pem")
+};
+https.createServer(httpsOptions, app).listen(3000);
+```
+4) Run both an HTTP server and an HTTPS server.  
+```javascript
+var express = require("express");
+var http = require("http");
+var https = require("https");
+var fs = require("fs");
+var app = express();
+// ... define your app ...
+var httpsOptions = {
+  key: fs.readFileSync("path/to/private/key.pem"),
+  cert: fs.readFileSync("path/to/certificate.pem")
+};
+http.createServer(app).listen(80);
+https.createServer(httpsOptions, app).listen(443)
+```
+5) Debugging Express  
+To see all the internal logs used in Express, set the DEBUG environment variable to express:* when launching your app.
+```javascript
+"debug": "DEBUG=express:* node helloworld.js"
+```
+Run 'npm run debug'.
+![image](/public/posts/2018-01-05/debug.png){:width="1000px"}  
+
+## 5. Source Files
 * [Source files of Express Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressTutorial)
 
-## 5. Reference
+## 6. Reference
 * [Express in Action](https://www.amazon.com/Express-Action-Writing-building-applications/dp/1617292427)
+* [Hello world example](https://expressjs.com/en/starter/hello-world.html)
 * [Express API](http://expressjs.com/en/api.html)
+* [Debugging Express](https://expressjs.com/en/guide/debugging.html)
 * [Express Tutorial](https://www.tutorialspoint.com/expressjs/index.htm)

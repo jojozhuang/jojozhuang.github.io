@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Using ExpressJS to Serve Static Files"
+title: "Using Express to Serve Static Files"
 date: 2018-01-07
 tags: [Node.js, Express]
 ---
