@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Express - Template Engine"
-date: 2018-01-12
+date: 2018-01-11
 tags: [Template Engine, EJS]
 ---
 

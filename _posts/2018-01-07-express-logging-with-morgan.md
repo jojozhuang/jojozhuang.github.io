@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Express - Logging with Morgan"
-date: 2018-01-08
+date: 2018-01-07
 tags: [Morgan]
 ---
 

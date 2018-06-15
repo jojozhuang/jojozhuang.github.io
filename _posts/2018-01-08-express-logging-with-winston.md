@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Express - Logging with Winston"
-date: 2018-01-09
+date: 2018-01-08
 tags: [Winston]
 ---
 
