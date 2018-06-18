@@ -2,14 +2,14 @@
 layout: post
 key: blog
 title: "Deploying Full Stack Node.js App to Heroku"
-date: 2018-01-29
+date: 2018-02-12
 tags: [Nodejs, Heroku]
 ---
 
 > Introduce how to deploy a Full Stack app to Heroku.
 
 ## 1. Full Stack App
-In the posting [Building Online Code Editor]({% link _posts/2018-01-25-building-online-code-editor.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
+In the posting [Building Online Code Editor]({% link _posts/2018-02-08-building-online-code-editor.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
 
 ## 2. Heroku
 [Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -123,7 +123,7 @@ $ git push heroku master
 ```
 4) Testing Server  
 Open web browser, access 'https://online-code-editor-api.herokuapp.com/api/file/Java'. The API is working now.
-![image](/public/posts/2018-01-29/api.png)
+![image](/public/posts/2018-02-12/api.png)
 
 ### 3.2 Client
 1) Build react app.
@@ -131,7 +131,7 @@ Open web browser, access 'https://online-code-editor-api.herokuapp.com/api/file/
 $ npm run build
 ```
 The React app is built and exported to dist folder. All are static files(html, js and images).
-![image](/public/posts/2018-01-29/build.png){:width="800px"}  
+![image](/public/posts/2018-02-12/build.png){:width="800px"}  
 2) Create App on Heroku
 ```sh
 $ heroku create online-code-editor
@@ -151,19 +151,19 @@ $ heroku git:remote -a online-code-editor
 ```
 4) Testing Server  
 Open web browser, access 'https://online-code-editor.herokuapp.com/'. The React app is working now.
-![image](/public/posts/2018-01-29/client.png)
+![image](/public/posts/2018-02-12/client.png)
 * Notice, because the Client Side Routing doesn't work properly, I changed to the router rules to show editor in the root path /.
 
 ## 4. Heroku UI
 ### 4.1 Dashboard
 Log into Heroku and go to https://dashboard.heroku.com/. The dashboard shows all the app we have created.
-![image](/public/posts/2018-01-29/dashboard.png)
+![image](/public/posts/2018-02-12/dashboard.png)
 ### 4.2 Overview
 Click one of the app and check the overview.
-![image](/public/posts/2018-01-29/overview.png)
+![image](/public/posts/2018-02-12/overview.png)
 ### 4.3 Deploy
 In the deploy tab, notice that we can connect GitHub and deploy projects.
-![image](/public/posts/2018-01-29/deploy.png)
+![image](/public/posts/2018-02-12/deploy.png)
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

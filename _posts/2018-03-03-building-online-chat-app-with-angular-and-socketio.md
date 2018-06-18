@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Building Online Chat App with Angular and Socket.IO[Draft]"
-date: 2018-01-19
+date: 2018-03-03
 tags: [Angular, Socket.IO, MongoDB]
 ---
 

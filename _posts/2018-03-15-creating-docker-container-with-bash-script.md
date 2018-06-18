@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Creating Docker Container with Bash Script[Draft]"
-date: 2018-01-18
+date: 2018-03-15
 tags: [Docker, Bash]
 ---
 

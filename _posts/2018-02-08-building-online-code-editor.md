@@ -2,14 +2,14 @@
 layout: post
 key: blog
 title: "Building Online Code Editor"
-date: 2018-01-25
+date: 2018-02-08
 tags: [React, Node.js]
 ---
 
 > Build an online code editor with React as front end and Node.js as back end. This app can compile and run the code.
 
 ## 1. Introduction
-In the posting [Creating FullStack App with React and Node.js]({% link _posts/2018-01-23-creating-fullstack-app-with-react-and-nodejs.md %}), I introduced how to run C and Java in [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to create a web application to achieve the same function with React and Node.js.
+In the posting [Creating FullStack App with React and Node.js]({% link _posts/2018-02-06-creating-fullstack-app-with-react-and-nodejs.md %}), I introduced how to run C and Java in [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to create a web application to achieve the same function with React and Node.js.
 
 ## 2. Server
 Use [express](https://expressjs.com/) to setup an web server. Two APIs are available.
@@ -862,10 +862,10 @@ To show line break '\n' in html, we need to add style `whiteSpace: pre-wrap` to 
 </Alert>
 ```
 Here is the sample screenshot for line break. Without the whitespace style, the lines will be concatenated together and hard to read.
-![image](/public/posts/2018-01-25/linebreak.png)
+![image](/public/posts/2018-02-08/linebreak.png)
 
 ## 4. Webpack
-For the configuration of Webpack, please refer to another blog [Creating FullStack App with React and Node.js]({% link _posts/2018-01-23-creating-fullstack-app-with-react-and-nodejs.md %}).
+For the configuration of Webpack, please refer to another blog [Creating FullStack App with React and Node.js]({% link _posts/2018-02-06-creating-fullstack-app-with-react-and-nodejs.md %}).
 The only thing needs to be taken care is nodemon. Add 'temp' folder to ignore in `nodemon.json` to prevent nodemon from monitoring it. Otherwise, server will restart if files inside this folder are changed after user submits code to server.
 ```javascript
 {
@@ -880,13 +880,13 @@ Start both the client and server with 'npm run dev'. The client is served at por
 $ npm run dev
 ```
 Open web browser, access 'http://localhost:3000/'.
-![image](/public/posts/2018-01-25/homepage.png)
+![image](/public/posts/2018-02-08/homepage.png)
 Switch to code editor. By default, Java is selected. You can select any language listed in the dropdown list.
-![image](/public/posts/2018-01-25/codeeditor.png)
+![image](/public/posts/2018-02-08/codeeditor.png)
 Click the Run button. The execution result will be printed out if there is no error.
-![image](/public/posts/2018-01-25/run.png)
+![image](/public/posts/2018-02-08/run.png)
 Otherwise, the error will be printed out instead.
-![image](/public/posts/2018-01-25/error.png)
+![image](/public/posts/2018-02-08/error.png)
 
 ## 6. Source Files
 * [Source files of Online Code Editor on Github](https://github.com/jojozhuang/Tutorials/tree/master/OnlineCodeEditorReact)

@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Running C and Java in Node.js"
-date: 2018-01-21
+date: 2018-02-05
 tags: [Nodejs, Java]
 ---
 
@@ -111,7 +111,7 @@ compiler.java('HelloJava.java');
 $ node run_c.js
 $ node run_java.js
 ```
-![image](/public/posts/2018-01-21/run.png){:width="650px"}
+![image](/public/posts/2018-02-25/run.png){:width="650px"}
 
 ## 5. Reference
 * [Child Processes on Node.js Document](https://nodejs.org/api/child_process.html)

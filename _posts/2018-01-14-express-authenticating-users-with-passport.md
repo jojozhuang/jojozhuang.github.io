@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Authenticating Users with Passport(Draft)"
+title: "Express - Authenticating Users with Passport(Draft)"
 date: 2018-01-14
 tags: [React, Nodejs]
 ---

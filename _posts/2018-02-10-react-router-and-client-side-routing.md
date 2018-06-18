@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "React Router and Client Side Routing"
-date: 2018-01-27
+date: 2018-02-10
 tags: [Routing, CSR, Webpack, Nginx]
 ---
 
@@ -10,9 +10,9 @@ tags: [Routing, CSR, Webpack, Nginx]
 
 ## 1. Routing Issue
 When using [React Router](https://www.npmjs.com/package/react-router-dom) and [Webpack](https://webpack.js.org/) for my React app, I encountered a routing issue. When accessing the homepage http://localhost:3000/, everything looks fine.
-![image](/public/posts/2018-01-27/homepage.png)
+![image](/public/posts/2018-02-10/homepage.png)
 However, when clicking on the Code Editor button, we are navigated to http://localhost:3000/editor. The routing is not working, instead, "Cannot GET /URL Error" appears.
-![image](/public/posts/2018-01-27/error.png)
+![image](/public/posts/2018-02-10/error.png)
 
 ## 2. Client Side Routers
 In the old days, things were simple. If you wanted to get the contents of /dashboard, the browser would make a GET request to your server, by inspecting the path portion of the URL the server would figure out that the user was requesting the /dashboard page. It would then grab that page and send back to the browser as a response. Then these things called client side routers (CSR) came into the picture. With a CSR (like React Router), you’re no longer making requests to your server every time you change routes. Instead, your CSR is just handling that for you locally on the browser. So when you go to /dashboard, instead of making a GET request to your server, your CSR is using a browser API called history.pushState to manually change the URL and then it renders the View for that specific route - all without causing a page refresh.
@@ -73,7 +73,7 @@ module.exports = {
 };
 ```
 Rebuild with webpack and refresh the browser. You may need to clean web browser cache.
-![image](/public/posts/2018-01-27/fixed.png){:width="900px"}
+![image](/public/posts/2018-02-10/fixed.png){:width="900px"}
 ### 3.2 Nginx Server
 Add following line to the Nginx configuration file /usr/local/etc/nginx/nginx.conf.
 ```sh

@@ -182,8 +182,8 @@ app.listen(3000, function() {
   console.log("Web Server started on port 3000");
 });
 ```
-Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You would see multiple log files in directory ./logs. Each file name has the format 'yyyyMMdd-hhmm-01-minute.log'. From the following screenshot, we see ten log files are created from 20:57 to 21:06 on Jan 08, 2018.
-![image](/public/posts/2018-01-08/logfiles.png){:width="350px"}  
+Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You would see multiple log files in directory ./logs. Each file name has the format 'yyyyMMdd-hhmm-01-minute.log'. From the following screenshot, we see ten log files are created from 20:57 to 21:06 on Jan 07, 2018.
+![image](/public/posts/2018-01-07/logfiles.png){:width="350px"}  
 
 ## 4. Source Files
 * [Source files of Express Logging Morgan on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressLoggingMorgan)

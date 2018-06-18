@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Using Yarn to Manage Packages"
-date: 2018-01-24
+date: 2018-02-01
 tags: [Yarn]
 ---
 
