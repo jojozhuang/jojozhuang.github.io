@@ -1,20 +1,14 @@
 ---
 layout: post
 key: blog
-title: "Building RESTful APIs with Node.js And MongoDB(Draft)"
+title: "Express - Versioning RESTful API(Draft)"
 date: 2018-01-17
-tags: [RESTful, Node.js, MongoDB]
+tags: [RESTful]
 ---
 
 >
 
 
-Route	HTTP Verb	Description
-/api/bears	GET	Get all the bears.
-/api/bears	POST	Create a bear.
-/api/bears/:bear_id	GET	Get a single bear.
-/api/bears/:bear_id	PUT	Update a bear with new info.
-/api/bears/:bear_id	DELETE	Delete a bear.
 
 Route Middleware
 ```javascript
@@ -70,6 +64,34 @@ displayName: String,
 bio: String
 });
 ```
-https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4
-https://codeburst.io/writing-a-crud-app-with-node-js-and-mongodb-e0827cbbdafb
-https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2
+
+```javascript
+var csrf = require("csurf");
+// …
+app.use(csrf());
+app.get("/", function(req, res) {
+  res.render("myview", {
+    csrfToken: req.csrfToken()
+  });
+});
+```
+
+
+[Node.js API Versioning with totoro-node](https://blog.cloudboost.io/node-js-api-versioning-with-totoro-node-c2ea1ef3dfba)
+
+User login, product management CRUD
+cookieParser
+
+
+
+
+http://meanjs.org/
+http://mean.io/
+https://www.quora.com/What-is-the-difference-between-http-mean-io-and-Mean-JS
+https://stackoverflow.com/questions/23199392/difference-between-mean-js-and-mean-io
+
+```sh
+ng g directive disablecontrol
+```
+
+[Disabling Form Controls When Working With Reactive Forms in Angular](https://netbasal.com/disabling-form-controls-when-working-with-reactive-forms-in-angular-549dd7b42110)

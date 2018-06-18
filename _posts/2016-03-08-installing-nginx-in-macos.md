@@ -84,6 +84,31 @@ In you local Mac machine, create a new folder /nginx/www. And create a static ht
 ```
 Stop and restart nginx, then refresh the web browser. Nginx is now serving pages from the custom folder.
 ![image](/public/posts/2016-03-08/location.png){:width="700px"}  
+### 3.3 Supporting Client Side Routing
+Many front-end libraries like React and Angular are using client side routing(CSR). Instead of making a GET request to server, CSR is using a browser API called history.pushState to manually change the URL and then it renders the view for that specific route - all without causing a page refresh.
+
+One limitation of CSR is, it assumes user always accesses the index page first. If user directly access the routing page, for example, http://localhost:3000/productlist, “Cannot GET /URL Error” will appear. Notice, after we deploy the Single Page Application, there is only one index.html file and several assets file in the server folder. This is no file named productlist.html. To solve this issue, we can force web browser access the index file. 
+
+For nginx, add following line to the configuration file /usr/local/etc/nginx/nginx.conf.
+```sh
+try_files $uri /index.html;
+```
+This lets nginx serve static asset files and serves your index.html file when any file isn't found on the server.
+```raw
+server {
+    listen       9096;
+    server_name  localhost;
+
+    #charset koi8-r;
+
+    #access_log  logs/host.access.log  main;
+
+    location / {
+        try_files $uri /index.html;
+        root   /nginx/www;
+        index  index.html index.htm;
+    }
+```
 
 ## 4. References
 * [Nginx Official Website](https://www.nginx.com/)

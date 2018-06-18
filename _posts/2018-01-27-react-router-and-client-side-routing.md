@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "React Router and Client Side Routing"
 date: 2018-01-27
-tags: [Routing, CSR, Webpack]
+tags: [Routing, CSR, Webpack, Nginx]
 ---
 
 > Introduce client side routing and how to fix the issue when using React Router.
@@ -79,7 +79,7 @@ Add following line to the Nginx configuration file /usr/local/etc/nginx/nginx.co
 ```sh
 try_files $uri /index.html;
 ```
-This lets nginx serve static asset files and serves your index.html file when another file isn't found on the server.
+This lets nginx serve static asset files and serves your index.html file when any file isn't found on the server.
 ```raw
 server {
     listen       9096;

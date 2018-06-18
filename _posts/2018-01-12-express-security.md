@@ -97,24 +97,32 @@ npm install –g nsp
 nsp audit-package
 
 Handling server crashes, forever
+```sh
 npm install forever --save
+```
+```javascript
 "scripts": {
 "start": "forever app.js"
 }
-
+```
 Various little tricks
 app.disable("x-powered-by");
 
 X-Frame-Options
+```javascript
 app.use(helmet.frameguard("sameorigin"));
 // or …
 app.use(helmet.frameguard("deny"));
+```
 
 restrictive crossdomain.xml
+```xml
 <?xml version="1.0"?>
 <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 <cross-domain-policy>
 <site-control permitted-cross-domain-policies="none">
 </cross-domain-policy>
-
+```
+```javascript
 app.use(helmet.noSniff());
+```

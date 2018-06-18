@@ -21,11 +21,14 @@ Then, install the Angular CLI globally.
 ```sh
 $ npm install -g @angular/cli
 ```
-Check CLI version
+Check CLI version.
 ```sh
 $ ng --version
 ```
-
+Update Angular CLI.
+```sh
+$ npm update -g @angular/cli
+```
 ## 4. Creating New Project
 Generate a new project and skeleton application named 'helloworld' by running the following commands:
 ```sh

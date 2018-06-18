@@ -8,122 +8,57 @@ tags: [React, Nodejs]
 
 > Introduce how to compile and run c/java in Node.js.
 
-1. Signup
-https://signup.heroku.com/
-2. Install Heroku CLI
-https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
-3. Login through terminal
-```sh
-$ heroku login
+User system, register, login.
+
+use express middleware to implement the authentication.
+Use bcrypt to hash password
+
+Hashing Passwords with Node.js and Bcrypt
+https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt
+http://www.summa.com/blog/node.js-and-password-storage-with-bcrypt
+
+User model
+```javascript
+var bcrypt = require("bcrypt-nodejs");
+var mongoose = require("mongoose");
+var SALT_FACTOR = 10;
+var userSchema = mongoose.Schema({
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
+  displayName: String,
+  bio: String
+});
+var noop = function() {};
+userSchema.pre("save", function(done) {
+  var user = this;
+  if (!user.isModified("password")) {
+    return done();
+  }
+  bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
+    if (err) {
+      return done(err);
+    }
+    bcrypt.hash(user.password, salt, noop, function(err, hashedPassword) {
+      if (err) {
+        return done(err);
+      }
+      user.password = hashedPassword;
+      done();
+    });
+  });
+});
+userSchema.methods.checkPassword = function(guess, done) {
+  bcrypt.compare(guess, this.password, function(err, isMatch) {
+    done(err, isMatch);
+  });
+};
+userSchema.methods.name = function() {
+  return this.displayName || this.username;
+};
+var User = mongoose.model("User", userSchema);
+module.exports = User;
 ```
-
-view log
-```sh
-heroku logs --tail
-heroku ps //check how many dynos are running
-heroku ps:scale web=0 // scale down
-heroku ps:scale web=1 // scale up
-```
-
-Run the app locally
-```sh
-heroku local web // same to 'npm start'
-```
-
-Console
-```sh
-$ heroku run bash
-Running bash on ⬢ damp-springs-52045... up, run.3598 (Free)
-~ $ ls
-Procfile  README.md  app.json  index.js  node_modules  package-lock.json  package.json	public	test.js  views
-```
-type 'exit' to exit.
-
-```sh
-Johnny@Johnny-Mac:~$ git push heroku master
-Counting objects: 7, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 68.86 KiB | 6.89 MiB/s, done.
-Total 7 (delta 2), reused 0 (delta 0)
-remote: Compressing source files... done.
-remote: Building source:
-remote:
-remote: -----> Node.js app detected
-remote:
-remote: -----> Build failed
-remote:  !     Two different lockfiles found: package-lock.json and yarn.lock
-remote:
-remote:        Both npm and yarn have created lockfiles for this application,
-remote:        but only one can be used to install dependencies. Installing
-remote:        dependencies using the wrong package manager can result in missing
-remote:        packages or subtle bugs in production.
-remote:
-remote:        - To use npm to install your application's dependencies please delete
-remote:          the yarn.lock file.
-remote:
-remote:          $ git rm yarn.lock
-remote:
-remote:        - To use yarn to install your application's dependences please delete
-remote:          the package-lock.json file.
-remote:
-remote:          $ git rm package-lock.json
-remote:     
-remote:        https://kb.heroku.com/why-is-my-node-js-build-failing-because-of-conflicting-lock-files
-remote:
-remote:  !     Push rejected, failed to compile Node.js app.
-remote:
-remote:  !     Push failed
-remote: Verifying deploy....
-remote:
-remote: !	Push rejected to afternoon-harbor-24879.
-remote:
-To https://git.heroku.com/afternoon-harbor-24879.git
- ! [remote rejected] master -> master (pre-receive hook declined)
-error: failed to push some refs to 'https://git.heroku.com/afternoon-harbor-24879.git'
-```
-remove yarn.lock from git.
-```sh
-$ git rm yarn.lock
-rm 'yarn.lock'
-git commit -m "remove yarn.lock"
-[master 7944b7d] remove yarn.lock
- 1 file changed, 7423 deletions(-)
- delete mode 100644 yarn.lock
-$ git push heroku master
-```
-
-change the name, then need to update git remote.
-https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes
-```sh
-git remote rm heroku
-heroku git:remote -a online-code-editor
-```
-
-## 4. Deployment
-Deploying Express.
-https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
-
-Lessons learned from deploying my first full-stack web application
-https://medium.freecodecamp.org/lessons-learned-from-deploying-my-first-full-stack-web-application-34f94ec0a286
-
-https://daveceddia.com/deploy-react-express-app-heroku/
-
-## 4. Deployment
-https://www.jaygould.co.uk/devops/2017/08/18/using-environment-config-variables-node.html
-https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html
-https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment
-
-http://blog.teamtreehouse.com/deploy-static-site-heroku
-https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489
-
-Deploying Express.
-https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
-
-Lessons learned from deploying my first full-stack web application
-https://medium.freecodecamp.org/lessons-learned-from-deploying-my-first-full-stack-web-application-34f94ec0a286
-
-https://daveceddia.com/deploy-react-express-app-heroku/
 
 ## 5. Reference
 * [Child Processes on Node.js Document](https://nodejs.org/api/child_process.html)
@@ -132,3 +67,12 @@ https://daveceddia.com/deploy-react-express-app-heroku/
 * [How to build Online Judge](https://www.zhihu.com/question/20343652)
 * [Making a code compiler using Hackerrank API and ACE editor](http://blog.arpitdubey.com/making-a-code-compiler-using-hackerrank-api-and-ace-editor/)
 * * [How to build Online Judge](https://www.zhihu.com/question/20343652)
+
+
+SECCOMP
+https://github.com/QingdaoU/OnlineJudge
+https://github.com/QingdaoU/OnlineJudgeDeploy
+[Compiling a program with limited library access](https://stackoverflow.com/questions/27731599/compiling-a-program-with-limited-library-access)
+
+[Online Judge 是如何解决判题端安全性问题的？](https://www.zhihu.com/question/23067497)
+https://www.zhihu.com/question/27340709

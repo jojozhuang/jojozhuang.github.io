@@ -56,7 +56,7 @@ In 'app.module.ts', include the router module and define route array 'Routes'.
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule} from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -92,6 +92,14 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+```
+Apply the router by updating ./app/app.component.html with the following content.
+```html
+<div class="mainpage">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
 ```
 ### 2.4 BootStrap CSS
 Add bootstrap to the project.
@@ -262,7 +270,7 @@ import { ProductService } from './product.service';
 ```
 
 ### 3.5 Intercept HTTP Requests
-In Angular 4.3 or higher version, you can use HttpInterceptor to intercept and modify HTTP requests globally. In this application, I use it to handle http request error globally. In folder './src/main', create file named 'http.interceptor.ts' with following content.
+In Angular 4.3 or higher version, you can use HttpInterceptor to intercept and modify HTTP requests globally. In this application, I use it to handle http request error globally. In folder './src/app', create file named 'http.interceptor.ts' with following content.
 ```typescript
 import { Injectable } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, HttpErrorResponse, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -328,7 +336,7 @@ If error is caught, we get the status and error message, then return the Respons
 
 Register the customized HttpInterceptor to NgModule. In 'app.module.ts', append 'ErrorInterceptorProvider' to 'providers'.
 ```typescript
-import { ProductService } from './product.service';
+import { ErrorInterceptorProvider } from './http.interceptor';
 
 ...
 
@@ -557,6 +565,28 @@ The following points need to be noted about the above code.
 * Use productForm to display product if it is in edit mode.
 * If Save button is clicked. Function 'onClickSubmit()' will be called.
 * Show error message if applicable.
+
+As we use the `formGroup` attribute in form tag, we need to import `ReactiveFormsModule`. Otherwise, you will get **Can't bind to 'formGroup' since it isn't a known property of 'form'** error and the page will be blank.
+
+In 'app.module.ts', include 'ReactiveFormsModule'.
+```typescript
+import { ReactiveFormsModule } from '@angular/forms';
+
+...
+
+@NgModule({
+  ...,
+
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+    AlertModule.forRoot(),
+    HttpClientModule
+  ],
+  ...
+})
+```
 
 ## 4. Uploading Image
 Following html contains one image control to display product's photo. There is a file control to allow user select image from local disk. And button 'Upload' is to upload the selected image to remote server.

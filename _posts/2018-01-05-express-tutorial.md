@@ -89,19 +89,28 @@ app.listen(3000, function() {
 ```
 
 ## 4. Other Usage
-1) Query arguments, /search?q=javascript  
+1) Enable CORS
+```javascript
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "*");
+  next();
+});
+```
+2) Query arguments, /search?q=javascript  
 ```javascript
 app.get("/search", function(req, res) {
     req.query.q == "best restaurant"
 // ...
 });
 ```
-2) Redirect  
+3) Redirect  
 ```javascript
 response.redirect("/hello/world");
 response.redirect("http://expressjs.com");
 ```
-3) Https  
+4) Https  
 ```javascript
 // https
 var express = require("express");
@@ -115,7 +124,7 @@ var httpsOptions = {
 };
 https.createServer(httpsOptions, app).listen(3000);
 ```
-4) Run both an HTTP server and an HTTPS server.  
+5) Run both an HTTP server and an HTTPS server.  
 ```javascript
 var express = require("express");
 var http = require("http");
@@ -130,7 +139,7 @@ var httpsOptions = {
 http.createServer(app).listen(80);
 https.createServer(httpsOptions, app).listen(443)
 ```
-5) Debugging Express  
+6) Debugging Express  
 To see all the internal logs used in Express, set the DEBUG environment variable to express:* when launching your app.
 ```javascript
 "debug": "DEBUG=express:* node helloworld.js"
