@@ -11,7 +11,7 @@ tags: [JUnit]
 ## 1. JUnit
 [JUnit](https://junit.org/) is a test framework for Java programming language. It uses annotations to identify methods that specify a test. JUnit is an open source project hosted at [Github](https://github.com/junit-team/junit4). The following sample project is based on `JUnit 4`.
 
-## 2. Run JUnit in Eclipse
+## 2. Running JUnit in Eclipse
 In Eclipse, create a new Java project.
 ### 2.1 Java Class
 Create a class with one method named 'twoSum()'. This is the solution for the first algorithm question in [LeetCode](https://leetcode.com/problems/two-sum/description/).
