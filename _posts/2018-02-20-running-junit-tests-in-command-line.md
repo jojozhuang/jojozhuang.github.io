@@ -89,7 +89,7 @@ public class SolutionTest {
 }
 ```
 ### 2.3 Running JUnit
-In Eclipse, select the `SolutionTest` class, right-click on it and select Run-as -> JUnit Test. You should see all the three methods are passed the testing.
+In Eclipse, select the `SolutionTest` class, right-click on it and select Run-as -> JUnit Test. You should see all the three methods passed the testing.
 ![image](/public/posts/2018-02-20/runjunit.png)
 
 ## 3. Compile and Run Java in Command Line

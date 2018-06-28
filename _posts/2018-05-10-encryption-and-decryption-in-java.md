@@ -201,7 +201,7 @@ Create a text file in the project root folder with name 'document.txt' and the f
 Happy work, happy life!
 ```
 ### 3.2 Run Junit
-In the console, you should see the following output.
+In the console, you should see the following output. The encrypted content is unreadable.
 ```sh
 Original content: Happy work, happy life!
 
