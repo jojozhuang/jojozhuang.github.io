@@ -148,9 +148,9 @@ public class Solution {
 Create JUnit class based on JUnit 4 to test the 'towSum' method. We define three test methods here.
 * testInvalidInput()
 * testSmallInput()
-* testLargeInput();
+* testLargeInput()
 
-```raw
+```java
 package johnny.tutorial.JUnitDynamicTest;
 import static org.junit.Assert.*;
 

@@ -11,7 +11,8 @@ tags: [MongoDB, CRUD]
 ## 1. Start MongoDB
 Start MongoDB service.
 ```sh
-$ sudo service mongod start
+$ sudo service mongod start   // linux
+$ brew services start mongodb // macOS
 ```
 Launch MongoDB Shell with `mongo` command.
 ```sh
@@ -64,8 +65,34 @@ admin  0.000GB
 local  0.000GB
 ```
 
-## 3. Collection
-### 3.1 Syntax of Creating Collection
+
+## 3. User
+### 3.1 Adding a User to Database
+Create user who will have both read and write privileges to the database.
+```
+> use mymdb
+switched to db mymdb
+> db.createUser({'user':'testuser', 'pwd':'abc123', roles:['readWrite']});
+Successfully added user: { "user" : "testuser", "roles" : [ "readWrite" ] }
+```
+Create user who will have read-only access to the database.
+```
+db.createUser({'user':'testuser', 'pwd':'abc123', roles:['read']});
+```
+### 3.2 Connecting Database with the New User
+Syntax:
+```sh
+mongo -u 'username' -p 'password' <servername>/databasename
+```
+Example:
+```sh
+$ mongo -u 'testuser' -p 'abc123' localhost:27017/mymdb
+MongoDB shell version v3.4.10
+connecting to: mongodb://localhost:27017/mymdb
+```
+
+## 4. Collection
+### 4.1 Syntax of Creating Collection
 Basic syntax of creating new collection in MongoDB.
 ```sh
 db.createCollection(name, options)
@@ -76,7 +103,7 @@ Option list:
 * size: Specifies a maximum size in bytes for a capped collection. If capped is true, then you need to specify this field also.
 * max: Specifies the maximum number of documents allowed in the capped collection.
 
-### 3.2 Creating Collection Without Options
+### 4.2 Creating Collection Without Options
 Create database named `store` and collection named `product`.
 ```
 > use store
@@ -90,7 +117,7 @@ Check the created collection with `show collection` command.
 > show collections
 product
 ```
-### 3.3 Creating Collection With Options
+### 4.3 Creating Collection With Options
 Create collection named `productOptions` with explicit options.
 ```
 >db.createCollection("productOptions", { capped : true, autoIndexId : true, size : 2000000, max : 10000 } )
@@ -103,7 +130,7 @@ Check the collection list.
 product
 productOptions
 ```
-### 3.4 Creating Collection Implicitly
+### 4.4 Creating Collection Implicitly
 Collection named `productImplicit` is created automatically, when document is inserted into it.
 ```sh
 > db.productImplicit.insert({"name":"iPhone 8"})
@@ -115,7 +142,7 @@ productOptions
 >
 ```
 
-### 3.5 Dropping Collection
+### 4.5 Dropping Collection
 Drop a collection from the database `store` with `db.<Collection>.drop()` command.
 ```sh
 > use store
@@ -128,8 +155,8 @@ productOptions
 >
 ```
 
-## 4. Document
-### 4.1 Creating Document
+## 5. Document
+### 5.1 Creating Document
 Syntax for creating document.
 ```sh
 db.<Collection>.insert(document)
@@ -173,7 +200,7 @@ BulkWriteResult({
     "upserted" : [ ]
 })
 ```
-### 4.2 Updating Document
+### 5.2 Updating Document
 Syntax for updating document.
 ```sh
 db.<Collection>.update(SELECTION_CRITERIA, UPDATED_DATA)
@@ -201,7 +228,7 @@ Check the updated document.
 ```
 ![image](/public/posts/2016-11-21/update.png){:width="700px"}  
 
-### 4.3 Deleting Document
+### 5.3 Deleting Document
 Syntax for deleting document.
 ```sh
 db.<Collection>.remove(DELLETION_CRITTERIA)
@@ -238,8 +265,8 @@ Delete all documents if no deletion criteria is specified.
 > db.<Collection>.remove()
 ```
 
-## 5. Query In MongoDB
-### 5.1 Finding Document
+## 6. Query In MongoDB
+### 6.1 Finding Document
 Display all the documents in collection.
 ```sh
 > db.<Collection>.find()
@@ -252,7 +279,7 @@ Return only one document from the collection.
 ```sh
 > db.<Collection>.findOne()
 ```
-### 5.2 Where Clause
+### 6.2 Where Clause
 Use following operations to query documents with some conditions.
 
  Operation           | Syntax                     | Example                               | Equivalent
@@ -264,26 +291,27 @@ Use following operations to query documents with some conditions.
  Greater Than Equals | {\<key\>:{$`gte`:\<value\>}} | db.product.find({"price":{$gte:400}}) | where price >= 400
  Not Equals          | {\<key\>:{$`ne`:\<value\>}}  | db.product.find({"price":{$ne:400}})  | where price != 400
 
-### 5.3 AND in MongoDB
+### 6.3 AND in MongoDB
 Find products whose price is greater than or equals to 400, and its price is less than 800.
 ```sh
 > db.product.find({$and:[{"price":{$gte:400}},{"price":{$lt:800}}]})
 ```
 ![image](/public/posts/2016-11-21/findand.png){:width="700px"}  
-### 5.4 OR in MongoDB
+### 6.4 OR in MongoDB
 Find products whose name is 'Xbox', or its price is greater than 600.
 ```sh
 > db.product.find({$or:[{"name":"Xbox"},{"price":{$gt:600}}]})
 ```
 ![image](/public/posts/2016-11-21/findor.png){:width="700px"}  
-### 5.5 Using AND and OR Together
+### 6.5 Using AND and OR Together
 Find products whose name is 'Xbox', or its price is greater than 600, and its price is less than 300.
 ```sh
 > db.product.find({"price":{$lt:300}, $or:[{"name":"Xbox"},{"price":{$gt:600}}]})
 ```
 ![image](/public/posts/2016-11-21/findandor.png){:width="700px"}  
 
-## 6. References
+## 7. References
 * [MongoDB Official Website](https://www.mongodb.com)
 * [MongoDB - Create Database](https://www.tutorialspoint.com/mongodb/mongodb_create_database.htm)
+* [Getting Started with MongoDB User Management](https://scalegrid.io/blog/getting-started-with-user-management-in-mongodb/)
 * [Databases and Collections](https://docs.mongodb.com/manual/core/databases-and-collections/)
