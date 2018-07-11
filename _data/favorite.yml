@@ -170,6 +170,12 @@ bookmarks:
       - name: Type Script
         description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
+      - name: Fiddler
+        description: The free web debugging proxy for any browser, system or platform
+        url: https://www.telerik.com/fiddler
+      - name: Plunker
+        description: An online real-time collaborative code editor
+        url: https://plnkr.co/
       - name: Postman
         description: A lightweight tool for testing web APIs
         url: https://www.getpostman.com/

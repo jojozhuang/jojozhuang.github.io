@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Setting Up Jekyll on Windows 10"
-date: 2018-03-01
+date: 2018-04-01
 tags: [Jekyll, Windows10]
 ---
 

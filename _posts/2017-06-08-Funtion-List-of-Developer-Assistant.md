@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Function List of Developer Assistant"
+title: "Function List of Developer Assistant(Draft)"
 date: 2017-06-08
 tags: [String, File]
 ---
@@ -25,6 +25,7 @@ Take a look how Atom is built.
   * Extract full name from each line
   * Sort all lines by specified field
   * Change long string to multiple lines with the given max length.
+  * url encoding(http://pressbin.com/tools/urlencode_urldecode/)
 
 ## 3. String Search/Replace
   * Search by wildcard(?,\*)
@@ -39,3 +40,6 @@ https://bootsnipp.com/snippets/WR0r1
 
 Create a website which collects all classic codes as best practice.
 For example: string empty check in java, javascript, c#
+
+## 9. Others
+Json viewer: https://jsonformatter.curiousconcept.com/
