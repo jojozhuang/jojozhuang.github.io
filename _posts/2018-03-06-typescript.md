@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "TypeScript"
 date: 2018-03-06
-tags: [TypeScript]
+tags: [TypeScript, tsc]
 ---
 
 > Introduction of TypeScript.
@@ -52,6 +52,27 @@ greeter.greet() // print "Hello, world"
 ### 1.3 Play Ground
 You can go to http://www.typescriptlang.org/play/index.html to try it. Input TypeScript at the left side and you will see the equivalent javascript code at the right side.
 ![image](/public/posts/2018-03-06/playground.png)
+### 1.4 Local Environment Setup
+Type the following command in terminal to install TypeScript.
+```sh
+$ npm install -g typescript
+```
+Create file named hello.ts with the following content.
+```typescript
+// hello.ts
+var message:string = "Hello World"
+console.log(message)
+```
+Compile it to js file with `tsc` command.
+```sh
+$ tsc hello.ts
+```
+A new file named hello.js will be created in the sample folder. Open it, you will see the following javascript codes.
+```javascript
+// hello.js
+var message = "Hello World";
+console.log(message);
+```
 
 ## 2. Types
 In TypeScript, types can be grouped to Built-in Types and User-defined Types. Besides, it can also be grouped to Primitive Types and Object Types.
@@ -1000,8 +1021,11 @@ class Person{ }
 var obj = new Person()
 console.log(obj instanceof Person);   // print true
 ```
+### 8.2 tsconfig.json
+The presence of a `tsconfig.json` file in a directory indicates that the directory is the root of a TypeScript project. The tsconfig.json file specifies the root files and the compiler options required to compile the project.
 
 ## 9. Reference
 * [TypeScript Official Website](http://www.typescriptlang.org/)
 * [TypeScript Tutorial](https://www.tutorialspoint.com/typescript/index.htm)
 * [Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
+* [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)

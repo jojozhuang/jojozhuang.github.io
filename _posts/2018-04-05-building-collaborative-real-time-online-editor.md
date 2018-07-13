@@ -8,6 +8,10 @@ tags: [Angular, Socket.IO]
 
 > Introduce how to use [Travis CI](https://travis-ci.org) to get build error from GitHub Pages.
 
+Collaborative Real Time Online Editor and Message.
+the upper is the online editor
+the lower is the textbox for messaging.
+
 ## 1. GitHub Pages & Jekyll
 
 ng build --prod --aot=false

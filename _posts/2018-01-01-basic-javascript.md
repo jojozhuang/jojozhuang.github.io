@@ -39,301 +39,8 @@ and Object
 Ebook: Angular 5 Projects
 http://www.allitebooks.in/angular-5-projects/
 
-**TypeScript**
-2.1 What is Type Script
-TypeScript is a superset of JavaScript (written by Microsoft) that primarily provides optional static typing, classes, and interfaces. Browsers can’t run TypeScript directly—not yet anyway. TypeScript code is compiled down to JavaScript.
-```raw
-TypeScript = JavaScript + Types + Classes + Modules + More
-```
-Microsoft website for learning typescript.
-http://www.typescriptlang.org/
-
-sample
-```javascript
-var Greeter = /** @class */ (function () {
-    function Greeter(message) {
-        this.greeting = message;
-    }
-    Greeter.prototype.greet = function () {
-        return "Hello, " + this.greeting;
-    };
-    return Greeter;
-}());
-var greeter = new Greeter("world");
-greeter.greet() // print "Hello, world"
-```
-same logic implemented with TypeScript
-```TypeScript
-class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
-}
-
-let greeter = new Greeter("world");
-greeter.greet() // print "Hello, world"
-```
-2.1 Modules
-Internal Modules, External Modules
-2.2 Enumerations and Generics
-```TypeScript
-enum Color {Red, Green, Blue};
-var c: Color = Color.Green;
-```
-1.3 Constructors
-TypeScript uses the constructor keyword to declare constructors, rather than the class name. Another difference is that TypeScript automatically assigns constructor arguments as properties. You don’t need to assign instance variables in your constructor—that’s already done for you.
-```TypeScript
-class Person {
-    constructor(private firstName: string, private lastName: string) {
-    }
-}
-//equals this:
-class Person {
-    private firstName: string;
-    private lastName: string;
-    constructor(firstName: string, lastName: string) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-}
-```
-1.4 Arrow Functions
-```javascript
-// regular function
-var calculateInterest = function (amount, interestRate, duration) {
-    return amount * interestRate * duration / 12;
-}
-// convert to arrow function
-var calculateInterest = (amount, interestRate, duration) => {
-    return amount * interestRate * duration / 12;
-}
-// much shorter arrow function
-var calculateInterest = (amount, interestRate, duration) => amount * interestRate * duration / 12;
-```
-1.5 `this` variable in arrow function
-```javascript
-function Person(age) {
-	this.age = age
-	this.growOld = function() {
-		this.age++;
-	}
-}
-var person = new Person(1);
-setTimeout(person.growOld, 1000);
-
-setTimeout(function(){ console.log(person.age); }, 2000); // print 1,  the this variable inside the Person function doesn’t actually represent the Person function.
-```
-
-```javascript
-function Person(age) {
-	this.age = age
-	this.growOld = () => {
-		this.age++;
-	}
-}
-var person = new Person(1);
-setTimeout(person.growOld, 1000);
-
-setTimeout(function(){ console.log(person.age); }, 2000); // print 2
-```
-1.6 Getters and Setters
-```TypeScript
-class foo {
-  private _bar:boolean = false;
-  get bar():boolean {
-    return this._bar;
-  }
-  set bar(theBar:boolean) {
-    this._bar = theBar;
-  }
-}
-
-let myFoo = new foo();
-var myBar = myFoo.bar;
-myFoo.bar = true;
-```
-1.7 Types
-```javascript
-var mark = 123;         // javascript
-var mark: number = 123; // typescript
-```
-1.7.1 Primitive Types
-Primitive types aren’t inherited from the Object class and aren’t extendable.
-any, number, string, boolean
-1.7.2 Object Types
-Object types inherited from the `Object` class and are extendable.
-Number, String, Boolean
-```javascript
-String.prototype.Foo = function() {
-    // DO THIS...
-}
-```
-check class type.
-```TypeScript
-myString instanceof String
-```
-1.7.3 Union Types
-```TypeScript
-var name: string|number;
-
-// both assignments are fine
-this.name = 'abc';
-this.name = 22;
-```
-Union types can also to apply to function arguments and results:
-```TypeScript
-function format(value: string, padding: string | number) {  }
-function getFormatted(anyValue:any): string | number {  }
-```
-1.7.4 Alias Types
-```TypeScript
-type Location = string|number;
-var loc: Location;
-```
-1.7.5 Tuple Types
-```TypeScript
-var contactInfo: [string, string, number];
-contactInfo = ['Mark', '12 Welton Road', 30122];
-```
-1.8 Compilation Options
-tsconfig.json
 
 
-## 2. Visual Studio Code
-1.1 Download
-File->Open, `code .`
-1.2 Seeing Files, Commands, and Hot Keys
-CMD+P, CMD+Shift+P, CMD+Shift+M, CMD+Shift+D(Debug, breakpoint)
-1.3 Starting a Build
-tasks.json
-https://code.visualstudio.com/docs/editor/tasks
-1.4 Debugging
-The debugging is more useful for debugging server-side code than for browser-side code,
-1.5 sdfs
-
-## 3. Node.js
-3.1 Setting Up and Running Node
-3.2 Node Package Manager (npm)
-check whether your modules are outdated
-```sh
-npm outdated
-```
-update modules
-```sh
-npm update
-npm update -g #update globally installed packages
-```
-```sh
-npm uninstall
-npm uninstall -g
-```
-3.3 Node Module Installation Levels
-Global, local
-```sh
-npm install -g typescript  # global
-npm install express        # local
-```
-3.4 Updating Node Modules
-3.5 The package.json File
-Ways of Specifying Version Numbers
-
- Version | Description
----------|--------------------------
-1.2.1    | Must match version 1.2.1
-\>1.2.1  | Must be later than version 1.2.1
-\>=1.2.1 | Must be version 1.2.1 or later
-<1.2.1   | Must be before version 1.2.1  
-<=1.2.1  | Must be before or equal to version 1.2.1
-~1.2.1   | Must be approximately equivalent to version 1.2.1
-^1.2.1   | Must be compatible with version 1.2.1
-1.2.x    | Must be any version starting with 1.2.
-\*       | any version
-
-3.6 The Folder node_modules
-When you install a Node module, it’s downloaded and placed into the subfolder node_modules within your project folder.
-
-```sh
-npm install
-```
-package.json file.
-```json
-{
-  "name" : "MyStaticServer",
-  "version" : "0.0.1",
-  "dependencies" : {
-    "express" : "3.3.x"
-  }
-}
-```
-## 4. Starting to Code with the CLI
-```sh
-npm install -g angular-cli
-ng --version
-```
-Upgrade CLI
-```sh
-npm uninstall -g angular-cli
-npm cache clean
-npm install -g angular-cli
-```
-4.1 Create a Start Project
-What’s in the Root Folder?
-
-File or Folder     | What It Is
--------------------|--
-e2e                | Folder for testing files (more on testing, Karma, and protractor)  
-node_modules       | Folder for project node dependencies
-src                | Folder for project source code
-.editorConfig      | editor configuration file
-.gitignore         | git ignore file
-angular-cli.json   | CLI configuration file. You change your CLi options in this file
-karma-conf.json    | Karma configuration file (more on testing, Karma, and protractor)   
-package.json       | node dependencies configuration file
-protractor-conf.js | Protractor configuration file (more on testing, Karma, and protractor)
-readMe.md          | readme informational file, contains information on CLI commands
-tslint.json        | Lint configuration file
-
-CLI-Generated project code
-
-File or Folder | What It Is
----------------|-------------------
-app            | Folder for your application source code files
-assets         | Folder for your application image and CSS files
-environments   | Folder for configuration files for environments
-favicon.ico    | Application icon
-index.html     | The htML page for the Angular single page application  
-main.ts        | Code to start the application  
-styles.css     | Global style definitions
-test.ts        | Code to run the application tests
-tsconfig.json  | Typescript/compiler configuration file
-
-
-Bootstrapping
-```json
-@NgModule({
-     ...
-    bootstrap: [AppComponent]
-})
-```
-Useful CLI Options
---flat
---inline-template
---inline-style
---spec false
---minimal
-
-```sh
-ng new components-ex100 --inline-template --inline-style
-```
-Ahead of Time Compilation
--aot option
-```sh
-ng serve -aot
-```
 
 
 ## 5. angular component
@@ -343,7 +50,7 @@ ng serve -aot
 * `Include multiple component classes in the same file`: You can combine multiple components in the same file, like this:
 
 
-```TypeScript
+```typescript
 import { Component } from '@angular/core';
 @Component({
   selector: 'Paragraph',
@@ -370,7 +77,7 @@ export class AppComponent {
 }
 ```
 5.2 \@Component Annotation
-```TypeScript
+```typescript
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -445,7 +152,7 @@ Event Handling
 The event information is available in the `$event` variable, which may or may not be utilized.
 
 set focus
-```TypeScript
+```typescript
 ngAfterViewInit() {
     this.inputBox.nativeElement.focus()
 }
@@ -456,7 +163,7 @@ The Angular CDK (Component Development Kit) was released in 2017 with Angular 5.
 
 ## 9. Introducing Modules
 Importing Code from Someone Else’s Module
-```TypeScript
+```typescript
 import { Component } from '@angular/core';
 import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 ```
@@ -470,24 +177,24 @@ module "foo" {
 }
 ```
 Importing Your Project Code
-```TypeScript
+```typescript
 import {AppComponent} from './app.component';
 ```
 
 1) Import all:
-```TypeScript
+```typescript
     import * as myModule from 'my-module';
 ```
 2) With named import, the name needs to exactly match the name of an object exported in the module:
-```TypeScript
+```typescript
     import { myMember } from 'my-module';
 ```
 3) For multiple named imports from a module, the names need to exactly match the names of objects exported in the module:
-```TypeScript
+```typescript
 import { foo, bar } from 'my-module';
 ````
 4) With a default import from a module, the name doesn’t need to match any object exported in the module. It can be an alias. It knows it has to import the default object from the module:
-```TypeScript
+```typescript
     import myDefault from 'my-module';
 ```
 
@@ -495,7 +202,7 @@ Angular Module System
 CLI and Webpack
 Modules in the Start Project
 module.ts
-```TypeScript
+```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -575,7 +282,7 @@ Directives are very useful when reused to add common behavior to user interfaces
 ng generate directive sizer
 ```
 Edit sizer.directive.ts: Change it to the following:
-```TypeScript
+```typescript
 import { Directive, Input, Component, ElementRef, Renderer, OnInit } from '@angular/core';
 @Directive({
   selector: '[sizer]'
@@ -597,7 +304,7 @@ usage
 ```
 9.3 Accessing the DOM Events in Directives
 Using the Directive Element host
-```TypeScript
+```typescript
 @Directive({
   selector: 'input',
   host: {
@@ -616,7 +323,7 @@ class InputDirective {
 ```
 HostListeners
 Use HostListener annotations to bind a method in class to a DOM event.
-```TypeScript
+```typescript
 @HostListener('mouseenter') onMouseEnter() {
   this.highlight('yellow');
 }
@@ -629,7 +336,7 @@ private highlight(color: string) {
 ```
 9.4 Accessing the DOM Properties in Directives
 in the following code you could control the background color of the element by modifying the value of the backgroundColor instance variable:
-```TypeScript
+```typescript
 @Directive({
     selector: '[myHighlight]',
 })
@@ -643,7 +350,7 @@ Creating a Directive with Events
 ng generate directive hoverer
 ```
 Edit hoverer.directive.ts: Change it to the following:
-```TypeScript
+```typescript
 import { Directive, Input, ElementRef, Renderer } from '@angular/core';
   @Directive({
     selector: '[hoverer]',
@@ -680,7 +387,7 @@ ViewChild:
 <h1 #title></h1>
 The title is {{title.innerHTML}}
 ```
-```TypeScript
+```typescript
 export class AppComponent implements AfterViewInit  {
   @ViewChild('title') title: ElementRef;
   ngAfterViewInit(){
@@ -694,7 +401,7 @@ ViewChildren:
 <p #paragraph2>Good morning</p>
 <p *ngIf="note">{{note}}</p>
 ```
-```TypeScript
+```typescript
 export class AppComponent implements AfterViewInit{
   @ViewChildren('paragraph1, paragraph2') paragraphs;
   note: string = '';
@@ -741,7 +448,7 @@ There are three types of providers: class providers, factory providers, and valu
 push service class to app component or to the app.module.ts to avoid creating duplicated service instances.
 
 13.2 Class Providers
-```TypeScript
+```typescript
 class Watch {
   getTime(): string {
     return new Date() + "";
@@ -779,7 +486,7 @@ providers: [{
 ```
 
 Value Provider
-```TypeScript
+```typescript
 providers: [{
   provide: 'language',
   useValue: 'en'
@@ -787,12 +494,12 @@ providers: [{
 ```
 
 Injector API
-```TypeScript
+```typescript
 import { Injector } from '@angular/core';
 const injector = Injector.resolveAndCreate([Car, Engine, Tires, Doors]);
 const car = injector.get(Car);
 ```
-```TypeScript
+```typescript
 import { Injector } from '@angular/core';
 const injector = Injector.resolveAndCreate(
   [
@@ -806,6 +513,255 @@ const car = injector.get(Car);
 ```
 
 ## 14. Angular and UI Widgets
+Bootstrap and Material
+
+## 15. Routes and Navigation
+### 15.1 Router Module
+Objects in the Router Module
+
+Object           | Type      | Description
+-----------------|-----------|------------------
+RouterModule     | Module    | A separate angular module that provides the necessary service providers and directives for navigating through application views.
+Router           |           | Displays the application component for the active urL. Manages navigation from one component to the next.
+Routes           |           | Defines an array of routes, each mapping a urL path to a component.
+Route            |           | Defines how the router should navigate to a component based on a urL pattern. Most routes consist of a path and a component type.
+RouterOutlet     | Directive | The directive (\<router-outlet\>) that marks where the router displays a view.
+RouterLink       | Directive | The directive for binding a clickable htML element to a route. Clicking an element with a RouterLink directive that’s bound to a string or a link parameters array triggers a navigation.
+RouterLinkActive | Directive | The directive for adding/removing classes from an htML element when an associated RouterLink contained on or inside the element becomes active/inactive.
+ActivatedRoute   |           | A service that’s provided to each route component that contains route-specific information such as route parameters, static data, resolve data, global query params, and the global fragment.  
+RouterState      |           | The current state of the router including a tree of the currently activated routes together with convenience methods for traversing the route tree.
+
+### 15.2 Route Path Parameters
+URL: http://www.example.com/customer/123
+
+You can read the parameter from the route snapshot.
+```typescript
+constructor(route: ActivatedRoute) {
+    this.customerId = route.snapshot.paramMap.get('id');
+}
+```
+You can read the parameter by subscribing to an observable parameter map.
+```typescript
+constructor(route: ActivatedRoute) {
+  route.paramMap.subscribe(
+    params => this.customerId = params.get('id')
+  );
+}
+```
+
+### 15.3 Route Query Parameters
+URL: http://www.example.com/customer?id=123.
+
+You can read the query parameter from the route snapshot.
+```typescript
+constructor(route: ActivatedRoute) {
+  this.customerId = route.snapshot.queryParams['id'];
+}
+```
+You can read the parameter by subscribing to an observable query parameter map.
+```typescript
+constructor(route: ActivatedRoute) {
+  route.queryParams.subscribe(
+    params => this.customerId = params.get('id')
+  );
+}
+```
+
+### 15.4 Router Imperative Navigation
+The two methods are Router.navigate() and Router.navigateByUrl().
+
+* Router.navigate: This navigates to a component relatively (to the current route) or absolutely based on an array of commands or route elements.
+* Router.navigateByUrl: This navigates to a complete absolute URL string. If the given URL begins with a /, the router will navigate absolutely. If the given URL doesn’t begin with /, the router will navigate relative to this component.
+
+### 15.5 Router: Extracting Data
+Extracting Data from Router
+
+ Property           | Description
+--------------------|-------------------
+errorHandler        | Error handler that’s invoked when a navigation errors
+navigated           | Indicates if at least one navigation happened
+urlHandlingStrategy | URL handling strategy
+routeReuseStrategy  | Route reuse strategy
+routerState         | Current router state
+url events          | Current URL
+error               | An observable of router events, allows you to add callbacks to router events
+
+### 15.6 Route Guards
+There are two main types of route guards:
+* CanActivate: Can the user navigate to a route? In this class, you can inject the router. This is useful to navigate the user away to another resource if the user isn’t allowed to navigate to a route.
+* CanDeactivate: Can the user move away from a route? Useful for prompting to save changes.
+
+Allow to access only if user has logged in.
+```typescript
+import { Injectable } from "@angular/core";
+import {
+  Router,
+  CanActivate,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot
+} from "@angular/router";
+import { AuthenticationService } from "./authentication.service";
+
+@Injectable()
+export class AuthGuardService implements CanActivate {
+  constructor(private auth: AuthenticationService, private router: Router) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    if (!this.auth.isLoggedIn()) {
+      // not logged in so redirect to login page with the return url
+      this.router.navigate(["/login"], {
+        queryParams: { returnUrl: state.url }
+      });
+      return false;
+    }
+    return true;
+  }
+}
+```
+## 16. Observers, Reactive Programming, and RxJS
+Reactive Extensions for JavaScript (RxJS) is a Reactive streams library that allows you to work with asynchronous data streams.
+
+`Reactive programming` is a programming paradigm focused on data flows and change. It allows you to express static or dynamic data flows with ease, and the execution model will automatically propagate changes through the data flow.
+
+## 17. RxJS with Angular
+Observables have a few advantages over promises:
+• Promises only emitted one value/error. Observables can emit multiple values over time. For example, with an observable you can listen for events on a web socket for a period of time. You can only listen once with a promise.
+• You can use operators with observers to map, filter, and more.
+• You can cancel observables.
+
+• Angular uses observables for handling DOM events and the results of HTTP service calls (calling an HTTP service on a server and receiving the result).
+• Observables enable the user to handle streams of data using RxJS. For example, you could make an HTTP call to get some data and use the RxJS map operator to transform the result.
+
+## 18. HTTP and the HttpClient Module
+
+## 19. Forms
+The Forms module offers two main way of working with forms: template-driven forms and reactive forms. Both ways work with the same Forms module.
+### 19.1 Template-Driven Forms
+* Advantages: Simple, quick to get started, perfect for simple forms, don’t need to know how form model objects work
+* Disadvantages: HTML and business rules are coupled, no unit testing
+example
+```html
+aaa
+```
+### 19.2 Reactive Forms
+* Advantages: More control, perfect for more advanced forms, enable unit testing, HTML and business rules are decoupled
+* Disadvantages: Need to know how form model objects work, take more time to develop
+example
+```html
+aaa
+```
+
+Reactive Forms: FormBuilder
+FormBuilder Methods
+
+ Method    | Purpose               | Arguments  | Returns
+-----------|-----------------------|------------|--------------------------------------------------------
+group      | Create a form group   | Configuration object, extra parameters (validators, async validators) | FormGroup
+control    | Create a form control | Current form state (value/disabled status), array of validators, array of async validators | FormControl
+array      | Create a form array   | Configuration object (array), validator, async validator | FormArray
+
+
+## 20. Pipes
+### 20.1 Angular Pipes
+lowercase
+Lowercase: {{ "The Quick Brown Fox Jumped Over The Lazy Dogs" | lowercase }}
+Produces:
+Lowercase: the quick brown fox jumped over the lazy dogs
+uppercase
+Uppercase: {{ "The Quick Brown Fox Jumped Over The Lazy Dogs" | uppercase }}
+Produces:
+Uppercase: THE QUICK BROWN FOX JUMPED OVER THE LAZY DOGS
+
+Currency: {{ 2012.55 | currency }}
+Produces:
+Currency: USD2,012.55
+
+UK (gbp) pound currency
+```raw
+UK Pound Currency:  2012.55 | currency: 'gbp':true
+```
+Produces:
+UK Pound Currency: £2,012.55
+percent
+Percentage: {{ 0.5 | percent }}
+Produces:
+Percentage: 50%
+date
+```raw
+Date: {\{ dt | date \}}
+```
+Produces:
+Date: Jul 12, 2017
+shortdate
+Short Date: {{ dt | date:shortdate }}
+Produces:
+Short Date: Jul 12, 2017
+Special Date Format
+Special Date Format: {{ dt | date:'yMMMMEEEEd' }}
+Produces:
+Special Date Format: Wednesday, July 12, 2017
+Table 20-1.
+Name
+medium
+short
+fullDate
+longDate
+mediumDate
+shortDate
+mediumTime
+shortTime
+Predefined Date Formats
+Chapter 20
+pipes
+   Format
+yMMMdjms yMdjm yMMMMeeeed yMMMMd yMMMd
+yMd jms jm
+Example (English/US)
+sep 3, 2010, 12:05:08 pM 9/3/2010, 12:05 pM Friday, september 3, 2010 september 3, 2010
+sep 3, 2010 9/3/2010 12:05:08 pM 12:05 pM
+
+
+json
+```raw
+{\{customerName: 'Mark', 'address': '2312 welton av 30333'\} \| json }
+Produces:
+{ "customerName": "Mark", "address": "2312 welton av 30333" }
+```
+### 20.2 Custom Pipes
+```sh
+ng generate pipe reverse
+```
+
+Todo: create pipe for time date, create pipe for shorten the description in table.
+
+
+## 21. Zones and Change Detection
+### 21.1 NgZone Is Zone.js for Angular
+The `NgZone` class is a wrapper around the `zone.js` framework. The dependency injector can also pass in the zone through constructor injection.
+
+## 22. Testing
+### 22.1 Karma
+### 22.2 Jasmine
+### 22.3 CLI Unit Test
+### 22.4 Use HttpClientTestingModule to Create Fake Http Responses
+### 22.5 Testing Service that Uses HttpClient
+### 22.6 Testing Component that Uses Service
+
+
+## 23. More Advanced Topics
+### 23.1 View Encapsulation
+### 23.2 Shadow DOMs
+### 23.3 Component Encapsulation
+Encapsulation Option
+  Option
+ViewEncapsulation.Emulated
+ViewEncapsulation.Native
+ViewEncapsulation.None
+Description
+Emulated Shadow DOM, the default mode for Angular Native Shadow DOM
+No Shadow DOM at all
+
+### 23.4 Styling Content Children
 
 
 ## 7. Reference
