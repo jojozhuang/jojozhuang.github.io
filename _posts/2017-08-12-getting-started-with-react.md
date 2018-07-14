@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Getting Started with React"
 date: 2017-08-12
-tags: [React, Visual Studio Code]
+tags: [React]
 ---
 
 > Build web application with React.
