@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Angular - Directives"
-date: 2018-03-12
+date: 2018-03-13
 tags: [Angular Directives]
 ---
 
