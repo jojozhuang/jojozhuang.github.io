@@ -17,24 +17,24 @@ tags: [Angular CLI]
 ### 2.1 Installing Angular CLI
 Install Angular CLI globally and check the version.
 ```sh
-npm install -g angular-cli
-ng --version
+$ npm install -g angular-cli
+$ ng --version
 ```
 ### 2.2 Upgrading CLI
 Uninstall and install again to upgrade CLI.
 ```sh
-npm uninstall -g angular-cli
-npm cache clean
-npm install -g angular-cli
+$ npm uninstall -g angular-cli
+$ npm cache clean
+$ npm install -g angular-cli
 ```
 ### 2.3 Common CLI Commands
 Useful commands to create angular components, services, etc.
 ```sh
-ng g component header // create a new component
-ng g service product  // create a new service
-ng g module shared    // create a new module
-ng g directive sizer  // create a new directive
-ng g pipe reverse     // create a new pipe
+$ ng g component header // create a new component
+$ ng g service product  // create a new service
+$ ng g module shared    // create a new module
+$ ng g directive sizer  // create a new directive
+$ ng g pipe reverse     // create a new pipe
 ```
 ### 2.4 Useful CLI Options
 When calling the CLI commands, we have following options.
@@ -46,7 +46,7 @@ When calling the CLI commands, we have following options.
 
 For example, the following command create new Angular project with inline template and inline style(No additional html and css file).
 ```sh
-ng new helloworld --inline-template --inline-style
+$ ng new helloworld --inline-template --inline-style
 ```
 
 ## 3. Starting to Code with CLI
@@ -111,10 +111,19 @@ $ ng serve
 ```
 For AOT compilation, append the `--aot` flags to the build-only or the build-and-serve-locally CLI commands:
 ```sh
-ng build --aot
-ng serve --aot
+$ ng build --aot
+$ ng serve --aot
 ```
 * The `--prod` meta-flag compiles with AOT by default.
+
+### 3.6 WebPack
+The Angular CLI uses `Webpack` to transpile, compile, and deploy project code. It also uses the webpack-dev-server as its web server by default.
+
+By default, WebPack configuration file `webpack.config.js` is hidden. The following Angular CLI command makes it available:
+```sh
+$ ng eject
+```
+* Be careful, running this command will change the commands in package.json.
 
 ## 4. References
 * [Official website](https://angular.io/)
