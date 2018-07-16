@@ -13,6 +13,9 @@ tags: [React, Nodejs]
 3. unit test with mocha
 4. docker
 
+Todo: create pipe for time date, create pipe for shorten the description in table.
+
+
 knowledge: type script, angular 4, rxjs,
 
 
