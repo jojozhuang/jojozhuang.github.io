@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Modern JavaScript[Draft]"
+title: "JavaScript - Modern [Draft]"
 date: 2018-01-02
 tags: [JavaScript]
 ---

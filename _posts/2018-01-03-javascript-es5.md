@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "JavaScript ES5"
-date: 2018-03-04
-tags: [ECMAScript 5]
+title: "JavaScript - ES5"
+date: 2018-01-03
+tags: [ES5]
 ---
 
 > ECMAScript 5 is also known as ES5 and ECMAScript 2009.

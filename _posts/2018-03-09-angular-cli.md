@@ -127,6 +127,7 @@ $ ng eject
 
 ## 4. References
 * [Official website](https://angular.io/)
+* [Ebook: Angular 5 Projects](http://www.allitebooks.in/angular-5-projects/)
 * [Angular QuickStart](https://angular.io/guide/quickstart)
 * [Get Started with Angular CLI](https://github.com/angular/angular-cli)
 * [Angular 4 Tutorial](https://www.tutorialspoint.com/angular4/index.htm)

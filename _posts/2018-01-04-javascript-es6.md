@@ -1,9 +1,9 @@
 ---
 layout: post
 key: blog
-title: "JavaScript ES6"
-date: 2018-03-05
-tags: [ECMAScript 6]
+title: "JavaScript - ES6"
+date: 2018-01-04
+tags: [ES6]
 ---
 
 > ECMAScript 6 is also known as ES6 and ECMAScript 2015.
