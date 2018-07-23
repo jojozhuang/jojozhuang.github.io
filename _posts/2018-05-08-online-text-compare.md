@@ -12,12 +12,15 @@ sample https://text-compare.com/
 
 https://dzone.com/articles/generic-text-comparison-tool
 
+jgroups
 
-Nodejs
-Logging,
-https://www.npmjs.com/package/morgan
+http://www.jgroups.org/
+
 
 Testing, Mocha
 
 yargs
 https://github.com/yargs/yargs
+
+Java web service
+https://www.journaldev.com/9191/java-web-services-tutorial

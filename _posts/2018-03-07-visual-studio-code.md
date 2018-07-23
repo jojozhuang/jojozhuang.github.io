@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Setup and Basics of Visual Studio Code"
 date: 2018-03-07
-tags: [VS Code]
+tags: [Visual Studio Code]
 ---
 
 > Walk through setting up Visual Studio Code and get an overview of the basic features.
