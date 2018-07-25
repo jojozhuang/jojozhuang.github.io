@@ -16,11 +16,8 @@ tags: [Angular4, Angular CLI]
 
 [Angular CLI](https://cli.angular.io/) is a command line interface tool that can create a project, add files, and perform a variety of ongoing development tasks such as testing, bundling, and deployment. Angular CLI makes it easy to start with any Angular project. Angular CLI comes with commands that help us create and start on our project very fast.
 
-## 2. Installing Node.js and NPM
-Before using Angular, we first need to install nodejs. Refer the posting [Installing Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}) to install NodeJs and NPM.
-
-## 3. Installing Angular CLI
-Then, install the Angular CLI globally.
+## 2. Installing Angular CLI
+Install the Angular CLI globally.
 ```sh
 $ npm install -g @angular/cli
 ```
@@ -32,7 +29,8 @@ Update Angular CLI.
 ```sh
 $ npm update -g @angular/cli
 ```
-## 4. Creating New Project
+
+## 3. Creating New Project
 Generate a new project and skeleton application named 'helloworld' by running the following commands:
 ```sh
 $ ng new helloworld
@@ -41,7 +39,7 @@ $ ng new helloworld
 Open this project in Visual Studio Code.
 ![image](/public/tutorials/321/project.png){:width="400px"}  
 
-## 5. Serving the Application
+## 4. Serving the Application
 Start the app, server it in web server.
 ```sh
 $ cd helloworld
@@ -64,7 +62,7 @@ You can make it serve at different port. Open `.angular-cli.json`, add 'serve' u
 Run 'ng serve' again. Now, this application is served at port '12080'.
 ![image](/public/tutorials/321/serveport.png)  
 
-## 6. References
+## 5. References
 * [Official website](https://angular.io/)
 * [Angular QuickStart](https://angular.io/guide/quickstart)
 * [Get Started with Angular CLI](https://github.com/angular/angular-cli)

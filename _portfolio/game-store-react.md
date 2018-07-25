@@ -33,7 +33,7 @@ Click 'OK' button, product will be deleted.
 ![image](/public/portfolios/gamestorereact/productlistafterdel.png)
 
 ## 3. Under the Hood
-Check posting [Building Web Application with React]({% link _posts/2017-08-16-building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _posts/2017-08-20-building-web-application-with-react-and-redux.md %}) to learn the details of React and Redux.
+Check posting [Building Web Application with React]({% link _tutorial/react/building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _tutorial/react/building-web-application-with-react-and-redux.md %}) to learn the details of React and Redux.
 
 ## 4. Source Files
 * [Source files of Game Store(React) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReact)

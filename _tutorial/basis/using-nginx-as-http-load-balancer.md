@@ -24,7 +24,7 @@ The following load balancing mechanisms (or methods) are supported in nginx:
 
 ## 3. Setting up Load Balancer
 ### 3.1 Node Servers
-First, follow the steps mentioned in [Creating Http Server with Node.js]({% link _posts/2016-03-07-creating-http-server-with-nodejs.md %}) to setup three node servers. They are served at different ports, 8086, 8087 and 8088.  
+First, follow the steps mentioned in [Creating Http Server with Node.js]({% link _tutorial/nodejs/creating-http-server-with-nodejs.md %}) to setup three node servers. They are served at different ports, 8086, 8087 and 8088.  
 Server1.
 ![image](/public/tutorials/43/nodeserver1.png){:width="700px"}
 Server2.
@@ -32,7 +32,7 @@ Server2.
 Server3.
 ![image](/public/tutorials/43/nodeserver3.png){:width="700px"}
 ### 3.2 Nginx Server
-Second, follow the steps mentioned in [Installing Nginx in MacOS]({% link _posts/2016-03-08-installing-nginx-in-macos.md %}) to setup a nginx server. It is served at post 9096.
+Second, follow the steps mentioned in [Installing Nginx in MacOS]({% link _tutorial/basis/installing-nginx-in-macos.md %}) to setup a nginx server. It is served at post 9096.
 ![image](/public/tutorials/43/nginxserver.png){:width="700px"}  
 ### 3.3 Configuring Nginx Server as Load Balancer
 Edit Nginx's configuration file /usr/local/etc/nginx/nginx.conf. Create server list in `upstream`, and link them to `proxy_pass` directive in `location`. Here, we use the default load balancing method: round-robin.

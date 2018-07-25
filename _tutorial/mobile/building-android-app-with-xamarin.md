@@ -13,9 +13,9 @@ tags: [Xamarin, Android, SQLite, C#]
 
 ## 1. Android App
 ### 1.1 Requirement
-We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Android and Java. See more details in the posting [Building Android App with Android Studio]({% link _posts/2017-07-16-building-android-app-with-android-studio.md %}).
+We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Android and Java. See more details in the posting [Building Android App with Android Studio]({% link _tutorial/mobile/building-android-app-with-android-studio.md %}).
 ### 1.2 Android Project
-In the blog [Building iOS App with Xamarin]({% link _posts/2017-07-21-building-ios-app-with-xamarin.md %}), I introduce how to build iOS App with Xamarin. At that time, we created the Xamarin Android project along with the Core Portable project and Xamarin iOS project. In this blog, I will use this Android project to build the Game Store app.
+In the blog [Building iOS App with Xamarin]({% link _tutorial/mobile/building-ios-app-with-xamarin.md %}), I introduce how to build iOS App with Xamarin. At that time, we created the Xamarin Android project along with the Core Portable project and Xamarin iOS project. In this blog, I will use this Android project to build the Game Store app.
 ![image](/public/tutorials/408/project_stucture.png){:width="320px"}  
 Delete file 'Main.axml' and 'MainActivity.cs'.
 ### 1.3 Layouts

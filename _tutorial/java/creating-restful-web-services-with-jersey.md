@@ -11,8 +11,8 @@ tags: [Jersey, RESTful, Maven]
 
 > Build RESTful web services with Jersey in Java.
 
-## 1. Prerequisites
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment On Ubuntu]({% link _posts/2016-02-10-setting-up-java-development-environment-on-ubuntu.md %}) to setup your development environment.
+## 1. Jersey
+[Jersey](https://jersey.github.io/) RESTful Web Services framework is an open source framework for developing RESTful Web Services in Java. It provides support for JAX-RS APIs and serves as a JAX-RS Reference Implementation. 
 
 ## 2. Jersey Project
 ### 2.1 Creating Maven Project

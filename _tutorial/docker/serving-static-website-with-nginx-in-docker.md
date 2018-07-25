@@ -11,13 +11,11 @@ tags: [Docker, Nginx]
 
 > Introduce how to serve static files in Nginx with Kitematic.
 
-Guide how to serve static website in Nginx with Kitematic.
+## 1. Steps
+Steps for serving static website in Nginx with Kitematic.
 * Download and run a web server container
 * Explore the container’s website data natively on your Mac
 * Use volumes to modify the website data
-
-## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
 
 ## 2. Running Nginx Web Server Container
 ### 2.1 Creating Nginx Container

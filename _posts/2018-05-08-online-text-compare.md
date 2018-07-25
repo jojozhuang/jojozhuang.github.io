@@ -24,6 +24,3 @@ https://github.com/yargs/yargs
 
 Java web service
 https://www.journaldev.com/9191/java-web-services-tutorial
-
-Font Awesome Introduction
-https://www.w3schools.com/icons/fontawesome_icons_intro.asp

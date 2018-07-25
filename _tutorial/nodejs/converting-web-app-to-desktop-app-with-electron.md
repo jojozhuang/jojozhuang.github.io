@@ -12,7 +12,7 @@ tags: [Electron, 2048]
 >  Wrap a web application of game 2048 and convert it to desktop application.
 
 ## 1. Installing Electron
-If you haven't installed [Electron](https://electron.atom.io/) or you want to learn the basic knowledge of Electron, please check my previous posting [Build Cross-platform Apps with Electron]({% link _posts/2016-11-03-building-cross-platform-desktop-apps-with-electron.md %}) first.
+If you haven't installed [Electron](https://electron.atom.io/) or you want to learn the basic knowledge of Electron, please check my previous posting [Building Cross-platform Desktop Apps with Electron]({% link _tutorial/nodejs/building-cross-platform-desktop-apps-with-electron.md %}) first.
 
 ## 2. 2048
 2048 is a famous number puzzle game, you can try it online at [https://gabrielecirulli.github.io/2048/](https://gabrielecirulli.github.io/2048/). It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.

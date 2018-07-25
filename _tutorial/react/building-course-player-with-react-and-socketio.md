@@ -12,7 +12,7 @@ tags: [React, Socket.IO]
 > Build a realtime course player with React and Socket.IO.
 
 ## 1.Course Player
-In the posting [Building Course Player with Node.js and Socket.IO]({% link _posts/2016-03-16-building-course-player-with-nodejs-and-socketio.md %}), I introduced how to use Socket.IO, HTML5 canvas and jQuery to build an online course player. In this tutorial, we will learn how enhance it with React. We will divide the UI pages and functions to smaller React components.
+In the posting [Building Course Player with Node.js and Socket.IO]({% link _tutorial/react/building-course-player-with-nodejs-and-socketio.md %}), I introduced how to use Socket.IO, HTML5 canvas and jQuery to build an online course player. In this tutorial, we will learn how enhance it with React. We will divide the UI pages and functions to smaller React components.
 
 ## 2. React Project
 ### 2.1 Creating New Project

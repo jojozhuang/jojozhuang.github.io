@@ -154,8 +154,8 @@ As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notic
 
 ## 5.3 Using Dockerfile to Create New Images
 Refer to the following blogs:
-* [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %})
-* [Creating Tomcat Image with Docker File]({% link _posts/2016-09-25-creating-tomcat-image-with-docker-file.md %})
+* [Creating MySQL Image with Docker File]({% link _tutorial/docker/creating-mysql-image-with-docker-file.md %})
+* [Creating Tomcat Image with Docker File]({% link _tutorial/docker/creating-tomcat-image-with-docker-file.md %})
 
 ## 6. Pushing Docker Images to Docker Hub
 ## 6.1 Logging into Docker Hub

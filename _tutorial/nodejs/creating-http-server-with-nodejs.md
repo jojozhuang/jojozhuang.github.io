@@ -11,10 +11,7 @@ tags: [Node.js]
 
 > Tutorial for how to create web applications through Node.js.
 
-## 1. Prerequisite
-If you haven’t installed Node.js and NPM, please install them by referring to my previous posting [Install Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}).
-
-## 2. Creating Server
+## 1. Creating Server
 Create a file named `main.js` having following codes:
 ```javascript
 var http = require("http");
@@ -38,7 +35,7 @@ The following points need to be noted about the above file.
 * Call `http.createServer()` method to create a server instance and then bind it at port `8086` using the listen method associated with the server instance. Pass it a function with parameters request and response. Write the sample implementation to always return "Hello World from Node Server".
 * Print log in console indicating server is running.
 
-## 3. Running and Testing
+## 2. Running and Testing
 In terminal, execute main.js with `node` command.
 ```sh
 $ node main.js
@@ -52,8 +49,8 @@ Now the HTTP server is running on the local machine and waiting for a request at
  Open web browser, access http://127.0.0.1:8086/.
 ![browser](/public/tutorials/204/browser.png){:width="600px"}  
 
-## 4. Source Files
+## 3. Source Files
 * [Source files of Nodejs Http Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/NodeHttpServer)
 
-## 5. References
+## 4. References
 * [Node.js - First Application](https://www.tutorialspoint.com/nodejs/nodejs_first_application.htm)

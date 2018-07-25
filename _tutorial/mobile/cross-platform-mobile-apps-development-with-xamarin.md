@@ -38,9 +38,9 @@ I choose the third approach to setup Xamarin development environment, since I li
 Go to App Store, search 'xcode', install.
 ![image](/public/tutorials/406/appstore.png)  
 ### 3.2 Installing Visual Studio
-Refer to [Setting up .Net Development Environment on Mac]({% link _posts/2017-07-19-setting-up-dotnet-development-environment-on-mac.md %}) to install Visual Studio on Mac.
+Refer to [Setting up .Net Development Environment on Mac]({% link _tutorial/mobile/setting-up-dotnet-development-environment-on-mac.md %}) to install Visual Studio on Mac.
 ### 3.3 Installing JDK and Android Studio
-Refer to [Setting up Android Development Environment on Mac]({% link _posts/2017-07-13-setting-up-android-development-environment-on-mac.md %}) to install JDK and Android Studio on Mac.
+Refer to [Setting up Android Development Environment on Mac]({% link _tutorial/mobile/setting-up-android-development-environment-on-mac.md %}) to install JDK and Android Studio on Mac.
 
 ## 4. SDK Configuration in Visual Studio
 ### 4.1 iOS SDK

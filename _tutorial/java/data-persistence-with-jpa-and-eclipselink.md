@@ -28,15 +28,7 @@ Hibernate is a high-performance Object/Relational persistence and query service.
 ### 1.5 Difference Between JPA and Hibernate
 JPA define guidelines to implement the Object Relational Mapping (ORM) and there is no underlying code for the implementation. Where as, Hibernate is the actual implementation of JPA guidelines.
 
-## 2. Prerequisites
-### 2.1 Java Development Environment
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _posts/2016-02-13-setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
-### 2.2 Docker Toolbox
-Docker and Kitematic have been setup. Otherwise, please install Docker Toolbox by referring to posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
-### 2.3 MySQL Workbench
-MySQL database has been installed. Otherwise, refer to [Installing MySQL and Workbench on Mac]({% link _posts/2016-02-25-installing-mysql-and-workbench-on-mac.md %}) to install MySQL database and MySQL Workbench.
-
-## 3. Installing Eclipselink in Eclipse
+## 2. Installing Eclipselink in Eclipse
 In Eclipse, File -> New -> 'JPA Project', Name: `JPATutorial`, and select 'Java SE 8' for target runtime, click Next.  
 ![image](/public/tutorials/535/jpaproject.png){:width="500px"}  
 In JPA Facet, click on download library (if you do not have the library) in the user library section:
@@ -50,16 +42,16 @@ After downloading, check the box of 'EclipseLink 2.5.2' and click Finish.
 Finally you get the JPA project in Eclipse IDE. Expand all files, you will get the folder and file hierarchy as follows:
 ![image](/public/tutorials/535/projectstructure.png){:width="400px"}  
 
-## 4. Adding MySQL Connector to Project
+## 3. Adding MySQL Connector to Project
 To access MySQL database, we need mysql connector jar.
 Go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download MySQL Connector/J(ZIP Archive).
 ![image](/public/tutorials/535/mysqlconnectordownload.png)  
 Extract `mysql-connector-java-5.1.44-bin.jar` from the the downloaded zip file, and copy it to /JPATutorial/lib/. In Eclipse, right click on Project -> Properties -> Java Build Path, click on 'Add External Jars...', add mysql connector into the build path.
 ![image](/public/tutorials/535/mysqlconnector.png){:width="700px"}
 
-## 5. Setting up MySQL Container
+## 4. Setting up MySQL Container
 We use docker container to host our MySQL database.
-### 5.1 Creating Dockerfile
+### 4.1 Creating Dockerfile
 Create a file named `Dockerfile` with the following content.
 ```sh
 #Create MySQL Image for JPA Tutorial
@@ -75,7 +67,7 @@ Notice that we set environment variable MYSQL_ROOT_PASSWORD to `jpa`. Later, we 
 ```sql
 CREATE DATABASE IF NOT EXISTS `jpadb`
 ```
-### 5.2 Creating Image with Dockerfile
+### 4.2 Creating Image with Dockerfile
 In Docker Terminal, navigate to /JPATutorial/Docker/, run the following command the create MySQL image.
 ```sh
 $ docker build -t jpa-mysql:0.1 .
@@ -85,20 +77,20 @@ The new image is created with named `jpa-mysql` and tag `0.1`.
 $ docker images
 ```
 ![image](/public/tutorials/535/dockerimage.png){:width="700px"}  
-### 5.3 Running MySQL Container
+### 4.3 Running MySQL Container
 In Docker Terminal, run command to launch MySQL container with the new image 'jpa-mysql:0.1'.
 ```sh
 $ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
 You will see that a container named `jpamysql` is running now. Note the IP address `192.168.99.100` and port `11020`. We will use them to configure the database connection in eclipse and MySQL Workbench later.
 ![image](/public/tutorials/535/kitematic.png)  
-### 5.4 Connecting MySQL Container With MySQL Workbench
+### 4.4 Connecting MySQL Container With MySQL Workbench
 In MySQL Workbench, create a new connection with name 'JPA Tutorial'. Set IP address to `192.168.99.100` and port to `11020`. And set password `jpa` for user `root`.
 ![image](/public/tutorials/535/newconnection.png){:width="800px"}
 Test the connection and connect the MySQL container. You will see there is no table created yet in database jpadb.
 ![image](/public/tutorials/535/workbench.png)
-## 6. Making Changes to JPA Project
-### 6.1 Configuring Persistence.xml
+## 5. Making Changes to JPA Project
+### 5.1 Configuring Persistence.xml
 In eclipse, open `Persistence.xml` of JPATutorial, switch to source view. Edit it as follows:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -118,7 +110,7 @@ In eclipse, open `Persistence.xml` of JPATutorial, switch to source view. Edit i
 </persistence>
 
 ```
-### 6.2 Creating Entity
+### 5.2 Creating Entity
 Create a package named `Johnny.JPATutorial.Entity`, under ‘src’ (Source) package.
 ![image](/public/tutorials/535/package.png){:width="500px"}  
 Create a class named `Employee.java` under given package as follows:
@@ -192,7 +184,7 @@ public class Employee {
     }
 }
 ```
-### 6.2 Creating Persistence Operations
+### 5.3 Creating Persistence Operations
 Create another package named `Johnny.JPATutorial.Service`, under ‘src’ (source) package.  
 Create `CreateEmployee.java`
 ```java
@@ -305,14 +297,14 @@ public class DeleteEmployee {
     }
 }
 ```
-### 6.3 Final Project Structure
+### 5.4 Final Project Structure
 Finally, the project looks as follows.
 ![image](/public/tutorials/535/finalstructure.png){:width="400px"}  
 
-## 7. Testing
-### 7.1 Running CreateEmployee Method
+## 6. Testing
+### 6.1 Running CreateEmployee Method
 In Eclipse, right click on `CreateEmployee.java` file -> Run AS -> Java Application. You will get notifications from Eclipselink library on the console panel of eclipse IDE.
-### 7.2 Checking Data
+### 6.2 Checking Data
 In MySQL Workbench, refresh database `jpadb`, you will see table `EMPLOYEE` is created. Run sql query to find all rows in the Employee table. You will see one new entry has been created.
 ```sql
 SELECT * FROM jpadb.EMPLOYEE;
@@ -322,15 +314,15 @@ We see the row for new employee is there.
 
 Test updating, finding and deleting with the same approach. Data should always get updated properly in mysql.
 
-## 8. Other Topics
+## 7. Other Topics
 * JPQL
 * Entity Relationships
 * Criteria API
 
-## 9. Source Files
+## 8. Source Files
 * [Source files of JPA Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JPATutorial)
 
-## 10. Reference
+## 9. Reference
 * [JPA Tutorial](https://www.tutorialspoint.com/jpa/index.htm)
 * [EclipseLink](http://www.eclipse.org/eclipselink/)
 * [What's the difference between JPA and Hibernate?](https://stackoverflow.com/questions/9881611/whats-the-difference-between-jpa-and-hibernate)

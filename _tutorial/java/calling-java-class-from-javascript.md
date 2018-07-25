@@ -12,7 +12,7 @@ tags: [Rhino, Javascript, Java]
 > Use Rhino to call java class and its method with javascript at server side.
 
 ## 1. Introduction
-In the previous posting [Running JavaScript at Server Side with Rhino]({% link _posts/2017-10-11-running-javascript-at-server-side-with-rhino.md %}), we learned how to run javascript at server side. In this posting, we will learn how to call java classes and methods from javascript. We will re-use the servlet project from the previous posting, but it will be renamed to `RhinoWebsiteJava`.
+In the previous posting [Running JavaScript at Server Side with Rhino]({% link _tutorial/java/running-javascript-at-server-side-with-rhino.md %}), we learned how to run javascript at server side. In this posting, we will learn how to call java classes and methods from javascript. We will re-use the servlet project from the previous posting, but it will be renamed to `RhinoWebsiteJava`.
 
 ## 2. Start Testing Page
 Right-click on RhinoWebsiteJava->WebContent->index.html, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it.

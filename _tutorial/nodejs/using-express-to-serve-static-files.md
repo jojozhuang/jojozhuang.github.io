@@ -14,8 +14,6 @@ tags: [Node.js, Express]
 ## 1. Web Server
 In some cases, we need to share information in the html files to others. It is not always that we have a available web server eg. Aparche Tomcat, Microsoft IIS, or Nigix. One option is to use Express based on Node.js to setup a 'static' web server, which only serves static files.
 
-If you have not installed Node.js and NPM, first install them by refer to the posting [Install Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}).
-
 ## 2. Creating Server
 Create a folder in local disk.
 ```sh

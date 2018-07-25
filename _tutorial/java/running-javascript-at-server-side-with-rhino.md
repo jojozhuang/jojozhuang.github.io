@@ -12,9 +12,7 @@ tags: [Rhino, Javascript, Servlet]
 > Use Rhino to run javascript at server side which is built with Java Servlet.
 
 ## 1. Prerequisite
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _posts/2016-02-13-setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
-
-In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Scripting Java With Rhino]({% link _posts/2017-10-10-scripting-java-with-rhino.md %}) to get Rhino installed on your local machine.
+In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Scripting Java With Rhino]({% link _tutorial/java/scripting-java-with-rhino.md %}) to get Rhino installed on your local machine.
 
 ## 2. Creating Server
 ### 2.1 Creating Servlet Project

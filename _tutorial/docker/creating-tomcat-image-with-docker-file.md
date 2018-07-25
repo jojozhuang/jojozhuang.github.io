@@ -15,7 +15,7 @@ tags: [Docker, Dockerfile, Tomcat]
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
 
 ## 2. What We've Done Until Now?
-In posting [Serving JSP Application With Tomcat In Docker]({% link _posts/2016-09-20-serving-jsp-application-with-tomcat-in-docker.md %}) and [Enabling Tomcat Debugging in Docker for Eclipse]({% link _posts/2016-09-22-enabling-tomcat-debugging-in-docker-for-eclipse.md %}), we deployed the JSP Tutorial application to Tomcat container with enabling the remote debugging. Below is the command we used.
+In posting [Serving JSP Application With Tomcat In Docker]({% link _tutorial/docker/serving-jsp-application-with-tomcat-in-docker.md %}) and [Enabling Tomcat Debugging in Docker for Eclipse]({% link _tutorial/docker/enabling-tomcat-debugging-in-docker-for-eclipse.md %}), we deployed the JSP Tutorial application to Tomcat container with enabling the remote debugging. Below is the command we used.
 ```sh
 $ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
 ```

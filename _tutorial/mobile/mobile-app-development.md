@@ -46,10 +46,10 @@ RSETful Web Service.
 |Cordova | HTML + JS         | Visual Studio Code    | html + CSS | Platform specific            | Local/Remote     |
 
 ## 4. Tutorials
-* [Building iOS App with Xcode]({% link _posts/2017-07-10-building-ios-app-with-xcode.md %})
-* [Building Android App with Android Studio]({% link _posts/2017-07-16-building-android-app-with-android-studio.md %})
-* [Building iOS App with Xamarin]({% link _posts/2017-07-21-building-ios-app-with-xamarin.md %})
-* [Building Android App with Xamarin]({% link _posts/2017-07-22-building-android-app-with-xamarin.md %})
+* [Building iOS App with Xcode]({% link _tutorial/mobile/building-ios-app-with-xcode.md %})
+* [Building Android App with Android Studio]({% link _tutorial/mobile/building-android-app-with-android-studio.md %})
+* [Building iOS App with Xamarin]({% link _tutorial/mobile/building-ios-app-with-xamarin.md %})
+* [Building Android App with Xamarin]({% link _tutorial/mobile/building-android-app-with-xamarin.md %})
 
 ## 5. Reference
 * [Mobile Development Tutorials](https://www.tutorialspoint.com/mobile_development_tutorials.htm)

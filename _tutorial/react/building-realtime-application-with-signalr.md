@@ -14,7 +14,6 @@ tags: [Chat Room, Sketch Pad, SignalR]
 ## 1. Home Page  
 Some resources which help to build this application.  
 ![image](/public/tutorials/363/home.png){:width="700px"}  
-For the basic knowledge of WebSocket and SignalR, please refer to one of my blog posting [Building Realtime Web Application with WebSocket]({% link _posts/2016-03-13-building-realtime-web-application-with-websocket.md %}).
 
 ## 2. Chat Room
 ### 2.1 Introduction  

@@ -17,7 +17,7 @@ A course player consists of three components: video, screenshot and whiteboard.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-Check the posting [Introduction of Course Player]({% link _posts/2016-03-12-introduction-of-course-player.md %}) to learn the details.
+Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.
 
 ## 2. UI
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
@@ -30,7 +30,7 @@ You can drag the slider bar to move forward or backward.
 ![image](/public/portfolios/courseplayerreact/drag.png)  
 
 ## 3. Under the Hood
-Check posting [Building Course Player with React and Socket.IO]({% link _posts/2017-08-25-building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
+Check posting [Building Course Player with React and Socket.IO]({% link _tutorial/react/building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
 
 ## 4. Source Files
 * [Source files of Course Player(React) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerReact)

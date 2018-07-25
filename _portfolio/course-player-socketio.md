@@ -17,7 +17,7 @@ A course player consists of three components: video, screenshot and whiteboard.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-Check the posting [Introduction of Course Player]({% link _posts/2016-03-12-introduction-of-course-player.md %}) to learn the details.
+Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.
 
 ## 2. UI
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
@@ -30,9 +30,9 @@ You can drag the slider bar to move forward or backward.
 ![image](/public/portfolios/courseplayersocketio/drag.png)  
 
 ## 4. Under the Hood
-Check posting [Building Course Player with Node.js and Socket.IO]({% link _posts/2016-03-16-building-course-player-with-nodejs-and-socketio.md %}) to learn the details of Socket.IO and how this course player is built.
+Check posting [Building Course Player with Node.js and Socket.IO]({% link _tutorial/react/building-course-player-with-nodejs-and-socketio.md %}) to learn the details of Socket.IO and how this course player is built.
 
-Besides, check another blog post [Building Realtime Web Application with WebSocket]({% link _posts/2016-03-13-building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind Socket.IO.
+Besides, check another blog post [Building Realtime Web Application with WebSocket]({% link _tutorial/react/building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind Socket.IO.
 
 ## 5. Source Files
 * [Source files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)

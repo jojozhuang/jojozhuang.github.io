@@ -12,7 +12,7 @@ tags: [MySQL, Docker]
 > Introduce how to backup MySQL database which is running in container.
 
 ## 1. Introduction
-In posting [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}), we created MySQL image `jojozhuang/jspmysql` with Dockerfile, and used this image to run MySQL container. The issue is MySQL image doesn't persist data. Initially, in this MySQL container, there are three rows in table `Product`. If you make some changes(eg. add new product), and create new image based on this container, these changes won't be restored to the new image, they are lost. So each time before creating a new image for MySQL container, we need to backup the database first.
+In posting [Creating MySQL Image with Docker File]({% link _tutorial/docker/creating-mysql-image-with-docker-file.md %}), we created MySQL image `jojozhuang/jspmysql` with Dockerfile, and used this image to run MySQL container. The issue is MySQL image doesn't persist data. Initially, in this MySQL container, there are three rows in table `Product`. If you make some changes(eg. add new product), and create new image based on this container, these changes won't be restored to the new image, they are lost. So each time before creating a new image for MySQL container, we need to backup the database first.
 
 ## 2. MySQL Database Backup
 ### 2.1 General Backup Approaches in MySQL

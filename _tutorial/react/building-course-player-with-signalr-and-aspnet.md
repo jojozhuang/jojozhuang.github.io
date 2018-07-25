@@ -19,7 +19,7 @@ A course player consists of three components: video, screenshot and whiteboard.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-Check the posting [Introduction of Course Player]({% link _posts/2016-03-12-introduction-of-course-player.md %}) to learn the details.
+Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.
 
 ## 2. Course Player Project
 ### 2.1 Creating New Projects
@@ -28,7 +28,7 @@ In Visual Studio, create a 'Web Application' project named `CoursePlayer.SignalR
 ### 2.2 Core Project
 Reuse the Course Player Core project, copy all files except the interface file 'IFileHelper' from 'Johnny.Portfolio.CoursePlayer.Core'.
 ![image](/public/tutorials/364/coreproject.png){:width="350px"}
-Project 'Johnny.Portfolio.CoursePlayer.Core' was created for the portfolio `Course Player Xamarin`. Check the posting [Building Course Player with Xamarin]({% link _posts/2017-07-24-building-course-player-with-xamarin.md %})  for more details.
+Project 'Johnny.Portfolio.CoursePlayer.Core' was created for the portfolio `Course Player Xamarin`. Check the posting [Building Course Player with Xamarin]({% link _tutorial/mobile/building-course-player-with-xamarin.md %})  for more details.
 
 In `CourseApi.cs`, we define two methods. One is for fetching the data of screenshot, another is for fetching the data of whiteboard.
 ```c#

@@ -15,10 +15,8 @@ tags: [SQL Server, Docker]
 SQL Server is a relational database management system (RDBMS) developed by Microsoft. SQL Server is originally released to Windows platform. Recently, Microsoft released the linux version. In this tutorial, we will use docker to install SQL Server for Linux. Thus, we can use it on Mac.
 
 ## 2. Prerequisite
-### 2.1 Docker and Kitematic Installed
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring  [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
-### 2.2 Docker Machine with Large Storage
-The SQL Server container requires at least 3.25 GB of RAM and large storage. If you are unable to install it because of the 'no space left on device' error, you have to create a new docker machine with large storage assigned. For more details, refer to [Creating Docker Machine with More Disk Space]({% link _posts/2017-03-02-creating-docker-machine-with-more-disk-space.md %}).
+### 2.1 Docker Machine with Large Storage
+The SQL Server container requires at least 3.25 GB of RAM and large storage. If you are unable to install it because of the 'no space left on device' error, you have to create a new docker machine with large storage assigned. For more details, refer to [Creating Docker Machine with More Disk Space]({% link _tutorial/docker/creating-docker-machine-with-more-disk-space.md %}).
 
 ## 3. Creating SQL Server Container in Kitematic
 ### 3.1 Creating SQL Server Container

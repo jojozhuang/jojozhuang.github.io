@@ -12,7 +12,7 @@ tags: [React, ESLint, Webpack]
 > Build web application with ReactJS.
 
 ## 1. Game Store Web Application
-In the posting [Building Web Application with Angular]({% link _posts/2017-08-09-building-web-application-with-angular.md %}), I introduced how to use Angular and RESTful web service to create a web application to manage products. In this tutorial, we will learn how to use React to build such web application with the same UI and functions.
+In the posting [Building Web Application with Angular]({% link _tutorial/angular/building-web-application-with-angular.md %}), I introduced how to use Angular and RESTful web service to create a web application to manage products. In this tutorial, we will learn how to use React to build such web application with the same UI and functions.
 
 ## 2. React Project
 ### 2.1 Creating New Project

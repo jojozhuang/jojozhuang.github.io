@@ -19,7 +19,7 @@ Go to https://www.getpostman.com/apps, select 'Postman for Mac' to download the 
 ![image](/public/tutorials/367/postman_main.png)
 
 ## 3. APIs for Testing
-In the posting [Building RESTful APIs with ASP.NET Core]({% link _posts/2017-08-02-building-restful-apis-with-aspnet-core.md %}), I introduced how to create RESTful APIs with C#. Now, let's use Postman to test these APIs.
+In the posting [Building RESTful APIs with ASP.NET Core]({% link _tutorial/react/building-restful-apis-with-aspnet-core.md %}), I introduced how to create RESTful APIs with C#. Now, let's use Postman to test these APIs.
 
 API                       | Description         | Request body | Response body
 --------------------------|---------------------|--------------|-------------------

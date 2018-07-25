@@ -106,7 +106,7 @@ Add role and admin user to this file.
 $ $CATALINA_HOME/bin/startup.sh
 ```
 Verify that Tomcat is working by visiting http://localhost:8080.
-![tomcat](/public/posts/2016-02-10/tomcat.png)  
+![tomcat](/public/tutorials/13/tomcat.png)  
 Tomcat can be stopped by executing the following command:
 ```sh
 $ $CATALINA_HOME/bin/shutdown.sh
@@ -120,11 +120,11 @@ $ tar xvzf eclipse-inst-linux64.tar.gz
 ```
 ### 3.2 Installing Eclipse
 Go to the uncompressed folder 'eclipse-installer', double click the installation file 'eclipse-inst'.
-![installeclipse](/public/posts/2016-02-10/installeclipse.png)  
+![installeclipse](/public/tutorials/13/installeclipse.png)  
 In the wizard, select 'Eclipse IDE for Java EE Developers'.
-![jee](/public/posts/2016-02-10/jee.png)  
+![jee](/public/tutorials/13/jee.png)  
 Leave the installation folder unchanged, click 'INSTALL' button.
-![location](/public/posts/2016-02-10/location.png)  
+![location](/public/tutorials/13/location.png)  
 Installation should start and wait until it is finished. If you see 'read-only' error, run the following command, and try to install again.
 ```sh
 $ sudo chown -R $USER /opt/  // grant all access of rights for folder /opt/ to current user.
@@ -136,9 +136,9 @@ $ cd /home/johnny/eclipse/jee-oxygen/eclipse/
 $ ./eclipse
 ```
 Set workspace.
-![eclipse_workspace](/public/posts/2016-02-10/eclipse_workspace.png)  
+![eclipse_workspace](/public/tutorials/13/eclipse_workspace.png)  
 Close the welcome page, you will get Eclipse ready for use.
-![eclipse_launched](/public/posts/2016-02-10/eclipse_launched.png)  
+![eclipse_launched](/public/tutorials/13/eclipse_launched.png)  
 
 In addition, if your eclipse icon is missing after you launch it, copy `icon.xpm` to `/usr/share/pixmaps/`, and rename it to `eclipse.xpm`.
 ```sh

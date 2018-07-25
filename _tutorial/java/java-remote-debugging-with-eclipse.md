@@ -12,13 +12,10 @@ tags: [Eclipse, Debugging]
 > Tutorial for how to remote debugging with Eclipse.
 
 ## 1. Introduction
-In the posting [Using Java Debugger]({% link _posts/2016-03-21-using-java-debugger.md %}), we learned how to debug a Java application with Java debugger (JDB). In this posting, I will introduce how to debug the same Java application in Eclipse, which would be much easier and more convenient than using JDB.
+In the posting [Using Java Debugger]({% link _tutorial/java/using-java-debugger.md %}), we learned how to debug a Java application with Java debugger (JDB). In this posting, I will introduce how to debug the same Java application in Eclipse, which would be much easier and more convenient than using JDB.
 
-## 2. Prerequisites
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _posts/2016-02-13-setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
-
-## 3. Debugging in Eclipse
-### 3.1 Preparing Project
+## 2. Debugging in Eclipse
+### 2.1 Preparing Project
 In Eclipse, create a new Java Project. Add one class named `Sum.java` into the project with following content.
 ```java
 public class Sum {
@@ -32,11 +29,11 @@ public class Sum {
 ```
 Set breakpoints to line 3 and line 6 in Sum.java.
 ![image](/public/tutorials/513/project.png)
-### 3.2 Creating Debug Configuration
+### 2.2 Creating Debug Configuration
 In Eclipse, Run -> Debug Configurations..., create a new 'Remote Java Application' named `Sum Debugging`. Specify the Host to `localhost` and Port to `4000`.
 ![image](/public/tutorials/513/debugconfig.png){:width="800px"}
 
-### 3.3 Compiling and Running
+### 2.3 Compiling and Running
 Open terminal, navigate to the folder where Sum.java locates, use `javac` to compile it. The `g` option adds extra debug info to the class.
 ```sh
 $ javac -g Sum.java
@@ -50,7 +47,7 @@ $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=
 
 ![image](/public/tutorials/513/rundebugmode.png){:width="600px"}
 
-### 3.4 Debugging
+### 2.4 Debugging
 In Eclipse, click the `Debug As..` button on toolbar and select `Sum Debugging`.
 ![image](/public/tutorials/513/attach.png)
 You will see the debugging is working now. The first breakpoint is activated.
@@ -62,9 +59,9 @@ Step over line 6 and switch to the terminal. The result is just printed out in t
 Click the `Resume` button(F8), the debugging session ends in Eclipse. Meanwhile, the debug process ends in terminal.
 ![image](/public/tutorials/513/done.png)
 
-## 4. Source Files
+## 3. Source Files
 * [Source files for JDBTutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JDBTutorial)
 
-## 5. Reference
+## 4. Reference
 * [Java Remote Debug with Eclipse](http://javapapers.com/core-java/java-remote-debug-with-eclipse/)
 * [Understanding how Java Debug works](http://cscarioni.blogspot.com/2010/12/understanding-how-java-debug-works.html)

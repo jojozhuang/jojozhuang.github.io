@@ -12,7 +12,7 @@ tags: [Spring Boot, RESTful, Maven]
 > Create Restful Web Service with Spring Boot for Angular/ReactJS App to consume.
 
 ## 1. RESTful APIs
-In the posting [Building RESTful APIs with ASP.NET Core]({% link _posts/2017-08-02-building-restful-apis-with-aspnet-core.md %}), I introduced how to create RESTful APIs with ASP.NET Core in C#. In this tutorial, we will create the same APIs with Spring Boot in Java.
+In the posting [Building RESTful APIs with ASP.NET Core]({% link _tutorial/react/building-restful-apis-with-aspnet-core.md %}), I introduced how to create RESTful APIs with ASP.NET Core in C#. In this tutorial, we will create the same APIs with Spring Boot in Java.
 
 API                       | Description         | Request body | Response body
 --------------------------|---------------------|--------------|-------------------

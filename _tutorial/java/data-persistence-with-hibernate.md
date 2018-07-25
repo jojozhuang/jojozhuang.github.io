@@ -14,20 +14,12 @@ tags: [Hibernate, ORM]
 ## 1. What is Hibernate?
 Hibernate is a high-performance Object/Relational persistence and query service. Hibernate not only takes care of the mapping from Java classes to database tables (and from Java data types to SQL data types), but also provides data query and retrieval facilities.
 
-## 2. Prerequisites
-### 2.1 Java Development Environment
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _posts/2016-02-13-setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
-### 2.2 Docker Toolbox
-Docker and Kitematic have been setup. Otherwise, please install Docker Toolbox by referring to posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
-### 2.3 MySQL Workbench
-MySQL database has been installed. Otherwise, refer to [Installing MySQL and Workbench on Mac]({% link _posts/2016-02-25-installing-mysql-and-workbench-on-mac.md %}) to install MySQL database and MySQL Workbench.
-
-## 3. Installing Hibernate to Eclipse Project
-### 3.1 Downloading Hibernate
+## 2. Installing Hibernate to Eclipse Project
+### 2.1 Downloading Hibernate
 Go to [http://hibernate.org/orm/releases/](http://hibernate.org/orm/releases/), download the latest version of Hibernate, eg hibernate-release-5.0.11.Final.zip, unzip it after downloading.
-### 3.2 Creating Java Project
+### 2.2 Creating Java Project
 In Eclipse, File -> New -> 'Java Project', Name: `HibernateTutorial`. Create `lib` and `src` subdirectories in this project. (When you create a new Java Project in Eclipse IDE, src subdirectory will be created automatically.)
-### 3.3 Importing JAR Files
+### 2.3 Importing JAR Files
 Copy JAR files which are listed below, from hibernate distribution that you have downloaded to the `lib` directory of the `HibernateTutorial` project.
 * antlr-2.7.7.jar
 * dom4j-1.6.1.jar
@@ -48,7 +40,7 @@ Extract `mysql-connector-java-5.1.44-bin.jar` from the the downloaded zip file, 
 
 After all above steps, `HibernateTutorial` project will look like this:
 ![image](/public/tutorials/536/projectstructure.png){:width="350px"}  
-### 3.4 Adding Reference
+### 2.4 Adding Reference
 Eclipse->Preferences, Java->Build Path->User Libraries, add new user library `Hibernate`.
 ![image](/public/tutorials/536/adduserlibrary.png){:width="700px"}  
 Select `Hibernate` User library that we just created and click `Add JARS…` button.
@@ -68,9 +60,9 @@ Finally, check the box of `Hibernate` User library and click Finish button.
 After adding `Hibernate` User library to `HibernateTutorial` project, it will look like this:
 ![image](/public/tutorials/536/structure2.png){:width="350px"}
 
-## 4. Setting up MySQL Container
+## 3. Setting up MySQL Container
 We use docker container to host our MySQL database.
-### 4.1 Creating Dockerfile
+### 3.1 Creating Dockerfile
 Create a file named `Dockerfile` with the following content.
 ```sh
 #Create MySQL Image for Hibernate Tutorial
@@ -96,7 +88,7 @@ CREATE TABLE `EMPLOYEE` (
 );
 
 ```
-### 4.2 Creating Image with Dockerfile
+### 3.2 Creating Image with Dockerfile
 In Docker Terminal, navigate to /HibernateTutorial/Docker/, run the following command the create MySQL image.
 ```sh
 $ docker build -t hbn-mysql:0.1 .
@@ -106,21 +98,21 @@ The new image is created with named `hbn-mysql` and tag `0.1`.
 $ docker images
 ```
 ![image](/public/tutorials/536/dockerimage.png){:width="700px"}  
-### 4.3 Running MySQL Container
+### 3.3 Running MySQL Container
 In Docker Terminal, run command to launch MySQL container with the new image 'hbn-mysql:0.1'.
 ```sh
 $ docker run --detach --name=hnbmysql --publish 11050:3306 hbn-mysql:0.1
 ```
 You will see that a container named `hnbmysql` is running now. Note the IP address `192.168.99.100` and port `11050`. We will use them to configure the database connection in eclipse and MySQL Workbench later.
 ![image](/public/tutorials/536/kitematic.png)  
-### 5.4 Connecting MySQL Container With MySQL Workbench
+### 3.4 Connecting MySQL Container With MySQL Workbench
 In MySQL Workbench, create a new connection with name 'Hibernate Tutorial'. Set IP address to `192.168.99.100` and port to `11050`. And set password `hbn` for user `root`.
 ![image](/public/tutorials/536/newconnection.png){:width="800px"}
 Test the connection and connect the MySQL container. You will see database `hbndb` and table `EMPLOYEE` are created, but there is no data created yet in table `EMPLOYEE`.
 ![image](/public/tutorials/536/workbench.png)
 
-## 5. Making Changes to HibernateTutorial Project
-### 5.1 Creating Entity
+## 4. Making Changes to HibernateTutorial Project
+### 4.1 Creating Entity
 Create package `Johnny.HibernateTutorial.Entity` under `src`, and create class `Employee` as follows.
 ```java
 package Johnny.HibernateTutorial.Entity;
@@ -166,7 +158,7 @@ public class Employee {
     }
 }
 ```
-### 5.2 Creating Persistence Operations
+### 4.2 Creating Persistence Operations
 Create another package `Johnny.HibernateTutorial.Service` under `src`, and create class `ManageEmployee` as follows. The main method has three operations.
 * Create three employees
 * Update the salary of the first employee
@@ -297,7 +289,7 @@ public class ManageEmployee {
     }
 }
 ```
-### 5.3 Creating Mapping Configuration File
+### 4.3 Creating Mapping Configuration File
 Create `Employee.hbm.xml` under `src`.
 ```xml
 <?xml version = "1.0" encoding = "utf-8"?>
@@ -316,7 +308,7 @@ Create `Employee.hbm.xml` under `src`.
    </class>
 </hibernate-mapping>
 ```
-### 5.4 Creating Hibernate Configuration File
+### 4.4 Creating Hibernate Configuration File
 Create `hibernate.cfg.xml` under `src`.
 ```xml
 <?xml version = "1.0" encoding = "utf-8"?>
@@ -336,12 +328,12 @@ Create `hibernate.cfg.xml` under `src`.
    </session-factory>
 </hibernate-configuration>
 ```
-### 5.5 Final Project Structure
+### 4.5 Final Project Structure
 Finally, the project looks as follows.
 ![image](/public/tutorials/536/finalstructure.png){:width="400px"}  
 
-## 6. Testing
-### 6.1 Running ManageEmployee Class
+## 5. Testing
+### 5.1 Running ManageEmployee Class
 In Eclipse, right click on `ManageEmployee.java` file -> Run AS -> Java Application. You will get the following output in the console panel of eclipse IDE.
 ```sh
 Name: Rong Zhuang Salary: 1000.0
@@ -351,17 +343,17 @@ Name: Rong Zhuang Salary: 7000.0
 Name: Johnny Walker Salary: 10000.0
 ```
 ![image](/public/tutorials/536/console.png)
-### 6.2 Checking Data in MySQL
+### 5.2 Checking Data in MySQL
 In MySQL Workbench, run sql query to find all rows in table `Employee`. You will see two entries.
 ```sql
 SELECT * FROM hbndb.EMPLOYEE;
 ```
 ![image](/public/tutorials/536/datacreated.png)
 
-## 7. Source Files
+## 6. Source Files
 * [Source files of Hibernate Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/HibernateTutorial)
 
-## 8. Reference
+## 7. Reference
 * [Hibernate Tutorial](https://www.tutorialspoint.com/hibernate/index.htm)
 * [Hibernate Installation/Setup on Eclipse IDE](https://kaanmutlu.wordpress.com/2011/07/30/hibernate-installationsetup-on-eclipse-ide/)
 * [Sample Hibernate Application](https://kaanmutlu.wordpress.com/2011/07/30/sample-hibernate-application/)

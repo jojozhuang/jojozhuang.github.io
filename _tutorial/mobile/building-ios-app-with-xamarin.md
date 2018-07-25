@@ -13,7 +13,7 @@ tags: [Xamarin, Xcode, SQLite, C#]
 
 ## 1. iOS App
 ### 1.1 Requirement
-We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Xcode and Swift. See more details in the posting [Building iOS App with Xcode]({% link _posts/2017-07-10-building-ios-app-with-xcode.md %}).
+We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Xcode and Swift. See more details in the posting [Building iOS App with Xcode]({% link _tutorial/mobile/building-ios-app-with-xcode.md %}).
 ### 1.2 Creating Project
 In Visual Studio, File->New Solution, select Multiplatform->App->Blank Native App(iOS, Android), Next.
 ![image](/public/tutorials/407/project_create.png){:width="800px"}  

@@ -14,10 +14,7 @@ tags: [React]
 ## 1. ReactJS
 [ReactJS](https://reactjs.org/) is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate. React is currently one of the most popular JavaScript libraries and has a strong foundation and large community behind it.
 
-## 2. Node.js and NPM
-Before using React, we first need to install Node.js. Refer the posting [Installing Node.js and NPM]({% link _posts/2016-03-06-installing-nodejs-and-npm.md %}) to install Node.js and NPM.
-
-## 3. Creating React App
+## 2. Creating React App
 Install 'create-react-app' globally.
 ```sh
 $ npm install create-react-app -g
@@ -29,7 +26,7 @@ $ create-react-app react-app
 Open 'react-app' in Visual Studio Code.
 ![image](/public/tutorials/351/project.png){:width="350px"}
 
-## 4. Serving the Application
+## 3. Serving the Application
 Start 'react-app' through npm.
 ```sh
 $ npm start
@@ -50,7 +47,7 @@ You can make it serve at different port. Open `package.json`, add 'PORT' option 
 Run 'npm start' again. Now, this application is served at port '12090'.
 ![image](/public/tutorials/351/changeport.png)  
 
-## 5. References
+## 4. References
 * [React Official Website](https://reactjs.org/)
 * [Tutorial: Intro To React](https://reactjs.org/tutorial/tutorial.html)
 * [React Official Docs](https://reactjs.org/docs/hello-world.html)

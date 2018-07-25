@@ -12,7 +12,7 @@ tags: [Docker, Tomcat]
 > Guide how to serve Java Servlet/JSP website in Tomcat container.
 
 ## 1. Introduction
-In posting [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}), we created a MySQL container with Dockerfile. But we are still using local Tomcat to serve our website. In this tutorial, I will introduce how to serve our JSP Tutorial application in Docker Container.
+In posting [Creating MySQL Image with Docker File]({% link _tutorial/docker/creating-mysql-image-with-docker-file.md %}), we created a MySQL container with Dockerfile. But we are still using local Tomcat to serve our website. In this tutorial, I will introduce how to serve our JSP Tutorial application in Docker Container.
 
 ## 2. Setting up Tomcat Container
 ### 2.1 Creating Tomcat Container
@@ -51,7 +51,7 @@ Open directory `~/Documents/` in your host machine, you will find `jsptomcat` is
 
 
 ### 3.2 Publishing JSP Application
-We will use the same JSP application for [Creating MySQL Image with Docker File]({% link _posts/2016-09-15-creating-mysql-image-with-docker-file.md %}). Download the source files from [My Github](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile), and build the project.  
+We will use the same JSP application for [Creating MySQL Image with Docker File]({% link _tutorial/docker/creating-mysql-image-with-docker-file.md %}). Download the source files from [My Github](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile), and build the project.  
 1) Copy all of the files from `/JSPTutorialDockerfile/WebContent/` to `~/Documents/jsptomcat/`.  
 2) Copy the entire 'classes' folder from `/JSPTutorialDockerfile/build/` to `~/Documents/jsptomcat/WEB-INF/`.  
 3) The final structure of the volume folder looks like below. All the files for this JSP Tutorial application are deployed.  

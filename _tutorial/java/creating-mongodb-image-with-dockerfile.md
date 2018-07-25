@@ -11,11 +11,8 @@ tags: [MongoDB, Dockerfile, Docker]
 
 > Tutorial for creating MongoDB image with Dockerfile.
 
-## 1. Prerequisite
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _posts/2016-09-11-installing-docker-toolbox-and-kitematic-on-mac.md %}).
-
-## 2. Creating MongoDB Image with Dockerfile
-### 2.1 Creating Docker File
+## 1. Creating MongoDB Image with Dockerfile
+### 1.1 Creating Docker File
 Create one file named `Dockerfile` in any directory on local machine.
 ```sh
 $ cd ~/Johnny
@@ -37,7 +34,7 @@ The following points need to be noted about the above file.
 * The next command is the person who is going to maintain this image.
 * The EXPOSE command exposes port `27017` of the image.
 
-### 2.2 Creating Image with Dockerfile
+### 1.2 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile locates. Run the following command.
 ```sh
 $ docker build -t jspmongo:0.1 .
@@ -49,18 +46,18 @@ $ docker images
 As you see, the new image is created with tag 0.1.
 ![image](/public/tutorials/534/imagecreated.png){:width="750px"}  
 
-## 3. Testing The New Image
-### 3.1 Running Container
+## 2. Testing The New Image
+### 2.1 Running Container
 In docker terminal, run the following command.
 ```sh
 $ docker run --detach --name=jspmongo --publish 37017:27017 jspmongo:0.1
 ```
-### 3.2 Verifying Container in Kitematic
+### 2.2 Verifying Container in Kitematic
 A MongoDB container named `jspmongo` is running now. Notice, it's source image is `jspmongo:0.1`.
 ![image](/public/tutorials/534/general.png)  
 Port 27017 is also exposed and mapped to 37017.
 ![image](/public/tutorials/534/port.png)  
-### 3.3 Creating Sample Data
+### 2.3 Creating Sample Data
 In container terminal, launch MongoDB Shell with `mongo` command.
 ```raw
 # mongo
@@ -73,10 +70,10 @@ Create a database named `mongodbtutorial` and three documents for collection `pr
 ```
 ![image](/public/tutorials/534/createdata.png){:width="750px"}  
 
-## 4. Testing
-### 4.1 Getting MongoDB Tutorial Application
-In Eclipse, open the MongoDB Tutorial project which we created for [Building Website with JSP and MongoDB]({% link _posts/2016-11-22-building-website-with-jsp-and-mongodb.md %}). Rename it to `MongoDBDockerfile`.
-### 4.2 Updating Connection Host and Port
+## 3. Testing
+### 3.1 Getting MongoDB Tutorial Application
+In Eclipse, open the MongoDB Tutorial project which we created for [Building Website with JSP and MongoDB]({% link _tutorial/java/building-website-with-jsp-and-mongodb.md %}). Rename it to `MongoDBDockerfile`.
+### 3.2 Updating Connection Host and Port
 Edit `web.xml`, change the host to `192.168.99.100`, and port to `37017`.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -100,17 +97,17 @@ Edit `web.xml`, change the host to `192.168.99.100`, and port to `37017`.
     </session-config>
 </web-app>
 ```
-### 4.3 Verifying MongoDB Connection
+### 3.3 Verifying MongoDB Connection
 Run the project and access
 http://localhost:8080/MongoDBDockerfile/productlist.jsp. Products are displayed properly.
 ![image](/public/tutorials/534/productlist.png)  
 Try to add, edit or delete product. Then, verify the data in MongoDB Shell, you will see the changes.
 
-## 5. Source Files
+## 4. Source Files
 * [MongoDB Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/MongoDBDockerfile/Docker/Dockerfile)
 * [Source files for MongoDBDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/MongoDBDockerfile)
 
-## 6. References
+## 5. References
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 * [Creating a MongoDB Docker Container with an Attached Storage Volume](https://devops.profitbricks.com/tutorials/creating-a-mongodb-docker-container-with-an-attached-storage-volume/)
 * [Running MongoDB as a Docker container](https://www.thachmai.info/2015/04/30/running-mongodb-container/)

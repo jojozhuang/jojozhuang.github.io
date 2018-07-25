@@ -22,9 +22,9 @@ MySQL is the most popular Open Source Relational SQL Database Management System.
 
 ## 2. Prerequisites
 ### 2.1 Java Development Environment
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _posts/2016-02-13-setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _tutorial/basis/setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
 ### 2.2 MySQL Database
-MySQL database has been installed. Otherwise, refer to [Installing MySQL and Workbench on Mac]({% link _posts/2016-02-25-installing-mysql-and-workbench-on-mac.md %}) to install MySQL database and MySQL Workbench.
+MySQL database has been installed. Otherwise, refer to [Installing MySQL and Workbench on Mac]({% link _tutorial/basis/installing-mysql-and-workbench-on-mac.md %}) to install MySQL database and MySQL Workbench.
 
 ## 3. Setting up JSP Project
 ### 3.1 Creating Dynamic Web Project

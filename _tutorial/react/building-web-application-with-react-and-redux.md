@@ -12,7 +12,7 @@ tags: [React, Redux]
 > Build web application with React and Redux.
 
 ## 1. Game Store Web Application
-In the posting [Building Web Application with React]({% link _posts/2017-08-16-building-web-application-with-react.md %}), I introduced how to use React to create a web application to manage products. In this tutorial, we will reuse this app and learn how to enhance it with Redux.
+In the posting [Building Web Application with React]({% link _tutorial/react/building-web-application-with-react.md %}), I introduced how to use React to create a web application to manage products. In this tutorial, we will reuse this app and learn how to enhance it with Redux.
 
 ## 2. React Project
 ### 2.1 Source Files

@@ -15,7 +15,7 @@ tags: [Dockerfile, Docker, MySQL]
 Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. By using 'docker build', users can create an automated build that executes several command-line instructions in succession.
 
 ## 2. What We've Done Until Now?
-In the previous posting [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}), we created a MySQL container to store data for our JSP Tutorial application. Previously, we used the following command to create MySQL container.
+In the previous posting [Using MySQL Container for JSP Application]({% link _tutorial/docker/using-mysql-container-for-jsp-application.md %}), we created a MySQL container to store data for our JSP Tutorial application. Previously, we used the following command to create MySQL container.
 ```sh
 $ docker run --detach --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" --publish 6603:3306 mysql
 ```
@@ -94,7 +94,7 @@ In MySQL workbench, create a connection to `192.168.99.100:6603` with user `root
 ![image](/public/tutorials/604/workbench.png)  
 
 ### 4.4 Verifying JSP Tutorial Website
-In Eclipse, open the JSP Tutorial project which we created for [Using MySQL Container for JSP Application]({% link _posts/2016-09-13-using-mysql-container-for-jsp-application.md %}). Run it and access
+In Eclipse, open the JSP Tutorial project which we created for [Using MySQL Container for JSP Application]({% link _tutorial/docker/using-mysql-container-for-jsp-application.md %}). Run it and access
 http://localhost:8080/JSPTutorialContainer/productlist.jsp. Our JSP Tutorial Website is back. Products are displayed properly.
 ![image](/public/tutorials/604/productlist.png)  
 Try to add, edit or delete product. Then, verify the data in workbench, you will see the changes.
