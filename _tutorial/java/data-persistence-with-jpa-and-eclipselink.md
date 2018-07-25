@@ -38,24 +38,24 @@ MySQL database has been installed. Otherwise, refer to [Installing MySQL and Wor
 
 ## 3. Installing Eclipselink in Eclipse
 In Eclipse, File -> New -> 'JPA Project', Name: `JPATutorial`, and select 'Java SE 8' for target runtime, click Next.  
-![image](/public/posts/2016-12-21/jpaproject.png){:width="500px"}  
+![image](/public/tutorials/535/jpaproject.png){:width="500px"}  
 In JPA Facet, click on download library (if you do not have the library) in the user library section:
-![image](/public/posts/2016-12-21/jpafacet.png){:width="500px"}   
+![image](/public/tutorials/535/jpafacet.png){:width="500px"}   
 Select the latest version of Eclipselink library and click Next.
-![image](/public/posts/2016-12-21/eclipselink.png){:width="600px"}  
+![image](/public/tutorials/535/eclipselink.png){:width="600px"}  
 Accept the terms of license and click Finish to start downloading.
-![image](/public/posts/2016-12-21/downloading.png){:width="600px"}  
+![image](/public/tutorials/535/downloading.png){:width="600px"}  
 After downloading, check the box of 'EclipseLink 2.5.2' and click Finish.
-![image](/public/posts/2016-12-21/finish.png){:width="500px"}  
+![image](/public/tutorials/535/finish.png){:width="500px"}  
 Finally you get the JPA project in Eclipse IDE. Expand all files, you will get the folder and file hierarchy as follows:
-![image](/public/posts/2016-12-21/projectstructure.png){:width="400px"}  
+![image](/public/tutorials/535/projectstructure.png){:width="400px"}  
 
 ## 4. Adding MySQL Connector to Project
 To access MySQL database, we need mysql connector jar.
 Go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download MySQL Connector/J(ZIP Archive).
-![image](/public/posts/2016-12-21/mysqlconnectordownload.png)  
+![image](/public/tutorials/535/mysqlconnectordownload.png)  
 Extract `mysql-connector-java-5.1.44-bin.jar` from the the downloaded zip file, and copy it to /JPATutorial/lib/. In Eclipse, right click on Project -> Properties -> Java Build Path, click on 'Add External Jars...', add mysql connector into the build path.
-![image](/public/posts/2016-12-21/mysqlconnector.png){:width="700px"}
+![image](/public/tutorials/535/mysqlconnector.png){:width="700px"}
 
 ## 5. Setting up MySQL Container
 We use docker container to host our MySQL database.
@@ -84,19 +84,19 @@ The new image is created with named `jpa-mysql` and tag `0.1`.
 ```sh
 $ docker images
 ```
-![image](/public/posts/2016-12-21/dockerimage.png){:width="700px"}  
+![image](/public/tutorials/535/dockerimage.png){:width="700px"}  
 ### 5.3 Running MySQL Container
 In Docker Terminal, run command to launch MySQL container with the new image 'jpa-mysql:0.1'.
 ```sh
 $ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
 You will see that a container named `jpamysql` is running now. Note the IP address `192.168.99.100` and port `11020`. We will use them to configure the database connection in eclipse and MySQL Workbench later.
-![image](/public/posts/2016-12-21/kitematic.png)  
+![image](/public/tutorials/535/kitematic.png)  
 ### 5.4 Connecting MySQL Container With MySQL Workbench
 In MySQL Workbench, create a new connection with name 'JPA Tutorial'. Set IP address to `192.168.99.100` and port to `11020`. And set password `jpa` for user `root`.
-![image](/public/posts/2016-12-21/newconnection.png){:width="800px"}
+![image](/public/tutorials/535/newconnection.png){:width="800px"}
 Test the connection and connect the MySQL container. You will see there is no table created yet in database jpadb.
-![image](/public/posts/2016-12-21/workbench.png)
+![image](/public/tutorials/535/workbench.png)
 ## 6. Making Changes to JPA Project
 ### 6.1 Configuring Persistence.xml
 In eclipse, open `Persistence.xml` of JPATutorial, switch to source view. Edit it as follows:
@@ -120,7 +120,7 @@ In eclipse, open `Persistence.xml` of JPATutorial, switch to source view. Edit i
 ```
 ### 6.2 Creating Entity
 Create a package named `Johnny.JPATutorial.Entity`, under ‘src’ (Source) package.
-![image](/public/posts/2016-12-21/package.png){:width="500px"}  
+![image](/public/tutorials/535/package.png){:width="500px"}  
 Create a class named `Employee.java` under given package as follows:
 ```java
 package Johnny.JPATutorial.Entity;
@@ -307,7 +307,7 @@ public class DeleteEmployee {
 ```
 ### 6.3 Final Project Structure
 Finally, the project looks as follows.
-![image](/public/posts/2016-12-21/finalstructure.png){:width="400px"}  
+![image](/public/tutorials/535/finalstructure.png){:width="400px"}  
 
 ## 7. Testing
 ### 7.1 Running CreateEmployee Method
@@ -318,7 +318,7 @@ In MySQL Workbench, refresh database `jpadb`, you will see table `EMPLOYEE` is c
 SELECT * FROM jpadb.EMPLOYEE;
 ```
 We see the row for new employee is there.
-![image](/public/posts/2016-12-21/datacreated.png)
+![image](/public/tutorials/535/datacreated.png)
 
 Test updating, finding and deleting with the same approach. Data should always get updated properly in mysql.
 

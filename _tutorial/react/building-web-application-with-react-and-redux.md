@@ -768,7 +768,7 @@ dispatch(fetchResoucesFail(Object.assign(error, {product: product})));
 ```
 
 ### 2.10 Final Project Structure
-![image](/public/posts/2017-08-20/projectstructure.png){:width="350px"}
+![image](/public/tutorials/355/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
@@ -776,21 +776,21 @@ Start the RESTful service first, and start this React app, serve it in web serve
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.
-![image](/public/posts/2017-08-20/homepage.png)
+![image](/public/tutorials/355/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/posts/2017-08-20/productlist.png)
+![image](/public/tutorials/355/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/public/posts/2017-08-20/productadd.png)
+![image](/public/tutorials/355/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/posts/2017-08-20/productlistafteradd.png)
+![image](/public/tutorials/355/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/public/posts/2017-08-20/productedit.png)
+![image](/public/tutorials/355/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/public/posts/2017-08-20/productlistafteredit.png)
+![image](/public/tutorials/355/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/posts/2017-08-20/deleteconfirm.png)
+![image](/public/tutorials/355/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/posts/2017-08-20/productlistafterdel.png)
+![image](/public/tutorials/355/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReactRedux)

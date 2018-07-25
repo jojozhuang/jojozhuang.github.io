@@ -80,7 +80,7 @@ Update `index.html` with following content.
 </html>
 ```
 And put some static files, images to the both root folder and sub folder.
-![image](/public/posts/2018-01-18/folder_structure.png){:width="500px"}  
+![image](/public/tutorials/261/folder_structure.png){:width="500px"}  
 
 ## 3. Running and Testing
 In terminal, start the server with `node` command.
@@ -92,19 +92,19 @@ You should see the following log.
 Server running at http://localhost:12000/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 12000.
-![image](/public/posts/2018-01-18/startserver.png){:width="550px"}  
+![image](/public/tutorials/261/startserver.png){:width="550px"}  
 Open web browser, access http://127.0.0.1:12000/.
-![image](/public/posts/2018-01-18/index.png)
+![image](/public/tutorials/261/index.png)
 1) Static Html
-![image](/public/posts/2018-01-18/statichtml.png)
+![image](/public/tutorials/261/statichtml.png)
 2) Html in Sub Folder
-![image](/public/posts/2018-01-18/htmlsubfolder.png)
+![image](/public/tutorials/261/htmlsubfolder.png)
 3) Image
-![image](/public/posts/2018-01-18/image.png)
+![image](/public/tutorials/261/image.png)
 4) Image in Sub Folder
-![image](/public/posts/2018-01-18/imagesubfolder.png)
+![image](/public/tutorials/261/imagesubfolder.png)
 5) Game 2048
-![image](/public/posts/2018-01-18/game2048.png)
+![image](/public/tutorials/261/game2048.png)
 
 ## 4. Source Files
 * [Source files of Static Web Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/StaticWebServer)

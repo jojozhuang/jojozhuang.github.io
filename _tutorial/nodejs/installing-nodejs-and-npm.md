@@ -99,7 +99,7 @@ If everything is fine with your installation, this should produce the following 
 ```sh
 Hello, World!
 ```
-![image](/public/posts/2016-03-06/testnode.png){:width="600px"}
+![image](/public/tutorials/201/testnode.png){:width="600px"}
 
 ## 7. References
 * [Nodejs Guides](https://nodejs.org/en/docs/guides/)

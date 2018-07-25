@@ -42,9 +42,9 @@ $ docker exec CONTAINER /usr/bin/mysqldump -u root --password=PASSWORD DATABASE 
 ## 3. Backing up and Restoring
 ### 3.1 Making Changes
 Add one new product, name=iPad, price=399.
-![image](/public/posts/2016-09-16/addproduct.png)
+![image](/public/tutorials/605/addproduct.png)
 Verify that the new product is in the list.
-![image](/public/posts/2016-09-16/productlist.png)
+![image](/public/tutorials/605/productlist.png)
 ### 3.2 Dump Database jsptutorial
 Check the container id.
 ```sh
@@ -57,10 +57,10 @@ Execute `mysqldump` in docker terminal.
 $ docker exec f91d97a62086 /usr/bin/mysqldump -u root --password=jsppassword jsptutorial > backup.sql
 ```
 Notice `f91d97a62086` is the container id, `jsptutorial` is the database and `backup.sql` is the output file. After running the above command, a new backup.sql file is created.
-![image](/public/posts/2016-09-16/mysqldump.png)
+![image](/public/tutorials/605/mysqldump.png)
 ### 3.3 Checking the Output File
 Notice that new product `(4,'iPad',399)` is added to the sql for restoring table `Product`.
-![image](/public/posts/2016-09-16/newsql.png){:width="800px"}
+![image](/public/tutorials/605/newsql.png){:width="800px"}
 Now you can rename this file to jsp_backup.sql or use it directly in Dockerfile to create MySQL image.
 ### 3.4 Restoring Data to MySQL Container
 You can also restore the data directly to the container. In docker terminal, run the following command.

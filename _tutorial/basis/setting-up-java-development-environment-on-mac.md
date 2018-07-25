@@ -21,7 +21,7 @@ We will use the following free softwares/tools.
 Download the latest version of JDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Select JDK, in the next page, accept the license and choose 'jdk-8u151-macosx-x64.dmg' to download.
 ### 1.2 Installing JDK
 After downloading finish, double click on the installer. Follow the wizard to install JDK.
-![installjdk](/public/posts/2016-02-13/installjdk.png){:width="600px"}  
+![installjdk](/public/tutorials/14/installjdk.png){:width="600px"}  
 Finally, JDK is installed to /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/.
 ### 1.3 Checking Java Version
 ```sh
@@ -63,7 +63,7 @@ $ /Library/Tomcat/bin/shutdown.sh
 ```
 
 Verify that Tomcat is working by visiting http://localhost:8080.
-![tomcat](/public/posts/2016-02-13/tomcat.png)  
+![tomcat](/public/tutorials/14/tomcat.png)  
 
 ## 3. Installing Eclipse
 ### 3.1 Downloading Eclipse
@@ -74,7 +74,7 @@ Download the latest version of Eclipse from [https://www.eclipse.org/downloads/]
 $ tar xvzf eclipse-inst-mac64.tar.gz
 ```
 2) Double click on 'Eclipse Installer'. Select 'Eclipse IDE for Java EE Developers'.
-![eclipseinstaller](/public/posts/2016-02-13/eclipseinstaller.png){:width="600px"}  
+![eclipseinstaller](/public/tutorials/14/eclipseinstaller.png){:width="600px"}  
 Follow the wizard to finish the installation.
 ### 3.3 Starting Eclipse
 Eclipse is installed to '/Users/<username>/eclipse/jee-oxygen', run following command to launch Eclipse.
@@ -82,9 +82,9 @@ Eclipse is installed to '/Users/<username>/eclipse/jee-oxygen', run following co
 $ open ~/eclipse/jee-oxygen/Eclipse.app
 ```
 Set workspace.
-![eclipseworkspace](/public/posts/2016-02-13/eclipseworkspace.png){:width="600px"}  
+![eclipseworkspace](/public/tutorials/14/eclipseworkspace.png){:width="600px"}  
 Close the welcome page, you will get Eclipse ready for use.
-![eclipselaunched](/public/posts/2016-02-13/eclipselaunched.png)  
+![eclipselaunched](/public/tutorials/14/eclipselaunched.png)  
 
 ## 4. References
 * [Installing Tomcat on macOS 10.12 Sierra](https://wolfpaulus.com/mac/tomcat/)

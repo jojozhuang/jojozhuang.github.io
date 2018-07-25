@@ -23,14 +23,14 @@ I've already created the Dockerfile to quickly setup MySQL container in docker. 
 $ docker build -t datafix-mysql:0.1 .
 $ docker run --detach --name=dfmysql --publish 10202:3306 datafix-mysql:0.1
 ```
-![image](/public/posts/2017-10-13/mysqlcontainer.png){:width="700px"}
+![image](/public/tutorials/540/mysqlcontainer.png){:width="700px"}
 
 ## 4. Setting Up Project
 Get the source file of JSP application from [here](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial), rename it to `RhinoDataFix`.
 The project in Eclipse looks like this.
-![image](/public/posts/2017-10-13/originalproject.png){:width="400px"}
+![image](/public/tutorials/540/originalproject.png){:width="400px"}
 Start this application and access http://localhost:8080/RhinoDataFix/productlist.jsp in web browser. Initially, there are three products.
-![image](/public/posts/2017-10-13/originalproductlist.png)
+![image](/public/tutorials/540/originalproductlist.png)
 
 ## 5. Enhancing Project by Adding Data Fix Function
 Suppose the prices of the these products are incorrect, as customer requests, we need to double it through data fix.
@@ -112,7 +112,7 @@ Edit 'header.jsp' in RhinoDataFix->WebContent. Add link for 'datafix.jsp'.
 ```
 ### 5.5 Project Structure
 Finally, the project structure looks like this.
-![image](/public/posts/2017-10-13/projectstructure.png){:width="400px"}
+![image](/public/tutorials/540/projectstructure.png){:width="400px"}
 
 ## 6. Running Data Fix
 Right-click on RhinoDataFix->WebContent->datafix.jsp, Run As->Run On Server, specify Tomcat as web server and launch this servlet project with it. Open web browser, access http://localhost:8080/RhinoDataFix/datafix.jsp.
@@ -170,10 +170,10 @@ Data Fix with JS: Update products by doubling their prices: START
 Summary: Fixed 3 Products.
 Data Fix with JS: Update products by doubling their prices: END
 ```
-![image](/public/posts/2017-10-13/datafix.png)
+![image](/public/tutorials/540/datafix.png)
 
 Switch to Product List page, the prices have been doubled successfully.
-![image](/public/posts/2017-10-13/afterdfproductlist.png)
+![image](/public/tutorials/540/afterdfproductlist.png)
 
 ## 7. Source Files
 * [MySQL Dockerfile](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/Dockerfile)

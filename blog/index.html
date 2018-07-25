@@ -22,7 +22,9 @@ title: Rong Zhuang's Blog
           <div class="row">
               <h2>{{ page.title }}</h2>
               <dl class="dl-unsur">
+                  {% assign counter = 1 %}
                 {% for post in site.posts %}
+                {% assign counter=counter | plus:1 %}
                   <dd>
                     <a href="{{ post.url }}" title="{{ post.title }}">
                         <div>{{ post.title }}</div>
@@ -31,6 +33,7 @@ title: Rong Zhuang's Blog
                     <div class="tag pull-right">{{ post.tags | array_to_sentence_string}}</div>
                   </dd>
                 {% endfor %}
+                {{ counter }}
               </dl>
           </div>
       </div>

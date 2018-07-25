@@ -39,7 +39,7 @@ $ ng new helloworld
 ```
 
 Open this project in Visual Studio Code.
-![image](/public/posts/2017-08-08/project.png){:width="400px"}  
+![image](/public/tutorials/321/project.png){:width="400px"}  
 
 ## 5. Serving the Application
 Start the app, server it in web server.
@@ -48,7 +48,7 @@ $ cd helloworld
 $ ng serve
 ```
 By default, angular app is served at port 4200. Open web browser access 'http://localhost:4200/'.
-![image](/public/posts/2017-08-08/helloworld.png)  
+![image](/public/tutorials/321/helloworld.png)  
 
 You can make it serve at different port. Open `.angular-cli.json`, add 'serve' underneath 'defaults' as follows. Set the port to '12080'.
 ```json
@@ -62,7 +62,7 @@ You can make it serve at different port. Open `.angular-cli.json`, add 'serve' u
 }
 ```
 Run 'ng serve' again. Now, this application is served at port '12080'.
-![image](/public/posts/2017-08-08/serveport.png)  
+![image](/public/tutorials/321/serveport.png)  
 
 ## 6. References
 * [Official website](https://angular.io/)

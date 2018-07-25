@@ -140,7 +140,7 @@ Run this app using the following command:
 $ electron ./main.js
 ```
 A new window will open up, showing 'Hello World'.
-![image](/public/posts/2016-11-03/helloworld.png)  
+![image](/public/tutorials/231/helloworld.png)  
 
 ## 4. Using Popular Libraries
 We can leverage all the available tools for front-end web development in Electron. For example, you can use bootstrap, jQuery, AngularJs or ReactJs to build Electron apps.
@@ -191,7 +191,7 @@ $('#countbtn').on('click', () => {
 $ electron ./main.js
 ```
 A new window will open up, showing bootstrap UI.
-![image](/public/posts/2016-11-03/bootstrap.png)  
+![image](/public/tutorials/231/bootstrap.png)  
 
 ## 5. Inter Process Communication
 Electron provides us with 2 IPC (Inter Process Communication) modules called ipcMain and ipcRenderer.
@@ -289,16 +289,16 @@ Run this app using the following command:
 $ electron ./main.js
 ```
 A new window will open up, showing a textbox and a button. Click on that button, select a txt file, then its content would be shown in the textbox.
-![image](/public/posts/2016-11-03/ipc.png){:width="600px"}  
+![image](/public/tutorials/231/ipc.png){:width="600px"}  
 
 ## 6. Debugging
 ## 6.1 Developer Tools in Chrome
 You can use the chrome's developer tools for Electron apps. Shortcut: Command + Option + I.
-![image](/public/posts/2016-11-03/devtools.png)  
+![image](/public/tutorials/231/devtools.png)  
 ## 6.2 Debugging with VSCode
 You can also use VSCode for debugging main process.  
 1) Create '.vscode' folder in the root of project. Then, create launch.json file inside it.
-![image](/public/posts/2016-11-03/launch.png)  
+![image](/public/tutorials/231/launch.png)  
 
 Paste the following content to launch.json.
 ```json
@@ -336,7 +336,7 @@ Paste the following content to launch.json.
 ```
 
 2) In VSCopde, Debug->Start Debugging.
-![image](/public/posts/2016-11-03/debuginvsc.png)  
+![image](/public/tutorials/231/debuginvsc.png)  
 
 ## 7. Packaging
 There are two modules support you to package your Electron apps.
@@ -408,7 +408,7 @@ Building DMG
 ```
 
 Finally, you will get the executable file `electron-tutorial` and installer in `dist` folder.
-![image](/public/posts/2016-11-03/packaging.png)  
+![image](/public/tutorials/231/packaging.png)  
 
 ## 8. Source Files
 * [Source files of Electron Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ElectronTutorial)

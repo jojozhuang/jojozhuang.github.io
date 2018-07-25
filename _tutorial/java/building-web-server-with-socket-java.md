@@ -645,30 +645,30 @@ public class LogUtil {
 ```
 ## 4. Auxiliary Resources
 Some images, and static files. The final project looks as follows.
-![image](/public/posts/2016-02-24/project.png){:width="350px"}
+![image](/public/tutorials/531/project.png){:width="350px"}
 
 ## 5 Testing
 Right click on 'WebServer.java'-> Run As->Java Application. You will see the logs in console. The web server starts working.
-![image](/public/posts/2016-02-24/console.png){:width="800px"}  
+![image](/public/tutorials/531/console.png){:width="800px"}  
 
 Open web browser, access 'http://localhost:2540/'. All of the files in the root directory are displayed.
-![image](/public/posts/2016-02-24/homepage.png)
+![image](/public/tutorials/531/homepage.png)
 Click on the folder 'src' and navigate to the deeper layers. The path in browser's address bar changes accordingly, files in each directory are properly displayed.
-![image](/public/posts/2016-02-24/navigation.png)
+![image](/public/tutorials/531/navigation.png)
 Click on file 'WebServer.java', its content shows up.
-![image](/public/posts/2016-02-24/content.png)
+![image](/public/tutorials/531/content.png)
 Go back to the root folder, view content of txt file.
-![image](/public/posts/2016-02-24/dogtxt.png){:width="800px"}
+![image](/public/tutorials/531/dogtxt.png){:width="800px"}
 View html file.
-![image](/public/posts/2016-02-24/cathtml.png){:width="800px"}
+![image](/public/tutorials/531/cathtml.png){:width="800px"}
 Let's test the CGI function. In the root directory, click 'addnums.html'.
-![image](/public/posts/2016-02-24/cgi.png){:width="800px"}
+![image](/public/tutorials/531/cgi.png){:width="800px"}
 If numbers are correctly set, we can get the proper result.
-![image](/public/posts/2016-02-24/addnumbers.png){:width="800px"}
+![image](/public/tutorials/531/addnumbers.png){:width="800px"}
 If invalid input are passed to the server, it returns 500 error with specific error message.
-![image](/public/posts/2016-02-24/error.png){:width="800px"}
+![image](/public/tutorials/531/error.png){:width="800px"}
 Check the logs in WebServerLogs.txt. These logs are also available in the console of Eclipse.
-![image](/public/posts/2016-02-24/logs.png){:width="800px"}  
+![image](/public/tutorials/531/logs.png){:width="800px"}  
 
 ## 6. Source Files
 * [Source files of Web Server on Github](https://github.com/jojozhuang/Portfolio/tree/master/WebServer)

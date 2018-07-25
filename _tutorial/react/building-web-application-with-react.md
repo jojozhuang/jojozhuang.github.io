@@ -818,7 +818,7 @@ class FileApi {
 export default FileApi;
 ```
 ### 3.4 Final Project Structure
-![image](/public/posts/2017-08-16/projectstructure.png){:width="350px"}
+![image](/public/tutorials/353/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
@@ -826,21 +826,21 @@ Start the RESTful service first, and start this React app, serve it in web serve
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.
-![image](/public/posts/2017-08-16/homepage.png)
+![image](/public/tutorials/353/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/posts/2017-08-16/productlist.png)
+![image](/public/tutorials/353/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/public/posts/2017-08-16/productadd.png)
+![image](/public/tutorials/353/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/posts/2017-08-16/productlistafteradd.png)
+![image](/public/tutorials/353/productlistafteradd.png)
 Click 'Edit' button of the new product. Change the product name and price.
-![image](/public/posts/2017-08-16/productedit.png)
+![image](/public/tutorials/353/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/public/posts/2017-08-16/productlistafteredit.png)
+![image](/public/tutorials/353/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/posts/2017-08-16/deleteconfirm.png)
+![image](/public/tutorials/353/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/posts/2017-08-16/productlistafterdel.png)
+![image](/public/tutorials/353/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of Game Store(React) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReact)

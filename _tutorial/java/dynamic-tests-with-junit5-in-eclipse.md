@@ -32,13 +32,13 @@ In JUnit 5, dynamic test cases are represented by DynamicTest class. Here are so
 Go to https://www.eclipse.org/, download and install or upgrade Eclipse to Oxygen.1a Release (4.7.1a) or later version.
 ### 2.2 Maven Project
 In Eclipse, create new Maven project.
-![image](/public/posts/2018-02-21/newproject.png){:width="650px"}
+![image](/public/tutorials/522/newproject.png){:width="650px"}
 Specify the location of your new project. Do not select 'Create a simple project' option.
-![image](/public/posts/2018-02-21/location.png){:width="650px"}
+![image](/public/tutorials/522/location.png){:width="650px"}
 Press next, filter for the 'quickstart' archetype and select the maven-archetype-quickstart entry. This is the classical Maven example archetype for project creation.
-![image](/public/posts/2018-02-21/filter.png){:width="650px"}
+![image](/public/tutorials/522/filter.png){:width="650px"}
 Press next, specify Group Id, Artifact Id, Package, etc, then click Finish.
-![image](/public/posts/2018-02-21/groupid.png){:width="650px"}  
+![image](/public/tutorials/522/groupid.png){:width="650px"}  
 ### 2.3 Dependencies in pom.xml
 Edit `pom.xml`, add properties, build and dependencies for jupiter, vintage and platform.
 ```xml
@@ -331,10 +331,10 @@ null
 ## 3. Testing
 ### 3.1 Running JUnit4 Test
 In Eclipse, select the `SolutionTest` class, right-click on it and select Run-as -> JUnit Test. You should see all the three methods created based on JUnit4 passed the testing.
-![image](/public/posts/2018-02-21/junit4.png)
+![image](/public/tutorials/522/junit4.png)
 ### 3.2 Running JUnit5 Test
 In Eclipse, select the `SolutionDynamicTest` class, right-click on it and select Run-as -> JUnit Test. You should see 5 test methods passed the testing.
-![image](/public/posts/2018-02-21/junit5.png)
+![image](/public/tutorials/522/junit5.png)
 
 ## 4. Source Files
 * [Source files of JUnit5 Dynamic Test on Github](https://github.com/jojozhuang/Tutorials/tree/master/JUnit5DynamicTest)

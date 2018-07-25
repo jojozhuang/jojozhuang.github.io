@@ -865,7 +865,7 @@ To show line break '\n' in html, we need to add style `whiteSpace: pre-wrap` to 
 </Alert>
 ```
 Here is the sample screenshot for line break. Without the whitespace style, the lines will be concatenated together and hard to read.
-![image](/public/posts/2018-02-08/linebreak.png)
+![image](/public/tutorials/369/linebreak.png)
 
 ## 4. Webpack
 For the configuration of Webpack, please refer to another blog [Creating FullStack App with React and Node.js]({% link _posts/2018-02-06-creating-fullstack-app-with-react-and-nodejs.md %}).
@@ -883,13 +883,13 @@ Start both the client and server with 'npm run dev'. The client is served at por
 $ npm run dev
 ```
 Open web browser, access 'http://localhost:3000/'.
-![image](/public/posts/2018-02-08/homepage.png)
+![image](/public/tutorials/369/homepage.png)
 Switch to code editor. By default, Java is selected. You can select any language listed in the dropdown list.
-![image](/public/posts/2018-02-08/codeeditor.png)
+![image](/public/tutorials/369/codeeditor.png)
 Click the Run button. The execution result will be printed out if there is no error.
-![image](/public/posts/2018-02-08/run.png)
+![image](/public/tutorials/369/run.png)
 Otherwise, the error will be printed out instead.
-![image](/public/posts/2018-02-08/error.png)
+![image](/public/tutorials/369/error.png)
 
 ## 6. Source Files
 * [Source files of Online Code Editor on Github](https://github.com/jojozhuang/Tutorials/tree/master/OnlineCodeEditorReact)

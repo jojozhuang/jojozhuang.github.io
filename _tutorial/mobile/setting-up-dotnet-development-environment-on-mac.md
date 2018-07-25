@@ -27,41 +27,41 @@ Generally, we setup dotnet development environment on Windows. Now we can also s
 Go to [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/), switch MacOS, select 'Community for Mac' to download.
 ### 3.2 Installing
 After downloading, click the 'VisualStudioforMacInstaller.dmg' file. In the installer window, double click the install logo.
-![image](/public/posts/2017-07-19/install_vs.png){:width="400px"}  
+![image](/public/tutorials/405/install_vs.png){:width="400px"}  
 Accept the license, select the items, Install.
-![image](/public/posts/2017-07-19/install_components.png){:width="800px"}  
+![image](/public/tutorials/405/install_components.png){:width="800px"}  
 The installer starts the download and install process of the selected items.
-![image](/public/posts/2017-07-19/install_downloading.png){:width="800px"}  
+![image](/public/tutorials/405/install_downloading.png){:width="800px"}  
 Once the installation is finished, there will be a new logo named 'Visual Studio' in your desktop. Click on it to launch Visual Studio.
-![image](/public/posts/2017-07-19/visualstudio_workspace.png)
+![image](/public/tutorials/405/visualstudio_workspace.png)
 
 ## 4. Using Visual Studio
 ### 4.1 Project Template
 There are several project templates are supported in Visual Studio for Mac.  
 You can create Multiplatform mobile projects for iOS and Android which are based on [Xamarin](https://www.xamarin.com/).
-![image](/public/posts/2017-07-19/project_multiplatform.png){:width="800px"}  
+![image](/public/tutorials/405/project_multiplatform.png){:width="800px"}  
 You can also create native iOS project with C#.
-![image](/public/posts/2017-07-19/project_ios.png){:width="800px"}  
+![image](/public/tutorials/405/project_ios.png){:width="800px"}  
 You can also create native Android project with C#.
-![image](/public/posts/2017-07-19/project_android.png){:width="800px"}  
+![image](/public/tutorials/405/project_android.png){:width="800px"}  
 Further more, you are also able to create ASP.NET applications.
-![image](/public/posts/2017-07-19/project_aspnet.png){:width="800px"}  
+![image](/public/tutorials/405/project_aspnet.png){:width="800px"}  
 ### 4.2 Creating Multiplatform Project
 Click 'New Project' button in the welcome page or go to File->New Solution, select Multiplatform->App->Blank Native App(iOS, Android), Next.
-![image](/public/posts/2017-07-19/newproject_native.png){:width="800px"}  
+![image](/public/tutorials/405/newproject_native.png){:width="800px"}  
 Give a name to your app and specify Organization Identifier, Next.
-![image](/public/posts/2017-07-19/newproject_appname.png){:width="800px"}  
+![image](/public/tutorials/405/newproject_appname.png){:width="800px"}  
 Specify the location where the source files will locate, Create.
-![image](/public/posts/2017-07-19/newproject_location.png){:width="800px"}  
+![image](/public/tutorials/405/newproject_location.png){:width="800px"}  
 Three projects are created. 'Mobile' is a Portable .NET project. It can be shared to the Android project and the iOS project. You should put the common functions/classes in this project. 'Mobile.Droid' and 'Mobile.iOS' focus on UI, which are specific for Android and iOS.
-![image](/public/posts/2017-07-19/newproject_finish.png)
+![image](/public/tutorials/405/newproject_finish.png)
 ### 4.3 Managing Packages with NuGet Package Manager
 Select the 'Mobile.iOS' project. Then open NuGet Package Manager by choosing Project->Add NuGet Package.
-![image](/public/posts/2017-07-19/package_add.png){:width="800px"}  
+![image](/public/tutorials/405/package_add.png){:width="800px"}  
 Search 'sqlite', select the package named 'sqlite-net-pcl', specify the version of this component if necessary and click 'Add Package'.
-![image](/public/posts/2017-07-19/package_sqlite.png){:width="800px"}  
+![image](/public/tutorials/405/package_sqlite.png){:width="800px"}  
 There will be a new file named 'package.config' added to the project. The packages and their dependencies are listed in this file. Notice that, new packages are installed into the Packages folder. Now you can use them in your project.
-![image](/public/posts/2017-07-19/package_config.png)
+![image](/public/tutorials/405/package_config.png)
 
 ## 5. References
 * [Setup and Install Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/installation)

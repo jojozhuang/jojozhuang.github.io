@@ -40,6 +40,8 @@ $ npm update -g #update globally installed packages
 $ npm uninstall express
 $ npm uninstall -g typescript
 ```
+### 1.6 Starting App
+Use 'npm start' instead of 'node server.js' to start the application.
 
 ## 2. Packages
 ### 2.1 NPM and Modules
@@ -144,6 +146,24 @@ console.log(randomInt()); // 12
 console.log(randomInt()); // 77
 console.log(randomInt()); // 8
 ````
+### 3.2 Extending Native Prototypes in Node.js
+Create file named 'String.prototype.startsWith.js' in the root directory, then add following content:
+```javascript
+if(!String.prototype.startsWith) {
+  String.prototype.startsWith = function(term) {
+    return this.substr(0, term.length) === term;
+  };
+}
+```
+In the file where you want to call the prototype method.
+```javascript
+require('./String.prototype.startsWith');
+
+// Usage
+if(myString.startsWith('Moo')) {
+  // ...
+}
+```
 
 ## 4. Asynchronous Call
 ### 4.1 Read File
@@ -178,3 +198,5 @@ server.listen(3000);
 * [Node.js Tutorial](https://www.tutorialspoint.com/nodejs/index.htm)
 * [Specifics of npm's package.json handling](https://docs.npmjs.com/files/package.json)
 * [package-lock.json](https://docs.npmjs.com/files/package-lock.json)
+* [Extend Native Prototypes in Node.js](https://davidwalsh.name/extend-prototypes)
+* [Where to change objects prototypes in node.js?](https://stackoverflow.com/questions/14329210/where-to-change-objects-prototypes-in-node-js)
