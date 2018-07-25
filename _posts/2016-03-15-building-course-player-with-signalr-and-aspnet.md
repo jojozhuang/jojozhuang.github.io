@@ -717,7 +717,7 @@ This player is web based, the only required tool on client’s machine to watch 
 ### 4.4 Cross-platform(For developer)  
 For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with the Flash player and Silverlight player, this SignalR player is simple and easy to maintain, since there is only one copy of the code.  
 ### 4.5 Reusable  
-The core module(CoursePlayer.Core) of this application is shared with [Xamarin Course Player]({% link _portfolios/course-player-xamarin.md %}), which is another portfolio of mine. That is a cross-platform solution for mobile development.
+The core module(CoursePlayer.Core) of this application is shared with [Xamarin Course Player]({% link _portfolio/course-player-xamarin.md %}), which is another portfolio of mine. That is a cross-platform solution for mobile development.
 ![image](/public/posts/2016-03-15/coreproject.png){:width="350px"}
 
 This means, we have the cross-platform solution for developing applications by only using C\#.  

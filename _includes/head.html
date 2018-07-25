@@ -6,6 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
   <!--
   <script src="/public/js/jquery.min.js"></script>
   <script src="/public/js/bootstrap.min.js"></script>
@@ -20,6 +21,9 @@
   {% endif %}
   {% if page.blog == "list" %}
     <link href="/public/css/bloglist.css" rel='stylesheet' />
+  {% endif %}
+  {% if page.tutorial == "list" %}
+    <link href="/public/css/tutoriallist.css" rel='stylesheet' />
   {% endif %}
   {% if page.key == "favorite" %}
     <link href="/public/css/favorite.css" rel='stylesheet' />

@@ -326,3 +326,8 @@ bookmarks:
       - name: Android Studio
         description: The official IDE for Android
         url: https://developer.android.com/studio/index.html
+  - category: Resources
+    links:
+      - name: Bootsnipp
+        description: Bootstrap Snippets - Html templates
+        url: https://bootsnipp.com/

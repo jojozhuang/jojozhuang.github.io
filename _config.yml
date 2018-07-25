@@ -19,6 +19,9 @@ navlist:
   - key: portfolio
     url: /portfolio
     visible: true
+  - key: tutorial
+    url: /tutorial
+    visible: true
   - key: blog
     url: /blog
     visible: true
@@ -49,9 +52,11 @@ navlist:
     visible: true
 
 collections:
-  portfolios:
+  portfolio:
     output: true
-  notes:
+  tutorial:
+    output: true
+  note:
     output: true
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml

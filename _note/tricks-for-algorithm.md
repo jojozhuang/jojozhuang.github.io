@@ -175,19 +175,19 @@ public boolean isUniqueChars(String str) {
 ```
 ## 3. Data Structure
 I've created several postings to discuss this topic separately.
-* [Data Structure - Linked List]({% link _notes/data-structure-linkedlist.md %})
-* [Data Structure - Stack]({% link _notes/data-structure-stack.md %})
-* [Data Structure - Queue]({% link _notes/data-structure-queue.md %})
-* [Data Structure - Tree]({% link _notes/data-structure-tree.md %})
-* [Data Structure - HashTable]({% link _notes/data-structure-hashtable.md %})
-* [Data Structure - Heap]({% link _notes/data-structure-heap.md %})
-* [Data Structure - Graph]({% link _notes/data-structure-graph.md %})
-* [Data Structure - Trie]({% link _notes/data-structure-trie.md %})
-* [Data Structure - Segment Tree]({% link _notes/data-structure-segmenttree.md %})
+* [Data Structure - Linked List]({% link _note/data-structure-linkedlist.md %})
+* [Data Structure - Stack]({% link _note/data-structure-stack.md %})
+* [Data Structure - Queue]({% link _note/data-structure-queue.md %})
+* [Data Structure - Tree]({% link _note/data-structure-tree.md %})
+* [Data Structure - HashTable]({% link _note/data-structure-hashtable.md %})
+* [Data Structure - Heap]({% link _note/data-structure-heap.md %})
+* [Data Structure - Graph]({% link _note/data-structure-graph.md %})
+* [Data Structure - Trie]({% link _note/data-structure-trie.md %})
+* [Data Structure - Segment Tree]({% link _note/data-structure-segmenttree.md %})
 
 ## 5. Other Topics
-* [Common Sorting Algorithms]({% link _notes/common-sorting-algorithms.md %})
-* [Bit Manipulation]({% link _notes/bit-manipulation.md %})
+* [Common Sorting Algorithms]({% link _note/common-sorting-algorithms.md %})
+* [Bit Manipulation]({% link _note/bit-manipulation.md %})
 
 ## 7. Others
 ### 7.1 Removing Duplicated Lists

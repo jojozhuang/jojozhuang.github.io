@@ -13,7 +13,7 @@ category: mobile
 
 ## 1. Introduction
 ### 1.1 Game Store Web Application
-I have a portfolio named '[Online Game Store]({% link _portfolios/game-store-aspnet.md %})' which is built with ASP.NET MVC in C#. It's an online store for selling game facilities.
+I have a portfolio named '[Online Game Store]({% link _portfolio/game-store-aspnet.md %})' which is built with ASP.NET MVC in C#. It's an online store for selling game facilities.
 ![image](/public/portfolios/gamestoremulti/gamestore_web.png)  
 There is one core functionality for the store administrator, managing products.
 ![image](/public/portfolios/gamestoremulti/gamestore_products.png)

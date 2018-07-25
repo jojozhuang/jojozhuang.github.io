@@ -1,0 +1,31 @@
+---
+layout: default
+key: tutorial
+---
+<script>
+  $(document).ready(function(){
+    $('img').addClass('image-software');
+    $('img').addClass('img-responsive');
+  });
+</script>
+<div style="background:transparent !important" class="jumbotron">
+  <div class="container">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h1>{{ page.title }}</br><small>{{ page.tags | array_to_sentence_string }}</small></h1>
+      {% include pagination.html %}
+      <hr>
+      <p class="meta">{{ page.date | date_to_string }}</p>
+      <div class="post">
+        {{ content }}
+      </div>
+      <hr>
+      {% include pagination.html %}
+      <!-- Post comments -->
+      <div class="notecomments">
+        {% include disqus.html %}
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>

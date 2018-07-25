@@ -54,7 +54,7 @@ The problem with the existing online players is, different technologies(flash an
 Similar problem for mobile players. The COL team has to maintain two piece of code for iOS and Android, even though they have the same function.
 ### 4.3 Prototypes for New Course Players
 I created several course player with new technologies. See below.
-* [Course Player (Socket.IO)]({% link _portfolios/course-player-socketio.md %}): Built with html5 canvas and socket.io based on Node.js.
-* [Course Player (React)]({% link _portfolios/course-player-react.md %}): Enhancement of the first player, built with React, html5 canvas and socket.io based on Node.js.
-* [Course Player (SignalR)]({% link _portfolios/course-player-signalr.md %}): Another online player, built with SingalR.
-* [Course Player(Xamarin)]({% link _portfolios/course-player-xamarin.md %}): An iOS player built with Xamarin.
+* [Course Player (Socket.IO)]({% link _portfolio/course-player-socketio.md %}): Built with html5 canvas and socket.io based on Node.js.
+* [Course Player (React)]({% link _portfolio/course-player-react.md %}): Enhancement of the first player, built with React, html5 canvas and socket.io based on Node.js.
+* [Course Player (SignalR)]({% link _portfolio/course-player-signalr.md %}): Another online player, built with SingalR.
+* [Course Player(Xamarin)]({% link _portfolio/course-player-xamarin.md %}): An iOS player built with Xamarin.
