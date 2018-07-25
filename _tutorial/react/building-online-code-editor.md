@@ -784,7 +784,8 @@ class Editor extends React.Component {
 export default Editor;
 ```
 ./src/client/components/controls/CodeEditor.js  
-```javascript
+{% raw %}
+```raw
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -851,6 +852,7 @@ CodeEditor.propTypes = {
 
 export default CodeEditor;
 ```
+{% endraw %}
 Here, we use [Ace Editor](https://ace.c9.io/) as code editor.
 * [React-Ace](https://github.com/securingsincity/react-ace)
 * [ACE Live Demo](http://securingsincity.github.io/react-ace/)
@@ -858,12 +860,14 @@ Here, we use [Ace Editor](https://ace.c9.io/) as code editor.
 
 ### 3.4 Showing Line Break
 To show line break '\n' in html, we need to add style `whiteSpace: pre-wrap` to html tag.
-```html
+{% raw %}
+```raw
 <Alert bsStyle="danger" onDismiss={this.handleDismiss}>
   <h4>Oh snap! You got an error!</h4>
   <p style={{ whiteSpace: 'pre-wrap' }}>{this.props.message}</p>
 </Alert>
 ```
+{% endraw %}
 Here is the sample screenshot for line break. Without the whitespace style, the lines will be concatenated together and hard to read.
 ![image](/public/tutorials/369/linebreak.png)
 

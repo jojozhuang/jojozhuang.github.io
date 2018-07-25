@@ -27,7 +27,7 @@ categories:
                           <h3 class="panel-title">{{ category.name }}</h3>
                       </div>
                       <ul class="list-group">
-                          {% assign list = (site.note | where: "category", {{category.type}}) | sort: 'index') %}
+                          {% assign list = site.note | where: "category", category.type | sort: 'index' %}
                           {% for note in list %}
                               <a href="{{ note.url }}" title="{{ note.title }}" class="list-group-item">
                                   <div>{{ note.title }}</div>

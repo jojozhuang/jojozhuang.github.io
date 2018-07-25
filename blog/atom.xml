@@ -16,7 +16,7 @@ type: blog
     <email>{{ site.author.email }}</email>
   </author>
 
-  {% for post in site.categories[page.type] %}
+  {% for post in site.posts %}
       <entry>
         <title>{{ post.title }}</title>
         <link href="{{ site.url }}{{ post.url }}"/>
