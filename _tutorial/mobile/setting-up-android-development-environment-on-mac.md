@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Setting up Android Development Environment on Mac"
 index: 403

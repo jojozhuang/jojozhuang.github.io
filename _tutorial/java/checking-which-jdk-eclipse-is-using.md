@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Checking Which JDK Eclipse is Using"
 index: 511

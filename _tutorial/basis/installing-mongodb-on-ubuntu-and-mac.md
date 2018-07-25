@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Installing MongoDB on Ubuntu and Mac"
 index: 32

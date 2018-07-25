@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "JavaScript - Modern [Draft]"
 index: 102

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Backing up MySQL Database Hosted in Docker Container"
 index: 605

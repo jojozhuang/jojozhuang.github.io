@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building RESTful APIs with Express And MongoDB"
 index: 263

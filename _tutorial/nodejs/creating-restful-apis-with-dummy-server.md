@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Creating RESTful APIs with Dummy Server"
 index: 262

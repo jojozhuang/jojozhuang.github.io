@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Angular - HTTP and HttpClient(Draft)"
 index: 310

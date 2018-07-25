@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Creating Docker Container with Bash Script[Draft]"
 index: 613

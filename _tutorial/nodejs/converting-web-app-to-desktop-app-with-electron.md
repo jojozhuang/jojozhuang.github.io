@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Converting Web App to Desktop App with Electron"
 index: 232

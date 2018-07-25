@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Installing and Using Splunk on Linux"
 index: 34

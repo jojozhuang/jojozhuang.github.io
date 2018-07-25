@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Deploying Node.js Application to Amazon EC2"
 index: 205

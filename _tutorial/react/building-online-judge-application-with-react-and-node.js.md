@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building Online Judge Application With React and Node.js(Draft)"
 index: 360

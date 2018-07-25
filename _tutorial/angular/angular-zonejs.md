@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Angular - Zone.js[Draft]"
 index: 313

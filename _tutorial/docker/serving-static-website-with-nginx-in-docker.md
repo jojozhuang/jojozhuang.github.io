@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Serving Static Website With Nginx In Docker"
 index: 606

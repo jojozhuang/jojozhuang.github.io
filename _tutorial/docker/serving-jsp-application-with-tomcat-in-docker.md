@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Serving JSP Application With Tomcat In Docker"
 index: 607

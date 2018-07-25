@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Setting up GitHub Pages Site Locally With Jekyll"
 index: 901

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Creating RESTful Web Services with Jersey"
 index: 551

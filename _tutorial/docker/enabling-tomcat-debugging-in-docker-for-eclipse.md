@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Enabling Tomcat Debugging in Docker for Eclipse"
 index: 608

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building Website with JSP and MongoDB"
 index: 533

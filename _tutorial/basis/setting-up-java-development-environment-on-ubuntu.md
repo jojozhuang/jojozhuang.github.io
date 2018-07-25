@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Setting up Java Development Environment on Ubuntu"
 index: 13

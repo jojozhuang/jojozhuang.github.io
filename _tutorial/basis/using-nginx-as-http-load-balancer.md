@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Using Nginx as HTTP Load Balancer"
 index: 43

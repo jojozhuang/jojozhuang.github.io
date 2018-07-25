@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Installing MySQL and Workbench on Mac"
 index: 31

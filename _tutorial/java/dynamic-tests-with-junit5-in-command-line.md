@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Dynamic Tests with JUnit 5 in Command Line"
 index: 523

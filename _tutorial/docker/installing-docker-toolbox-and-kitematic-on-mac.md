@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Installing Docker Toolbox and Kitematic on Mac"
 index: 602

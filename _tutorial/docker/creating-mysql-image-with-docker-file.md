@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Creating MySQL Image with Docker File"
 index: 604

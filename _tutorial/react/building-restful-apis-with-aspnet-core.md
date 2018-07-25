@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building RESTful APIs with ASP.NET Core"
 index: 366

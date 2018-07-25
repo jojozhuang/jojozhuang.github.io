@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Java Remote Debugging with Eclipse"
 index: 513

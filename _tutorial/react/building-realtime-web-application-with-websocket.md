@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building Realtime Web Application with WebSocket"
 index: 362

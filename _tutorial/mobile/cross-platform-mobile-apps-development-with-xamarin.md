@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Cross-platform Mobile Apps Development with Xamarin"
 index: 406

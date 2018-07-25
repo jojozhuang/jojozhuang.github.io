@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Getting Started with Angular4 and Angular CLI"
 index: 321

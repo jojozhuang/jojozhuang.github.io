@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Sharing files between Host and Guest in VirtualBox"
 index: 12

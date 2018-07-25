@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building Course Player with Node.js and Socket.IO"
 index: 365

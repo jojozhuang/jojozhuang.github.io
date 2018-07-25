@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Deploying Full Stack Node.js App to Heroku"
 index: 370

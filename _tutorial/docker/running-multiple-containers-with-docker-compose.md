@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Running Multiple Containers with Docker Compose"
 index: 610

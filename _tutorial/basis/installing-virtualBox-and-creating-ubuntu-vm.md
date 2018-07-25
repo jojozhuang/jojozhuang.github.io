@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Installing VirtualBox and Creating Ubuntu VM"
 index: 11

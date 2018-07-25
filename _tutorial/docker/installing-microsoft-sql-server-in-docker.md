@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Installing Microsoft SQL Server in Docker"
 index: 612

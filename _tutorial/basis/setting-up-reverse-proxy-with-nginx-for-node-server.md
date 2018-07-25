@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Setting Up Reverse Proxy with Nginx for Node Server"
 index: 42

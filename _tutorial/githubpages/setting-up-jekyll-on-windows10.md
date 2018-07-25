@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Setting Up Jekyll on Windows 10"
 index: 907

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Data Fix with Javascript For Web Application"
 index: 540

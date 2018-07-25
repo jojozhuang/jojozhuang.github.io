@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Viewing Jekyll Build Error with Travis CI"
 index: 906

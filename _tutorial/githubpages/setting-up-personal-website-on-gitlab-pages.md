@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Setting up Personal Website on GitLab Pages(Draft)"
 index: 910

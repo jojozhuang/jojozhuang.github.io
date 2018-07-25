@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Building Cross-platform Desktop Apps with Electron"
 index: 231

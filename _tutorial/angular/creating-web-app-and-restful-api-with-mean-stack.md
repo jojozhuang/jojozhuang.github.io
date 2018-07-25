@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Creating Web App and RESTful API with MEAN Stack"
 index: 324

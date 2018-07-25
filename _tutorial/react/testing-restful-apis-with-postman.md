@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Testing RESTful APIs with Postman"
 index: 367

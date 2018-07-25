@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Angular - Observable and Reactive Programming[Draft]"
 index: 309

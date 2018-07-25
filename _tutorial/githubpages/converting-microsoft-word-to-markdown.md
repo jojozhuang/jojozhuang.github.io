@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Converting Microsoft Word to Markdown"
 index: 908

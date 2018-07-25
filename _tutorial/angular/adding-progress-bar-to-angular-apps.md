@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Adding Progress Bar to Angular Apps[Draft]"
 index: 325

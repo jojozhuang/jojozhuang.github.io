@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 key: tutorial
 title: "Using MySQL Container for JSP Application"
 index: 603
