@@ -15,7 +15,6 @@ key: tutorial
       <h1>{{ page.index }}. {{ page.title }}</br><small>{{ page.tags | array_to_sentence_string }}</small></h1>
       {% include pagination.html %}
       <hr>
-      {% include sharebar.html %}
       <div class="post">
         {{ content }}
       </div>
