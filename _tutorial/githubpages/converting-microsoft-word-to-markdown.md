@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Converting Microsoft Word to Markdown"
-index: 908
+index: 909
 category: githubpages
 image: github-pages.png
 date: 2016-02-03
