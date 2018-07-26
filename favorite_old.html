@@ -1,0 +1,31 @@
+---
+layout: default
+key: favorite
+title: Rong Zhuang's Favorite Bookmarks
+---
+<div class="main-contents">
+    <div class="main-contents-inner">
+        {%- assign favorite = site.data.favoriteXXXXXXXXXXXXXXX -%}
+        <div class="main-contents-title"><h2>{{favorite.title}}</h2></div>
+        <div class="main-contents-description">{{favorite.description}}</div>
+        <div class="list">
+            {%- for bookmark in favorite.bookmarks -%}
+                <div class="list-item">
+                    <div class="list-title">{{ bookmark.category }}</div>
+                    <ul class="list-sub">
+                        {%- for link in bookmark.links -%}
+                            <li class="list-sub-item">
+                               <div class="list-sub-title"><a href="{{ link.url }}" class="list-sub-link" data-container="body" data-toggle="tooltip" data-placement="right" title="{{ link.description }}">{{ link.name }}</a></div>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>

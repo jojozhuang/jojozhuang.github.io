@@ -8,7 +8,10 @@
     }
 }
 .main-contents ul>li {
-    margin: 0
+    /* margin: 0 */
+}
+.main-contents p {
+    margin-top: 16px
 }
 .main-contents ul>li:before {
     content: ""
@@ -96,6 +99,9 @@
 }
 .list-posting .icon-portfolio {
     color: #5CB85C;
+}
+.list-posting .icon-tutorial {
+    color: #f48544;
 }
 
 hr {

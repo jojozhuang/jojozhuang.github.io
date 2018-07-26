@@ -328,6 +328,9 @@ bookmarks:
         url: https://developer.android.com/studio/index.html
   - category: Resources
     links:
+      - name: Awesome Icons
+        description: Free icons from Font Awecome
+        url: https://fontawesome.com/icons?d=gallery&m=free
       - name: Bootsnipp
         description: Bootstrap Snippets - Html templates
         url: https://bootsnipp.com/

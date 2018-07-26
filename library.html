@@ -5,7 +5,7 @@ title: Rong Zhuang's Library
 ---
 <div class="main-contents">
     <div class="main-contents-inner">
-        {%- assign favorite = site.data.favorite -%}
+        {%- assign favorite = site.data.favoriteXXXXXXXXXXXXXXX -%}
         <div class="main-contents-title"><h2>{{favorite.librarytitle}}</h2></div>
         <div class="main-contents-description">{{favorite.librarydesc}}</div>
         <div class="list">
@@ -30,6 +30,15 @@ title: Rong Zhuang's Library
                                     {% if posttag contains tag %}
                                         {% assign counter = counter | plus:1 %}
                                         {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.title%}
+                                        {% assign strlink = strlink | append: currlink %}
+                                    {% endif %}
+                                {%- endfor -%}
+                                {% assign template = "<li><a href='url' title='name' >name </a><span class='glyphicon glyphicon-book icon-tutorial'></span></li>" %}
+                                {% for portfl in site.tutorial %}
+                                    {% assign portfltag = portfl.tags | downcase %}
+                                    {% if portfltag contains tag %}
+                                        {% assign counter = counter | plus:1 %}
+                                        {% assign currlink = template | replace: "url", portfl.url | replace: "name", portfl.title%}
                                         {% assign strlink = strlink | append: currlink %}
                                     {% endif %}
                                 {%- endfor -%}
