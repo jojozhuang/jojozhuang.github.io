@@ -79,7 +79,7 @@ touch -m -t201607081029.44 default.png
 ## 8. Paste file paths in Open, Save dialogs
 Command+Shift+G, paste the path.
 
-## 99. References
+## 9. References
 * [Free Mac guides and tutorials](http://www.macforbeginners.com/)
 * [I've broken my .bash_profile](http://superuser.com/questions/170332/ive-broken-my-bash-profile)
 * [How to open Atom editor from command line in OS X?](http://stackoverflow.com/questions/22390709/open-atom-editor-from-command-line)

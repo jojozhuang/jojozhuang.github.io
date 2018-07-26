@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Personal Website on GitLab Pages(Draft)"
-index: 910
+index: 922
 category: githubpages
 image: github-pages.png
 date: 2018-06-06

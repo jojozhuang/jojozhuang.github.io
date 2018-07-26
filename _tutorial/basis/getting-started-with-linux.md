@@ -166,7 +166,7 @@ rpm -ivh VirtualBox-5.2-5.2.6_122088_el7-1.x86_64.rpm
 rpm -Uvh VirtualBox-5.2-5.2.10_122088_el7-1.x86_64.rpm
 ```
 
-## 99. References
+## 8. References
 * [UNIX / LINUX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 * [Bash Command Basics](https://www.unr.edu/it/research-resources/research-computing/hpc/the-grid/using-the-grid/bash-commands)
 * [Bash Guide for Beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)

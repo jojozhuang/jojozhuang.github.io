@@ -331,3 +331,6 @@ bookmarks:
       - name: Bootsnipp
         description: Bootstrap Snippets - Html templates
         url: https://bootsnipp.com/
+      - name: Disqus
+        description: A blog comment hosting service for web sites
+        url: https://disqus.com/

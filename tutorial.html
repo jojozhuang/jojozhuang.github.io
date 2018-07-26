@@ -60,7 +60,7 @@ categories:
                   <ul class="list-inline list-unstyled">
                     <li><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.date | date_to_string }}</li>
                     <li>|</li>
-                    <li><span><i class="fa fa-comments" style="color:#008c25"></i></span> 2 comments</li>
+                    <li><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
                     <li>|</li>
                     <li>
                       <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>

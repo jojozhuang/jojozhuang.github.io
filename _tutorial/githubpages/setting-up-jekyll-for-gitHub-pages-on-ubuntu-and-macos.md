@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Setting up GitHub Pages Site Locally With Jekyll"
+title: "Setting up Jekyll for GitHub Pages on Ubuntu and MacOS"
 index: 901
 category: githubpages
 image: github-pages.png
@@ -82,7 +82,7 @@ Open web browser to access your local jekyll website.
 ![image](/public/tutorials/901/local.png)  
 
 ## 5. References
-* [Official Installation Guide](https://jekyllrb.com/docs/installation/)
+* [Jekyll - Official Installation Guide](https://jekyllrb.com/docs/installation/)
 * [Setting up your GitHub Pages site locally with Jekyll
 ](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 * [Building a static website with Jekyll and GitHub Pages](https://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages)

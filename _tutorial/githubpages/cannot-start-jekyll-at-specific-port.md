@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Cannot Start Jekyll at Specific Port"
-index: 902
+index: 911
 category: githubpages
 image: github-pages.png
 date: 2016-01-17
@@ -25,7 +25,7 @@ Kill the process with its id.
 ```sh
 $ sudo kill -9 <PID>
 ```
-![image](/public/tutorials/902/port.png){:width="700px"}  
+![image](/public/tutorials/911/port.png){:width="700px"}  
 
 Retry 'jekyll serve', the error 'Port Already in Use' is gone.
 
@@ -38,8 +38,8 @@ nxd     11199   nx    3u  IPv4 0x2fad2a11645a3de5      0t0  TCP *:terabase (LIST
 nxd     11199   nx    4u  IPv6 0x2fad2a115cded5bd      0t0  TCP *:terabase (LISTEN)
 ```
 Killing the thread won't work, because NoMachine's nxd process will keep restarting, with a new PID. Either you have to change the port for your app. Or, change the service port for NoMachine. NoMachine->Preferences->Connection preferences.
-![image](/public/tutorials/902/nomachine_preferences.png){:width="700px"}  
-![image](/public/tutorials/902/nomachine_port.png){:width="700px"}  
+![image](/public/tutorials/911/nomachine_preferences.png){:width="700px"}  
+![image](/public/tutorials/911/nomachine_port.png){:width="700px"}  
 
 References:
 * [TCPServer Error: Address already in use - bind(2)](https://stackoverflow.com/questions/10261477/tcpserver-error-address-already-in-use-bind2)
