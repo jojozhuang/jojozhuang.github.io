@@ -12,7 +12,7 @@ tags: [React, Node.js]
 > Build an online code editor with React as front end and Node.js as back end.
 
 ## 1. Introduction
-In the posting [Creating FullStack App with React and Node.js]({% link _tutorial/react/creating-fullstack-app-with-react-and-nodejs.md %}), I introduced how to run C and Java in [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to create a web application to achieve the same function with React and Node.js.
+In the posting [Running C and Java in Node.js]({% link _tutorial/nodejs/running-c-and-java-in-nodejs.md %}), I introduced how to run C and Java in [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to create a web application to achieve the same function with React and Node.js.
 
 ## 2. Server
 Use [express](https://expressjs.com/) to setup an web server. Two APIs are available.
