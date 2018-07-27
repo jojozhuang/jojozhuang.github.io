@@ -1031,4 +1031,5 @@ The presence of a `tsconfig.json` file in a directory indicates that the directo
 * [TypeScript Official Website](http://www.typescriptlang.org/)
 * [TypeScript Tutorial](https://www.tutorialspoint.com/typescript/index.htm)
 * [Enums](https://www.typescriptlang.org/docs/handbook/enums.html)
+* [Union Types](https://blog.mariusschulz.com/2016/08/18/function-overloads-in-typescript)
 * [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
