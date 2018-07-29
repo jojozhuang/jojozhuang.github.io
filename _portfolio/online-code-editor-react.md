@@ -3,7 +3,7 @@ layout: portfolio
 key: portfolio
 title: "Online Code Editor(React)"
 index: 230
-tags: [React, Redux]
+tags: [React]
 image: /public/portfolios/onlinecodeeditorreact/thumbnail.png
 excerpt: A full stack web application for online programming, built with React and Express.
 category: web

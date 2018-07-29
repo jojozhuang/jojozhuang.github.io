@@ -26,6 +26,9 @@ bookmarks:
       - name: Icon Converter
         description: Convert PNG to ICO/ICNS
         url: https://iconverticons.com/online/
+      - name: Text Compare
+        description: An online text compare tool
+        url: https://text-compare.netlify.com/
   - category: Online Learning
     links:
       - name: W3Schools
@@ -138,9 +141,6 @@ bookmarks:
       - name: Cordova
         description: Cross-platform solution for mobile apps
         url: https://cordova.apache.org/
-      - name: Icons8
-        description: Free Icons
-        url: https://icons8.com
   - category: Frontend
     links:
       - name: React
@@ -328,6 +328,9 @@ bookmarks:
         url: https://developer.android.com/studio/index.html
   - category: Resources
     links:
+      - name: Icons8
+        description: Free Icons
+        url: https://icons8.com
       - name: Awesome Icons
         description: Free icons from Font Awecome
         url: https://fontawesome.com/icons?d=gallery&m=free
