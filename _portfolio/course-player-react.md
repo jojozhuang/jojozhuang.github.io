@@ -33,4 +33,4 @@ You can drag the slider bar to move forward or backward.
 Check posting [Building Course Player with React and Socket.IO]({% link _tutorial/react/building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
 
 ## 4. Source Files
-* [Source files of Course Player(React) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerReact)
+* [Source files of Course Player(React) on Github](https://github.com/jojozhuang/course-player-react)

@@ -1257,7 +1257,7 @@ You can drag the slider bar to move forward or backward.
 ![image](/public/tutorials/356/drag.png)
 
 ## 5. Source Files
-* [Source files of Course Player(React) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerReact)
+* [Source files of Course Player(React) on Github](https://github.com/jojozhuang/course-player-react)
 
 ## 6. References
 * [Range Sliders](https://www.w3schools.com/howto/howto_js_rangeslider.asp)
