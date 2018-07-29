@@ -243,7 +243,7 @@ Click on installer file(2048_1.0.0_amd64.deb) to install this app on Ubuntu, the
 ![image](/public/tutorials/232/uiubuntu.png)  
 
 ## 5. Source Files
-* [Source files of Game 2048 on Github](https://github.com/jojozhuang/Portfolio/tree/master/Game2048)
+* [Source files of Game 2048 on Github](https://github.com/jojozhuang/game-2048-electron)
 
 ## 6. References
 * [Electron Documentation](https://electron.atom.io/docs/all/)

@@ -28,4 +28,4 @@ Check posting [Converting Web App to Desktop App with Electron]({% link _tutoria
 Notice, Electron is used to build __cross-platform desktop apps__ with JavaScript, HTML, and CSS. To develop __cross-platform mobile apps__, maybe you need [Xamarin](https://www.xamarin.com/) or [Cordova](https://cordova.apache.org/) instead.
 
 ## 4. Source Files
-* [Source files of Game 2048 on Github](https://github.com/jojozhuang/Portfolio/tree/master/Game2048)
+* [Source files of Game 2048 on Github](https://github.com/jojozhuang/game-2048-electron)
