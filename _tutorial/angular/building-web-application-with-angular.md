@@ -662,7 +662,7 @@ Click 'OK' button, product will be deleted.
 ![image](/public/tutorials/322/productlistafterdel.png)
 
 ## 6. Source Files
-* [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAngular)
+* [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/game-store-angular)
 * [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
 
 ## 7. References
