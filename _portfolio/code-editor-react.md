@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Online Code Editor(React)"
+title: "Code Editor(React)"
 index: 230
 tags: [React]
 image: /public/portfolios/onlinecodeeditorreact/thumbnail.png
@@ -35,4 +35,4 @@ If the code has issue and can't run properly, the error will be displayed.
 Check posting [Building Online Code Editor]({% link _tutorial/react/building-online-code-editor.md %}) to learn the details of how this code editor is built.
 
 ## 4. Source Files
-* [Source files of Online Code Edit(React) on Github](https://github.com/jojozhuang/Portfolio/tree/master/OnlineCodeEditorReact)
+* [Source files of Code Edit(React) on Github](https://github.com/jojozhuang/code-editor-react)
