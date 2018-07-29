@@ -301,6 +301,9 @@ bookmarks:
       - name: Writage
         description: Markdown plugin for Microsoft Word
         url: http://www.writage.com/
+      - name: Monaco Editor
+        description: The code editor that powers VS Code
+        url: https://microsoft.github.io/monaco-editor/index.html
   - category: Free Text Editor
     links:
       - name: Atom
