@@ -35,4 +35,4 @@ Check posting [Building Course Player with Node.js and Socket.IO]({% link _tutor
 Besides, check another blog post [Building Realtime Web Application with WebSocket]({% link _tutorial/react/building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind Socket.IO.
 
 ## 5. Source Files
-* [Source files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)
+* [Source files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/course-player-socketio)

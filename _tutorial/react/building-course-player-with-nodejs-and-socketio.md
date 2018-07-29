@@ -750,7 +750,7 @@ Communication occurs only when necessary. Unlike traditional web application, We
 This player is web based, the only required application on client’s machine is a web browser(eg. Google Chrome). Besides, this course player is based on HTML5, so it can be accessed in different web browsers and on different platforms. No need to install extra plugin in web browser, such as flash player or Silverlight.  
 
 ## 5. Source Files
-* [Source files of Course Player(Socket.IO) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSocketIO)
+* [Source files of Course Player(Socket.IO) on Github](https://github.com/jojozhuang/course-player-socketio)
 
 ## 6. References
 * [Get Started: Chat application](https://socket.io/get-started/chat/)
