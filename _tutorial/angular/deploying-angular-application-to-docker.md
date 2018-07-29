@@ -125,7 +125,7 @@ Open web browser, access http://192.168.99.100:8080.
 ![image](/public/tutorials/328/home.png)
 Click the 'Text Compare' menu.
 ![image](/public/tutorials/328/textcompare.png)
-Try to input some texts in both editors and click 'Find Difference' button. The Diff Editor should work fine.
+Try to input some texts in the two input boxes and click 'Find Difference' button. You should be able to see the difference.
 ![image](/public/tutorials/328/typescript.png)
 
 ## 4. Reference
