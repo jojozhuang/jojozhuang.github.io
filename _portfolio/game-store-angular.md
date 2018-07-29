@@ -36,4 +36,4 @@ Click 'OK' button, product will be deleted.
 Check posting [Building Web Application with Angular]({% link _tutorial/angular/building-web-application-with-angular.md %}) to learn the details of Angular.
 
 ## 4. Source Files
-* [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAngular)
+* [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/game-store-angular)
