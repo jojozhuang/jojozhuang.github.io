@@ -663,7 +663,8 @@ Click 'OK' button, product will be deleted.
 
 ## 6. Source Files
 * [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/game-store-angular)
-* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
+* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/restful-api-aspnet)
+* [Source files of RESTful API(Spring Boot) on Github](https://github.com/jojozhuang/restful-api-springboot)
 
 ## 7. References
 * [Official website](https://angular.io/)
