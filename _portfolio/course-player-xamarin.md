@@ -57,4 +57,4 @@ Class diagram shows the design of this app based on Xamarin framework.
 Check the blog post [Building Course Player with Xamarin]({% link _tutorial/mobile/building-course-player-with-xamarin.md %}) to learn the details of Xamarin and how this app is built.
 
 ## 4. Source Files
-* [Source files of Course Player(Xamarin) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerXamarin)
+* [Source files of Course Player(Xamarin) on Github](https://github.com/jojozhuang/course-player-xamarin)
