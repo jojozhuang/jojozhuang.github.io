@@ -793,8 +793,9 @@ Click 'OK' button, product will be deleted.
 ![image](/public/tutorials/355/productlistafterdel.png)
 
 ## 5. Source Files
-* [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReactRedux)
-* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
+* [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/game-store-reactredux)
+* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/restful-api-aspnet)
+* [Source files of RESTful API(Spring Boot) on Github](https://github.com/jojozhuang/restful-api-springboot)
 
 ## 6. References
 * [Redux-Official Doc](https://redux.js.org/)
