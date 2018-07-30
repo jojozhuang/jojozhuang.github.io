@@ -380,7 +380,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     ...
 }
 ````
-When accessing the URL 'http://localhost:5000/images/controller.jpg'. The image with name 'controller.jpg' is displayed in the browser.
+When accessing the URL 'http://localhost:8080/images/controller.jpg'. The image with name 'controller.jpg' is displayed in the browser.
 ![image](/public/tutorials/366/images_serving.png){:width="700px"}  
 ### 4.3 Enabling Directory Browsing
 In Startup.cs, make the changes as follows.
@@ -406,10 +406,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
    ...
 }
 ```
-When accessing the URL 'http://localhost:5000/images/'. All the images in '~/wwwwroot/images/' folder are displayed.
+When accessing the URL 'http://localhost:8080/images/'. All the images in '~/wwwwroot/images/' folder are displayed.
 ![image](/public/tutorials/366/directory browsing.png){:width="700px"}  
 ### 4.4 Getting Base URL in .NET Core
-Base URL is the 'root' of the RESTful service. Take the API of getting all products as example, the full URL address is 'http://localhost:5000/api/products'. Here, 'http://localhost:5000/' is the base URL, which includes the host name(or ip address) and port number. It looks like a prefix for all APIs. We need this base URL to generate the full URL after image is uploaded to service. We will rely on the HttpContext to get the host and port number.
+Base URL is the 'root' of the RESTful service. Take the API of getting all products as example, the full URL address is 'http://localhost:8080/api/products'. Here, 'http://localhost:8080/' is the base URL, which includes the host name(or ip address) and port number. It looks like a prefix for all APIs. We need this base URL to generate the full URL after image is uploaded to service. We will rely on the HttpContext to get the host and port number.
 
 Register HttpContextAccessor in the Startup:
 ```c#
@@ -451,12 +451,12 @@ We created 6 APIs and will test them through Postman, see next blog.
 
 API                       | Description         | URL
 --------------------------|---------------------|--------------
-GET /api/products         | Get all products    | GET [http://localhost:5000/api/products](http://localhost:5000/api/products)
-GET /api/products/{id}    | Get a product by ID | GET [http://localhost:5000/api/products/1](http://localhost:5000/api/products/1)
-POST /api/products        | Add a new product   | POST [http://localhost:5000/api/products](http://localhost:5000/api/products)
-PUT /api/products/{id}    | Update a product    | PUT [http://localhost:5000/api/products/1](http://localhost:5000/api/products/1)
-DELETE /api/products/{id} | Delete a product    | DELETE [http://localhost:5000/api/products/1](http://localhost:5000/api/products/1)
-POST /api/upload          | Upload an image     | POST [http://localhost:5000/api/upload](http://localhost:5000/api/upload)
+GET /api/products         | Get all products    | GET [http://localhost:8080/api/products](http://localhost:8080/api/products)
+GET /api/products/{id}    | Get a product by ID | GET [http://localhost:8080/api/products/1](http://localhost:8080/api/products/1)
+POST /api/products        | Add a new product   | POST [http://localhost:8080/api/products](http://localhost:8080/api/products)
+PUT /api/products/{id}    | Update a product    | PUT [http://localhost:8080/api/products/1](http://localhost:8080/api/products/1)
+DELETE /api/products/{id} | Delete a product    | DELETE [http://localhost:8080/api/products/1](http://localhost:8080/api/products/1)
+POST /api/upload          | Upload an image     | POST [http://localhost:8080/api/upload](http://localhost:8080/api/upload)
 
 ## 5. Source Files
 * [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
