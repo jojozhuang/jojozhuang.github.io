@@ -35,4 +35,4 @@ Check posting [Building Course Player with SignalR and ASP.NET]({% link _tutoria
 Besides, check another blog post [Building Realtime Web Application with WebSocket]({% link _tutorial/react/building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind SignalR.
 
 ## 5. Source Files
-* [Source files of Course Player (SignalR) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSignalR)
+* [Source files of Course Player (SignalR) on Github](https://github.com/jojozhuang/course-player-signalr)

@@ -732,7 +732,7 @@ This means, we have the cross-platform solution for developing applications by o
 * Two parts cannot be reused, one is the UI, web(html) and mobile(native UI) are obviously different. And another is file operation, reading/writing file on windows/ios/linux platform varies apparently. However, the business logics are same, which can be reused.  
 
 ## 5. Source Files
-* [Source files of Course Player(SignalR) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerSignalR)
+* [Source files of Course Player(SignalR) on Github](https://github.com/jojozhuang/course-player-signalr)
 
 ## 6. References
 * [jQuery Slider](https://jqueryui.com/slider/)
