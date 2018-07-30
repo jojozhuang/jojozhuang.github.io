@@ -46,8 +46,6 @@ Add, edit, delete and search order.
 Add order items.
 ![image](/public/portfolios/shoestoreaspnet/addorder.png)  
 
-## 4. References
+## 4. Source Files
+* [Source files of Shoe Store on Github](https://github.com/jojozhuang/shoe-store-aspnet)
 * [AdminLTE Control Panel Template](https://almsaeedstudio.com/)
-
-## 5. Source Files
-* [Source files of Shoe Store on Github](https://github.com/jojozhuang/Portfolio/tree/master/ShoeStoreMVC/Src)
