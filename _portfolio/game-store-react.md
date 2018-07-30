@@ -36,5 +36,5 @@ Click 'OK' button, product will be deleted.
 Check posting [Building Web Application with React]({% link _tutorial/react/building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _tutorial/react/building-web-application-with-react-and-redux.md %}) to learn the details of React and Redux.
 
 ## 4. Source Files
-* [Source files of Game Store(React) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReact)
-* [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReactRedux)
+* [Source files of Game Store(React) on Github](https://github.com/jojozhuang/game-store-react)
+* [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/game-store-reactredux)
