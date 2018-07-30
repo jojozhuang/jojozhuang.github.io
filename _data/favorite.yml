@@ -116,6 +116,10 @@ bookmarks:
       - name: Netlify
         description: A cloud service for hosting websites
         url: https://www.netlify.com/
+      - name: Travis CI
+        description: A continuous integration service used to build projects hosted at GitHub
+        url: https://travis-ci.org/
+
   - category: Big Data/AI
     links:
       - name: MapReduce

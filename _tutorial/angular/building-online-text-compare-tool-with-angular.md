@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Online Text Compare Tool"
+title: "Building Online Text Compare Tool with Angular"
 index: 326
 category: angular
 image: angular.png
