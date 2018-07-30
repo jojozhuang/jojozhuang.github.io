@@ -16,10 +16,10 @@ In the posting [Building Web Application with Angular]({% link _tutorial/angular
 
 ## 2. React Project
 ### 2.1 Creating New Project
-Create new Node.js app named `GameStoreReact`.
+Create new Node.js app named `game-store-react`.
 ```sh
-$ mkdir GameStoreReact
-$ cd GameStoreReact
+$ mkdir game-store-react
+$ cd game-store-react
 $ npm init
 ```
 
@@ -31,7 +31,7 @@ $ npm install npm-run-all -g
 Open `package.json`, update it as follows.
 ```json
 {
-  "name": "gamestorereact",
+  "name": "game-store-react",
   "version": "1.0.0",
   "description": "Game Store built with ReactJS",
   "main": "index.js",

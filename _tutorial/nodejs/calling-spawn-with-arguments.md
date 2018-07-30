@@ -31,7 +31,7 @@ argsRun[1] = "1";
 argsRun[2] = "0";
 argsRun[3] = "-1";
 argsRun[4] = "-1";
-console.log("argsRun:", argsRun);  //argsRun: [OnlineJudgeMEAN/server/compiler/temp/two-sum_javascript_2018-07-07T23:10:37.605Z/SolutionTester.js','1','0','-1','-1' ]
+console.log("argsRun:", argsRun);  //argsRun: [online-judge-mean/server/compiler/temp/two-sum_javascript_2018-07-07T23:10:37.605Z/SolutionTester.js','1','0','-1','-1' ]
 
 // node SolutionTester.js 1 0 -1 -1
 const executor = spawn("node", argsRun);

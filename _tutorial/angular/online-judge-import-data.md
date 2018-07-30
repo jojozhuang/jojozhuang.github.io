@@ -131,7 +131,7 @@ var filepath = path.join(__dirname, "./uploads/"); // make sure this folder exis
 ```
 You see, the folder is in controller folder, create uploads folder in it or change to another exsitign folder.
 ```json
-{"error_code":1,"err_desc":{"errno":-2,"code":"ENOENT","syscall":"open","path":"/Users/Johnny/GitHub/Tutorials/OnlineJudgeMEAN/server/controllers/uploads/fileitem-1530761500560.txt","storageErrors":[]}}
+{"error_code":1,"err_desc":{"errno":-2,"code":"ENOENT","syscall":"open","path":"/Users/Johnny/GitHub/online-judge-mean/server/controllers/uploads/fileitem-1530761500560.txt","storageErrors":[]}}
 ```
 
 

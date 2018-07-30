@@ -16,10 +16,10 @@ In the posting [Building Course Player with Node.js and Socket.IO]({% link _tuto
 
 ## 2. React Project
 ### 2.1 Creating New Project
-Create new Node.js app named `CoursePlayerReact`.
+Create new Node.js app named `course-player-react`.
 ```sh
-$ mkdir CoursePlayerReact
-$ cd CoursePlayerReact
+$ mkdir course-player-react
+$ cd course-player-react
 $ npm init
 ```
 
