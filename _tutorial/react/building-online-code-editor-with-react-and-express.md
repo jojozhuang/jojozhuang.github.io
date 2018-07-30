@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Online Code Editor"
+title: "Building Online Code Editor with React and Express"
 index: 369
 category: reactjs
 image: reactjs.png
@@ -9,7 +9,7 @@ date: 2018-02-08
 tags: [React, Express]
 ---
 
-> Build an online code editor with React as front end and Node.js as back end.
+> Build an online code editor with React as front end and Express as back end.
 
 ## 1. Introduction
 In the posting [Running C and Java in Node.js]({% link _tutorial/nodejs/running-c-and-java-in-nodejs.md %}), I introduced how to run C and Java in [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to create a web application to achieve the same function with React and Node.js.
