@@ -113,6 +113,9 @@ bookmarks:
       - name: Heroku
         description: A PaaS platform supported by Salesforce
         url: https://www.heroku.com/
+      - name: Netlify
+        description: A cloud service for hosting websites
+        url: https://www.netlify.com/
   - category: Big Data/AI
     links:
       - name: MapReduce
