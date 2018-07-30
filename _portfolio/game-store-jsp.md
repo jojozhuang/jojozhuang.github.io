@@ -112,6 +112,6 @@ For the MySQL version, data is persisted to MySQL database. Use MySQL Workbench 
 ![image](/public/portfolios/gamestorejsp/mysqlworkbench.png)  
 
 ## 6. Source Files
-* [Source files of GameStore(Servlet) on Github](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreServlet)
-* [Source files of GameStore(JSP) on Github](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreJSP)
-* [Source files of GameStore(MySQL) on Github](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreMySQL)
+* [Source files of GameStore(Servlet) on Github](https://github.com/jojozhuang/game-store-servlet)
+* [Source files of GameStore(JSP) on Github](https://github.com/jojozhuang/game-store-jsp)
+* [Source files of GameStore(MySQL) on Github](https://github.com/jojozhuang/game-store-mysql)
