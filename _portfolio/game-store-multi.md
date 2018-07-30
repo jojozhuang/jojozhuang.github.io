@@ -42,6 +42,6 @@ Check the following blog posts to learn the details how these mobile apps were b
 * [Building Android App with Xamarin]({% link _tutorial/mobile/building-android-app-with-xamarin.md %})
 
 ## 4. Source Files
-* [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreiOS)
-* [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAndroid)
-* [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreXamarin)
+* [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/game-store-ios)
+* [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/game-store-android)
+* [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/game-store-xamarin)

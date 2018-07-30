@@ -810,7 +810,7 @@ In landscape view.
 ![image](/public/tutorials/404/runlandscape.png){:width="700px"}  
 
 ## 5. Source Files
-* [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreAndroid)
+* [Source files of Game Store(Android) on Github](https://github.com/jojozhuang/game-store-android)
 
 ## 6. References
 * [Starting Android Development, Creating a Todo App](https://www.sitepoint.com/starting-android-development-creating-todo-app/)

@@ -642,7 +642,7 @@ In landscape view.
 ![image](/public/tutorials/408/runlandscape.png){:width="700px"}  
 
 ## 6. Source Files
-* [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreXamarin)
+* [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/game-store-xamarin)
 
 ## 7. References
 * [Hello, Android: Quickstart](https://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_quickstart/)

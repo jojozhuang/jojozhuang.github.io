@@ -566,7 +566,7 @@ In landscape view.
 ![image](/public/tutorials/407/runlandscape.png){:width="700px"}  
 
 ## 5. Source Files
-* [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreXamarin)
+* [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/game-store-xamarin)
 
 ## 6. References
 * [Xamarin Forms Samples](https://github.com/xamarin/xamarin-forms-samples)

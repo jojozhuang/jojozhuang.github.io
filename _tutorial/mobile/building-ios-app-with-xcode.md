@@ -483,7 +483,7 @@ In landscape view.
 ![image](/public/tutorials/402/runlandscape.png){:width="700px"}  
 
 ## 7. Source Files
-* [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreiOS)
+* [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/game-store-ios)
 
 ## 8. Reference
 * [Start Developing iOS Apps (Swift)](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/)
