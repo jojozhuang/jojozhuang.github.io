@@ -150,4 +150,4 @@ You can view and delete order, view detail items of the order.
 ![image](/public/portfolios/gamestoreaspnet/orderitem.png)  
 
 ## 8. Source Files
-* [Source files of Game Store(ASP.NET MVC) on Github](https://github.com/jojozhuang/Portfolio/tree/master/GameStoreASPNETMVC)
+* [Source files of Game Store(ASP.NET MVC) on Github](https://github.com/jojozhuang/game-store-aspnet)
