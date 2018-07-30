@@ -61,5 +61,4 @@ The backend data server is built with ASP.NET MVC, which provides RESTful APIs. 
 
 ![backend](/public/portfolios/restaurantandroid/backend.png)  
 ## 7. Source Files
-* [Source files of Restaurant on Github](https://github.com/jojozhuang/Portfolio/tree/master/Restaurant/Android)
-* [Source files of Data Server on Github](https://github.com/jojozhuang/Portfolio/tree/master/Restaurant/DataServer)
+* [Source files of Restaurant(Android + DataServer) on Github](https://github.com/jojozhuang/restaurant-android)
