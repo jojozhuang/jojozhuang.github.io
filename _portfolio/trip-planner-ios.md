@@ -45,4 +45,4 @@ In the ‘City Detail’ screen, you can find lots of useful information, such a
 ## 3. Settings  
 ![settings](/public/portfolios/tripplannerios/settings.png "settings")  
 ## 4. Source Files
-* [Source files of Trip Planner on Github](https://github.com/jojozhuang/Portfolio/tree/master/TripPlanner/TripPlanneriOS)
+* [Source files of Trip Planner on Github](https://github.com/jojozhuang/trip-planner-ios)
