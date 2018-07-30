@@ -11,7 +11,7 @@ category: dotnet
 
 > A web server built with sockets in Java, capable of handling general HTTP requests.
 
-This web server is able to respond properly to HTTP requests from client(web browser) and it can handle requests simultaneously. Java sockets are used to to accept string-format requests and return string-format responses. So, this Http Sever is implemented at very low layer. It processes stand HTTP requests and responses all by hand.   
+This web server is able to handle HTTP requests from client(web browser) simultaneously. Java sockets are used to accept string-format requests, process them and return string-format responses. So, this web server processes standard HTTP requests and responses at socket level.
 
 ## 1. Web Server
 ### 1.1 Homepage
@@ -40,7 +40,7 @@ Check the logs in WebServerLogs.txt. These logs are also available in the consol
 ![image](/public/portfolios/webserverjava/logs.png){:width="800px"}  
 
 ## 2. Under the Hood
-Check posting [Building Web Server with Socket in Java]({% link _tutorial/java/building-web-server-with-socket-java.md %}) to learn the details how this web server is built.
+Check posting [Building Web Server with Java Socket]({% link _tutorial/java/building-web-server-with-java-socket.md %}) to learn the details how this web server is built.
 
 ## 3. Source Files
-* [Source files of Web Server on Github](https://github.com/jojozhuang/Portfolio/tree/master/WebServer)
+* [Source files of Web Server(Java Socket) on Github](https://github.com/jojozhuang/web-server-java)

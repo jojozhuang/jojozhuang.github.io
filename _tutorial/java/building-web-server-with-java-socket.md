@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Web Server with Socket in Java"
+title: "Building Web Server with Java Socket"
 index: 531
 category: java
 image: java.png
@@ -647,7 +647,7 @@ public class LogUtil {
 Some images, and static files. The final project looks as follows.
 ![image](/public/tutorials/531/project.png){:width="350px"}
 
-## 5 Testing
+## 5. Testing
 Right click on 'WebServer.java'-> Run As->Java Application. You will see the logs in console. The web server starts working.
 ![image](/public/tutorials/531/console.png){:width="800px"}  
 
@@ -671,7 +671,7 @@ Check the logs in WebServerLogs.txt. These logs are also available in the consol
 ![image](/public/tutorials/531/logs.png){:width="800px"}  
 
 ## 6. Source Files
-* [Source files of Web Server on Github](https://github.com/jojozhuang/Portfolio/tree/master/WebServer)
+* [Source files of Web Server on Github](https://github.com/jojozhuang/web-server-java)
 
 ## 7. References
 * [Java - Networking](https://www.tutorialspoint.com/java/java_networking.htm)
