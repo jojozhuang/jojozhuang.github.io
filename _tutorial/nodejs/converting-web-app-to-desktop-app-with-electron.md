@@ -61,7 +61,7 @@ Create package.json.
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/jojozhuang/Portfolio/tree/master/Game2048",
+  "repository": "https://github.com/jojozhuang/game-2048-electron",
   "author": "Johnny",
   "license": "MIT",
   "devDependencies": {

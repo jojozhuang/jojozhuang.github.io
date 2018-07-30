@@ -459,7 +459,7 @@ DELETE /api/products/{id} | Delete a product    | DELETE [http://localhost:8080/
 POST /api/upload          | Upload an image     | POST [http://localhost:8080/api/upload](http://localhost:8080/api/upload)
 
 ## 5. Source Files
-* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulAspNet)
+* [Source files of RESTful API(ASP.NET Core) on Github](https://github.com/jojozhuang/restful-api-aspnet)
 
 ## 6. References
 * [Create a Web API with ASP.NET Core MVC and Visual Studio for Mac](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api-mac)

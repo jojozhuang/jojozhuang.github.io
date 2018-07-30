@@ -529,7 +529,7 @@ If you go to the project's image folder '/src/main/resources/images/', you will 
 ![image](/public/tutorials/368/imageonserver.png){:width="700px"}  
 
 ## 6. Source Files
-* [Source files of RESTful API(Spring Boot) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulSpringBoot)
+* [Source files of RESTful API(Spring Boot) on Github](https://github.com/jojozhuang/restful-api-springboot)
 
 ## 7. References
 * [Spring Boot, MySQL, JPA, Hibernate Restful CRUD API Tutorial](https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/)

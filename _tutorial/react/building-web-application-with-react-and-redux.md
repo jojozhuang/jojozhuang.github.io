@@ -16,7 +16,7 @@ In the posting [Building Web Application with React]({% link _tutorial/react/bui
 
 ## 2. React Project
 ### 2.1 Source Files
-Download the source files from [Game Store(React) on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/GameStoreReact), open the project in Visual Studio Code.
+Download the source files from [Game Store(React) on GitHub](https://github.com/jojozhuang/game-store-react), open the project in Visual Studio Code.
 ### 2.2 Installing Packages
 Install new packages `redux`, `redux-thunk` and `react-redux`.
 ```sh
