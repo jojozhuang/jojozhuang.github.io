@@ -48,4 +48,4 @@ Add order items.
 
 ## 4. Source Files
 * [Source files of Shoe Store on Github](https://github.com/jojozhuang/shoe-store-aspnet)
-* [AdminLTE Control Panel Template](https://almsaeedstudio.com/)
+* [AdminLTE Control Panel Template](https://adminlte.io/)
