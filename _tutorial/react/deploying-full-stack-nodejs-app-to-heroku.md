@@ -12,7 +12,7 @@ tags: [Nodejs, Heroku]
 > Introduce how to deploy a Full Stack app to Heroku.
 
 ## 1. Full Stack App
-In the posting [Building Online Code Editor]({% link _tutorial/react/building-online-code-editor.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
+In the posting [Building Online Code Editor with React and Express]({% link _tutorial/react/building-online-code-editor-with-react-and-express.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
 
 ## 2. Heroku
 [Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -61,8 +61,8 @@ Procfile  README.md  app.json  index.js  node_modules  package-lock.json  packag
 ### 3.1 Server
 1) Clone Source Code
 ```sh
-$ git clone https://github.com/jojozhuang/Tutorials/tree/master/OnlineCodeEditorReact
-$ cd OnlineCodeEditorReact
+$ git clone https://github.com/jojozhuang/code-editor-react
+$ cd code-editor-react
 ```
 2) Create App on Heroku
 ```sh

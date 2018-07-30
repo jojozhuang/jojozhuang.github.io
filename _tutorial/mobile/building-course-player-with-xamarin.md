@@ -1484,7 +1484,7 @@ You can drag the slider bar to move forward or backward.
 ![image](/public/tutorials/409/drag.png){:width="400px"}  
 
 ## 5. Source Files
-* [Source files of Course Player(Xamarin) on Github](https://github.com/jojozhuang/Portfolio/tree/master/CoursePlayerXamarin)
+* [Source files of Course Player(Xamarin) on Github](https://github.com/jojozhuang/course-player-xamarin)
 
 ## 6. References
 * [Xamarin Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
