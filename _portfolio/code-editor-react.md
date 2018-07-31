@@ -19,7 +19,8 @@ Use this online code editor to write programming code, compile and execute to se
 * JavaScript
 * Python
 
-Live Demo on Heroku: https://online-code-editor.herokuapp.com/
+`Live Demo:` https://online-code-editor.herokuapp.com/
+
 ## 2. UI
 Home page.
 ![image](/public/portfolios/onlinecodeeditorreact/homepage.png)

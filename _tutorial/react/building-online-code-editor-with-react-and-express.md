@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Online Code Editor with React and Express"
-index: 369
+index: 372
 category: reactjs
 image: reactjs.png
 date: 2018-02-08
@@ -869,10 +869,10 @@ To show line break '\n' in html, we need to add style `whiteSpace: pre-wrap` to 
 ```
 {% endraw %}
 Here is the sample screenshot for line break. Without the whitespace style, the lines will be concatenated together and hard to read.
-![image](/public/tutorials/369/linebreak.png)
+![image](/public/tutorials/372/linebreak.png)
 
 ## 4. Webpack
-For the configuration of Webpack, please refer to another blog [Creating FullStack App with React and Node.js]({% link _tutorial/react/creating-fullstack-app-with-react-and-nodejs.md %}).
+For the configuration of Webpack, please refer to another blog [Creating Full Stack App with React and Node.js]({% link _tutorial/react/creating-full-stack-app-with-react-and-nodejs.md %}).
 The only thing needs to be taken care is nodemon. Add 'temp' folder to ignore in `nodemon.json` to prevent nodemon from monitoring it. Otherwise, server will restart if files inside this folder are changed after user submits code to server.
 ```javascript
 {
@@ -887,13 +887,13 @@ Start both the client and server with 'npm run dev'. The client is served at por
 $ npm run dev
 ```
 Open web browser, access 'http://localhost:3000/'.
-![image](/public/tutorials/369/homepage.png)
+![image](/public/tutorials/372/homepage.png)
 Switch to code editor. By default, Java is selected. You can select any language listed in the dropdown list.
-![image](/public/tutorials/369/codeeditor.png)
+![image](/public/tutorials/372/codeeditor.png)
 Click the Run button. The execution result will be printed out if there is no error.
-![image](/public/tutorials/369/run.png)
+![image](/public/tutorials/372/run.png)
 Otherwise, the error will be printed out instead.
-![image](/public/tutorials/369/error.png)
+![image](/public/tutorials/372/error.png)
 
 ## 6. Source Files
 * [Source files of Code Editor on Github](https://github.com/jojozhuang/code-editor-react)

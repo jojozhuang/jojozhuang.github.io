@@ -14,7 +14,7 @@ category: web
 ## 1. Tex Compare
 This app is used to compare text. All the differences are displayed in a [Monaco Diff Editor](https://microsoft.github.io/monaco-editor/index.html) with highlighting. It supports multiple languages, e.g. c, java, xml, typescript, etc.
 
-Live Demo: https://text-compare.netlify.com/
+`Live Demo:` https://text-compare.netlify.com/
 
 ## 2. UI
 Home page.
