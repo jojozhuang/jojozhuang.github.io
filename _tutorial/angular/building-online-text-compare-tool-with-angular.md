@@ -12,7 +12,7 @@ tags: [Angular, Monaco Editor]
 > Tutorial for how to build a text compare tool with Angular.
 
 ## 1. Text Compare
-Text compare tool is very useful when find the different content of two files, or two strings. We will use Angular to build a tool like [this](https://www.diffchecker.com/). The application is based on Angular 5 and we will use [Monaco Editor](https://github.com/Microsoft/monaco-editor) as the diff editor.
+Text compare tool is very useful when find the different content of two files, or two strings. We will use Angular to build a tool like [diffchecker](https://www.diffchecker.com/) or [text-compare](https://text-compare.com/). The application is based on Angular 5 and we will use [Monaco Editor](https://github.com/Microsoft/monaco-editor) as the diff editor.
 
 ## 2. Angular Project
 ### 2.1 Creating New Project

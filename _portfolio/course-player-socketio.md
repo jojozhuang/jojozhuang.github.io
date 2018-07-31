@@ -19,6 +19,8 @@ A course player consists of three components: video, screenshot and whiteboard.
 
 Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.
 
+`Live Demo:` https://course-player-socketio.herokuapp.com/
+
 ## 2. UI
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
 
