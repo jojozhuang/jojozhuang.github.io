@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Online Text Compare(Draft)"
+title: "Todo List(Draft)"
 date: 2018-05-08
 tags: [Perl]
 ---
@@ -24,3 +24,7 @@ https://github.com/yargs/yargs
 
 Java web service
 https://www.journaldev.com/9191/java-web-services-tutorial
+
+
+Why End-to-End Testing is Important for Your Team
+https://medium.freecodecamp.org/why-end-to-end-testing-is-important-for-your-team-cb7eb0ec1504
