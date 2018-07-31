@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with React and Socket.IO"
-index: 369
+index: 367
 category: reactjs
 image: reactjs.png
 date: 2017-08-25
@@ -1241,7 +1241,7 @@ Canvas.propTypes = {
 export default Canvas;
 ```
 ### 3.8 Final Project Structure
-![image](/public/tutorials/369/projectstructure.png){:width="350px"}
+![image](/public/tutorials/367/projectstructure.png){:width="350px"}
 Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ## 4. Running and Testing
@@ -1250,11 +1250,11 @@ Start this React app, serve it in web server.
 $ npm start
 ```
 View the course player at http://localhost:12100/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![image](/public/tutorials/369/homepage.png)
+![image](/public/tutorials/367/homepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/tutorials/369/play.png)
+![image](/public/tutorials/367/play.png)
 You can drag the slider bar to move forward or backward.
-![image](/public/tutorials/369/drag.png)
+![image](/public/tutorials/367/drag.png)
 
 ## 5. Source Files
 * [Source files of Course Player(React) on Github](https://github.com/jojozhuang/course-player-react)
