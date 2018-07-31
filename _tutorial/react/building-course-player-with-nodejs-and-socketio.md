@@ -23,10 +23,10 @@ Check the posting [Introduction of Course Player]({% link _tutorial/react/introd
 
 ## 2. Course Player Project
 ### 2.1 Creating New Project
-Create new Node.js app named `CoursePlayerSocketIO`.
+Create new Node.js app named `course-player-socketio`.
 ```sh
-$ mkdir CoursePlayerSocketIO
-$ cd CoursePlayerSocketIO
+$ mkdir course-player-socketio
+$ cd course-player-socketio
 $ npm init
 ```
 ### 2.2 Installing Packages

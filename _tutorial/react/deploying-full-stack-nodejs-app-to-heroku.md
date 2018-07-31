@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Full Stack Node.js App to Heroku"
-index: 370
+index: 374
 category: reactjs
 image: reactjs.png
 date: 2018-02-12
@@ -126,7 +126,7 @@ $ git push heroku master
 ```
 4) Testing Server  
 Open web browser, access 'https://online-code-editor-api.herokuapp.com/api/file/Java'. The API is working now.
-![image](/public/tutorials/370/api.png)
+![image](/public/tutorials/374/api.png)
 
 ### 3.2 Client
 1) Build react app.
@@ -134,7 +134,7 @@ Open web browser, access 'https://online-code-editor-api.herokuapp.com/api/file/
 $ npm run build
 ```
 The React app is built and exported to dist folder. All are static files(html, js and images).
-![image](/public/tutorials/370/build.png){:width="800px"}  
+![image](/public/tutorials/374/build.png){:width="800px"}  
 2) Create App on Heroku
 ```sh
 $ heroku create online-code-editor
@@ -154,19 +154,19 @@ $ heroku git:remote -a online-code-editor
 ```
 4) Testing Server  
 Open web browser, access 'https://online-code-editor.herokuapp.com/'. The React app is working now.
-![image](/public/tutorials/370/client.png)
+![image](/public/tutorials/374/client.png)
 * Notice, because the Client Side Routing doesn't work properly, I changed to the router rules to show editor in the root path /.
 
 ## 4. Heroku UI
 ### 4.1 Dashboard
 Log into Heroku and go to https://dashboard.heroku.com/. The dashboard shows all the app we have created.
-![image](/public/tutorials/370/dashboard.png)
+![image](/public/tutorials/374/dashboard.png)
 ### 4.2 Overview
 Click one of the app and check the overview.
-![image](/public/tutorials/370/overview.png)
+![image](/public/tutorials/374/overview.png)
 ### 4.3 Deploy
 In the deploy tab, notice that we can connect GitHub and deploy projects.
-![image](/public/tutorials/370/deploy.png)
+![image](/public/tutorials/374/deploy.png)
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
