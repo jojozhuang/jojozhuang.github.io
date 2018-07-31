@@ -1,10 +1,10 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Testing RESTful APIs with Postman"
-index: 359
-category: reactjs
-image: reactjs.png
+title: "Testing RESTful API with Postman"
+index: 154
+category: restful
+image: restfulapi.png
 date: 2017-08-03
 tags: [HTTP, Postman]
 ---
@@ -16,10 +16,10 @@ tags: [HTTP, Postman]
 
 ## 2. Installation
 Go to https://www.getpostman.com/apps, select 'Postman for Mac' to download the installer of Postman. Unzip the downloaded file, and click on the 'Postman' file to launch it.
-![image](/public/tutorials/359/postman_main.png)
+![image](/public/tutorials/154/postman_main.png)
 
 ## 3. APIs for Testing
-In the posting [Building RESTful APIs with ASP.NET Core]({% link _tutorial/react/building-restful-apis-with-aspnet-core.md %}), I introduced how to create RESTful APIs with C#. Now, let's use Postman to test these APIs.
+In the posting [Building RESTful API with ASP.NET Core]({% link _tutorial/restful/building-restful-api-with-aspnet-core.md %}), I introduced how to create RESTful APIs with C#. Now, let's use Postman to test these APIs.
 
 API                       | Description         | Request body | Response body
 --------------------------|---------------------|--------------|-------------------
@@ -33,18 +33,18 @@ POST [http://localhost:5000/api/upload](http://localhost:5000/api/upload)       
 ## 4. Testing
 ### 4.1 Creating New Collection
 In Postman, switch to 'Collections' tab, click on the 'New collection' button.
-![image](/public/tutorials/359/newcollection.png){:width="350px"}  
+![image](/public/tutorials/154/newcollection.png){:width="350px"}  
 Provide the Name and Description, Create.
-![image](/public/tutorials/359/newcollection2.png){:width="800px"}  
+![image](/public/tutorials/154/newcollection2.png){:width="800px"}  
 ### 4.2 Creating Requests
 1) Get all products.  
 Select the 'RESTfulAspNet' collection, click 'Add requests' link. Provide Name and Description, save it to the new collection folder.
-![image](/public/tutorials/359/newrequest.png){:width="500px"}  
+![image](/public/tutorials/154/newrequest.png){:width="500px"}  
 Edit the request, choose the 'GET' method and specify 'http://localhost:5000/api/products' as the URL, click the blue Send button. All three products are returned in the response body.
-![image](/public/tutorials/359/getall.png)
+![image](/public/tutorials/154/getall.png)
 2) Get a product by ID.  
 Create a new request, choose the 'GET' method and specify 'http://localhost:5000/api/products/1' as the URL, click the Send button. Product with ID equals to '1' is returned in the response body.
-![image](/public/tutorials/359/getone.png)
+![image](/public/tutorials/154/getone.png)
 3) Add a new product.  
 Create another request, choose the 'POST' method and specify 'http://localhost:5000/api/products/' as the URL. In the Request Body, select 'raw', provide the new product information in JSON format, and choose 'JSON(application/json)'.
 ```json
@@ -56,9 +56,9 @@ Create another request, choose the 'POST' method and specify 'http://localhost:5
 }
 ```
 Click the Send button. There is no response body returned, but we see the status is '200 OK'. New product should be created.
-![image](/public/tutorials/359/add.png)
+![image](/public/tutorials/154/add.png)
 Run the 'Get all products' request to verify whether the new product is created. We see there is a new product with ID equals to 4.
-![image](/public/tutorials/359/addcheck.png)
+![image](/public/tutorials/154/addcheck.png)
 4) Update a product.  
 Create a new request, choose the 'PUT' method and specify 'http://localhost:5000/api/products/4' as the URL. In the Request Body, select 'raw', provide the new product information in JSON format, and choose 'JSON(application/json)'.
 ```json
@@ -70,21 +70,21 @@ Create a new request, choose the 'PUT' method and specify 'http://localhost:5000
 }
 ```
 Click the Send button. There is no response body returned, but we see the status is '200 OK'. New product should be created.
-![image](/public/tutorials/359/update.png)
+![image](/public/tutorials/154/update.png)
 Run the 'Get all products' request to verify whether the product is updated. We see product 4 has new name and price.
-![image](/public/tutorials/359/updatecheck.png)
+![image](/public/tutorials/154/updatecheck.png)
 5) Delete a product.  
 Create a new request, choose 'DELETE' method and specify 'http://localhost:5000/api/products/4' as the URL, click the Send button. There is no response body returned, but we see the status is '200 OK'. Product 4 should be deleted.
-![image](/public/tutorials/359/delete.png)
+![image](/public/tutorials/154/delete.png)
 Run the 'Get all products' request to verify whether product4 is deleted. We see product 4 is no longer existing.
-![image](/public/tutorials/359/deletecheck.png)
+![image](/public/tutorials/154/deletecheck.png)
 6) Upload an image.  
 Create a new request, choose the 'POST' method and specify 'http://localhost:5000/api/upload' as the URL. In the Request Body, select 'form-data', add new key named 'file', select 'File' type, you will see the 'Choose Files' button. Select one image from your local disk, and click the Send button. In the response body, we see the status code and message. This message actually contains the URL of the uploaded image.
-![image](/public/tutorials/359/upload.png)
+![image](/public/tutorials/154/upload.png)
 Click on the image link. A new request is created automatically, click the Send button, you will see the image displayed in the response body.
-![image](/public/tutorials/359/uploadcheck.png)
+![image](/public/tutorials/154/uploadcheck.png)
 If you go to the server folder(~/wwwwroot/images/) of RESTful APIs service, you will see this image.
-![image](/public/tutorials/359/imageonserver.png){:width="700px"}  
+![image](/public/tutorials/154/imageonserver.png){:width="700px"}  
 
 ## 5. References
 * [Installation and updates Postman](https://www.getpostman.com/docs/postman/launching_postman/installation_and_updates)
