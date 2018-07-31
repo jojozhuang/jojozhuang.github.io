@@ -1,18 +1,18 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Socket.IO App to Heroku"
-index: 366
+title: "Deploying React and Socket.IO App to Heroku"
+index: 368
 category: reactjs
 image: reactjs.png
 date: 2018-02-12
 tags: [Nodejs, Heroku]
 ---
 
-> Introduce how to deploy a Socket.IO app to Heroku.
+> Introduce how to deploy a React and Socket.IO app to Heroku.
 
 ## 1. Socket.IO App
-In the posting [Building Course Player with Node.js and Socket.IO]({% link _tutorial/react/building-course-player-with-nodejs-and-socketio.md %}), I introduced how to build an course player with [Socket.IO](https://socket.io/). In this posting, I will introduce how to deploy this Socket.IO to [Heroku](https://www.heroku.com/).
+In the posting [Building Course Player with React and Socket.IO]({% link _tutorial/react/building-course-player-with-react-and-socketio.md %}), I introduced how to build an course player with [React](https://reactjs.org/) and [Socket.IO](https://socket.io/). In this posting, I will introduce how to deploy this app to [Heroku](https://www.heroku.com/).
 
 ## 2. Heroku
 [Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -32,7 +32,7 @@ Password: **********
 2) Create Heroku App
 ```sh
 $ heroku create                        // no name, a random name will be assigned to the app
-$ heroku create course-player-socketio // create app with the given name
+$ heroku create course-player-react // create app with the given name
 ```
 3) View logs
 ```sh
@@ -60,25 +60,25 @@ Procfile  README.md  app.json  index.js  node_modules  package-lock.json  packag
 ## 3. Deployment
 ### 3.1 Cloning Source Code
 ```sh
-$ git clone https://github.com/jojozhuang/course-player-socketio
-$ cd course-player-socketio
+$ git clone https://github.com/jojozhuang/course-player-react
+$ cd course-player-react
 ```
 ### 3.2 Creating App on Heroku
 ```sh
-$ heroku create course-player-socketio
-Creating ⬢ course-player-socketio... done
-https://course-player-socketio.herokuapp.com/ | https://git.heroku.com/course-player-socketio.git
+$ heroku create course-player-react
+Creating ⬢ course-player-react... done
+https://course-player-react.herokuapp.com/ | https://git.heroku.com/course-player-react.git
 ```
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
 ### 3.3 Pushing Files to Heroku
 ```sh
 $ git push heroku master
-Counting objects: 57, done.
+Counting objects: 89, done.
 Delta compression using up to 8 threads.
-Compressing objects: 100% (53/53), done.
-Writing objects: 100% (57/57), 14.55 MiB | 711.00 KiB/s, done.
-Total 57 (delta 2), reused 0 (delta 0)
+Compressing objects: 100% (81/81), done.
+Writing objects: 100% (89/89), 14.55 MiB | 625.00 KiB/s, done.
+Total 89 (delta 15), reused 0 (delta 0)
 remote: Compressing source files... done.
 remote: Building source:
 remote:
@@ -104,7 +104,11 @@ remote:        Skipping cache restore (not-found)
 remote:
 remote: -----> Building dependencies
 remote:        Installing node modules (package.json + package-lock)
-remote:        added 98 packages in 7.015s
+remote:        
+remote:        > uglifyjs-webpack-plugin@0.4.6 postinstall /tmp/build_be3dc5293418ccdd9f30ac4b62a5e876/node_modules/uglifyjs-webpack-plugin
+remote:        > node lib/post_install.js
+remote:        
+remote:        added 808 packages in 14.998s
 remote:
 remote: -----> Caching build
 remote:        Clearing previous node cache
@@ -125,13 +129,13 @@ remote:        Procfile declares types     -> (none)
 remote:        Default types for buildpack -> web
 remote:
 remote: -----> Compressing...
-remote:        Done: 32.8M
+remote:        Done: 44.1M
 remote: -----> Launching...
 remote:        Released v3
-remote:        https://course-player-socketio.herokuapp.com/ deployed to Heroku
+remote:        https://course-player-react.herokuapp.com/ deployed to Heroku
 remote:
 remote: Verifying deploy... done.
-To https://git.heroku.com/course-player-socketio.git
+To https://git.heroku.com/course-player-react.git
  * [new branch]      master -> master
 ```
 If you need to push some updated files, run following commands.
@@ -140,12 +144,11 @@ $ git add .
 $ git commit -m "<comments>"
 $ git push heroku master
 ```
-
 ## 4. Testing
-Open web browser, access 'https://course-player-socketio.herokuapp.com/'. The player is working now.
-![image](/public/tutorials/366/home.png)  
+Open web browser, access 'https://course-player-react.herokuapp.com/'. The player is working now.
+![image](/public/tutorials/368/home.png)  
 Click the 'Play' button and drag to slider bar.
-![image](/public/tutorials/366/play.png)  
+![image](/public/tutorials/368/play.png)  
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
