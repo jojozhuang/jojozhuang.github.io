@@ -14,6 +14,8 @@ category: web
 ## 1. Angular
 [Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc.
 
+`Live Demo:` https://game-store-angular.netlify.com/
+
 ## 2. UI
 Home page.
 ![image](/public/portfolios/gamestoreangular/homepage.png)
