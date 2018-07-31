@@ -16,14 +16,14 @@ Previously, I introduced how to use JSP and MySQL/MongoDB to build web applicati
 
 ## 2. Angular Project
 ### 2.1 Creating New Project
-In terminal, create new angular app named 'GameStoreAngular4'.
+In terminal, create new angular app named 'game-store-angular'.
 ```sh
-$ ng new GameStoreAngular4
+$ ng new game-store-angular
 ```
 ### 2.2 Components
 Then, create 5 components.
 ```sh
-$ cd GameStoreAngular4
+$ cd game-store-angular
 $ ng g component header
 $ ng g component footer
 $ ng g component mainpage
