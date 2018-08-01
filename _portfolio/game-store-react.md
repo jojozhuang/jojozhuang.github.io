@@ -14,7 +14,11 @@ category: web
 ## 1. ReactJS
 [ReactJS](https://reactjs.org/) is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.
 
-## 2. UI
+## 2. Live Demo
+`Demo:` <a href="https://game-store-react.netlify.com/" target="\_blank">https://game-store-react.netlify.com/</a>
+* Note: The website may be slow when you access it for the first time. Be patient!
+
+## 3. UI
 Home page.
 ![image](/public/portfolios/gamestorereact/homepage.png)
 Click the List button. There are three products with images.
@@ -32,9 +36,9 @@ Click 'Delete' button of the last product. A popup window for confirming the del
 Click 'OK' button, product will be deleted.
 ![image](/public/portfolios/gamestorereact/productlistafterdel.png)
 
-## 3. Under the Hood
-Check posting [Building Web Application with React]({% link _tutorial/react/building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _tutorial/react/building-web-application-with-react-and-redux.md %}) to learn the details of React and Redux.
+## 4. Under the Hood
+Read tutorial [Building Web Application with React]({% link _tutorial/react/building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _tutorial/react/building-web-application-with-react-and-redux.md %}) to learn how these two apps are built with React and Redux.
 
-## 4. Source Files
+## 5. Source Files
 * [Source files of Game Store(React) on Github](https://github.com/jojozhuang/game-store-react)
 * [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/game-store-reactredux)

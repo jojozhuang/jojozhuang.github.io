@@ -11,12 +11,14 @@ category: web
 
 > A web application for text compare, built with Angular and Monaco Editor.
 
-## 1. Tex Compare
+## 1. Text Compare
 This app is used to compare text. All the differences are displayed in a [Monaco Diff Editor](https://microsoft.github.io/monaco-editor/index.html) with highlighting. It supports multiple languages, e.g. c, java, xml, typescript, etc.
 
-`Live Demo:` https://text-compare.netlify.com/
+## 2. Live Demo
+`Demo:` <a href="https://text-compare.netlify.com/" target="\_blank">https://text-compare.netlify.com/</a>
+* Note: The website may be slow when you access it for the first time. Be patient!
 
-## 2. UI
+## 3. UI
 Home page.
 ![image](/public/portfolios/textcompareangular/home.png)
 Click the 'Text Compare' menu.
@@ -30,8 +32,8 @@ Input some typescripts and set the language to 'typescript'.
 Change theme to 'Visual Studio Dark'.
 ![image](/public/portfolios/textcompareangular/darktheme.png)
 
-## 3. Under the Hood
-Check posting [Building Online Text Compare Tool with Angular]({% link _tutorial/angular/building-online-text-compare-tool-with-angular.md %}) to learn the details of how this text compare tool is built.
+## 4. Under the Hood
+Read tutorial [Building Online Text Compare Tool with Angular]({% link _tutorial/angular/building-online-text-compare-tool-with-angular.md %}) to learn how this text compare tool is built.
 
-## 4. Source Files
+## 5. Source Files
 * [Source files of Text Compare on Github](https://github.com/jojozhuang/text-compare-angular)

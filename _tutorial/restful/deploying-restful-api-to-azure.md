@@ -26,7 +26,9 @@ Set the App Name, Subscription and Resource Group, click 'Create' button.
 ![image](/public/tutorials/155/create.png){:width="700px"}  
 Visual Studio will start deploying the RESTful Api to Azure.
 ![image](/public/tutorials/155/warn.png){:width="700px"}  
-On the top of Visual Studio, you should see the deployment status, and it shows 'Published' when it's done.
+On the top of Visual Studio, you should see the deployment status.
+![image](/public/tutorials/155/deploying.png)  
+And it shows 'Published' when it's done.
 ![image](/public/tutorials/155/published.png)
 
 ## 3. Azure Portal
