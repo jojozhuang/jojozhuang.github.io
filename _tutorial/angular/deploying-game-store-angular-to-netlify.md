@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Game Store Angular to Netlify[Draft]"
+title: "Deploying Game Store Angular to Netlify"
 index: 330
 category: angular
 image: angular.png
