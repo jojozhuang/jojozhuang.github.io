@@ -15,6 +15,7 @@ tags: [Netlify]
 [Netlify](https://www.netlify.com/) is an online service which builds, deploys, and manages modern web projects.  Netlify basically initiates its own kind of repository that pushes both to a Github repository and its own services. It offers hosting for front-end projects with many options.
 
 ## 2. Deploying Application From Github Repository
+In this tutorial, I will deploy my [Game Store Angular](https://github.com/jojozhuang/game-store-angular) app to Netlify.
 ### 2.1 New Netlify Account
 Go to https://app.netlify.com/signup to create a Netlify account with your GitHub account.
 ### 2.2 New Site from GitHub
