@@ -14,9 +14,11 @@ category: web
 ## 1. Angular
 [Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc.
 
-`Live Demo:` https://game-store-angular.netlify.com/
+## 2. Live Demo
+`Demo:` <a href="https://game-store-angular.netlify.com/" target="\_blank">https://game-store-angular.netlify.com/</a>
+* Note: The website may be slow when you access it for the first time. Be patient!
 
-## 2. UI
+## 3. UI
 Home page.
 ![image](/public/portfolios/gamestoreangular/homepage.png)
 Click the List button. There are three products with images.
@@ -34,8 +36,8 @@ Click 'Delete' button of the last product. A popup window for confirming the del
 Click 'OK' button, product will be deleted.
 ![image](/public/portfolios/gamestoreangular/productlistafterdel.png)
 
-## 3. Under the Hood
-Check posting [Building Web Application with Angular]({% link _tutorial/angular/building-web-application-with-angular.md %}) to learn the details of Angular.
+## 4. Under the Hood
+Read tutorial [Building Web Application with Angular]({% link _tutorial/angular/building-web-application-with-angular.md %}) to learn how this angular app is built.
 
-## 4. Source Files
+## 5. Source Files
 * [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/game-store-angular)
