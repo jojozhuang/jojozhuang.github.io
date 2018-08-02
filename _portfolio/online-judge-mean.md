@@ -1,10 +1,10 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Online Judge(Angular)"
+title: "Online Judge(MEAN)"
 index: 250
 tags: [MongoDB, Express, Angular and Node.js]
-image: /public/portfolios/onlinejudgeangular/thumbnail.png
+image: /public/portfolios/onlinejudgemean/thumbnail.png
 excerpt: A web application for online judge(Algorithm questions), built with MEAN stack.
 category: web
 ---
@@ -20,19 +20,19 @@ A web application for online judge(solve algorithm questions), built with MEAN s
 
 ## 3. UI
 Home page.
-![image](/public/portfolios/onlinejudgeangular/home.png)
+![image](/public/portfolios/onlinejudgemean/home.png)
 Click the 'Questions' menu.
-![image](/public/portfolios/onlinejudgeangular/questions.png)
+![image](/public/portfolios/onlinejudgemean/questions.png)
 Create a new account.
-![image](/public/portfolios/onlinejudgeangular/signup.png)
+![image](/public/portfolios/onlinejudgemean/signup.png)
 After login, you can select one question to solve, and submit the solution.
-![image](/public/portfolios/onlinejudgeangular/solution.png)
+![image](/public/portfolios/onlinejudgemean/solution.png)
 If the solution is passed all of the test cases, the submission is successful.
-![image](/public/portfolios/onlinejudgeangular/pass.png)
+![image](/public/portfolios/onlinejudgemean/pass.png)
 Or the solutions is failed by some of the test cases.
-![image](/public/portfolios/onlinejudgeangular/fail.png)
+![image](/public/portfolios/onlinejudgemean/fail.png)
 Switch to 'Submissions' to view all your submissions.
-![image](/public/portfolios/onlinejudgeangular/submissions.png)
+![image](/public/portfolios/onlinejudgemean/submissions.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Online Judge Application With Angular and ExpressJS]({% link _tutorial/angular/building-online-judge-application-with-angular-and-expressjs.md %}) to learn how this online judge app is built.
