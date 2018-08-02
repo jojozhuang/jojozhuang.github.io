@@ -13,7 +13,7 @@ tags: [Angular, Heroku]
 
 ## 1. Full Stack App
 In the posting [Building Online Judge Application With Angular and ExpressJS]({% link _tutorial/angular/building-online-judge-application-with-angular-and-expressjs.md %}), I introduced how to build an online judge system with [Angular](https://angular.io/) and [ExpressJS](https://expressjs.com/). In this tutorial, I will introduce how to deploy both the front end(Implemented with Angular) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the Angular app and another is for the express app.
-### 1.1 Prepare for Deployment(Express Server)
+### 1.1 Deployment Preparation for API Server
 Edit './server/config/server-config.js'.
 ```javascript
 //mongodb_url: "mongodb://stage_dev:abc123@ds163781.mlab.com/onlinejudge_dev",
@@ -97,7 +97,7 @@ if (process.env.NODE_ENV === "production") {
 console.log("dbURI:", dbURI);
 mongoose.connect(dbURI);
 ```
-### 1.2 Prepare for Deployment(Angular)
+### 1.2 Deployment Preparation for Angular
 Edit './src/environments/environment.prod.ts'
 ```typescript
 export const environment = {
