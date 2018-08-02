@@ -318,7 +318,7 @@ Open web browser, access 'https://online-judge-api.herokuapp.com/api/'. The API 
 ```
 ![image](/public/tutorials/340/api.png){:width="650px"}  
 If you access https://online-judge-api.herokuapp.com/api/submission/questions, you should get all reqestions in json format.
-![image](/public/tutorials/340/questions.png)
+![image](/public/tutorials/340/questionsjson.png)
 ### 3.2 Client
 1) Build Angular app.
 ```sh
