@@ -37,7 +37,7 @@ Edit 'environment.prod.ts', add apiURL with production server api.
 ```javascript
 export const environment = {
   production: true,
-  apiUrl: "http://gamestore-api.azurewebsites.net/"
+  apiUrl: "https://gamestore-api.azurewebsites.net/"
 };
 ```
 Edit 'environment.ts', add apiURL with local development api.
@@ -51,6 +51,7 @@ export const environment = {
 Edit 'product.service.ts', update baseUrl with the environment variable.
 ```javascript
 ...
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class ProductService {
