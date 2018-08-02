@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying React Application to Netlify"
+title: "Deploying Game Store React App to Netlify"
 index: 356
 category: reactjs
 image: reactjs.png
@@ -9,7 +9,7 @@ date: 2018-02-25
 tags: [Netlify]
 ---
 
-> Introduce how to deploy angular application to Netlify.
+> Introduce how to deploy React application to Netlify.
 
 ## 1. Netlify
 [Netlify](https://www.netlify.com/) is an online service which builds, deploys, and manages modern web projects.  Netlify basically initiates its own kind of repository that pushes both to a Github repository and its own services. It offers hosting for front-end projects with many options.
@@ -100,10 +100,24 @@ Change the name to 'game-store-react' and save.
 ![image](/public/tutorials/356/changename.png)
 Access your site with the new URL, it should work.
 ![image](/public/tutorials/356/newname.png)
-
+### 2.6 Hot Module Replacement Error
+In addition, I got the following HMR issue somehow after I changed the build command.
+```sh
+VM72 bundle.js:16 Uncaught Error: locals[0] does not appear to be a `module` object with Hot Module replacement API enabled. You should disable react-transform-hmr in production by using `env` section in Babel configuration. See the example in README: https://github.com/gaearon/react-transform-hmr
+```
+![image](/public/tutorials/356/hmr.png)
+The below 'build' command triggers this HMR issue.
+```javascript
+"build": "webpack --env production ",
+```
+To fix the issue, add 'NODE_ENV=production' into the build command. Submit the change to Github, Netlify will automatically deploy again, and the HMR issue should be solved.
+```javascript
+"build": "NODE_ENV=production webpack --env production ",
+```
 ## 3. Reference
 * [Netlify - History Pushstate and Single Page Apps](https://www.netlify.com/docs/redirects/#history-pushstate-and-single-page-apps)
 * [Production build of React app use wrong development env with HMR](https://stackoverflow.com/questions/36153628/why-does-production-build-of-react-app-with-webpack-and-babel-use-wrong-develo)
 * [How do you handle frontend routing with Netlify and React Router v4?](https://www.reddit.com/r/Frontend/comments/6h34h0/how_do_you_handle_frontend_routing_with_netlify/)
 * [One-Page App Routing on Netlify](https://www.crookm.com/2018/02/one-page-app-routing-on-netlify.html)
 * [CopyWebpackPlugin - Copies individual files or entire directories to the build directory](https://webpack.js.org/plugins/copy-webpack-plugin/)
+* [Why does production build of React app (with Webpack and Babel) use wrong development env with HMR, which causes errors?](https://stackoverflow.com/questions/36153628/why-does-production-build-of-react-app-with-webpack-and-babel-use-wrong-develo)

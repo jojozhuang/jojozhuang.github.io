@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Angular Application to Docker"
+title: "Deploying Text Compare Angular App to Docker"
 index: 328
 category: angular
 image: angular.png

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Angular Application to Netlify"
+title: "Deploying Text Compare Angular App to Netlify"
 index: 329
 category: angular
 image: angular.png
