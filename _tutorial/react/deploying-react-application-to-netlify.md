@@ -72,6 +72,19 @@ exports.loadStatic = () => ({
   ]
 });
 ```
+Edit 'webpack.config.js', call 'loadStatic' method in production merge.
+```javascript
+const productionConfig = merge([
+  // parts.loadEnv('https://online-code-editor-api.herokuapp.com'),
+  parts.extractCSS({
+    use: "css-loader"
+  }),
+
+  ...
+
+  parts.loadStatic()
+]);
+```
 Run 'npm run build'. The '\_redirects' file is copied from './public' folder to the root folder of 'dist'.
 ![image](/public/tutorials/356/dist.png){:width="700px"}
 In Netlify, switch to 'Deploy' tab, click the 'Trigger Deploy' button to deploy again.
