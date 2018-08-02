@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Full Stack Node.js App to Heroku"
+title: "Deploying Full Stack React App to Heroku"
 index: 374
 category: reactjs
 image: reactjs.png
@@ -9,10 +9,58 @@ date: 2018-02-12
 tags: [Nodejs, Heroku]
 ---
 
-> Introduce how to deploy a Full Stack app to Heroku.
+> Introduce how to deploy a Full Stack(React + Express) app to Heroku.
 
 ## 1. Full Stack App
 In the posting [Building Online Code Editor with React and Express]({% link _tutorial/react/building-online-code-editor-with-react-and-express.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
+### 1.1 Deployment Preparation for API Server
+Nothing needs to be done for the express, as there is no database connection required, no need to set db url.
+### 1.2 Deployment Preparation for Angular
+Edit 'webpack.parts.js', use `DefinePlugin` to set api url to environment variable 'API_URL'.
+```javascript
+...
+
+const webpack = require('webpack');
+
+exports.loadEnv = url => ({
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        API_URL: JSON.stringify(url)
+      },
+    }),
+  ],
+});
+```
+Edit 'webpack.config.js', call 'loadEnv()' method to set URL for production and development.
+```javascript
+const productionConfig = merge([
+  parts.loadEnv('https://code-editor-api.herokuapp.com'),
+
+  ...
+
+]);
+const developmentConfig = merge([
+  parts.loadEnv('http://localhost:8080'),
+
+  ...
+
+]);
+```
+Edit 'package.json', add 'build' command to compile React app and output to 'dist'.
+```javascript
+"scripts": {
+  "start": "node src/server/index.js",
+  "build": "webpack --env production ",
+  "client":
+    "PORT=3000 webpack-dev-server --env development --devtool inline-source-map --hot",
+  "client-prod": "PORT=3001 webpack-dev-server",
+  "server": "nodemon src/server/index.js",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "prod": "concurrently \"npm run server\" \"npm run client-prod\""
+},
+```
+* Notice, command 'prod' is used to test React app in production mode. The dropdown list should only contains two options: javascript and python in this mode.
 
 ## 2. Heroku
 [Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
@@ -31,8 +79,8 @@ Password: **********
 ```
 2) Create Heroku App
 ```sh
-$ heroku create                        // no name, a random name will be assigned to the app
-$ heroku create online-code-editor-api // create app with the given name
+$ heroku create                   // no name, a random name will be assigned to the app
+$ heroku create code-editor-api   // create app with the given name
 ```
 3) View logs
 ```sh
@@ -66,7 +114,7 @@ $ cd code-editor-react
 ```
 2) Create App on Heroku
 ```sh
-$ heroku create online-code-editor-api
+$ heroku create code-editor-api
 ```
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
@@ -108,25 +156,32 @@ remote:
 remote:  !     Push failed
 remote: Verifying deploy....
 remote:
-remote: !	Push rejected to online-code-editor-api.
+remote: !	Push rejected to code-editor-api.
 remote:
-To https://git.heroku.com/online-code-editor-api.git
+To https://git.heroku.com/code-editor-api.git
  ! [remote rejected] master -> master (pre-receive hook declined)
-error: failed to push some refs to 'https://git.heroku.com/online-code-editor-api.git'
+error: failed to push some refs to 'https://git.heroku.com/code-editor-api.git'
 ```
 Error occurs, we need to decide whether to use `npm` or `yarn` to manage dependencies. Notice that when the React App was created, both yarn lock file `yarn.lock` and npm lock file `package-lock.json` were generated. I decide to use npm, so remove yarn.lock from git staging and try to push again.
 ```sh
 $ git rm yarn.lock
 rm 'yarn.lock'
-git commit -m "remove yarn.lock"
+$ git commit -m "remove yarn.lock"
 [master 7944b7d] remove yarn.lock
  1 file changed, 7423 deletions(-)
  delete mode 100644 yarn.lock
 $ git push heroku master
 ```
+If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
+```sh
+$ git remote rm heroku
+$ heroku git:remote -a code-editor-api
+```
 4) Testing Server  
-Open web browser, access 'https://online-code-editor-api.herokuapp.com/api/file/Java'. The API is working now.
+Open web browser, access 'https://code-editor-api.herokuapp.com/api'. The API is working now.
 ![image](/public/tutorials/374/api.png)
+If we access https://code-editor-api.herokuapp.com/api/file/Java, it returns some java source codes.
+![image](/public/tutorials/374/java.png)
 
 ### 3.2 Client
 1) Build react app.
@@ -137,7 +192,7 @@ The React app is built and exported to dist folder. All are static files(html, j
 ![image](/public/tutorials/374/build.png){:width="800px"}  
 2) Create App on Heroku
 ```sh
-$ heroku create online-code-editor
+$ heroku create code-editor
 ```
 3) Create git repository.
 ```sh
@@ -150,12 +205,16 @@ $ git push heroku master
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
 ```sh
 $ git remote rm heroku
-$ heroku git:remote -a online-code-editor
+$ heroku git:remote -a code-editor
 ```
 4) Testing Server  
-Open web browser, access 'https://online-code-editor.herokuapp.com/'. The React app is working now.
+Open web browser, access 'https://code-editor.herokuapp.com/'. The React app is working now.
 ![image](/public/tutorials/374/client.png)
 * Notice, because the Client Side Routing doesn't work properly, I changed to the router rules to show editor in the root path /.
+
+In addition, notice that c, c++ and java are not supported in Heroku or Netlify. I got the CORS error when trying to execute java program.
+![image](/public/tutorials/374/cors_error.png)
+So these three languages are removed from the dropdown list in production mode. They are only available in dev mode, locally.
 
 ## 4. Heroku UI
 ### 4.1 Dashboard
