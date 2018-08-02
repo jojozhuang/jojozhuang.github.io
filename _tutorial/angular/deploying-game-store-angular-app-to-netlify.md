@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Game Store Angular to Netlify"
+title: "Deploying Game Store Angular App to Netlify"
 index: 330
 category: angular
 image: angular.png
@@ -64,7 +64,7 @@ export class ProductService {
 ```
 
 ## 3. Deployment & Test
-Follow the steps described in tutorial [Deploying Angular Application to Netlify]({% link _tutorial/angular/deploying-angular-application-to-netlify.md %}) to deploy this app to Netlify.
+Follow the steps described in tutorial [Deploying Text Compare Angular App to Netlify]({% link _tutorial/angular/deploying-text-compare-angular-app-to-netlify.md %}) to deploy this app to Netlify.
 
 Access https://game-store-angular.netlify.com/ in browser, and click the 'List' button, everything looks fine.
 ![image](/public/tutorials/330/productlist.png)
