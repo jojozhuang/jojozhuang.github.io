@@ -328,7 +328,7 @@ The Angular app is built and exported to dist folder. All are static files(html,
 ![image](/public/tutorials/340/build.png){:width="800px"}  
 2) Create App on Heroku
 ```sh
-$ heroku create online-judge-angular
+$ heroku create online-judge-mean
 ```
 3) Create git repository.
 ```sh
@@ -352,11 +352,11 @@ remote:
 remote:  !     Push failed
 remote: Verifying deploy...
 remote:
-remote: !	Push rejected to online-judge-angular.
+remote: !	Push rejected to online-judge-mean.
 remote:
-To https://git.heroku.com/online-judge-angular.git
+To https://git.heroku.com/online-judge-mean.git
  ! [remote rejected] master -> master (pre-receive hook declined)
-error: failed to push some refs to 'https://git.heroku.com/online-judge-angular.git'
+error: failed to push some refs to 'https://git.heroku.com/online-judge-mean.git'
 ```
 Error occurs, Heroku is not able to determine the language of the app. Actually, it is just a static web site since we compile the Angular app. The solution is: rename './dist/index.html' to './dist/index.php'. Then, push again.
 ```sh
@@ -413,10 +413,10 @@ remote: -----> Compressing...
 remote:        Done: 16.2M
 remote: -----> Launching...
 remote:        Released v3
-remote:        https://online-judge-angular.herokuapp.com/ deployed to Heroku
+remote:        https://online-judge-mean.herokuapp.com/ deployed to Heroku
 remote:
 remote: Verifying deploy... done.
-To https://git.heroku.com/online-judge-angular.git
+To https://git.heroku.com/online-judge-mean.git
  * [new branch]      master -> master
 ```
 The push is successful.
@@ -424,13 +424,15 @@ The push is successful.
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
 ```sh
 $ git remote rm heroku
-$ heroku git:remote -a online-judge-angular
+$ heroku git:remote -a online-judge-mean
 ```
 4) Testing Client  
-Open web browser, access 'https://online-judge-angular.herokuapp.com/'. The Angular app is working now.
+Open web browser, access 'https://online-judge-mean.herokuapp.com/'. The Angular app is working now.
 ![image](/public/tutorials/340/home.png)
 Click on the 'Questions' menu.
 ![image](/public/tutorials/340/questions.png)
+Go to the question details.
+![image](/public/tutorials/340/question.png)
 
 ## 4. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
