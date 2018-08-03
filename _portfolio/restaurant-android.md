@@ -9,39 +9,37 @@ excerpt: An Android App for searching restaurants, built with Java.
 category: mobile
 ---
 
-> An Android App for searching restaurants, built with Java.
+> An Android app for searching restaurants, built with Java.
 
-This app is used to search restaurants, view the details of them. After login, you can share your experience with others about the restaurant you have been. You can submit ratings and reviews. All of the data are dynamic, which means this app connects backend server to retrieve data.
+This app is used to search restaurants, view the details of them. After login, you can share your experience with others by submitting ratings and reviews. All of the data are dynamically fetched from backend server.
 
-## 1. Restaurant List
-### 1.1 Home screen  
-This is the list of restaurants. Each restaurant has a specific icon based on its category. Restaurants are grouped to 5 categories:
-* Restaurant
-* Dessert
-* CoffeeTea
-* Bakeries
-* IceCream
+## 1. Home screen
+### 1.1 Restaurant List  
+Each restaurant has a specific icon based on its category(Restaurant, Dessert, CoffeeTea, Bakeries or IceCream). Tap on any of them, the restaurant detail shows up.
+![index](/public/portfolios/restaurantandroid/index.png){:width="350px"}  
 
-![index](/public/portfolios/restaurantandroid/index.png){:width="400px"}  
-Touch on one row, restaurant Detail will be displayed.
-### 1.2 Detail Screen
-Pictures, address, rating and comments show up. If you have signed in, you are able to submit ratings and add comments to share your experience.  
-![detail](/public/portfolios/restaurantandroid/detail.png){:width="400px"}  
-1) You can change the rating value of this restaurant by touching on the rating bar. The new value will be submitted to server directly.  
-2) Click on the ‘Write Comment’ button. User name is displayed at the top of the screen. The new comment will be submitted to server after clicking ‘Submit’ button.
-![detail](/public/portfolios/restaurantandroid/submitreview.png){:width="400px"}  
+### 1.2 Restaurant Detail
+The detail screen displays pictures, address, rating and comments. You can submit ratings and add comments to share your experience after login the app.
+* Touch on the star bar to submit your rating.  
+* Click on the ‘Write Comment’ button and fill out your comments.
+
+| Restaurant Details         | Write Comments                   |
+|----------------------------|----------------------------------|
+| ![detail](/public/portfolios/restaurantandroid/detail.png){:width="330px"} | ![detail](/public/portfolios/restaurantandroid/submitreview.png){:width="330px"}
 
 ## 2. Searching
-In the restaurant list view screen, click the ‘Search’ button on the menu bar.
-![searchbutton](/public/portfolios/restaurantandroid/searchbutton.png){:width="400px"}  
-Input the keyword you want to search, press Enter. The list will be refreshed with new result.
-![search](/public/portfolios/restaurantandroid/search.png){:width="400px"}  
+Click the ‘Search’ button on the menu bar, input the keyword and press Enter. The list will show the search result.
+
+| Search Button              | Search Result                    |
+|----------------------------|----------------------------------|
+| ![searchbutton](/public/portfolios/restaurantandroid/searchbutton.png){:width="330px"} | ![search](/public/portfolios/restaurantandroid/search.png){:width="330px"}
 
 ## 3. User Function
-Register as new user.
-![signup](/public/portfolios/restaurantandroid/signup.png){:width="400px"}  
-Though it is not necessary to sign in to use this app, you have to login first if you want to submit rating or review.
-![signin](/public/portfolios/restaurantandroid/signin.png){:width="400px"}  
+Register as new user and login to submit rating or review.
+
+| Sign Up                    | Login                            |
+|----------------------------|----------------------------------|
+| ![signup](/public/portfolios/restaurantandroid/signup.png){:width="330px"} | ![signin](/public/portfolios/restaurantandroid/signin.png){:width="330px"}
 
 ## 4. View in Landscape Mode  
 Rotate the screen to landscape mode, the layout still looks pretty.
