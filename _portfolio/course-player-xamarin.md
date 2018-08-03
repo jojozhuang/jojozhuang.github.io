@@ -44,11 +44,12 @@ Developers have to use two different programming languages Swift and Java to bui
 Xamarin is based on [Mono](http://www.mono-project.com/) and .NET framework, written in C#. With the help of Xamarin platform, we can use C# to build iOS and Android Apps. The benefit by using Xamarin is obvious, the development and maintenance cost are reduced, since the common libraries can be centralized and reused by other components. For developers, they can focus on UI of iOS and Android once the lower business logic component is finalized. You can find more details of Xamarin from my [Xamarin Research Document]({% link /public/docs/xamarin_research.pdf %}).
 ### 2.2 Xamarin Course Player(iOS)
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The first one is for screenshot and the second one is for whiteboard.
-![image](/public/portfolios/courseplayerxamarin/homepage.png){:width="400px"}  
-Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/portfolios/courseplayerxamarin/play.png){:width="400px"}  
-You can drag the slider bar to move forward or backward.
-![image](/public/portfolios/courseplayerxamarin/drag.png){:width="400px"}  
+![image](/public/portfolios/courseplayerxamarin/homepage.png){:width="350px"}  
+Click the `Play` button, the slider bar begins to move and the current time increments in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
+
+| Start Playing      | Move Forward        | Move Backward       |
+|--------------------|---------------------|---------------------|
+| ![image](/public/portfolios/courseplayerxamarin/play.png){:width="280px"} | ![image](/public/portfolios/courseplayerxamarin/forward.png){:width="280px"}   | ![image](/public/portfolios/courseplayerxamarin/backward.png){:width="280px"}
 
 ## 3. Under the Hood
 Class diagram shows the design of this app based on Xamarin framework.
