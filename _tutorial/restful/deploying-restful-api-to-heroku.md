@@ -1,0 +1,43 @@
+---
+layout: tutorial
+key: tutorial
+title: "Deploying RESTful API to Heroku"
+index: 155
+category: restful
+image: restfulapi.png
+date: 2017-08-02
+tags: [Azure]
+---
+
+> Deploy the RESTful API built with Spring Boot to Heroku.
+
+## 1. ASP.NET Core Project
+Download the project from Github.
+```sh
+git clone https://github.com/jojozhuang/restful-api-aspnet.git
+```
+
+## 2. Publish
+Open this ASP.NET project in Microsoft Visual Studio, compile it. Then, right click on the project and choose 'Publish' -> 'Publish to Azure'.
+
+After login with your Azure account, you should see the existing app services on Azure. Click the 'New' button.
+![image](/public/tutorials/155/app_services.png){:width="700px"}  
+Set the App Name, Subscription and Resource Group, click 'Create' button.
+![image](/public/tutorials/155/create.png){:width="700px"}  
+Visual Studio will start deploying the RESTful Api to Azure.
+![image](/public/tutorials/155/warn.png){:width="700px"}  
+On the top of Visual Studio, you should see the deployment status.
+![image](/public/tutorials/155/deploying.png)  
+And it shows 'Published' when it's done.
+![image](/public/tutorials/155/published.png)
+
+## 3. Azure Portal
+Log onto Azure Portal: https://portal.azure.com/. Go to App Services, we see the 'gamestore-api' service.
+![image](/public/tutorials/155/gamestore_api.png)
+Click on it, then we see the URL for our api, https://gamestore-api.azurewebsites.net.
+![image](/public/tutorials/155/url.png)
+Append 'api/products' to the URL(e.g. https://gamestore-api.azurewebsites.net/api/products), put it into web browser's address bar. The api works and returns correct products list.
+![image](/public/tutorials/155/test.png)  
+
+## 4. References
+* [Deploy your Spring Boot project on the cloud for FREE](https://medium.com/@ryanyuliu/deploy-your-spring-boot-project-properly-for-free-66ae38012698)
