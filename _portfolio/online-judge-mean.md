@@ -14,9 +14,11 @@ category: web
 ## 1. Online Judge
 A web application for online judge(solve algorithm questions), built with MEAN stack. It supports three languages, e.g. java, javascript and python.
 
-## 2. Live Demo
-* `Demo1:` <a href="https://online-judge-mean.herokuapp.com/" target="\_blank">https://online-judge-mean.herokuapp.com/</a>
-* `Demo2:` <a href="https://online-judge.netlify.com/" target="\_blank">https://online-judge.netlify.com/</a>
+## 2. Demo
+Two available demos:
+* `Live Demo on Heroku:` <a href="https://online-judge-mean.herokuapp.com/" target="\_blank">https://online-judge-mean.herokuapp.com/</a>
+* `Live Demo on Netlify:` <a href="https://online-judge.netlify.com/" target="\_blank">https://online-judge.netlify.com/</a>
+* `Live Demo on Azure:` <a href="https://online-judge.azurewebsites.net/" target="\_blank">https://online-judge.azurewebsites.net/</a>
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*
 

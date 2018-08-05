@@ -14,9 +14,12 @@ category: web
 ## 1. Text Compare
 This app is used to compare text. All the differences are displayed in a [Monaco Diff Editor](https://microsoft.github.io/monaco-editor/index.html) with highlighting. It supports multiple languages, e.g. c, java, xml, typescript, etc.
 
-## 2. Live Demo
-`Demo:` <a href="https://text-compare.netlify.com/" target="\_blank">https://text-compare.netlify.com/</a>
-* Note: The website may be slow when you access it for the first time. Be patient!
+## 2. Demo
+Two available demos:
+* `Live Demo on Netlify:` <a href="https://text-compare.netlify.com/" target="\_blank">https://text-compare.netlify.com/</a>
+* `Live Demo on Azure:` <a href="https://text-compare.azurewebsites.net/" target="\_blank">https://text-compare.azurewebsites.net/</a>
+
+*Note: The demo website may be slow when you access them for the first time. Be patient!*
 
 ## 3. UI
 Home page.
