@@ -19,7 +19,7 @@ Two available demos:
 * `Live Demo on Netlify:` <a href="https://text-compare.netlify.com/" target="\_blank">https://text-compare.netlify.com/</a>
 * `Live Demo on Azure:` <a href="https://text-compare.azurewebsites.net/" target="\_blank">https://text-compare.azurewebsites.net/</a>
 
-*Note: The demo website may be slow when you access them for the first time. Be patient!*
+*Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 ## 3. UI
 Home page.
