@@ -215,6 +215,9 @@ bookmarks:
       - name: Cyberduck
         description: A free FTP clients for Mac and Windows
         url: https://jekyllrb.com/
+      - name: FileZilla
+        description: A free cross-platform FTP application
+        url: https://filezilla-project.org/
       - name: Jekyll
         description: A blog-aware, static site generator in Ruby.
         url: https://jekyllrb.com/
