@@ -19,9 +19,12 @@ Use this online code editor to write programming code, compile and execute to se
 * JavaScript
 * Python
 
-## 2. Live Demo
-`Demo:` <a href="https://online-code-editor.herokuapp.com/" target="\_blank">https://online-code-editor.herokuapp.com/</a>
-* Note: The website may be slow when you access it for the first time. Be patient!
+## 2. Demo
+Two available demos:
+* `Live Demo on Netlify:` <a href="https://code-editor-react.netlify.com/" target="\_blank">https://code-editor-react.netlify.com/</a>
+* `Live Demo on Azure:` <a href="https://code-editor.azurewebsites.net/" target="\_blank">https://code-editor.azurewebsites.net/</a>
+
+*Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 ## 3. UI
 Home page.

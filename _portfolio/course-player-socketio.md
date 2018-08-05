@@ -17,9 +17,12 @@ A course player consists of three components: video, screenshot and whiteboard. 
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-## 2. Live Demo
-`Demo:` <a href="https://course-player-socketio.herokuapp.com/" target="\_blank">https://course-player-socketio.herokuapp.com/</a>
-* Note: The website may be slow when you access it for the first time. Be patient!
+## 2. Demo
+Two available demos:
+* `Live Demo on Heroku:` <a href="https://course-player-socketio.herokuapp.com/" target="\_blank">https://course-player-socketio.herokuapp.com/</a>
+* `Live Demo on Azure:` <a href="https://course-player-socketio.azurewebsites.net/" target="\_blank">https://course-player-socketio.azurewebsites.net/</a>
+
+*Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 ## 3. UI
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
