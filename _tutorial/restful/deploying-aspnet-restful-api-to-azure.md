@@ -1,15 +1,15 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying RESTful API to Heroku[Draft]"
-index: 157
+title: "Deploying ASP.NET RESTful API to Azure"
+index: 155
 category: restful
 image: restfulapi.png
 date: 2017-08-02
 tags: [Azure]
 ---
 
-> Deploy the RESTful API built with Spring Boot to Heroku.
+> Deploy the RESTful API built with ASP.NET Core to Azure.
 
 ## 1. ASP.NET Core Project
 Download the project from Github.
@@ -40,4 +40,4 @@ Append 'api/products' to the URL(e.g. https://gamestore-api.azurewebsites.net/ap
 ![image](/public/tutorials/155/test.png)  
 
 ## 4. References
-* [Deploy your Spring Boot project on the cloud for FREE](https://medium.com/@ryanyuliu/deploy-your-spring-boot-project-properly-for-free-66ae38012698)
+* [Publish an ASP.NET Core app to Azure with Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1)

@@ -15,7 +15,7 @@ tags: [Nodejs, Heroku]
 In the posting [Building Online Code Editor with React and Express]({% link _tutorial/react/building-online-code-editor-with-react-and-express.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
 ### 1.1 Deployment Preparation for API Server
 Nothing needs to be done for the express, as there is no database connection required, no need to set db url.
-### 1.2 Deployment Preparation for Angular
+### 1.2 Deployment Preparation for React
 Edit 'webpack.parts.js', use `DefinePlugin` to set api url to environment variable 'API_URL'.
 ```javascript
 ...
