@@ -541,3 +541,6 @@ If you go to the project's image folder '/src/main/resources/images/', you will 
 * [uploaded image does not display until I refresh the page Spring Mvc](https://stackoverflow.com/questions/31892652/uploaded-image-does-not-display-until-i-refresh-the-page-spring-mvc)
 * [Refreshing static content with Spring MVC and Boot](https://stackoverflow.com/questions/24762657/refreshing-static-content-with-spring-mvc-and-boot)
 * [Spring boot load image after upload](https://stackoverflow.com/questions/39464942/spring-boot-load-image-after-upload)
+* [Spring Boot File Upload / Download Rest API Example](https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/)
+* [Spring Boot File Upload / Download Rest API Example(Source Code on GitHub)](https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example)
+* [Serve Static Resources with Spring](http://www.baeldung.com/spring-mvc-static-resources)
