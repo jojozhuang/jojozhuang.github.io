@@ -2,10 +2,11 @@
 layout: tutorial
 key: tutorial
 title: "Converting Web App to Desktop App with Electron"
-index: 232
+index: 229
 category: nodejs
 image: nodejs.png
-date: 2016-11-08
+date: 2016-09-29
+postdate: 2016-11-08
 tags: [Electron, 2048]
 ---
 
@@ -16,7 +17,7 @@ If you haven't installed [Electron](https://electron.atom.io/) or you want to le
 
 ## 2. 2048
 2048 is a famous number puzzle game, you can try it online at [https://gabrielecirulli.github.io/2048/](https://gabrielecirulli.github.io/2048/). It also has iOS and Android version for mobile devices. In this tutorial, I will wrap this web application with Electron, and build a Cross-platform app for Mac, Linux and Windows.
-![image](/public/tutorials/232/2048.png)  
+![image](/public/tutorials/229/2048.png)  
 
 ## 3. Steps for Conversion
 ### 3.1 Getting Source Files for 2048
@@ -181,7 +182,7 @@ Run the following command to start the app.
 $ npm start
 ```
 Notice, the window title has been set to 2048. And the menu is also changed except the first one.
-![image](/public/tutorials/232/run2.png)  
+![image](/public/tutorials/229/run2.png)  
 ## 4. Packaging
 We need to create installer for this app. We will use electron-build for packaging.
 ### 4.1 Setting Icon
@@ -193,7 +194,7 @@ The icons on different operating system are different.
 Search 2048 image through Google, then use [Online Icon Converter](https://iconverticons.com/online/) to create all kinds of icons/images at once.
 
 To use electron-build for building, we need to create a folder named 'build' and put all icons into it.
-![image](/public/tutorials/232/icons.png)  
+![image](/public/tutorials/229/icons.png)  
 
 ### 4.2 Settings For Linux Packaging
 1) Specify homepage attribute in package.json  
@@ -214,7 +215,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 }
 ```
 3) The final structure of the project.
-![image](/public/tutorials/232/structure.png){:width="400px"}  
+![image](/public/tutorials/229/structure.png){:width="400px"}  
 ### 4.3 Running Packaging
 1) Run following command to start packaging.
 ```sh
@@ -222,9 +223,9 @@ $ npm run dist
 ```
 2) Mac  
 Output on Mac. One executable file, one installer file and one compressed file.
-![image](/public/tutorials/232/buildmac.png)  
+![image](/public/tutorials/229/buildmac.png)  
 Click on the executable file, run 2048. Notice, we have the icon on dock and correct menu on the top.
-![image](/public/tutorials/232/uimac.png)  
+![image](/public/tutorials/229/uimac.png)  
 
 3) Linux  
 Specify icon directory for linux in package.json.
@@ -238,9 +239,9 @@ Specify icon directory for linux in package.json.
     },
 ```
 Output on Ubuntu. One executable file, one deb installer file and one unpacked folder.
-![image](/public/tutorials/232/buildubuntu.png)  
+![image](/public/tutorials/229/buildubuntu.png)  
 Click on installer file(2048_1.0.0_amd64.deb) to install this app on Ubuntu, then run it. Notice, we have the icon on dock and correct menu on the top.
-![image](/public/tutorials/232/uiubuntu.png)  
+![image](/public/tutorials/229/uiubuntu.png)  
 
 ## 5. Source Files
 * [Source files of Game 2048 on Github](https://github.com/jojozhuang/game-2048-electron)

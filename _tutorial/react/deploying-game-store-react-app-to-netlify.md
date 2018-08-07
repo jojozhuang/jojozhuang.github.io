@@ -5,7 +5,8 @@ title: "Deploying Game Store React App to Netlify"
 index: 356
 category: reactjs
 image: reactjs.png
-date: 2018-02-25
+date: 2017-05-06
+postdate: 2018-02-25
 tags: [Netlify]
 ---
 

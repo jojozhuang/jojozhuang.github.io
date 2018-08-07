@@ -2,14 +2,15 @@
 layout: tutorial
 key: tutorial
 title: "Building Online Judge Application With Angular and ExpressJS(Draft)"
-index: 331
+index: 333
 category: angular
 image: angular.png
-date: 2018-04-09
+date: 2017-03-03
+postdate: 2018-04-09
 tags: [Angular, Nodejs]
 ---
 
-> Build online judge application with React.
+> Build online judge application with Angular.
 
 
 Todo:

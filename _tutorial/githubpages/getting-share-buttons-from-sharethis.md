@@ -5,7 +5,8 @@ title: "Getting Share Buttons from ShareThis"
 index: 908
 category: githubpages
 image: github-pages.png
-date: 2017-08-20
+date: 2018-07-08
+postdate: 2017-08-20
 tags: [Disqus]
 ---
 

@@ -5,7 +5,8 @@ title: "Express - Combine Morgan and Winston"
 index: 255
 category: nodejs
 image: expressjs.png
-date: 2018-01-09
+date: 2016-11-05
+postdate: 2018-01-09
 tags: [Express, Morgan, Winston]
 ---
 

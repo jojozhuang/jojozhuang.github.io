@@ -5,7 +5,8 @@ title: "Angular - CLI"
 index: 301
 category: angular
 image: angular.png
-date: 2018-03-09
+date: 2017-01-01
+postdate: 2018-03-09
 tags: [Angular CLI]
 ---
 

@@ -5,7 +5,8 @@ title: "Viewing Jekyll Build Error with Travis CI"
 index: 912
 category: githubpages
 image: github-pages.png
-date: 2017-12-10
+date: 2018-07-12
+postdate: 2017-12-10
 tags: [Github Pages, Travis CI]
 ---
 

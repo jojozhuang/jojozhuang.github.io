@@ -5,7 +5,8 @@ title: "Setting up Jekyll for GitHub Pages on Ubuntu and MacOS"
 index: 901
 category: githubpages
 image: github-pages.png
-date: 2016-01-16
+date: 2018-07-01
+postdate: 2016-01-16
 tags: [GitHub Pages, Jekyll, Ruby]
 ---
 

@@ -5,7 +5,8 @@ title: "Online Judge - RichTextEditor[Draft]"
 index: 336
 category: angular
 image: angular.png
-date: 2018-04-23
+date: 2017-03-06
+postdate: 2018-04-23
 tags: [ngx-editor]
 ---
 

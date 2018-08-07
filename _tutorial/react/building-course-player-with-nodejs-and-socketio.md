@@ -5,7 +5,8 @@ title: "Building Course Player with Node.js and Socket.IO"
 index: 365
 category: reactjs
 image: reactjs.png
-date: 2016-03-16
+date: 2017-06-05
+postdate: 2016-03-16
 tags: [Node.js, Socket.IO, HTML5 Canvas, jQuery]
 ---
 

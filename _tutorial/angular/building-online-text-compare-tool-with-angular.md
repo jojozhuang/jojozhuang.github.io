@@ -5,7 +5,8 @@ title: "Building Online Text Compare Tool with Angular"
 index: 326
 category: angular
 image: angular.png
-date: 2018-02-25
+date: 2017-01-26
+postdate: 2018-02-25
 tags: [Angular, Monaco Editor]
 ---
 

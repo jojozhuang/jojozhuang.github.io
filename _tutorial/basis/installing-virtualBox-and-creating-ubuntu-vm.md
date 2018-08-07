@@ -5,7 +5,8 @@ title: "Installing VirtualBox and Creating Ubuntu VM"
 index: 11
 category: basis
 image: code.png
-date: 2016-02-08
+date: 2016-01-11
+postdate: 2016-02-08
 tags: [VirtualBox, Ubuntu]
 ---
 

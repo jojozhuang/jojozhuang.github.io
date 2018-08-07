@@ -5,7 +5,8 @@ title: "Angular - Components"
 index: 303
 category: angular
 image: angular.png
-date: 2018-03-10
+date: 2017-01-03
+postdate: 2018-03-10
 tags: [Angular Components]
 ---
 

@@ -2,10 +2,11 @@
 layout: tutorial
 key: tutorial
 title: "Calling spawn with Arguments[Draft]"
-index: 207
+index: 212
 category: nodejs
 image: nodejs.png
-date: 2016-03-09
+date: 2016-09-12
+postdate: 2016-03-09
 tags: [Node.js]
 ---
 

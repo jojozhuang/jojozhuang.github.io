@@ -5,7 +5,8 @@ title: "Basic Knowledge of React"
 index: 352
 category: reactjs
 image: reactjs.png
-date: 2017-08-13
+date: 2017-05-02
+postdate: 2017-08-13
 tags: [React, React Developer Tools]
 ---
 

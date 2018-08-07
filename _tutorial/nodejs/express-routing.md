@@ -5,7 +5,8 @@ title: "Express - Routing"
 index: 256
 category: nodejs
 image: expressjs.png
-date: 2018-01-10
+date: 2016-11-06
+postdate: 2018-01-10
 tags: [Express, Routing]
 ---
 

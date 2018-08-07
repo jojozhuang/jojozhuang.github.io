@@ -5,7 +5,8 @@ title: "Introduction of Course Player"
 index: 361
 category: reactjs
 image: reactjs.png
-date: 2016-03-12
+date: 2017-06-01
+postdate: 2016-03-12
 tags: [Course Player]
 ---
 

@@ -5,7 +5,8 @@ title: "Testing RESTful API with Postman"
 index: 154
 category: restful
 image: restfulapi.png
-date: 2017-08-03
+date: 2016-07-04
+postdate: 2017-08-03
 tags: [HTTP, Postman]
 ---
 

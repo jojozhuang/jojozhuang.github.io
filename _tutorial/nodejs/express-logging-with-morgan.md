@@ -5,7 +5,8 @@ title: "Express - Logging with Morgan"
 index: 253
 category: nodejs
 image: expressjs.png
-date: 2018-01-07
+date: 2016-11-03
+postdate: 2018-01-07
 tags: [Express, Morgan]
 ---
 

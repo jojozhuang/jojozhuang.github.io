@@ -5,7 +5,8 @@ title: "Running Multiple Containers with Docker Compose"
 index: 610
 category: docker
 image: docker.png
-date: 2016-09-30
+date: 2018-06-10
+postdate: 2016-09-30
 tags: [Docker, Compose]
 ---
 

@@ -5,7 +5,8 @@ title: "JavaScript - ES6"
 index: 104
 category: javascript
 image: javascript.png
-date: 2018-01-04
+date: 2016-05-04
+postdate: 2018-01-04
 tags: [ES6]
 ---
 

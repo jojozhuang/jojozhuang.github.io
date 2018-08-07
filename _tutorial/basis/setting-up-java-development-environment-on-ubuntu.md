@@ -5,7 +5,8 @@ title: "Setting up Java Development Environment on Ubuntu"
 index: 13
 category: basis
 image: code.png
-date: 2016-02-10
+date: 2016-01-13
+postdate: 2016-02-10
 tags: [JDK, Tomcat, Eclipse]
 ---
 

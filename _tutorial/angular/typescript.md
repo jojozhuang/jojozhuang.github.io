@@ -5,7 +5,8 @@ title: "TypeScript"
 index: 302
 category: angular
 image: angular.png
-date: 2018-03-06
+date: 2017-01-02
+postdate: 2018-03-06
 tags: [TypeScript, tsc]
 ---
 

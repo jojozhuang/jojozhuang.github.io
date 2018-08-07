@@ -5,7 +5,8 @@ title: "Socket Programming with Java"
 index: 504
 category: java
 image: java.png
-date: 2016-02-22
+date: 2018-01-04
+postdate: 2016-02-22
 tags: [Socket, TCP, UDP]
 categories:
 - blog

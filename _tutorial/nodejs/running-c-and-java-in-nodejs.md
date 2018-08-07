@@ -2,10 +2,11 @@
 layout: tutorial
 key: tutorial
 title: "Running C and Java in Node.js"
-index: 221
+index: 211
 category: nodejs
 image: nodejs.png
-date: 2018-02-05
+date: 2016-09-11
+postdate: 2018-02-05
 tags: [Nodejs, Java]
 ---
 
@@ -114,7 +115,7 @@ compiler.java('HelloJava.java');
 $ node run_c.js
 $ node run_java.js
 ```
-![image](/public/tutorials/221/run.png){:width="650px"}
+![image](/public/tutorials/211/run.png){:width="650px"}
 
 ## 5. Reference
 * [Child Processes on Node.js Document](https://nodejs.org/api/child_process.html)

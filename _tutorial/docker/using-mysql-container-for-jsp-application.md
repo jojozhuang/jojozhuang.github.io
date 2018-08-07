@@ -5,7 +5,8 @@ title: "Using MySQL Container for JSP Application"
 index: 603
 category: docker
 image: docker.png
-date: 2016-09-13
+date: 2018-06-03
+postdate: 2016-09-13
 tags: [JSP, MySQL, Docker]
 ---
 

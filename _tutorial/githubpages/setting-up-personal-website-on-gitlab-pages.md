@@ -5,7 +5,8 @@ title: "Setting up Personal Website on GitLab Pages(Draft)"
 index: 922
 category: githubpages
 image: github-pages.png
-date: 2018-06-06
+date: 2018-07-22
+postdate: 2018-06-06
 tags: [GitLab Pages]
 ---
 

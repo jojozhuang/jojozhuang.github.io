@@ -5,7 +5,8 @@ title: "Installing MongoDB on Ubuntu and Mac"
 index: 32
 category: basis
 image: code.png
-date: 2016-11-20
+date: 2016-03-02
+postdate: 2016-11-20
 tags: [MongoDB]
 ---
 

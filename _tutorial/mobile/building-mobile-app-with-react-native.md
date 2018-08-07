@@ -5,7 +5,8 @@ title: "Building Mobile App with React Native[Draft]"
 index: 411
 category: mobile
 image: mobiledev.png
-date: 2017-08-28
+date: 2017-09-11
+postdate: 2017-08-28
 tags: [React Native, Yarn]
 ---
 

@@ -5,7 +5,8 @@ title: "Using Nginx as HTTP Load Balancer"
 index: 43
 category: basis
 image: code.png
-date: 2016-03-10
+date: 2016-04-03
+postdate: 2016-03-10
 tags: [Nginx, Proxy, Load Balancer]
 ---
 

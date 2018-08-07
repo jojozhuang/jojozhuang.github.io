@@ -5,7 +5,8 @@ title: "Building Web Application with React and Redux"
 index: 355
 category: reactjs
 image: reactjs.png
-date: 2017-08-20
+date: 2017-05-05
+postdate: 2017-08-20
 tags: [React, Redux]
 ---
 

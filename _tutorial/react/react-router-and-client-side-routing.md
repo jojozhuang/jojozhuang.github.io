@@ -5,7 +5,8 @@ title: "React Router and Client Side Routing"
 index: 373
 category: reactjs
 image: reactjs.png
-date: 2018-02-10
+date: 2017-07-03
+postdate: 2018-02-10
 tags: [Routing, CSR, Webpack, Nginx]
 ---
 

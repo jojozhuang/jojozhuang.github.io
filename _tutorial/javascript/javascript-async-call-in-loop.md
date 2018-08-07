@@ -5,7 +5,8 @@ title: "JavaScript - Async Call in Loop[Draft]"
 index: 105
 category: javascript
 image: javascript.png
-date: 2018-01-05
+date: 2016-05-05
+postdate: 2018-01-05
 tags: [Async]
 ---
 

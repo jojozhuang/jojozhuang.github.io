@@ -5,7 +5,8 @@ title: "Getting Started with macOS"
 index: 2
 category: basis
 image: code.png
-date: 2016-08-30
+date: 2016-01-02
+postdate: 2016-08-30
 tags: [Mac, Bash, Shell]
 ---
 

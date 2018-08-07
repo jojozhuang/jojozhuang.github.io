@@ -5,7 +5,8 @@ title: "Creating Full Stack App with React and Node.js"
 index: 371
 category: reactjs
 image: reactjs.png
-date: 2018-02-06
+date: 2017-07-01
+postdate: 2018-02-06
 tags: [React, Nodejs, Express, Webpack]
 ---
 

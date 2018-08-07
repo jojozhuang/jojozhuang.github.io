@@ -5,7 +5,8 @@ title: "Building CRUD Application With Angular"
 index: 323
 category: angular
 image: angular.png
-date: 2018-01-22
+date: 2017-01-23
+postdate: 2018-01-22
 tags: [Angular, MEAN, Node.js]
 ---
 

@@ -5,7 +5,8 @@ title: "Adding Social Media Share Buttons to Jekyll Site"
 index: 907
 category: githubpages
 image: github-pages.png
-date: 2017-08-19
+date: 2018-07-07
+postdate: 2017-08-19
 tags: [Disqus]
 ---
 

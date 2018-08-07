@@ -5,7 +5,8 @@ title: "Adding Disqus to Jekyll Site"
 index: 906
 category: githubpages
 image: github-pages.png
-date: 2017-08-17
+date: 2018-07-06
+postdate: 2017-08-17
 tags: [Disqus]
 ---
 

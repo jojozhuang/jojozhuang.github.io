@@ -5,7 +5,8 @@ title: "Building Realtime Application with SignalR"
 index: 363
 category: reactjs
 image: reactjs.png
-date: 2016-03-14
+date: 2017-06-03
+postdate: 2016-03-14
 tags: [Chat Room, Sketch Pad, SignalR]
 ---
 

@@ -5,7 +5,8 @@ title: "Getting Started with Linux"
 index: 1
 category: basis
 image: code.png
-date: 2016-08-26
+date: 2016-01-01
+postdate: 2016-08-26
 tags: [Unix, Linux, Shell, Bash]
 ---
 

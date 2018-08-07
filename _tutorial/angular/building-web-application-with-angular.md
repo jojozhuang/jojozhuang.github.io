@@ -5,7 +5,8 @@ title: "Building Web Application with Angular"
 index: 322
 category: angular
 image: angular.png
-date: 2017-08-09
+date: 2017-01-22
+postdate: 2017-08-09
 tags: [Angular]
 ---
 

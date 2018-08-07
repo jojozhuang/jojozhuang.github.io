@@ -5,7 +5,8 @@ title: "Building Course Player with SignalR and ASP.NET"
 index: 364
 category: reactjs
 image: reactjs.png
-date: 2016-03-15
+date: 2017-06-04
+postdate: 2016-03-15
 tags: [SignalR, ASP.NET HTML5 Canvas, jQuery]
 ---
 

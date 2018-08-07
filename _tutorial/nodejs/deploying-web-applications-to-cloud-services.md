@@ -5,7 +5,8 @@ title: "Deploying Web Applications to Cloud Services"
 index: 271
 category: nodejs
 image: expressjs.png
-date: 2018-08-05
+date: 2016-12-01
+postdate: 2018-08-05
 tags: [Heroku, Azure, EC2, Netlify]
 ---
 

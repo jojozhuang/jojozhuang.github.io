@@ -5,7 +5,8 @@ title: "Building Realtime Web Application with WebSocket"
 index: 362
 category: reactjs
 image: reactjs.png
-date: 2016-03-13
+date: 2017-06-02
+postdate: 2016-03-13
 tags: [WebSocket, Socket.IO, SignalR]
 ---
 
