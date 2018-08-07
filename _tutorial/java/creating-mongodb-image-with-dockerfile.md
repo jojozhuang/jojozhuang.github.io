@@ -5,7 +5,8 @@ title: "Creating MongoDB Image with Dockerfile"
 index: 534
 category: java
 image: java.png
-date: 2016-11-23
+date: 2018-03-04
+postdate: 2016-11-23
 tags: [MongoDB, Dockerfile, Docker]
 ---
 

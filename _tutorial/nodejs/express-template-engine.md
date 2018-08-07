@@ -5,7 +5,8 @@ title: "Express - Template Engine"
 index: 257
 category: nodejs
 image: expressjs.png
-date: 2018-01-11
+date: 2016-11-07
+postdate: 2018-01-11
 tags: [Express, Template Engine, EJS]
 ---
 

@@ -5,7 +5,8 @@ title: "Installing and Using Atom"
 index: 16
 category: basis
 image: code.png
-date: 2016-01-15
+date: 2016-01-16
+postdate: 2016-01-15
 tags: [Atom, Markdown]
 ---
 

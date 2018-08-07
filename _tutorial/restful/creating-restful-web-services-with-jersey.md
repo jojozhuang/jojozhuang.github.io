@@ -2,17 +2,18 @@
 layout: tutorial
 key: tutorial
 title: "Creating RESTful Web Services with Jersey"
-index: 551
-category: java
-image: java.png
-date: 2016-02-17
+index: 158
+category: restful
+image: restfulapi.png
+date: 2016-07-08
+postdate: 2016-02-17
 tags: [Jersey, RESTful, Maven]
 ---
 
 > Build RESTful web services with Jersey in Java.
 
 ## 1. Jersey
-[Jersey](https://jersey.github.io/) RESTful Web Services framework is an open source framework for developing RESTful Web Services in Java. It provides support for JAX-RS APIs and serves as a JAX-RS Reference Implementation. 
+[Jersey](https://jersey.github.io/) RESTful Web Services framework is an open source framework for developing RESTful Web Services in Java. It provides support for JAX-RS APIs and serves as a JAX-RS Reference Implementation.
 
 ## 2. Jersey Project
 ### 2.1 Creating Maven Project
@@ -178,21 +179,21 @@ public class ProductService {
 ```
 ### 2.5 Project Structure
 This is the final structure of this tutorial project.
-![image](/public/tutorials/551/structure.png){:width="400px"}  
+![image](/public/tutorials/158/structure.png){:width="400px"}  
 ### 2.6 Running and Testing
 1) Right click project JerseyTutorial -> Run As -> Run On Server.  
 Choose an existing server or create a new Tomcat server.  
-![image](/public/tutorials/551/runonserver.png){:width="600px"}  
+![image](/public/tutorials/158/runonserver.png){:width="600px"}  
 
 After Tomcat is started, let's test RESTful services through web browser.  
 2) Get Product List  
 * http://localhost:8080/JerseyTutorial/rest/ProductService/products
 
-![image](/public/tutorials/551/products.png){:width="600px"}  
+![image](/public/tutorials/158/products.png){:width="600px"}  
 3) Get Product by ID  
 * http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
 
-![image](/public/tutorials/551/oneproduct.png){:width="600px"}  
+![image](/public/tutorials/158/oneproduct.png){:width="600px"}  
 
 ## 3. Supporting Json
 ### 3.1 Adding Dependency to pom.xml
@@ -236,7 +237,7 @@ public Product getProductJson(@PathParam("id") int id) {
 Get product by id, data is returned in JSON format.
 * http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
 
-![image](/public/tutorials/551/jsonapi.png){:width="600px"}  
+![image](/public/tutorials/158/jsonapi.png){:width="600px"}  
 
 ## 4. Source Files
 * [Source files of Jersey Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JerseyTutorial)

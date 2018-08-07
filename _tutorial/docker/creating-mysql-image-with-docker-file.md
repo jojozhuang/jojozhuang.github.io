@@ -5,7 +5,8 @@ title: "Creating MySQL Image with Docker File"
 index: 604
 category: docker
 image: docker.png
-date: 2016-09-15
+date: 2018-06-04
+postdate: 2016-09-15
 tags: [Dockerfile, Docker, MySQL]
 ---
 

@@ -5,7 +5,8 @@ title: "Setting Up Jekyll on Windows 10"
 index: 902
 category: githubpages
 image: github-pages.png
-date: 2018-04-01
+date: 2018-07-02
+postdate: 2018-04-01
 tags: [Jekyll, Windows10]
 ---
 

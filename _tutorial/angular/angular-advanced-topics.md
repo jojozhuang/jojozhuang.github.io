@@ -5,7 +5,8 @@ title: "Angular - Advanced Topics[Draft]"
 index: 315
 category: angular
 image: angular.png
-date: 2018-03-23
+date: 2017-01-15
+postdate: 2018-03-23
 tags: [Angular, Karma, Jasmine]
 ---
 

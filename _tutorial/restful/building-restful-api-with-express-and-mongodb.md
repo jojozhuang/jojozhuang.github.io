@@ -1,11 +1,12 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building RESTful APIs with Express And MongoDB"
-index: 263
-category: nodejs
-image: expressjs.png
-date: 2018-01-20
+title: "Building RESTful API with Express And MongoDB"
+index: 160
+category: restful
+image: restfulapi.png
+date: 2016-07-10
+postdate: 2018-01-20
 tags: [RESTful, Express, MongoDB]
 ---
 
@@ -17,18 +18,18 @@ We will use MongoDB to store data for our RESTful APIs. Our database will be hos
 Go to https://mlab.com/signup/ to register a free account.
 ### 1.2 Creating Database
 After login, click 'Create new' button.
-![image](/public/tutorials/263/homepage.png)
+![image](/public/tutorials/160/homepage.png)
 Input the database name, eg. 'product', continue.
-![image](/public/tutorials/263/database.png)
+![image](/public/tutorials/160/database.png)
 It should be successfully created.
-![image](/public/tutorials/263/dbcreated.png)
+![image](/public/tutorials/160/dbcreated.png)
 ### 1.3 Creating User
 Select the database we just created, eg. 'ds153700/product'.
-![image](/public/tutorials/263/createuser.png)
+![image](/public/tutorials/160/createuser.png)
 Click the 'Add database user' button. Specify the user name and password, eg. testproduct/abc123.
-![image](/public/tutorials/263/username.png)
+![image](/public/tutorials/160/username.png)
 Click 'Create' button, done!
-![image](/public/tutorials/263/usercreated.png)
+![image](/public/tutorials/160/usercreated.png)
 ### 1.4 Connection String
 Syntax:
 ```javascript
@@ -262,7 +263,7 @@ app.listen(port, () => {
 
 ### 3.6 Final Project Structure
 The final structure of the express server project.
-![image](/public/tutorials/263/project_final.png){:width="350px"}
+![image](/public/tutorials/160/project_final.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the server and begin to test with [Postman](https://www.getpostman.com/).
@@ -271,25 +272,25 @@ $ npm start
 ```
 ### 4.1 Get All Products
 Create a request, choose 'GET' method and specify 'http://localhost:5000/api/product' as the URL, click the Send button. All two products are returned in the response body.
-![image](/public/tutorials/263/getall.png)
+![image](/public/tutorials/160/getall.png)
 ### 4.2 Get a product by ID
 Create a new request, choose the 'GET' method and specify 'http://localhost:8080/api/product/5b2694837dd3716d0b6710b1' as the URL, click the Send button. Product with that id is returned in the response body.
-![image](/public/tutorials/263/getone.png)
+![image](/public/tutorials/160/getone.png)
 ### 4.3 Create New Product
 Create another request, choose the 'POST' method and specify 'http://localhost:8080/api/product/' as the URL. In the Request Body, set name to 'iPad Pro' and price to '799', click the Send button. In the response body, we see the new product.
-![image](/public/tutorials/263/create.png)
+![image](/public/tutorials/160/create.png)
 Run the 'Get all products' request to verify whether the new product is created. We see there is a new product in the response body.
-![image](/public/tutorials/263/checkcreate.png)
+![image](/public/tutorials/160/checkcreate.png)
 ### 4.4 Update Product
 Create a new request, choose 'PUT' method and specify 'http://localhost:8080/api/product/5b273a13398fc8a253ab1b6d' as the URL. In the Request Body, set name to 'iPad 5th Generation' and price to '499', click the Send button. In the response body, we see the product has new name and price.
-![image](/public/tutorials/263/update.png)
+![image](/public/tutorials/160/update.png)
 Run the 'Get all products' request to verify whether the product is updated. We see the third product has the new name and price.
-![image](/public/tutorials/263/checkupdate.png)
+![image](/public/tutorials/160/checkupdate.png)
 ### 4.5 Delete Product
 Create a new request, choose 'DELETE' method and specify 'http://localhost:8080/api/product/5b273a13398fc8a253ab1b6d' as the URL, click the Send button. The deleted product is returned.
-![image](/public/tutorials/263/delete.png)
+![image](/public/tutorials/160/delete.png)
 Run the 'Get all products' request to verify whether the third product is deleted. We see it is no longer existing.
-![image](/public/tutorials/263/checkdelete.png)
+![image](/public/tutorials/160/checkdelete.png)
 
 ## 5. Source Files
 * [Source files of RESTful API(Express + MongoDB) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulExpressMongoDB)

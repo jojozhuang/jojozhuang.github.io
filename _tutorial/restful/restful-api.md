@@ -5,7 +5,8 @@ title: "RESTful API[Draft]"
 index: 151
 category: restful
 image: restfulapi.png
-date: 2017-08-06
+date: 2016-07-01
+postdate: 2017-08-06
 tags: [JSON Server]
 ---
 

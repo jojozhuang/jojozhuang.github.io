@@ -5,7 +5,8 @@ title: "Adding Progress Bar to Angular Apps[Draft]"
 index: 325
 category: angular
 image: angular.png
-date: 2018-02-24
+date: 2017-01-25
+postdate: 2018-02-24
 tags: [ngx-progressbar]
 ---
 

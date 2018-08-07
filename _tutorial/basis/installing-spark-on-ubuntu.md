@@ -5,7 +5,8 @@ title: "Installing Spark on Ubuntu"
 index: 35
 category: basis
 image: code.png
-date: 2017-04-03
+date: 2016-03-05
+postdate: 2017-04-03
 tags: [Spark, Scala]
 ---
 

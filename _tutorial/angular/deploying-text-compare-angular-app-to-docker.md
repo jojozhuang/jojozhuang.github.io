@@ -5,7 +5,8 @@ title: "Deploying Text Compare Angular App to Docker"
 index: 328
 category: angular
 image: angular.png
-date: 2018-02-25
+date: 2017-01-28
+postdate: 2018-02-25
 tags: [Angular, Docker]
 ---
 

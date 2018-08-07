@@ -5,7 +5,8 @@ title: "Creating RESTful API with Dummy Server"
 index: 152
 category: restful
 image: restfulapi.png
-date: 2017-08-06
+date: 2016-07-02
+postdate: 2017-08-06
 tags: [JSON Server]
 ---
 

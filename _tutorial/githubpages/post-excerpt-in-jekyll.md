@@ -5,7 +5,8 @@ title: "Post excerpt in Jekyll(Draft)"
 index: 905
 category: githubpages
 image: github-pages.png
-date: 2016-01-17
+date: 2018-07-05
+postdate: 2016-01-17
 tags: [Jekyll, excerpt]
 ---
 

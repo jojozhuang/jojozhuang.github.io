@@ -5,7 +5,8 @@ title: "Java Remote Debugging with Eclipse"
 index: 513
 category: java
 image: java.png
-date: 2016-03-22
+date: 2018-01-13
+postdate: 2016-03-22
 tags: [Eclipse, Debugging]
 ---
 

@@ -2,10 +2,11 @@
 layout: tutorial
 key: tutorial
 title: "Creating Http Server with Node.js"
-index: 204
+index: 205
 category: nodejs
 image: nodejs.png
-date: 2016-03-07
+date: 2016-09-05
+postdate: 2016-03-07
 tags: [Node.js]
 ---
 
@@ -45,9 +46,9 @@ You should see the following log.
 Server running at http://127.0.0.1:8086/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 8086.
-![startserver](/public/tutorials/204/startserver.png){:width="600px"}  
+![startserver](/public/tutorials/205/startserver.png){:width="600px"}  
  Open web browser, access http://127.0.0.1:8086/.
-![browser](/public/tutorials/204/browser.png){:width="600px"}  
+![browser](/public/tutorials/205/browser.png){:width="600px"}  
 
 ## 3. Source Files
 * [Source files of Nodejs Http Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/NodeHttpServer)

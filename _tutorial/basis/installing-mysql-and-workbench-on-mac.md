@@ -5,7 +5,8 @@ title: "Installing MySQL and Workbench on Mac"
 index: 31
 category: basis
 image: code.png
-date: 2016-02-25
+date: 2016-03-01
+postdate: 2016-02-25
 tags: [MySQL, MySQL Workbench]
 categories:
 - blog

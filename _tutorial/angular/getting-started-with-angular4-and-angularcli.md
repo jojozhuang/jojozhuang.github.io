@@ -5,7 +5,8 @@ title: "Getting Started with Angular4 and Angular CLI"
 index: 321
 category: angular
 image: angular.png
-date: 2017-08-08
+date: 2017-01-21
+postdate: 2017-08-08
 tags: [Angular4, Angular CLI]
 ---
 

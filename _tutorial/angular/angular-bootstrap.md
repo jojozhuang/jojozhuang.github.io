@@ -5,7 +5,8 @@ title: "Angular - Bootstrap"
 index: 307
 category: angular
 image: angular.png
-date: 2018-03-15
+date: 2017-01-07
+postdate: 2018-03-15
 tags: [Bootstrap]
 ---
 

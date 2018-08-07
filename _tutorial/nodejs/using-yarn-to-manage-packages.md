@@ -5,7 +5,8 @@ title: "Using Yarn to Manage Packages"
 index: 203
 category: nodejs
 image: nodejs.png
-date: 2018-02-01
+date: 2016-09-03
+postdate: 2018-02-01
 tags: [Yarn]
 ---
 

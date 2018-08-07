@@ -5,7 +5,8 @@ title: "JavaScript - ES5"
 index: 103
 category: javascript
 image: javascript.png
-date: 2018-01-03
+date: 2016-05-03
+postdate: 2018-01-03
 tags: [ES5]
 ---
 

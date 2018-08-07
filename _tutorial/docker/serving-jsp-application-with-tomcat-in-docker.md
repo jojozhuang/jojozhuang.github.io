@@ -5,7 +5,8 @@ title: "Serving JSP Application With Tomcat In Docker"
 index: 607
 category: docker
 image: docker.png
-date: 2016-09-20
+date: 2018-06-07
+postdate: 2016-09-20
 tags: [Docker, Tomcat]
 ---
 

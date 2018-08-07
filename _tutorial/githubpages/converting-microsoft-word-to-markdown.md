@@ -5,7 +5,8 @@ title: "Converting Microsoft Word to Markdown"
 index: 909
 category: githubpages
 image: github-pages.png
-date: 2016-02-03
+date: 2018-07-09
+postdate: 2016-02-03
 tags: [Markdown, Writage]
 ---
 

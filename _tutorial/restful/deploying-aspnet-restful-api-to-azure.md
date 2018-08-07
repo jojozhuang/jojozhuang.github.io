@@ -5,7 +5,8 @@ title: "Deploying ASP.NET RESTful API to Azure"
 index: 155
 category: restful
 image: restfulapi.png
-date: 2017-08-02
+date: 2016-07-05
+postdate: 2017-08-02
 tags: [Azure]
 ---
 

@@ -5,7 +5,8 @@ title: "Deploying Game Store React App to Azure with FTP"
 index: 357
 category: reactjs
 image: reactjs.png
-date: 2018-08-04
+date: 2017-05-07
+postdate: 2018-08-04
 tags: [Azure, FTP, FileZilla]
 ---
 

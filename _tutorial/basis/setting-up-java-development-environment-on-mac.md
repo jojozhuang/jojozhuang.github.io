@@ -5,7 +5,8 @@ title: "Setting up Java Development Environment on Mac"
 index: 14
 category: basis
 image: code.png
-date: 2016-02-13
+date: 2016-01-14
+postdate: 2016-02-13
 tags: [JDK, Tomcat, Eclipse]
 ---
 

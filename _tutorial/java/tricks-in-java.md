@@ -5,7 +5,8 @@ title: "Tricks in Java"
 index: 502
 category: java
 image: java.png
-date: 2016-03-25
+date: 2018-01-02
+postdate: 2016-03-25
 tags: [Java]
 ---
 

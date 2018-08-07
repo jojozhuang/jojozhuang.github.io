@@ -5,7 +5,8 @@ title: "JavaScript - Basic"
 index: 101
 category: javascript
 image: javascript.png
-date: 2018-01-01
+date: 2016-05-01
+postdate: 2018-01-01
 tags: [JavaScript]
 ---
 

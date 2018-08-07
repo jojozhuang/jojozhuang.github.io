@@ -5,7 +5,8 @@ title: "Installing and Using Visual Studio Code"
 index: 17
 category: basis
 image: code.png
-date: 2018-03-07
+date: 2016-01-17
+postdate: 2018-03-07
 tags: [Visual Studio Code]
 ---
 

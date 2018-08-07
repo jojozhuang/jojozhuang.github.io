@@ -5,7 +5,8 @@ title: "Running JUnit Tests in Command Line"
 index: 521
 category: java
 image: java.png
-date: 2018-02-20
+date: 2018-02-01
+postdate: 2018-02-20
 tags: [JUnit]
 ---
 

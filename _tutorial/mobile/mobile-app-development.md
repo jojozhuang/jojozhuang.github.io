@@ -5,7 +5,8 @@ title: "Mobile App Development"
 index: 401
 category: mobile
 image: mobiledev.png
-date: 2017-07-08
+date: 2017-09-01
+postdate: 2017-07-08
 tags: [iOS, Android, Cordova, Xamarin]
 ---
 

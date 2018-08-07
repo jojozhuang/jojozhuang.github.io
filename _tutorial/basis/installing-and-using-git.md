@@ -5,7 +5,8 @@ title: "Installing and Using Git"
 index: 15
 category: basis
 image: code.png
-date: 2016-02-15
+date: 2016-01-15
+postdate: 2016-02-15
 tags: [Git, GitHub, SourceTree]
 ---
 

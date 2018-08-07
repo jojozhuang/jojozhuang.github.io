@@ -5,7 +5,8 @@ title: "Data Fix with Javascript For Web Application"
 index: 540
 category: java
 image: java.png
-date: 2017-10-13
+date: 2018-03-10
+postdate: 2017-10-13
 tags: [Rhino, Javascript]
 ---
 

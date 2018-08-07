@@ -5,7 +5,8 @@ title: "Express - Process Manager[Draft]"
 index: 259
 category: nodejs
 image: expressjs.png
-date: 2018-01-13
+date: 2016-11-09
+postdate: 2018-01-13
 tags: [PM2]
 ---
 

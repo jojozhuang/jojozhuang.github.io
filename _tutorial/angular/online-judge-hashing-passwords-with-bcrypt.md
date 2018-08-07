@@ -2,10 +2,11 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Hashing Passwords with Bcrypt[Draft]"
-index: 337
+index: 334
 category: angular
 image: angular.png
-date: 2018-04-23
+date: 2017-03-04
+postdate: 2018-04-23
 tags: [ngx-editor]
 ---
 

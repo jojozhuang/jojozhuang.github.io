@@ -5,7 +5,8 @@ title: "Flux and Redux"
 index: 354
 category: reactjs
 image: reactjs.png
-date: 2017-08-18
+date: 2017-05-04
+postdate: 2017-08-18
 tags: [Flux, Redux]
 ---
 

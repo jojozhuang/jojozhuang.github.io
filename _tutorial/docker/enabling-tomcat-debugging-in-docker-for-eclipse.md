@@ -5,7 +5,8 @@ title: "Enabling Tomcat Debugging in Docker for Eclipse"
 index: 608
 category: docker
 image: docker.png
-date: 2016-09-22
+date: 2018-06-08
+postdate: 2016-09-22
 tags: [Docker, Debugging, Eclipse, Tomcat]
 ---
 

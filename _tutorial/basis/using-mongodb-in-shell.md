@@ -5,7 +5,8 @@ title: "Using MongoDB in Shell"
 index: 33
 category: basis
 image: code.png
-date: 2016-11-21
+date: 2016-03-03
+postdate: 2016-11-21
 tags: [MongoDB, CRUD]
 ---
 

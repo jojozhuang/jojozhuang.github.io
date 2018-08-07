@@ -5,7 +5,8 @@ title: "Deploying Full Stack React App to Heroku"
 index: 374
 category: reactjs
 image: reactjs.png
-date: 2018-02-12
+date: 2017-07-04
+postdate: 2018-02-12
 tags: [Nodejs, Heroku]
 ---
 

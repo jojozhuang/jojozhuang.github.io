@@ -5,7 +5,8 @@ title: "Customization of Jekyll"
 index: 904
 category: githubpages
 image: github-pages.png
-date: 2016-11-18
+date: 2018-07-04
+postdate: 2016-11-18
 tags: [Jekyll]
 ---
 

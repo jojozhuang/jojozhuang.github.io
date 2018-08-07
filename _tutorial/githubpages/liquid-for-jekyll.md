@@ -5,7 +5,8 @@ title: "Liquid for Jekyll"
 index: 903
 category: githubpages
 image: github-pages.png
-date: 2016-01-19
+date: 2018-07-03
+postdate: 2016-01-19
 tags: [Jekyll, Liquid]
 ---
 

@@ -5,7 +5,8 @@ title: "Deploying Game Store Angular App to Netlify"
 index: 330
 category: angular
 image: angular.png
-date: 2018-02-25
+date: 2017-01-30
+postdate: 2018-02-25
 tags: [Netlify]
 ---
 

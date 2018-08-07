@@ -5,7 +5,8 @@ title: "Deploying Full Stack Angular App to Heroku"
 index: 340
 category: angular
 image: angular.png
-date: 2018-06-12
+date: 2017-03-10
+postdate: 2018-06-12
 tags: [Angular, Heroku]
 ---
 

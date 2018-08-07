@@ -5,7 +5,8 @@ title: "Migrating Repositories From GitHub to GitLab"
 index: 921
 category: githubpages
 image: github-pages.png
-date: 2018-06-05
+date: 2018-07-21
+postdate: 2018-06-05
 tags: [GitHub, GitLab]
 ---
 

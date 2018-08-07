@@ -5,7 +5,8 @@ title: "Installing and Using Cordova on MacOS"
 index: 410
 category: mobile
 image: mobiledev.png
-date: 2017-07-26
+date: 2017-09-10
+postdate: 2017-07-26
 tags: [Cordova]
 ---
 

@@ -5,7 +5,8 @@ title: "Creating Docker Machine with More Disk Space"
 index: 611
 category: docker
 image: docker.png
-date: 2017-03-02
+date: 2018-06-11
+postdate: 2017-03-02
 tags: [Docker Machine, Docker]
 ---
 

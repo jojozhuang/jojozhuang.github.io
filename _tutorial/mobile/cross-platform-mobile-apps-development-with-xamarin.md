@@ -5,7 +5,8 @@ title: "Cross-platform Mobile Apps Development with Xamarin"
 index: 406
 category: mobile
 image: mobiledev.png
-date: 2017-07-20
+date: 2017-09-06
+postdate: 2017-07-20
 tags: [Xamarin, Visual Studio, Mono, Xcode]
 ---
 

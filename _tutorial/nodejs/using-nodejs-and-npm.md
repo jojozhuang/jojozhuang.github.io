@@ -5,7 +5,8 @@ title: "Using Node.js and NPM"
 index: 202
 category: nodejs
 image: nodejs.png
-date: 2016-03-06
+date: 2016-09-02
+postdate: 2016-03-06
 tags: [Node.js, NPM]
 ---
 

@@ -5,7 +5,8 @@ title: "Deploying Spring Boot RESTful API to Heroku"
 index: 157
 category: restful
 image: restfulapi.png
-date: 2018-08-05
+date: 2016-07-07
+postdate: 2018-08-05
 tags: [Spring Boot, Heroku]
 ---
 

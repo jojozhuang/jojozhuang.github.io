@@ -5,7 +5,8 @@ title: "Setting Up Reverse Proxy with Nginx for Node Server"
 index: 42
 category: basis
 image: code.png
-date: 2016-03-09
+date: 2016-04-02
+postdate: 2016-03-09
 tags: [Nginx, Proxy, Node.js]
 ---
 

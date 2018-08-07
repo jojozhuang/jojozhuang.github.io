@@ -5,7 +5,8 @@ title: "Express - Versioning RESTful API(Draft)"
 index: 264
 category: nodejs
 image: expressjs.png
-date: 2018-01-28
+date: 2016-11-14
+postdate: 2018-01-28
 tags: [RESTful]
 ---
 

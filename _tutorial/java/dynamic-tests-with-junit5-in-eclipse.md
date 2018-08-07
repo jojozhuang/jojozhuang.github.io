@@ -5,7 +5,8 @@ title: "Dynamic Tests with JUnit 5 in Eclipse"
 index: 522
 category: java
 image: java.png
-date: 2018-02-21
+date: 2018-02-02
+postdate: 2018-02-21
 tags: [JUnit 5, Maven]
 ---
 
