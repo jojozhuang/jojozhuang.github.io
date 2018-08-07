@@ -6,7 +6,7 @@ index: 31
 category: basis
 image: code.png
 date: 2016-03-01
-postdate: 2016-02-25
+postdate: 2017-10-30
 tags: [MySQL, MySQL Workbench]
 categories:
 - blog

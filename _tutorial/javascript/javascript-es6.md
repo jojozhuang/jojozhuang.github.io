@@ -6,7 +6,7 @@ index: 104
 category: javascript
 image: javascript.png
 date: 2016-05-04
-postdate: 2018-01-04
+postdate: 2018-03-25
 tags: [ES6]
 ---
 

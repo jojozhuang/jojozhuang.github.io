@@ -6,7 +6,7 @@ index: 338
 category: angular
 image: angular.png
 date: 2017-03-08
-postdate: 2018-04-25
+postdate: 2018-04-23
 tags: [Online Judge]
 ---
 

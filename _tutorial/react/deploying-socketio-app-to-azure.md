@@ -6,7 +6,7 @@ index: 367
 category: reactjs
 image: reactjs.png
 date: 2017-06-07
-postdate: 2018-03-02
+postdate: 2018-08-03
 tags: [Azure]
 ---
 

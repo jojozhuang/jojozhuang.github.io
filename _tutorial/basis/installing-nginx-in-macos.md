@@ -6,7 +6,7 @@ index: 41
 category: basis
 image: code.png
 date: 2016-04-01
-postdate: 2016-03-08
+postdate: 2018-05-26
 tags: [Nginx]
 ---
 

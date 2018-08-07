@@ -6,7 +6,7 @@ index: 102
 category: javascript
 image: javascript.png
 date: 2016-05-02
-postdate: 2018-01-02
+postdate: 2018-07-26
 tags: [Javascript, Promise, Observable, Axios]
 ---
 

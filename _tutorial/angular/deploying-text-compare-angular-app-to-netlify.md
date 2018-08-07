@@ -6,7 +6,7 @@ index: 329
 category: angular
 image: angular.png
 date: 2017-01-29
-postdate: 2018-02-25
+postdate: 2018-07-29
 tags: [Netlify]
 ---
 

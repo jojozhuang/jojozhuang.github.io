@@ -6,7 +6,7 @@ index: 15
 category: basis
 image: code.png
 date: 2016-01-15
-postdate: 2016-02-15
+postdate: 2017-08-31
 tags: [Git, GitHub, SourceTree]
 ---
 

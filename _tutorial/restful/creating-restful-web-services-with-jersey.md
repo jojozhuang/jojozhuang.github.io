@@ -6,7 +6,7 @@ index: 158
 category: restful
 image: restfulapi.png
 date: 2016-07-08
-postdate: 2016-02-17
+postdate: 2017-10-30
 tags: [Jersey, RESTful, Maven]
 ---
 

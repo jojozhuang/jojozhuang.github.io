@@ -6,7 +6,7 @@ index: 43
 category: basis
 image: code.png
 date: 2016-04-03
-postdate: 2016-03-10
+postdate: 2018-05-28
 tags: [Nginx, Proxy, Load Balancer]
 ---
 

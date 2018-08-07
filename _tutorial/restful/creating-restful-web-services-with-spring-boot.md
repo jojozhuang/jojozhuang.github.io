@@ -6,7 +6,7 @@ index: 159
 category: restful
 image: restfulapi.png
 date: 2016-07-09
-postdate: 2016-02-20
+postdate: 2017-10-30
 tags: [Spring Boot, RESTful, Maven]
 ---
 

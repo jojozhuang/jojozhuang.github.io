@@ -6,7 +6,7 @@ index: 334
 category: angular
 image: angular.png
 date: 2017-03-04
-postdate: 2018-04-23
+postdate: 2018-04-11
 tags: [ngx-editor]
 ---
 
