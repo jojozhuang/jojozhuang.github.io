@@ -6,7 +6,7 @@ index: 153
 category: restful
 image: restfulapi.png
 date: 2016-07-03
-postdate: 2017-08-02
+postdate: 2017-12-11
 tags: [ASP.NET Core, RESTful, WebAPI 2.0]
 ---
 

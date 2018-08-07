@@ -6,7 +6,7 @@ index: 11
 category: basis
 image: code.png
 date: 2016-01-11
-postdate: 2016-02-08
+postdate: 2016-10-03
 tags: [VirtualBox, Ubuntu]
 ---
 

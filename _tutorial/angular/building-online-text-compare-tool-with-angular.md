@@ -6,7 +6,7 @@ index: 326
 category: angular
 image: angular.png
 date: 2017-01-26
-postdate: 2018-02-25
+postdate: 2018-07-28
 tags: [Angular, Monaco Editor]
 ---
 

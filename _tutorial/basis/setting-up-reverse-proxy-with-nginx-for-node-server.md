@@ -6,7 +6,7 @@ index: 42
 category: basis
 image: code.png
 date: 2016-04-02
-postdate: 2016-03-09
+postdate: 2018-05-27
 tags: [Nginx, Proxy, Node.js]
 ---
 

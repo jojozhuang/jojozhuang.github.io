@@ -6,7 +6,7 @@ index: 34
 category: basis
 image: code.png
 date: 2016-03-04
-postdate: 2017-02-14
+postdate: 2017-08-23
 tags: [RedHat, Ubuntu, Splunk]
 ---
 

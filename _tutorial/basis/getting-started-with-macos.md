@@ -6,7 +6,7 @@ index: 2
 category: basis
 image: code.png
 date: 2016-01-02
-postdate: 2016-08-30
+postdate: 2017-06-17
 tags: [Mac, Bash, Shell]
 ---
 

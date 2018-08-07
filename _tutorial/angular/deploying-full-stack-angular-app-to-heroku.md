@@ -6,7 +6,7 @@ index: 340
 category: angular
 image: angular.png
 date: 2017-03-10
-postdate: 2018-06-12
+postdate: 2018-08-02
 tags: [Angular, Heroku]
 ---
 
