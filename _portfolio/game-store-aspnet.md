@@ -31,6 +31,8 @@ category: dotnet
 
 ### 1.3 Live Demo on Azure:
 [http://ect583final.azurewebsites.net/](http://ect583final.azurewebsites.net/)  (The website would be slow when you access it for the first time. Be patient!)
+
+Try it out on Azure with the following accounts:
 * admin@gamestore.com / admin
 * advanced@gamestore.com / advanced
 * regular@gamestore.com / regular

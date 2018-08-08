@@ -22,6 +22,10 @@ Three available demos:
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
+Try it out on any live demo website with the following accounts:
+* demo / 111111
+* admin / 111111
+
 ## 3. UI
 Home page.
 ![image](/public/portfolios/onlinejudgemean/home.png)
