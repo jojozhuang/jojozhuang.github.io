@@ -57,3 +57,8 @@ module.exports = User;
 
 ## 5. References
 * [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
+* [Learn using JWT with Passport authentication](https://medium.com/front-end-hacking/learn-using-jwt-with-passport-authentication-9761539c4314)
+* [Use multiple local strategies in PassportJS](https://stackoverflow.com/questions/20052617/use-multiple-local-strategies-in-passportjs)
+* [Creating Role Based Authentication with Passport in Ionic 2 – Part 1](https://www.joshmorony.com/creating-role-based-authentication-with-passport-in-ionic-2-part-1/)
+* [Node, Express, Mongoose and Passport.js REST API Authentication](https://www.djamware.com/post/58eba06380aca72673af8500/node-express-mongoose-and-passportjs-rest-api-authentication)
+https://www.npmjs.com/package/passport-jwt
