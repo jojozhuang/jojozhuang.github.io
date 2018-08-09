@@ -23,8 +23,8 @@ Three available demos:
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 Try it out on any live demo website with the following accounts:
-* demo / 111111
-* admin / 111111
+* Regular User: demo / 123456
+* Administrator: admin / 123456
 
 ## 3. UI
 Home page.
@@ -41,6 +41,8 @@ Or the solutions is failed by some of the test cases.
 ![image](/public/portfolios/onlinejudgemean/fail.png)
 Switch to 'Submissions' to view all your submissions.
 ![image](/public/portfolios/onlinejudgemean/submissions.png)
+Click on the 'Accepted' or 'Wrong Answer' link to view the submission in details.
+![image](/public/portfolios/onlinejudgemean/submission.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Online Judge Application With Angular and ExpressJS]({% link _tutorial/angular/building-online-judge-application-with-angular-and-expressjs.md %}) to learn how this online judge app is built.
