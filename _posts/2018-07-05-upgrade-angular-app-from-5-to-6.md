@@ -1,0 +1,40 @@
+---
+layout: post
+key: blog
+title: "Upgrade Angular App from 5 to 6"
+date: 2018-07-05
+tags: [Angular]
+---
+
+> Upgrade Angular App from 5 to 6
+
+## 1. Angular 5 Vs Angular 6
+
+## 2. Upgrade
+### 2.1 Upgrade Angular CLI
+Update Angular CLI from globally. In my local, Angular CLI is upgraded from 1.7.4 to 6.1.3.
+```sh
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g @angular/cli@latest
+```
+Update Angular CLI dev. Go to the root folder of the Angular project, then run following commands.
+```sh
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+```
+### 2.2 Upgrade Angular Core 5 to Angular 6
+```sh
+ng update @angular/core
+```
+* Note, after upgrading, `.angular-cli.json` will be deleted, instead, `angular.json` will be created.
+
+Install all related packages.
+```sh
+npm install
+```
+## 3. Reference
+* [Angular 6 Release vs. Angular 5: New Features and Improvements](https://dzone.com/articles/angular-6-release-vs-angular-5-new-features-and-im)
+* [Want to upgrade project from Angular v5 to Angular v6](https://stackoverflow.com/questions/48970553/want-to-upgrade-project-from-angular-v5-to-angular-v6)
+* [Error: Local workspace file ('angular.json') could not be found](https://stackoverflow.com/questions/49810580/error-local-workspace-file-angular-json-could-not-be-found)
