@@ -49,6 +49,8 @@ We may have the capability to build the entire web application from backend to f
 Continuous integration and continuous delivery.
 * [Continuously Deploy Angular App to GitHub Pages using Travis-CI]({% link _tutorial/angular/continuously-deploy-angular-app-to-github-pages-using-travis-ci.md %})
 * [Continuously Deploy Spring Boot App to Heroku with Travis-CI]({% link _tutorial/restful/continuously-deploy-spring-boot-app-to-heroku-with-travis-ci.md %})
+* [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI]({% link _tutorial/react/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci.md %})
+* [Continuously Deploy React and Socket.IO App to Heroku with Travis-CI]({% link _tutorial/react/continuously-deploy-react-and-socketio-app-to-heroku-with-travis-ci.md %})
 
 ## 4. References
 * [Deploying to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
