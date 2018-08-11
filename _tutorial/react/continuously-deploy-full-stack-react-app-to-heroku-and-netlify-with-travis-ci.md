@@ -75,7 +75,7 @@ Click the 'Settings' of the new repository. Keep the default settings for 'Gener
 In the 'Environment Variables' section, paste your Heroku API Key in the field ‘Value’ and name it 'HEROKU_API_KEY', click 'Add' button.
 ![image](/public/tutorials/375/travis_environment_variable.png)
 ### 2.5 Push
-Make any change to your Spring Boot app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
+Make any change to this app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
 ![image](/public/tutorials/375/travis_build.png)
 If the build is finished successfully, your site is deployed to Heroku.
 ![image](/public/tutorials/375/travis_deploy.png)  
@@ -125,7 +125,7 @@ Change the name to 'code-editor-react' and save.
 ![image](/public/tutorials/375/netlify_changename.png)
 Go back to overview, we see the new site name with the link.
 ![image](/public/tutorials/375/netlify_overview.png)
-### 3.5 Testing Client
+### 3.4 Testing Client
 Access https://code-editor-react.netlify.com/, we see the homepage.
 ![image](/public/tutorials/375/test_home.png)
 Click 'Code Editor' button, select javascript and click Run. It works properly.
