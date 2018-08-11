@@ -10,7 +10,7 @@ postdate: 2018-08-10
 tags: [Heroku, Travis CI]
 ---
 
-> Introduce how to deploy static web app(Angular, React, etc.) to GitHub Page with Travis-CI.
+> Introduce how to deploy Spring Boot RESTful API to Heroku with Travis-CI.
 
 ## 1. Spring Boot
 ### 1.1 Source Files
