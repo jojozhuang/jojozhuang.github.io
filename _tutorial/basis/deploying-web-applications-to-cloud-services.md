@@ -2,12 +2,12 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Web Applications to Cloud Services"
-index: 271
-category: nodejs
-image: expressjs.png
-date: 2016-12-01
+index: 44
+category: basis
+image: code.png
+date: 2016-04-04
 postdate: 2018-08-05
-tags: [Heroku, Azure, EC2, Netlify]
+tags: [Heroku, Azure, EC2, Netlify, Travis CI]
 ---
 
 > Tutorial for how to deploy Angular, React and Node.js applications to cloud services.
@@ -45,5 +45,10 @@ We may have the capability to build the entire web application from backend to f
 * [Deploying Full Stack Angular App to Heroku]({% link _tutorial/angular/deploying-full-stack-angular-app-to-heroku.md %})
 * [Deploying Full Stack React App to Heroku]({% link _tutorial/react/deploying-full-stack-react-app-to-heroku.md %})
 
-## 3. References
+## 3. CI/CD
+Continuous integration and continuous delivery.
+* [Continuously Deploy Angular App to GitHub Pages using Travis-CI]({% link _tutorial/angular/continuously-deploy-angular-app-to-github-pages-using-travis-ci.md %})
+* [Continuously Deploy Spring Boot App to Heroku with Travis-CI]({% link _tutorial/restful/continuously-deploy-spring-boot-app-to-heroku-with-travis-ci.md %})
+
+## 4. References
 * [Deploying to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
