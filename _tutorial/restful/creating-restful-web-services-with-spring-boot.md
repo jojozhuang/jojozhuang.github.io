@@ -5,7 +5,7 @@ title: "Creating RESTful Web Services with Spring Boot"
 index: 162
 category: restful
 image: restfulapi.png
-date: 2016-07-09
+date: 2016-07-12
 postdate: 2017-10-30
 tags: [Spring Boot, RESTful, Maven]
 ---
