@@ -10,7 +10,7 @@ postdate: 2018-07-30
 tags: [Nodejs, Heroku]
 ---
 
-> Introduce how to deploy a Socket.IO app to Heroku.
+> Introduce how to deploy course player app built with Socket.IO to Heroku.
 
 ## 1. Socket.IO App
 In the posting [Building Course Player with Node.js and Socket.IO]({% link _tutorial/react/building-course-player-with-nodejs-and-socketio.md %}), I introduced how to build an course player with [Socket.IO](https://socket.io/). In this posting, I will introduce how to deploy this Socket.IO to [Heroku](https://www.heroku.com/).

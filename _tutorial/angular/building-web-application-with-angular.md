@@ -10,7 +10,7 @@ postdate: 2017-12-14
 tags: [Angular]
 ---
 
-> Build web application with Angular and Angular CLI.
+> Build Game Store app with Angular and Angular CLI.
 
 ## 1. Game Store Web Application
 Previously, I introduced how to use JSP and MySQL/MongoDB to build web application to manage products. In this tutorial, we will learn how to use Angular and RESTful web service to build such web application.

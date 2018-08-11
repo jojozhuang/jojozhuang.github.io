@@ -1,27 +1,20 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Online Judge Application With Angular and ExpressJS(Draft)"
+title: "Building Online Judge Application With MEAN Stack(Draft)"
 index: 333
 category: angular
 image: angular.png
 date: 2017-03-03
 postdate: 2018-04-09
-tags: [Angular, Nodejs]
+tags: [MEAN, Angular, Express, MongoDB]
 ---
 
-> Build online judge application with Angular.
-
+> Build online judge application with MEAN stack(MongoDB, Express, Angular and Node.js).
 
 Todo:
-* Submission comparison(Text Compare)
-* Admin user role
-* Show submission
 * Collaborative editor
 * IM message.
-* Environment variable, database url, server url.
-* admin user role
-* view submission
 * unit test with mocha
 * docker
 * collaborative online judge system: google doc + online compiler.

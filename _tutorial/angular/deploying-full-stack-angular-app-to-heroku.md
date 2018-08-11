@@ -10,10 +10,10 @@ postdate: 2018-08-02
 tags: [Angular, Heroku]
 ---
 
-> Introduce how to deploy a Full Stack(Angular + Express) app to Heroku.
+> Deploy online judge app built with Angular and Express to Heroku.
 
 ## 1. Full Stack App
-In the posting [Building Online Judge Application With Angular and ExpressJS]({% link _tutorial/angular/building-online-judge-application-with-angular-and-expressjs.md %}), I introduced how to build an online judge system with [Angular](https://angular.io/) and [ExpressJS](https://expressjs.com/). In this tutorial, I will introduce how to deploy both the front end(Implemented with Angular) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the Angular app and another is for the express app.
+In the posting [Building Online Judge Application With MEAN Stack]({% link _tutorial/angular/building-online-judge-application-with-mean-stack.md %}), I introduced how to build an online judge system with [Angular](https://angular.io/) and [ExpressJS](https://expressjs.com/). In this tutorial, I will introduce how to deploy both the front end(Implemented with Angular) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the Angular app and another is for the express app.
 ### 1.1 Deployment Preparation for API Server
 Edit './server/config/server-config.js'.
 ```javascript

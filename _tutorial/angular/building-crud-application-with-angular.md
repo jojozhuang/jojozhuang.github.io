@@ -10,7 +10,7 @@ postdate: 2018-01-22
 tags: [Angular, MEAN, Node.js]
 ---
 
-> Build CRUD application with Angular and RESTful API.
+> Build web CRUD application with Angular and RESTful API.
 
 ## 1. CRUD Application
 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) stands for Create, Read, Update and Delete. Which are the basic operations that a simple web app would be designed to achieve. In this tutorial, we will learn how to use Angular and RESTful web service to build such web application.

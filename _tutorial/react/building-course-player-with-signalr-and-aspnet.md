@@ -10,7 +10,7 @@ postdate: 2016-03-15
 tags: [SignalR, ASP.NET HTML5 Canvas, jQuery]
 ---
 
-> Build a course player with SIgnalR.
+> Build a course player with SignalR.
 
 Build a realtime web application to play course recordings with [SignalR](https://www.asp.net/signalr), HTML5 Canvas and [jQuery](https://jquery.com/) based on ASP.NET MVC.
 

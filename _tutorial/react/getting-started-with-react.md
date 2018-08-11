@@ -10,7 +10,7 @@ postdate: 2017-08-12
 tags: [React]
 ---
 
-> Build web application with React.
+> Go through official React tutorial to build a hello world app.
 
 ## 1. ReactJS
 [ReactJS](https://reactjs.org/) is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate. React is currently one of the most popular JavaScript libraries and has a strong foundation and large community behind it.

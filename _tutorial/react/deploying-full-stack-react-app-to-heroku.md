@@ -10,7 +10,7 @@ postdate: 2018-08-02
 tags: [Nodejs, Heroku]
 ---
 
-> Introduce how to deploy a Full Stack(React + Express) app to Heroku.
+> Introduce how to deploy Code Editor app built with React and Express to Heroku.
 
 ## 1. Full Stack App
 In the posting [Building Online Code Editor with React and Express]({% link _tutorial/react/building-online-code-editor-with-react-and-express.md %}), I introduced how to build an online code editor with [React](https://reactjs.org/) and [Node.js](https://nodejs.org/en/). In this posting, I will introduce how to deploy both the front end(Implemented with React) and the backend(Implemented with express) to [Heroku](https://www.heroku.com/). We will create two sites on Heroku. One is for the React app and another is for the express app.
