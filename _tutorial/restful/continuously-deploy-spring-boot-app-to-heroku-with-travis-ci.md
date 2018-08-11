@@ -69,9 +69,4 @@ Access https://gamestore-api.herokuapp.com/api/products in browser, we see it re
 ## 6. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)
 * [Getting started with Spring Boot, Travis and Heroku](https://medium.com/@felippepuhle/getting-started-with-spring-boot-travis-and-heroku-4562a723fd0e)
-* [Deploying your Angular app to GitHub Pages using Travis-CI](https://medium.com/angularmedellin/deploying-your-angular-app-to-github-pages-using-travis-ci-baca2e1c30e7)
 * [Automatically deploy with Travis CI and Heroku](https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f)
-* [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)
-* [Angular 5 + Travis-CI continuous integration/deployment](https://medium.com/@swanandkeskar/angular-5-travis-ci-continuous-integration-deployment-fe9090f460c5)
-* [Angular + Travis CI + Heroku](https://medium.com/@preetham_s/angular-travis-ci-heroku-85038a0bcd73)
-* [Continuous Integration for Angular Projects with Travis CI](https://moduscreate.com/blog/continuous-integration-angular-projects-travisci/)
