@@ -10,7 +10,7 @@ postdate: 2018-08-10
 tags: [Heroku, Travis CI, Netlify]
 ---
 
-> Introduce how to deploy a full stack Code Editor app to Heroku and Netlify with Travis-CI.
+> Introduce how to deploy Code Editor app to Heroku and Netlify with Travis-CI.
 
 ## 1. Full Stack Project
 ### 1.1 Source Files

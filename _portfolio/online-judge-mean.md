@@ -45,7 +45,7 @@ Click on the 'Accepted' or 'Wrong Answer' link to view the submission in details
 ![image](/public/portfolios/onlinejudgemean/submission.png)
 
 ## 4. Under the Hood
-Read tutorial [Building Online Judge Application With Angular and ExpressJS]({% link _tutorial/angular/building-online-judge-application-with-angular-and-expressjs.md %}) to learn how this online judge app is built.
+Read tutorial [Building Online Judge Application With MEAN Stack]({% link _tutorial/angular/building-online-judge-application-with-mean-stack.md %}) to learn how this online judge app is built.
 
 ## 5. Source Files
 * [Source files of Online Judge(Angular+Express) on Github](https://github.com/jojozhuang/online-judge-mean)

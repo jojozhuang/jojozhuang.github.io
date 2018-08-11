@@ -10,7 +10,7 @@ postdate: 2018-08-03
 tags: [Azure]
 ---
 
-> Deploy the Course Player application(Socket.IO) from GitHub to Azure.
+> Deploy the Course Player app built with Socket.IO from GitHub to Azure.
 
 ## 1. Socket.IO Project
 ### 1.1 Cloning Source Code

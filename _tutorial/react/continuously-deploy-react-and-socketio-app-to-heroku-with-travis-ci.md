@@ -10,7 +10,7 @@ postdate: 2018-08-11
 tags: [Heroku, Travis CI]
 ---
 
-> Introduce how to publish the course player app built with react and socket.io to Heroku with continuous deployment.
+> Deploy the course player app built with React and Socket.IO to Heroku with Travis-CI.
 
 ## 1. React & Socket.IO Project
 ### 1.1 Source Files
