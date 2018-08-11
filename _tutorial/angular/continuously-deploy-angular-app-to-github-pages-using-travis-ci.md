@@ -1,16 +1,16 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Deploying Static Web App to GitHub Pages using Travis-CI"
-index: 931
-category: githubpages
-image: github-pages.png
-date: 2018-07-31
+title: "Continuously Deploy Angular App to GitHub Pages using Travis-CI"
+index: 331
+category: angular
+image: angular.png
+date: 2017-01-31
 postdate: 2018-08-09
 tags: [GitHub Pages, Travis CI]
 ---
 
-> Introduce how to deploy static web app(Angular, React, etc.) to GitHub Page with Travis-CI.
+> Introduce how to continuously deploy Game Store Angular app to GitHub Page with Travis-CI.
 
 ## 1. Angular Project
 ### 1.1 Source Files
@@ -57,39 +57,39 @@ deploy:
 ## 2. GitHub
 ### 2.1 GitHub Token
 Go to 'Settings' -> 'Developer Settings', or access link 'https://github.com/settings/developers' directly, switch to 'Personal access tokens', click 'Generate new token'.
-![image](/public/tutorials/931/github_developer_settings.png)
+![image](/public/tutorials/331/github_developer_settings.png)
 Input description and select scopes. Here, just mark the 'repo' checkbox. Scroll down the page and click 'Generate token' button.
-![image](/public/tutorials/931/github_token.png)
-Token is generated, copy it and we will use it later.
-![image](/public/tutorials/931/github_copy_token.png)  
+![image](/public/tutorials/331/github_token.png)
+Copy the new generated token, we will use it later.
+![image](/public/tutorials/331/github_copy_token.png)  
 
 ## 3. Travis
 Go to https://travis-ci.com/ to sign up with your GitHub account. After login, go to 'Profile'. We see the 'GitHub App Integration' section, click 'Activate' button.
-![image](/public/tutorials/931/travis_integration.png)
+![image](/public/tutorials/331/travis_integration.png)
 Grant with GitHub authority, choose the repository you want to integrate, click 'Approve & install' button.
-![image](/public/tutorials/931/travis_select_repository.png)
+![image](/public/tutorials/331/travis_select_repository.png)
 After a while, your GitHub repository is integrated to Travis, click 'Settings'.
-![image](/public/tutorials/931/travis_integrated.png)
+![image](/public/tutorials/331/travis_integrated.png)
 Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/tutorials/931/travis_settings.png)
+![image](/public/tutorials/331/travis_settings.png)
 In the 'Environment Variables' section, paste your GitHub token in the field ‘Value’ and name it ‘GITHUB_TOKEN’, click 'Add' button.
-![image](/public/tutorials/931/travis_environment_variable.png)
+![image](/public/tutorials/331/travis_environment_variable.png)
 
 ## 4. Deployment
 Make any change to your Angular app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/tutorials/931/travis_build.png)
+![image](/public/tutorials/331/travis_build.png)
 If the build is finished successfully, your site is deployed to GitHub page.
-![image](/public/tutorials/931/travis_deploy.png)  
+![image](/public/tutorials/331/travis_deploy.png)  
 
 ## 5. Testing
 Go to your GitHub repository, there will be one more branch named 'gh-pages'.
-![image](/public/tutorials/931/github_gh_pages.png)
+![image](/public/tutorials/331/github_gh_pages.png)
 Go to 'Settings', scroll down the page to 'GitHub Pages', you should see the link, click on it.
-![image](/public/tutorials/931/github_page_link.png)
+![image](/public/tutorials/331/github_page_link.png)
 The Angular app is live in the GitHub page.
-![image](/public/tutorials/931/gamestore_home.png)
+![image](/public/tutorials/331/gamestore_home.png)
 It works properly, wee see the products.
-![image](/public/tutorials/931/gamestore_list.png)  
+![image](/public/tutorials/331/gamestore_list.png)  
 
 ## 6. References
 * [GitHub Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
@@ -98,3 +98,4 @@ It works properly, wee see the products.
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)
 * [Angular 5 + Travis-CI continuous integration/deployment](https://medium.com/@swanandkeskar/angular-5-travis-ci-continuous-integration-deployment-fe9090f460c5)
 * [Angular + Travis CI + Heroku](https://medium.com/@preetham_s/angular-travis-ci-heroku-85038a0bcd73)
+* [Continuous Integration for Angular Projects with Travis CI](https://moduscreate.com/blog/continuous-integration-angular-projects-travisci/)
