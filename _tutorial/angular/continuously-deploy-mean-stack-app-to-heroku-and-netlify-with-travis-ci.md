@@ -63,7 +63,11 @@ deploy:
   app: online-judge-api
 ```
 ### 2.3 Heroku
-Login to Heroku https://www.heroku.com/, go to 'Account settings', copy the 'API Key'.
+Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'online-judge-api', click 'Create app' button.
+![image](/public/tutorials/346/heroku_createapp.png)
+Then, go to Settings, click 'Reveal Config Vars' button. Add new Key: MONGOLAB_URI and Value: Your MongoDB link.
+![image](/public/tutorials/346/heroku_configvar.png)
+In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
 ![image](/public/tutorials/346/heroku_apikey.png)  
 ### 2.4 Travis
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub' and add 'online-judge-mean'.
