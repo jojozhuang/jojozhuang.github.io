@@ -75,66 +75,7 @@ Use [(testResult)]="testResult", not [testResult]="testResult" to accept value c
 ```
 * [Update parent component property from child component in Angular 2](https://stackoverflow.com/questions/41464871/update-parent-component-property-from-child-component-in-angular-2)
 
-## 3. Mongo
-Create default user
-```javascript
-// Get collection names
-mongoose.connection.on("open", function() {
-  const users = mongoose.connection.db.collection("users");
 
-  users.findOne({ username: "jojozhuang" }, function(err, user) {
-    if (!user) {
-      const defaultUser = {
-        username: "jojozhuang",
-        email: "jojozhuang@gmail.com",
-        hash:
-          "9f51bcd7a80a8da6fa02dcc9e136cd2ea5a08a24c988e4d822ebeb0b3eb430fd9a62af4fc6e1c456cb12cbc5b8792f737166ca39b3bb0fe4d34e1cd1ae134fd3",
-        salt: "f8dae7c30d811b322b8763afc424fec0",
-        timecreated: Date.now
-      };
-
-      users.save(defaultUser, function(err) {
-        console.log(
-          "[Database Initialization] New admin user 'jojozhuang' was created!"
-        );
-        console.log("[Default Admin] User Name: jojozhuang, Password: 111111");
-      });
-
-      users.save(defaultUser);
-    } else {
-      console.log("[Default Admin] User Name: jojozhuang, Password: 111111");
-    }
-  });
-});
-```
-
-## 4. Server
-### 4.1 Testing Async
-Sleep the thread.
-
-sleep
-```javascript
-var sleep = require('sleep');
-    sleep.sleep(5)//sleep for 5 seconds, this will block the whole event loop execution
-```
-async
-```javascript
-const snooze = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-const example = async () => {
-  console.log("About to snooze without halting the event loop...");
-  await snooze(5000);
-  console.log("done!");
-};
-```
-* [How to sleep the thread in node.js without affecting other threads?](https://stackoverflow.com/questions/13448374/how-to-sleep-the-thread-in-node-js-without-affecting-other-threads)
-
-### 4.2 Async Files Operations
-// ncp - Asynchronous recursive file & directory copying, `cp -r`
-https://www.npmjs.com/package/ncp
-
-// app-root-path
-https://www.npmjs.com/package/app-root-path
 
 ## 5. OnlineJudge
 ### 5.1 Sample OnlineJudge
