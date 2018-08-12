@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Full Stack Angular App to Heroku"
-index: 340
+index: 345
 category: angular
 image: angular.png
-date: 2017-03-10
+date: 2017-03-15
 postdate: 2018-08-02
 tags: [Angular, Heroku]
 ---
@@ -311,22 +311,22 @@ Johnny@Johnny-Mac:~$
 ```
 4) Add MongoDB URL  
 Login to Heroku, go to Settings, click 'Reveal Config Vars' button. Add new Key: MONGOLAB_URI and Value: Your MongoDB link.
-![image](/public/tutorials/340/configvar.png)
+![image](/public/tutorials/345/configvar.png)
 5) Testing Server  
 Open web browser, access 'https://online-judge-api.herokuapp.com/api/'. The API is working now.
 ```sh
 {"message":"Hello! welcome to our api!"}
 ```
-![image](/public/tutorials/340/api.png){:width="650px"}  
+![image](/public/tutorials/345/api.png){:width="650px"}  
 If you access https://online-judge-api.herokuapp.com/api/submission/questions, you should get all reqestions in json format.
-![image](/public/tutorials/340/questionsjson.png)
+![image](/public/tutorials/345/questionsjson.png)
 ### 3.2 Client
 1) Build Angular app.
 ```sh
 $ npm run build
 ```
 The Angular app is built and exported to dist folder. All are static files(html, js and images).
-![image](/public/tutorials/340/build.png){:width="800px"}  
+![image](/public/tutorials/345/build.png){:width="800px"}  
 2) Create App on Heroku
 ```sh
 $ heroku create online-judge-mean
@@ -429,11 +429,11 @@ $ heroku git:remote -a online-judge-mean
 ```
 4) Testing Client  
 Open web browser, access 'https://online-judge-mean.herokuapp.com/'. The Angular app is working now.
-![image](/public/tutorials/340/home.png)
+![image](/public/tutorials/345/home.png)
 Click on the 'Questions' menu.
-![image](/public/tutorials/340/questions.png)
+![image](/public/tutorials/345/questions.png)
 Go to the question details.
-![image](/public/tutorials/340/question.png)
+![image](/public/tutorials/345/question.png)
 
 ## 4. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

@@ -1,8 +1,12 @@
 ---
-layout: post
-key: blog
-title: "Online Judge - Setting up Front End with Angular 5[Draft]"
-date: 2018-03-25
+layout: tutorial
+key: tutorial
+title: "Online Judge - Setting up Front End with Angular[Draft]"
+index: 335
+category: angular
+image: angular.png
+date: 2017-03-05
+postdate: 2018-04-11
 tags: [Angular]
 ---
 

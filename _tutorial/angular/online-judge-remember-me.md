@@ -2,11 +2,11 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Remember Me[Draft]"
-index: 335
+index: 337
 category: angular
 image: angular.png
-date: 2017-03-05
-postdate: 2018-04-12
+date: 2017-03-07
+postdate: 2018-04-13
 tags: [Online Judge]
 ---
 

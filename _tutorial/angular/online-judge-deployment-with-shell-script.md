@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Deployment with Shell Script[Draft]"
-index: 339
+index: 344
 category: angular
 image: angular.png
-date: 2017-03-09
+date: 2017-03-14
 postdate: 2018-04-28
 tags: [Online Judge]
 ---

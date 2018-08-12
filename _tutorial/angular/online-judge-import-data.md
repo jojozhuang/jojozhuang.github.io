@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Import Data[Draft]"
-index: 338
+index: 341
 category: angular
 image: angular.png
-date: 2017-03-08
+date: 2017-03-11
 postdate: 2018-04-23
 tags: [Online Judge]
 ---

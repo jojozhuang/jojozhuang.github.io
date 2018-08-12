@@ -1,8 +1,12 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Online Judge - Setting up Backend API Server with Express[Draft]"
-date: 2018-03-26
+index: 334
+category: angular
+image: angular.png
+date: 2017-03-04
+postdate: 2018-04-10
 tags: [Express, MongoDB]
 ---
 
