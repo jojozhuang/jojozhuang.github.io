@@ -16,7 +16,7 @@ category: web
 
 ## 2. Demo
 Two available demos:
-* `Live Demo on Netlify:` <a href="https://game-store-angular.netlify.com/" target="\_blank">https://game-store-angular.netlify.com/</a>
+* `Live Demo on Netlify(CI):` <a href="https://game-store-angular.netlify.com/" target="\_blank">https://game-store-angular.netlify.com/</a>
 * `Live Demo on Azure:` <a href="https://game-store-angular.azurewebsites.net/" target="\_blank">https://game-store-angular.azurewebsites.net/</a>
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*

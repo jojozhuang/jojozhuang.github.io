@@ -19,7 +19,7 @@ A course player consists of three components: video, screenshot and whiteboard. 
 
 ## 2. Demo
 One available demo:
-* `Live Demo on Heroku:` <a href="https://course-player-react.herokuapp.com/" target="\_blank">https://course-player-react.herokuapp.com/</a>
+* `Live Demo on Heroku(CI):` <a href="https://course-player-react.herokuapp.com/" target="\_blank">https://course-player-react.herokuapp.com/</a>
 
 *Note: The demo website may be slow when you access them for the first time. Be patient!*
 

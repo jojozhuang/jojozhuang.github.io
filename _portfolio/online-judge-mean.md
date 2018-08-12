@@ -17,7 +17,7 @@ A web application for online judge(solve algorithm questions), built with MEAN s
 ## 2. Demo
 Three available demos:
 * `Live Demo on Heroku:` <a href="https://online-judge-mean.herokuapp.com/" target="\_blank">https://online-judge-mean.herokuapp.com/</a>
-* `Live Demo on Netlify:` <a href="https://online-judge.netlify.com/" target="\_blank">https://online-judge.netlify.com/</a>
+* `Live Demo on Netlify(CI):` <a href="https://online-judge.netlify.com/" target="\_blank">https://online-judge.netlify.com/</a>
 * `Live Demo on Azure:` <a href="https://online-judge.azurewebsites.net/" target="\_blank">https://online-judge.azurewebsites.net/</a>
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*

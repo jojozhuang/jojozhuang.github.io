@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Getting Started with Angular4 and Angular CLI"
+title: "Getting Started with Angular and Angular CLI"
 index: 321
 category: angular
 image: angular.png
@@ -12,8 +12,8 @@ tags: [Angular4, Angular CLI]
 
 > Build web application with Angular4.
 
-## 1. Angular4 and Angular CLI
-[Angular 4](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc. The code is written in TypeScript, which compiles to JavaScript and displays the same in the browser.
+## 1. Angular and Angular CLI
+[Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc. The code is written in TypeScript, which compiles to JavaScript and displays the same in the browser.
 
 [Angular CLI](https://cli.angular.io/) is a command line interface tool that can create a project, add files, and perform a variety of ongoing development tasks such as testing, bundling, and deployment. Angular CLI makes it easy to start with any Angular project. Angular CLI comes with commands that help us create and start on our project very fast.
 

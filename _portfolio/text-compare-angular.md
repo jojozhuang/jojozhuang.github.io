@@ -16,7 +16,7 @@ This app is used to compare text. All the differences are displayed in a [Monaco
 
 ## 2. Demo
 Two available demos:
-* `Live Demo on Netlify:` <a href="https://text-compare.netlify.com/" target="\_blank">https://text-compare.netlify.com/</a>
+* `Live Demo on Netlify(CI):` <a href="https://text-compare.netlify.com/" target="\_blank">https://text-compare.netlify.com/</a>
 * `Live Demo on Azure:` <a href="https://text-compare.azurewebsites.net/" target="\_blank">https://text-compare.azurewebsites.net/</a>
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*
