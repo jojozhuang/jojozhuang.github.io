@@ -1,12 +1,12 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Online Judge - RichTextEditor[Draft]"
-index: 338
+title: "Online Judge - Code Editor[Draft]"
+index: 339
 category: angular
 image: angular.png
-date: 2017-03-08
-postdate: 2018-04-15
+date: 2017-03-09
+postdate: 2018-04-16
 tags: [ngx-editor]
 ---
 
