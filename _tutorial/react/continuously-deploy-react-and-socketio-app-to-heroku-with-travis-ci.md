@@ -57,7 +57,9 @@ deploy:
 ```
 
 ## 2. Heroku
-Login to Heroku https://www.heroku.com/, go to 'Account settings', copy the 'API Key'.
+Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'course-player-react', click 'Create app' button.
+![image](/public/tutorials/370/heroku_createapp.png)
+In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
 ![image](/public/tutorials/370/heroku_apikey.png)  
 
 ## 3. Travis

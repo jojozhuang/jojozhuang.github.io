@@ -37,8 +37,17 @@ deploy:
 ```
 
 ## 2. Heroku
-Login to Heroku, go to 'Account settings', copy the 'API Key'.
+Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'gamestore-api', click 'Create app' button.
+![image](/public/tutorials/158/heroku_createapp.png)
+In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
 ![image](/public/tutorials/158/heroku_apikey.png)  
+
+**In case, the continuous deployment doesn't work. Try to deploy it to Heroku manually first.**
+```sh
+cd restful-api-springboot
+heroku create gamestore-api
+git push heroku master
+```
 
 ## 3. Travis
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub'.
