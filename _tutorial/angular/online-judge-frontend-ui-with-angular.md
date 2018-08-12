@@ -1,21 +1,19 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Online Judge - Setting up Backend API Server with Express[Draft]"
-index: 334
+title: "Online Judge - Frontend UI with Angular[Draft]"
+index: 335
 category: angular
 image: angular.png
-date: 2017-03-04
-postdate: 2018-04-10
-tags: [Express, MongoDB]
+date: 2017-03-05
+postdate: 2018-04-11
+tags: [Angular]
 ---
 
 > Add progress bar for each http request
 
-## 1. Logging
-## 2. Local MongoDB
-## 2. mLab
-##
+## 1. User
+
 
 ## 7. Reference
 https://www.npmjs.com/package/ngx-progressba

@@ -1,12 +1,12 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Adding Progress Bar to Angular Apps[Draft]"
-index: 325
+title: "Online Judge - Progress Bar[Draft]"
+index: 342
 category: angular
 image: angular.png
-date: 2017-01-25
-postdate: 2018-02-24
+date: 2017-03-12
+postdate: 2018-05-01
 tags: [ngx-progressbar]
 ---
 
