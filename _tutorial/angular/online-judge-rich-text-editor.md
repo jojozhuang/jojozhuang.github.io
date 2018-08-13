@@ -10,7 +10,7 @@ postdate: 2018-04-15
 tags: [ngx-editor]
 ---
 
-> Learn how to use WYSIWYG(what you see is what you get) Editor: ngx-editor.
+> Introduce how to use WYSIWYG(what you see is what you get) Editor: ngx-editor.
 
 ## 1. Question Description
 Each question has description to show the details about what the problem is, and what solution is required. The description may contains html tags.
