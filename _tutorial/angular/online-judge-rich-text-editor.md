@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Online Judge - RichTextEditor[Draft]"
+title: "Online Judge - Rich Text Editor[Draft]"
 index: 338
 category: angular
 image: angular.png
