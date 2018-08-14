@@ -1,18 +1,14 @@
 ---
-layout: tutorial
-key: tutorial
-title: "Online Judge - Hashing Passwords with Bcrypt[Draft]"
-index: 336
-category: angular
-image: angular.png
-date: 2017-03-06
-postdate: 2018-04-12
-tags: [ngx-editor]
+layout: post
+key: blog
+title: "Hashing Passwords with Bcrypt"
+date: 2018-04-07
+tags: [Bcrypt]
 ---
 
-> Learn how to use WYSIWYG Editor:ngx-editor.
+> Learn how to use Bcrypt to encrypt password.
 
-User model
+## 1. User Model
 ```javascript
 var bcrypt = require("bcrypt-nodejs");
 var mongoose = require("mongoose");
@@ -55,10 +51,5 @@ var User = mongoose.model("User", userSchema);
 module.exports = User;
 ```
 
-## 5. References
+## 2. References
 * [Hashing Passwords with Node.js and Bcrypt](https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt)
-* [Learn using JWT with Passport authentication](https://medium.com/front-end-hacking/learn-using-jwt-with-passport-authentication-9761539c4314)
-* [Use multiple local strategies in PassportJS](https://stackoverflow.com/questions/20052617/use-multiple-local-strategies-in-passportjs)
-* [Creating Role Based Authentication with Passport in Ionic 2 – Part 1](https://www.joshmorony.com/creating-role-based-authentication-with-passport-in-ionic-2-part-1/)
-* [Node, Express, Mongoose and Passport.js REST API Authentication](https://www.djamware.com/post/58eba06380aca72673af8500/node-express-mongoose-and-passportjs-rest-api-authentication)
-https://www.npmjs.com/package/passport-jwt
