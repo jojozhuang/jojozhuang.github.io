@@ -1,54 +1,129 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Online Judge - Remember Me[Draft]"
+title: "Online Judge - Remember Me"
 index: 337
 category: angular
 image: angular.png
 date: 2017-03-07
 postdate: 2018-04-13
-tags: [Online Judge]
+tags: [Token, Cookies]
 ---
 
-> Learn how to implement auto login in Angular application.
+> Introduce how to implement auto login in Angular application.
 
-## 1. Implement remember me, cookie
-1) save token to response cookie if 'Remember me' is selected.
-```javascript
-// If a user is found
-if (user) {
-  var token = user.generateJwt();
-  if (req.body.remember == true) {
-    console.log("remember me, save cookie");
+## 1. Auto Login
+To implement 'Auto Login' function, we need to rely on the Cookies. The first time after user successful login, server saves a token in Cookies and returns it to client. Client save it to browser. Next, when user accesses any page, client sends out the token to server to identify the same user.
 
-    res.cookie("cookieToken", token, { maxAge: 900000 }); //expires after 900000 ms = 15 minutes
-  }
-  res.status(200);
-  res.json({
-    token: token
-  });
+## 2. Flow
+### 2.1 Remember Me Option(Client)
+Create a checkbox for Remember me in the login page './src/app/componets/authentication/login.component.html'.
+```html
+<div class="form-group">
+  <div class="col-md-offset-2 col-md-10">
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember-me" formControlName="remember">Remember me?</label>
+    </div>
+  </div>
+</div>
+```
+Send this option to server along with user name and password.
+```typescript
+onSubmit() {
+    ...
+
+    this.credentials.username = user.username;
+    this.credentials.password = user.password;
+    this.credentials.remember = user.remember;
+
+    this.authService.login(this.credentials, user.remember).subscribe(
+      () => {
+        this.handleSuccess("Login successful!", true, this.returnUrl);
+      },
+      error => {
+        this.handleError(error);
+      }
+    );
 }
 ```
-2) save cookie to browser. It is done when token is saved to local storage.
+### 2.2 Token(Server)
+Save token to response cookie if 'Remember me' is selected. File './server/controller/authentication.js'.
 ```javascript
-base = this.http.post(this.baseUrl + `api/authentication/${type}`, user);
+module.exports.login = function(req, res) {
+  ...
 
-const request = base.pipe(
-  map((data: TokenResponse) => {
-    if (refresh && data.token) {
-      AuthUtil.saveToken(data.token, savecookie);
+  const username = req.body.username;
+  const password = req.body.password;
+
+  // check with passport
+  passport.authenticate("local", function(err, user, info) {
+    ...
+
+    // If a user is found
+    if (user) {
+      var token = user.generateJwt();
+      if (req.body.remember == true) {
+        console.log("remember me, save cookie");
+
+        res.cookie("cookieToken", token, { maxAge: 900000 }); //expires after 900000 ms = 15 minutes
+      }
+      res.status(200);
+      res.json({
+        token: token
+      });
     }
-    return data.token;
-  })
-);
+  })(req, res);
+};
 ```
-3) In the `ngOnInit` event of login page, start auto login if cookie token is available.
+### 2.3 Saving Token to Browser Cookie(Client)
+Save cookie to browser. Notice 'savecookie' is set to true.
+```javascript
+private request(
+  type: "login" | "signup" | "update" | "resetpwd",
+  user: TokenPayload,
+  refresh: boolean,
+  savecookie?: boolean
+): Observable<any> {
+  let base;
+
+  base = this.http.post(this.baseUrl + `api/authentication/${type}`, user);
+  console.log(base);
+  const request = base.pipe(
+    map((data: TokenResponse) => {
+      if (refresh && data.token) {
+        AuthUtil.saveToken(data.token, savecookie);
+      }
+      return data.token;
+    })
+  );
+
+  return request;
+}
+```
+It is done when token is saved to local storage in './src/utils/authutil.ts'.
+```typescript
+export class AuthUtil {
+  ...
+
+  static saveToken(token: string, savetocookie?: boolean): void {
+    localStorage.setItem(STORAGE_TOKEN, token);
+    this.token = token;
+    if (savetocookie) {
+      CookieUtil.setCookie(COOKIE_TOKEN, token, COOKIE_EXPIREDAYS);
+    }
+  }
+  ...
+
+  static getCookieToken() {
+    return CookieUtil.getCookie(COOKIE_TOKEN);
+  }
+}
+```
+### 2.4 Using Token in Cookie(Client)
+For the second time login, auto login is happening. In the `ngOnInit` event of login page, start auto login if cookie token is available.
 ```javascript
 ngOnInit() {
     ...
-
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
 
     // auto login with cookie
     const cookieToken = AuthUtil.getCookieToken();
@@ -73,7 +148,8 @@ ngOnInit() {
     }
   }
 ```
-4) Add `withCredentials: true` option when sending out request. This option will make the request include cookie.
+### 2.5 Service(Client)
+In '.src/app/services/authentication.service.ts', add `withCredentials: true` option when sending out request. This option will make the request include cookie.
 ```javascript
 public autologin(): Observable<any> {
    let base;
@@ -96,7 +172,8 @@ public autologin(): Observable<any> {
    return request;
  }
 ```
-5) Express server. To allow the server to accept cookie from client, we need to enable CORS as follows.
+### 2.6 CORS(Server)
+In './server/server.js', to allow the express server to accept cookie from client, we need to enable CORS as follows.
 ```javascript
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:12080");
@@ -107,17 +184,17 @@ app.use(function(req, res, next) {
   next();
 });
 ```
-6) In server, create route for auto login
+### 2.7 Route for Auto Login(Server)
+In '.server/routes/authentication.js', define routing.
 ```javascript
 // auto login, remember me function
 router.post("/autologin", authentication_controller.autologin);
 ```
-7) autologin in authentication controller. If token can be fetched from request cookie, use it for login.
+### 2.8 User Match(Server)
+In '.server/controllers/authentication.js', if token can be fetched from request cookie, use it for login.
 ```javascript
 module.exports.autologin = function(req, res) {
   // check if the user's credentials are saved in a cookie //
-  console.log("autologin");
-  console.log(req.cookies);
   const token = req.cookies.cookieToken;
   console.log(token);
   if (token) {
@@ -154,7 +231,8 @@ module.exports.autologin = function(req, res) {
   }
 };
 ```
-8) Go back to client. If auto login is successful, new token will be saved to cookie.
+### 2.9 Successful Login(Client)
+Go back to client. If auto login is successful, new token will be saved to cookie.
 ```javascript
 this.authService.autologin().subscribe(
     () => {
@@ -170,11 +248,16 @@ this.authService.autologin().subscribe(
   );
 ```
 
+## 3. Testing
+Use select the 'Remember me' option when login for the first time.
+![image](/public/tutorials/337/login_remember.png)
+You should login successfully. Now close the browser and access the homepage again, http://localhost:12080/. You see the user name is already in the top menu.
+![image](/public/tutorials/337/login_auto.png)
 
-## 5. References
+## 4. References
 * [Express Cookies](http://expressjs.com/en/api.html#res.cookie)
 * [Cookies Are Not Getting Created and Saved in the Browser](https://stackoverflow.com/questions/19555069/cookies-are-not-getting-created-and-saved-in-the-browser)
 * [setcookie() does not set cookie in Google Chrome](https://stackoverflow.com/questions/5849013/setcookie-does-not-set-cookie-in-google-chrome)
-* * [jwt-decode - npm](https://www.npmjs.com/package/jwt-decode)
+* [jwt-decode - npm](https://www.npmjs.com/package/jwt-decode)
 * [jwt-decode - GitHub](https://github.com/auth0/jwt-decode)
 * [JavaScript Cookies](https://www.w3schools.com/js/js_cookies.asp)
