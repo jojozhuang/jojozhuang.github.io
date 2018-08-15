@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - User Authentication"
-index: 336
+index: 354
 category: angular
 image: angular.png
-date: 2017-03-06
+date: 2017-03-04
 postdate: 2018-04-12
 tags: [Sign Up, Login, Return URL]
 ---
@@ -245,9 +245,9 @@ module.exports.signup = function(req, res) {
 ```
 ### 2.3 Testing
 Click on the 'Sign Up' menu, input user name, password and email, then click 'Register' button.
-![image](/public/tutorials/336/signup_page.png)
+![image](/public/tutorials/354/signup_page.png)
 If no validation error, new user is created and the page is navigated to user profile.
-![image](/public/tutorials/336/signup_profile.png)
+![image](/public/tutorials/354/signup_profile.png)
 
 ## 3. Login
 ### 3.1 Angular(Client)
@@ -428,9 +428,9 @@ module.exports.login = function(req, res) {
 ```
 ### 3.3 Testing
 Click on the 'Login' menu, input user name and password, then click 'Login' button.
-![image](/public/tutorials/336/login_page.png)
+![image](/public/tutorials/354/login_page.png)
 If no validation error, login is successful and user is navigated to home page.
-![image](/public/tutorials/336/login_home.png)
+![image](/public/tutorials/354/login_home.png)
 
 ## 4. Login with Return URL
 ### 4.1 Auth Guard
@@ -489,11 +489,11 @@ onSubmit() {
 ```
 ### 4.4 Testing
 Try to access 'http://localhost:12080/admin/users' without login.
-![image](/public/tutorials/336/returnurl_url.png)
+![image](/public/tutorials/354/returnurl_url.png)
 You will be redirected to the login page. Notice the url in browser's address bar.
-![image](/public/tutorials/336/returnurl_login.png)
+![image](/public/tutorials/354/returnurl_login.png)
 Input admin user name and password, login. After login, you will be redirected to the admin user page.
-![image](/public/tutorials/336/returnurl_users.png)
+![image](/public/tutorials/354/returnurl_users.png)
 
 ## 5. References
 * [Angular 6 - User Registration and Login Example & Tutorial](http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial)

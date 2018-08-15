@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Rich Text Editor"
-index: 338
+index: 356
 category: angular
 image: angular.png
-date: 2017-03-08
+date: 2017-03-06
 postdate: 2018-04-15
 tags: [ngx-editor]
 ---
@@ -14,9 +14,9 @@ tags: [ngx-editor]
 
 ## 1. Question Description
 Each question has description to show the details about what the problem is, and what solution is required. The description may contains html tags.
-![image](/public/tutorials/338/question_desc.png)
+![image](/public/tutorials/356/question_desc.png)
 In the admin view, we need a WYSIWYG Editor to edit the content of description.
-![image](/public/tutorials/338/question_admin.png)
+![image](/public/tutorials/356/question_admin.png)
 
 ## 2. NgxEditor
 For this online judge app, I use [ngx-editor](https://www.npmjs.com/package/ngx-editor). It is a WYSIWYG editor for Angular. 'ngx-editor' depeneds on the following libraries to work.
@@ -78,7 +78,7 @@ Then, you can use 'htmlContent' to get or set value for the editor. If your are 
 ## 3. Testing
 ### 3.1 Small Icon Issue
 Start the app, login as 'jojozhuang', go to question admin view, select one question to edit(eg. http://localhost:12080/admin/question/5b424fb51e73e72e0d54f63b). Notice the icons in the toolbar of the editor is small.
-![image](/public/tutorials/338/small_icon.png)
+![image](/public/tutorials/356/small_icon.png)
 This is because 'ngx-editor' uses `rem` css. The rem unit sets the font-size relative to the browsers base font-size, and will not inherit from its parents.
 ```raw
 .ngx-editor-button {
@@ -109,7 +109,7 @@ In addition, make sure styles.css is after the bootstrap style file in 'angular-
 ],
 ```
 Refresh the question edit page, the icon now is larger.
-![image](/public/tutorials/338/large_icon.png)
+![image](/public/tutorials/356/large_icon.png)
 
 ## 4. References
 * [WYSIWYG Editor:ngx-editor](https://github.com/Sibiraj-S/ngx-editor)

@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Others"
-index: 347
+index: 362
 category: angular
 image: angular.png
-date: 2017-03-17
+date: 2017-03-12
 postdate: 2018-04-17
 tags: [MEAN, Angular, Express, MongoDB]
 ---
