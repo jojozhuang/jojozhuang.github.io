@@ -15,7 +15,7 @@ tags: [spawn]
 ## 1. Structure
 ### 1.1 Supported Languages
 For each question, we have multiple language specified solution. Currently, this online judge application supports three languages: Java, Javascript and Python.
-![image](/public/tutorials/343/solution_project.png){:width="450px"}  
+![image](/public/tutorials/343/solution_project.png){:width="400px"}  
 ### 1.2 Test Case
 For each question, there is one test case file shared by all solutions. For example, below is the test case for 'Two Sum' questions. There are 5 test cases in the test file. Each test case consists of three lines.
 ```sh
@@ -408,7 +408,7 @@ if __name__ == '__main__':
 ```
 ## 3. Judging Engine
 We defined several runners for different languages. Use 'RunnerManager' to manage this runners.
-![image](/public/tutorials/343/judging_engine.png){:width="450px"}  
+![image](/public/tutorials/343/judging_engine.png){:width="400px"}  
 ### 3.1 Base Class
 Runner.js
 ```javascript
@@ -973,3 +973,21 @@ Select one question to submit solution, two results. Either the solution passes 
 ![image](/public/tutorials/343/pass.png)
 or it fails for one of the test cases.
 ![image](/public/tutorials/343/fail.png)
+
+## 7. References
+### 7.1 Sample OnlineJudge
+* [OnlineJudge](https://github.com/QingdaoU/OnlineJudge)
+* [OnlineJudge Deploy](https://github.com/QingdaoU/OnlineJudgeDeploy)
+
+### 7.2 Security
+* [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html)
+* [4 Simple Steps to Secure Your Express Node Application](http://scottksmith.com/blog/2014/09/04/simple-steps-to-secure-your-express-node-application/)
+* [csurf](https://www.npmjs.com/package/csurf)
+* [SECCOMP wiki](https://en.wikipedia.org/wiki/Seccomp)
+* [Seccomp security profiles for Docker](https://docs.docker.com/engine/security/seccomp/)
+* [Compiling a program with limited library access](https://stackoverflow.com/questions/27731599/compiling-a-program-with-limited-library-access)
+* [Online Judge 是如何解决判题端安全性问题的？](https://www.zhihu.com/question/23067497)
+* [开发与维护好一个Online Judge需要学习哪些知识?](https://www.zhihu.com/question/27340709)
+
+### 7.3 Others
+* [Date manipulation - momentjs](http://momentjs.com/)

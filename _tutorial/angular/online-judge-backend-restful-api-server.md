@@ -342,3 +342,5 @@ const example = async () => {
 * [How to sleep the thread in node.js without affecting other threads?](https://stackoverflow.com/questions/13448374/how-to-sleep-the-thread-in-node-js-without-affecting-other-threads)
 * [App Root Path Module](https://www.npmjs.com/package/app-root-path)
 * [ncp - Asynchronous recursive file & directory copying](https://www.npmjs.com/package/ncp)
+* [Express form](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
+* [Express validation](https://express-validator.github.io/docs/)

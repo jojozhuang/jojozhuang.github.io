@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Online Judge - Authentication"
+title: "Online Judge - User Authentication"
 index: 336
 category: angular
 image: angular.png
@@ -496,6 +496,14 @@ Input admin user name and password, login. After login, you will be redirected t
 ![image](/public/tutorials/336/returnurl_users.png)
 
 ## 5. References
+* [Angular 6 - User Registration and Login Example & Tutorial](http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial)
+* [angular-6-registration-login-example](https://github.com/cornflourblue/angular-6-registration-login-example)
+* [Login Sample](https://stackblitz.com/edit/angular-6-registration-login-example?file=app%2Fhome%2Fhome.component.ts)
+* [Login Sample Code](https://stackblitz.com/edit/angular-6-registration-login-example?file=app%2Fhome%2Fhome.component.ts)
+* [Sample code for Sign up and Login](https://github.com/braitsch/node-login)
+* [User Authentication with the MEAN Stack](https://www.sitepoint.com/user-authentication-mean-stack/)
+* [Node.js and Password Storage with Bcrypt](http://www.summa.com/blog/node.js-and-password-storage-with-bcrypt)
+* [Validator used for confirm password in 'Change Password'](https://gist.github.com/slavafomin/17ded0e723a7d3216fb3d8bf845c2f30)
 * [Learn using JWT with Passport authentication](https://medium.com/front-end-hacking/learn-using-jwt-with-passport-authentication-9761539c4314)
 * [Use multiple local strategies in PassportJS](https://stackoverflow.com/questions/20052617/use-multiple-local-strategies-in-passportjs)
 * [Creating Role Based Authentication with Passport in Ionic 2 – Part 1](https://www.joshmorony.com/creating-role-based-authentication-with-passport-in-ionic-2-part-1/)

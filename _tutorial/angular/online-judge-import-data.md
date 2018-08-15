@@ -246,3 +246,4 @@ Click 'Upload' button, all data in the csv file is uploaded to MongoDB.
 * [Uploading files in Angular (2/4) to a REST api](https://nehalist.io/uploading-files-in-angular2/)
 * [File Upload with Angular](https://www.codingforentrepreneurs.com/blog/file-upload-with-angular/)
 * [Bulk Import a CSV File Into MongoDB Using Mongoose With Node.js](https://code.tutsplus.com/articles/bulk-import-a-csv-file-into-mongodb-using-mongoose-with-nodejs--cms-29574)
+* [Modal Dialogs](https://valor-software.com/ngx-bootstrap/#/modals)
