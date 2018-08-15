@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with React"
-index: 351
+index: 401
 category: reactjs
 image: reactjs.png
 date: 2017-05-01
@@ -25,16 +25,16 @@ Use 'create-react-app' to create new React application named 'react-app'
 $ create-react-app react-app
 ```
 Open 'react-app' in Visual Studio Code.
-![image](/public/tutorials/351/project.png){:width="350px"}
+![image](/public/tutorials/401/project.png){:width="350px"}
 
 ## 3. Serving the Application
 Start 'react-app' through npm.
 ```sh
 $ npm start
 ```
-![image](/public/tutorials/351/npmstart.png){:width="600px"}
+![image](/public/tutorials/401/npmstart.png){:width="600px"}
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-![image](/public/tutorials/351/runapp.png)
+![image](/public/tutorials/401/runapp.png)
 
 You can make it serve at different port. Open `package.json`, add 'PORT' option to 'start' script. For example, set the port to `12090` as follows.
 ```json
@@ -46,7 +46,7 @@ You can make it serve at different port. Open `package.json`, add 'PORT' option 
 }
 ```
 Run 'npm start' again. Now, this application is served at port '12090'.
-![image](/public/tutorials/351/changeport.png)  
+![image](/public/tutorials/401/changeport.png)  
 
 ## 4. References
 * [React Official Website](https://reactjs.org/)

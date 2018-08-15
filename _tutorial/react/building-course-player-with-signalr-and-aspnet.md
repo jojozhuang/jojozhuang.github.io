@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with SignalR and ASP.NET"
-index: 364
+index: 414
 category: reactjs
 image: reactjs.png
 date: 2017-06-04
@@ -28,7 +28,7 @@ In Visual Studio, create a 'Web Application' project named `CoursePlayer.SignalR
 
 ### 2.2 Core Project
 Reuse the Course Player Core project, copy all files except the interface file 'IFileHelper' from 'Johnny.Portfolio.CoursePlayer.Core'.
-![image](/public/tutorials/364/coreproject.png){:width="350px"}
+![image](/public/tutorials/414/coreproject.png){:width="350px"}
 Project 'Johnny.Portfolio.CoursePlayer.Core' was created for the portfolio `Course Player Xamarin`. Check the posting [Building Course Player with Xamarin]({% link _tutorial/mobile/building-course-player-with-xamarin.md %})  for more details.
 
 In `CourseApi.cs`, we define two methods. One is for fetching the data of screenshot, another is for fetching the data of whiteboard.
@@ -38,14 +38,14 @@ public static WBData GetWhiteboardData(int second) { }
 ```
 
 When reading the data from course files, we need to decompress them first. Here, I'm using `SharpZipLib` library, visit https://github.com/icsharpcode/SharpZipLib for more details.
-![image](/public/tutorials/364/zipproject.png){:width="350px"}
+![image](/public/tutorials/414/zipproject.png){:width="350px"}
 
 ### 2.3 Web Project
 Open the web project, it looks as follows.
-![image](/public/tutorials/364/webproject.png){:width="350px"}
+![image](/public/tutorials/414/webproject.png){:width="350px"}
 1) Install package `Microsoft.AspNet.SignalR` and its dependency through NuGet Package Manager. To enable SignalR in your application, create a class named Startup. Right click on `/App_Start` folder, choose 'New Item', then select Web->General->OWIN Startup class.
-![image](/public/tutorials/364/startupproject.png){:width="350px"}
-![image](/public/tutorials/364/startup.png){:width="800px"}
+![image](/public/tutorials/414/startupproject.png){:width="350px"}
+![image](/public/tutorials/414/startup.png){:width="800px"}
 Update its content as follows.
 ```c#
 using Microsoft.Owin;
@@ -498,7 +498,7 @@ Create view for this controller in folder `/Views/DummyPlayer` with the name `In
 </script>
 ```
 7) Include folder `/204304` to the project. This folder contains all of the data files for screenshot and whiteboard of one course recording.
-![image](/public/tutorials/364/recordingfiles.png){:width="350px"}
+![image](/public/tutorials/414/recordingfiles.png){:width="350px"}
 8) Create a model class `ScreenImage` in folder `/Models` with following content.
 ```c#
 namespace CoursePlayer.SignalR.Models
@@ -559,13 +559,13 @@ namespace CoursePlayer.SignalR
 ```
 ### 2.4 Running and Testing
 Start the web project. Home page contains some useful information related to SignalR.
-![image](/public/tutorials/364/homepage.png)
+![image](/public/tutorials/414/homepage.png)
 Switch to 'Dummy Player'. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![image](/public/tutorials/364/dummyhomepage.png)
+![image](/public/tutorials/414/dummyhomepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/tutorials/364/dummyplay.png)
+![image](/public/tutorials/414/dummyplay.png)
 You can drag the slider bar to move forward or backward.
-![image](/public/tutorials/364/dummydrag.png)
+![image](/public/tutorials/414/dummydrag.png)
 
 ## 3. Enhancement with Video Player
 Enhance the dummy player by replacing the slider bar with video player.
@@ -702,16 +702,16 @@ Add link for this new view in layout file.
 </div>
 ```
 ### 3.3 Final Project Structure
-![image](/public/tutorials/364/projectstructure.png){:width="350px"}
+![image](/public/tutorials/414/projectstructure.png){:width="350px"}
 Notice, folder `/204304` contains the data files for screenshot and whiteboard.
 
 ### 3.4 Running and Testing
 Start the web project and switch to 'Course Player'. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The upper one is for screenshot and the lower one is for whiteboard. And there is a video player at the left side.
-![image](/public/tutorials/364/playerhomepage.png)
+![image](/public/tutorials/414/playerhomepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/tutorials/364/playing.png)
+![image](/public/tutorials/414/playing.png)
 You can drag the slider bar to move forward or backward.
-![image13](/public/tutorials/364/drag.png)  
+![image13](/public/tutorials/414/drag.png)  
 
 ## 4. Conclusion  
 ### 4.1 Easy to Implement  
@@ -724,7 +724,7 @@ This player is web based, the only required tool on client’s machine to watch 
 For developer, since this WebSocket based player is a cross-platform application, it is a better solution than other platform specific solutions. Compared with the Flash player and Silverlight player, this SignalR player is simple and easy to maintain, since there is only one copy of the code.  
 ### 4.5 Reusable  
 The core module(CoursePlayer.Core) of this application is shared with [Xamarin Course Player]({% link _portfolio/course-player-xamarin.md %}), which is another portfolio of mine. That is a cross-platform solution for mobile development.
-![image](/public/tutorials/364/coreproject.png){:width="350px"}
+![image](/public/tutorials/414/coreproject.png){:width="350px"}
 
 This means, we have the cross-platform solution for developing applications by only using C\#.  
 * First, use Xamarin to develop mobile apps for iOS and Android platform.  

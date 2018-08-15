@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Mobile App with React Native[Draft]"
-index: 411
+index: 611
 category: mobile
 image: mobiledev.png
 date: 2017-09-11
@@ -69,9 +69,9 @@ sudo sysctl -w kern.maxfilesperproc=524288
 yarn start
 ```
 QR code in terminal prompt.
-![image](/public/posts/2017-08-28/qrcode.png){:width="800px"}
+![image](/public/tutorials/611/qrcode.png){:width="800px"}
 Click `i` to open iOS simulator. It will install [expo](https://expo.io/) first. Then launch the react native app. App is running in the simulator.
-![image](/public/posts/2017-08-28/iphonex.png){:width="400px"}
+![image](/public/tutorials/611/iphonex.png){:width="400px"}
 Note: start your desired simulator before running it with expo and expo will detect the currently running simulator and then deploy your code.
 
 ### 2.2 Installing Packages

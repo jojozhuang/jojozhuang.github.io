@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating Docker Container with Bash Script[Draft]"
-index: 613
+index: 713
 category: docker
 image: docker.png
 date: 2018-06-13
