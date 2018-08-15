@@ -5,7 +5,7 @@ title: "Data Persistence with JPA & Eclipselink"
 index: 535
 category: java
 image: java.png
-date: 2018-03-05
+date: 2017-10-05
 postdate: 2016-12-21
 tags: [JPA, Eclipse, Eclipselink, ORM]
 ---

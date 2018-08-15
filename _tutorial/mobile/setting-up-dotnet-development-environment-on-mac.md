@@ -5,7 +5,7 @@ title: "Setting up .Net Development Environment on Mac"
 index: 605
 category: mobile
 image: mobiledev.png
-date: 2017-09-05
+date: 2018-01-05
 postdate: 2017-07-19
 tags: [Visual Studio, NuGet]
 ---

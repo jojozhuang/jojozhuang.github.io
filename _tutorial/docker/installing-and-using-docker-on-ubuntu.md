@@ -5,7 +5,7 @@ title: "Installing and Using Docker on Ubuntu"
 index: 701
 category: docker
 image: docker.png
-date: 2018-06-01
+date: 2018-04-01
 postdate: 2017-10-10
 tags: [Docker, Docker Hub]
 ---

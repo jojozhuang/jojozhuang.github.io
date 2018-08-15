@@ -5,7 +5,7 @@ title: "Using Java Debugger"
 index: 512
 category: java
 image: java.png
-date: 2018-01-12
+date: 2017-09-12
 postdate: 2016-03-21
 tags: [JDB, Debugging]
 ---

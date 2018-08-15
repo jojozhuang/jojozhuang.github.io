@@ -5,7 +5,7 @@ title: "Building Website with JSP and MySQL"
 index: 532
 category: java
 image: java.png
-date: 2018-03-02
+date: 2017-10-02
 postdate: 2016-02-26
 tags: [JSP, MySQL]
 categories:

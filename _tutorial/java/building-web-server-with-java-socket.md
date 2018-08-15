@@ -5,7 +5,7 @@ title: "Building Web Server with Java Socket"
 index: 531
 category: java
 image: java.png
-date: 2018-03-01
+date: 2017-10-01
 postdate: 2016-02-24
 tags: [Http, Socket]
 categories:

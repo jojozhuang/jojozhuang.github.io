@@ -5,7 +5,7 @@ title: "Creating Docker Container with Bash Script[Draft]"
 index: 713
 category: docker
 image: docker.png
-date: 2018-06-13
+date: 2018-04-13
 postdate: 2018-04-15
 tags: [Docker, Bash]
 ---

@@ -5,7 +5,7 @@ title: "Scripting Java With Rhino"
 index: 537
 category: java
 image: java.png
-date: 2018-03-07
+date: 2017-10-07
 postdate: 2017-10-10
 tags: [Rhino, Javascript]
 ---

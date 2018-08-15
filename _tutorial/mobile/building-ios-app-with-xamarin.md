@@ -5,7 +5,7 @@ title: "Building iOS App with Xamarin"
 index: 607
 category: mobile
 image: mobiledev.png
-date: 2017-09-07
+date: 2018-01-07
 postdate: 2017-07-21
 tags: [Xamarin, Xcode, SQLite, C#]
 ---

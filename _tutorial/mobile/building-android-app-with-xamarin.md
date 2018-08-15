@@ -5,7 +5,7 @@ title: "Building Android App with Xamarin"
 index: 608
 category: mobile
 image: mobiledev.png
-date: 2017-09-08
+date: 2018-01-08
 postdate: 2017-07-22
 tags: [Xamarin, Android, SQLite, C#]
 ---
