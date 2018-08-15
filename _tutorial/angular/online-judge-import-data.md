@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Import Data"
-index: 341
+index: 359
 category: angular
 image: angular.png
-date: 2017-03-11
+date: 2017-03-09
 postdate: 2018-04-23
 tags: [Multer, Fast-csv]
 ---
@@ -230,13 +230,13 @@ You see, the folder is in controller folder, create uploads folder in it or chan
 
 ## 3. Testing
 Start the app, login as admin, go to Database.
-![image](/public/tutorials/341/test_menu.png)
+![image](/public/tutorials/359/test_menu.png)
 Choose collection 'questions'. Delete all entries if they exist.
-![image](/public/tutorials/341/test_database.png)
+![image](/public/tutorials/359/test_database.png)
 Click 'Import with CSV' button. A modal dialog will be displayed, choose questions.csv in './backup_csv' folder.
-![image](/public/tutorials/341/test_csvfile.png)
+![image](/public/tutorials/359/test_csvfile.png)
 Click 'Upload' button, all data in the csv file is uploaded to MongoDB.
-![image](/public/tutorials/341/test_finish.png)
+![image](/public/tutorials/359/test_finish.png)
 
 ## 4. References
 * [File Upload with AngularJS and NodeJS](https://ciphertrick.com/2015/12/07/file-upload-with-angularjs-and-nodejs/)

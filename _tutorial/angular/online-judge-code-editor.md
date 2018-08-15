@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Code Editor"
-index: 339
+index: 357
 category: angular
 image: angular.png
-date: 2017-03-09
+date: 2017-03-07
 postdate: 2018-04-16
 tags: [Monaco Editor]
 ---
@@ -18,7 +18,7 @@ When writing code to provide the solution for online judge question, it's better
 ## 2. Monaco Editor
 ### 2.1 Monaco Editor
 For this online judge app, I use [Monaco Editor](https://microsoft.github.io/monaco-editor/). It is the code editor that powers Visual Studio Code.
-![image](/public/tutorials/339/monaco_editor.png)
+![image](/public/tutorials/357/monaco_editor.png)
 ### 2.2 Monaco Editor for Angular
 Instead of using Monaco Editor directly in Angular, we can `ngx-monaco-editor` which is [Monaco Editor for Angular](https://github.com/atularen/ngx-monaco-editor).
 
@@ -118,11 +118,11 @@ Define a class to change the height of the editor. For example, the below css se
 
 ## 3. Testing
 Start the app, go to question view, select one question to edit(eg. http://localhost:12080/question/two-sum). By default, the language is 'javascript'.
-![image](/public/tutorials/339/javascript.png)
+![image](/public/tutorials/357/javascript.png)
 Select another language, 'java'.
-![image](/public/tutorials/339/java.png)
+![image](/public/tutorials/357/java.png)
 Or 'python'.
-![image](/public/tutorials/339/python.png)
+![image](/public/tutorials/357/python.png)
 
 ## 4. Reference
 * [Microsoft Monaco Editor](https://microsoft.github.io/monaco-editor/)

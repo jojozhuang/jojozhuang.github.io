@@ -2,10 +2,10 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Remember Me"
-index: 337
+index: 355
 category: angular
 image: angular.png
-date: 2017-03-07
+date: 2017-03-05
 postdate: 2018-04-13
 tags: [Token, Cookies]
 ---
@@ -250,9 +250,9 @@ this.authService.autologin().subscribe(
 
 ## 3. Testing
 Use select the 'Remember me' option when login for the first time.
-![image](/public/tutorials/337/login_remember.png)
+![image](/public/tutorials/355/login_remember.png)
 You should login successfully. Now close the browser and access the homepage again, http://localhost:12080/. You see the user name is already in the top menu.
-![image](/public/tutorials/337/login_auto.png)
+![image](/public/tutorials/355/login_auto.png)
 
 ## 4. References
 * [Express Cookies](http://expressjs.com/en/api.html#res.cookie)
