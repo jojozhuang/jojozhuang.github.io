@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Online Judge Application With MEAN Stack(Draft)"
+title: "Building Online Judge Application With MEAN Stack"
 index: 333
 category: angular
 image: angular.png
@@ -12,108 +12,45 @@ tags: [MEAN, Angular, Express, MongoDB]
 
 > Build online judge application with MEAN stack(MongoDB, Express, Angular and Node.js).
 
+## 1. Online Judge
+This online judge application is used to practice programming to solve algorithm questions. It can compile and execute code, and test them with pre-constructed data. The output of the code will be captured by the system, and compared with the standard output. The system will then return the result.
 
-## 2. Reactive Form
-### 2.1 Form Validation
-* [Angular Reactive Forms: trigger validation on submit](https://loiane.com/2017/08/angular-reactive-forms-trigger-validation-on-submit/)
-* [Optional icons in horizontal and inline forms](https://getbootstrap.com/docs/3.3/css/)
+This app contains one RESTful API server and another client component built with Angular. Main functions as follows.
+* User Authentication - Register, Login, Profile, Change Password, etc.
+* User Management - Create, Update, Delete user.
+* Question Management - Create, Update, Delete question.
+* Database Management - Import and Export data, including users, questions and submissions.
+* Solution Submission - Accept user's solution submissions for questions, execute them and return result.
 
-### 2.2 Server side Validation
-* [Express form](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-* [Express validation](https://express-validator.github.io/docs/)
+## 2. Judging System
+This is the core component of this online judge application.
+### 2.1 Master Data for Solutions
+For each question, we have multiple language specified solution. Currently, this online judge application supports three languages: Java, Javascript and Python. And for each solution, there is a test file to verify user's submitted solution. For each question, there is one particular test case file.
+### 2.2 Judging Engine
+Judging engine contains several 'runner's for different languages. It automatically detects what language of the solution submitted by user, and call specific runner to execute the solution against the pre-defined test cases.
 
-### 2.4 Controls
-Using ControlValueAccessor to Create Custom Form Controls in Angular, rating star
-https://alligator.io/angular/custom-form-control/
+## 3. Server
+### 3.1 Express
+Use express as web server to host the RESTful API.
+### 3.2 MongoDB
+Most of the data are stored in MongoDB. The database URL is configurable. You can either use local MongoDB or remote MongoDB hosted on cloud service.
 
+## 4. Client
+### 4.1 Angular
+Use Angular as the front end stack to build the UI web pages. With the help of third party libraries, this app can
+### 4.2 Controls
+Progress Bar, Loading icon, WYSIWYG editor, code editor, etc.
 
+## 5. More Tutorials
+Read the following tutorials to learn more details about this online judge application.
+* [Online Judge - Backend RESTful API Server]({% link _tutorial/angular/online-judge-backend-restful-api-server.md %})
+* [Online Judge - Frontend UI with Angular]({% link _tutorial/angular/online-judge-frontend-ui-with-angular.md %})
+* [Online Judge - Judging System]({% link _tutorial/angular/online-judge-judging-system.md %})
+* [Online Judge - User Authentication]({% link _tutorial/angular/online-judge-user-authentication.md %})
+* [Online Judge - Remember Me]({% link _tutorial/angular/online-judge-remember-me.md %})
 
-### 2.5 Angular basis
-* [CSS Encapsulation with Angular Components](https://coryrylan.com/blog/css-encapsulation-with-angular-components)
-
-### 2.6 Create 2 way data-binding with @Output.
-```typescript
-//result-panel.component.ts
-@Input() testResult: number;
-@Output() testResultChange = new EventEmitter<number>();
-```
-Notify parent if value changes.
-```typescript
-//result-panel.component.ts
-close() {
-  this.testResult = 0;
-  this.testResultChange.emit(0); // notify parent
-}
-```
-Use [(testResult)]="testResult", not [testResult]="testResult" to accept value change from child component.
-```html
-<!-- algorithm-question.component.html -->
-<app-widget-result-panel [(testResult)]="testResult" [resultMessage]="resultMessage"></app-widget-result-panel>
-```
-* [Update parent component property from child component in Angular 2](https://stackoverflow.com/questions/41464871/update-parent-component-property-from-child-component-in-angular-2)
-
-
-## 7. MongoDB
-* [Get Most Recent Document By Type With Mongo Aggregation Query](https://stackoverflow.com/questions/48274137/get-most-recent-document-by-type-with-mongo-aggregation-query)
-
-```raw
-db.submissions.aggregate([
-    { $sort: { "timecreated": -1 } },
-    { $group: { _id: "$language", latest: { $first: "$$ROOT" } }},
-    { $project : {_id : "$latest._id", username : "$latest.username", questionname : "$latest.questionname", solution : "$latest.solution", language : "$latest.language", status : "$latest.status", timeupdated : "$latest.timeupdated", timesubmitted : "$latest.timesubmitted", runtime : "$latest.runtime" }},
-    { $sort: { "language": 1 } }
-]).pretty()
-```
-
-## 8. RESTful API
-* [Developing a RESTful API with Node and TypeScript](http://mherman.org/blog/2016/11/05/developing-a-restful-api-with-node-and-typescript/)
-* [RESTful API Design: How to handle errors?](https://alidg.me/blog/2016/9/24/rest-api-error-handling)
-* [How to Handle an OPTIONS Request in Express](http://johnzhang.io/options-request-in-express)
-* [Why is an OPTIONS request sent and can I disable it?](https://stackoverflow.com/questions/29954037/why-is-an-options-request-sent-and-can-i-disable-it)
-
-## 9. Issues
-### 9.1 Error: No default engine was specified and no extension was provided
-The res.render stuff will throw an error if you're not using a view engine.
-* [Error: No default engine was specified and no extension was provided](https://stackoverflow.com/questions/23595282/error-no-default-engine-was-specified-and-no-extension-was-provided)
-
-If you just want to serve json replace the res.render('error', { error: err }); lines in your code with:
-```javascript
-res.json({ error: err })
-PS: People usually also have message in the returned object:
-
-res.status(err.status || 500);
-res.json({
-  message: err.message,
-  error: err
-});
-```
-
-### 9.2 ErrorHttpInterceptor
-when using HttpInterceptor to handle http request error, do not call
-```javascript
-//ErrorHttpInterceptor.intercept()
-return next.handle(request);
-```
-It will make zone.js to send second same request to server. Instead, throw the error.
-```javascript
-//ErrorHttpInterceptor.intercept()
-return _throw(this.messages);
-```
-
-Todo:
-* Collaborative editor
-* IM message.
-* unit test with mocha
-* docker
-* collaborative online judge system: google doc + online compiler.
-* create pipe for time date, create pipe for shorten the description in table.
-* knowledge: type script, angular 4, rxjs,
-* how to get dev and prod, to show error message in http.interceptor.ts
-
-
-
-## 10. Reference
-* [Child Processes on Node.js Document](https://nodejs.org/api/child_process.html)
+## 6. Reference
+* [Online Judge at Wikipedia](https://en.wikipedia.org/wiki/Online_judge)
 * [How do I create online compiler for C, C++ and Java using node.js as server language?](https://www.quora.com/How-do-I-create-online-compiler-for-C-C++-and-Java-using-node-js-as-server-language)
 * [How to build Online Judge](https://www.zhihu.com/question/20343652)
 * [Making a code compiler using Hackerrank API and ACE editor](http://blog.arpitdubey.com/making-a-code-compiler-using-hackerrank-api-and-ace-editor/)

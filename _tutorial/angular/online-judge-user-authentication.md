@@ -10,7 +10,7 @@ postdate: 2018-04-12
 tags: [Sign Up, Login, Return URL]
 ---
 
-> Introduce how to implement authentication with token.
+> Introduce how to implement user authentication with token.
 
 ## 1. Authentication
 ### 1.1 Scope
