@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Enabling Tomcat Debugging in Docker for Eclipse"
-index: 608
+index: 708
 category: docker
 image: docker.png
 date: 2018-06-08
@@ -19,7 +19,7 @@ In posting [Serving JSP Application With Tomcat In Docker]({% link _tutorial/doc
 * Data is persisted into the MySQL container.
 * Tomcat container connects MySQL container to read/write data. They are hosted in the same docker machine with same IP address but different ports.
 
-![image](/public/tutorials/608/devenv.png){:width="700px"}  
+![image](/public/tutorials/708/devenv.png){:width="700px"}  
 
 Now, one question is how to debug this JSP application? Actually, Tomcat supports remote debugging, the following steps introduce how to enable debugging in Eclipse.
 
@@ -48,33 +48,33 @@ Let's take a moment to examine this command in detail:
 * catalina.sh jpda run, tells the container to launch tomcat with this command.
 
 Switch to Kitematic, the new container is running with `JPDA_ADDRESS` configured to `8000`.
-![image](/public/tutorials/608/portenv.png)  
+![image](/public/tutorials/708/portenv.png)  
 Apart from port 31020, port 8000 for debugging is exposed to host machine as well.
-![image](/public/tutorials/608/debugport.png)  
+![image](/public/tutorials/708/debugport.png)  
 Use the same `~/Documents/jsptomcat` folder, which we deployed JSP application into.
-![image](/public/tutorials/608/localfolder.png)  
+![image](/public/tutorials/708/localfolder.png)  
 Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully! We still use port 31020. Port 8000 is only for debugging.
-![image](/public/tutorials/608/preview.png)  
+![image](/public/tutorials/708/preview.png)  
 
 ## 3. Setting up Debugging in Eclipse
 ### 3.1 Creating Remote Java Application
 In Eclipse, create new Remote Java Application. Set host with tomcat container's IP address, and port 8000.
-![image](/public/tutorials/608/debugconfig.png){:width="800px"}  
+![image](/public/tutorials/708/debugconfig.png){:width="800px"}  
 ### 3.2 Setting Breakpoint
 Find file `productlist.jsp` under WebContent, set breakpoint at line of 'ProductDao.getList()'.
-![image](/public/tutorials/608/breakpoint.png)  
+![image](/public/tutorials/708/breakpoint.png)  
 ### 3.3 Enabling Debugging
 Switch to debug view, enable debugging. If you don't see the Debug view, go to Windows->Perspective->Customize Perspective->Check the Debug option.
-![image](/public/tutorials/608/enabledebug.png)  
+![image](/public/tutorials/708/enabledebug.png)  
 Then, you will see some Daemon Thread are listed in debug view.
-![image](/public/tutorials/608/afterdebug.png)  
+![image](/public/tutorials/708/afterdebug.png)  
 
 ## 4. Triggering Breakpoint
 ### 4.1 Accessing JSP Tutorial Website
 Access http://192.168.99.100:31020/jsptutorial/productlist.jsp or refresh the `productlist.jsp` page in web browser. Switch to Eclipse, the breakpoint is activated. The remote debugging function is working now.
-![image](/public/tutorials/608/breakpointdt.png)  
+![image](/public/tutorials/708/breakpointdt.png)  
 Meanwhile, JSP application is stuck, waiting response from tomcat server.
-![image](/public/tutorials/608/stuck.png)  
+![image](/public/tutorials/708/stuck.png)  
 
 ## 5. Source Files
 * [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)

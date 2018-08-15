@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Serving JSP Application With Tomcat In Docker"
-index: 607
+index: 707
 category: docker
 image: docker.png
 date: 2018-06-07
@@ -18,15 +18,15 @@ In posting [Creating MySQL Image with Docker File]({% link _tutorial/docker/crea
 ## 2. Setting up Tomcat Container
 ### 2.1 Creating Tomcat Container
 In Kitematic, Search 'tomcat', Click on the 'CREATE' button of the official Tomcat image.
-![image](/public/tutorials/607/search.png)  
+![image](/public/tutorials/707/search.png)  
 Kitematic will download (also known as pull the image) the tomcat image from the Docker Hub immediately.
-![image](/public/tutorials/607/download.png)  
+![image](/public/tutorials/707/download.png)  
 Once it’s done, Kitematic will run a Docker Tomcat container with this image. A Tomcat web server starts up, it is ready to serve website data to your Mac.
-![image](/public/tutorials/607/running.png)  
+![image](/public/tutorials/707/running.png)  
 Click on the preview button to see the result in web browser. If you see the following web page, it means tomcat is working properly.
-![image](/public/tutorials/607/preview.png)  
+![image](/public/tutorials/707/preview.png)  
 There is one issue with this Tomcat container, volume is not configured.
-![image](/public/tutorials/607/novolume.png)  
+![image](/public/tutorials/707/novolume.png)  
 ### 2.2 Creating Tomcat Container with Bindmounting a Volume
 Let's manually create another Tomcat container for the same tomcat image.
 In docker terminal, run the following command.
@@ -41,14 +41,14 @@ Let's take a moment to examine this command in detail:
 * tomcat specifies that the container should be built from the tomcat image.
 
 Switch to Kitematic, the new container is running with Volume configured.
-![image](/public/tutorials/607/jsptomcat.png)  
+![image](/public/tutorials/707/jsptomcat.png)  
 Click on the preview button of the new container. You will see a same Tomcat welcome page. Notice, the port is different with the previous one. They are running in different tomcat containers.
-![image](/public/tutorials/607/newpreview.png)  
+![image](/public/tutorials/707/newpreview.png)  
 
 ## 3. Preparing JSP Application
 ### 3.1 Creating Folder for Volume in Host
 Open directory `~/Documents/` in your host machine, you will find `jsptomcat` is created automatically.
-![image](/public/tutorials/607/localfolder.png){:width="700px"}
+![image](/public/tutorials/707/localfolder.png){:width="700px"}
 
 
 ### 3.2 Publishing JSP Application
@@ -56,7 +56,7 @@ We will use the same JSP application for [Creating MySQL Image with Docker File]
 1) Copy all of the files from `/JSPTutorialDockerfile/WebContent/` to `~/Documents/jsptomcat/`.  
 2) Copy the entire 'classes' folder from `/JSPTutorialDockerfile/build/` to `~/Documents/jsptomcat/WEB-INF/`.  
 3) The final structure of the volume folder looks like below. All the files for this JSP Tutorial application are deployed.  
-![image](/public/tutorials/607/final.png)  
+![image](/public/tutorials/707/final.png)  
 
 ### 3.3 Checking webapps Directory in Tomcat Container
 Inspect to tomcat container, and navigate to the default web folder of tomcat.
@@ -69,11 +69,11 @@ $ pwd
 /usr/local/tomcat/webapps/jsptutorial
 ```
 All files are under webapps/jsptutorial directory now.
-![image](/public/tutorials/607/webapps.png)  
+![image](/public/tutorials/707/webapps.png)  
 
 ### 3.4 Accessing JSP Application
 Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully!
-![image](/public/tutorials/607/deployed.png)  
+![image](/public/tutorials/707/deployed.png)  
 
 ## 4. Source Files
 * [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)

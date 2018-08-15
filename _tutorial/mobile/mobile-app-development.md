@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Mobile App Development"
-index: 401
+index: 601
 category: mobile
 image: mobiledev.png
 date: 2017-09-01

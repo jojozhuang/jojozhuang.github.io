@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying React and Socket.IO App to Heroku"
-index: 369
+index: 419
 category: reactjs
 image: reactjs.png
 date: 2017-06-09
@@ -147,9 +147,9 @@ $ git push heroku master
 ```
 ## 4. Testing
 Open web browser, access 'https://course-player-react.herokuapp.com/'. The player is working now.
-![image](/public/tutorials/369/home.png)  
+![image](/public/tutorials/419/home.png)  
 Click the 'Play' button and drag to slider bar.
-![image](/public/tutorials/369/play.png)  
+![image](/public/tutorials/419/play.png)  
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

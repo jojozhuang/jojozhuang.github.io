@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Socket.IO App to Heroku"
-index: 366
+index: 416
 category: reactjs
 image: reactjs.png
 date: 2017-06-06
@@ -144,9 +144,9 @@ $ git push heroku master
 
 ## 4. Testing
 Open web browser, access 'https://course-player-socketio.herokuapp.com/'. The player is working now.
-![image](/public/tutorials/366/home.png)  
+![image](/public/tutorials/416/home.png)  
 Click the 'Play' button and drag to slider bar.
-![image](/public/tutorials/366/play.png)  
+![image](/public/tutorials/416/play.png)  
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

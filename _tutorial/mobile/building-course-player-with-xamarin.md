@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with Xamarin"
-index: 409
+index: 609
 category: mobile
 image: mobiledev.png
 date: 2017-09-09
@@ -14,17 +14,17 @@ tags: [Xamarin, C#]
 
 ## 1. Creating Project
 In Visual Studio, File->New Solution, select Multiplatform->App->Blank Native App(iOS, Android), Next.
-![image](/public/tutorials/409/project_create.png){:width="800px"}  
+![image](/public/tutorials/609/project_create.png){:width="800px"}  
 Provide the app name 'CoursePlayer' and specify the location for the source files, save the project. Three projects are created. One portable .NET project and two platform specific projects, one is for iOS and another for Android.
-![image](/public/tutorials/409/project_stucture.png){:width="320px"}  
+![image](/public/tutorials/609/project_stucture.png){:width="320px"}  
 Delete the Android Project, since I will only implement the iOS app. Rename the portable project to `Johnny.Portfolio.CoursePlayer.Core`. And rename the iOS project to `Johnny.Portfolio.CoursePlayer.iOS`.
 
 ## 2. Portable Project
 ### 2.1 Packages
 Select the 'Johnny.Portfolio.CoursePlayer.Core' project, Project->Add NuGet Package, then NuGet Package Manager will be opened. Search `SharpZipLib.Portable`, select it and click 'Add Package'.
-![image](/public/tutorials/409/package_sharpziplibportable.png){:width="800px"}  
+![image](/public/tutorials/609/package_sharpziplibportable.png){:width="800px"}  
 Install another package `Xamarin.Forms`.
-![image](/public/tutorials/409/package_xamarinforms.png){:width="800px"}  
+![image](/public/tutorials/609/package_xamarinforms.png){:width="800px"}  
 The selected packages will be installed to current project. A new file named 'package.config' is added to the project.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -286,7 +286,7 @@ namespace Johnny.Portfolio.CoursePlayer.Core
             var ms = new MemoryStream(bytInput, 0, bytInput.Length);
             byte[] bytResult = null;
             string strResult = String.Empty;
-            var writeData = new byte[4096];
+            var writeData = new byte[6096];
             Stream steam = new InflaterInputStream(ms);
             try
             {
@@ -725,18 +725,18 @@ The following points need to be noted about the above code.
 
 ### 2.4 Project Structure
 The final structure of the portable project.
-![image](/public/tutorials/409/portable_project.png){:width="320px"}  
+![image](/public/tutorials/609/portable_project.png){:width="320px"}  
 
 ## 3. iOS Project
 ### 3.1 View Controllers
 1) Right click the Johnny.Portfolio.CoursePlayer.iOS' project, Add->New File. Select iOS->View Controller, set name to 'CourseListViewController'.
-![image](/public/tutorials/409/ios_viewcontroller.png){:width="700px"}  
+![image](/public/tutorials/609/ios_viewcontroller.png){:width="700px"}  
 2) Create another two view controllers named 'PlayerViewController' and 'SettingsViewController'
 3) We will not use the `xib` files, so just delete them.
 ### 3.2 UI Design with Xcode
 Right click on 'Main.storyboard', Open With -> Xcode Interface Builder.
 Create a Tab Bar controller, and bind three view controllers we created in Visual Studio.
-![image](/public/tutorials/409/ios_storyboard.png)  
+![image](/public/tutorials/609/ios_storyboard.png)  
 The second tab will be used as our player. Save the storyboard before closing it, return to Visual Studio.
 ### 3.3 Model Classes
 Create file `WBLineStyle.cs`. 'WBLineStyle' defines line color and width for drawing whiteboard. As we add reference to `UIKit` to use `UIColor`, it becomes platform specific(iOS), so we can't put this class to portable project.
@@ -1464,25 +1464,25 @@ The following points need to be noted about the above code.
 * Why use three timers? Actually, we just need only one timer, the slider timer. We could put the codes for drawing screenshot and whiteboard to the slider timer. However, by using three timer, the drawing task for screenshot and whiteboard can be divided and performance would be better.
 
 Open the storyboard in Xamarin, you will see the layout of `PlayerViewController`.
-![image](/public/tutorials/409/ios_storyboardxamarin.png)
+![image](/public/tutorials/609/ios_storyboardxamarin.png)
 
 ### 3.7 Project Structure
 The final structure of the iOS project.
-![image](/public/tutorials/409/ios_project.png){:width="320px"}  
+![image](/public/tutorials/609/ios_project.png){:width="320px"}  
 Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ### 3.8 Architecture
 Class diagram shows the design of this app based on Xamarin framework.
-![framework](/public/tutorials/409/framework.png)  
+![framework](/public/tutorials/609/framework.png)  
 
 ## 4. Testing
 In Visual Studio, click the arrow button(or Run->Start Without Debugging) to run the app in iOS Simulator.  
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The upper one is for screenshot and the lower one is for whiteboard.
-![image](/public/tutorials/409/homepage.png){:width="400px"}  
+![image](/public/tutorials/609/homepage.png){:width="400px"}  
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/tutorials/409/play.png){:width="400px"}  
+![image](/public/tutorials/609/play.png){:width="400px"}  
 You can drag the slider bar to move forward or backward.
-![image](/public/tutorials/409/drag.png){:width="400px"}  
+![image](/public/tutorials/609/drag.png){:width="400px"}  
 
 ## 5. Source Files
 * [Source files of Course Player(Xamarin) on Github](https://github.com/jojozhuang/course-player-xamarin)

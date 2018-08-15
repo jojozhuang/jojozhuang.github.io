@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Flux and Redux"
-index: 354
+index: 404
 category: reactjs
 image: reactjs.png
 date: 2017-05-04
@@ -31,7 +31,7 @@ The following diagram describes how data flows through the system.
 2. The dispatcher sends actions to every store.
 3. Stores send data to the views.
 
-![image](/public/tutorials/354/fluxdataflow.png){:width="700px"}
+![image](/public/tutorials/404/fluxdataflow.png){:width="700px"}
 
 ## 2. Redux
 ### 2.1 Flux Overview
