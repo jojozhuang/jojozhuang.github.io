@@ -5,7 +5,7 @@ title: "Building iOS App with Xcode"
 index: 602
 category: mobile
 image: mobiledev.png
-date: 2017-09-02
+date: 2018-01-02
 postdate: 2017-07-10
 tags: [iOS, Swift, Xcode]
 ---

@@ -5,7 +5,7 @@ title: "Calling Java Class from Javascript"
 index: 539
 category: java
 image: java.png
-date: 2018-03-09
+date: 2017-10-09
 postdate: 2017-10-12
 tags: [Rhino, Javascript, Java]
 ---

@@ -5,7 +5,7 @@ title: "Data Persistence with Hibernate"
 index: 536
 category: java
 image: java.png
-date: 2018-03-06
+date: 2017-10-06
 postdate: 2016-12-23
 tags: [Hibernate, ORM]
 ---

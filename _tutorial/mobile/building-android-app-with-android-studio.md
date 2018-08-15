@@ -5,7 +5,7 @@ title: "Building Android App with Android Studio"
 index: 604
 category: mobile
 image: mobiledev.png
-date: 2017-09-04
+date: 2018-01-04
 postdate: 2017-07-16
 tags: [Android, Android Studio, SQLite]
 ---

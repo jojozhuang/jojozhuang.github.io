@@ -5,7 +5,7 @@ title: "Backing up MySQL Database Hosted in Docker Container"
 index: 705
 category: docker
 image: docker.png
-date: 2018-06-05
+date: 2018-04-05
 postdate: 2017-10-16
 tags: [MySQL, Docker]
 ---

@@ -5,7 +5,7 @@ title: "Serving Static Website With Nginx In Docker"
 index: 706
 category: docker
 image: docker.png
-date: 2018-06-06
+date: 2018-04-06
 postdate: 2017-10-18
 tags: [Docker, Nginx]
 ---
