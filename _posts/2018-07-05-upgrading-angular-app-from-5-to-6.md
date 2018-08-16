@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Upgrade Angular App from 5 to 6[Draft]"
+title: "Upgrading Angular App from 5 to 6"
 date: 2018-07-05
 tags: [Angular]
 ---
@@ -9,6 +9,7 @@ tags: [Angular]
 > Upgrade Angular App from 5 to 6
 
 ## 1. Angular 5 Vs Angular 6
+Angular 6 was released on May 4th, 2018. That is 6 months after its predecessor's (Angular 5) release. The highlights of Angular 6 include the Angular Command Line Interface (CLI), The Component Development KIT (CDK) and the Angular Material package update.
 
 ## 2. Upgrade
 ### 2.1 Upgrade Angular CLI
