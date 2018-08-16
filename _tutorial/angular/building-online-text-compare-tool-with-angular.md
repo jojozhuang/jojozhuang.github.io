@@ -444,6 +444,7 @@ Change theme to 'Visual Studio Dark'.
 * [Source files of Text Compare on Github](https://github.com/jojozhuang/text-compare-angular)
 
 ## 6. Reference
+* [A Generic Text Comparison Tool Implementation with LCS Approach](https://dzone.com/articles/generic-text-comparison-tool)
 * [Microsoft Monaco Editor](https://microsoft.github.io/monaco-editor/)
 * [Monao Editor on GitHub](https://github.com/Microsoft/monaco-editor)
 * [Monaco Editor for Angular](https://github.com/atularen/ngx-monaco-editor)
