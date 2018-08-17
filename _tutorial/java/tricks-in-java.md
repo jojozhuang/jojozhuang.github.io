@@ -159,3 +159,42 @@ Notice, method `setToNull(Foo d)` won't work, object 'f' is still a non-null obj
 ### 4.2 Reference
 Search the same code in the page of below link, there is an diagram explains why.
 * [Is Java “pass-by-reference” or “pass-by-value”?](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)
+
+## 5. Convert Enum to String
+When using Enum, we probably encounter the situation that we need to convert it to String. We can call 'toString()' method.
+```java
+enum Color {
+  RED, GREEN, BLUE;
+}
+public static void main(String[] args)
+{
+  Color c1 = Color.RED;
+  String strColor = c1.toString();  // type cast
+  System.out.println(strColor);
+}
+```
+Better solution. Define the Enum type with String.
+```java
+public enum Color {
+   RED("RED"),
+   GREEN("GREEN"),
+   BLUE("BLUE");
+
+   private String name;
+   private Color (String name)
+   {
+       this.name = name;
+   }
+   public String getName()
+   {
+       return name;
+   }
+}
+
+public static void main(String[] args)
+{
+  String strColor = Color.RED.getName(); // no type cast
+  System.out.println(strColor);
+}
+```
+* [Best way to create enum of strings?](https://stackoverflow.com/questions/3978654/best-way-to-create-enum-of-strings)
