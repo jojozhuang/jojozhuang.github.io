@@ -59,6 +59,6 @@ collections:
   note:
     output: true
 
-exclude: ["_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml", "note_old.html", "favorite_old.html", "library.html", "tutorial2.html"]
+exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml", "note_old.html", "favorite_old.html", "library.html", "tutorial2.html"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
