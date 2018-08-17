@@ -1,44 +1,77 @@
 ---
 layout: default
 key: note
-title: Rong Zhuang's Notes
+note: list
+title: Rong Zhuang's Note
 categories:
   - name: Basic Knowledge
-    type: basic
-  - name: Programming Language
-    type: language
+    description: OS, Database
+    type: basis
+  - name: Programming
+    description: Java, Javascript
+    type: programming
   - name: Tools
+    description: IDE, Webpack
     type: tools
   - name: Architecture
+    description: TOGAF
     type: architecture
-  - name: DataStructure and Algorithm
+  - name: Data Structure and Algorithm
+    description: Data Structure, Algorithm
     type: dsa
+  - name: Others
+    description: Japanese
+    type: others
 ---
-<div style="background:transparent !important" class="jumbotron">
-  <div class="container">
+<div class="container">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-      <div class="container">
-          <div class="row">
-              <h2>{{ page.title }}</h2>
-              {% for category in page.categories %}
-                  <div class="panel panel-info">
-                      <div class="panel-heading">
-                          <h3 class="panel-title">{{ category.name }}</h3>
-                      </div>
-                      <ul class="list-group">
-                          {% assign list = site.note | where: "category", category.type | sort: 'index' %}
-                          {% for note in list %}
-                              <a href="{{ note.url }}" title="{{ note.title }}" class="list-group-item">
-                                  <div>{{ note.title }}</div>
-                              </a>
-                          {% endfor %}
-                      </ul>
-                  </div>
-              {% endfor %}
+    <div class="row">
+        {% assign tutorials = site.note | sort: 'index' %}
+        {% for category in page.categories %}
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
           </div>
-      </div>
+        </div>
+        <dl class="dl-unsur">
+          {% assign list = tutorials | where: 'category', category.type %}
+          {% for tutorial in list %}
+          <dd>
+          <div class="media">
+            <div class="media-left">
+              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}">
+                <img src="../public/images/{{ tutorial.image }}" class="media-object" style="width:80px">
+              </a>
+            </div>
+            <div class="media-body">
+              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div>{{ tutorial.index }}. {{ tutorial.title }}</div></a>
+              {{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
+              <div class="pull-left">
+                  <ul class="list-inline list-unstyled">
+                    <li><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
+                    <li>|</li>
+                    <li><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
+                    <li>|</li>
+                    <li>
+                      <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
+                    </li>
+                    <li>|</li>
+                    <li>
+                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                      <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
+                      <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
+                      <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          </dd>
+          {% endfor %}
+        </dl>
+        {% endfor %}
+    </div>
     </div>
     <div class="col-sm-1"></div>
-  </div>
 </div>

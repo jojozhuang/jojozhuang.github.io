@@ -34,12 +34,15 @@ navlist:
   - key: favorite
     url: /favorite
     visible: true
+  - key: note
+    url: /note
+    visible: true
   - key: feed
     url: /blog/atom.xml"
     visible: false
   - key: more
     url: /#
-    visible: true
+    visible: false
     subkeys: note
     sublist:
       - key: note
