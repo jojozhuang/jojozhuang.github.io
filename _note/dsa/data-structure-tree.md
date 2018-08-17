@@ -2,15 +2,17 @@
 layout: note
 key: note
 title: "Data Structure - Tree"
-index: 505
+index: 305
 category: dsa
 image: /note/dsa.png
-date: 2016-05-05
-postdate: 2016-05-05
-tags: [BST]
+date: 2016-03-05
+postdate: 2016-03-05
+tags: [Tree, BST]
 ---
 
-> A tree is a data structure composed of nodes.The tree cannot contain cycles. The nodes may or may not be in a particular order, they could have any data type as values, and they may or may not have links back to their parent nodes.
+> Introduce what is Tree, how to construct it and how to use it.
+
+A tree is a data structure composed of nodes.The tree cannot contain cycles. The nodes may or may not be in a particular order, they could have any data type as values, and they may or may not have links back to their parent nodes.
 
 ## 1. Definition of Tree
 * Each tree has a root node.

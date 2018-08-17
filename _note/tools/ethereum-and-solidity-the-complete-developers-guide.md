@@ -2,13 +2,15 @@
 layout: note
 key: note
 title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
-index: 302
+index: 502
 category: tools
 image: note/tools.png
-date: 2016-03-02
-postdate: 2016-03-02
-tags: [BST]
+date: 2017-05-02
+postdate: 2017-05-02
+tags: [Block Chain, Digital Currency, Ethereum]
 ---
+
+> Learn Block Chain, Digital Currency and Ethereum.
 
 Course Link on Udemy:
 https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide

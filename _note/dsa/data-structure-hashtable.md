@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "Data Structure - HashTable"
-index: 506
+index: 306
 category: dsa
 image: note/dsa.png
-date: 2016-05-06
-postdate: 2016-05-06
-tags: [BST]
+date: 2016-03-06
+postdate: 2016-03-06
+tags: [Hash, HashMap, HashTable]
 ---
 
 > Implement a generic HashTable/HashMap with Separate Chaining technique by using linked list.

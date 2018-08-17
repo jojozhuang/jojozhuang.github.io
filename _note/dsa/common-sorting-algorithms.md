@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "Common Sorting Algorithms"
-index: 521
+index: 321
 category: dsa
 image: note/dsa.png
-date: 2016-05-21
-postdate: 2016-05-21
-tags: [BST]
+date: 2016-03-21
+postdate: 2016-03-21
+tags: [Sorting]
 ---
 
 > All of the common sorting algorithms.

@@ -7,7 +7,7 @@ category: basis
 image: note/cs.png
 date: 2016-01-10
 postdate: 2016-01-10
-tags: [BST]
+tags: [System Design]
 ---
 
 > Best Practice and Common Questions for System Design.

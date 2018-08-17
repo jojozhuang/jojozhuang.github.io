@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "Data Structure - Graph"
-index: 508
+index: 308
 category: dsa
 image: note/dsa.png
-date: 2016-05-08
-postdate: 2016-05-08
-tags: [BST]
+date: 2016-03-08
+postdate: 2016-03-08
+tags: [Graph]
 ---
 
 > A graph is simply a collection of nodes with edges between (some of) them.

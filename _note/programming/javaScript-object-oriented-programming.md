@@ -7,10 +7,10 @@ category: programming
 image: /note/programming.png
 date: 2016-02-12
 postdate: 2016-02-12
-tags: [BST]
+tags: [Javascript OO]
 ---
 
-> Nodes for javascript
+> Nodts for javascript
 
 
 JavaScript basics

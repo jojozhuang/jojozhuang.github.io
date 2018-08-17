@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "Sliding Window Template To Solve All Substring Problems(Draft)"
-index: 522
+index: 322
 category: dsa
 image: /note/dsa.png
-date: 2016-05-22
-postdate: 2016-05-22
-tags: [BST]
+date: 2016-03-22
+postdate: 2016-03-22
+tags: [Sliding Window]
 ---
 
 > Useful tricks for algorithm, Java.

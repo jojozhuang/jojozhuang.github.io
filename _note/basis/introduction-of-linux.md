@@ -7,19 +7,18 @@ category: basis
 image: note/cs.png
 date: 2016-01-01
 postdate: 2016-01-01
-tags: [BST]
+tags: [Linux, Bash]
 ---
 
-> Book: Introduction to Linux - A beginner's Guide  
+> Notes of Book: Introduction to Linux - A beginner's Guide  
+
+Author: Machtelt Garrels  
+![image](/public/notes/introduction-to-linux/cover.jpg){:width="300px"}  
 
 Summary:
 * Linux is an implementation of UNIX.
 * The Linux operating system is written in the C programming language.
 * Linux uses GNU tools, a set of freely available standard tools for handling the operating system.
-
-
-Author: Machtelt Garrels  
-![image](/public/notes/introduction-to-linux/cover.jpg){:width="300px"}  
 
 ## 1. What is Linux?
 Terminology:

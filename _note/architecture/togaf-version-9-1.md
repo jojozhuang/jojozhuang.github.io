@@ -5,12 +5,12 @@ title: "TOGAF Version 9.1(Draft)"
 index: 401
 category: architecture
 image: /note/note.png
-date: 2016-04-01
-postdate: 2016-04-01
-tags: [BST]
+date: 2017-04-01
+postdate: 2017-04-01
+tags: [TOGAF]
 ---
 
-> The Open Group Architecture Framework (TOGAF)
+> Notes of Book: The Open Group Architecture Framework (TOGAF)
 
 http://pubs.opengroup.org/architecture/togaf9-doc/arch/
 

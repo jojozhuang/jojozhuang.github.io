@@ -7,7 +7,7 @@ category: programming
 image: /note/programming.png
 date: 2016-02-06
 postdate: 2016-02-06
-tags: [BST]
+tags: [Interview]
 ---
 
 > Interview Questions

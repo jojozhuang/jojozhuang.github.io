@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Eclipse IDE Tutorial (Vogella)"
-index: 301
+index: 501
 category: tools
 image: note/tools.png
-date: 2016-03-01
-postdate: 2016-03-01
-tags: [BST]
+date: 2017-05-01
+postdate: 2017-05-01
+tags: [Eclipse]
 ---
 
-> Book: Eclipse IDE  
+> Notes of Book: Eclipse IDE  
 
 
 Author: Lars Vogel

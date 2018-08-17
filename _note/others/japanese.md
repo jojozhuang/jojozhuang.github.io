@@ -1,41 +1,45 @@
 ---
 layout: note
 key: note
-title: "Japanese(Draft)"
-index: 203
+title: "Japanese"
+index: 901
 category: others
 image: /note/note.png
-date: 2016-09-01
-postdate: 2016-09-01
-tags: [BST]
+date: 2017-09-01
+postdate: 2017-09-01
+tags: [Japanese]
 ---
 
-> Japanese, Duolingo APP
+> Japanese, Duolingo App
 
-Two days before yesterday is 一昨々日 sakiototoi
-The day before yesterday is 一昨日 ototoi
-Yesterday is 昨日　kinô
-Today is 今日　kyô
-Tomorrow is 明日 asu or ashita
-The day after tomorrow is 明後日 asatte
-Two days after tomorrow is 明々後日 shiasatte
-Three days after tomorrow is 弥の明後日　yanoasatte
+## 1. Day
 
+English                   | Japanese | Typing
+--------------------------|----------|----------------
+Two days before yesterday | 一昨々日  | sakiototoi
+The day before yesterday  | 一昨日    | ototoi
+Yesterday                 | 昨日      | kinô
+Today                     | 今日      | kyô
+Tomorrow                  | 明日      | asu or ashita
+The day after tomorrow    | 明後日    | asatte
+Two days after tomorrow   | 明々後日  | shiasatte
+Three days after tomorrow | 弥の明後日 | yanoasatte
 
+## 2. Sentences
 What did you do the day before yesterday?  
 おとといは何をしましたか？
 
 I did not work the day before yesterday.  
 おとといはしごとをしませんでした。
 
-I ate breakfast yesterday.
+I ate breakfast yesterday.  
 きのうはあさごはんを食べました。
 
-What will you do tomorrow?
+What will you do tomorrow?  
 あしたは何をしますか？
 
-What will you do the day after tomorrow?
+What will you do the day after tomorrow?  
 あさっては何をしますか？
 
-I'm going to buy a desk the day after tomorrow.
+I'm going to buy a desk the day after tomorrow.  
 あさってはつくえをかいます。

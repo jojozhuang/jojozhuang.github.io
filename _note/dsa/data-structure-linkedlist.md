@@ -2,15 +2,17 @@
 layout: note
 key: note
 title: "Data Structure - Linked List"
-index: 502
+index: 302
 category: dsa
 image: note/dsa.png
-date: 2016-05-02
-postdate: 2016-05-02
-tags: [BST]
+date: 2016-03-02
+postdate: 2016-03-02
+tags: [Linked List]
 ---
 
-> A linked list is represented by a sequence of nodes. Each node contains a link to another node. Linked list is one of the most-used data structure.
+> Introduce what is linked list, how to construct it and how to use it.
+
+A linked list is represented by a sequence of nodes. Each node contains a link to another node. Linked list is one of the most-used data structure.
 
 ## 1. Types of Linked List
 ### 1.1 Singly Linked List

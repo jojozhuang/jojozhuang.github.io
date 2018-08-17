@@ -2,15 +2,17 @@
 layout: note
 key: note
 title: "Data Structure - Queue"
-index: 504
+index: 304
 category: dsa
 image: /note/dsa.png
-date: 2016-05-04
-postdate: 2016-05-04
-tags: [BST]
+date: 2016-03-04
+postdate: 2016-03-04
+tags: [Queue]
 ---
 
-> A queue is an object or more specifically an abstract data structure(ADT) that follows FIFO (first-in first-out) rule.
+> Introduce what is Queue, how to construct it and how to use it.
+
+A queue is an object or more specifically an abstract data structure(ADT) that follows FIFO (first-in first-out) rule.
 
 ## 1. Introduction
 ### 1.1 Real-life Example

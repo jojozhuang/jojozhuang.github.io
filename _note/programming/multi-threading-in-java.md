@@ -7,5 +7,7 @@ category: programming
 image: /note/programming.png
 date: 2016-02-03
 postdate: 2016-02-03
-tags: [BST]
+tags: [Multi Threading]
 ---
+
+> Create concurrent application with threadings.

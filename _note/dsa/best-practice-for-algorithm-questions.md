@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "Best Practice for Algorithm Questions"
-index: 525
+index: 325
 category: dsa
 image: /note/dsa.png
-date: 2016-05-25
-postdate: 2016-05-25
-tags: [BST]
+date: 2016-03-25
+postdate: 2016-03-25
+tags: [Algorithm]
 ---
 
 > Best practices

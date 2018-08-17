@@ -7,7 +7,7 @@ category: programming
 image: /note/programming.png
 date: 2016-02-11
 postdate: 2016-02-11
-tags: [BST]
+tags: [Javascript]
 ---
 
 > Basic knowledge of JavaScript.

@@ -2,11 +2,14 @@
 layout: note
 key: note
 title: "Test JavaScript with Mocha(Draft)"
-index: 304
+index: 504
 category: tools
 image: note/tools.png
-date: 2016-03-04
-postdate: 2016-03-04
-tags: [BST]
+date: 2017-05-04
+postdate: 2017-05-04
+tags: [Mocha]
 ---
+
+> Write automation test cases with Mocha for javascript applications.
+
 https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e
