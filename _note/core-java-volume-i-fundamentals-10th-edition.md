@@ -144,9 +144,9 @@ The usual arithmetic operators +, -, \*, / are used in Java for addition, subtra
 ```java
 public static strictfp void main(String[] args)
 ```
-Then all instructions inside the main method will use strict floating-point computa- tions. If you tag a class as strictfp, then all of its methods must use strict floating-point computations.
+Then all instructions inside the main method will use strict floating-point computations. If you tag a class as strictfp, then all of its methods must use strict floating-point computations.
 
-The methods in the `Math` class use the routines in the computer’s floating- point unit for fastest performance. If completely predictable results are more important than performance, use the `StrictMath` class instead.
+The methods in the `Math` class use the routines in the computer’s floating point unit for fastest performance. If completely predictable results are more important than performance, use the `StrictMath` class instead.
 
 #### 3.5.3 Casts
 ```java
@@ -166,7 +166,7 @@ int b=2*n++; //now b is 14, n is 8
 ```java
 String greeting = "Hello";
 int n = greeting.length(); // is 5.
-int cpCount = greeting.codePointCount(0, greeting.length());
+int cpCount = greeting.codePointCount(0, greeting.length()); // is 5.
 ```
 
 StringBuilder, StringBuffer  
