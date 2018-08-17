@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "Data Structure - Heap"
-index: 507
+index: 307
 category: dsa
 image: note/dsa.png
-date: 2016-05-07
-postdate: 2016-05-07
-tags: [BST]
+date: 2016-03-07
+postdate: 2016-03-07
+tags: [Heap]
 ---
 
 > Implement generic Max Heap and Min Heap with array.

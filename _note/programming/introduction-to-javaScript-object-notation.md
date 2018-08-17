@@ -7,10 +7,10 @@ category: programming
 image: /note/programming.png
 date: 2016-02-14
 postdate: 2016-02-14
-tags: [BST]
+tags: [JSON]
 ---
 
-> Book: Introduction to JavaScript Object Notation  
+> Notes of Book: Introduction to JavaScript Object Notation  
 
 ## 1. Co
 

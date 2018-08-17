@@ -2,15 +2,17 @@
 layout: note
 key: note
 title: "Data Structure - Trie"
-index: 509
+index: 309
 category: dsa
 image: /note/dsa.png
-date: 2016-05-09
-postdate: 2016-05-09
-tags: [BST]
+date: 2016-03-09
+postdate: 2016-03-09
+tags: [Trie]
 ---
 
-> A Trie (pronounced try) or Prefix Tree is an ordered tree in which characters are stored at each node. Each path down the tree may
+> Introduce to use Trie for word search.
+
+A Trie (pronounced try) or Prefix Tree is an ordered tree in which characters are stored at each node. Each path down the tree may
 represent a word.
 
 ## 1. Usage of Trie

@@ -2,12 +2,12 @@
 layout: note
 key: note
 title: "SurviveJS - Webpack(Online Doc)"
-index: 303
+index: 503
 category: tools
 image: note/tools.png
-date: 2016-03-03
-postdate: 2016-03-03
-tags: [BST]
+date: 2017-05-03
+postdate: 2017-05-03
+tags: [Webpack]
 ---
 
 > Comprehensive introduction of [Webpack](https://webpack.js.org/).

@@ -7,10 +7,10 @@ category: programming
 image: /note/programming.png
 date: 2016-02-01
 postdate: 2016-02-01
-tags: [BST]
+tags: [Java]
 ---
 
-> Book: Core Java Volume I--Fundamentals (10th Edition)  
+> Notes of Book: Core Java Volume I--Fundamentals (10th Edition)  
 
 ## 1. An Introduction to Java
 The Java “White Paper” Buzzwords

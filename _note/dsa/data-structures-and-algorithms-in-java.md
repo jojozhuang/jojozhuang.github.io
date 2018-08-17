@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Data Structures and Algorithms in Java"
-index: 501
+index: 301
 category: dsa
 image: /note/dsa.png
-date: 2016-05-01
-postdate: 2016-05-01
-tags: [BST]
+date: 2016-03-01
+postdate: 2016-03-01
+tags: [Data Structure, Algorithm]
 ---
 
-> Book: Data Structures and Algorithms in Java  
+> Notes of Book: Data Structures and Algorithms in Java  
 
 Author: Robert Lafore
 ![image](/public/notes/data-structures-and-algorithms-in-java/cover.jpg){:width="300px"}  

@@ -2,15 +2,17 @@
 layout: note
 key: note
 title: "Data Structure - Stack"
-index: 503
+index: 303
 category: dsa
 image: /note/dsa.png
-date: 2016-05-03
-postdate: 2016-05-03
-tags: [BST]
+date: 2016-03-03
+postdate: 2016-03-03
+tags: [Stack]
 ---
 
-> Stack is an abstract data type that serves as a collection of elements, with two principal operations:
+> Introduce what is Stack, how to construct it and how to use it.
+
+Stack is an abstract data type that serves as a collection of elements, with two principal operations:
 * push, which adds an element to the collection, and
 * pop, which removes the most recently added element that was not yet removed.
 
