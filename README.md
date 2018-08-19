@@ -2,10 +2,12 @@
 My personal website hosted on Github, built with Jekyll, Liquid and MarkDown.
 
 # Function
-It demonstrates my software portfolios with detailed explanation and live demos. I also post blogs and tutorials onto it.
+Show my software portfolios with detailed explanation and live demos. Share my knowledges through blog and tutorial.
 
 <kbd>![image](/public/images/github_portfolio1.png)</kbd>
+
 <kbd>![image](/public/images/github_portfolio2.png)</kbd>
+
 <kbd>![image](/public/images/github_tutorial.png)</kbd>
 
 # Demo
@@ -22,7 +24,7 @@ bundle exec jekyll serve --port 12001
 Access http://localhost:12001/ in web browser, enjoy!
 
 # Deployment
-Follow tutorial [CViewing Jekyll Build Error with Travis CI](https://jojozhuang.github.io/tutorial/githubpages/viewing-jekyll-build-error-with-travisci/) to continuously deploy this personal website to GitHub Pages.
+Follow tutorial [Viewing Jekyll Build Error with Travis CI](https://jojozhuang.github.io/tutorial/githubpages/viewing-jekyll-build-error-with-travisci/) to continuously deploy this personal website to GitHub Pages.
 
 # Tutorial
 Read tutorial [Setting up Jekyll for GitHub Pages on Ubuntu and MacOS](https://jojozhuang.github.io/tutorial/githubpages/setting-up-jekyll-for-github-pages-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages..
