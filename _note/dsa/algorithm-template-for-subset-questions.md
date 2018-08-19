@@ -44,7 +44,7 @@ public List<List<Integer>> subsetsThree(int[] nums) {
         return res;
     }
 
-    Arrays.sort(nums);// not necessary, just for unit test
+    Arrays.sort(nums); // not necessary
 
     // natural idea
     res.add(new ArrayList<Integer>());                  // res =  [[]]
@@ -64,7 +64,7 @@ public List<List<Integer>> subsetsThree(int[] nums) {
         }
     }
 
-    // optimize the first loop, make it use the same pattern
+    // the first loop is optimized, it has the same pattern as the second and third loop
     res.clear();
     List<Integer> list = new ArrayList<Integer>();      // list = []
     res.add(new ArrayList<>(list));                     // res =  [[]]
@@ -89,11 +89,11 @@ public List<List<Integer>> subsetsThree(int[] nums) {
 ```
 The following points needs to be noticed for the above codes.
 * This solution has two approaches, both can handle the scenario that 'nums' has equal or less than 3 elements.
-* The first approach comes naturally. For array, we will definitely try to use for loop to iterate it. And we want to get the subsets from small to large and from few to many. For each element, we need to create a loop. The difference is, we are moving forward. The inner loop starts from 'index + 1' of the outer loop. Notice, we need to remove the last element when return to the outer loop.
+* The first approach comes naturally. To process array data, we will definitely try to use 'for' loop to iterate it. And we want to get the subsets from small to large and from few to many. For each element, we need to create a new iteration. The difference is, we are moving forward. The inner loop starts from 'index + 1' of the outer loop. Here, we have three loops. Notice, we need to remove the last element when return to the outer loop.
 * The second approach improves the first loop. The 'list' variable is moved out the first loop. It makes easy to see the pattern now, that is, for each loop, add the current element to list, then add this list to final 'res' list. And after return back to the outer loop, remove the last element in the loop.
-* The inline comments assume nums=[1,2,3] and you can see the value of 'list' and 'res' in each step.
+* The inline comments assume nums=[1,2,3] and you can see the value of 'list' and 'res' in each step. The sample just shows the case when 'i=0'.
 
-Both approaches give the following output. Notice, the output is in sequence.
+Both approaches give the following output. Notice, the output is in sequence, based on the order of the elements in the 'nums' array.
 ```sh
 // []
 // [1], [1,2], [1,2,3],[1,3]
@@ -102,7 +102,7 @@ Both approaches give the following output. Notice, the output is in sequence.
 ```
 
 ### 1.3 Template
-Now, we see the pattern. For each loop, we have similar codes.
+Now, we see the pattern. For each loop, we have similar codes as follows.
 ```java
 res.add(new ArrayList<>(list));
 for (int k = j + 1; k < nums.length; k++) {
@@ -133,7 +133,7 @@ public List<List<Integer>> subsets(int[] nums) {
         return res;
     }
 
-    Arrays.sort(nums);// not necessary, just for unit test
+    Arrays.sort(nums);// not necessary
 
     List<Integer> list = new ArrayList<Integer>();
     helper(nums, 0, list, res);
@@ -150,6 +150,7 @@ private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>>
     }
 }
 ```
+* Notice, the sort for 'nums' array is not required, as all elements of it are unique.
 
 ## 2. Similar Question
 ### 2.1 Subset II
@@ -172,7 +173,7 @@ Output:
 If we use the solution for subset, we will get the following outputs.
 ```sh
 // []
-// [1], [1,2], [1,2,2],[1,2]
+// [1], [1,2], [1,2,2], [1,2]
 // [2], [2,2]
 // [2]
 ```
@@ -182,16 +183,28 @@ However, the expected output should not contain any duplicated elements.
 // [1], [1,2], [1,2,2]
 // [2], [2,2]
 ```
-We need to remove '[1,2]' and '[2]'. At the same level iteration, we should check if duplicated value found. '[1,2]' is in the second loop, '[2]' is in the first loop.
+We need to remove '[1,2]' and the last '[2]'. At the same level iteration, we should check if duplicated value found. Suppose, we are using the previous 'subsetsThree()' method, then '[1,2]' is in the second loop(i = 0; k = 2), '[2]' is in the first loop (i = 2).
 
 ### 2.3 Solution
-Just add check before add element to list. If the current element has the same value with the previous one, ignore it.
+Just check whether the current element has the same value with the previous one before adding it to the list. Notice, this approach works only if the 'nums' array is `sorted`.
 ```java
+public List<List<Integer>> subsetsWithDup(int[] nums) {
+    List<List<Integer>> res = new ArrayList<List<Integer>>();
+    if (nums == null) {
+        return res;
+    }
+
+    Arrays.sort(nums); // must sort
+
+    List<Integer> list = new ArrayList<Integer>();
+    helper(nums, 0, list, res);
+    return res;
+}
 private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>> res) {
     res.add(new ArrayList<Integer>(list));
 
     for (int i = pos; i < nums.length; i++) {
-        if (i > 0 && i != pos && nums[i] == nums[i-1]){
+        if (i > pos && nums[i] == nums[i-1]) {
             continue;
         }
         list.add(nums[i]);
