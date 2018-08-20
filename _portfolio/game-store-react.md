@@ -9,10 +9,14 @@ excerpt: A web app to manage products, built with React and Redux.
 category: web
 ---
 
-> A web app to manage products, built with React and Redux.
+> A web app for managing products, built with React/Redux and RESTful API.
 
-## 1. ReactJS
-[ReactJS](https://reactjs.org/) is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.
+## 1. Function
+This application is used to manage products. It implements all CRUD operations. Below are the available features.
+* Product List - Show all products in a list with Edit and Delete button.
+* Product Management - Create, update and delete product.
+* Image Upload - Set image for product and upload to server.
+* Dynamic Data - All data is fetched from backend RESTful services.
 
 ## 2. Demo
 Four available demos:

@@ -9,10 +9,14 @@ excerpt: A web app to manage products, built with Angular.
 category: web
 ---
 
-> A web app to manage products, built with Angular.
+> A web app for managing products, built with Angular and RESTful API.
 
-## 1. Angular
-[Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc.
+## 1. Function
+This application is used to manage products. It implements all CRUD operations. Below are the available features.
+* Product List - Show all products in a list with Edit and Delete button.
+* Product Management - Create, update and delete product.
+* Image Upload - Set image for product and upload to server.
+* Dynamic Data - All data is fetched from backend RESTful services.
 
 ## 2. Demo
 Two available demos:
