@@ -12,9 +12,8 @@ category: dotnet
 > An online eCommerce web store, built with ASP.NET MVC in C#.
 
 ## 1. Introduction
-This website has all the required functions as an eCommerce web store. 
 ### 1.1 Function
-Here are the available features.
+This website has all the required functions as an eCommerce web store. Here are the available features.
 * Membership: Regular User, Advanced User, Admin User.
 * User Authentication - Register, Login, User Profile, Reset Password, Role, etc.
 * Product Management - Create, Update, Delete product.
