@@ -13,14 +13,33 @@ tags: [MEAN, Angular, Express, MongoDB]
 > Build online judge application with MEAN stack(MongoDB, Express, Angular and Node.js).
 
 ## 1. Online Judge
+### 1.1 Introduction
 This online judge application is used to practice programming to solve algorithm questions. It can compile and execute code, and test them with pre-constructed data. The output of the code will be captured by the system, and compared with the standard output. The system will then return the result.
-
-This app contains one RESTful API server and another client component built with Angular. Main functions as follows.
-* User Authentication - Register, Login, Profile, Change Password, etc.
+### 1.2 Functions
+The implemented functions are listed as follows.
+* User Authentication - Based Token, Register, Login, Auto Login, User Profile, Reset Password, etc.
 * User Management - Create, Update, Delete user.
 * Question Management - Create, Update, Delete question.
-* Database Management - Import and Export data, including users, questions and submissions.
-* Solution Submission - Accept user's solution submissions for questions, execute them and return result.
+* Database Management - Import and Export data with csv files for users, questions and submissions.
+* Judging System - Judging Engine, Solution Template, Submission History, Multi-programming language support.
+* UI - RichTextEditor, Code Editor, Progress Bar, Loading Image are applied.
+
+The following functions are under development.
+* Contest - Generate contest by randomly selecting four questions from the question library.
+* Collaborative code editor - Different users can work on the same solution simultaneously.
+
+### 1.3 Technologies
+The Server is built with Express and MongoDB.
+* RESTful API: express, express router, mongoose, cors
+* Logging: morgan, winston
+* User Authentication: jsonwebtoken, passport, cookie-parser, express-jwt
+* Import/Export Data: multer, csv-express, fast-csv
+
+The Client is built with Angular and 3rd-party libraries.
+* CSS and Icon: bootstrap, font-awesome
+* Rich Text Editor: ngx-editor
+* Code Editor: ngx-monaco-editor
+* Progress Bar: ngx-progressbar
 
 ## 2. Judging System
 This is the core component of this online judge application.
@@ -28,6 +47,11 @@ This is the core component of this online judge application.
 For each question, we have multiple language specified solution. Currently, this online judge application supports three languages: Java, Javascript and Python. And for each solution, there is a test file to verify user's submitted solution. For each question, there is one particular test case file.
 ### 2.2 Judging Engine
 Judging engine contains several 'runner's for different languages. It automatically detects what language of the solution submitted by user, and call specific runner to execute the solution against the pre-defined test cases.
+### 2.3 Dependency
+To compile and run Java, Javascript and Python, the following software/tools need to be installed.
+* JDK (jdk 7 or above)
+* Node.Js (node 6 or above)
+* Python(2 or 3)
 
 ## 3. Server
 ### 3.1 Express
