@@ -63,7 +63,7 @@ Most of the data are stored in MongoDB. The database URL is configurable. You ca
 
 ## 4. Client
 ### 4.1 Angular
-Use Angular as the front end stack to build the UI web pages. With the help of third party libraries, this app can
+Use Angular as the front end stack to build the UI web pages.
 ### 4.2 Controls
 Progress Bar, Loading icon, WYSIWYG editor, code editor, etc.
 
