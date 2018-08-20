@@ -1,14 +1,19 @@
 # jojozhuang.github.io
 My personal website hosted on Github, built with Jekyll, Liquid and MarkDown.
 
-# Function
-Show my software portfolios with detailed explanation and live demos. Share my knowledges through blog and tutorial.
-
 <kbd>![image](/public/images/github_portfolio1.png)</kbd>
 
 <kbd>![image](/public/images/github_portfolio2.png)</kbd>
 
 <kbd>![image](/public/images/github_tutorial.png)</kbd>
+
+# Function
+This website is used to demonstrate my portfolios and share my knowledge about software development through tutorials.
+* Profile - Introduction of myself.
+* Portfolio - My 15+ Software portfolios with detailed explanation and live demos
+* Tutorial - 160+ Tutorials for learning computer science and software development, including, mobile dev, web dev, etc.
+* Blog - My technical Blogs.
+* Favorite - Popular open-source projects and useful online tools for software development.
 
 # Demo
 Two available demos:
