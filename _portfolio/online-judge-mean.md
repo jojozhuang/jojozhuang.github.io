@@ -12,12 +12,13 @@ category: web
 > A web application for online judge, built with MEAN stack(MongoDB, Express, Angular and Node.js)
 
 ## 1. Online Judge
-This application is used to solve algorithm questions. You can submit the solution to see if it passes all test cases. Three programming languages(Java, Javascript and Python) are currently supported. Below are the available features.
+This application is used to solve algorithm questions. You can submit the solution to see if it passes all test cases. Below are the available features.
 * Token Based Authentication - Register, Login, Auto Login, User Profile, Reset Password, etc.
 * User Management - Create, Update, Delete user.
 * Question Management - Create, Update, Delete question.
 * Database Management - Import and Export data with csv files for users, questions and submissions.
 * Judging System - Judging Engine, Solution Template, Submission History, Multi-programming language support.
+* Programming Languages - Three languages are currently supported, including Java, Javascript and Python.
 * UI - RichTextEditor, Code Editor, Progress Bar, Loading Image are applied.
 
 ## 2. Demo

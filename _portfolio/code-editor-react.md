@@ -12,12 +12,10 @@ category: web
 > A full stack web application for online programming, built with React and Express.
 
 ## 1. Code Editor
-Use this online code editor to write programming code, compile and execute to see the result. Five languages are supported:
-* C
-* C++
-* Java
-* JavaScript
-* Python
+This application is used for online coding. After selecting the programming language, you can start to write code. Below are the highlighted features.
+* Five programming languages are supported, including c, c++, java, javascript and python.
+* Syntax highlighting for different languages.
+* Compilation and execution are supported. The proper result or error message will be displayed.
 
 ## 2. Demo
 Two available demos:
