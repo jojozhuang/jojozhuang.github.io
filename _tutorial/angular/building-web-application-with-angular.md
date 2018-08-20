@@ -16,6 +16,7 @@ tags: [Angular]
 Previously, I introduced how to use JSP and MySQL/MongoDB to build web application to manage products. In this tutorial, we will learn how to use Angular and RESTful web service to build such web application.
 
 ## 2. Angular Project
+[Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc.
 ### 2.1 Creating New Project
 In terminal, create new angular app named 'game-store-angular'.
 ```sh
