@@ -12,25 +12,34 @@ category: dotnet
 > An online eCommerce web store, built with ASP.NET MVC in C#.
 
 ## 1. Introduction
-### 1.1 Function Features
-* Pages: Home, Consoles, Accessories, Games
-* General Functions: View Product, Search Product
-* Membership: Register, Login, Logout
+This website has all the required functions as an eCommerce web store. 
+### 1.1 Function
+Here are the available features.
+* Membership: Regular User, Advanced User, Admin User.
+* User Authentication - Register, Login, User Profile, Reset Password, Role, etc.
+* Product Management - Create, Update, Delete product.
+* User Management - Create, Update, Delete user.
+* Procure System - Shopping Cart, Order, Payment, Shipping.
+* Website Management - Dashboard.
+* General Function - Product Search.
 
-### 1.2 Technical Features
-* C\#, ASP.NET MVC, WebAPI
-* Azure Deployment
+### 1.2 Technology
+The frameworks and libraries used for this app are listed below.
+* C#, ASP.NET MVC, WebAPI
 * Entity Framework (Code First)
 * SQL Server for persistence
-* ASP.Net Identity: User and Role, Admin Area
-* Authentication and Authorization
-* Cache: Output Caching, ASP.NET Cache
 * Bootstrap, jQuery
 * Ninject for Dependency Injection
+* ASP.Net Identity: User and Role, Admin Area
+* Authentication and Authorization
 * Third-party Payment Gateway
+* Cache: Output Caching, ASP.NET Cache
+* Azure Deployment
 
-### 1.3 Live Demo on Azure:
-[http://ect583final.azurewebsites.net/](http://ect583final.azurewebsites.net/)  (The website would be slow when you access it for the first time. Be patient!)
+### 1.3 Demo:
+Live Demo on Azure: <a href="http://ect583final.azurewebsites.net/" target="\_blank">http://ect583final.azurewebsites.net/</a>
+
+*Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 Try it out on Azure with the following accounts:
 * admin@gamestore.com / admin
