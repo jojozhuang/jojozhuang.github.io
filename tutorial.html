@@ -58,7 +58,7 @@ categories:
             </div>
             <div class="media-body">
               <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div>{{ tutorial.index }}. {{ tutorial.title }}</div></a>
-              {{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
+              <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
               <div class="pull-left">
                   <ul class="list-inline list-unstyled">
                     <li><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>

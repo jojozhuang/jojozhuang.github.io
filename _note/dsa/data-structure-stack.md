@@ -201,7 +201,7 @@ public class ArrayStack {
 import java.util.Stack;
 
 public class StackSorting {
-	public static Stack<Integer> sort(Stack<Integer> stack) {
+    public static Stack<Integer> sort(Stack<Integer> stack) {
         if (stack == null || stack.isEmpty() || stack.size() == 1) {
             return stack;
         }
