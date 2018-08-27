@@ -28,3 +28,7 @@ tags: [Web, Architect]
 * [Facebook 面试记](http://xiaohanyu.me/posts/2017-05-20-facebook-interview/)
 * [北美求职记（二）：Google & Facebook](https://blog.yxwang.me/2012/12/job-hunting-in-usa-2/)
 * [北美求职记（三）：Hulu & Twitter](https://blog.yxwang.me/2012/12/job-hunting-in-usa-3/)
+
+## 4. Java
+* [what-is-a-java-classloader](https://stackoverflow.com/questions/2424604/what-is-a-java-classloader)
+* [Java - Multithreading](https://www.tutorialspoint.com/java/java_multithreading.htm)
