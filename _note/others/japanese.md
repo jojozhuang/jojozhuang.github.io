@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Japanese"
-index: 901
+index: 902
 category: others
 image: /note/note.png
-date: 2017-09-01
-postdate: 2017-09-01
+date: 2017-09-02
+postdate: 2017-09-02
 tags: [Japanese]
 ---
 

@@ -45,6 +45,9 @@
 .dl-unsur dd > div > div > a > div {
     font-size:18px;
 }
-.dl-unsur dd> div > div > div > p {
+.dl-unsur dd> div > div > p {
+    font-size:14px;
+}
+.dl-unsur dd> div > div {
     font-size:14px;
 }
