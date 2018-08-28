@@ -28,7 +28,9 @@ tags: [Web, Architect]
 * [Facebook 面试记](http://xiaohanyu.me/posts/2017-05-20-facebook-interview/)
 * [北美求职记（二）：Google & Facebook](https://blog.yxwang.me/2012/12/job-hunting-in-usa-2/)
 * [北美求职记（三）：Hulu & Twitter](https://blog.yxwang.me/2012/12/job-hunting-in-usa-3/)
+* [Lyft Manager：如何“快”“准”“狠”地做Salary Negotiation?](https://www.youtube.com/watch?v=V09yYac4KWk&feature=push-sd&attr_tag=tKmxOfLo67zjpc4G%3A6)
 
 ## 4. Java
 * [what-is-a-java-classloader](https://stackoverflow.com/questions/2424604/what-is-a-java-classloader)
 * [Java - Multithreading](https://www.tutorialspoint.com/java/java_multithreading.htm)
+* [Top 15 Java Multithreading, Concurrency Interview Questions With Investment Banks](https://dzone.com/articles/top-15-java-multithreading-concurrency-interview-q)

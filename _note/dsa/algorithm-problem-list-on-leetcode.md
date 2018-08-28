@@ -36,23 +36,24 @@ tags: [Algorithm, Leetcode]
 <hr/>
 * [26. Remove Duplicates from Sorted Array(No Duplicated)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (On variable for index)
 * [80. Remove Duplicates from Sorted Array II(One Duplicated)](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) (n > nums[i - 2])
-* [27. Remove Element](https://leetcode.com/problems/remove-element/) (Two variables for index)
+* [27. Remove Element](https://leetcode.com/problems/remove-element/) (Fast and slow pointers)
 <hr/>
 * [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
-* [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)
-* [120. Triangle](https://leetcode.com/problems/triangle/)(DP)
+* [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) (Rolling, from end to start)
+* [120. Triangle](https://leetcode.com/problems/triangle/)(DP, Bottom Up or Top Down)
 <hr/>
 * [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)(HashSet, One Pass)
-* [219. Contains Duplicate II](https://leetcode.com/problems/triangle/)(HashSet, One Pass)
+* [219. Contains Duplicate II(at most k distance)](https://leetcode.com/problems/contains-duplicate-ii/)(HashSet, Sliding window)
+* [220. Contains Duplicate III(distance and value)](https://leetcode.com/problems/contains-duplicate-iii/)(SortedSet, !!!)
 <hr/>
-* [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)(HashMap+List)
+* [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)(Design: HashMap+List)
 * [381. Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)(HashMap+TreeSet+List)
 <hr/>
-* [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
-* [448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
+* [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) (Swap until nums[i] = i + 1)
+* [448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) (Swap until nums[i] = i + 1, return i + 1)
 <hr/>
-* [531. Lonely Pixel I](https://leetcode.com/problems/lonely-pixel-i/)
-* [533. Lonely Pixel II](https://leetcode.com/problems/lonely-pixel-ii/)
+* [531. Lonely Pixel I](https://leetcode.com/problems/lonely-pixel-i/) (Two arrays for row and column, first count, second check)
+* [533. Lonely Pixel II](https://leetcode.com/problems/lonely-pixel-ii/) (HashMap + Array)
 <hr/>
 * [79. Word Search](https://leetcode.com/problems/word-search/) (DFS)(!!!)
 * [212. Word Search II](https://leetcode.com/problems/word-search-ii)(Trie)
@@ -367,7 +368,7 @@ tags: [Algorithm, Leetcode]
 * [590. N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal)
 <hr/>
 * [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
-* [346. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+* [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
 <hr/>
 * [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)
 * [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii)
@@ -433,8 +434,11 @@ tags: [Algorithm, Leetcode]
 * [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list)
 * [255. Verify Preorder Sequence in Binary Search Tree](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree)(Stack)
 * [331. Verify Preorder Serialization of a Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree)(Stack)
-
 <hr/>
+## Binary Indexed Tree/Fenwick-Tree
+https://leetcode.com/tag/binary-indexed-tree/
+https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
+
 ## 8. Trie
 * [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)
 * [211. Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design)
@@ -629,3 +633,15 @@ tags: [Algorithm, Leetcode]
 * [877. Stone Game](https://leetcode.com/problems/stone-game)
 * [879. Profitable Schemes](https://leetcode.com/problems/profitable-schemes)
 * [887. Super Egg Drop](https://leetcode.com/problems/super-egg-drop)
+
+
+## 21. Facebook
+* [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)(!!!!!)
+* [285. Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst)
+* [273. Integer to English Words](https://leetcode.com/problems/integer-to-english-words)
+* [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)(Stack)
+* [Given two sparse Vectors, compute the Dot Product. careercup](https://www.careercup.com/question?id=5678837729853440)
+* [67. Add Binary](https://leetcode.com/problems/add-binary)
+* [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)
+* [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+* [301. Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/description/)

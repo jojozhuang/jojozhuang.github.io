@@ -73,6 +73,8 @@ tags: [English]
 * arbitrary: 任意的
 * anagram: 回文构词法, rearranging the letters, typically using all the original letters exactly once
 * palindrome: 回文, a word or a phrase that is the same whether you read it backward or forward e.g. refer, madam
+* sparse matrix: 稀疏矩阵
+* dot product: 点积
 
 ## 4. Others:
 * clockwise: 顺时针
