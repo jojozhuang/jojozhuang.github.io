@@ -21,7 +21,7 @@ tags: [Sorting]
  Shell Sort     | n<sup>2</sup> | nlog(n)       | n<sup>2</sup> | 1                | No
  Selection Sort | n<sup>2</sup> | n<sup>2</sup> | n<sup>2</sup> | 1                | No
  Heap Sort      | nlog(n)       | nlog(n)       | nlog(n)       | 1                | No
- Merge Sort     | nlog(n)       | nlog(n)       | nlog(n)       | Depends          | Yes
+ Merge Sort     | nlog(n)       | nlog(n)       | nlog(n)       | O(n)             | Yes
  Quick Sort     | nlog(n)       | nlog(n)       | n<sup>2</sup> | log(n)           | No
  Bucket Sort    | --            | n + r         | n + r         | n + r            | Yes
  Counting Sort  | --            | n + r         | n + r         | n + r            | Yes

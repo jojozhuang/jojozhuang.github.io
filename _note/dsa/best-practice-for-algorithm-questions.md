@@ -83,6 +83,11 @@ bit ^ 1
 * Template for tree traversal.
 * outdegree, indegree, question331.
 
+## 4. Heap
+```java
+PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
+```
 ## 4. Back Tracking
 
 ## 5. References

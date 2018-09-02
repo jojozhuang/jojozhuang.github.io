@@ -48,8 +48,6 @@ tags: [English]
 * denominator: 除数
 * quotient: 商
 * remainder: 余数
-* exponent: 指数
-* exponential: 指数的，幂的
 * logarithm: 对数
 * factorial: 阶乘, e.g. n!
 * square root: 平方根
@@ -58,7 +56,14 @@ tags: [English]
 * geometry: 几何
 * diagonal: 斜线
 * slope: 斜率
-* within bound: 在边界之内
+* exponent: 指数
+* exponential: 指数的，幂的
+* n^2: n square
+* n^5: n to the power of 5
+* 2^n: 2 to the power of n, 2 is base, n is exponent
+* n!: n factorial
+* n^m: n的m次幂, n的m次方
+* power: 幂/次方
 
 ## 3. Computer
 * iteration: 迭代
@@ -77,6 +82,7 @@ tags: [English]
 * dot product: 点积
 
 ## 4. Others:
+* within bound: 在边界之内
 * clockwise: 顺时针
 * counter-clockwise: 逆时针
 * 硬币的两面： heads or tails; Coin flipping, coin tossing

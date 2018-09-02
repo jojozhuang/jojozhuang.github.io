@@ -28,7 +28,7 @@ tags: [Algorithm, Leetcode]
 * [244. Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii/) (HashMap, map value=List)
 * [245. Shortest Word Distance III](https://leetcode.com/problems/shortest-word-distance-iii/)
 <hr/>
-* [55. Jump Game](https://leetcode.com/problems/jump-game/)
+* [55. Jump Game](https://leetcode.com/problems/jump-game/) (Greedy)
 * [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
 <hr/>
 * [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) (Four Directions)
@@ -38,7 +38,7 @@ tags: [Algorithm, Leetcode]
 * [80. Remove Duplicates from Sorted Array II(One Duplicated)](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) (n > nums[i - 2])
 * [27. Remove Element](https://leetcode.com/problems/remove-element/) (Fast and slow pointers)
 <hr/>
-* [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
+* [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) (Rolling, use the previous list create new list)
 * [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) (Rolling, from end to start)
 * [120. Triangle](https://leetcode.com/problems/triangle/)(DP, Bottom Up or Top Down)
 <hr/>
@@ -117,25 +117,25 @@ tags: [Algorithm, Leetcode]
 * [723. Candy Crush](https://leetcode.com/problems/candy-crush)
 
 ## 2. String
-* [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
+* [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome) (Two Pointers)
 * [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii)
-* [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
-</hr>
-* [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
-* [126. Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)(!!!!!)
+* [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) (Use Array as HashMap)
+<hr/>
+* [127. Word Ladder](https://leetcode.com/problems/word-ladder/) (HashSet + BFS)
+* [126. Word Ladder II](https://leetcode.com/problems/word-ladder-ii/) (HashSet + WordNode)(!!!!!)
 <hr/>
 * [72. Edit Distance](https://leetcode.com/problems/edit-distance)(!!!!!)(DP)
 * [161. One Edit Distance](https://leetcode.com/problems/one-edit-distance)
-<hr/>
-* [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
-* [186. Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii)
-* [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii)
 <hr/>
 * [344. Reverse String](https://leetcode.com/problems/reverse-string)
 * [541. Reverse String II](https://leetcode.com/problems/reverse-string-ii)
 * [345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string)
 <hr/>
-* [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses)
+* [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
+* [186. Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii)
+* [557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii)
+<hr/>
+* [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses) (DFS)
 * [468. Validate IP Address](https://leetcode.com/problems/validate-ip-address)
 <hr/>
 * [408. Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation)
@@ -147,8 +147,12 @@ tags: [Algorithm, Leetcode]
 * [521. Longest Uncommon Subsequence I](https://leetcode.com/problems/longest-uncommon-subsequence-i)
 * [522. Longest Uncommon Subsequence II](https://leetcode.com/problems/longest-uncommon-subsequence-ii)
 <hr/>
-* [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
-
+* [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) (HashMap + Two Pointers)
+* [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words)
+* [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring) (HashMap + Two Pointers)
+* [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters) (HashMap + Two Pointers)
+* [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+<hr/>
 * [6. ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion)
 * [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)
 * [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman)
@@ -157,7 +161,6 @@ tags: [Algorithm, Leetcode]
 * [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
 * [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses)
 * [28. Implement strStr()](https://leetcode.com/problems/implement-strstr)
-* [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words)
 * [38. Count and Say](https://leetcode.com/problems/count-and-say)
 * [43. Multiply Strings](https://leetcode.com/problems/multiply-strings)
 * [49. Group Anagrams](https://leetcode.com/problems/group-anagrams)
@@ -165,11 +168,9 @@ tags: [Algorithm, Leetcode]
 * [65. Valid Number](https://leetcode.com/problems/valid-number)
 * [67. Add Binary](https://leetcode.com/problems/add-binary)
 * [68. Text Justification](https://leetcode.com/problems/text-justification)
-* [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)
 
 * [157. Read N Characters Given Read4](https://leetcode.com/problems/read-n-characters-given-read4)
 * [158. Read N Characters Given Read4 II - Call multiple times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times)
-* [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters)
 * [165. Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers)
 * [214. Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome)
 * [249. Group Shifted Strings](https://leetcode.com/problems/group-shifted-strings)
@@ -227,8 +228,8 @@ tags: [Algorithm, Leetcode]
 ## 3. Subset
 * [78. Subsets](https://leetcode.com/problems/subsets/)
 * [90. Subsets II](https://leetcode.com/problems/subsets-ii/)
-* [46. Permutations](https://leetcode.com/problems/permutations/)
-* [47. Permutations II (contains duplicates)](https://leetcode.com/problems/permutations-ii/)
+* [46. Permutations](https://leetcode.com/problems/permutations/) (No pos, always from 0)
+* [47. Permutations II (contains duplicates)](https://leetcode.com/problems/permutations-ii/) (visited)
 * [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
 * [40. Combination Sum II (can't reuse same element)](https://leetcode.com/problems/combination-sum-ii/)
 * [216. Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
@@ -249,23 +250,23 @@ tags: [Algorithm, Leetcode]
 * [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii)
 <hr/>
 * [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-* [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)(Heap)
+* [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)(Binary Merge, Heap)
 <hr/>
 * [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list)
 * [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii)
 * [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list)
 * [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements)
-* [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list)
+* [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) (One pass, moving window)
 <hr/>
-* [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer)
+* [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer) (Append Node, add random, split)
 * [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)
 * [61. Rotate List](https://leetcode.com/problems/rotate-list)
 * [86. Partition List](https://leetcode.com/problems/partition-list)
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
 * [147. Insertion Sort List](https://leetcode.com/problems/insertion-sort-list)
-* [148. Sort List](https://leetcode.com/problems/sort-list)
+* [148. Sort List](https://leetcode.com/problems/sort-list) (Merge Sort, nlog(n))
 * [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists)
-* [234. Palindrome Linked List](https://leetcode.com/tag/linked-list/)
+* [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
 * [328. Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list)
 * [369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list)
 * [370. Design Phone Directory](https://leetcode.com/problems/design-phone-directory)(Design, HashSet+Queue)
@@ -273,7 +274,7 @@ tags: [Algorithm, Leetcode]
 * [707. Design Linked List](https://leetcode.com/problems/design-linked-list)
 * [708. Insert into a Cyclic Sorted List](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list)
 * [725. Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts)
-* [817. Linked List Components](https://leetcode.com/problems/linked-list-components)
+* [817. Linked List Components](https://leetcode.com/problems/linked-list-components) (HashSet)
 
 ## 5. Stack
 * [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)(Stack)
@@ -645,3 +646,8 @@ https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 * [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)
 * [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
 * [301. Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/description/)
+* [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array)
+* [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)
+* [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring) (HashMap + Two Pointers)
+https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem
+https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems
