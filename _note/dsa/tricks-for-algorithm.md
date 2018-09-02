@@ -21,8 +21,22 @@ private class IntervalComparator implements Comparator<Interval> {
     }
 }
 ```
+### 1.2 Sorting Array by Another Array's Value.
+```java
+Integer[] index = new Integer[nums.length];
+for (int i = 0; i < nums.length; i++) {
+    index[i] = i;
+}
 
-### 1.2 Binary Search
+Arrays.sort(index, new Comparator<Integer>() {
+    public int compare(Integer i1, Integer i2) {
+        return nums[i2] - nums[i1];
+    }
+});
+```
+* Example Problem - [Leetcode 506. Relative Ranks](https://leetcode.com/problems/relative-ranks/)
+
+### 1.3 Binary Search
 ```java
 int start = 0;
 int end = nums.length - 1;
@@ -54,8 +68,9 @@ while (start + 1 < end) { // avoid infinite loop, need to check nums[start] and 
     }
 }
 ```
+* Example Problem - [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
 
-### 1.3 Subset
+### 1.4 Subset
 ```java
 public List<List<Integer>> subsets(int[] nums) {
     List<List<Integer>> res = new ArrayList<List<Integer>>();
@@ -80,8 +95,9 @@ private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>>
     }
 }
 ```
+* Example Problem - [LeetCode 78. Subsets](https://leetcode.com/problems/subsets/)
 
-### 1.4 Generating Unique Path for Each TreeNode(Preorder)
+### 1.5 Generating Unique Path for Each TreeNode(Preorder)
 Each node has a unique path in preoder/postorder/inorder.
 ```java
 // generate preoder key of each node
@@ -104,10 +120,9 @@ For tree {2,1,1}, map contains two entry
 * 2,1,#,#,1,#,# => 0 // there is only one node with value 2, the root
 * 1,#,# => 1         // there are two nodes with value 1, the left and the right
 
-Based on different requirements, you can add more parameters accordingly and update them by checking the map when necessary. For example, add a list as third parameter, to find all duplicate subtrees(LeetCode 652).
+Based on different requirements, you can add more parameters accordingly and update them by checking the map when necessary. For example, add a list as third parameter, to find all duplicate subtrees - [LeetCode 652. Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)
 
 ## 2. Array and Strings
-
 ### 2.1 Partition of Quick Sort
 ```java
 // one way
@@ -129,6 +144,8 @@ private int partition(int[] nums, int start, int end) {
     return pivot;
 }
 ```
+* Example Problem - [LeetCode 215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
 ### 2.2 Rotating Array or String by Three Steps
 Rotate an array of n elements to the right by k steps.
 ```java
@@ -136,22 +153,7 @@ reverse(nums, 0, nums.length - k - 1);
 reverse(nums, nums.length - k, nums.length - 1);
 reverse(nums, 0, nums.length - 1);
 ```
-
-### 2.3 Sorting Array by Another Array's Value.
-```java
-Integer[] index = new Integer[nums.length];
-for(int i = 0; i < nums.length; i++) {
-    index[i] = i;
-}
-
-Arrays.sort(index, new Comparator<Integer>() {
-    public int compare(Integer i1, Integer i2) {
-        return nums[i2] - nums[i1];
-    }
-});
-```
-
-Refer to Leetcode 506, lintcode 612.
+* Example Problem - [LeetCode 189. Rotate Array](https://leetcode.com/problems/rotate-array/)
 
 ### 2.4 Using An Integer Instead of An Array to Store States
 Implement an algorithm to determine if a string has all unique characters.
@@ -176,24 +178,9 @@ public boolean isUniqueChars(String str) {
     return true;
 }
 ```
-## 3. Data Structure
-I've created several postings to discuss this topic separately.
-* [Data Structure - Linked List]({% link _note/dsa/data-structure-linkedlist.md %})
-* [Data Structure - Stack]({% link _note/dsa/data-structure-stack.md %})
-* [Data Structure - Queue]({% link _note/dsa/data-structure-queue.md %})
-* [Data Structure - Tree]({% link _note/dsa/data-structure-tree.md %})
-* [Data Structure - HashTable]({% link _note/dsa/data-structure-hashtable.md %})
-* [Data Structure - Heap]({% link _note/dsa/data-structure-heap.md %})
-* [Data Structure - Graph]({% link _note/dsa/data-structure-graph.md %})
-* [Data Structure - Trie]({% link _note/dsa/data-structure-trie.md %})
-* [Data Structure - Segment Tree]({% link _note/dsa/data-structure-segmenttree.md %})
 
-## 5. Other Topics
-* [Common Sorting Algorithms]({% link _note/dsa/common-sorting-algorithms.md %})
-* [Bit Manipulation]({% link _note/dsa/bit-manipulation.md %})
-
-## 7. Others
-### 7.1 Removing Duplicated Lists
+## 3. Others
+### 3.1 Removing Duplicated Lists
 ```java
 List<List<Integer>> res = new ArrayList<List<Integer>>();
 ... // res contains duplicated list after some operation
@@ -201,51 +188,53 @@ HashSet<List<Integer>> set = new HashSet<List<Integer>>(res);
 res.clear();
 res.addAll(set); // now, each list in res is unique
 ```
-
-* numsUsed[c - '1'] : use char to get index of array directly, no need to calculate the index value.
-* n is integer, n % 10, get the last bit of number, iterate this can get the reverse list of n.
-* LRU Cache: double linked node, define two nodes (head and tail) at the very beginning, head.next = tail; tail.prev = head;
-* Dp can be used to optimize time complexity of 2^n, but not for n^2.
-* Get int value from char
-```java
-String s = "ab5d";
-int x = Character.getNumericValue(s.charAt(2)); // x = 5
-```
-
-* otheres
-Direction Array used in Grid Traversal, DFS & BFS.  
+### 3.2 Direction Array used in Grid Traversal, DFS & BFS.  
 ```java
 int[] dr = new int[]{-1, 0, 1, 0};
 int[] dc = new int[]{0, -1, 0, 1};
 ```
+### 3.3 Get Int Value From Char
+```java
+String s = "ab5d";
+int x = Character.getNumericValue(s.charAt(2)); // x = 5
+```
+### 3.4 Check If Character is Number or Letter
+```java
+boolean isNumberOrLetter = Character.isLetterOrDigit(c);
+```
+### 3.5 Others
+* numsUsed[c - '1'] : use char to get index of array directly, no need to calculate the index value.
+* n is integer, n % 10, get the last bit of number, iterate this can get the reverse list of n.
+* LRU Cache: double linked node, define two nodes (head and tail) at the very beginning, head.next = tail; tail.prev = head;
+* Dp can be used to optimize time complexity of 2^n, but not for n^2.
 
-## 8. Time Complexity
-O(Big O): Upper Bound on Time
-&#911;(Big Omega): Lower Bound on Time
-&Theta;(Big Theta): Tight Bound, includes both of them.
 
-Best Case, Worst Case, Expected Case
-For quick sort: O(N), O(N^2), O(NLog(N))
+## 4. Complexity
+### 4.1 Time Complexity
+Best Case, Worst Case, Expected Case. For example, quick sort: O(N), O(N^2), O(NLog(N)).
+* O(Big O): Upper Bound on Time
+* &#911;(Big Omega): Lower Bound on Time
+* &Theta;(Big Theta): Tight Bound, includes both of them.
 
-## 9. Space Complexity
+Common Complexity
+* factorial time(n!)
+* exponential time(2^n)
 
+### 4.2 Space Complexity
 Log(n), what is the base of Log, 2 or 10? It doesn't matter to Big O.
 Best Conceivable Runtime(BCR)
 
-how many ascii characters are there?
-Basically, we use only 128 total character which is used mostly during program. But total number of Character in ASCII table is 256 (0 to 255). 0 to 31(total 32 character ) is called as ASCII control characters (character code 0-31). 32 to 127 character is called as ASCII printable characters (character code 32-127). 128 to 255 is called as The extended ASCII codes (character code 128-255).
+## 5. Characters
+### 5.1 How Many ASCII Characters Are There?
+Basically, we use only 128 total character which is used mostly during program. But total number of Character in ASCII table is 256 (0 to 255).
+* 0 to 31(total 32 character ) is called as ASCII control characters.
+* 32 to 127 character is called as ASCII printable characters.
+* 128 to 255 is called as The extended ASCII codes.
 
-factorial time(n!)
-exponential time(2^n)
+### 5.2 Characters in Algorithm Questions
+* a~z, A~Z
+* a~Z, 0~9
 
-
-## 10. Common Sorting Algorithms
-* Bubble Sort: Average O(n^2), Worst Case O(n^2); Memory: O(1).
-* Selection Sort: Average O(n^2), Worst Case O(n^2); Memory: O(1).
-* Merge Sort: Average O(nlog(n)), Worst Case O(nlog(n)); Memory: Depends.
-* Quick Sort: Average O(nlog(n)), Worst Case O(n^2); Memory: O(log(n)).
-* Bucket Sort: Average O(kn), Worst Case O(kn); Memory: Depends.
-
-## 11. References
+## 6. References
 * [Data Structures - Algorithms Basics](https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm)
 * [Data Structure and Algorithms Binary Search](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
