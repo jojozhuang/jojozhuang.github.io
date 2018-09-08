@@ -80,6 +80,7 @@ tags: [English]
 * palindrome: 回文, a word or a phrase that is the same whether you read it backward or forward e.g. refer, madam
 * sparse matrix: 稀疏矩阵
 * dot product: 点积
+* wild card: 通配符
 
 ## 4. Others:
 * within bound: 在边界之内
