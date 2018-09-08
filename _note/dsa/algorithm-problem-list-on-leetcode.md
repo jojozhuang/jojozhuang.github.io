@@ -277,15 +277,15 @@ tags: [Algorithm, Leetcode]
 * [817. Linked List Components](https://leetcode.com/problems/linked-list-components) (HashSet)
 
 ## 5. Stack
-* [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)(Stack)
-* [678. Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string)(String)
-* [71. Simplify Path](https://leetcode.com/problems/simplify-path)
+* [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)(Stack, store the second one; extend pairs with HashMap)
+* [678. Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string)(Multiple solution: String, Stack)
+* [71. Simplify Path](https://leetcode.com/problems/simplify-path) (Deque)
 <hr/>
-* [155. Min Stack](https://leetcode.com/problems/min-stack)
-* [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues)
-* [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
+* [155. Min Stack](https://leetcode.com/problems/min-stack) (Two Stacks)
+* [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues) (Two Queues, all in first queue)
+* [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks) (Two Stacks, new and old)
 <hr/>
-* [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i)
+* [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i) (Stack + HashMap; Extend to right/left and large/small)
 * [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii)
 * [556. Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii)
 <hr/>
@@ -299,7 +299,7 @@ tags: [Algorithm, Leetcode]
 <hr/>
 * [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) (!!!!!)
 * [85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) (!!)(DP)
-* [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+* [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) (Stack)
 * [316. Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters)
 * [341. Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator)
 * [385. Mini Parser](https://leetcode.com/problems/mini-parser)
@@ -321,10 +321,10 @@ tags: [Algorithm, Leetcode]
 <hr/>
 
 ## 6. Queue
-* [346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream)
-* [353. Design Snake Game](https://leetcode.com/problems/design-snake-game)
+* [346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream) (Queue)
+* [353. Design Snake Game](https://leetcode.com/problems/design-snake-game) (HashSet + Deque)
 * [363. Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k)
-* [582. Kill Process](https://leetcode.com/problems/kill-process)(Queue+Tree)
+* [582. Kill Process](https://leetcode.com/problems/kill-process) (Queue+Tree)
 * [621. Task Scheduler](https://leetcode.com/problems/task-scheduler)
 * [622. Design Circular Queue](https://leetcode.com/problems/design-circular-queue)
 * [641. Design Circular Deque](https://leetcode.com/problems/design-circular-deque)
@@ -344,7 +344,7 @@ tags: [Algorithm, Leetcode]
 * [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value)
 * [272. Closest Binary Search Tree Value II](https://leetcode.com/problems/closest-binary-search-tree-value-ii)(Stack)
 <hr/>
-* [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)(!!!!!)
+* [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree) (Queue !!!!!)
 * [449. Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst)
 * [536. Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string)
 * [606. Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree)
@@ -437,23 +437,27 @@ tags: [Algorithm, Leetcode]
 * [331. Verify Preorder Serialization of a Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree)(Stack)
 <hr/>
 ## Binary Indexed Tree/Fenwick-Tree
-https://leetcode.com/tag/binary-indexed-tree/
-https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
+* https://leetcode.com/tag/binary-indexed-tree/
+* https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 
-## 8. Trie
-* [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)
-* [211. Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design)
-* [421. Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array)
-* [425. Word Squares](https://leetcode.com/problems/word-squares)
+## 8. Trie (Prefix Tree)
+* [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree) (TrieNode=char+HashMap+isLeaf)
+* [211. Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design) (TireNode=String+Array, DFS)
+* [421. Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array) (TrieNode= {TrieNode zero; TrieNode one;})
+* [425. Word Squares](https://leetcode.com/problems/word-squares) (Trie + BackTracking)
 * [472. Concatenated Words](https://leetcode.com/problems/concatenated-words)
 * [642. Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system)(!!!!!)
-* [648. Replace Words](https://leetcode.com/problems/replace-words)
+* [648. Replace Words](https://leetcode.com/problems/replace-words) (HashSet or Trie)
 * [676. Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary)
 * [677. Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/)
 * [720. Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary)
 * [745. Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search)
 
-## 9. Segment Tree
+## 9. Bloom Filter
+* https://www.youtube.com/watch?v=bEmBh1HtYrw
+* https://www.youtube.com/watch?v=bgzUdBVr5tE
+
+## 10. Segment Tree
 * [223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)
 * [850. Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii)
 <hr/>
@@ -464,21 +468,21 @@ https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 * [699. Falling Squares](https://leetcode.com/problems/falling-squares)
 * [715. Range Module](https://leetcode.com/problems/range-module)
 
-## 10. Binary Search
+## 11. Binary Search
 * [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 * [81. Search in Rotated Sorted Array II(Duplicates)](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) (Brute Force)
 <hr/>
 * [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 * [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-* [154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+* [154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) (Brute Force, O(n))
 
-## 11. Hash Table
-* [729. My Calendar I](https://leetcode.com/problems/my-calendar-i/)(TreeMap)
+## 12. Hash Table
+* [729. My Calendar I](https://leetcode.com/problems/my-calendar-i/) (TreeMap)
 * [731. My Calendar II](https://leetcode.com/problems/my-calendar-ii/)
-* [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii)(TreeMap)
-* [146. LRU Cache](https://leetcode.com/problems/lru-cache/), DoublyLinkedList + HashMap
+* [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii) (TreeMap)
+* [146. LRU Cache](https://leetcode.com/problems/lru-cache/) (DoublyLinkedList + HashMap)
 
-## 12. Heap
+## 13. Heap
 * [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms)
 * [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii)
 <hr/>
@@ -514,7 +518,7 @@ https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 * [871. Minimum Number of Refueling Stops](https://leetcode.com/problems/minimum-number-of-refueling-stops)
 * [882. Reachable Nodes In Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph)
 
-## 13. DP
+## 14. DP
 * [62. Unique Paths](https://leetcode.com/problems/unique-paths/)(DP)
 * [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
 * [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
@@ -649,5 +653,5 @@ https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/
 * [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array)
 * [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)
 * [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring) (HashMap + Two Pointers)
-https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem
-https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems
+* [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem)
+* [76. Minimum Window Substring-Discussion](https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems)

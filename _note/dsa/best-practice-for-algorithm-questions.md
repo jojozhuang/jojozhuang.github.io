@@ -20,6 +20,7 @@ String.toCharArray()
 StringBuilder.append()
 
 Character.isDigit(c) // same to c >= '0' && c <= '9'
+Character.isLetterOrDigit(c);
 ```
 Split string with regex.
 ```java
@@ -75,6 +76,15 @@ bit ^ 1
 ## 2. Linked List Question
 * Consider recursion first, then iteration.
 * Dummy Node, Use fast and slow pointers to find middle node, reverse linked list.
+
+Loop elements in queue.
+```java
+LinkedList<Integer> queue = new LinkedList<Integer>();
+int sum = 0;
+for (int i: queue) {
+    sum = sum + i;
+}
+```
 
 ## 3. Tree Questions
 * Recursive, Iterative, Stack of Recursion, Queue for Iteration.
