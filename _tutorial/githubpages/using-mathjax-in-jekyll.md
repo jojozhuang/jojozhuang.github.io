@@ -18,7 +18,7 @@ mathjax: true
 
 ## 2. Using MathJax on Web Pages
 ### 2.1 Loading MathJax
-The preferred way to use MathJax on a web page is by linking to the publicly available MathJax Content Delivery Network (CDN). This can be done by adding the following code snippet into the HTML header block (the code between <head> and </head> of your HTML or XHTML document:
+The preferred way to use MathJax on a web page is by linking to the publicly available MathJax Content Delivery Network `(CDN)`. This can be done by adding the following code snippet into the HTML header block `(the code between <head> and </head>)` of your HTML or XHTML document:
 ```html
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -26,8 +26,8 @@ The preferred way to use MathJax on a web page is by linking to the publicly ava
 ```
 For greater security, it is also possible to access the CDN via https:
 ```html
-<script type="text/javascript"
-  src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 ```
 ### 2.2 Including MathML
