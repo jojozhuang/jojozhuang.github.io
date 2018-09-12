@@ -37,7 +37,9 @@
   {% if page.key == "library" %}
     <link href="/public/css/library.css" rel='stylesheet' />
   {% endif %}
-
+  {% if page.mathjax %}
+    {% include mathjax.html %}
+  {% endif %}
   <!-- move to here, script should be inside head, otherwise doesn't work for ie -->
   {% include google_analytics.html %}
 

@@ -313,6 +313,9 @@ bookmarks:
       - name: Monaco Editor
         description: The code editor that powers VS Code
         url: https://microsoft.github.io/monaco-editor/index.html
+      - name: MathJax
+        description: An open source JavaScript display engine for mathematics.
+        url: https://www.mathjax.org/
   - category: Free Text Editor
     links:
       - name: Atom
