@@ -54,5 +54,6 @@ Cubic Time       | $O(n^3)$      | `$O(n^3)$`
 Factorial Time   | $O(n!)$       | `$O(n!)$`
 
 ## 5. References
+* [Big O and related notations in LaTeX](https://texblog.org/2014/06/24/big-o-and-related-notations-in-latex/)
 * [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 * [Time complexity - Wikipedia](https://en.wikipedia.org/wiki/Time_complexity)
