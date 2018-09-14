@@ -316,6 +316,9 @@ bookmarks:
       - name: MathJax
         description: An open source JavaScript display engine for mathematics.
         url: https://www.mathjax.org/
+      - name: MermaidJs
+        description: A simple markdown-like script language for generating charts from text via javascript.
+        url: https://mermaidjs.github.io/
   - category: Free Text Editor
     links:
       - name: Atom

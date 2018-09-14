@@ -49,7 +49,7 @@ Let's consider <math><mi>a</mi><mo>≠</mo><mn>0</mn></math>.
 
 ## 3. Using MathJax in Jekyll with Markdown
 ### 3.1 Page Template
-Create  a file named with `mathjax.html` in `_include` directory as follows:
+Create a file named with `mathjax.html` in `_include` directory as follows:
 ```html
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

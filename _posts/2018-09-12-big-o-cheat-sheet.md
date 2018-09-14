@@ -3,7 +3,7 @@ layout: post
 key: blog
 title: "Big O Cheat Sheet"
 date: 2018-09-12
-tags: [Time Complexity, Space Complexity]
+tags: [Big O, Time Complexity]
 ---
 
 > Cheat sheet for Big O complexity.
