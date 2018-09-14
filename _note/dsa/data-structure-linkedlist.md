@@ -197,6 +197,15 @@ public boolean hasCycle(ListNode head) {
 
 ### 3.4 Finding the Node Where Cycle Begins
 Find the node where cycle begins in a given linked list. If there is no cycle, return null.
+
+We use the following figure to illustrate the solution. We will use the fast pointer and the slow pointer to solve this problem.
+![image](/public/notes/data-structure-linkedlist/cycle.png){:width="600px"}  
+* X is the start node of the linked list.
+* Y is the node where the cycle begins. It is the node we are looking for.
+* Z is the node where the fast and slow pointers meet for the first time.
+* For fast pointer, the distance it has walked through is a + b + c + b; for slow pointer, the distance is a + b. Since the speed of fast pointer is twice of the slow pointer, then we have a + b + c + b = 2 * (a + b). Finally we have `a = c`.
+* When they meet at node Z, we can put fast pointer to the start node X, and let the slow pointer continue walk in the cycle. This time, we let both pointers move one step each time. When they meet again, they should be at node Y, where the cycle begins.
+
 ```java
 /**
  * @param head of the original linked list

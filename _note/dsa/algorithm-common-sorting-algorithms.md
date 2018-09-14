@@ -1,35 +1,36 @@
 ---
 layout: note
 key: note
-title: "Common Sorting Algorithms"
+title: "Algorithm - Common Sorting Algorithms"
 index: 321
 category: dsa
 image: note/dsa.png
 date: 2016-03-21
 postdate: 2016-03-21
 tags: [Sorting]
+mathjax: true
 ---
 
-> All of the common sorting algorithms.
+> Most popular sorting algorithms.
 
 ## 1. Common Sorting Algorithms
 
- Name           | Time(Average) | Time (Best)   | Time(Worst)   | Space Complexity | Stable
+ Name           | Average       | Best Case     | Worst Case    | Space Complexity | Stable
 ----------------|---------------|---------------|---------------|------------------|--------
- Bubble Sort    | n<sup>2</sup> | n             | n<sup>2</sup> | 1                | Yes
- Insertion Sort | n<sup>2</sup> | n             | n<sup>2</sup> | 1                | Yes
- Shell Sort     | n<sup>2</sup> | nlog(n)       | n<sup>2</sup> | 1                | No
- Selection Sort | n<sup>2</sup> | n<sup>2</sup> | n<sup>2</sup> | 1                | No
- Heap Sort      | nlog(n)       | nlog(n)       | nlog(n)       | 1                | No
- Merge Sort     | nlog(n)       | nlog(n)       | nlog(n)       | O(n)             | Yes
- Quick Sort     | nlog(n)       | nlog(n)       | n<sup>2</sup> | log(n)           | No
- Bucket Sort    | --            | n + r         | n + r         | n + r            | Yes
- Counting Sort  | --            | n + r         | n + r         | n + r            | Yes
- Radix Sort     | --            | nk/d          | nk/d          | n + 2<sup>d</sup>| Yes
+ Bubble Sort    | $O(n^2)$      | $O(n)$        | $O(n^2)$      | $O(1)$           | Yes
+ Insertion Sort | $O(n^2)$      | $O(n)$        | $O(n^2)$      | $O(1)$           | Yes
+ Shell Sort     | Depends       | $O(n\log{}n)$ | Depends       | $O(1)$           | No
+ Selection Sort | $O(n^2)$      | $O(n^2)$      | $O(n^2)$      | $O(1)$           | No
+ Heap Sort      | $O(n\log{}n)$ | $O(n\log{}n)$ | $O(n\log{}n)$ | $O(1)$           | No
+ Merge Sort     | $O(n\log{}n)$ | $O(n\log{}n)$ | $O(n\log{}n)$ | $O(n)$           | Yes
+ Quick Sort     | $O(n\log{}n)$ | $O(n\log{}n)$ | $O(n^2)$      | $O(\log{}n)$     | No
+ Bucket Sort    | --            | $O(n+r)$      | $O(n+r)$      | $O(n+r)$         | Yes
+ Counting Sort  | --            | $O(n+r)$      | $O(n+r)$      | $O(n+r)$         | Yes
+ Radix Sort     | --            | $O(nk/d)$     | $O(nk/d)$     | $O(n+2^d)$       | Yes
 
 ## 2. Bubble Sort
 ### 2.1 How It Works?
-Take the last element, compare it with the previous one, swap if it is smaller(or larger). By doing this repetitively, bubble up the smallest(or the largest) to the front.
+Take the last element, compare it with the previous one, swap if it is smaller/larger. By doing this repetitively, bubble up the smallest/largest to the front.
 ### 2.2 Implementation
 ```java
 public int[] bubbleSort(int[] nums) {
@@ -51,12 +52,12 @@ public int[] bubbleSort(int[] nums) {
 }  
 ```
 ### 2.3 Complexity
-* Space: O(1)
-* Time: Average O(n^2), Worst Case O(n^2)
+* Space: $O(1)$
+* Time: Average $O(n^2)$, Worst Case $O(n^2)$
 
 ## 3. Insertion Sort
 ### 3.1 How It Works?
-Start from the second element, each time, insert the current element to the proper position.
+Start from the second element, each time take the element and compare with the previous one. Swap the two elements if the latter one is smaller/larger than the previous one. By doing this repetitively, insert the current element to the proper position of given array.
 ![image](/public/notes/common-sorting-algorithms/insertionsort.png)  
 ### 2.2 Implementation
 ```java
@@ -79,12 +80,12 @@ public int[] insertionSort(int[] nums) {
 }
 ```
 ### 3.3 Complexity
-* Space: O(1)
-* Time: Average O(n^2), Worst Case O(n^2)
+* Space: $O(1)$
+* Time: Average $O(n^2)$, Worst Case $O(n^2)$
 
 ## 4. Shell Sort
 ### 4.1 How It Works?
-ShellSort is mainly a variation of Insertion Sort. Do a gapped insertion sort.
+Swap two items who has the distance of the gap. Gap is reduced by half in every iteration, until it becomes to one.
 ### 4.2 Implementation
 ```java
 public int[] shellSort(int[] nums) {
@@ -107,8 +108,8 @@ public int[] shellSort(int[] nums) {
 }
 ```
 ### 4.3 Complexity
-* Space:
-* Time:
+* Space: $O(1)$
+* Time: The above implementation has average $O(n^2)$, worst Case $O(n^2)$. There are other ways to reduce gap which lead to better time complexity.
 
 ## 5. Selection Sort
 ### 5.1 How It Works?
@@ -139,8 +140,8 @@ public int[] selectionSort(int[] nums) {
 }
 ```
 ### 5.3 Complexity
-* Space: O(1)
-* Time: Average O(n^2), Worst Case O(n^2)
+* Space: $O(1)$
+* Time: Average $O(n^2)$, Worst Case $O(n^2)$
 
 ## 6. Heap Sort
 ### 6.1 How It Works?
@@ -195,8 +196,8 @@ private void heapify(int nums[], int n, int i)
 }
 ```
 ### 6.3 Complexity
-* Space:
-* Time:
+* Space: $O(n\log{}n)$
+* Time: Average $O(n\log{}n)$, Worst Case $O(n\log{}n)$
 
 ## 7. Merge Sort
 ### 7.1 How It Works?
@@ -243,13 +244,13 @@ public int[] mergeSort(int[] nums) {
          else{
              nums[k] = copy[right];
              right++;
-         }                
+         }
      }
  }
 ```
 ### 7.3 Complexity
-* Space: O(1)
-* Time: Average O(nlog(n)), Worst Case O(nlog(n))
+* Space: $O(n)$
+* Time: Average $O(n\log{}n)$, Worst Case $O(n\log{}n)$
 
 ## 8. Quick Sort
 ### 8.1 How It Works?
@@ -294,8 +295,8 @@ private int partition(int[] nums, int start, int end) {
 }
 ```
 ### 8.3 Complexity
-* Space: O(log(n))
-* Time: Average O(nlog(n)), Worst Case O(n^2)
+* Space: $O(n\log{}n)$
+* Time: Average $O(n\log{}n)$, Worst Case $O(n^2)$
 
 ## 9. Bucket Sort
 ### 9.1 How It Works?
@@ -329,9 +330,10 @@ public int[] BucketSort(int[] nums, int maxVal) {
 ```
 ### 9.3 Complexity
 * Space: Depends
-* Time: Average O(kn), Worst Case O(kn)
+* Time: Average $O(n+r)$, Worst Case $O(n+r)$
 
 ## 10. Reference
+* [Big-O Cheat Sheet](http://bigocheatsheet.com/)
 * [Sorting Algorithms on Wiki](https://en.wikipedia.org/wiki/Sorting_algorithm)
 * [Data Structure - Sorting Techniques](https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms.htm)
 * [Bubble Sort](http://www.geeksforgeeks.org/bubble-sort/)
