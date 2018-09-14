@@ -139,6 +139,9 @@ public class ArrayQueue {
 
     // Add item to the end of the array
     public void enqueue(int value) {
+        if (tail >= arr.length - 1) {
+            return;
+        }
         arr[++tail] = value;
         if (head == -1) {
             head = 0;
@@ -169,15 +172,142 @@ public class ArrayQueue {
     }
 }
 ```
+* There is one problem with the above implementation. Notice that both head and tail only increase, never decrease. When tail reaches to the end of the array, you cannot add more items into it. Even if you call dequeue method to clear some space, however, the head and tail won't move back.
 
-### 2.4 Implement with Array(Loop)
+### 2.4 Implement with Circular Array
+To solve the issue mentioned above, we can use a circular array to implement the queue.
+![image](/public/notes/data-structure-queue/circular-queue.png){:width="350px"}  
 ```java
-https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/
+public class CircularArrayQueue {
+    private int head; // the first node in queue, not the first item in array
+    private int tail; // the last node in queue, not the first item in array
+    private int[] arr;
+
+    public CircularArrayQueue(int capacity) {
+        arr = new int[capacity];
+        head = -1;
+        tail = -1;
+    }
+
+    // Add item to the end of the queue
+    public void enqueue(int value) {
+        // check if queue is full
+        if (tail == arr.length - 1 && head == 0 || tail == head - 1) {
+            System.out.println("queue is full.");
+            return;
+        }
+        // reset tail if it reaches to the end
+        if (tail == arr.length - 1 && head != 0) {
+            tail = 0;
+            arr[tail] = value;
+        } else {
+            arr[++tail] = value;
+            if (head == -1) {
+                head = 0;
+            }
+        }
+    }
+
+    // Remove the first item from the queue and return its value
+    public int dequeue() throws Exception {
+        if (isEmpty()) {
+            throw new Exception();
+        }
+
+        int value = arr[head];
+        if (head == tail) {
+            // empty, reset to initial status
+            head = -1;
+            tail = -1;
+        } else if (head == arr.length-1) {
+            head = 0;
+        } else {
+            head++;
+        }
+        return value;
+    }
+
+    // Get the first item
+    public int peek() throws Exception {
+        if (isEmpty()) {
+            throw new Exception();
+        }
+        return arr[head];
+    }
+
+    // Return whether the queue is empty
+    public boolean isEmpty() {
+        return head == -1;
+    }
+}
 ```
 
 ## 3. Implementing Sort Function with Queue
-### 3.1 Insertion Sort with Queue
+### 3.1 Merge Sort with Queue
+If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a queue, which contains {1,2,2,3,4,5,6,7}, 1 is the header and 7 is the tail.
 ```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueMergeSort {
+    // Merge Sort
+    public Queue<Integer> sort(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return null;
+        }
+
+        // initialize queue
+        Queue<int[]> queue = new LinkedList<int[]>();
+        for (int i = 0; i < nums.length; i++) {
+            // convert number to number array
+            queue.offer(new int[]{nums[i]});
+        }
+
+        while (queue.size() > 1) {
+            int[] l = queue.poll();
+            int[] r = queue.poll();
+            int[] merged = merge(l, r);
+            queue.offer(merged);
+        }
+
+        int[] sorted = queue.poll();
+        Queue<Integer> finalQueue = new LinkedList<>();
+        for (int i : sorted) {
+            finalQueue.offer(i);
+        }
+
+        return finalQueue;
+    }
+
+    private int[] merge(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums1.length == 0) {
+            return nums2;
+        }
+        if (nums2 == null || nums2.length == 0) {
+            return nums1;
+        }
+
+        int[] nums = new int[nums1.length + nums2.length];
+        int i = 0, j = 0;
+        for (int k = 0; k < nums.length; k++) {
+            if (i >= nums1.length) {
+                nums[k] = nums2[j];
+                j++;
+            } else if (j >= nums2.length) {
+                nums[k] = nums1[i];
+                i++;
+            } else if (nums1[i] <= nums2[j]) {
+                nums[k] = nums1[i];
+                i++;
+            } else {
+                nums[k] = nums2[j];
+                j++;
+            }
+        }
+
+        return nums;
+    }
+}
 ```
 
 ## 4. Source Files
@@ -188,3 +318,4 @@ https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementa
 * [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
 * [Queue](https://www.programiz.com/dsa/queue)
+* [Circular Queue - Introduction and Array Implementation](https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/)
