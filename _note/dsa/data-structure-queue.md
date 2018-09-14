@@ -172,13 +172,19 @@ public class ArrayQueue {
 
 ### 2.4 Implement with Array(Loop)
 ```java
+https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/
 ```
 
-## 3. Source Files
+## 3. Implementing Sort Function with Queue
+### 3.1 Insertion Sort with Queue
+```java
+```
+
+## 4. Source Files
 * [Source files for Queue on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Queue)
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1scNOPMlC4kNb2FiyDhlhX8R7fCx3tkGC01J7ljYREWg/edit?usp=sharing)
 
-## 4. Reference
+## 5. Reference
 * [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
 * [Queue](https://www.programiz.com/dsa/queue)

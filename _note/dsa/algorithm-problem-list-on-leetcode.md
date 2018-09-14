@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Problem List on LeetCode"
-index: 327
+index: 300
 category: dsa
 image: /note/dsa.png
-date: 2016-03-27
-postdate: 2016-03-27
+date: 2016-03-01
+postdate: 2016-03-01
 tags: [Algorithm, Leetcode]
 ---
 
@@ -331,15 +331,15 @@ tags: [Algorithm, Leetcode]
 * [862. Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k)
 
 ## 7. Tree
-* [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)
-* [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)
-* [145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal)
-* [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
-* [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii)
-* [103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)
+* [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal) (Recursion or Iteration)
+* [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal) (Recursion or Iteration)
+* [145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal) (Recursion or Iteration)
+* [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal) (Iteration with Queue)
+* [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii) (Iteration with Queue)
+* [103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal) (Iteration with Queue)
 <hr/>
 * [96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees)(DP)
-* [95. Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii)(DP)
+* [95. Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii)(Recursion)
 <hr/>
 * [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value)
 * [272. Closest Binary Search Tree Value II](https://leetcode.com/problems/closest-binary-search-tree-value-ii)(Stack)
@@ -349,48 +349,49 @@ tags: [Algorithm, Leetcode]
 * [536. Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string)
 * [606. Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree)
 <hr/>
-* [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-* [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
-* [899. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal)
+* [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) (Find root+recursion)
+* [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) (Find root+recursion)
+* [899. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal) (Find root+recursion)
 <hr/>
-* [112. Path Sum](https://leetcode.com/problems/path-sum)
-* [113. Path Sum II](https://leetcode.com/problems/path-sum-ii)
-* [437. Path Sum III](https://leetcode.com/problems/path-sum-iii)
-* [666. Path Sum IV](https://leetcode.com/problems/path-sum-iv)
+* [112. Path Sum](https://leetcode.com/problems/path-sum) (Recursion)
+* [113. Path Sum II](https://leetcode.com/problems/path-sum-ii) (Back tracking, similar to Subset)
+* [437. Path Sum III](https://leetcode.com/problems/path-sum-iii) (Recursion)
+* [666. Path Sum IV](https://leetcode.com/problems/path-sum-iv) (HashMap+DFS)
 <hr/>
-* [298. Binary Tree Longest Consecutive Sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence)
-* [549. Binary Tree Longest Consecutive Sequence II](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii)
+* [298. Binary Tree Longest Consecutive Sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence) (Recursion)
+* [549. Binary Tree Longest Consecutive Sequence II](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii) (Recursion + Global Variable)
 <hr/>
-* [428. Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree)
-* [429. N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal)
-* [431. Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree)
-* [559. Maximum Depth of N-ary Tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree)
-* [589. N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal)
-* [590. N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal)
+* [428. Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree) (Preorder, value + children count)
+* [429. N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal) (Queue)
+* [431. Encode N-ary Tree to Binary Tree](https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree) (Next Level -> left, Same Level -> right)
+* [559. Maximum Depth of N-ary Tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree) (Recursion)
+* [589. N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal) (Stack)
+* [590. N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal) (Stack)
 <hr/>
-* [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
-* [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+* [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree) (Comparison + Recursion)
+* [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree) (Recursion + Comparision)
 <hr/>
 * [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)
 * [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii)
 <hr/>
-* [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)(!!!!!)
-* [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)
+* [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree) (Recursion)
+* [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree) (Recursion)
 <hr/>
 * [684. Redundant Connection](https://leetcode.com/problems/redundant-connection)
 * [685. Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii)
-* [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)
+<hr/>
+* [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree) (Recursion with min and max at each level)
 * [99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree)
-* [100. Same Tree](https://leetcode.com/problems/same-tree)(!!!!)
-* [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree)(!!!)
-* [110. Balanced Binary Tree](Balanced Binary Tree)(!!!!)
-* [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees)
+* [100. Same Tree](https://leetcode.com/problems/same-tree) (Recursion)(!!!!!)
+* [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree) (Recursion)(!!!)
+* [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree) (Recursion, help method returns -1)(!!!!)
+* [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees) (Recursion)
 * [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)
 * [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers)
 * [156. Binary Tree Upside Down](https://leetcode.com/problems/binary-tree-upside-down)
 * [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 * [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes)
-* [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)(!!!!!)
+* [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree) (Recursion)(!!!!!)
 * [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst)
 * [250. Count Univalue Subtrees](https://leetcode.com/problems/count-univalue-subtrees)
 * [687. Longest Univalue Path](https://leetcode.com/problems/longest-univalue-path)
@@ -461,7 +462,7 @@ tags: [Algorithm, Leetcode]
 * [223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)
 * [850. Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii)
 <hr/>
-* [307. Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable)
+* [307. Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable) (Fenwick Tree or Segment Tree)
 * [308. Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable)
 * [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self)
 * [493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs)
@@ -519,19 +520,19 @@ tags: [Algorithm, Leetcode]
 * [882. Reachable Nodes In Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph)
 
 ## 14. DP
-* [62. Unique Paths](https://leetcode.com/problems/unique-paths/)(DP)
-* [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
-* [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+* [62. Unique Paths](https://leetcode.com/problems/unique-paths/) (DP with Matrix, DP with array)
+* [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) (DP with Matrix, DP with array)
+* [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) (DP with Matrix, DP with array)
 <hr/>
-* [91. Decode Ways](https://leetcode.com/problems/decode-ways)
+* [91. Decode Ways](https://leetcode.com/problems/decode-ways) (DP with array)
 * [639. Decode Ways II](https://leetcode.com/problems/decode-ways-ii)
 <hr/>
-* [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
-* [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs)
+* [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs) (Recursion, DP, Fibonacci Number)
+* [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs) (DP)
 <hr/>
-* [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)(DP)
+* [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (DP)
 * [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
-* [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)(DP)
+* [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) (DP)
 * [188. Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv)
 * [309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown)
 * [714. Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)(DP)
@@ -647,11 +648,16 @@ tags: [Algorithm, Leetcode]
 * [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses)(Stack)
 * [Given two sparse Vectors, compute the Dot Product. careercup](https://www.careercup.com/question?id=5678837729853440)
 * [67. Add Binary](https://leetcode.com/problems/add-binary)
-* [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/description/)
+* [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates)
 * [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
-* [301. Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/description/)
+* [301. Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses)
 * [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array)
 * [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)
 * [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring) (HashMap + Two Pointers)
 * [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem)
 * [76. Minimum Window Substring-Discussion](https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems)
+
+## 22. Google
+* [Print out an immutable singly linked list in reverse](https://leetcode.com/discuss/interview-question/124617/Print-out-an-immutable-singly-linked-list-in-reverse/)
+* [Sqrt (or Square Root) Decomposition Technique](https://www.geeksforgeeks.org/sqrt-square-root-decomposition-technique-set-1-introduction/)
+* [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters) (HashMap + Two Pointers)

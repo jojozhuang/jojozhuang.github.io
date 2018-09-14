@@ -195,40 +195,190 @@ public class ArrayStack {
 ### 2.4 Implementing with Array(Loop)
 ```java
 ```
-## 3. Implementing Sort Function for Stack
-### 3.1 Sorting with Additional Stack.
+## 3. Implementing Sort Function with Stack
+### 3.1 Insertion Sort with Stack
+If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a stack, which contains {1,2,2,3,4,5,6,7}, 7 is at top.
 ```java
 import java.util.Stack;
 
-public class StackSorting {
-    public static Stack<Integer> sort(Stack<Integer> stack) {
-        if (stack == null || stack.isEmpty() || stack.size() == 1) {
-            return stack;
+public class StackInsertionSort {
+    // Insertion Sort
+    public Stack<Integer> sort(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return null;
         }
 
-        Stack<Integer> res = new Stack<Integer>();
+        // initialize stack1
+        Stack<Integer> stack = new Stack<Integer>();
+        for (int i = 0; i < nums.length; i++) {
+            stack.push(nums[i]);
+        }
+        // stack2 contains the sorted items
+        Stack<Integer> stack2 = new Stack<Integer>();
 
         while (!stack.isEmpty()) {
             int top = stack.pop();
-            if (res.isEmpty()) {
-                res.push(top);
+            if (stack2.isEmpty()) {
+                stack2.push(top);
                 continue;
             }
-            while (!res.isEmpty() && res.peek() > top) {
-                stack.push(res.pop());
+            while (!stack2.isEmpty() && stack2.peek() > top) {
+                stack.push(stack2.pop());
             }
-            res.push(top);
+            stack2.push(top);
         }
 
-        return res;
+        return stack2;
     }
 }
 ```
-### 3.2 Implementing Merge Sort with Stack
+### 3.2 Merge Sort with Stack
+If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a stack, which contains {1,2,2,3,4,5,6,7}, 7 is at top.
 ```java
+import java.util.Stack;
+
+public class StackMergeSort {
+    // Merge Sort
+    public Stack<Integer> sort(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return null;
+        }
+
+        // initialize stack1
+        Stack<int[]> stack = new Stack<int[]>();
+        for (int i = 0; i < nums.length; i++) {
+            // convert number to number array
+            stack.push(new int[]{nums[i]});
+        }
+        // stack2 contains the sorted sub arrays
+        Stack<int[]> stack2 = new Stack<int[]>();
+
+        while (stack.size() > 1) {
+            while (stack.size() > 1) {
+                int[] r = stack.pop();
+                int[] l = stack.pop();
+                int[] merged = merge(l, r);
+                stack2.push(merged);
+            }
+            while (stack2.size() > 1) {
+                int[] r = stack2.pop();
+                int[] l = stack2.pop();
+                int[] merged = merge(l, r);
+                stack.push(merged);
+            }
+        }
+
+        // odd case
+        if (!stack.isEmpty() && !stack2.isEmpty()) {
+            int[] r = stack.pop();
+            int[] l = stack2.pop();
+            int[] merged = merge(l, r);
+            stack.push(merged);
+        }
+
+        int[] sorted = stack.isEmpty() ? stack2.pop() : stack.pop();
+
+        Stack<Integer> finalStack = new Stack<>();
+        for (int i : sorted) {
+            finalStack.push(i);
+        }
+
+        return finalStack;
+    }
+
+    private int[] merge(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums1.length == 0) {
+            return nums2;
+        }
+        if (nums2 == null || nums2.length == 0) {
+            return nums1;
+        }
+
+        int[] nums = new int[nums1.length + nums2.length];
+        int i = 0, j = 0;
+        for (int k = 0; k < nums.length; k++) {
+            if (i >= nums1.length) {
+                nums[k] = nums2[j];
+                j++;
+            } else if (j >= nums2.length) {
+                nums[k] = nums1[i];
+                i++;
+            } else if (nums1[i] <= nums2[j]) {
+                nums[k] = nums1[i];
+                i++;
+            } else {
+                nums[k] = nums2[j];
+                j++;
+            }
+        }
+
+        return nums;
+    }
+}
 ```
 ### 3.3 Implementing Quick Sort with Stack
+If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a stack, which contains {1,2,2,3,4,5,6,7}, 7 is at top.
 ```java
+import java.util.Stack;
+
+public class StackQuickSort {
+    public Stack<Integer> sort(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return null;
+        }
+        quickHelper(nums, 0, nums.length - 1);
+
+        Stack<Integer> finalStack = new Stack<>();
+        for (int i : nums) {
+            finalStack.push(i);
+        }
+
+        return finalStack;
+    }
+
+    private void quickHelper(int[] nums, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+
+        /*int pivot = partition(nums, start, end);
+        quickHelper(nums, start, pivot - 1);
+        quickHelper(nums, pivot + 1, end);*/
+
+        // use stack to implement the recursion(implicit stack).
+        Stack<int[]> stack = new Stack<int[]>();
+        stack.push(new int[] {0, end});
+        while (!stack.isEmpty()) {
+            while (start <= end) {
+                int pivot = partition(nums, start, end);
+                stack.push(new int[] {pivot + 1, end}); // execute second recursive call
+                end = pivot - 1;  // execute first recursive call
+            }
+            int[] next = stack.pop();  // fetch next recursive call to execute
+            start = next[0];
+            end = next[1];
+        }
+    }   
+
+    // one way
+    private int partition(int[] nums, int start, int end) {
+        int pivot = start; // select the first as the pivot
+
+        for (int i = start + 1; i <= end; i++) {
+            if (nums[i] < nums[start]) {
+                pivot++;
+                int temp = nums[pivot];
+                nums[pivot] = nums[i];
+                nums[i] = temp;
+            }
+        }
+
+        int temp = nums[pivot];
+        nums[pivot] = nums[start];
+        nums[start] = temp;
+        return pivot;
+    }
+}
 ```
 
 ## 4. Source Files
@@ -239,3 +389,5 @@ public class StackSorting {
 * [Data Structure and Algorithms - Stack](https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
 * [Stack](https://www.programiz.com/dsa/stack)
+* [Using Stacks for a Non-Recursive MergeSort?](https://stackoverflow.com/questions/21897184/using-stacks-for-a-non-recursive-mergesort)
+* [Implementing Quicksort with a Stack](https://courses.cs.washington.edu/courses/cse332/11au/recursion.pdf)
