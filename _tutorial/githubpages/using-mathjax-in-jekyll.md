@@ -18,7 +18,7 @@ mathjax: true
 
 ## 2. Using MathJax on Web Pages
 ### 2.1 Loading MathJax
-The preferred way to use MathJax on a web page is by linking to the publicly available MathJax Content Delivery Network `(CDN)`. This can be done by adding the following code snippet into the HTML header block `(the code between <head> and </head>)` of your HTML or XHTML document:
+The preferred way to use MathJax on a web page is by linking to the publicly available MathJax Content Delivery Network(CDN). This can be done by adding the following code snippet into the HTML header block(the code between <head> and </head>) of your HTML or XHTML document:
 ```html
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -59,7 +59,7 @@ Create a file named with `mathjax.html` in `_include` directory as follows:
       }
     },
     tex2jax: {
-      inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
       displayMath: [ ['$$','$$'] ],
       processEscapes: true,
     }
@@ -67,6 +67,8 @@ Create a file named with `mathjax.html` in `_include` directory as follows:
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```
+* See the details about the settings from [here](http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-math-delimiters), especially for the escape character \$ and ().
+
 Update file `_inlude/head.html`, include the above template file if `page.mathjax` is true.
 ```javascript
 {%- raw -%}
@@ -76,8 +78,8 @@ Update file `_inlude/head.html`, include the above template file if `page.mathja
 {% endraw %}
 ```
 ### 3.2 Using Math Formula in Markdown Page
-In order to use the math formula in markdown page, it must have a variable `mathjax` and set its value to `true`. For example, the following is a markdown page using mathjax.
-```javascript
+In order to use the math formula in markdown page, it must have a variable `mathjax` and set its value to `true`. For example, the following example is a markdown page using mathjax.
+~~~markdown
 ---
 layout: tutorial
 title: "Using MathJax in Jekyll"
@@ -85,7 +87,7 @@ date: 2018-07-10
 tags: [MathJax, Mathematic]
 mathjax: true
 ---
-```
+~~~
 1) Example One:
 Construct the formula with following markdown.
 ```raw

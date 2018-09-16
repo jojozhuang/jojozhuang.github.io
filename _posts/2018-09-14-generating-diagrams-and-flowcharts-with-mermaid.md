@@ -93,10 +93,7 @@ Define a flow chart containing 4 nodes. The icons are accessed via the syntax `f
 ```
 ![image](/public/posts/2018-09-14/icon_supported.png/){:width="600px"}
 
-## 4. Using Mermaid with Markdown
-Unfortunately, currently GitHub Pages doesn't support Mermaid, see the [issue](https://github.com/github/markup/issues/533). You can use plugin [jekyll-mermaid](https://github.com/jasonbellamy/jekyll-mermaid) to generate diagrams with markdown in your local Jekyll. But it won't work if you push these markdown files into GitHub pages.
-
-## 5. References
+## 4. References
 * [Mermaid Documentation](https://mermaidjs.github.io/)
 * [Mermaid Live Editor](https://mermaidjs.github.io/mermaid-live-editor/)
 * [Mermaid on GitHub](https://github.com/knsv/mermaid)
