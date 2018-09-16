@@ -40,6 +40,9 @@
   {% if page.mathjax %}
     {% include mathjax.html %}
   {% endif %}
+  {% if page.mermaid %}
+    {% include mermaid.html %}
+  {% endif %}
   <!-- move to here, script should be inside head, otherwise doesn't work for ie -->
   {% include google_analytics.html %}
 
