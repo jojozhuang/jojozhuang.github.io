@@ -7,7 +7,7 @@ tags: [Mermaid]
 mermaid: true
 ---
 
-> Cheat Sheet for Mermaid
+> Cheat Sheet for Mermaid.
 
 ## 1. Flowcharts
 A flowchart is a type of diagram that represents an algorithm, workflow or process. The flowchart shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows. This diagrammatic representation illustrates a solution model to a given problem.
@@ -203,6 +203,40 @@ Possible directions are:
     </tr>
   </tbody>
 </table>
+### 1.4 Subgraphs
+Syntax:
+~~~markdown
+subgraph title
+    graph definition
+end
+~~~
+Example:
+~~~markdown
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+~~~
+<div class="mermaid">
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+</div>
 
 ## 2. Sequence Diagrams
 A Sequence diagram is an interaction diagram that shows how processes operate with one another and in what order.
@@ -533,7 +567,24 @@ graph LR
     B --> D{Rhombus}
     C --> D
 </div>
-### 4.2 Larger Flowchart with Some Styling
+### 4.2 Flowchart with Decision
+```raw
+graph TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+<div class="mermaid">
+graph TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+</div>
+### 4.3 Larger Flowchart with Some Styling
 ```raw
 graph TB
     sq[Square shape] --> ci((Circle shape))
@@ -580,7 +631,7 @@ graph TB
      class sq,e green
      class di orange
 </div>
-### 4.3 Basic Sequence Diagram
+### 4.4 Basic Sequence Diagram
 ```raw
 sequenceDiagram
     Alice ->> Bob: Hello Bob, how are you?
@@ -603,7 +654,7 @@ sequenceDiagram
     Bob-->Alice: Checking with John...
     Alice->John: Yes... John, how are you?
 </div>
-### 4.4 Message to Self in Loop
+### 4.5 Message to Self in Loop
 ```raw
 sequenceDiagram
     participant Alice
@@ -634,3 +685,4 @@ sequenceDiagram
 ## 5. References
 * [Mermaid Flowcharts - Basic Syntax](https://mermaidjs.github.io/flowchart.html)
 * [Mermaid Sequence diagrams](https://mermaidjs.github.io/sequenceDiagram.html)
+* [Mermaid Gant diagrams](https://mermaidjs.github.io/gantt.html)
