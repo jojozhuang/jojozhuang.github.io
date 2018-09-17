@@ -14,3 +14,7 @@ tags: [Chrome, MacOS]
 
 ## 1. Latest
 * [How to Disable Google Chrome UI Theme Redesign and Return to Classic UI](http://osxdaily.com/2018/09/10/disable-chrome-ui-theme-redesign/)
+* [Front-End Handbook](https://www.frontendhandbook.com/)
+* [Publish GitBook to Your GitHub Pages](http://sangsoonam.github.io/2016/08/02/publish-gitbook-to-your-github-pages.html)
+* [online diagramming web site](https://github.com/jgraph/drawio)
+* [www.draw.io](www.draw.io)
