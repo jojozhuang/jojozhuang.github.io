@@ -245,7 +245,7 @@ public ListNode detectCycle(ListNode head) {
 
 ## 4. Source Files
 * [Source files for Linked List on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LinkedList)
-* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1qXW9wig6XkCCm2Bgd-9UOW7fHfyUmCF4FDEeLEdsxUQ/edit?usp=sharing)
+* [Linked List Diagrams on Google Slides](https://docs.google.com/presentation/d/1qXW9wig6XkCCm2Bgd-9UOW7fHfyUmCF4FDEeLEdsxUQ/edit?usp=sharing)
 
 ## 5. Reference
 * [Data Structure and Algorithms - Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
