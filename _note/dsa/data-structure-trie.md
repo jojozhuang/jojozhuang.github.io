@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Trie"
-index: 309
+index: 307
 category: dsa
 image: /note/dsa.png
-date: 2016-03-09
-postdate: 2016-03-09
+date: 2016-03-07
+postdate: 2016-03-07
 tags: [Trie]
 ---
 

@@ -7,7 +7,8 @@ category: dsa
 image: /note/dsa.png
 date: 2016-03-05
 postdate: 2016-03-05
-tags: [Tree, BST]
+tags: [Tree, Binary Tree]
+mathjax: true
 ---
 
 > Introduce what is Tree, how to construct it and how to use it.
@@ -28,10 +29,20 @@ A tree is a data structure composed of nodes.The tree cannot contain cycles. The
 * `Full Binary Trees`: A full binary tree is a binary tree in which every node has either zero or two children.That is, no nodes have only one child.
 * `Perfect Binary Trees`: A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
 
-## 3. Binary Tree Traversal
-### 3.1 Definition of Binary Tree
+![image](/public/notes/data-structure-tree/trees.png){:width="1000px"}  
+
+## 3. Binary Tree Properties
+* The maximum number of nodes at level `'l'` of a binary tree is $2^{l-1}$.
+* Maximum number of nodes in a binary tree of height `'h'` is $2^h-1$, since 1 + 2 + 4 + .. + $2^{h-1}$ = $2^h-1$.
+* In a Binary Tree with `'n'` nodes, minimum possible height or minimum number of levels is $\log_{2}(n+1)$.
+* A Binary Tree with `'l'` leaves has at least $\log_{2}(l) + 1$ levels.
+* In Binary tree where every node has 0 or 2 children, number of leaf nodes is always one more than nodes with two children.
+
+## 4. Binary Tree Traversal
+### 4.1 Definition of Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
-### 3.2 Implementing Tree Node
+![image](/public/notes/data-structure-tree/binary_tree.png){:width="350px"}  
+### 4.2 Implementing Tree Node
 ```java
 public class TreeNode {
     public int val;
@@ -44,14 +55,14 @@ public class TreeNode {
     }
 }
 ```
-### 3.3 Common Traversal Approaches On Binary Tree
+### 4.3 Common Traversal Approaches On Binary Tree
 * Preorder -> Recursion or Iteration with Stack(Add right first, then left node to stack)
 * Inorder -> Recursion or Iteration with Stack(Go to the deepest left node)
 * Postorder -> Recursion or Iteration with Stack(Need to set node.left = null)
 * Level -> Queue
 
-### 3.4 Binary Tree Traversal(Recursion)
-Pre-Order
+### 4.4 Binary Tree Traversal(Recursion)
+Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 /**
  * @param root, the root node of a tree
@@ -73,7 +84,7 @@ public List<Integer> preorderRecursion(TreeNode root) {
     return res;
 }
 ```
-In-Order
+In-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,1,4,3,5].
 ```java
 /**
  * @param root, the root node of a tree
@@ -96,8 +107,7 @@ public List<Integer> inorderRecursion(TreeNode root) {
     return res;
 }
 ```
-
-Post-Order
+Post-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,4,5,3,1].
 ```java
 /**
  * @param root, the root node of a tree
@@ -120,9 +130,8 @@ public List<Integer> postorderRecursion(TreeNode root) {
     return res;
 }
 ```
-
-### 3.5 Binary Tree Traversal(Iteration)
-Pre-Order
+### 4.5 Binary Tree Traversal(Iteration)
+Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 /**
  * @param root, the root node of a tree
@@ -152,8 +161,7 @@ public List<Integer> preorderIteration(TreeNode root) {
     return res;
 }
 ```
-
-In-Order
+In-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,1,4,3,5].
 ```java
 /**
  * @param root, the root node of a tree
@@ -182,8 +190,7 @@ public List<Integer> inorderIteration(TreeNode root) {
     return res;
 }
 ```
-
-Post-Order
+Post-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,4,5,3,1].
 ```java
 /**
  * @param root, the root node of a tree
@@ -222,13 +229,10 @@ public List<Integer> postorderIteration(TreeNode root) {
     return res;
 }
 ```
-
-### 3.6 Binary Tree Traversal(General Template)
-Suppose we have a tree as follows. There are totally 6 traversal ways.  
-     1  
-   /   \  
-  2     3  
-
+### 4.6 Binary Tree Traversal(General Template)
+Suppose we have a tree as follows.
+![image](/public/notes/data-structure-tree/tree_template.png){:width="200px"}
+There are totally 6 traversal ways.  
 ```java
 /**
  * 1->2->3
@@ -351,8 +355,8 @@ public List<Integer> postorderTraversal2(TreeNode root) {
 }
 ```
 
-## 4. Level-Order in Binary Tree
-## 4.1 Creating TreeNode With Level-Order String Array
+## 5. Level-Order in Binary Tree
+## 5.1 Creating TreeNode With Level-Order String Array
 For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
 ```java
 TreeNode root = TreeFactory.createInstance(new String[]{"1","#","3"});
@@ -369,24 +373,24 @@ public class TreeFactory {
             return null;
         }
 
-        Queue<TreeNode> queueNode = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
 
         TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
-        queueNode.offer(root);
+        queue.offer(root);
 
         int index = 0;
         while (index < arr.length - 1) {
-            TreeNode node = queueNode.poll();
+            TreeNode node = queue.poll();
             if (node != null) {
                 String str = arr[++index];
                 if (!str.equals("#")) {
                     node.left = new TreeNode(Integer.parseInt(str));
-                    queueNode.add(node.left);
+                    queue.add(node.left);
                 }
                 str = arr[++index];
                 if (!str.equals("#")) {
                     node.right = new TreeNode(Integer.parseInt(str));
-                    queueNode.add(node.right);
+                    queue.add(node.right);
                 }
             }
         }
@@ -394,24 +398,20 @@ public class TreeFactory {
         return root;
     }
 }
-
 ```
 
-## 4.2 Level-Order Traversal on Binary Tree
-Given binary tree {3,9,20,#,#,15,7},  
-     3  
-    / \  
-   9  20  
-     /  \  
-    15   7  
- return its level order traversal as:  
-
+## 5.2 Level-Order Traversal on Binary Tree
+Given binary tree {3,9,20,#,#,15,7} as follows.
+![image](/public/notes/data-structure-tree/tree_level_order.png){:width="350px"}
+Return its level order traversal as:  
+```raw
  [  
    [3],  
    [9,20],  
    [15,7]  
  ]  
-
+```
+Use Queue to traverse the tree by layer.
 ```java
 /**
  * @param root, the root node of a tree
@@ -447,39 +447,10 @@ public List<List<Integer>> levelOrder(TreeNode root) {
 }
 ```
 
-## 5. Implementing Binary Search Tree
-Methods:  
-* insert(int value)
-* find(int value)
-* size()
-
-```java
-public class BSTNode {
-    public int val;
-    public BSTNode left, right;
-    private int size = 0;
-
-    public BSTNode(int value) {
-        this.val = value;
-        this.size = 1;
-    }
-
-    public void insert(int value) {
-
-    }
-
-    public BSTNode find(int value) {
-        return null;
-    }
-
-    public int size() {
-        return this.size;
-    }
-}
-```
-
 ## 6. Source Files
 * [Source files for Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
+* [Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/10KemmKHtZPHko6qIhThmVVaqH5X1Nz5o/view?usp=sharing)
+* [Binary Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1WAxUtv_nD9CJ1E5e8JaW-Kf9Vi3fLl9x/view?usp=sharing)
 
 ## 7. Reference
 * [Data Structure and Algorithms - Tree](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)

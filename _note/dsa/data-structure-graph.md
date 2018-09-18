@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Graph"
-index: 308
+index: 311
 category: dsa
 image: note/dsa.png
-date: 2016-03-08
-postdate: 2016-03-08
+date: 2016-03-11
+postdate: 2016-03-11
 tags: [Graph]
 ---
 

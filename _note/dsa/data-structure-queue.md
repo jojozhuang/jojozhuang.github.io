@@ -312,7 +312,7 @@ public class QueueMergeSort {
 
 ## 4. Source Files
 * [Source files for Queue on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Queue)
-* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1scNOPMlC4kNb2FiyDhlhX8R7fCx3tkGC01J7ljYREWg/edit?usp=sharing)
+* [Queue Diagrams on Google Slides](https://docs.google.com/presentation/d/1scNOPMlC4kNb2FiyDhlhX8R7fCx3tkGC01J7ljYREWg/edit?usp=sharing)
 
 ## 5. Reference
 * [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)
