@@ -13,14 +13,14 @@ mathjax: true
 
 > Introduce what is Tree, how to construct it and how to use it.
 
+## 1. Tree
 A tree is a data structure composed of nodes.The tree cannot contain cycles. The nodes may or may not be in a particular order, they could have any data type as values, and they may or may not have links back to their parent nodes.
-
-## 1. Definition of Tree
+### 1.1 Definition of Tree
 * Each tree has a root node.
 * The root node has zero or more child nodes.
 * Each child node has zero or more child nodes, and so on.
 
-## 2. Distinguishing the following Concepts
+### 1.2 Distinguishing the following Concepts
 * Graphs vs. Trees: A tree is a connected graph without cycles.
 * Trees vs. `Binary Trees`: Each node in binary tree has no more than 2 children nodes.
 * Binary Tree vs. `Binary Search Tree`: Every node in BST fits a specific ordering property: all left descendents <= current node < all right descendents.
@@ -31,18 +31,18 @@ A tree is a data structure composed of nodes.The tree cannot contain cycles. The
 
 ![image](/public/notes/data-structure-tree/trees.png){:width="1000px"}  
 
-## 3. Binary Tree Properties
+### 1.3 Binary Tree Properties
 * The maximum number of nodes at level `'l'` of a binary tree is $2^{l-1}$.
 * Maximum number of nodes in a binary tree of height `'h'` is $2^h-1$, since 1 + 2 + 4 + .. + $2^{h-1}$ = $2^h-1$.
 * In a Binary Tree with `'n'` nodes, minimum possible height or minimum number of levels is $\log_{2}(n+1)$.
 * A Binary Tree with `'l'` leaves has at least $\log_{2}(l) + 1$ levels.
 * In Binary tree where every node has 0 or 2 children, number of leaf nodes is always one more than nodes with two children.
 
-## 4. Binary Tree Traversal
-### 4.1 Definition of Binary Tree
+## 2. Binary Tree Traversal
+### 2.1 Definition of Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 ![image](/public/notes/data-structure-tree/binary_tree.png){:width="350px"}  
-### 4.2 Implementing Tree Node
+### 2.2 Implementing Tree Node
 ```java
 public class TreeNode {
     public int val;
@@ -55,13 +55,13 @@ public class TreeNode {
     }
 }
 ```
-### 4.3 Common Traversal Approaches On Binary Tree
+### 2.3 Common Traversal Approaches On Binary Tree
 * Preorder -> Recursion or Iteration with Stack(Add right first, then left node to stack)
 * Inorder -> Recursion or Iteration with Stack(Go to the deepest left node)
 * Postorder -> Recursion or Iteration with Stack(Need to set node.left = null)
 * Level -> Queue
 
-### 4.4 Binary Tree Traversal(Recursion)
+### 2.4 Binary Tree Traversal(Recursion)
 Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 /**
@@ -130,7 +130,7 @@ public List<Integer> postorderRecursion(TreeNode root) {
     return res;
 }
 ```
-### 4.5 Binary Tree Traversal(Iteration)
+### 2.5 Binary Tree Traversal(Iteration)
 Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 /**
@@ -229,7 +229,7 @@ public List<Integer> postorderIteration(TreeNode root) {
     return res;
 }
 ```
-### 4.6 Binary Tree Traversal(General Template)
+### 2.6 Binary Tree Traversal(General Template)
 Suppose we have a tree as follows.
 ![image](/public/notes/data-structure-tree/tree_template.png){:width="200px"}
 There are totally 6 traversal ways.  
@@ -354,53 +354,7 @@ public List<Integer> postorderTraversal2(TreeNode root) {
     return res;
 }
 ```
-
-## 5. Level-Order in Binary Tree
-## 5.1 Creating TreeNode With Level-Order String Array
-For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
-```java
-TreeNode root = TreeFactory.createInstance(new String[]{"1","#","3"});
-```
-
-Implementation of the 'createInstance' method.
-```java
-import java.util.LinkedList;
-import java.util.Queue;
-
-public class TreeFactory {
-    public static TreeNode createInstance(String[] arr) {
-        if(arr == null || arr.length == 0) {
-            return null;
-        }
-
-        Queue<TreeNode> queue = new LinkedList<>();
-
-        TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
-        queue.offer(root);
-
-        int index = 0;
-        while (index < arr.length - 1) {
-            TreeNode node = queue.poll();
-            if (node != null) {
-                String str = arr[++index];
-                if (!str.equals("#")) {
-                    node.left = new TreeNode(Integer.parseInt(str));
-                    queue.add(node.left);
-                }
-                str = arr[++index];
-                if (!str.equals("#")) {
-                    node.right = new TreeNode(Integer.parseInt(str));
-                    queue.add(node.right);
-                }
-            }
-        }
-
-        return root;
-    }
-}
-```
-
-## 5.2 Level-Order Traversal on Binary Tree
+### 2.7 Level-Order Traversal on Binary Tree
 Given binary tree {3,9,20,#,#,15,7} as follows.
 ![image](/public/notes/data-structure-tree/tree_level_order.png){:width="350px"}
 Return its level order traversal as:  
@@ -447,11 +401,128 @@ public List<List<Integer>> levelOrder(TreeNode root) {
 }
 ```
 
-## 6. Source Files
+## 3. Constructing Binary Tree
+### 3.1 Serialization and Deserialization of Binary Tree
+* Serialization - Convert a binary tree to string.
+* Deserialization - Decode a string to binary tree.
+
+For example, we have a tree as follows.
+![image](/public/notes/data-structure-tree/binary_tree.png){:width="350px"}
+Serialization will convert to tree to string ["1","2","3","#","#","4","5"] and deserialization will convert this string to the original tree.
+
+Below is the implementation of serialization and deserialization in Java.
+```java
+public class Codec {
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        if (root == null) {
+            return "";
+        }
+
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
+        StringBuilder sb = new StringBuilder();
+        sb.append(root.val + ",");
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if (node.left != null) {
+                    queue.offer(node.left);
+                    sb.append(node.left.val + ",");
+                } else {
+                    sb.append("#,");
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                    sb.append(node.right.val + ",");
+                } else {
+                    sb.append("#,");
+                }
+
+            }
+        }
+        sb.deleteCharAt(sb.length() - 1);
+        return sb.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if (data == null || data.length() == 0) {
+            return null;
+        }
+
+        String[] values = data.split(",");
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        TreeNode root = new TreeNode(Integer.parseInt(values[0]));
+        queue.offer(root);
+
+        for (int i = 1; i < values.length; i = i + 2) {
+            TreeNode node = queue.poll();
+            if (!values[i].equals("#")) {
+                node.left = new TreeNode(Integer.parseInt(values[i]));
+                queue.offer(node.left);
+            }
+            if (!values[i + 1].equals("#")) {
+                node.right = new TreeNode(Integer.parseInt(values[i + 1]));
+                queue.offer(node.right);
+            }
+        }
+
+        return root;
+    }
+}
+```
+### 3.2 Creating Tree With Level-Order String Array
+For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
+```java
+TreeNode root = TreeFactory.createInstance(new String[]{"1","#","3"});
+```
+
+Implementation of the 'createInstance' method.
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class TreeFactory {
+    public static TreeNode createInstance(String[] arr) {
+        if(arr == null || arr.length == 0) {
+            return null;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+
+        TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
+        queue.offer(root);
+
+        int index = 0;
+        while (index < arr.length - 1) {
+            TreeNode node = queue.poll();
+            if (node != null) {
+                String str = arr[++index];
+                if (!str.equals("#")) {
+                    node.left = new TreeNode(Integer.parseInt(str));
+                    queue.add(node.left);
+                }
+                str = arr[++index];
+                if (!str.equals("#")) {
+                    node.right = new TreeNode(Integer.parseInt(str));
+                    queue.add(node.right);
+                }
+            }
+        }
+
+        return root;
+    }
+}
+```
+
+## 4. Source Files
 * [Source files for Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
 * [Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/10KemmKHtZPHko6qIhThmVVaqH5X1Nz5o/view?usp=sharing)
 * [Binary Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1WAxUtv_nD9CJ1E5e8JaW-Kf9Vi3fLl9x/view?usp=sharing)
 
-## 7. Reference
+## 5. Reference
 * [Data Structure and Algorithms - Tree](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
 * [Binary Tree Data Structure](http://www.geeksforgeeks.org/binary-tree-data-structure/)
