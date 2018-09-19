@@ -82,7 +82,17 @@ $ bundle exec jekyll serve --port 12001
 Open web browser to access your local jekyll website.
 ![image](/public/tutorials/901/local.png)  
 
-## 5. References
+## 5. Upgrade Jekyll
+```sh
+$ brew update
+$ brew upgrade ruby
+$ gem update jekyll
+$ cd /Johnny/GitHub/jojozhuang.github.io
+$ bundle update
+$ bundle exec jekyll serve --port 12001
+```
+
+## 6. References
 * [Jekyll - Official Installation Guide](https://jekyllrb.com/docs/installation/)
 * [Setting up your GitHub Pages site locally with Jekyll
 ](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
