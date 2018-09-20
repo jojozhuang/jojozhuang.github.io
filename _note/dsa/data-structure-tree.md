@@ -521,7 +521,7 @@ public class TreeFactory {
 ## 4. Source Files
 * [Source files for Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
 * [Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/10KemmKHtZPHko6qIhThmVVaqH5X1Nz5o/view?usp=sharing)
-* [Binary Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1WAxUtv_nD9CJ1E5e8JaW-Kf9Vi3fLl9x/view?usp=sharing)
+* [Binary Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1D57NwHAx8-Q1ZhC8HRgzNVUI_IdReCEr/view?usp=sharing)
 
 ## 5. Reference
 * [Data Structure and Algorithms - Tree](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)

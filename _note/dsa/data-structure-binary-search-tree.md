@@ -8,49 +8,199 @@ image: /note/dsa.png
 date: 2016-03-06
 postdate: 2016-03-06
 tags: [BST]
-mathjax: true
 ---
 
-> Introduce what is Tree, how to construct it and how to use it.
+> Introduce what is Binary Search Tree, how to construct it and how to use it.
 
 ## 1. Binary Search Tree
+Binary Search Tree(BST) is a node-based binary tree data structure which has the following properties:
+* The left subtree of a node contains only nodes with values lesser than the node’s value.
+* The right subtree of a node contains only nodes with values greater than the node’s values.
+* The left and right subtree each must also be a binary search tree.
+* There must be no duplicate nodes.
 
-## 6. Implementing Binary Search Tree
-Methods:  
-* insert(int value)
-* find(int value)
-* size()
+![image](/public/notes/data-structure-binary-search-tree/bst.png){:width="450px"}  
 
+Common operations on BST.
+* Search
+* Insertion
+* Deletion
+
+## 2. Search
+Given a binary search tree as follows, search node with value 7.
+![image](/public/notes/data-structure-binary-search-tree/search7.png){:width="450px"}
+Binary Search Tree is constructed with nodes recursively. The following example shows how the node is defined.
 ```java
 public class BSTNode {
     public int val;
     public BSTNode left, right;
-    private int size = 0;
 
     public BSTNode(int value) {
         this.val = value;
-        this.size = 1;
     }
-
-    public void insert(int value) {
-
+}
+```
+To search a given value in Binary Search Tree, we first compare it with root, if the key is present at root, we return root. If the value is greater than root’s value, we search further in the right subtree. Otherwise we search further in the left subtree.
+```java
+public boolean search(int val) {
+    BSTNode current = root;
+    while ( current != null) {
+        if (current.val == val) {
+            return true;
+        } else if (current.val > val) {
+            current = current.left;
+        } else {
+            current = current.right;
+        }
     }
+    return false;
+}
+```
 
-    public BSTNode find(int value) {
-        return null;
+## 3. Insertion
+Given a binary search tree as follows, insert new value 5 into this tree.
+![image](/public/notes/data-structure-binary-search-tree/insert5.png)
+A new value is always inserted at leaf. Similar with the search operation, we start searching the given value from root till we hit a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node. At each step, we compare the given value with the node value to determine whether to go left or right.
+```java
+public void insert(int val) {
+    BSTNode newNode = new BSTNode(val);
+    if (root == null) {
+        root = newNode;
+        return;
     }
-
-    public int size() {
-        return this.size;
+    BSTNode current = root;
+    while (true) {
+        if (val < current.val) {
+            if (current.left == null) {
+                current.left = newNode;
+                return;
+            }
+            current = current.left;
+        } else {
+            if (current.right == null) {
+                current.right = newNode;
+                return;
+            }
+            current = current.right;
+        }
     }
 }
 ```
 
-## 7. Source Files
-* [Source files for Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
-* [Stack Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/10KemmKHtZPHko6qIhThmVVaqH5X1Nz5o/view?usp=sharing)
+## 4. Deletion
+There are three cases when deleting a node from Binary Search Tree.
+* Node is leaf, has no children.
+* Node has only one child.
+* Node has two children.
 
-## 8. Reference
+### 4.1 Node Has No Children
+![image](/public/notes/data-structure-binary-search-tree/delete4.png)
+The solution is easy, simply remove the node from the tree.
+### 4.2 Node Has One Child
+![image](/public/notes/data-structure-binary-search-tree/delete9.png)
+If node has only one child, then replace this node with its child.
+### 4.3 Node Has Two Children
+This case is more complex, and we have two options.  
+1) Populate successor
+![image](/public/notes/data-structure-binary-search-tree/delete3successor.png)
+Find inorder successor of the node. Replace the node with its successor and delete the successor from its original parent.  
+2) Populate predecessor  
+![image](/public/notes/data-structure-binary-search-tree/delete3predecessor.png)
+Find inorder predecessor of the node. Replace the node with its predecessor and delete the predecessor from its original parent.  
+
+The following implementation populates the successor of the deleted node.
+```java
+public boolean delete(int val) {
+    BSTNode parent = root;
+    BSTNode current = root;
+    boolean isLeftChild = false;
+
+    while (current.val != val){
+        parent = current;
+        if (current.val > val){
+            isLeftChild = true;
+            current = current.left;
+        } else {
+            isLeftChild = false;
+            current = current.right;
+        }
+        if (current == null) {
+            return false;
+        }
+    }
+
+    //if i am here that means we have found the node
+    //Case 1: if node to be deleted has no children(leaf)
+    if (current.left == null && current.right == null) {
+        if (current == root) {
+            root = null;
+        }
+        if (isLeftChild == true) {
+            parent.left = null;
+        } else {
+            parent.right = null;
+        }
+    }
+    //Case 2 : if node to be deleted has only one child
+    else if (current.right == null) {
+        if (current == root) {
+            root = current.left;
+        } else if(isLeftChild) {
+            parent.left = current.left;
+        } else {
+            parent.right = current.left;
+        }
+    }
+    else if (current.left == null) {
+        if (current == root) {
+            root = current.right;
+        } else if (isLeftChild) {
+            parent.left = current.right;
+        }else{
+            parent.right = current.right;
+        }
+    }
+    //Case 3 : if node to be deleted has two children
+    else if (current.left != null && current.right != null){
+        //now we have found the minimum element in the right sub tree
+        BSTNode successor = getSuccessor(current);
+        if (current == root) {
+            root = successor;
+        } else if (isLeftChild) {
+            parent.left = successor;
+        }else{
+            parent.right = successor;
+        }
+        successor.left = current.left;
+    }
+    return true;
+}
+
+private BSTNode getSuccessor(BSTNode deleleNode) {
+    BSTNode successsor =null;
+    BSTNode successsorParent =null;
+    BSTNode current = deleleNode.right;
+    while (current != null){
+        successsorParent = successsor;
+        successsor = current;
+        current = current.left;
+    }
+    //check if successor has the right child, it cannot have left child for sure
+    // if it does have the right child, add it to the left of successorParent.
+    //      successsorParent
+    if (successsor != deleleNode.right) {
+        successsorParent.left = successsor.right;
+        successsor.right = deleleNode.right;
+    }
+    return successsor;
+}
+```
+
+## 5. Source Files
+* [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
+* [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
+
+## 6. Reference
 * [Binary Search Tree - Search and Insertion)](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/)
 * [Binary Search Tree - Delete](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
 * [Binary Search Tree Complete Implementation](https://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/)
