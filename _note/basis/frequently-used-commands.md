@@ -53,3 +53,9 @@ https://codeyarns.com/2018/02/02/perforce-cheatsheet/
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ```
 * `r` - Recursively copy entire directories.
+
+### 8. Change Owner of Entire Directory to Current User
+```sh
+sudo chown $USER /ariba/ssp_mvn/ -R
+```
+* `r` - Recursively change the owner for sub directories.

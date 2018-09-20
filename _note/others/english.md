@@ -81,6 +81,8 @@ tags: [English]
 * sparse matrix: 稀疏矩阵
 * dot product: 点积
 * wild card: 通配符
+* successor: 继承者
+* predecessor: 前任，前辈
 
 ## 4. Others:
 * within bound: 在边界之内
