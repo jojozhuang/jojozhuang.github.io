@@ -20,6 +20,8 @@ Very commonly, a trie is used to store the entire (English) language for quick p
 
 Below picture shows how words are stored in trie. This trie stores five words: dog, dot, pump, fat, fire. Each node has a hashmap and a flag to indicate whether the current node is a leaf(a complete path for a word).
 ![image](/public/notes/data-structure-trie/trie.png){:width="800px"}
+* In trie, each path from root to any node represents a word.
+* It is not necessary that leaf has to be the node without children. For example, suppose 'dog' and 'dot' are words in this trie. Then, node 'g' and node 't' are obviously marked as leaves. If word 'do' is also in this trie, then node 'o' is also marked as leaf, even if it has two children, 'g' and 't'.
 
 Common operations on Trie.
 * Search
@@ -58,12 +60,12 @@ public boolean startsWith(String prefix) {
     }
 }
 
-private TrieNode searchNode(String str){
+private TrieNode searchNode(String str) {
     TrieNode current = root;
 
-    for (int i = 0; i < str.length(); i++){
+    for (int i = 0; i < str.length(); i++) {
         char ch = str.charAt(i);
-        if (current.children.containsKey(ch)){
+        if (current.children.containsKey(ch)) {
             current = current.children.get(ch);
         } else {
             return null;
@@ -89,16 +91,20 @@ public boolean search(String word) {
 
 ## 3. Insertion
 Given a trie as follows, insert new word 'firm' into this trie.
-![image](/public/notes/data-structure-trie/insert.png)
+![image](/public/notes/data-structure-trie/insertfirm.png)
 We start searching the given word from root till we cannot find one particular character. Then we construct new trie nodes recursively for the rest characters. In the end, set the leaf attribute of the last node to true.
+
+One case needs to be noticed here. If the new word(eg. 'do') is prefix of other words(word 'do' is prefix of word 'dot'),  we just need to mark the last node(eg. node 'o') of the new word as leaf without creating any new node. Even though node 'o' has children, it is marked as leaf since the path from root to node 'o' represents word 'do'.
+![image](/public/notes/data-structure-trie/insertdo.png)
+Below is the implementation of the insert method.
 ```java
 // Insert a word into trie
 public void insert(String word) {
     TrieNode current = root;
 
-    for (int i = 0; i < word.length(); i++){
+    for (int i = 0; i < word.length(); i++) {
         char ch = word.charAt(i);
-        if (!current.children.containsKey(ch)){
+        if (!current.children.containsKey(ch)) {
             current.children.put(ch, new TrieNode());
         }
         current = current.children.get(ch);
@@ -134,9 +140,9 @@ public boolean delete(String word) {
     TrieNode lastBranchNode = null;
     Character lastBrachChar = null;
 
-    for (int i = 0; i < word.length(); i++){
+    for (int i = 0; i < word.length(); i++) {
         char ch = word.charAt(i);
-        if (current.children.containsKey(ch)){
+        if (current.children.containsKey(ch)) {
             if (current.children.size() > 1) {
                 lastBranchNode = current;
                 lastBrachChar = ch;
@@ -167,6 +173,19 @@ public boolean delete(String word) {
 ```
 
 ## 5. Trie Variants
+### 5.1 Trie Node
+If the words contains only lower-case letters, then we can define Trie Node with array instead of hashmap.
+```java
+public class TrieNode {
+    public TrieNode[] children;
+    public boolean leaf;
+
+    public TrieNode() {
+        children = new TrieNode[26];
+        leaf = false;
+    }
+}
+```
 
 ## 6. Source Files
 * [Source files for Trie on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Trie)
