@@ -101,46 +101,39 @@ private SegmentTreeNode buildMinHelpler(int[] arr, int start, int end) {
 ### 2.4 Searching on Minimum Segment Tree
 There are four cases when searching with the given range.
 * Search range is same with the range of root node, return the value directly.
-* Search range is within the range of left child node, search in left node.
-* Search range is within the range of right child node, search in right node.
+* Search range is within the range of left child, continue searching in left node.
+* Search range is within the range of right child, continue searching in right node.
 * Search range crosses both left and right children, split the search and merge the result.
 
 ```java
+public int queryMin(int start, int end) {
+    return queryMin(this.root, start, end);
+}
+
 private int queryMin(SegmentTreeNode root, int start, int end) {
     if (root == null) {
         return 0;
     }
 
-    // case 1: search range is same with the range of root node.
+    // case 1: search range is same with the range of root node
     if (root.start == start && root.end == end) {
         return root.min;
     }
 
     int mid = root.start + (root.end - root.start) / 2;
-    int leftmin = Integer.MAX_VALUE;
-    int rightmin = Integer.MAX_VALUE;
-    // left range
-    if (start <= mid) {
-        if (mid < end) {
-            // case 4: search range crosses both left and right children
-            leftmin = queryMin(root.left, start, mid);
-        } else {
-            // case 2: search range is in the range of left child node
-            leftmin = queryMin(root.left, start, end);
-        }
+    // left range = [root.start, root.mid], right range = [root.mid + 1, root.end]
+    if (end <= mid) {
+        // case 2: search range is in the range of left child node
+        return queryMin(root.left, start, end);
+    } else if (start > mid) {
+        // case 3: search range is in the range of right child node
+        return queryMin(root.right, start, end);
+    } else {
+        //case 4: search range crosses both left and right children
+        int leftmin = queryMin(root.left, start, mid);
+        int rightmin = queryMin(root.right, mid + 1, end);
+        return Math.min(leftmin, rightmin);
     }
-    // right range
-    if (mid < end) {
-        if (start <= mid) {
-            // case 4: search range crosses both left and right children
-            rightmin = queryMin(root.right, mid + 1, end);
-        } else {
-            // case 3: search range is in the range of right child node
-            rightmin = queryMin(root.right, start, end);
-        }
-    }
-
-    return Math.min(leftmin, rightmin);
 }
 ```
 
@@ -203,31 +196,24 @@ private int queryMin(SegmentTreeNode root, int start, int end) {
         return 0;
     }
 
+    // case 1: search range is same with the range of root node
     if (root.start == start && root.end == end) {
         return root.min;
     }
 
     int mid = root.start + (root.end - root.start) / 2;
-    int leftmin = Integer.MAX_VALUE;
-    int rightmin = Integer.MAX_VALUE;
-    // left range
-    if (start <= mid) {
-        if (mid < end) {
-            leftmin = queryMin(root.left, start, mid);
-        } else {
-            leftmin = queryMin(root.left, start, end);
-        }
+    if (end <= mid) {
+        // case 2: search range is in the range of left child node
+        return queryMin(root.left, start, end);
+    } else if (start > mid) {
+        // case 3: search range is in the range of right child node
+        return queryMin(root.right, start, end);
+    } else {
+        //case 4: search range crosses both left and right children
+        int leftmin = queryMin(root.left, start, mid);
+        int rightmin = queryMin(root.right, mid + 1, end);
+        return Math.min(leftmin, rightmin);
     }
-    // right range
-    if (mid < end) {
-        if (start <= mid) {
-            rightmin = queryMin(root.right, mid + 1, end);
-        } else {
-            rightmin = queryMin(root.right, start, end);
-        }
-    }
-
-    return Math.min(leftmin, rightmin);
 }
 
 public int queryMax(int start, int end) {
@@ -239,31 +225,24 @@ public int queryMax(SegmentTreeNode root, int start, int end) {
         return 0;
     }
 
+    // case 1: search range is same with the range of root node
     if (root.start == start && root.end == end) {
         return root.max;
     }
 
     int mid = root.start + (root.end - root.start) / 2;
-    int leftmax = Integer.MIN_VALUE;
-    int rightmax = Integer.MIN_VALUE;
-    // left range
-    if (start <= mid) {
-        if (mid < end) {
-            leftmax = queryMax(root.left, start, mid);
-        } else {
-            leftmax = queryMax(root.left, start, end);
-        }
+    if (end <= mid) {
+        // case 2: search range is in the range of left child node
+        return queryMax(root.left, start, end);
+    } else if (start > mid) {
+        // case 3: search range is in the range of right child node
+        return queryMax(root.right, start, end);
+    } else {
+        //case 4: search range crosses both left and right children
+        int leftmax = queryMax(root.left, start, mid);
+        int rightmax = queryMax(root.right, mid + 1, end);
+        return Math.max(leftmax, rightmax);
     }
-    // right range
-    if (mid < end) {
-        if (start <= mid) {
-            rightmax = queryMax(root.right, mid + 1, end);
-        } else {
-            rightmax = queryMax(root.right, start, end);
-        }
-    }
-
-    return Math.max(leftmax, rightmax);
 }
 
 public int querySum(int start, int end) {
@@ -275,40 +254,99 @@ public int querySum(SegmentTreeNode root, int start, int end) {
         return 0;
     }
 
+    // case 1: search range is same with the range of root node
     if (root.start == start && root.end == end) {
         return root.sum;
     }
 
     int mid = root.start + (root.end - root.start) / 2;
-    int leftsum = 0;
-    int rightsum = 0;
-    // left range
-    if (start <= mid) {
-        if (mid < end) {
-            leftsum = querySum(root.left, start, mid);
-        } else {
-            leftsum = querySum(root.left, start, end);
-        }
+    if (end <= mid) {
+        // case 2: search range is in the range of left child node
+        return querySum(root.left, start, end);
+    } else if (start > mid) {
+        // case 3: search range is in the range of right child node
+        return querySum(root.right, start, end);
+    } else {
+        //case 4: search range crosses both left and right children
+        int leftsum = querySum(root.left, start, mid);
+        int rightsum = querySum(root.right, mid + 1, end);
+        return leftsum + rightsum;
     }
-    // right range
-    if (mid < end) {
-        if (start <= mid) {
-            rightsum = querySum(root.right, mid + 1, end);
-        } else {
-            rightsum = querySum(root.right, start, end);
-        }
-    }
-
-    return leftsum + rightsum;
 }
 ```
 
-## 4. Source Files
+## 4. Modification
+### 4.1 Minimum Segment Tree
+If value on leaf node is changed, we need to update its parent accordingly. For example, if we change the value of the second leaf from '-1' to '5' in minimum segment tree, then all nodes from root to this leaf need to be updated.
+![image](/public/notes/data-structure-segmenttree/modify5.png)
+
+The implementation of the `modify` method.
+```java
+public void modify(int index, int value) {
+    modify(this.root, index, value);
+}
+
+private void modify(SegmentTreeNode root, int index, int value) {
+    if (root == null) {
+        return;
+    }
+
+    if (root.start == root.end && root.start == index) {
+        root.min = value;
+        return;
+    }
+
+    int mid = root.start + (root.end - root.start) / 2;
+    if (index <= mid) {
+        modify(root.left, index, value);
+    } else {
+        modify(root.right, index, value);
+    }
+
+    root.min = Math.min(root.left.min, root.right.min);
+}
+```
+### 4.2 Modifying Maximum and Sum
+Similarly, if we change the value, the max value and the sum value will be affected as well.
+![image](/public/notes/data-structure-segmenttree/modifyall.png)
+Refine the `modify` method to update the max value and the sum value together.
+```java
+public void modify(int index, int value) {
+    modify(this.root, index, value);
+}
+
+private void modify(SegmentTreeNode root, int index, int value) {
+    if (root == null) {
+        return;
+    }
+
+    if (root.start == root.end && root.start == index) {
+        root.min = value;
+        root.max = value;
+        root.sum = value;
+        return;
+    }
+
+    int mid = root.start + (root.end - root.start) / 2;
+    if (index <= mid) {
+        modify(root.left, index, value);
+    } else {
+        modify(root.right, index, value);
+    }
+
+    root.min = Math.min(root.left.min, root.right.min);
+    root.max = Math.max(root.left.max, root.right.max);
+    root.sum = root.left.sum + root.right.sum;
+}
+```
+
+## 5. Source Files
 * [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/SegmentTree)
 * [Segment Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ir0YmfXC2EM--aJZcPbn6_uFSxs6kbyC/view?usp=sharing)
 
-## 5. Reference
+## 6. Reference
 * [Segment Tree - Range Minimum Query](https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/)
 * [Segment Tree - Sum of given range](https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)
 * [Segment Tree Range Minimum Query(Video on Youtube)](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 * [Segment Tree Build on LintCode](http://www.lintcode.com/en/problem/segment-tree-build/)
+* [Segment Tree Modify on LintCode](https://www.lintcode.com/problem/segment-tree-modify/)
