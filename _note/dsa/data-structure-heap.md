@@ -8,6 +8,7 @@ image: note/dsa.png
 date: 2016-03-10
 postdate: 2016-03-10
 tags: [Heap]
+mathjax: true
 ---
 
 > Implement generic Max Heap and Min Heap with array.
@@ -17,159 +18,144 @@ A heap is a binary tree with these characteristics:
 * It’s complete. This means it’s completely filled in, reading from left to right across each row, although the last row need not be full.
 * It’s (usually) implemented as an array. Binary trees can be stored in arrays, rather than using references to connect the nodes.
 * Each node in a heap satisfies the `heap condition`, which states that every node’s key is larger/smaller than the keys of its children.
-![image](/public/notes/data-structure-heap/heap.png){:width="800px"}  
+
+![image](/public/notes/data-structure-heap/complete.png){:width="800px"}  
 
 Heap can be implemented with array. A heap is a complete binary tree implies that there are no “holes” in the
 array used to represent it.
 ![image](/public/notes/data-structure-heap/heaparray.png){:width="800px"}  
 
-## 2. Binary Max Heap
+## 2. Max Heap
 A max-heap is a complete binary tree where each node is larger than its children. The root, therefore, is the maximum element in the heap.
 ## 2.1 Insertion
 Insertion means add new element to the heap. Initially, the new element is placed in the first open position at the end of the array. Insertion increases the array size by one. Here are the steps for adding the new element to max heap:
-1. Add new element to bottom, rightmost  
-2. Bubble up this new element, swap with its parent until it is smaller than its parent.  
-![image](/public/notes/data-structure-heap/heapinsert.png){:width="800px"}  
+* 1) Add new element to bottom, rightmost  
+* 2) Bubble up this new element, swap with its parent until it is smaller than its parent.  
+
+![image](/public/notes/data-structure-heap/heapinsert.png)
 
 ## 2.2 Removal
 Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
-1. Remove the top element.  
-2. Move the last element(bottom, rightmost) to top.  
-3. Bubble down this new top element. Each level, select smaller child and swap until to the bottom.  
-![image](/public/notes/data-structure-heap/heapremove.png){:width="800px"}  
-* 1->a), 2->b), 3->c),d),e)
+* 1) Remove the top element.  
+* 2) Move the last element(bottom, rightmost) to top.  
+* 3) Bubble down this new top element. Each level, select smaller child and swap until to the bottom.  
+
+![image](/public/notes/data-structure-heap/heapremove.png)
 
 ## 2.3 Efficiency of Heap Operations
-A heap is a special kind of binary tree, the number of levels `L` in a binary tree equals log2(N+1), where N is the number of nodes. The `bubble up` and `bubble down` routines cycle through their loops L-1 times, so the first takes time proportional to log2N, and the second somewhat more because of the extra comparison. Thus, the heap operations we’ve talked about here all operate in `O(logN)` time.
+A heap is a special kind of binary tree, the number of levels `L` in a binary tree equals $\log_{2}(N+1)$, where N is the number of nodes. The `bubble up` and `bubble down` routines cycle through their loops L-1 times, so the first takes time proportional to $\log_{2}N$, and the second somewhat more because of the extra comparison. Thus, the heap operations we’ve talked about here all operate in $O(\log{}N)$ time.
 
 ## 2.4 Elements Sequence
 If you remove a node and then insert the same node, the result is `not` necessarily the restoration of the original heap. A given set of nodes can be arranged in `many` valid heaps, depending on the `order` in which nodes are inserted.
 
 ## 2.5 Index Relationships
-For a node at index x in the array,
-* Its parent is (x-1) / 2.
-* Its left child is 2*x + 1.
-* Its right child is 2*x + 2.
+For a node at index `i` in the array,
+* Its parent is (i - 1) / 2.
+* Its left child is 2 * i + 1.
+* Its right child is 2 * i + 2.
 
 ## 2.6 Implementing MaxHeap
+The following code is the implementation of max heap with type integer.
 ```java
-public class MaxHeap<T extends Comparable<T>> {
-    private static final int DEFAULT_CAPACITY = 10;
-    protected T[] array;
+public class MaxHeap {
+    private int capacity = 10;
+    protected Integer[] array;
     protected int size;
 
-    /**
-     * Constructs a new MaxHeap.
-     */
-    @SuppressWarnings("unchecked")
     public MaxHeap () {
-        // Java doesn't allow construction of arrays of placeholder data types
-        array = (T[])new Comparable[DEFAULT_CAPACITY];
+        array = new Integer[capacity];
         size = 0;
     }
 
-    /**
-     * Adds a value to the max-heap.
-     */
-    public void add(T value) {
-        // grow array if needed
+    public MaxHeap (int capacity) {
+        this.capacity = capacity;
+        array = new Integer[capacity];
+        size = 0;
+    }
+
+    // add new element into heap
+    public void add(int value) {
         if (size >= array.length - 1) {
             array = this.resize();
         }
 
-        // place element into heap at bottom
-        int index = size;
-        array[index] = value;
+        // place element into heap at bottom (right most)
+        array[size] = value;
         size++;
 
         bubbleUp();
     }
 
-    /**
-     * Returns true if the heap has no elements; false otherwise.
-     */
-    public boolean isEmpty() {
-        return size == 0;
+    // bubble up the last node with it's parent until they are in the order of max heap
+    protected void bubbleUp() {
+        int index = this.size - 1;  // last node (right most)
+
+        while (hasParent(index) && (parent(index) < array[index])) {
+            // parent and child are out of order; swap them
+            swap(index, parentIndex(index));
+            index = parentIndex(index);
+        }
     }
 
-    /**
-     * Returns heap size.
-     */
-    public int size() {
-        return size;
-    }
 
-    /**
-     * Returns (but does not remove) the maximum element in the heap.
-     */
-    public T peek() {
+    // remove and return the maximum element in the heap
+    public int remove() {
         if (this.isEmpty()) {
             throw new IllegalStateException();
         }
+        // get the root, which is the maximum value
+        int result = peek();
 
-        return array[0]; // root
+        // move the last leaf to root
+        array[0] = array[size - 1];
+        array[size - 1] = null;
+        size--;
+
+        bubbleDown();
+
+        return result;
     }
 
-    /**
-     * Removes and returns the maximum element in the heap.
-     */
-    public T remove() {
-            // get the root, which is the maximum value
-            T result = peek();
-
-            // get rid of the last leaf/decrement
-            array[0] = array[size - 1];
-            array[size - 1] = null;
-            size--;
-
-            bubbleDown();
-
-            return result;
-    }
-
-    /**
-     * Performs the "bubble down" operation to place the element that is at the
-     * root of the heap in its correct place so that the heap maintains the
-     * max-heap order property.
-     */
+    // bubble down the new root to proper position to maintain the order of max heap
     protected void bubbleDown() {
-        int index = 0; // root
+        // root
+        int index = 0;
 
-        // bubble down
+        // heap is complete tree, so it's safe to check left child first
         while (hasLeftChild(index)) {
-            // which child is bigger?
             int biggerChild = leftIndex(index);
 
-            // bubble with the smaller child, if it exists
+            // find the smaller child
             if (hasRightChild(index)
-                && array[leftIndex(index)].compareTo(array[rightIndex(index)]) < 0) {
+                && array[leftIndex(index)] < (array[rightIndex(index)])) {
                 biggerChild = rightIndex(index);
             }
 
-            if (array[index].compareTo(array[biggerChild]) > 0) {
+            if (array[index] > array[biggerChild]) {
                 break;
             } else {
+                // parent and child are out of order; swap them
                 swap(index, biggerChild);
-                // make sure to update loop counter/index of where last el is put
                 index = biggerChild;
             }
         }
     }
 
-    /**
-     * Performs the "bubble up" operation to place a newly inserted element
-     * (i.e. the element that is at the size index) in its correct place so
-     * that the heap maintains the max-heap order property.
-     */
-    protected void bubbleUp() {
-        int index = this.size - 1;  // last/right most
-
-        while (hasParent(index)
-                && (parent(index).compareTo(array[index]) < 0)) {
-            // parent/child are out of order; swap them
-            swap(index, parentIndex(index));
-            index = parentIndex(index);
+    // get the root without removing it from heap
+    public int peek() {
+        if (this.isEmpty()) {
+            throw new IllegalStateException();
         }
+
+        return array[0];
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public int size() {
+        return size;
     }
 
     protected boolean hasParent(int i) {
@@ -177,11 +163,11 @@ public class MaxHeap<T extends Comparable<T>> {
     }
 
     protected int leftIndex(int i) {
-        return i * 2 + 1;
+        return 2 * i + 1;
     }
 
     protected int rightIndex(int i) {
-        return i * 2 + 2;
+        return 2 * i + 2;
     }
 
     protected boolean hasLeftChild(int i) {
@@ -192,7 +178,7 @@ public class MaxHeap<T extends Comparable<T>> {
         return rightIndex(i) <= size - 1;
     }
 
-    protected T parent(int i) {
+    protected int parent(int i) {
         return array[parentIndex(i)];
     }
 
@@ -200,140 +186,123 @@ public class MaxHeap<T extends Comparable<T>> {
         return (i - 1) / 2;
     }
 
-    protected T[] resize() {
+    protected Integer[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
 
     protected void swap(int index1, int index2) {
-        T tmp = array[index1];
+        int tmp = array[index1];
         array[index1] = array[index2];
         array[index2] = tmp;
     }
 }
 ```
 
-## 3. Binary Min Heap
+## 3. Min Heap
 A min-heap is a complete binary tree where each node is smaller than its children. The root, therefore, is the minimum element in the heap.
 
 ## 3.1 Implementing MinHeap
+The following code is the implementation of max heap with type integer. The only difference with max heap is the comparison.
 ```java
-public class MinHeap<T extends Comparable<T>> {
-    private static final int DEFAULT_CAPACITY = 10;
-    protected T[] array;
+public class MinHeap {
+    private int capacity = 10;
+    protected Integer[] array;
     protected int size;
 
-    /**
-     * Constructs a new MinHeap.
-     */
-    @SuppressWarnings("unchecked")
     public MinHeap () {
-        // Java doesn't allow construction of arrays of placeholder data types
-        array = (T[])new Comparable[DEFAULT_CAPACITY];
+        array = new Integer[capacity];
         size = 0;
     }
 
-    /**
-     * Adds a value to the min-heap.
-     */
-    public void add(T value) {
-        // grow array if needed
+    public MinHeap (int capacity) {
+        this.capacity = capacity;
+        array = new Integer[capacity];
+        size = 0;
+    }
+
+    // add new element into heap
+    public void add(int value) {
         if (size >= array.length - 1) {
             array = this.resize();
         }
 
-        // place element into heap at bottom
-        int index = size;
-        array[index] = value;
+        // place element into heap at bottom (right most)
+        array[size] = value;
         size++;
 
         bubbleUp();
     }
 
-    /**
-     * Returns true if the heap has no elements; false otherwise.
-     */
-    public boolean isEmpty() {
-        return size == 0;
+    // bubble up the last node with it's parent until they are in the order of max heap
+    protected void bubbleUp() {
+        int index = this.size - 1;  // last node (right most)
+
+        while (hasParent(index) && (parent(index) > array[index])) {
+            // parent and child are out of order; swap them
+            swap(index, parentIndex(index));
+            index = parentIndex(index);
+        }
     }
 
-    /**
-     * Returns heap size.
-     */
-    public int size() {
-        return size;
+
+    // remove and return the maximum element in the heap
+    public int remove() {
+        if (this.isEmpty()) {
+            throw new IllegalStateException();
+        }
+        // get the root, which is the maximum value
+        int result = peek();
+
+        // move the last leaf to root
+        array[0] = array[size - 1];
+        array[size - 1] = null;
+        size--;
+
+        bubbleDown();
+
+        return result;
     }
 
-    /**
-     * Returns (but does not remove) the minimum element in the heap.
-     */
-    public T peek() {
+    // bubble down the new root to proper position to maintain the order of max heap
+    protected void bubbleDown() {
+        // root
+        int index = 0;
+
+        // heap is complete tree, so it's safe to check left child first
+        while (hasLeftChild(index)) {
+            int biggerChild = leftIndex(index);
+
+            // find the smaller child
+            if (hasRightChild(index)
+                && array[leftIndex(index)] > (array[rightIndex(index)])) {
+                biggerChild = rightIndex(index);
+            }
+
+            if (array[index] < array[biggerChild]) {
+                break;
+            } else {
+                // parent and child are out of order; swap them
+                swap(index, biggerChild);
+                index = biggerChild;
+            }
+        }
+    }
+
+    // get the root without removing it from heap
+    public int peek() {
         if (this.isEmpty()) {
             throw new IllegalStateException();
         }
 
-        return array[0]; // root
+        return array[0];
     }
 
-    /**
-     * Removes and returns the minimum element in the heap.
-     */
-    public T remove() {
-            // get the root, which is the minimum value
-            T result = peek();
-
-            // get rid of the last leaf/decrement
-            array[0] = array[size - 1];
-            array[size - 1] = null;
-            size--;
-
-            bubbleDown();
-
-            return result;
+    public boolean isEmpty() {
+        return size == 0;
     }
 
-    /**
-     * Performs the "bubble down" operation to place the element that is at the
-     * root of the heap in its correct place so that the heap maintains the
-     * min-heap order property.
-     */
-    protected void bubbleDown() {
-        int index = 0; // root
-
-        // bubble down
-        while (hasLeftChild(index)) {
-            // which child is smaller?
-            int smallerChild = leftIndex(index);
-
-            // bubble with the smaller child, if it exists
-            if (hasRightChild(index)
-                && array[leftIndex(index)].compareTo(array[rightIndex(index)]) > 0) {
-                smallerChild = rightIndex(index);
-            }
-
-            if (array[index].compareTo(array[smallerChild]) < 0) {
-                break;
-            } else {
-                swap(index, smallerChild);
-                // make sure to update loop counter/index of where last el is put
-                index = smallerChild;
-            }
-        }
-    }
-
-    /**
-     * Performs the "bubble up" operation to place a newly inserted element
-     * (i.e. the element that is at the size index) in its correct place so
-     * that the heap maintains the min-heap order property.
-     */
-    protected void bubbleUp() {
-        int index = this.size - 1;  // last/right most
-
-        while (hasParent(index)
-                && (parent(index).compareTo(array[index]) > 0)) {
-            // parent/child are out of order; swap them
-            swap(index, parentIndex(index));
-            index = parentIndex(index);
-        }
+    public int size() {
+        return size;
     }
 
     protected boolean hasParent(int i) {
@@ -341,11 +310,11 @@ public class MinHeap<T extends Comparable<T>> {
     }
 
     protected int leftIndex(int i) {
-        return i * 2 + 1;
+        return 2 * i + 1;
     }
 
     protected int rightIndex(int i) {
-        return i * 2 + 2;
+        return 2 * i + 2;
     }
 
     protected boolean hasLeftChild(int i) {
@@ -356,7 +325,7 @@ public class MinHeap<T extends Comparable<T>> {
         return rightIndex(i) <= size - 1;
     }
 
-    protected T parent(int i) {
+    protected int parent(int i) {
         return array[parentIndex(i)];
     }
 
@@ -364,19 +333,21 @@ public class MinHeap<T extends Comparable<T>> {
         return (i - 1) / 2;
     }
 
-    protected T[] resize() {
+    protected Integer[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
 
     protected void swap(int index1, int index2) {
-        T tmp = array[index1];
+        int tmp = array[index1];
         array[index1] = array[index2];
         array[index2] = tmp;
     }
 }
 ```
+
 ## 4. Source Files
 * [Source files for Heap on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Heap)
+* [Heap Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1EQJpMtw2ZLlUKU-nlrUlqLz6HqgJ2mRU/view?usp=sharing)
 
 ## 5. Reference
 * [Heap Data Structures](https://www.tutorialspoint.com/data_structures_algorithms/heap_data_structure.htm)
