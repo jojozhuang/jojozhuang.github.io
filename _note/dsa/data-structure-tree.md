@@ -24,18 +24,21 @@ A tree is a data structure composed of nodes.The tree cannot contain cycles. The
 * Graphs vs. Trees: A tree is a connected graph without cycles.
 * Trees vs. `Binary Trees`: Each node in binary tree has no more than 2 children nodes.
 * Binary Tree vs. `Binary Search Tree`: Every node in BST fits a specific ordering property: all left descendents <= current node < all right descendents.
-* `Balanced` vs. Unbalanced: A tree is balanced if each sub-tree is balanced and the height of the two sub-trees differ by at most one.
 * `Complete Binary Trees`: A complete binary tree is a binary tree in which every level of the tree is fully filled, except for perhaps the last level. To the extent that the last level is filled, it is filled left to right.
 * `Full Binary Trees`: A full binary tree is a binary tree in which every node has either zero or two children.That is, no nodes have only one child.
 * `Perfect Binary Trees`: A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
 
-![image](/public/notes/data-structure-tree/trees.png){:width="1000px"}  
+![image](/public/notes/data-structure-tree/trees.png)
+
+* `Balanced` vs. Unbalanced: A tree is balanced if each sub-tree is balanced and the height of the two sub-trees differ by at most one.
+
+![image](/public/notes/data-structure-tree/balanced.png){:width="700px"}
 
 ### 1.3 Binary Tree Properties
 * The maximum number of nodes at level `'l'` of a binary tree is $2^{l-1}$.
 * Maximum number of nodes in a binary tree of height `'h'` is $2^h-1$, since 1 + 2 + 4 + .. + $2^{h-1}$ = $2^h-1$.
 * In a Binary Tree with `'n'` nodes, minimum possible height or minimum number of levels is $\log_{2}(n+1)$.
-* A Binary Tree with `'l'` leaves has at least $\log_{2}(l) + 1$ levels.
+* A Binary Tree with `'m'` leaves has at least $\log_{2}(m) + 1$ levels.
 * In Binary tree where every node has 0 or 2 children, number of leaf nodes is always one more than nodes with two children.
 
 ## 2. Binary Tree Traversal
@@ -231,7 +234,7 @@ public List<Integer> postorderIteration(TreeNode root) {
 ```
 ### 2.6 Binary Tree Traversal(General Template)
 Suppose we have a tree as follows.
-![image](/public/notes/data-structure-tree/tree_template.png){:width="200px"}
+![image](/public/notes/data-structure-tree/tree_template.png){:width="180px"}
 There are totally 6 traversal ways.  
 ```java
 /**
@@ -520,8 +523,7 @@ public class TreeFactory {
 
 ## 4. Source Files
 * [Source files for Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
-* [Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/10KemmKHtZPHko6qIhThmVVaqH5X1Nz5o/view?usp=sharing)
-* [Binary Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1D57NwHAx8-Q1ZhC8HRgzNVUI_IdReCEr/view?usp=sharing)
+* [Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1D57NwHAx8-Q1ZhC8HRgzNVUI_IdReCEr/view?usp=sharing)
 
 ## 5. Reference
 * [Data Structure and Algorithms - Tree](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)
