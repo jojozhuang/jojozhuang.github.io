@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note2
-title: "Bit Manipulation"
-index: 323
+title: "Algorithm - Bit Manipulation"
+index: 328
 category: dsa
 image: note/dsa.png
-date: 2016-03-23
-postdate: 2016-03-23
+date: 2016-03-28
+postdate: 2016-03-28
 tags: [Bit]
 ---
 
