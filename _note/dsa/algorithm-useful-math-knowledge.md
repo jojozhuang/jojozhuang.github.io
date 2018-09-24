@@ -1,13 +1,13 @@
 ---
 layout: note
 key: note
-title: "Useful Math Knowledge Used in Algorithm Questions"
-index: 324
+title: "Algorithm - Useful Math Knowledge"
+index: 329
 category: dsa
 image: /note/dsa.png
-date: 2016-03-24
-postdate: 2016-03-24
-tags: [Algorithm]
+date: 2016-03-29
+postdate: 2016-03-29
+tags: [Math, Algorithm]
 ---
 
 > Common useful math knowledge used in algorithms.

@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Template for Subset Questions"
+title: "Algorithm - Template for Subset Problems"
 index: 326
 category: dsa
 image: /note/dsa.png

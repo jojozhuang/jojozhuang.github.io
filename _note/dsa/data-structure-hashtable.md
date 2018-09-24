@@ -205,7 +205,9 @@ public class HashMap<K, V> {
 ```
 
 ## 3. HashMap in Java
-TreeMap, HashMap, LinkedHashMap
+TreeMap, HashMap, LinkedHashMap, WeakHashMap
+
+For thread-unsafe hashmap, infinite loop may occur during rehashing. One thread is setting node1.next to node2. Meanwhile, another thread is setting node2.next = node1. Cycle exists in the node list.
 
 ## 4. Source Files
 * [Source files for HashMap on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/HashMap)
