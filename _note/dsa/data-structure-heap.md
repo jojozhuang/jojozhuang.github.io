@@ -29,16 +29,18 @@ array used to represent it.
 A max-heap is a complete binary tree where each node is larger than its children. The root, therefore, is the maximum element in the heap.
 ## 2.1 Insertion
 Insertion means add new element to the heap. Initially, the new element is placed in the first open position at the end of the array. Insertion increases the array size by one. Here are the steps for adding the new element to max heap:
-* 1) Add new element to bottom, rightmost  
-* 2) Bubble up this new element, swap with its parent until it is smaller than its parent.  
+* 1) Add new node to bottom, rightmost.
+* 2) Compare the value of this node with its parent. If value of parent is less than child, then swap them.
+* 3) Repeat step 2) to bubble up this new node to maintain the heap condition if possible; otherwise, stop.
 
 ![image](/public/notes/data-structure-heap/heapinsert.png)
 
 ## 2.2 Removal
 Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
-* 1) Remove the top element.  
-* 2) Move the last element(bottom, rightmost) to top.  
-* 3) Bubble down this new top element. Each level, select smaller child and swap until to the bottom.  
+* 1) Remove the root node.
+* 2) Move the last element(bottom, rightmost) to root.  
+* 3) Compare the value of this child with its parent. If value of parent is less than child, then swap them.
+* 4) Repeat step 3) to bubble down this node to maintain the heap condition if possible; otherwise, stop.  
 
 ![image](/public/notes/data-structure-heap/heapremove.png)
 
