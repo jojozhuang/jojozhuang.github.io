@@ -17,10 +17,10 @@ A linked list is represented by a sequence of nodes. Each node contains a link t
 ## 1. Types of Linked List
 ### 1.1 Singly Linked List
 Each node has an attribute to represent its value. It also has one pointer, linking it to the next node in the linked list.
-![image](/public/notes/data-structure-linkedlist/singlylinkedlist.png){:width="800px"}  
+![image](/public/notes/data-structure-linkedlist/singlylinkedlist.png)
 ### 1.2 Doubly Linked List
 Each node has an attribute to represent its value. Meanwhile, it has two pointers, the first pointer links to the next node, and the second pointer links to the previous node.
-![image](/public/notes/data-structure-linkedlist/doublylinkedlist.png){:width="800px"}  
+![image](/public/notes/data-structure-linkedlist/doublylinkedlist.png)
 
 ## 2. Implementation
 ### 2.1 Creating Singly Linked List
@@ -245,7 +245,7 @@ public ListNode detectCycle(ListNode head) {
 
 ## 4. Source Files
 * [Source files for Linked List on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LinkedList)
-* [Linked List Diagrams on Google Slides](https://docs.google.com/presentation/d/1qXW9wig6XkCCm2Bgd-9UOW7fHfyUmCF4FDEeLEdsxUQ/edit?usp=sharing)
+* [Linked List Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1z7A9h4_6aDY_KAYOvACxYLoiBhbEbCNl/view?usp=sharing)
 
 ## 5. Reference
 * [Data Structure and Algorithms - Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
