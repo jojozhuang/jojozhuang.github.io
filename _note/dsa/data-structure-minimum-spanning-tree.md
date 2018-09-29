@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Minimum Spanning Tree(Draft)"
-index: 312
+index: 313
 category: dsa
 image: note/dsa.png
-date: 2016-03-12
-postdate: 2016-03-12
+date: 2016-03-13
+postdate: 2016-03-13
 tags: [MST]
 ---
 
