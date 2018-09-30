@@ -1,13 +1,13 @@
 ---
 layout: note
 key: note
-title: "Data Structure - Cache"
+title: "Data Structure - LRU Cache"
 index: 315
 category: dsa
 image: note/dsa.png
 date: 2016-03-15
 postdate: 2016-03-15
-tags: [LRU, LFU]
+tags: [LRU]
 ---
 
 > Introduce two caching algorithms: LRU and LFU.
@@ -20,39 +20,39 @@ tags: [LRU, LFU]
 ### 2.1 How It Works?
 The LRU cache provides two methods: `add` and `get`.
 * add(value) - Add the value into cache if it is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
-* get(value) - Get the value (will always be positive) if it exists in the cache, otherwise return the minimum value of Integer. In addition, move this element to the head of the cache.
+* get(value) - Get the value if it exists in the cache, otherwise, return the minimum value of Integer. In addition, move this element to the head of the cache.
 
 The following diagram illustrates how LRU works.
-![image](/public/notes/data-structure-cache/lru.png){:width="800px"}  
+![image](/public/notes/data-structure-lru-cache/lru.png){:width="800px"}  
 
 ### 2.2 Data Structure
 Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
-![image](/public/notes/data-structure-cache/structure.png)
+![image](/public/notes/data-structure-lru-cache/structure.png)
 * The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
 * Nodes between the head and tail nodes are used to store data, each node for one value. Every node has two pointers, pointing to the previous and the next nodes. They are connected to each other.
-* Nodes near the tail are least recently accessed. They will be removed if cache reaches to it capacity.
+* Nodes near the tail are least recently accessed. They will be removed if cache reaches to its capacity.
 
 ### 2.3 Operations On LRU
 1) Initialization
-![image](/public/notes/data-structure-cache/initialization.png){:width="400px"}  
+![image](/public/notes/data-structure-lru-cache/initialization.png){:width="400px"}  
 * Only two dummy nodes, head and tail.
 * Notice that there is another HashMap which stores the value-node pair.
 
 2) Add (Cache is not full)
-![image](/public/notes/data-structure-cache/add1.png)
+![image](/public/notes/data-structure-lru-cache/add1.png)
 * Create new node for the given value and insert it to the head of the linked list.
 * Add the new node to HashMap with the given value as key.
 * Size is increased by one.
 
 3) Add (Cache is full)
-![image](/public/notes/data-structure-cache/add2.png)
+![image](/public/notes/data-structure-lru-cache/add2.png)
 * Remove the last element(The one tail.prev is pointing) from the list.
 * Create new node for the given value and insert it to the head of the linked list.
 * Add the new node to HashMap with the given value as key.
 * Size remains unchanged.
 
 4) Get
-![image](/public/notes/data-structure-cache/get.png)
+![image](/public/notes/data-structure-lru-cache/get.png)
 * Find the given value in HashMap.
 * If the corresponding node is not at the head position of the linked list, move it to head.
 * Update the tail pointers accordingly.
@@ -197,11 +197,9 @@ lru.add(8); // list = [8,7,4,6,5]
 ```
 
 ## 5. Source Files
-* [Source files for Cache on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Cache)
-* [Cache Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ZIZ5oLBk_YLK-DRgEiQl_q5V5n6ZzEJx/view?usp=sharing)
+* [Source files for LRU Cache on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LRU)
+* [LRU Cache Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ZIZ5oLBk_YLK-DRgEiQl_q5V5n6ZzEJx/view?usp=sharing)
 
 ## 6. Reference
 * [LRU Cache Implementation](https://www.geeksforgeeks.org/lru-cache-implementation/)
-* [LFU (Least Frequently Used) Cache Implementation](https://www.geeksforgeeks.org/lfu-least-frequently-used-cache-implementation/)
 * [LRU Cache on LeetCode](https://leetcode.com/problems/lru-cache/)
-* [LFU Cache on LeetCode](https://leetcode.com/problems/lfu-cache/)

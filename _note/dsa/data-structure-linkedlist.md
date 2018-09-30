@@ -12,9 +12,11 @@ tags: [Linked List]
 
 > Introduce what is linked list, how to construct it and how to use it.
 
-A linked list is represented by a sequence of nodes. Each node contains a link to another node. Linked list is one of the most-used data structure.
+## 1. Linked List
+A linked list is represented by a sequence of nodes. Each node contains a link to another node. There are two main types of linked list.
+* Singly Linked List - Each node has only one link, points to the next node.
+* Doubly Linked List - Each node has two links, one points to previous node, another points to the next node.
 
-## 1. Types of Linked List
 ### 1.1 Singly Linked List
 Each node has an attribute to represent its value. It also has one pointer, linking it to the next node in the linked list.
 ![image](/public/notes/data-structure-linkedlist/singlylinkedlist.png)
