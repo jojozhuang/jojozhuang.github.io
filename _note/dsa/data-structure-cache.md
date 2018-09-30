@@ -28,28 +28,38 @@ The following diagram illustrates how LRU works.
 ### 2.2 Data Structure
 Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
 ![image](/public/notes/data-structure-cache/structure.png)
-* The head and tail nodes don't store data. They are created for just conveniently manipulating the Linked List.
-* Each node between the head and tail stores data. They are connecting to each other.
+* The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
+* Nodes between the head and tail nodes are used to store data, each node for one value. Every node has two pointers, pointing to the previous and the next nodes. They are connected to each other.
 * Nodes near the tail are least recently accessed. They will be removed if cache reaches to it capacity.
 
+### 2.3 Operations On LRU
 1) Initialization
 ![image](/public/notes/data-structure-cache/initialization.png){:width="400px"}  
-* Only two nodes, head and tail.
+* Only two dummy nodes, head and tail.
+* Notice that there is another HashMap which stores the value-node pair.
 
-2) Add Operation(Cache is not full)
-![image](/public/notes/data-structure-cache/add1.png){:width="800px"}  
-* Size is less than capacity.
+2) Add (Cache is not full)
+![image](/public/notes/data-structure-cache/add1.png)
+* Create new node for the given value and insert it to the head of the linked list.
+* Add the new node to HashMap with the given value as key.
+* Size is increased by one.
 
-3) Add Operation(Cache is full)
-![image](/public/notes/data-structure-cache/add2.png){:width="800px"}  
-* Size is same with capacity, must remove the tail to add new element.
+3) Add (Cache is full)
+![image](/public/notes/data-structure-cache/add2.png)
+* Remove the last element(The one tail.prev is pointing) from the list.
+* Create new node for the given value and insert it to the head of the linked list.
+* Add the new node to HashMap with the given value as key.
+* Size remains unchanged.
 
-4) Get Element
-![image](/public/notes/data-structure-cache/get.png){:width="800px"}  
-* Return the value and move it to head.
+4) Get
+![image](/public/notes/data-structure-cache/get.png)
+* Find the given value in HashMap.
+* If the corresponding node is not at the head position of the linked list, move it to head.
+* Update the tail pointers accordingly.
+* Return the value.
 
-### 2.3 Implementation
-Node.
+### 2.4 Implementation(Custom Node)
+The following code implements LRU based on custom nodes. The node is defined as follows.
 ```java
 public class Node {
     public int value;
@@ -63,7 +73,7 @@ public class Node {
     }
 }
 ```
-Below is the sample code which implements LRU algorithm.
+Following is the LRU class which implements the `add()` and `get()` methods.
 ```java
 public class LRU {
     private int capacity;
@@ -112,7 +122,7 @@ public class LRU {
         // move current node to head
         moveToHead(current);
 
-        return value;
+        return map.get(value).value;
     }
 
     private void moveToHead(Node node) {
@@ -123,36 +133,67 @@ public class LRU {
     }
 }
 ```
-### 2.4 Testing
+### 2.5 Implementation(Deque)
+Instead of creating the doubly linked list by hand, we can use Deque directly in Java. The following LRUDeque class implements LRU with Deque.
+```java
+public class LRUDeque {
+    private int capacity;
+    private HashMap<Integer, Integer> map;
+    private Deque<Integer> deque;
+    private final int MIN = Integer.MIN_VALUE;
+
+    public LRUDeque(int capacity) {
+        this.capacity = capacity;
+        this.map = new HashMap<Integer, Integer>();
+        this.deque = new LinkedList<Integer>();
+    }
+
+    public void add(int value) {
+        if (map.containsKey(value)) {
+            return;
+        }
+
+        if (map.size() == capacity) {
+            // remove the least recently used element from map and deque
+            map.remove(deque.removeLast());
+        }
+
+        // add to map
+        map.put(value, value);
+        // add to the head of deque
+        deque.addFirst(value);
+    }
+
+    public int get(int value) {
+        if (!map.containsKey(value)) {
+            return this.MIN;
+        }
+
+        // remove current
+        deque.remove(value); // performance issue, the time complexity for random access is O(n)
+        // move it to head
+        deque.addFirst(value);
+
+        return map.get(value);
+    }
+}
+```
+### 2.6 Testing
+Create an instance of LRU class and call add() and get() methods. The change of the list is described in the inline comments.
 ```java
 LRU lru = new LRU(5); //capacity = 5
-lru.add(1);
-assertArrayEquals(new int[]{1}, lru.getAll());
-lru.add(2);
-assertArrayEquals(new int[]{2,1}, lru.getAll());
-lru.add(3);
-assertArrayEquals(new int[]{3,2,1}, lru.getAll());
-assertEquals(1, lru.get(1));
-assertArrayEquals(new int[]{1,3,2}, lru.getAll());
-assertEquals(3, lru.get(3));
-assertArrayEquals(new int[]{3,1,2}, lru.getAll());
-assertEquals(3, lru.get(3));
-assertArrayEquals(new int[]{3,1,2}, lru.getAll());
-lru.add(4);
-assertArrayEquals(new int[]{4,3,1,2}, lru.getAll());
-lru.add(5);
-assertArrayEquals(new int[]{5,4,3,1,2}, lru.getAll());
-lru.add(6);
-assertArrayEquals(new int[]{6,5,4,3,1}, lru.getAll());
-assertEquals(4, lru.get(4));
-assertArrayEquals(new int[]{4,6,5,3,1}, lru.getAll());
-lru.add(7);
-assertArrayEquals(new int[]{7,4,6,5,3}, lru.getAll());
-lru.add(8);
-assertArrayEquals(new int[]{8,7,4,6,5}, lru.getAll());
-```
-### 2.5 Implemented with Queue
-```java
+lru.add(1); // list = [1]
+lru.add(2); // list = [2,1]
+lru.add(3); // list = [3,2,1]
+lru.get(1); // list = [1,3,2], return 1
+lru.get(3); // list = [3,1,2], return 3
+lru.get(3); // list = [3,1,2], return 3
+lru.add(4); // list = [4,3,1,2]
+lru.add(5); // list = [5,4,3,1,2], cache is full
+lru.add(6); // list = [6,5,4,3,1]
+lru.get(4); // list = [4,6,5,3,1], return 4
+lru.add(7); // list = [7,4,6,5,3]
+lru.add(8); // list = [8,7,4,6,5]
 ```
 
 ## 5. Source Files
