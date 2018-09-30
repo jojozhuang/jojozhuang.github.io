@@ -8,6 +8,7 @@ image: /note/dsa.png
 date: 2016-03-06
 postdate: 2016-03-06
 tags: [BST]
+mathjax: true
 ---
 
 > Introduce what is Binary Search Tree, how to construct it and how to use it.
@@ -22,9 +23,9 @@ Binary Search Tree(BST) is a node-based binary tree data structure which has the
 ![image](/public/notes/data-structure-binary-search-tree/bst.png){:width="450px"}  
 
 Common operations on BST.
-* Search
-* Insertion
-* Deletion
+* Search - $O(\log{}n)$
+* Insertion - $O(\log{}n)$
+* Deletion - $O(\log{}n)$
 
 ## 2. Search
 Given a binary search tree as follows, search node with value 7.
@@ -197,7 +198,7 @@ private BSTNode getSuccessor(BSTNode deleleNode) {
 ```
 
 ## 5. Source Files
-* [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
+* [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/BinarySearchTree)
 * [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
 
 ## 6. Reference
