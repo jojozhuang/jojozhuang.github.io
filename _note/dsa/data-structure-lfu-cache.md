@@ -8,12 +8,13 @@ image: note/dsa.png
 date: 2016-03-16
 postdate: 2016-03-16
 tags: [LFU]
+mathjax: true
 ---
 
-> Introduce two caching algorithms: LRU and LFU.
+> Introduce the definition, implementation and usage of Least Frequently Used(LFU) cache.
 
 ## 1. LFU
-### 1.1 LFU Cache Algorithms
+### 1.1 LFU Cache Algorithm
 Least Frequently Used(LFU) cache algorithm uses a counter to keep track of how often an entry is accessed. With the LFU cache algorithm, the entry with the lowest count is removed first. This method isn't used that often, as it does not account for an item that had an initially high access rate and then was not accessed for a long time.
 ### 1.2 How It Works?
 The `LFU` cache provides two methods: `add` and `get`.
@@ -23,7 +24,8 @@ The `LFU` cache provides two methods: `add` and `get`.
 The following diagram illustrates how LFU works.
 ![image](/public/notes/data-structure-lfu-cache/lfu.png)
 
-### 1.3 Data Structure
+## 2. Implementation
+### 2.1 Data Structure
 LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
 ![image](/public/notes/data-structure-lfu-cache/structure.png)
 * The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
@@ -31,7 +33,7 @@ LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
 * Nodes near the tail are least frequently accessed. They will be removed if cache reaches to its capacity.
 * Nodes in LFU are sorted by frequency(count).
 
-### 1.4 Operations On LFU
+### 2.2 Operations On LFU
 1) Initialization
 ![image](/public/notes/data-structure-lfu-cache/initialization.png){:width="400px"}  
 * Only two dummy nodes, head and tail.
@@ -62,9 +64,8 @@ LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
 * Increase the frequency of this node by one. Move it to proper position of the linked list.
 * Return the value.
 
-## 2. Implementation
-### 2.1 Custom Node
-The following code implements LFU based on custom nodes. The node is defined as follows.
+### 2.3 Built With Custom Node
+The following code is the implementation of LFU based on custom nodes. The node is defined as follows.
 ```java
 public class Node {
     public int value;
@@ -80,7 +81,6 @@ public class Node {
     }
 }
 ```
-### 2.2 LFU Class
 Following is the LFU class which implements the `add()` and `get()` methods.
 ```java
 public class LFU {
@@ -152,28 +152,56 @@ public class LFU {
     }
 }
 ```
-### 2.3 Testing
-Create an instance of LRU class and call add() and get() methods. The change of the list is described in the inline comments.
+Time complexity:
+* add() - $O(n)$
+* get() - $O(n)$
+
+Space complexity:
+* $O(n)$, 2*N, N is the number of nodes
+
+### 2.4 Testing
+Create an instance of LFU class and call add() and get() methods. The changes of the value and frequency list are described in the inline comments.
 ```java
-LRU lru = new LRU(5); //capacity = 5
-lru.add(1); // list = [1]
-lru.add(2); // list = [2,1]
-lru.add(3); // list = [3,2,1]
-lru.get(1); // list = [1,3,2], return 1
-lru.get(3); // list = [3,1,2], return 3
-lru.get(3); // list = [3,1,2], return 3
-lru.add(4); // list = [4,3,1,2]
-lru.add(5); // list = [5,4,3,1,2], cache is full
-lru.add(6); // list = [6,5,4,3,1]
-lru.get(4); // list = [4,6,5,3,1], return 4
-lru.add(7); // list = [7,4,6,5,3]
-lru.add(8); // list = [8,7,4,6,5]
+LFU lfu = new LFU(5); //capacity = 5
+lfu.add(1); // value = [1],         frequency = [0]
+lfu.add(2); // value = [2,1],       frequency = [0,0]
+lfu.add(3); // value = [3,2,1],     frequency = [0,0,0]
+lfu.get(1); // value = [1,3,2],     frequency = [1,0,0], return 1
+lfu.get(3); // value = [3,1,2],     frequency = [1,1,0], return 3
+lfu.get(3); // value = [3,1,2],     frequency = [2,1,0], return 3
+lfu.add(4); // value = [3,1,4,2],   frequency = [2,1,0,0]
+lfu.add(5); // value = [3,1,5,4,2], frequency = [2,1,0,0,0], cache is full
+lfu.add(6); // value = [3,1,6,5,4], frequency = [2,1,0,0,0], last element 2 is removed
+lfu.get(4); // value = [3,4,1,6,5], frequency = [2,1,1,0,0], return 4
+lfu.add(7); // value = [3,4,1,7,6], frequency = [2,1,1,0,0], last element 5 is removed
+lfu.get(7); // value = [3,7,4,1,6], frequency = [2,1,1,1,0], return 7
+lfu.get(6); // value = [3,6,7,4,1], frequency = [2,1,1,1,1], return 6
+lfu.get(6); // value = [6,3,7,4,1], frequency = [2,2,1,1,1], return 6
+lfu.get(6); // value = [6,3,7,4,1], frequency = [3,2,1,1,1], return 6
+lfu.add(8); // value = [6,3,7,4,8], frequency = [3,2,1,1,0], last element 1 is removed
 ```
 
 ## 3. Optimization
-### 3.1 Current Implementation
-Time Complexity can be O(n) in worst case.
+### 3.1 Implementation With Custom Node
+Time complexity can be $O(n)$ in worst case. This is because in the 'move' method, we may have to traverse all the node to find the proper position to insert the given node.
+```java
+private void move(Node node) {
+    Node curr = head;
+    while (curr != null) {
+        if (curr.count > node.count) {
+            curr = curr.next;
+        } else {
+            node.prev = curr.prev;
+            node.next = curr;
+            node.next.prev = node;
+            node.prev.next = node;
+            break;
+        }
+    }
+}
+```
 ### 3.2 Potential Improvement
+To improve the performance, we have two destinations, $O(\log{}n)$ or $O(1)$.
 not possible to use max heap, as you can get the minimum value within O(log(n)). For example, you can get the maximum value 82 in O(1), but when trying to remove minimum 27, we have to move all elements at its right to left. It may take O(n).
 ![image](/public/notes/data-structure-lfu-cache/heap.png){:width="450px"}  
 

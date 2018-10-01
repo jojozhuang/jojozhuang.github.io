@@ -11,9 +11,10 @@ tags: [BST]
 mathjax: true
 ---
 
-> Introduce what is Binary Search Tree, how to construct it and how to use it.
+> Introduce the definition, implementation and usage of binary search tree.
 
 ## 1. Binary Search Tree
+### 1.1 Definition of BST
 Binary Search Tree(BST) is a node-based binary tree data structure which has the following properties:
 * The left subtree of a node contains only nodes with values lesser than the node’s value.
 * The right subtree of a node contains only nodes with values greater than the node’s values.
@@ -22,7 +23,7 @@ Binary Search Tree(BST) is a node-based binary tree data structure which has the
 
 ![image](/public/notes/data-structure-binary-search-tree/bst.png){:width="450px"}  
 
-Common operations on BST.
+### 1.2 Common Operations on BST
 * Search - $O(\log{}n)$
 * Insertion - $O(\log{}n)$
 * Deletion - $O(\log{}n)$
@@ -202,6 +203,6 @@ private BSTNode getSuccessor(BSTNode deleleNode) {
 * [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
 
 ## 6. Reference
-* [Binary Search Tree - Search and Insertion)](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/)
+* [Binary Search Tree - Search and Insertion](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/)
 * [Binary Search Tree - Delete](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
 * [Binary Search Tree Complete Implementation](https://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/)

@@ -10,7 +10,7 @@ postdate: 2016-03-12
 tags: [Directed Graph, Topological Sorting]
 ---
 
-> A graph is simply a collection of nodes with edges between (some of) them.
+> Introduce the definition, implementation and usage of directed graph.
 
 ## 1. Directed Graph
 

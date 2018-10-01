@@ -8,16 +8,15 @@ image: note/dsa.png
 date: 2016-03-15
 postdate: 2016-03-15
 tags: [LRU]
+mathjax: true
 ---
 
-> Introduce two caching algorithms: LRU and LFU.
+> Introduce the definition, implementation and usage of Least Recently Used(LRU) cache.
 
-## 1. Cache Algorithms
-* Least Recently Used: `LRU` cache algorithm keeps recently used items near the front of cache. Whenever a new item is accessed, the LRU places it at the head of the cache. When the cache reaches to its capacity, items that have been accessed less recently will be removed starting from the end of the cache.
-* Least Frequently Used: `LFU` cache algorithm uses a counter to keep track of how often an entry is accessed. With the LFU cache algorithm, the entry with the lowest count is removed first. This method isn't used that often, as it does not account for an item that had an initially high access rate and then was not accessed for a long time.
-
-## 2. LRU
-### 2.1 How It Works?
+## 1. LRU
+### 1.1 LRU Cache Algorithm
+Least Recently Used(LRU) cache algorithm keeps recently used items near the front of cache. Whenever a new item is accessed, the LRU places it at the head of the cache. When the cache reaches to its capacity, items that have been accessed less recently will be removed starting from the end of the cache.
+### 1.2 How It Works?
 The LRU cache provides two methods: `add` and `get`.
 * add(value) - Add the value into cache if it is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
 * get(value) - Get the value if it exists in the cache, otherwise, return the minimum value of Integer. In addition, move this element to the head of the cache.
@@ -25,14 +24,15 @@ The LRU cache provides two methods: `add` and `get`.
 The following diagram illustrates how LRU works.
 ![image](/public/notes/data-structure-lru-cache/lru.png){:width="800px"}  
 
-### 2.2 Data Structure
+## 2. Implementation
+### 2.1 Data Structure
 Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
 ![image](/public/notes/data-structure-lru-cache/structure.png)
 * The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
 * Nodes between the head and tail nodes are used to store data, each node for one value. Every node has two pointers, pointing to the previous and the next nodes. They are connected to each other.
 * Nodes near the tail are least recently accessed. They will be removed if cache reaches to its capacity.
 
-### 2.3 Operations On LRU
+### 2.2 Operations On LRU
 1) Initialization
 ![image](/public/notes/data-structure-lru-cache/initialization.png){:width="400px"}  
 * Only two dummy nodes, head and tail.
@@ -58,8 +58,8 @@ Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
 * Update the tail pointers accordingly.
 * Return the value.
 
-### 2.4 Implementation(Custom Node)
-The following code implements LRU based on custom nodes. The node is defined as follows.
+### 2.3 Built With Custom Node
+The following code is the implementation of LRU based on custom nodes. The node is defined as follows.
 ```java
 public class Node {
     public int value;
@@ -79,7 +79,7 @@ public class LRU {
     private int capacity;
     private HashMap<Integer, Node> map;
     private Node head; // The latest accessed element
-    private Node tail;
+    private Node tail; // The least recently used element
     private final int MIN = Integer.MIN_VALUE;
 
     public LRU(int capacity) {
@@ -133,8 +133,15 @@ public class LRU {
     }
 }
 ```
-### 2.5 Implementation(Deque)
-Instead of creating the doubly linked list by hand, we can use Deque directly in Java. The following LRUDeque class implements LRU with Deque.
+Time complexity:
+* add() - $O(1)$
+* get() - $O(1)$
+
+Space complexity:
+* $O(n)$, 2*N, N is the number of nodes
+
+### 2.4 Built With Deque
+Instead of creating the doubly linked list by hand, we can use `Deque` directly in Java. The following LRUDeque class implements LRU with Deque.
 ```java
 public class LRUDeque {
     private int capacity;
@@ -178,28 +185,35 @@ public class LRUDeque {
     }
 }
 ```
-### 2.6 Testing
+Time complexity:
+* add() - $O(1)$
+* get() - $O(1)$
+
+Space complexity:
+* $O(n)$, 2*N, N is the number of nodes
+
+### 2.5 Testing
 Create an instance of LRU class and call add() and get() methods. The change of the list is described in the inline comments.
 ```java
 LRU lru = new LRU(5); //capacity = 5
-lru.add(1); // list = [1]
-lru.add(2); // list = [2,1]
-lru.add(3); // list = [3,2,1]
-lru.get(1); // list = [1,3,2], return 1
-lru.get(3); // list = [3,1,2], return 3
-lru.get(3); // list = [3,1,2], return 3
-lru.add(4); // list = [4,3,1,2]
-lru.add(5); // list = [5,4,3,1,2], cache is full
-lru.add(6); // list = [6,5,4,3,1]
-lru.get(4); // list = [4,6,5,3,1], return 4
-lru.add(7); // list = [7,4,6,5,3]
-lru.add(8); // list = [8,7,4,6,5]
+lru.add(1); // values = [1]
+lru.add(2); // values = [2,1]
+lru.add(3); // values = [3,2,1]
+lru.get(1); // values = [1,3,2], return 1
+lru.get(3); // values = [3,1,2], return 3
+lru.get(3); // values = [3,1,2], return 3
+lru.add(4); // values = [4,3,1,2]
+lru.add(5); // values = [5,4,3,1,2], cache is full
+lru.add(6); // values = [6,5,4,3,1]
+lru.get(4); // values = [4,6,5,3,1], return 4
+lru.add(7); // values = [7,4,6,5,3]
+lru.add(8); // values = [8,7,4,6,5]
 ```
 
-## 5. Source Files
+## 3. Source Files
 * [Source files for LRU Cache on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LRU)
 * [LRU Cache Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ZIZ5oLBk_YLK-DRgEiQl_q5V5n6ZzEJx/view?usp=sharing)
 
-## 6. Reference
+## 4. Reference
 * [LRU Cache Implementation](https://www.geeksforgeeks.org/lru-cache-implementation/)
 * [LRU Cache on LeetCode](https://leetcode.com/problems/lru-cache/)
