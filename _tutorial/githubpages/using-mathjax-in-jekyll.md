@@ -13,11 +13,22 @@ mathjax: true
 
 > Display mathematical notation in web pages with MathJax.
 
-## 1. MathJax
-[MathJax](https://www.mathjax.org/) is a cross-browser JavaScript library that displays mathematical notation in web browsers.
+## 1. Math Symbols
+### 1. Showing Math Symbols on Web Page
+The support of displaying math symbols with html tags is limited. Though you can use UTF-8 to display some special characters, it is hard to remember them and it is inconvenient to use.
+
+Title                   | Formula                 | HTML Tag
+------------------------|-------------------------|--------------------------------------
+Square                  | n<sup>2</sup>           | `n<sup>2</sup>`
+Square Root             | &radic;, &#8730;        | `&radic;`, or `&#8730;`
+Summary                 | &sum;, &#8721;          | `&sum;`, or `&#8721;`
+
+* [UTF-8 Mathematical Operators](https://www.w3schools.com/charsets/ref_utf_math.asp)
 
 ## 2. Using MathJax on Web Pages
-### 2.1 Loading MathJax
+### 2.1 MathJax
+[MathJax](https://www.mathjax.org/) is a cross-browser JavaScript library that displays mathematical notation in web browsers.
+### 2.2 Loading MathJax
 The preferred way to use MathJax on a web page is by linking to the publicly available MathJax Content Delivery Network(CDN). This can be done by adding the following code snippet into the HTML header block(the code between <head> and </head>) of your HTML or XHTML document:
 ```html
 <script type="text/javascript"
@@ -30,7 +41,7 @@ For greater security, it is also possible to access the CDN via https:
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
 </script>
 ```
-### 2.2 Including MathML
+### 2.3 Including MathML
 With the link to MathJax in the HTML header in place, MathJax will recognize and render MathML elements that are included in the document with the standard `<math>` tags. A minimal example of a fully functional HTML page with embedded MathML using MathJax from the CDN could be the following:
 ```html
 <!DOCTYPE html>

@@ -11,9 +11,9 @@ tags: [Graph, DFS, BFS]
 mathjax: true
 ---
 
-> A graph is simply a collection of nodes with edges between (some of) them.
+> Introduce the definition, implementation and usage of graph.
 
-## 1. Concepts of Graph
+## 1. Graph
 ### 1.1 Definition of Graph
 Graph is a data structure that consists of following two components: `vertex` and `edge`.
 * A finite set of vertices, also called as nodes.

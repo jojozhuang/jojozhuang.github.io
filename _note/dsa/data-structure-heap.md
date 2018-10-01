@@ -11,23 +11,44 @@ tags: [Heap]
 mathjax: true
 ---
 
-> Implement generic Max Heap and Min Heap with array.
+> Introduce the definition, implementation and usage of heap.
 
 ## 1. Heap
+### 1.1 Definition of Heap
 A heap is a binary tree with these characteristics:
 * It’s complete. This means it’s completely filled in, reading from left to right across each row, although the last row need not be full.
 * It’s (usually) implemented as an array. Binary trees can be stored in arrays, rather than using references to connect the nodes.
 * Each node in a heap satisfies the `heap condition`, which states that every node’s key is larger/smaller than the keys of its children.
 
 ![image](/public/notes/data-structure-heap/complete.png){:width="800px"}  
-
+### 1.2 Data Structure of Heap
 Heap can be implemented with array. A heap is a complete binary tree implies that there are no “holes” in the
 array used to represent it.
 ![image](/public/notes/data-structure-heap/heaparray.png){:width="800px"}  
+### 1.3 Types of Heap
+* Max Heap - The root is the maximum element in the heap.
+* Min Heap - The root is the minimum element in the heap.
+
+### 1.4 Common Operations on Heap
+* Insertion - $O(\log{}n)$
+* Removal - $O(\log{}n)$
+* Get - $O(1)$
+
+### 2.3 Efficiency of Heap Operations
+A heap is a special kind of binary tree, the number of levels `L` in a binary tree equals $\log_{2}(N+1)$, where N is the number of nodes. The `bubble up` and `bubble down` routines cycle through their loops L-1 times, so the first takes time proportional to $\log_{2}N$, and the second somewhat more because of the extra comparison. Thus, the heap operations we’ve talked about here all operate in $O(\log{}N)$ time.
+
+### 2.4 Elements Sequence
+If you remove a node and then insert the same node, the result is `not` necessarily the restoration of the original heap. A given set of nodes can be arranged in `many` valid heaps, depending on the `order` in which nodes are inserted.
+
+### 2.5 Index Relationships
+For a node at index `i` in the array,
+* Its parent is (i - 1) / 2.
+* Its left child is 2 * i + 1.
+* Its right child is 2 * i + 2.
 
 ## 2. Max Heap
 A max-heap is a complete binary tree where each node is larger than its children. The root, therefore, is the maximum element in the heap.
-## 2.1 Insertion
+### 2.1 Insertion
 Insertion means add new element to the heap. Initially, the new element is placed in the first open position at the end of the array. Insertion increases the array size by one. Here are the steps for adding the new element to max heap:
 * 1) Add new node to bottom, rightmost.
 * 2) Compare the value of this node with its parent. If value of parent is less than child, then swap them.
@@ -35,7 +56,7 @@ Insertion means add new element to the heap. Initially, the new element is place
 
 ![image](/public/notes/data-structure-heap/heapinsert.png)
 
-## 2.2 Removal
+### 2.2 Removal
 Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
 * 1) Remove the root node.
 * 2) Move the last element(bottom, rightmost) to root.  
@@ -44,19 +65,7 @@ Removal means removing the node with the maximum key. This node is always the ro
 
 ![image](/public/notes/data-structure-heap/heapremove.png)
 
-## 2.3 Efficiency of Heap Operations
-A heap is a special kind of binary tree, the number of levels `L` in a binary tree equals $\log_{2}(N+1)$, where N is the number of nodes. The `bubble up` and `bubble down` routines cycle through their loops L-1 times, so the first takes time proportional to $\log_{2}N$, and the second somewhat more because of the extra comparison. Thus, the heap operations we’ve talked about here all operate in $O(\log{}N)$ time.
-
-## 2.4 Elements Sequence
-If you remove a node and then insert the same node, the result is `not` necessarily the restoration of the original heap. A given set of nodes can be arranged in `many` valid heaps, depending on the `order` in which nodes are inserted.
-
-## 2.5 Index Relationships
-For a node at index `i` in the array,
-* Its parent is (i - 1) / 2.
-* Its left child is 2 * i + 1.
-* Its right child is 2 * i + 2.
-
-## 2.6 Implementing MaxHeap
+### 2.3 Implementing MaxHeap
 The following code is the implementation of max heap with type integer.
 ```java
 public class MaxHeap {
@@ -203,7 +212,7 @@ public class MaxHeap {
 ## 3. Min Heap
 A min-heap is a complete binary tree where each node is smaller than its children. The root, therefore, is the minimum element in the heap.
 
-## 3.1 Implementing MinHeap
+### 3.1 Implementing MinHeap
 The following code is the implementation of max heap with type integer. The only difference with max heap is the comparison.
 ```java
 public class MinHeap {

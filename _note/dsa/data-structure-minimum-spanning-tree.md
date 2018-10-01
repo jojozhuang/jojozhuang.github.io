@@ -10,7 +10,7 @@ postdate: 2016-03-13
 tags: [MST]
 ---
 
-> A graph is simply a collection of nodes with edges between (some of) them.
+> Introduce the definition, implementation and usage of minimum spanning tree.
 
 ## 3. Minimum Spanning Trees
 A `minimum spanning tree` (MST) is a graph with the minimum number of edges necessary to connect the vertices.

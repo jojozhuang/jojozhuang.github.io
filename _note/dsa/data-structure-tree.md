@@ -11,7 +11,7 @@ tags: [Tree, Binary Tree]
 mathjax: true
 ---
 
-> Introduce what is Tree, how to construct it and how to use it.
+> Introduce the definition, implementation and usage of tree.
 
 ## 1. Tree
 A tree is a data structure composed of nodes.The tree cannot contain cycles. The nodes may or may not be in a particular order, they could have any data type as values, and they may or may not have links back to their parent nodes.

@@ -2,7 +2,7 @@
 layout: post
 key: blog
 title: "Mermaid Cheat Sheet"
-date: 2018-09-16
+date: 2018-09-18
 tags: [Mermaid]
 mermaid: true
 ---

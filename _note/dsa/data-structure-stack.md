@@ -10,14 +10,9 @@ postdate: 2016-03-03
 tags: [Stack]
 ---
 
-> Introduce what is Stack, how to construct it and how to use it.
+> Introduce the definition, implementation and usage of stack.
 
-Stack is an abstract data type that serves as a collection of elements, with two principal operations:
-* push, which adds an element to the collection, and
-* pop, which removes the most recently added element that was not yet removed.
-
-
-## 1. Introduction
+## 1. Stack
 ### 1.1 Real-life Example
 Stack is just like a pile of plates kept on top of each other. You can only take out a plate from the top and put a plate on top of the other plates.
 ![image](/public/notes/data-structure-stack/plates.png){:width="400px"}  
@@ -26,20 +21,22 @@ Think about the things you can do with such a pile of plates.
 * Remove the top plate
 
 If you want the plate at the bottom, you have to first remove all the plates on top.
-
 ### 1.2 Stack in Programming Terms
-In programming terms, putting an item on top of the stack is called `push` and removing an item is called `pop`.
-![image](/public/notes/data-structure-stack/stack.png){:width="800px"}  
-Stack follows the `LIFO`(Last In First Out) rule. The last item that was placed is the first item to go out.
+Stack is an abstract data type that serves as a collection of elements, with two principal operations:
+* `push`: add an element to the collection
+* `pop`: remove the most recently added element
 
-### 1.3 Common Operations on Stack
+Stack follows the `LIFO`(Last-in, first-out) rule. The last item that was placed is the first item to go out.
+![image](/public/notes/data-structure-stack/stack.png){:width="800px"}  
+
+## 2. Implementation
+### 2.1 Common Operations on Stack
 * push(item): Add an item to the top of the stack.
 * pop(): Remove the top item from the stack.
 * peek(): Return the top of the stack.
 * isEmpty(): Return true if and only if the stack is empty.
 
-## 2. Implementation
-### 2.1 Implementing with LinkedList
+### 2.2 Built with LinkedList
 First, define the list node as follows.
 ```java
 public class ListNode {
@@ -92,7 +89,7 @@ public class LinkedListStack {
 }
 ```
 
-### 2.2 Implementing with Two Queues
+### 2.3 Built with Two Queues
 ```java
 import java.util.LinkedList;
 import java.util.Queue;
@@ -151,7 +148,7 @@ public class QueueStack {
 }
 ```
 
-### 2.3 Implementing with Array
+### 2.4 Built with Array
 ```java
 public class ArrayStack {
     private int top;
@@ -192,9 +189,10 @@ public class ArrayStack {
 }
 ```
 
-### 2.4 Implementing with Array(Loop)
+### 2.5 Built with Array(Loop)
 ```java
 ```
+
 ## 3. Implementing Sort Function with Stack
 ### 3.1 Insertion Sort with Stack
 If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a stack, which contains {1,2,2,3,4,5,6,7}, 7 is at top.

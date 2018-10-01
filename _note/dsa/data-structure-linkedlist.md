@@ -10,7 +10,7 @@ postdate: 2016-03-02
 tags: [Linked List]
 ---
 
-> Introduce what is linked list, how to construct it and how to use it.
+> Introduce the definition, implementation and usage of linked list.
 
 ## 1. Linked List
 A linked list is represented by a sequence of nodes. Each node contains a link to another node. There are two main types of linked list.

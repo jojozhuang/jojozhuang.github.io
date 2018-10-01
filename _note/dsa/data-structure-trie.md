@@ -10,12 +10,13 @@ postdate: 2016-03-07
 tags: [Trie, Prefix Tree]
 ---
 
-> Introduce to use Trie for word search.
+> Introduce to use trie for word search.
 
+## 1. Trie
+### 1.1 Definition of Trie
 A Trie (pronounced try) or Prefix Tree is an ordered tree in which characters are stored at each node. Each path down the tree may
 represent a word.
-
-## 1. Usage of Trie
+### 1.2 Usage of Trie
 Very commonly, a trie is used to store the entire (English) language for quick prefix lookups. While a hash table can quickly look up whether a string is a valid word, however it cannot tell us if a string is a prefix of any valid words. A trie can do this very quickly.
 
 Below picture shows how words are stored in trie. This trie stores five words: dog, dot, pump, fat, fire. Each node has a hashmap and a flag to indicate whether the current node is a leaf(a complete path for a word).
@@ -23,7 +24,7 @@ Below picture shows how words are stored in trie. This trie stores five words: d
 * In trie, each path from root to any node represents a word.
 * It is not necessary that leaf has to be the node without children. For example, suppose 'dog' and 'dot' are words in this trie. Then, node 'g' and node 't' are obviously marked as leaves. If word 'do' is also in this trie, then node 'o' is also marked as leaf, even if it has two children, 'g' and 't'.
 
-Common operations on Trie.
+### 1.3 Common Operations on Trie
 * Search
 * Insertion
 * Deletion

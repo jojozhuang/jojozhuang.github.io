@@ -10,27 +10,27 @@ postdate: 2016-03-04
 tags: [Queue]
 ---
 
-> Introduce what is Queue, how to construct it and how to use it.
+> Introduce the definition, implementation and usage of queue.
 
-A queue is an object or more specifically an abstract data structure(ADT) that follows FIFO (first-in first-out) rule.
-
-## 1. Introduction
+## 1. Queue
 ### 1.1 Real-life Example
 Queue is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
-
 ### 1.2 Queue in Programming Terms
-In programming terms, putting an item into the queue is called `enqueue` and removing an item from the queue is called `dequeue`.
-![image](/public/notes/data-structure-queue/queue.png){:width="800px"}  
-Queue follows the `FIFO`(First In First Out) rule. The item that goes in first is the item that comes out first too.
+Queue is an abstract data type that serves as a collection of elements, with two principal operations:
+* `enqueue`: add an element to the collection
+* `dequeue`: remove the least recently added element
 
-### 1.3 Common Operations on Queue
+Queue follows the `FIFO`(First-in, first-out) rule. The item that goes in first is the item that comes out first too.
+ ![image](/public/notes/data-structure-queue/queue.png){:width="800px"}  
+
+## 2. Implementation
+### 2.1 Common Operations on Queue
 * enqueue(item): Add an item to the end of the list.
 * dequeue(): Pull the first item out of the list.
 * peek(): Return the top of the queue.
 * isEmpty(): Return true if and only if the queue is empty.
 
-## 2. Implementation
-### 2.1 Implementing with LinkedList
+### 2.2 Implementing with LinkedList
 ```java
 public class LinkedListQueue {
     private ListNode head; // the first node
@@ -77,7 +77,7 @@ public class LinkedListQueue {
 }
 ```
 
-### 2.2 Implementing with Two Stacks
+### 2.3 Implementing with Two Stacks
 ```java
 import java.util.Stack;
 
@@ -123,8 +123,7 @@ public class StackQueue {
     }
 }
 ```
-
-### 2.3 Implementing with Array
+### 2.4 Implementing with Array
 ```java
 public class ArrayQueue {
     private int head; // the first node
@@ -174,7 +173,7 @@ public class ArrayQueue {
 ```
 * There is one problem with the above implementation. Notice that both head and tail only increase, never decrease. When tail reaches to the end of the array, you cannot add more items into it. Even if you call dequeue method to clear some space, however, the head and tail won't move back.
 
-### 2.4 Implement with Circular Array
+### 2.5 Implement with Circular Array
 To solve the issue mentioned above, we can use a circular array to implement the queue.
 ![image](/public/notes/data-structure-queue/circular-queue.png){:width="350px"}  
 ```java
