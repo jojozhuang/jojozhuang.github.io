@@ -62,11 +62,13 @@ Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
 The following code is the implementation of LRU based on custom nodes. The node is defined as follows.
 ```java
 public class Node {
+    public int key;
     public int value;
     public Node prev;
     public Node next;
 
-    public Node(int value) {
+    public Node(int key, int value) {
+        this.key = key;
         this.value = value;
         this.prev = null;
         this.next = null;
@@ -77,22 +79,23 @@ Following is the LRU class which implements the `add()` and `get()` methods.
 ```java
 public class LRU {
     private int capacity;
-    private HashMap<Integer, Node> map;
-    private Node head; // The latest accessed element
-    private Node tail; // The least recently used element
+    private HashMap<Integer, Node> map; // key, node
+    private Node head;                  // The latest accessed element
+    private Node tail;                  // The least recently used element
+    private final int MAX = Integer.MAX_VALUE;
     private final int MIN = Integer.MIN_VALUE;
 
     public LRU(int capacity) {
         this.capacity = capacity;
         this.map = new HashMap<Integer, Node>();
-        this.head = new Node(this.MIN);
-        this.tail = new Node(this.MIN);
+        this.head = new Node(this.MAX, this.MAX);
+        this.tail = new Node(this.MIN, this.MIN);
         head.next = tail;
         tail.prev = head;
     }
 
-    public void add(int value) {
-        if (map.containsKey(value)) {
+    public void add(int key, int value) {
+        if (map.containsKey(key)) {
             return;
         }
 
@@ -102,27 +105,27 @@ public class LRU {
             tail.prev.next = tail;
         }
 
-        Node newNode = new Node(value);
-        map.put(value, newNode);
+        Node newNode = new Node(key, value);
+        map.put(key, newNode);
 
         // move new node to head
         moveToHead(newNode);
     }
 
-    public int get(int value) {
-        if (!map.containsKey(value)) {
+    public int get(int key) {
+        if (!map.containsKey(key)) {
             return this.MIN;
         }
 
         // remove current
-        Node current = map.get(value);
+        Node current = map.get(key);
         current.prev.next = current.next;
         current.next.prev = current.prev;
 
         // move current node to head
         moveToHead(current);
 
-        return map.get(value).value;
+        return map.get(key).value;
     }
 
     private void moveToHead(Node node) {
@@ -141,12 +144,12 @@ Space complexity:
 * $O(n)$, 2*N, N is the number of nodes
 
 ### 2.4 Built With Deque
-Instead of creating the doubly linked list by hand, we can use `Deque` directly in Java. The following LRUDeque class implements LRU with Deque.
+Instead of creating the doubly linked list by hand, we can use `Deque` directly in Java. The following LRUDeque class implements LRU with Deque. The efficiency of the `get()` method may be $O(n)$ in the worst case.
 ```java
 public class LRUDeque {
     private int capacity;
-    private HashMap<Integer, Integer> map;
-    private Deque<Integer> deque;
+    private HashMap<Integer, Integer> map; // key, value
+    private Deque<Integer> deque;          // key
     private final int MIN = Integer.MIN_VALUE;
 
     public LRUDeque(int capacity) {
@@ -155,8 +158,8 @@ public class LRUDeque {
         this.deque = new LinkedList<Integer>();
     }
 
-    public void add(int value) {
-        if (map.containsKey(value)) {
+    public void add(int key, int value) {
+        if (map.containsKey(key)) {
             return;
         }
 
@@ -166,28 +169,28 @@ public class LRUDeque {
         }
 
         // add to map
-        map.put(value, value);
+        map.put(key, value);
         // add to the head of deque
-        deque.addFirst(value);
+        deque.addFirst(key);
     }
 
-    public int get(int value) {
-        if (!map.containsKey(value)) {
+    public int get(int key) {
+        if (!map.containsKey(key)) {
             return this.MIN;
         }
 
         // remove current
-        deque.remove(value); // performance issue, the time complexity for random access is O(n)
+        deque.remove(key); // equivalent to removeFirstOccurrence(), performance issue, O(n)
         // move it to head
-        deque.addFirst(value);
+        deque.addFirst(key);
 
-        return map.get(value);
+        return map.get(key);
     }
 }
 ```
 Time complexity:
 * add() - $O(1)$
-* get() - $O(1)$
+* get() - $O(n)$
 
 Space complexity:
 * $O(n)$, 2*N, N is the number of nodes
@@ -196,18 +199,18 @@ Space complexity:
 Create an instance of LRU class and call add() and get() methods. The change of the list is described in the inline comments.
 ```java
 LRU lru = new LRU(5); //capacity = 5
-lru.add(1); // values = [1]
-lru.add(2); // values = [2,1]
-lru.add(3); // values = [3,2,1]
-lru.get(1); // values = [1,3,2], return 1
-lru.get(3); // values = [3,1,2], return 3
-lru.get(3); // values = [3,1,2], return 3
-lru.add(4); // values = [4,3,1,2]
-lru.add(5); // values = [5,4,3,1,2], cache is full
-lru.add(6); // values = [6,5,4,3,1]
-lru.get(4); // values = [4,6,5,3,1], return 4
-lru.add(7); // values = [7,4,6,5,3]
-lru.add(8); // values = [8,7,4,6,5]
+lru.add(1,1); // values = [1]
+lru.add(2,2); // values = [2,1]
+lru.add(3,3); // values = [3,2,1]
+lru.get(1);   // values = [1,3,2], return 1
+lru.get(3);   // values = [3,1,2], return 3
+lru.get(3);   // values = [3,1,2], return 3
+lru.add(4,4); // values = [4,3,1,2]
+lru.add(5,5); // values = [5,4,3,1,2], cache is full
+lru.add(6,6); // values = [6,5,4,3,1]
+lru.get(4);   // values = [4,6,5,3,1], return 4
+lru.add(7,7); // values = [7,4,6,5,3]
+lru.add(8,8); // values = [8,7,4,6,5]
 ```
 
 ## 3. Source Files
