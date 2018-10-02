@@ -198,11 +198,62 @@ private BSTNode getSuccessor(BSTNode deleleNode) {
 }
 ```
 
-## 5. Source Files
+## 5. Balanced Binary Search Tree
+In some cases, we need to convert a normal BST tree to a balanced BST.
+![image](/public/notes/data-structure-binary-search-tree/balanced_bst.png){:width="800px"}
+We can convert it with the following two steps.
+* Get the sorted node list from existing bst tree by traversing it inorder.
+* Binary construct the balanced BST with the sorted node list.
+
+```java
+public BSTNode rebalanceBST(BSTNode root) {
+    List<BSTNode> list = inorder(root);
+    if (list == null || list.size() == 0) {
+        return null;
+    }
+
+    return sortedListToBST(list, 0, list.size() - 1);
+}
+
+// build bst with give node list.
+private BSTNode sortedListToBST(List<BSTNode> list, int start, int end) {
+    if (start > end) {
+        return null;
+    }
+
+    int mid = start + (end - start) / 2;
+    BSTNode root = list.get(mid);
+
+    root.left = sortedListToBST(list, start, mid - 1);
+    root.right = sortedListToBST(list, mid + 1, end);
+    return root;
+}
+
+// get the sorted node list of bst tree
+public List<BSTNode> inorder(BSTNode root) {
+    List<BSTNode> res = new ArrayList<BSTNode>();
+
+    if (root == null) {
+        return res;
+    }
+
+    List<BSTNode> left = inorder(root.left);
+    List<BSTNode> right = inorder(root.right);
+
+    res.addAll(left);
+    res.add(root);
+    res.addAll(right);
+
+    return res;
+}
+```
+
+## 6. Source Files
 * [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/BinarySearchTree)
 * [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
 
-## 6. Reference
+## 7. Reference
 * [Binary Search Tree - Search and Insertion](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/)
 * [Binary Search Tree - Delete](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
 * [Binary Search Tree Complete Implementation](https://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/)
+* [Sorted Array to Balanced BST](https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)
