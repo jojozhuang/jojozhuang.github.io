@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Best Practice"
-index: 330
+index: 331
 category: dsa
 image: /note/dsa.png
-date: 2016-03-30
-postdate: 2016-03-30
+date: 2016-03-31
+postdate: 2016-03-31
 tags: [Algorithm]
 ---
 

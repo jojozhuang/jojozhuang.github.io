@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Union And Find"
-index: 324
+index: 325
 category: dsa
 image: note/dsa.png
-date: 2016-03-24
-postdate: 2016-03-24
+date: 2016-03-25
+postdate: 2016-03-25
 tags: [Disjoint Set, Union, Find]
 ---
 

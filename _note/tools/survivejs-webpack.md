@@ -5,8 +5,8 @@ title: "SurviveJS - Webpack(Online Doc)"
 index: 503
 category: tools
 image: note/tools.png
-date: 2017-05-03
-postdate: 2017-05-03
+date: 2017-07-03
+postdate: 2017-07-03
 tags: [Webpack]
 ---
 
