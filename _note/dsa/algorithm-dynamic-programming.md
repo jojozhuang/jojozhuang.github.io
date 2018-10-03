@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Dynamic Programming(Draft)"
-index: 323
+index: 324
 category: dsa
 image: note/dsa.png
-date: 2016-03-23
-postdate: 2016-03-23
+date: 2016-03-24
+postdate: 2016-03-24
 tags: [Sorting]
 ---
 

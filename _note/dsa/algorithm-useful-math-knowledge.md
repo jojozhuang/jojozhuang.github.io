@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Useful Math Knowledge"
-index: 329
+index: 330
 category: dsa
 image: /note/dsa.png
-date: 2016-03-29
-postdate: 2016-03-29
+date: 2016-03-30
+postdate: 2016-03-30
 tags: [Math, Algorithm]
 ---
 

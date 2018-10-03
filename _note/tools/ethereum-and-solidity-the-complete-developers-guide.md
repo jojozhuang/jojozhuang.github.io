@@ -5,8 +5,8 @@ title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 502
 category: tools
 image: note/tools.png
-date: 2017-05-02
-postdate: 2017-05-02
+date: 2017-07-02
+postdate: 2017-07-02
 tags: [Block Chain, Digital Currency, Ethereum]
 ---
 
