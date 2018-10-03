@@ -85,9 +85,9 @@ Following is the LFU class which implements the `add()` and `get()` methods.
 ```java
 public class LFU {
     private int capacity;
-    private HashMap<Integer, Node> map;
-    private Node head; // The most frequently accessed element
-    private Node tail; // The least frequently used element
+    private HashMap<Integer, Node> map; // key, node
+    private Node head;                  // The most frequently accessed element
+    private Node tail;                  // The least frequently used element
     private final int MAX = Integer.MAX_VALUE;
     private final int MIN = Integer.MIN_VALUE;
 
@@ -100,8 +100,8 @@ public class LFU {
         tail.prev = head;
     }
 
-    public void add(int value) {
-        if (map.containsKey(value)) {
+    public void add(int key, int value) {
+        if (map.containsKey(key)) {
             return;
         }
 
@@ -111,20 +111,20 @@ public class LFU {
             tail.prev.next = tail;
         }
 
-        Node newNode = new Node(value, 0);
-        map.put(value, newNode);
+        Node newNode = new Node(key, 0);
+        map.put(key, newNode);
 
         // move new node to proper position
         move(newNode);
     }
 
-    public int get(int value) {
-        if (!map.containsKey(value)) {
+    public int get(int key) {
+        if (!map.containsKey(key)) {
             return this.MIN;
         }
 
         // remove current
-        Node current = map.get(value);
+        Node current = map.get(key);
         current.prev.next = current.next;
         current.next.prev = current.prev;
 
@@ -133,7 +133,7 @@ public class LFU {
         // move current node to proper position
         move(current);
 
-        return map.get(value).value;
+        return map.get(key).value;
     }
 
     private void move(Node node) {
@@ -163,22 +163,22 @@ Space complexity:
 Create an instance of LFU class and call add() and get() methods. The changes of the value and frequency list are described in the inline comments.
 ```java
 LFU lfu = new LFU(5); //capacity = 5
-lfu.add(1); // value = [1],         frequency = [0]
-lfu.add(2); // value = [2,1],       frequency = [0,0]
-lfu.add(3); // value = [3,2,1],     frequency = [0,0,0]
-lfu.get(1); // value = [1,3,2],     frequency = [1,0,0], return 1
-lfu.get(3); // value = [3,1,2],     frequency = [1,1,0], return 3
-lfu.get(3); // value = [3,1,2],     frequency = [2,1,0], return 3
-lfu.add(4); // value = [3,1,4,2],   frequency = [2,1,0,0]
-lfu.add(5); // value = [3,1,5,4,2], frequency = [2,1,0,0,0], cache is full
-lfu.add(6); // value = [3,1,6,5,4], frequency = [2,1,0,0,0], last element 2 is removed
-lfu.get(4); // value = [3,4,1,6,5], frequency = [2,1,1,0,0], return 4
-lfu.add(7); // value = [3,4,1,7,6], frequency = [2,1,1,0,0], last element 5 is removed
-lfu.get(7); // value = [3,7,4,1,6], frequency = [2,1,1,1,0], return 7
-lfu.get(6); // value = [3,6,7,4,1], frequency = [2,1,1,1,1], return 6
-lfu.get(6); // value = [6,3,7,4,1], frequency = [2,2,1,1,1], return 6
-lfu.get(6); // value = [6,3,7,4,1], frequency = [3,2,1,1,1], return 6
-lfu.add(8); // value = [6,3,7,4,8], frequency = [3,2,1,1,0], last element 1 is removed
+lfu.add(1,1); // value = [1],         frequency = [0]
+lfu.add(2,2); // value = [2,1],       frequency = [0,0]
+lfu.add(3,3); // value = [3,2,1],     frequency = [0,0,0]
+lfu.get(1);   // value = [1,3,2],     frequency = [1,0,0], return 1
+lfu.get(3);   // value = [3,1,2],     frequency = [1,1,0], return 3
+lfu.get(3);   // value = [3,1,2],     frequency = [2,1,0], return 3
+lfu.add(4,4); // value = [3,1,4,2],   frequency = [2,1,0,0]
+lfu.add(5,5); // value = [3,1,5,4,2], frequency = [2,1,0,0,0], cache is full
+lfu.add(6,6); // value = [3,1,6,5,4], frequency = [2,1,0,0,0], last element 2 is removed
+lfu.get(4);   // value = [3,4,1,6,5], frequency = [2,1,1,0,0], return 4
+lfu.add(7,7); // value = [3,4,1,7,6], frequency = [2,1,1,0,0], last element 5 is removed
+lfu.get(7);   // value = [3,7,4,1,6], frequency = [2,1,1,1,0], return 7
+lfu.get(6);   // value = [3,6,7,4,1], frequency = [2,1,1,1,1], return 6
+lfu.get(6);   // value = [6,3,7,4,1], frequency = [2,2,1,1,1], return 6
+lfu.get(6);   // value = [6,3,7,4,1], frequency = [3,2,1,1,1], return 6
+lfu.add(8,8); // value = [6,3,7,4,8], frequency = [3,2,1,1,0], last element 1 is removed
 ```
 
 ## 3. Optimization
