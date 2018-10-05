@@ -380,7 +380,7 @@ public class StackQuickSort {
 ```
 
 ## 4. Source Files
-* [Source files for Stack on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Stack)
+* [Source files for Stack on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-stack)
 * [Stack Diagrams on Google Slides](https://docs.google.com/presentation/d/1gs-gOoLqcy5oskHUx5SD5Dh5OtACMiI7kLH8R-HHjME/edit?usp=sharing)
 
 ## 5. Reference

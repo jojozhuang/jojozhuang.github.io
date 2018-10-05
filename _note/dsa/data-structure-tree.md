@@ -480,49 +480,44 @@ public class Codec {
 ### 3.2 Creating Tree With Level-Order String Array
 For example, the below code create a tree with a root and right sub node. "#" stands for a empty node. The array contains level-order values for all the tree nodes.
 ```java
-TreeNode root = TreeFactory.createInstance(new String[]{"1","#","3"});
+TreeNode root = TreeNode.createInstance(new String[]{"1","#","3"});
 ```
 
 Implementation of the 'createInstance' method.
 ```java
-import java.util.LinkedList;
-import java.util.Queue;
+public static TreeNode createInstance(String[] arr) {
+    if(arr == null || arr.length == 0) {
+        return null;
+    }
 
-public class TreeFactory {
-    public static TreeNode createInstance(String[] arr) {
-        if(arr == null || arr.length == 0) {
-            return null;
-        }
+    Queue<TreeNode> queue = new LinkedList<>();
 
-        Queue<TreeNode> queue = new LinkedList<>();
+    TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
+    queue.offer(root);
 
-        TreeNode root = new TreeNode(Integer.parseInt(arr[0]));
-        queue.offer(root);
-
-        int index = 0;
-        while (index < arr.length - 1) {
-            TreeNode node = queue.poll();
-            if (node != null) {
-                String str = arr[++index];
-                if (!str.equals("#")) {
-                    node.left = new TreeNode(Integer.parseInt(str));
-                    queue.add(node.left);
-                }
-                str = arr[++index];
-                if (!str.equals("#")) {
-                    node.right = new TreeNode(Integer.parseInt(str));
-                    queue.add(node.right);
-                }
+    int index = 0;
+    while (index < arr.length - 1) {
+        TreeNode node = queue.poll();
+        if (node != null) {
+            String str = arr[++index];
+            if (!str.equals("#")) {
+                node.left = new TreeNode(Integer.parseInt(str));
+                queue.add(node.left);
+            }
+            str = arr[++index];
+            if (!str.equals("#")) {
+                node.right = new TreeNode(Integer.parseInt(str));
+                queue.add(node.right);
             }
         }
-
-        return root;
     }
+
+    return root;
 }
 ```
 
 ## 4. Source Files
-* [Source files for Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Tree)
+* [Source files for Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-tree)
 * [Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1D57NwHAx8-Q1ZhC8HRgzNVUI_IdReCEr/view?usp=sharing)
 
 ## 5. Reference

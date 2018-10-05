@@ -179,7 +179,7 @@ public void union(int i, int j) {
 ```
 
 ## 4. Source Files
-* [Source files for Union Find on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/UnionFind)
+* [Source files for Union Find on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-union-find)
 * [Union Find Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1CulEG8tHmHdQQ5UPnCjrIzdpIZNZd-WB/view?usp=sharing)
 
 ## 5. References

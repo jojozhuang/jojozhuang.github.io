@@ -117,7 +117,7 @@ public int search(int[] nums, int target) {
 ```
 
 ## 4. Source Files
-* [Source files for Binary Search on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Algorithm)
+* [Source files for Binary Search on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-binary-search)
 * [Binary Search Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1kFOgd-Xf944qt2zqupqd7-eHG7C237si/view?usp=sharing)
 
 ## 5. References
