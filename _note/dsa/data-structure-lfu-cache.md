@@ -214,7 +214,7 @@ Instead of creating the doubly linked list by hand, we can use Deque directly in
 ```
 
 ## 4. Source Files
-* [Source files for LFU Cache on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LFU)
+* [Source files for LFU Cache on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-lfu-cache)
 * [LFU Cache Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1NGLMVXkvRhIkwAkvQtRHCHwN9VgjihoN/view?usp=sharing)
 
 ## 5. Reference

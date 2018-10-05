@@ -96,23 +96,29 @@ public class StackQueue {
     }
 
     // Remove the first item from the queue and return its value
-    public int dequeue() {
+    public int dequeue() throws Exception {
         if (!stack2.isEmpty()) {
             return stack2.pop();
         }
         while (!stack1.isEmpty()) {
             stack2.push(stack1.pop());
         }
+        if (stack2.isEmpty()) {
+            throw new Exception();
+        }
         return stack2.pop();
     }
 
     // Get the first element
-    public int peek() {
+    public int peek() throws Exception {
         if (!stack2.isEmpty()) {
             return stack2.peek();
         }
         while (!stack1.isEmpty()) {
             stack2.push(stack1.pop());
+        }
+        if (stack2.isEmpty()) {
+            throw new Exception();
         }
         return stack2.peek();
     }
@@ -167,7 +173,7 @@ public class ArrayQueue {
 
     // Return whether the queue is empty
     public boolean isEmpty() {
-        return (head > tail) || (head == -1);
+        return (head == -1) || (head > tail);
     }
 }
 ```
@@ -310,7 +316,7 @@ public class QueueMergeSort {
 ```
 
 ## 4. Source Files
-* [Source files for Queue on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Queue)
+* [Source files for Queue on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-queue)
 * [Queue Diagrams on Google Slides](https://docs.google.com/presentation/d/1scNOPMlC4kNb2FiyDhlhX8R7fCx3tkGC01J7ljYREWg/edit?usp=sharing)
 
 ## 5. Reference

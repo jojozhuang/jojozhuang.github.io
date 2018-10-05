@@ -214,7 +214,7 @@ lru.add(8,8); // values = [8,7,4,6,5]
 ```
 
 ## 3. Source Files
-* [Source files for LRU Cache on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LRU)
+* [Source files for LRU Cache on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-lru-cache)
 * [LRU Cache Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ZIZ5oLBk_YLK-DRgEiQl_q5V5n6ZzEJx/view?usp=sharing)
 
 ## 4. Reference

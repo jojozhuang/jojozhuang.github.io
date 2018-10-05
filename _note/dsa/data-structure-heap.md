@@ -357,7 +357,7 @@ public class MinHeap {
 ```
 
 ## 4. Source Files
-* [Source files for Heap on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Heap)
+* [Source files for Heap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-heap)
 * [Heap Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1EQJpMtw2ZLlUKU-nlrUlqLz6HqgJ2mRU/view?usp=sharing)
 
 ## 5. Reference

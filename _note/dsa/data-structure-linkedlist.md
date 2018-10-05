@@ -246,7 +246,7 @@ public ListNode detectCycle(ListNode head) {
 ```
 
 ## 4. Source Files
-* [Source files for Linked List on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/LinkedList)
+* [Source files for Linked List on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-linked-list)
 * [Linked List Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1z7A9h4_6aDY_KAYOvACxYLoiBhbEbCNl/view?usp=sharing)
 
 ## 5. Reference

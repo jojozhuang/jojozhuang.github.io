@@ -344,7 +344,7 @@ private void modify(SegmentTreeNode root, int index, int value) {
 ```
 
 ## 6. Source Files
-* [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/SegmentTree)
+* [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-segment-tree)
 * [Segment Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ir0YmfXC2EM--aJZcPbn6_uFSxs6kbyC/view?usp=sharing)
 
 ## 7. Reference

@@ -249,7 +249,7 @@ public List<BSTNode> inorder(BSTNode root) {
 ```
 
 ## 6. Source Files
-* [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/BinarySearchTree)
+* [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-binary-search-tree)
 * [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
 
 ## 7. Reference
