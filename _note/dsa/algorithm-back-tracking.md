@@ -7,11 +7,13 @@ category: dsa
 image: note/dsa.png
 date: 2016-03-23
 postdate: 2016-03-23
-tags: [Sorting]
+tags: [Back Tracking]
 ---
 
 > All of the common sorting algorithms.
 
+## 1. Puzzle Problem
+Matrix problem
 
 ## 4. References
 * [Backtracking - Introduction](https://www.geeksforgeeks.org/backtracking-introduction/)

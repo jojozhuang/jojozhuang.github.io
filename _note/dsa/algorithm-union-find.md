@@ -1,16 +1,16 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Union And Find"
-index: 325
+title: "Algorithm - Union Find"
+index: 326
 category: dsa
 image: note/dsa.png
-date: 2016-03-25
-postdate: 2016-03-25
+date: 2016-03-26
+postdate: 2016-03-26
 tags: [Disjoint Set, Union, Find]
 ---
 
-> Use Union and Find approach for solve disjoint set problems.
+> Use Union-Find approach for solve disjoint set problems.
 
 ## 1. Disjoint Set
 ### 1.1 Disjoint Set in Math

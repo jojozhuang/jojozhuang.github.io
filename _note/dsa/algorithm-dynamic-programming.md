@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Dynamic Programming(Draft)"
-index: 324
+index: 325
 category: dsa
 image: note/dsa.png
-date: 2016-03-24
-postdate: 2016-03-24
+date: 2016-03-25
+postdate: 2016-03-25
 tags: [Sorting]
 ---
 
@@ -20,6 +20,25 @@ Types:
 
 
 ## 2. Array DP
+```java
+public int fibonacci(int n) {
+    if (n == 1) {
+        return 0;
+    }
+    if (n == 2) {
+        return 1;
+    }
+
+    int[] ret = new int[n];
+    ret[0] = 0;
+    ret[1] = 1;
+    for (int i = 2; i < n; i++)  {
+        ret[i] = ret[i - 1] + ret[i - 2];
+    }
+
+    return ret[n - 1];
+}
+```
 ### 2.1 Problem - Climbing Stairs
 You are climbing a stair case. It takes n steps to reach to the top.
 

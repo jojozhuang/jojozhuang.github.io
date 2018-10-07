@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Best Practice"
-index: 331
+title: "Practice - Best Practice"
+index: 341
 category: dsa
 image: /note/dsa.png
-date: 2016-03-31
-postdate: 2016-03-31
+date: 2016-04-01
+postdate: 2016-04-01
 tags: [Algorithm]
 ---
 
