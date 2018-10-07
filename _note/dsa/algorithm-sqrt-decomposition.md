@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Sqrt Decomposition(Draft)"
-index: 326
+index: 327
 category: dsa
 image: note/dsa.png
-date: 2016-03-26
-postdate: 2016-03-26
+date: 2016-03-27
+postdate: 2016-03-27
 tags: [Sqrt Decomposition]
 mathjax: true
 ---

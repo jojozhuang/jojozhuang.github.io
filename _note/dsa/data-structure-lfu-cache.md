@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Data Structure - LFU Cache"
+title: "Data Structure - LFU Cache(Draft)"
 index: 316
 category: dsa
 image: note/dsa.png

@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Common Sorting Algorithms"
+title: "Algorithm - Sorting"
 index: 321
 category: dsa
 image: note/dsa.png
@@ -33,10 +33,10 @@ mathjax: true
 Take the last element, compare it with the previous one, swap if it is smaller/larger. By doing this repetitively, bubble up the smallest/largest to the front.
 ### 2.2 Implementation
 ```java
-public int[] bubbleSort(int[] nums) {
+public void bubbleSort(int[] nums) {
     if (nums == null || nums.length < 2) {
-        return nums;
-    }        
+        return;
+    }
 
     for(int i = 0; i < nums.length; i++) {
         for (int j = nums.length - 1; j > i; j--) {
@@ -47,9 +47,7 @@ public int[] bubbleSort(int[] nums) {
             }
         }
     }
-
-    return nums;
-}  
+}
 ```
 ### 2.3 Complexity
 * Space: $O(1)$
@@ -61,9 +59,9 @@ Start from the second element, each time take the element and compare with the p
 ![image](/public/notes/common-sorting-algorithms/insertionsort.png)  
 ### 2.2 Implementation
 ```java
-public int[] insertionSort(int[] nums) {
+public void insertionSort(int[] nums) {
     if (nums == null || nums.length < 2) {
-        return nums;
+        return;
     }
 
     for (int i = 1; i < nums.length; i++) {
@@ -75,8 +73,6 @@ public int[] insertionSort(int[] nums) {
         }
         nums[j] = key;
     }
-
-    return nums;
 }
 ```
 ### 3.3 Complexity
@@ -88,23 +84,21 @@ public int[] insertionSort(int[] nums) {
 Swap two items who has the distance of the gap. Gap is reduced by half in every iteration, until it becomes to one.
 ### 4.2 Implementation
 ```java
-public int[] shellSort(int[] nums) {
+public void shellSort(int[] nums) {
     if (nums == null || nums.length < 2) {
-        return nums;
+        return;
     }
 
-    for (int gap = nums.length/2; gap > 0; gap = gap/2) {
+    for (int gap = nums.length / 2; gap > 0; gap = gap / 2) {
         for (int i = gap; i < nums.length; i++) {
             int temp = nums[i];
             int j;
-            for (j = i; j >= gap && nums[j - gap] > temp; j = j-gap) {
+            for (j = i; j >= gap && nums[j - gap] > temp; j = j - gap) {
                 nums[j] = nums[j - gap];
             }
             nums[j] = temp;
         }
     }
-
-    return nums;
 }
 ```
 ### 4.3 Complexity
@@ -116,12 +110,12 @@ public int[] shellSort(int[] nums) {
 Each time, find the smallest element between the current element and the tail element, append it to the front.
 ### 5.2 Implementation
 ```java
-public int[] selectionSort(int[] nums) {
+public void selectionSort(int[] nums) {
     if (nums == null || nums.length < 2) {
-        return nums;
+        return;
     }
 
-    for(int i = 0; i < nums.length; i++) {
+    for (int i = 0; i < nums.length; i++) {
         int min = i;
         for (int j = i + 1; j < nums.length; j++) {
             if (nums[j] < nums[min]) {
@@ -135,8 +129,6 @@ public int[] selectionSort(int[] nums) {
             nums[min] = temp;
         }
     }
-
-    return nums;
 }
 ```
 ### 5.3 Complexity
@@ -148,9 +140,9 @@ public int[] selectionSort(int[] nums) {
 Build heap
 ### 6.2 Implementation
 ```java
-public int[] heapSort(int nums[]) {
+public void heapSort(int nums[]) {
     if (nums == null || nums.length < 2) {
-        return nums;
+        return;
     }
 
     // Build heap (rearrange array)
@@ -159,22 +151,19 @@ public int[] heapSort(int nums[]) {
     }
 
     // One by one extract an element from heap
-    for (int i= nums.length-1; i>=0; i--) {
+    for (int i = nums.length - 1; i >= 0; i--) {
         int temp = nums[0];
         nums[0] = nums[i];
         nums[i] = temp;
 
         heapify(nums, i, 0);
     }
-
-    return nums;
 }
 
-private void heapify(int nums[], int n, int i)
-{
+private void heapify(int nums[], int n, int i) {
     int largest = i;  // Initialize largest as root
-    int l = 2*i + 1;  // left = 2*i + 1
-    int r = 2*i + 2;  // right = 2*i + 2
+    int l = 2*i + 1;  // left child
+    int r = 2*i + 2;  // right child
 
     if (l < n && nums[l] > nums[largest]) {
         largest = l;
@@ -204,49 +193,49 @@ private void heapify(int nums[], int n, int i)
 Take the
 ### 6.2 Implementation
 ```java
-public int[] mergeSort(int[] nums) {
-     if (nums == null || nums.length < 2) {
-         return nums;
-     }
-     mergeHelper(nums, 0, nums.length - 1);
-     return nums;
- }
+public void mergeSort(int[] nums) {
+    if (nums == null || nums.length < 2) {
+        return;
+    }
+    mergeHelper(nums, 0, nums.length - 1);
+    return;
+}
 
- public void mergeHelper(int[] nums, int start, int end) {
-     if (start >= end) {
-         return;
-     }
+private void mergeHelper(int[] nums, int start, int end) {
+    if (start >= end) {
+        return;
+    }
 
-     int mid = start + (end - start) / 2;
-     mergeHelper(nums, start, mid);
-     mergeHelper(nums, mid + 1, end);
-     merge(nums, start, mid, end);
- }
+    int mid = start + (end - start) / 2;
+    mergeHelper(nums, start, mid);
+    mergeHelper(nums, mid + 1, end);
+    merge(nums, start, mid, end);
+}
 
- private void merge(int[] nums, int start, int mid, int end) {
-     int[] copy = Arrays.copyOf(nums, nums.length);
+private void merge(int[] nums, int start, int mid, int end) {
+    int[] copy = Arrays.copyOf(nums, nums.length);
 
-     int left = start;
-     int right = mid + 1;
-     for (int k = start; k <= end; k++) {
-         if (left > mid) { // no item at left
-             nums[k] = copy[right];
-             right++;
-         }
-         else if(right > end) { // no item at right
-             nums[k] = copy[left];
-             left++;
-         }
-         else if (copy[left] <= copy[right]) {
-             nums[k] = copy[left];
-             left++;
-         }
-         else{
-             nums[k] = copy[right];
-             right++;
-         }
-     }
- }
+    int left = start;
+    int right = mid + 1;
+    for (int k = start; k <= end; k++) {
+        if (left > mid) { // no item at left
+            nums[k] = copy[right];
+            right++;
+        }
+        else if(right > end) { // no item at right
+            nums[k] = copy[left];
+            left++;
+        }
+        else if (copy[left] <= copy[right]) {
+            nums[k] = copy[left];
+            left++;
+        }
+        else{
+            nums[k] = copy[right];
+            right++;
+        }
+    }
+}
 ```
 ### 7.3 Complexity
 * Space: $O(n)$
@@ -257,15 +246,15 @@ public int[] mergeSort(int[] nums) {
 Take the
 ### 8.2 Implementation
 ```java
-public int[] quickSort(int[] nums) {
+public void quickSort(int[] nums) {
     if (nums == null || nums.length < 2) {
-        return nums;
+        return;
     }
     quickHelper(nums, 0, nums.length - 1);
-    return nums;
+    return;
 }
 
-public void quickHelper(int[] nums, int start, int end) {
+private void quickHelper(int[] nums, int start, int end) {
     if (start >= end) {
         return;
     }
@@ -303,9 +292,9 @@ private int partition(int[] nums, int start, int end) {
 Take the
 ### 9.2 Implementation
 ```java
-public int[] BucketSort(int[] nums, int maxVal) {
+public void bucketSort(int[] nums, int maxVal) {
     if (nums == null || nums.length == 0) {
-        return nums;
+        return;
     }
 
     int [] bucket = new int[maxVal+1];
@@ -324,15 +313,17 @@ public int[] BucketSort(int[] nums, int maxVal) {
             nums[outPos++] = i;
         }
     }
-
-    return nums;
 }
 ```
 ### 9.3 Complexity
 * Space: Depends
 * Time: Average $O(n+r)$, Worst Case $O(n+r)$
 
-## 10. Reference
+## 10. Source Files
+* [Source files for Sorting on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-sorting)
+* [Binary Search Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1kFOgd-Xf944qt2zqupqd7-eHG7C237si/view?usp=sharing)
+
+## 11. Reference
 * [Big-O Cheat Sheet](http://bigocheatsheet.com/)
 * [Sorting Algorithms on Wiki](https://en.wikipedia.org/wiki/Sorting_algorithm)
 * [Data Structure - Sorting Techniques](https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms.htm)

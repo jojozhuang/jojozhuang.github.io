@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Template for Subset Problems"
-index: 327
+title: "Practice - Template for Subset Problems"
+index: 343
 category: dsa
 image: /note/dsa.png
-date: 2016-03-27
-postdate: 2016-03-27
+date: 2016-04-03
+postdate: 2016-04-03
 tags: [Algorithm, Subsets]
 ---
 
