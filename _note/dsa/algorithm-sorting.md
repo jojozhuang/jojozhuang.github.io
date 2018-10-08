@@ -30,7 +30,8 @@ mathjax: true
 
 ## 2. Bubble Sort
 ### 2.1 How It Works?
-Take the last element, compare it with the previous one, swap if it is smaller/larger. By doing this repetitively, bubble up the smallest/largest to the front.
+Each time, start taking the last element and compare it with the previous one, swap them if the latter is smaller than the former. By doing this repetitively, bubble up the smallest element and append it to the sorted head list.
+![image](/public/notes/algorithm-sorting/bubble_sort.png){:width="500px"}  
 ### 2.2 Implementation
 ```java
 public void bubbleSort(int[] nums) {
@@ -55,8 +56,8 @@ public void bubbleSort(int[] nums) {
 
 ## 3. Insertion Sort
 ### 3.1 How It Works?
-Start from the second element, each time take the element and compare with the previous one. Swap the two elements if the latter one is smaller/larger than the previous one. By doing this repetitively, insert the current element to the proper position of given array.
-![image](/public/notes/common-sorting-algorithms/insertionsort.png)  
+Start from the second element, compare it with the previous one. Swap them if the latter is larger than the former, otherwise, stop comparing, move to the next element. By doing this repetitively, we always take the first element for the unsorted tail list and insert it to the proper position of sorted head list.
+![image](/public/notes/algorithm-sorting/insertion_sort.png){:width="500px"}  
 ### 2.2 Implementation
 ```java
 public void insertionSort(int[] nums) {
@@ -82,6 +83,7 @@ public void insertionSort(int[] nums) {
 ## 4. Shell Sort
 ### 4.1 How It Works?
 Swap two items who has the distance of the gap. Gap is reduced by half in every iteration, until it becomes to one.
+![image](/public/notes/algorithm-sorting/shell_sort.png){:width="800px"}  
 ### 4.2 Implementation
 ```java
 public void shellSort(int[] nums) {
@@ -107,7 +109,8 @@ public void shellSort(int[] nums) {
 
 ## 5. Selection Sort
 ### 5.1 How It Works?
-Each time, find the smallest element between the current element and the tail element, append it to the front.
+Start from the first element, each time, find the smallest element after this element. Swap it with current element if it is smaller. By doing this repetitively, we always select the smallest element in the unsorted tail list and append it to the end of the sorted head list.
+![image](/public/notes/algorithm-sorting/selection_sort.png){:width="500px"}  
 ### 5.2 Implementation
 ```java
 public void selectionSort(int[] nums) {
@@ -190,8 +193,9 @@ private void heapify(int nums[], int n, int i) {
 
 ## 7. Merge Sort
 ### 7.1 How It Works?
-Take the
-### 6.2 Implementation
+Binary split the original arrays to smaller groups until each group contains only one element. Then, binary merge these groups to larger groups until we have the final one group with all sorted elements.
+![image](/public/notes/algorithm-sorting/merge_sort.png){:width="800px"}  
+### 7.2 Implementation
 ```java
 public void mergeSort(int[] nums) {
     if (nums == null || nums.length < 2) {
