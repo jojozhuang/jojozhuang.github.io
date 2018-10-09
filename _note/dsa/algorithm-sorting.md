@@ -140,7 +140,13 @@ public void selectionSort(int[] nums) {
 
 ## 6. Heap Sort
 ### 6.1 How It Works?
-Build heap
+1) Build a max heap with the given array.
+![image](/public/notes/algorithm-sorting/heap_sort_build.png){:width="800px"}
+2) The root contains the largest item. Swap root with last node, remove the last node(the largest item), then heapify the new root. The following diagrams shows how to use heap to find the largest and the second largest items.
+![image](/public/notes/algorithm-sorting/heap_sort_swap.png)
+3) Repeat above steps while size of heap is greater than 1. Below is the entire sorting process.
+![image](/public/notes/algorithm-sorting/heap_sort_flow.png)
+
 ### 6.2 Implementation
 ```java
 public void heapSort(int nums[]) {
@@ -152,7 +158,6 @@ public void heapSort(int nums[]) {
     for (int i = nums.length / 2 - 1; i >= 0; i--) {
         heapify(nums, nums.length, i);
     }
-
     // One by one extract an element from heap
     for (int i = nums.length - 1; i >= 0; i--) {
         int temp = nums[0];
@@ -160,20 +165,25 @@ public void heapSort(int nums[]) {
         nums[i] = temp;
 
         heapify(nums, i, 0);
-    }
+   }
 }
 
+/*
+* n is the size of heap, i is the index of node in array
+*/
 private void heapify(int nums[], int n, int i) {
-    int largest = i;  // Initialize largest as root
-    int l = 2*i + 1;  // left child
-    int r = 2*i + 2;  // right child
+    int largest = i;     // Initialize largest as root
+    int left = 2*i + 1;  // left child
+    int right = 2*i + 2; // right child
 
-    if (l < n && nums[l] > nums[largest]) {
-        largest = l;
+    // If left child is larger than root
+    if (left < n && nums[left] > nums[largest]) {
+        largest = left;
     }
 
-    if (r < n && nums[r] > nums[largest]) {
-        largest = r;
+    // If right child is larger than largest so far
+    if (right < n && nums[right] > nums[largest]) {
+        largest = right;
     }
 
     // If largest is not root
@@ -247,7 +257,10 @@ private void merge(int[] nums, int start, int mid, int end) {
 
 ## 8. Quick Sort
 ### 8.1 How It Works?
-Take the
+1) Take the first element as pivot, split the elements to two groups. All elements in first group are smaller than pivot and all elements in second group are larger than pivot.  
+2) The new position of the pivot is fixed(sorted).  
+3) Repeat above steps until group contains only one element. Below is the entire sorting process.
+![image](/public/notes/algorithm-sorting/quick_sort.png){:width="800px"}
 ### 8.2 Implementation
 ```java
 public void quickSort(int[] nums) {
@@ -293,28 +306,44 @@ private int partition(int[] nums, int start, int end) {
 
 ## 9. Bucket Sort
 ### 9.1 How It Works?
-Take the
+1) Get the maximum value of the given array.  
+2) Create and initialize buckets.  
+3) Go through the original array, update corresponding bucket if that value exists.  
+4) Go through the buckets from the smallest index, build the sorted array.  
+![image](/public/notes/algorithm-sorting/bucket_sort.png){:width="800px"}
 ### 9.2 Implementation
 ```java
-public void bucketSort(int[] nums, int maxVal) {
+public void bucketSort(int[] nums) {
     if (nums == null || nums.length == 0) {
         return;
     }
 
-    int [] bucket = new int[maxVal+1];
+    // get the max value
+    int max = Integer.MIN_VALUE;
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] > max) {
+            max = nums[i];
+        }
+    }
 
+    // create buckets
+    int [] bucket = new int[max + 1];
+
+    // initialize buckets
     for (int i = 0; i < bucket.length; i++) {
         bucket[i] = 0;
     }
 
+    // increment bucket value by one if corresponding element is found
     for (int i = 0; i < nums.length; i++) {
         bucket[nums[i]]++;
     }
 
-    int outPos=0;
+    // rebuild array from buckets
+    int index = 0;
     for (int i = 0; i < bucket.length; i++) {
         for (int j = 0; j < bucket[i]; j++) {
-            nums[outPos++] = i;
+            nums[index++] = i;
         }
     }
 }
@@ -325,7 +354,7 @@ public void bucketSort(int[] nums, int maxVal) {
 
 ## 10. Source Files
 * [Source files for Sorting on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-sorting)
-* [Binary Search Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1kFOgd-Xf944qt2zqupqd7-eHG7C237si/view?usp=sharing)
+* [Sorting Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1LpLxWmdsLdLoi0PqN0RZ2yZl-ezjDWQI/view?usp=sharing)
 
 ## 11. Reference
 * [Big-O Cheat Sheet](http://bigocheatsheet.com/)
@@ -336,3 +365,4 @@ public void bucketSort(int[] nums, int maxVal) {
 * [Selection Sort](http://www.geeksforgeeks.org/selection-sort/)
 * [Shell Sort](http://www.geeksforgeeks.org/shellsort/)
 * [Heap Sort](http://www.geeksforgeeks.org/heap-sort/)
+* [Bucket Sort](https://www.geeksforgeeks.org/bucket-sort-2/)
