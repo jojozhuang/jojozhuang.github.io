@@ -7,7 +7,8 @@ category: dsa
 image: /note/dsa.png
 date: 2016-03-04
 postdate: 2016-03-04
-tags: [Queue]
+tags: [Queue, FIFO]
+mathjax: true
 ---
 
 > Introduce the definition, implementation and usage of queue.
@@ -30,7 +31,12 @@ Queue follows the `FIFO`(First-in, first-out) rule. The item that goes in first 
 * peek(): Return the top of the queue.
 * isEmpty(): Return true if and only if the queue is empty.
 
-### 2.2 Implementing with LinkedList
+### 2.2 Time Complexity
+* enqueue: $O(1)$
+* dequeue: $O(1)$
+* peek: $O(1)$
+
+### 2.3 Implementing with LinkedList
 ```java
 public class LinkedListQueue {
     private ListNode head; // the first node
@@ -77,7 +83,7 @@ public class LinkedListQueue {
 }
 ```
 
-### 2.3 Implementing with Two Stacks
+### 2.4 Implementing with Two Stacks
 ```java
 import java.util.Stack;
 
@@ -129,7 +135,7 @@ public class StackQueue {
     }
 }
 ```
-### 2.4 Implementing with Array
+### 2.5 Implementing with Array
 ```java
 public class ArrayQueue {
     private int head; // the first node
@@ -179,7 +185,7 @@ public class ArrayQueue {
 ```
 * There is one problem with the above implementation. Notice that both head and tail only increase, never decrease. When tail reaches to the end of the array, you cannot add more items into it. Even if you call dequeue method to clear some space, however, the head and tail won't move back.
 
-### 2.5 Implement with Circular Array
+### 2.6 Implement with Circular Array
 To solve the issue mentioned above, we can use a circular array to implement the queue.
 ![image](/public/notes/data-structure-queue/circular-queue.png){:width="400px"}  
 ```java
@@ -315,11 +321,14 @@ public class QueueMergeSort {
 }
 ```
 
-## 4. Source Files
-* [Source files for Queue on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-queue)
-* [Queue Diagrams(draw.io) on Google Slides](https://drive.google.com/file/d/1BVK-Fe6Wh1c1crGYpSxvPpG_lTPpCisa/view?usp=sharing)
+## 4. Queue Problems
+* [LeetCode 346 - Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)
 
-## 5. Reference
+## 5. Source Files
+* [Source files for Queue on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-queue)
+* [Queue Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1BVK-Fe6Wh1c1crGYpSxvPpG_lTPpCisa/view?usp=sharing)
+
+## 6. Reference
 * [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
 * [Queue](https://www.programiz.com/dsa/queue)

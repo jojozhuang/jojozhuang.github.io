@@ -7,7 +7,7 @@ category: dsa
 image: note/dsa.png
 date: 2016-03-02
 postdate: 2016-03-02
-tags: [Linked List]
+tags: [Singly Linked List, Doubly Linked List]
 ---
 
 > Introduce the definition, implementation and usage of linked list.
