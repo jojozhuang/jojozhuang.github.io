@@ -36,7 +36,12 @@ Stack follows the `LIFO`(Last-in, first-out) rule. The last item that was placed
 * peek(): Return the top of the stack.
 * isEmpty(): Return true if and only if the stack is empty.
 
-### 2.2 Built with LinkedList
+### 2.2 Time Complexity
+* push: O(1).
+* pop: O(1).
+* peek: O(1).
+
+### 2.3 Built with LinkedList
 First, define the list node as follows.
 ```java
 public class ListNode {
@@ -89,7 +94,7 @@ public class LinkedListStack {
 }
 ```
 
-### 2.3 Built with Two Queues
+### 2.4 Built with Two Queues
 ```java
 import java.util.LinkedList;
 import java.util.Queue;
@@ -148,7 +153,7 @@ public class QueueStack {
 }
 ```
 
-### 2.4 Built with Array
+### 2.5 Built with Array
 ```java
 public class ArrayStack {
     private int top;
@@ -189,7 +194,7 @@ public class ArrayStack {
 }
 ```
 
-### 2.5 Built with Array(Loop)
+### 2.6 Built with Array(Loop)
 ```java
 ```
 
@@ -379,11 +384,16 @@ public class StackQuickSort {
 }
 ```
 
-## 4. Source Files
-* [Source files for Stack on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-stack)
-* [Stack Diagrams on Google Slides](https://docs.google.com/presentation/d/1gs-gOoLqcy5oskHUx5SD5Dh5OtACMiI7kLH8R-HHjME/edit?usp=sharing)
+## 4. Stack Problems
+* [LeetCode 155 - Min Stack](https://leetcode.com/problems/min-stack/)
+* [LeetCode 232 - Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+* [LeetCode 84 - Largest Rectangle in histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
-## 5. Reference
+## 5. Source Files
+* [Source files for Stack on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-stack)
+* [Stack Diagrams(draw.io) on Google Slides](https://drive.google.com/file/d/1Qy0xBmbjYmG9BCJeKbCQ7yG4EEFDoqRx/view?usp=sharing)
+
+## 6. Reference
 * [Data Structure and Algorithms - Stack](https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm)
 * [Stacks and Queues](http://introcs.cs.princeton.edu/java/43stack/)
 * [Stack](https://www.programiz.com/dsa/stack)

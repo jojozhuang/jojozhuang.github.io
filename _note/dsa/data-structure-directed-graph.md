@@ -15,6 +15,7 @@ tags: [Directed Graph, Topological Sorting]
 ## 1. Directed Graph
 
 ## 2. Topological Sorting
+Out-degree and In-degree
 
 ## 3. Detect Cycle in a Directed Graph
 

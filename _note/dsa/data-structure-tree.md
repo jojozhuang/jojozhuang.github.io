@@ -72,6 +72,8 @@ Implementation ways:
 2) Breadth First Traversals:
 * Level order traversal
 
+Most of the tree traversal problems have the `O(n)` time complexity.
+
 ### 2.4 Implementation of Binary Tree Traversal - Recursion
 Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java

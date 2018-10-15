@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Scan Line"
-index: 328
+title: "Algorithm - Sweep Line"
+index: 329
 category: dsa
 image: /note/dsa.png
-date: 2016-03-28
-postdate: 2016-03-28
+date: 2016-03-29
+postdate: 2016-03-29
 tags: [Scan Line]
 mathjax: true
 ---
@@ -116,4 +116,6 @@ public int getMostPopulation(int[][] persons) {
 * [Scan Line Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1qh2nqRorRfF4H89DP94aU3SeywZvI17C/view?usp=sharing)
 
 ## 6. References
+* [Line Segment Intersection](https://www.youtube.com/watch?v=dePDHVovJlE)
+* [The Skyline Problem at LeetCode](https://leetcode.com/problems/the-skyline-problem/)
 * [The skyline problem](https://briangordon.github.io/2014/08/the-skyline-problem.html)

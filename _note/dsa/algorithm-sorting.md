@@ -352,11 +352,33 @@ public void bucketSort(int[] nums) {
 * Space: Depends
 * Time: Average $O(n+r)$, Worst Case $O(n+r)$
 
-## 10. Source Files
+## 10. Merge Sort vs Quick Sort
+Both Merge Sort and Quick Sort use the divide conquer methodology.
+
+Feature         | Merge Sort                                     | Quick Sort
+----------------|------------------------------------------------|------------
+Divide Conquer  | Yes                                            | Yes
+Order           | Individual sorted first, then overall sorted   | Overall sorted first, then individual sorted
+Time complexity | Divide = O(1), Conquer = O(n), total = nLog(n) | Divide = O(n), Conquer = O(1), total = nlog(n)
+Space           | Require extra space                            | In-place  
+Stable          | Yes                                            | No  
+
+How to explain the time complexity of merge sort?
+* It divides array to smaller ones, length from n to n/2, then to n/4, until each group has only 1 item. The total level is log(n).
+* At each level, it use O(1) time to split the array and O(n) time to merge.
+* We have log(n) levels and we spend O(n) time at each level, so, the total time is  O(n) * log(n) = nlog(n).
+
+How to explain the time complexity of quick sort?
+* It divides array to smaller ones by the pivot, the length is not fixed, depends on the value of pivot.
+* It takes O(n) time to divide the array with pivot, uses O(1) to recursively conquer the sub arrays.
+* In average case, like the merge sort, total level is log(n). At each level, it use O(n) time, so, the total time is  O(n) * log(n) = nlog(n).
+* In worst case(partition the array only one element each time), it needs O(n^2) times to divide the array.
+
+## 11. Source Files
 * [Source files for Sorting on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-sorting)
 * [Sorting Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1LpLxWmdsLdLoi0PqN0RZ2yZl-ezjDWQI/view?usp=sharing)
 
-## 11. Reference
+## 12. Reference
 * [Big-O Cheat Sheet](http://bigocheatsheet.com/)
 * [Sorting Algorithms on Wiki](https://en.wikipedia.org/wiki/Sorting_algorithm)
 * [Data Structure - Sorting Techniques](https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms.htm)

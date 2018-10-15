@@ -35,6 +35,9 @@ Output:
 ```
 It looks like a permutation or combination questions.
 
+Todo: Recursion Tree
+
+
 ### 1.2 Solution for Array with Three Elements
 To simplify the question, we assume there are only three elements in the 'nums' array. Let's see if we can solve the problem and figure out the pattern if 'nums' has more elements.
 ```java

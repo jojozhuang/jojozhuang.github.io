@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Dynamic Programming"
-index: 325
+index: 326
 category: dsa
 image: note/dsa.png
-date: 2016-03-25
-postdate: 2016-03-25
+date: 2016-03-26
+postdate: 2016-03-26
 tags: [DP]
 mathjax: true
 ---
@@ -14,10 +14,22 @@ mathjax: true
 > Introduce dynamic programming.
 
 ## 1. Dynamic Programming
-Types:
-* Array DP
-* Matrix DP
-* Sequence DP
+### 1.1 When to use DP?
+* Maximum/Minimum
+* Yes/No
+* Count(\*)
+* Can't sort or swap
+
+### 1.2 DP Types
+* Array DP (5%)
+* Matrix DP (5%)
+* Sequence DP (40%)
+* Two Sequences DP (40%)
+* Backpack (10%)
+
+### 1.3 Implementation of DP
+* Memorization Search(Drawback: extra space)
+* Loop
 
 ## 2. Array DP
 ### 2.1 Problem - Fibonacci Numbers
@@ -188,14 +200,39 @@ public int uniquePath(int m, int n) {
 * Time complexity: $O(m*n)$
 * Space complexity: $O(n)$
 
+### 3.4 Problems
+* [LeetCode 62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
+* [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+
 ## 4. Sequence DP
 
-## 5. Source Files
+### 4.4 Problems
+* [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+* [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
+* [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+* [LeetCode 132 - Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
+* [LeetCode 139 - Word Break](https://leetcode.com/problems/word-break/)
+* [LeetCode 140 - Word Break II](https://leetcode.com/problems/word-break-ii/)
+* [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+## 5. Two Sequences DP
+### 5.4 Problems
+* [LintCode 77 - Longest Common Subsequence](https://www.lintcode.com/problem/longest-common-subsequence)
+* [LintCode 79 - Longest Common Substring](https://www.lintcode.com/problem/longest-common-substring)
+* [LeetCode 72 - Edit Distance](https://leetcode.com/problems/edit-distance/)
+* [LeetCode 115 - Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
+* [LeetCode 97 - Interleaving String](https://leetcode.com/problems/interleaving-string/)
+
+## 6. Backpack
+### 6.4 Problems
+* [LintCode 92 - Backpack](https://www.lintcode.com/problem/backpack/)
+* [LintCode 91 - Minimum Adjustment Cost](https://www.lintcode.com/problem/minimum-adjustment-cost)
+
+## 7. Source Files
 * [Source files for Dynamic Programming on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-dp)
 * [Dynamic Programming Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1gp898o4dRvrV2nPVZOEfJYfijkeyjdnK/view?usp=sharing)
 
-## 6. References
+## 8. References
 * [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)
 * [How to solve a Dynamic Programming Problem ?](https://www.geeksforgeeks.org/solve-dynamic-programming-problem/)
 * [Tabulation vs Memorization](https://www.geeksforgeeks.org/tabulation-vs-memoizatation/)
-* [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)

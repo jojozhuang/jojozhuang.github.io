@@ -248,11 +248,40 @@ public List<BSTNode> inorder(BSTNode root) {
 }
 ```
 
-## 6. Source Files
+## 6. Binary Search Tree Iterator
+```java
+public class BSTIterator {
+    private Stack<BSTNode> stack = new Stack<BSTNode>();
+    private BSTNode curr;
+    public BSTIterator(BSTNode root) {
+        curr = root;
+    }
+
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        return (curr != null || !stack.isEmpty());
+    }
+
+    /** @return the next smallest number */
+    public int next() {
+        while (curr != null) {
+            stack.push(curr);
+            curr = curr.left;
+        }
+
+        curr = stack.pop();
+        int res = curr.val;
+        curr = curr.right;
+        return res;
+    }
+}
+```
+
+## 7. Source Files
 * [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-binary-search-tree)
 * [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
 
-## 7. Reference
+## 8. Reference
 * [Binary Search Tree - Search and Insertion](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/)
 * [Binary Search Tree - Delete](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
 * [Binary Search Tree Complete Implementation](https://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/)
