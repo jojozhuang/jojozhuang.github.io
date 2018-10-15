@@ -7,7 +7,8 @@ category: dsa
 image: note/dsa.png
 date: 2016-03-09
 postdate: 2016-03-09
-tags: [Hash, HashMap]
+tags: [Hash, HashMap, Load Factor, Rehashing]
+mathjax: true
 ---
 
 > Implement a generic HashMap with Separate Chaining technique by using linked list.
@@ -43,7 +44,6 @@ In our implementation whenever we add a key value pair to the Hash Table we chec
 ### 2.1 Structure of HashMap
 An array list contains Hash Nodes. Each node can have none or multiple descendant nodes. They have the same index, but contains different hashcode.
 ![image](/public/notes/data-structure-hashmap/hashmap.png){:width="800px"}  
-* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1B0kYSS92tQ98Y7WsAcY9ypafoKf9QYSiUkc0_hK20pQ/edit?usp=sharing)
 
 ### 2.2 Common Operations for HashMap
 * get(key): returns the value corresponding to the key if the key is present in HashMap
@@ -52,7 +52,12 @@ An array list contains Hash Nodes. Each node can have none or multiple descendan
 * size(): return the size of the HashMap
 * isEmpty(): returns true if size is zero
 
-### 2.3 HashNode
+### 2.3 Time Complexity
+* get: $O(1)$
+* add: $O(1)$
+* remove: $O(1)$
+
+### 2.4 HashNode
 HashNode is a storage unit for storing date. It has the `next` attribute pointing to the next hashnode, behaves like a linked list.
 ```java
 public class HashNode<K, V> {
@@ -66,7 +71,7 @@ public class HashNode<K, V> {
     }
 }
 ```
-### 2.4 HashMap
+### 2.5 HashMap
 Generic HashMap.
 ```java
 public class HashMap<K, V> {
@@ -204,7 +209,8 @@ public class HashMap<K, V> {
 }
 ```
 
-## 3. Linked List Problems
+## 3. HashMap Problems
+* [LeetCode 1 - Two Sum](https://leetcode.com/problems/two-sum/)
 * [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 ## 4. HashMap in Java
@@ -222,7 +228,7 @@ For thread-unsafe hashmap, infinite loop may occur during rehashing. One thread 
 
 ## 5. Source Files
 * [Source files for HashMap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-hashmap)
-* [Diagrams on Google Slides](https://docs.google.com/presentation/d/1B0kYSS92tQ98Y7WsAcY9ypafoKf9QYSiUkc0_hK20pQ/edit?usp=sharing)
+* [HashMap Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/17exDp3INEXpg8-Sk46gR9rLWYTo1Uckn/view?usp=sharing)
 
 ## 6. Reference
 * [Java.util.HashMap in Java](https://www.geeksforgeeks.org/java-util-hashmap-in-java/)

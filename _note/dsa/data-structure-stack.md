@@ -7,7 +7,8 @@ category: dsa
 image: /note/dsa.png
 date: 2016-03-03
 postdate: 2016-03-03
-tags: [Stack]
+tags: [Stack, LIFO]
+mathjax: true
 ---
 
 > Introduce the definition, implementation and usage of stack.
@@ -37,9 +38,9 @@ Stack follows the `LIFO`(Last-in, first-out) rule. The last item that was placed
 * isEmpty(): Return true if and only if the stack is empty.
 
 ### 2.2 Time Complexity
-* push: O(1).
-* pop: O(1).
-* peek: O(1).
+* push: $O(1)$
+* pop: $O(1)$
+* peek: $O(1)$
 
 ### 2.3 Built with LinkedList
 First, define the list node as follows.
@@ -391,7 +392,7 @@ public class StackQuickSort {
 
 ## 5. Source Files
 * [Source files for Stack on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-stack)
-* [Stack Diagrams(draw.io) on Google Slides](https://drive.google.com/file/d/1Qy0xBmbjYmG9BCJeKbCQ7yG4EEFDoqRx/view?usp=sharing)
+* [Stack Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1Qy0xBmbjYmG9BCJeKbCQ7yG4EEFDoqRx/view?usp=sharing)
 
 ## 6. Reference
 * [Data Structure and Algorithms - Stack](https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm)
