@@ -204,15 +204,26 @@ public class HashMap<K, V> {
 }
 ```
 
-## 3. HashMap in Java
+## 3. Linked List Problems
+* [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+
+## 4. HashMap in Java
 TreeMap, HashMap, LinkedHashMap, WeakHashMap
+
+LinkedHashMap = DoublyLinkedList + HashMap
+```java
+HashMap<key, DoublyListNode>
+DoublyListNode {
+    prev, next, key, value;
+}
+```
 
 For thread-unsafe hashmap, infinite loop may occur during rehashing. One thread is setting node1.next to node2. Meanwhile, another thread is setting node2.next = node1. Cycle exists in the node list.
 
-## 4. Source Files
+## 5. Source Files
 * [Source files for HashMap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-hashmap)
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1B0kYSS92tQ98Y7WsAcY9ypafoKf9QYSiUkc0_hK20pQ/edit?usp=sharing)
 
-## 5. Reference
+## 6. Reference
 * [Java.util.HashMap in Java](https://www.geeksforgeeks.org/java-util-hashmap-in-java/)
 * [Implementing our Own Hash Table with Separate Chaining in Java](https://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/)

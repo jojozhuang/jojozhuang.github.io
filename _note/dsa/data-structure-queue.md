@@ -21,7 +21,7 @@ Queue is an abstract data type that serves as a collection of elements, with two
 * `dequeue`: remove the least recently added element
 
 Queue follows the `FIFO`(First-in, first-out) rule. The item that goes in first is the item that comes out first too.
- ![image](/public/notes/data-structure-queue/queue.png){:width="800px"}  
+ ![image](/public/notes/data-structure-queue/queue.png)
 
 ## 2. Implementation
 ### 2.1 Common Operations on Queue
@@ -181,7 +181,7 @@ public class ArrayQueue {
 
 ### 2.5 Implement with Circular Array
 To solve the issue mentioned above, we can use a circular array to implement the queue.
-![image](/public/notes/data-structure-queue/circular-queue.png){:width="350px"}  
+![image](/public/notes/data-structure-queue/circular-queue.png){:width="400px"}  
 ```java
 public class CircularArrayQueue {
     private int head; // the first node in queue, not the first item in array
@@ -317,7 +317,7 @@ public class QueueMergeSort {
 
 ## 4. Source Files
 * [Source files for Queue on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-queue)
-* [Queue Diagrams on Google Slides](https://docs.google.com/presentation/d/1scNOPMlC4kNb2FiyDhlhX8R7fCx3tkGC01J7ljYREWg/edit?usp=sharing)
+* [Queue Diagrams(draw.io) on Google Slides](https://drive.google.com/file/d/1BVK-Fe6Wh1c1crGYpSxvPpG_lTPpCisa/view?usp=sharing)
 
 ## 5. Reference
 * [Data Structure and Algorithms - Queue](https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm)

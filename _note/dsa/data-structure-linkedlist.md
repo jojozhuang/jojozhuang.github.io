@@ -100,6 +100,7 @@ Here are some basic approaches for solving linked list problems.
 * Dummy Node
 * Reversing Linked List
 * Fast and Slow Pointers
+* Find middle node
 
 All below questions/codes are based on singly linked list.  
 ### 3.1 Reversing Linked List
@@ -245,11 +246,22 @@ public ListNode detectCycle(ListNode head) {
 }
 ```
 
-## 4. Source Files
+## 4. Linked List Problems
+* [LeetCode 83 - Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+* [LeetCode 82 - Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+* [LeetCode 206 - Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+* [LeetCode 92 - Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+* [LeetCode 148 - Sort List](https://leetcode.com/problems/sort-list/)
+* [LeetCode 143 - Reorder List](https://leetcode.com/problems/reorder-list/)
+* [LeetCode 141 - Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+* [LeetCode 26 - Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+* [LeetCode 109 - Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+
+## 5. Source Files
 * [Source files for Linked List on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-linked-list)
 * [Linked List Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1z7A9h4_6aDY_KAYOvACxYLoiBhbEbCNl/view?usp=sharing)
 
-## 5. Reference
+## 6. Reference
 * [Data Structure and Algorithms - Linked List](https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm)
 * [Linked List](https://www.programiz.com/dsa/linked-list)
 * [Linked List Operations](https://www.programiz.com/dsa/linked-list-operations)
