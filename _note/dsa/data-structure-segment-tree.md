@@ -46,9 +46,9 @@ Segment Tree has less storage and better performance.
 * The time complexity for building the tree is $O(n)$, for searching is $O(\log{}n)$.
 
 ### 2.3 Common Operations on Segment Tree
-* Build
-* Search
-* Modification
+* Build - $O(n)$
+* Search - $O(\log{}n)$
+* Modification - $O(\log{}n)$
 
 ## 3. Minimum Segment Tree
 ### 3.1 Definition of Minimum Segment Tree
@@ -345,7 +345,13 @@ private void modify(SegmentTreeNode root, int index, int value) {
 
 ## 5. Segment Tree Problems
 * [LintCode 201 - Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/)
+* [LintCode 202 - Segment Tree Query](https://www.lintcode.com/problem/segment-tree-query/)
 * [LintCode 203 - Segment Tree Modify](https://www.lintcode.com/problem/segment-tree-modify/)
+* [LintCode 205 - Interval Minimum Number](https://www.lintcode.com/problem/interval-minimum-number/)
+* [LintCode 206 - Interval Sum](https://www.lintcode.com/problem/interval-sum/)
+* [LintCode 207 - Interval Sum II](https://www.lintcode.com/problem/interval-sum-ii/)
+* [LintCode 248 - Count of Smaller Number](https://www.lintcode.com/problem/count-of-smaller-number)
+* [LintCode 249 - Count of Smaller Number before itself](https://www.lintcode.com/problem/count-of-smaller-number-before-itself)
 
 ## 6. Source Files
 * [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-segment-tree)

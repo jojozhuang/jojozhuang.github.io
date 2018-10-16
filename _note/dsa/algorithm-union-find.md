@@ -178,11 +178,17 @@ public void union(int i, int j) {
 }
 ```
 
-## 4. Source Files
+## 4. Classic Problems
+* [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
+* [LeetCode 305 - Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
+* [LeetCode 323 - Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+
+## 5. Source Files
 * [Source files for Union Find on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-union-find)
 * [Union Find Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1CulEG8tHmHdQQ5UPnCjrIzdpIZNZd-WB/view?usp=sharing)
 
-## 5. References
+## 6. References
+* [Union-Find Algorithms](https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf)
 * [Disjoint Set Data Structures](https://www.geeksforgeeks.org/disjoint-set-data-structures-java-implementation/)
 * [Disjoint Set (Or Union-Find)](https://www.geeksforgeeks.org/union-find/)
 * [Union-Find Algorithm](https://www.geeksforgeeks.org/union-find-algorithm-union-rank-find-optimized-path-compression/)
