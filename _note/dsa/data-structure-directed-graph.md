@@ -19,6 +19,9 @@ Out-degree and In-degree
 
 ## 3. Detect Cycle in a Directed Graph
 
+## 6. Directed Graph Problems
+* [LintCode 127 - Topological Sorting](http://lintcode.com/problem/topological-sorting/)
+
 ## 5. Source Files
 * [Source files for Graph on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Graph)
 

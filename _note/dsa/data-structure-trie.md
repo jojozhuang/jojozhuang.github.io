@@ -188,11 +188,15 @@ public class TrieNode {
 }
 ```
 
-## 6. Source Files
+## 6. Trie Problems
+* [LeetCode 212 - Word Search II](https://leetcode.com/problems/word-search-ii/)
+
+
+## 7. Source Files
 * [Source files for Trie on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-trie)
 * [Trie Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1nU4ABZxZnVZytgbyiFuAZn7k4dGJxwg1/view?usp=sharing)
 
-## 7. Reference
+## 8. Reference
 * [Trie - Insert and Search](http://www.geeksforgeeks.org/trie-insert-and-search/)
 * [Trie - Delete](https://www.geeksforgeeks.org/trie-delete/)
 * [Trie Data Structure Video on Youtube](https://www.youtube.com/watch?v=AXjmTQ8LEoI&t=272s)

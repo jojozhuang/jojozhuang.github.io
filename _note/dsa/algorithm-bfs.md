@@ -1,18 +1,29 @@
 ---
 layout: note
 key: note
-title: "Algorithm - BFS and DFS(Draft)"
+title: "Algorithm - BFS"
 index: 324
 category: dsa
 image: note/dsa.png
 date: 2016-03-24
 postdate: 2016-03-24
-tags: [BFS, DFS]
+tags: [BFS]
 ---
 
-> All of the common sorting algorithms.
+> All of the common BFS algorithms.
+
+BFS in Binary Tree
+Binary Tree Serialization
+
+BFS in Graph
+Topological Sorting
+
+BFS in Chessboard
 
 ## 1. Tree, Matrix, Graph
+
+## 1. Puzzle Problem
+Matrix problem
 
 ## 6. Directed Graph Problems
 * [LeetCode 46 - Permutations](https://leetcode.com/problems/permutations/)
