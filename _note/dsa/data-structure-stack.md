@@ -29,21 +29,31 @@ Stack is an abstract data type that serves as a collection of elements, with two
 
 Stack follows the `LIFO`(Last-in, first-out) rule. The last item that was placed is the first item to go out.
 ![image](/public/notes/data-structure-stack/stack.png){:width="800px"}  
-
-## 2. Implementation
-### 2.1 Common Operations on Stack
+### 1.3 Common Operations on Stack
 * push(item): Add an item to the top of the stack.
 * pop(): Remove the top item from the stack.
 * peek(): Return the top of the stack.
-* isEmpty(): Return true if and only if the stack is empty.
+* isEmpty(): Return true if the stack is empty.
 
-### 2.2 Time Complexity
+### 1.4 Time Complexity
 * push: $O(1)$
 * pop: $O(1)$
 * peek: $O(1)$
 
-### 2.3 Built with LinkedList
-First, define the list node as follows.
+## 2. Implementation
+Four ways to implement stack.
+* Linked List
+* Array
+* Circular Array
+* Queues
+
+### 2.1 Using Linked List
+The head of the Linked List keeps the latest added item, which is the top of stack.
+![image](/public/notes/data-structure-stack/linkedlist_stack.png)
+* push: Create new node with the given value, set its next pointer point to the current head node and let the head pointer point to the new node.
+* pop: Get value of the head node, let the head pointer point to the next node.
+
+See the implementation below. First, define the list node as follows.
 ```java
 public class ListNode {
     public int val;
@@ -54,23 +64,23 @@ public class ListNode {
     }
 }
 ```
-Then, create a linked list stack as follows.
+Then, create the stack with list nodes.
 ```java
 public class LinkedListStack {
-    private ListNode head; // the first node
+    private ListNode head; // the head node
 
     public LinkedListStack() {
         head = null;
     }
 
-    // Add element to the beginning of the list
+    // Add item to the list, let head point to the new node
     public void push(int value) {
         ListNode oldHead = head;
         head = new ListNode(value);
         head.next = oldHead;
     }
 
-    // Remove value from the beginning of the list and return the value
+    // Remove the head item from the list and return its value
     public int pop() throws Exception {
         if (head == null) {
             throw new Exception();
@@ -80,7 +90,7 @@ public class LinkedListStack {
         return value;
     }
 
-    // Get the top element
+    // Get the value of the head item
     public int peek() throws Exception {
         if (head == null) {
             throw new Exception();
@@ -88,14 +98,62 @@ public class LinkedListStack {
         return head.val;
     }
 
-    // Return whether the stack is empty
+    // Return whether the list is empty
     public boolean isEmpty() {
         return head == null;
     }
 }
 ```
+### 2.2 Using Array
+The top pointer is always pointing to the latest added item, which is the top of stack.
+![image](/public/notes/data-structure-stack/array_stack.png)
+* push: Move top pointer one step ahead and put the given value.
+* pop: Return the top value and move top pointer one step backward.
 
-### 2.4 Built with Two Queues
+See the implementation below.
+```java
+public class ArrayStack {
+    private int top;
+    private int[] arr;
+
+    public ArrayStack(int capacity) {
+        arr = new int[capacity];
+        top = -1;
+    }
+
+    // Add new element to the end of the array
+    public void push(int value) {
+        arr[++top] = value;
+    }
+
+    // Remove the last element from the array and return its value
+    public int pop() throws Exception {
+        if (top < 0) {
+            throw new Exception();
+        }
+        int value = arr[top];
+        top--;
+        return value;
+    }
+
+    // Get the top element
+    public int peek() throws Exception {
+        if (top < 0) {
+            throw new Exception();
+        }
+        return arr[top];
+    }
+
+    // Return whether the stack is empty
+    public boolean isEmpty() {
+        return top < 0;
+    }
+}
+```
+### 2.3 Using Circular Array
+No need to use circular array to implement stack. As you see how we implement stack with array, no space is wasted after `pop` operation. While in queue(implemented with array), empty cell appears after `poll` method gets called.
+
+### 2.4 Using Two Queues
 ```java
 import java.util.LinkedList;
 import java.util.Queue;
@@ -154,52 +212,7 @@ public class QueueStack {
 }
 ```
 
-### 2.5 Built with Array
-```java
-public class ArrayStack {
-    private int top;
-    private int[] arr;
-
-    public ArrayStack(int capacity) {
-        arr = new int[capacity];
-        top = -1;
-    }
-
-    // Add new element to the end of the array
-    public void push(int value) {
-        arr[++top] = value;
-    }
-
-    // Remove the last element from the array and return its value
-    public int pop() throws Exception {
-        if (top < 0) {
-            throw new Exception();
-        }
-        int value = arr[top];
-        top--;
-        return value;
-    }
-
-    // Get the top element
-    public int peek() throws Exception {
-        if (top < 0) {
-            throw new Exception();
-        }
-        return arr[top];
-    }
-
-    // Return whether the stack is empty
-    public boolean isEmpty() {
-        return top < 0;
-    }
-}
-```
-
-### 2.6 Built with Array(Loop)
-```java
-```
-
-## 3. Implementing Sort Function with Stack
+## 3. Implementing Sorting Algorithms with Stack
 ### 3.1 Insertion Sort with Stack
 If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a stack, which contains {1,2,2,3,4,5,6,7}, 7 is at top.
 ```java
@@ -320,7 +333,7 @@ public class StackMergeSort {
     }
 }
 ```
-### 3.3 Implementing Quick Sort with Stack
+### 3.3 Quick Sort with Stack
 If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a stack, which contains {1,2,2,3,4,5,6,7}, 7 is at top.
 ```java
 import java.util.Stack;

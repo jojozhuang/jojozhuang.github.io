@@ -453,7 +453,10 @@ public class PriorityQueueMin {
 
 ## 6. Heap Problems
 * [LeetCode 295 - Find Median from Data Stream](http://www.lintcode.com/en/problem/segment-tree-build/)
+* [LeetCode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+* [LintCode 364 - Trapping Rain Water II](https://www.lintcode.com/problem/trapping-rain-water-ii/)
 * [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+* [LeetCode 480 - Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)
 
 ## 7. Source Files
 * [Source files for Heap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-heap)
