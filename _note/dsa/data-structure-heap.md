@@ -363,6 +363,15 @@ public class MinHeap {
 
 ## 5. Priority Queue
 Priority queues are useful for any application that involves processing elements based on some priority.
+
+`Priority Queue vs Heap`  
+A priority queue can be implemented using many of the data structures(Array, Linked List, or Binary Search Tree). However, those data structures do not provide the most efficient operations. To make all of the operations very efficient, we'll use a new data structure called a heap.
+
+`Priority Queue vs TreeMap`  
+* PriorityQueue Allows Duplicate(i.e with same priority) while TreeMap doesn't.
+* Complexity of PriorityQueue is O(n)(when is increases its size), while that of TreeMap is O(logn)(as it is based on Red Black Tree)
+* PriorityQueue is based on Array while in TreeMap nodes are linked to each other, so contains method of PriorityQueue would take O(n) time while TreeMap would take O(logn) time.
+
 ### 5.1 Common Operations on Priority Queue
 * Add - Insert a new value to priority queue.
 * Poll - Remove and return the maximum/minimum.
@@ -442,12 +451,17 @@ public class PriorityQueueMin {
 }
 ```
 
-## 6. Source Files
+## 6. Heap Problems
+* [LeetCode 295 - Find Median from Data Stream](http://www.lintcode.com/en/problem/segment-tree-build/)
+* [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+
+## 7. Source Files
 * [Source files for Heap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-heap)
 * [Heap Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1EQJpMtw2ZLlUKU-nlrUlqLz6HqgJ2mRU/view?usp=sharing)
 
-## 7. Reference
+## 8. Reference
 * [Binary Heaps](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html)
 * [Binary Heap](https://www.geeksforgeeks.org/binary-heap/)
 * [Heap Data Structures](https://www.tutorialspoint.com/data_structures_algorithms/heap_data_structure.htm)
 * [Binary Min-Heap Implementation](https://courses.cs.washington.edu/courses/cse373/11wi/homework/5/BinaryHeap.java)
+* [Difference between a heap and a priority queue](https://softwareengineering.stackexchange.com/questions/254947/difference-between-a-heap-and-a-priority-queue)

@@ -1,26 +1,26 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Divide and Conquer(Draft)"
-index: 325
+title: "Algorithm - Combination DFS(Draft)"
+index: 324
 category: dsa
 image: note/dsa.png
-date: 2016-03-25
-postdate: 2016-03-25
+date: 2016-03-24
+postdate: 2016-03-24
 tags: [BFS, DFS]
 ---
 
 > All of the common sorting algorithms.
 
-Divide & Conquer in Tree
-Introduce DFS Template
-
- Traverse vs Divide Conquer
+Combination DFS
+Permutation DFS
+Non-Recursion DFS
 
 ## 1. Tree, Matrix, Graph
 
-## 6. Divide and Conquer Problems
-* [LeetCode 4 - Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+## 6. Directed Graph Problems
+* [LeetCode 46 - Permutations](https://leetcode.com/problems/permutations/)
+
 
 ## 4. References
 * [BFS vs DFS for Binary Tree](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)

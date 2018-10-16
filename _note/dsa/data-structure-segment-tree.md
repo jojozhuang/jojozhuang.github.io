@@ -343,13 +343,15 @@ private void modify(SegmentTreeNode root, int index, int value) {
 }
 ```
 
+## 5. Segment Tree Problems
+* [LintCode 201 - Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/)
+* [LintCode 203 - Segment Tree Modify](https://www.lintcode.com/problem/segment-tree-modify/)
+
 ## 6. Source Files
 * [Source files for Segment Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-segment-tree)
 * [Segment Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1ir0YmfXC2EM--aJZcPbn6_uFSxs6kbyC/view?usp=sharing)
 
 ## 7. Reference
-* [Segment Tree - Range Minimum Query](https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/)
-* [Segment Tree - Sum of given range](https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)
+* [Segment Tree Set 2 - Range Minimum Query](https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/)
+* [Segment Tree Set 1 - Sum of given range](https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)
 * [Segment Tree Range Minimum Query(Video on Youtube)](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
-* [Segment Tree Build on LintCode](http://www.lintcode.com/en/problem/segment-tree-build/)
-* [Segment Tree Modify on LintCode](https://www.lintcode.com/problem/segment-tree-modify/)

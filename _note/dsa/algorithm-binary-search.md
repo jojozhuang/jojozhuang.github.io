@@ -189,22 +189,25 @@ public int searchLast(int[] nums, int target) {
     return -1;
 }
 ```
-## 4. Source Files
+
+## 4. Binary Search Problems
+* [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/)
+* [LintCode 61 - Search for a range](https://www.lintcode.com/problem/search-for-a-range)
+* [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+* [LeetCode 74 - Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+* [LeetCode 278 - First Bad Version](https://leetcode.com/problems/first-bad-version/)
+* [LeetCode 162 - Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+* [LeetCode 33 - Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+* [LeetCode 153 - Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+* [LeetCode 4 - Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+* [LeetCode 88 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+* [LintCode 39 - Recover Sorted Array](https://www.lintcode.com/problem/recover-rotated-sorted-array/)
+* [LeetCode 796 - Rotate String](https://leetcode.com/problems/rotate-string/)
+* [LeetCode 151 - Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
+
+## 5. Source Files
 * [Source files for Binary Search on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-binary-search)
 * [Binary Search Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1kFOgd-Xf944qt2zqupqd7-eHG7C237si/view?usp=sharing)
 
-## 5. References
+## 6. References
 * [Binary Search at Geeksforgeeks](https://www.geeksforgeeks.org/binary-search/)
-* [Binary Search](https://leetcode.com/problems/binary-search/)
-* [Search for a range](https://www.lintcode.com/problem/search-for-a-range)
-* [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
-* [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-* [First Bad Version](https://leetcode.com/problems/first-bad-version/)
-* [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
-* [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-* [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-* [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
-* [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
-* [Recover Sorted Array](https://www.lintcode.com/problem/recover-rotated-sorted-array/)
-* [Rotate String](https://leetcode.com/problems/rotate-string/)
-* [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
