@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Problem List on LeetCode"
-index: 300
+index: 350
 category: dsa
 image: /note/dsa.png
-date: 2016-03-01
-postdate: 2016-03-01
+date: 2016-04-10
+postdate: 2016-04-10
 tags: [Algorithm, Leetcode]
 ---
 

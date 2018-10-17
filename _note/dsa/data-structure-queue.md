@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Queue"
-index: 304
+index: 303
 category: dsa
 image: /note/dsa.png
-date: 2016-03-04
-postdate: 2016-03-04
+date: 2016-03-03
+postdate: 2016-03-03
 tags: [Queue, FIFO]
 mathjax: true
 ---

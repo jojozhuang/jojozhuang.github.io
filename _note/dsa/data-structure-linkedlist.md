@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Linked List"
-index: 302
+index: 301
 category: dsa
 image: note/dsa.png
-date: 2016-03-02
-postdate: 2016-03-02
+date: 2016-03-01
+postdate: 2016-03-01
 tags: [Singly Linked List, Doubly Linked List]
 ---
 

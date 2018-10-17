@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Stack"
-index: 303
+index: 302
 category: dsa
 image: /note/dsa.png
-date: 2016-03-03
-postdate: 2016-03-03
+date: 2016-03-02
+postdate: 2016-03-02
 tags: [Stack, LIFO]
 mathjax: true
 ---
