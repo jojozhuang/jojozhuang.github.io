@@ -188,9 +188,8 @@ public class TrieNode {
 }
 ```
 
-## 6. Trie Problems
+## 6. Classic Problems
 * [LeetCode 212 - Word Search II](https://leetcode.com/problems/word-search-ii/)
-
 
 ## 7. Source Files
 * [Source files for Trie on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-trie)

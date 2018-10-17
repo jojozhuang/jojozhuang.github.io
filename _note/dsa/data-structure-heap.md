@@ -451,7 +451,7 @@ public class PriorityQueueMin {
 }
 ```
 
-## 6. Heap Problems
+## 6. Classic Problems
 * [LeetCode 295 - Find Median from Data Stream](http://www.lintcode.com/en/problem/segment-tree-build/)
 * [LeetCode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 * [LintCode 364 - Trapping Rain Water II](https://www.lintcode.com/problem/trapping-rain-water-ii/)

@@ -200,13 +200,13 @@ public int uniquePath(int m, int n) {
 * Time complexity: $O(m*n)$
 * Space complexity: $O(n)$
 
-### 3.4 Problems
+### 3.4 Classic Problems
 * [LeetCode 62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
 * [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
 
 ## 4. Sequence DP
 
-### 4.4 Problems
+### 4.4 Classic Problems
 * [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 * [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
 * [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
@@ -216,7 +216,7 @@ public int uniquePath(int m, int n) {
 * [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 ## 5. Two Sequences DP
-### 5.4 Problems
+### 5.4 Classic Problems
 * [LintCode 77 - Longest Common Subsequence](https://www.lintcode.com/problem/longest-common-subsequence)
 * [LintCode 79 - Longest Common Substring](https://www.lintcode.com/problem/longest-common-substring)
 * [LeetCode 72 - Edit Distance](https://leetcode.com/problems/edit-distance/)
@@ -224,7 +224,7 @@ public int uniquePath(int m, int n) {
 * [LeetCode 97 - Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
 ## 6. Backpack
-### 6.4 Problems
+### 6.4 Classic Problems
 * [LintCode 92 - Backpack](https://www.lintcode.com/problem/backpack/)
 * [LintCode 91 - Minimum Adjustment Cost](https://www.lintcode.com/problem/minimum-adjustment-cost)
 

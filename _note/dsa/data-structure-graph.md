@@ -396,7 +396,7 @@ public void dfs2(Node root, List<String> list) {
 }
 ```
 
-## 5. Graph Problems
+## 5. Classic Problems
 * [LeetCode 133 - Clone Graph](https://leetcode.com/problems/clone-graph/)
 
 ## 6. Source Files
