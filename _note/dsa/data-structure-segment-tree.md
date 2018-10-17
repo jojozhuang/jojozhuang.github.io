@@ -343,7 +343,7 @@ private void modify(SegmentTreeNode root, int index, int value) {
 }
 ```
 
-## 5. Segment Tree Problems
+## 5. Classic Problems
 * [LintCode 201 - Segment Tree Build](http://www.lintcode.com/en/problem/segment-tree-build/)
 * [LintCode 202 - Segment Tree Query](https://www.lintcode.com/problem/segment-tree-query/)
 * [LintCode 203 - Segment Tree Modify](https://www.lintcode.com/problem/segment-tree-modify/)

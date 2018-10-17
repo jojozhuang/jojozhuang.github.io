@@ -22,21 +22,32 @@ Queue is an abstract data type that serves as a collection of elements, with two
 * `dequeue`: remove the least recently added element
 
 Queue follows the `FIFO`(First-in, first-out) rule. The item that goes in first is the item that comes out first too.
- ![image](/public/notes/data-structure-queue/queue.png)
-
-## 2. Implementation
-### 2.1 Common Operations on Queue
+![image](/public/notes/data-structure-queue/queue.png)
+### 1.3 Common Operations on Queue
 * enqueue(item): Add an item to the end of the list.
 * dequeue(): Pull the first item out of the list.
 * peek(): Return the top of the queue.
 * isEmpty(): Return true if and only if the queue is empty.
 
-### 2.2 Time Complexity
+### 1.4 Time Complexity
 * enqueue: $O(1)$
 * dequeue: $O(1)$
 * peek: $O(1)$
 
-### 2.3 Implementing with LinkedList
+## 2. Implementation
+Four ways to implement queue.
+* Linked List
+* Array
+* Circular Array
+* Stack
+
+### 2.1 Using Linked List
+Use two pointers(head and tail) to locate the first and last nodes in the list and track the change.
+![image](/public/notes/data-structure-queue/linkedlist_queue.png)
+* enqueue: Create new node with the given value in the tail of the list, set current tail's next pointer point to the new node and let the tail pointer point to the last node.
+* dequeue: Get value of the head node, let the head pointer point to the next node.
+
+See the implementation below.
 ```java
 public class LinkedListQueue {
     private ListNode head; // the first node
@@ -82,60 +93,13 @@ public class LinkedListQueue {
     }
 }
 ```
+### 2.2 Using Array
+Use two pointers(head and tail) to locate the first and last position in the array and track the change.
+![image](/public/notes/data-structure-queue/array_queue.png)
+* enqueue: Move tail one step ahead and set value.
+* dequeue: Return the head value and move head one step ahead.
 
-### 2.4 Implementing with Two Stacks
-```java
-import java.util.Stack;
-
-public class StackQueue {
-    private Stack<Integer> stack1; // s1 stores new items
-    private Stack<Integer> stack2; // s2 stores old items
-
-    public StackQueue() {
-        stack1 = new Stack<Integer>();
-        stack2 = new Stack<Integer>();
-    }
-
-    // Add new item onto queue
-    public void enqueue(int value) {
-        stack1.push(value);
-    }
-
-    // Remove the first item from the queue and return its value
-    public int dequeue() throws Exception {
-        if (!stack2.isEmpty()) {
-            return stack2.pop();
-        }
-        while (!stack1.isEmpty()) {
-            stack2.push(stack1.pop());
-        }
-        if (stack2.isEmpty()) {
-            throw new Exception();
-        }
-        return stack2.pop();
-    }
-
-    // Get the first element
-    public int peek() throws Exception {
-        if (!stack2.isEmpty()) {
-            return stack2.peek();
-        }
-        while (!stack1.isEmpty()) {
-            stack2.push(stack1.pop());
-        }
-        if (stack2.isEmpty()) {
-            throw new Exception();
-        }
-        return stack2.peek();
-    }
-
-    // Return whether the queue is empty
-    public boolean isEmpty() {
-        return stack1.isEmpty() && stack2.empty();
-    }
-}
-```
-### 2.5 Implementing with Array
+See the implementation below.
 ```java
 public class ArrayQueue {
     private int head; // the first node
@@ -185,9 +149,16 @@ public class ArrayQueue {
 ```
 * There is one problem with the above implementation. Notice that both head and tail only increase, never decrease. When tail reaches to the end of the array, you cannot add more items into it. Even if you call dequeue method to clear some space, however, the head and tail won't move back.
 
-### 2.6 Implement with Circular Array
+### 2.3 Using Circular Array
 To solve the issue mentioned above, we can use a circular array to implement the queue.
-![image](/public/notes/data-structure-queue/circular-queue.png){:width="400px"}  
+![image](/public/notes/data-structure-queue/circular_array.png){:width="400px"}
+See the details below.
+![image](/public/notes/data-structure-queue/circular_queue.png)
+Notice the step of 'enqueue 9' and 'dequeue 8'.
+* If `tail` is at the last position of the array, it will be moved back to the first position if new item needs to be added.
+* If `head` is at the last position of the array, it will be moved back to the first position if old item needs to be deleted.
+
+See the implementation below.
 ```java
 public class CircularArrayQueue {
     private int head; // the first node in queue, not the first item in array
@@ -252,8 +223,62 @@ public class CircularArrayQueue {
     }
 }
 ```
+### 2.4 Using Stack
+Use two stacks. The first one only stores new items, and the second one only stores old items.
+```java
+import java.util.Stack;
 
-## 3. Implementing Sort Function with Queue
+public class StackQueue {
+    private Stack<Integer> stack1; // s1 stores new items
+    private Stack<Integer> stack2; // s2 stores old items
+
+    public StackQueue() {
+        stack1 = new Stack<Integer>();
+        stack2 = new Stack<Integer>();
+    }
+
+    // Add new item onto queue
+    public void enqueue(int value) {
+        stack1.push(value);
+    }
+
+    // Remove the first item from the queue and return its value
+    public int dequeue() throws Exception {
+        if (!stack2.isEmpty()) {
+            return stack2.pop();
+        }
+        while (!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
+        }
+        if (stack2.isEmpty()) {
+            throw new Exception();
+        }
+        return stack2.pop();
+    }
+
+    // Get the first element
+    public int peek() throws Exception {
+        if (!stack2.isEmpty()) {
+            return stack2.peek();
+        }
+        while (!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
+        }
+        if (stack2.isEmpty()) {
+            throw new Exception();
+        }
+        return stack2.peek();
+    }
+
+    // Return whether the queue is empty
+    public boolean isEmpty() {
+        return stack1.isEmpty() && stack2.empty();
+    }
+}
+```
+* The average time complexity is $O(1)$.
+
+## 3. Implementing Sorting Algorithms with Queue
 ### 3.1 Merge Sort with Queue
 If we call the sort method with array {2,4,5,7,1,2,3,6}, it will return a queue, which contains {1,2,2,3,4,5,6,7}, 1 is the header and 7 is the tail.
 ```java
@@ -321,7 +346,7 @@ public class QueueMergeSort {
 }
 ```
 
-## 4. Queue Problems
+## 4. Classic Problems
 * [LeetCode 346 - Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)
 
 ## 5. Source Files

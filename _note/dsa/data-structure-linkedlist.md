@@ -246,7 +246,7 @@ public ListNode detectCycle(ListNode head) {
 }
 ```
 
-## 4. Linked List Problems
+## 4. Classic Problems
 * [LeetCode 83 - Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
 * [LeetCode 82 - Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 * [LeetCode 206 - Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)

@@ -44,7 +44,7 @@ Stack follows the `LIFO`(Last-in, first-out) rule. The last item that was placed
 Four ways to implement stack.
 * Linked List
 * Array
-* Circular Array
+* Circular Array(No need)
 * Queues
 
 ### 2.1 Using Linked List
@@ -398,7 +398,7 @@ public class StackQuickSort {
 }
 ```
 
-## 4. Stack Problems
+## 4. Classic Problems
 * [LeetCode 155 - Min Stack](https://leetcode.com/problems/min-stack/)
 * [LeetCode 232 - Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 * [LeetCode 84 - Largest Rectangle in histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)

@@ -190,7 +190,7 @@ public int searchLast(int[] nums, int target) {
 }
 ```
 
-## 4. Binary Search Problems
+## 4. Classic Problems
 * [LeetCode 704 - Binary Search](https://leetcode.com/problems/binary-search/)
 * [LintCode 61 - Search for a range](https://www.lintcode.com/problem/search-for-a-range)
 * [LeetCode 35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/)
