@@ -21,8 +21,7 @@ mathjax: true
 * Can't sort or swap
 
 ### 1.2 DP Types
-* Array DP (5%)
-* Matrix DP (5%)
+* Matrix DP (10%)
 * Sequence DP (40%)
 * Two Sequences DP (40%)
 * Backpack (10%)
@@ -31,82 +30,11 @@ mathjax: true
 * Memorization Search(Drawback: extra space)
 * Loop
 
-## 2. Array DP
-### 2.1 Problem - Fibonacci Numbers
-Fibonacci Numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ... Now, given an integer N(N >= 0), return the Nth Fibonacci number.
-### 2.2 Recursive Solution
-```java
-// recursive implementation
-public int fibonacci(int n) {
-    if (n == 0) {
-        return 0;
-    }
-    if (n == 1) {
-        return 1;
-    }
-
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}
-```
-* Time complexity: $O(2^n)$
-* Space complexity: $O(1)$
-
-### 2.3 DP Solution
-```java
-// DP
-public int fibonacci(int n) {
-    if (n == 0) {
-        return 0;
-    }
-    if (n == 1) {
-        return 1;
-    }
-
-    int[] dp = new int[n + 1];
-    dp[0] = 0;
-    dp[1] = 1;
-    for (int i = 2; i <= n; i++)  {
-        dp[i] = dp[i - 1] + dp[i - 2];
-    }
-
-    return dp[n];
-}
-```
-* Time complexity: $O(n)$
-* Space complexity: $O(n)$
-
-### 2.4 Solution with Constant Space
-```java
-// constant space
-public int fibonacci(int n) {
-    if (n == 0) {
-        return 0;
-    }
-    if (n == 1) {
-        return 1;
-    }
-
-    int first = 0;
-    int second = 1;
-    int third = 0;
-
-    for (int i = 2; i <= n; i++) {
-        third = first + second;
-        first = second;
-        second = third;
-    }
-
-    return third;
-}
-```
-* Time complexity: $O(n)$
-* Space complexity: $O(1)$
-
-## 3. Matrix DP
-### 3.1 Problem - Unique Paths
+## 2. Matrix DP
+### 2.1 Problem - Unique Paths
 A robot is located at the top-left corner of a `m x n` grid (marked 'Start' in the diagram below). The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below). How many possible unique paths are there?
 ![image](/public/notes/algorithm-dynamic-programming/robot.png){:width="500px"}  
-### 3.2 Solution with Matrix(Two-dimensional array)
+### 2.2 Solution with Matrix(Two-dimensional array)
 ```java
 // time: O(m*n), space: O(m*n)
 public int uniquePathMatrix(int m, int n) {
@@ -155,7 +83,7 @@ public int uniquePathMatrix2(int m, int n) {
 * Time complexity: $O(m*n)$
 * Space complexity: $O(m*n)$
 
-### 3.3 Solution with One-dimensional Array
+### 2.3 Solution with One-dimensional Array
 Use one-dimensional array instead of the matrix. Same time complexity, but space is reduced to $O(n)$.
 ```java
 // time: O(m*n), space: O(n)
@@ -200,13 +128,83 @@ public int uniquePath(int m, int n) {
 * Time complexity: $O(m*n)$
 * Space complexity: $O(n)$
 
-### 3.4 Classic Problems
+### 2.4 Classic Problems
 * [LeetCode 62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
 * [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+* [LeetCode 221 - Maximal Square](https://leetcode.com/problems/maximal-square)
 
-## 4. Sequence DP
+## 3. Sequence DP
+### 3.1 Problem - Fibonacci Numbers
+Fibonacci Numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ... Now, given an integer N(N >= 0), return the Nth Fibonacci number.
+### 3.2 Recursive Solution
+```java
+// recursive implementation
+public int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
 
-### 4.4 Classic Problems
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+* Time complexity: $O(2^n)$
+* Space complexity: $O(1)$
+
+### 3.3 DP Solution
+```java
+// DP
+public int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+
+    int[] dp = new int[n + 1];
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++)  {
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
+
+    return dp[n];
+}
+```
+* Time complexity: $O(n)$
+* Space complexity: $O(n)$
+
+### 3.4 Solution with Constant Space
+```java
+// constant space
+public int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+
+    int first = 0;
+    int second = 1;
+    int third = 0;
+
+    for (int i = 2; i <= n; i++) {
+        third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return third;
+}
+```
+* Time complexity: $O(n)$
+* Space complexity: $O(1)$
+
+### 4.5 Classic Problems
 * [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 * [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
 * [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
@@ -214,6 +212,8 @@ public int uniquePath(int m, int n) {
 * [LeetCode 139 - Word Break](https://leetcode.com/problems/word-break/)
 * [LeetCode 140 - Word Break II](https://leetcode.com/problems/word-break-ii/)
 * [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+* [LeetCode 198 - House Robber](https://leetcode.com/problems/house-robber/)
+* [LeetCode 213 - House Robber II](https://leetcode.com/problems/house-robber-ii)
 
 ## 5. Two Sequences DP
 ### 5.4 Classic Problems
@@ -233,6 +233,7 @@ public int uniquePath(int m, int n) {
 * [Dynamic Programming Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1gp898o4dRvrV2nPVZOEfJYfijkeyjdnK/view?usp=sharing)
 
 ## 8. References
+* [Introduction to Dynamic Programming 1](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
 * [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)
 * [How to solve a Dynamic Programming Problem ?](https://www.geeksforgeeks.org/solve-dynamic-programming-problem/)
 * [Tabulation vs Memorization](https://www.geeksforgeeks.org/tabulation-vs-memoizatation/)
