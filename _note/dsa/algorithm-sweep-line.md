@@ -13,8 +13,8 @@ mathjax: true
 
 > Sweep line approach to solve interval problems.
 
-## 1. Problems
-Maximum Population, Planes in Air.
+## 1. Sweep Line
+A sweep line is an imaginary vertical line which is swept across the plane rightwards.
 
 ## 2. Problem - Maximum Population
 ### 2.1 Problem Description
@@ -111,11 +111,16 @@ public int getMostPopulation(int[][] persons) {
 * Time complexity: $O(n+y)$, n is the number of persons, y is the year range.
 * Space complexity: $O(y)$, y is the year range.
 
-## 5. Source Files
+## 3. Classic Problems
+* [LintCode 391 - Number of Airplanes in the Sky](https://www.lintcode.com/problem/number-of-airplanes-in-the-sky/)
+* [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+
+## 4. Source Files
 * [Source files for Sweep Line on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-sweep-line)
 * [Sweep Line Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1qh2nqRorRfF4H89DP94aU3SeywZvI17C/view?usp=sharing)
 
-## 6. References
+## 5. References
+* [Line Sweep Technique](https://www.hackerearth.com/practice/math/geometry/line-sweep-technique/tutorial/)
 * [Line Segment Intersection](https://www.youtube.com/watch?v=dePDHVovJlE)
 * [The Skyline Problem at LeetCode](https://leetcode.com/problems/the-skyline-problem/)
 * [The skyline problem](https://briangordon.github.io/2014/08/the-skyline-problem.html)

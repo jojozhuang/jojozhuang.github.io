@@ -402,6 +402,9 @@ public class StackQuickSort {
 * [LeetCode 155 - Min Stack](https://leetcode.com/problems/min-stack/)
 * [LeetCode 232 - Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 * [LeetCode 84 - Largest Rectangle in histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+* [LintCode 367 - Expression Tree Build](https://www.lintcode.com/problem/expression-tree-build/)
+* [LintCode 370 - Convert Expression to Reverse Polish Notation](https://www.lintcode.com/problem/convert-expression-to-reverse-polish-notation/)
+* [LintCode 368 - Expression Evaluation](https://www.lintcode.com/problem/expression-evaluation)
 
 ## 5. Source Files
 * [Source files for Stack on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-stack)
