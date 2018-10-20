@@ -361,7 +361,12 @@ public class MinHeap {
 }
 ```
 
-## 5. Priority Queue
+## 5. Heap Sort
+Construct a heap with all numbers, and delete root one by one to get the sorted list.
+```java
+```
+
+## 6. Priority Queue
 Priority queues are useful for any application that involves processing elements based on some priority.
 
 `Priority Queue vs Heap`  
@@ -372,17 +377,17 @@ A priority queue can be implemented using many of the data structures(Array, Lin
 * Complexity of PriorityQueue is O(n)(when is increases its size), while that of TreeMap is O(logn)(as it is based on Red Black Tree)
 * PriorityQueue is based on Array while in TreeMap nodes are linked to each other, so contains method of PriorityQueue would take O(n) time while TreeMap would take O(logn) time.
 
-### 5.1 Common Operations on Priority Queue
+### 6.1 Common Operations on Priority Queue
 * Add - Insert a new value to priority queue.
 * Poll - Remove and return the maximum/minimum.
 * Peek - Get the maximum/minimum.
 
-### 5.2 Time Complexity
+### 6.2 Time Complexity
 * Add - $O(\log{}n)$
 * Poll - $O(\log{}n)$
 * Peek - $O(1)$
 
-### 5.3 Max Priority Queue
+### 6.3 Max Priority Queue
 ```java
 public class PriorityQueueMax {
     private MaxHeap heap;
@@ -416,7 +421,7 @@ public class PriorityQueueMax {
     }
 }
 ```
-### 5.4 Min Priority Queue
+### 6.4 Min Priority Queue
 ```java
 public class PriorityQueueMin {
     private MinHeap heap;
@@ -451,18 +456,18 @@ public class PriorityQueueMin {
 }
 ```
 
-## 6. Classic Problems
+## 7. Classic Problems
 * [LeetCode 295 - Find Median from Data Stream](http://www.lintcode.com/en/problem/segment-tree-build/)
 * [LeetCode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 * [LintCode 364 - Trapping Rain Water II](https://www.lintcode.com/problem/trapping-rain-water-ii/)
 * [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 * [LeetCode 480 - Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)
 
-## 7. Source Files
+## 8. Source Files
 * [Source files for Heap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-heap)
 * [Heap Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1EQJpMtw2ZLlUKU-nlrUlqLz6HqgJ2mRU/view?usp=sharing)
 
-## 8. Reference
+## 9. Reference
 * [Binary Heaps](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html)
 * [Binary Heap](https://www.geeksforgeeks.org/binary-heap/)
 * [Heap Data Structures](https://www.tutorialspoint.com/data_structures_algorithms/heap_data_structure.htm)
