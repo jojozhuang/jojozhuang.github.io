@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Multi-Threading in Java"
+title: "Java - Multithreading"
 index: 203
 category: java
 image: /note/programming.png

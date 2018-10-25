@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java Interview Questions"
-index: 206
+index: 406
 category: programming
 image: /note/programming.png
-date: 2016-02-06
-postdate: 2016-02-06
+date: 2016-06-06
+postdate: 2016-06-06
 tags: [Interview]
 ---
 
