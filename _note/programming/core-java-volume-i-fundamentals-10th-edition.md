@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Core Java Volume I--Fundamentals (10th Edition)"
-index: 201
+index: 401
 category: programming
 image: /note/programming.png
-date: 2016-02-01
-postdate: 2016-02-01
+date: 2016-06-01
+postdate: 2016-06-01
 tags: [Java]
 ---
 

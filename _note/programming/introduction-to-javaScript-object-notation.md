@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Introduction to JavaScript Object Notation(Draft)"
-index: 214
+index: 414
 category: programming
 image: /note/programming.png
-date: 2016-02-14
-postdate: 2016-02-14
+date: 2016-06-14
+postdate: 2016-06-14
 tags: [JSON]
 ---
 

@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "TOGAF Version 9.1(Draft)"
-index: 401
+index: 501
 category: architecture
 image: /note/note.png
-date: 2017-06-01
-postdate: 2017-06-01
+date: 2017-08-01
+postdate: 2017-08-01
 tags: [TOGAF]
 ---
 
