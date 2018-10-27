@@ -2,7 +2,7 @@
 layout: note
 key: note
 title: "JavaScript object oriented programming(Online Doc)"
-index: 412
+index: 612
 category: programming
 image: /note/programming.png
 date: 2016-06-12

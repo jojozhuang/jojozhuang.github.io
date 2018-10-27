@@ -2,7 +2,7 @@
 layout: note
 key: note
 title: "Java - Thread Dumps & Analysis"
-index: 404
+index: 604
 category: programming
 image: /note/programming.png
 date: 2016-06-04

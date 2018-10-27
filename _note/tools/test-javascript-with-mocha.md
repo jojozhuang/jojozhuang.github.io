@@ -2,7 +2,7 @@
 layout: note
 key: note
 title: "Test JavaScript with Mocha(Draft)"
-index: 604
+index: 804
 category: tools
 image: note/tools.png
 date: 2017-08-04
