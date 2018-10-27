@@ -2,7 +2,7 @@
 layout: note
 key: note
 title: "Java Interview Questions"
-index: 406
+index: 606
 category: programming
 image: /note/programming.png
 date: 2016-06-06

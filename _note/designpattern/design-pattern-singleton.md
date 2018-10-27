@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Introduction to JavaScript Object Notation(Draft)"
-index: 614
-category: programming
-image: /note/programming.png
-date: 2016-06-14
-postdate: 2016-06-14
+title: "Design Pattern - Singleton(Draft)"
+index: 401
+category: designpattern
+image: /note/designpattern.png
+date: 2016-04-01
+postdate: 2016-04-01
 tags: [JSON]
 ---
 

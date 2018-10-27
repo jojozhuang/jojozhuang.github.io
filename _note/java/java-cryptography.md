@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Java - Encryption"
+title: "Java - Cryptography"
 index: 202
 category: java
 image: /note/programming.png
@@ -11,3 +11,6 @@ tags: [Encryption, Decryption]
 ---
 
 > Create concurrent application with threadings.
+
+
+http://tutorials.jenkov.com/java-cryptography/index.html

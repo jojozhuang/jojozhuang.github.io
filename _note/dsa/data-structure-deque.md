@@ -43,6 +43,20 @@ A double-ended queue (abbreviated to deque) is an abstract data type that genera
 
 ## 2. Implementation
 ### 2.1 Using Linked List
+Define Node.
+```java
+public class ListNode {
+    public int val;
+    public ListNode previous;
+    public ListNode next;
+    public ListNode(int val) {
+        this.val = val;
+        previous = null;
+        this.next = null;
+    }
+}
+```
+Implement Deque.
 ```java
 public class LinkedListDeque {
     private ListNode head; // the first node
