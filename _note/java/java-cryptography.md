@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Cryptography"
-index: 202
+index: 203
 category: java
 image: /note/programming.png
-date: 2016-02-02
-postdate: 2016-02-02
+date: 2016-02-03
+postdate: 2016-02-03
 tags: [Encryption, Decryption]
 ---
 

@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Object Class"
-index: 205
+index: 206
 category: java
 image: /note/programming.png
-date: 2016-02-05
-postdate: 2016-02-05
+date: 2016-02-06
+postdate: 2016-02-06
 tags: [Encryption, Decryption]
 ---
 
