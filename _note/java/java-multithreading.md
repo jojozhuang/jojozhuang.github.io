@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Multithreading"
-index: 203
+index: 204
 category: java
 image: /note/programming.png
-date: 2016-02-03
-postdate: 2016-02-03
+date: 2016-02-04
+postdate: 2016-02-04
 tags: [Multi Threading]
 ---
 
