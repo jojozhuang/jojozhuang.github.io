@@ -14,7 +14,7 @@ tags: [Bridge]
 
 
 ## 4. Source Files
-* [Source files for Adapter Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-adapter)
+* [Source files for Bridge Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-bridge)
 
 ## 5. References
 * [Bridge Design Pattern](https://www.geeksforgeeks.org/bridge-design-pattern/)
