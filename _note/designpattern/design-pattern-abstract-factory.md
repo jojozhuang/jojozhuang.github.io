@@ -1,16 +1,16 @@
 ---
 layout: note
 key: note
-title: "Design Pattern - Factory"
+title: "Design Pattern - Abstract Factory"
 index: 403
 category: designpattern
 image: /note/designpattern.png
 date: 2016-04-03
 postdate: 2016-04-03
-tags: [Factory, Abstract Factory, Factory Method]
+tags: [Factory, Abstract Factory]
 ---
 
-> Factory pattern for creating objects.
+> Creational Pattern: Abstract Factory.
 
 ## 1. Types of Factory Pattern
 * Simple Factory Pattern

@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Bridge"
-index: 414
+index: 411
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-14
-postdate: 2016-04-14
+date: 2016-04-11
+postdate: 2016-04-11
 tags: [Bridge]
 ---
 
-> Bridge design pattern for creating objects.
+> Structural Pattern: Bridge.
 
 
 ## 4. Source Files

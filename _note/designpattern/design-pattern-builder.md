@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Builder"
-index: 411
+index: 405
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-11
-postdate: 2016-04-11
+date: 2016-04-05
+postdate: 2016-04-05
 tags: [Builder]
 ---
 
-> Builder design pattern for creating objects.
+> Creational Pattern: Builder.
 
 
 ## 4. Source Files

@@ -13,33 +13,33 @@ tags: [Design Pattern]
 > Design pattern in Java.
 
 ## 1. Creational Patterns
-* Singleton Pattern
-* Abstract Factory Pattern
-* Factory Method Pattern
-* Builder Pattern
-* Prototype Pattern
+* [Singleton Pattern]({% link _note/designpattern/design-pattern-singleton.md %})
+* [Abstract Factory Pattern]({% link _note/designpattern/design-pattern-abstract-factory.md %})
+* [Factory Method Pattern]({% link _note/designpattern/design-pattern-factory-method.md %})
+* [Builder Pattern]({% link _note/designpattern/design-pattern-builder.md %})
+* [Prototype Pattern]({% link _note/designpattern/design-pattern-prototype.md %})
 
 ## 2. Structural Patterns
-* Adapter Pattern
-* Bridge Pattern
-* Composite Pattern
-* Decorator Pattern
-* Facade Pattern
-* Flyweight Pattern
-* Proxy Pattern
+* [Adapter Pattern]({% link _note/designpattern/design-pattern-adapter.md %})
+* [Bridge Pattern]({% link _note/designpattern/design-pattern-bridge.md %})
+* [Composite Pattern]({% link _note/designpattern/design-pattern-composite.md %})
+* [Decorator Pattern]({% link _note/designpattern/design-pattern-decorator.md %})
+* [Facade Pattern]({% link _note/designpattern/design-pattern-facade.md %})
+* [Flyweight Pattern]({% link _note/designpattern/design-pattern-flyweight.md %})
+* [Proxy Pattern]({% link _note/designpattern/design-pattern-proxy.md %})
 
 ## 3. Behavioral Patterns
 * Chain of Responsibility Pattern
-* Command Pattern
-* Interpreter Pattern
-* Iterator Pattern
-* Mediator Pattern
-* Memento Pattern
-* Observer Pattern
-* State Pattern
-* Strategy Pattern
-* Template Method Pattern
-* Visitor Pattern
+* [Command Pattern]({% link _note/designpattern/design-pattern-command.md %})
+* [Interpreter Pattern]({% link _note/designpattern/design-pattern-interpreter.md %})
+* [Iterator Pattern]({% link _note/designpattern/design-pattern-iterator.md %})
+* [Mediator Pattern]({% link _note/designpattern/design-pattern-mediator.md %})
+* [Memento Pattern]({% link _note/designpattern/design-pattern-memento.md %})
+* [Observer Pattern]({% link _note/designpattern/design-pattern-observer.md %})
+* [State Pattern]({% link _note/designpattern/design-pattern-state.md %})
+* [Strategy Pattern]({% link _note/designpattern/design-pattern-strategy.md %})
+* [Template Method Pattern]({% link _note/designpattern/design-pattern-template-method.md %})
+* [Visitor Pattern]({% link _note/designpattern/design-pattern-visitor.md %})
 
 ## 4. References
 * [Design Patterns](https://sourcemaking.com/design_patterns)

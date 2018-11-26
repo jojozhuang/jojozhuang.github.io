@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Decorator"
-index: 409
+index: 413
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-09
-postdate: 2016-04-09
+date: 2016-04-13
+postdate: 2016-04-13
 tags: [Decorator]
 ---
 
-> Decorator design pattern for creating objects.
+> Structural Pattern: Decorator.
 
 ## 4. Source Files
 * [Source files for Decorator Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-decorator)

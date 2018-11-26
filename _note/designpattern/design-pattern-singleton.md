@@ -10,7 +10,7 @@ postdate: 2016-04-02
 tags: [Singleton]
 ---
 
-> Singleton design pattern for creating objects.
+> Creational Pattern: Singleton.
 
 ## 1. Singleton Pattern
 The Singleton design pattern is designed to restrict instantiation of a class to one object. The singleton pattern is implemented by creating a class with a method that creates a new instance of the object only if one does not already exist. If one does exist, it returns a reference to the object that already exists. If not, a new instance is created and a reference to that new object is returned. To make sure that the object cannot be instantiated any other way the constructor is made either private or protected. The 2 key points that are supported in the Singleton pattern are:

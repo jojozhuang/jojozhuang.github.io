@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Command"
-index: 416
+index: 421
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-16
-postdate: 2016-04-16
+date: 2016-04-21
+postdate: 2016-04-21
 tags: [Command]
 ---
 
-> Command design pattern for creating objects.
+> Behavioral Pattern: Command.
 
 ## 4. Source Files
 * [Source files for Command Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-command)
