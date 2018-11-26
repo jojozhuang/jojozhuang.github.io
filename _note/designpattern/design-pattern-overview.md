@@ -40,3 +40,8 @@ tags: [Design Pattern]
 * Strategy Pattern
 * Template Method Pattern
 * Visitor Pattern
+
+## 4. References
+* [Design Patterns](https://sourcemaking.com/design_patterns)
+* [Design Patterns in Java Tutorial](https://www.tutorialspoint.com/design_pattern/index.htm)
+* [Abstract Factory Pattern Tutorial with Java Examples](https://dzone.com/articles/design-patterns-abstract-factory)
