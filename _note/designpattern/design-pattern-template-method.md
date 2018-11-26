@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Template Method"
-index: 422
+index: 429
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-22
-postdate: 2016-04-22
+date: 2016-04-29
+postdate: 2016-04-29
 tags: [Template Method]
 ---
 
-> Template Method design pattern for creating objects.
+> Behavioral Pattern: Template Method.
 
 ## 4. Source Files
 * [Source files for Template Method Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-templatemethod)

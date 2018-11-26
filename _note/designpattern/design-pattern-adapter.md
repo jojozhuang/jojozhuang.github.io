@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Adapter"
-index: 413
+index: 410
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-13
-postdate: 2016-04-13
+date: 2016-04-10
+postdate: 2016-04-10
 tags: [Adapter]
 ---
 
-> Builder design pattern for creating objects.
+> Structural Pattern: Adapter.
 
 
 ## 4. Source Files

@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Composite"
-index: 415
+index: 412
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-15
-postdate: 2016-04-15
+date: 2016-04-12
+postdate: 2016-04-12
 tags: [Composite]
 ---
 
-> Composite design pattern for creating objects.
+> Structural Pattern: Composite.
 
 ## 4. Source Files
 * [Source files for Composite Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-composite)

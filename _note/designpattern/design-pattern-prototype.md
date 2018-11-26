@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Prototype"
-index: 412
+index: 406
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-12
-postdate: 2016-04-12
+date: 2016-04-06
+postdate: 2016-04-06
 tags: [Prototype]
 ---
 
-> Builder design pattern for creating objects.
+> Creational Pattern: Prototype.
 
 
 ## 4. Source Files
