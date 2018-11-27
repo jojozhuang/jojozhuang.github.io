@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Flyweight"
-index: 415
+index: 515
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-15
-postdate: 2016-04-15
-tags: [Flyweight]
+date: 2016-05-15
+postdate: 2016-05-15
+tags: [Flyweight Pattern]
 ---
 
-> Structural Pattern: Flyweight.
+> Structural Pattern: Flyweight Pattern.
 
 ## 4. Source Files
 * [Source files for Flyweight Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-flyweight)

@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Design Pattern - Null Object"
-index: 405
+index: 505
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-05
-postdate: 2016-04-05
+date: 2016-05-05
+postdate: 2016-05-05
 tags: [Null Object]
 ---
 

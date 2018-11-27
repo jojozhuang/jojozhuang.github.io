@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Design Pattern - DTO"
-index: 407
+index: 507
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-07
-postdate: 2016-04-07
+date: 2016-05-07
+postdate: 2016-05-07
 tags: [Data Transfer Object]
 ---
 

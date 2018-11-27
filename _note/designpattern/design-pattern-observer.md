@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Observer"
-index: 426
+index: 526
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-26
-postdate: 2016-04-26
-tags: [Observer]
+date: 2016-05-26
+postdate: 2016-05-26
+tags: [Observer Pattern]
 ---
 
-> Behavioral Pattern: Observer.
+> Behavioral Pattern: Observer Pattern.
 
 ## 4. Source Files
 * [Source files for Mediator Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-mediator)

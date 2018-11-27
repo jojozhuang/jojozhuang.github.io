@@ -1,16 +1,16 @@
 ---
 layout: note
 key: note
-title: "Design Pattern - Abstract Factory"
-index: 403
+title: "Design Pattern - Factory"
+index: 503
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-03
-postdate: 2016-04-03
-tags: [Factory, Abstract Factory]
+date: 2016-05-03
+postdate: 2016-05-03
+tags: [Factory, Abstract Factory, Factory Method]
 ---
 
-> Creational Pattern: Abstract Factory.
+> Creational Pattern: Factory Pattern.
 
 ## 1. Types of Factory Pattern
 * Simple Factory Pattern

@@ -2,18 +2,20 @@
 layout: note
 key: note
 title: "Design Pattern - Singleton"
-index: 402
+index: 502
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-02
-postdate: 2016-04-02
-tags: [Singleton]
+date: 2016-05-02
+postdate: 2016-05-02
+tags: [Singleton Pattern]
 ---
 
-> Creational Pattern: Singleton.
+> Creational Pattern: Singleton Pattern.
 
 ## 1. Singleton Pattern
-The Singleton design pattern is designed to restrict instantiation of a class to one object. The singleton pattern is implemented by creating a class with a method that creates a new instance of the object only if one does not already exist. If one does exist, it returns a reference to the object that already exists. If not, a new instance is created and a reference to that new object is returned. To make sure that the object cannot be instantiated any other way the constructor is made either private or protected. The 2 key points that are supported in the Singleton pattern are:
+The Singleton design pattern is designed to restrict instantiation of a class to one object. The singleton pattern is implemented by creating a class with a method that creates a new instance of the object only if one does not already exist. If one does exist, it returns a reference to the object that already exists. If not, a new instance is created and a reference to that new object is returned. To make sure that the object cannot be instantiated any other way the constructor is made either private or protected.
+
+The 2 key points that are supported in the Singleton pattern are:
 * Create a class that can only have one instance and allow the class to manage the one instance
 * Provide a global access point to the instance
 
@@ -40,7 +42,7 @@ public final class Singleton {
 * Declare a private constructor – only the Singleton class itself can instantiate a Singleton object using this constructor.
 * Declares a static reference to a Singleton object and invokes the private constructor.
 
-## 3. Implementation(Thread-safe)
+## 3. Optimization with Thread-safe
 ```java
 // Define class as final, so it can't be inherited
 public final class Singleton {
