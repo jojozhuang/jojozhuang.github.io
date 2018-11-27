@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Prototype"
-index: 406
+index: 506
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-06
-postdate: 2016-04-06
-tags: [Prototype]
+date: 2016-05-06
+postdate: 2016-05-06
+tags: [Prototype Pattern]
 ---
 
-> Creational Pattern: Prototype.
+> Creational Pattern: Prototype Pattern.
 
 
 ## 4. Source Files

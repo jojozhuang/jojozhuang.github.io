@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - State"
-index: 427
+index: 527
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-27
-postdate: 2016-04-27
-tags: [State]
+date: 2016-05-27
+postdate: 2016-05-27
+tags: [State Pattern]
 ---
 
-> Behavioral Pattern: State.
+> Behavioral Pattern: State Pattern.
 
 ## 4. Source Files
 * [Source files for State Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-state)

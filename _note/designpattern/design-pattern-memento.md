@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Memento"
-index: 425
+index: 525
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-25
-postdate: 2016-04-25
-tags: [Decorator]
+date: 2016-05-25
+postdate: 2016-05-25
+tags: [Decorator Pattern]
 ---
 
-> Behavioral Pattern: Memento.
+> Behavioral Pattern: Memento Pattern.
 
 The Memento design pattern defines three distinct roles:
 * Originator - the object that knows how to save itself.

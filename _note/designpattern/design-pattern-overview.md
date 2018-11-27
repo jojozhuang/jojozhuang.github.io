@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Design Pattern - Overview(Draft)"
-index: 401
+title: "Design Pattern - Overview"
+index: 501
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-01
-postdate: 2016-04-01
+date: 2016-05-01
+postdate: 2016-05-01
 tags: [Design Pattern]
 ---
 
@@ -14,8 +14,7 @@ tags: [Design Pattern]
 
 ## 1. Creational Patterns
 * [Singleton Pattern]({% link _note/designpattern/design-pattern-singleton.md %})
-* [Abstract Factory Pattern]({% link _note/designpattern/design-pattern-abstract-factory.md %})
-* [Factory Method Pattern]({% link _note/designpattern/design-pattern-factory-method.md %})
+* [Factory Pattern]({% link _note/designpattern/design-pattern-factory.md %})
 * [Builder Pattern]({% link _note/designpattern/design-pattern-builder.md %})
 * [Prototype Pattern]({% link _note/designpattern/design-pattern-prototype.md %})
 

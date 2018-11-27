@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Strategy"
-index: 428
+index: 528
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-28
-postdate: 2016-04-28
-tags: [Strategy]
+date: 2016-05-28
+postdate: 2016-05-28
+tags: [Strategy Pattern]
 ---
 
-> Behavioral Pattern: Strategy.
+> Behavioral Pattern: Strategy Pattern.
 
 ## 1. The Strategy Pattern
 As the Strategy pattern dictates, we encapsulate each of the identified algorithms in separate Impl classes, and make them interchangeable. The Strategy design pattern embodies two fundamental tenets of object-oriented (OO) design:

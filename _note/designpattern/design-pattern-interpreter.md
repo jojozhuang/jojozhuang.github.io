@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Interpreter"
-index: 422
+index: 522
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-22
-postdate: 2016-04-22
-tags: [Interpreter]
+date: 2016-05-22
+postdate: 2016-05-22
+tags: [Interpreter Pattern]
 ---
 
-> Behavioral Pattern: Interpreter.
+> Behavioral Pattern: Interpreter Pattern.
 
 ## 4. Source Files
 * [Source files for Interpreter Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-interpreter)

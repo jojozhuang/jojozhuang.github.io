@@ -2,15 +2,15 @@
 layout: note
 key: note
 title: "Design Pattern - Facade"
-index: 414
+index: 514
 category: designpattern
 image: /note/designpattern.png
-date: 2016-04-14
-postdate: 2016-04-14
-tags: [Facade]
+date: 2016-05-14
+postdate: 2016-05-14
+tags: [Facade Pattern]
 ---
 
-> Structural Pattern: Facade.
+> Structural Pattern: Facade Pattern.
 
 ## 1. The Strategy Pattern
 As the Strategy pattern dictates, we encapsulate each of the identified algorithms in separate Impl classes, and make them interchangeable. The Strategy design pattern embodies two fundamental tenets of object-oriented (OO) design:
