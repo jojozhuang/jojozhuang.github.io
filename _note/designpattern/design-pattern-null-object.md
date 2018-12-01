@@ -12,68 +12,224 @@ tags: [Null Object]
 
 > Null Object design pattern for creating objects.
 
-## 1. The Strategy Pattern
-As the Strategy pattern dictates, we encapsulate each of the identified algorithms in separate Impl classes, and make them interchangeable. The Strategy design pattern embodies two fundamental tenets of object-oriented (OO) design:
-* Encapsulate the Concept that Varies
-* Program to an Interface, Not an Implementation
+## 1. Null Object Pattern
 
-Use the strategy pattern when:
-* Many related classes differ only in their behavior.
-* You need different variants of an algorithm.
-* An algorithm uses data that client shouldn't know about.
-* You need to vary a behavior’s algorithm at run-time.
 
-## 2. Implementation
+## 2. Example of Implementation
+## 2.1 Interface
 ```java
-// Define class as final, so it can't be inherited
-public final class Singleton {
-    private static Singleton instance;
+public interface Shape {
+    double area();
+    double perimeter();
+    void draw();
+}
+```
+## 2.2 Classes
+```java
+public class Circle implements Shape {
+    private final double radius;
 
-    // Declare a private constructor to prevent class instances from being created in any other places
-    private Singleton() {}
+    public Circle (double radius) {
+        this.radius = radius;
+    }
 
-    // Use a static method to get instance of this class
-    public static Singleton getInstance() {
-        if (instance == null) {
-            instance = new Singleton();
-        }
+    @Override
+    public double area() {
+        // Area = πr^2
+        return Math.PI * Math.pow(radius, 2);
+    }
 
-        return instance;
+    @Override
+    public double perimeter() {
+        // Perimeter = 2πr
+        return 2 * Math.PI * radius;
+    }
+    @Override
+    public void draw() {
+        System.out.println("Drawing Circle with area: " + area() + " and perimeter: " + perimeter());
+    }
+}
+
+public class Rectangle implements Shape {
+    private final double width;
+    private final double height;
+
+    public Rectangle (double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double area() {
+        // A = w * h
+        return width * height;
+    }
+
+    @Override
+    public double perimeter() {
+        // P = 2(w + h)
+        return 2 * (width + height);
+    }
+
+    @Override
+    public void draw() {
+    	System.out.println("Drawing Rectangle with area: " + area() + " and perimeter: " + perimeter());
+    }
+}
+
+public class Triangle implements Shape {
+    private final double a;
+    private final double b;
+    private final double c;
+
+    public Triangle (double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    @Override
+    public double area() {
+        // Using Heron's formula:
+        // Area = SquareRoot(s * (s - a) * (s - b) * (s - c))
+        // where s = (a + b + c) / 2, or 1/2 of the perimeter of the triangle
+        double s = (a + b + c) / 2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    }
+
+    @Override
+    public double perimeter() {
+        // P = a + b + c
+        return a + b + c;
+    }
+
+    @Override public void draw() {
+    	System.out.println("Drawing Triangle with area: " + area() + " and perimeter: " + perimeter());
     }
 }
 ```
-* Declares class “Singleton” as final, so that subclasses cannot be created that could provide multiple instantiations.
-* Declare a private constructor – only the Singleton class itself can instantiate a Singleton object using this constructor.
-* Declares a static reference to a Singleton object and invokes the private constructor.
-
-## 3. Implementation(Thread-safe)
+### 2.3 Problematic Usage
 ```java
-// Define class as final, so it can't be inherited
-public final class Singleton {
-    private volatile static Singleton instance;
+public class ShapeFactory {
+    public static Shape createShape(String shapeType) {
+        Shape shape = null;
+        if ("Circle".equalsIgnoreCase(shapeType)) {
+            shape = new Circle(3);
+        } else if ("Rectangle".equalsIgnoreCase(shapeType)) {
+            shape = new Rectangle(2, 4);
+        } else if ("Triangle".equalsIgnoreCase(shapeType)) {
+            shape = new Triangle(3, 4, 5);
+        } // else return null
 
-    // Declare a private constructor to prevent class instances from being created in any other places
-    private Singleton() {}
+        return shape;
+    }
+}
+```
+When client using this factory to get shape instance, null-check is required if it returns null object. Otherwise, NullPointerException occurs.
+```java
+public class ShapeProcessor {
+    String[] shapeTypes = new String[] { "Circle", "Triangle", "Rectangle", null};
 
-    // Use a static method to get object of this class
-    public static synchronized Singleton getInstance() {
-        if (instance == null) {
-            synchronized (Singleton.class) {
-                if (instance == null) { // Double-Check!
-                    instance = new Singleton();
-                }
+    public ShapeProcessor () {
+
+    }
+
+    public void process() {
+        for (String shapeType : shapeTypes) {
+            Shape shape = ShapeFactory.createShape(shapeType);
+            if (shape != null) { // null-check is required if factory returns null object
+                System.out.println("Shape area: " + shape.area());
+                System.out.println("Shape Perimeter: " + shape.perimeter());
+                shape.draw();
+                System.out.println();
             }
         }
-
-        return instance;
     }
 }
 ```
-* For variables marked with the “volatile” keyword, threads will be required to access the value of “ourInstance” from main memory, rather than access cached variable values in local (thread) memory.
-* Double check to see if instance is null or not.
+### 2.4 Implementation with NullObject Pattern
+Create 'null' class as default shape.
+```java
+public class NullShape implements Shape {
 
-## 4. Source Files
-* [Source files for Singleton Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-singleton)
+    public NullShape () {}
 
-## 5. References
+    @Override
+    public double area() {
+        return 0.0d;
+    }
+
+    @Override
+    public double perimeter() {
+        return 0.0d;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Null object can't be drawn");
+    }
+}
+```
+Factory can now return the null object.
+```java
+public class ShapeFactory {
+    public static Shape createShape(String shapeType) {
+        Shape shape = null;
+        if ("Circle".equalsIgnoreCase(shapeType)) {
+            shape = new Circle(3);
+        } else if ("Rectangle".equalsIgnoreCase(shapeType)) {
+            shape = new Rectangle(2, 4);
+        } else if ("Triangle".equalsIgnoreCase(shapeType)) {
+            shape = new Triangle(3, 4, 5);
+        } else {
+            shape = new NullShape();
+        }
+        return shape;
+    }
+}
+```
+Now, client doesn't need the null check.
+```java
+public class ShapeProcessor {
+    String[] shapeTypes = new String[] { "Circle", "Triangle", "Rectangle", null};
+
+    public ShapeProcessor () {
+
+    }
+
+    public void process() {
+        for (String shapeType : shapeTypes) {
+            Shape shape = ShapeFactory.createShape(shapeType);
+            // no null-check required since shape factory always creates shape objects
+            System.out.println("Shape area: " + shape.area());
+            System.out.println("Shape Perimeter: " + shape.perimeter());
+            shape.draw();
+            System.out.println();
+        }
+    }
+}
+```
+Output.
+```sh
+Shape area: 28.274333882308138
+Shape Perimeter: 18.84955592153876
+Drawing Circle with area: 28.274333882308138 and perimeter: 18.84955592153876
+
+Shape area: 6.0
+Shape Perimeter: 12.0
+Drawing Triangle with area: 6.0 and perimeter: 12.0
+
+Shape area: 8.0
+Shape Perimeter: 12.0
+Drawing Rectangle with area: 8.0 and perimeter: 12.0
+
+Shape area: 0.0
+Shape Perimeter: 0.0
+Null object cant be drawn
+```
+
+## 3. Source Files
+* [Source files for Null Object Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-nullobject)
+
+## 4. References
 * [Null Object Pattern in Java](https://dzone.com/articles/null-object-pattern-in-java)
