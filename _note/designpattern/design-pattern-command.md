@@ -12,8 +12,67 @@ tags: [Command Pattern]
 
 > Behavioral Pattern: Command Pattern.
 
-## 4. Source Files
+## 1. Command Pattern
+
+## 2. Example
+### 2.1 Command
+```java
+public interface Command {
+    void execute();
+}
+
+public class Buy implements Command {
+    public void execute() {
+        System.out.println("Buy stock");
+    }
+}
+
+public class Sell implements Command {
+    public void execute() {
+        System.out.println("Sell stock");
+    }
+}
+```
+### 2.2 Broker
+```java
+public class Broker {
+    private List<Command> cmdList = new ArrayList<>();
+
+    public void acceptCommand(Command cmd){
+        cmdList.add(cmd);
+    }
+
+    public void executeCommand(){
+        for (Command cmd : cmdList) {
+            cmd.execute();
+        }
+        cmdList.clear();
+    }
+}
+```
+### 2.3 Client
+```java
+public class Client {
+    public void run() {
+        Buy buyStock = new Buy();
+        Sell sellStock = new Sell();
+
+        Broker broker = new Broker();
+        broker.acceptCommand(buyStock);
+        broker.acceptCommand(sellStock);
+
+        broker.executeCommand();
+    }
+}
+```
+Output.
+```sh
+Buy stock
+Sell stock
+```
+
+## 3. Source Files
 * [Source files for Command Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-command)
 
-## 5. References
+## 4. References
 * [Design Patterns - Command Pattern](https://www.tutorialspoint.com/design_pattern/command_pattern.htm)

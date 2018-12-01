@@ -28,7 +28,6 @@ tags: [Design Pattern]
 * [Proxy Pattern]({% link _note/designpattern/design-pattern-proxy.md %})
 
 ## 3. Behavioral Patterns
-* Chain of Responsibility Pattern
 * [Command Pattern]({% link _note/designpattern/design-pattern-command.md %})
 * [Interpreter Pattern]({% link _note/designpattern/design-pattern-interpreter.md %})
 * [Iterator Pattern]({% link _note/designpattern/design-pattern-iterator.md %})
