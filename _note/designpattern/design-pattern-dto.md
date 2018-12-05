@@ -1,7 +1,7 @@
 ---
 layout: note
 key: note
-title: "Design Pattern - DTO"
+title: "Design Pattern - DTO(Draft)"
 index: 507
 category: designpattern
 image: /note/designpattern.png

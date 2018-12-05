@@ -13,6 +13,7 @@ tags: [Proxy Pattern]
 > Structural Pattern: Proxy Pattern.
 
 ## 1. Proxy Pattern
+In proxy pattern, a class represents functionality of another class. The Proxy class provides a surrogate or place holder to provide access to an object.
 
 ## 2. Example
 ### 2.1 Internet

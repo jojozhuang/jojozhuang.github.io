@@ -13,7 +13,7 @@ tags: [Prototype Pattern]
 > Creational Pattern: Prototype Pattern.
 
 ## 1. Prototype Pattern
-
+Prototype pattern refers to creating duplicate object while keeping performance in mind. Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
 ## 2. Example of Implementation
 ## 2.1 Base Class

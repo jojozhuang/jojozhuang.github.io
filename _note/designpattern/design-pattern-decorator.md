@@ -13,6 +13,7 @@ tags: [Decorator Pattern]
 > Structural Pattern: Decorator Pattern.
 
 ## 1. Decorator Pattern
+The Decorator pattern allows a user to add new functionality to an existing object without altering its structure. This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
 
 ## 2. Example
 ### 2.1 Shapes

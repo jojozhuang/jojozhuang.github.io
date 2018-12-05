@@ -13,6 +13,7 @@ tags: [Interpreter Pattern]
 > Behavioral Pattern: Interpreter Pattern.
 
 ## 1. Interpreter Pattern
+The Interpreter pattern defines a grammatical representation for a language and an interpreter to interpret the grammar.
 
 ## 2. Example
 ### 2.1 Expression

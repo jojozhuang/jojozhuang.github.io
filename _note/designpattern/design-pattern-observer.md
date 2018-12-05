@@ -2,17 +2,18 @@
 layout: note
 key: note
 title: "Design Pattern - Observer"
-index: 526
+index: 527
 category: designpattern
 image: /note/designpattern.png
-date: 2016-05-26
-postdate: 2016-05-26
+date: 2016-05-27
+postdate: 2016-05-27
 tags: [Observer Pattern]
 ---
 
 > Behavioral Pattern: Observer Pattern.
 
 ## 1. Observer Pattern
+The Observer pattern defines a one-to-many relationship so that when one object changes state, the others are notified and updated automatically.
 
 ## 2. Example
 ### 2.1 Observer
@@ -117,8 +118,8 @@ George received message from server: We are using Java to send message!
 ```
 
 ## 3. Source Files
-* [Source files for Mediator Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-mediator)
+* [Source files for Observer Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-observer)
 
 ## 4. References
-* [Design Patterns - Mediator Pattern](https://www.tutorialspoint.com/design_pattern/mediator_pattern.htm)
-* [Mediator Design Pattern in Java](https://www.journaldev.com/1730/mediator-design-pattern-java)
+* [Design Patterns - Observer Pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm)
+* [Observer Design Pattern](https://sourcemaking.com/design_patterns/observer)

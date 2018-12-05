@@ -13,6 +13,7 @@ tags: [Iterator Pattern]
 > Behavioral Pattern: Iterator Pattern.
 
 ## 1. Iterator Pattern
+The Iterator pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation. This pattern is widely used in Java Collection Framework. `Iterator` interface provides methods for traversing through a collection.
 
 ## 2. Example
 ### 2.1 Course
