@@ -13,6 +13,7 @@ tags: [Bridge Pattern]
 > Structural Pattern: Bridge Pattern.
 
 ## 1. Bridge Pattern
+The Bridge pattern decouples an abstraction from its implementation, so that the two can vary independently.
 
 ## 2. Example
 ### 2.1 Workshop

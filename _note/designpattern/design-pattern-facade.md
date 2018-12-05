@@ -12,68 +12,87 @@ tags: [Facade Pattern]
 
 > Structural Pattern: Facade Pattern.
 
-## 1. The Strategy Pattern
-As the Strategy pattern dictates, we encapsulate each of the identified algorithms in separate Impl classes, and make them interchangeable. The Strategy design pattern embodies two fundamental tenets of object-oriented (OO) design:
-* Encapsulate the Concept that Varies
-* Program to an Interface, Not an Implementation
-
-Use the strategy pattern when:
-* Many related classes differ only in their behavior.
-* You need different variants of an algorithm.
-* An algorithm uses data that client shouldn't know about.
-* You need to vary a behavior’s algorithm at run-time.
+## 1. Facade Pattern
+The Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system.
 
 ## 2. Implementation
+### 2.1 Shape
 ```java
-// Define class as final, so it can't be inherited
-public final class Singleton {
-    private static Singleton instance;
+public interface Shape {
+    void draw();
+}
 
-    // Declare a private constructor to prevent class instances from being created in any other places
-    private Singleton() {}
+public class Circle implements Shape {
 
-    // Use a static method to get instance of this class
-    public static Singleton getInstance() {
-        if (instance == null) {
-            instance = new Singleton();
-        }
+    @Override
+    public void draw() {
+        System.out.println("Circle::draw()");
+    }
+}
 
-        return instance;
+public class Rectangle implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Rectangle::draw()");
+    }
+}
+
+public class Square implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Square::draw()");
     }
 }
 ```
-* Declares class “Singleton” as final, so that subclasses cannot be created that could provide multiple instantiations.
-* Declare a private constructor – only the Singleton class itself can instantiate a Singleton object using this constructor.
-* Declares a static reference to a Singleton object and invokes the private constructor.
-
-## 3. Implementation(Thread-safe)
+### 2.2 Facade Class
 ```java
-// Define class as final, so it can't be inherited
-public final class Singleton {
-    private volatile static Singleton instance;
 
-    // Declare a private constructor to prevent class instances from being created in any other places
-    private Singleton() {}
+public class ShapeMaker {
+    private Shape circle;
+    private Shape rectangle;
+    private Shape square;
 
-    // Use a static method to get object of this class
-    public static synchronized Singleton getInstance() {
-        if (instance == null) {
-            synchronized (Singleton.class) {
-                if (instance == null) { // Double-Check!
-                    instance = new Singleton();
-                }
-            }
-        }
+    public ShapeMaker() {
+        circle = new Circle();
+        rectangle = new Rectangle();
+        square = new Square();
+    }
 
-        return instance;
+    public void drawCircle(){
+        circle.draw();
+    }
+    public void drawRectangle(){
+        rectangle.draw();
+    }
+    public void drawSquare(){
+        square.draw();
+    }
+}
+````
+### 2.3 Client
+```java
+public class Client {
+    public void run() {
+        ShapeMaker shapeMaker = new ShapeMaker();
+
+        shapeMaker.drawCircle();
+        shapeMaker.drawRectangle();
+        shapeMaker.drawSquare();
     }
 }
 ```
-* For variables marked with the “volatile” keyword, threads will be required to access the value of “ourInstance” from main memory, rather than access cached variable values in local (thread) memory.
-* Double check to see if instance is null or not.
+Output.
+```sh
+Circle::draw()
+Rectangle::draw()
+Square::draw()
+```
 
-## 4. Source Files
-* [Source files for Singleton Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-singleton)
+## 3. Source Files
+* [Source files for Facade Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-facade)
 
-## 5. References
+## 4. References
+* [Design Patterns - Facade Pattern](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm)
 * [Facade Pattern Tutorial with Java Examples](https://dzone.com/articles/design-patterns-uncovered-1)

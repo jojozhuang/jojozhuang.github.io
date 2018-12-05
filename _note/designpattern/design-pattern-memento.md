@@ -7,13 +7,13 @@ category: designpattern
 image: /note/designpattern.png
 date: 2016-05-25
 postdate: 2016-05-25
-tags: [Decorator Pattern]
+tags: [Memento Pattern]
 ---
 
 > Behavioral Pattern: Memento Pattern.
 
 ## 1. Memento Pattern
-The Memento design pattern defines three distinct roles:
+The Memento pattern is used to restore state of an object to a previous state. Normally, this pattern defines three distinct roles:
 * Originator - the object that knows how to save itself.
 * Caretaker - the object that knows why and when the Originator needs to save and restore itself.
 * Memento - the lock box that is written and read by the Originator, and shepherded by the Caretaker.

@@ -33,6 +33,7 @@ tags: [Design Pattern]
 * [Iterator Pattern]({% link _note/designpattern/design-pattern-iterator.md %})
 * [Mediator Pattern]({% link _note/designpattern/design-pattern-mediator.md %})
 * [Memento Pattern]({% link _note/designpattern/design-pattern-memento.md %})
+* [Null Object Pattern]({% link _note/designpattern/design-pattern-null-object.md %})
 * [Observer Pattern]({% link _note/designpattern/design-pattern-observer.md %})
 * [State Pattern]({% link _note/designpattern/design-pattern-state.md %})
 * [Strategy Pattern]({% link _note/designpattern/design-pattern-strategy.md %})

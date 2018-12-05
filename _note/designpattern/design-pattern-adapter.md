@@ -13,6 +13,7 @@ tags: [Adapter Pattern]
 > Structural Pattern: Adapter Pattern.
 
 ## 1. Adapter Pattern
+The Adapter pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients. 
 
 ## 2. Example
 ```java

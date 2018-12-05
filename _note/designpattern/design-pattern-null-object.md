@@ -2,18 +2,23 @@
 layout: note
 key: note
 title: "Design Pattern - Null Object"
-index: 505
+index: 526
 category: designpattern
 image: /note/designpattern.png
-date: 2016-05-05
-postdate: 2016-05-05
+date: 2016-05-26
+postdate: 2016-05-26
 tags: [Null Object]
 ---
 
-> Null Object design pattern for creating objects.
+> Behavioral Pattern:  Null Object Pattern.
 
 ## 1. Null Object Pattern
+The Null Object pattern is used to encapsulate the absence of an object by providing a substitutable alternative that offers suitable default do nothing behavior. In short, a design where "nothing will come of nothing".
 
+Use the Null Object pattern when:
+* an object requires a collaborator. The Null Object pattern does not introduce this collaboration--it makes use of a collaboration that already exists
+* some collaborator instances should do nothing
+* you want to abstract the handling of null away from the client
 
 ## 2. Example of Implementation
 ## 2.1 Interface
@@ -232,4 +237,5 @@ Null object cant be drawn
 * [Source files for Null Object Pattern on GitHub](https://github.com/jojozhuang/design-patterns-java/tree/master/design-pattern-nullobject)
 
 ## 4. References
+* [Null Object Design Pattern](https://sourcemaking.com/design_patterns/null_object)
 * [Null Object Pattern in Java](https://dzone.com/articles/null-object-pattern-in-java)

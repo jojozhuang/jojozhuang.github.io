@@ -13,6 +13,7 @@ tags: [Command Pattern]
 > Behavioral Pattern: Command Pattern.
 
 ## 1. Command Pattern
+The Command pattern allows requests to be encapsulated as objects, thereby allowing clients to be parametrized with different requests. Command decouples the object that invokes the operation from the one that knows how to perform it.
 
 ## 2. Example
 ### 2.1 Command

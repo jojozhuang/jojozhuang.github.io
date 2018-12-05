@@ -13,6 +13,7 @@ tags: [Mediator Pattern]
 > Behavioral Pattern: Mediator Pattern.
 
 ## 1. Mediator
+The Mediator pattern is used to provide a centralized communication medium between different objects in a system.
 
 ## 2. Example
 ### 2.1 User

@@ -2,17 +2,18 @@
 layout: note
 key: note
 title: "Design Pattern - State"
-index: 527
+index: 528
 category: designpattern
 image: /note/designpattern.png
-date: 2016-05-27
-postdate: 2016-05-27
+date: 2016-05-28
+postdate: 2016-05-28
 tags: [State Pattern]
 ---
 
 > Behavioral Pattern: State Pattern.
 
 ## 1. State Pattern
+The State pattern allows an object to change its behavior when its internal state changes.
 
 ## 2. Example
 ### 2.1 State
@@ -76,3 +77,4 @@ Stop State
 
 ## 4. References
 * [Design Patterns - State Pattern](https://www.tutorialspoint.com/design_pattern/state_pattern.htm)
+* [State Design Pattern](https://sourcemaking.com/design_patterns/state)

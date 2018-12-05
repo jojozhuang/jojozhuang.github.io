@@ -13,6 +13,7 @@ tags: [Builder Pattern]
 > Creational Pattern: Builder Pattern.
 
 ## 1. Builder Pattern
+The Builder pattern separates the construction of a complex object from its representation so that the same construction process can create different representations.
 
 ## 2. Example
 ### 2.1 Pizza

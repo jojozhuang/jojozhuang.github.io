@@ -2,17 +2,18 @@
 layout: note
 key: note
 title: "Design Pattern - Template Method"
-index: 529
+index: 530
 category: designpattern
 image: /note/designpattern.png
-date: 2016-05-29
-postdate: 2016-05-29
+date: 2016-05-30
+postdate: 2016-05-30
 tags: [Template Method Pattern]
 ---
 
 > Behavioral Pattern: Template Method Pattern.
 
 ## 1. Template Method
+The Template Method design pattern is to define an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class.
 
 ## 2. Example
 ### 2.1 Template
