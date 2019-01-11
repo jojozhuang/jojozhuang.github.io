@@ -56,6 +56,6 @@ scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 
 ### 8. Change Owner of Entire Directory to Current User
 ```sh
-sudo chown $USER /ariba/ssp_mvn/ -R
+sudo chown $USER /ariba/ssp_git/ -R
 ```
 * `r` - Recursively change the owner for sub directories.
