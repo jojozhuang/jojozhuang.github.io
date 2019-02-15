@@ -162,16 +162,16 @@ public class CircularArrayDeque {
         if (isFull()) {
             return;
         }
-        // reset head if it reaches to the head
-        if (head == 0 && tail != arr.length - 1) {
+
+        if (head == -1) {
+            head = 0;
+            tail = 0;
+        } else if (head == 0) {
             head = arr.length - 1;
-            arr[head] = value;
         } else {
-            arr[--head] = value;
-            if (tail == -1) {
-                tail = 0;
-            }
+            head = head - 1;
         }
+        arr[head] = value;
     }
 
     // Remove the first item from the deque and return its value
@@ -204,19 +204,19 @@ public class CircularArrayDeque {
     // Add item to the end of the deque
     public void addLast(int value) {
         // check if deque is full
-    	if (isFull()) {
+        if (isFull()) {
             return;
         }
-        // reset tail if it reaches to the end
-        if (tail == arr.length - 1 && head != 0) {
+
+        if (head == -1) {
+            head = 0;
             tail = 0;
-            arr[tail] = value;
+        } else if (tail == arr.length - 1) {
+            tail = 0;
         } else {
-            arr[++tail] = value;
-            if (head == -1) {
-                head = 0;
-            }
+            tail = tail + 1;
         }
+        arr[tail] = value;
     }
 
     // Remove the last item from the deque and return its value

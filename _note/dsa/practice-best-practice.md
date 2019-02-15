@@ -279,6 +279,21 @@ res.addAll(set); // now, each list in res is unique
 ```java
 int[] dr = new int[]{-1, 0, 1, 0};
 int[] dc = new int[]{0, -1, 0, 1};
+
+// A is a given matrix
+int m = A.length;
+int n = A[0].length;
+for (int i = 0; i < 4; i++) {
+    int r = pos[0] + dr[i];
+    int c = pos[1] + dc[i];
+    if (r < 0 || r >= m || c < 0 || c >= n) {
+        continue;
+    }
+
+    if (A[r][c] == 1) {
+        // code here
+    }
+}
 ```
 ### 4.3 Get Int Value From Char
 ```java
