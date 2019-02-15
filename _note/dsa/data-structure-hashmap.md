@@ -214,7 +214,11 @@ public class HashMap<K, V> {
 * [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 ## 4. HashMap in Java
-TreeMap, HashMap, LinkedHashMap, WeakHashMap
+TreeMap, HashMap, LinkedHashMap, Hashtable, WeakHashMap
+* HashMap is implemented as a hash table, and there is no ordering on keys or values.
+* TreeMap is implemented based on red-black tree structure, and it is ordered by the key.
+* LinkedHashMap preserves the insertion order
+* Hashtable is synchronized, in contrast to HashMap.
 
 LinkedHashMap = DoublyLinkedList + HashMap
 ```java
@@ -233,3 +237,4 @@ For thread-unsafe hashmap, infinite loop may occur during rehashing. One thread 
 ## 6. Reference
 * [Java.util.HashMap in Java](https://www.geeksforgeeks.org/java-util-hashmap-in-java/)
 * [Implementing our Own Hash Table with Separate Chaining in Java](https://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/)
+* [HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap](https://dzone.com/articles/hashmap-vs-treemap-vs)
