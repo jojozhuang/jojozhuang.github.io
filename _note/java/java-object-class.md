@@ -30,3 +30,15 @@ Now, if you print, it will print value of name on called object.
 
 https://www.geeksforgeeks.org/equals-hashcode-methods-java/
 https://www.quora.com/Which-is-the-base-class-of-all-class-in-java
+
+
+Why is char[] preferred over String for passwords?
+Strings are immutable. That means once you've created the String, if another process can dump memory, there's no way (aside from reflection) you can get rid of the data before garbage collection kicks in.
+https://stackoverflow.com/questions/8881291/why-is-char-preferred-over-string-for-passwords
+
+
+final keyword in java
+* Final variable: to create constant variables.
+* Final methods: prevent method overriding
+* Final class: prevent inheritance
+https://www.geeksforgeeks.org/final-keyword-java/

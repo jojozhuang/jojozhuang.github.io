@@ -154,60 +154,89 @@ public class ArrayStack {
 No need to use circular array to implement stack. As you see how we implement stack with array, no space is wasted after `pop` operation. While in queue(implemented with array), empty cell appears after `poll` method gets called.
 
 ### 2.4 Using Two Queues
+Time complexity: push: O(1), pop: O(n), peek: O(1)
 ```java
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class QueueStack {
-    Queue<Integer> queue1;
-    Queue<Integer> queue2;
-    int lastnum = 0;
+    Queue<Integer> queue1; // Q1 always has all of the elements
+    Queue<Integer> queue2; // Q2 always be empty after pop
+    int top = 0;
 
+    // Initialize your data structure here.
     public QueueStack() {
-        queue1 = new LinkedList<Integer>(); // queue1 always has all of the elements
-        queue2 = new LinkedList<Integer>(); // queue2 always be empty after pop or top
+        queue1 = new LinkedList<Integer>();
+        queue2 = new LinkedList<Integer>();
     }
 
-    // Push new element onto stack
-    public void push(int value) {
-        queue1.offer(value);
+    // Push element x onto stack.
+    public void push(int x) {
+        queue1.offer(x);
+        top = x;
     }
 
-    // Remove the element on top of the stack and return that element
-    public int pop() throws Exception {
-        if (queue1.isEmpty()) {
-            throw new Exception();
+    // Removes the element on top of the stack and returns that element.
+    public int pop() {
+        while (queue1.size() > 1) {
+            top = queue1.poll();
+            queue2.offer(top);
         }
-        while (!queue1.isEmpty()) {
-            lastnum = queue1.poll();
-            if (!queue1.isEmpty()) {
-                queue2.offer(lastnum);
-            }
-        }
+        int res = queue1.poll();
         Queue<Integer> temp = queue1;
         queue1 = queue2;
         queue2 = temp;
-        return lastnum;
+        return res;
     }
 
-    // Get the top element
-    public int peek() throws Exception {
-        if (queue1.isEmpty()) {
-            throw new Exception();
-        }
-        while (!queue1.isEmpty()) {
-            lastnum = queue1.poll();
-            queue2.offer(lastnum);
-        }
-        Queue<Integer> temp = queue1;
-        queue1 = queue2;
-        queue2 = temp;
-        return lastnum;
+    // Get the top element.
+    public int top() {
+        return top;
     }
 
-    // Return whether the stack is empty
-    public boolean isEmpty() {
+    // Returns whether the stack is empty.
+    public boolean empty() {
         return queue1.isEmpty();
+    }
+}
+```
+### 2.5 Using One Queue
+Time complexity: push: O(n), pop: O(1), peek: O(1)
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueStack {
+    private LinkedList<Integer> queue;
+
+    /** Initialize your data structure here. */
+    public QueueStack() {
+        queue = new LinkedList<>();
+    }
+
+    /** Push element x onto stack. */
+    public void push(int x) {
+        queue.add(x);
+        int sz = queue.size();
+        while (sz > 1) {
+            queue.add(queue.remove());
+            sz--;
+        }
+    }
+
+    /** Removes the element on top of the stack and returns that element. */
+    public int pop() {
+        return queue.remove();
+    }
+
+    /** Get the top element. */
+    public int top() {
+        return queue.peek();
+    }
+
+    /** Returns whether the stack is empty. */
+    public boolean empty() {
+        return queue.isEmpty();
     }
 }
 ```

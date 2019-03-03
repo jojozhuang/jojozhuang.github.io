@@ -173,24 +173,18 @@ Check whether there is any cycle exists in a given linked list. The below approa
  *
  */
 public boolean hasCycle(ListNode head) {
-    if (head == null) {
+    if (head == null || head.next == null) {
         return false;
     }
 
-    ListNode fast = new ListNode(0);
-    fast.next = head;
-    ListNode slow = new ListNode(1);
-    slow.next = head;
+    ListNode fast = head.next; // or ListNode fast = head.next
+    ListNode slow = head;
 
-    while (fast != null) {
-        if (fast.next == null) {
-            return false;
-        } else {
-            fast = fast.next.next;
-            slow = slow.next;
-            if (fast == slow) { // Compare object, not its value. Nodes with same value may exist.
-                return true;
-            }
+    while (fast != null && fast.next != null) {
+        fast = fast.next.next;
+        slow = slow.next;
+        if (fast == slow) {
+            return true;
         }
     }
 
@@ -226,7 +220,7 @@ public ListNode detectCycle(ListNode head) {
         return null;
     }
 
-    ListNode fast = head;
+    ListNode fast = head; // ListNode fast = head.next doesn't work
     ListNode slow = head;
 
     while (fast != null && fast.next != null) {

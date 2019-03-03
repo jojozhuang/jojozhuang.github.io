@@ -72,7 +72,7 @@ private int gcd(int x, int y) {
 }
 ```
 
-### 1.3 Valid Perfect Square(leetcode 367)
+### 1.4 Valid Perfect Square(leetcode 367)
 ```java
 // Newton Method
 public boolean isPerfectSquare(int num) {
@@ -83,7 +83,55 @@ public boolean isPerfectSquare(int num) {
     return x * x == num;
 }
 ```
+### 1.5 Check Integer is Prime
+Prime number: 2,3,5,7,11,13,17,19,23,29 ...
 
+Naive approach.
+```java
+// time: O(n)
+private boolean isPrime(int n) {
+    if (n < 2) {
+        return false;
+    }
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+Improved by setting the ceiling to square root of n, see [here](https://www.mkyong.com/java/how-to-determine-a-prime-number-in-java/).
+```java
+ // time: sqrt(n)
+private boolean isPrime(int n) {
+    if (n < 2) {
+        return false;
+    }
+    int sqrt = (int)Math.sqrt(n);
+    for (int i = 2; i <= sqrt; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+Same idea but without using sqrt.
+```java
+// time: sqrt(n)
+private boolean isPrime(int n) {
+    if (n < 2) {
+        return false;
+    }
+    for (int i = 2; i*i <= n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
 
 ## 2. Slot
 
@@ -96,3 +144,4 @@ Complex number = real parts and imaginary parts
 * [Program to find GCD or HCF of two numbers](https://www.geeksforgeeks.org/c-program-find-gcd-hcf-two-numbers/)
 * [Greatest Common Divisor(GCD)](https://blog.csdn.net/tigerisland45/article/details/51151529)
 * [Greatest common divisor on wikipedia](https://en.wikipedia.org/wiki/Greatest_common_divisor)
+* [How to determine a prime number in Java](https://www.mkyong.com/java/how-to-determine-a-prime-number-in-java/)

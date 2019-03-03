@@ -8,7 +8,16 @@ tags: [Git]
 
 > Common Git Commands
 
-## 1. Branch
+## 1. Git Configuration
+List all git settings.
+```sh
+git config --list
+```
+Change configuration. For example, change the remote url.
+```sh
+git config remote.origin.url "https://github.com/jojozhuang"
+```
+## 2. Branch
 Check current branch
 ```sh
 git branch --list
@@ -23,7 +32,7 @@ $ git checkout -b [name_of_your_new_branch]
 $ git branch [name_of_your_new_branch]
 ```
 
-## 2. Status
+## 3. Status
 Check all change status
 ```sh
 git status
@@ -33,7 +42,7 @@ Check log
 git log
 ```
 
-## 3. Files
+## 4. Files
 Add file
 ```sh
 git add [path_of_file]
@@ -43,7 +52,7 @@ Remove file
 git checkout [path_of_file]
 ```
 
-## 4. Submit change
+## 5. Submit change
 Commit change
 ```sh
 git commit -m "message of the commit"
@@ -53,5 +62,5 @@ Push to remote
 git push
 ```
 
-## 5. References
+## 6. References
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
