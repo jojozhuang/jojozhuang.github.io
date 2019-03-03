@@ -211,6 +211,7 @@ public int fibonacci(int n) {
 * [LeetCode 132 - Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
 * [LeetCode 139 - Word Break](https://leetcode.com/problems/word-break/)
 * [LeetCode 140 - Word Break II](https://leetcode.com/problems/word-break-ii/)
+* [LeetCode 674 - Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
 * [LeetCode 300 - Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 * [LeetCode 198 - House Robber](https://leetcode.com/problems/house-robber/)
 * [LeetCode 213 - House Robber II](https://leetcode.com/problems/house-robber-ii)

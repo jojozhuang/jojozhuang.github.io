@@ -20,6 +20,10 @@ private class IntervalComparator implements Comparator<Interval> {
         return i1.start - i2.start;
     }
 }
+// three return values
+// -1, i1 < i2
+// 0, i1 = i2
+// 1, i1 > i2
 ```
 ### 1.2 Sorting Array by Another Array's Value.
 ```java
@@ -182,10 +186,11 @@ public boolean isUniqueChars(String str) {
 ## 3. Useful Methods in Java
 ### 3.1 String and Character
 ```java
-String.toCharArray()
-StringBuilder.append()
+String.toCharArray();          // string to char array
+StringBuilder.append()         // concatenate string
+sb.setLength(sb.length() - 1); // delete last character of a StringBuilder?
 
-Character.isDigit(c) // same to c >= '0' && c <= '9'
+Character.isDigit(c)           // same to c >= '0' && c <= '9'
 Character.isLetterOrDigit(c);
 ```
 Split string with regex.
@@ -238,7 +243,11 @@ Flip bit with XOR, change 1 to 0 and change 0 to 1.
 ```java
 bit ^ 1
 ```
-
+Power
+```java
+int left = 3;
+int pow = 1 << left; // pow = 8
+```
 ## 4. Data Structure Related Questions
 ### 4.1 Linked List
 * Consider recursion first, then iteration.

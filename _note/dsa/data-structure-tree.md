@@ -65,16 +65,16 @@ public class TreeNode {
 * Postorder -> left child, right child, root
 
 Implementation ways:
-* Recursion
+* Recursive
 * Divide and Conquer
-* Traversal
+* Iterative
 
 2) Breadth First Traversals:
 * Level order traversal
 
 Most of the tree traversal problems have the `O(n)` time complexity.
 
-### 2.4 Implementation of Binary Tree Traversal - Recursion
+### 2.4 Implementation of Binary Tree Traversal - Recursive
 Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 // pre-order, recursive
@@ -147,7 +147,7 @@ private void postorderHelper(TreeNode root, List<Integer> res) {
     res.add(root.val);
 }
 ```
-### 2.5 Implementation of Binary Tree Traversal - Divide Conquer
+### 2.5 Implementation of Binary Tree Traversal - Divide and Conquer
 Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 // pre-order, Divide Conquer
@@ -213,7 +213,7 @@ public List<Integer> postorderDivideConquer(TreeNode root) {
     return res;
 }
 ```
-### 2.6 Implementation of Binary Tree Traversal - Traversal
+### 2.6 Implementation of Binary Tree Traversal - Iterative
 Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 // pre-order, traverse with stack
@@ -431,7 +431,7 @@ public List<Integer> postorderTraversal2(TreeNode root) {
 ### 2.8 Level-Order Traversal on Binary Tree
 Given binary tree {3,9,20,#,#,15,7} as follows.
 ![image](/public/notes/data-structure-tree/tree_level_order.png){:width="350px"}
-Return its level order traversal as:  
+Return its level order traversal as below.
 ```raw
  [  
    [3],  
@@ -439,7 +439,7 @@ Return its level order traversal as:
    [15,7]  
  ]  
 ```
-Use Queue to traverse the tree by layer.
+Approach 1: BSF: Use Queue to traverse the tree by layer.
 ```java
 /**
  * @param root, the root node of a tree
@@ -472,6 +472,28 @@ public List<List<Integer>> levelOrder(TreeNode root) {
     }
 
     return res;
+}
+```
+Approach 2: DFS: recursive
+```java
+public List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> ans = new ArrayList<List<Integer>>();
+
+    helper(root, ans, 0);
+
+    return ans;
+}
+private void helper(TreeNode root, List<List<Integer>> list, int height) {
+    if (root == null) {
+        return;
+    }
+
+    if (height >= list.size()) {
+        list.add(new ArrayList<Integer>());
+    }
+    list.get(height).add(root.val);
+    helper(root.left, list, height + 1);
+    helper(root.right, list, height + 1);
 }
 ```
 

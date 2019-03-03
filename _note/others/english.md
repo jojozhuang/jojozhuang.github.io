@@ -20,6 +20,7 @@ tags: [English]
 * `!` exclamation mark
 * `#` hash mark
 * `|` pipe
+* `^` caret
 * `~` tilde(twiddle)
 * `x` cross sign
 * `""` double quotes
@@ -53,6 +54,7 @@ tags: [English]
 * square root: 平方根
 * cartesian product: 笛卡儿积
 * algebraic: 代数的
+* perimeter: 周长
 * geometry: 几何
 * diagonal: 斜线
 * slope: 斜率
@@ -83,6 +85,8 @@ tags: [English]
 * wild card: 通配符
 * successor: 继承者
 * predecessor: 前任，前辈
+* pruning: 剪枝
+* xor: Exclusive Or
 
 ## 4. Others:
 * within bound: 在边界之内

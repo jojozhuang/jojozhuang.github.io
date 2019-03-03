@@ -1,0 +1,21 @@
+---
+layout: note
+key: note
+title: "Java - Generics"
+index: 208
+category: java
+image: /note/programming.png
+date: 2016-02-08
+postdate: 2016-02-08
+tags: [Generic Types]
+---
+
+> Generic Types
+
+## 1. Type Erasure
+Type erasure is a process in which compiler replaces a generic parameter with actual class or bridge method. In type erasure, compiler ensures that no extra classes are created and there is no runtime overhead.
+
+
+Methods Erasure
+
+https://www.tutorialspoint.com/java_generics/index.htm
