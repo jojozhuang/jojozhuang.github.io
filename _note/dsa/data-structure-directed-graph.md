@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Directed Graph(Draft)"
-index: 312
+index: 316
 category: dsa
 image: note/dsa.png
-date: 2016-03-12
-postdate: 2016-03-12
+date: 2016-03-16
+postdate: 2016-03-16
 tags: [Directed Graph, Topological Sorting]
 ---
 

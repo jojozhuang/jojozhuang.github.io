@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - LRU Cache"
-index: 315
+index: 305
 category: dsa
 image: note/dsa.png
-date: 2016-03-15
-postdate: 2016-03-15
+date: 2016-03-05
+postdate: 2016-03-05
 tags: [LRU]
 mathjax: true
 ---

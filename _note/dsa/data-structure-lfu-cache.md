@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - LFU Cache(Draft)"
-index: 316
+index: 306
 category: dsa
 image: note/dsa.png
-date: 2016-03-16
-postdate: 2016-03-16
+date: 2016-03-06
+postdate: 2016-03-06
 tags: [LFU]
 mathjax: true
 ---

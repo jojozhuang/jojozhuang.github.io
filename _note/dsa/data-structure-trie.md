@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Trie"
-index: 307
+index: 309
 category: dsa
 image: /note/dsa.png
-date: 2016-03-07
-postdate: 2016-03-07
+date: 2016-03-09
+postdate: 2016-03-09
 tags: [Trie, Prefix Tree]
 ---
 

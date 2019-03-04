@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Data Structure - Graph"
-index: 314
+title: "Data Structure - Graph 2"
+index: 315
 category: dsa
 image: note/dsa.png
-date: 2016-03-14
-postdate: 2016-03-14
+date: 2016-03-15
+postdate: 2016-03-15
 tags: [Graph, DFS, BFS]
 mathjax: true
 ---

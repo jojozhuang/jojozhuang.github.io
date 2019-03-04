@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - HashMap"
-index: 309
+index: 312
 category: dsa
 image: note/dsa.png
-date: 2016-03-09
-postdate: 2016-03-09
+date: 2016-03-12
+postdate: 2016-03-12
 tags: [Hash, HashMap, Load Factor, Rehashing]
 mathjax: true
 ---
@@ -71,7 +71,7 @@ public class HashNode<K, V> {
     }
 }
 ```
-### 2.5 HashMap
+### 2.5 Implementation of HashMap
 Generic HashMap.
 ```java
 public class HashMap<K, V> {
@@ -208,7 +208,207 @@ public class HashMap<K, V> {
     }
 }
 ```
+Integer type, implemented with node.
+```java
+class MyHashMap {
+    class HashNode {
+        int key, val;
+        HashNode next;
 
+        HashNode(int key, int val) {
+            this.key = key;
+            this.val = val;
+        }
+    }
+    HashNode[] bucket;
+    /** Initialize your data structure here. */
+    public MyHashMap() {
+        bucket = new HashNode[1000000];
+    }
+
+    /** value will always be non-negative. */
+    public void put(int key, int value) {
+        int hash = hashFunc(key);
+        if (bucket[hash] == null) {
+            bucket[hash] = new HashNode(key, value);
+        } else {
+            HashNode header = bucket[hash];
+            while (header != null && header.next != null) {
+                if (header.key == key) {
+                    header.val = value;
+                    return;
+                }
+                header = header.next;
+            }
+            if (header.key == key) {
+                header.val = value;
+            } else {
+                header.next = new HashNode(key, value);
+            }
+        }
+    }
+
+    /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
+    public int get(int key) {
+        int hash = hashFunc(key);
+        if (bucket[hash] == null) {
+            return -1;
+        } else {
+            HashNode header = bucket[hash];
+            while (header != null) {
+                if (header.key == key) {
+                    return header.val;
+                }
+                header = header.next;
+            }
+            return -1;
+        }
+    }
+
+    /** Removes the mapping of the specified value key if this map contains a mapping for the key */
+    public void remove(int key) {
+        int hash = hashFunc(key);
+        if (bucket[hash] == null) {
+            return;
+        } else {
+            HashNode dummy = new HashNode(0, 0);
+            dummy.next = bucket[hash];
+            HashNode prev = dummy;
+            HashNode curr = dummy.next;
+            while (curr != null) {
+                if (curr.key == key) {
+                    prev.next = curr.next;
+                    break;
+                }
+                curr = curr.next;
+                prev = prev.next;
+            }
+            bucket[hash] = dummy.next;
+        }
+    }
+
+    private int hashFunc(int key) {
+        return key % 1000000;
+    }
+}
+```
+### 2.6 Implementation of HashSet
+Implemented with node.
+```java
+public class MyHashSet {
+    class HashNode {
+        int key;
+        HashNode next;
+
+        HashNode(int key) {
+            this.key = key;
+        }
+    }
+
+    HashNode[] bucket;
+    public MyHashSet() {
+        bucket = new HashNode[1000000];
+    }
+
+    public void add(int key) {
+        int hash = hashFunc(key);
+        if (bucket[hash] == null) {
+            bucket[hash] = new HashNode(key);
+        } else {
+            HashNode header = bucket[hash];
+            while (header != null) {
+                if (header.key == key) {
+                    return;
+                }
+                if (header.next == null) {
+                    header.next = new HashNode(key);
+                } else {
+                    header = header.next;
+                }
+            }
+        }
+    }
+
+    public void remove(int key) {
+        int hash = hashFunc(key);
+        if (bucket[hash] == null) {
+            return;
+        } else {
+            HashNode dummy = new HashNode(0);
+            dummy.next = bucket[hash];
+            HashNode prev = dummy;
+            HashNode curr = dummy.next;
+            while (curr != null) {
+                if (curr.key == key) {
+                    prev.next = curr.next;
+                    break;
+                }
+                curr = curr.next;
+                prev = prev.next;
+            }
+            bucket[hash] = dummy.next;
+        }
+    }
+
+    public boolean contains(int key) {
+        int hash = hashFunc(key);
+        if (bucket[hash] == null) {
+            return false;
+        } else {
+            HashNode header = bucket[hash];
+            while (header != null) {
+                if (header.key == key) {
+                    return true;
+                }
+                header = header.next;
+            }
+            return false;
+        }
+    }
+
+    private int hashFunc(int key) {
+        return key % 1000000;
+    }
+}
+```
+Implemented with array.
+```java
+public class MyHashSet {
+    int[] arr;
+    private int capacity = 1000000;
+
+    // Initialize your data structure here.
+    public MyHashSet() {
+        arr = new int[capacity];
+        // Create empty chains
+        for (int i = 0; i < capacity; i++) {
+            arr[i] = Integer.MIN_VALUE;
+        }
+    }
+
+    public void add(int key) {
+        int hash = hashFunc(key);
+        arr[hash] = key;
+    }
+
+    public void remove(int key) {
+        int hash = hashFunc(key);
+        if (arr[hash] == key) {
+            arr[hash] = Integer.MIN_VALUE;
+        }
+    }
+
+    public boolean contains(int key) {
+        int hash = hashFunc(key);
+        return arr[hash] != Integer.MIN_VALUE;
+    }
+
+    // hash function
+    private int hashFunc(int key) {
+        return key % capacity;
+    }
+}
+```
 ## 3. Classic Problems
 * [LeetCode 1 - Two Sum](https://leetcode.com/problems/two-sum/)
 * [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)

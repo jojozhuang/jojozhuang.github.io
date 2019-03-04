@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Fenwick Tree(Draft)"
-index: 314
+index: 311
 category: dsa
 image: note/dsa.png
-date: 2016-03-14
-postdate: 2016-03-14
+date: 2016-03-11
+postdate: 2016-03-11
 tags: [BIT]
 ---
 
