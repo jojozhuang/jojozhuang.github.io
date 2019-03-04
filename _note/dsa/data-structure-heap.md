@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Heap"
-index: 310
+index: 313
 category: dsa
 image: note/dsa.png
-date: 2016-03-10
-postdate: 2016-03-10
+date: 2016-03-13
+postdate: 2016-03-13
 tags: [Max Heap, Min Heap]
 mathjax: true
 ---

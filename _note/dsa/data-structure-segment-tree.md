@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Segment Tree"
-index: 308
+index: 310
 category: dsa
 image: /note/dsa.png
-date: 2016-03-08
-postdate: 2016-03-08
+date: 2016-03-10
+postdate: 2016-03-10
 tags: [Segment Tree, Interval Tree]
 mathjax: true
 ---

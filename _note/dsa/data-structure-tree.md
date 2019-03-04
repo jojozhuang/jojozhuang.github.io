@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Data Structure - Tree"
-index: 305
+index: 307
 category: dsa
 image: /note/dsa.png
-date: 2016-03-05
-postdate: 2016-03-05
+date: 2016-03-07
+postdate: 2016-03-07
 tags: [Tree, Binary Tree]
 mathjax: true
 ---
@@ -79,22 +79,22 @@ Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 // pre-order, recursive
 public List<Integer> preorderRecursion(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
     if (root == null) {
-        return res;
+        return list;
     }
 
-    preorderHelper(root, res);
+    preorderHelper(root, list);
 
-    return res;
+    return list;
 }
 
-private void preorderHelper(TreeNode root, List<Integer> res) {
+private void preorderHelper(TreeNode root, List<Integer> list) {
     if (root == null) {
         return;
     }
 
-    res.add(root.val);
+    list.add(root.val);
     preorderHelper(root.left, res);
     preorderHelper(root.right, res);
 }
@@ -103,47 +103,47 @@ In-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,1,4,3,5].
 ```java
 // in-order, recursive
 public List<Integer> inorderRecursion(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
     if (root == null) {
-        return res;
+        return list;
     }
 
-    inorderHelper(root, res);
+    inorderHelper(root, list);
 
-    return res;
+    return list;
 }
 
-private void inorderHelper(TreeNode root, List<Integer> res) {
+private void inorderHelper(TreeNode root, List<Integer> list) {
     if (root == null) {
         return;
     }
 
-    inorderHelper(root.left, res);
+    inorderHelper(root.left, list);
     res.add(root.val);
-    inorderHelper(root.right, res);
+    inorderHelper(root.right, list);
 }
 ```
 Post-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,4,5,3,1].
 ```java
 // post-order, recursive
 public List<Integer> postorderRecursion(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
     if (root == null) {
-        return res;
+        return list;
     }
 
-    postorderHelper(root, res);
+    postorderHelper(root, list);
 
-    return res;
+    return list;
 }
 
-private void postorderHelper(TreeNode root, List<Integer> res) {
+private void postorderHelper(TreeNode root, List<Integer> list) {
     if (root == null) {
         return;
     }
 
-    postorderHelper(root.left, res);
-    postorderHelper(root.right, res);
+    postorderHelper(root.left, list);
+    postorderHelper(root.right, list);
     res.add(root.val);
 }
 ```
@@ -152,9 +152,9 @@ Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 // pre-order, Divide Conquer
 public List<Integer> preorderDivideConquer(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
     if (root == null) {
-        return res;
+        return list;
     }
 
     // divide
@@ -162,21 +162,21 @@ public List<Integer> preorderDivideConquer(TreeNode root) {
     List<Integer> right = preorderDivideConquer(root.right);
 
     // conquer
-    res.add(root.val);
-    res.addAll(left);
-    res.addAll(right);
+    list.add(root.val);
+    list.addAll(left);
+    list.addAll(right);
 
-    return res;
+    return list;
 }
 ```
 In-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,1,4,3,5].
 ```java
 // in-order, Divide Conquer
 public List<Integer> inorderDivideConquer(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
 
     if (root == null) {
-        return res;
+        return list;
     }
 
     // divide
@@ -184,21 +184,21 @@ public List<Integer> inorderDivideConquer(TreeNode root) {
     List<Integer> right = inorderDivideConquer(root.right);
 
     // conquer
-    res.addAll(left);
-    res.add(root.val);
-    res.addAll(right);
+    list.addAll(left);
+    list.add(root.val);
+    list.addAll(right);
 
-    return res;
+    return list;
 }
 ```
 Post-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,4,5,3,1].
 ```java
 // post-order, Divide Conquer
 public List<Integer> postorderDivideConquer(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
 
     if(root == null) {
-        return res;
+        return list;
     }
 
     // divide
@@ -206,11 +206,11 @@ public List<Integer> postorderDivideConquer(TreeNode root) {
     List<Integer> right = postorderDivideConquer(root.right);
 
     // conquer
-    res.addAll(left);
-    res.addAll(right);
-    res.add(root.val);
+    list.addAll(left);
+    list.addAll(right);
+    list.add(root.val);
 
-    return res;
+    return list;
 }
 ```
 ### 2.6 Implementation of Binary Tree Traversal - Iterative
@@ -218,18 +218,16 @@ Pre-Order: Given binary tree {1,2,3,#,#,4,5}, output [1,2,3,4,5].
 ```java
 // pre-order, traverse with stack
 public List<Integer> preorderTraversal(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
-
+    List<Integer> list = new ArrayList<>();
     if (root == null) {
-        return res;
+        return list;
     }
 
-    Stack<TreeNode> stack = new Stack<TreeNode>();
+    Stack<TreeNode> stack = new Stack<>();
     stack.push(root);
-    while (!stack.empty()) {
+    while (!stack.isEmpty()) {
         TreeNode node = stack.pop();
-        res.add(node.val);
-
+        list.add(node.val);
         if (node.right != null) {
             stack.push(node.right);
         }
@@ -237,70 +235,60 @@ public List<Integer> preorderTraversal(TreeNode root) {
             stack.push(node.left);
         }
     }
-
-    return res;
+    return list;
 }
 ```
 In-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,1,4,3,5].
 ```java
 // in-order, traverse with stack
 public List<Integer> inorderTraversal(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
-
+    List<Integer> list = new ArrayList<>();
     if (root == null) {
-        return res;
+        return list;
     }
 
-    Stack<TreeNode> stack = new Stack<TreeNode>();
+    Stack<TreeNode> stack = new Stack<>();
     TreeNode curr = root;
-
-    while (curr != null || !stack.empty()) {
+    while (curr != null || !stack.isEmpty()) {
         while (curr != null) {
             stack.push(curr);
             curr = curr.left;
         }
         curr = stack.pop();
-        res.add(curr.val);
+        list.add(curr.val);
         curr = curr.right;
     }
-
-    return res;
+    return list;
 }
 ```
 Post-Order: Given binary tree {1,2,3,#,#,4,5}, output [2,4,5,3,1].
 ```java
 // post-order, traverse with stack
 public List<Integer> postorderTraversal(TreeNode root) {
-    List<Integer> res = new ArrayList<Integer>();
-
+    List<Integer> list = new ArrayList<Integer>();
     if (root == null) {
-        return res;
+        return list;
     }
 
     Stack<TreeNode> stack = new Stack<TreeNode>();
-    stack.push(root);
-
-    while (!stack.isEmpty()) {
-        TreeNode node = stack.peek();
-        if (node.left == null) {
-            if (node.right != null) {
-                stack.push(node.right);
-                node.right = null;
-            } else {
-                res.add(node.val);
-                stack.pop();
-            }
+    TreeNode curr = root;
+    while (curr != null || !stack.empty()) {
+        while (curr != null) {
+            stack.push(curr);
+            curr = curr.left;
+        }
+        curr = stack.peek();
+        if (curr.right == null) {
+            stack.pop();
+            list.add(curr.val);
+            curr = null;
         } else {
-            if (node.right != null) {
-                stack.push(node.right);
-                node.right = null;
-            }
-            stack.push(node.left);
-            node.left = null;
+            TreeNode right = curr.right;
+            curr.right = null; // avoid being added to stack again.
+            curr = right;
         }
     }
-
-    return res;
+    return list;
 }
 ```
 ### 2.7 Binary Tree Traversal(General Template)
