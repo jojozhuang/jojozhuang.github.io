@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Bloom Filter"
-index: 324
+title: "Algorithm - Bloom Filter(Draft)"
+index: 331
 category: dsa
 image: note/dsa.png
-date: 2016-03-24
-postdate: 2016-03-24
+date: 2016-03-31
+postdate: 2016-03-31
 tags: [BFS]
 ---
 

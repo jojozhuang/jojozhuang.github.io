@@ -319,17 +319,18 @@ public class NodeGraph {
 ```
 ### 4.2 Search
 Both DFS and BFS approaches can be applied to Node Graph.
+
+1) Traverse all nodes in graph with DFS.
 ```java
 // dfs, stack
-private Stack<Node> stack = new Stack<Node>();
-public String[] dfs(Node root) {
-    String[] res = new String[nodes.length];
+public List<String> dfs(Node root) {
+    List<String> ans = new ArrayList<>();
     if (root == null) {
-        return res;
+        return ans;
     }
+    Stack<Node> stack = new Stack<Node>();
     root.visited = true;
-    int idx = 0;
-    res[idx++] = root.name;
+    ans.add(root.name);
     stack.push(root);
     while (!stack.isEmpty()) {
         Node node = stack.peek();
@@ -338,12 +339,12 @@ public String[] dfs(Node root) {
             stack.pop();
         } else {
             neighbor.visited = true;
-            res[idx++] = neighbor.name;
+            ans.add(neighbor.name);
             stack.push(neighbor);
         }
     }
 
-    return res;
+    return ans;
 }
 private Node getUnvisitedNeighbor(Node node) {
     for (int i = 0; i < node.neighbors.length; i++) {
@@ -352,31 +353,6 @@ private Node getUnvisitedNeighbor(Node node) {
         }
     }
     return null;
-}
-
-// bfs
-private Queue<Node> queue = new LinkedList<Node>();
-public String[] bfs(Node root) {
-    String[] res = new String[nodes.length];
-    if (root == null) {
-        return res;
-    }
-    root.visited = true;
-    int idx = 0;
-    res[idx++] = root.name;
-    queue.offer(root);
-    while (!queue.isEmpty()) {
-        Node node = queue.poll();
-        for (Node neighbor : node.neighbors) {
-            if (neighbor.visited == false) {
-                neighbor.visited = true;
-                res[idx++] = neighbor.name;
-                queue.offer(neighbor);
-            }
-        }
-    }
-
-    return res;
 }
 ```
 For the DFS search, we can simplify the implementation without using stack. The dfs2 method calls itself recursively to generate the list.
@@ -393,6 +369,31 @@ public void dfs2(Node root, List<String> list) {
             dfs2(neighbor, list);
         }
     }
+}
+```
+2) Traverse all nodes in graph with BFS.
+```java
+public List<String> bfs(Node root) {
+    List<String> ans = new ArrayList<>();
+    if (root == null) {
+        return ans;
+    }
+    Queue<Node> queue = new LinkedList<Node>();
+    root.visited = true;
+    ans.add(root.name);
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+        Node node = queue.poll();
+        for (Node neighbor : node.neighbors) {
+            if (neighbor.visited == false) {
+                neighbor.visited = true;
+                ans.add(neighbor.name);
+                queue.offer(neighbor);
+            }
+        }
+    }
+
+    return ans;
 }
 ```
 

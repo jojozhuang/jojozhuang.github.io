@@ -159,7 +159,7 @@ reverse(nums, 0, nums.length - 1);
 ```
 * Example Problem - [LeetCode 189. Rotate Array](https://leetcode.com/problems/rotate-array/)
 
-### 2.4 Using An Integer Instead of An Array to Store States
+### 2.3 Using An Integer Instead of An Array to Store States
 Implement an algorithm to determine if a string has all unique characters.
 What if you can not use additional data structures?
 Assume there are only lower case letters from 'a' to 'z'.
@@ -182,9 +182,50 @@ public boolean isUniqueChars(String str) {
     return true;
 }
 ```
+## 3. Data Structure Related Questions
+### 3.1 Linked List
+* Consider recursion first, then iteration.
+* Dummy Node, Use fast and slow pointers to find middle node, reverse linked list.
 
-## 3. Useful Methods in Java
-### 3.1 String and Character
+Loop elements in queue.
+```java
+Queue<Integer> queue = new LinkedList<>();
+int sum = 0;
+for (int i: queue) {
+    sum = sum + i;
+}
+```
+
+### 3.2 Tree
+* Recursive, Iterative, Stack for Recursion, Queue for Iteration.
+* BST or regular binary tree?
+* BST => Inorder Traversal
+* Template for tree traversal.
+* outdegree, indegree, question331.
+
+### 3.3 Heap
+Create create in ascending or descending order.
+```java
+PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
+```
+### 3.4 Graph
+Create graph with adjacency list.
+```java
+List<Integer>[] graph = new ArrayList[N]; // list array
+// create vertices
+for (int i = 0; i < N; i++) {
+    graph[i] = new ArrayList<Integer>();
+}
+// add edges
+for (int[] edge: edges) {
+    graph[edge[0]].add(edge[1]);
+    graph[edge[1]].add(edge[0]);
+}
+```
+
+## 4. Useful Methods in Java
+### 4.1 String and Character
 ```java
 String.toCharArray();          // string to char array
 StringBuilder.append()         // concatenate string
@@ -202,7 +243,7 @@ int b = "1+2i3";
 String y[] = b.split("\\+|i"); // y[] = {1, 2, 3};
 ```
 
-### 3.2 Array and Collections
+### 4.2 Array and Collections
 ```java
 // Sort array
 int[] arr = {3, 7, 6, 5, 9, 2};
@@ -231,7 +272,7 @@ int index1 = Collections.binarySearch(list,20); // index1 = 2
 int index2 = Collections.binarySearch(list,8);  // index2 = -1, (-insertion point) - 1
 int index3 = Collections.binarySearch(list,40); // index3 = -6, (-insertion point) - 1
 ```
-### 3.3 Bit Manipulation
+### 4.3 Bit Manipulation
 Number of one-bits
 ```java
 // Number = 177
@@ -248,35 +289,9 @@ Power
 int left = 3;
 int pow = 1 << left; // pow = 8
 ```
-## 4. Data Structure Related Questions
-### 4.1 Linked List
-* Consider recursion first, then iteration.
-* Dummy Node, Use fast and slow pointers to find middle node, reverse linked list.
 
-Loop elements in queue.
-```java
-LinkedList<Integer> queue = new LinkedList<Integer>();
-int sum = 0;
-for (int i: queue) {
-    sum = sum + i;
-}
-```
-
-### 4.2 Tree
-* Recursive, Iterative, Stack of Recursion, Queue for Iteration.
-* BST or regular binary tree?
-* BST => Inorder Traversal
-* Template for tree traversal.
-* outdegree, indegree, question331.
-
-### 4.3 Heap
-```java
-PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
-```
-
-## 4. Others
-### 4.1 Removing Duplicated Lists
+## 5. Others
+### 5.1 Removing Duplicated Lists
 ```java
 List<List<Integer>> res = new ArrayList<List<Integer>>();
 ... // res contains duplicated list after some operation
@@ -284,7 +299,7 @@ HashSet<List<Integer>> set = new HashSet<List<Integer>>(res);
 res.clear();
 res.addAll(set); // now, each list in res is unique
 ```
-### 4.2 Direction Array used in Grid Traversal, DFS & BFS.  
+### 5.2 Direction Array used in Grid Traversal, DFS & BFS.  
 ```java
 int[] dr = new int[]{-1, 0, 1, 0};
 int[] dc = new int[]{0, -1, 0, 1};
@@ -304,23 +319,23 @@ for (int i = 0; i < 4; i++) {
     }
 }
 ```
-### 4.3 Get Int Value From Char
+### 5.3 Get Int Value From Char
 ```java
 String s = "ab5d";
 int x = Character.getNumericValue(s.charAt(2)); // x = 5
 ```
-### 4.4 Check If Character is Number or Letter
+### 5.4 Check If Character is Number or Letter
 ```java
 boolean isNumberOrLetter = Character.isLetterOrDigit(c);
 ```
-### 4.5 Others
+### 5.5 Others
 * numsUsed[c - '1'] : use char to get index of array directly, no need to calculate the index value.
 * n is integer, n % 10, get the last bit of number, iterate this can get the reverse list of n.
 * LRU Cache: double linked node, define two nodes (head and tail) at the very beginning, head.next = tail; tail.prev = head;
 * Dp can be used to optimize time complexity of 2^n, but not for n^2.
 
-## 5. Complexity
-### 5.1 Time Complexity
+## 6. Complexity
+### 6.1 Time Complexity
 Best Case, Worst Case, Expected Case. For example, quick sort: O(N), O(N^2), O(NLog(N)).
 * O(Big O): Upper Bound on Time
 * &#911;(Big Omega): Lower Bound on Time
@@ -330,22 +345,22 @@ Common Complexity
 * factorial time(n!)
 * exponential time(2^n)
 
-### 5.2 Space Complexity
+### 6.2 Space Complexity
 Log(n), what is the base of Log, 2 or 10? It doesn't matter to Big O.
 Best Conceivable Runtime(BCR)
 
-## 6. Characters
-### 6.1 How Many ASCII Characters Are There?
+## 7. Characters
+### 7.1 How Many ASCII Characters Are There?
 Basically, we use only 128 total character which is used mostly during program. But total number of Character in ASCII table is 256 (0 to 255).
 * 0 to 31(total 32 character ) is called as ASCII control characters.
 * 32 to 127 character is called as ASCII printable characters.
 * 128 to 255 is called as The extended ASCII codes.
 
-### 6.2 Characters in Algorithm Questions
+### 7.2 Characters in Algorithm Questions
 * a~z, A~Z
 * a~Z, 0~9
 
-## 7. References
+## 8. References
 * [Data Structures - Algorithms Basics](https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm)
 * [Data Structure and Algorithms Binary Search](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
 * [Why should I use Deque over Stack?](https://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack)

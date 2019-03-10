@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Algorithm - Union Find"
-index: 327
+index: 324
 category: dsa
 image: note/dsa.png
-date: 2016-03-27
-postdate: 2016-03-27
+date: 2016-03-24
+postdate: 2016-03-24
 tags: [Disjoint Set, Union, Find]
 ---
 
@@ -17,7 +17,7 @@ tags: [Disjoint Set, Union, Find]
 In mathematics, two sets are said to be `disjoint sets` if they have no element in common. Equivalently, disjoint sets are sets whose intersection is the empty set. For example, {1, 2, 3} and {4, 5, 6} are disjoint sets, while {1, 2, 3} and {3, 4, 5} are not.
 
 ### 1.2 Disjoint-set Data Structure
-A disjoint-set data structure is a data structure that tracks a set of elements partitioned into a number of disjoint (non-overlapping) subsets. Generally, it is implemented with an array and find, union methods.
+A disjoint-set data structure is a data structure that tracks a set of elements partitioned into a number of disjoint (non-overlapping) subsets. Generally, it is implemented with an array and `find`, `union` methods.
 
 ### 1.3 Set Problem
 Consider a situation with a number of persons and following tasks to be performed on them.

@@ -1,12 +1,12 @@
 ---
 layout: note
 key: note
-title: "Algorithm - Dynamic Programming"
-index: 326
+title: "Algorithm - DP2 - Backpack Problems(Draft)"
+index: 328
 category: dsa
 image: note/dsa.png
-date: 2016-03-26
-postdate: 2016-03-26
+date: 2016-03-28
+postdate: 2016-03-28
 tags: [DP]
 mathjax: true
 ---
