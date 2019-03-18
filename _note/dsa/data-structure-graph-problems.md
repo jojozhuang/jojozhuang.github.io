@@ -251,10 +251,101 @@ private void dfs(int[][] grid, int m, int n, int i, int j, Queue<int[]> queue) {
     dfs(grid, m, n, i, j + 1, queue);
 }
 ```
-## 3. Classic Problems
+## 3. Closest Leaf in a Binary Tree
+### 3.1 Description
+Given a binary tree where every node has a unique value, and a target key `k`, find the value of the nearest leaf node to target k in the tree.
+
+Here, nearest to a leaf means the least number of edges travelled on the binary tree to reach any leaf of the tree. Also, a node is called a leaf if it has no children.
+
+In the following examples, the input tree is represented in flattened form row by row. The actual root tree given will be a TreeNode object.
+
+```sh
+Example 3:
+
+Input:
+root = [1,2,3,4,null,null,null,5,null,6], k = 2
+Diagram of binary tree:
+             1
+            / \
+           2   3
+          /
+         4
+        /
+       5
+      /
+     6
+
+Output: 3
+Explanation: The leaf node with value 3 (and not the leaf node with value 6) is nearest to the node with value 2.
+```
+### 3.2 Solution with DFS + BFS
+Use DFS to convert tree to graph with HashMap, then use BFS to find the shortest path from target `k` to leaf in graph.
+```java
+TreeNode nodeK = null;
+public int findClosestLeaf(TreeNode root, int k) {
+    Map<Integer, List<TreeNode>> map = new HashMap<>();
+    helper(map, root, k);
+    Set<TreeNode> set = new HashSet<>();
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(nodeK);
+
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        while (size-- > 0) {
+            TreeNode node = queue.poll();
+            if (node.left == null && node.right == null) {
+                return node.val;
+            }
+            set.add(node);
+            List<TreeNode> neis = map.get(node.val);
+            for (TreeNode nei : neis) {
+                if (!set.contains(nei)) {
+                    queue.offer(nei);
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+
+private void helper(Map<Integer, List<TreeNode>> map, TreeNode root, int k) {
+    if (root == null) {
+        return;
+    }
+
+    if (root.val == k) {
+        nodeK = root;
+    }
+    if (!map.containsKey(root.val)) {
+        map.put(root.val, new ArrayList<TreeNode>());
+    }
+    if (root.left != null) {
+        if (!map.containsKey(root.left.val)) {
+            map.put(root.left.val, new ArrayList<TreeNode>());
+        }
+        map.get(root.val).add(root.left);
+        map.get(root.left.val).add(root);
+        helper(map, root.left, k);
+    }
+    if (root.right != null) {
+        if (!map.containsKey(root.right.val)) {
+            map.put(root.right.val, new ArrayList<TreeNode>());
+        }
+        map.get(root.val).add(root.right);
+        map.get(root.right.val).add(root);
+        helper(map, root.right, k);
+    }
+}
+```
+
+## 3. Redundant Connection
+
+## 4. Classic Problems
 * [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
 * [LeetCode 934 - Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
+* [LeetCode 742 - Closest Leaf in a Binary Tree](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/)
 
-## 4. Source Files
+## 5. Source Files
 
-## 5. Reference
+## 6. Reference

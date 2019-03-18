@@ -1,16 +1,16 @@
 ---
 layout: note
 key: note
-title: "Practice - Best Practice"
-index: 341
+title: "Practice - Algorithm Best Practice"
+index: 342
 category: dsa
 image: /note/dsa.png
-date: 2016-04-01
-postdate: 2016-04-01
+date: 2016-04-02
+postdate: 2016-04-02
 tags: [Algorithm]
 ---
 
-> Useful tricks for algorithm, Java.
+> Useful tricks for algorithms.
 
 ## 1. Templates
 ### 1.1 Defining Customized Comparator
@@ -74,7 +74,27 @@ while (start + 1 < end) { // avoid infinite loop, need to check nums[start] and 
 ```
 * Example Problem - [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
 
-### 1.4 Subset
+### 1.4 Direction Array used in Grid Traversal, DFS & BFS.  
+```java
+int[] dr = new int[]{-1, 0, 1, 0};
+int[] dc = new int[]{0, -1, 0, 1};
+
+// A is a given matrix
+int m = A.length;
+int n = A[0].length;
+for (int i = 0; i < 4; i++) {
+    int r = pos[0] + dr[i];
+    int c = pos[1] + dc[i];
+    if (r < 0 || r >= m || c < 0 || c >= n) {
+        continue;
+    }
+
+    if (A[r][c] == 1) {
+        // code here
+    }
+}
+```
+### 1.5 Subset
 ```java
 public List<List<Integer>> subsets(int[] nums) {
     List<List<Integer>> res = new ArrayList<List<Integer>>();
@@ -101,7 +121,7 @@ private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>>
 ```
 * Example Problem - [LeetCode 78. Subsets](https://leetcode.com/problems/subsets/)
 
-### 1.5 Generating Unique Path for Each TreeNode(Preorder)
+### 1.6 Generating Unique Path for Each TreeNode(Preorder)
 Each node has a unique path in preoder/postorder/inorder.
 ```java
 // generate preoder key of each node
@@ -187,15 +207,6 @@ public boolean isUniqueChars(String str) {
 * Consider recursion first, then iteration.
 * Dummy Node, Use fast and slow pointers to find middle node, reverse linked list.
 
-Loop elements in queue.
-```java
-Queue<Integer> queue = new LinkedList<>();
-int sum = 0;
-for (int i: queue) {
-    sum = sum + i;
-}
-```
-
 ### 3.2 Tree
 * Recursive, Iterative, Stack for Recursion, Queue for Iteration.
 * BST or regular binary tree?
@@ -203,13 +214,7 @@ for (int i: queue) {
 * Template for tree traversal.
 * outdegree, indegree, question331.
 
-### 3.3 Heap
-Create create in ascending or descending order.
-```java
-PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
-```
-### 3.4 Graph
+### 3.3 Graph
 Create graph with adjacency list.
 ```java
 List<Integer>[] graph = new ArrayList[N]; // list array
@@ -224,111 +229,8 @@ for (int[] edge: edges) {
 }
 ```
 
-## 4. Useful Methods in Java
-### 4.1 String and Character
-```java
-String.toCharArray();          // string to char array
-StringBuilder.append()         // concatenate string
-sb.setLength(sb.length() - 1); // delete last character of a StringBuilder?
-
-Character.isDigit(c)           // same to c >= '0' && c <= '9'
-Character.isLetterOrDigit(c);
-```
-Split string with regex.
-```java
-int a = "1+2i";
-String x[] = a.split("\\+|i"); // x[] = {1, 2};
-
-int b = "1+2i3";
-String y[] = b.split("\\+|i"); // y[] = {1, 2, 3};
-```
-
-### 4.2 Array and Collections
-```java
-// Sort array
-int[] arr = {3, 7, 6, 5, 9, 2};
-Arrays.sort(array);
-
-// Sort collection
-List<String> list = new ArrayList<String>();
-list.add("apple");
-list.add("banana");
-Collections.sort(list);
-
-// Binary search on sorted array or collection
-int index1 = Arrays.binarySearch(new char[]{'c','d','e','f','g'}, 'f');  // index1 = 3;
-int index2 = Arrays.binarySearch(new int[]{10,15,20,22,35}, 20); // index2 = 2;
-int index3 = Collections.binarySearch(Arrays.asList(new Integer[] {10,15,20,22,35}), 15); // index3 = 1;
-
-// Binary search on array
-int[] array = {10,15,20,22,35};
-int index1 = Arrays.binarySearch(array,20); // index1 = 2
-int index2 = Arrays.binarySearch(array,8);  // index2 = -1, (-insertion point) - 1
-int index3 = Arrays.binarySearch(array,40); // index3 = -6, (-insertion point) - 1
-
-// Binary search on collection
-List list = new ArrayList<>(Arrays.asList(new Integer[]{10,20,15,22,35}));
-int index1 = Collections.binarySearch(list,20); // index1 = 2
-int index2 = Collections.binarySearch(list,8);  // index2 = -1, (-insertion point) - 1
-int index3 = Collections.binarySearch(list,40); // index3 = -6, (-insertion point) - 1
-```
-### 4.3 Bit Manipulation
-Number of one-bits
-```java
-// Number = 177
-// Binary = 10110001
-// Number of one bits = 4
-Integer.bitCount(177); // return 4
-```
-Flip bit with XOR, change 1 to 0 and change 0 to 1.
-```java
-bit ^ 1
-```
-Power
-```java
-int left = 3;
-int pow = 1 << left; // pow = 8
-```
-
 ## 5. Others
-### 5.1 Removing Duplicated Lists
-```java
-List<List<Integer>> res = new ArrayList<List<Integer>>();
-... // res contains duplicated list after some operation
-HashSet<List<Integer>> set = new HashSet<List<Integer>>(res);
-res.clear();
-res.addAll(set); // now, each list in res is unique
-```
-### 5.2 Direction Array used in Grid Traversal, DFS & BFS.  
-```java
-int[] dr = new int[]{-1, 0, 1, 0};
-int[] dc = new int[]{0, -1, 0, 1};
-
-// A is a given matrix
-int m = A.length;
-int n = A[0].length;
-for (int i = 0; i < 4; i++) {
-    int r = pos[0] + dr[i];
-    int c = pos[1] + dc[i];
-    if (r < 0 || r >= m || c < 0 || c >= n) {
-        continue;
-    }
-
-    if (A[r][c] == 1) {
-        // code here
-    }
-}
-```
-### 5.3 Get Int Value From Char
-```java
-String s = "ab5d";
-int x = Character.getNumericValue(s.charAt(2)); // x = 5
-```
-### 5.4 Check If Character is Number or Letter
-```java
-boolean isNumberOrLetter = Character.isLetterOrDigit(c);
-```
-### 5.5 Others
+### 5.1 Others
 * numsUsed[c - '1'] : use char to get index of array directly, no need to calculate the index value.
 * n is integer, n % 10, get the last bit of number, iterate this can get the reverse list of n.
 * LRU Cache: double linked node, define two nodes (head and tail) at the very beginning, head.next = tail; tail.prev = head;

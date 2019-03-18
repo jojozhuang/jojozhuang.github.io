@@ -66,6 +66,9 @@ tags: [English]
 * n!: n factorial
 * n^m: n的m次幂, n的m次方
 * power: 幂/次方
+* hundreds digit: 百位
+* tens digit: 十位
+* units digit: 个位
 
 ## 3. Computer
 * iteration: 迭代

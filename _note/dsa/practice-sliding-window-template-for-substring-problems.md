@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Practice - Sliding Window Template for Substring Problems(Draft)"
-index: 344
+index: 346
 category: dsa
 image: /note/dsa.png
-date: 2016-04-04
-postdate: 2016-04-04
+date: 2016-04-06
+postdate: 2016-04-06
 tags: [Sliding Window]
 ---
 

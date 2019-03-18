@@ -2,11 +2,11 @@
 layout: note
 key: note2
 title: "Practice - Bit Manipulation"
-index: 342
+index: 343
 category: dsa
 image: note/dsa.png
-date: 2016-04-02
-postdate: 2016-04-02
+date: 2016-04-03
+postdate: 2016-04-03
 tags: [Bit]
 ---
 
