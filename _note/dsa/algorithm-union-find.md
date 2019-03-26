@@ -31,11 +31,10 @@ A `union-find` algorithm is an algorithm that performs two useful operations on 
 
 Below is the sample code which implements union-find algorithm.
 ```java
-public class DisjointSet {
-    private int[] parents;
+public class DSU { // Disjoint Set Union
+    public int[] parents;
 
-    public DisjointSet(int size)
-    {
+    public DSU(int size) {
         parents = new int[size];
         for (int i = 0; i < parents.length; i++) {
             // Initially, all elements are in their own set.
@@ -45,37 +44,22 @@ public class DisjointSet {
 
     // find
     public int find(int i) {
-        if (parents[i] == i) {
-            // i is the representative of this set
-            return i;
-        } else {
-            // If i is not the parent of itself, then i is not the representative of this set. So we
-            // recursively call find() on its parent
+        if (parents[i] != i) {
             return find(parents[i]);
         }
+        return parents[i];
     }
 
     // union
     public void union(int i, int j) {
-        int root1 = find(i);
-        int root2 = find(j);
-        parents[root1] = root2;
+        int p1 = find(i);
+        int p2 = find(j);
+        parents[p1] = p2;
     }
 }
 ```
 * Array `parents` stores the information that who is the parent of the current node.
 
-The find method can be implemented without recursion.
-```java
-// no recursion
-public int find2(int i) {
-    while (parents[i] != i) {
-        parents[i] = parents[parents[i]];
-        i = parents[i];
-    }
-    return parents[i];
-}
-```
 Let's take a look how it works.
 ![image](/public/notes/algorithm-union-and-find/union_find.png){:width="800px"}
 * a) Initially, we have 5 elements and each of them in their own subset.
@@ -88,22 +72,22 @@ Now, if we want to find out whether `0` and `4` are in the same subset, we just 
 
 The following code show how to use union and find methods to reproduce the above process.
 ```java
-DisjointSet djs = new DisjointSet(5); // parents = [0,1,2,3,4]
+DSU dju = new DSU(5); // parents = [0,1,2,3,4]
 // set 2 as parent of 0
-djs.union(0, 2); // parents = [2,1,2,3,4]
+dju.union(0, 2); // parents = [2,1,2,3,4]
 // set 2 as parent of 4
-djs.union(4, 2); // parents = [2,1,2,3,2]
+dju.union(4, 2); // parents = [2,1,2,3,2]
 // set 1 as parent of 3
-djs.union(3, 1); // parents = [2,1,2,1,2]
+dju.union(3, 1); // parents = [2,1,2,1,2]
 
-// Subset1 = {0,2,4}
-// Subset2 = {1,3}
-// Check if 0 and 4 are in the same subset.
-if(djs.find(0) == djs.find(4)) {
+// Group1 = {0,2,4}
+// Group2 = {1,3}
+// Check if 0 and 4 are in the same group.
+if(dju.find(0) == dju.find(4)) {
     System.out.println("Yes");
 }
-// Check if 0 and 1 are in the same subset.
-if(djs.find(0) != djs.find(1)) {
+// Check if 0 and 1 are in the same group.
+if(dju.find(0) != dju.find(1)) {
     System.out.println("No");
 }
 ```
@@ -123,21 +107,24 @@ Below is the optimized find() method with Path Compression.
 ```java
 // Path Compression
 public int find(int i) {
-    if (parents[i] == i) {
-        // Then i is the representative of this set
-        return i;
-    } else {
-        // Recursively find the representative.
-        int result = find(parents[i]);
-
-        // Change the parent during traversal
-        parents[i] = result;
-
-        // Return the result
-        return result;
+    if (parents[i] != i) {
+        parents[i] = find(parents[i]);
     }
+    return parents[i];
 }
 ```
+We can also implement `find` without recursion.
+```java
+// Path Compression
+public int find(int i) {
+    while (parents[i] != i) {
+        parents[i] = parents[parents[i]];
+        i = parents[i];
+    }
+    return parents[i];
+}
+```
+
 ### 3.2 Union by Rank
 Problem with naive union method. Following is an example of worst case scenario. Union the nodes in sequence, the tree becomes like a linked list.
 ![image](/public/notes/algorithm-union-and-find/naive_union.png){:width="800px"}
@@ -149,45 +136,367 @@ The solution is to always attach smaller depth tree under the root of the deeper
 * b) When calling 'union(0,1)', node 0 and node 1 have the same rank 0. We can choose either of them as the root. In this case, we choose node 1 as root, so set parents[0] = 1. Since node 1 is now as root, so set rank[1] = 1.
 * c) When calling 'union(1,2)', node 1 has larger rank than node 2, so take node 1 as root, set parents[2] = 1.
 * d) When calling 'union(2,3)', node 2's root is node 1 and node 1 has larger rank than node 3, so take node 1 as root, set parents[3] = 1.
-* Finally, we have two trees, one is {1,2,3,4}, another is {4}. Notice, tree {1,2,3,4} is flattened.
+* Finally, we have two trees, one is {0,1,2,3}, another is {4}. Notice, tree {0,1,2,3} is flattened.
 
 Below is the optimized union() method with Union by Rank.
 ```java
 // Union by rank
 public void union(int i, int j) {
-    int root1 = find(i);
-    int root2 = find(j);
-    if (root1 == root2) {
+    int p1 = find(i);
+    int p2 = find(j);
+    if (p1 == p2) {
         return;
     }
 
     // If root1’s rank is less than root2’s rank
-    if (rank[root1] < rank[root2]) {
+    if (rank[p1] < rank[p2]) {
         // Then move root1 under root2
-        parents[root1] = root2;
+        parents[p1] = p2;
     // If root1’s rank is larger than root2’s rank
-    } else if (rank[root1] > rank[root2]) {
+    } else if (rank[p1] > rank[p2]) {
         // Then move root2 under root1
-        parents[root2] = root1;
+        parents[p2] = p1;
     // if ranks are the same
     } else {
         // Then move root1 under root2 (doesn't matter which one goes where)
-        parents[root1] = root2;
-        rank[root2]++;
+        parents[p1] = p2;
+        rank[p2]++;
     }
 }
 ```
 
-## 4. Classic Problems
+## 4. Union Find Template
+Based on the above discussion, here is the template for Union and Find.
+```java
+public class DSU { // Disjoint Set Union with Rank
+    public int[] parents;
+    public int[] rank;
+
+    public DSU(int size) {
+        parents = new int[size];
+        for (int i = 0; i < parents.length; i++) {
+            // Initially, all elements are in their own set.
+            parents[i] = i;
+        }
+        rank = new int[size];
+    }
+
+    // Path Compression
+    public int find(int i) {
+        while (parents[i] != i) {
+            parents[i] = parents[parents[i]];
+            i = parents[i];
+        }
+        return parents[i];
+    }
+
+    // Union by rank
+    public void union(int i, int j) {
+        int p1 = find(i);
+        int p2 = find(j);
+        if (p1 == p2) {
+            return;
+        }
+
+        // If root1’s rank is less than root2’s rank
+        if (rank[p1] < rank[p2]) {
+            // Then move root1 under root2
+            parents[p1] = p2;
+        // If root1’s rank is larger than root2’s rank
+        } else if (rank[p1] > rank[p2]) {
+            // Then move root2 under root1
+            parents[p2] = p1;
+        // if ranks are the same
+        } else {
+            // Then move root1 under root2 (doesn't matter which one goes where)
+            parents[p1] = p2;
+            rank[p2]++;
+        }
+    }
+}
+```
+
+## 5. Friend Circles
+### 5.1 Description
+There are N students in a class. Some of them are friends, while some are not. Their friendship is transitive in nature. For example, if A is a direct friend of B, and B is a direct friend of C, then A is an indirect friend of C. And we defined a friend circle is a group of students who are direct or indirect friends.
+
+Given a N*N matrix M representing the friend relationship between students in the class. If M[i][j] = 1, then the ith and jth students are direct friends with each other, otherwise not. And you have to output the total number of friend circles among all the students.
+
+Example 1:
+```sh
+Input:
+[[1,1,0],
+ [1,1,0],
+ [0,0,1]]
+Output: 2
+Explanation:The 0th and 1st students are direct friends, so they are in a friend circle.
+The 2nd student himself is in a friend circle. So return 2.
+```
+Example 2:
+```sh
+Input:
+[[1,1,0],
+ [1,1,1],
+ [0,1,1]]
+Output: 1
+Explanation:The 0th and 1st students are direct friends, the 1st and 2nd students are direct friends,
+so the 0th and 2nd students are indirect friends. All of them are in the same friend circle, so return 1.
+```
+### 5.2 Solution with DFS
+Search and add friend to group, then count how many groups.
+```java
+// dfs
+public int findCircleNum(int[][] M) {
+    int[] visited = new int[M.length];
+    int count = 0;
+    for (int i = 0; i < M.length; i++) {
+        if (visited[i] == 0) {
+            dfs(M, visited, i);
+            count++;
+        }
+    }
+    return count;
+}  
+public void dfs(int[][] M, int[] visited, int i) {
+    for (int j = 0; j < M.length; j++) {
+        if (M[i][j] == 1 && visited[j] == 0) {
+            visited[j] = 1;
+            dfs(M, visited, j);
+        }
+    }
+}
+```
+### 5.3 Solution With Union Find Template
+```java
+public class DSU { // Disjoint Set Union with Rank
+    public int[] parents;
+    public int[] rank;
+
+    public DSU(int size) {
+        parents = new int[size];
+        for (int i = 0; i < parents.length; i++) {
+            // Initially, all elements are in their own set.
+            parents[i] = i;
+        }
+        rank = new int[size];
+    }
+
+    // Path Compression
+    public int find(int i) {
+        while (parents[i] != i) {
+            parents[i] = parents[parents[i]];
+            i = parents[i];
+        }
+        return parents[i];
+    }
+
+    // Union by rank
+    public void union(int i, int j) {
+        int p1 = find(i);
+        int p2 = find(j);
+        if (p1 == p2) {
+            return;
+        }
+
+        // If root1’s rank is less than root2’s rank
+        if (rank[p1] < rank[p2]) {
+            // Then move root1 under root2
+            parents[p1] = p2;
+        // If root1’s rank is larger than root2’s rank
+        } else if (rank[p1] > rank[p2]) {
+            // Then move root2 under root1
+            parents[p2] = p1;
+        // if ranks are the same
+        } else {
+            // Then move root1 under root2 (doesn't matter which one goes where)
+            parents[p1] = p2;
+            rank[p2]++;
+        }
+    }
+}
+
+public int findCircleNum(int[][] M) {
+    DSU dsu = new DSU(M.length);
+    for (int i = 0; i < M.length - 1; i++) {
+        for (int j = i + 1; j < M.length; j++) {
+            if (M[i][j] == 1) {
+                dsu.union(i, j);
+            }
+        }
+    }
+
+    Set<Integer> set = new HashSet<>();
+    for (int i = 0; i < M.length; i++) {
+        set.add(dsu.find(i));
+    }
+
+    return set.size();
+}
+```
+
+## 6. Redundant Connection
+### 6.1 Description
+In this problem, a tree is an undirected graph that is connected and has no cycles.
+
+The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
+
+The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
+
+Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge [u, v] should be in the same format, with u < v.
+```sh
+Example 1:
+Input: [[1,2], [1,3], [2,3]]
+Output: [2,3]
+Explanation: The given undirected graph will be like this:
+  1
+ / \
+2 - 3
+
+Example 2:
+Input: [[1,2], [2,3], [3,4], [1,4], [1,5]]
+Output: [1,4]
+Explanation: The given undirected graph will be like this:
+5 - 1 - 2
+    |   |
+    4 - 3
+```
+### 6.2 Solution with Graph + DFS
+Construct graph with the given edges. During the construction, use DFS to search the target edge.
+```java
+public int[] findRedundantConnection(int[][] edges) {
+    Map<Integer, List<Integer>> map = new HashMap<>();
+    for (int[] edge : edges) {
+        if (!map.containsKey(edge[0])) {
+            map.put(edge[0], new ArrayList<Integer>());
+        }
+        if (!map.containsKey(edge[1])) {
+            map.put(edge[1], new ArrayList<Integer>());
+        }
+        Set<Integer> visited = new HashSet<>();
+        if (dfs(map, edge[0], edge[1], visited)) {
+            return edge;
+        }
+        map.get(edge[0]).add(edge[1]);
+        map.get(edge[1]).add(edge[0]);
+    }
+
+    return new int[]{0,0};
+}
+
+private boolean dfs(Map<Integer, List<Integer>> map, int start, int target, Set<Integer> visited) {
+
+    if (start == target) {
+        return true;
+    }
+    visited.add(start);
+    if (!map.containsKey(start) || !map.containsKey(target)) {
+        return false;
+    }
+    for (int nei : map.get(start)) {
+        if (visited.contains(nei)) {
+            continue;
+        }
+        if (dfs(map, nei, target, visited)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+```
+### 6.3 Solution with Union Find
+Create parents array, go through each edge, find and union them until find the target edge.
+```java
+public int[] findRedundantConnection(int[][] edges) {
+    int[] parents = new int[edges.length + 1];
+    for (int i = 0; i < parents.length; i++) {
+        parents[i] = i;
+    }
+
+    for (int[] edge : edges) {
+        int u = edge[0];
+        int v = edge[1];
+        int pu = find(u, parents);
+        int pv = find(v, parents);
+        if (pu == pv) {
+            return edge;
+        }
+        parents[pv] = pu;
+    }
+
+    return new int[] {0,0};
+}
+
+private int find(int curr, int[] parents) {
+    while (parents[curr] != curr) {
+        parents[curr] = parents[parents[curr]];
+        curr = parents[curr];
+    }
+
+    return curr;
+}
+```
+### 6.4 Solution With Union Find Template
+```java
+class DSU {
+    int[] rank;
+    int[] parent;
+    public DSU(int size) {
+        parent = new int[size];
+        for (int i = 0; i < size; i++) {
+            parent[i] = i;
+        }
+        rank = new int[size];
+    }
+
+    public int find(int i) {
+        while (parent[i] != i) {
+            parent[i] = parent[parent[i]];
+            i = parent[i];
+        }
+        return parent[i];
+    }
+
+    public boolean union(int i, int j) {
+        int p1 = find(i);
+        int p2 = find(j);
+        if (p1 == p2) { // found
+            return false;
+        } else if (rank[p1] < rank[p2]) {
+            parent[p1] = p2;
+        } else if (rank[p1] > rank[p1]) {
+            parent[p2] = p1;
+        } else {
+            parent[p2] = p1;
+            rank[p1]++;
+        }
+        return true;
+    }
+}
+
+public int[] findRedundantConnection(int[][] edges) {
+    DSU dsu = new DSU(edges.length + 1);
+    for (int[] edge: edges) {
+        if (!dsu.union(edge[0], edge[1])) {
+            return edge;
+        }
+    }
+    return new int[] {0,0};
+}
+```
+
+## 7. Classic Problems
+* [LeetCode 547 - Friend Circles](https://leetcode.com/problems/friend-circles/)
+* [LeetCode 684 - Redundant Connection](https://leetcode.com/problems/redundant-connection/)
 * [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
 * [LeetCode 305 - Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
 * [LeetCode 323 - Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
-## 5. Source Files
+## 8. Source Files
 * [Source files for Union Find on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-union-find)
 * [Union Find Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1CulEG8tHmHdQQ5UPnCjrIzdpIZNZd-WB/view?usp=sharing)
 
-## 6. References
+## 9. References
 * [Union-Find Algorithms](https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf)
 * [Disjoint Set Data Structures](https://www.geeksforgeeks.org/disjoint-set-data-structures-java-implementation/)
 * [Disjoint Set (Or Union-Find)](https://www.geeksforgeeks.org/union-find/)

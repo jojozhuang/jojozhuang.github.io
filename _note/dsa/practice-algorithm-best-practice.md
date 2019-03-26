@@ -25,6 +25,29 @@ private class IntervalComparator implements Comparator<Interval> {
 // 0, i1 = i2
 // 1, i1 > i2
 ```
+Usage.
+```java
+Collections.sort(intervals, new IntervalComparator());
+
+// lamda expression
+Collections.sort(intervals, (a, b) -> a.start - b.start);
+```
+More conditions
+```java
+private class IntervalComparator implements Comparator<Interval> {
+    public int compare(Interval a, Interval b) {
+        if (a.start == b.start) {
+            return a.end - b.end;
+        } else {
+            return a.start - b.start;
+        }
+    }
+}
+Collections.sort(intervals, new IntervalComparator());
+// equivalent to one line lamda expression
+Arrays.sort(intervals, (a,b)->(a.start == b.start ? a.end - b.end : a.start - b.start));
+```
+`The comparison only works for integer, not for double type.`
 ### 1.2 Sorting Array by Another Array's Value.
 ```java
 Integer[] index = new Integer[nums.length];
@@ -146,6 +169,36 @@ For tree {2,1,1}, map contains two entry
 
 Based on different requirements, you can add more parameters accordingly and update them by checking the map when necessary. For example, add a list as third parameter, to find all duplicate subtrees - [LeetCode 652. Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)
 
+### 1.7 Top K Problems
+Three solutions for K-th problems, see [Three solutions to this classical K-th problem](https://leetcode.com/problems/k-closest-points-to-origin/discuss/220235/Java-Three-solutions-to-this-classical-K-th-problem.)
+* Sort, then pick up the first K elements, O(Nlog(N))
+* PriorityQueue, add element to heap until size reaches to K, O(Nlog(N))
+* Partition, same with Quick Sort, divide elements to two parts, O(N)
+
+### 1.8 DP - One Array
+Apply the DP formula by traversing `j` loop before `i` loop, thus, make it easy to understand.
+```java
+// dp
+public int findLongestChain(int[][] pairs) {
+    if (pairs == null || pairs.length == 0) {
+        return 0;
+    }
+
+    Arrays.sort(pairs, (a, b)->(a[0]-b[0]));
+
+    int n = pairs.length;
+    int[] dp = new int[n];
+    Arrays.fill(dp, 1);
+    for (int j = 1; j < n; j++) {
+        for (int i = 0; i < j; i++) {
+            if (pairs[i][1] < pairs[j][0]) {
+                dp[j] = Math.max(dp[j], dp[i] + 1);
+            }
+        }
+    }
+    return dp[n - 1];
+}
+```
 ## 2. Array and Strings
 ### 2.1 Partition of Quick Sort
 ```java
@@ -202,6 +255,7 @@ public boolean isUniqueChars(String str) {
     return true;
 }
 ```
+
 ## 3. Data Structure Related Questions
 ### 3.1 Linked List
 * Consider recursion first, then iteration.
