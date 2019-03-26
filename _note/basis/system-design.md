@@ -13,9 +13,6 @@ tags: [System Design]
 > Best Practice and Common Questions for System Design.
 
 ## 0. System Design
-System Design Introduction For Interview.
-https://www.youtube.com/watch?v=UzLMhqg3_Wc
-
 Key Concepts1:
 * Vertical vs Horizontal Scaling
 * CAP theorem: Consistency, Availability, Partition tolerance
@@ -236,3 +233,5 @@ which data is on which machine.
 * Reduce takes a key and a set of associated values and "reduces"them in some way, emitting a new key and value.
 
 ## 6. References
+* [System Design Introduction For Interview](https://www.youtube.com/watch?v=UzLMhqg3_Wc)
+* [Grokking the System Design Interview](https://www.educative.io/collection/5668639101419520/5649050225344512)

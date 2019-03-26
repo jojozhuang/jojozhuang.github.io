@@ -68,7 +68,41 @@ public int backPack(int[] A, int[] V, int w) {
     return dp[A.length][w];
 }
 ```
+## 3. Coin Change
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 
+```sh
+Example 1:
+
+Input: coins = [1, 2, 5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+Example 2:
+
+Input: coins = [2], amount = 3
+Output: -1
+```
+
+```java
+public int coinChange(int[] coins, int amount) {
+    if (coins == null || coins.length == 0) {
+        return -1;
+    }
+
+    int[] dp = new int[amount + 1];
+    Arrays.fill(dp, Integer.MAX_VALUE);
+    dp[0] = 0;
+    for (int i = 0; i < coins.length; i++) {
+        for (int j = coins[i]; j <= amount; j++) {
+            if (dp[j - coins[i]] != Integer.MAX_VALUE) {
+                dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
+            }
+        }
+    }
+
+    return dp[amount] == Integer.MAX_VALUE ? -1: dp[amount];
+}
+```
 ## 3. Classic Problems
 * [LintCode 92 - Backpack](https://www.lintcode.com/problem/backpack/)
 * [LintCode 91 - Minimum Adjustment Cost](https://www.lintcode.com/problem/minimum-adjustment-cost)

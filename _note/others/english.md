@@ -90,6 +90,7 @@ tags: [English]
 * predecessor: 前任，前辈
 * pruning: 剪枝
 * xor: Exclusive Or
+* throughput: 吞吐量
 
 ## 4. Others:
 * within bound: 在边界之内

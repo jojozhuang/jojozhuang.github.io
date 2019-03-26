@@ -131,6 +131,10 @@ List list = new ArrayList<>(Arrays.asList(new Integer[]{10,20,15,22,35}));
 int index1 = Collections.binarySearch(list,20); // index1 = 2
 int index2 = Collections.binarySearch(list,8);  // index2 = -1, (-insertion point) - 1
 int index3 = Collections.binarySearch(list,40); // index3 = -6, (-insertion point) - 1
+
+// print Array
+int[] nums = {1,3,5,7};
+System.out.println(Arrays.toString(nums)); // print [1,3,5,7]
 ```
 
 ## 3. Bit Manipulation
@@ -172,7 +176,7 @@ return count; // count = 4;
 Integer.bitCount(177); // return 4
 ```
 
-## 4. HashSet and HashMap
+## 4. HashSet, HashMap, TreeMap
 ```java
 // create HashSet
 Set<String> set = new HashSet<>();
@@ -197,6 +201,18 @@ list.add(1); // duplicate element
 Set<Integer> set = new HashSet<>(list); // set = {1,2}
 list.clear();
 list.addAll(set); // list = {1,2}
+
+TreeMap<Integer, String> treeMap = new TreeMap<>();
+treeMap.put(1, "Monday")
+treeMap.put(2, "Tuesday")
+treeMap.put(3, "Wednesday")
+treeMap.put(4, "Thursday")
+treeMap.put(5, "Friday")
+String day = treeMap.get(3); // day = "Wednesday"
+Integer lowKey = treeMap.lowerKey(3); // lowKey = 2
+Integer highKey = treeMap.higherKey(3); // lowKey = 4
+Map.Entry<Integer, String> lowEntry = treeMap.lowerEntry(3); // lowEntry = <3, Wednesday>
+Map.Entry<Integer, String> highEntry = treeMap.higherEntry(3); // lowEntry = <4, Thursday>
 ```
 
 ## 5. Stack and Queue

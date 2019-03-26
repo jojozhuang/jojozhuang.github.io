@@ -204,6 +204,10 @@ public int fibonacci(int n) {
 * Time complexity: $O(n)$
 * Space complexity: $O(1)$
 
+## 4. Game, Min-Max
+* [LeetCode 486 - Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
+* [LeetCode 877 - Stone Game](https://leetcode.com/problems/stone-game/)
+
 ### 4.5 Classic Problems
 * [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 * [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)

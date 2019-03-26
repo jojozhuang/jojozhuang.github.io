@@ -339,13 +339,159 @@ private void helper(Map<Integer, List<TreeNode>> map, TreeNode root, int k) {
 }
 ```
 
-## 3. Redundant Connection
+## 4. Redundant Connection
+### 4.1 Description
+In this problem, a tree is an undirected graph that is connected and has no cycles.
 
-## 4. Classic Problems
+The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
+
+The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
+
+Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge [u, v] should be in the same format, with u < v.
+```sh
+Example 1:
+Input: [[1,2], [1,3], [2,3]]
+Output: [2,3]
+Explanation: The given undirected graph will be like this:
+  1
+ / \
+2 - 3
+
+Example 2:
+Input: [[1,2], [2,3], [3,4], [1,4], [1,5]]
+Output: [1,4]
+Explanation: The given undirected graph will be like this:
+5 - 1 - 2
+    |   |
+    4 - 3
+```
+### 4.2 Solution with Graph + DFS
+Construct graph with the given edges. During the construction, use DFS to search the target edge.
+```java
+public int[] findRedundantConnection(int[][] edges) {
+    Map<Integer, List<Integer>> map = new HashMap<>();
+    for (int[] edge : edges) {
+        if (!map.containsKey(edge[0])) {
+            map.put(edge[0], new ArrayList<Integer>());
+        }
+        if (!map.containsKey(edge[1])) {
+            map.put(edge[1], new ArrayList<Integer>());
+        }
+        Set<Integer> visited = new HashSet<>();
+        if (dfs(map, edge[0], edge[1], visited)) {
+            return edge;
+        }
+        map.get(edge[0]).add(edge[1]);
+        map.get(edge[1]).add(edge[0]);
+    }
+
+    return new int[]{0,0};
+}
+
+private boolean dfs(Map<Integer, List<Integer>> map, int start, int target, Set<Integer> visited) {
+
+    if (start == target) {
+        return true;
+    }
+    visited.add(start);
+    if (!map.containsKey(start) || !map.containsKey(target)) {
+        return false;
+    }
+    for (int nei : map.get(start)) {
+        if (visited.contains(nei)) {
+            continue;
+        }
+        if (dfs(map, nei, target, visited)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+```
+### 4.2 Solution with Union Find
+Create parents array, go through each edge, find and union them until find the target edge.
+```java
+public int[] findRedundantConnection(int[][] edges) {
+    int[] parents = new int[edges.length + 1];
+    for (int i = 0; i < parents.length; i++) {
+        parents[i] = i;
+    }
+
+    for (int[] edge : edges) {
+        int u = edge[0];
+        int v = edge[1];
+        int pu = find(u, parents);
+        int pv = find(v, parents);
+        if (pu == pv) {
+            return edge;
+        }
+        parents[pv] = pu;
+    }
+
+    return new int[] {0,0};
+}
+
+private int find(int curr, int[] parents) {
+    while (parents[curr] != curr) {
+        parents[curr] = parents[parents[curr]];
+        curr = parents[curr];
+    }
+
+    return curr;
+}
+```
+### 4.3 Solution With Union Find Template
+```java
+class DSU {
+    int[] rank;
+    int[] parent;
+    public DSU(int size) {
+        parent = new int[size];
+        for (int i = 0; i < size; i++) {
+            parent[i] = i;
+        }
+        rank = new int[size];
+    }
+
+    public int find(int i) {
+        while (parent[i] != i) {
+            parent[i] = parent[parent[i]];
+            i = parent[i];
+        }
+        return parent[i];
+    }
+
+    public boolean union(int i, int j) {
+        int p1 = find(i);
+        int p2 = find(j);
+        if (p1 == p2) { // found
+            return false;
+        } else if (rank[p1] < rank[p2]) {
+            parent[p1] = p2;
+        } else if (rank[p1] > rank[p1]) {
+            parent[p2] = p1;
+        } else {
+            parent[p2] = p1;
+            rank[p1]++;
+        }
+        return true;
+    }
+}
+
+public int[] findRedundantConnection(int[][] edges) {
+    DSU dsu = new DSU(edges.length + 1);
+    for (int[] edge: edges) {
+        if (!dsu.union(edge[0], edge[1])) {
+            return edge;
+        }
+    }
+    return new int[] {0,0};
+}
+```
+
+## 5. Classic Problems
 * [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
 * [LeetCode 934 - Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
 * [LeetCode 742 - Closest Leaf in a Binary Tree](https://leetcode.com/problems/closest-leaf-in-a-binary-tree/)
-
-## 5. Source Files
-
-## 6. Reference
+* [LeetCode 684 - Redundant Connection](https://leetcode.com/problems/redundant-connection/)
