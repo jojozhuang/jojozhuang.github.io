@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Front End(Draft)"
-index: 113
-category: basis
-image: note/cs.png
-date: 2016-01-13
-postdate: 2016-01-13
+index: 153
+category: interview
+image: note/interview.png
+date: 2019-01-03
+postdate: 2019-01-03
 tags: [Javascript, Html, Css]
 ---
 
