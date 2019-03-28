@@ -66,7 +66,7 @@ Build and launch the website. All of the files will be deployed to a new folder 
 $ jekyll build
 $ jekyll serve
 ```
-If you want jekyll to start at different port, add port option when using `jekyll serve`.
+If you want jekyll to start at different port, add `port` option when using jekyll serve.
 ```sh
 $ jekyll serve --port 12001
 ```
@@ -82,7 +82,32 @@ $ bundle exec jekyll serve --port 12001
 Open web browser to access your local jekyll website.
 ![image](/public/tutorials/901/local.png)  
 
-## 5. Upgrade Jekyll
+## 5. Increase Jekyll Build Speed
+Jekyll build speed slows down with the increase in the number of files, posts, images etc. Below are some options to speed up the build.
+
+Exclude files that are not required. Add `exclude` into `_config.yml`.
+```sh
+exclude: [node_modules, README.md]
+```
+Keep files that are required as-is. Add `keep_files` into `_config.yml`.
+```sh
+keep_files: [images]
+```
+Generate a Liquid rendering profile to help you identify performance bottlenecks.
+```sh
+jekyll serve --profile
+```
+Use Jekyll incremental build
+```sh
+jekyll serve -I
+jekyll serve --incremental
+```
+Let Jekyll build only the necessary posts.
+```sh
+jekyll serve --watch --limit_posts 1
+```
+
+## 6. Upgrade Jekyll
 ```sh
 $ brew update
 $ brew upgrade ruby
@@ -92,9 +117,10 @@ $ bundle update
 $ bundle exec jekyll serve --port 12001
 ```
 
-## 6. References
+## 7. References
 * [Jekyll - Official Installation Guide](https://jekyllrb.com/docs/installation/)
 * [Setting up your GitHub Pages site locally with Jekyll
 ](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 * [Building a static website with Jekyll and GitHub Pages](https://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages)
 * [How to Set Up a Jekyll Development Site on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jekyll-development-site-on-ubuntu-16-04)
+* [Increase Jekyll Build Speed](https://blog.webjeda.com/jekyll-build-speed/)
