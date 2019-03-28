@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - MultiThreading"
-index: 153
+index: 154
 category: interview
 image: note/interview.png
-date: 2019-01-03
-postdate: 2019-01-03
+date: 2019-01-04
+postdate: 2019-01-04
 tags: [Thread, Runnable, concurrency]
 ---
 
