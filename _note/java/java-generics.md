@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Generics"
-index: 208
+index: 207
 category: java
 image: /note/programming.png
-date: 2016-02-08
-postdate: 2016-02-08
+date: 2016-02-07
+postdate: 2016-02-07
 tags: [Generic Types]
 ---
 

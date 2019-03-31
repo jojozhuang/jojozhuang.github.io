@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Formatting"
-index: 201
+index: 202
 category: java
 image: /note/programming.png
-date: 2016-02-01
-postdate: 2016-02-01
+date: 2016-02-02
+postdate: 2016-02-02
 tags: [Formatting]
 ---
 

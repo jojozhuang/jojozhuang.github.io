@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Message Queue"
-index: 209
+index: 219
 category: java
 image: /note/programming.png
-date: 2016-02-09
-postdate: 2016-02-09
+date: 2016-02-19
+postdate: 2016-02-19
 tags: [Message Queue, JMS]
 ---
 
