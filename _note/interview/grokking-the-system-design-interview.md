@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Grokking the System Design Interview"
-index: 152
+index: 162
 category: interview
 image: note/interview.png
-date: 2019-01-02
-postdate: 2019-01-02
+date: 2019-01-12
+postdate: 2019-01-12
 tags: [System Design]
 ---
 

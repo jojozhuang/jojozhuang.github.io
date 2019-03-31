@@ -7,9 +7,9 @@ category: java
 image: /note/programming.png
 date: 2016-02-01
 postdate: 2016-02-01
-tags: [Formatting]
+tags: [String, Integer, Array, List]
 ---
 
-> Formatting for String, Int and Double.
+> Basic knowledge of java.
 
 * [Core Java Tutorial](https://www.journaldev.com/24601/java-11-features)

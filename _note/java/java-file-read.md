@@ -1,18 +1,18 @@
 ---
 layout: note
 key: note
-title: "Java - Predicate"
-index: 217
+title: "Java - File Operations"
+index: 208
 category: java
 image: /note/programming.png
-date: 2016-02-17
-postdate: 2016-02-17
+date: 2016-02-08
+postdate: 2016-02-08
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---
 
 > BlockingQueue interface and its implementations.
 
-## 1. Predicate
+## 1. BitSet
 
 
 
@@ -20,4 +20,4 @@ tags: [BlockingQueue, ArrayBlockingQueue]
 * [Source files for Java BlockingQueue on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-blockingqueue)
 
 ## 4. References
-* [Java Predicate](http://zetcode.com/java/predicate/)
+* [Java - The BitSet Class](https://www.tutorialspoint.com/java/java_bitset_class.htm)

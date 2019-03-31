@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - Web Service"
-index: 205
+index: 211
 category: java
 image: /note/programming.png
-date: 2016-02-05
-postdate: 2016-02-05
+date: 2016-02-11
+postdate: 2016-02-11
 tags: [SOAP, WSDL]
 ---
 

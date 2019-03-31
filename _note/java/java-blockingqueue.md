@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - BlockingQueue"
-index: 201
+index: 218
 category: java
 image: /note/programming.png
-date: 2016-02-01
-postdate: 2016-02-01
+date: 2016-02-18
+postdate: 2016-02-18
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---
 

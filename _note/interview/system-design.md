@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "System Design(Draft)"
-index: 151
+index: 161
 category: interview
 image: note/interview.png
-date: 2019-01-01
-postdate: 2019-01-01
+date: 2019-01-11
+postdate: 2019-01-11
 tags: [System Design]
 ---
 

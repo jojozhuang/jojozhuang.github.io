@@ -2,11 +2,11 @@
 layout: note
 key: note
 title: "Java - MultiThreading"
-index: 154
+index: 153
 category: interview
 image: note/interview.png
-date: 2019-01-04
-postdate: 2019-01-04
+date: 2019-01-03
+postdate: 2019-01-03
 tags: [Thread, Runnable, concurrency]
 ---
 
@@ -276,3 +276,4 @@ Executing : Task 5 at 2019-03-27T18:45:08.994
 * [Java Concurrency Tutorial](https://howtodoinjava.com/java-concurrency-tutorial/)
 * [Java Thread Pool – ThreadPoolExecutor Example](https://howtodoinjava.com/java/multi-threading/java-thread-pool-executor-example/)
 * [Thread Pools](http://tutorials.jenkov.com/java-concurrency/thread-pools.html)
+* [Example of newSingleThreadExecutor in Java](https://www.concretepage.com/java/newsinglethreadexecutor_java)

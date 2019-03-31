@@ -1,17 +1,16 @@
 ---
 layout: note
 key: note
-title: "Java Interview Questions"
-index: 606
-category: programming
-image: /note/programming.png
-date: 2016-06-06
-postdate: 2016-06-06
-tags: [Interview]
+title: "Java - Interview Questions(Draft)"
+index: 151
+category: interview
+image: note/interview.png
+date: 2019-01-01
+postdate: 2019-01-01
+tags: [Java, Interview]
 ---
 
-> Interview Questions
-
+> Popular interview questions for Java.
 
 ## 1. String, StringBuilder, StringBuffer
 
