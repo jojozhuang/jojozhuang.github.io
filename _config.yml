@@ -36,6 +36,9 @@ navlist:
     visible: true
   - key: note
     url: /note
+    visible: true
+  - key: programming
+    url: /programming
     visible: false
   - key: feed
     url: /blog/atom.xml"
@@ -57,6 +60,8 @@ collections:
   tutorial:
     output: true
   note:
+    output: true
+  programming:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml", "note_old.html", "favorite_old.html", "library.html", "tutorial2.html"]
