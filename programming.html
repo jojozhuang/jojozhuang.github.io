@@ -1,0 +1,63 @@
+---
+layout: default
+key: programming
+note: list
+title: Programming
+categories:
+  - name: Interview
+    description: Interview
+    type: interview
+  - name: Java
+    description: Data Type, Collection, Multithreading
+    type: java
+---
+<div class="container">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+    <div class="row">
+        {% assign lessons = site.programming | sort: 'index' %}
+        {% for category in page.categories %}
+        <div class="row">
+          <div>
+            <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
+          </div>
+        </div>
+        <dl class="dl-unsur">
+          {% assign list = lessons | where: 'category', category.type %}
+          {% for lesson in list %}
+          <dd>
+          <div class="media">
+            <div class="media-left">
+              <a href="{{ lesson.url }}" title="{{ lesson.title }}">
+                <img src="../public/images/{{ lesson.image }}" class="media-object" style="width:80px">
+              </a>
+            </div>
+            <div class="media-body">
+              <a href="{{ lesson.url }}" title="{{ lesson.title }}"><div>{{ lesson.index }}. {{ lesson.title }}</div></a>
+              {{ lesson.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
+              <div class="pull-left">
+                  <ul class="list-inline list-unstyled">
+                    <li><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ lesson.url }}#disqus_thread">Comments</a></li>
+                    <li>|</li>
+                    <li>
+                      <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ lesson.tags | join: ", "}} </span>
+                    </li>
+                    <li>|</li>
+                    <li>
+                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                      <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
+                      <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
+                      <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          </dd>
+          {% endfor %}
+        </dl>
+        {% endfor %}
+    </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
