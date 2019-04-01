@@ -36,7 +36,7 @@ navlist:
     visible: true
   - key: note
     url: /note
-    visible: true
+    visible: false
   - key: programming
     url: /programming
     visible: false

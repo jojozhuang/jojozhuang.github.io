@@ -75,36 +75,27 @@ A thread pool manages the collection of Runnable threads and worker threads exec
 java.util.concurrent.Executors provide implementation of java.util.concurrent.Executor interface to create the thread pool in java.
 
 ## 2. Concurrency Questions
-What is atomic operation? What are atomic classes in Java Concurrency API?
-
+### 2.1 What is atomic operation? What are atomic classes in Java Concurrency API?
 Atomic operations are performed in a single unit of task without interference from other operations. Atomic operations are necessity in multi-threaded environment to avoid data inconsistency.
 
 int++ is not an atomic operation. So by the time one threads read it’s value and increment it by one, other thread has read the older value leading to wrong result.
 
-To solve this issue, we will have to make sure that increment operation on count is atomic, we can do that using Synchronization but Java 5 java.util.concurrent.atomic provides wrapper classes for int and long that can be used to achieve this atomically without usage of Synchronization. Go to this article to learn more about atomic concurrent classes.
-
-What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
-
+To solve this issue, we will have to make sure that increment operation on count is atomic, we can do that using Synchronization but Java 5 java.util.concurrent.atomic provides wrapper classes for int and long that can be used to achieve this atomically without usage of Synchronization.
+### 2.2 What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
 Lock interface provide more extensive locking operations than can be obtained using synchronized methods and statements. They allow more flexible structuring, may have quite different properties, and may support multiple associated Condition objects.
 The advantages of a lock are
+* it’s possible to make them fair
+* it’s possible to make a thread responsive to interruption while waiting on a Lock object.
+* it’s possible to try to acquire the lock, but return immediately or after a timeout if the lock can’t be acquired
+* it’s possible to acquire and release locks in different scopes, and in different orders
 
-    it’s possible to make them fair
-    it’s possible to make a thread responsive to interruption while waiting on a Lock object.
-    it’s possible to try to acquire the lock, but return immediately or after a timeout if the lock can’t be acquired
-    it’s possible to acquire and release locks in different scopes, and in different orders
-
-Read more at Java Lock Example.
-
-What is Executors Framework?
-
+### 2.3 What is Executors Framework?
 In Java 5, Executor framework was introduced with the java.util.concurrent.Executor interface.
 
 The Executor framework is a framework for standardizing invocation, scheduling, execution, and control of asynchronous tasks according to a set of execution policies.
 
-Creating a lot many threads with no bounds to the maximum threshold can cause application to run out of heap memory. So, creating a ThreadPool is a better solution as a finite number of threads can be pooled and reused. Executors framework facilitate process of creating Thread pools in java. Check out this post to learn with example code to create thread pool using Executors framework.
-
-What is BlockingQueue? How can we implement Producer-Consumer problem using Blocking Queue?
-
+Creating a lot many threads with no bounds to the maximum threshold can cause application to run out of heap memory. So, creating a ThreadPool is a better solution as a finite number of threads can be pooled and reused. Executors framework facilitate process of creating Thread pools in java.
+### 2.4 What is BlockingQueue? How can we implement Producer-Consumer problem using Blocking Queue?
 java.util.concurrent.BlockingQueue is a Queue that supports operations that wait for the queue to become non-empty when retrieving and removing an element, and wait for space to become available in the queue when adding an element.
 
 BlockingQueue doesn’t accept null values and throw NullPointerException if you try to store null value in the queue.
@@ -112,41 +103,26 @@ BlockingQueue doesn’t accept null values and throw NullPointerException if you
 BlockingQueue implementations are thread-safe. All queuing methods are atomic in nature and use internal locks or other forms of concurrency control.
 
 BlockingQueue interface is part of java collections framework and it’s primarily used for implementing producer consumer problem.
-Check this post for producer-consumer problem implementation using BlockingQueue.
-
-What is Callable and Future?
-
+### 2.5 What is Callable and Future?
 Java 5 introduced java.util.concurrent.Callable interface in concurrency package that is similar to Runnable interface but it can return any Object and able to throw Exception.
 
 Callable interface use Generic to define the return type of Object. Executors class provide useful methods to execute Callable in a thread pool. Since callable tasks run in parallel, we have to wait for the returned Object. Callable tasks return java.util.concurrent.Future object. Using Future we can find out the status of the Callable task and get the returned Object. It provides get() method that can wait for the Callable to finish and then return the result.
-Check this post for Callable Future Example.
-
-What is FutureTask Class?
-
-FutureTask is the base implementation class of Future interface and we can use it with Executors for asynchronous processing. Most of the time we don’t need to use FutureTask class but it comes real handy if we want to override some of the methods of Future interface and want to keep most of the base implementation. We can just extend this class and override the methods according to our requirements. Check out Java FutureTask Example post to learn how to use it and what are different methods it has.
-
-What are Concurrent Collection Classes?
-
+### 2.6 What is FutureTask Class?
+FutureTask is the base implementation class of Future interface and we can use it with Executors for asynchronous processing. Most of the time we don’t need to use FutureTask class but it comes real handy if we want to override some of the methods of Future interface and want to keep most of the base implementation. We can just extend this class and override the methods according to our requirements.
+### 2.7 What are Concurrent Collection Classes?
 Java Collection classes are fail-fast which means that if the Collection will be changed while some thread is traversing over it using iterator, the iterator.next() will throw ConcurrentModificationException.
 
 Concurrent Collection classes support full concurrency of retrievals and adjustable expected concurrency for updates.
-Major classes are ConcurrentHashMap, CopyOnWriteArrayList and CopyOnWriteArraySet, check this post to learn how to avoid ConcurrentModificationException when using iterator.
-
-What is Executors Class?
-
+Major classes are ConcurrentHashMap, CopyOnWriteArrayList and CopyOnWriteArraySet.
+### 2.8 What is Executors Class?
 Executors class provide utility methods for Executor, ExecutorService, ScheduledExecutorService, ThreadFactory, and Callable classes.
 
 Executors class can be used to easily create Thread Pool in java, also this is the only class supporting execution of Callable implementations.
-
-What are some of the improvements in Concurrency API in Java 8?
-
+### 2.9 What are some of the improvements in Concurrency API in Java 8?
 Some important concurrent API enhancements are:
+* ConcurrentHashMap compute(), forEach(), forEachEntry(), forEachKey(), forEachValue(), merge(), reduce() and search() methods.
+* CompletableFuture that may be explicitly completed (setting its value and status).
+* Executors newWorkStealingPool() method to create a work-stealing thread pool using all available processors as its target parallelism level.
 
-    ConcurrentHashMap compute(), forEach(), forEachEntry(), forEachKey(), forEachValue(), merge(), reduce() and search() methods.
-    CompletableFuture that may be explicitly completed (setting its value and status).
-    Executors newWorkStealingPool() method to create a work-stealing thread pool using all available processors as its target parallelism level.
-	
-## 2. References
+## 3. References
 * [Java Multithreading Concurrency Interview Questions and Answers](https://www.journaldev.com/1162/java-multithreading-concurrency-interview-questions-answers)
-* [Java Interview Questions](https://www.journaldev.com/java-interview-questions)
-* [Java String Interview Questions and Answers](https://www.journaldev.com/1321/java-string-interview-questions-and-answers)
