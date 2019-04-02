@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java - Dead Lock"
-index: 155
+index: 118
 category: interview
 image: programming/interview.png
-date: 2019-01-05
-postdate: 2019-01-05
+date: 2019-01-18
+postdate: 2019-01-18
 tags: [synchronized, deadlock]
 ---
 

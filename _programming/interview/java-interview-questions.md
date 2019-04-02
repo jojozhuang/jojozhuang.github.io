@@ -2,7 +2,7 @@
 layout: programming
 key: programming
 title: "Java - Interview Questions(Draft)"
-index: 151
+index: 101
 category: interview
 image: programming/interview.png
 date: 2019-01-01

@@ -12,14 +12,402 @@ tags: [String, Integer, Array, List]
 
 > Basic knowledge of java.
 
-## 1. String, StringBuilder, StringBuffer and CharSequence
+## 1. Basics
+### 1.1 Java Access Modifiers
+Class Access Levels are as follows:
+
+Access Modifiers        | private | default | protected | public
+Inside Class            | Y       | Y       | Y         | Y
+Same Package Class      | N       | Y       | Y         | Y
+Same Package Sub-Class  | N       | Y       | Y         | Y
+Other Package Class     | N       | N       | N         | Y
+Other Package Sub-Class | N       | N       | Y         | Y
+
+### 1.2 Java Primitive Data Types
+A `primitive data type` specifies the size and type of variable values, and it has no additional methods. There are eight primitive data types in Java:
+
+Data Type | Size    | Description
+----------|---------|---------------------------------------
+byte      | 1 byte  | Stores whole numbers from -128 to 127
+short     | 2 bytes | Stores whole numbers from -32,768 to 32,767
+int       | 4 bytes | Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long      | 8 bytes | Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
+float     | 4 bytes | Stores fractional numbers from 3.4e−038 to 3.4e+038. Sufficient for storing 6 to 7 decimal digits
+double    | 8 bytes | Stores fractional numbers from 1.7e−308 to 1.7e+038. Sufficient for storing 15 decimal digits
+boolean   | 1 byte  | Stores true or false values
+char      | 2 bytes | Stores a single character/letter
+
+### 1.3 Java Non-primitive data types
+`Non-primitive data types` are called `reference types` because they refer to objects. The main difference between `primitive` and `non-primitive` data types are:
+* Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for `String`).
+* Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+* A primitive type has always a value, while non-primitve types can be `null`.
+* A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+* The size of a primitive type depends on the data type, while non-primitive types have all the same size.
+
+Examples of non-primitive types are `Strings`, `Arrays`, `Classes`, `Interface`, etc.
+
+### 1.4 Autoboxing in Java
+Autoboxing in java was introduced in Java 1.5. Autoboxing and unboxing is a convenient way to auto transform primitive data type to it’s corresponding java wrapper classes and vice versa.
+
+1) Autoboxing in Java  
+Converting a primitive data type into an object of the corresponding wrapper class is called autoboxing. For example, converting int to Integer or converting long to Long object.
+
+Java compiler applies autoboxing when a primitive value is:
+* Passed as a parameter to a method that expects an object of the corresponding wrapper class. For example a method with Integer argument can be called by passing int, java compiler will do the conversion of int to Integer.
+* Assigned to a variable of the corresponding wrapper class. For example, assigning a Long object to long variable.
+
+2) Unboxing in Java  
+Converting an object of a wrapper type to its corresponding primitive data type is called unboxing.
+
+Java compiler applies unboxing when an object of a wrapper class is:
+* Passed as a parameter to a method that expects a value of the corresponding primitive type.
+* Assigned to a variable of the corresponding primitive type.
+
+Java Autoboxing Example
+```java
+public static void main(String[] args) {
+    int i = 6;
+    long j = 105L;
+
+    // passed the int, will get converted to Integer object at Runtime using
+    // autoboxing in java
+    doSomething(i);
+
+    List<Long> list = new ArrayList<>();
+
+    // java autoboxing to add primitive type in collection classes
+    list.add(j);
+}
+
+private static void doSomething(Integer in) {
+    // unboxing in java, at runtime Integer.intValue() is called implicitly to return int
+    int j = in;
+
+    // java unboxing, Integer is passed where int is expected
+    doPrimitive(in);
+}
+
+private static void doPrimitive(int i) {
+
+}
+```
+
+### 1.5 Wrapper Class in Java
+Wrapper class in java are the Object representation of eight primitive types in java. All the wrapper classes in java are `immutable` and `final`. Java 5 autoboxing and unboxing allows easy conversion between primitive types and their corresponding wrapper classes in java programs.
+
+Below table shows the primitive types and their wrapper class in java.
+
+Primitive type | Wrapper class | Constructor Arguments
+---------------|---------------|------------------------
+byte           | Byte          | byte or String
+short          | Short         | short or String
+int            | Integer       | int or String
+long           | Long          | long or String
+float          | Float         | float, double or String
+double         | Double        | double or String
+char           | Character     | char
+boolean        | Boolean       | boolean or String
+
+Example.
+```java
+public static void main(String args[]){
+    int i = 10;
+    char c = 'a';
+
+    // primitives are simple to use
+    int j = i + 3;
+
+    // polymorphism achieved by Wrapper classes, we can't pass primitive here
+    doSomething(new Character(c));
+
+    List<Integer> list = new ArrayList<>();
+    // wrapper classes can be used in Collections
+    Integer in = new Integer(i);
+    list.add(in);
+
+    // autoboxing takes care of primitive to wrapper class conversion
+    list.add(j);
+
+    // wrapper classes can be null
+    in = null;
+
+    Integer ix = new Integer(12);
+    System.out.println(ix); // ix = 12
+    modify(ix);
+    System.out.println(ix); // ix is still 12
+}
+
+private static void doSomething(Object obj){
+
+}
+
+private static void modify(Integer ix) {
+    ix = ix + 1;
+    System.out.println(ix); // ix = 13
+}
+```
+Notice, variable `ix` in main() function is not changed after the call by modify() function.
+
+### 1.6 for loop
+There are three types of for loop in java.
+* General for loop
+* for-each or enhanced for loop
+* Java for loop with label(continue or break)
+
+Example for 'general for loop'.
+```java
+// print integers 6 to 10
+for (int i = 6; i <= 10; i++) {
+    System.out.println("Java for loop example - " + i);
+}
+```
+Example for 'for-each or enhanced for loop'.
+```java
+// print integers with 'for each'
+int[] intArray = { 1, 2, 3, 4, 5 };
+
+for (int i : intArray) {
+    System.out.println("Java for each example - " + i);
+}
+
+// print strings with 'for loop'
+List<String> fruits = new ArrayList<>();
+fruits.add("Apple");
+fruits.add("Banana");
+fruits.add("Orange");
+
+for (String f : fruits) {
+    System.out.println("Java for each loop with collection - " + f);
+}
+```
+Example for 'for loop with label'.
+```java
+// for loop with label, continue
+int[][] intArr = { { 1, -2, 3 }, { 0, 3 }, { 9, 2, 5 }, { 1, 2, 5 }};
+
+process: for (int i = 0; i < intArr.length; i++) {
+    boolean allPositive = true;
+    for (int j = 0; j < intArr[i].length; j++) {
+        if (intArr[i][j] < 0) {
+            allPositive = false;
+            continue process;
+        }
+    }
+    if (allPositive) {
+        // process the array
+        System.out.println("Array has no negative elements: " + Arrays.toString(intArr[i]));
+    }
+}
+
+// for loop with label, break
+search:
+for (int i = 0; i < intArr.length; i++) {
+    for (int j = 0; j < intArr[i].length; j++) {
+        if (intArr[i][j] > 7) {
+            System.out.println("Find array which contains element larger than 7: " + Arrays.toString(intArr[i]));
+            break search;
+        }
+    }
+}
+```
+Output.
+```sh
+Java for loop example - 6
+Java for loop example - 7
+Java for loop example - 8
+Java for loop example - 9
+Java for loop example - 10
+Java for each example - 1
+Java for each example - 2
+Java for each example - 3
+Java for each example - 4
+Java for each example - 5
+Java for each loop with collection - Apple
+Java for each loop with collection - Banana
+Java for each loop with collection - Orange
+Array has no negative elements: [0, 3]
+Array has no negative elements: [9, 2, 5]
+Array has no negative elements: [1, 2, 5]
+Find array which contains element larger than 7: [9, 2, 5]
+```
+### 1.7 while loop
+```java
+// while loop
+int i = 6;
+while (i <= 10) {
+    System.out.println(i);
+    i++;
+}
+
+// while loop with Iterator
+List<String> veggies = new ArrayList<>();
+veggies.add("Spinach");
+veggies.add("Potato");
+veggies.add("Tomato");
+
+Iterator<String> it = veggies.iterator();
+
+while(it.hasNext()) {
+    System.out.println(it.next());
+}
+
+// infinite loop
+while(true) {
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm:ss");
+    Date current = new Date(System.currentTimeMillis());
+    System.out.println(sdf.format(current));
+}
+```
+Output.
+```sh
+6
+7
+8
+9
+10
+Spinach
+Potato
+Tomato
+Apr 01,2019 13:52:25
+Apr 01,2019 13:52:26
+Apr 01,2019 13:52:27
+Apr 01,2019 13:52:28
+Apr 01,2019 13:52:29
+Apr 01,2019 13:52:30
+...
+```
+### 1.8 do while loop
+```java
+// do while loop
+int i = 6;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 10);
+
+// infinite loop
+do {
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm:ss");
+    Date current = new Date(System.currentTimeMillis());
+    System.out.println(sdf.format(current));
+} while(true);
+```
+Output.
+```sh
+6
+7
+8
+9
+10
+Apr 01,2019 14:01:06
+Apr 01,2019 14:01:07
+Apr 01,2019 14:01:08
+Apr 01,2019 14:01:09
+Apr 01,2019 14:01:10
+```
+### 1.9 do while vs while loop
+The only time you should use `do while` loop is when you want to execute the statements inside loop `at least once`, even though condition expression returns false. Otherwise it’s always better to use while loop.
+
+## 2. Static Keyword
+static keyword usage.
+* static variable
+* static methods
+* static block
+* static inner class
+* Interface static method
+
+Example.
+```java
+public class StaticKeywordExample {
+    public static void main(String[] args) {
+        StaticExample.setCount(5);
+
+        //non-private static variables can be accessed with class name
+        StaticExample.str = "abc";
+        StaticExample se = new StaticExample();
+        System.out.println(se.getCount());
+
+        //class and instance static variables are same
+        System.out.println(StaticExample.str + " is same as " + se.str);
+        System.out.println(StaticExample.str == se.str);
+
+        //static nested classes are like normal top-level classes
+        StaticExample.MyStaticClass myStaticClass1 = new StaticExample.MyStaticClass();
+        myStaticClass1.count = 10;
+
+        StaticExample.MyStaticClass myStaticClass2 = new StaticExample.MyStaticClass();
+        myStaticClass2.count = 20;
+
+        System.out.println(myStaticClass1.count);
+        System.out.println(myStaticClass2.count);
+    }
+}
+
+class StaticExample {
+    //static block
+    static {
+        //can be used to initialize resources when class is loaded
+        System.out.println("StaticExample static block");
+        //can access only static variables and methods
+        str = "Test";
+        setCount(2);
+    }
+
+    //multiple static blocks in same class
+    static{
+        System.out.println("StaticExample static block2");
+    }
+
+    //static variable example
+    private static int count; //kept private to control its value through setter
+    public static String str;
+
+    // instance method
+    public int getCount() {
+        return count;
+    }
+
+    //static method example
+    public static void setCount(int count) {
+        if (count > 0)
+            StaticExample.count = count;
+    }
+
+    //static util method
+    public static int addInts(int i, int...js){
+        int sum = i;
+        for (int x : js) {
+            sum += x;
+        }
+        return sum;
+    }
+
+    //static class example - used for packaging convenience only
+    public static class MyStaticClass{
+        public int count;
+    }
+}
+```
+
+## 3. String, StringBuilder, StringBuffer and CharSequence
 
 Feature     | String | StringBuilder | StringBuffer
 ------------|--------|---------------|-------------
 mutable     | No     | Yes           | Yes
 thread-safe | Yes    | No            | Yes
 
-### 1.1 String
+### 3.1 String
 Common operations on String.
 * Creation
 * Concatenation
@@ -87,7 +475,7 @@ String strC = "Hello, World!";
 strC = strC.toLowerCase();                 // strC = "hello, world!"
 System.out.println(strC);
 ```
-### 1.2 StringBuilder
+### 3.2 StringBuilder
 StringBuilder is mainly used to concatenate strings, as it has better performance than String.
 ```java
 // StringBuilder creation
@@ -130,7 +518,7 @@ System.out.println(sb); // sb.toString() = "!yad ecin a evah ,ynnhoJ"
 String str = sb.toString();
 System.out.println(str); // str = "!yad ecin a evah ,ynnhoJ";
 ```
-### 1.3 StringBuffer
+### 3.3 StringBuffer
 StringBuffer is mainly used to concatenate strings, as it has better performance than String.
 ```java
 // StringBuffer creation
@@ -173,8 +561,7 @@ System.out.println(sb); // sb.toString() = "!yad ecin a evah ,ynnhoJ"
 String str = sb.toString();
 System.out.println(str); // str = "!yad ecin a evah ,ynnhoJ";
 ```
-
-### 1.4 CharSequence
+### 3.4 CharSequence
 CharSequence is an interface that represents a sequence of characters. String, StringBuilder and StringBuffer are all its implementations.
 ```java
 // CharSequence creation, instantiated by implementation class(String, StringBuffer or  StringBuilder)
@@ -200,7 +587,7 @@ System.out.println(cs2.equals(str1));           // true
 ```
 Note, whether the object created by CharSequence is equal to other strings depends on how this object is created. If we know which class instantiated these objects, it is easy to apply the comparison rules.
 
-## 2. Character
+## 4. Character
 ```java
 // get integer value from char
 String s = "ab5d";
@@ -219,7 +606,7 @@ if (c >= '0' && c <= '9' || c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') {
 }
 ```
 
-## 2. Array and Collections
+## 5. Array and Collections
 ```java
 // create empty array
 int[] nums = new int[]{};
@@ -388,4 +775,7 @@ PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
 * [Source files for Java Core Basic on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-basic)
 
 ## 9. References
+* [Java Doc - Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 * [Core Java Tutorial](https://www.journaldev.com/24601/java-11-features)
+* [Java Data Types](https://www.w3schools.com/java/java_data_types.asp)
+* [Primitive Wrapper Classes are Immutable in Java](https://www.geeksforgeeks.org/primitive-wrapper-classes-are-immutable-in-java/)
