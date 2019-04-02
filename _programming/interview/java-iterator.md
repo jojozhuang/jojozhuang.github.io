@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java - Iterator"
-index: 152
+index: 115
 category: interview
 image: programming/interview.png
-date: 2019-01-02
-postdate: 2019-01-02
+date: 2019-01-15
+postdate: 2019-01-15
 tags: [Iterator, Predicate]
 ---
 

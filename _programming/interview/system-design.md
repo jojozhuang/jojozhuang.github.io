@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "System Design(Draft)"
-index: 161
+index: 151
 category: interview
 image: programming/interview.png
-date: 2019-01-11
-postdate: 2019-01-11
+date: 2019-03-01
+postdate: 2019-03-01
 tags: [System Design]
 ---
 

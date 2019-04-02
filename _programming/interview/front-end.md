@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Front End(Draft)"
-index: 166
+index: 131
 category: interview
 image: programming/interview.png
-date: 2019-01-16
-postdate: 2019-01-16
+date: 2019-02-01
+postdate: 2019-02-01
 tags: [Javascript, Html, Css]
 ---
 

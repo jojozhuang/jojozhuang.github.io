@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java - Read Files in Parallel"
-index: 154
+index: 117
 category: interview
 image: programming/interview.png
-date: 2019-01-04
-postdate: 2019-01-04
+date: 2019-01-17
+postdate: 2019-01-17
 tags: [Javascript, Html, Css]
 ---
 
