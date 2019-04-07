@@ -45,12 +45,13 @@ tags: [English]
 * whole number: 整数, e.g. 0, 1, 2, 3, 4… (may have different definition)
 * integer: 整数, e.g. -3, -2, -1, 0,1, 2, 3, 4,…
 * fractional portion: 小数
-* numerator: 被除数
-* denominator: 除数
+* numerator: 分子/被除数
+* denominator: 分母/除数
 * quotient: 商
 * remainder: 余数
 * logarithm: 对数
 * factorial: 阶乘, e.g. n!
+* square: 平方
 * square root: 平方根
 * cartesian product: 笛卡儿积
 * algebraic: 代数的

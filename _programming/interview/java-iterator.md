@@ -82,6 +82,7 @@ Exception in thread "main" java.util.ConcurrentModificationException
 ```
 
 ## 2. Custom Iterator
+### 2.1 Sorted Iterator
 Create an iterator which accepts an integer array and returns its elements in increasing order. For example, the given array is [3,6,8,2,4,7,1], this iterator returns [1,2,3,4,6,7,8] if we keep calling the next() method.
 
 Create a class with implementing Iterator interface. Override the `hasNext()` and `next()` method.
@@ -143,12 +144,11 @@ Output
 7
 8
 ```
-
-## 3. Common Element Iterator
+### 2.2 Common Element Iterator
 Give two sorted iterator, implement a common element iterator.  
-For example: Suppose we have iterator1, which contains int array [1,3,5,7,9]. And we also have iterator2, which contains int array [2,3,4,8,9]. The common element iterator should return the common elements in the above two iterator, [3,9].
+For example: Suppose we have iterator1, which contains int array [1,3,5,7,9]. And we also have iterator2, which contains int array [2,3,4,8,9]. The common element iterator should return the common elements in the above two iterators, [3,9].
 
-CommonIterator
+Create a class with implementing Iterator interface. Override the `hasNext()` and `next()` method.
 ```java
 import java.util.Iterator;
 
@@ -229,11 +229,87 @@ Output
 3
 9
 ```
+### 2.3 Implement Remove Method of Iterator
+Given a list of integer, use it to implement iterator, override `remove` method. Notice that the remove method only remove the `last visited element`(visited by next() method).
+```java
+import java.util.Iterator;
+import java.util.List;
 
-## 4. Predicate Iterator
-Implement an iterator with predicate.
-### 4.1 Custom Predicate
-Create a custom predicate, which return true only if the given value is larger than 5.
+public class RemoveIterator implements Iterator<Integer> {
+
+    private List<Integer> list;
+    private int last = -1;
+    private int curr = 0;
+    public RemoveIterator(List<Integer> list) {
+        this.list = list;
+    }
+
+    @Override
+    public boolean hasNext(){
+        if (curr < list.size()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public Integer next() {
+        if (hasNext()) {
+            last = curr;
+            curr++;
+            return list.get(last);
+        }
+
+        return null;
+    }
+
+    @Override
+    public void remove() {
+        if (last > 0) {
+            //throw exception
+        }
+
+        list.remove(last);
+        curr = last; // keep the current position
+        last = -1;
+    }
+}
+```
+Test RemoveIterator, delete elements 2 and 8.
+```java
+public static void main(String args[]) {
+    List<Integer> list = new ArrayList<>(Arrays.asList(new Integer[]{3,5,6,8,2,4,7,1}));
+    RemoveIterator iterator = new RemoveIterator(list);
+    while (iterator.hasNext()){
+        Integer number = iterator.next();
+        System.out.println("Processing - " + number);
+
+        if(number == 8 || number == 2) {
+            iterator.remove();
+        }
+    }
+
+    System.out.println("list after iteration = " + list);
+}
+```
+Output.
+```sh
+Processing - 3
+Processing - 5
+Processing - 6
+Processing - 8
+Processing - 2
+Processing - 4
+Processing - 7
+Processing - 1
+list after iteration = [3, 5, 6, 4, 7, 1]
+```
+
+## 3. Predicate + Iterator
+Implement an iterator with predicate interface.
+### 3.1 Custom Predicate
+Create a custom predicate, which returns true only if the given value is larger than 5.
 ```java
 import java.util.function.Predicate;
 
@@ -247,8 +323,8 @@ public class BiggerThanFivePredicate implements Predicate<Integer> {
     }
 }
 ```
-### 4.2 Predicate Iterator
-Create a class with implementing Iterator interface. Override the `hasNext()` and `next()` method. Use the custom predicate to filter out unmatched data.
+### 3.2 Predicate Iterator
+Create a class, implement Iterator interface. Override the `hasNext()` and `next()` method. Use the custom predicate to filter out unmatched data.
 ```java
 import java.util.Iterator;
 
@@ -291,7 +367,7 @@ public class PredicateIterator implements Iterator<Integer> {
     }
 }
 ```
-Test CommonIterator.
+Test PredicateIterator.
 ```java
 public static void main(String args[]) {
     List<Integer> list = new ArrayList<>(Arrays.asList(new Integer[]{3,5,6,8,2,4,7,1}));
@@ -311,10 +387,10 @@ Output.
 7
 ```
 
-## 5. Source Files
+## 4. Source Files
 * [Source files for Iterator on GitHub](https://github.com/jojozhuang/technical-interview/tree/master/java-iterator)
 
-## 6. References
+## 5. References
 * [Java Doc - Interface Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)
 * [Java Predicate](http://zetcode.com/java/predicate/)
 * [Java Iterator with examples](https://beginnersbook.com/2014/06/java-iterator-with-examples/)
