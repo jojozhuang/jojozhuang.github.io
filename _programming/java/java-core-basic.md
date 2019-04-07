@@ -779,3 +779,4 @@ PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
 * [Core Java Tutorial](https://www.journaldev.com/24601/java-11-features)
 * [Java Data Types](https://www.w3schools.com/java/java_data_types.asp)
 * [Primitive Wrapper Classes are Immutable in Java](https://www.geeksforgeeks.org/primitive-wrapper-classes-are-immutable-in-java/)
+* [Java Arrays](https://www.journaldev.com/750/initialize-array-java)
