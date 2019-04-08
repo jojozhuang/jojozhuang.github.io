@@ -31,535 +31,202 @@ CopyOnWriteArrayList  | Yes | Yes     | No       | Yes                | Yes     
 ConcurrentHashMap     | No  | Yes     | Yes      | No                 | Yes          | Yes
 CopyOnWriteArraySet   | No  | No      | No       | No                 | Yes          | Yes
 
-## 2. ArrayList
+## 2. Queue
 ### 2.1 Constructor
-There are three constructors in Java ArrayList class.
-* public ArrayList()
-* public ArrayList(int initialCapacity)
-* public ArrayList(Collection<? extends E> c)
-
 ```java
 private static void constructList() {
-    // no arguments
-    List<Integer> list1 = new ArrayList<>();
-    list1.add(5);
-    list1.add(9);
-    list1.add(4);
-    list1.add(2);
-    System.out.println("Construct list: " + list1);
+    Queue<String> queue = new LinkedList<>();
+    queue.add("one");
+    queue.add("two");
+    queue.add("three");
+    queue.add("four");
+    System.out.println(queue);
 
-    // with another list
-    List<Integer> list2 = new ArrayList<>(list1);
-    System.out.println("Construct list with another list: " + list2);
+    queue.remove("three");
+    System.out.println(queue);
+    System.out.println("Queue Size: " + queue.size());
+    System.out.println("Queue Contains element 'two' or not? : " + queue.contains("two"));
 
-    // with treeset
-    SortedSet<Integer> treeSet1 = new TreeSet<>(list1);
-    List<Integer> list3 = new ArrayList<>(treeSet1);
-    System.out.println("Construct list with tree set: " + list3);
+    // To empty the queue
+    queue.clear();
+
+    //Array to Queue
+    String[] nums = {"one","two","three","four","five"};
+    Queue<String> queue2 = new LinkedList<>();
+    Collections.addAll(queue2, nums);
+    System.out.println(queue2);
+
+    // Queue to Array
+    String strArray[] = queue2.toArray(new String[queue2.size()]);
+    System.out.println(Arrays.toString(strArray));
 }
 ```
 Output.
 ```sh
-Construct list: [5, 9, 4, 2]
-Construct list with another list: [5, 9, 4, 2]
-Construct list with tree set: [2, 4, 5, 9]
+[one, two, three, four]
+[one, two, four]
+Queue Size: 3
+Queue Contains element 'two' or not? : true
+[one, two, three, four, five]
+[one, two, three, four, five]
 ```
 ### 2.2 Common Operations
-* list.add(item);
-* list.add(0, item);
-* list.remove(index);
-* list.subList(index1, index2);
+Java Queue supports all operations supported by Collection interface and some more operations. It supports almost all operations in two forms.
+* One set of operations throws an exception if the operation fails.
+* The other set of operations returns a special value if the operation fails.
 
-Example.
+The following table explains all Queue common operations briefly.
+
+OPERATION | THROWS EXCEPTION | SPECIAL VALUE
+----------|------------------|---------------
+Insert    | add(e)           | offer(e)
+Remove    | remove()         | poll()
+Examine   | element()        | peek()
+
 ```java
-private static void commonOperations() {
+// insert
+private static void insert() {
+    System.out.println("Queue - insert");
     // add
-    List<Integer> list1 = new ArrayList<>();
-    for (int i = 0; i < 9; i++) {
-        list1.add(i);
-    }
-    System.out.println("Common operations - add : " + list1);
+    BlockingQueue<String> queue = new ArrayBlockingQueue<>(2);
+    System.out.println(queue.add("one"));   // true
+    System.out.println(queue.add("two"));   // true
+    System.out.println(queue);              // [one, two]
+    //System.out.println(queue.add("three")); // java.lang.IllegalStateException: Queue full
+    System.out.println(queue);
 
-    // insert
-    list1.add(0, 12);
-    System.out.println("Insert 12 at index 0 : " + list1);
-    list1.add(5, 9);
-    System.out.println("Insert 9 at index 5 : " + list1);
+    // offer
+    BlockingQueue<String> queue2 = new ArrayBlockingQueue<>(2);
+    System.out.println(queue2.offer("one"));   // true
+    System.out.println(queue2.offer("two"));   // true
+    System.out.println(queue2);                   // [one, two]
+    System.out.println(queue2.offer("three")); // false
+    System.out.println(queue2);                   // [one, two]
+}
 
+// delete
+private static void delete() {
+    System.out.println("Queue - delete");
     // remove
-    list1.remove(0);
-    System.out.println("Remove element which is at index 0 : " + list1);
+    Queue<String> queue = new LinkedList<>();
+    queue.offer("one");
+    queue.offer("two");
+    System.out.println(queue);           // [one, two]
+    System.out.println(queue.remove());  // one
+    System.out.println(queue.remove());  // two
+    //System.out.println(queue.remove()); // java.util.NoSuchElementException
 
-    // get
-    System.out.println("Get element which is at index 3 : " + list1.get(3));
+    // poll
+    Queue<String> queue2 = new LinkedList<>();
+    queue2.offer("one");
+    queue2.offer("two");
+    System.out.println(queue2);         // [one, two]
+    System.out.println(queue2.poll());  // one
+    System.out.println(queue2.poll());  // two
+    System.out.println(queue2.poll());  // return null
+}
 
-    // sub list
-    List<Integer> list2 = list1.subList(2, 4);
-    System.out.println("Sub list from index 2(inclusive) to index 4(exclusive) : " + list2);
+// examine
+private static void examine() {
+    System.out.println("Queue - examine");
+    // element
+    Queue<String> queue = new LinkedList<>();
+    queue.add("one");
+
+    System.out.println(queue.element());  // one
+    System.out.println(queue);            // [one]
+    queue.clear();
+    //System.out.println(queue.element()); // java.util.NoSuchElementException
+
+    // peek
+    Queue<String> queue2 = new LinkedList<>();
+    queue2.add("one");
+
+    System.out.println(queue2.peek());  // one
+    System.out.println(queue2);         // [one]
+    queue2.clear();
+    System.out.println(queue2.peek());  // return null
 }
 ```
 Output.
 ```sh
-Common operations - add : [0, 1, 2, 3, 4, 5, 6, 7, 8]
-Insert 12 at index 0 : [12, 0, 1, 2, 3, 4, 5, 6, 7, 8]
-Insert 9 at index 5 : [12, 0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
-Remove element which is at index 0 : [0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
-Get element which is at index 3 : 3
-Sub list from index 2(inclusive) to index 4(exclusive) : [2, 3]
+Queue - insert
+true
+true
+[one, two]
+[one, two]
+true
+true
+[one, two]
+false
+[one, two]
+Queue - delete
+[one, two]
+one
+two
+[one, two]
+one
+two
+null
+Queue - examine
+one
+[one]
+one
+[one]
+null
 ```
-### 2.3 Sorting
+### 2.3 Java Queue Categories
+`Bounded Queues` are queues which are bounded by capacity that means we need to provide the max size of the queue at the time of creation. For example ArrayBlockingQueue (see previous example).
+* Bounded Queues
+* Unbounded Queues
+
+All Queues which implement `BlockingQueue` interface are BlockingQueues and rest are Non-Blocking Queues.
+* Blocking Queues
+* Non-Blocking Queues
+
+OPERATION | THROWS EXCEPTION | SPECIAL VALUE |BLOCKS  | TIMES OUT
+----------|------------------|---------------|--------|---------------------
+Insert    | add(e)           | offer(e)      | put(e) | offer(e, time, unit)
+Remove    | remove()         | poll()        | take() | poll(time, unit)
+Examine   | element()        | peek()        | N/A    | N/A
+
+## 3. Stack
+Java Stack extends Vector class with the following five operations only.
+* boolean empty(): Tests if this stack is empty.
+* E peek(): Looks at the object at the top of this stack without removing it from the stack.
+* E pop() : Removes the object at the top of this stack and returns that object as the value of this function.
+* E push(E item) : Pushes an item onto the top of this stack.
+* int search(Object o) : Returns the 1-based position where an object is on this stack.
+
 ```java
-private static void sortList() {
-    // Sorting
-    List<Integer> list1 = new ArrayList<>();
-    list1.add(3);
-    list1.add(1);
-    list1.add(2);
-    Collections.sort(list1);                // ascending order, list1 = {1,2,3}
-    System.out.println("Sort list in ascending order: " + list1);
-    Collections.sort(list1, (a,b)->(b-a));  // descending order, list1 = {3,2,1}
-    System.out.println("Sort list in descending order: " + list1);
+public static void main(String a[]){
+    Stack<Integer> stack = new Stack<>();
+    System.out.println("stack : "  + stack); // []
+    System.out.println("Empty stack : "  + stack.isEmpty()); // true
+    // Exception in thread "main" java.util.EmptyStackException
+    // System.out.println("Empty stack : Pop Operation : "  + stack.pop());
+    stack.push(11);
+    stack.push(12);
+    stack.push(13);
+    stack.push(14);
+    System.out.println("stack : "  + stack); // [11,12,13,14]
+    System.out.println("Pop Operation : "  + stack.pop()); // 14
+    System.out.println("After Pop Operation : "  + stack); // [11,12,13]
+    System.out.println("search() Operation : "  + stack.search(12)); // 2
+    System.out.println("stack : "  + stack.isEmpty()); // false
 }
 ```
 Output.
+
 ```sh
-Sort list in ascending order: [1, 2, 3]
-Sort list in descending order: [3, 2, 1]
+stack : []
+Empty stack : true
+stack : [11, 12, 13, 14]
+Pop Operation : 14
+After Pop Operation : [11, 12, 13]
+search() Operation : 2
+stack : false
 ```
-### 2.4 Traversal
-There are three ways to traverse a list.
-* basic for
-* for each
-* iterator
-
-```java
-private static void traverseList() {
-    List<String> fruits = new ArrayList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    // basic for
-    for (int i = 0; i < fruits.size(); i++) {
-        System.out.println("Traverse List(basic for): processing - " + fruits.get(i));
-    }
-
-    System.out.println();
-
-    // for each
-    for (String fruit : fruits) {
-        System.out.println("Traverse List(for each): processing - " + fruit);
-    }
-
-    System.out.println();
-
-    // iterator
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()) {
-        String fruit = iterator.next();
-        System.out.println("Traverse List(iterator): processing - " + fruit);
-    }
-}
-```
-Output.
-```sh
-Traverse List(basic for): processing - Apple
-Traverse List(basic for): processing - Banana
-Traverse List(basic for): processing - Orange
-Traverse List(basic for): processing - Watermelon
-Traverse List(basic for): processing - Kiwi
-
-Traverse List(for each): processing - Apple
-Traverse List(for each): processing - Banana
-Traverse List(for each): processing - Orange
-Traverse List(for each): processing - Watermelon
-Traverse List(for each): processing - Kiwi
-
-Traverse List(iterator): processing - Apple
-Traverse List(iterator): processing - Banana
-Traverse List(iterator): processing - Orange
-Traverse List(iterator): processing - Watermelon
-Traverse List(iterator): processing - Kiwi
-```
-### 2.5 Remove Element
-Below is the example showing the wrong way to remove element during traversal. We will get java.util.ConcurrentModificationException if we call `List.remove()` inside the for loop.
-```java
-private static void wrongWayToRemoveElement() {
-    List<String> fruits = new ArrayList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    // in for each loop
-    for (String fruit : fruits) {
-        System.out.println("Traverse List(for each): processing - " + fruit);
-
-        if ("Orange".equals(fruit)) {
-            fruits.remove("Orange");  // java.util.ConcurrentModificationException is thrown
-        }
-    }
-
-    // in iterator loop
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Traverse List(iterator): processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            fruits.remove("Orange");  // java.util.ConcurrentModificationException is thrown
-        }
-    }
-
-    System.out.println("fruits list after iteration = " + fruits);
-}
-```
-The correct way to remove element is to call `Iterator.remove()` method.
-```java
-private static void correctWayToRemoveElement() {
-    List<String> fruits = new ArrayList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Remove element: processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            iterator.remove();  // iterator.remove not list.remove
-        }
-    }
-
-    System.out.println("Fruits list after deletion = " + fruits);
-}
-```
-Output.
-```sh
-Remove element: processing - Apple
-Remove element: processing - Banana
-Remove element: processing - Orange
-Remove element: processing - Watermelon
-Remove element: processing - Kiwi
-Fruits list after deletion = [Apple, Banana, Watermelon, Kiwi]
-```
-
-## 3. LinkedList
-### 3.1 Constructor
-There are two constructors in Java LinkedList class.
-* public LinkedList()
-* public LinkedList(Collection<? extends E> c)
-
-```java
-private static void constructList() {
-    // no arguments
-    List<Integer> list1 = new LinkedList<>();
-    list1.add(5);
-    list1.add(9);
-    list1.add(4);
-    list1.add(4);
-    list1.add(2);
-    System.out.println("Construct list: " + list1);
-
-    // with another list
-    List<Integer> list2 = new LinkedList<>(list1);
-    System.out.println("Construct list with another list: " + list2);
-
-    // with treeset
-    SortedSet<Integer> treeSet1 = new TreeSet<>(list1);
-    List<Integer> list3 = new LinkedList<>(treeSet1);
-    System.out.println("Construct list with tree set: " + list3);
-}
-```
-Output.
-```sh
-Construct list: [5, 9, 4, 4, 2]
-Construct list with another list: [5, 9, 4, 4, 2]
-Construct list with tree set: [2, 4, 5, 9]
-```
-### 3.2 Common Operations
-* list.add(item);
-* list.add(0, item);
-* list.remove(index);
-* list.subList(index1, index2);
-
-Example.
-```java
-private static void commonOperations() {
-    // add
-    List<Integer> list1 = new LinkedList<>();
-    for (int i = 0; i < 9; i++) {
-        list1.add(i);
-    }
-    System.out.println("Common operations - add : " + list1);
-
-    // insert
-    list1.add(0, 12);
-    System.out.println("Insert 12 at index 0 : " + list1);
-    list1.add(5, 9);
-    System.out.println("Insert 9 at index 5 : " + list1);
-
-    // remove
-    list1.remove(0);
-    System.out.println("Remove element which is at index 0 : " + list1);
-
-    // sub list
-    List<Integer> list2 = list1.subList(2, 4);
-    System.out.println("Sub list from index 2(inclusive) to index 4(exclusive) : " + list2);
-}
-```
-Output.
-```sh
-Common operations - add : [0, 1, 2, 3, 4, 5, 6, 7, 8]
-Insert 12 at index 0 : [12, 0, 1, 2, 3, 4, 5, 6, 7, 8]
-Insert 9 at index 5 : [12, 0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
-Remove element which is at index 0 : [0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
-Sub list from index 2(inclusive) to index 4(exclusive) : [2, 3]
-```
-### 3.3 Sorting
-```java
-private static void sortList() {
-    // Sorting
-    List<Integer> list1 = new LinkedList<>();
-    list1.add(3);
-    list1.add(1);
-    list1.add(2);
-
-    Collections.sort(list1);                // ascending order, list1 = {1,2,3}
-    System.out.println("Sort list in ascending order: " + list1);
-    Collections.sort(list1, (a,b)->(b-a));  // descending order, list1 = {3,2,1}
-    System.out.println("Sort list in descending order: " + list1);
-}
-```
-Output.
-```sh
-Sort list in ascending order: [1, 2, 3]
-Sort list in descending order: [3, 2, 1]
-```
-### 3.4 Traversal
-There are two ways to traverse a list.
-* for each
-* iterator
-
-```java
-private static void traverseList() {
-    List<String> fruits = new LinkedList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    // for each
-    for (String fruit : fruits) {
-        System.out.println("Traverse List(for each): processing - " + fruit);
-    }
-
-    System.out.println();
-
-    // iterator
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()) {
-        String fruit = iterator.next();
-        System.out.println("Traverse List(iterator): processing - " + fruit);
-    }
-}
-```
-Output.
-```sh
-Traverse List(for each): processing - Apple
-Traverse List(for each): processing - Banana
-Traverse List(for each): processing - Orange
-Traverse List(for each): processing - Watermelon
-Traverse List(for each): processing - Kiwi
-
-Traverse List(iterator): processing - Apple
-Traverse List(iterator): processing - Banana
-Traverse List(iterator): processing - Orange
-Traverse List(iterator): processing - Watermelon
-Traverse List(iterator): processing - Kiwi
-```
-### 3.5 Remove Element
-Below is the example showing the wrong way to remove element during traversal. We will get java.util.ConcurrentModificationException if we call `List.remove()` inside the for loop.
-```java
-private static void wrongWayToRemoveElement() {
-    List<String> fruits = new LinkedList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    // in for each loop
-    for (String fruit : fruits) {
-        System.out.println("Traverse List(for each): processing - " + fruit);
-
-        if ("Orange".equals(fruit)) {
-            fruits.remove("Orange");  // java.util.ConcurrentModificationException is thrown
-        }
-    }
-
-    // in iterator loop
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Traverse List(iterator): processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            fruits.remove("Orange");  // java.util.ConcurrentModificationException is thrown
-        }
-    }
-
-    System.out.println("fruits list after iteration = " + fruits);
-}
-```
-The correct way to remove element is to call `Iterator.remove()` method.
-```java
-private static void correctWayToRemoveElement() {
-    List<String> fruits = new LinkedList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Remove element: processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            iterator.remove();  // iterator.remove not list.remove
-        }
-    }
-
-    System.out.println("Fruits list after deletion = " + fruits);
-}
-```
-Output.
-```sh
-Remove element: processing - Apple
-Remove element: processing - Banana
-Remove element: processing - Orange
-Remove element: processing - Watermelon
-Remove element: processing - Kiwi
-Fruits list after deletion = [Apple, Banana, Watermelon, Kiwi]
-```
-### 3.6 Interface
-LinkedList implements three interfaces: List, Queue and Queue.
-```java
-private static void interfaces() {
-    // List Interface, insertion order
-    List<Integer> list = new LinkedList<>();
-    list.add(1);
-    list.add(2);
-    list.add(4);
-    list.forEach(System.out::println);  // print 1,2,4
-
-    // Queue interface, FIFO
-    Queue<Integer> queue = new LinkedList<>();
-    queue.offer(1);
-    queue.offer(2);
-    queue.offer(3);
-    while (!queue.isEmpty()) {
-        System.out.println(queue.poll());  // print 1,2,3
-    }
-
-    // Deque interface, FIFO or LIFO
-    Deque<Integer> deque = new LinkedList<>();
-    deque.offerLast(1);  // deque = {1}
-    deque.offerLast(2);  // deque = {1,2}
-    deque.offerFirst(3); // deque = {3, 1, 2}
-    deque.peekFirst();      // return 3
-    deque.peekLast( );      // return 2
-    deque.pollFirst();      // return 3, deque = {1,2}
-    deque.pollLast();       // return 2, deque = {1}
-}
-```
-
-## 3. Set, HashSet, SortedSet, TreeSet
-HashSet.
-```java
-public static void main(String[] args) {
-    Set<String> set = new HashSet<>();
-
-    //initial capacity should be power of 2
-    set = new HashSet<>(32);
-
-    //setting backing HashMap initial capacity and load factor
-    set = new HashSet<>(32, 0.80f);
-
-    //creating HashSet from another Collection
-    Set<String> set1 = new HashSet<>(set);
-    Set<String> set2 = new HashSet<>(new ArrayList<>());
-}
-```
-Traverse set by for each or iterator.
-```java
-private static void traverseSet() {
-    Set<String> fruits = new HashSet<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Mango");
-
-    // by for each
-    for (String fruit : fruits) {
-        System.out.println("Processing - " + fruit);
-    }
-
-    // by iterator
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()) {
-        String fruit = iterator.next();
-        System.out.println("Processing - " + fruit);
-    }
-}
-```
-Remove element during traverse.
-```java
-private static void correctWayToRemoveElement() {
-    Set<String> fruits = new HashSet<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Mango");
-
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            iterator.remove(); // iterator.remove not set.remove
-        }
-    }
-
-    System.out.println("fruits set after iteration = " + fruits);
-}
-```
-
-Interface: java.util.Set, java.util.SortedSet;
-Class: java.util.HashSet, java.util.TreeSet;
-```java
-Set setA = new HashSet();
-Set<String> daysOfWeek = new HashSet<>();
-```
-## 4. Map
 
 ## 5. Heap
 Interface: java.util.Queue
