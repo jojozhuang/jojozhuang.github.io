@@ -1,13 +1,13 @@
 ---
 layout: programming
 key: programming
-title: "Front End(Draft)"
-index: 131
+title: "Front End - CSS"
+index: 133
 category: interview
 image: programming/interview.png
-date: 2019-02-01
-postdate: 2019-02-01
-tags: [Javascript, Html, Css]
+date: 2019-02-03
+postdate: 2019-02-03
+tags: [CSS]
 ---
 
 > Knowledges of front end.

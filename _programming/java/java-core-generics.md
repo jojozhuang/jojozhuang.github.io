@@ -19,3 +19,5 @@ Type erasure is a process in which compiler replaces a generic parameter with ac
 Methods Erasure
 
 https://www.tutorialspoint.com/java_generics/index.htm
+
+https://www.journaldev.com/1663/java-generics-example-method-class-interface
