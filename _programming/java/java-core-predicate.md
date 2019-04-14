@@ -21,3 +21,5 @@ tags: [BlockingQueue, ArrayBlockingQueue]
 
 ## 4. References
 * [Java Predicate](http://zetcode.com/java/predicate/)
+* [Java Predicate – Java 8 Predicate](https://www.journaldev.com/17072/java-predicate)
+* [Java 8 - Functional Interfaces](https://www.tutorialspoint.com/java8/java8_functional_interfaces.htm)
