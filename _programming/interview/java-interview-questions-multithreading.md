@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - Multithreading Interview Questions"
-index: 103
+title: "Java Interview Questions - Multithreading"
+index: 105
 category: interview
 image: programming/interview.png
-date: 2019-01-03
-postdate: 2019-01-03
+date: 2016-01-05
+postdate: 2016-01-05
 tags: [Java, Interview]
 ---
 

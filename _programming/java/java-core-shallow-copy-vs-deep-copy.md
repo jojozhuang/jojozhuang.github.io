@@ -1,18 +1,26 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - Shallow Copy and Deep Copy"
+title: "Java Core - Shallow Copy vs Deep Copy"
 index: 204
 category: java
 image: /programming/java.png
-date: 2016-02-04
-postdate: 2016-02-04
+date: 2017-01-04
+postdate: 2017-01-04
 tags: [Shallow Copy, Deep Copy]
 ---
 
 > Compare the difference between shallow copy and deep copy.
 
-## 1. Model Class
+## 1. Shallow Copy and Deep Copy
+`Shallow copy` is creating a new object and then copying the non static fields of the current object to the new object. If the field is a value type, a bit by bit copy of the field is performed. If the field is a reference type, the reference is copied but the referred object is not, therefore the original object and its clone refer to the same object. A shallow copy of an object is a new object whose instance variables are identical to the old object.
+
+`Deep copy` is creating a new object and then copying the non-static fields of the current object to the new object. If a field is a value type, a bit by bit copy of the field is performed. If a field is a reference type, a new copy of the referred object is performed. A deep copy of an object is a new object with entirely new instance variables, it does not share objects with the old.
+
+![image](/public/programming/java-core-shallow-copy-vs-deep-copy/object_clone.jpg){:width="400px"}  
+
+## 2. Example
+### 2.1 Person Class
 ```java
 class Person {
     private String name;
@@ -35,9 +43,11 @@ class Person {
     }
 }
 ```
-## 2. Shallow Copy
+### 2.2 Shallow Copy
 ```java
 private static void shallowCopy() {
+    System.out.println("Shallow copy example:");
+
     Person p1 = new Person("Johnny");
     Person p2 = new Person("Sean");
 
@@ -59,9 +69,11 @@ private static void shallowCopy() {
     System.out.println("Modified Array = " + Arrays.toString(pArray));
 }
 ```
-## 3. Deep Copy
+### 2.3 Deep Copy
 ```java
 private static void deepCopy() {
+    System.out.println("Deep copy example:");
+
     Person p1 = new Person("Johnny");
     Person p2 = new Person("Sean");
 
@@ -90,39 +102,35 @@ private static void deepCopy() {
 }
 ```
 
-## 4. Test
+### 2.4 Test
 ```java
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-public class ShallowCopy {
-    public static void main(String[] args) {
-        System.out.println("Shallow copy example:");
-        shallowCopy();
-        System.out.println("---------------------------------------------");
-        System.out.println("Deep copy example:");
-        deepCopy();
-    }
+public static void main(String[] args) {
+    shallowCopy();
+    System.out.println();
+    deepCopy();
 }
 ```
-Output
+Output.
 ```sh
 Shallow copy example:
 Original List = [Johnny, Sean]
 Array from ArrayList = [Johnny, Sean]
 Modified List = [David, Peter]
 Modified Array = [David, Peter]
----------------------------------------------
+
 Deep copy example:
 Original List = [Johnny, Sean]
 Array from ArrayList = [Johnny, Sean]
 Modified List = [David, Sean]
 Modified Array = [Johnny, Peter]
 ```
+* In shallow copy, both the array and the list are changed by each other.
+* In deep copy, the change to array or list doesn't impact the other.
 
-## 5. Source Files
-* [Source files for Java Array and List on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-array-list)
+## 3. Source Files
+* [Source files for Java Shallow Copy on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-shallow-copy)
 
-## 6. References
+## 4. References
 * [Java ArrayList to Array](https://www.journaldev.com/760/java-arraylist-to-array)
+* [Difference between Shallow copy and Deep copy](http://net-informations.com/faq/net/shallow-deep-copy.htm)
+* [What is the difference between a deep copy and a shallow copy?](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)

@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Front End - Javascript"
-index: 134
+title: "Javascript Interview Questions"
+index: 114
 category: interview
 image: programming/interview.png
-date: 2019-02-04
-postdate: 2019-02-04
+date: 2016-01-14
+postdate: 2016-01-14
 tags: [Javascript]
 ---
 

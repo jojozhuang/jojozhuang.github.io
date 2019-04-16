@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Front End - Interview Questions"
-index: 131
+title: "Front-End Interview Questions"
+index: 111
 category: interview
 image: programming/interview.png
-date: 2019-02-01
-postdate: 2019-02-01
+date: 2016-01-11
+postdate: 2019-01-11
 tags: [Html, CSS, javascript]
 ---
 

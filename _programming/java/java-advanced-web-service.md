@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - Web Service"
-index: 211
+title: "Java Advanced - Web Service"
+index: 235
 category: java
 image: /programming/java.png
-date: 2016-02-11
-postdate: 2016-02-11
+date: 2017-03-05
+postdate: 2017-03-05
 tags: [SOAP, WSDL]
 ---
 

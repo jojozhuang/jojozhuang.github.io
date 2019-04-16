@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - Difference between Abstract Class and Interface"
-index: 110
-category: interview
-image: programming/interview.png
-date: 2019-01-10
-postdate: 2019-01-10
+title: "Java Advanced - Abstract Class Vs Interface"
+index: 241
+category: java
+image: programming/java.png
+date: 2017-04-01
+postdate: 2017-04-01
 tags: [Abstract Class, Interface]
 ---
 

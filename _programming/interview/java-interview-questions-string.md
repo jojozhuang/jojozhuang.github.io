@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - String Interview Questions"
-index: 102
+title: "Java Interview Questions - String"
+index: 104
 category: interview
 image: programming/interview.png
-date: 2019-01-01
-postdate: 2019-01-01
+date: 2016-01-04
+postdate: 2016-01-04
 tags: [Java, Interview]
 ---
 

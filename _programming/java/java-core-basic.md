@@ -5,8 +5,8 @@ title: "Java Core - Basic"
 index: 201
 category: java
 image: /programming/java.png
-date: 2016-02-01
-postdate: 2016-02-01
+date: 2017-01-01
+postdate: 2017-01-01
 tags: [String, Integer, Array, List]
 ---
 

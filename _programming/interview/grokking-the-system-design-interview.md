@@ -5,8 +5,8 @@ title: "Grokking the System Design Interview"
 index: 152
 category: interview
 image: programming/interview.png
-date: 2019-03-02
-postdate: 2019-03-02
+date: 2016-03-02
+postdate: 2016-03-02
 tags: [System Design]
 ---
 

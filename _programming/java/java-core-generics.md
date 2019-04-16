@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - Generics"
-index: 207
+index: 213
 category: java
 image: /programming/java.png
-date: 2016-02-07
-postdate: 2016-02-07
+date: 2017-01-13
+postdate: 2017-01-13
 tags: [Generic Types]
 ---
 

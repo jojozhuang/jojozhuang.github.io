@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Advanced - Java Memory Model"
-index: 220
+index: 231
 category: java
 image: /programming/java.png
-date: 2016-02-20
-postdate: 2016-02-20
+date: 2017-03-01
+postdate: 2017-03-01
 tags: [Memory Model]
 ---
 

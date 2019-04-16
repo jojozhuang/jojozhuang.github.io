@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - Interview Questions(Draft)"
-index: 101
+title: "Java Interview Questions"
+index: 103
 category: interview
 image: programming/interview.png
-date: 2019-01-01
-postdate: 2019-01-01
+date: 2016-01-03
+postdate: 2016-01-03
 tags: [Java, Interview]
 ---
 
@@ -261,6 +261,17 @@ Comparable vs Comparator
 * We don’t need to make any code changes at client side for using Comparable, `Arrays.sort()` or `Collection.sort()` methods automatically uses the `compareTo()` method of the class. For Comparator, client needs to provide the Comparator class to use in compare() method.
 
 ### 2.3 OOP vs Functional Programming vs Procedural Programming
+
+### 2.4 Shallow copy VS Deep copy
+
+Values                           | Shallow copy | Deep copy
+---------------------------------|--------------|-----------
+Primitive Type - Value           | Copied       | Copied
+Reference Type - Reference       | Copied       | Copied
+Reference Type - Referred Object | Not copied   | Copied
+
+Object clone.
+![image](/public/programming/java-core-shallow-copy-vs-deep-copy/object_clone.jpg){:width="400px"}  
 
 ## 1. String, StringBuilder, StringBuffer
 

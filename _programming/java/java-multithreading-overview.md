@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - Multithreading"
-index: 216
+title: "Java Multithreading - Overview"
+index: 221
 category: java
 image: /programming/java.png
-date: 2016-02-16
-postdate: 2016-02-16
+date: 2017-02-01
+postdate: 2017-02-01
 tags: [Multi Threading]
 ---
 

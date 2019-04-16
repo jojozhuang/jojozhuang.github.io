@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - Cryptography"
-index: 210
+title: "Java Advanced - Cryptography"
+index: 233
 category: java
 image: /programming/java.png
-date: 2016-02-10
-postdate: 2016-02-10
+date: 2017-03-03
+postdate: 2017-03-03
 tags: [Encryption, Decryption]
 ---
 

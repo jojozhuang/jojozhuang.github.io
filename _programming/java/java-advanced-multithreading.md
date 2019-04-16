@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - MultiThreading"
-index: 116
-category: interview
-image: programming/interview.png
-date: 2019-01-16
-postdate: 2019-01-16
+title: "Java Advanced - MultiThreading"
+index: 244
+category: java
+image: programming/java.png
+date: 2017-04-04
+postdate: 2017-04-04
 tags: [Thread, Runnable, concurrency]
 ---
 

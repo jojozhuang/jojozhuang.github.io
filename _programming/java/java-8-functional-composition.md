@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java 8 - Functional Composition"
-index: 226
+index: 255
 category: java
 image: /programming/java.png
-date: 2019-02-26
-postdate: 2019-02-26
+date: 2017-05-05
+postdate: 2017-05-05
 tags: [Functional Composition]
 ---
 
