@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java 8 - New Features"
-index: 222
+index: 251
 category: java
 image: /programming/java.png
-date: 2016-02-22
-postdate: 2016-02-22
+date: 2017-05-01
+postdate: 2017-05-01
 tags: [Message Queue, JMS]
 ---
 

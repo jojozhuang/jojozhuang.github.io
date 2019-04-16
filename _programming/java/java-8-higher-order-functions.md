@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java 8 - Higher Order Functions"
-index: 224
+index: 253
 category: java
 image: /programming/java.png
-date: 2019-02-24
-postdate: 2019-02-24
+date: 2017-05-03
+postdate: 2017-05-03
 tags: [Higher Order Functions]
 ---
 

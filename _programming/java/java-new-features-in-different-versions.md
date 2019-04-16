@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java - Java 11,10,9,8,7"
-index: 221
+index: 261
 category: java
 image: /programming/java.png
-date: 2016-02-21
-postdate: 2016-02-21
+date: 2017-06-01
+postdate: 2017-06-01
 tags: [Formatting]
 ---
 

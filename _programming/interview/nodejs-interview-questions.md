@@ -1,19 +1,18 @@
 ---
 layout: programming
 key: programming
-title: "Node.js - Memory Management"
-index: 141
+title: "Node.js Interview Questions"
+index: 121
 category: interview
 image: programming/interview.png
-date: 2019-02-11
-postdate: 2019-02-11
+date: 2016-01-21
+postdate: 2016-01-21
 tags: [Node.js]
 ---
 
-> Knowledges of front end.
+> Knowledges of Node.js
 
-## 1. Overview
-* JavaScript is Case Sensitive
+## 1. Node.js Memory Management
 
 
 ## 6. References

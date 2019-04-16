@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - Predicate"
-index: 217
+index: 247
 category: java
 image: /programming/java.png
-date: 2016-02-17
-postdate: 2016-02-17
+date: 2017-04-07
+postdate: 2017-04-07
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---
 

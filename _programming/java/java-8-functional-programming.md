@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java 8 - Functional programming"
-index: 223
+index: 252
 category: java
 image: /programming/java.png
-date: 2019-02-23
-postdate: 2019-02-23
+date: 2017-05-02
+postdate: 2017-05-02
 tags: [Functional programming]
 ---
 

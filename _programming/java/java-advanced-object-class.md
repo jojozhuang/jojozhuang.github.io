@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - Object Class"
-index: 206
+title: "Java Advanced - Object Class"
+index: 232
 category: java
 image: /programming/java.png
-date: 2016-02-06
-postdate: 2016-02-06
+date: 2017-03-02
+postdate: 2017-03-02
 tags: [Encryption, Decryption]
 ---
 

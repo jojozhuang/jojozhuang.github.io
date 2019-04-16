@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java 8 - Stream API"
-index: 227
+index: 256
 category: java
 image: /programming/java.png
-date: 2019-02-27
-postdate: 2019-02-27
+date: 2017-05-06
+postdate: 2017-05-06
 tags: [Stream API]
 ---
 

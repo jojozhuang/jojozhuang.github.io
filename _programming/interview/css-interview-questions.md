@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Front End - CSS"
-index: 133
+title: "CSS Interview Questions"
+index: 113
 category: interview
 image: programming/interview.png
-date: 2019-02-03
-postdate: 2019-02-03
+date: 2016-01-13
+postdate: 2016-01-13
 tags: [CSS]
 ---
 

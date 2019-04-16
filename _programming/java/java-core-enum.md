@@ -5,8 +5,8 @@ title: "Java Core - Enum"
 index: 205
 category: java
 image: /programming/java.png
-date: 2016-02-05
-postdate: 2016-02-05
+date: 2017-01-05
+postdate: 2017-01-05
 tags: [Enum, EnumSet, EnumMap]
 ---
 
@@ -49,7 +49,7 @@ private static void enumLoop() {
 }
 ```
 
-## 2. Java Enum vs Constants
+## 2. Enum vs Constants
 Create Constants.
 ```java
 class PriorityConstant {

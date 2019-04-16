@@ -1,16 +1,16 @@
 ---
 layout: programming
 key: programming
-title: "Interview Questions"
-index: 100
+title: "Generic Interview Questions"
+index: 102
 category: interview
 image: programming/interview.png
-date: 2019-01-01
-postdate: 2019-01-01
-tags: [Technique Interview]
+date: 2016-01-02
+postdate: 2016-01-02
+tags: [Generic Questions]
 ---
 
-> Popular interview questions.
+> Generic interview questions.
 
 ## 1. Network
 ### 1.1 Forward Proxy VS Reverse Proxy
@@ -38,13 +38,6 @@ Application Delivery including:
 * Authentication
 * Single Sign On
 
-## 99. To Do
-1. Java Memory Model
-2. Nodejs Memory Model
-3. Functional Programming
-4. Upgrade Bootstrap 3 to 4.
-
-
-## 6. References
+### 1.2 References
 * [FORWARD PROXY VS REVERSE PROXY](https://ipwithease.com/forward-proxy-vs-reverse-proxy/)
 * [Jenkins with HTTPS Using NGINX and Docker](https://itnext.io/setting-up-https-for-jenkins-with-nginx-everything-in-docker-4a118dc29127)

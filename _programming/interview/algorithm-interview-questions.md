@@ -1,18 +1,18 @@
 ---
 layout: programming
 key: programming
-title: "Algorithm - Convert Number into Negative Base Representation"
+title: "Algorithm Interview Questions"
 index: 170
 category: interview
 image: programming/interview.png
-date: 2019-01-20
-postdate: 2019-01-20
-tags: [Javascript, Html, Css]
+date: 2016-04-01
+postdate: 2016-04-01
+tags: [Algorithm]
 ---
 
-> Knowledges of front end.
+> Knowledges of Algorithm
 
-## 1. Event Bubbling and Capturing
+## 1. Convert Number into Negative Base Representation
 
 ## 6. References
 * [Convert a number into negative base representation](https://www.geeksforgeeks.org/convert-number-negative-base-representation/)

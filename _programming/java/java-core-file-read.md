@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - File Operations"
-index: 208
+index: 211
 category: java
 image: /programming/java.png
-date: 2016-02-08
-postdate: 2016-02-08
+date: 2017-01-11
+postdate: 2017-01-11
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---
 

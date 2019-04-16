@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - BitSet"
-index: 209
+index: 212
 category: java
 image: /programming/java.png
-date: 2016-02-09
-postdate: 2016-02-09
+date: 2017-01-12
+postdate: 2017-01-12
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---
 

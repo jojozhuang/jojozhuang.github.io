@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "Java - Iterator"
-index: 115
-category: interview
-image: programming/interview.png
-date: 2019-01-15
-postdate: 2019-01-15
+title: "Java Advanced - Iterator"
+index: 243
+category: java
+image: programming/java.png
+date: 2017-04-03
+postdate: 2017-04-03
 tags: [Iterator, Predicate]
 ---
 

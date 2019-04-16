@@ -1,12 +1,12 @@
 ---
 layout: programming
 key: programming
-title: "System Design(Draft)"
+title: "System Design Interview Questions"
 index: 151
 category: interview
 image: programming/interview.png
-date: 2019-03-01
-postdate: 2019-03-01
+date: 2016-03-01
+postdate: 2016-03-01
 tags: [System Design]
 ---
 

@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Advanced - Message Queue"
-index: 219
+index: 236
 category: java
 image: /programming/java.png
-date: 2016-02-19
-postdate: 2016-02-19
+date: 2017-03-06
+postdate: 2017-03-06
 tags: [Message Queue, JMS]
 ---
 

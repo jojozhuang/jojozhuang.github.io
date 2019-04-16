@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Multithreading - BlockingQueue"
-index: 218
+index: 222
 category: java
 image: /programming/java.png
-date: 2016-02-18
-postdate: 2016-02-18
+date: 2017-02-02
+postdate: 2017-02-02
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---
 

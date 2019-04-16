@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java 8 - Functional Interfaces"
-index: 225
+index: 254
 category: java
 image: /programming/java.png
-date: 2019-02-25
-postdate: 2019-02-25
+date: 2017-05-04
+postdate: 2017-05-04
 tags: [Function, Predicate, BinaryOperator, Supplier, Consumer]
 ---
 
