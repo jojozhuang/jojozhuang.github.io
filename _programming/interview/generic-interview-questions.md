@@ -38,6 +38,34 @@ Application Delivery including:
 * Authentication
 * Single Sign On
 
-### 1.2 References
+**References**
 * [FORWARD PROXY VS REVERSE PROXY](https://ipwithease.com/forward-proxy-vs-reverse-proxy/)
 * [Jenkins with HTTPS Using NGINX and Docker](https://itnext.io/setting-up-https-for-jenkins-with-nginx-everything-in-docker-4a118dc29127)
+
+### 1.2 Long Polling vs SSE vs WebSocket
+Two general approaches for building real-time web application: `client pull` or `server push`.
+A few ways to implement these:
+* Long/short polling (client pull)
+* WebSockets (server push)
+* Server-Sent Events (server push)
+
+
+* [Polling vs SSE vs WebSocket— How to choose the right one](https://codeburst.io/polling-vs-sse-vs-websocket-how-to-choose-the-right-one-1859e4e13bd9)
+
+## 2. Database
+### 2.1 SQL vs NoSQL
+![image](/public/programming/interview-questions/nosql-dec-tree.png)
+
+### 2.2 References
+* [NoSQL Key-Value Database Simplicity vs. Document Database Flexibility](http://www.informit.com/articles/article.aspx?p=2429466)
+* [The SQL vs NoSQL Difference: MySQL vs MongoDB](https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2)
+* [How to Choose the Right Database System: RDBMS vs. NoSql vs. NewSQL](https://www.innoarchitech.com/how-choose-right-database-system-relational-rdbms-vs-nosql-vs-newsql/)
+
+## 3. Design Pattern
+### 3.1 Observer vs Publisher-Subscriber
+![image](/public/programming/interview-questions/observer_vs_pubsub.jpeg)
+* In Publisher/Subscriber pattern, components are loosely coupled as opposed to Observer pattern.
+* Observer pattern is mostly implemented in a `synchronous` way, i.e. the Subject calls the appropriate method of all its observers when some event occurs. The Publisher/Subscriber pattern is mostly implemented in an `asynchronous` way (using message queue).
+
+### 3.2 References
+* [Observer vs Pub-Sub pattern](https://hackernoon.com/observer-vs-pub-sub-pattern-50d3b27f838c)

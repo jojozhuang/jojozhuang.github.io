@@ -89,6 +89,39 @@ public boolean search(String word) {
     }
 }
 ```
+### 2.3 Searching Words with Same Prefix
+Return all words which start with the given prefix, check if the node is leaf.
+```java
+// Return all words which start with the given prefix
+public List<String> searchWords(String prefix) {
+    TrieNode current = root;
+    StringBuilder sb = new StringBuilder();
+
+    for (int i = 0; i < prefix.length(); i++) {
+        char ch = prefix.charAt(i);
+        if (!current.children.containsKey(ch)) {
+            return null;
+        } else {
+            sb.append(ch);
+            current = current.children.get(ch);
+        }
+    }
+
+    List<String> list = new ArrayList<>();
+    dfs(current, sb.toString(), list);
+
+    return list;
+}
+
+private void dfs(TrieNode node, String prefix, List<String> list) {
+    if (node.leaf) {
+        list.add(prefix);
+    }
+    for (Map.Entry<Character, TrieNode> entry : node.children.entrySet()) {
+        dfs(entry.getValue(), prefix + entry.getKey(), list);
+    }
+}
+```
 
 ## 3. Insertion
 Given a trie as follows, insert new word 'firm' into this trie.

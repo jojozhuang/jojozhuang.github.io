@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - Collection - List"
-index: 206
+index: 207
 category: java
 image: /programming/java.png
-date: 2017-01-06
-postdate: 2017-01-06
+date: 2017-01-07
+postdate: 2017-01-07
 tags: [List, Set, Map, Stack]
 ---
 

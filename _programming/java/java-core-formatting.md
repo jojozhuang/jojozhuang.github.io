@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - Formatting"
-index: 202
+index: 203
 category: java
 image: /programming/java.png
-date: 2017-01-02
-postdate: 2016-01-02
+date: 2017-01-03
+postdate: 2016-01-03
 tags: [Formatting]
 ---
 

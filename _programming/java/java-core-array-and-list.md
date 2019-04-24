@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - Array and List"
-index: 203
+index: 204
 category: java
 image: /programming/java.png
-date: 2017-01-03
-postdate: 2017-01-03
+date: 2017-01-04
+postdate: 2017-01-04
 tags: [Array, ArrayList]
 ---
 
