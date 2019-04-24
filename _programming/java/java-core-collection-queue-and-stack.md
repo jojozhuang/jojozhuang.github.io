@@ -2,11 +2,11 @@
 layout: programming
 key: programming
 title: "Java Core - Collection - Queue and Stack"
-index: 208
+index: 209
 category: java
 image: /programming/java.png
-date: 2017-01-08
-postdate: 2017-01-08
+date: 2017-01-09
+postdate: 2017-01-09
 tags: [List, Set, Map, Stack]
 ---
 

@@ -100,7 +100,7 @@ public class LRU {
         }
 
         if (map.size() == capacity) {
-            map.remove(tail.prev.value);
+            map.remove(tail.prev.key);
             tail.prev = tail.prev.prev;
             tail.prev.next = tail;
         }
