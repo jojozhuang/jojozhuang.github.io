@@ -64,6 +64,70 @@ Tools/Softwares:
 System Design : Design a service like TinyUrl
 https://www.youtube.com/watch?v=fMZMm_0ZhK4
 
+* [Generating human-readable/usable, short but unique IDs](https://stackoverflow.com/questions/9543715/generating-human-readable-usable-short-but-unique-ids)
+
+Random Id Generator.
+```java
+public class RandomIdGenerator {
+    private static char[] _base62chars =
+            "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
+
+    private static Random _random = new Random();
+
+    public static String GetBase62(int length)
+    {
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++)
+            sb.append(_base62chars[_random.nextInt(62)]);
+
+        return sb.toString();
+    }
+
+    public static String GetBase36(int length)
+    {
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i=0; i < length; i++)
+            sb.append(_base62chars[_random.nextInt(36)]);
+
+        return sb.toString();
+    }
+}
+```
+Test class
+```java
+public class RandomIdGeneratorTest {
+
+    @Test
+    public void tesRandomIdGenerator() {
+        System.out.println("tesRandomIdGenerator");
+
+        // create five IDs of six, base 62 characters
+        for (int i = 0; i < 5; i++) {
+            System.out.println(RandomIdGenerator.GetBase62(6));
+        }
+
+        // create five IDs of eight base 36 characters
+        for (int i = 0; i < 5; i++) {
+            System.out.println(RandomIdGenerator.GetBase36(8));
+        }
+    }
+}
+```
+Output.
+```sh
+kXyqhd
+dj2hRs
+HuuCar
+NIDFdK
+dc0xV1
+UVCOLG33
+QAOZ3ENW
+I42VA1AI
+BTS30GXA
+CXD8AEEY
+```
 
 Queries Per Second (QPS)
 
@@ -171,6 +235,27 @@ Message
 -Status: Draft/Sent/Delivered/Read by receiver
 
 ## 4. Uber Lyft ride sharing services
+QUIC protocol(Quick UDP internet connections)
+![image](/public/programming/system-design-interview-questions/uber_architecture.jpg)
+* [Understanding QUIC wire protocol](https://medium.com/@nirosh/understanding-quic-wire-protocol-d0ff97644de7)
+
+* [Geohash Intro](http://www.bigfastblog.com/geohash-intro)
+* [Designing a Spacial Index](https://dzone.com/articles/designing-spacial-index)
+
+design
+1. tiny url
+2. crawl wiki with 1k machines
+3. designlyft
+4. designpricesurge以及各种类似问题
+这四道题一定要会做
+建议先去学习一下geohash http://www.bigfastblog.com/geohash-intro https://dzone.com/articles/designing-spacial-index
+再去看看一下vedio
+https://www.youtube.com/watch?v=cSFWlF96Sds (注意看前半段，多看几遍，讲的比较详细了，这是lyft的做 法，现在变没变就不知道了，不过照着这个说应该可以ok)
+然后这是uber的tech talk,大家随便看看 https://www.youtube.com/watch?v=AzptiVdUJXg https://www.infoq.com/presentations/uber-flink-stream https://www.slideshare.net/g9yuayon/streaming-analytics-in-uber 最后面两个link，如果面data infra看看，不面的话就不用看了吧，别看乱脑子。
+
+QuadTree
+* [An interactive explanation of quadtrees](https://jimkang.com/quadtreevis/)
+
 ### 4.1 Questions/Clarification
 
 ### 4.2 Features/Functions
