@@ -49,14 +49,41 @@ A few ways to implement these:
 * WebSockets (server push)
 * Server-Sent Events (server push)
 
-
 * [Polling vs SSE vs WebSocket— How to choose the right one](https://codeburst.io/polling-vs-sse-vs-websocket-how-to-choose-the-right-one-1859e4e13bd9)
 
-## 2. Database
-### 2.1 SQL vs NoSQL
+### 1.3 Networking Metrics
+* Bandwidth
+* Throughput
+* Latency
+
+## 2. Database Design
+### 2.1 Entity-Relationship Diagram
+### 2.2 Key, Index(Cluster Index), Constraints
+Cluster Index, B-Tree Index, Inverted Index  
+Shard
+
+### 2.3 Normalization
+Normalized databases are designed to minimize redundancy, while denormalized databases are designed
+to optimize read time.
+### 2.4 Denormalization
+Denormalization means adding redundant information into a database to speed up reads.
+* Denormalization is a time-space trade-off.
+* Allow redundant data in database to avoid 'Join' in queries for improving performance.
+* Need to solve the problem: data consistency. Constraints on tables.
+* Can speed-up reads(SELECT in SQL) while slowing down writes(INSERT, UPDATE and DELETE). So use Denormalization only when reading frequency is more than writing frequency.
+* One approach in practice is to use view in database.
+
+### 2.5 Database Partitioning (Sharding)
+Sharding means splitting the data across multiple machines while ensuring you have a way of figuring out
+which data is on which machine.
+* Vertical Partitioning
+* Key-Based (or Hash-Based) Partitioning
+* Directory-Based Partitioning
+
+### 2.6 SQL vs NoSQL
 ![image](/public/programming/interview-questions/nosql-dec-tree.png)
 
-### 2.2 References
+### 2.7 References
 * [NoSQL Key-Value Database Simplicity vs. Document Database Flexibility](http://www.informit.com/articles/article.aspx?p=2429466)
 * [The SQL vs NoSQL Difference: MySQL vs MongoDB](https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2)
 * [How to Choose the Right Database System: RDBMS vs. NoSql vs. NewSQL](https://www.innoarchitech.com/how-choose-right-database-system-relational-rdbms-vs-nosql-vs-newsql/)
@@ -69,3 +96,15 @@ A few ways to implement these:
 
 ### 3.2 References
 * [Observer vs Pub-Sub pattern](https://hackernoon.com/observer-vs-pub-sub-pattern-50d3b27f838c)
+
+## 4. Basis of Computer Science
+### 4.1 How Addition Is Implemented in Program?
+```java
+
+```
+
+## 5. Object-Oriented Programming
+
+## 6. MapReduce
+* Map takes in some data and emits a <key J value> pair.
+* Reduce takes a key and a set of associated values and "reduces"them in some way, emitting a new key and value.
