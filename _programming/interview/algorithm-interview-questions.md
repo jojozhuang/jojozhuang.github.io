@@ -2,7 +2,7 @@
 layout: programming
 key: programming
 title: "Algorithm Interview Questions"
-index: 170
+index: 171
 category: interview
 image: programming/interview.png
 date: 2016-04-01
