@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - Predicate"
+title: "Java Core - Predicate(Draft)"
 index: 247
 category: java
 image: /programming/java.png

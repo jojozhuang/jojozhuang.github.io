@@ -57,6 +57,9 @@ bookmarks:
       - name: HTTP
         description: Hypertext Transfer Protocol
         url: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+      - name: HTTP Status Codes
+        description: HTTP Status Codes
+        url: https://www.restapitutorial.com/httpstatuscodes.html
       - name: TCP
         description: Transmission Control Protocol
         url: https://en.wikipedia.org/wiki/Transmission_Control_Protocol

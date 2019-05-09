@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Algorithm Interview Questions"
+title: "Algorithm Interview Questions(Draft)"
 index: 171
 category: interview
 image: programming/interview.png

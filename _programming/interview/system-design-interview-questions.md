@@ -51,6 +51,9 @@ tags: [System Design]
 * CDNs
 * Consistent hashing
 * 80/20 rule
+* Rate Limiter
+* Reverse Index for search
+* bloom filters for de-depulicate
 
 ### 1.6 Basic Knowledge for System Design
 Key Concepts1:
@@ -122,6 +125,9 @@ Extended Requirements:
 * Analytics; e.g., how many times a redirection happened?
 * Our service should also be accessible through REST APIs by other services.
 
+### 2.2 How it works(Todo)
+Http status code 301, Redirect user to original url after decoding for the tiny url.
+see the picture in phone(2019/05/08).
 ### 2.2 Capacity Estimation and Constraints
 * Heavy read
 
@@ -596,20 +602,386 @@ Consistent Hashing.
 ### 8.8 Cache
 80/20 rule.
 
-## 4. Design a Parking Lot
-### 4.1 Questions/Clarification
+## 9. Rate Limiter
+### 9.1 Usage of rate limiting
+* Misbehaving clients/scripts
+* Security
+* To prevent abusive behavior and bad design practices
+* To keep costs and resource usage under control
+* Revenue
+* To eliminate spikiness in traffic
+
+### 9.2 Requirements
+Functional Requirements:
+* Limit the number of requests an entity can send to an API within a time window, e.g., 15 requests per second.
+* The APIs are accessible through a cluster, so the rate limit should be considered across different servers. The user should get an error message whenever the defined threshold is crossed within a single server or across a combination of servers.
+
+Non-Functional Requirements:
+* The system should be highly available. The rate limiter should always work since it protects our service from external attacks.
+* Our rate limiter should not introduce substantial latencies affecting the user experience.
+
+### 9.3 Throttling
+`Throttling` is the process of controlling the usage of the APIs by customers during a given period. Throttling can be defined at the application level and/or API level. When a throttle limit is crossed, the server returns HTTP status `429 - Too many requests`.
+
+Different types of throttling:
+* `Hard Throttling`: The number of API requests cannot exceed the throttle limit.
+* `Soft Throttling`: In this type, we can set the API request limit to exceed a certain percentage. For example, if we have rate-limit of 100 messages a minute and 10% exceed-limit, our rate limiter will allow up to 110 messages per minute.
+* `Elastic or Dynamic Throttling`: Under Elastic throttling, the number of requests can go beyond the threshold if the system has some resources available. For example, if a user is allowed only 100 messages a minute, we can let the user send more than 100 messages a minute when there are free resources available in the system.
+
+### 9.4 Algorithms used for Rate Limiting
+* Fixed Window Algorithm
+* Rolling Window Algorithm
+
+![image](/public/programming/system-design-interview-questions/ratelimiter_algorithm.png){:width="800px"}
+Problem with fixed window. It may allow twice the number of requests per minute.
+![image](/public/programming/system-design-interview-questions/ratelimiter_problemoffixed.png){:width="800px"}
+
+### 9.5 High level design
+![image](/public/programming/system-design-interview-questions/ratelimiter_highlevel.png){:width="800px"}
+
+## 10. Design Twitter Search
+### 10.1 Requirements
+Assumption:
+* Twitter has 1.5 billion total users with 800 million daily active users.
+* On average Twitter gets 400 million tweets every day.
+* The average size of a tweet is 300 bytes.
+* Let’s assume there will be 500M searches every day.
+* The search query will consist of multiple words combined with AND/OR.
+
+We need to design a system that can efficiently store and query tweets.
+### 10.2 High Level Design
+![image](/public/programming/system-design-interview-questions/twittersearch_highlevel.png){:width="800px"}
+### 10.3 Detailed Component Design
+![image](/public/programming/system-design-interview-questions/twittersearch_detaileddesign.png){:width="800px"}
+
+## 11. Design a Web Crawler
+### 11.1 Requirements
+* Access targeted websites, collect their content.
+* Scalability: Our service needs to be scalable such that it can crawl the entire Web and can be used to fetch hundreds of millions of Web documents.
+* Extensibility: Our service should be designed in a modular way with the expectation that new functionality will be added to it. There could be newer document types that needs to be downloaded and processed in the future.
+
+### 11.2 Some Design Considerations
+* Content: HTML pages only? images? videos?
+* Protocols: Http? FTP?
+* Number of pages to crawl.
+
+The `Robots Exclusion Protocol` allows Webmasters to declare parts of their sites off limits to crawlers. It requires a Web crawler to fetch a special document called `robot.txt` which contains these declarations from a Web site before downloading any real content from it.
+
+### 11.3 High Level design
+* 1) Pick a URL from the unvisited URL list.
+* 2) Determine the IP Address of its host-name.
+* 3) Establish a connection to the host to download the corresponding document.
+* 4) Parse the document contents to look for new URLs.
+* 5) Add the new URLs to the list of unvisited URLs.
+* 6) Process the downloaded document, e.g., store it or index its contents, etc.
+* 7) Go back to step 1
+
+How to crawl? BFS, DFS, Path-ascending crawling
+
+For example, when given a seed URL of http://foo.com/a/b/page.html, it will attempt to crawl `/a/b/`, `/a/`, and `/`.
+
+Difficulties in implementing efficient web crawler  
+Two important characteristics   
+* Large volume of Web pages: Can only download fraction of the web pages, crawler must be intelligent.
+* Rate of change on web pages: Web pages change frequently.
+
+Components for a minimum crawler:
+1. URL frontier: To store the list of URLs to download and also prioritize which URLs should be crawled first.
+2. HTTP Fetcher: To retrieve a web page from the server.
+3. Extractor: To extract links from HTML documents.
+4. Duplicate Eliminator: To make sure the same content is not extracted twice unintentionally.
+5. Datastore: To store retrieved pages, URLs, and other metadata.
+
+![image](/public/programming/system-design-interview-questions/webcrawler_highlevel.png){:width="800px"}
+
+### 11.4 Detailed Component Design
+![image](/public/programming/system-design-interview-questions/webcrawler_detaileddesign.png){:width="800px"}
+Document Dedupe test: To prevent processing of a document more than once, we perform a dedupe test on each document to remove duplication.
+URL filters: Blacklist websites.
+URL dedupe test: Multiple links to the same document.
+
+### 12. Design Facebook’s Newsfeed
+### 12.1 Requirements
+Functional requirements:
+* Newsfeed will be generated based on the posts from the people, pages, and groups that a user follows.
+* A user may have many friends and follow a large number of pages/groups.
+* Feeds may contain images, videos, or just text.
+* Our service should support appending new posts as they arrive to the newsfeed for all active users.
+
+Non-functional requirements:
+* Our system should be able to generate any user’s newsfeed in real-time - maximum latency seen by the end user would be 2s.
+* A post shouldn’t take more than 5s to make it to a user’s feed assuming a new newsfeed request comes in.
+
+### 12.2 System APIs
+```java
+getUserFeed(api_dev_key, user_id, since_id, count, max_id, exclude_replies)
+```
+Parameters:
+* `api_dev_key` (string): The API developer key of a registered can be used to, among other things, throttle users based on their allocated quota.
+* `user_id` (number): The ID of the user for whom the system will generate the newsfeed.
+* `since_id` (number): Optional; returns results with an ID higher than (that is, more recent than) the specified ID.
+* `count` (number): Optional; specifies the number of feed items to try and retrieve up to a maximum of 200 per distinct request.
+* `max_id` (number): Optional; returns results with an ID less than (that is, older than) or equal to the specified ID.
+* `exclude_replies` (boolean): Optional; this parameter will prevent replies from appearing in the returned timeline.
+
+Returns: (JSON) Returns a JSON object containing a list of feed items.
+
+### 12.3 Database Design
+There are three primary objects:
+* User
+* Entity (e.g. page, group, etc.)
+* FeedItem (or Post)
+
+Relationships between these entities:
+* A User can follow other entities and can become friends with other users.
+* Both users and entities can post FeedItems which can contain text, images, or videos.
+* Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook Pages can post feed item too.
+* Each FeedItem can optionally have an EntityID pointing to the page or the group where that post was created.
+
+![image](/public/programming/system-design-interview-questions/facebooknewsfeed_database.png){:width="800px"}
+
+### 12.4 High Level Design
+At a high level this problem can be divided into two parts:
+`Feed generation`: Newsfeed is generated from the posts (or feed items) of users and entities (pages and groups) that a user follows. So, whenever our system receives a request to generate the feed for a user (say Jane), we will perform the following steps:
+* Retrieve IDs of all users and entities that Jane follows.
+* Retrieve latest, most popular and relevant posts for those IDs. These are the potential posts that we can show in Jane’s newsfeed.
+* Rank these posts based on the relevance to Jane. This represents Jane’s current feed.
+Store this feed in the cache and return top posts (say 20) to be rendered on Jane’s feed.
+* On the front-end, when Jane reaches the end of her current feed, she can fetch the next 20 posts from the server and so on.
+
+`Feed publishing`: Whenever user loads newsfeed page, he/she has to request and pull feed items from the server.
+At a high level, we will need following components in our Newsfeed service:
+* `Web servers`: To maintain a connection with the user. This connection will be used to transfer data between the user and the server.
+* `Application server`: To execute the workflows of storing new posts in the database servers. We will also need some application servers to retrieve and to push the newsfeed to the end user.
+* `Metadata database and cache`: To store the metadata about Users, Pages, and Groups.
+* `Posts database and cache`: To store metadata about posts and their contents.
+* `Video and photo storage, and cache`: Blob storage, to store all the media included in the posts.
+* `Newsfeed generation service`: To gather and rank all the relevant posts for a user to generate newsfeed and store in the cache. This service will also receive live updates and will add these newer feed items to any user’s timeline.
+* `Feed notification service`: To notify the user that there are newer items available for their newsfeed.
+
+![image](/public/programming/system-design-interview-questions/facebooknewsfeed_highlevel.png){:width="800px"}
+
+### 12.5 Detailed Component Design
+a. Feed generation
+* 1) Offline generation for newsfeed
+* 2) How many feed items should we store in memory for a user’s feed? 10 pages * 20 posts/page = 200 posts/per user.
+* 3) Should we generate (and keep in memory) newsfeeds for all users? LRU + Pregeneration based on login pattern.
+
+b. Feed publishing
+* Pull Mode: Pull the feed data on a regular basis. Drawback: Wasting resources.
+* Push Mode: Push new post to all follows. Drawback: Server has to maintain long pulling requests, which requires large memory. Problem with celebrity user who has large number of followers.
+* Hybrid: Only push data for those users who have a few hundred (or thousand) followers. For celebrity users, we can let the followers pull the updates.
+
+## 13. Design Yelp(Nearby Friend)
+### 13.1 Requirements
+Functional Requirements:
+* Users should be able to add/delete/update Places.
+* Given their location (longitude/latitude), users should be able to find all nearby places within a given radius.
+* Users should be able to add feedback/review about a place. The feedback can have pictures, text, and a rating.
+
+Non-functional Requirements:
+* Users should have a real-time search experience with minimum latency.
+* Our service should support a heavy search load. There will be a lot of search requests compared to adding a new place.
+
+### 13.2 Database Schema
+location:
+
+LocationID  | Name        | Latitude   | Longitude   | Description | Category    |
+------------|-------------|--------------------------|-------------|-------------|
+1           | Starbucks   | 37.337034, | -122.035963 | Starbucks   | Coffee Shop |
+2           | Burger King | 37.309433, | -121.993708 | Burger King | Restaurant  |
+
+reviews:
+
+LocationID | ReviewID | ReviewText   | Rating |
+-----------|----------|--------------|--------|
+1          | 1        | Fancy        | 4      |
+1          | 2        | slow service | 1      |
+2          | 1        | nice food    | 5      |
+
+### 13.3 System APIs
+```java
+search(api_dev_key, search_terms, user_location, radius_filter, maximum_results_to_return, category_filter, sort, page_token)
+```
+Parameters:
+* `api_dev_key` (string): The API developer key of a registered account. This will be used to, among other things, throttle users based on their allocated quota.
+* `search_terms` (string): A string containing the search terms.
+* `user_location` (string): Location of the user performing the search.
+* `radius_filter` (number): Optional search radius in meters.
+* `maximum_results_to_return` (number): Number of business results to return.
+* `category_filter` (string): Optional category to filter search results, e.g., Restaurants, Shopping Centers, etc.
+* `sort` (number): Optional sort mode: Best matched (0 - default), Minimum distance (1), Highest rated (2).
+* `page_token` (string): This token will specify a page in the result set that should be returned.
+
+Returns: (JSON)
+A JSON containing information about a list of businesses matching the search query. Each result entry will have the business name, address, category, rating, and thumbnail.
+
+### 13.4 Basic System Design and Algorithm
+Different ways to store locations and search them which are nearby me.
+* SQL solution: Store longitude and latitude separately in two different columns, and index them.
+* Grids: Divide the whole map into smaller grids to group locations into smaller sets. Search the neighboring eight grids of the given location.
+![image](/public/programming/system-design-interview-questions/yelp_gridmap.png){:width="800px"}
+* Dynamic size grids: QuadTree. It is not guaranteed that we will have an equal number of places in any given grid.
+![image](/public/programming/system-design-interview-questions/yelp_quadtree.png){:width="800px"}
+
+### 13.5 Data Partitioning
+* Sharding based on regions
+* Sharding based on LocationID
+
+We will have different QuadTree structure on different partitions.
+![image](/public/programming/system-design-interview-questions/yelp_highlevel.png){:width="800px"}
+
+## 14. Design Uber(Ride Sharing)
+### 14.1 Requirements
+There are two kinds of users in our system: `Drivers` and `Riders`.
+* Drivers need to regularly notify the service about their current location and their availability to pick passengers.
+* Passengers get to see all the nearby available drivers.
+* Customer can request a ride; nearby drivers are notified that a customer is ready to be picked up.
+* Once a driver and a customer accept a ride, they can constantly see each other’s current location until the trip finishes.
+* Upon reaching the destination, the driver marks the journey complete to become available for the next ride.
+
+### 14.2 Basic System Design and Algorithm
+![image](/public/programming/system-design-interview-questions/uber_highlevel.png){:width="800px"}
+* 1) The customer will put a request for a ride.
+* 2) One of the Aggregator servers will take the request and asks QuadTree servers to return nearby drivers.
+* 3) The Aggregator server collects all the results and sorts them by ratings.
+* 4) The Aggregator server will send a notification to the top (say three) drivers simultaneously, whichever driver accepts the request first will be assigned the ride. The other drivers will receive a cancellation request. If none of the three drivers respond, the Aggregator will request a ride from the next three drivers from the list.
+* 5) Once a driver accepts a request, the customer is notified.
+
+## 15. Design Ticketmaster(Online Ticketing)
+### 15.1 Requirements
+Functional Requirements:
+* Our ticket booking service should be able to list different cities where its affiliate cinemas are located.
+* Once the user selects the city, the service should display the movies released in that particular city.
+* Once the user selects a movie, the service should display the cinemas running that movie and its available show times.
+* The user should be able to choose a show at a particular cinema and book their tickets.
+* The service should be able to show the user the seating arrangement of the cinema hall. The user should be able to select multiple seats according to their preference.
+* The user should be able to distinguish available seats from booked ones.
+* Users should be able to put a hold on the seats for five minutes before they make a payment to finalize the booking.
+* The user should be able to wait if there is a chance that the seats might become available, e.g., when holds by other users expire.
+* Waiting customers should be serviced in a fair, first come, first serve manner.
+
+Non-Functional Requirements:
+* The system would need to be highly concurrent. There will be multiple booking requests for the same seat at any particular point in time. The service should handle this gracefully and fairly.
+* The core thing of the service is ticket booking, which means financial transactions. This means that the system should be secure and the database ACID compliant.
+
+### 15.2 System APIs
+```java
+SearchMovies(api_dev_key, keyword, city, lat_long, radius, start_datetime, end_datetime, postal_code, includeSpellcheck, results_per_page, sorting_order)
+```
+Parameters:
+* `api_dev_key` (string): The API developer key of a registered account. This will be used to, among other things, throttle * users based on their allocated quota.
+* `keyword` (string): Keyword to search on.
+* `city` (string): City to filter movies by.
+* `lat_long` (string): Latitude and longitude to filter by. radius (number): Radius of the area in which we want to search for events.
+* `start_datetime` (string): Filter movies with a starting datetime.
+* `end_datetime` (string): Filter movies with an ending datetime.
+* `postal_code` (string): Filter movies by postal code / zipcode.
+* `includeSpellcheck` (Enum: “yes” or “no”): Yes, to include spell check suggestions in the response.
+* `results_per_page` (number): Number of results to return per page. Maximum is 30.
+* `sorting_order` (string): Sorting order of the search result. Some allowable values : ‘name,asc’, ‘name,desc’, ‘date,asc’, ‘date,desc’, ‘distance,asc’, ‘name,date,asc’, ‘name,date,desc’, ‘date,name,asc’, ‘date,name,desc’.
+
+Returns: (JSON)
+Here is a sample list of movies and their shows:
+```json
+[
+  {
+    "MovieID": 1,
+    "ShowID": 1,
+    "Title": "Cars 2",
+    "Description": "About cars",
+    "Duration": 120,
+    "Genre": "Animation",
+    "Language": "English",
+    "ReleaseDate": "8th Oct. 2014",
+    "Country": USA,
+    "StartTime": "14:00",
+    "EndTime": "16:00",
+    "Seats":
+    [
+      {  
+        "Type": "Regular"
+        "Price": 14.99
+        "Status: "Almost Full"
+      },
+      {  
+        "Type": "Premium"
+        "Price": 24.99
+        "Status: "Available"
+      }
+    ]
+  },
+  {
+    "MovieID": 1,
+    "ShowID": 2,
+    "Title": "Cars 2",
+    "Description": "About cars",
+    "Duration": 120,
+    "Genre": "Animation",
+    "Language": "English",
+    "ReleaseDate": "8th Oct. 2014",
+    "Country": USA,
+    "StartTime": "16:30",
+    "EndTime": "18:30",
+    "Seats":
+    [
+        {  
+          "Type": "Regular"
+          "Price": 14.99
+          "Status: "Full"
+      },
+        {  
+          "Type": "Premium"
+        "Price": 24.99
+        "Status: "Almost Full"
+      }
+    ]
+  },
+ ]
+```
+
+```java
+ReserveSeats(api_dev_key, session_id, movie_id, show_id, seats_to_reserve[])
+```
+Parameters:
+* `api_dev_key` (string): same as above
+* `session_id` (string): User’s session ID to track this reservation. Once the reservation time expires, user’s reservation on the server will be removed using this ID.
+* `movie_id` (string): Movie to reserve.
+* `show_id` (string): Show to reserve.
+* `seats_to_reserve` (number): An array containing seat IDs to reserve.
+
+Returns: (JSON)
+Returns the status of the reservation, which would be one of the following: 1) “Reservation Successful” 2) “Reservation Failed - Show Full,” 3) “Reservation Failed - Retry, as other users are holding reserved seats”.
+
+### 15.3 Database Design
+Here are a few observations about the data we are going to store:
+* Each City can have multiple Cinemas.
+* Each Cinema will have multiple halls.
+* Each Movie will have many Shows and each Show will have multiple Bookings.
+* A user can have multiple bookings.
+
+![image](/public/programming/system-design-interview-questions/ticketmaster_db.png){:width="800px"}
+
+### 15.4 High Level Design
+![image](/public/programming/system-design-interview-questions/ticketmaster_highlevel.png){:width="800px"}
+
+### 15.5 Detailed Component Design
+![image](/public/programming/system-design-interview-questions/ticketmaster_detailed.png){:width="800px"}
+
+## 16. Design a Parking Lot
+### 16.1 Questions/Clarification
 * How many parking lots?
 * Located in multiple levels?
 * Free or cost?
 * Size? S/M/L/XL? Motor? Car? Truck? Bus?
 
-### 4.2 Features/Functions
+### 16.2 Features/Functions
 * Search free spots
 * Place vehicle
 * Remove vehicle
 * Pricing? Hourly/Whole Day?
 
-### 4.3 Classes
+### 16.3 Classes
 Vehicle:
 * License Plate
 * Color
@@ -621,29 +993,29 @@ Spot(id, size):
 -Status: Free/Occupied
 -Location
 
-## 5. Messenger service like Whatsapp or WeChat
-### 5.1 Questions/Clarification
+## 17. Messenger service like Whatsapp or WeChat
+### 17.1 Questions/Clarification
 * Text/Audio/Video?
 * One to One? Group Chatting
 * History?
 * Asynchronous/instant？
 
-### 5.2 Features/Functions
+### 17.2 Features/Functions
 * Send message
 * Push notifications
 
-### 5.3 Infrastructure
+### 17.3 Infrastructure
 * User -> Server(n) -> User
 * Message Queue
 * Handle if receiver is offline, keep the message in sequence
 
-### 5.4 Class
+### 17.4 Class
 User
 -Id
 Message
 -Status: Draft/Sent/Delivered/Read by receiver
 
-## 6. Uber Lyft ride sharing services
+## 18. Uber Lyft ride sharing services
 QUIC protocol(Quick UDP internet connections)
 ![image](/public/programming/system-design-interview-questions/uber_architecture.jpg)
 * [Understanding QUIC wire protocol](https://medium.com/@nirosh/understanding-quic-wire-protocol-d0ff97644de7)
@@ -654,24 +1026,24 @@ QUIC protocol(Quick UDP internet connections)
 QuadTree
 * [An interactive explanation of quadtrees](https://jimkang.com/quadtreevis/)
 
-### 6.1 Questions/Clarification
+### 18.1 Questions/Clarification
 
-### 6.2 Features/Functions
+### 18.2 Features/Functions
 * Match Driver and Rider
 
-### 6.3 Infrastructure
+### 18.3 Infrastructure
 
-### 6.4 Class
+### 18.4 Class
 Driver
 Rider
 Trip
 
-## 7. Rate Limiter
+## 19. Rate Limiter
 API Rate Limiter throttles users based upon the number of the requests they are sending.
 Http State Code: 429 - Too Many Requests
 * [Designing an API Rate Limiter](https://www.educative.io/collection/page/5668639101419520/5649050225344512/5707274949492736)
 
-### 7.1 Why rate limiting is necessary?
+### 19.1 Why rate limiting is necessary?
 * Avoid Abuse of the system: Denial-of-service (DOS) attacks, brute-force password attempt
 * Build Reliable System: keep costs and resource usage under control
 
