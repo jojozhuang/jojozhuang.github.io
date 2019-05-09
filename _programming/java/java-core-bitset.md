@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - BitSet"
+title: "Java Core - BitSet(Draft)"
 index: 212
 category: java
 image: /programming/java.png

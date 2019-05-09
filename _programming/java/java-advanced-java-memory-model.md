@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Java Advanced - Java Memory Model"
+title: "Java Advanced - Java Memory Model(Draft)"
 index: 231
 category: java
 image: /programming/java.png

@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Java Core - Generics"
+title: "Java Core - Generics(Draft)"
 index: 213
 category: java
 image: /programming/java.png

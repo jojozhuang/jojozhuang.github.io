@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Java Advanced - Message Queue"
+title: "Java Advanced - Message Queue(Draft)"
 index: 236
 category: java
 image: /programming/java.png

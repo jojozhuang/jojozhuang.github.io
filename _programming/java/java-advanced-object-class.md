@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Java Advanced - Object Class"
+title: "Java Advanced - Object Class(Draft)"
 index: 232
 category: java
 image: /programming/java.png

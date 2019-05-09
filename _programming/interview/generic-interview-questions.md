@@ -1,7 +1,7 @@
 ---
 layout: programming
 key: programming
-title: "Generic Interview Questions"
+title: "Generic Interview Questions(Draft)"
 index: 102
 category: interview
 image: programming/interview.png
