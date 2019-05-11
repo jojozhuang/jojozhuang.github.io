@@ -1,11 +1,11 @@
 ---
 layout: portfolio
 key: portfolio
-title: "Course Player(Socket.IO)"
+title: "Course Player(Socket)"
 index: 190
 tags: [WebSocket, Socket.IO, Node.js, jQuery]
 image: /public/portfolios/courseplayersocketio/thumbnail.png
-excerpt: A realtime online course player, built with Socket.IO, HTML5 Canvas, Node.js and jQuery.
+excerpt: A realtime online course player, built with Socket.IO, HTML5 Canvas and Node.js.
 category: web
 ---
 

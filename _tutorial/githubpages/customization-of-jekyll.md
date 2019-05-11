@@ -247,7 +247,7 @@ At last, create portfolio.html in the root directory, add codes to read data fro
           <a href="{{ post.url }}">
             <img class="img-responsive" src="{{ post.image }}" alt="image">
           </a>
-          <div class="item-title">
+          <div class="item-detail">
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             <p>{{ post.excerpt }}</p>
           </div>

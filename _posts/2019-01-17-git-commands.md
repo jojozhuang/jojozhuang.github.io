@@ -1,7 +1,7 @@
 ---
 layout: post
 key: blog
-title: "Git Commands[Draft]"
+title: "Git Commands"
 date: 2019-01-17
 tags: [Git]
 ---
