@@ -5,7 +5,7 @@ title: "Game Store(Multi)"
 index: 80
 tags: [iOS, Android, Xamarin, Cordova]
 image: /public/portfolios/gamestoremulti/thumbnail.png
-excerpt: Apps for product management, built with different tools.
+excerpt: 4 different implementations for product management.
 category: mobile
 ---
 
