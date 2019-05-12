@@ -5,7 +5,7 @@ title: "Game Store(React)"
 index: 160
 tags: [React, Redux]
 image: /public/portfolios/gamestorereact/thumbnail.png
-excerpt: A web app to manage products, built with React and Redux.
+excerpt: A web app to manage products, built with React.
 category: web
 ---
 

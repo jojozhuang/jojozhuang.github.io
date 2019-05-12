@@ -55,6 +55,23 @@ table, th, td {
   padding: 10px;
 }
 
+/* index (self introduction) */
+@media (max-width: 424px) {
+    .self-profile p {
+        font-size: 16px;
+    }
+}
+
+/* portfolio */
+@media (max-width: 1200px) {
+    .item-detail h3 {
+        font-size: 15px;
+    }
+    .item-detail p {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 424px) {
     .page-header {
         font-size: 25px;
@@ -62,8 +79,6 @@ table, th, td {
     .page-header small {
         font-size: 15px;
     }
-}
-@media (max-width: 424px) {
     .item-detail h3 {
         font-size: 15px;
     }
