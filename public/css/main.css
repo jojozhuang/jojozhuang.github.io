@@ -9,6 +9,20 @@ footer {
   padding: 25px;
 }
 
+.container {
+    margin-top:30px
+}
+
+.page-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 9px;
+    margin-bottom: 20px;
+}
+.page-header small {
+    font-size: 60%;
+    color: #777;
+}
+
 ul.posts {
     font-size: 1.4em;
 }
@@ -29,8 +43,13 @@ ul.posts {
     border: 1px solid #e9e9e9;
 }
 .item-detail {
+    margin-top: 15px;
     padding: 0 5px;
 }
+.item-detail h3 {
+    font-size: 23px;
+}
+
 .image-software {
     border: 1px solid #e9e9e9;
     display: block;
@@ -56,10 +75,8 @@ table, th, td {
 }
 
 /* index (self introduction) */
-@media (max-width: 424px) {
-    .self-profile p {
-        font-size: 16px;
-    }
+.page-content p {
+    font-size: 20px;
 }
 
 /* portfolio */
@@ -72,7 +89,17 @@ table, th, td {
     }
 }
 
+/* index (self introduction) */
+@media (max-width: 768px) {
+    .self-profile p {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 424px) {
+    .self-profile p {
+        font-size: 16px;
+    }
     .page-header {
         font-size: 25px;
     }

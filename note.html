@@ -33,26 +33,22 @@ categories:
     type: others
 ---
 <div class="container">
+  <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-    <div class="row">
         {% assign notes = site.note | sort: 'index' %}
         {% for category in page.categories %}
-        <div class="row">
-          <div>
-            <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
-          </div>
+        <div>
+          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
         </div>
         <dl class="dl-unsur">
           {% assign list = notes | where: 'category', category.type %}
           {% for note in list %}
           <dd>
           <div class="media">
-            <div class="media-left">
-              <a href="{{ note.url }}" title="{{ note.title }}">
-                <img src="../public/images/{{ note.image }}" class="media-object" style="width:80px">
-              </a>
-            </div>
+            <a href="{{ note.url }}" title="{{ note.title }}">
+              <img src="../public/images/{{ note.image }}" class="rounded" style="width:80px;margin-right:10px">
+            </a>
             <div class="media-body">
               <a href="{{ note.url }}" title="{{ note.title }}"><div>{{ note.index }}. {{ note.title }}</div></a>
               {{ note.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
@@ -79,6 +75,6 @@ categories:
         </dl>
         {% endfor %}
     </div>
-    </div>
     <div class="col-sm-1"></div>
+  </div>
 </div>

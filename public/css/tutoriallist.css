@@ -8,7 +8,8 @@
     border-top:1px solid #959595;
     display:block;
     float:left;
-    padding:8px 0;
+    padding-top: 8px;
+    margin-bottom: 0;
 }
 .dl-unsur dd:first-child {
     border-top:0;
