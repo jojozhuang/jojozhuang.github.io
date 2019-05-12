@@ -25,13 +25,13 @@ categories:
     {% assign portfolios = list | where: "category", category.type %}
     {% for portfolio in portfolios %}
         {% if category.type == 'mobile' %}
-          <div class="col-xs-6 col-md-3 portfolio-item">
+          <div class="col-6 col-lg-3 portfolio-item">
         {% else %}
-          <div class="col-xs-6 col-md-4 portfolio-item">
+          <div class="col-6 col-lg-4 portfolio-item">
         {% endif %}
           <div class="item-border">
             <a href="{{ portfolio.url }}">
-              <img class="img-responsive" src="{{ portfolio.image }}" alt="image">
+              <img class="img-fluid" src="{{ portfolio.image }}" alt="image">
             </a>
             <div class="item-detail">
               <h3><a href="{{ portfolio.url }}">{{ portfolio.title }}</a></h3>
