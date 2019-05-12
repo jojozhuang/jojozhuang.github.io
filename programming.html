@@ -12,26 +12,22 @@ categories:
     type: java
 ---
 <div class="container">
+  <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-    <div class="row">
         {% assign lessons = site.programming | sort: 'index' %}
         {% for category in page.categories %}
-        <div class="row">
-          <div>
-            <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
-          </div>
+        <div>
+          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
         </div>
         <dl class="dl-unsur">
           {% assign list = lessons | where: 'category', category.type %}
           {% for lesson in list %}
           <dd>
           <div class="media">
-            <div class="media-left">
-              <a href="{{ lesson.url }}" title="{{ lesson.title }}">
-                <img src="../public/images/{{ lesson.image }}" class="media-object" style="width:80px">
-              </a>
-            </div>
+            <a href="{{ lesson.url }}" title="{{ lesson.title }}">
+              <img src="../public/images/{{ lesson.image }}" class="rounded" style="width:80px;margin-right:10px">
+            </a>
             <div class="media-body">
               <a href="{{ lesson.url }}" title="{{ lesson.title }}"><div>{{ lesson.index }}. {{ lesson.title }}</div></a>
               {{ lesson.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
@@ -58,6 +54,6 @@ categories:
         </dl>
         {% endfor %}
     </div>
-    </div>
     <div class="col-sm-1"></div>
+  </div>
 </div>
