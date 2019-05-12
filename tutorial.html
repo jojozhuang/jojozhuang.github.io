@@ -55,19 +55,19 @@ categories:
               </a>
             </div>
             <div class="media-body">
-              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div>{{ tutorial.index }}. {{ tutorial.title }}</div></a>
+              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div class="subject"><span>{{ tutorial.index }}. {{ tutorial.title }}</span></div></a>
               <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
               <div class="pull-left">
                   <ul class="list-inline list-unstyled">
                     <li class="list-inline-item"><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
                       <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
                     </li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
                     <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
                       <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
                       <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
