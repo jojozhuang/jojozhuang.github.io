@@ -12,38 +12,34 @@ categories:
     type: java
 ---
 <div class="container">
+  <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-    <div class="row">
         {% assign lessons = site.programming | sort: 'index' %}
         {% for category in page.categories %}
-        <div class="row">
-          <div>
-            <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
-          </div>
+        <div>
+          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
         </div>
         <dl class="dl-unsur">
           {% assign list = lessons | where: 'category', category.type %}
           {% for lesson in list %}
           <dd>
           <div class="media">
-            <div class="media-left">
-              <a href="{{ lesson.url }}" title="{{ lesson.title }}">
-                <img src="../public/images/{{ lesson.image }}" class="media-object" style="width:80px">
-              </a>
-            </div>
+            <a href="{{ lesson.url }}" title="{{ lesson.title }}">
+              <img src="../public/images/{{ lesson.image }}" class="rounded" style="width:80px;margin-right:10px">
+            </a>
             <div class="media-body">
-              <a href="{{ lesson.url }}" title="{{ lesson.title }}"><div>{{ lesson.index }}. {{ lesson.title }}</div></a>
+              <a href="{{ lesson.url }}" title="{{ lesson.title }}"><div class="subject"><span>{{ lesson.index }}. {{ lesson.title }}</span></div></a>
               {{ lesson.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
               <div class="pull-left">
                   <ul class="list-inline list-unstyled">
-                    <li><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ lesson.url }}#disqus_thread">Comments</a></li>
-                    <li>|</li>
-                    <li>
+                    <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ lesson.url }}#disqus_thread">Comments</a></li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item">
                       <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ lesson.tags | join: ", "}} </span>
                     </li>
-                    <li>|</li>
-                    <li>
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
                     <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
                       <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
                       <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
@@ -58,6 +54,6 @@ categories:
         </dl>
         {% endfor %}
     </div>
-    </div>
     <div class="col-sm-1"></div>
+  </div>
 </div>
