@@ -58,13 +58,13 @@ categories:
               {{ note.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
               <div class="pull-left">
                   <ul class="list-inline list-unstyled">
-                    <li><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ note.url }}#disqus_thread">Comments</a></li>
-                    <li>|</li>
-                    <li>
+                    <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ note.url }}#disqus_thread">Comments</a></li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item">
                       <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ note.tags | join: ", "}} </span>
                     </li>
-                    <li>|</li>
-                    <li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item">
                     <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
                       <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
                       <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
