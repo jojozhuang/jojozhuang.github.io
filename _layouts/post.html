@@ -15,7 +15,7 @@ key: blog
       <h1>{{ page.title }}</br><small>{{ page.tags | array_to_sentence_string }}</small></h1>
       {% include pagination.html %}
       <hr>
-      <p class="meta">{{ page.date | date_to_string }}</p>
+      <p>{{ page.date | date_to_string }}</p>
       <div class="post">
         {{ content }}
       </div>

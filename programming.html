@@ -29,7 +29,7 @@ categories:
               <img src="../public/images/{{ lesson.image }}" class="rounded" style="width:80px;margin-right:10px">
             </a>
             <div class="media-body">
-              <a href="{{ lesson.url }}" title="{{ lesson.title }}"><div>{{ lesson.index }}. {{ lesson.title }}</div></a>
+              <a href="{{ lesson.url }}" title="{{ lesson.title }}"><div class="subject"><span>{{ lesson.index }}. {{ lesson.title }}</span></div></a>
               {{ lesson.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
               <div class="pull-left">
                   <ul class="list-inline list-unstyled">
@@ -38,8 +38,8 @@ categories:
                     <li class="list-inline-item">
                       <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ lesson.tags | join: ", "}} </span>
                     </li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
                     <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
                       <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
                       <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
