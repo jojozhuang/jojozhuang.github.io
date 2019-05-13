@@ -45,6 +45,12 @@ bookmarks:
         url: http://www.jiuzhang.com/
   - category: Online Learning
     links:
+      - name: Stack Overflow
+        description: A question and answer site for professional and enthusiast programmers
+        url: https://stackoverflow.com/
+      - name: GeeksforGeeks
+        description: A Computer Science portal for geeks
+        url: https://www.geeksforgeeks.org/
       - name: W3Schools
         description: A popular web site for learning web technologies
         url: https://www.w3schools.com/
@@ -56,14 +62,68 @@ bookmarks:
         url: https://javascript.info/
   - category: Programming Language
     links:
+      - name: C
+        description: A general-purpose, imperative computer programming language
+        url: https://en.wikipedia.org/wiki/C_(programming_language)
+      - name: C++
+        description: A general-purpose programming language
+        url: https://en.wikipedia.org/wiki/C%2B%2B
+      - name: C#
+        description: A general-purpose, multi-paradigm programming language
+        url: https://docs.microsoft.com/en-us/dotnet/csharp/
+      - name: Java
+        description: A general-purpose programming language that is class-based, object-oriented
+        url: https://www.oracle.com/java/
+      - name: JavaScript
+        description: A high-level, interpreted programming language that conforms to the ECMAScript specification
+        url: https://en.wikipedia.org/wiki/JavaScript
+      - name: Python
+        description: An interpreted, high-level, general-purpose programming language
+        url: https://www.python.org/
+      - name: Go
+        description: A statically typed, compiled programming language
+        url: https://golang.org/
+      - name: Erlang
+        description: A general-purpose, concurrent, functional programming language
+        url: https://www.erlang.org/
+      - name: Kotlin
+        description: A cross-platform, statically typed, general-purpose programming language
+        url: https://kotlinlang.org/
       - name: Scala
         description: A programming language based on Java
         url: https://www.scala-lang.org/
       - name: Groovy
         description: A powerful, optionally typed and dynamic languag
         url: http://groovy-lang.org/
+      - name: Objective-C
+        description: A general-purpose, object-oriented programming language
+        url: https://en.wikipedia.org/wiki/Objective-C
+      - name: Swift
+        description: A general-purpose, multi-paradigm, compiled programming language
+        url: https://developer.apple.com/swift/
+      - name: Type Script
+        description: Strict syntactical superset of JavaScript maintained by Microsoft
+        url: https://www.typescriptlang.org/
   - category: Knowledge
     links:
+      - name: Data structure
+        description: A data organization, management, and storage format that enables efficient access and modification
+        url: https://en.wikipedia.org/wiki/Data_structure
+      - name: Algorithm
+        description: An unambiguous specification of how to solve a class of problems
+        url: https://en.wikipedia.org/wiki/Algorithm
+      - name: Design Pattern
+        description: A general, reusable solution to a commonly occurring problem within a given context in software design
+        url: https://en.wikipedia.org/wiki/Software_design_pattern
+      - name: Microservices
+        description: A service-oriented architecture that structures an application as a collection of loosely coupled services
+        url: https://en.wikipedia.org/wiki/Microservices
+      - name: Cache
+        description: A hardware or software component that stores data so that future requests for that data can be served faster
+        url: https://en.wikipedia.org/wiki/Cache_(computing)
+      - name: Load Balancing
+        description: A mechanism to improve the distribution of workloads across multiple computing resources
+        url: https://en.wikipedia.org/wiki/Load_balancing_(computing)
       - name: Debugging
         description: The process of finding and resolving of defects
         url: https://en.wikipedia.org/wiki/Debugging
@@ -153,6 +213,15 @@ bookmarks:
       - name: MapReduce
         description: A programming model and an associated implementation for processing and generating big data sets
         url: https://en.wikipedia.org/wiki/MapReduce
+      - name: Apache Hadoop
+        description: An open-source framework designed for distributed storage and processing of very large data sets across clusters of computers
+        url: https://hadoop.apache.org/
+      - name: Apache Hive
+        description: A data warehouse software project built on top of Apache Hadoop for providing data query and analysis
+        url: https://hive.apache.org/
+      - name: Apache Pig
+        description: A high-level platform for creating programs that run on Apache Hadoop
+        url: https://pig.apache.org/
       - name: IBM Watson
         description: An AI system developed by IBM
         url: https://www.ibm.com/watson
@@ -205,9 +274,6 @@ bookmarks:
       - name: JSON Server
         description: A dummy server providing fake JSON data
         url: https://github.com/typicode/json-server
-      - name: Type Script
-        description: Strict syntactical superset of JavaScript maintained by Microsoft
-        url: https://www.typescriptlang.org/
       - name: Socket.IO
         description: Real-time bidirectional event-based communication
         url: https://socket.io/
@@ -225,9 +291,6 @@ bookmarks:
       - name: Elasticsearch
         description: A distributed, RESTful search and analytics engine
         url: https://www.elastic.co/
-      - name: IIS
-        description: Internet Information Services, Microsoft's web server
-        url: https://tomcat.apache.org/
       - name: Tomcat
         description: An open source web server
         url: https://tomcat.apache.org/
@@ -268,8 +331,26 @@ bookmarks:
         description: An open source JavaScript display engine for mathematics.
         url: https://www.mathjax.org/
       - name: MermaidJs
-        description: A simple markdown-like script language for generating charts from text via javascript.
+        description: A simple markdown-like script language for generating charts from text via javascript
         url: https://mermaidjs.github.io/
+      - name: Apache Kafka
+        description: An open-source stream-processing software platform
+        url: https://kafka.apache.org/
+      - name: Redis
+        description: An open source in-memory data structure store, used as a database, cache and message broker
+        url: https://redis.io/
+      - name: Memcached
+        description: A general-purpose distributed memory caching system
+        url: https://memcached.org/
+      - name: Apache ZooKeeper
+        description: A centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services
+        url: https://zookeeper.apache.org/
+      - name: Netty
+        description: A non-blocking I/O client-server framework for the development of Java network applications such as protocol servers and clients
+        url: https://netty.io/
+      - name: Apache Dubbo
+        description: A high-performance, light weight, java based RPC framework
+        url: https://dubbo.apache.org/
   - category: Development
     links:
       - name: Git
