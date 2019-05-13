@@ -29,6 +29,20 @@ bookmarks:
       - name: Text Compare
         description: An online text compare tool
         url: https://text-compare.netlify.com/
+      - name: Plunker
+        description: An online real-time collaborative code editor
+        url: https://plnkr.co/
+  - category: Algorithm
+    links:
+      - name: Leetcode
+        description: Practice algorithms online
+        url: https://leetcode.com/problemset/algorithms/
+      - name: Lintcode
+        description: Practice algorithms online
+        url: http://www.lintcode.com/en/problem/
+      - name: JiuZhang(Chinese)
+        description: A chinese algorithms training website
+        url: http://www.jiuzhang.com/
   - category: Online Learning
     links:
       - name: W3Schools
@@ -40,6 +54,14 @@ bookmarks:
       - name: The Modern JavaScript Tutorial
         description: A good tutorial for javascript
         url: https://javascript.info/
+  - category: Programming Language
+    links:
+      - name: Scala
+        description: A programming language based on Java
+        url: https://www.scala-lang.org/
+      - name: Groovy
+        description: A powerful, optionally typed and dynamic languag
+        url: http://groovy-lang.org/
   - category: Knowledge
     links:
       - name: Debugging
@@ -85,23 +107,30 @@ bookmarks:
         url: https://www.virtualbox.org/
   - category: Database
     links:
+      - name: Oracle
+        description: The most popular and powerful RDBMS Database
+        url: https://www.oracle.com/database/
+      - name: SQL Server
+        description: Another popular RDBMS Database developed by Microsoft
+        url: https://www.microsoft.com/en-us/sql-server
       - name: MySQL
         description: The most popular Open Source RDBMS
         url: https://www.mysql.com/
+      - name: PostgreSQL
+        description: Another popular Open Source RDBMS
+        url: https://www.postgresql.org/
       - name: SQLite
         description: A light-weight embedded database
         url: https://www.sqlite.org/
-  - category: Algorithm
-    links:
-      - name: Leetcode
-        description: Practice algorithms online
-        url: https://leetcode.com/problemset/algorithms/
-      - name: Lintcode
-        description: Practice algorithms online
-        url: http://www.lintcode.com/en/problem/
-      - name: JiuZhang(Chinese)
-        description: A chinese algorithms training website
-        url: http://www.jiuzhang.com/
+      - name: MongoDB
+        description: A cross-platform document-oriented NoSQL database program.
+        url: https://www.mongodb.com/
+      - name: Apache CouchDB
+        description: An open-source document-oriented NoSQL database.
+        url: https://couchdb.apache.org/
+      - name: Amazon DynamoDB
+        description: A fully managed NoSQL database that supports key-value and document.
+        url: https://aws.amazon.com/dynamodb/
   - category: Cloud
     links:
       - name: Amazon EC2
@@ -116,9 +145,6 @@ bookmarks:
       - name: Heroku
         description: A PaaS platform supported by Salesforce
         url: https://www.heroku.com/
-      - name: Netlify
-        description: A cloud service for hosting websites
-        url: https://www.netlify.com/
       - name: Travis CI
         description: A continuous integration service used to build projects hosted at GitHub
         url: https://travis-ci.org/
@@ -130,9 +156,12 @@ bookmarks:
       - name: IBM Watson
         description: An AI system developed by IBM
         url: https://www.ibm.com/watson
-      - name: Spark
+      - name: Apache Spark
         description: A fast and general engine for large-scale data processing
         url: https://spark.apache.org/
+      - name: Apache Storm
+        description: A free and open source distributed realtime computation system
+        url: https://storm.apache.org/
   - category: Mobile Development
     links:
       - name: iOS
@@ -161,9 +190,6 @@ bookmarks:
       - name: Bootstrap
         description: A free framework for developing responsive, mobile-first web sites.
         url: http://getbootstrap.com/
-      - name: Upgrade to Bootstrap 4
-        description: A service helps to upgrade from Bootstrap 3 to Bootstrap 4.
-        url: http://upgrade-bootstrap.bootply.com/
       - name: Jquery
         description: A popular JavaScript library
         url: https://jquery.com/
@@ -182,57 +208,6 @@ bookmarks:
       - name: Type Script
         description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
-      - name: Fiddler
-        description: The free web debugging proxy for any browser, system or platform
-        url: https://www.telerik.com/fiddler
-      - name: Plunker
-        description: An online real-time collaborative code editor
-        url: https://plnkr.co/
-      - name: Postman
-        description: A lightweight tool for testing web APIs
-        url: https://www.getpostman.com/
-      - name: Bootstrap Templates
-        description: Free Bootstrap themes and templates
-        url: https://bootsnipp.com
-      - name: Generate Bootstrap Navbar
-        description: Generate your own Bootstrap navbar
-        url: https://work.smarchal.com/twbscolor/
-      - name: highlight.js
-        description: Javascript syntax highlighter
-        url: https://highlightjs.org/
-      - name: Git
-        description: A free and open source distributed version control system
-        url: https://git-scm.com/
-      - name: GitIgnore
-        description: Create useful .gitignore files for your project
-        url: https://www.gitignore.io/
-      - name: SourceTree
-        description: A free Git client for Windows and Mac
-        url: https://www.sourcetreeapp.com/
-      - name: GitHub
-        description: A web-based Git or version control repository
-        url: https://github.com/
-      - name: Github Page
-        description: Free internet hosting service
-        url: https://pages.github.com/
-      - name: Putty
-        description: A free SSH and telnet client for Windows
-        url: http://www.putty.org/
-      - name: Cyberduck
-        description: A free FTP clients for Mac and Windows
-        url: https://jekyllrb.com/
-      - name: FileZilla
-        description: A free cross-platform FTP application
-        url: https://filezilla-project.org/
-      - name: Jekyll
-        description: A blog-aware, static site generator in Ruby.
-        url: https://jekyllrb.com/
-      - name: Liquid
-        description: An open-source template language written in Ruby
-        url: https://shopify.github.io/liquid/
-      - name: Electron
-        description: Build cross-platform desktop apps with JavaScript, HTML, and CSS.
-        url: https://electron.atom.io/
       - name: Socket.IO
         description: Real-time bidirectional event-based communication
         url: https://socket.io/
@@ -241,33 +216,15 @@ bookmarks:
         url: https://www.asp.net/signalr
   - category: Open Source/Popular Projects
     links:
-      - name: Docker
-        description: A software technology providing containers
-        url: https://www.docker.com/
-      - name: Docker Hub
-        description: A repository where open Docker images are stored
-        url: https://hub.docker.com/
-      - name: Kitematic
-        description: A tool to maintain docker containers through GUI
-        url: https://kitematic.com/
       - name: Node.js
         description: A JavaScript runtime built on Chrome's V8 JavaScript engine
         url: https://nodejs.org/
       - name: NPM
         description: The package manager for JavaScript and the world’s largest software registry
         url: https://www.npmjs.com/
-      - name: Jenkins
-        description: An open source automation server written in Java
-        url: https://jenkins.io/
-      - name: Splunk
-        description: Search, analyze and visualize the machine-generated data
-        url: https://www.splunk.com/
       - name: Elasticsearch
         description: A distributed, RESTful search and analytics engine
         url: https://www.elastic.co/
-      - name: Dynatrace
-        description: A performance monitoring tool
-        url: https://www.dynatrace.com/
       - name: IIS
         description: Internet Information Services, Microsoft's web server
         url: https://tomcat.apache.org/
@@ -292,15 +249,6 @@ bookmarks:
       - name: Maven
         description: A software project management and comprehension tool
         url: https://maven.apache.org/
-      - name: Gradle
-        description: An open source build automation system
-        url: https://gradle.org/
-      - name: Scala
-        description: A programming language based on Java
-        url: https://www.scala-lang.org/
-      - name: Groovy
-        description: A powerful, optionally typed and dynamic languag
-        url: http://groovy-lang.org/
       - name: SDKMAN
         description: A tool for managing parallel versions of multiple SDKs
         url: http://sdkman.io/
@@ -316,15 +264,75 @@ bookmarks:
       - name: Writage
         description: Markdown plugin for Microsoft Word
         url: http://www.writage.com/
-      - name: Monaco Editor
-        description: The code editor that powers VS Code
-        url: https://microsoft.github.io/monaco-editor/index.html
       - name: MathJax
         description: An open source JavaScript display engine for mathematics.
         url: https://www.mathjax.org/
       - name: MermaidJs
         description: A simple markdown-like script language for generating charts from text via javascript.
         url: https://mermaidjs.github.io/
+  - category: Development
+    links:
+      - name: Git
+        description: A free and open source distributed version control system
+        url: https://git-scm.com/
+      - name: GitIgnore
+        description: Create useful .gitignore files for your project
+        url: https://www.gitignore.io/
+      - name: SourceTree
+        description: A free Git client for Windows and Mac
+        url: https://www.sourcetreeapp.com/
+      - name: GitHub
+        description: A web-based Git or version control repository
+        url: https://github.com/
+      - name: Electron
+        description: Build cross-platform desktop apps with JavaScript, HTML, and CSS.
+        url: https://electron.atom.io/
+  - category: DevOps
+    links:
+      - name: Gradle
+        description: An open source build automation system
+        url: https://gradle.org/
+      - name: Jenkins
+        description: An open source automation server written in Java
+        url: https://jenkins.io/
+      - name: Bamboo
+        description: A continuous integration and continuous deployment server developed by Atlassian
+        url: https://www.atlassian.com/software/bamboo
+      - name: Docker
+        description: A software technology providing containers
+        url: https://www.docker.com/
+      - name: Docker Hub
+        description: A repository where open Docker images are stored
+        url: https://hub.docker.com/
+      - name: Kitematic
+        description: A tool to maintain docker containers through GUI
+        url: https://kitematic.com/
+      - name: Kubernetes(K8s)
+        description: an open-source container orchestration system for automating application deployment, scaling, and management.
+        url: https://kubernetes.io/
+      - name: Splunk
+        description: Search, analyze and visualize the machine-generated data
+        url: https://www.splunk.com/
+      - name: Dynatrace
+        description: A performance monitoring tool
+        url: https://www.dynatrace.com/
+  - category: Tools
+    links:
+      - name: Postman
+        description: A lightweight tool for testing web APIs
+        url: https://www.getpostman.com/
+      - name: Putty
+        description: A free SSH and telnet client for Windows
+        url: http://www.putty.org/
+      - name: Cyberduck
+        description: A free FTP clients for Mac and Windows
+        url: https://jekyllrb.com/
+      - name: FileZilla
+        description: A free cross-platform FTP application
+        url: https://filezilla-project.org/
+      - name: Fiddler
+        description: The free web debugging proxy for any browser, system or platform
+        url: https://www.telerik.com/fiddler
   - category: Free Text Editor
     links:
       - name: Atom
@@ -350,6 +358,23 @@ bookmarks:
       - name: Android Studio
         description: The official IDE for Android
         url: https://developer.android.com/studio/index.html
+      - name: IntelliJ IDEA
+        description: A Java integrated development environment for developing computer software
+        url: https://www.jetbrains.com/idea/
+  - category: Free Hosting Service
+    links:
+      - name: Github Page
+        description: Free internet hosting service
+        url: https://pages.github.com/
+      - name: Netlify
+        description: A cloud service for hosting websites
+        url: https://www.netlify.com/
+      - name: Jekyll
+        description: A blog-aware, static site generator in Ruby.
+        url: https://jekyllrb.com/
+      - name: Liquid
+        description: An open-source template language written in Ruby
+        url: https://shopify.github.io/liquid/
   - category: Resources
     links:
       - name: Icons8
@@ -359,8 +384,20 @@ bookmarks:
         description: Free icons from Font Awecome
         url: https://fontawesome.com/icons?d=gallery&m=free
       - name: Bootsnipp
-        description: Bootstrap Snippets - Html templates
+        description: Free Bootstrap themes and templates
         url: https://bootsnipp.com/
+      - name: Generate Bootstrap Navbar
+        description: Generate your own Bootstrap navbar
+        url: https://work.smarchal.com/twbscolor/
+      - name: Upgrade to Bootstrap 4
+        description: A service helps to upgrade from Bootstrap 3 to Bootstrap 4.
+        url: http://upgrade-bootstrap.bootply.com/
+      - name: highlight.js
+        description: Javascript syntax highlighter
+        url: https://highlightjs.org/
+      - name: Monaco Editor
+        description: The code editor that powers VS Code
+        url: https://microsoft.github.io/monaco-editor/index.html
       - name: Disqus
         description: A blog comment hosting service for web sites
         url: https://disqus.com/
