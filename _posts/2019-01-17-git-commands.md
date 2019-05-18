@@ -31,6 +31,10 @@ Create new Branch
 $ git checkout -b [name_of_your_new_branch]
 $ git branch [name_of_your_new_branch]
 ```
+Delete Branch
+```sh
+$ git branch -d <branchname>
+```
 
 ## 3. Status
 Check all change status
@@ -63,4 +67,4 @@ git push
 ```
 
 ## 6. References
-https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+* [Basic Git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)

@@ -12,6 +12,16 @@ tags: [System Design]
 
 > Best Practice and Common Questions for System Design.
 
+## 0. Todo
+* Implementation of Consistent Hashing
+* Message Queue
+* Design Calendar https://www.jiuzhang.com/qa/3498/
+* Top K https://www.bookstack.cn/read/system-design/cn-bigdata-heavy-hitters.md
+* https://github.com/FreemanZhang/system-design/tree/master/linkedin
+* https://www.jiuzhang.com/qa/219/
+* https://github.com/FreemanZhang/system-design
+* https://www.interviewbit.com/courses/system-design/topics/interview-questions/
+
 ## 1. Best Practice for Onsite Interview
 ### 1.1 Generic Tips
 * Focus on what I've already known
@@ -104,7 +114,7 @@ Tools/Softwares:
 * Docker,Kubernets, mesos
 * Hadoop/Spark, HDFS
 
-### 1.6 References
+### 1.7 References
 * [System Design Introduction For Interview](https://www.youtube.com/watch?v=UzLMhqg3_Wc&t=1216s)
 * [System Design Interview - Approach and structure - How To Part1](https://www.youtube.com/watch?v=0163cssUxLA&list=PLA8lYuzFlBqAy6dkZHj5VxUAaqr4vwrka)
 
