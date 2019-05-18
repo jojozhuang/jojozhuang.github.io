@@ -154,6 +154,9 @@ bookmarks:
       - name: CORS
         description: Cross-origin resource sharing
         url: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+      - name: Lambda Architecture
+        description: A data-processing architecture designed to handle massive quantities of data
+        url: https://en.wikipedia.org/wiki/Lambda_architecture
   - category: Basis
     links:
       - name: Ubuntu
@@ -183,19 +186,28 @@ bookmarks:
         description: A light-weight embedded database
         url: https://www.sqlite.org/
       - name: MongoDB
-        description: A cross-platform document-oriented NoSQL database program.
+        description: A cross-platform document-oriented NoSQL database program
         url: https://www.mongodb.com/
+      - name: Apache HBase
+        description: Wide-column store based on Apache Hadoop and on concepts of BigTable
+        url: https://couchdb.apache.org/
       - name: Apache CouchDB
-        description: An open-source document-oriented NoSQL database.
+        description: An open-source document-oriented NoSQL database
+        url: https://couchdb.apache.org/
+      - name: Apache Cassandra
+        description: A free and open-source, distributed, wide column store, NoSQL database
         url: https://couchdb.apache.org/
       - name: Amazon DynamoDB
-        description: A fully managed NoSQL database that supports key-value and document.
+        description: A fully managed NoSQL database that supports key-value and document
         url: https://aws.amazon.com/dynamodb/
   - category: Cloud
     links:
       - name: Amazon EC2
         description: World largest cloud platform
         url: https://aws.amazon.com/ec2/
+      - name: Amazon S3
+        description: The largest and most performant, secure, and feature-rich object storage service
+        url: https://aws.amazon.com/s3/
       - name: Google Cloud
         description: Google's cloud platform
         url: https://cloud.google.com/
@@ -210,27 +222,30 @@ bookmarks:
         url: https://travis-ci.org/
   - category: Big Data/AI
     links:
-      - name: MapReduce
-        description: A programming model and an associated implementation for processing and generating big data sets
-        url: https://en.wikipedia.org/wiki/MapReduce
       - name: Apache Hadoop
         description: An open-source framework designed for distributed storage and processing of very large data sets across clusters of computers
         url: https://hadoop.apache.org/
+      - name: HDFS
+        description: A distributed file system designed to run on commodity hardware
+        url: https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html
+      - name: MapReduce
+        description: A programming model and an associated implementation for processing and generating big data sets
+        url: https://en.wikipedia.org/wiki/MapReduce
       - name: Apache Hive
         description: A data warehouse software project built on top of Apache Hadoop for providing data query and analysis
         url: https://hive.apache.org/
       - name: Apache Pig
         description: A high-level platform for creating programs that run on Apache Hadoop
         url: https://pig.apache.org/
-      - name: IBM Watson
-        description: An AI system developed by IBM
-        url: https://www.ibm.com/watson
       - name: Apache Spark
         description: A fast and general engine for large-scale data processing
         url: https://spark.apache.org/
       - name: Apache Storm
         description: A free and open source distributed realtime computation system
         url: https://storm.apache.org/
+      - name: IBM Watson
+        description: An AI system developed by IBM
+        url: https://www.ibm.com/watson
   - category: Mobile Development
     links:
       - name: iOS
