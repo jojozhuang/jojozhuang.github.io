@@ -1,10 +1,11 @@
 ---
 layout: default
 key: favorite
-title: Rong Zhuang's Favorite Bookmarks
+title: Favorites
 ---
 <div class="main-contents">
     <div class="main-contents-inner">
+      <h1 class="page-header">{{ page.title }}</h2>
       {%- assign favorite = site.data.favorite -%}
       <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" href="#favorite"><h4 class="tab-title">{{favorite.title}}</h4></a></li>

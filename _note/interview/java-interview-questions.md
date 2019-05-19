@@ -4,7 +4,7 @@ key: programming
 title: "Java Interview Questions"
 index: 103
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-03
 postdate: 2016-01-03
 tags: [Java, Interview]

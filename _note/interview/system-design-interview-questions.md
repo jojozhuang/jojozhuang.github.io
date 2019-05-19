@@ -4,7 +4,7 @@ key: programming
 title: "System Design Interview Questions"
 index: 151
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-03-01
 postdate: 2016-03-01
 tags: [System Design]

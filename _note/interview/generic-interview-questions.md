@@ -4,7 +4,7 @@ key: programming
 title: "Generic Interview Questions(Draft)"
 index: 102
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-02
 postdate: 2016-01-02
 tags: [Generic Questions]

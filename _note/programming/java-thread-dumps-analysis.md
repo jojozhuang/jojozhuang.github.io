@@ -4,7 +4,7 @@ key: note
 title: "Java - Thread Dumps & Analysis"
 index: 604
 category: programming
-image: /note/programming.png
+image: programming.png
 date: 2016-06-04
 postdate: 2016-06-04
 tags: [Thread Dumps]

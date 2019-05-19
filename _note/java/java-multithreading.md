@@ -4,7 +4,7 @@ key: note
 title: "Java - Multithreading"
 index: 216
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-16
 postdate: 2016-02-16
 tags: [Multi Threading]

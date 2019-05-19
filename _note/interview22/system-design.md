@@ -4,7 +4,7 @@ key: note
 title: "System Design(Draft)"
 index: 161
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-11
 postdate: 2019-01-11
 tags: [System Design]

@@ -4,7 +4,7 @@ key: note
 title: "Java - Web Service"
 index: 211
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-11
 postdate: 2016-02-11
 tags: [SOAP, WSDL]

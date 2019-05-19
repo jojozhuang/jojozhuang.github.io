@@ -4,7 +4,7 @@ key: note
 title: "Java 8 - New Features"
 index: 222
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-22
 postdate: 2016-02-22
 tags: [Message Queue, JMS]

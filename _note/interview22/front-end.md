@@ -4,7 +4,7 @@ key: note
 title: "Front End(Draft)"
 index: 166
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-16
 postdate: 2019-01-16
 tags: [Javascript, Html, Css]

@@ -4,7 +4,7 @@ key: note
 title: "JavaScript Guide MDN(Online Doc)"
 index: 611
 category: programming
-image: /note/programming.png
+image: programming.png
 date: 2016-06-11
 postdate: 2016-06-11
 tags: [Javascript]

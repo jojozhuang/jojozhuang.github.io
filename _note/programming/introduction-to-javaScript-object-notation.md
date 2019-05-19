@@ -4,7 +4,7 @@ key: note
 title: "Introduction to JavaScript Object Notation(Draft)"
 index: 614
 category: programming
-image: /note/programming.png
+image: programming.png
 date: 2016-06-14
 postdate: 2016-06-14
 tags: [JSON]

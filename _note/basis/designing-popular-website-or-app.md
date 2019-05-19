@@ -4,7 +4,7 @@ key: note
 title: "Designing Popular Website or App"
 index: 112
 category: basis
-image: note/cs.png
+image: cs.png
 date: 2016-01-12
 postdate: 2016-01-12
 tags: [System Design]

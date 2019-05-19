@@ -4,7 +4,7 @@ key: note
 title: "Good Articles"
 index: 120
 category: basis
-image: note/cs.png
+image: cs.png
 date: 2016-01-20
 postdate: 2016-01-20
 tags: [Web, Architect]

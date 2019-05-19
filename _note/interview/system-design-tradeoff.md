@@ -4,7 +4,7 @@ key: programming
 title: "System Design - Tradeoff"
 index: 153
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-03-03
 postdate: 2016-03-03
 tags: [Tradeoffs]

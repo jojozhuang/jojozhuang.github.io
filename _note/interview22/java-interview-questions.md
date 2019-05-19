@@ -4,7 +4,7 @@ key: note
 title: "Java - Interview Questions(Draft)"
 index: 151
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-01
 postdate: 2019-01-01
 tags: [Java, Interview]

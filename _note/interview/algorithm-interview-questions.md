@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm Interview Questions(Draft)"
 index: 171
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-04-01
 postdate: 2016-04-01
 tags: [Algorithm]

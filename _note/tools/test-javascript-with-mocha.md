@@ -4,7 +4,7 @@ key: note
 title: "Test JavaScript with Mocha(Draft)"
 index: 804
 category: tools
-image: note/tools.png
+image: tools.png
 date: 2017-08-04
 postdate: 2017-08-04
 tags: [Mocha]

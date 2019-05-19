@@ -4,7 +4,7 @@ key: programming
 title: "Node.js Interview Questions(Draft)"
 index: 121
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-21
 postdate: 2016-01-21
 tags: [Node.js]

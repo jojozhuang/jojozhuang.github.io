@@ -4,7 +4,7 @@ key: note
 title: "Java - Iterator"
 index: 152
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-02
 postdate: 2019-01-02
 tags: [Iterator, Predicate]

@@ -4,7 +4,7 @@ key: programming
 title: "Java Interview Questions - Multithreading"
 index: 105
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-05
 postdate: 2016-01-05
 tags: [Java, Interview]

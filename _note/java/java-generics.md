@@ -4,7 +4,7 @@ key: note
 title: "Java - Generics"
 index: 207
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-07
 postdate: 2016-02-07
 tags: [Generic Types]

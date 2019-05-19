@@ -4,7 +4,7 @@ key: note
 title: "Java - Formatting"
 index: 202
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-02
 postdate: 2016-02-02
 tags: [Formatting]

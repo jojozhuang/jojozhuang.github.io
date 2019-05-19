@@ -4,7 +4,7 @@ key: note
 title: "Java - BlockingQueue"
 index: 218
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-18
 postdate: 2016-02-18
 tags: [BlockingQueue, ArrayBlockingQueue]
