@@ -15,7 +15,7 @@ tags: [spawn]
 ## 1. Structure
 ### 1.1 Supported Languages
 For each question, we have multiple language specified solution. Currently, this online judge application supports three languages: Java, Javascript and Python.
-![image](/public/tutorials/361/solution_project.png){:width="400px"}  
+![image](/public/images/frontend/361/solution_project.png){:width="400px"}  
 ### 1.2 Test Case
 For each question, there is one test case file shared by all solutions. For example, below is the test case for 'Two Sum' questions. There are 5 test cases in the test file. Each test case consists of three lines.
 ```sh
@@ -408,7 +408,7 @@ if __name__ == '__main__':
 ```
 ## 3. Judging Engine
 We defined several runners for different languages. Use 'RunnerManager' to manage this runners.
-![image](/public/tutorials/361/judging_engine.png){:width="400px"}  
+![image](/public/images/frontend/361/judging_engine.png){:width="400px"}  
 ### 3.1 Base Class
 Runner.js
 ```javascript
@@ -970,9 +970,9 @@ export class SubmissionService {
 
 ## 6. Demo
 Select one question to submit solution, two results. Either the solution passes all the test cases,
-![image](/public/tutorials/361/pass.png)
+![image](/public/images/frontend/361/pass.png)
 or it fails for one of the test cases.
-![image](/public/tutorials/361/fail.png)
+![image](/public/images/frontend/361/fail.png)
 
 ## 7. References
 ### 7.1 Sample OnlineJudge

@@ -14,23 +14,23 @@ tags: [Chat Room, Sketch Pad, SignalR]
 
 ## 1. Home Page  
 Some resources which help to build this application.  
-![image](/public/tutorials/413/home.png){:width="700px"}  
+![image](/public/images/frontend/413/home.png){:width="700px"}  
 
 ## 2. Chat Room
 ### 2.1 Introduction  
 This is an online chat room application. Any message submitted is broadcasted.  
 ### 2.2 First User (Joined through Chrome)  
 To join the chatting room, you must provide a user name first.  
-![image](/public/tutorials/413/chatroomuser1.png)
+![image](/public/images/frontend/413/chatroomuser1.png)
 To send message, just input the text and click ‘Send’.
-![image](/public/tutorials/413/chatroommsg1.png)
+![image](/public/images/frontend/413/chatroommsg1.png)
 ### 2.3 Second User(Joined through Firefox)  
-![image](/public/tutorials/413/chatroomuser2.png)
+![image](/public/images/frontend/413/chatroomuser2.png)
 Send a message to others.  
-![image](/public/tutorials/413/chatroommsg2.png)
+![image](/public/images/frontend/413/chatroommsg2.png)
 ### 2.4 Receive Broadcasting Messages  
 Go back to the first user. The message from Mike is displayed automatically. Here, we see the real-time message   without refreshing the current page.  
-![image](/public/tutorials/413/chatroombroadcasting.png)
+![image](/public/images/frontend/413/chatroombroadcasting.png)
 ### 2.5 Under the Hood  
 How does it work?  
 1) When accessing the chat room, a new connection is setup between your web browser and the server.  
@@ -47,14 +47,14 @@ How does it work?
 One user draws on the canvas and other users will see the drawing immediately on their own canvas. This sketch pad is implemented by HTML5 canvas and SignalR.  
 ### 3.2 Opening Two Sketch Pads with Different Browsers
 Open the first one in Chrome.  
-![image](/public/tutorials/413/sketchpad1.png)
+![image](/public/images/frontend/413/sketchpad1.png)
 Open the second one in Firebox.  
-![image](/public/tutorials/413/sketchpad2.png)  
+![image](/public/images/frontend/413/sketchpad2.png)  
 ### 3.3 Drawing in Chrome
-![image](/public/tutorials/413/sketchpaddrawing.png)  
+![image](/public/images/frontend/413/sketchpaddrawing.png)  
 ### 3.4 Synchronizing to Others
 The drawing is synchronized to others(eg. here is Firefox) simultaneously.  
-![image](/public/tutorials/413/sketchpadsync.png)  
+![image](/public/images/frontend/413/sketchpadsync.png)  
 ### 3.5 Under the Hood  
 The process is same with the chat room. The only difference is, the format of data used for the communication between server and client. For drawing, we send out coordinates of the points on the canvas instead of string messages.
 

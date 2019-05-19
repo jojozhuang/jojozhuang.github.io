@@ -53,7 +53,7 @@ Segment Tree has less storage and better performance.
 ## 3. Minimum Segment Tree
 ### 3.1 Definition of Minimum Segment Tree
 The digram below shows what Minimum Segment Tree for given array {4,-1,3,0,2} looks like.
-![image](/public/notes/data-structure-segmenttree/min.png){:width="800px"}  
+![image](/public/images/dsa/data-structure-segmenttree/min.png){:width="800px"}  
 ### 3.2 Creating Segment Tree Node
 Create a class named `SegmentTreeNode`. Attributes `start` and `end` define the range. Attributes `left` and `right` are the children of the current node.
 ```java
@@ -143,7 +143,7 @@ private int queryMin(SegmentTreeNode root, int start, int end) {
 ## 4. Including Maximum and Sum
 ### 4.1 Definition of Minimum/Maximum/Sum Segment Tree
 Actually, we can build Segment Tree for minimum, maximum and sum all at once.
-![image](/public/notes/data-structure-segmenttree/minmaxsum.png){:width="800px"}  
+![image](/public/images/dsa/data-structure-segmenttree/minmaxsum.png){:width="800px"}  
 For each node, it contains min, max and sum value. Here are the samples for different ranges.
 
   | Range  | Min | Max | Sum
@@ -281,7 +281,7 @@ public int querySum(SegmentTreeNode root, int start, int end) {
 ## 5. Modification
 ### 5.1 Minimum Segment Tree
 If value on leaf node is changed, we need to update its parent accordingly. For example, if we change the value of the second leaf from '-1' to '5' in minimum segment tree, then all nodes from root to this leaf need to be updated.
-![image](/public/notes/data-structure-segmenttree/modify5.png)
+![image](/public/images/dsa/data-structure-segmenttree/modify5.png)
 
 The implementation of the `modify` method.
 ```java
@@ -311,7 +311,7 @@ private void modify(SegmentTreeNode root, int index, int value) {
 ```
 ### 5.2 Modifying Maximum and Sum
 Similarly, if we change the value, the max value and the sum value will be affected as well.
-![image](/public/notes/data-structure-segmenttree/modifyall.png)
+![image](/public/images/dsa/data-structure-segmenttree/modifyall.png)
 Refine the `modify` method to update the max value and the sum value together.
 ```java
 public void modify(int index, int value) {

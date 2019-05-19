@@ -27,14 +27,14 @@ The following load balancing mechanisms (or methods) are supported in nginx:
 ### 3.1 Node Servers
 First, follow the steps mentioned in [Creating Http Server with Node.js]({% link _frontend/nodejs/creating-http-server-with-nodejs.md %}) to setup three node servers. They are served at different ports, 8086, 8087 and 8088.  
 Server1.
-![image](/public/tutorials/43/nodeserver1.png){:width="700px"}
+![image](/public/images/devops/43/nodeserver1.png){:width="700px"}
 Server2.
-![image](/public/tutorials/43/nodeserver2.png){:width="700px"}
+![image](/public/images/devops/43/nodeserver2.png){:width="700px"}
 Server3.
-![image](/public/tutorials/43/nodeserver3.png){:width="700px"}
+![image](/public/images/devops/43/nodeserver3.png){:width="700px"}
 ### 3.2 Nginx Server
 Second, follow the steps mentioned in [Installing Nginx in MacOS]({% link _devops/basis/installing-nginx-in-macos.md %}) to setup a nginx server. It is served at post 9096.
-![image](/public/tutorials/43/nginxserver.png){:width="700px"}  
+![image](/public/images/devops/43/nginxserver.png){:width="700px"}  
 ### 3.3 Configuring Nginx Server as Load Balancer
 Edit Nginx's configuration file /usr/local/etc/nginx/nginx.conf. Create server list in `upstream`, and link them to `proxy_pass` directive in `location`. Here, we use the default load balancing method: round-robin.
 ```raw
@@ -60,11 +60,11 @@ http {
 }
 ```
 Stop and restart nginx, then refresh the web browser. Nginx is now serving as load balancer for the node servers. For the first time, data comes from server1 .
-![image](/public/tutorials/43/balancer1.png){:width="700px"}
+![image](/public/images/devops/43/balancer1.png){:width="700px"}
 Refresh the web browser, this time, the date comes from server 2.
-![image](/public/tutorials/43/balancer2.png){:width="700px"}
+![image](/public/images/devops/43/balancer2.png){:width="700px"}
 Refresh again, the date comes from server 3. If you continue refresh, you will see three node servers return data in turn.
-![image](/public/tutorials/43/balancer3.png){:width="700px"}
+![image](/public/images/devops/43/balancer3.png){:width="700px"}
 
 ## 4. Source Files
 * [Source files of Node Servers on Github](https://github.com/jojozhuang/Tutorials/tree/master/NginxLoadBalancer)

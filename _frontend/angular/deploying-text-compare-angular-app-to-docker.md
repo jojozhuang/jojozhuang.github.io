@@ -114,7 +114,7 @@ Open docker terminal, go to main project folder. Run the following command:
 docker build -t text-compare .
 ```
 It will take two or three minutes to build the image. Nodejs and Nginx have been downloaded to local docker virtual machine. New image 'text-compare' has been created successfully.
-![image](/public/tutorials/328/dockerimages.png){:width="700px"}  
+![image](/public/images/frontend/328/dockerimages.png){:width="700px"}  
 * If you don't see the image or the new image has no name and tag set, there must be some errors during the build. Check and rebuild the image.
 
 ## 3. Running and Testing
@@ -123,11 +123,11 @@ Run the image in container.
 docker run --name text-compare -p 8080:80 text-compare &
 ```
 Open web browser, access http://192.168.99.100:8080.
-![image](/public/tutorials/328/home.png)
+![image](/public/images/frontend/328/home.png)
 Click the 'Text Compare' menu.
-![image](/public/tutorials/328/textcompare.png)
+![image](/public/images/frontend/328/textcompare.png)
 Try to input some texts in the two input boxes and click 'Find Difference' button. You should be able to see the difference.
-![image](/public/tutorials/328/typescript.png)
+![image](/public/images/frontend/328/typescript.png)
 
 ## 4. Reference
 * [Docker File Sample](https://github.com/gdi2290/angular-starter#install-docker)

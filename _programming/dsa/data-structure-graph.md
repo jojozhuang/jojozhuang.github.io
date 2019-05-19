@@ -20,7 +20,7 @@ Graph is a data structure that consists of following two components: `vertex` an
 * A finite set of ordered pair of the form (u, v), also called as edge. The pair is ordered because (u, v) is not same as (v, u) in case of a directed graph(di-graph). The pair of the form (u, v) indicates that there is an edge from vertex u to vertex v. The edges may contain weight/value/cost.
 
 Following is an example of an undirected graph with 5 vertices.
-![image](/public/notes/data-structure-graph/graph.png){:width="350px"}
+![image](/public/images/dsa/data-structure-graph/graph.png){:width="350px"}
 
 ### 1.2 Graph Features
 * Graphs can be either `directed` or `undirected`. While directed edges are like a one-way street, undirected edges are like a two-way street.
@@ -36,7 +36,7 @@ There are two most common ways to implement graph:
 Adjacency Matrix is a 2D array of size V x V where `V` is the number of vertices in a graph. Let the 2D array be matrix[][], a slot `matrix[i][j] = 1` indicates that there is an edge from vertex `i` to vertex `j`. Adjacency matrix for undirected graph is always symmetric. Adjacency Matrix is also used to represent weighted graphs. If matrix[i][j] = `w`, then there is an edge from vertex i to vertex j with weight w.
 
 The adjacency matrix for the above example graph is:
-![image](/public/notes/data-structure-graph/adjacency_matrix.png){:width="500px"}
+![image](/public/images/dsa/data-structure-graph/adjacency_matrix.png){:width="500px"}
 * Pros: Representation is easier to implement and follow. Removing an edge takes $O(1)$ time. Queries like whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done $O(1)$.
 * Cons: Consumes more space $O(V^2)$. Even if the graph is sparse(contains less number of edges), it consumes the same space. Adding a vertex is $O(V^2)$ time, as you have to rebuild the matrix.
 
@@ -93,7 +93,7 @@ public class AdjMatrixGraph {
 Adjacency List an array of lists. Size of the array is equal to the number of vertices. Let the array be vertexList[]. An entry `vertexList[i]` represents the list of vertices adjacent to the $i^{th}$ vertex.
 
 Following is adjacency list representation of the above graph.
-![image](/public/notes/data-structure-graph/adjacency_list.png){:width="700px"}
+![image](/public/images/dsa/data-structure-graph/adjacency_list.png){:width="700px"}
 * Pros: Saves space. Generally, it takes $O(V+2E)$, V is number of vertices and E is the number of edges. In the worst case, there can be $V^2$ number of edges in a graph(Every vertex connects to all other vertices) thus consuming $O(V^2)$ space. Adding a vertex is easier, just append a new node into the vertex list.
 * Cons: Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done $O(V)$, as you have to search one by one in the vertex list.
 

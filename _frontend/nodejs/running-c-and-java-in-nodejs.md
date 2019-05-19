@@ -115,7 +115,7 @@ compiler.java('HelloJava.java');
 $ node run_c.js
 $ node run_java.js
 ```
-![image](/public/tutorials/211/run.png){:width="650px"}
+![image](/public/images/frontend/211/run.png){:width="650px"}
 
 ## 5. Reference
 * [Child Processes on Node.js Document](https://nodejs.org/api/child_process.html)

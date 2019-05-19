@@ -25,7 +25,7 @@ Start nginx after installation.
 $ sudo nginx
 ```
 Access 'http://localhost:8080' in web browser.
-![image](/public/tutorials/41/startserver.png){:width="700px"}  
+![image](/public/images/devops/41/startserver.png){:width="700px"}  
 
 Use the following command to stop nginx.
 ```sh
@@ -53,7 +53,7 @@ server {
     }
 ```
 Stop and restart nginx. Access 'http://localhost:9096' in web browser.
-![image](/public/tutorials/41/changeport.png){:width="700px"}  
+![image](/public/images/devops/41/changeport.png){:width="700px"}  
 ### 3.2 Changing the Path of Default Web Location
 Change the 'root' to '/nginx/www'.
 ```raw
@@ -87,7 +87,7 @@ In you local Mac machine, create a new folder /nginx/www. And create a static ht
 </html>
 ```
 Stop and restart nginx, then refresh the web browser. Nginx is now serving pages from the custom folder.
-![image](/public/tutorials/41/location.png){:width="700px"}  
+![image](/public/images/devops/41/location.png){:width="700px"}  
 ### 3.3 Supporting Client Side Routing
 Many front-end libraries like React and Angular are using client side routing(CSR). Instead of making a GET request to server, CSR is using a browser API called history.pushState to manually change the URL and then it renders the view for that specific route - all without causing a page refresh.
 

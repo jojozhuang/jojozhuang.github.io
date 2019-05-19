@@ -31,10 +31,10 @@ Using Compose is basically a three-step process.
 ## 3. Creating Docker Compose
 ### 3.1 Getting MySQL Backup File
 Download the backup file for MySQL from [My GitHub](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/DockerMySQL/jsp_backup.sql), and put it into `~/Documents/jspmysql/`. This folder will be mounted to MySQL container later.
-![image](/public/tutorials/710/mysqlbackup.png){:width="800px"}  
+![image](/public/images/devops/710/mysqlbackup.png){:width="800px"}  
 ### 3.2 Getting JSP Tutorial Application
 Download the source files of JSP Tutorial application from [My GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile), compile and deploy all jsp and class files into `~/Documents/jsptomcat/`. This folder will be mounted to Tomcat container later.
-![image](/public/tutorials/710/tomcatdeploy.png){:width="800px"}  
+![image](/public/images/devops/710/tomcatdeploy.png){:width="800px"}  
 ### 3.3 Creating Compose File
 Create one file named `docker-compose.yml` in any directory on local machine.
 ```sh
@@ -85,7 +85,7 @@ Check the containers.
 $ docker ps
 ```
 As you see, two containers are running now.
-![image](/public/tutorials/710/run.png)  
+![image](/public/images/devops/710/run.png)  
 
 Use the following command to stop the containers.
 ```sh
@@ -95,21 +95,21 @@ $ docker-compose down
 ## 4. Verifying the Containers
 ### 4.1 Checking Tomcat Container
 Environment variable for tomcat is set correctly.
-![image](/public/tutorials/710/tomcatgeneral.png)  
+![image](/public/images/devops/710/tomcatgeneral.png)  
 Ports are also configured.
-![image](/public/tutorials/710/tomcatport.png)  
+![image](/public/images/devops/710/tomcatport.png)  
 Volume is also configured correctly.
-![image](/public/tutorials/710/tomcatvolume.png)  
+![image](/public/images/devops/710/tomcatvolume.png)  
 ### 4.2 Checking Tomcat Container
 Environment variable for mysql is set correctly.
-![image](/public/tutorials/710/mysqlgeneral.png)  
+![image](/public/images/devops/710/mysqlgeneral.png)  
 Ports are also configured.
-![image](/public/tutorials/710/mysqlport.png)  
+![image](/public/images/devops/710/mysqlport.png)  
 Volume is also configured correctly.
-![image](/public/tutorials/710/mysqlvolume.png)  
+![image](/public/images/devops/710/mysqlvolume.png)  
 ### 4.3 Accessing Game Store Website
 Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully!
-![image](/public/tutorials/710/jsptutorial.png)  
+![image](/public/images/devops/710/jsptutorial.png)  
 
 ## 5. Source Files
 * [Docker Compose File](https://github.com/jojozhuang/Tutorials/blob/master/JSPTutorialDockerfile/Docker/docker-compose.yml)

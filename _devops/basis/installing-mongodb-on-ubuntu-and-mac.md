@@ -42,7 +42,7 @@ $ sudo apt-get install -y mongodb-org
 ```sh
 $ mongo -version
 ```
-![image](/public/tutorials/32/versionubuntu.png){:width="600px"}  
+![image](/public/images/devops/32/versionubuntu.png){:width="600px"}  
 6) Start MongoDB service and using it with `mongo` command.
 ```sh
 $ sudo service mongod start
@@ -68,7 +68,7 @@ $ brew install mongodb
 ```sh
 $ mongo -version
 ```
-![image](/public/tutorials/32/versionmac.png){:width="600px"}  
+![image](/public/images/devops/32/versionmac.png){:width="600px"}  
 4) Create the data directory.
 ```sh
 $ mkdir -p /data/db

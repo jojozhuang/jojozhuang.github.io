@@ -17,11 +17,11 @@ tags: [Xamarin, Android, SQLite, C#]
 We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Android and Java. See more details in the posting [Building Android App with Android Studio]({% link _frontend/mobile/building-android-app-with-android-studio.md %}).
 ### 1.2 Android Project
 In the blog [Building iOS App with Xamarin]({% link _frontend/mobile/building-ios-app-with-xamarin.md %}), I introduce how to build iOS App with Xamarin. At that time, we created the Xamarin Android project along with the Core Portable project and Xamarin iOS project. In this blog, I will use this Android project to build the Game Store app.
-![image](/public/tutorials/608/project_stucture.png){:width="320px"}  
+![image](/public/images/frontend/608/project_stucture.png){:width="320px"}  
 Delete file 'Main.axml' and 'MainActivity.cs'.
 ### 1.3 Layouts
 Right click on Resources->layout, Add->New File. Select Android->Layout, set name to 'ProductList'.
-![image](/public/tutorials/608/layout_productlist.png){:width="700px"}  
+![image](/public/images/frontend/608/layout_productlist.png){:width="700px"}  
 Modify its content as follows.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -116,7 +116,7 @@ Create another layout named 'ProductDetail'. It is used to display and edit prod
 ### 1.4 Activities
 Activity works with layout. It control the behaviors of the layout.  
 Right click the ‘GameStoreXamarin.Android' project, Add->New File. Select Android->Activity, set name to 'ProductListActivity'.
-![image](/public/tutorials/608/activity_productlist.png){:width="700px"}  
+![image](/public/images/frontend/608/activity_productlist.png){:width="700px"}  
 Add `'MainLauncher = true'` to the Activity attribute to inform Android to run 'ProductListActivity' first when the app is launched.
 ```c#
 [Activity(Label = "ProductListActivity", MainLauncher = true)]
@@ -165,7 +165,7 @@ Project->Add NuGet Packages, search and install two packages, 'sqlite-net-pcl' a
 ```
 ### 1.6 Importing Images
 Add three images to Resources->drawable folder. These images are used as product's photo.
-![image](/public/tutorials/608/drawable_images.png){:width="320px"}  
+![image](/public/images/frontend/608/drawable_images.png){:width="320px"}  
 ### 1.7 Dummy Data
 Create three products with images in drawable folder. If there is no data in SQLite database, call this method get initial products.
 ```c#
@@ -625,22 +625,22 @@ public override Boolean OnOptionsItemSelected(IMenuItem item)
 
 ### 4.5 Final Project Structure
 The final structure of the portable project.
-![image](/public/tutorials/608/android_project.png){:width="320px"}  
+![image](/public/images/frontend/608/android_project.png){:width="320px"}  
 
 ## 5. Testing
 In Visual Studio, click the arrow button(or Run->Start Without Debugging) to run the app in Android Emulator.
-![image](/public/tutorials/608/emulator.png){:width="400px"}  
+![image](/public/images/frontend/608/emulator.png){:width="400px"}  
 Product list.
-![image](/public/tutorials/608/runproductlist.png){:width="350px"}  
+![image](/public/images/frontend/608/runproductlist.png){:width="350px"}  
 Edit product.
-![image](/public/tutorials/608/runproductadd.png){:width="350px"}  
+![image](/public/images/frontend/608/runproductadd.png){:width="350px"}  
 Select photo.
-![image](/public/tutorials/608/runphotochooser.png){:width="350px"}  
-![image](/public/tutorials/608/runphotochooser2.png){:width="350px"}  
+![image](/public/images/frontend/608/runphotochooser.png){:width="350px"}  
+![image](/public/images/frontend/608/runphotochooser2.png){:width="350px"}  
 Delete product.
-![image](/public/tutorials/608/runproductdelete.png){:width="350px"}  
+![image](/public/images/frontend/608/runproductdelete.png){:width="350px"}  
 In landscape view.
-![image](/public/tutorials/608/runlandscape.png){:width="700px"}  
+![image](/public/images/frontend/608/runlandscape.png){:width="700px"}  
 
 ## 6. Source Files
 * [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/game-store-xamarin)

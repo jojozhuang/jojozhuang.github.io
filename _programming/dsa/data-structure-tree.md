@@ -28,11 +28,11 @@ A tree is a data structure composed of nodes.The tree cannot contain cycles. The
 * `Full Binary Trees`: A full binary tree is a binary tree in which every node has either zero or two children.That is, no nodes have only one child.
 * `Perfect Binary Trees`: A perfect binary tree is one that is both full and complete. All leaf nodes will be at the same level, and this level has the maximum number of nodes.
 
-![image](/public/notes/data-structure-tree/trees.png)
+![image](/public/images/dsa/data-structure-tree/trees.png)
 
 * `Balanced` vs. Unbalanced: A tree is balanced if each sub-tree is balanced and the height of the two sub-trees differ by at most one.
 
-![image](/public/notes/data-structure-tree/balanced.png){:width="700px"}
+![image](/public/images/dsa/data-structure-tree/balanced.png){:width="700px"}
 
 ### 1.3 Binary Tree Properties
 * The maximum number of nodes at level `'l'` of a binary tree is $2^{l-1}$.
@@ -44,7 +44,7 @@ A tree is a data structure composed of nodes.The tree cannot contain cycles. The
 ## 2. Binary Tree Traversal
 ### 2.1 Definition of Binary Tree
 A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
-![image](/public/notes/data-structure-tree/binary_tree.png){:width="350px"}  
+![image](/public/images/dsa/data-structure-tree/binary_tree.png){:width="350px"}  
 ### 2.2 Implementing Tree Node
 ```java
 public class TreeNode {
@@ -293,7 +293,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
 ```
 ### 2.7 Binary Tree Traversal(General Template)
 Suppose we have a tree as follows.
-![image](/public/notes/data-structure-tree/tree_template.png){:width="180px"}
+![image](/public/images/dsa/data-structure-tree/tree_template.png){:width="180px"}
 There are totally 6 traversal ways.  
 ```java
 /**
@@ -418,7 +418,7 @@ public List<Integer> postorderTraversal2(TreeNode root) {
 ```
 ### 2.8 Level-Order Traversal on Binary Tree
 Given binary tree {3,9,20,#,#,15,7} as follows.
-![image](/public/notes/data-structure-tree/tree_level_order.png){:width="350px"}
+![image](/public/images/dsa/data-structure-tree/tree_level_order.png){:width="350px"}
 Return its level order traversal as below.
 ```raw
  [  
@@ -491,7 +491,7 @@ private void helper(TreeNode root, List<List<Integer>> list, int height) {
 * Deserialization - Decode a string to binary tree.
 
 For example, we have a tree as follows.
-![image](/public/notes/data-structure-tree/binary_tree.png){:width="350px"}
+![image](/public/images/dsa/data-structure-tree/binary_tree.png){:width="350px"}
 Serialization will convert to tree to string ["1","2","3","#","#","4","5"] and deserialization will convert this string to the original tree.
 
 Below is the implementation of serialization and deserialization in Java.
