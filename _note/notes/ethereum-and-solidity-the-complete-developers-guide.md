@@ -3,7 +3,7 @@ layout: note
 key: note
 title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 802
-category: tools
+category: notes
 image: tools.png
 date: 2017-08-02
 postdate: 2017-08-02

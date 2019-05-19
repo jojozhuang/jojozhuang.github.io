@@ -3,7 +3,7 @@ layout: note
 key: note
 title: "Introduction to Linux(Book)"
 index: 101
-category: basis
+category: notes
 image: cs.png
 date: 2016-01-01
 postdate: 2016-01-01

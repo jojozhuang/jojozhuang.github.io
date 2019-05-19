@@ -3,7 +3,7 @@ layout: note
 key: note
 title: "Technologies Used in Ariba(Draft)"
 index: 720
-category: architecture
+category: basis
 image: note.png
 date: 2017-07-20
 postdate: 2017-07-20

@@ -3,7 +3,7 @@ layout: note
 key: note
 title: "Eclipse IDE Tutorial (Vogella)"
 index: 801
-category: tools
+category: notes
 image: tools.png
 date: 2017-08-01
 postdate: 2017-08-01

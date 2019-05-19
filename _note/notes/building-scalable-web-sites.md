@@ -3,7 +3,7 @@ layout: note
 key: note
 title: "Building Scalable Web Sites"
 index: 702
-category: architecture
+category: notes
 image: note.png
 date: 2017-07-02
 postdate: 2017-07-02

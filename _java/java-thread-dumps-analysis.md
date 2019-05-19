@@ -1,12 +1,12 @@
 ---
-layout: note
-key: note
+layout: programming
+key: java
 title: "Java - Thread Dumps & Analysis"
 index: 604
-category: programming
-image: programming.png
-date: 2016-06-04
-postdate: 2016-06-04
+category: advanced
+image: java.png
+date: 2017-06-04
+postdate: 2017-06-04
 tags: [Thread Dumps]
 ---
 
