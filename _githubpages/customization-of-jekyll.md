@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Customization of Jekyll"
 index: 904
 category: githubpages

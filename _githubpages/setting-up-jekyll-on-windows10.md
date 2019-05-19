@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Setting Up Jekyll on Windows 10"
 index: 902
 category: githubpages

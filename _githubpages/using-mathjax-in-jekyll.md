@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Using MathJax in Jekyll"
 index: 910
 category: githubpages

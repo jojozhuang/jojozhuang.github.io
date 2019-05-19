@@ -2,7 +2,7 @@
 layout: default
 key: devops
 tutorial: list
-title: Dev Ops
+title: DevOps
 categories:
   - name: Basis
     description: OS, Database, IDE, Virtual Machine, Git
@@ -18,58 +18,64 @@ categories:
     type: messagequeue
 ---
 <div class="container">
-  <h1>{{ page.title }}</h1>
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    {% for category in page.categories %}
-    <li class="nav-item">
-      <a class="nav-link {% if category.type contains 'basis' %} active {% endif %}" data-toggle="tab" href="#{{category.type}}"><h5>{{category.name}}</h5></a>
-    </li>
-    {% endfor %}
-  </ul>
-  <!-- Tab panes -->
-  <div class="tab-content">
-    {% assign tutorials = site.devops | sort: 'index' %}
-    {% for category in page.categories %}
-    <div id="{{category.type}}" class="tab-pane {% if category.type contains 'basis' %} active {% else %} fade {% endif %}"><br>
-      <p>{{category.description}}</p>
-      <dl class="dl-unsur">
-        {% assign list = tutorials | where: 'category', category.type %}
-        {% for tutorial in list %}
-        <dd>
-        <div class="media">
-          <div class="media-left">
-            <a href="{{ tutorial.url }}" title="{{ tutorial.title }}">
-              <img src="../public/images/{{ tutorial.image }}" class="rounded" style="width:80px;margin-right:10px">
-            </a>
-          </div>
-          <div class="media-body">
-            <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div class="subject"><span>{{ tutorial.index }}. {{ tutorial.title }}</span></div></a>
-            <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
-            <div class="pull-left">
-                <ul class="list-inline list-unstyled">
-                  <li class="list-inline-item"><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
-                  <li class="list-inline-item">|</li>
-                  <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
-                  <li class="list-inline-item hidden-extra">|</li>
-                  <li class="list-inline-item hidden-extra">
-                    <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
-                  </li>
-                  <li class="list-inline-item hidden-extra">|</li>
-                  <li class="list-inline-item hidden-extra">
-                  <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                    <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
-                    <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
-                    <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
-                  </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-        </dd>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h1>{{ page.title }}</h1>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        {% for category in page.categories %}
+        <li class="nav-item">
+          <a class="nav-link {% if category.type contains 'basis' %} active {% endif %}" data-toggle="tab" href="#{{category.type}}"><h5>{{category.name}}</h5></a>
+        </li>
         {% endfor %}
-      </dl>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        {% assign tutorials = site.devops | sort: 'index' %}
+        {% for category in page.categories %}
+        <div id="{{category.type}}" class="tab-pane {% if category.type contains 'basis' %} active {% else %} fade {% endif %}"><br>
+          <p>{{category.description}}</p>
+          <dl class="dl-unsur">
+            {% assign list = tutorials | where: 'category', category.type %}
+            {% for tutorial in list %}
+            <dd>
+            <div class="media">
+              <div class="media-left">
+                <a href="{{ tutorial.url }}" title="{{ tutorial.title }}">
+                  <img src="../public/images/{{ tutorial.image }}" class="rounded" style="width:80px;margin-right:10px">
+                </a>
+              </div>
+              <div class="media-body">
+                <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div class="subject"><span>{{ tutorial.index }}. {{ tutorial.title }}</span></div></a>
+                <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
+                <div class="pull-left">
+                    <ul class="list-inline list-unstyled">
+                      <li class="list-inline-item"><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
+                      <li class="list-inline-item">|</li>
+                      <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
+                      <li class="list-inline-item hidden-extra">|</li>
+                      <li class="list-inline-item hidden-extra">
+                        <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
+                      </li>
+                      <li class="list-inline-item hidden-extra">|</li>
+                      <li class="list-inline-item hidden-extra">
+                      <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                        <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
+                        <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
+                        <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            </dd>
+            {% endfor %}
+          </dl>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
+    <div class="col-sm-1"></div>
   </div>
 </div>

@@ -80,7 +80,7 @@ collections:
     output: true
   note:
     output: true
-  programming:
+  githubpages:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml", "note_old.html", "favorite_old.html", "library.html", "tutorial2.html"]

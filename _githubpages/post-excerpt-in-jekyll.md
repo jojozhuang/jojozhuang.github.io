@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Post excerpt in Jekyll(Draft)"
 index: 905
 category: githubpages
