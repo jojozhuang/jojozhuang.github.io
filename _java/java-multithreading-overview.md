@@ -4,7 +4,7 @@ key: java
 title: "Java Multithreading - Overview"
 index: 221
 category: multithreading
-image: /programming/java.png
+image: java.png
 date: 2017-02-01
 postdate: 2017-02-01
 tags: [Multi Threading]

@@ -4,7 +4,7 @@ key: java
 title: "Java Core - User Input"
 index: 202
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-02
 postdate: 2016-01-02
 tags: [Scanner]

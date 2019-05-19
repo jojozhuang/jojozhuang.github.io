@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Composite"
 index: 512
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-12
 postdate: 2016-05-12
 tags: [Composite Pattern]

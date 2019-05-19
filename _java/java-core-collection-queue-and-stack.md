@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Collection - Queue and Stack"
 index: 209
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-09
 postdate: 2017-01-09
 tags: [List, Set, Map, Stack]

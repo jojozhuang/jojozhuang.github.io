@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - HashMap"
 index: 312
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-12
 postdate: 2016-03-12
 tags: [Hash, HashMap, Load Factor, Rehashing]

@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Enum"
 index: 206
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-06
 postdate: 2017-01-06
 tags: [Enum, EnumSet, EnumMap]

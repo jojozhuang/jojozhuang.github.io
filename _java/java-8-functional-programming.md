@@ -4,7 +4,7 @@ key: java
 title: "Java 8 - Functional programming"
 index: 252
 category: java8
-image: /programming/java.png
+image: java.png
 date: 2017-05-02
 postdate: 2017-05-02
 tags: [Functional programming]

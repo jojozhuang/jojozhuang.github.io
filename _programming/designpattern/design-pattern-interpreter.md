@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Interpreter"
 index: 522
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-22
 postdate: 2016-05-22
 tags: [Interpreter Pattern]

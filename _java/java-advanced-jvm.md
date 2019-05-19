@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - JVM(Draft)"
 index: 237
 category: advanced
-image: /programming/java.png
+image: java.png
 date: 2017-03-07
 postdate: 2017-03-07
 tags: [JVM]

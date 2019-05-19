@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Fenwick Tree(Draft)"
 index: 311
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-11
 postdate: 2016-03-11
 tags: [BIT]

@@ -4,7 +4,7 @@ key: java
 title: "Java 8 - Functional Composition"
 index: 255
 category: java8
-image: /programming/java.png
+image: java.png
 date: 2017-05-05
 postdate: 2017-05-05
 tags: [Functional Composition]

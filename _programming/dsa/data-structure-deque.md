@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Deque"
 index: 304
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-03-04
 postdate: 2016-03-04
 tags: [Deque]

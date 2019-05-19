@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Iterator"
 index: 523
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-23
 postdate: 2016-05-23
 tags: [Iterator Pattern]

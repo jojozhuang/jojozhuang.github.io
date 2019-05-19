@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Sorting"
 index: 321
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-21
 postdate: 2016-03-21
 tags: [Sorting]

@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Bipartite Graph"
 index: 316
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-16
 postdate: 2016-03-16
 tags: [Bipartite Graph, Hungarian Algorithm]

@@ -4,7 +4,7 @@ key: java
 title: "Java 8 - Functional Interfaces"
 index: 254
 category: java8
-image: /programming/java.png
+image: java.png
 date: 2017-05-04
 postdate: 2017-05-04
 tags: [Function, Predicate, BinaryOperator, Supplier, Consumer]

@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - LFU Cache(Draft)"
 index: 306
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-06
 postdate: 2016-03-06
 tags: [LFU]

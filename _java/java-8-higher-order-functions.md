@@ -4,7 +4,7 @@ key: java
 title: "Java 8 - Higher Order Functions"
 index: 253
 category: java8
-image: /programming/java.png
+image: java.png
 date: 2017-05-03
 postdate: 2017-05-03
 tags: [Higher Order Functions]

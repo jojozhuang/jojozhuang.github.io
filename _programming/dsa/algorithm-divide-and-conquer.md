@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Divide and Conquer"
 index: 325
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-25
 postdate: 2016-03-25
 tags: [Divide, Conquer]

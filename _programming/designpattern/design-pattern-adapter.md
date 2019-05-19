@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Adapter"
 index: 510
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-10
 postdate: 2016-05-10
 tags: [Adapter Pattern]

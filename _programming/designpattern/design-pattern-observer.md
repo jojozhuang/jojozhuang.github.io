@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Observer"
 index: 527
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-27
 postdate: 2016-05-27
 tags: [Observer Pattern]

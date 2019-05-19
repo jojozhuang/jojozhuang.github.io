@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Strategy"
 index: 529
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-29
 postdate: 2016-05-29
 tags: [Strategy Pattern]

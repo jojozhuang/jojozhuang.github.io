@@ -2,7 +2,9 @@
 layout: default
 key: about
 tutorial: list
-title: About this website
+title2: About this website
+title: Tutorials for GitHub Pages & Jekyll
+defaultcategory: githubpages
 categories:
   - name: GitHub Pages
     description: Jekyll, Liquid, MarkDown, Travisci
@@ -12,7 +14,7 @@ categories:
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-10 page-content">
-        <h1 class="page-header">{{ page.title }}</h1>
+        <h1 class="page-header">{{ page.title2 }}</h1>
         <p>This website is powered by <a href="http://jekyllrb.com/">Jekyll</a> and hosted on <a href="https://pages.github.com/">GitHub Pages</a>. It supports different screen sizes. You can view this website through your desktop, laptop or mobile devices, like pad or smart phones.
           All of the pages within this website are static. The postings of portfolio, tutorial and blog are all created with <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. Take a look at Markdown Cheatsheet from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here</a>. </p>
         <p>Here are some resources which helped me to build this website:</p>
@@ -34,52 +36,6 @@ categories:
     </div>
     <br/>
     <hr>
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        {% assign tutorials = site.githubpages | sort: 'index' %}
-        {% for category in page.categories %}
-        <div>
-          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
-        </div>
-        <dl class="dl-unsur">
-          {% assign list = tutorials | where: 'category', category.type %}
-          {% for tutorial in list %}
-          <dd>
-          <div class="media">
-            <div class="media-left">
-              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}">
-                <img src="../public/images/{{ tutorial.image }}" class="rounded" style="width:80px;margin-right:10px">
-              </a>
-            </div>
-            <div class="media-body">
-              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div class="subject"><span>{{ tutorial.index }}. {{ tutorial.title }}</span></div></a>
-              <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
-              <div class="pull-left">
-                  <ul class="list-inline list-unstyled">
-                    <li class="list-inline-item"><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
-                    <li class="list-inline-item hidden-extra">|</li>
-                    <li class="list-inline-item hidden-extra">
-                      <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
-                    </li>
-                    <li class="list-inline-item hidden-extra">|</li>
-                    <li class="list-inline-item hidden-extra">
-                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                      <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
-                      <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
-                      <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
-                    </li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-          </dd>
-          {% endfor %}
-        </dl>
-        {% endfor %}
-    </div>
-    <div class="col-md-1"></div>
-  </div>
 </div>
+{% assign postings = site.githubpages | sort: 'index' %}
+{% include postinglist.html %}

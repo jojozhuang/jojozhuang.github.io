@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Monotonic Queue(Draft)"
 index: 319
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-19
 postdate: 2016-03-19
 tags: [Monotonic Queue]

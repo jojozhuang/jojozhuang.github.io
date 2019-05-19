@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Null Object"
 index: 526
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-26
 postdate: 2016-05-26
 tags: [Null Object]

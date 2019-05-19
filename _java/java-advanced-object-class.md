@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - Object Class(Draft)"
 index: 232
 category: advanced
-image: /programming/java.png
+image: java.png
 date: 2017-03-02
 postdate: 2017-03-02
 tags: [Encryption, Decryption]

@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Heap"
 index: 313
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-13
 postdate: 2016-03-13
 tags: [Max Heap, Min Heap]

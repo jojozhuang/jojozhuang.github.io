@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Factory"
 index: 503
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-03
 postdate: 2016-05-03
 tags: [Factory, Abstract Factory, Factory Method]

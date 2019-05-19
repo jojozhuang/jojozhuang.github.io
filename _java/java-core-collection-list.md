@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Collection - List"
 index: 207
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-07
 postdate: 2017-01-07
 tags: [List, Set, Map, Stack]

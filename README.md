@@ -1,11 +1,11 @@
 # jojozhuang.github.io
 My personal website hosted on Github, built with Jekyll, Liquid and MarkDown.
 
-<kbd>![image](/public/images/github_portfolio1.png)</kbd>
+<kbd>![image](/public/assets/github_portfolio1.png)</kbd>
 
-<kbd>![image](/public/images/github_portfolio2.png)</kbd>
+<kbd>![image](/public/assets/github_portfolio2.png)</kbd>
 
-<kbd>![image](/public/images/github_tutorial.png)</kbd>
+<kbd>![image](/public/assets/github_tutorial.png)</kbd>
 
 # Function
 This website is mainly used to demonstrate my portfolios and share my knowledge about software development through tutorials.

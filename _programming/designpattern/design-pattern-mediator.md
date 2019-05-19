@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Mediator"
 index: 524
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-24
 postdate: 2016-05-24
 tags: [Mediator Pattern]

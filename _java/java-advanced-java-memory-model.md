@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - Java Memory Model(Draft)"
 index: 231
 category: advanced
-image: /programming/java.png
+image: java.png
 date: 2017-03-01
 postdate: 2017-03-01
 tags: [Memory Model]

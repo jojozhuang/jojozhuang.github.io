@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Formatting"
 index: 203
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-03
 postdate: 2016-01-03
 tags: [Formatting]

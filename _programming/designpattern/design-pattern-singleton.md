@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Singleton"
 index: 502
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-02
 postdate: 2016-05-02
 tags: [Singleton Pattern]

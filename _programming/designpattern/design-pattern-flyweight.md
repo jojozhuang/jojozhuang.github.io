@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Flyweight"
 index: 515
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-15
 postdate: 2016-05-15
 tags: [Flyweight Pattern]

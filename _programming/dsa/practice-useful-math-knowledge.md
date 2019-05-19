@@ -4,7 +4,7 @@ key: programming
 title: "Practice - Useful Math Knowledge"
 index: 345
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-04-05
 postdate: 2016-04-05
 tags: [Math]
