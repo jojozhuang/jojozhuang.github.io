@@ -59,14 +59,14 @@ If you haven't already, go to [https://github.com/](https://github.com/) to regi
 
 ### 3.2 Repositories on GitHub
 After login, you will see the page like below. For my GitHub, there are total 9 repositories. Seven of them are mine. One of them(EthanHao/Depaul) is shared by another GitHub Account. And another repository(github-example) is forked from some one's repository.
-![image](/public/tutorials/15/github.png)  
+![image](/public/images/devops/15/github.png)  
 
 ### 3.3 Creating New Repository
 Click the green 'New repository' button. Provide name and description, select public or private.
-![image](/public/tutorials/15/createrepo.png)  
+![image](/public/images/devops/15/createrepo.png)  
 
 After creation, some instructions show how to submit files to this repository through command line. Next, we will do that.
-![image](/public/tutorials/15/repocreated.png)  
+![image](/public/images/devops/15/repocreated.png)  
 
 ## 4. Pushing Local File to GitHub
 ### 4.1 Creating Local Repository
@@ -102,9 +102,9 @@ Branch master set up to track remote branch master from origin.
 
 ## 4.3 Checking on GitHub
 File 'hello.txt' is added into repository 'github-test'.
-![image](/public/tutorials/15/pushed.png)  
+![image](/public/images/devops/15/pushed.png)  
 Click on the file, check the content of it.
-![image](/public/tutorials/15/content.png)  
+![image](/public/images/devops/15/content.png)  
 
 ## 5. Pulling Files From GitHub
 Below commands show how to pull the files from GitHub repository 'github-test' to local Mac.
@@ -136,36 +136,36 @@ Go to [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/), download
 
 ### 6.2 Cloning Repository from GitHub
 New Repository->Clone From URL
-![image](/public/tutorials/15/sourcetree-repo.png)  
+![image](/public/images/devops/15/sourcetree-repo.png)  
 
 Input Source URL, which is the url of your repository on GitHub. And specify the local path and name.
-![image](/public/tutorials/15/sourcetree-clone.png)  
+![image](/public/images/devops/15/sourcetree-clone.png)  
 
 Click the Pull button on the top, then click the Ok button in the prompt dialog.
-![image](/public/tutorials/15/sourcetree-pull.png)  
+![image](/public/images/devops/15/sourcetree-pull.png)  
 
 File is pulled from GitHub.
-![image](/public/tutorials/15/sourcetree-pulled.png)  
+![image](/public/images/devops/15/sourcetree-pulled.png)  
 
 Check file on mac.
-![image](/public/tutorials/15/sourcetree-fileonmac.png)  
+![image](/public/images/devops/15/sourcetree-fileonmac.png)  
 
 ### 6.3 Pushing Files to GitHub
 Open the hello.txt file, add 'Pushed by SourceTree!' to the end, save the file.
 Switch to SourceTree, it detects the new changes.
-![image](/public/tutorials/15/sourcetree-filechanged.png)  
+![image](/public/images/devops/15/sourcetree-filechanged.png)  
 
 Stage the file by clicking the checkbox just in front the file name. Then, click on the Commit button on the top left, input the commit description, and commit.
-![image](/public/tutorials/15/sourcetree-stagecommit.png)  
+![image](/public/images/devops/15/sourcetree-stagecommit.png)  
 
 The staged file is committed. Click the Push button. You may be asked for GitHub username and password for the first time you push.
-![image](/public/tutorials/15/sourcetree-push.png)  
+![image](/public/images/devops/15/sourcetree-push.png)  
 
 After the push, check the history. You see the second commit is there.
-![image](/public/tutorials/15/sourcetree-history.png)  
+![image](/public/images/devops/15/sourcetree-history.png)  
 
 Switch to GitHub, find the file, you see that the content is changed. And click the commit description to see the difference of this commit.
-![image](/public/tutorials/15/sourcetree-githubfile.png)  
+![image](/public/images/devops/15/sourcetree-githubfile.png)  
 
 ## 7. References
 * [Try Git](https://try.github.io/)

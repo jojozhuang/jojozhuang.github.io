@@ -323,9 +323,9 @@ app.listen(3000, function() {
 });
 ```
 Start the server with 'node router.js' and access http://localhost:3000/users in browser.
-![image](/public/tutorials/256/users.png){:width="600px"}
+![image](/public/images/frontend/256/users.png){:width="600px"}
 Then access http://localhost:3000/products.
-![image](/public/tutorials/256/products.png){:width="600px"}
+![image](/public/images/frontend/256/products.png){:width="600px"}
 
 ## 4. Source Files
 * [Source files of Express Routing on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressRouting)

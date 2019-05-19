@@ -219,7 +219,7 @@ var logger = require("./config/winston-config-rotate");
 ...
 ```
 Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You would see multiple log files in directory ./logs. Each file name has the format 'application-YYYY-MM-DD-HH.log'. From the following screenshot, we see multiple log files are created from 11:00 to 16:00 on Jan 08, 2018.
-![image](/public/tutorials/254/logfiles.png){:width="350px"}  
+![image](/public/images/frontend/254/logfiles.png){:width="350px"}  
 
 ## 3. Source Files
 * [Source files of Express Logging Winston on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressLoggingWinston)

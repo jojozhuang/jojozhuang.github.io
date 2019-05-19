@@ -58,33 +58,33 @@ deploy:
 
 ## 2. Heroku
 Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'course-player-react', click 'Create app' button.
-![image](/public/tutorials/420/heroku_createapp.png)
+![image](/public/images/frontend/420/heroku_createapp.png)
 In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
-![image](/public/tutorials/420/heroku_apikey.png)  
+![image](/public/images/frontend/420/heroku_apikey.png)  
 
 ## 3. Travis
 ### 3.1 Importing New Repository from GitHub
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub' and add 'course-player-react'.
-![image](/public/tutorials/420/travis_add_repository.png)
+![image](/public/images/frontend/420/travis_add_repository.png)
 Click the 'Settings' of the new repository. Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/tutorials/420/travis_settings.png)
+![image](/public/images/frontend/420/travis_settings.png)
 In the 'Environment Variables' section, paste your Heroku API Key in the field ‘Value’ and name it 'HEROKU_API_KEY', click 'Add' button.
-![image](/public/tutorials/420/travis_environment_variable.png)
+![image](/public/images/frontend/420/travis_environment_variable.png)
 ### 3.2 Continuous Deployment
 Make any change to this app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/tutorials/420/travis_build.png)
+![image](/public/images/frontend/420/travis_build.png)
 If the build is finished successfully, your site is deployed to Heroku.
-![image](/public/tutorials/420/travis_deploy.png)  
+![image](/public/images/frontend/420/travis_deploy.png)  
 
 ## 4. Testing
 Go to Heroku, you should see the new app 'course-player-react' in the dashboard.
-![image](/public/tutorials/420/heroku_newapp.png)
+![image](/public/images/frontend/420/heroku_newapp.png)
 Click on it, and switch to 'Setting' tab. You should find the link for this app, click on it.
-![image](/public/tutorials/420/heroku_link.png)
+![image](/public/images/frontend/420/heroku_link.png)
 Now we see the course player.
-![image](/public/tutorials/420/test_home.png)
+![image](/public/images/frontend/420/test_home.png)
 Click the 'Play' button and drag the progress bar, player is working properly.
-![image](/public/tutorials/420/test_playing.png)
+![image](/public/images/frontend/420/test_playing.png)
 
 ## 5. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

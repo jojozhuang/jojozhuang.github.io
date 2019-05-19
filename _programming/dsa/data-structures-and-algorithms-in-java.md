@@ -13,7 +13,7 @@ tags: [Data Structure, Algorithm]
 > Notes of Book: Data Structures and Algorithms in Java  
 
 Author: Robert Lafore
-![image](/public/notes/data-structures-and-algorithms-in-java/cover.jpg){:width="300px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/cover.jpg){:width="300px"}  
 
 ## 1. Overview
 Characteristics of Data Structures
@@ -338,7 +338,7 @@ Each node in a binary tree has a maximum of two children.
 * Slow Searching in a Linked List
 
 ### Tree Terminology
-![image](/public/notes/data-structures-and-algorithms-in-java/treeterminology.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/treeterminology.png){:width="800px"}  
 ### Binary Trees
 binary search tree, unbalanced tree
 
@@ -381,7 +381,7 @@ preorder, inorder, and postorder.
 3. The node to be deleted has two children.
 
 ### Trees Represented as Arrays
-![image](/public/notes/data-structures-and-algorithms-in-java/treeinarray.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/treeinarray.png){:width="800px"}  
 Suppose a node’s index number is index.
 * left child: 2*index + 1
 * right child: 2*index + 2
@@ -431,23 +431,23 @@ A heap is a binary tree with these characteristics:
 * It’s complete. This means it’s completely filled in, reading from left to right across each row, although the last row need not be full.
 * It’s (usually) implemented as an array. Binary trees can be stored in arrays, rather than using references to connect the nodes.
 * Each node in a heap satisfies the `heap condition`, which states that every node’s key is larger than (or equal to) the keys of its children.
-![image](/public/notes/data-structures-and-algorithms-in-java/heap.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/heap.png){:width="800px"}  
 
 Heap can be implemented with array. A heap is a complete binary tree implies that there are no “holes” in the
 array used to represent it.
-![image](/public/notes/data-structures-and-algorithms-in-java/heaparray.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/heaparray.png){:width="800px"}  
 ### Remove
 Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
 1. Remove the root.
 2. Move the last node into the root.
 3. Trickle the last node down until it’s below a larger node and above a smaller one.
 
-![image](/public/notes/data-structures-and-algorithms-in-java/heapremove.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/heapremove.png){:width="800px"}  
 * 1->a), 2->b), 3->c),d),e)
 
 ### Insertion
 Insertion uses `trickle up`, rather than `trickle down`. Initially, the node to be inserted is placed in the first open position at the end of the array, increasing the array size by one.
-![image](/public/notes/data-structures-and-algorithms-in-java/heapinsert.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/heapinsert.png){:width="800px"}  
 
 If you remove a node and then insert the same node the result is `not` necessarily the restoration of the original heap. A given set of nodes can be arranged in `many` valid heaps, depending on the `order` in which nodes are inserted.
 
@@ -468,7 +468,7 @@ vertices, edges
 * Adjacency: Two vertices are said to be adjacent to one another if they are connected by a single edge. The vertices adjacent to a given vertex are sometimes said to be its `neighbors`.  
 * Paths: A path is a sequence of edges.  
 * Connected Graphs: A graph is said to be connected if there is at least one path from every vertex to every other vertex.
-![image](/public/notes/data-structures-and-algorithms-in-java/graphconnected.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/graphconnected.png){:width="800px"}  
 * Directed and Weighted Graphs: The edges in `non-directed` graphs don’t have a `direction`; you can go either way on them. In `directed graph`, you can go in only one direction along an edge. In `weighted` graphs, edges are given a weight.
 
 ### Representing a Graph in a Program
@@ -513,7 +513,7 @@ A `minimum spanning tree` (MST) is a graph with the minimum number of edges nece
 
 ### Topological Sorting with Directed Graphs
 Directed Graphs: In a directed graph you can proceed only one way along an edge.
-![image](/public/notes/data-structures-and-algorithms-in-java/directedgraph.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/directedgraph.png){:width="800px"}  
 Both the following topologically sorted list are valid.
 * BAEDGCFH
 * CFBAEDGH
@@ -536,7 +536,7 @@ P694/801
 ## 15. When to Use What
 ### General-Purpose Data Structures
 Arrays, linked lists, trees, and hash tables.
-![image](/public/notes/data-structures-and-algorithms-in-java/generaldatastructures.png){:width="800px"}  
+![image](/public/images/dsa/data-structures-and-algorithms-in-java/generaldatastructures.png){:width="800px"}  
 
 General-Purpose Data Storage Structures
 

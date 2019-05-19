@@ -112,7 +112,7 @@ public List<Integer> preorderTraversal(TreeNode root) {
 
 ## 3. Graph Problems
 Given an undirected graph with 5 vertices, traverse all vertices in this graph.
-![image](/public/notes/data-structure-graph/graph.png){:width="350px"}
+![image](/public/images/dsa/data-structure-graph/graph.png){:width="350px"}
 
 ### 3.1 DFS
 DFS method returns [A, B, C, D, E].

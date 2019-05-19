@@ -146,9 +146,9 @@ $ heroku git:remote -a gamestore-api
 
 ## 3. Testing
 Open web browser, access 'https://gamestore-api.herokuapp.com/api/products'. The API is working now.
-![image](/public/tutorials/157/api.png)
+![image](/public/images/frontend/157/api.png)
 It returns some products in JSON format. Notice, the image URL contains the correct API server address.
-![image](/public/tutorials/157/json.png)
+![image](/public/images/frontend/157/json.png)
 
 ## 4. References
 * [Deploying Spring Boot Applications to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku)

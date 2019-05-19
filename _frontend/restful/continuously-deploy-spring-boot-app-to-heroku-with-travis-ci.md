@@ -38,9 +38,9 @@ deploy:
 
 ## 2. Heroku
 Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'gamestore-api', click 'Create app' button.
-![image](/public/tutorials/158/heroku_createapp.png)
+![image](/public/images/frontend/158/heroku_createapp.png)
 In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
-![image](/public/tutorials/158/heroku_apikey.png)  
+![image](/public/images/frontend/158/heroku_apikey.png)  
 
 **In case, the continuous deployment doesn't work. Try to deploy it to Heroku manually first.**
 ```sh
@@ -51,29 +51,29 @@ git push heroku master
 
 ## 3. Travis
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub'.
-![image](/public/tutorials/158/travis_profile.png)
+![image](/public/images/frontend/158/travis_profile.png)
 You will be navigated to GitHub, select 'restful-api-springboot' and save.
-![image](/public/tutorials/158/github_add_repository.png)
+![image](/public/images/frontend/158/github_add_repository.png)
 Go back to Travis, refresh, 'restful-api-springboot' is integrated to Travis.
-![image](/public/tutorials/158/travis_add_repository.png)
+![image](/public/images/frontend/158/travis_add_repository.png)
 Click the 'Settings' of the new repository. Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/tutorials/158/travis_settings.png)
+![image](/public/images/frontend/158/travis_settings.png)
 In the 'Environment Variables' section, paste your Heroku API Key in the field ‘Value’ and name it 'HEROKU_API_KEY', click 'Add' button.
-![image](/public/tutorials/158/travis_environment_variable.png)
+![image](/public/images/frontend/158/travis_environment_variable.png)
 
 ## 4. Deployment
 Make any change to your Spring Boot app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/tutorials/158/travis_build.png)
+![image](/public/images/frontend/158/travis_build.png)
 If the build is finished successfully, your site is deployed to Heroku.
-![image](/public/tutorials/158/travis_deploy.png)  
+![image](/public/images/frontend/158/travis_deploy.png)  
 
 ## 5. Testing
 Go to Heroku, you should see the new app in the dashboard.
-![image](/public/tutorials/158/heroku_newapp.png)
+![image](/public/images/frontend/158/heroku_newapp.png)
 Click on it, and switch to 'Setting' tab. You should find the link, it is the root url of the RESTful API.
-![image](/public/tutorials/158/heroku_link.png)
+![image](/public/images/frontend/158/heroku_link.png)
 Access https://gamestore-api.herokuapp.com/api/products in browser, we see it returns data.
-![image](/public/tutorials/158/heroku_api.png)
+![image](/public/images/frontend/158/heroku_api.png)
 
 ## 6. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

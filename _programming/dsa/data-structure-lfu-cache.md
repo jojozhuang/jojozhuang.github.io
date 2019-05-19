@@ -22,12 +22,12 @@ The `LFU` cache provides two methods: `add` and `get`.
 * get(value) - Get the value if it exists in the cache, otherwise, return the minimum value of Integer. In addition, move this element to the proper position of the cache.
 
 The following diagram illustrates how LFU works.
-![image](/public/notes/data-structure-lfu-cache/lfu.png)
+![image](/public/images/dsa/data-structure-lfu-cache/lfu.png)
 
 ## 2. Implementation
 ### 2.1 Data Structure
 LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
-![image](/public/notes/data-structure-lfu-cache/structure.png)
+![image](/public/images/dsa/data-structure-lfu-cache/structure.png)
 * The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
 * Nodes between the head and tail nodes are used to store data, each node for one value. Every node has two pointers, pointing to the previous and the next nodes. Each node has two attributes, one is the value and another is the count of this node.
 * Nodes near the tail are least frequently accessed. They will be removed if cache reaches to its capacity.
@@ -35,31 +35,31 @@ LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
 
 ### 2.2 Operations On LFU
 1) Initialization
-![image](/public/notes/data-structure-lfu-cache/initialization.png){:width="400px"}  
+![image](/public/images/dsa/data-structure-lfu-cache/initialization.png){:width="400px"}  
 * Only two dummy nodes, head and tail.
 * Notice that there is another HashMap which stores the value-node pair.
 
 2) Add (Cache is not full and maximum frequency = 0)
-![image](/public/notes/data-structure-lfu-cache/add1.png)
+![image](/public/images/dsa/data-structure-lfu-cache/add1.png)
 * Create new node for the given value and insert it to the head of the linked list.
 * Add the new node to HashMap with the given value as key.
 * Size is increased by one.
 
 3) Add (Cache is not full and maximum frequency > 0)
-![image](/public/notes/data-structure-lfu-cache/add2.png)
+![image](/public/images/dsa/data-structure-lfu-cache/add2.png)
 * Create new node for the given value and insert it before the node which has the same frequency or to the tail.
 * Add the new node to HashMap with the given value as key.
 * Size is increased by one.
 
 4) Add (Cache is full)
-![image](/public/notes/data-structure-lfu-cache/add3.png)
+![image](/public/images/dsa/data-structure-lfu-cache/add3.png)
 * Remove the last element(The one tail.prev is pointing) from the list.
 * Create new node for the given value and insert it before the node which has the same frequency or to the tail.
 * Add the new node to HashMap with the given value as key.
 * Size remains unchanged.
 
 5) Get
-![image](/public/notes/data-structure-lfu-cache/get.png)
+![image](/public/images/dsa/data-structure-lfu-cache/get.png)
 * Find the given value in HashMap.
 * Increase the frequency of this node by one. Move it to proper position of the linked list.
 * Return the value.
@@ -203,10 +203,10 @@ private void move(Node node) {
 ### 3.2 Potential Improvement
 To improve the performance, we have two destinations, $O(\log{}n)$ or $O(1)$.
 not possible to use max heap, as you can get the minimum value within O(log(n)). For example, you can get the maximum value 82 in O(1), but when trying to remove minimum 27, we have to move all elements at its right to left. It may take O(n).
-![image](/public/notes/data-structure-lfu-cache/heap.png){:width="450px"}  
+![image](/public/images/dsa/data-structure-lfu-cache/heap.png){:width="450px"}  
 
 Instead, we can use BST tree.
-![image](/public/notes/data-structure-binary-search-tree/bst.png){:width="450px"}  
+![image](/public/images/dsa/data-structure-binary-search-tree/bst.png){:width="450px"}  
 ### 3.3 New Implementation(Deque)
 Instead of creating the doubly linked list by hand, we can use Deque directly in Java. The following LRUDeque class implements LRU with Deque.
 ```java

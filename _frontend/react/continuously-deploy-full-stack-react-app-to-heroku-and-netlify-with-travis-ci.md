@@ -66,29 +66,29 @@ deploy:
 ```
 ### 2.3 Heroku
 Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'code-editor-api', click 'Create app' button.
-![image](/public/tutorials/425/heroku_createapp.png)
+![image](/public/images/frontend/425/heroku_createapp.png)
 In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
-![image](/public/tutorials/425/heroku_apikey.png)  
+![image](/public/images/frontend/425/heroku_apikey.png)  
 
 ### 2.4 Travis
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub' and add 'code-editor-react'.
-![image](/public/tutorials/425/travis_add_repository.png)
+![image](/public/images/frontend/425/travis_add_repository.png)
 Click the 'Settings' of the new repository. Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/tutorials/425/travis_settings.png)
+![image](/public/images/frontend/425/travis_settings.png)
 In the 'Environment Variables' section, paste your Heroku API Key in the field ‘Value’ and name it 'HEROKU_API_KEY', click 'Add' button.
-![image](/public/tutorials/425/travis_environment_variable.png)
+![image](/public/images/frontend/425/travis_environment_variable.png)
 ### 2.5 Push
 Make any change to this app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/tutorials/425/travis_build.png)
+![image](/public/images/frontend/425/travis_build.png)
 If the build is finished successfully, your site is deployed to Heroku.
-![image](/public/tutorials/425/travis_deploy.png)  
+![image](/public/images/frontend/425/travis_deploy.png)  
 ### 2.6 Testing Server
 Go to Heroku, you should see the new app 'code-editor-api' in the dashboard.
-![image](/public/tutorials/425/heroku_newapp.png)
+![image](/public/images/frontend/425/heroku_newapp.png)
 Click on it, and switch to 'Setting' tab. You should find the link, it is the root url of the RESTful API.
-![image](/public/tutorials/425/heroku_link.png)
+![image](/public/images/frontend/425/heroku_link.png)
 Access https://code-editor-api.herokuapp.com/api/file/java in browser, we see it returns data.
-![image](/public/tutorials/425/heroku_api.png)
+![image](/public/images/frontend/425/heroku_api.png)
 
 ## 3. Client Deployment
 ### 3.1 Build Command
@@ -111,30 +111,30 @@ const productionConfig = merge([
 ```
 ### 3.3 Netlify
 Login to Netlify https://www.netlify.com/ with GitHub account, click 'New site from Git'.
-![image](/public/tutorials/425/netlify_app.png)
+![image](/public/images/frontend/425/netlify_app.png)
 Choose 'Github', next.
-![image](/public/tutorials/425/netlify_newsite.png)
+![image](/public/images/frontend/425/netlify_newsite.png)
 Authorize Netlify to access your GitHub account, then choose the repository 'code-editor-react', next.
-![image](/public/tutorials/425/netlify_repository.png)
+![image](/public/images/frontend/425/netlify_repository.png)
 Choose `master` for the Branch to deploy, set `npm run build` to the Build command, and set `dist` to the Publish directory, click the 'Deploy site' button.
-![image](/public/tutorials/425/netlify_options.png)
+![image](/public/images/frontend/425/netlify_options.png)
 Netlify will start to deploy your site.
-![image](/public/tutorials/425/netlify_inprogress.png)
+![image](/public/images/frontend/425/netlify_inprogress.png)
 If no issue occurs, the publish will be done after few seconds(or minutes). Notice the site is given with a random name.
-![image](/public/tutorials/425/netlify_published.png)
+![image](/public/images/frontend/425/netlify_published.png)
 Switch to Settings tab, scroll down and click the 'Change site name' button.
-![image](/public/tutorials/425/netlify_settings.png)
+![image](/public/images/frontend/425/netlify_settings.png)
 Change the name to 'code-editor-react' and save.
-![image](/public/tutorials/425/netlify_changename.png)
+![image](/public/images/frontend/425/netlify_changename.png)
 Go back to overview, we see the new site name with the link.
-![image](/public/tutorials/425/netlify_overview.png)
+![image](/public/images/frontend/425/netlify_overview.png)
 ### 3.4 Testing Client
 Access https://code-editor-react.netlify.com/, we see the homepage.
-![image](/public/tutorials/425/test_home.png)
+![image](/public/images/frontend/425/test_home.png)
 Click 'Code Editor' button, select javascript and click Run. It works properly.
-![image](/public/tutorials/425/test_editor.png)
+![image](/public/images/frontend/425/test_editor.png)
 Though chrome debug tool, we see this React app is calling the RESTful API hosted on Heroku to fetch data.
-![image](/public/tutorials/425/test_remoteapi.png)
+![image](/public/images/frontend/425/test_remoteapi.png)
 
 ## 4. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

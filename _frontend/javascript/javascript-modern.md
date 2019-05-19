@@ -129,7 +129,7 @@ observable:
 * can be created from other sources like events
 * they are function, which could be subscribed later on
 
-![image](/public/tutorials/102/promise_vs_observable.png){:width="600px"}  
+![image](/public/images/frontend/102/promise_vs_observable.png){:width="600px"}  
 
 ## 3. Http Request
 ### 3.1 Fetch API

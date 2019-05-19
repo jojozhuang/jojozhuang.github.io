@@ -23,7 +23,7 @@ Go to https://code.visualstudio.com/, download VS Code and install it.
 ## 3. Running and Using VS Code
 ### 3.1 Launch from UI
 Start VS Code through Launch pad.
-![image](/public/tutorials/17/vscode.png)
+![image](/public/images/devops/17/vscode.png)
 ### 3.2 Launch from Terminal
 In terminal, navigate to the folder where your code file locates, type the following command.
 ```sh
@@ -37,7 +37,7 @@ After executing the command, restart the terminal for the new $PATH value to tak
 
 ### 3.3 Hot Keys
 Go to menu Code > Preferences > Keyboard Shortcuts to view or define the shortcut keys.
-![image](/public/tutorials/17/shortcuts.png)
+![image](/public/images/devops/17/shortcuts.png)
 
 ### 3.4 Useful Shortcuts
 
