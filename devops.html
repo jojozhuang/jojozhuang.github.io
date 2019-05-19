@@ -3,6 +3,7 @@ layout: default
 key: devops
 tutorial: list
 title: DevOps
+description: Build, Deployment, Popular Tools
 defaultcategory: basis
 categories:
   - name: Basis
@@ -17,6 +18,9 @@ categories:
   - name: Message Queue
     description: Kafka, RabbitQueue
     type: messagequeue
+  - name: System Design
+    description: Architecture, Scale
+    type: systemdesign
 ---
 {% assign postings = site.devops | sort: 'index' %}
 {% include postinglist.html %}

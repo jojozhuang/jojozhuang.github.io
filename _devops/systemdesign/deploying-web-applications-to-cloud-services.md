@@ -1,13 +1,13 @@
 ---
-layout: note
-key: note
+layout: tutorial
+key: devops
 title: "Cloud Services"
-index: 703
-category: architecture
-image: note.png
-date: 2017-07-03
-postdate: 2017-07-03
-tags: [Cloud]
+index: 44
+category: systemdesign
+image: code.png
+date: 2016-04-04
+postdate: 2018-08-05
+tags: [Heroku, Azure, EC2, Netlify, Travis CI]
 ---
 
 > Cloud Services
@@ -19,7 +19,7 @@ tags: [Cloud]
 * IaaS: Infrastructure as a service
 
 ### 1.2 Summary of Key Differences
-![image](/public/images/note/cloud-services/iaas-paas-saas-comparison.png){:width="800px"}  
+![image](/public/images/devops/cloud-services/iaas-paas-saas-comparison.png){:width="800px"}  
 
 ### 1.3 Common Examples of SaaS, PaaS, & IaaS
 

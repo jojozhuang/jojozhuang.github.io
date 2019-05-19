@@ -30,7 +30,7 @@
 .main-contents-inner {
     max-width: 920px;
     margin: 0 auto;
-    padding-top: 48px;
+    padding-top: 30px;
     padding-bottom: 64px
 }
 @media (max-width: 568px) {
