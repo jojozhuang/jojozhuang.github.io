@@ -23,6 +23,9 @@ footer {
     color: #777;
 }
 
+.tab-title {
+
+}
 h1 small {
     font-size: 60%;
     color: #777;
@@ -138,6 +141,9 @@ table, th, td {
         font-size: 25px;
     }
     .page-header small {
+        font-size: 15px;
+    }
+    .tab-title {
         font-size: 15px;
     }
     .item-detail h3 {
