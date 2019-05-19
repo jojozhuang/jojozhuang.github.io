@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Liquid for Jekyll"
 index: 903
 category: githubpages

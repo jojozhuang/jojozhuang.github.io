@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Adding Disqus to Jekyll Site"
 index: 906
 category: githubpages

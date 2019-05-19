@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: about
 title: "Getting Share Buttons from ShareThis"
 index: 908
 category: githubpages
