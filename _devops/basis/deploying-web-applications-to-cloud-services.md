@@ -1,0 +1,57 @@
+---
+layout: tutorial
+key: devops
+title: "Deploying Web Applications to Cloud Services"
+index: 44
+category: basis
+image: code.png
+date: 2016-04-04
+postdate: 2018-08-05
+tags: [Heroku, Azure, EC2, Netlify, Travis CI]
+---
+
+> Tutorial for how to deploy Angular, React and Node.js applications to cloud services.
+
+## 1. Deployment
+### 1.1 Deployment Types
+Before deploy your apps, you need to first understand what is the app type.
+* Static Sites(built with Angular, React, or other front-end frameworks)
+* Server(built with Node Express, ASP.NET, PHP, Python, Spring, etc.)
+* Full Stack(including both client and server)
+
+### 1.2 Cloud Services
+There are many cloud services where you can deploy angular, react or express applications. Your web applications are served by their servers and can be accessed globally through internet. Some of them provide free cost for hosting your sites. Also, they provide paid options for more advanced features.
+* Heroku: https://www.heroku.com/
+* Azure: https://portal.azure.com/
+* Amazon EC2: https://aws.amazon.com/ec2/
+* Netlify(Static sites only): https://www.netlify.com/
+
+## 2. Tutorials for Deployment
+### 2.1 Static Sites
+Angular or React app will be compiled to static files when these kinds of apps are deployed to server. Even if they may call backend server(eg. RESTful services) to fetch data, they are still static sites from the deployment perspective.
+* [Deploying Text Compare Angular App to Netlify]({% link _frontend/angular/deploying-text-compare-angular-app-to-netlify.md %})
+* [Deploying Game Store Angular App to Netlify]({% link _frontend/angular/deploying-game-store-angular-app-to-netlify.md %})
+* [Deploying Game Store React App to Netlify]({% link _frontend/react/deploying-game-store-react-app-to-netlify.md %})
+* [Deploying Game Store React App to Azure with FTP]({% link _frontend/react/deploying-game-store-react-app-to-azure-with-ftp.md %})
+
+### 2.2 Server Sites
+In the most of cases, when we are talking about Node.js apps, we are actually talking about Express applications. As every productive Node.js app has a web server and express is the best web server for Node.js.
+* [Deploying Socket.IO App to Heroku]({% link _frontend/react/deploying-socketio-app-to-heroku.md %})
+* [Deploying Socket.IO App to Azure]({% link _frontend/react/deploying-socketio-app-to-azure.md %})
+* [Deploying React and Socket.IO App to Heroku]({% link _frontend/react/deploying-react-and-socketio-app-to-heroku.md %})
+
+### 2.3 Full Stack Sites
+We may have the capability to build the entire web application from backend to front end. For example, we use so called MEAN stack (MongoDB+Express+Angular+Node.js) to build an online judge application. In this case, we need to deploy both the client and the server.
+* [Deploying Full Stack Angular App to Heroku]({% link _frontend/angular/deploying-full-stack-angular-app-to-heroku.md %})
+* [Deploying Full Stack React App to Heroku]({% link _frontend/react/deploying-full-stack-react-app-to-heroku.md %})
+
+## 3. CI/CD
+Continuous integration and continuous delivery.
+* [Continuously Deploy Angular App to GitHub Pages using Travis-CI]({% link _frontend/angular/continuously-deploy-angular-app-to-github-pages-using-travis-ci.md %})
+* [Continuously Deploy Spring Boot App to Heroku with Travis-CI]({% link _frontend/restful/continuously-deploy-spring-boot-app-to-heroku-with-travis-ci.md %})
+* [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI]({% link _frontend/react/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci.md %})
+* [Continuously Deploy React and Socket.IO App to Heroku with Travis-CI]({% link _frontend/react/continuously-deploy-react-and-socketio-app-to-heroku-with-travis-ci.md %})
+* [Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI]({% link _frontend/angular/continuously-deploy-mean-stack-app-to-heroku-and-netlify-with-travis-ci.md %})
+
+## 4. References
+* [Deploying to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

@@ -44,7 +44,7 @@ Click 'OK' button, product will be deleted.
 ![image](/public/portfolios/gamestoreangular/productlistafterdel.png)
 
 ## 4. Under the Hood
-Read tutorial [Building Web Application with Angular]({% link _tutorial/angular/building-web-application-with-angular.md %}) to learn how this angular app is built.
+Read tutorial [Building Web Application with Angular]({% link _frontend/angular/building-web-application-with-angular.md %}) to learn how this angular app is built.
 
 ## 5. Source Files
 * [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/game-store-angular)

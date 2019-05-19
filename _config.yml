@@ -19,9 +19,21 @@ navlist:
   - key: portfolio
     url: /portfolio
     visible: true
+  - key: frontend
+    url: /frontend
+    visible: true
+  - key: java
+    url: /java
+    visible: true
+  - key: programming
+    url: /programming
+    visible: true
+  - key: devops
+    url: /devops
+    visible: true
   - key: tutorial
     url: /tutorial
-    visible: true
+    visible: false2
   - key: blog
     url: /blog
     visible: true
@@ -37,9 +49,6 @@ navlist:
   - key: note
     url: /note
     visible: false
-  - key: programming
-    url: /programming
-    visible: false
   - key: feed
     url: /blog/atom.xml"
     visible: false
@@ -50,12 +59,22 @@ navlist:
     sublist:
       - key: note
         url: /note
+      - key: programming
+        url: /programming
   - key: about
     url: /about
-    visible: true
+    visible: false
 
 collections:
   portfolio:
+    output: true
+  frontend:
+    output: true
+  java:
+    output: true
+  programming:
+    output: true
+  devops:
     output: true
   tutorial:
     output: true

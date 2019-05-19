@@ -36,10 +36,10 @@ I built four mobile apps with multiple different technologies. Apart from the na
 
 ## 3. Under the Hood
 Read the following tutorials to learn the details how these mobile apps were built.
-* [Building iOS App with Xcode]({% link _tutorial/mobile/building-ios-app-with-xcode.md %})
-* [Building Android App with Android Studio]({% link _tutorial/mobile/building-android-app-with-android-studio.md %})
-* [Building iOS App with Xamarin]({% link _tutorial/mobile/building-ios-app-with-xamarin.md %})
-* [Building Android App with Xamarin]({% link _tutorial/mobile/building-android-app-with-xamarin.md %})
+* [Building iOS App with Xcode]({% link _frontend/mobile/building-ios-app-with-xcode.md %})
+* [Building Android App with Android Studio]({% link _frontend/mobile/building-android-app-with-android-studio.md %})
+* [Building iOS App with Xamarin]({% link _frontend/mobile/building-ios-app-with-xamarin.md %})
+* [Building Android App with Xamarin]({% link _frontend/mobile/building-android-app-with-xamarin.md %})
 
 ## 4. Source Files
 * [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/game-store-ios)
