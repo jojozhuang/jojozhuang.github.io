@@ -30,14 +30,14 @@
       </ul>
       <ul class="nav navbar-nav ml-auto">
         <!--<li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>-->
-        <li class="nav-item {% if page.key == "contact" %} active {% endif %}"><a class="nav-link" href="/contact">Contact</a></li>
+        <li class="nav-item {% if page.key == "about" %} active {% endif %}"><a class="nav-link" href="/about">About</a></li>
       </ul>
     </div>
 </nav>
 
 {{ content }}
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center" style="clear: both;">
   <p>&copy; {{ site.time | date: '%Y' }} jojozhuang.github.io, All rights reserved.</p>
 </footer>
 
