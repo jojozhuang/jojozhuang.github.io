@@ -23,6 +23,17 @@ footer {
     color: #777;
 }
 
+.tab-dropdown {
+    display:none;
+    margin:0 auto;
+}
+.tab-dropdown li {
+    display:inline-block;
+}
+.tab-dropdown span {
+    font-size: 15px;
+}
+
 .tab-title {
 
 }
@@ -142,6 +153,12 @@ table, th, td {
     }
     .page-header small {
         font-size: 15px;
+    }
+    .tab-full {
+        display: none;
+    }
+    .tab-dropdown {
+        display: block;
     }
     .tab-title {
         font-size: 15px;
