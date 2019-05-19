@@ -94,7 +94,7 @@ public class SolutionTest {
 ```
 ### 2.3 Running JUnit
 In Eclipse, select the `SolutionTest` class, right-click on it and select Run-as -> JUnit Test. You should see all the three methods passed the testing.
-![image](/public/tutorials/521/runjunit.png)
+![image](/public/images/java/521/runjunit.png)
 
 ## 3. Compile and Run Java in Command Line
 Before we start learning how to run JUnit in command line, let's first learn how to run java code from a command line. Generally, we need two commands, `javac` and `java`.
@@ -173,7 +173,7 @@ javac -d bin -sourcepath src -cp .:lib/junit-4.12.jar src/TestRunner.java
 ```sh
 java -cp .:bin/:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar TestRunner
 ```
-![image](/public/tutorials/521/commandline.png){:width="700px"}  
+![image](/public/images/java/521/commandline.png){:width="700px"}  
 
 ## 5. Source Files
 * [Source files of JUnit Command Line on Github](https://github.com/jojozhuang/Tutorials/tree/master/JUnitCommandLine)

@@ -4,7 +4,7 @@ key: portfolio
 title: "Online Judge(MEAN)"
 index: 250
 tags: [MongoDB, Express, Angular, Node.js]
-image: /public/portfolios/onlinejudgemean/thumbnail.png
+image: /public/images/portfolio/onlinejudgemean/thumbnail.png
 excerpt: A web application for online judge(Algorithm questions), built with MEAN stack.
 category: web
 ---
@@ -35,21 +35,21 @@ Try it out on any live demo website with the following accounts:
 
 ## 3. UI
 Home page.
-![image](/public/portfolios/onlinejudgemean/home.png)
+![image](/public/images/portfolio/onlinejudgemean/home.png)
 Click the 'Questions' menu.
-![image](/public/portfolios/onlinejudgemean/questions.png)
+![image](/public/images/portfolio/onlinejudgemean/questions.png)
 Create a new account.
-![image](/public/portfolios/onlinejudgemean/signup.png)
+![image](/public/images/portfolio/onlinejudgemean/signup.png)
 After login, you can select one question to solve, and submit the solution.
-![image](/public/portfolios/onlinejudgemean/solution.png)
+![image](/public/images/portfolio/onlinejudgemean/solution.png)
 If the solution is passed all of the test cases, the submission is successful.
-![image](/public/portfolios/onlinejudgemean/pass.png)
+![image](/public/images/portfolio/onlinejudgemean/pass.png)
 Or the solutions is failed by some of the test cases.
-![image](/public/portfolios/onlinejudgemean/fail.png)
+![image](/public/images/portfolio/onlinejudgemean/fail.png)
 Switch to 'Submissions' to view all your submissions.
-![image](/public/portfolios/onlinejudgemean/submissions.png)
+![image](/public/images/portfolio/onlinejudgemean/submissions.png)
 Click on the 'Accepted' or 'Wrong Answer' link to view the submission in details.
-![image](/public/portfolios/onlinejudgemean/submission.png)
+![image](/public/images/portfolio/onlinejudgemean/submission.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Online Judge Application With MEAN Stack]({% link _frontend/angular/building-online-judge-application-with-mean-stack.md %}) and [Online Judge - Judging System]({% link _frontend/angular/online-judge-judging-system.md %}) to learn how this online judge app is built.

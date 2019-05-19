@@ -4,7 +4,7 @@ key: portfolio
 title: "Game Store(React)"
 index: 160
 tags: [React, Redux]
-image: /public/portfolios/gamestorereact/thumbnail.png
+image: /public/images/portfolio/gamestorereact/thumbnail.png
 excerpt: A web app to manage products, built with React.
 category: web
 ---
@@ -29,21 +29,21 @@ Four available demos:
 
 ## 3. UI
 Home page.
-![image](/public/portfolios/gamestorereact/homepage.png)
+![image](/public/images/portfolio/gamestorereact/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/portfolios/gamestorereact/productlist.png)
+![image](/public/images/portfolio/gamestorereact/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/public/portfolios/gamestorereact/productadd.png)
+![image](/public/images/portfolio/gamestorereact/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/portfolios/gamestorereact/productlistafteradd.png)
+![image](/public/images/portfolio/gamestorereact/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/public/portfolios/gamestorereact/productedit.png)
+![image](/public/images/portfolio/gamestorereact/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/public/portfolios/gamestorereact/productlistafteredit.png)
+![image](/public/images/portfolio/gamestorereact/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/portfolios/gamestorereact/deleteconfirm.png)
+![image](/public/images/portfolio/gamestorereact/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/portfolios/gamestorereact/productlistafterdel.png)
+![image](/public/images/portfolio/gamestorereact/productlistafterdel.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Web Application with React]({% link _frontend/react/building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _frontend/react/building-web-application-with-react-and-redux.md %}) to learn how these two apps are built with React and Redux.

@@ -55,9 +55,9 @@ contract Inbox {
 }
 ```
 Get message.
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/firstcontract.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/firstcontract.png)
 Set message.
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/setmessage.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/setmessage.png)
 
 * getMessage method is duplicated, since variable message is public, we can access it to get the message.
 * getMessage has not cost. However, setMessage costs. After calling set method, ETH of your account is reduced.
@@ -190,7 +190,7 @@ run test.
 npm run test
 ```
 output
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/ganacheaccounts.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/ganacheaccounts.png)
 ```sh
 > mocha
 
@@ -235,7 +235,7 @@ describe('Inbox', () => {
     });
 });
 ```
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/ganacheaccountsasync.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/ganacheaccountsasync.png)
 
 Deployment with Web3
 ```javascript
@@ -266,7 +266,7 @@ describe('Inbox', () => {
     });
 });
 ```
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/deploywithweb3.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/deploywithweb3.png)
 
 45. Deployed Inbox Overview
 Asserting Deployment
@@ -277,7 +277,7 @@ describe('Inbox', () => {
     });
 });
 ```
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/deploymentassert.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/deploymentassert.png)
 
 50. Deployment with Infura
 Register on https://infura.io/.
@@ -295,10 +295,10 @@ Contract deployed to 0x672DBd70e0E4AD5FB59f1B1269535cB03f06Eb8A
 If you get this Error: insufficient funds for gas * price + value, go to http://rinkeby-faucet.com/ to request more eth.
 Find you contract.
 https://rinkeby.etherscan.io/address/0xc0413358d6c103f0cdf7f50ba8eef83bbda70051
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/findcontract.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/findcontract.png)
 
 55. Deployed Contracts in remix
-![image](/public/notes/ethereum-and-solidity-the-complete-developers-guide/deployedcontract.png)
+![image](/public/images/note/ethereum-and-solidity-the-complete-developers-guide/deployedcontract.png)
 
 56.
 

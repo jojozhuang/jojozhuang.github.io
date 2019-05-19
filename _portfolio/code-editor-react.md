@@ -4,7 +4,7 @@ key: portfolio
 title: "Code Editor(React)"
 index: 230
 tags: [React]
-image: /public/portfolios/codeeditorreact/thumbnail.png
+image: /public/images/portfolio/codeeditorreact/thumbnail.png
 excerpt: A full stack web application for online programming, built with React and Express.
 category: web
 ---
@@ -26,13 +26,13 @@ Two available demos:
 
 ## 3. UI
 Home page.
-![image](/public/portfolios/codeeditorreact/homepage.png)
+![image](/public/images/portfolio/codeeditorreact/homepage.png)
 Select javascript from the dropdown list. Notice, only javascript and python are supported on [Heroku](https://www.heroku.com/). If you run this application locally, then all 5 languages are supported.
-![image](/public/portfolios/codeeditorreact/selectlanguage.png)
+![image](/public/images/portfolio/codeeditorreact/selectlanguage.png)
 Edit the code and click 'Run' button to execute the program.
-![image](/public/portfolios/codeeditorreact/execute.png)
+![image](/public/images/portfolio/codeeditorreact/execute.png)
 If the code has issue and can't run properly, the error will be displayed.
-![image](/public/portfolios/codeeditorreact/error.png)
+![image](/public/images/portfolio/codeeditorreact/error.png)
 
 ## 4. Under the Hood
 Check posting [Building Online Code Editor with React and Express]({% link _frontend/react/building-online-code-editor-with-react-and-express.md %}) to learn the details of how this code editor is built.

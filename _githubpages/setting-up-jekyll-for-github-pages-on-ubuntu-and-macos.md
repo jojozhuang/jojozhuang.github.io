@@ -80,7 +80,7 @@ And prepending `bundle exec` to the jekyll command.
 $ bundle exec jekyll serve --port 12001
 ```
 Open web browser to access your local jekyll website.
-![image](/public/tutorials/901/local.png)  
+![image](/public/images/githubpages/901/local.png)  
 
 ## 5. Increase Jekyll Build Speed
 Jekyll build speed slows down with the increase in the number of files, posts, images etc. Below are some options to speed up the build.

@@ -19,7 +19,7 @@ tags: [Cloud]
 * IaaS: Infrastructure as a service
 
 ### 1.2 Summary of Key Differences
-![image](/public/notes/cloud-services/iaas-paas-saas-comparison.png){:width="800px"}  
+![image](/public/images/note/cloud-services/iaas-paas-saas-comparison.png){:width="800px"}  
 
 ### 1.3 Common Examples of SaaS, PaaS, & IaaS
 

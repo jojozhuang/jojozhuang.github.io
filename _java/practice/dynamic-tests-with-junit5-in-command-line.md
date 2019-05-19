@@ -26,7 +26,7 @@ Create new folder named `JUnit5DynamicConsole` for our new project. And create t
 To run JUnit5 tests in command line, we need an executable `junit-platform-console-standalone-1.1.0.jar` with all dependencies included. It is published in the central [Maven repository](https://mvnrepository.com/) under the [junit-platform-console-standalone](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone) directory.
 
 Download 'junit-platform-console-standalone-1.1.0.jar' from [here](https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console-standalone/1.1.0).
-![image](/public/tutorials/523/download.png)
+![image](/public/images/java/523/download.png)
 Put the downloaded jar file into the `lib` folder.
 ### 2.3 Source Files
 Reuse the java files and the test files created in the previous tutorial. Copy them to the `src` folder. Notice, we don't need the package definition, so remove it at the header of each source file. So all the java classes are in the default package.
@@ -237,7 +237,7 @@ javac -d bin -sourcepath src -cp .:lib/junit-platform-console-standalone-1.1.0.j
 java -jar lib/junit-platform-console-standalone-1.1.0.jar --cp bin/ -c SolutionDynamicTest
 ```
 All the 5 test cases defined in the `testcase.txt` are executed and passed.
-![image](/public/tutorials/523/run.png)
+![image](/public/images/java/523/run.png)
 
 ## 4. Source Files
 * [Source files of JUnit5 Dynamic Console on Github](https://github.com/jojozhuang/Tutorials/tree/master/JUnit5DynamicConsole)

@@ -4,7 +4,7 @@ key: portfolio
 title: "Text Compare(Angular)"
 index: 240
 tags: [Angular, Monaco Editor]
-image: /public/portfolios/textcompareangular/thumbnail.png
+image: /public/images/portfolio/textcompareangular/thumbnail.png
 excerpt: A web application for text compare, built with Angular and Monaco Editor.
 category: web
 ---
@@ -26,17 +26,17 @@ Two available demos:
 
 ## 3. UI
 Home page.
-![image](/public/portfolios/textcompareangular/home.png)
+![image](/public/images/portfolio/textcompareangular/home.png)
 Click the 'Text Compare' menu.
-![image](/public/portfolios/textcompareangular/textcompare.png)
+![image](/public/images/portfolio/textcompareangular/textcompare.png)
 Input some text in both the original and modified text boxes, and click 'Find Difference' button.
-![image](/public/portfolios/textcompareangular/plaintext.png)
+![image](/public/images/portfolio/textcompareangular/plaintext.png)
 Check the 'Inline Style' to view the difference in inline mode.
-![image](/public/portfolios/textcompareangular/inline.png)
+![image](/public/images/portfolio/textcompareangular/inline.png)
 Input some typescripts and set the language to 'typescript'.
-![image](/public/portfolios/textcompareangular/typescript.png)
+![image](/public/images/portfolio/textcompareangular/typescript.png)
 Change theme to 'Visual Studio Dark'.
-![image](/public/portfolios/textcompareangular/darktheme.png)
+![image](/public/images/portfolio/textcompareangular/darktheme.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Online Text Compare Tool with Angular]({% link _frontend/angular/building-online-text-compare-tool-with-angular.md %}) to learn how this text compare tool is built.

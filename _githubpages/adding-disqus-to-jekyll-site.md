@@ -18,7 +18,7 @@ tags: [Disqus]
 ## 2. Installing Disqus
 ### 2.1 Registration
 Go to https://disqus.com/ to create a Disqus account. Login and go to settings->profile, set your name. This name will be used as short name for your site.
-![image](/public/tutorials/906/account.png)
+![image](/public/images/githubpages/906/account.png)
 ### 2.2 Universal Code
 Access the following link to find the universal code of your Disqus. Replace the shortname with yours.
 ```sh
@@ -92,7 +92,7 @@ key: tutorial
 {% endraw %}
 ### 2.4 Comments in Posting
 Open the page, you will see the comments.
-![image](/public/tutorials/906/comments.png)
+![image](/public/images/githubpages/906/comments.png)
 
 ## 3. Displaying Comments Count
 ### 3.1 Script for Count
@@ -130,7 +130,7 @@ In the list page, it is added to all the links through 'tutorial.url'.
 {% endraw %}
 ### 3.3 Demo
 See the comments count is correctly displayed. Click on the link, it will navigate you to the comments on that page directly.
-![image](/public/tutorials/906/count.png)
+![image](/public/images/githubpages/906/count.png)
 
 ## 4. References:
 * [DISQUS universal code](https://disqus.com/admin/install/platforms/universalcode/)

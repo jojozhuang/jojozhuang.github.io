@@ -27,7 +27,7 @@ To check with what Java version (JRE or JDK) Eclipse is running, do the followin
 /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/bin/../jre/lib/server/libjvm.dylib
 ```
 
-![image](/public/tutorials/511/jdkversion.png){:width="650px"}
+![image](/public/images/java/511/jdkversion.png){:width="650px"}
 
 ## 3. References
 * [Run Eclipse with a JDK](https://matsim.org/docs/devguide/eclipse/jdk)

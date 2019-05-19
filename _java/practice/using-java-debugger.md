@@ -56,14 +56,14 @@ $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=
 * With `suspend=y` the Java-process will wait until the debugger connects, with suspend=n you will be also able to debug the application servers startup process.
 * The option `server=y` opens a socket and listens for incoming debugger requests. With server=n the debugged application will try to connect actively to a debugger and run therefore as a client.
 
-![rundebugmode](/public/tutorials/512/rundebugmode.png){:width="600px"}
+![rundebugmode](/public/images/java/512/rundebugmode.png){:width="600px"}
 
 ### 3.4 Debugging with JDB
 Open another terminal, use `jdb` to start a new debug session. The `attach` option attaches the debugger to the running VM by specifying the specific port 4000.
 ```sh
 jdb -attach 4000
 ```
-![attachport](/public/tutorials/512/attachport.png){:width="600px"}
+![attachport](/public/images/java/512/attachport.png){:width="600px"}
 
 Use `stop` command to set breakpoint to line 6, which is 'System.out.println("Sum is " + sum);'.
 ```sh
@@ -77,15 +77,15 @@ Use `list` command to know the line in the code up to which the program control 
 ```sh
 main[1] list
 ```
-![step](/public/tutorials/512/step.png){:width="600px"}
+![step](/public/images/java/512/step.png){:width="600px"}
 Step twice, then use `print` command to check the values of `val1` and `val2`. (If there is any object, you can use `dump` command to check the current value of each field defined in the object.)
-![print](/public/tutorials/512/print.png){:width="600px"}
+![print](/public/images/java/512/print.png){:width="600px"}
 Step one more time, and use `locals` command to see all local variables.
-![locals](/public/tutorials/512/locals.png){:width="600px"}
+![locals](/public/images/java/512/locals.png){:width="600px"}
 Use `cont` command to continue execution of the debugged application. Since there is no more lines need to be executed, application exits.
-![cont](/public/tutorials/512/cont.png){:width="600px"}
+![cont](/public/images/java/512/cont.png){:width="600px"}
 Switch to the first terminal, you see the result is printed out and debug process is stopped as well.
-![return](/public/tutorials/512/return.png){:width="600px"}
+![return](/public/images/java/512/return.png){:width="600px"}
 
 ## 4. Source Files
 * [Source files for JDBTutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JDBTutorial)
