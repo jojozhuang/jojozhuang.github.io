@@ -15,4 +15,4 @@ tags: [JSON]
 ## 1. Co
 
 Author: Lindsay Bassett
-![image](/public/notes/introduction-to-javaScript-object-notation/cover.jpg){:width="300px"}  
+![image](/public/images/note/introduction-to-javaScript-object-notation/cover.jpg){:width="300px"}  

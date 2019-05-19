@@ -4,7 +4,7 @@ key: portfolio
 title: "Game 2048(Electron)"
 index: 180
 tags: [Electron, Node.js, Cross-platform]
-image: /public/portfolios/game2048electron/thumbnail.png
+image: /public/images/portfolio/game2048electron/thumbnail.png
 excerpt: A cross-platform desktop app for Game 2048, built with Electron and Node.js
 category: web
 ---
@@ -16,11 +16,11 @@ category: web
 
 ## 2. UI
 The user interface looks same with the web application. Click `New Game` to start and use four arrow keys on keyboard to move the tiles for playing.
-![image](/public/portfolios/game2048electron/2048.png)  
+![image](/public/images/portfolio/game2048electron/2048.png)  
 ### 2.1 Play on Mac
-![image](/public/portfolios/game2048electron/mac.png){:width="400px"}  
+![image](/public/images/portfolio/game2048electron/mac.png){:width="400px"}  
 ### 2.2 Play on Ubuntu/Linux
-![image](/public/portfolios/game2048electron/linux.png){:width="400px"}  
+![image](/public/images/portfolio/game2048electron/linux.png){:width="400px"}  
 
 ## 3. Under the Hood
 Check posting [Converting Web App to Desktop App with Electron]({% link _frontend/nodejs/converting-web-app-to-desktop-app-with-electron.md %}) to learn the details of Electron and how this desktop app was built.

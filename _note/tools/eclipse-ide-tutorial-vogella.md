@@ -14,7 +14,7 @@ tags: [Eclipse]
 
 
 Author: Lars Vogel
-![image](/public/notes/eclipse-ide-tutorial-vogella/cover.jpg){:width="300px"}  
+![image](/public/images/note/eclipse-ide-tutorial-vogella/cover.jpg){:width="300px"}  
 
 
 ## 1. Shortcuts in Eclipse:

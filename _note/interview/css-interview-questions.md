@@ -20,7 +20,7 @@ tags: [CSS]
 
 ### 1.1 CSS Syntax
 A CSS rule-set consists of a `selector` and a `declaration block`:
-![image](/public/programming/front-end-css/selector.gif){:width="500px"}  
+![image](/public/images/note/front-end-css/selector.gif){:width="500px"}  
 * The selector points to the HTML element you want to style.
 * The declaration block contains one or more declarations separated by semicolons.
 * Each declaration includes a CSS property name and a value, separated by a colon.
@@ -308,7 +308,7 @@ p {
 
 ### 2.5 CSS Box Model
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
-![image](/public/programming/front-end-css/box_model.png){:width="600px"}  
+![image](/public/images/note/front-end-css/box_model.png){:width="600px"}  
 Explanation of the different parts:
 * `Content` - The content of the box, where text and images appear
 * `Padding` - Clears an area around the content. The padding is transparent

@@ -4,7 +4,7 @@ key: portfolio
 title: "Course Player(SignalR)"
 index: 280
 tags: [WebSocket, SignalR, ASP.NET]
-image: /public/portfolios/courseplayersignalr/thumbnail.png
+image: /public/images/portfolio/courseplayersignalr/thumbnail.png
 excerpt: A realtime online course player, built with SignalR and ASP.NET.
 category: dotnet
 ---
@@ -23,11 +23,11 @@ Check the posting [Introduction of Course Player]({% link _frontend/react/introd
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video.
 
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The upper one is for screenshot and the lower one is for whiteboard. And there is a video player at the left side.
-![image](/public/portfolios/courseplayersignalr/homepage.png)  
+![image](/public/images/portfolio/courseplayersignalr/homepage.png)  
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/portfolios/courseplayersignalr/playing.png)  
+![image](/public/images/portfolio/courseplayersignalr/playing.png)  
 You can drag the slider bar to move forward or backward.
-![image](/public/portfolios/courseplayersignalr/drag.png)  
+![image](/public/images/portfolio/courseplayersignalr/drag.png)  
 
 ## 4. Under the Hood
 Check posting [Building Course Player with SignalR and ASP.NET]({% link _frontend/react/building-course-player-with-signalr-and-aspnet.md %}) to learn the details of SignalR and how this course player is built.

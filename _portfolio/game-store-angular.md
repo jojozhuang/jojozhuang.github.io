@@ -4,7 +4,7 @@ key: portfolio
 title: "Game Store(Angular)"
 index: 170
 tags: [Angular, TypeScript]
-image: /public/portfolios/gamestoreangular/thumbnail.png
+image: /public/images/portfolio/gamestoreangular/thumbnail.png
 excerpt: A web app to manage products, built with Angular.
 category: web
 ---
@@ -27,21 +27,21 @@ Two available demos:
 
 ## 3. UI
 Home page.
-![image](/public/portfolios/gamestoreangular/homepage.png)
+![image](/public/images/portfolio/gamestoreangular/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/portfolios/gamestoreangular/productlist.png)
+![image](/public/images/portfolio/gamestoreangular/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/public/portfolios/gamestoreangular/productadd.png)
+![image](/public/images/portfolio/gamestoreangular/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/portfolios/gamestoreangular/productlistafteradd.png)
+![image](/public/images/portfolio/gamestoreangular/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/public/portfolios/gamestoreangular/productedit.png)
+![image](/public/images/portfolio/gamestoreangular/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/public/portfolios/gamestoreangular/productlistafteredit.png)
+![image](/public/images/portfolio/gamestoreangular/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/portfolios/gamestoreangular/deleteconfirm.png)
+![image](/public/images/portfolio/gamestoreangular/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/portfolios/gamestoreangular/productlistafterdel.png)
+![image](/public/images/portfolio/gamestoreangular/productlistafterdel.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Web Application with Angular]({% link _frontend/angular/building-web-application-with-angular.md %}) to learn how this angular app is built.

@@ -29,10 +29,10 @@ public class Sum {
 }
 ```
 Set breakpoints to line 3 and line 6 in Sum.java.
-![image](/public/tutorials/513/project.png)
+![image](/public/images/java/513/project.png)
 ### 2.2 Creating Debug Configuration
 In Eclipse, Run -> Debug Configurations..., create a new 'Remote Java Application' named `Sum Debugging`. Specify the Host to `localhost` and Port to `4000`.
-![image](/public/tutorials/513/debugconfig.png){:width="800px"}
+![image](/public/images/java/513/debugconfig.png){:width="800px"}
 
 ### 2.3 Compiling and Running
 Open terminal, navigate to the folder where Sum.java locates, use `javac` to compile it. The `g` option adds extra debug info to the class.
@@ -46,19 +46,19 @@ $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=
 * With `suspend=y` the Java-process will wait until the debugger connects, with suspend=n you will be also able to debug the application servers startup process.
 * The option `server=y` opens a socket and listens for incoming debugger requests. With server=n the debugged application will try to connect actively to a debugger and run therefore as a client.
 
-![image](/public/tutorials/513/rundebugmode.png){:width="600px"}
+![image](/public/images/java/513/rundebugmode.png){:width="600px"}
 
 ### 2.4 Debugging
 In Eclipse, click the `Debug As..` button on toolbar and select `Sum Debugging`.
-![image](/public/tutorials/513/attach.png)
+![image](/public/images/java/513/attach.png)
 You will see the debugging is working now. The first breakpoint is activated.
-![image](/public/tutorials/513/debugperspective.png)
+![image](/public/images/java/513/debugperspective.png)
 Click the `Step Over` button(F6) in the tool bar to step the execution to the next line. Meanwhile, you see the values of local variables are changing.
-![image](/public/tutorials/513/stepover.png)
+![image](/public/images/java/513/stepover.png)
 Step over line 6 and switch to the terminal. The result is just printed out in the terminal.
-![image](/public/tutorials/513/print.png)
+![image](/public/images/java/513/print.png)
 Click the `Resume` button(F8), the debugging session ends in Eclipse. Meanwhile, the debug process ends in terminal.
-![image](/public/tutorials/513/done.png)
+![image](/public/images/java/513/done.png)
 
 ## 3. Source Files
 * [Source files for JDBTutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JDBTutorial)

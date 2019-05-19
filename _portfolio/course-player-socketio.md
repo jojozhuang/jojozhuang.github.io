@@ -4,7 +4,7 @@ key: portfolio
 title: "Course Player(Socket)"
 index: 190
 tags: [WebSocket, Socket.IO, Node.js, jQuery]
-image: /public/portfolios/courseplayersocketio/thumbnail.png
+image: /public/images/portfolio/courseplayersocketio/thumbnail.png
 excerpt: A realtime online course player, built with Socket.IO, HTML5 Canvas and Node.js.
 category: web
 ---
@@ -28,11 +28,11 @@ Two available demos:
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video. In this app, a slider bar is used to simulate the video player.
 
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![image](/public/portfolios/courseplayersocketio/homepage.png)
+![image](/public/images/portfolio/courseplayersocketio/homepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/portfolios/courseplayersocketio/playing.png)
+![image](/public/images/portfolio/courseplayersocketio/playing.png)
 You can drag the slider bar to move forward or backward.
-![image](/public/portfolios/courseplayersocketio/drag.png)
+![image](/public/images/portfolio/courseplayersocketio/drag.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Course Player with Node.js and Socket.IO]({% link _frontend/react/building-course-player-with-nodejs-and-socketio.md %}) to learn the details of Socket.IO and how this course player is built.
