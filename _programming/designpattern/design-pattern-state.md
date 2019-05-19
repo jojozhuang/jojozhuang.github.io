@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - State"
 index: 528
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-28
 postdate: 2016-05-28
 tags: [State Pattern]

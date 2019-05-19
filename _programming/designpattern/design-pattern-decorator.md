@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Decorator"
 index: 513
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-13
 postdate: 2016-05-13
 tags: [Decorator Pattern]

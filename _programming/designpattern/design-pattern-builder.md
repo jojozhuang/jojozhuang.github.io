@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Builder"
 index: 504
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-04
 postdate: 2016-05-04
 tags: [Builder Pattern]

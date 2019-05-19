@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Graph Problems"
 index: 315
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-15
 postdate: 2016-03-15
 tags: [Graph, DFS, BFS]

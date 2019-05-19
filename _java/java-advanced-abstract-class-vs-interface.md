@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - Abstract Class Vs Interface"
 index: 241
 category: advanced
-image: programming/java.png
+image: java.png
 date: 2017-04-01
 postdate: 2017-04-01
 tags: [Abstract Class, Interface]

@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - DTO(Draft)"
 index: 507
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-07
 postdate: 2016-05-07
 tags: [Data Transfer Object]

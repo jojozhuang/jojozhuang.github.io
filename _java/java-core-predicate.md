@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Predicate(Draft)"
 index: 247
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-04-07
 postdate: 2017-04-07
 tags: [BlockingQueue, ArrayBlockingQueue]

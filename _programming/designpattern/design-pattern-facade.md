@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Facade"
 index: 514
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-14
 postdate: 2016-05-14
 tags: [Facade Pattern]

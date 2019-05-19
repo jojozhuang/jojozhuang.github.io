@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - Iterator"
 index: 243
 category: advanced
-image: programming/java.png
+image: java.png
 date: 2017-04-03
 postdate: 2017-04-03
 tags: [Iterator, Predicate]

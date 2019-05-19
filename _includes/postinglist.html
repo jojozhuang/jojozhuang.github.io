@@ -1,37 +1,49 @@
----
-layout: default
-key: programming
-tutorial: list
-title: Programming
-defaultcategory: dsa
-categories:
-  - name: DSA
-    description: Data Structure and Algorithm
-    type: dsa
-  - name: Design Patterns
-    description: Object-Orientation, Inheritance
-    type: designpattern
----
-{% assign postings = site.programming | sort: 'index' %}
-{% include postinglist.html %}
 <div class="container">
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <h1 class="page-header">{{ page.title }}</h1>
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs tab-full" role="tablist">
         {% for category in page.categories %}
         <li class="nav-item">
-          <a class="nav-link {% if category.type contains 'dsa' %} active {% endif %}" data-toggle="tab" href="#{{category.type}}"><h5 class="tab-title">{{category.name}}</h5></a>
+          <a class="nav-link {% if category.type contains page.defaultcategory %} active {% endif %}" data-toggle="tab" href="#{{category.type}}"><h5 class="tab-title">{{category.name}}</h5></a>
         </li>
         {% endfor %}
       </ul>
+	  <ul class="nav nav-tabs tab-dropdown" role="tablist">
+        {% if page.categories.size < 4 %}
+          {% for category in page.categories %}
+          <li class="nav-item">
+            <a class="nav-link {% if category.type contains page.defaultcategory %} active {% endif %}" data-toggle="tab" href="#{{category.type}}"><h5 class="tab-title">{{category.name}}</h5></a>
+          </li>
+          {% endfor %}
+        {% else %}
+          {% for category in page.categories %}
+          {% assign idx1 = forloop.index %}
+            {% if idx1 < 4 %}
+              <li class="nav-item">
+                <a class="nav-link {% if category.type contains page.defaultcategory %} active {% endif %}" data-toggle="tab" href="#{{category.type}}">{{category.name}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">More</a>
+            <div class="dropdown-menu">
+              {% for category in page.categories %}
+                {% assign idx2 = forloop.index %}
+                {% if idx2 >= 4 %}
+                  <a class="dropdown-item" data-toggle="tab" href="#{{category.type}}"><span>{{category.name}}</span></a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </li>
+        {% endif %}
+      </ul>
       <!-- Tab panes -->
       <div class="tab-content">
-        {% assign postings = site.programming | sort: 'index' %}
         {% for category in page.categories %}
-        <div id="{{category.type}}" class="tab-pane {% if category.type contains 'dsa' %} active {% else %} fade {% endif %}"><br>
+        <div id="{{category.type}}" class="tab-pane {% if category.type contains page.defaultcategory %} active {% else %} fade {% endif %}"><br>
           <p>{{category.description}}</p>
           <dl class="dl-unsur">
             {% assign list = postings | where: 'category', category.type %}

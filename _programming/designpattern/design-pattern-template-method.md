@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Template Method"
 index: 530
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-30
 postdate: 2016-05-30
 tags: [Template Method Pattern]

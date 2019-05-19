@@ -4,7 +4,7 @@ key: programming
 title: "Practice - Algorithm Best Practice"
 index: 342
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-04-02
 postdate: 2016-04-02
 tags: [Algorithm]

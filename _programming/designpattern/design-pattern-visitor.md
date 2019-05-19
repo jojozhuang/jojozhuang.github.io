@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Visitor"
 index: 531
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-31
 postdate: 2016-05-31
 tags: [Visitor Pattern]

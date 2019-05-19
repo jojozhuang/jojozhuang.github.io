@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - MultiThreading"
 index: 244
 category: advanced
-image: programming/java.png
+image: java.png
 date: 2017-04-04
 postdate: 2017-04-04
 tags: [Thread, Runnable, concurrency]

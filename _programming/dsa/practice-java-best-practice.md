@@ -4,7 +4,7 @@ key: programming
 title: "Practice - Java Best Practice"
 index: 341
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-04-01
 postdate: 2016-04-01
 tags: [Java]

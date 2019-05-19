@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Command"
 index: 521
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-21
 postdate: 2016-05-21
 tags: [Command Pattern]

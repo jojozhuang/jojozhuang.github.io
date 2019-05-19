@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Array and List"
 index: 204
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-04
 postdate: 2017-01-04
 tags: [Array, ArrayList]

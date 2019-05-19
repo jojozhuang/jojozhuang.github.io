@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Sqrt Decomposition"
 index: 330
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-30
 postdate: 2016-03-30
 tags: [Sqrt Decomposition]

@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Problem List on LeetCode"
 index: 350
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-04-10
 postdate: 2016-04-10
 tags: [Algorithm, Leetcode]

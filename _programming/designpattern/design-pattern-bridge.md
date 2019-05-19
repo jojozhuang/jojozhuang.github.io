@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Bridge"
 index: 511
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-11
 postdate: 2016-05-11
 tags: [Bridge Pattern]

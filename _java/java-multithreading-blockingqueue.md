@@ -4,7 +4,7 @@ key: java
 title: "Java Multithreading - BlockingQueue"
 index: 222
 category: multithreading
-image: /programming/java.png
+image: java.png
 date: 2017-02-02
 postdate: 2017-02-02
 tags: [BlockingQueue, ArrayBlockingQueue]

@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Directed Graph(Draft)"
 index: 317
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-17
 postdate: 2016-03-17
 tags: [Directed Graph, Topological Sorting]

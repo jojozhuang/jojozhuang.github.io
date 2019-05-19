@@ -4,7 +4,7 @@ key: java
 title: "Java Core - BitSet(Draft)"
 index: 212
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-12
 postdate: 2017-01-12
 tags: [BlockingQueue, ArrayBlockingQueue]

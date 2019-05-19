@@ -4,7 +4,7 @@ key: java
 title: "Java Core - File Operations(Draft)"
 index: 211
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-11
 postdate: 2017-01-11
 tags: [BlockingQueue, ArrayBlockingQueue]

@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Binary Search"
 index: 322
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-22
 postdate: 2016-03-22
 tags: [Binary Search]

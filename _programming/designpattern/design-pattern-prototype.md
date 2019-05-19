@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Prototype"
 index: 506
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-06
 postdate: 2016-05-06
 tags: [Prototype Pattern]

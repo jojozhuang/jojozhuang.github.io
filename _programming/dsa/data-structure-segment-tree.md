@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Segment Tree"
 index: 310
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-03-10
 postdate: 2016-03-10
 tags: [Segment Tree, Interval Tree]

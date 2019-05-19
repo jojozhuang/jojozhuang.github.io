@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - DP1"
 index: 328
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-28
 postdate: 2016-03-28
 tags: [DP]

@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - Dead Lock"
 index: 242
 category: advanced
-image: programming/java.png
+image: java.png
 date: 2017-04-02
 postdate: 2017-04-02
 tags: [synchronized, deadlock]

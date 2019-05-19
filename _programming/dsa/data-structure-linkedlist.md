@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Linked List"
 index: 301
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-01
 postdate: 2016-03-01
 tags: [Singly Linked List, Doubly Linked List]

@@ -4,7 +4,7 @@ key: programming
 title: "Practice - Bit Manipulation"
 index: 343
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-04-03
 postdate: 2016-04-03
 tags: [Bit]

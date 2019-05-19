@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Two Pointers"
 index: 323
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-23
 postdate: 2016-03-23
 tags: [Two Pointers]

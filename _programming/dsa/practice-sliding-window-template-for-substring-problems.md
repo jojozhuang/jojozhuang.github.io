@@ -4,7 +4,7 @@ key: programming
 title: "Practice - Sliding Window Template for Substring Problems(Draft)"
 index: 346
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-04-06
 postdate: 2016-04-06
 tags: [Sliding Window]

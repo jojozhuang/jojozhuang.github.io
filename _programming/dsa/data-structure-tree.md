@@ -4,7 +4,7 @@ key: programming
 title: "Data Structure - Tree"
 index: 307
 category: dsa
-image: /note/dsa.png
+image: /dsa.png
 date: 2016-03-07
 postdate: 2016-03-07
 tags: [Tree, Binary Tree]

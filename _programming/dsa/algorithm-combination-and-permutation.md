@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Combination and Permutation"
 index: 327
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-27
 postdate: 2016-03-27
 tags: [Combination, Permutation, Subset]

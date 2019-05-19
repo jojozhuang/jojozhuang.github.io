@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Generics(Draft)"
 index: 213
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-13
 postdate: 2017-01-13
 tags: [Generic Types]

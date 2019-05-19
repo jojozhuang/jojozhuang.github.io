@@ -4,7 +4,7 @@ key: programming
 title: "Design Pattern - Overview"
 index: 501
 category: designpattern
-image: /note/designpattern.png
+image: designpattern.png
 date: 2016-05-01
 postdate: 2016-05-01
 tags: [Design Pattern]

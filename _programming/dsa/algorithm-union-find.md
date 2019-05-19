@@ -4,7 +4,7 @@ key: programming
 title: "Algorithm - Union Find"
 index: 324
 category: dsa
-image: note/dsa.png
+image: dsa.png
 date: 2016-03-24
 postdate: 2016-03-24
 tags: [Disjoint Set, Union, Find]

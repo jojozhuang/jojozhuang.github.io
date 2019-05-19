@@ -4,7 +4,7 @@ key: java
 title: "Java Core - Basic"
 index: 201
 category: core
-image: /programming/java.png
+image: java.png
 date: 2017-01-01
 postdate: 2017-01-01
 tags: [String, Integer, Array, List]

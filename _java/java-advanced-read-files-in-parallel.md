@@ -4,7 +4,7 @@ key: java
 title: "Java Advanced - Read Files in Parallel(Draft)"
 index: 245
 category: advanced
-image: programming/java.png
+image: java.png
 date: 2017-04-05
 postdate: 2017-04-05
 tags: [Javascript, Html, Css]
