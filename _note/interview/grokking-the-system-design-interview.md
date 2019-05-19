@@ -4,7 +4,7 @@ key: programming
 title: "Grokking the System Design Interview"
 index: 152
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-03-02
 postdate: 2016-03-02
 tags: [System Design]

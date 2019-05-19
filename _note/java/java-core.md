@@ -4,7 +4,7 @@ key: note
 title: "Java - Core"
 index: 201
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-01
 postdate: 2016-02-01
 tags: [String, Integer, Array, List]

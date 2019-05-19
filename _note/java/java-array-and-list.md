@@ -4,7 +4,7 @@ key: note
 title: "Java - Array and List"
 index: 203
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-03
 postdate: 2016-02-03
 tags: [Array, ArrayList]

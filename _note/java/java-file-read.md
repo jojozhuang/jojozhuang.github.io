@@ -4,7 +4,7 @@ key: note
 title: "Java - File Operations"
 index: 208
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-08
 postdate: 2016-02-08
 tags: [BlockingQueue, ArrayBlockingQueue]

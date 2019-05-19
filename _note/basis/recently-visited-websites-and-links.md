@@ -4,7 +4,7 @@ key: note
 title: "Recently Visited Websites and Links"
 index: 122
 category: basis
-image: note/cs.png
+image: cs.png
 date: 2016-01-22
 postdate: 2016-01-22
 tags: [Chrome, MacOS]

@@ -4,7 +4,7 @@ key: note
 title: "Java - Collection"
 index: 205
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-05
 postdate: 2016-02-05
 tags: [LinedList, HashMap]

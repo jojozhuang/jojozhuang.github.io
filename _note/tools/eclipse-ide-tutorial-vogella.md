@@ -4,7 +4,7 @@ key: note
 title: "Eclipse IDE Tutorial (Vogella)"
 index: 801
 category: tools
-image: note/tools.png
+image: tools.png
 date: 2017-08-01
 postdate: 2017-08-01
 tags: [Eclipse]

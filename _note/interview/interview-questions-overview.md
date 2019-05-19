@@ -4,7 +4,7 @@ key: programming
 title: "Interview Questions - Overview"
 index: 101
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-01
 postdate: 2016-01-01
 tags: [Technique Interview]

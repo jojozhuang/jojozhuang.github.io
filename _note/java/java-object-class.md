@@ -4,7 +4,7 @@ key: note
 title: "Java - Object Class"
 index: 206
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-06
 postdate: 2016-02-06
 tags: [Encryption, Decryption]

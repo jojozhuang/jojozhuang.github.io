@@ -4,7 +4,7 @@ key: note
 title: "JavaScript object oriented programming(Online Doc)"
 index: 612
 category: programming
-image: /note/programming.png
+image: programming.png
 date: 2016-06-12
 postdate: 2016-06-12
 tags: [Javascript OO]

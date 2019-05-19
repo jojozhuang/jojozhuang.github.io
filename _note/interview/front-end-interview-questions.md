@@ -4,7 +4,7 @@ key: programming
 title: "Front-End Interview Questions"
 index: 111
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-11
 postdate: 2019-01-11
 tags: [Html, CSS, javascript]

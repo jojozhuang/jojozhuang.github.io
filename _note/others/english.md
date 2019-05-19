@@ -4,7 +4,7 @@ key: note
 title: "Computer English"
 index: 901
 category: others
-image: /note/note.png
+image: note.png
 date: 2017-09-01
 postdate: 2017-09-01
 tags: [English]

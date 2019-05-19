@@ -4,7 +4,7 @@ key: note
 title: "Java - Predicate"
 index: 217
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-17
 postdate: 2016-02-17
 tags: [BlockingQueue, ArrayBlockingQueue]

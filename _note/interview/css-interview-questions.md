@@ -4,7 +4,7 @@ key: programming
 title: "CSS Interview Questions"
 index: 113
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-13
 postdate: 2016-01-13
 tags: [CSS]

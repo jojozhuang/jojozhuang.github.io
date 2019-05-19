@@ -4,7 +4,7 @@ key: note
 title: "Java - Shallow Copy and Deep Copy"
 index: 204
 category: java
-image: /note/programming.png
+image: programming.png
 date: 2016-02-04
 postdate: 2016-02-04
 tags: [Shallow Copy, Deep Copy]

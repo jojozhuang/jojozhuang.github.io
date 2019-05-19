@@ -4,7 +4,7 @@ key: note
 title: "Java - Dead Lock"
 index: 155
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-05
 postdate: 2019-01-05
 tags: [synchronized, deadlock]

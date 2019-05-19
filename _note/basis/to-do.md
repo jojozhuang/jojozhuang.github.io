@@ -4,7 +4,7 @@ key: note
 title: "TO DO"
 index: 123
 category: basis
-image: note/cs.png
+image: cs.png
 date: 2016-01-23
 postdate: 2016-01-23
 tags: [Todo List]

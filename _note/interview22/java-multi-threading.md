@@ -4,7 +4,7 @@ key: note
 title: "Java - MultiThreading"
 index: 153
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-03
 postdate: 2019-01-03
 tags: [Thread, Runnable, concurrency]

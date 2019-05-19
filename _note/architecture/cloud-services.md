@@ -4,7 +4,7 @@ key: note
 title: "Cloud Services"
 index: 703
 category: architecture
-image: /note/note.png
+image: note.png
 date: 2017-07-03
 postdate: 2017-07-03
 tags: [Cloud]

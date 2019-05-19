@@ -4,7 +4,7 @@ key: note
 title: "Java - Read Files in Parallel"
 index: 154
 category: interview
-image: note/interview.png
+image: interview.png
 date: 2019-01-04
 postdate: 2019-01-04
 tags: [Javascript, Html, Css]

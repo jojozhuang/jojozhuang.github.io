@@ -4,7 +4,7 @@ key: programming
 title: "Java Interview Questions - String"
 index: 104
 category: interview
-image: programming/interview.png
+image: interview.png
 date: 2016-01-04
 postdate: 2016-01-04
 tags: [Java, Interview]
