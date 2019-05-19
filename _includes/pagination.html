@@ -17,6 +17,13 @@
   border-color: #ccc;
   color: #808080;
 }
+
+@media (max-width: 424px) {
+    .pager .btn {
+        font-size: 13px;
+        padding: 0.2rem;
+    }
+}
 </style>
 <ul class="pager">
   {% if page.previous.url %}

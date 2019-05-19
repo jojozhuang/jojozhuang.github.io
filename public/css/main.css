@@ -175,4 +175,23 @@ table, th, td {
     .subject span {
         font-size: 15px;
     }
+    /* content of post */
+    .post-content h1 {
+        font-size: 25px;
+    }
+    .post-content small {
+        font-size: 15px;
+    }
+    .post-content h2 {
+        font-size: 22px;
+    }
+    .post-content h3 {
+        font-size: 18px;
+    }
+    .post-content blockquote {
+        padding: 5px 15px;
+        margin: 0 0 10px;
+        font-size: 13.5px;
+    }
+
 }
