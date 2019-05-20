@@ -4,7 +4,7 @@ key: note
 title: "Introduction to Linux(Book)"
 index: 101
 category: notes
-image: cs.png
+image: note.png
 date: 2016-01-01
 postdate: 2016-01-01
 tags: [Linux, Bash]
