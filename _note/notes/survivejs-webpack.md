@@ -4,7 +4,7 @@ key: note
 title: "SurviveJS - Webpack(Online Doc)"
 index: 803
 category: notes
-image: tools.png
+image: note.png
 date: 2017-08-03
 postdate: 2017-08-03
 tags: [Webpack]

@@ -4,7 +4,7 @@ key: note
 title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 802
 category: notes
-image: tools.png
+image: note.png
 date: 2017-08-02
 postdate: 2017-08-02
 tags: [Block Chain, Digital Currency, Ethereum]
