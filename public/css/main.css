@@ -127,6 +127,10 @@ table, th, td {
     font-size: 20px;
 }
 
+.post-content p {
+    font-size: 17.5px;
+}
+
 /* portfolio */
 @media (max-width: 1200px) {
     .item-detail h3 {

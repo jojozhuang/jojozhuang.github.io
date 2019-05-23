@@ -7,28 +7,18 @@ category: dsa
 image: dsa.png
 date: 2016-03-31
 postdate: 2016-03-31
-tags: [BFS]
+tags: [Bloom Filter]
 ---
 
-> All of the common BFS algorithms.
+> Bloom filter and its implementation.
 
-BFS in Binary Tree
-Binary Tree Serialization
+## 1. Bloom Filter
+Bloom filter is a data structure designed to rapidly and memory-efficiently tell whether an element is present in a set.
 
-BFS in Graph
-Topological Sorting
-
-BFS in Chessboard
-
-## 1. Tree, Matrix, Graph
-
-## 1. Puzzle Problem
-Matrix problem
-
-## 6. Directed Graph Problems
+## 3. Directed Graph Problems
 * [LeetCode 46 - Permutations](https://leetcode.com/problems/permutations/)
 
-
 ## 4. References
-* [BFS vs DFS for Binary Tree](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
-* [Breadth first search and depth first search](https://www.ics.uci.edu/~eppstein/161/960215.html)
+* [Bloom filter - Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter)
+* [Bloom Filters by Example](https://llimllib.github.io/bloomfilter-tutorial/)
+* [BloomFilter——大规模数据处理利器](http://www.cnblogs.com/heaad/archive/2011/01/02/1924195.html)
