@@ -157,6 +157,9 @@ bookmarks:
       - name: Lambda Architecture
         description: A data-processing architecture designed to handle massive quantities of data
         url: https://en.wikipedia.org/wiki/Lambda_architecture
+      - name: Serverless Architecture
+        description: A way to build and run applications and services without having to manage infrastructure
+        url: https://aws.amazon.com/lambda/serverless-architectures-learn-more/
   - category: Basis
     links:
       - name: Ubuntu

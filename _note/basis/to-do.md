@@ -16,6 +16,12 @@ Todo:
 * Build a website to learn data structure and algorithms. Refer to [interviewbit](https://www.interviewbit.com/practice/). And this website support online practice.
 * Convert datetime based on timezone. Here is the [example](https://www.timeanddate.com/worldclock/converted.html?iso=20190311T00&p1=198&p2=137).
 
+Tutorials:
+* Redis
+* Kubernetes(K8s)
+* Kafka
+* Cassandra
+
 ## 1. Latest
 * [How to Disable Google Chrome UI Theme Redesign and Return to Classic UI](http://osxdaily.com/2018/09/10/disable-chrome-ui-theme-redesign/)
 * [Front-End Handbook](https://www.frontendhandbook.com/)
