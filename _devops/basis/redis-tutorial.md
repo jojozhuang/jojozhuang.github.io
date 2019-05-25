@@ -47,9 +47,27 @@ redis 127.0.0.1:6379>
 redis 127.0.0.1:6379> PING  
 PONG
 ```
-### 2.2 Redis Desktop Manager
+### 2.2 Connect Redis installed in Ubuntu Virtual Machine
+First, find the ip address of Ubuntu. Settings->Network, click the setting icon, see the ip address, eg. '192.168.182.129'.
+
+Edit file /etc/redis/redis.conf in Ubuntu. Change bind from '127.0.0.1 ::1' to '0.0.0.0 ::1'. Or directly comment out.
+```sh
+bind 127.0.0.1 ::1
+```
+Restart redis server.
+```sh
+sudo systemctl restart redis
+```
+Check if redis can be access with non-local ip address.
+```sh
+$ redis-cli -h 192.168.182.129
+192.168.182.129:6379>ping
+PONG
+```
+
+### 2.3 Redis Desktop Manager
 Go to https://redisdesktop.com/download download and install Redis Desktop Manager.
-### 2.3 Configuration
+### 2.4 Configuration
 Syntax.
 ```sh
 CONFIG GET CONFIG_SETTING_NAME
