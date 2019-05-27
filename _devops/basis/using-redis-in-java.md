@@ -95,7 +95,10 @@ List of stored keys:: tutorial-name
 List of stored keys:: tutorial-list
 ```
 
-## 4. References
+## 4. Source Files
+* [Source files for Redis Java on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-redis)
+
+## 5. References
 * [Redis Clients](https://redis.io/clients)
 * [Jedis on GitHub](https://github.com/xetorthio/jedis)
 * [How to Check IP Address on Ubuntu](https://tecadmin.net/check-ip-address-ubuntu-18-04-desktop/)

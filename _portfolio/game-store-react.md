@@ -21,8 +21,10 @@ This application is used to manage products. It implements all CRUD operations. 
 ## 2. Demo
 Four available demos:
 * `Live Demo on Netlify(CI):` <a href="https://game-store-react.netlify.com/" target="\_blank">https://game-store-react.netlify.com/</a>
+* `Live Demo on Heroku(CI):` <a href="https://game-store-react.herokuapp.com/" target="\_blank">https://game-store-react.herokuapp.com/</a>
 * `Live Demo on Azure:` <a href="https://game-store-react.azurewebsites.net/" target="\_blank">https://game-store-react.azurewebsites.net/</a>
 * `Live Demo(Redux) on Netlify(CI):` <a href="https://game-store-redux.netlify.com/" target="\_blank">https://game-store-redux.netlify.com/</a>
+* `Live Demo(Redux) on Heroku(CI):` <a href="https://game-store-redux.herokuapp.com/" target="\_blank">https://game-store-redux.herokuapp.com/</a>
 * `Live Demo(Redux) on Azure:` <a href="https://game-store-redux.azurewebsites.net/" target="\_blank">https://game-store-redux.azurewebsites.net/</a>
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*
