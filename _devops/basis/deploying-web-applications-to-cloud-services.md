@@ -45,6 +45,12 @@ We may have the capability to build the entire web application from backend to f
 * [Deploying Full Stack Angular App to Heroku]({% link _frontend/angular/deploying-full-stack-angular-app-to-heroku.md %})
 * [Deploying Full Stack React App to Heroku]({% link _frontend/react/deploying-full-stack-react-app-to-heroku.md %})
 
+### 2.4 Three Ways to Deploy Angular App to Heroku
+For Angular or React apps, we can deploy them as static websites after build them locally. Or, we can let the server to build and serve them with express server. In addition, we can use Travis to deploy them continuously.
+* [Deploying Angular App to Heroku as Static Website]({% link _frontend/angular/deploying_angular_app-to-heroku-as-static-website.md %})
+* [Deploying Angular App to Heroku with Express Server]({% link _frontend/angular/deploying_angular_app-to-heroku-with-express-server.md %})
+* [Continuously Deploy Angular App to Heroku using Travis-CI]({% link _frontend/angular/continuously-deploy-angular-app-to-heroku-using-travis-ci.md %})
+
 ## 3. CI/CD
 Continuous integration and continuous delivery.
 * [Continuously Deploy Angular App to GitHub Pages using Travis-CI]({% link _frontend/angular/continuously-deploy-angular-app-to-github-pages-using-travis-ci.md %})
