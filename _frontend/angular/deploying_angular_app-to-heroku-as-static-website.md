@@ -245,5 +245,4 @@ It works properly, wee see the products.
 ![image](/public/images/frontend/341/gamestore_list.png)  
 
 ## 5. References
-* [Angular CLI Deployment: Host Your Angular 2 App on Heroku](https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352)
-* [How do you deploy Angular apps?](https://stackoverflow.com/questions/35539622/how-do-you-deploy-angular-apps)
+* [Deploying Node.js Apps on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)

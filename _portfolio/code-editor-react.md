@@ -20,6 +20,7 @@ This application is used for online coding. After selecting the programming lang
 ## 2. Demo
 Two available demos:
 * `Live Demo on Netlify(CI):` <a href="https://code-editor-react.netlify.com/" target="\_blank">https://code-editor-react.netlify.com/</a>
+* `Live Demo on Heroku(CI):` <a href="https://code-editor-react.herokuapp.com/" target="\_blank">https://code-editor-react.herokuapp.com/</a>
 * `Live Demo on Azure:` <a href="https://code-editor.azurewebsites.net/" target="\_blank">https://code-editor.azurewebsites.net/</a>
 
 *Note: The demo websites may be slow when you access them for the first time. Be patient!*

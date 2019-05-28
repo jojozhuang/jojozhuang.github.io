@@ -79,3 +79,7 @@ It works properly, wee see the products.
 ## 5. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)
 * [Automatically deploy with Travis CI and Heroku](https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f)
+* [Deploying Node.js Apps on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
+* [Script deployment](https://docs.travis-ci.com/user/deployment/script/)
+* [The Procfile](https://devcenter.heroku.com/articles/procfile)
+* [Deploying to Multiple Providers](https://docs.travis-ci.com/user/deployment#deploying-to-multiple-providers)
