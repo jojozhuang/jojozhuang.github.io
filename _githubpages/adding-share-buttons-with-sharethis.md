@@ -1,13 +1,13 @@
 ---
 layout: tutorial
 key: about
-title: "Getting Share Buttons from ShareThis"
+title: "Adding Share Buttons with ShareThis"
 index: 908
 category: githubpages
 image: github-pages.png
 date: 2018-07-08
 postdate: 2017-08-20
-tags: [Disqus]
+tags: [ShareThis]
 ---
 
 > Create share buttons for the most popular social medias.
