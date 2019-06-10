@@ -33,7 +33,7 @@ navlist:
     visible: true
   - key: tutorial
     url: /tutorial
-    visible: false2
+    visible: false
   - key: blog
     url: /blog
     visible: true
@@ -63,7 +63,7 @@ navlist:
         url: /programming
   - key: about
     url: /about
-    visible: false
+    visible: true
 
 collections:
   portfolio:
