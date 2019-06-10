@@ -67,3 +67,8 @@
     background-color: #2178bd;
   }
 }
+@media (max-width: 576px) {
+  .form-inline .btn-outline-light {
+      margin-left: 8px;
+  }
+}

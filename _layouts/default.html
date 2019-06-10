@@ -3,14 +3,14 @@
 {% include head.html %}
 <body>
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
   <a class="navbar-brand" href="/">
       <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="{{ site.url }}/public/assets/rz-200px.jpg">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         {% for link in site.navlist %}
           {% if link.visible == true %}
@@ -30,13 +30,17 @@
       </ul>
       <ul class="nav navbar-nav ml-auto">
         <!--<li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>-->
-        <li class="nav-item {% if page.key == "about" %} active {% endif %}"><a class="nav-link" href="/about">About</a></li>
+        <!--<li class="nav-item {% if page.key == "about" %} active {% endif %}"><a class="nav-link" href="/about">About</a></li>-->
       </ul>
+      <form class="form-inline ml-auto" action="/search">
+        <div class="form-group">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" name="query" id="search-box">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </div>
+      </form>
     </div>
-    <form class="form-inline" action="/search">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="query" id="search-box">
-      <button class="btn btn-success" type="submit">Search</button>
-    </form>
 </nav>
 
 {{ content }}
