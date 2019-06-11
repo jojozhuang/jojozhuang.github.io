@@ -38,9 +38,11 @@
     opacity: 0;
   }
 }
-body {
+
+.page-wrapper {
   font-size: 0.9rem;
 }
+
 .page-wrapper .sidebar-wrapper,
 .sidebar-wrapper .sidebar-brand > a,
 .sidebar-wrapper .sidebar-dropdown > a:after,
@@ -86,7 +88,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled .page-content {
-    padding-left: 300px;
+    padding-left: 100px;
   }
 }
 /*----------------show sidebar button----------------*/
