@@ -32,8 +32,8 @@ navlist:
     url: /devops
     visible: true
   - key: tutorial
-    url: /tutorial
-    visible: false
+    url: /sidebar
+    visible: true
   - key: blog
     url: /blog
     visible: true
@@ -48,7 +48,7 @@ navlist:
     visible: true
   - key: note
     url: /note
-    visible: false
+    visible: true
   - key: feed
     url: /blog/atom.xml"
     visible: false
