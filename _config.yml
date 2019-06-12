@@ -48,7 +48,7 @@ navlist:
     visible: true
   - key: note
     url: /note
-    visible: true
+    visible: false
   - key: feed
     url: /blog/atom.xml"
     visible: false
