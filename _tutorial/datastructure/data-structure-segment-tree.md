@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Segment Tree"
+layout: tutorial
+key: tutorial
+title: "Segment Tree"
 index: 310
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-10
 postdate: 2016-03-10

@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Trie"
+layout: tutorial
+key: tutorial
+title: "Trie"
 index: 309
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-09
 postdate: 2016-03-09

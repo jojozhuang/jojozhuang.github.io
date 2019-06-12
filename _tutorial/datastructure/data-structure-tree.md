@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Tree"
+layout: tutorial
+key: tutorial
+title: "Tree"
 index: 307
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-07
 postdate: 2016-03-07

@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Stack"
+layout: tutorial
+key: tutorial
+title: "Stack"
 index: 302
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-02
 postdate: 2016-03-02
