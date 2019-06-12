@@ -1,10 +1,69 @@
 categories:
-  - name: Data Structure
-    description: Data Structure
-    type: datastructure
-  - name: Algorithm
-    description: Algorithm
-    type: algorithm
-  - name: Design Patterns
-    description: Object-Orientation, Inheritance
-    type: designpattern
+  - category: General
+    topics:
+      - name: Data Structure
+        description: Data Structure
+        type: datastructure
+      - name: Algorithm
+        description: Algorithm
+        type: algorithm
+      - name: Design Patterns
+        description: Object-Orientation, Inheritance
+        type: designpattern
+  - category: Frontend
+    topics:
+      - name: Javascript
+        description: Javascript
+        type: javascript
+      - name: Restful
+        description: Restful
+        type: restful
+      - name: Node.js
+        description: Node.js
+        type: nodejs
+      - name: AngularJS
+        description: AngularJS
+        type: angular
+      - name: ReactJS
+        description: ReactJS
+        type: reactjs
+      - name: Mobile
+        description: Mobile
+        type: mobile
+  - category: Java
+    topics:
+      - name: Core
+        description: Core features of Java
+        type: core
+      - name: Java 8
+        description: New features in Java 8
+        type: java8
+      - name: Advanced
+        description: Advanced topics of Java
+        type: advanced
+      - name: Concurrency
+        description: Concurrency and MultiThreading
+        type: multithreading
+      - name: Practice
+        description: Practice of Java
+        type: practice
+  - category: DevOps
+    topics:
+      - name: Basis
+        description: OS, Database, IDE, Virtual Machine, Git
+        type: basis
+      - name: Docker
+        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        type: docker
+      - name: NoSQL
+        description: MongoDB
+        type: nosql
+      - name: Message Queue
+        description: Kafka, RabbitQueue
+        type: messagequeue
+      - name: Distributed System
+        description: Distributed System
+        type: distributed
+      - name: System Design
+        description: Architecture, Scale
+        type: systemdesign

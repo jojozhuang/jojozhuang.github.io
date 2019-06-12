@@ -40,7 +40,7 @@ Change theme to 'Visual Studio Dark'.
 ![image](/public/images/portfolio/textcompareangular/darktheme.png)
 
 ## 4. Under the Hood
-Read tutorial [Building Online Text Compare Tool with Angular]({% link _frontend/angular/building-online-text-compare-tool-with-angular.md %}) to learn how this text compare tool is built.
+Read tutorial [Building Online Text Compare Tool with Angular]({% link _tutorial/angular/building-online-text-compare-tool-with-angular.md %}) to learn how this text compare tool is built.
 
 ## 5. Source Files
 * [Source files of Text Compare on Github](https://github.com/jojozhuang/text-compare-angular)

@@ -21,16 +21,16 @@ navlist:
     visible: true
   - key: frontend
     url: /frontend
-    visible: true
+    visible: false
   - key: java
     url: /java
-    visible: true
+    visible: false
   - key: programming
     url: /programming
     visible: false
   - key: devops
     url: /devops
-    visible: true
+    visible: false
   - key: tutorial
     url: /tutorial
     visible: true

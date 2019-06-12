@@ -13,7 +13,7 @@ tags: [Docker, Jenkins]
 
 ## 2. Creating Jenkins Container in Docker
 ### 2.1 Installing Docker and Kitematic
-If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to another posting [Installing Docker Toolbox and Kitematic on Mac]({% link _devops/docker/installing-docker-toolbox-and-kitematic-on-mac.md %}).
+If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to another posting [Installing Docker Toolbox and Kitematic on Mac]({% link _tutorial/docker/installing-docker-toolbox-and-kitematic-on-mac.md %}).
 ### 2.2 Creating Jenkins Container
 Search jenkins in Kitematic, select the official image, and click Create button.
 ![image](/public/images/blog/2016-10-08/dockersearch.png)

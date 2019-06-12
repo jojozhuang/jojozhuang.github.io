@@ -12,7 +12,7 @@ category: web
 > A realtime online course player, built with React and Socket.IO.
 
 ## 1. Course Player
-A course player consists of three components: video, screenshot and whiteboard. Check the posting [Introduction of Course Player]({% link _frontend/react/introduction-of-course-player.md %}) to learn the details.
+A course player consists of three components: video, screenshot and whiteboard. Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.
 * Video is captured by a camera during the lecturing time. It is in mp4 format.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
@@ -34,7 +34,7 @@ You can drag the slider bar to move forward or backward.
 ![image](/public/images/portfolio/courseplayerreact/drag.png)
 
 ## 4. Under the Hood
-Read tutorial [Building Course Player with React and Socket.IO]({% link _frontend/react/building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
+Read tutorial [Building Course Player with React and Socket.IO]({% link _tutorial/react/building-course-player-with-react-and-socketio.md %}) to learn the details of React, Socket.IO and how this course player is built.
 
 ## 5. Source Files
 * [Source files of Course Player(React) on Github](https://github.com/jojozhuang/course-player-react)
