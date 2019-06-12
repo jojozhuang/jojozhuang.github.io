@@ -25,18 +25,19 @@
     </div>
     <!-- sidebar-search  -->
     <div class="sidebar-menu">
+      {% assign tutorial = site.data.tutorial %}
       <ul>
-        <li class="header-menu">
-          <span>General</span>
-        </li>
-        {% assign tutorial = site.data.tutorial %}
         {% for category in tutorial.categories %}
+        <li class="header-menu">
+          <span>{{category.category}}</span>
+        </li>
+        {% for topic in category.topics %}
         {% assign postings = site.tutorial | sort: 'index' %}
-        {% assign list = postings | where: 'category', category.type %}
+        {% assign list = postings | where: 'category', topic.type %}
         <li class="sidebar-dropdown">
           <a href="#">
             <i class="fa fa-tachometer-alt"></i>
-            <span>{{category.name}}</span>
+            <span>{{topic.name}}</span>
             <span class="badge badge-pill badge-success">{{list | size}}</span>
           </a>
           <div class="sidebar-submenu">
@@ -50,221 +51,7 @@
           </div>
         </li>
         {% endfor %}
-        <li class="sidebar-dropdown">
-          <a href="#">
-            <i class="fa fa-tachometer-alt"></i>
-            <span>Algorithm</span>
-            <span class="badge badge-pill badge-warning">New</span>
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="#">Sorting
-                  <span class="badge badge-pill badge-success">Pro</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">DFS & BFS</a>
-              </li>
-              <li>
-                <a href="#">Divide & Conqueue</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="sidebar-dropdown">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i>
-            <span>Design Pattern</span>
-            <span class="badge badge-pill badge-danger">3</span>
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="#">Singleton</a>
-              </li>
-              <li>
-                <a href="#">Factory</a>
-              </li>
-              <li>
-                <a href="#">Proxy</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="sidebar-dropdown">
-          <a href="#">
-            <i class="far fa-gem"></i>
-            <span>Components</span>
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="#">General</a>
-              </li>
-              <li>
-                <a href="#">Panels</a>
-              </li>
-              <li>
-                <a href="#">Tables</a>
-              </li>
-              <li>
-                <a href="#">Icons</a>
-              </li>
-              <li>
-                <a href="#">Forms</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="sidebar-dropdown">
-          <a href="#">
-            <i class="fa fa-chart-line"></i>
-            <span>Charts</span>
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="#">Pie chart</a>
-              </li>
-              <li>
-                <a href="#">Line chart</a>
-              </li>
-              <li>
-                <a href="#">Bar chart</a>
-              </li>
-              <li>
-                <a href="#">Histogram</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="sidebar-dropdown">
-          <a href="#">
-            <i class="fa fa-globe"></i>
-            <span>Maps</span>
-          </a>
-          <div class="sidebar-submenu">
-            <ul>
-              <li>
-                <a href="#">Google maps</a>
-              </li>
-              <li>
-                <a href="#">Open street map</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="header-menu">
-          <span>Extra</span>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-book"></i>
-            <span>Documentation</span>
-            <span class="badge badge-pill badge-primary">Beta</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-calendar"></i>
-            <span>Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Examples</span>
-          </a>
-        </li>
-        <li class="header-menu">
-          <span>Extra</span>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-book"></i>
-            <span>Documentation</span>
-            <span class="badge badge-pill badge-primary">Beta</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-calendar"></i>
-            <span>Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Examples</span>
-          </a>
-        </li>
-        <li class="header-menu">
-          <span>Extra</span>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-book"></i>
-            <span>Documentation</span>
-            <span class="badge badge-pill badge-primary">Beta</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-calendar"></i>
-            <span>Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Examples</span>
-          </a>
-        </li>
-        <li class="header-menu">
-          <span>Extra</span>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-book"></i>
-            <span>Documentation</span>
-            <span class="badge badge-pill badge-primary">Beta</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-calendar"></i>
-            <span>Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Examples</span>
-          </a>
-        </li>
-        <li class="header-menu">
-          <span>Extra</span>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-book"></i>
-            <span>Documentation</span>
-            <span class="badge badge-pill badge-primary">Beta</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-calendar"></i>
-            <span>Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Examples</span>
-          </a>
-        </li>
+        {% endfor %}
         <li class="header-menu">
           <span>Extra</span>
         </li>

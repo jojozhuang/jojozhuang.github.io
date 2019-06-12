@@ -36,7 +36,7 @@ If the code has issue and can't run properly, the error will be displayed.
 ![image](/public/images/portfolio/codeeditorreact/error.png)
 
 ## 4. Under the Hood
-Check posting [Building Online Code Editor with React and Express]({% link _frontend/react/building-online-code-editor-with-react-and-express.md %}) to learn the details of how this code editor is built.
+Check posting [Building Online Code Editor with React and Express]({% link _tutorial/react/building-online-code-editor-with-react-and-express.md %}) to learn the details of how this code editor is built.
 
 ## 5. Source Files
 * [Source files of Code Editor(React) on Github](https://github.com/jojozhuang/code-editor-react)
