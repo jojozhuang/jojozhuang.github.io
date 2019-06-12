@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Deque"
+layout: tutorial
+key: tutorial
+title: "Deque"
 index: 304
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-04
 postdate: 2016-03-04

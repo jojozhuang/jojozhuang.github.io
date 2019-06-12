@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Fenwick Tree(Draft)"
+layout: tutorial
+key: tutorial
+title: "Fenwick Tree(Draft)"
 index: 311
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-11
 postdate: 2016-03-11

@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Directed Graph(Draft)"
+layout: tutorial
+key: tutorial
+title: "Directed Graph(Draft)"
 index: 317
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-17
 postdate: 2016-03-17

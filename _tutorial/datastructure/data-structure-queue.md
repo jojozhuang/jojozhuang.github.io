@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Queue"
+layout: tutorial
+key: tutorial
+title: "Queue"
 index: 303
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-03
 postdate: 2016-03-03

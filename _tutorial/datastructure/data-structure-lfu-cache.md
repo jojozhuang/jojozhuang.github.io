@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - LFU Cache(Draft)"
+layout: tutorial
+key: tutorial
+title: "LFU Cache(Draft)"
 index: 306
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-06
 postdate: 2016-03-06

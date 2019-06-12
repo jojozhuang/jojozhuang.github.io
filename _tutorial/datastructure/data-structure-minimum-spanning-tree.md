@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Minimum Spanning Tree(Draft)"
+layout: tutorial
+key: tutorial
+title: "Minimum Spanning Tree(Draft)"
 index: 318
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-18
 postdate: 2016-03-18
