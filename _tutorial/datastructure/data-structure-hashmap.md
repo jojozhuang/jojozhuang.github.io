@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - HashMap"
+layout: tutorial
+key: tutorial
+title: "HashMap"
 index: 312
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-12
 postdate: 2016-03-12

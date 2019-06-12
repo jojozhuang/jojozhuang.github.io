@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Monotonic Queue(Draft)"
+layout: tutorial
+key: tutorial
+title: "Monotonic Queue(Draft)"
 index: 319
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-19
 postdate: 2016-03-19

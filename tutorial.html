@@ -1,87 +1,61 @@
 ---
 layout: default
 key: tutorial
-tutorial: list
-title: Rong Zhuang's Tutorial
-categories:
-  - name: Basic Knowledge
-    description: OS, Database, IDE, Virtual Machine, Git
-    type: basis
-  - name: Javascript
-    description: Javascript, Promise, Observable
-    type: javascript
-  - name: RESTful
-    description: RESTful Api, ASP.NET Core, Postman, Spring Boot
-    type: restful
-  - name: Node.js
-    description: Node.js, NPM, Yarn, Express, Electron
-    type: nodejs
-  - name: AngularJS
-    description: Angular, TypeScript, Routing, Pipes, Jasmine, MEAN
-    type: angular
-  - name: ReactJS
-    description: React JS, Flux, Redux, Routing, React Native
-    type: reactjs
-  - name: Java
-    description: Java, Eclipse, JUnit, Spring Boot, Hibernate
-    type: java
-  - name: Mobile Development
-    description: iOS, Android, Xamarin, Cordova
-    type: mobile
-  - name: Docker
-    description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
-    type: docker
-  - name: GitHub Pages
-    description: Jekyll, Liquid, MarkDown, Travisci
-    type: githubpages
 ---
+<script>
+  $(document).ready(function(){
+    $('img').addClass('image-software');
+    $('img').addClass('img-responsive');
+  });
+</script>
 <div class="container">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        {% assign tutorials = site.tutorial | sort: 'index' %}
-        {% for category in page.categories %}
-        <div>
-          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
-        </div>
-        <dl class="dl-unsur">
-          {% assign list = tutorials | where: 'category', category.type %}
-          {% for tutorial in list %}
-          <dd>
-          <div class="media">
-            <div class="media-left">
-              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}">
-                <img src="../public/assets/{{ tutorial.image }}" class="rounded" style="width:80px;margin-right:10px">
-              </a>
+    <div class="page-wrapper chiller-theme toggled">
+      {% include sidebar.html %}
+      <!-- sidebar-wrapper  -->
+      <main class="page-content">
+        <div class="container-fluid">
+          <h2>Pro Sidebar</h2>
+          <hr>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <p>This is a responsive sidebar template with dropdown menu based on bootstrap 4 framework.</p>
+              <p> You can find the complete code on <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">
+                  Github</a>, it contains more themes and background image option</p>
             </div>
-            <div class="media-body">
-              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div class="subject"><span>{{ tutorial.index }}. {{ tutorial.title }}</span></div></a>
-              <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
-              <div class="pull-left">
-                  <ul class="list-inline list-unstyled">
-                    <li class="list-inline-item"><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
-                    <li class="list-inline-item hidden-extra">|</li>
-                    <li class="list-inline-item hidden-extra">
-                      <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
-                    </li>
-                    <li class="list-inline-item hidden-extra">|</li>
-                    <li class="list-inline-item hidden-extra">
-                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                      <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
-                      <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
-                      <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
-                    </li>
-                  </ul>
+            <div class="form-group col-md-12">
+              <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=large"
+                frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+              <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=large"
+                frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+            </div>
+          </div>
+          <h5>More templates</h5>
+          <hr>
+            <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="card rounded-0 p-0 shadow-sm">
+                <img src="https://user-images.githubusercontent.com/25878302/58369568-a49b2480-7efc-11e9-9ca9-2be44afacda1.png" class="card-img-top rounded-0" alt="Angular pro sidebar">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Angular Pro Sidebar</h6>
+                    <a href="https://github.com/azouaoui-med/angular-pro-sidebar" target="_blank" class="btn btn-primary btn-sm">Github</a>
+                    <a href="https://azouaoui-med.github.io/angular-pro-sidebar/demo/" target="_blank" class="btn btn-success btn-sm">Preview</a>
+                </div>
+              </div>
+            </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+              <div class="card rounded-0 p-0 shadow-sm">
+                <img src="https://user-images.githubusercontent.com/25878302/58369258-33f20900-7ef8-11e9-8ff3-b277cb7ed7b4.PNG" class="card-img-top rounded-0" alt="Angular pro sidebar">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Angular Dashboard</h6>
+                    <a href="https://github.com/azouaoui-med/lightning-admin-angular" target="_blank" class="btn btn-primary btn-sm">Github</a>
+                    <a href="https://azouaoui-med.github.io/lightning-admin-angular/demo/" target="_blank" class="btn btn-success btn-sm">Preview</a>
+                </div>
               </div>
             </div>
           </div>
-          </dd>
-          {% endfor %}
-        </dl>
-        {% endfor %}
+        </div>
+
+      </main>
+      <!-- page-content" -->
     </div>
-    <div class="col-md-1"></div>
-  </div>
 </div>

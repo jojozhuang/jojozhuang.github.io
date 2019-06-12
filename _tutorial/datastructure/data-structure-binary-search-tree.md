@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Binary Search Tree"
+layout: tutorial
+key: tutorial
+title: "Binary Search Tree"
 index: 308
-category: dsa
+category: datastructure
 image: /dsa.png
 date: 2016-03-08
 postdate: 2016-03-08

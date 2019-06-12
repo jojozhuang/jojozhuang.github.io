@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Bipartite Graph"
+layout: tutorial
+key: tutorial
+title: "Bipartite Graph"
 index: 316
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-16
 postdate: 2016-03-16

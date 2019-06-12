@@ -1,0 +1,87 @@
+---
+layout: default
+key: tutorial
+tutorial: list
+title: Rong Zhuang's Tutorial
+categories:
+  - name: Basic Knowledge
+    description: OS, Database, IDE, Virtual Machine, Git
+    type: basis
+  - name: Javascript
+    description: Javascript, Promise, Observable
+    type: javascript
+  - name: RESTful
+    description: RESTful Api, ASP.NET Core, Postman, Spring Boot
+    type: restful
+  - name: Node.js
+    description: Node.js, NPM, Yarn, Express, Electron
+    type: nodejs
+  - name: AngularJS
+    description: Angular, TypeScript, Routing, Pipes, Jasmine, MEAN
+    type: angular
+  - name: ReactJS
+    description: React JS, Flux, Redux, Routing, React Native
+    type: reactjs
+  - name: Java
+    description: Java, Eclipse, JUnit, Spring Boot, Hibernate
+    type: java
+  - name: Mobile Development
+    description: iOS, Android, Xamarin, Cordova
+    type: mobile
+  - name: Docker
+    description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+    type: docker
+  - name: GitHub Pages
+    description: Jekyll, Liquid, MarkDown, Travisci
+    type: githubpages
+---
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        {% assign tutorials = site.tutorial | sort: 'index' %}
+        {% for category in page.categories %}
+        <div>
+          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
+        </div>
+        <dl class="dl-unsur">
+          {% assign list = tutorials | where: 'category', category.type %}
+          {% for tutorial in list %}
+          <dd>
+          <div class="media">
+            <div class="media-left">
+              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}">
+                <img src="../public/assets/{{ tutorial.image }}" class="rounded" style="width:80px;margin-right:10px">
+              </a>
+            </div>
+            <div class="media-body">
+              <a href="{{ tutorial.url }}" title="{{ tutorial.title }}"><div class="subject"><span>{{ tutorial.index }}. {{ tutorial.title }}</span></div></a>
+              <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
+              <div class="pull-left">
+                  <ul class="list-inline list-unstyled">
+                    <li class="list-inline-item"><span><i class="fa fa-calendar" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item"><span><i class="fa fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
+                      <span><i class="fa fa-tags" style="color:#3B5998"></i> {{ tutorial.tags | join: ", "}} </span>
+                    </li>
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
+                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                      <span><i class="fa fa-facebook-square" style="color:#3B5998"></i></span>
+                      <span><i class="fa fa-twitter-square" style="color:#1DA1F2"></i></span>
+                      <span><i class="fa fa-google-plus-square" style="color:#DB4437"></i></span>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          </dd>
+          {% endfor %}
+        </dl>
+        {% endfor %}
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
