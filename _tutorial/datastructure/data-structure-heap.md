@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Heap"
+layout: tutorial
+key: tutorial
+title: "Heap"
 index: 313
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-13
 postdate: 2016-03-13

@@ -32,7 +32,7 @@ navlist:
     url: /devops
     visible: true
   - key: tutorial
-    url: /sidebar
+    url: /tutorial
     visible: true
   - key: blog
     url: /blog

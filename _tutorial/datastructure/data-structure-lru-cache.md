@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - LRU Cache"
+layout: tutorial
+key: tutorial
+title: "LRU Cache"
 index: 305
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-05
 postdate: 2016-03-05

@@ -1,0 +1,7 @@
+topics:
+  - name: Data Structure
+    description: Data Structure
+    type: datastructure
+  - name: Design Patterns
+    description: Object-Orientation, Inheritance
+    type: designpattern

@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Graph Problems"
+layout: tutorial
+key: tutorial
+title: "Graph Problems"
 index: 315
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-15
 postdate: 2016-03-15

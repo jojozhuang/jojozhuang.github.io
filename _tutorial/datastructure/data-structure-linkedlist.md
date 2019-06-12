@@ -1,9 +1,9 @@
 ---
-layout: note
-key: programming
-title: "Data Structure - Linked List"
+layout: tutorial
+key: tutorial
+title: "Linked List"
 index: 301
-category: dsa
+category: datastructure
 image: dsa.png
 date: 2016-03-01
 postdate: 2016-03-01
