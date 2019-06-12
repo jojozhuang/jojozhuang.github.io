@@ -27,7 +27,7 @@ navlist:
     visible: true
   - key: programming
     url: /programming
-    visible: true
+    visible: false
   - key: devops
     url: /devops
     visible: true

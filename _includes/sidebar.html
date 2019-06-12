@@ -30,17 +30,17 @@
           <span>General</span>
         </li>
         {% assign tutorial = site.data.tutorial %}
-        {% for topic in tutorial.topics %}
+        {% for category in tutorial.categories %}
+        {% assign postings = site.tutorial | sort: 'index' %}
+        {% assign list = postings | where: 'category', category.type %}
         <li class="sidebar-dropdown">
           <a href="#">
             <i class="fa fa-tachometer-alt"></i>
-            <span>{{topic.name}}</span>
-            <span class="badge badge-pill badge-warning">New</span>
+            <span>{{category.name}}</span>
+            <span class="badge badge-pill badge-success">{{list | size}}</span>
           </a>
           <div class="sidebar-submenu">
             <ul>
-             {% assign postings = site.tutorial | sort: 'index' %}
-             {% assign list = postings | where: 'category', topic.type %}
              {% for posting in list %}
               <li>
                 <a href="{{ posting.url }}">{{ posting.title }}</a>
