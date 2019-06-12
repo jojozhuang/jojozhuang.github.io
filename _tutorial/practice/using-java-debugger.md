@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Using Java Debugger"
 index: 512
 category: practice

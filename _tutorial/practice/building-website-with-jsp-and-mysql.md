@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Building Website with JSP and MySQL"
 index: 532
 category: practice

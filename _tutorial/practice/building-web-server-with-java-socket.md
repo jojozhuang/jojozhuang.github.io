@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Building Web Server with Java Socket"
 index: 531
 category: practice

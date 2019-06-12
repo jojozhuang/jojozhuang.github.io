@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Creating MongoDB Image with Dockerfile"
 index: 534
 category: practice

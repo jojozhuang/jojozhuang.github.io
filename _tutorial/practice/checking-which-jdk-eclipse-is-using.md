@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Checking Which JDK Eclipse is Using"
 index: 511
 category: practice

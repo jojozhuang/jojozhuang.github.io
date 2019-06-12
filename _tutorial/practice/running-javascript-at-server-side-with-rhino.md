@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Running JavaScript at Server Side with Rhino"
 index: 538
 category: practice
