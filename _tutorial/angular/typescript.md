@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: frontend
+key: tutorial
 title: "TypeScript"
 index: 302
 category: angular

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Encryption and Decryption in Java"
 index: 503
 category: practice

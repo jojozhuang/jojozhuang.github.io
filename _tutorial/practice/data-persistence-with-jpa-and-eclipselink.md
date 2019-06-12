@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Data Persistence with JPA & Eclipselink"
 index: 535
 category: practice

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Socket Programming with Java"
 index: 504
 category: practice

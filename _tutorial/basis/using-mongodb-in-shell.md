@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: devops
+key: tutorial
 title: "Using MongoDB in Shell"
 index: 33
 category: basis

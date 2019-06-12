@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Data Persistence with Hibernate"
 index: 536
 category: practice

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Remote Debugging JSP Application"
 index: 514
 category: practice

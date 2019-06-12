@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Java Remote Debugging with Eclipse"
 index: 513
 category: practice

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: frontend
+key: tutorial
 title: "Express - Middleware"
 index: 252
 category: nodejs

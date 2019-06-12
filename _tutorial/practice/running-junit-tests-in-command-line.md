@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Running JUnit Tests in Command Line"
 index: 521
 category: practice

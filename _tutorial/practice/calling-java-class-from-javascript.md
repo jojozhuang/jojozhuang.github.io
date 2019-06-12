@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Calling Java Class from Javascript"
 index: 539
 category: practice

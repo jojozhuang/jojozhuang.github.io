@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Scripting Java With Rhino"
 index: 537
 category: practice

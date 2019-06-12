@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Dynamic Tests with JUnit 5 in Command Line"
 index: 523
 category: practice

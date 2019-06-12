@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: java
+key: tutorial
 title: "Data Fix with Javascript For Web Application"
 index: 540
 category: practice
