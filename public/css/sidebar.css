@@ -481,3 +481,18 @@
 .chiller-theme .sidebar-footer>a:last-child {
     border-right: none;
 }
+
+/*--------Customization------------*/
+.sidebar-search .btn {
+  color: #818896;
+  background-color: #3a3f48;
+  border: none;
+  cursor: pointer;
+  margin-right: -8px;
+}
+
+.sidebar-search .btn:focus{
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
