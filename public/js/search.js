@@ -10,7 +10,7 @@
         appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
         appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
         appendString += '  </a>';
-        appendString += '  <div class="pull-left"><p>' + item.excerpt + '</p></div>';
+        appendString += '  <div class="float-left"><p>' + item.excerpt + '</p></div>';
         appendString += '</dd>';
       }
       searchResults.innerHTML = appendString;
