@@ -25,8 +25,8 @@ title: Rong Zhuang's Blog
               <a href="{{ post.url }}" title="{{ post.title }}">
                   <div>{{ post.title }}</div>
               </a>
-              <div class="pull-left"><p class="small pull-left" ><span><i class="fa fa-calendar"></i></span> {{ post.date | date_to_string }}</p></div>
-              <div class="tag pull-right">{{ post.tags | array_to_sentence_string}}</div>
+              <div class="float-left"><p class="small"><i class="far fa-calendar-alt"></i> {{ post.date | date_to_string }}</p></div>
+              <div class="tag float-right">{{ post.tags | array_to_sentence_string}}</div>
             </dd>
           {% endfor %}
         </dl>

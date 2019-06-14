@@ -18,6 +18,7 @@ author:
 navlist:
   - key: portfolio
     url: /portfolio
+    icon: fas fa-briefcase
     visible: true
   - key: frontend
     url: /frontend
@@ -33,9 +34,11 @@ navlist:
     visible: false
   - key: tutorial
     url: /tutorial
+    icon: fas fa-chalkboard-teacher
     visible: true
   - key: blog
     url: /blog
+    icon: fas fa-blog
     visible: true
   - key: cv
     url: /cv
@@ -45,6 +48,7 @@ navlist:
     visible: false
   - key: favorite
     url: /favorite
+    icon: fas fa-star
     visible: true
   - key: note
     url: /note
@@ -63,6 +67,7 @@ navlist:
         url: /programming
   - key: about
     url: /about
+    icon: fas fa-info-circle
     visible: true
 
 collections:
