@@ -1,0 +1,13 @@
+name: Popular
+categories:
+  - name: General
+    subcategories:
+      - name: Data Structure
+        description: Data Structure
+        type: datastructure
+      - name: Algorithm
+        description: Algorithm
+        type: algorithm
+      - name: Design Patterns
+        description: Object-Orientation, Inheritance
+        type: designpattern

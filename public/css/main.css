@@ -82,6 +82,7 @@ ul.posts {
 /* change the background color */
 .navbar-custom {
     background-color: #24272d;
+    padding: 0 !important;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
@@ -103,6 +104,14 @@ ul.posts {
 
 .navbar-custom .form-inline {
     padding: 0rem 1rem;
+}
+
+/* index (self introduction) */
+@media (max-width: 992px) {
+    .navbar-toggler {
+        margin: .30rem .25rem;
+        padding: .45rem .75rem;
+    }
 }
 
 .right_grid{
