@@ -21,7 +21,8 @@ title: Rong Zhuang's Blog
     {% assign programmings = site.programming %}
     {% assign devops = site.devops %}
     {% assign tutorials = site.tutorial %}
-    {% assign postings = frontends | concat: javas | concat: programmings | concat: devops | concat: tutorials %}
+    {% assign populars = site.popular %}
+    {% assign postings = frontends | concat: javas | concat: programmings | concat: devops | concat: tutorials | concat: populars %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",

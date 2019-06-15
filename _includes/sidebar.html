@@ -38,7 +38,7 @@
         {% assign list = postings | where: 'category', subcategory.type %}
         <li class="sidebar-dropdown">
           <a href="#">
-            <i class="fa fa-tachometer-alt"></i>
+            <i class="{{subcategory.icon}}"></i>
             <span>{{subcategory.name}}</span>
             <span class="badge badge-pill badge-success">{{list | size}}</span>
           </a>

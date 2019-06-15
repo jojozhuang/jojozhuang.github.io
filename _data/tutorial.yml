@@ -1,59 +1,76 @@
 name: Tutorial
 categories:
-  - category: Frontend
+  - name: Frontend
     subcategories:
       - name: Javascript
         description: Javascript
+        icon: fab fa-js-square
         type: javascript
       - name: Restful
         description: Restful
+        icon: fas fa-tachometer-alt
         type: restful
       - name: Node.js
         description: Node.js
+        icon: fab fa-node-js
         type: nodejs
       - name: AngularJS
         description: AngularJS
+        icon: fab fa-angular
         type: angular
       - name: ReactJS
         description: ReactJS
+        icon: fab fa-react
         type: reactjs
       - name: Mobile
         description: Mobile
+        icon: fas fa-mobile-alt
         type: mobile
-  - category: Java
+  - name: Java
     subcategories:
       - name: Core
         description: Core features of Java
+        icon: fab fa-java
         type: core
       - name: Java 8
         description: New features in Java 8
+        icon: fas fa-tachometer-alt
         type: java8
       - name: Advanced
         description: Advanced topics of Java
+        icon: fas fa-tachometer-alt
         type: advanced
       - name: Concurrency
         description: Concurrency and MultiThreading
+        icon: fas fa-tachometer-alt
         type: multithreading
       - name: Practice
         description: Practice of Java
+        icon: fas fa-tachometer-alt
         type: practice
-  - category: DevOps
+  - name: DevOps
     subcategories:
       - name: Basis
         description: OS, Database, IDE, Virtual Machine, Git
+        icon: fas fa-tachometer-alt
         type: basis
       - name: Docker
         description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        icon: fas fa-tachometer-alt
         type: docker
       - name: NoSQL
         description: MongoDB
+        icon: fas fa-tachometer-alt
         type: nosql
       - name: Message Queue
         description: Kafka, RabbitQueue
+        icon: fas fa-tachometer-alt
         type: messagequeue
       - name: Distributed System
         description: Distributed System
+        icon: fas fa-tachometer-alt
         type: distributed
       - name: System Design
         description: Architecture, Scale
+        icon: fas fa-tachometer-alt
         type: systemdesign
