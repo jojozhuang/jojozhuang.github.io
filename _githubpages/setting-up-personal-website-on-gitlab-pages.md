@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Setting up Personal Website on GitLab Pages(Draft)"
 index: 922

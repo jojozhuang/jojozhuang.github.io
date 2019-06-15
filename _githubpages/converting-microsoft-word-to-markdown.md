@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Converting Microsoft Word to Markdown"
 index: 909

@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Adding Search Function for Static Website with Lunr.js"
 index: 913

@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Migrating Repositories From GitHub to GitLab"
 index: 921

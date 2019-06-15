@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Adding Share Buttons with ShareThis"
 index: 908

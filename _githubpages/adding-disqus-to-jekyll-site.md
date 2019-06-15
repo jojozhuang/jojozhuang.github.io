@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Adding Disqus to Jekyll Site"
 index: 906
