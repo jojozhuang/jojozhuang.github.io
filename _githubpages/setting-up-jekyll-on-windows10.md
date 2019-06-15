@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Setting Up Jekyll on Windows 10"
 index: 902

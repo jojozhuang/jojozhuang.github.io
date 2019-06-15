@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Post excerpt in Jekyll(Draft)"
 index: 905

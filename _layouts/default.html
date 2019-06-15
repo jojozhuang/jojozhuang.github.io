@@ -3,45 +3,7 @@
 {% include head.html %}
 <body>
 
-<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
-  <a class="navbar-brand" href="/">
-      <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="{{ site.url }}/public/assets/rz-200px.jpg">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        {% for link in site.navlist %}
-          {% if link.visible == true %}
-            {% if link.sublist %}
-            <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" href="{{ link.url }}" aria-haspopup="true" aria-expanded="false">{{ link.key | capitalize }}</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {% for sublink in link.sublist %}
-                  <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}">{{ sublink.key | capitalize }}</a>
-                {% endfor %}
-              </div>
-            </li>
-            {% else %}
-              <li class="nav-item {% if page.key == link.key %} active {% endif %}"><a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a></li>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-      <ul class="nav navbar-nav ml-auto">
-        <!--<li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>-->
-        <!--<li class="nav-item {% if page.key == "about" %} active {% endif %}"><a class="nav-link" href="/about">About</a></li>-->
-      </ul>
-      <form class="form-inline ml-auto" action="/search">
-        <div class="form-group">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search..." name="query" id="search-box">
-        </div>
-        <div class="form-group">
-          <button class="btn btn-outline-light" type="submit">Search</button>
-        </div>
-      </form>
-    </div>
-</nav>
+{% include navbar.html %}
 
 {{ content }}
 

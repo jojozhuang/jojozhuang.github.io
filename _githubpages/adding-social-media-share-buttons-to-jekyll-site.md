@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Adding Social Media Share Buttons to Jekyll Site"
 index: 907

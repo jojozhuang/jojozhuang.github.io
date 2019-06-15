@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Adding Sidebar(draft)"
 index: 914

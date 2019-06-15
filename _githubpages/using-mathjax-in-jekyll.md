@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Using MathJax in Jekyll"
 index: 910

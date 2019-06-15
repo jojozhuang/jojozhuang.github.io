@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Setting up Jekyll for GitHub Pages on Ubuntu and MacOS"
 index: 901

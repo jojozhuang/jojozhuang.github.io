@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: note
 key: about
 title: "Cannot Start Jekyll at Specific Port"
 index: 911
