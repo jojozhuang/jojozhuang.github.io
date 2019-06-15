@@ -32,6 +32,10 @@ navlist:
   - key: devops
     url: /devops
     visible: false
+  - key: popular
+    url: /popular
+    icon: fas fa-fire-alt
+    visible: true
   - key: tutorial
     url: /tutorial
     icon: fas fa-chalkboard-teacher
@@ -80,6 +84,8 @@ collections:
   programming:
     output: true
   devops:
+    output: true
+  popular:
     output: true
   tutorial:
     output: true

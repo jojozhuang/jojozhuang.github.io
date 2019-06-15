@@ -1,6 +1,6 @@
 ---
 layout: default
-key: tutorial
+key: popular
 ---
 <script>
   $(document).ready(function(){
@@ -10,8 +10,8 @@ key: tutorial
 </script>
 <div class="container">
     <div class="page-wrapper chiller-theme toggled">
-      {% assign subject = site.data.tutorial %}
-      {% assign postings = site.tutorial | sort: 'index' %}
+      {% assign subject = site.data.popular %}
+      {% assign postings = site.popular | sort: 'index' %}
       {% include sidebar.html %}
       <!-- sidebar-wrapper  -->
       <main class="page-content">

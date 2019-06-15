@@ -1,6 +1,7 @@
 /* change the background color */
 .navbar-custom {
     background-color: #ff5500;
+    padding: 0 !important;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
@@ -22,4 +23,11 @@
 
 .navbar-custom .form-inline {
     padding: 0rem 1rem;
+}
+/* index (self introduction) */
+@media (max-width: 992px) {
+    .navbar-toggler {
+		margin: .30rem .25rem;
+		padding: .45rem .75rem;
+	}
 }

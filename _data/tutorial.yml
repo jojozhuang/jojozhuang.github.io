@@ -1,17 +1,7 @@
+name: Tutorial
 categories:
-  - category: General
-    topics:
-      - name: Data Structure
-        description: Data Structure
-        type: datastructure
-      - name: Algorithm
-        description: Algorithm
-        type: algorithm
-      - name: Design Patterns
-        description: Object-Orientation, Inheritance
-        type: designpattern
   - category: Frontend
-    topics:
+    subcategories:
       - name: Javascript
         description: Javascript
         type: javascript
@@ -31,7 +21,7 @@ categories:
         description: Mobile
         type: mobile
   - category: Java
-    topics:
+    subcategories:
       - name: Core
         description: Core features of Java
         type: core
@@ -48,7 +38,7 @@ categories:
         description: Practice of Java
         type: practice
   - category: DevOps
-    topics:
+    subcategories:
       - name: Basis
         description: OS, Database, IDE, Virtual Machine, Git
         type: basis
