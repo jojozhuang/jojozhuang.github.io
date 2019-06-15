@@ -4,10 +4,13 @@ categories:
     subcategories:
       - name: Data Structure
         description: Data Structure
+        icon: fas fa-sitemap
         type: datastructure
       - name: Algorithm
         description: Algorithm
+        icon: fas fa-square-root-alt
         type: algorithm
       - name: Design Patterns
         description: Object-Orientation, Inheritance
+        icon: fas fa-pencil-ruler
         type: designpattern
