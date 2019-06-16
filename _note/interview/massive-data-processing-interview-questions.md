@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Massive Data Processing Interview Questions(Draft)"
 index: 172
 category: interview

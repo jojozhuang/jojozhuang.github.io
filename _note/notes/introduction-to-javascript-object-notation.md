@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "Introduction to JavaScript Object Notation(Draft)"
 index: 614

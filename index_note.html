@@ -1,0 +1,65 @@
+---
+layout: default
+key: index_note
+note: list
+title: Rong Zhuang's Note
+categories:
+  - name: Basic Knowledge
+    description: OS, Database
+    type: basis
+  - name: Interview
+    description: Interview
+    type: interview
+  - name: Study Notes
+    description: Notes for books or online doc
+    type: notes
+  - name: Others
+    description: Japanese
+    type: others
+---
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        {% assign notes = site.note | sort: 'index' %}
+        {% for category in page.categories %}
+        <div>
+          <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
+        </div>
+        <dl class="dl-unsur">
+          {% assign list = notes | where: 'category', category.type %}
+          {% for note in list %}
+          <dd>
+          <div class="media">
+            <a href="{{ note.url }}" title="{{ note.title }}">
+              <img src="../public/assets/category/{{ note.image }}" class="rounded" style="width:80px;margin-right:10px">
+            </a>
+            <div class="media-body">
+              <a href="{{ note.url }}" title="{{ note.title }}"><div class="subject"><span>{{ note.index }}. {{ note.title }}</span></div></a>
+              {{ note.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}
+              <div class="pull-left">
+                  <ul class="list-inline list-unstyled">
+                    <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="{{ note.url }}#disqus_thread">Comments</a></li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item">
+                      <span><i class="fas fa-tags" style="color:#3B5998"></i> {{ note.tags | join: ", "}} </span>
+                    </li>
+                    <li class="list-inline-item hidden-extra">|</li>
+                    <li class="list-inline-item hidden-extra">
+                      <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                      <span><i class="fab fa-facebook" style="color:#3B5998"></i></span>
+                      <span><i class="fab fa-twitter-square" style="color:#1DA1F2"></i></span>
+                      <span><i class="fab fa-google-plus" style="color:#DB4437"></i></span>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          </dd>
+          {% endfor %}
+        </dl>
+        {% endfor %}
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Front-End Interview Questions"
 index: 111
 category: interview

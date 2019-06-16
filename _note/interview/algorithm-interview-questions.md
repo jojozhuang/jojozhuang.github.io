@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Algorithm Interview Questions(Draft)"
 index: 171
 category: interview

@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "System Design - Tradeoff"
 index: 153
 category: interview

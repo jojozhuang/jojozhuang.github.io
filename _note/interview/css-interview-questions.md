@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "CSS Interview Questions"
 index: 113
 category: interview

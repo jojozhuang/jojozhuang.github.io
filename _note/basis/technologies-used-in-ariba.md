@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "Technologies Used in Ariba(Draft)"
 index: 720

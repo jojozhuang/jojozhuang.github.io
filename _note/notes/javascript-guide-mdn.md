@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "JavaScript Guide MDN(Online Doc)"
 index: 611

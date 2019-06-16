@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "Core Java Volume I--Fundamentals (10th Edition)"
 index: 601

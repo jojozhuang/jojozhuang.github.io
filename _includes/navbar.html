@@ -10,10 +10,11 @@
         {% for link in site.navlist %}
           {% if link.visible == true %}
             {% if link.sublist %}
-            <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" href="{{ link.url }}" aria-haspopup="true" aria-expanded="false">{{ link.key | capitalize }}</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a>
+              <div class="dropdown-menu">
                 {% for sublink in link.sublist %}
-                  <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}">{{ sublink.key | capitalize }}</a>
+                  <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description | capitalize }}</a>
                 {% endfor %}
               </div>
             </li>

@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "AWS - Certified Solutions Architect"
 index: 804

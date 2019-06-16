@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Grokking the System Design Interview"
 index: 152
 category: interview

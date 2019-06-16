@@ -56,19 +56,29 @@ navlist:
     visible: true
   - key: note
     url: /note
+    icon: fas fa-book-open
     visible: false
   - key: feed
     url: /blog/atom.xml"
     visible: false
   - key: more
     url: /#
+    icon: fas fa-chevron-circle-down
     visible: false
-    subkeys: note
+    subkeys: ["index_tutorial","index_note","index_programming"]
     sublist:
-      - key: note
-        url: /note
+      - key: index_note
+        description: Index of Note
+        url: /index_note
+        icon: fas fa-book-open
+      - key: index_tutorial
+        description: Index of Tutorial
+        url: /index_tutorial
+        icon: fas fa-chalkboard-teacher
       - key: programming
+        description: Index of Programming
         url: /programming
+        icon: fas fa-book-open
   - key: about
     url: /about
     icon: fas fa-info-circle

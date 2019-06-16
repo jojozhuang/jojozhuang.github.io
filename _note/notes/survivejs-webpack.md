@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "SurviveJS - Webpack(Online Doc)"
 index: 803
