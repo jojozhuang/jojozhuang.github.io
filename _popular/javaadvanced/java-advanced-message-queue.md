@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Message Queue(Draft)"
+title: "Java Advanced - Message Queue - Draft"
 index: 236
 category: advanced
 image: java.png

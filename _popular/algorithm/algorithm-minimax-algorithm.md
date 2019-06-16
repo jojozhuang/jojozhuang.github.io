@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Minimax Algorithm(Draft)"
+title: "Minimax Algorithm - Draft"
 index: 331
 category: algorithm
 image: /dsa.png

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Directed Graph(Draft)"
+title: "Directed Graph - Draft"
 index: 317
 category: datastructure
 image: dsa.png

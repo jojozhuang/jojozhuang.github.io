@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Object Class(Draft)"
+title: "Java Advanced - Object Class - Draft"
 index: 232
 category: advanced
 image: java.png

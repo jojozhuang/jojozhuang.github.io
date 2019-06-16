@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "LFU Cache(Draft)"
+title: "LFU Cache - Draft"
 index: 306
 category: datastructure
 image: dsa.png

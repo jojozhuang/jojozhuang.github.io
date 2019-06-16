@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "DTO(Draft)"
+title: "DTO - Draft"
 index: 507
 category: designpattern
 image: designpattern.png

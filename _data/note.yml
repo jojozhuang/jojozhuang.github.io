@@ -6,10 +6,6 @@ categories:
         description: OS, Database
         icon: fas fa-sitemap
         type: basis
-      - name: Interview
-        description: Interview
-        icon: fas fa-sitemap
-        type: interview
       - name: Study Notes
         description: Notes for books or online doc
         icon: fas fa-sitemap
@@ -18,3 +14,21 @@ categories:
         description: Japanese
         icon: fas fa-sitemap
         type: others
+  - name: Interview Questions
+    subcategories:
+      - name: General
+        description: OS, Database
+        icon: fas fa-sitemap
+        type: interview-general
+      - name: Frontend Questions
+        description: OS, Database
+        icon: fas fa-sitemap
+        type: interview-frontend
+      - name: Java Questions
+        description: Interview
+        icon: fas fa-sitemap
+        type: interview-java
+      - name: System Design
+        description: Notes for books or online doc
+        icon: fas fa-sitemap
+        type: interview-systemdesign

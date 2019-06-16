@@ -1,5 +1,15 @@
 name: Tutorial
 categories:
+  - name: Prerequisites
+    subcategories:
+      - name: Knowledge
+        description: Knowledge
+        icon: fas fa-tachometer-alt
+        type: knowledge
+      - name: Dev Environment
+        description: Development Environment
+        icon: fab fa-dev
+        type: devenv
   - name: Frontend
     subcategories:
       - name: Javascript
@@ -26,16 +36,8 @@ categories:
         description: Mobile
         icon: fas fa-mobile-alt
         type: mobile
-  - name: DevOps
+  - name: Distributed System
     subcategories:
-      - name: Basis
-        description: OS, Database, IDE, Virtual Machine, Git
-        icon: fas fa-tachometer-alt
-        type: basis
-      - name: Docker
-        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
-        icon: fas fa-tachometer-alt
-        type: docker
       - name: NoSQL
         description: MongoDB
         icon: fas fa-tachometer-alt
@@ -44,11 +46,23 @@ categories:
         description: Kafka, RabbitQueue
         icon: fas fa-tachometer-alt
         type: messagequeue
-      - name: Distributed System
-        description: Distributed System
+      - name: Redis
+        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
         icon: fas fa-tachometer-alt
-        type: distributed
-      - name: System Design
-        description: Architecture, Scale
+        type: redis
+      - name: Nginx
+        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
         icon: fas fa-tachometer-alt
-        type: systemdesign
+        type: nginx
+      - name: Zookeeper
+        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        icon: fas fa-tachometer-alt
+        type: zookeeper
+      - name: Docker
+        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        icon: fas fa-tachometer-alt
+        type: docker
+      - name: Big Data
+        description: Big Data
+        icon: fas fa-tachometer-alt
+        type: bigdata

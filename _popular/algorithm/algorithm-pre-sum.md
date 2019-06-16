@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Pre Sum(Draft)"
+title: "Pre Sum - Draft"
 index: 331
 category: algorithm
 image: /dsa.png

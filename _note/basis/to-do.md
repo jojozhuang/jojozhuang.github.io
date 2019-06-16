@@ -16,6 +16,11 @@ Todo:
 * Build a website to learn data structure and algorithms. Refer to [interviewbit](https://www.interviewbit.com/practice/). And this website support online practice.
 * Convert datetime based on timezone. Here is the [example](https://www.timeanddate.com/worldclock/converted.html?iso=20190311T00&p1=198&p2=137).
 * move portfolio 'web server' to popular->java->posting
+* Java Memory Model
+*  Nodejs Memory Model
+* Functional Programming
+* Upgrade Bootstrap 3 to 4.
+* Shallow Copy Vs Deep Copy
 
 Tutorials:
 * Redis
