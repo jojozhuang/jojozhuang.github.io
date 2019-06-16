@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Java Interview Questions"
 index: 103
 category: interview

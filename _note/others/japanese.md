@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "Japanese"
 index: 902

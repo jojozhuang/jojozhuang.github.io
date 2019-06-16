@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "System Design Interview Questions"
 index: 151
 category: interview

@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "TO DO"
 index: 123

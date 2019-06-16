@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Java Interview Questions - Multithreading"
 index: 105
 category: interview

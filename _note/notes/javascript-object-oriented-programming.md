@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "JavaScript object oriented programming(Online Doc)"
 index: 612

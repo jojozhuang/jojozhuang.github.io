@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Generic Interview Questions(Draft)"
 index: 102
 category: interview

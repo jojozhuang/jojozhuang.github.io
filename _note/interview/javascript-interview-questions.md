@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Javascript Interview Questions"
 index: 114
 category: interview

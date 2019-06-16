@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "Algorithm - Convert Number into Negative Base Representation"
 index: 170

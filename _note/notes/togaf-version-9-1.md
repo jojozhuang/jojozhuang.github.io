@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "TOGAF Version 9.1(Draft)"
 index: 701

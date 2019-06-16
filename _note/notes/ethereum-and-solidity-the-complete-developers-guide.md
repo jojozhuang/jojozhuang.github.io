@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: tutorial
 key: note
 title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 802

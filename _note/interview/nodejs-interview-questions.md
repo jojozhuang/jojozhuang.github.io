@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Node.js Interview Questions(Draft)"
 index: 121
 category: interview

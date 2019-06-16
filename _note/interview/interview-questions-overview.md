@@ -1,6 +1,6 @@
 ---
-layout: programming
-key: programming
+layout: tutorial
+key: note
 title: "Interview Questions - Overview"
 index: 101
 category: interview
