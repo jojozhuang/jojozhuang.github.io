@@ -14,3 +14,25 @@ categories:
         description: Object-Orientation, Inheritance
         icon: fas fa-pencil-ruler
         type: designpattern
+  - name: Java
+    subcategories:
+      - name: Java Core
+        description: Core features of Java
+        icon: fab fa-java
+        type: core
+      - name: Java 8
+        description: New features in Java 8
+        icon: fab fa-java
+        type: java8
+      - name: Advanced
+        description: Advanced topics of Java
+        icon: fab fa-java
+        type: advanced
+      - name: Concurrency
+        description: Concurrency and MultiThreading
+        icon: fab fa-java
+        type: multithreading
+      - name: Practice
+        description: Practice of Java
+        icon: fab fa-java
+        type: practice

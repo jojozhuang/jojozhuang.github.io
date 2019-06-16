@@ -19,7 +19,7 @@ jQuery(function ($) {
   });
 
   // expand the menu when page is loaded.
-  var submenu = $("#sidebar-submenu1");
+  /*var submenu = $("#sidebar-submenu1");
   submenu.slideUp(200);
   if (submenu.parent().hasClass("active")) {
     submenu.parent().removeClass("active");
@@ -28,7 +28,7 @@ jQuery(function ($) {
     submenu.parent().removeClass("active");
     submenu.slideDown(200);
     submenu.addClass("active");
-  }
+}*/
   /*
   $("#sidebar-submenu1").slideUp(200);
   if ($("#sidebar-dropdown1").hasClass("active")) {
