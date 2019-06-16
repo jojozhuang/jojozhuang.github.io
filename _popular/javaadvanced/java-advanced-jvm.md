@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - JVM(Draft)"
+title: "Java Advanced - JVM - Draft"
 index: 237
 category: advanced
 image: java.png

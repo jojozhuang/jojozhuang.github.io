@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Monotonic Queue(Draft)"
+title: "Monotonic Queue - Draft"
 index: 319
 category: datastructure
 image: dsa.png

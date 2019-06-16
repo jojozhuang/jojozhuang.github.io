@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Cryptography(Draft)"
+title: "Java Advanced - Cryptography - Draft"
 index: 233
 category: advanced
 image: java.png

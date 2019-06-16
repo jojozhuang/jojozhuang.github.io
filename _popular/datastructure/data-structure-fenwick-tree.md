@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Fenwick Tree(Draft)"
+title: "Fenwick Tree - Draft"
 index: 311
 category: datastructure
 image: dsa.png

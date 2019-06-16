@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Generics(Draft)"
+title: "Generics - Draft"
 index: 213
 category: core
 image: java.png

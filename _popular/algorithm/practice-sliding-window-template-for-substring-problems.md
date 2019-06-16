@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Practice - Sliding Window Template for Substring Problems(Draft)"
+title: "Practice - Sliding Window Template for Substring Problems - Draft"
 index: 346
 category: dsa
 image: /dsa.png

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Web Service(Draft)"
+title: "Java Advanced - Web Service - Draft"
 index: 235
 category: advanced
 image: java.png

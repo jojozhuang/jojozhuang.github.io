@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Static Block(Draft)"
+title: "Static Block - Draft"
 index: 248
 category: core
 image: java.png

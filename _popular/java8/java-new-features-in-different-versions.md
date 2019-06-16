@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java - Java 11,10,9,8,7(Draft)"
+title: "Java - Java 11,10,9,8,7 - Draft"
 index: 261
 category: java8
 image: java.png

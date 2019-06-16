@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Bloom Filter(Draft)"
+title: "Bloom Filter - Draft"
 index: 331
 category: algorithm
 image: dsa.png

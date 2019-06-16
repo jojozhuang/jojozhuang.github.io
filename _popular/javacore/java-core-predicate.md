@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Predicate(Draft)"
+title: "Predicate - Draft"
 index: 247
 category: core
 image: java.png
