@@ -26,28 +26,6 @@ categories:
         description: Mobile
         icon: fas fa-mobile-alt
         type: mobile
-  - name: Java
-    subcategories:
-      - name: Core
-        description: Core features of Java
-        icon: fab fa-java
-        type: core
-      - name: Java 8
-        description: New features in Java 8
-        icon: fas fa-tachometer-alt
-        type: java8
-      - name: Advanced
-        description: Advanced topics of Java
-        icon: fas fa-tachometer-alt
-        type: advanced
-      - name: Concurrency
-        description: Concurrency and MultiThreading
-        icon: fas fa-tachometer-alt
-        type: multithreading
-      - name: Practice
-        description: Practice of Java
-        icon: fas fa-tachometer-alt
-        type: practice
   - name: DevOps
     subcategories:
       - name: Basis
