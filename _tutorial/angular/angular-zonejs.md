@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Zone.js[Draft]"
+title: "Zone.js - Draft"
 index: 313
 category: angular
 image: angular.png

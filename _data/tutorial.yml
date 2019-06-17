@@ -10,32 +10,52 @@ categories:
         description: Development Environment
         icon: fab fa-dev
         type: devenv
-  - name: Frontend
+  - name: Backend
     subcategories:
-      - name: Javascript
-        description: Javascript
-        icon: fab fa-js-square
-        type: javascript
-      - name: Restful
-        description: Restful
+      - name: RESTful API
+        description: RESTful API
         icon: fas fa-tachometer-alt
         type: restful
       - name: Node.js
         description: Node.js
         icon: fab fa-node-js
         type: nodejs
-      - name: AngularJS
-        description: AngularJS
+      - name: Express.js
+        description: Express.js
+        icon: fab fa-node-js
+        type: expressjs
+  - name: Frontend
+    subcategories:
+      - name: Javascript
+        description: Javascript
+        icon: fab fa-js-square
+        type: javascript
+      - name: Angular Tutorial
+        description: Angular Tutorial
         icon: fab fa-angular
         type: angular
-      - name: ReactJS
-        description: ReactJS
+      - name: Angular App
+        description: Angular App
+        icon: fab fa-angular
+        type: angularapp
+      - name: React Tutorial
+        description: React Tutorial
         icon: fab fa-react
         type: reactjs
+      - name: React App
+        description: React App
+        icon: fab fa-react
+        type: reactapp
       - name: Mobile
         description: Mobile
         icon: fas fa-mobile-alt
         type: mobile
+  - name: Project
+    subcategories:
+      - name: Online Judge
+        description: Online Judge
+        icon: fab fa-js-square
+        type: onlinejudge
   - name: Distributed System
     subcategories:
       - name: NoSQL

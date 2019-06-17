@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Directives"
+title: "Angular Directives"
 index: 305
 category: angular
 image: angular.png

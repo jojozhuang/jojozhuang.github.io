@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Mobile App with React Native[Draft]"
+title: "Building Mobile App with React Native - Draft"
 index: 611
 category: mobile
 image: mobiledev.png
@@ -13,7 +13,7 @@ tags: [React Native, Yarn]
 > Build web application with ReactJS.
 
 ## 1. Game Store Web Application
-In the posting [Building Web Application with Angular]({% link _tutorial/angular/building-web-application-with-angular.md %}), I introduced how to use Angular and RESTful web service to create a web application to manage products. In this tutorial, we will learn how to use React to build such web application with the same UI and functions.
+In the posting [Building Web Application with Angular]({% link _tutorial/angularapp/building-web-application-with-angular.md %}), I introduced how to use Angular and RESTful web service to create a web application to manage products. In this tutorial, we will learn how to use React to build such web application with the same UI and functions.
 
 ## 2. Tools
 Since react native doesn't support npm5, have to use `yarn`.  

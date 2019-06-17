@@ -52,7 +52,7 @@ Click on the 'Accepted' or 'Wrong Answer' link to view the submission in details
 ![image](/public/images/portfolio/onlinejudgemean/submission.png)
 
 ## 4. Under the Hood
-Read tutorial [Building Online Judge Application With MEAN Stack]({% link _tutorial/angular/building-online-judge-application-with-mean-stack.md %}) and [Online Judge - Judging System]({% link _tutorial/angular/online-judge-judging-system.md %}) to learn how this online judge app is built.
+Read tutorial [Building Online Judge Application With MEAN Stack]({% link _tutorial/project/building-online-judge-application-with-mean-stack.md %}) and [Online Judge - Judging System]({% link _tutorial/project/online-judge-judging-system.md %}) to learn how this online judge app is built.
 
 ## 5. Source Files
 * [Source files of Online Judge(MEAN) on Github](https://github.com/jojozhuang/online-judge-mean)

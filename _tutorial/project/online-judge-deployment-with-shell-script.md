@@ -1,0 +1,26 @@
+---
+layout: tutorial
+key: tutorial
+title: "Deployment with Shell Script - Draft"
+index: 363
+category: onlinejudge
+image: angular.png
+date: 2017-03-13
+postdate: 2018-04-28
+tags: [Online Judge]
+---
+
+> Learn how to deployment the online Judge application through shell script.
+
+
+
+## 11. Run Script
+// compile java with shell script
+
+// ShellJS - Unix shell commands for Node.js, Can be used to create deployment script.
+
+
+
+## 5. References
+* [Java compile example - A Linux shell script](https://alvinalexander.com/blog/post/java/unix-shell-script-i-use-for-compiling-java-programs)
+* [ShellJS - Unix shell commands for Node.js](https://www.npmjs.com/package/shelljs)

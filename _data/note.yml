@@ -6,7 +6,7 @@ categories:
         description: OS, Database
         icon: fas fa-sitemap
         type: basis
-      - name: Study Notes
+      - name: Book Notes
         description: Notes for books or online doc
         icon: fas fa-sitemap
         type: notes

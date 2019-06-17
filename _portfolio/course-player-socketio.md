@@ -35,9 +35,9 @@ You can drag the slider bar to move forward or backward.
 ![image](/public/images/portfolio/courseplayersocketio/drag.png)
 
 ## 4. Under the Hood
-Read tutorial [Building Course Player with Node.js and Socket.IO]({% link _tutorial/react/building-course-player-with-nodejs-and-socketio.md %}) to learn the details of Socket.IO and how this course player is built.
+Read tutorial [Building Course Player with Node.js and Socket.IO]({% link _tutorial/reactapp/building-course-player-with-nodejs-and-socketio.md %}) to learn the details of Socket.IO and how this course player is built.
 
-Besides, read another tutorial [Building Realtime Web Application with WebSocket]({% link _tutorial/react/building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind Socket.IO.
+Besides, read another tutorial [Building Realtime Web Application with WebSocket]({% link _tutorial/reactapp/building-realtime-web-application-with-websocket.md %}) to learn the basic knowledge of [WebSocket](https://en.wikipedia.org/wiki/WebSocket), which is the technology behind Socket.IO.
 
 ## 5. Source Files
 * [Source files of Course Player (Socket.IO) on Github](https://github.com/jojozhuang/course-player-socketio)

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Routes and Navigation"
+title: "Routes and Navigation"
 index: 308
 category: angular
 image: angular.png

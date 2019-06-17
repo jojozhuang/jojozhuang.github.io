@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "TypeScript"
+title: "Using TypeScript in Angular"
 index: 302
 category: angular
 image: angular.png
