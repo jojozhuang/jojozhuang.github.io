@@ -4,6 +4,7 @@ key: tutorial
 title: "Deploying Web Applications to Cloud Services"
 index: 44
 category: knowledge
+navpath: [Tutorial, Prerequisites, Knowledge]
 image: code.png
 date: 2016-04-04
 postdate: 2018-08-05
