@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Advanced Topics[Draft]"
+title: "Advanced Topics - Draft"
 index: 315
 category: angular
 image: angular.png

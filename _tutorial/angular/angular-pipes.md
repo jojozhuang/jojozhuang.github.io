@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Pipes"
+title: "Angular Pipes"
 index: 312
 category: angular
 image: angular.png

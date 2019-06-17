@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Observable and Reactive Programming[Draft]"
+title: "Observable and Reactive Programming - Draft"
 index: 309
 category: angular
 image: angular.png

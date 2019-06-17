@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - CLI"
+title: "Angular CLI"
 index: 301
 category: angular
 image: angular.png

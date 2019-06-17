@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - HTTP and HttpClient(Draft)"
+title: "HTTP and HttpClient - Draft"
 index: 310
 category: angular
 image: angular.png

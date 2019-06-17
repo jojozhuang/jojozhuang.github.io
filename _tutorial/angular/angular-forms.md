@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Forms"
+title: "Angular Forms"
 index: 311
 category: angular
 image: angular.png

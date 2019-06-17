@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular - Components"
+title: "Angular Components"
 index: 303
 category: angular
 image: angular.png
