@@ -4,6 +4,7 @@ key: tutorial
 title: "Sharing files between Host and Guest in VirtualBox"
 index: 12
 category: devenv
+navpath: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-12
 postdate: 2016-10-10
