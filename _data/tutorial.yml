@@ -59,6 +59,10 @@ categories:
         type: onlinejudge
   - name: Distributed System
     subcategories:
+      - name: Network
+        description: Network
+        icon: fas fa-tachometer-alt
+        type: network
       - name: NoSQL
         description: MongoDB
         icon: fas fa-tachometer-alt

@@ -4,6 +4,7 @@ key: tutorial
 title: "Using MongoDB in Shell"
 index: 33
 category: devenv
+navpath: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-03-03
 postdate: 2017-11-09

@@ -4,6 +4,7 @@ key: tutorial
 title: "Getting Started with macOS"
 index: 2
 category: devenv
+navpath: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-02
 postdate: 2017-06-17

@@ -6,7 +6,7 @@
       var appendString = '';
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = results[i];
-				console.log(item);
+				//console.log(item);
         appendString += '<dd>';
         appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
         appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
@@ -46,9 +46,9 @@
     for (var key in window.store) {
       var navpath = window.store[key].navpath;
       if (navpath) {
-        console.log(navpath);
+        //console.log(navpath);
       }
-      if (navpath.startsWith("[Tutorial, Prerequisites,")) {
+      if (navpath.startsWith("["+searchTerm)) {
         results.push({
           'id': key,
           'title': window.store[key].title,
@@ -60,8 +60,8 @@
       }
     }
 
-    console.log("results:");
-    console.log(results);
+    //console.log("results:");
+    //console.log(results);
     displaySearchResults(results, window.store); // We'll write this in the next section
   }
 })();

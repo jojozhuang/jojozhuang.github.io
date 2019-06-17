@@ -4,6 +4,7 @@ key: tutorial
 title: "Setting up Java Development Environment on Ubuntu"
 index: 13
 category: devenv
+navpath: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-13
 postdate: 2016-10-31

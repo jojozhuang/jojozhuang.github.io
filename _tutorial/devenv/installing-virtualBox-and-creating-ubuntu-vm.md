@@ -4,6 +4,7 @@ key: tutorial
 title: "Installing VirtualBox and Creating Ubuntu VM"
 index: 11
 category: devenv
+navpath: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-11
 postdate: 2016-10-03
