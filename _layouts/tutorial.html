@@ -25,6 +25,16 @@ layout: default
           <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10 post-content">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  {% assign searchkey = '' %}
+                  {% for item in page.navpath %}
+                    {% assign searchkey = searchkey | append: item | append: ', ' %}
+                    <li class="breadcrumb-item"><a href="/navigation?query={{searchkey}}">{{item}}</a></li>
+                  {% endfor %}
+                  <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+                </ol>
+              </nav>
               <h1>{{ page.index }}. {{ page.title }}</br><small>{{ page.tags | array_to_sentence_string }}</small></h1>
               {% include pagination.html %}
               <hr>

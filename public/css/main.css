@@ -9,6 +9,11 @@ footer {
   padding: 25px;
 }
 
+/* change separator of breadcrumb  */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+
 .container {
     margin-top:80px
 }
