@@ -39,7 +39,7 @@
   }
 }
 
-.page-wrapper {
+.sidebar-wrapper {
   font-size: 0.9rem;
 }
 
@@ -357,11 +357,11 @@
   display: inline-block;
   width: 100%;
   padding-left: 0px;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 .page-wrapper .page-content > div {
-  padding: 20px 40px;
+  padding: 0 40px 20px 40px;
 }
 
 .page-wrapper .page-content {

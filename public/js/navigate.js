@@ -7,16 +7,46 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = results[i];
 				//console.log(item);
+        //appendString += '<dd>';
+        //appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
+        //appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
+        //appendString += '  </a>';
+        //appendString += '  <div class="float-left"><p>' + item.excerpt + '</p></div>';
+        //appendString += '</dd>';
         appendString += '<dd>';
-        appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
-        appendString += '  </a>';
-        appendString += '  <div class="float-left"><p>' + item.excerpt + '</p></div>';
+        appendString += '  <div class="media">';
+        appendString += '    <div class="media-left">';
+        appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
+        appendString += '        <img src="../public/assets/category/' + item.image + '" class="rounded" style="width:80px;margin-right:10px">';
+        appendString += '      </a>';
+        appendString += '    </div>';
+        appendString += '    <div class="media-body">';
+        appendString += '      <a href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title + '</span></div></a>';
+        appendString += '      <p>' + item.excerpt + '</p>';
+        appendString += '      <div class="pull-left">';
+        appendString += '          <ul class="list-inline list-unstyled">';
+        appendString += '            <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
+        appendString += '            <li class="list-inline-item">|</li>';
+        appendString += '            <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="' + item.url + '#disqus_thread">Comments</a></li>';
+        appendString += '            <li class="list-inline-item hidden-extra">|</li>';
+        appendString += '            <li class="list-inline-item hidden-extra">';
+        appendString += '              <span><i class="fas fa-tags" style="color:#3B5998"></i> ' + item.tags + ' </span>';
+        appendString += '            </li>';
+        appendString += '            <li class="list-inline-item hidden-extra">|</li>';
+        appendString += '            <li class="list-inline-item hidden-extra">';
+        appendString += '              <span><i class="fab fa-facebook" style="color:#3B5998"></i></span>';
+        appendString += '              <span><i class="fab fa-twitter-square" style="color:#1DA1F2"></i></span>';
+        appendString += '              <span><i class="fab fa-google-plus" style="color:#DB4437"></i></span>';
+        appendString += '            </li>';
+        appendString += '          </ul>';
+        appendString += '      </div>';
+        appendString += '    </div>';
+        appendString += '  </div>';
         appendString += '</dd>';
       }
       searchResults.innerHTML = appendString;
     } else {
-      searchResults.innerHTML = '<li>No results found</li>';
+      searchResults.innerHTML = 'No content';
     }
   }
 
@@ -35,14 +65,29 @@
 
   var searchTerm = getQueryVariable('query');
   var results = [];
+  if (searchTerm) {
+    $(".page-wrapper").removeClass("toggled");
+  } else {
+    $(".page-wrapper").addClass("toggled");
+    searchTerm = "Tutorial,"
+  }
 
   if (searchTerm) {
-    if (searchTerm) {
-      searchTerm = searchTerm.substring(0, searchTerm.length - 1);
+    // bread crumb
+    searchTerm = searchTerm.substring(0, searchTerm.length - 1);
+    var terms = searchTerm.split(",");
+    var appendString = '';
+    var searchkey = '';
+    appendString += '<ol class="breadcrumb">';
+    for (i = 0; i < terms.length; i++) {
+      searchkey += terms[i] + ",";
+      appendString += '  <li class="breadcrumb-item"><a href="/tutorial?query=' + searchkey + '">'+terms[i]+'</a></li>';
     }
-    //document.getElementById('search-box').setAttribute("value", searchTerm);
-    document.getElementById('search-key').innerHTML = searchTerm;
+    appendString += '</ol>';
+    var breadcrumb = document.getElementById('bread-crumb');
+    breadcrumb.innerHTML = appendString;
 
+   // search
     for (var key in window.store) {
       var navpath = window.store[key].navpath;
       if (navpath) {
@@ -55,10 +100,14 @@
           'content': window.store[key].content,
           'url': window.store[key].url,
           'index': window.store[key].index,
-          'excerpt': window.store[key].excerpt
+          'excerpt': window.store[key].excerpt,
+          'tags': window.store[key].tags,
+          'postdate': window.store[key].postdate,
+          'image': window.store[key].image
         });
       }
     }
+    console.log(window.tc);
 
     //console.log("results:");
     //console.log(results);

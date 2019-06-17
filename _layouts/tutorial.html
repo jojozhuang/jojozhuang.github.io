@@ -23,14 +23,13 @@ layout: default
       <!-- sidebar-wrapper  -->
       <main class="page-content">
           <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10 post-content">
+            <div class="col-md-12">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   {% assign searchkey = '' %}
                   {% for item in page.navpath %}
                     {% assign searchkey = searchkey | append: item | append: ', ' %}
-                    <li class="breadcrumb-item"><a href="/navigation?query={{searchkey}}">{{item}}</a></li>
+                    <li class="breadcrumb-item"><a href="/tutorial?query={{searchkey}}">{{item}}</a></li>
                   {% endfor %}
                   <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                 </ol>
@@ -48,7 +47,6 @@ layout: default
                 {% include disqus.html %}
               </div>
             </div>
-            <div class="col-sm-1"></div>
           </div>
 
       </main>

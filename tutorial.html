@@ -1,31 +1,50 @@
 ---
 layout: default
 key: tutorial
+tutorial: list
+title: Rong Zhuang's Tutorial
 ---
-<script>
-  $(document).ready(function(){
-    $('img').addClass('image-software');
-    $('img').addClass('img-responsive');
-  });
-</script>
 <div class="container">
-    <div class="page-wrapper chiller-theme toggled">
-      {% assign subject = site.data.tutorial %}
-      {% assign postings = site.tutorial | sort: 'index' %}
-      {% include sidebar.html %}
-      <!-- sidebar-wrapper  -->
-      <main class="page-content">
-        <div class="container-fluid">
-          <h2>{{subject.name}}</h2>
-          <hr>
-          <div class="row">
-            <div class="form-group col-md-12">
-              <p>Tutorials for data stucture, algorithm, node.js, angular, react, etc.</p>
-              <p>This page is still under construction, and will be coming soon!</p>
-            </div>
-          </div>
+  <div class="page-wrapper chiller-theme">
+    {% assign subject = site.data.tutorial %}
+    {% assign postings = site.tutorial | sort: 'index' %}
+    {% include sidebar.html %}
+    <!-- sidebar-wrapper  -->
+    <main class="page-content">
+      <div class="row">
+        <div class="col-md-12">
+          <nav aria-label="breadcrumb" id="bread-crumb"></nav>
+          <dl class="dl-unsur" id="search-results">
         </div>
-      </main>
-      <!-- page-content" -->
-    </div>
+      </div>
+    </main>
+    <!-- page-content" -->
+  </div>
 </div>
+
+<script>
+  window.store = {
+    {% assign tutorials = site.tutorial %}
+    {% assign postings = tutorials %}
+    {% for post in postings %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "category": "{{ post.category | xml_escape }}",
+        "navpath": "{{ post.navpath | replace: '&quot', '' | replace: '"','' }}",
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ post.url | xml_escape }}",
+        "index": "{{ post.index | xml_escape }}",
+        "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
+        "tags": "{{ post.tags | join: ", "}}",
+        "postdate": "{{ post.postdate | date_to_string}}",
+        "image": "{{ post.image | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  // tutorial category
+  //window.tc = {{ site.data.tutorial | replace: '=>', ':'}};
+
+</script>
+<script src="/public/js/navigate.js"></script>
