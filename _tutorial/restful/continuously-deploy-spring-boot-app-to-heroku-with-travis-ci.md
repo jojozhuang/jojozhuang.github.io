@@ -4,6 +4,7 @@ key: tutorial
 title: "Continuously Deploy Spring Boot App to Heroku with Travis-CI"
 index: 158
 category: restful
+breadcrumb: [Tutorial, Backend, RESTful]
 image: restfulapi.png
 date: 2016-07-08
 postdate: 2018-08-10

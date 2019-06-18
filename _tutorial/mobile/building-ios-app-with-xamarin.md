@@ -4,6 +4,7 @@ key: tutorial
 title: "Building iOS App with Xamarin"
 index: 607
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-07
 postdate: 2017-07-21

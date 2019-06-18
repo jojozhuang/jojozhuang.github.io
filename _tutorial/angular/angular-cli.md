@@ -4,6 +4,7 @@ key: tutorial
 title: "Angular CLI"
 index: 301
 category: angular
+breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
 date: 2017-01-01
 postdate: 2018-03-09

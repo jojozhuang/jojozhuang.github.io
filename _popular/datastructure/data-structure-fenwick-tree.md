@@ -4,6 +4,7 @@ key: popular
 title: "Fenwick Tree - Draft"
 index: 311
 category: datastructure
+breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-11
 postdate: 2016-03-11

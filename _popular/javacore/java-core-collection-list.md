@@ -4,6 +4,7 @@ key: popular
 title: "Collection - List"
 index: 207
 category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-07
 postdate: 2017-01-07

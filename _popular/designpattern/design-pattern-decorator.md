@@ -4,6 +4,7 @@ key: popular
 title: "Decorator"
 index: 513
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-13
 postdate: 2016-05-13

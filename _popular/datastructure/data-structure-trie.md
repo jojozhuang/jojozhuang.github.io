@@ -4,6 +4,7 @@ key: popular
 title: "Trie"
 index: 309
 category: datastructure
+breadcrumb: [Popular, General, Data Structure]
 image: /dsa.png
 date: 2016-03-09
 postdate: 2016-03-09

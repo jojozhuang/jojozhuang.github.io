@@ -4,6 +4,7 @@ key: popular
 title: "Building Web Server with Java Socket"
 index: 531
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-10-01
 postdate: 2016-02-24

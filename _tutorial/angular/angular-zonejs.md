@@ -4,6 +4,7 @@ key: tutorial
 title: "Zone.js - Draft"
 index: 313
 category: angular
+breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
 date: 2017-01-13
 postdate: 2018-03-21

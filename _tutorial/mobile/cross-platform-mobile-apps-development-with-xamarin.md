@@ -4,6 +4,7 @@ key: tutorial
 title: "Cross-platform Mobile Apps Development with Xamarin"
 index: 606
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-06
 postdate: 2017-07-20

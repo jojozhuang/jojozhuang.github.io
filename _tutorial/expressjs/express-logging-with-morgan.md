@@ -4,6 +4,7 @@ key: tutorial
 title: "Logging with Morgan"
 index: 253
 category: expressjs
+breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png
 date: 2016-11-03
 postdate: 2018-01-07

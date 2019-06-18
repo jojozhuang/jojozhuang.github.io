@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Course Player with SignalR and ASP.NET"
 index: 414
 category: reactapp
+breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-06-04
 postdate: 2016-03-15

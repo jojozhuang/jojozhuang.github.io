@@ -4,6 +4,7 @@ key: popular
 title: "Deque"
 index: 304
 category: datastructure
+breadcrumb: [Popular, General, Data Structure]
 image: /dsa.png
 date: 2016-03-04
 postdate: 2016-03-04

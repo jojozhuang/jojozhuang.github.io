@@ -4,6 +4,7 @@ key: tutorial
 title: "Setting up Android Development Environment on Mac"
 index: 603
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-03
 postdate: 2017-07-13

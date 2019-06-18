@@ -4,6 +4,7 @@ key: popular
 title: "Strategy"
 index: 529
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-29
 postdate: 2016-05-29

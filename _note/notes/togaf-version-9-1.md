@@ -4,6 +4,7 @@ key: note
 title: "TOGAF Version 9.1(Draft)"
 index: 701
 category: notes
+breadcrumb: [Note, Work Space, Book Notes]
 image: note.png
 date: 2017-07-01
 postdate: 2017-07-01

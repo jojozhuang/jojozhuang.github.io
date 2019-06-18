@@ -4,7 +4,7 @@ key: tutorial
 title: "Installing MySQL and Workbench on Mac"
 index: 31
 category: devenv
-navpath: [Tutorial, Prerequisites, Dev Environment]
+breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-03-01
 postdate: 2017-10-30

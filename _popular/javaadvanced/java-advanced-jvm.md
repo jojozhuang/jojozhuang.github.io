@@ -4,6 +4,7 @@ key: popular
 title: "Java Advanced - JVM - Draft"
 index: 237
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-03-07
 postdate: 2017-03-07

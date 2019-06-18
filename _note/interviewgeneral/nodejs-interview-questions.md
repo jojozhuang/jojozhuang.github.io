@@ -4,7 +4,7 @@ key: note
 title: "Node.js Interview Questions - Draft"
 index: 121
 category: interview-general
-navpath: [Note, Interview Questions, General]
+breadcrumb: [Note, Interview Questions, General]
 image: interview.png
 date: 2016-01-21
 postdate: 2016-01-21

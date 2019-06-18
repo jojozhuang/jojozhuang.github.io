@@ -4,6 +4,7 @@ key: note
 title: "Technologies Used in Ariba(Draft)"
 index: 720
 category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2017-07-20
 postdate: 2017-07-20

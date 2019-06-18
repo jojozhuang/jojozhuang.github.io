@@ -4,6 +4,7 @@ key: tutorial
 title: "Mobile App Development"
 index: 601
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-01
 postdate: 2017-07-08

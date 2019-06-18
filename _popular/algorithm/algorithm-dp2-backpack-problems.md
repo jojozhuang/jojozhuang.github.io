@@ -4,6 +4,7 @@ key: popular
 title: "Backpack Problems"
 index: 328
 category: algorithm
+breadcrumb: [Popular, General, Algorithm]
 image: dsa.png
 date: 2016-03-28
 postdate: 2016-03-28

@@ -4,6 +4,7 @@ key: popular
 title: "Java Advanced - Object Class - Draft"
 index: 232
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-03-02
 postdate: 2017-03-02

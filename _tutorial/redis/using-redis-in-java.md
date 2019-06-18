@@ -4,6 +4,7 @@ key: tutorial
 title: "Using Redis in Java"
 index: 47
 category: redis
+breadcrumb: [Tutorial, Distributed System, Redis]
 image: code.png
 date: 2016-04-07
 postdate: 2018-08-08

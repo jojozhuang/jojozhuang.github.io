@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Android App with Android Studio"
 index: 604
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-04
 postdate: 2017-07-16

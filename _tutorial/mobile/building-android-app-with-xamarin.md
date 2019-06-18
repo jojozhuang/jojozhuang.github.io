@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Android App with Xamarin"
 index: 608
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-08
 postdate: 2017-07-22

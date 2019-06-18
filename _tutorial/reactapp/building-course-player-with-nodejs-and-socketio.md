@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Course Player with Node.js and Socket.IO"
 index: 415
 category: reactapp
+breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-06-05
 postdate: 2016-03-16

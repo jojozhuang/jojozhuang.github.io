@@ -4,6 +4,7 @@ key: tutorial
 title: "Continuously Deploy Angular App to GitHub Pages using Travis-CI"
 index: 331
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-01-31
 postdate: 2018-08-09

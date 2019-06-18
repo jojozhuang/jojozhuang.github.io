@@ -4,6 +4,7 @@ key: popular
 title: "Java - Thread Dumps & Analysis"
 index: 604
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-06-04
 postdate: 2017-06-04

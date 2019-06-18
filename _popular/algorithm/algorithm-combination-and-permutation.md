@@ -4,6 +4,7 @@ key: popular
 title: "Combination and Permutation"
 index: 327
 category: algorithm
+breadcrumb: [Popular, General, Algorithm]
 image: dsa.png
 date: 2016-03-27
 postdate: 2016-03-27

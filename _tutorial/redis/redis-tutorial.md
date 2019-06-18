@@ -4,6 +4,7 @@ key: tutorial
 title: "Redis Tutorial"
 index: 45
 category: redis
+breadcrumb: [Tutorial, Distributed System, Redis]
 image: code.png
 date: 2016-04-05
 postdate: 2018-08-06

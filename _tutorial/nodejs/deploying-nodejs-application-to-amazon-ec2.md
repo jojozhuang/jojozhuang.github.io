@@ -4,6 +4,7 @@ key: tutorial
 title: "Deploying Node.js Application to Amazon EC2"
 index: 225
 category: nodejs
+breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
 date: 2016-09-25
 postdate: 2016-03-18

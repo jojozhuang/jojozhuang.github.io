@@ -4,6 +4,7 @@ key: note
 title: "Recently Visited Websites and Links"
 index: 122
 category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2016-01-22
 postdate: 2016-01-22

@@ -4,6 +4,7 @@ key: popular
 title: "Java 8 - Higher Order Functions"
 index: 253
 category: java8
+breadcrumb: [Popular, Java, Java8]
 image: java.png
 date: 2017-05-03
 postdate: 2017-05-03

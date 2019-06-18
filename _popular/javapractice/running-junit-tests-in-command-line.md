@@ -4,6 +4,7 @@ key: popular
 title: "Running JUnit Tests in Command Line"
 index: 521
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-21
 postdate: 2018-02-20

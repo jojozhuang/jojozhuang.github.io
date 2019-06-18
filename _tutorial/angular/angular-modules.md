@@ -4,6 +4,7 @@ key: tutorial
 title: "Angular Modules"
 index: 304
 category: angular
+breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
 date: 2017-01-04
 postdate: 2018-03-12

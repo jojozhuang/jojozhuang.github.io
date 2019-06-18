@@ -4,6 +4,7 @@ key: tutorial
 title: "Deploying Game Store React App to Azure with FTP"
 index: 407
 category: reactapp
+breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-05-07
 postdate: 2018-08-04

@@ -4,6 +4,7 @@ key: popular
 title: "Socket Programming with Java"
 index: 504
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-04
 postdate: 2016-02-22

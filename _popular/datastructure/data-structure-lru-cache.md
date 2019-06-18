@@ -4,6 +4,7 @@ key: popular
 title: "LRU Cache"
 index: 305
 category: datastructure
+breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-05
 postdate: 2016-03-05

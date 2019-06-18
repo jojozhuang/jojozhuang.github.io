@@ -4,6 +4,7 @@ key: tutorial
 title: "Deploying Text Compare Angular App to Docker"
 index: 328
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-01-28
 postdate: 2018-07-28

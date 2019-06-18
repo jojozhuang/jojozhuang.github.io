@@ -4,7 +4,7 @@ key: tutorial
 title: "Setting up Java Development Environment on Mac"
 index: 14
 category: devenv
-navpath: [Tutorial, Prerequisites, Dev Environment]
+breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-14
 postdate: 2016-11-01

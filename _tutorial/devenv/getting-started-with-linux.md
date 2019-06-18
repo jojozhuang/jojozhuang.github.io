@@ -4,7 +4,7 @@ key: tutorial
 title: "Getting Started with Linux"
 index: 1
 category: devenv
-navpath: [Tutorial, Prerequisites, Dev Environment]
+breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-01
 postdate: 2017-07-26

@@ -4,7 +4,7 @@ key: tutorial
 title: "Installing and Using Git"
 index: 15
 category: devenv
-navpath: [Tutorial, Prerequisites, Dev Environment]
+breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-15
 postdate: 2017-08-31

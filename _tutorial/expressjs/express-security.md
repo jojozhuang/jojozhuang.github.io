@@ -4,6 +4,7 @@ key: tutorial
 title: "Express Security - Draft"
 index: 258
 category: expressjs
+breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png
 date: 2016-11-08
 postdate: 2018-01-12

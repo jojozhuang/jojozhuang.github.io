@@ -4,6 +4,7 @@ key: note
 title: "Java Interview Questions - String"
 index: 104
 category: interview-java
+breadcrumb: [Note, Interview Questions, Java Questions]
 image: interview.png
 date: 2016-01-04
 postdate: 2016-01-04

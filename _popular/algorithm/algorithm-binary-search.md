@@ -4,6 +4,7 @@ key: popular
 title: "Binary Search"
 index: 322
 category: algorithm
+breadcrumb: [Popular, General, Algorithm]
 image: dsa.png
 date: 2016-03-22
 postdate: 2016-03-22

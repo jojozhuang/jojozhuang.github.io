@@ -4,6 +4,7 @@ key: tutorial
 title: "Installing Nginx in MacOS"
 index: 41
 category: nginx
+breadcrumb: [Tutorial, Distributed System, Nginx]
 image: code.png
 date: 2016-04-01
 postdate: 2018-05-26

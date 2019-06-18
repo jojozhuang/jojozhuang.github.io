@@ -4,6 +4,7 @@ key: tutorial
 title: "Deployment with Shell Script - Draft"
 index: 363
 category: onlinejudge
+breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png
 date: 2017-03-13
 postdate: 2018-04-28

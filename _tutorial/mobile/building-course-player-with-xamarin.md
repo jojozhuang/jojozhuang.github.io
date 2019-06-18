@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Course Player with Xamarin"
 index: 609
 category: mobile
+breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
 date: 2018-01-09
 postdate: 2017-07-24

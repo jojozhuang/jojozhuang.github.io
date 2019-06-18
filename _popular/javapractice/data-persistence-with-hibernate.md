@@ -4,6 +4,7 @@ key: popular
 title: "Data Persistence with Hibernate"
 index: 536
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-10-06
 postdate: 2016-12-23

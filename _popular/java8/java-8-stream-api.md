@@ -4,6 +4,7 @@ key: popular
 title: "Java 8 - Stream API"
 index: 256
 category: java8
+breadcrumb: [Popular, Java, Java8]
 image: java.png
 date: 2017-05-06
 postdate: 2017-05-06

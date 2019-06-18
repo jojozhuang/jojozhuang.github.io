@@ -4,6 +4,7 @@ key: popular
 title: "Data Fix with Javascript For Web Application"
 index: 540
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-10-10
 postdate: 2017-10-13

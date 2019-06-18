@@ -4,6 +4,7 @@ key: tutorial
 title: "ZooKeeper"
 index: 50
 category: zookeeper
+breadcrumb: [Tutorial, Distributed System, Zookeeper]
 image: code.png
 date: 2016-04-10
 postdate: 2018-08-10

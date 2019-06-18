@@ -5,32 +5,31 @@ tutorial: list
 ---
 <div class="container">
   <div class="page-wrapper chiller-theme">
+    <!-- sidebar-wrapper  -->
     {% assign subject = site.data.note %}
     {% assign postings = site.note | sort: 'index' %}
     {% include sidebar.html %}
-    <!-- sidebar-wrapper  -->
+    <!-- page-content" -->
     <main class="page-content">
       <div class="row">
         <div class="col-md-12">
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
-          <dl class="dl-unsur" id="search-results">
+          <dl class="dl-unsur" id="posting-list">
         </div>
       </div>
     </main>
     <input type="hidden" id="subject" name="subject" value="{{page.key}}">
-    <!-- page-content" -->
   </div>
 </div>
 
 <script>
   window.store = {
-    {% assign notes = site.note %}
-    {% assign postings = notes %}
+    {% assign postings = site.note %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
-        "navpath": "{{ post.navpath | replace: '&quot', '' | replace: '"','' }}",
+        "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
         "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",

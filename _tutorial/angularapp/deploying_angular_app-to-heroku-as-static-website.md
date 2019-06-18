@@ -4,6 +4,7 @@ key: tutorial
 title: "Deploying Angular App to Heroku as Static Website"
 index: 341
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-02-01
 postdate: 2019-05-25

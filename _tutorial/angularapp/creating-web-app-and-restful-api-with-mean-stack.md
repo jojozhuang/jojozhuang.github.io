@@ -4,6 +4,7 @@ key: tutorial
 title: "Creating Web App and RESTful API with MEAN Stack"
 index: 324
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-01-24
 postdate: 2018-01-25

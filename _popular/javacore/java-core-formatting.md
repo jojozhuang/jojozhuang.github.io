@@ -4,6 +4,7 @@ key: popular
 title: "Formatting"
 index: 203
 category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-03
 postdate: 2016-01-03

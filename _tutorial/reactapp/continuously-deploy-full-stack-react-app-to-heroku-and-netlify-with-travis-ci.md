@@ -4,6 +4,7 @@ key: tutorial
 title: "Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI"
 index: 425
 category: reactapp
+breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-07-05
 postdate: 2018-08-10

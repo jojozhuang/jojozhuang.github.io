@@ -4,6 +4,7 @@ key: tutorial
 title: "Installing Spark on Ubuntu"
 index: 35
 category: bigdata
+breadcrumb: [Tutorial, Distributed System, Big Data]
 image: code.png
 date: 2016-03-05
 postdate: 2017-11-06

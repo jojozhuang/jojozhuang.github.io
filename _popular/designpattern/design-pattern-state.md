@@ -4,6 +4,7 @@ key: popular
 title: "State"
 index: 528
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-28
 postdate: 2016-05-28

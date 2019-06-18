@@ -4,6 +4,7 @@ key: popular
 title: "Factory"
 index: 503
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-03
 postdate: 2016-05-03

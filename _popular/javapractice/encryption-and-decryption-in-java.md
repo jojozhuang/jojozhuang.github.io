@@ -4,6 +4,7 @@ key: popular
 title: "Encryption and Decryption in Java"
 index: 503
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-03
 postdate: 2018-05-10

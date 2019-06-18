@@ -4,6 +4,7 @@ key: tutorial
 title: "Routes and Navigation"
 index: 308
 category: angular
+breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
 date: 2017-01-08
 postdate: 2018-03-16

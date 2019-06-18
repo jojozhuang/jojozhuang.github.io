@@ -4,6 +4,7 @@ key: popular
 title: "Remote Debugging JSP Application"
 index: 514
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-14
 postdate: 2016-03-23

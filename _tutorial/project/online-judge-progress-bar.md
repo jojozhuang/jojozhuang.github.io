@@ -4,6 +4,7 @@ key: tutorial
 title: "Progress Bar"
 index: 360
 category: onlinejudge
+breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png
 date: 2017-03-10
 postdate: 2018-05-01

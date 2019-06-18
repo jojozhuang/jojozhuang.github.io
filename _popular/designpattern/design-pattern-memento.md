@@ -4,6 +4,7 @@ key: popular
 title: "Memento"
 index: 525
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-25
 postdate: 2016-05-25

@@ -4,7 +4,7 @@ key: tutorial
 title: "Installing and Using Visual Studio Code"
 index: 17
 category: devenv
-navpath: [Tutorial, Prerequisites, Dev Environment]
+breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-17
 postdate: 2018-07-13
