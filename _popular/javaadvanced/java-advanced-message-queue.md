@@ -4,6 +4,7 @@ key: popular
 title: "Java Advanced - Message Queue - Draft"
 index: 236
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-03-06
 postdate: 2017-03-06

@@ -4,6 +4,7 @@ key: popular
 title: "Minimum Spanning Tree - Draft"
 index: 318
 category: datastructure
+breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-18
 postdate: 2016-03-18

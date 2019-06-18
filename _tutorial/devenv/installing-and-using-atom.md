@@ -4,7 +4,7 @@ key: tutorial
 title: "Installing and Using Atom"
 index: 16
 category: devenv
-navpath: [Tutorial, Prerequisites, Dev Environment]
+breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
 date: 2016-01-16
 postdate: 2017-10-15

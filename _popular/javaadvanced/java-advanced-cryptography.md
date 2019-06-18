@@ -4,6 +4,7 @@ key: popular
 title: "Java Advanced - Cryptography - Draft"
 index: 233
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-03-03
 postdate: 2017-03-03

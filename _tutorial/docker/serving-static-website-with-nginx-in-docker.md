@@ -4,6 +4,7 @@ key: tutorial
 title: "Serving Static Website With Nginx In Docker"
 index: 706
 category: docker
+breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
 date: 2018-04-06
 postdate: 2017-10-18

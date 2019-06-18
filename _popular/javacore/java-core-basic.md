@@ -4,6 +4,7 @@ key: popular
 title: "Java Basic - Draft"
 index: 201
 category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-01
 postdate: 2017-01-01

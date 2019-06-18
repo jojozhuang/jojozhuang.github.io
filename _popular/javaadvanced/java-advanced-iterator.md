@@ -4,6 +4,7 @@ key: popular
 title: "Java Advanced - Iterator"
 index: 243
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-04-03
 postdate: 2017-04-03

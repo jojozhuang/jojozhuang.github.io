@@ -4,6 +4,7 @@ key: tutorial
 title: "Using Nginx as Load Balancer"
 index: 43
 category: nginx
+breadcrumb: [Tutorial, Distributed System, Nginx]
 image: code.png
 date: 2016-04-03
 postdate: 2018-05-28

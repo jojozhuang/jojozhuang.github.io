@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Web Application with React and Redux"
 index: 405
 category: reactapp
+breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-05-05
 postdate: 2017-08-20

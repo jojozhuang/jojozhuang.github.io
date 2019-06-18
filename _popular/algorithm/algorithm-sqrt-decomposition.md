@@ -4,6 +4,7 @@ key: popular
 title: "Sqrt Decomposition"
 index: 330
 category: algorithm
+breadcrumb: [Popular, General, Algorithm]
 image: dsa.png
 date: 2016-03-30
 postdate: 2016-03-30

@@ -4,6 +4,7 @@ key: tutorial
 title: "Export Data"
 index: 358
 category: onlinejudge
+breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png
 date: 2017-03-08
 postdate: 2018-04-20

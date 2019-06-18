@@ -4,6 +4,7 @@ key: tutorial
 title: "Deploying Angular App to Heroku with Express Server"
 index: 342
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-02-02
 postdate: 2019-05-26

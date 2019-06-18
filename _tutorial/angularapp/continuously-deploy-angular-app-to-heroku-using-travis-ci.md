@@ -4,6 +4,7 @@ key: tutorial
 title: "Continuously Deploy Angular App to Heroku using Travis-CI"
 index: 343
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-02-03
 postdate: 2019-05-27

@@ -4,6 +4,7 @@ key: tutorial
 title: "Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI"
 index: 365
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-03-15
 postdate: 2018-08-11

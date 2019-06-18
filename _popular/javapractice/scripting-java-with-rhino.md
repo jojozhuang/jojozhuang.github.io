@@ -4,6 +4,7 @@ key: popular
 title: "Scripting Java With Rhino"
 index: 537
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-10-07
 postdate: 2017-10-10

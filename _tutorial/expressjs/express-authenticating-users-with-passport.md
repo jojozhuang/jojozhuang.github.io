@@ -4,6 +4,7 @@ key: tutorial
 title: "Authenticating Users with Passport - Draft"
 index: 260
 category: expressjs
+breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png
 date: 2016-11-10
 postdate: 2018-01-14

@@ -4,6 +4,7 @@ key: popular
 title: "Composite"
 index: 512
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-12
 postdate: 2016-05-12

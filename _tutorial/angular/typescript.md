@@ -4,6 +4,7 @@ key: tutorial
 title: "Using TypeScript in Angular"
 index: 302
 category: angular
+breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
 date: 2017-01-02
 postdate: 2018-03-06

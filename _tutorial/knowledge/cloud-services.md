@@ -4,7 +4,7 @@ key: tutorial
 title: "Cloud Services"
 index: 44
 category: knowledge
-navpath: [Tutorial, Prerequisites, Knowledge]
+breadcrumb: [Tutorial, Prerequisites, Knowledge]
 image: code.png
 date: 2016-04-04
 postdate: 2018-08-05

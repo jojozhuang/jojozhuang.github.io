@@ -4,6 +4,7 @@ key: popular
 title: "Flyweight"
 index: 515
 category: designpattern
+breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-15
 postdate: 2016-05-15

@@ -26,10 +26,10 @@ layout: default
             <div class="col-md-12">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  {% assign searchkey = '' %}
-                  {% for item in page.navpath %}
-                    {% assign searchkey = searchkey | append: item | append: ', ' %}
-                    <li class="breadcrumb-item"><a href="/{{page.key}}?query={{searchkey}}">{{item}}</a></li>
+                  {% assign navigatePath = '' %}
+                  {% for item in page.breadcrumb %}
+                    {% assign navigatePath = navigatePath | append: item | append: ', ' %}
+                    <li class="breadcrumb-item"><a href="/{{page.key}}?navigation={{navigatePath}}">{{item}}</a></li>
                   {% endfor %}
                   <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                 </ol>

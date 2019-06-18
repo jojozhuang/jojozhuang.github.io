@@ -4,6 +4,7 @@ key: popular
 title: "Dynamic Tests with JUnit 5 in Command Line"
 index: 523
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-23
 postdate: 2018-02-22

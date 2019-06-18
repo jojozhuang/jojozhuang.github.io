@@ -4,6 +4,7 @@ key: popular
 title: "Practice - Algorithm Best Practice"
 index: 342
 category: dsa
+breadcrumb: [Popular, General, Algorithm]
 image: /dsa.png
 date: 2016-04-02
 postdate: 2016-04-02

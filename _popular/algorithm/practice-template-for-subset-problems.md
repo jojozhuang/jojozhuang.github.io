@@ -4,6 +4,7 @@ key: popular
 title: "Practice - Template for Subset Problems"
 index: 344
 category: dsa
+breadcrumb: [Popular, General, Algorithm]
 image: /dsa.png
 date: 2016-04-04
 postdate: 2016-04-04

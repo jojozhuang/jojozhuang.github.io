@@ -4,6 +4,7 @@ key: tutorial
 title: "Creating Full Stack App with React and Node.js"
 index: 421
 category: reactapp
+breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-07-01
 postdate: 2018-05-29

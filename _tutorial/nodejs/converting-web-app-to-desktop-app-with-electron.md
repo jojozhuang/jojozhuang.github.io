@@ -4,6 +4,7 @@ key: tutorial
 title: "Converting Web App to Desktop App with Electron"
 index: 229
 category: nodejs
+breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
 date: 2016-09-29
 postdate: 2017-11-03

@@ -1,18 +1,11 @@
 (function() {
   function displaySearchResults(results, store) {
-    var searchResults = document.getElementById('search-results');
+    var searchResults = document.getElementById('posting-list');
 
     if (results.length) { // Are there any results?
       var appendString = '';
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = results[i];
-				//console.log(item);
-        //appendString += '<dd>';
-        //appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
-        //appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
-        //appendString += '  </a>';
-        //appendString += '  <div class="float-left"><p>' + item.excerpt + '</p></div>';
-        //appendString += '</dd>';
         appendString += '<dd>';
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
@@ -68,37 +61,37 @@
   }
 
   var subject = document.getElementById('subject').value;
-  var searchTerm = getQueryVariable('query');
+  var navigation = getQueryVariable('navigation');
   var results = [];
-  if (searchTerm) {
+  if (navigation) {
     $(".page-wrapper").removeClass("toggled");
   } else {
     $(".page-wrapper").addClass("toggled");
-    searchTerm = jsUcfirst(subject) + ",";
+    navigation = jsUcfirst(subject) + ",";
   }
 
-  if (searchTerm) {
+  if (navigation) {
     // bread crumb
-    searchTerm = searchTerm.substring(0, searchTerm.length - 1);
-    var terms = searchTerm.split(",");
+    navigation = navigation.substring(0, navigation.length - 1);
+    var items = navigation.split(",");
     var appendString = '';
-    var searchkey = '';
+    var navigationPath = '';
     appendString += '<ol class="breadcrumb">';
-    for (i = 0; i < terms.length; i++) {
-      searchkey += terms[i] + ",";
-      appendString += '  <li class="breadcrumb-item"><a href="/' + subject + '?query=' + searchkey + '">'+terms[i]+'</a></li>';
+    for (i = 0; i < items.length; i++) {
+      navigationPath += items[i] + ",";
+      appendString += '  <li class="breadcrumb-item"><a href="/' + subject + '?navigation=' + navigationPath + '">'+items[i]+'</a></li>';
     }
     appendString += '</ol>';
-    var breadcrumb = document.getElementById('bread-crumb');
-    breadcrumb.innerHTML = appendString;
+    var breadcrumbCtrl = document.getElementById('bread-crumb');
+    breadcrumbCtrl.innerHTML = appendString;
 
    // search
     for (var key in window.store) {
-      var navpath = window.store[key].navpath;
-      if (navpath) {
-        //console.log(navpath);
+      var breadcrumb = window.store[key].breadcrumb;
+      if (breadcrumb) {
+        //console.log(breadcrumb);
       }
-      if (navpath.startsWith("["+searchTerm)) {
+      if (breadcrumb.startsWith("["+navigation)) {
         results.push({
           'id': key,
           'title': window.store[key].title,

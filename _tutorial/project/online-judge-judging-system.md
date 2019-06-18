@@ -4,6 +4,7 @@ key: tutorial
 title: "Judging System"
 index: 361
 category: onlinejudge
+breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png
 date: 2017-03-11
 postdate: 2018-05-04

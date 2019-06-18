@@ -4,6 +4,7 @@ key: popular
 title: "Using Java Debugger"
 index: 512
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-12
 postdate: 2016-03-21

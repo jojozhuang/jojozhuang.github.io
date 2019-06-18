@@ -4,6 +4,7 @@ key: tutorial
 title: "Flux and Redux"
 index: 404
 category: reactjs
+breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png
 date: 2017-05-04
 postdate: 2017-08-18

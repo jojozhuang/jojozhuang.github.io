@@ -4,6 +4,7 @@ key: note
 title: "Computer English"
 index: 901
 category: others
+breadcrumb: [Note, Work Space, Others]
 image: note.png
 date: 2017-09-01
 postdate: 2017-09-01

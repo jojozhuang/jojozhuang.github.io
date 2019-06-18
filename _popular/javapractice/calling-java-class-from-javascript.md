@@ -4,6 +4,7 @@ key: popular
 title: "Calling Java Class from Javascript"
 index: 539
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-10-09
 postdate: 2017-10-12

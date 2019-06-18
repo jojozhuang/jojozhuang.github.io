@@ -4,6 +4,7 @@ key: note
 title: "Good Articles"
 index: 120
 category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2016-01-20
 postdate: 2016-01-20

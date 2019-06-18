@@ -4,6 +4,7 @@ key: tutorial
 title: "React Router and Client Side Routing"
 index: 423
 category: reactjs
+breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png
 date: 2017-07-03
 postdate: 2018-06-05

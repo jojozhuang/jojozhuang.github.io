@@ -4,6 +4,7 @@ key: popular
 title: "Tricks in Java"
 index: 502
 category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-09-02
 postdate: 2016-03-25

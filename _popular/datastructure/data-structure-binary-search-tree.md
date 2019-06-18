@@ -4,6 +4,7 @@ key: popular
 title: "Binary Search Tree"
 index: 308
 category: datastructure
+breadcrumb: [Popular, General, Data Structure]
 image: /dsa.png
 date: 2016-03-08
 postdate: 2016-03-08

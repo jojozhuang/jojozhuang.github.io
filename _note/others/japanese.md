@@ -4,6 +4,7 @@ key: note
 title: "Japanese"
 index: 902
 category: others
+breadcrumb: [Note, Work Space, Others]
 image: note.png
 date: 2017-09-02
 postdate: 2017-09-02

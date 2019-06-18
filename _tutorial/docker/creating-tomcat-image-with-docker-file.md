@@ -4,6 +4,7 @@ key: tutorial
 title: "Creating Tomcat Image with Docker File"
 index: 709
 category: docker
+breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
 date: 2018-04-09
 postdate: 2017-10-25

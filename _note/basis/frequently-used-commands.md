@@ -4,6 +4,7 @@ key: note
 title: "Frequently Used Commands"
 index: 121
 category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2016-01-21
 postdate: 2016-01-21

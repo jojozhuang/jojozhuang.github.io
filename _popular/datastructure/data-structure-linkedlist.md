@@ -4,7 +4,7 @@ key: popular
 title: "Linked List"
 index: 301
 category: datastructure
-navpath: [Popular, General, Data Structure]
+breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-01
 postdate: 2016-03-01

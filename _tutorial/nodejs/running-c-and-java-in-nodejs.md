@@ -4,6 +4,7 @@ key: tutorial
 title: "Running C and Java in Node.js"
 index: 211
 category: nodejs
+breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
 date: 2016-09-11
 postdate: 2018-05-28

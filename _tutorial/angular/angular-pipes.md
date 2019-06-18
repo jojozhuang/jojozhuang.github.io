@@ -4,6 +4,7 @@ key: tutorial
 title: "Angular Pipes"
 index: 312
 category: angular
+breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
 date: 2017-01-12
 postdate: 2018-03-20

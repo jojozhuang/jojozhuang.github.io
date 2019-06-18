@@ -4,6 +4,7 @@ key: popular
 title: "Java Advanced - MultiThreading"
 index: 244
 category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-04-04
 postdate: 2017-04-04

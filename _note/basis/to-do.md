@@ -4,6 +4,7 @@ key: note
 title: "TO DO"
 index: 123
 category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2016-01-23
 postdate: 2016-01-23
@@ -21,6 +22,7 @@ Todo:
 * Functional Programming
 * Upgrade Bootstrap 3 to 4.
 * Shallow Copy Vs Deep Copy
+* Improving SEO for Github Pages or Jekyll Sites(https://www.readmodwrite.com/2019-01-18-jekyll-seo-tags/)
 
 Tutorials:
 * Redis

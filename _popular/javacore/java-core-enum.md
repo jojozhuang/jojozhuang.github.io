@@ -4,6 +4,7 @@ key: popular
 title: "Enum"
 index: 206
 category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-06
 postdate: 2017-01-06

@@ -4,6 +4,7 @@ key: tutorial
 title: "JavaScript - Modern"
 index: 102
 category: javascript
+breadcrumb: [Tutorial, Frontend, Javascript]
 image: javascript.png
 date: 2016-05-02
 postdate: 2018-07-26

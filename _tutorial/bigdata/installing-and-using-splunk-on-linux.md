@@ -4,6 +4,7 @@ key: tutorial
 title: "Installing and Using Splunk on Linux"
 index: 34
 category: bigdata
+breadcrumb: [Tutorial, Distributed System, Big Data]
 image: code.png
 date: 2016-03-04
 postdate: 2017-08-23

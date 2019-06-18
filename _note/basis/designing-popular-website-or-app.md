@@ -4,6 +4,7 @@ key: note
 title: "Designing Popular Website or App"
 index: 112
 category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2016-01-12
 postdate: 2016-01-12

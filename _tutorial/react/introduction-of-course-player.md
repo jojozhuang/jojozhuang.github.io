@@ -4,6 +4,7 @@ key: tutorial
 title: "Introduction of Course Player"
 index: 411
 category: reactjs
+breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png
 date: 2017-06-01
 postdate: 2016-03-12

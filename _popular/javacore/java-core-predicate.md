@@ -4,6 +4,7 @@ key: popular
 title: "Predicate - Draft"
 index: 247
 category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-04-07
 postdate: 2017-04-07

@@ -4,6 +4,7 @@ key: tutorial
 title: "Building Online Text Compare Tool with Angular"
 index: 326
 category: angularapp
+breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-01-26
 postdate: 2018-07-28
