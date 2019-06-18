@@ -29,7 +29,7 @@ layout: default
                   {% assign searchkey = '' %}
                   {% for item in page.navpath %}
                     {% assign searchkey = searchkey | append: item | append: ', ' %}
-                    <li class="breadcrumb-item"><a href="/tutorial?query={{searchkey}}">{{item}}</a></li>
+                    <li class="breadcrumb-item"><a href="/{{page.key}}?query={{searchkey}}">{{item}}</a></li>
                   {% endfor %}
                   <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                 </ol>

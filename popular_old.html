@@ -1,0 +1,31 @@
+---
+layout: default
+key: popular
+---
+<script>
+  $(document).ready(function(){
+    $('img').addClass('image-software');
+    $('img').addClass('img-responsive');
+  });
+</script>
+<div class="container">
+    <div class="page-wrapper chiller-theme toggled">
+      {% assign subject = site.data.popular %}
+      {% assign postings = site.popular | sort: 'index' %}
+      {% include sidebar.html %}
+      <!-- sidebar-wrapper  -->
+      <main class="page-content">
+        <div class="container-fluid">
+          <h2>{{subject.name}}</h2>
+          <hr>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <p>Tutorials for data stucture, algorithm, node.js, angular, react, etc.</p>
+              <p>This page is still under construction, and will be coming soon!</p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- page-content" -->
+    </div>
+</div>

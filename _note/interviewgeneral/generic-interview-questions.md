@@ -4,6 +4,7 @@ key: note
 title: "Generic Interview Questions - Draft"
 index: 102
 category: interview-general
+navpath: [Note, Interview Questions, General]
 image: interview.png
 date: 2016-01-02
 postdate: 2016-01-02

@@ -4,6 +4,7 @@ key: note
 title: "Massive Data Processing Interview Questions - Draft"
 index: 172
 category: interview-general
+navpath: [Note, Interview Questions, General]
 image: interview.png
 date: 2016-04-02
 postdate: 2016-04-02
