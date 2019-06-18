@@ -4,6 +4,7 @@ key: note
 title: "Interview Questions - Overview"
 index: 101
 category: interview-general
+navpath: [Note, Interview Questions, General]
 image: interview.png
 date: 2016-01-01
 postdate: 2016-01-01

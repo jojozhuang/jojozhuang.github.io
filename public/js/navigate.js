@@ -63,13 +63,18 @@
     }
   }
 
+  function jsUcfirst(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  var subject = document.getElementById('subject').value;
   var searchTerm = getQueryVariable('query');
   var results = [];
   if (searchTerm) {
     $(".page-wrapper").removeClass("toggled");
   } else {
     $(".page-wrapper").addClass("toggled");
-    searchTerm = "Tutorial,"
+    searchTerm = jsUcfirst(subject) + ",";
   }
 
   if (searchTerm) {
@@ -81,7 +86,7 @@
     appendString += '<ol class="breadcrumb">';
     for (i = 0; i < terms.length; i++) {
       searchkey += terms[i] + ",";
-      appendString += '  <li class="breadcrumb-item"><a href="/tutorial?query=' + searchkey + '">'+terms[i]+'</a></li>';
+      appendString += '  <li class="breadcrumb-item"><a href="/' + subject + '?query=' + searchkey + '">'+terms[i]+'</a></li>';
     }
     appendString += '</ol>';
     var breadcrumb = document.getElementById('bread-crumb');
@@ -107,7 +112,6 @@
         });
       }
     }
-    console.log(window.tc);
 
     //console.log("results:");
     //console.log(results);
