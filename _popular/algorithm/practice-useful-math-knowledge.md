@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Practice - Useful Math Knowledge"
 index: 345
-category: dsa
+category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: /dsa.png
 date: 2016-04-05

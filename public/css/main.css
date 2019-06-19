@@ -170,6 +170,10 @@ table, th, td {
     font-size: 17.5px;
 }
 
+.media-left img {
+  width: 80px;
+  margin: 0 10px 0 0;
+}
 /* portfolio */
 @media (max-width: 1200px) {
     .item-detail h3 {
@@ -177,6 +181,16 @@ table, th, td {
     }
     .item-detail p {
         font-size: 12px;
+    }
+}
+
+/* large screen */
+@media (max-width: 992px) {
+    .media-body .excerpt {
+        display: none;
+    }
+    .media-left img {
+      width: 40px;
     }
 }
 

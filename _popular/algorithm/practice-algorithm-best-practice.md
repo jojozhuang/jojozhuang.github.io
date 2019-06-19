@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Practice - Algorithm Best Practice"
 index: 342
-category: dsa
+category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: /dsa.png
 date: 2016-04-02
