@@ -220,16 +220,16 @@ table, th, td {
     }
     /* content of post */
     .post-content h1 {
-        font-size: 22px;
+        font-size: 23px;
     }
     .post-content small {
-        font-size: 13px;
+        font-size: 14px;
     }
     .post-content h2 {
-        font-size: 19px;
+        font-size: 20px;
     }
     .post-content h3 {
-        font-size: 16px;
+        font-size: 17px;
     }
     .post-content blockquote {
         padding: 5px 15px;
