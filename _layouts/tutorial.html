@@ -9,6 +9,7 @@ layout: default
 </script>
 <div class="container">
     <div class="page-wrapper chiller-theme">
+      <!-- sidebar-wrapper  -->
       {% assign subject = site.data.popular %}
       {% assign postings = site.popular | sort: 'index' %}
       {% if page.key == "tutorial" %}
@@ -20,10 +21,10 @@ layout: default
         {% assign postings = site.note | sort: 'index' %}
       {% endif %}
       {% include sidebar.html %}
-      <!-- sidebar-wrapper  -->
+      <!-- page-content" -->
       <main class="page-content">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 post-content"">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   {% assign navigatePath = '' %}
@@ -48,9 +49,7 @@ layout: default
               </div>
             </div>
           </div>
-
       </main>
-      <!-- page-content" -->
     </div>
 
 </div>
