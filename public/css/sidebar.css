@@ -94,10 +94,10 @@
 /*----------------show sidebar button----------------*/
 #show-sidebar {
   position: fixed;
-  left: 0;
-  top: 68px;
+  left: -3px;
+  top: 62px;
   border-radius: 0 4px 4px 0px;
-  width: 35px;
+  width: 30px;
   transition-delay: 0.3s;
 }
 .page-wrapper.toggled #show-sidebar {
@@ -361,7 +361,7 @@
 }
 
 .page-wrapper .page-content > div {
-  padding: 0 40px 20px 40px;
+  padding: 0 22px 20px 22px;
 }
 
 .page-wrapper .page-content {
