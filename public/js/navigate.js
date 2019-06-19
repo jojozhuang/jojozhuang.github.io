@@ -10,12 +10,12 @@
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
         appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '        <img src="../public/assets/category/' + item.image + '" class="rounded" style="width:80px;margin-right:10px">';
+        appendString += '        <img src="../public/assets/category/' + item.image + '" class="rounded">';
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
         appendString += '      <a href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title + '</span></div></a>';
-        appendString += '      <p>' + item.excerpt + '</p>';
+        appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled">';
         appendString += '            <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
