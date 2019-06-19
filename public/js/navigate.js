@@ -17,7 +17,7 @@
         appendString += '      <a href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title + '</span></div></a>';
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
-        appendString += '          <ul class="list-inline list-unstyled">';
+        appendString += '          <ul class="list-inline list-unstyled more-att">';
         appendString += '            <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
         appendString += '            <li class="list-inline-item">|</li>';
         appendString += '            <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="' + item.url + '#disqus_thread">Comments</a></li>';
