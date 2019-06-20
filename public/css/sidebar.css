@@ -65,7 +65,7 @@
 
 .page-wrapper {
   height: 100vh;
-  margin-top:58px;
+  padding-top:10px;
 }
 
 .page-wrapper .theme {
@@ -99,6 +99,7 @@
   border-radius: 0 4px 4px 0px;
   width: 30px;
   transition-delay: 0.3s;
+  z-index: 100 /* always on the top */
 }
 .page-wrapper.toggled #show-sidebar {
   left: -40px;
@@ -361,7 +362,7 @@
 }
 
 .page-wrapper .page-content > div {
-  padding: 0 22px 20px 22px;
+  padding: 0 18px 20px 18px;
 }
 
 .page-wrapper .page-content {

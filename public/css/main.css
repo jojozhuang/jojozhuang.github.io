@@ -161,10 +161,16 @@ pre {
   width: 80px;
   margin: 0 10px 0 0;
 }
+.media-body .title-org {
+  display: block;
+}
+.media-body .title-abb {
+  display: none;
+}
 
 @media (max-width: 992px) { /* large screen */
   .media-left img {
-    width: 40px;
+    width: 35px;
     margin: 0 5px 0 0;
   }
   .media-body .subject {
@@ -192,13 +198,22 @@ pre {
 
 @media (max-width: 424px) {
   .media-body .subject {
-    font-size: 15px;
+    font-size: 14px;
   }
   .media-body .more-att {
     font-size: 12px;
   }
   .media-body .hidden-extra {
     display: none;
+  }
+  .media-body .title-org {
+    display: none;
+  }
+  .media-body .title-abb {
+    display: block;
+  }
+  .media-body .list-inline-item {
+    margin-right: 0;
   }
 }
 
