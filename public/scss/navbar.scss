@@ -1,0 +1,38 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+/* change the background color */
+.navbar-custom {
+  background-color: #24272d;
+  padding: 0 !important;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: rgba(255,255,255,.8);
+  margin-left: 1rem;
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+  color: rgba(255,255,255,.5);
+  padding: 1rem 0.5rem;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #ffffff;
+  background-color: #24272d; /* add background-color to active links */
+}
+
+.navbar-custom .form-inline {
+  padding: 0rem 1rem;
+}
+
+/* index (self introduction) */
+@media (max-width: 992px) {
+  .navbar-toggler {
+    margin: .30rem .25rem;
+    padding: .45rem .75rem;
+  }
+}
