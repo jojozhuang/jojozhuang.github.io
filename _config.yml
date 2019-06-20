@@ -1,6 +1,10 @@
 markdown: kramdown
 highlighter: rouge
 
+sass:
+  sass_dir: public/scss
+  style: compressed
+
 permalink: /blog/:year/:month/:day/:title/
 
 # Setup

@@ -6,11 +6,44 @@
       var appendString = '';
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
+        /*
         appendString += '<dd>';
         appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
         appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
         appendString += '  </a>';
         appendString += '  <div class="float-left"><p>' + item.excerpt + '</p></div>';
+        appendString += '</dd>';
+        */
+        appendString += '<dd>';
+        appendString += '  <div class="media">';
+        appendString += '    <div class="media-left">';
+        appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
+        appendString += '        <img src="../public/assets/category/' + item.image + '" class="rounded">';
+        appendString += '      </a>';
+        appendString += '    </div>';
+        appendString += '    <div class="media-body">';
+        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title+ '</span></div></a>';
+        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
+        appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
+        appendString += '      <div class="pull-left">';
+        appendString += '          <ul class="list-inline list-unstyled more-att">';
+        appendString += '            <li class="list-inline-item hidden-extra"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
+        appendString += '            <li class="list-inline-item hidden-extra">|</li>';
+        appendString += '            <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="' + item.url + '#disqus_thread">Comments</a></li>';
+        appendString += '            <li class="list-inline-item">|</li>';
+        appendString += '            <li class="list-inline-item">';
+        appendString += '              <span><i class="fas fa-tags" style="color:#3B5998"></i> ' + item.tags + ' </span>';
+        appendString += '            </li>';
+        appendString += '            <li class="list-inline-item hidden-extra">|</li>';
+        appendString += '            <li class="list-inline-item hidden-extra">';
+        appendString += '              <span><i class="fab fa-facebook" style="color:#3B5998"></i></span>';
+        appendString += '              <span><i class="fab fa-twitter-square" style="color:#1DA1F2"></i></span>';
+        appendString += '              <span><i class="fab fa-google-plus" style="color:#DB4437"></i></span>';
+        appendString += '            </li>';
+        appendString += '          </ul>';
+        appendString += '      </div>';
+        appendString += '    </div>';
+        appendString += '  </div>';
         appendString += '</dd>';
       }
       searchResults.innerHTML = appendString;
@@ -30,6 +63,15 @@
         return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
       }
     }
+  }
+
+  function formatTitle(title) {
+    if (title) {
+      if (title.length > 37) {
+        title = title.slice(0,37) + "...";
+      }
+    }
+    return title;
   }
 
   var searchTerm = getQueryVariable('query');
