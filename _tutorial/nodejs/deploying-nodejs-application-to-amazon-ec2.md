@@ -8,7 +8,7 @@ breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
 date: 2016-09-25
 postdate: 2016-03-18
-tags: [Amazon EC2, Node.js, Putty, Cyberduck]
+tags: [Amazon EC2, Node.js, Putty]
 ---
 
 >  Introduce how to deploy Node.js application to Amazon Cloud Server, EC2.

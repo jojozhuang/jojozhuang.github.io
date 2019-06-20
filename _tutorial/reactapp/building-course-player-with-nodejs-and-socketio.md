@@ -8,7 +8,7 @@ breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-06-05
 postdate: 2016-03-16
-tags: [Node.js, Socket.IO, HTML5 Canvas, jQuery]
+tags: [Node.js, Socket.IO, jQuery]
 ---
 
 >  Build a course player with Socket.IO.

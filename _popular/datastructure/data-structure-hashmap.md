@@ -8,7 +8,7 @@ breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-12
 postdate: 2016-03-12
-tags: [Hash, HashMap, Load Factor, Rehashing]
+tags: [Hash, Load Factor, Rehashing]
 mathjax: true
 ---
 

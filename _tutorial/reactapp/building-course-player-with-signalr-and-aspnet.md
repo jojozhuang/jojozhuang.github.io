@@ -8,7 +8,7 @@ breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
 date: 2017-06-04
 postdate: 2016-03-15
-tags: [SignalR, ASP.NET HTML5 Canvas, jQuery]
+tags: [SignalR, ASP.NET, jQuery]
 ---
 
 > Build a course player with SignalR.
