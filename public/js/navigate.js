@@ -18,11 +18,11 @@
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled more-att">';
-        appendString += '            <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
-        appendString += '            <li class="list-inline-item">|</li>';
-        appendString += '            <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="' + item.url + '#disqus_thread">Comments</a></li>';
+        appendString += '            <li class="list-inline-item hidden-extra"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
         appendString += '            <li class="list-inline-item hidden-extra">|</li>';
-        appendString += '            <li class="list-inline-item hidden-extra">';
+        appendString += '            <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="' + item.url + '#disqus_thread">Comments</a></li>';
+        appendString += '            <li class="list-inline-item">|</li>';
+        appendString += '            <li class="list-inline-item">';
         appendString += '              <span><i class="fas fa-tags" style="color:#3B5998"></i> ' + item.tags + ' </span>';
         appendString += '            </li>';
         appendString += '            <li class="list-inline-item hidden-extra">|</li>';
@@ -64,9 +64,9 @@
   var navigation = getQueryVariable('navigation');
   var results = [];
   if (navigation) {
-    $(".page-wrapper").removeClass("toggled");
+    //$(".page-wrapper").removeClass("toggled");
   } else {
-    $(".page-wrapper").addClass("toggled");
+    //$(".page-wrapper").addClass("toggled");
     navigation = jsUcfirst(subject) + ",";
   }
 
