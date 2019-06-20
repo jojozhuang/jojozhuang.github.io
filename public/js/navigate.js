@@ -14,7 +14,8 @@
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
-        appendString += '      <a href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title + '</span></div></a>';
+        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title+ '</span></div></a>';
+        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled more-att">';
@@ -58,6 +59,18 @@
 
   function jsUcfirst(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  function formatTitle(title) {
+    if (title) {
+      console.log(title);
+      console.log(title.length);
+      if (title.length > 37) {
+        title = title.slice(0,37) + "...";
+        console.log(title);
+      }
+    }
+    return title;
   }
 
   var subject = document.getElementById('subject').value;
