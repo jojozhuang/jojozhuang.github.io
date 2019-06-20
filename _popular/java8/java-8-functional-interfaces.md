@@ -8,7 +8,7 @@ breadcrumb: [Popular, Java, Java8]
 image: java.png
 date: 2017-05-04
 postdate: 2017-05-04
-tags: [Function, Predicate, BinaryOperator, Supplier, Consumer]
+tags: [Predicate, Supplier, Consumer]
 ---
 
 > Functional Interfaces in Java 8.

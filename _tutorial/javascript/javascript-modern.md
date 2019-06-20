@@ -8,7 +8,7 @@ breadcrumb: [Tutorial, Frontend, Javascript]
 image: javascript.png
 date: 2016-05-02
 postdate: 2018-07-26
-tags: [Javascript, Promise, Observable, Axios]
+tags: [Promise, Observable, Axios]
 ---
 
 > Advanced topics about javascript.

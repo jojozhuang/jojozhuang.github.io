@@ -170,7 +170,7 @@ pre {
 
 @media (max-width: 992px) { /* large screen */
   .media-left img {
-    width: 35px;
+    width: 60px;
     margin: 0 5px 0 0;
   }
   .media-body .subject {
@@ -185,6 +185,10 @@ pre {
 }
 
 @media (max-width: 768px) {
+  .media-left img {
+    width: 45px;
+    margin: 0 5px 0 0;
+  }
   .media-body .subject {
     font-size: 18px;
   }
@@ -197,6 +201,10 @@ pre {
 }
 
 @media (max-width: 424px) {
+  .media-left img {
+    width: 35px;
+    margin: 0 5px 0 0;
+  }
   .media-body .subject {
     font-size: 14px;
   }

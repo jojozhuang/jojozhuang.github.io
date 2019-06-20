@@ -8,7 +8,7 @@ breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-03
 postdate: 2016-05-03
-tags: [Factory, Abstract Factory, Factory Method]
+tags: [Abstract Factory, Factory Method]
 ---
 
 > Creational Pattern: Factory Pattern.

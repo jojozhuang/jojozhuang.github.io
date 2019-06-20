@@ -63,11 +63,8 @@
 
   function formatTitle(title) {
     if (title) {
-      console.log(title);
-      console.log(title.length);
       if (title.length > 37) {
         title = title.slice(0,37) + "...";
-        console.log(title);
       }
     }
     return title;

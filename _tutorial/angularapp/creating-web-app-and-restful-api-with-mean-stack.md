@@ -8,7 +8,7 @@ breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
 date: 2017-01-24
 postdate: 2018-01-25
-tags: [MEAN, MongoDB, Express, Angular, Node.js]
+tags: [MEAN, MongoDB, Express, Angular]
 ---
 
 > Introduce how to setup a MEAN stack project with MongoDB, Express, Angular and Node.js.
