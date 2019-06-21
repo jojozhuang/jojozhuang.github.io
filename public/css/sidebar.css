@@ -95,9 +95,9 @@
 #show-sidebar {
   position: fixed;
   left: -3px;
-  top: 62px;
+  /*top: 62px;*/
   border-radius: 0 4px 4px 0px;
-  width: 30px;
+  width: 32px;
   transition-delay: 0.3s;
   z-index: 100 /* always on the top */
 }

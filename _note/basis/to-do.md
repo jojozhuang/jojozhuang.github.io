@@ -23,6 +23,7 @@ Todo:
 * Upgrade Bootstrap 3 to 4.
 * Shallow Copy Vs Deep Copy
 * Improving SEO for Github Pages or Jekyll Sites(https://www.readmodwrite.com/2019-01-18-jekyll-seo-tags/)
+* using SCSS for Jekyll
 
 Tutorials:
 * Redis
