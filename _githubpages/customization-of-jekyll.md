@@ -67,7 +67,7 @@ To enable the highlighting, you need to edit `_config.yml` file which is located
 markdown: kramdown
 highlighter: rouge
 ```
-Then, create css file, for example, [highlight.css]({% link /public/css/highlight.css %}). And include this css file to the page.
+Then, create css file, for example, [highlight.scss]({% link /public/css/highlight.scss %}). And include this css file to the page.
 ```html
 <link href="/public/css/highlight.css" rel="stylesheet" />
 ```

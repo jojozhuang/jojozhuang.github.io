@@ -8,7 +8,7 @@ breadcrumb: [Note, Work Space, Book Notes]
 image: note.png
 date: 2017-08-02
 postdate: 2017-08-02
-tags: [Block Chain, Digital Currency, Ethereum]
+tags: [Block Chain, Digital Currency]
 ---
 
 > Learn Block Chain, Digital Currency and Ethereum.
