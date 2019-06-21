@@ -2,7 +2,7 @@ markdown: kramdown
 highlighter: rouge
 
 sass:
-  sass_dir: public/scss
+  sass_dir: public/css
   style: compressed
 
 permalink: /blog/:year/:month/:day/:title/
@@ -108,6 +108,6 @@ collections:
   githubpages:
     output: true
 
-exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml", "note_old.html", "favorite_old.html", "library.html", "tutorial2.html"]
+exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml

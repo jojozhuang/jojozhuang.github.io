@@ -6,14 +6,6 @@
       var appendString = '';
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        /*
-        appendString += '<dd>';
-        appendString += '  <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '    <div>' + item.index + '. ' + item.title + '</div>';
-        appendString += '  </a>';
-        appendString += '  <div class="float-left"><p>' + item.excerpt + '</p></div>';
-        appendString += '</dd>';
-        */
         appendString += '<dd>';
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
