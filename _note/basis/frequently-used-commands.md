@@ -18,13 +18,22 @@ tags: [Linux, MacOS]
 cd Johnny/GitHub/jojozhuang.github.io/
 bundle exec jekyll serve --port 12001
 ```
-### 2. Search Files by Name
+### 2. Search Files/Directories
+Search Files by Name
 ```sh
 find . -name 'filename' -R
 ```
 * `.` - path, the current directory
 * `R` - recursive
 
+Search Directories end with '-T'.
+```sh
+find . -name "*-T" -type d
+```
+Search Directories end with '-T' and delete them.
+```sh
+find . -name "*-T" -type d -exec rm -rf {} \;
+```
 ### 3. Search Files Containing Specific Text
 ```sh
 grep -Ril "text-to-find-here" /

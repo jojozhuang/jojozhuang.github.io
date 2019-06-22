@@ -24,6 +24,13 @@ Todo:
 * Shallow Copy Vs Deep Copy
 * Improving SEO for Github Pages or Jekyll Sites(https://www.readmodwrite.com/2019-01-18-jekyll-seo-tags/)
 * using SCSS for Jekyll
+* Building a Sitemap with Jekyll(https://mijingo.com/blog/building-a-sitemap-with-jekyll)
+* Building a Better Sitemap.xml with Jekyll(http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/)
+
+
+
+
+
 
 Tutorials:
 * Redis
