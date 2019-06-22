@@ -1,5 +1,5 @@
 name: Tutorial
-url: /index_tutorial
+description: Node.js, Angular, React
 categories:
   - name: Prerequisites
     subcategories:

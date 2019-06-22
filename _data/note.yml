@@ -1,4 +1,5 @@
 name: Note
+description: Book Notes, Interview Questions
 categories:
   - name: Work Space
     subcategories:
