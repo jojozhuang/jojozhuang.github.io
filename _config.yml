@@ -71,6 +71,10 @@ navlist:
     visible: false
     subkeys: ["index_tutorial","index_note","index_programming"]
     sublist:
+      - key: blank
+        description: Blank Page
+        url: /blank
+        icon: fas fa-book-open
       - key: index_note
         description: Index of Note
         url: /index_note
