@@ -32,6 +32,9 @@ bookmarks:
       - name: Plunker
         description: An online real-time collaborative code editor
         url: https://plnkr.co/
+      - name: Google PageSpeed Insights
+        description: An online tool for analyzing the page’s loading performance
+        url: https://developers.google.com/speed/pagespeed/insights/
   - category: Algorithm
     links:
       - name: Leetcode
