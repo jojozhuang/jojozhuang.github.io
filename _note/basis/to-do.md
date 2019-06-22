@@ -26,6 +26,7 @@ Todo:
 * using SCSS for Jekyll
 * Building a Sitemap with Jekyll(https://mijingo.com/blog/building-a-sitemap-with-jekyll)
 * Building a Better Sitemap.xml with Jekyll(http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/)
+* 13 Steps to a Faster Jekyll Website(https://wiredcraft.com/blog/make-jekyll-fast/)
 
 
 
