@@ -97,12 +97,33 @@
   left: -3px;
   /*top: 62px;*/
   border-radius: 0 4px 4px 0px;
+  width: 40px;
+  transition-delay: 0.3s;
+  z-index: 100; /* always on the top */
+  display: block;
+}
+#show-sm-sidebar {
+  position: fixed;
+  left: -3px;
+  /*top: 62px;*/
+  border-radius: 0 4px 4px 0px;
   width: 32px;
   transition-delay: 0.3s;
-  z-index: 100 /* always on the top */
+  z-index: 100; /* always on the top */
+  display: none;
 }
+
 .page-wrapper.toggled #show-sidebar {
   left: -40px;
+}
+
+@media (max-width: 768px) {
+  #show-sidebar {
+    display: none;
+  }
+  #show-sm-sidebar {
+    display: block;
+  }
 }
 /*----------------sidebar-wrapper----------------*/
 
