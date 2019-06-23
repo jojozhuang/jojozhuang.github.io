@@ -25,12 +25,19 @@
         {% endfor %}
       </ul>
       <ul class="nav navbar-nav ml-auto">
-        <!--<li><a href="/public/cv/cv.pdf"><span class="glyphicon glyphicon-download-alt"></span> Download CV</a></li>-->
-        <!--<li class="nav-item {% if page.key == "about" %} active {% endif %}"><a class="nav-link" href="/about">About</a></li>-->
+        <!--<li><a href="/public/cv/cv.pdf"><i class="fas fa-download"></i> Download CV</a></li>-->
       </ul>
       <form class="form-inline ml-auto" action="/search">
+        <!--<div class="input-group">
+           <input class="form-control border-secondary py-2" style="width:100px" type="search" name="k" placeholder="Search this site">
+           <div class="input-group-append">
+               <button class="btn btn-outline-secondary" type="submit">
+                   <i class="fa fa-search"></i>
+               </button>
+           </div>
+         </div>-->
         <div class="form-group">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search..." name="k" id="search-box">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search this site" name="k" id="search-box">
         </div>
         <div class="form-group">
           <button class="btn btn-outline-light search-btn" type="submit">Search</button>
