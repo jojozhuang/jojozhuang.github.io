@@ -16,15 +16,13 @@ tutorial: list
 
 <script>
   window.store = {
-    {% assign frontends = site.frontend %}
-    {% assign javas = site.java %}
-    {% assign programmings = site.programming %}
-    {% assign devops = site.devops %}
     {% assign tutorials = site.tutorial %}
     {% assign populars = site.popular %}
-    {% assign postings = frontends | concat: javas | concat: programmings | concat: devops | concat: tutorials | concat: populars %}
+    {% assign notes = site.note %}
+    {% assign postings = tutorials | concat: populars | concat: notes %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
+        "key": "{{ post.key | xml_escape }}",
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
         "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
