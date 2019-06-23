@@ -66,36 +66,36 @@
     return title;
   }
 
-  var searchTerm = getQueryVariable('query');
+  var keyword = getQueryVariable('k');
+  var category = getQueryVariable('c');
 
-  if (searchTerm) {
-    //document.getElementById('search-box').setAttribute("value", searchTerm);
-    document.getElementById('search-key').innerHTML = searchTerm;
+  if (keyword) {
+    document.getElementById('search-key').innerHTML = keyword;
 
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      //this.field('category');
       this.field('content');
       this.field('url');
 
-      for (var key in window.store) { // Add the data to lunr
-        this.add({
-          'id': key,
-          'title': window.store[key].title,
-          //'author': window.store[key].author,
-          //'category': window.store[key].category,
-          'content': window.store[key].content,
-          'url': window.store[key].url,
-          'index': window.store[key].index,
-          'excerpt': window.store[key].excerpt
-        });
+      for (var url in window.store) { // Add the data to lunr
+        var key = window.store[url].key;
+        if ((!category && key!='note') || key==category) {
+          this.add({
+            'id': url,
+            'title': window.store[url].title,
+            'content': window.store[url].content,
+            'url': window.store[url].url,
+            'index': window.store[url].index,
+            'excerpt': window.store[url].excerpt
+          });
+        }
       }
     });
 
-    var results = idx.search(searchTerm); // Get lunr to perform a search
+    var results = idx.search(keyword); // Get lunr to perform a search
     //console.log("results:");
     //console.log(results);
     displaySearchResults(results, window.store); // We'll write this in the next section

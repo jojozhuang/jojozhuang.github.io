@@ -14,7 +14,8 @@
       <div>
         <form class="form-inline" action="/search">
           <div class="input-group">
-            <input type="text" class="form-control search-menu" name="query" placeholder="Search...">
+            <input type="text" class="form-control search-menu" name="k" placeholder="Search...">
+            <input type="hidden" id="c" name="c" value="{{page.key}}">
             <div class="input-group-append">
               <span class="input-group-text">
                 <button class="submit-btn" style="height:24px" type="submit">
