@@ -95,21 +95,13 @@ navlist:
 collections:
   portfolio:
     output: true
-  frontend:
-    output: true
-  java:
-    output: true
-  programming:
-    output: true
-  devops:
-    output: true
   popular:
     output: true
   tutorial:
     output: true
-  note:
+  githubpage:
     output: true
-  githubpages:
+  note:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml"]
