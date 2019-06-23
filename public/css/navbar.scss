@@ -26,13 +26,17 @@
 }
 
 .navbar-custom .form-inline {
-  padding: 0rem 1rem;
+  padding: 0rem 0.75rem 0rem 0.5rem;
 }
 
-/* index (self introduction) */
 @media (max-width: 992px) {
   .navbar-toggler {
     margin: .30rem .25rem;
     padding: .45rem .75rem;
+  }
+}
+@media (max-width: 576px) {
+  .search-btn {
+    margin-left: 8px;
   }
 }
