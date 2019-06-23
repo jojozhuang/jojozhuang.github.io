@@ -104,7 +104,7 @@ bookmarks:
       - name: Swift
         description: A general-purpose, multi-paradigm, compiled programming language
         url: https://developer.apple.com/swift/
-      - name: Type Script
+      - name: TypeScript
         description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
   - category: Knowledge

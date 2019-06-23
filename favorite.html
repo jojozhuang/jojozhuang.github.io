@@ -41,65 +41,65 @@ title: Favorites
         <div id="library" class="tab-pane fade">
           <p>{{favorite.librarydesc}}</p>
           <div class="list">
-              {%- for bookmark in favorite.bookmarks -%}
-                  {% assign idx1 = forloop.index %}
-                  <div class="list-category">
-                      <div class="list-category-title">{{ bookmark.category }}</div>
-                      <div class="list-sublist">
-                          {%- for link in bookmark.links -%}
-                              {% assign col = forloop.index0 | modulo: 3 %}
-                              {% if col == 0 %}
-                                  <div class="row">
-                              {% endif %}
-                                  <div class="col-sm-4">
-                                  <span class="list-sub-index">{{ idx1 }}.{{ forloop.index }}</span>
-                                  {% assign counter = 0 %}
-                                  {% assign tag = link.name | downcase %}
-                                  {% assign strlink = "<ul class='list-posting'>" %}
-                                  {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-blog' style='color:#3742d8'></i></li>" %}
-                                  {% for posting in site.posts %}
-                                      {% assign posttag = posting.tags | downcase %}
-                                      {% if posttag contains tag %}
+            {% assign portfolios = site.portfolio %}
+            {% assign populars = site.popular %}
+            {% assign tutorials = site.tutorial %}
+            {% assign githubpages = site.githubpage %}
+            {% assign blogs = site.posts %}
+            {% assign postings = portfolios | concat: populars | concat: tutorials | concat: githubpages | concat: blogs %}
+            {%- for bookmark in favorite.bookmarks -%}
+                {% assign idx1 = forloop.index %}
+                <div class="list-category">
+                    <div class="list-category-title">{{ bookmark.category }}</div>
+                    <div class="list-sublist">
+                        {%- for link in bookmark.links -%}
+                            {% assign col = forloop.index0 | modulo: 3 %}
+                            {% if col == 0 %}
+                                <div class="row">
+                            {% endif %}
+                                <div class="col-sm-4">
+                                <span class="list-sub-index">{{ idx1 }}.{{ forloop.index }}</span>
+                                {% assign counter = 0 %}
+                                {% assign linkname = link.name | downcase %}
+                                {% assign strlink = "<ul class='list-posting'>" %}
+                                {% assign template = "" %}
+                                {% for posting in postings %}
+                                    {% case posting.key %}
+                                      {% when 'portfolio' %}
+                                        {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-briefcase' style='color:#3742d8'></i></li>" %}
+                                      {% when 'popular' %}
+                                        {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-fire-alt' style='color:#3742d8'></i></li>" %}
+                                      {% when 'tutorial' %}
+                                        {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-chalkboard-teacher' style='color:#3742d8'></i></li>" %}
+                                      {% else %}
+                                        {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-blog' style='color:#3742d8'></i></li>" %}
+                                    {% endcase %}
+                                    {% for tag in posting.tags %}
+                                      {% assign lowercase_tag = tag | downcase %}
+                                      {% if lowercase_tag == linkname %}
                                           {% assign counter = counter | plus:1 %}
                                           {% assign currlink = template | replace: "url", posting.url | replace: "name", posting.title%}
                                           {% assign strlink = strlink | append: currlink %}
                                       {% endif %}
-                                  {%- endfor -%}
-                                  {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-chalkboard-teacher' style='color:red'></i></li>" %}
-                                  {% for portfl in site.tutorial %}
-                                      {% assign portfltag = portfl.tags | downcase %}
-                                      {% if portfltag contains tag %}
-                                          {% assign counter = counter | plus:1 %}
-                                          {% assign currlink = template | replace: "url", portfl.url | replace: "name", portfl.title%}
-                                          {% assign strlink = strlink | append: currlink %}
-                                      {% endif %}
-                                  {%- endfor -%}
-                                  {% assign template = "<li><a href='url' title='name'>name </a><i class='fas fa-briefcase' style='color:red'></i></li>" %}
-                                  {% for portfl in site.portfolio %}
-                                      {% assign portfltag = portfl.tags | downcase %}
-                                      {% if portfltag contains tag %}
-                                          {% assign counter = counter | plus:1 %}
-                                          {% assign currlink = template | replace: "url", portfl.url | replace: "name", portfl.title%}
-                                          {% assign strlink = strlink | append: currlink %}
-                                      {% endif %}
-                                  {%- endfor -%}
-                                  {% assign strlink = strlink | append: "</ul>" %}
-                                  {% assign popoverlink = "<a href='url' title='name'>name</a>" | replace: "url", link.url | replace: "name", link.url%}
-                                  {% if counter > 0 %}
-                                      {% assign strlink = strlink | append: "<hr>" %}
-                                  {% else %}
-                                      {% assign strlink = "" %}
-                                  {% endif %}
-                                  {% assign strlink = strlink | append: popoverlink %}
-                                  <span class="list-sub-link"><a href="{{ link.url }}" data-container="body" class="pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge badge-secondary">{% if counter > 0 %}{{counter}}{% endif %}</span></a></span>
-                                  </div>
-                              {% if col == 2 or forloop.last == true %}
-                                  </div>
-                              {% endif %}
-                          {%- endfor -%}
-                      </div>
-                  </div>
-              {%- endfor -%}
+                                    {%- endfor -%}
+                                {%- endfor -%}
+                                {% assign strlink = strlink | append: "</ul>" %}
+                                {% assign popoverlink = "<a href='url' title='name'>name</a>" | replace: "url", link.url | replace: "name", link.url%}
+                                {% if counter > 0 %}
+                                    {% assign strlink = strlink | append: "<hr>" %}
+                                {% else %}
+                                    {% assign strlink = "" %}
+                                {% endif %}
+                                {% assign strlink = strlink | append: popoverlink %}
+                                <span class="list-sub-link"><a href="{{ link.url }}" data-container="body" class="pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge badge-secondary">{% if counter > 0 %}{{counter}}{% endif %}</span></a></span>
+                                </div>
+                            {% if col == 2 or forloop.last == true %}
+                                </div>
+                            {% endif %}
+                        {%- endfor -%}
+                    </div>
+                </div>
+            {%- endfor -%}
           </div>
         </div>
       </div>
