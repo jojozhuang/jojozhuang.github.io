@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /note/
+
+Sitemap: https://jojozhuang.github.io/sitemap.xml

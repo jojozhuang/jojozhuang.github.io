@@ -2,19 +2,21 @@
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
+  {% for page in site.pages %}
+    {% if page.layout != nil and page.layout != 'feed' and page.url != '/note/' and page.url != '/index_note/' and page.url != '/index_tutorial/' and page.url != '/search/' and page.url != '/blog/atom.xml' and page.url != '/contact/'%}
+      <url>
+        <loc>http://jojozhuang.github.io{{ page.url | remove: 'index.html' }}</loc>
+      </url>
+    {% endif %}
+  {% endfor %}
+
+  {% assign portfolios = site.portfolio %}
+  {% assign blogs = site.posts %}
+  {% assign posts = portfolios | concat: blogs %}
+  {% for post in posts %}
     <url>
       <loc>http://jojozhuang.github.io{{ post.url | remove: 'index.html' }}</loc>
     </url>
   {% endfor %}
 
-  {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
-      <url>
-        <loc>http://jojozhuang.github.io{{ page.url | remove: 'index.html' }}</loc>
-      </url>
-    {% endif %}
-    {% endif %}
-  {% endfor %}
 </urlset>
