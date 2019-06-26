@@ -82,6 +82,10 @@ navlist:
         description: RSS
         url: /blog/atom.xml
         icon: fas fa-rss
+      - key: sitemap
+        description: Sitemap
+        url: /sitemap.xml
+        icon: fas fa-sitemap
       - key: blank
         description: Blank Page
         url: /blank
@@ -103,6 +107,6 @@ collections:
   note:
     output: true
 
-exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock", "sitemap.xml"]
+exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
