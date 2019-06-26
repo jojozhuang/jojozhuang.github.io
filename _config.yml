@@ -12,6 +12,9 @@ mywebsite:
   url: http://jojozhuang.github.io
 #theme: jekyll-theme-cayman
 
+# rss
+blogtitle: Rong Zhuang's Blog
+
 author:
   name: 'Rong Zhuang'
   email: 'jojozhuang@gmail.com'
@@ -68,25 +71,21 @@ navlist:
   - key: more
     url: /#
     icon: fas fa-chevron-circle-down
-    visible: false
-    subkeys: ["index_tutorial","index_note","index_programming"]
+    visible: true
+    subkeys: ["contact","rss","blank"]
     sublist:
+      - key: contact
+        description: Contact me
+        url: /contact
+        icon: fas fa-address-book
+      - key: rss
+        description: RSS
+        url: /blog/atom.xml
+        icon: fas fa-rss
       - key: blank
         description: Blank Page
         url: /blank
-        icon: fas fa-book-open
-      - key: index_note
-        description: Index of Note
-        url: /index_note
-        icon: fas fa-book-open
-      - key: index_tutorial
-        description: Index of Tutorial
-        url: /index_tutorial
-        icon: fas fa-chalkboard-teacher
-      - key: programming
-        description: Index of Programming
-        url: /programming
-        icon: fas fa-book-open
+        icon: fas fa-chalkboard
   - key: about
     url: /about
     icon: fas fa-info-circle
