@@ -24,12 +24,15 @@ layout: default
       <!-- page-content" -->
       <main class="page-content">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
             <h1 class="page-header">{{subject.name}} <small>{{subject.description}}</small></h1>
           </div>
+          <div class="col-md-1"></div>
         </div>
           <div class="row">
-            <div class="col-md-12 post-content"">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 post-content"">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   {% assign navigatePath = '' %}
@@ -53,6 +56,7 @@ layout: default
                 {% include disqus.html %}
               </div>
             </div>
+            <div class="col-md-1"></div>
           </div>
       </main>
     </div>

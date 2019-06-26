@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "LFU Cache - Draft"
+title: "LFU Cache"
 index: 306
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
@@ -19,8 +19,8 @@ mathjax: true
 Least Frequently Used(LFU) cache algorithm uses a counter to keep track of how often an entry is accessed. With the LFU cache algorithm, the entry with the lowest count is removed first. This method isn't used that often, as it does not account for an item that had an initially high access rate and then was not accessed for a long time.
 ### 1.2 How It Works?
 The `LFU` cache provides two methods: `add` and `get`.
-* add(value) - Add the value into cache if it is not already present. When the cache reached its capacity, it should invalidate the least frequently used item before inserting a new item.
-* get(value) - Get the value if it exists in the cache, otherwise, return the minimum value of Integer. In addition, move this element to the proper position of the cache.
+* add(key, value) - Add the value into cache if it is not already present. When the cache reached its capacity, it should invalidate the least frequently used item before inserting a new item. If there is a tie (i.e., two or more keys that have the same frequency), the least recently used key would be evicted.
+* get(key) - If the key doesn't exist in the cache, return the minimum value of Integer. Otherwise, return the value of the key and move this element to the proper position of the cache.
 
 The following diagram illustrates how LFU works.
 ![image](/public/images/dsa/data-structure-lfu-cache/lfu.png)
@@ -202,17 +202,67 @@ private void move(Node node) {
 }
 ```
 ### 3.2 Potential Improvement
-To improve the performance, we have two destinations, $O(\log{}n)$ or $O(1)$.
-not possible to use max heap, as you can get the minimum value within O(log(n)). For example, you can get the maximum value 82 in O(1), but when trying to remove minimum 27, we have to move all elements at its right to left. It may take O(n).
-![image](/public/images/dsa/data-structure-lfu-cache/heap.png){:width="450px"}  
-
-Instead, we can use BST tree.
-![image](/public/images/dsa/data-structure-binary-search-tree/bst.png){:width="450px"}  
-### 3.3 New Implementation(Deque)
-Instead of creating the doubly linked list by hand, we can use Deque directly in Java. The following LRUDeque class implements LRU with Deque.
+To improve the performance, we have two destinations, $O(\log{}n)$ or $O(1)$. Use hashmap.
 ```java
+public class LFUHashMap {
+    HashMap<Integer, Integer> values;               // key, value
+    HashMap<Integer, Integer> counts;               // key, count
+    HashMap<Integer, LinkedHashSet<Integer>> lists; // count, list->keys
+    int cap;
+    int min = -1;
+    public LFUHashMap(int capacity) {
+        cap = capacity;
+        values = new HashMap<>();
+        counts = new HashMap<>();
+        lists = new HashMap<>();
+        lists.put(0, new LinkedHashSet<>());
+    }
 
+    public void add(int key, int value) {
+        if (cap <= 0) {
+            return;
+        }
+        if (values.containsKey(key)) {
+            values.put(key, value);
+            get(key); // trigger the reorder
+            return;
+        }
+        if (values.size() >= cap) {
+            int evict = lists.get(min).iterator().next();
+            lists.get(min).remove(evict);
+            values.remove(evict);
+            counts.remove(evict);
+        }
+        values.put(key, value);
+        counts.put(key, 0);
+        min = 0;
+        lists.get(0).add(key);
+    }
+
+    public int get(int key) {
+        if (!values.containsKey(key)) {
+            return -1;
+        }
+        int count = counts.get(key);
+        counts.put(key, count + 1);
+        lists.get(count).remove(key);
+        if (count == min && lists.get(count).size() == 0) {
+            min++;
+        }
+        if (!lists.containsKey(count+1)) {
+            lists.put(count + 1, new LinkedHashSet<>());
+        }
+        lists.get(count + 1).add(key);
+        return values.get(key);
+    }
+}
 ```
+Time complexity:
+* add() - $O(1)$
+* get() - $O(1)$
+
+Space complexity:
+* $O(n)$, 3*N, N is the number of keys
 
 ## 4. Source Files
 * [Source files for LFU Cache on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-lfu-cache)

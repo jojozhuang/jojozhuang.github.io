@@ -369,12 +369,14 @@
   /*padding-top: 20px;*/
 }
 
-.page-wrapper .page-content > div {
-  padding: 0 14px 0 16px;
-}
-
 .page-wrapper .page-content {
   overflow-x: hidden;
+}
+
+@media (max-width: 576px) {
+  .page-wrapper .page-content > div {
+    padding: 0 14px 0 16px;
+  }
 }
 
 /*------scroll bar---------------------*/
