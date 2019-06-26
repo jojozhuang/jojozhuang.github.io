@@ -19,8 +19,8 @@ mathjax: true
 Least Recently Used(LRU) cache algorithm keeps recently used items near the front of cache. Whenever a new item is accessed, the LRU places it at the head of the cache. When the cache reaches to its capacity, items that have been accessed less recently will be removed starting from the end of the cache.
 ### 1.2 How It Works?
 The LRU cache provides two methods: `add` and `get`.
-* add(value) - Add the value into cache if it is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
-* get(value) - Get the value if it exists in the cache, otherwise, return the minimum value of Integer. In addition, move this element to the head of the cache.
+* add(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+* get(key) - If the key doesn't exist in the cache, return the minimum value of Integer. Otherwise, return the value of the key and move this item to the head of the cache.
 
 The following diagram illustrates how LRU works.
 ![image](/public/images/dsa/data-structure-lru-cache/lru.png){:width="800px"}  
@@ -59,7 +59,7 @@ Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
 * Update the tail pointers accordingly.
 * Return the value.
 
-### 2.3 Built With Custom Node
+### 2.3 Implementation with Custom Node
 The following code is the implementation of LRU based on custom nodes. The node is defined as follows.
 ```java
 public class Node {
@@ -144,7 +144,7 @@ Time complexity:
 Space complexity:
 * $O(n)$, 2*N, N is the number of nodes
 
-### 2.4 Built With Deque
+### 2.4 Implementation with Deque
 Instead of creating the doubly linked list by hand, we can use `Deque` directly in Java. The following LRUDeque class implements LRU with Deque. The efficiency of the `get()` method may be $O(n)$ in the worst case.
 ```java
 public class LRUDeque {
