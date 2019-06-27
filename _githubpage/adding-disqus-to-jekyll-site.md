@@ -103,7 +103,7 @@ Add the following script to the page where you want to display the count of page
 ### 3.2 Getting Count
 Append `#disqus_thread` to the `href` attribute in your links. For example,
 ```html
-<a href="http://jojozhuang.github.io/tutorial/basis/getting-started-with-linux/#disqus_thread">Comments</a>
+<a href="http://rongzhuang.me/tutorial/basis/getting-started-with-linux/#disqus_thread">Comments</a>
 ```
 In the list page, it is added to all the links through 'tutorial.url'.
 {% raw %}

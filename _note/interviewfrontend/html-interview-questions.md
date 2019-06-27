@@ -253,9 +253,9 @@ The `target` attribute specifies where to open the linked document. It can have 
 
 Example.
 ```html
-<a href="https://jojozhuang.github.io/">Visit johnny's website</a>
-<a href="https://jojozhuang.github.io/" target="_blank">Visit johnny website in new tab!</a>
-<a href="https://jojozhuang.github.io/" title="Go to Johnny's website">Visit johnny's website</a>
+<a href="https://rongzhuang.me/">Visit johnny's website</a>
+<a href="https://rongzhuang.me/" target="_blank">Visit johnny website in new tab!</a>
+<a href="https://rongzhuang.me/" title="Go to Johnny's website">Visit johnny's website</a>
 
 <!-- bookmark -->
 <h2 id="C4">Chapter 4</h2>
@@ -366,14 +366,14 @@ Example.
   <meta http-equiv="refresh" content="30"> <!-- Refresh document every 30 seconds -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- control the page's dimensions and scaling -->
   <link rel="stylesheet" href="mystyle.css">
-  <base href="https://jojozhuang.github.io/images/">
+  <base href="https://rongzhuang.me/images/">
 </head>
 
 <body>
 The content of the document......
 
 <img src="html5.png">
-<p>Since we have specified a base URL, the browser will look for the image "html5.png" at "https://jojozhuang.github.io/images/html5.png"</p>
+<p>Since we have specified a base URL, the browser will look for the image "html5.png" at "https://rongzhuang.me/images/html5.png"</p>
 
 </body>
 

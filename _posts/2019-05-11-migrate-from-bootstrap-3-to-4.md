@@ -6,7 +6,7 @@ date: 2019-05-11
 tags: [Bootstrap]
 ---
 
-> Upgrade bootstrap from 3 to 4 for jojozhuang.github.io.
+> Upgrade bootstrap from 3 to 4 for rongzhuang.me.
 
 ## 1. Difference between 3 and 4
 

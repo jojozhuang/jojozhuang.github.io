@@ -54,7 +54,7 @@ Edit `pom.xml`, add properties, build and dependencies for jupiter, vintage and 
   <packaging>jar</packaging>
 
   <name>JUnitDynamicTest</name>
-  <url>https://jojozhuang.github.io</url>
+  <url>https://rongzhuang.me</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

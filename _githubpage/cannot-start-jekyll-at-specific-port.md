@@ -13,7 +13,7 @@ tags: [Jekyll, Port]
 > Handle error 'Address Already in Use' when starting Jekyll.
 
 ## 1. Issue of 'Address Already in Use'
-I've set up my [GitHub Page website](http://jojozhuang.github.io/) locally. It works as expected. But sometimes, I'm unable to start Jekyll. I keep getting the following error after running 'jekyll serve' command.
+I've set up my [GitHub Page website](http://rongzhuang.me/) locally. It works as expected. But sometimes, I'm unable to start Jekyll. I keep getting the following error after running 'jekyll serve' command.
 ```sh
 jekyll 3.5.2 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
 ```

@@ -1,4 +1,4 @@
-# jojozhuang.github.io
+# rongzhuang.me
 My personal website hosted on Github, built with Jekyll, Liquid and MarkDown.
 
 <kbd>![image](/public/assets/github_portfolio1.png)</kbd>
@@ -17,7 +17,7 @@ This website is mainly used to demonstrate my portfolios and share my knowledge 
 
 # Demo
 Two available demos:
-* `Live Demo on GitHub:` <a href="https://jojozhuang.github.io/" target="\_blank">https://jojozhuang.github.io/</a>
+* `Live Demo on GitHub:` <a href="https://rongzhuang.me/" target="\_blank">https://rongzhuang.me/</a>
 * `Live Demo on Netlify:` <a href="https://jojozhuang.netlify.com/" target="\_blank">https://jojozhuang.netlify.com/</a>
 
 # Setup Locally
@@ -29,7 +29,7 @@ bundle exec jekyll serve --port 12001
 Access http://localhost:12001/ in web browser, enjoy!
 
 # Deployment
-Follow tutorial [Viewing Jekyll Build Error with Travis CI](https://jojozhuang.github.io/tutorial/githubpages/viewing-jekyll-build-error-with-travisci/) to continuously deploy this personal website to GitHub Pages.
+Follow tutorial [Viewing Jekyll Build Error with Travis CI](https://rongzhuang.me/tutorial/githubpages/viewing-jekyll-build-error-with-travisci/) to continuously deploy this personal website to GitHub Pages.
 
 # Tutorial
-Read tutorial [Setting up Jekyll for GitHub Pages on Ubuntu and MacOS](https://jojozhuang.github.io/tutorial/githubpages/setting-up-jekyll-for-github-pages-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages.
+Read tutorial [Setting up Jekyll for GitHub Pages on Ubuntu and MacOS](https://rongzhuang.me/tutorial/githubpages/setting-up-jekyll-for-github-pages-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages.

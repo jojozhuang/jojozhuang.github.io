@@ -1,39 +1,22 @@
 ---
 layout: note
 key: about
-title: "SEO"
-index: 915
+title: "Setting up Personal Website with Custom Domain"
+index: 916
 category: githubpages
 image: github-pages.png
-date: 2018-07-15
+date: 2019-06-27
 postdate: 2017-12-13
 tags: [siderbar]
 ---
 
 > Search.
 
-## 1. SEO
-* rss
-* robots.txt
-* sitemap
-
-
-## 2. Caching with CDN
-### 2.1 Create a new account in Cloudflare
-Add a new site, note the two name servers
-miki.ns.cloudflare.com
-owen.ns.cloudflare.com
-### 2.2 Update Name server in GoDaddy
-Find your domain, click the three dot button, choose 'Manage DNS'.
-![image](/public/images/githubpages/915/godaddy_mydomains.png){:width="800px"}
-Scroll down, see the Nameservers section, click 'Change' btton.
-![image](/public/images/githubpages/915/godaddy_nameservers.png){:width="800px"}
-Select 'Custom' type and input two Cloudflare name servers.
-![image](/public/images/githubpages/915/godaddy_changenameserver.png){:width="800px"}
-Done.
-![image](/public/images/githubpages/915/godaddy_done.png){:width="800px"}
-You will receive an email from CloudFlare.
-![image](/public/images/githubpages/915/cloudflare_notification.png){:width="800px"}
+## 1. Setup website with own domain
+### 1.1 Setup website in github page
+### 1.2 Register domain from Godaddy and setup DNS
+### 1.3 Enable Custom Domain and SSL on GitHub
+![image](/public/images/githubpages/916/custom_domain.png){:width="600px"}
 
 https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
 https://support.cloudflare.com/hc/en-us/articles/201720164-Step-2-Create-a-CloudFlare-account-and-add-a-website
@@ -46,4 +29,3 @@ https://support.cloudflare.com/hc/en-us/articles/201720164-Step-2-Create-a-Cloud
 * [How to Configure GoDaddy Custom Domains with GitHub Pages](https://medium.com/@supriyakankure/how-to-add-a-custom-domain-to-your-github-page-with-godaddy-84495781143e)
 * [Custom domains on GitHub Pages gain support for HTTPS](https://github.blog/2018-05-01-github-pages-custom-domains-https/)
 * [Free Secure Web: Jekyll & Github Pages & Cloudflare](https://martin.ankerl.com/2017/07/22/free-secure-web-jekyll-github-pages-cloudflare/)
-* [How to Change Nameservers in GoDaddy?](https://www.webnots.com/how-to-change-nameservers-in-godaddy/)

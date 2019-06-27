@@ -9,7 +9,7 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Setup
 mywebsite:
-  url: http://jojozhuang.github.io
+  url: http://rongzhuang.me
 #theme: jekyll-theme-cayman
 
 # rss

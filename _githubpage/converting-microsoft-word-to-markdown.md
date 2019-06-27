@@ -13,7 +13,7 @@ tags: [Markdown, Writage]
 > Use Microsoft Word to create Markdown documents.
 
 ## 1. Background
-After I setup [this personal website](http://jojozhuang.github.io/) on github, I have keep posting blogs and portfolios for a while. It's great to use Markdown to edit page content. However, it is not easy to add images into the page.
+After I setup [this personal website](http://rongzhuang.me/) on github, I have keep posting blogs and portfolios for a while. It's great to use Markdown to edit page content. However, it is not easy to add images into the page.
 
 Apart from [Atom](https://atom.io/), I'm also using Microsoft Word for editing my website. I wonder whether there is a tool to convert Word format(.docx) to Markdown format(.md). It's not hard to find such tool [Writage](http://www.writage.com/). Actually, it is a plugin for Microsoft Word.
 
