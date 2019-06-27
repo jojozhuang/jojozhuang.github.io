@@ -97,9 +97,9 @@ Generate a Liquid rendering profile to help you identify performance bottlenecks
 ```sh
 jekyll serve --profile
 $ bundle exec jekyll build --profile
-Configuration file: /Users/i857285/Johnny/GitHub/jojozhuang.github.io/_config.yml
-            Source: /Users/i857285/Johnny/GitHub/jojozhuang.github.io
-       Destination: /Users/i857285/Johnny/GitHub/jojozhuang.github.io/_site
+Configuration file: /Users/Johnny/GitHub/jojozhuang.github.io/_config.yml
+            Source: /Users/Johnny/GitHub/jojozhuang.github.io
+       Destination: /Users/Johnny/GitHub/jojozhuang.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating...
      Build Warning: Layout 'nil' requested in blog/atom.xml does not exist.

@@ -19,7 +19,7 @@ URL shortening is used to create shorter aliases for long URLs. We call these sh
 
 For example, if we shorten this page through TinyURL:
 ```sh
-https://jojozhuang.github.io/portfolio/online-judge-mean/
+https://rongzhuang.me/portfolio/online-judge-mean/
 ```
 We would get:
 ```sh

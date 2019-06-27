@@ -60,38 +60,38 @@ language:
     proficiency: 25
 portfolio:
   - name: Game 2048
-    link: http://jojozhuang.github.io/portfolio/game-2048/
+    link: http://rongzhuang.me/portfolio/game-2048/
     description: A cross-platform desktop application for game 2048, built with <span class="highlight">Electron and Node.js</span>.
   - name: Trip Planner
-    link: http://jojozhuang.github.io/portfolio/trip-planner/
+    link: http://rongzhuang.me/portfolio/trip-planner/
     description: An <span class="highlight">iOS</span> app for itinerary management, built with <span class="highlight">Swift</span>.
   - name: Restaurant
-    link: http://jojozhuang.github.io/portfolio/restaurant/
+    link: http://rongzhuang.me/portfolio/restaurant/
     description: An <span class="highlight">Android</span> app for searching restaurants, built with <span class="highlight">Java</span>. And there is a backend server built with <span class="highlight">ASP.NET</span>.
   - name: Course Player
-    link: http://jojozhuang.github.io/portfolio/course-player-xamarin/
+    link: http://rongzhuang.me/portfolio/course-player-xamarin/
     description: An <span class="highlight">iOS</span> app built with <span class="highlight">Xamarin</span> in <span class="highlight">C#</span>, one of the <span class="highlight">cross-platform</span> solutions for mobile app development.
   - name: Game Store
-    link: http://jojozhuang.github.io/portfolio/game-store/
-    description: An online website built with <span class="highlight">ASP.NETMVC & Web API</span> in <span class="highlight">C#</span>, another similar <a href="http://jojozhuang.github.io/portfolio/game-store/">Game Store</a> implemented with <span class="highlight">JSP</span>.
+    link: http://rongzhuang.me/portfolio/game-store/
+    description: An online website built with <span class="highlight">ASP.NETMVC & Web API</span> in <span class="highlight">C#</span>, another similar <a href="http://rongzhuang.me/portfolio/game-store/">Game Store</a> implemented with <span class="highlight">JSP</span>.
   - name: Online Course Player
-    link: http://jojozhuang.github.io/portfolio/course-player-socketio/
-    description: A player built with <span class="highlight">Node.js</span>, based on <span class="highlight">Socket.IO, WebSocket</span>, another similar <a href="http://jojozhuang.github.io/portfolio/course-player-signalr/">Course Player</a> implemented with <span class="highlight">C#</span>, based on <span class="highlight">SignalR</span>.
+    link: http://rongzhuang.me/portfolio/course-player-socketio/
+    description: A player built with <span class="highlight">Node.js</span>, based on <span class="highlight">Socket.IO, WebSocket</span>, another similar <a href="http://rongzhuang.me/portfolio/course-player-signalr/">Course Player</a> implemented with <span class="highlight">C#</span>, based on <span class="highlight">SignalR</span>.
   - name: Shoe Store
-    link: http://jojozhuang.github.io/portfolio/shoe-store/
+    link: http://rongzhuang.me/portfolio/shoe-store/
     description: An online store developed with <span class="highlight">ASP.NET MVC</span>, supports different screen size devices.
   - name: Code Generator
-    link: http://jojozhuang.github.io/portfolio/code-generator/
+    link: http://rongzhuang.me/portfolio/code-generator/
     description: A <span class="highlight">Windows Form(C#)</span> application for code generation based on database schema and templates.
   - name: 3-Tier CMS
-    link: http://jojozhuang.github.io/portfolio/three-tier-cms/
+    link: http://rongzhuang.me/portfolio/three-tier-cms/
     description: A Content Management System(CMS) built with classic <span class="highlight">ASP.NET Web Form</span>.
   - name: Kaixin Assistant
-    link: http://jojozhuang.github.io/portfolio/kaixin-assistant/
+    link: http://rongzhuang.me/portfolio/kaixin-assistant/
     description: A 'tag-on' desktop application for playing online games, built with <span class="highlight">C#</span> and <span class="highlight">Windows Form</span>.
   - name: Web Server
-    link: http://jojozhuang.github.io/portfolio/web-server/
+    link: http://rongzhuang.me/portfolio/web-server/
     description: A web server built with <span class="highlight">Java</span> sockets, capable of handling general HTTP requests.
   - name: SAP Dictionary
-    link: http://jojozhuang.github.io/portfolio/sap-dictionary/
+    link: http://rongzhuang.me/portfolio/sap-dictionary/
     description: A <span class="highlight">Windows Phone</span> app for searching SAP & ERP related words.

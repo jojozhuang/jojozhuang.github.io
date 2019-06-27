@@ -127,7 +127,7 @@ header.ejs
 footer.ejs
 ```html
 <!-- views/partials/footer.ejs -->
-<p class="text-center text-muted">© 2018 jojozhuang.github.io, All rights reserved.</p>
+<p class="text-center text-muted">© 2018 rongzhuang.me, All rights reserved.</p>
 ```
 ### 2.3 Express Server
 server.js
