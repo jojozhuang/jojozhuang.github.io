@@ -32,9 +32,29 @@ bookmarks:
       - name: Plunker
         description: An online real-time collaborative code editor
         url: https://plnkr.co/
+  - category: SEO
+    links:
+      - name: Varvy SEO tool
+        description: An online tool for testing your site to see if it follows the Google guidelines.
+        url: https://varvy.com/
+      - name: GTmetrix
+        description: An online tool to test the site loads and provide optimization suggestions.
+        url: https://gtmetrix.com/
+      - name: Web Page Performance Test
+        description: An online tool to run a speed test from multiple locations with different browsers.
+        url: https://www.webpagetest.org/
       - name: Google PageSpeed Insights
         description: An online tool for analyzing the page’s loading performance
         url: https://developers.google.com/speed/pagespeed/insights/
+      - name: Mobile Friendly Test
+        description: An online tool for testing how easily a visitor can use your page on a mobile device
+        url: https://search.google.com/test/mobile-friendly
+      - name: TinyPNG
+        description: An online tool to reduce the file size of JPG and PNG files.
+        url: https://tinypng.com/
+      - name: GoDaddy
+        description: An American publicly traded Internet domain registrar and web hosting company.
+        url: https://www.godaddy.com
   - category: Algorithm
     links:
       - name: Leetcode

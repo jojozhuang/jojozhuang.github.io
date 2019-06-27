@@ -16,8 +16,13 @@ tags: [siderbar]
 * rss
 * robots.txt
 * sitemap
+* GoDaddy
+* CloudFlare
+* 
+https://support.cloudflare.com/hc/en-us/articles/201720164-Step-2-Create-a-CloudFlare-account-and-add-a-website
 
 ## 7. Reference
 * [About /robots.txt](https://www.robotstxt.org/robotstxt.html)
 * [How to Use XML Sitemaps to Boost SEO](https://www.searchenginejournal.com/xml-sitemaps-seo/)
 * [JEKYLL - GENERATING A SITEMAP.XML WITHOUT A PLUGIN](http://www.independent-software.com/generating-a-sitemap-xml-with-jekyll-without-a-plugin.html)
+* [10 Must do Jekyll SEO optimizations](https://blog.webjeda.com/optimize-jekyll-seo/)
