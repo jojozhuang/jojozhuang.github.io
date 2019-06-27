@@ -27,18 +27,6 @@ navlist:
     url: /portfolio
     icon: fas fa-briefcase
     visible: true
-  - key: frontend
-    url: /frontend
-    visible: false
-  - key: java
-    url: /java
-    visible: false
-  - key: programming
-    url: /programming
-    visible: false
-  - key: devops
-    url: /devops
-    visible: false
   - key: popular
     url: /popular
     icon: fas fa-fire-alt
@@ -64,10 +52,7 @@ navlist:
   - key: note
     url: /note
     icon: fas fa-book-open
-    visible: false
-  - key: feed
-    url: /blog/atom.xml"
-    visible: false
+    visible: true
   - key: more
     url: /#
     icon: fas fa-chevron-circle-down
@@ -79,7 +64,7 @@ navlist:
         url: /contact
         icon: fas fa-address-book
       - key: rss
-        description: RSS
+        description: RSS Feed
         url: /blog/atom.xml
         icon: fas fa-rss
       - key: sitemap
