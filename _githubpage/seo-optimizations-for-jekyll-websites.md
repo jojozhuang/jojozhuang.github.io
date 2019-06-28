@@ -110,3 +110,4 @@ You will receive an email from CloudFlare.
 * [Free Secure Web: Jekyll & Github Pages & Cloudflare](https://martin.ankerl.com/2017/07/22/free-secure-web-jekyll-github-pages-cloudflare/)
 * [How to Change Nameservers in GoDaddy?](https://www.webnots.com/how-to-change-nameservers-in-godaddy/)
 * [How to Deploy Websites on Custom Domains using Cloudflare and Github Pages](https://medium.com/crowdbotics/annie-azana-how-to-deploy-websites-using-cloudflare-and-github-pages-c415c55fea36)
+* [Fix Defer Parsing of Javascript Warning in WordPress Using Async](https://www.collectiveray.com/defer-parsing-of-javascript-wordpress-async)

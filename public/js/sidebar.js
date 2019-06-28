@@ -18,3 +18,12 @@ jQuery(function ($) {
     $(".page-wrapper").addClass("toggled");
   });
 });
+
+$(document).ready(function(){
+  $("#show-sidebar").on("mouseover",function(event){
+    $(".page-wrapper").addClass("toggled");
+  });
+  $(".page-content").on("mouseover",function(event){
+    $(".page-wrapper").removeClass("toggled");
+  });
+});
