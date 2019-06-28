@@ -5,6 +5,9 @@ sass:
   sass_dir: public/css
   style: compressed
 
+plugins:
+  - jekyll-seo-tag
+  
 permalink: /blog/:year/:month/:day/:title/
 
 # Setup

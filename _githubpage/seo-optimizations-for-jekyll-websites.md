@@ -102,6 +102,8 @@ Done.
 You will receive an email from CloudFlare.
 ![image](/public/images/githubpages/916/cloudflare_notification.png)
 
+## 3. Move Javascript to Bottom
+
 ## 7. Reference
 * [About robots.txt](https://www.robotstxt.org/robotstxt.html)
 * [How to Use XML Sitemaps to Boost SEO](https://www.searchenginejournal.com/xml-sitemaps-seo/)
@@ -111,3 +113,4 @@ You will receive an email from CloudFlare.
 * [How to Change Nameservers in GoDaddy?](https://www.webnots.com/how-to-change-nameservers-in-godaddy/)
 * [How to Deploy Websites on Custom Domains using Cloudflare and Github Pages](https://medium.com/crowdbotics/annie-azana-how-to-deploy-websites-using-cloudflare-and-github-pages-c415c55fea36)
 * [Fix Defer Parsing of Javascript Warning in WordPress Using Async](https://www.collectiveray.com/defer-parsing-of-javascript-wordpress-async)
+* [Demo - Put Scripts at the Bottom](http://stevesouders.com/examples/rule-js-bottom.php)
