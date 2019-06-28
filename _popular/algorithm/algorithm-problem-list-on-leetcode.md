@@ -5,7 +5,7 @@ title: "Problem List on LeetCode"
 index: 350
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: /dsa.png
+image: dsa.png
 date: 2016-04-10
 postdate: 2016-04-10
 tags: [Algorithm, Leetcode]

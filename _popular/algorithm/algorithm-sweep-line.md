@@ -5,7 +5,7 @@ title: "Sweep Line"
 index: 329
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: /dsa.png
+image: dsa.png
 date: 2016-03-29
 postdate: 2016-03-29
 tags: [Sweep Line]

@@ -5,7 +5,7 @@ title: "Trie"
 index: 309
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: /dsa.png
+image: dsa.png
 date: 2016-03-09
 postdate: 2016-03-09
 tags: [Trie, Prefix Tree]

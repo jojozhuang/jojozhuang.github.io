@@ -5,7 +5,7 @@ title: "Practice - Java Best Practice"
 index: 341
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: /dsa.png
+image: dsa.png
 date: 2016-04-01
 postdate: 2016-04-01
 tags: [Java]

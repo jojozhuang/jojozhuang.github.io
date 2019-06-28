@@ -5,7 +5,7 @@ title: "Practice - Useful Math Knowledge"
 index: 345
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: /dsa.png
+image: dsa.png
 date: 2016-04-05
 postdate: 2016-04-05
 tags: [Math]

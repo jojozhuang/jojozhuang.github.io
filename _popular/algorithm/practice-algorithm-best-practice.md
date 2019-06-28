@@ -5,7 +5,7 @@ title: "Practice - Algorithm Best Practice"
 index: 342
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: /dsa.png
+image: dsa.png
 date: 2016-04-02
 postdate: 2016-04-02
 tags: [Algorithm]
