@@ -5,7 +5,7 @@ title: "Stack"
 index: 302
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: /dsa.png
+image: dsa.png
 date: 2016-03-02
 postdate: 2016-03-02
 tags: [Stack, LIFO]
