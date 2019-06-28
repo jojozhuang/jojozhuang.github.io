@@ -32,4 +32,4 @@ Access http://localhost:12001/ in web browser, enjoy!
 Follow tutorial [Viewing Jekyll Build Error with Travis CI](https://rongzhuang.me/tutorial/githubpages/viewing-jekyll-build-error-with-travisci/) to continuously deploy this personal website to GitHub Pages.
 
 # Tutorial
-Read tutorial [Setting up Jekyll for GitHub Pages on Ubuntu and MacOS](https://rongzhuang.me/tutorial/githubpages/setting-up-jekyll-for-github-pages-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages.
+Read tutorial [Setting up Jekyll for GitHub Pages on Ubuntu and MacOS](https://rongzhuang.me/githubpage/setting-up-jekyll-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages.
