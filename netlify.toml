@@ -3,14 +3,12 @@
   publish = "_site/"
 
 [[headers]]
-  for = "/public/images/*"
+  for = "/*"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "/public/css/*.css"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "/public/js/*.js"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+    #  Multi-key header rules are expressed with multi-line strings
+    cache-control = '''
+    public,
+    s-max-age=604800'''
