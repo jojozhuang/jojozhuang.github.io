@@ -175,3 +175,4 @@ $ bundle exec jekyll serve --port 12001
 * [Building a static website with Jekyll and GitHub Pages](https://programminghistorian.org/lessons/building-static-sites-with-jekyll-github-pages)
 * [How to Set Up a Jekyll Development Site on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jekyll-development-site-on-ubuntu-16-04)
 * [Increase Jekyll Build Speed](https://blog.webjeda.com/jekyll-build-speed/)
+* [How I reduced my Jekyll build time by 61%](https://forestry.io/blog/how-i-reduced-my-jekyll-build-time-by-61/)
