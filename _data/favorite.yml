@@ -49,6 +49,12 @@ bookmarks:
       - name: Mobile Friendly Test
         description: An online tool for testing how easily a visitor can use your page on a mobile device
         url: https://search.google.com/test/mobile-friendly
+      - name: Security Headers
+        description: An online tool for testing security headers of website.
+        url: https://securityheaders.com/
+      - name: SSL Labs
+        description: A free online service to perform analysis of the configuration of any SSL web server on the public Internet.
+        url: https://www.ssllabs.com/ssltest/
       - name: TinyPNG
         description: An online tool to reduce the file size of JPG and PNG files.
         url: https://tinypng.com/
