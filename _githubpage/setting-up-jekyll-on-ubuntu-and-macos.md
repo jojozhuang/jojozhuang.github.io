@@ -153,6 +153,10 @@ Let Jekyll build only the necessary posts.
 ```sh
 jekyll serve --watch --limit_posts 1
 ```
+Alternatively, we can set `incremental: true` in Jekyll’s `_config.yml` file. Notice, if the file name is changed, you have to restart the build.
+```sh
+incremental: true
+```
 
 ## 6. Upgrade Jekyll
 ```sh
