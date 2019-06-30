@@ -1,15 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+<head>
+  <title>{{ page.title }} @ {{site.mywebsite.url}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+  <link href="/public/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/public/css/allinone.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  {% seo %}
+</head>
 <body>
-
-{% include navbar.html %}
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark navbar-custom">
+    <a class="navbar-brand" href="/">
+        <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="{{ site.url }}/public/assets/rz-50px.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          {% for link in site.navlist %}
+            {% if link.visible == true %}
+              {% if link.sublist %}
+              <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a>
+                <div class="dropdown-menu">
+                  {% for sublink in link.sublist %}
+                    <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description | capitalize }}</a>
+                  {% endfor %}
+                </div>
+              </li>
+              {% else %}
+                <li class="nav-item {% if page.key == link.key %} active {% endif %}"><a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+          <!--<li><a href="/public/cv/cv.pdf"><i class="fas fa-download"></i> Download CV</a></li>-->
+        </ul>
+        <form class="form-inline ml-auto" action="/search">
+          <!--<div class="input-group">
+             <input class="form-control border-secondary py-2" style="width:100px" type="search" name="k" placeholder="Search this site">
+             <div class="input-group-append">
+                 <button class="btn btn-outline-secondary" type="submit">
+                     <i class="fa fa-search"></i>
+                 </button>
+             </div>
+           </div>-->
+          <div class="form-group">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search this site" name="k" id="search-box">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-outline-light search-btn" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+  </nav>
 
 {{ content }}
 
 <footer class="container-fluid text-center" style="clear: both;">
   <span>&copy; {{ site.time | date: '%Y' }} rongzhuang.me, All rights reserved.</span>
 </footer>
-{% include scripts.html %}
+
+<!-- scripts.html -->
+<script id="dsq-count-scr" src="//jojozhuang.disqus.com/count.js" defer></script>
+<script src="//platform-api.sharethis.com/js/sharethis.js#property=5b595ccbf5aa6d001130cf95&product=sticky-share-buttons" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--
+link href="/public/css/navbar.css" rel="stylesheet" />
+<link href="/public/css/main.css" rel='stylesheet' />
+<link href="/public/css/highlight.css" rel="stylesheet" />
+{% if page.key == "favorite" %}
+  <link href="/public/css/favorite.css" rel='stylesheet' />
+{% endif %}
+{% if page.tutorial == "list" %}
+  <link href="/public/css/tutoriallist.css" rel='stylesheet' />
+{% endif %}
+{% if page.note == "list" %}
+  <link href="/public/css/tutoriallist.css" rel='stylesheet' />
+{% endif %}
+{% if page.blog == "list" %}
+  <link href="/public/css/bloglist.css" rel='stylesheet' />
+{% endif %}
+{% if page.key == "library" %}
+  <link href="/public/css/library.css" rel='stylesheet' />
+{% endif %}
+{% if page.key == "cv" %}
+  <link href="/public/css/cv.css" rel='stylesheet' />
+{% endif %}
+-->
+{% if page.key == "tutorial" or page.key == "popular" or page.key == "note" %}
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>-->
+  <!--<link href="/public/css/sidebar.css" rel='stylesheet' />-->
+  <script src="/public/js/sidebar.js"></script>
+{% endif %}
+{% if page.key == "favorite" %}
+  <script src="/public/js/favorite.js"></script>
+{% endif %}
+{% if page.layout == "tutorial" or page.layout == "portfolio" or page.layout == "blog" or page.layout == "note"%}
+  <script src="/public/js/img.js"></script>
+{% endif %}
+{% if page.mathjax %}
+  {% include mathjax.html %}
+{% endif %}
+{% if page.mermaid %}
+  {% include mermaid.html %}
+{% endif %}
+<!-- move to here, script should be inside head, otherwise doesn't work for ie -->
+{% include google_analytics.html %}
+
 </body>
 </html>

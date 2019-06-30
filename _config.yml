@@ -1,5 +1,6 @@
 markdown: kramdown
 highlighter: rouge
+incremental: true
 
 sass:
   sass_dir: public/css
@@ -7,7 +8,7 @@ sass:
 
 plugins:
   - jekyll-seo-tag
-  
+
 permalink: /blog/:year/:month/:day/:title/
 
 # Setup
