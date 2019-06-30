@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-incremental: true
+# incremental: true
 
 sass:
   sass_dir: public/css

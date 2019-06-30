@@ -1,5 +1,7 @@
 (function() {
   function displaySearchResults(results, store) {
+    var searchTitle = document.getElementById('search-title');
+    var spinner = document.getElementById('spinner');
     var searchResults = document.getElementById('search-results');
 
     if (results.length) { // Are there any results?
@@ -42,6 +44,8 @@
     } else {
       searchResults.innerHTML = '<li>No results found</li>';
     }
+    searchTitle.style.display = "block";
+    spinner.style.display = "none";
   }
 
   function getQueryVariable(variable) {
