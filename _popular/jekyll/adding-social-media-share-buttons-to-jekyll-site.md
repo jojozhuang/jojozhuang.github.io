@@ -1,9 +1,10 @@
 ---
-layout: note
-key: about
+layout: tutorial
+key: popular
 title: "Adding Social Media Share Buttons to Jekyll Site"
 index: 907
-category: githubpages
+category: jekyll
+breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
 date: 2018-07-07
 postdate: 2017-08-19

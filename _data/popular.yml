@@ -37,3 +37,9 @@ categories:
         description: Practice of Java
         icon: fab fa-java
         type: practice
+  - name: Personal Website
+    subcategories:
+      - name: GitHub Pages and Jekyll
+        description: GitHub Pages and Jekyll
+        icon: fab fa-github
+        type: jekyll

@@ -1,9 +1,10 @@
 ---
-layout: note
-key: about
+layout: tutorial
+key: popular
 title: "Setting up Jekyll on Windows 10"
 index: 902
-category: githubpages
+category: jekyll
+breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
 date: 2018-07-02
 postdate: 2018-04-01

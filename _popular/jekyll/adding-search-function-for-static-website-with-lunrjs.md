@@ -1,9 +1,10 @@
 ---
-layout: note
-key: about
+layout: tutorial
+key: popular
 title: "Adding Search Function for Static Website with Lunr.js"
 index: 911
-category: githubpages
+category: jekyll
+breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
 date: 2018-07-11
 postdate: 2019-05-23

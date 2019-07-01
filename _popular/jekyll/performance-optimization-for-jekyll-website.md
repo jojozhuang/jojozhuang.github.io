@@ -1,9 +1,10 @@
 ---
-layout: note
-key: about
+layout: tutorial
+key: popular
 title: "Performance Optimization for Jekyll Website"
 index: 924
-category: githubpages
+category: jekyll
+breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
 date: 2018-07-24
 postdate: 2019-06-28

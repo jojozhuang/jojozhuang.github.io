@@ -1,9 +1,10 @@
 ---
-layout: note
-key: about
+layout: tutorial
+key: popular
 title: "Deploying Jekyll Website to Netlify"
 index: 922
-category: githubpages
+category: jekyll
+breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
 date: 2018-07-22
 postdate: 2019-06-22

@@ -3,12 +3,6 @@ layout: default
 key: about
 tutorial: list
 title: About This Website
-title2: Tutorials for GitHub Pages & Jekyll
-defaultcategory: githubpages
-categories:
-  - name: GitHub Pages
-    description: Jekyll, Liquid, MarkDown, Travisci
-    type: githubpages
 ---
 <div class="container">
     <div class="row">
@@ -25,7 +19,7 @@ categories:
           <li>The <a href="https://github.com/jojozhuang/jojozhuang.github.io">source code repository on GitHub</a> for this website.</li>
           <li>The <a href="http://startbootstrap.com/template-overviews/3-col-portfolio/">list page template</a> for Portfolio.</li>
           <li>The <a href="https://w3layouts.com/cv-v2-a-personal-portfolio-flat-bootstrap-responsive-web-template/">personal page template</a> for CV.</li>
-          <li>Tutorials for how to setup personal website with Jekyll are listed below.</li>
+          <li><a href="/popular/?navigation=Popular,%20Personal%20Website,">Tutorials</a> for how to setup personal website with Jekyll.</li>
         </ul>
 
         <p>If you have any questions or comments, please post them below. If you like my website, you can
@@ -35,7 +29,4 @@ categories:
       <div class="col-sm-1"></div>
     </div>
     <br/>
-    <hr>
 </div>
-{% assign postings = site.githubpage | sort: 'index' %}
-{% include postinglist.html %}
