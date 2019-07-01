@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Sharing files between Host and Guest in VirtualBox"
+title: "Sharing Files between Host and Guest in VirtualBox"
 index: 12
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
