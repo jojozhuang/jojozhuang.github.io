@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-# incremental: true
+#incremental: true
 
 sass:
   sass_dir: public/css
@@ -79,6 +79,18 @@ navlist:
         description: Blank Page
         url: /blank
         icon: fas fa-chalkboard
+      - key: system-design
+        description: 系统设计(System Design)
+        url: /public/pdf/system-design-cn.pdf
+        icon: far fa-file-pdf
+      - key: algorithm-essentials-java
+        description: Algorithm Essentials
+        url: /public/pdf/algorithm-essentials-java.pdf
+        icon: fas fa-square-root-alt
+      - key: modern-java
+        description: Modern Java
+        url: /public/pdf/Manning.Modern.Java.in.Action.2018.9.pdf
+        icon: fab fa-java
   - key: about
     url: /about
     icon: fas fa-info-circle
