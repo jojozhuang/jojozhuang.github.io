@@ -2,10 +2,10 @@
 layout: note
 key: about
 title: "Liquid for Jekyll"
-index: 903
+index: 904
 category: githubpages
 image: github-pages.png
-date: 2018-07-03
+date: 2018-07-04
 postdate: 2016-01-19
 tags: [Jekyll, Liquid]
 ---

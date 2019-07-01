@@ -1,7 +1,7 @@
 ---
 layout: note
 key: about
-title: "Setting Up Jekyll on Windows 10"
+title: "Setting up Jekyll on Windows 10"
 index: 902
 category: githubpages
 image: github-pages.png

@@ -2,11 +2,11 @@
 layout: note
 key: about
 title: "Adding Progress Bar"
-index: 914
+index: 909
 category: githubpages
 image: github-pages.png
-date: 2018-07-14
-postdate: 2017-12-12
+date: 2018-07-09
+postdate: 2019-06-04
 tags: [Nanobar, Progress Bar]
 ---
 
@@ -62,7 +62,7 @@ Create nanobar with javascript and assign it to div with classname `nanobar`. No
 ```
 ### 2.6 Test
 Access any page, there is a green top bar below the navigation bar.
-![image](/public/images/githubpages/914/progress_bar.png)
+![image](/public/images/githubpages/909/progress_bar.png)
 
 ## 3. Reference
 * [Adding Top Progress Bar to Websites](https://blog.webjeda.com/top-bar-website/)

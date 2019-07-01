@@ -2,10 +2,10 @@
 layout: note
 key: about
 title: "Setting up Personal Website on GitLab Pages(Draft)"
-index: 922
+index: 930
 category: githubpages
 image: github-pages.png
-date: 2018-07-22
+date: 2018-07-30
 postdate: 2018-06-06
 tags: [GitLab Pages]
 ---

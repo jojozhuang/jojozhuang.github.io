@@ -2,10 +2,10 @@
 layout: note
 key: about
 title: "Using MathJax in Jekyll"
-index: 910
+index: 913
 category: githubpages
 image: github-pages.png
-date: 2018-07-10
+date: 2018-07-13
 postdate: 2018-09-10
 tags: [MathJax, Mathematic]
 mathjax: true
@@ -56,7 +56,7 @@ Let's consider <math><mi>a</mi><mo>≠</mo><mn>0</mn></math>.
 </body>
 </html>
 ```
-![image](/public/images/githubpages/910/mathml.png){:width="600px"}
+![image](/public/images/githubpages/913/mathml.png){:width="600px"}
 
 ## 3. Using MathJax in Jekyll with Markdown
 ### 3.1 Page Template

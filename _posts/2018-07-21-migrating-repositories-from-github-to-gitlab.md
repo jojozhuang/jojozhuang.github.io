@@ -1,12 +1,8 @@
 ---
-layout: note
-key: about
+layout: post
+key: blog
 title: "Migrating Repositories From GitHub to GitLab"
-index: 921
-category: githubpages
-image: github-pages.png
 date: 2018-07-21
-postdate: 2018-06-05
 tags: [GitHub, GitLab]
 ---
 
@@ -14,7 +10,7 @@ tags: [GitHub, GitLab]
 
 ## 1. Microsoft Acquired GitHub
 On June 6th, 2018, Microsoft announced an agreement to acquire GitHub. Here is the official blog [Microsoft + GitHub = Empowering Developers](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/) about this acquisition. And GitHub also announced this news through [A bright future for GitHub](https://blog.github.com/2018-06-04-github-microsoft/). And this news is highlighted on GitHub.
-![image](/public/images/githubpages/921/acquire.png)
+![image](/public/images/blog/2018-07-21/acquire.png)
 
 ## 2. Moving to GitLab
 Not sure how open source projects hosted in GitHub would be impacted. For safety, I moved all repositories from [GitHub](ttps://github.com) to [GitLab](https://GitLab.com).
@@ -22,25 +18,25 @@ Not sure how open source projects hosted in GitHub would be impacted. For safety
 Go to https://GitLab.com/users/sign_in to register.
 ### 2.2 Profile
 Login and go to Profile, edit user info.
-![image](/public/images/githubpages/921/profile.png)
+![image](/public/images/blog/2018-07-21/profile.png)
 ### 2.3 Import Projects
 Click '+' dropdown button which is nearby the top search box, and select 'New project'. Switch to 'Import project' tab, then select 'GitHub'.
-![image](/public/images/githubpages/921/import.png)
+![image](/public/images/blog/2018-07-21/import.png)
 Click 'List your GitHub repositories', and provide GitHub credentials.
-![image](/public/images/githubpages/921/github.png)
+![image](/public/images/blog/2018-07-21/github.png)
 You should be able to see all your repositories. Click 'Import all repositories' and wait for few seconds. All of your repositories will be imported to GitLab. Done!
-![image](/public/images/githubpages/921/moving.png)
+![image](/public/images/blog/2018-07-21/moving.png)
 
 ## 3. Working with GitLab
 ### 3.1 Repository
 Compared with GitHub, more information are shown in the same page. The left side is a menu tree, and the right side shows the relative detail information.
-![image](/public/images/githubpages/921/portfolio.png)
+![image](/public/images/blog/2018-07-21/portfolio.png)
 ### 3.2 CI/CD Pipeline
 GitLab offers a continuous integration(CI) service. If you add a `.GitLab-ci.yml` file to the root directory of your repository, and configure your GitLab project to use a Runner, then each commit or push, triggers your CI `pipeline`.
-![image](/public/images/githubpages/921/pipeline.png)
+![image](/public/images/blog/2018-07-21/pipeline.png)
 ### 3.3 Kubernete
 You can connect your project to Google Kubernetes Engine (GKE) on Google Cloud Platform (GCP).
-![image](/public/images/githubpages/921/kubernete.png)
+![image](/public/images/blog/2018-07-21/kubernete.png)
 
 ## 4. References
 * [Import your project from GitHub to GitLab](https://docs.GitLab.com/ee/user/project/import/github.html)
