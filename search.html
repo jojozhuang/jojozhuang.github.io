@@ -20,7 +20,8 @@ tutorial: list
     {% assign tutorials = site.tutorial %}
     {% assign populars = site.popular %}
     {% assign notes = site.note %}
-    {% assign postings = tutorials | concat: populars | concat: notes %}
+    {% assign githubpages = site.githubpage %}
+    {% assign postings = tutorials | concat: populars | concat: notes | concat: githubpages %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "key": "{{ post.key | xml_escape }}",

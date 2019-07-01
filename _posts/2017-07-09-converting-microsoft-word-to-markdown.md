@@ -1,12 +1,8 @@
 ---
-layout: note
-key: about
+layout: post
+key: blog
 title: "Converting Microsoft Word to Markdown"
-index: 909
-category: githubpages
-image: github-pages.png
-date: 2018-07-09
-postdate: 2016-02-03
+date: 2017-07-09
 tags: [Markdown, Writage]
 ---
 

@@ -2,12 +2,12 @@
 layout: note
 key: about
 title: "Customization of Jekyll"
-index: 904
+index: 905
 category: githubpages
 image: github-pages.png
-date: 2018-07-04
+date: 2018-07-05
 postdate: 2016-11-18
-tags: [Jekyll]
+tags: [Jekyll, Excerpt]
 ---
 
 > Several useful approaches used to customize Jekyll for my personal website hosted on GitHub Pages.
@@ -49,7 +49,7 @@ Add the following codes to post.html, which is the template of posting.
 {% endraw %}
 ```
 Previous and Next buttons are added to the posting. Now, you can click on either of them to navigate to another posting.
-![image](/public/images/githubpages/904/pagination.png)  
+![image](/public/images/githubpages/905/pagination.png)  
 
 ## 3. Code Snippet Highlighting
 When insert codes to markdown, you can specify the programming language of the code. For example:
@@ -60,7 +60,7 @@ java code
 ````
 
 Be default, there is only a grey rectangle as background, no highlighting on the codes. See the below screenshot.
-![image](/public/images/githubpages/904/withouthighlight.png)  
+![image](/public/images/githubpages/905/withouthighlight.png)  
 
 To enable the highlighting, you need to edit `_config.yml` file which is located in the root directory of the website, add following lines.
 ```
@@ -72,7 +72,7 @@ Then, create css file, for example, [highlight.scss]({% link /public/css/highlig
 <link href="/public/css/highlight.css" rel="stylesheet" />
 ```
 Refresh the page. The highlighting is working now.
-![image](/public/images/githubpages/904/javahighlight.png)  
+![image](/public/images/githubpages/905/javahighlight.png)  
 
 ## 4. Links
 In Markdown, we can create hyperlinks to the pages of our own website or external website with the following codes:
@@ -132,12 +132,12 @@ category: java
 ---
 ```
 Again, use `post.excerpt` to get customized excerpt and display it on page.
-![image](/public/images/githubpages/904/excerpt.png){:width="400px"}  
+![image](/public/images/githubpages/905/excerpt.png){:width="400px"}  
 
 ## 6. Data File
 All the links in [favorite page](http://rongzhuang.me/favorite/) are from `Data File`.  
 Create `_data` folder in the root directory, add create a data file named `favorite.yml`.
-![image](/public/images/githubpages/904/datafile.png){:width="400px"}  
+![image](/public/images/githubpages/905/datafile.png){:width="400px"}  
 Add following content to `favorite.yml`.
 ```
 title: My Favorites
@@ -210,7 +210,7 @@ title: Rong Zhuang's Favorite Bookmarks
 {% endraw %}
 ```
 Open browser, access the favorite page.
-![image](/public/images/githubpages/904/favorite.png)  
+![image](/public/images/githubpages/905/favorite.png)  
 
 ## 7. Collection
 Use `Collection` to create similar pages. The [portfolio index page](http://rongzhuang.me/portfolio/) is created by collection.
@@ -221,7 +221,7 @@ collections:
     output: true
 ```
 Create new folder named `_portfolio` in root directory, and put all portfolio postings into it.
-![image](/public/images/githubpages/904/collection.png){:width="400px"}  
+![image](/public/images/githubpages/905/collection.png){:width="400px"}  
 Each posting Markdown file contains following attributes.
 ```
 ---
@@ -259,7 +259,7 @@ At last, create portfolio.html in the root directory, add codes to read data fro
 {% endraw %}
 ```
 Open browser, access the collection page.
-![image](/public/images/githubpages/904/portfolio.png)  
+![image](/public/images/githubpages/905/portfolio.png)  
 
 ## 8. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)

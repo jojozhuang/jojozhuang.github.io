@@ -2,11 +2,11 @@
 layout: note
 key: about
 title: "Adding Search Function for Static Website with Lunr.js"
-index: 913
+index: 911
 category: githubpages
 image: github-pages.png
-date: 2018-07-13
-postdate: 2017-12-11
+date: 2018-07-11
+postdate: 2019-05-23
 tags: [Search, Lunr.js]
 ---
 

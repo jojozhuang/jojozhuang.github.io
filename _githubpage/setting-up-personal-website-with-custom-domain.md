@@ -2,12 +2,12 @@
 layout: note
 key: about
 title: "Setting up Personal Website with Custom Domain"
-index: 915
+index: 921
 category: githubpages
 image: github-pages.png
-date: 2019-06-26
-postdate: 2017-12-13
-tags: [siderbar]
+date: 2018-07-21
+postdate: 2019-06-21
+tags: [Custom Domain]
 ---
 
 > Setup personal website with Github page and custom domain.
@@ -19,11 +19,11 @@ For demo purpose, I will use the repository of my personal website, see https://
 
 ## 2. Register domain from Godaddy
 Visit https://www.godaddy.com, register account and search domains.
-![image](/public/images/githubpages/915/godaddy_searchdomain.png)
+![image](/public/images/githubpages/921/godaddy_searchdomain.png)
 Add the domain you're interested into shopping cart, and prepare to pay for it.
-![image](/public/images/githubpages/915/godaddy_cart.png)
+![image](/public/images/githubpages/921/godaddy_cart.png)
 After you finish the payment, congratulations, you own the domain!
-![image](/public/images/githubpages/915/godaddy_domain.png)
+![image](/public/images/githubpages/921/godaddy_domain.png)
 
 ## 3. Setup DNS
 Now, it's time to setup DNS for your new domain. Add `A` record to point the new domain(eg. rongzhuang.me) to a specific IP. The below four IP addresses are for GitHub Pages.
@@ -33,16 +33,16 @@ Now, it's time to setup DNS for your new domain. Add `A` record to point the new
 * 185.199.111.153
 
 In addition, add `CNAME` record to point the new domain(eg. rongzhuang.me) to the existing github page domain(eg. jojozhuang.github.io).
-![image](/public/images/githubpages/915/godaddy_adddns.png)
+![image](/public/images/githubpages/921/godaddy_adddns.png)
 
 ## 4. Enable Custom Domain and SSL on GitHub
 Go to the github repository. In Settings, input the custom domain and check 'Enforce HTTPS'.
-![image](/public/images/githubpages/915/custom_domain.png){:width="700px"}
+![image](/public/images/githubpages/921/custom_domain.png){:width="700px"}
 
 The settings on GitHub and GoDaddy will be activated after a while. Visit the website with new domain [rongzhuang.me](rongzhuang.me). Notice that the url always starts with `https`.
-![image](/public/images/githubpages/915/rongzhuang_home.png)
+![image](/public/images/githubpages/921/rongzhuang_home.png)
 Portfolio page.
-![image](/public/images/githubpages/915/rongzhuang_portfolio.png)
+![image](/public/images/githubpages/921/rongzhuang_portfolio.png)
 
 ## 5. Reference
 * [How to Configure GoDaddy Custom Domains with GitHub Pages](https://medium.com/@supriyakankure/how-to-add-a-custom-domain-to-your-github-page-with-godaddy-84495781143e)
