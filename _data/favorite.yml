@@ -72,6 +72,11 @@ bookmarks:
       - name: JiuZhang(Chinese)
         description: A chinese algorithms training website
         url: http://www.jiuzhang.com/
+  - category: System Design
+    links:
+      - name: System Design Primer
+        description: System Design Primer - Trade Off
+        url: https://github.com/donnemartin/system-design-primer
   - category: Online Learning
     links:
       - name: Stack Overflow
@@ -508,7 +513,7 @@ bookmarks:
       - name: Icons8
         description: Free Icons
         url: https://icons8.com
-      - name: Awesome Icons
+      - name: Font Awesome
         description: Free icons from Font Awecome
         url: https://fontawesome.com/icons?d=gallery&m=free
       - name: Bootsnipp
