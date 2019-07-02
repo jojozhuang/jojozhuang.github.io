@@ -74,9 +74,9 @@ bookmarks:
         url: http://www.jiuzhang.com/
   - category: System Design
     links:
-      - name: System Design Primer
-        description: System Design Primer - Trade Off
-        url: https://github.com/donnemartin/system-design-primer
+      - name: The System Design Primer
+        description: Summaries of various system design topics, including pros and cons. Everything is a trade-off.
+        url: https://github.com/donnemartin/system-design-primer/blob/master/README.md
   - category: Online Learning
     links:
       - name: Stack Overflow
