@@ -23,6 +23,8 @@ Go to https://www.getpostman.com/apps, select 'Postman for Mac' to download the 
 ## 3. APIs for Testing
 In the posting [Building RESTful API with ASP.NET Core]({% link _tutorial/restful/building-restful-api-with-aspnet-core.md %}), I introduced how to create RESTful APIs with C#. Now, let's use Postman to test these APIs.
 
+<div class="table-responsive-sm" markdown="block">
+
 API                       | Description         | Request body | Response body
 --------------------------|---------------------|--------------|-------------------
 GET [http://localhost:5000/api/products](http://localhost:5000/api/products)        | Get all products    | None         | Array of Products
@@ -31,6 +33,8 @@ POST [http://localhost:5000/api/products](http://localhost:5000/api/products)   
 PUT [http://localhost:5000/api/products/1](http://localhost:5000/api/products/1)   | Update a product    | Product      | None
 DELETE [http://localhost:5000/api/products/1](http://localhost:5000/api/products/1) | Delete a product    | None         | None
 POST [http://localhost:5000/api/upload](http://localhost:5000/api/upload)         | Upload an image     | Image File   | Image URL
+
+</div>
 
 ## 4. Testing
 ### 4.1 Creating New Collection

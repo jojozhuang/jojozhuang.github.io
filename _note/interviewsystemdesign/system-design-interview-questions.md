@@ -797,10 +797,14 @@ Non-functional Requirements:
 ### 13.2 Database Schema
 location:
 
+<div class="table-responsive-sm" markdown="block">  
+
 LocationID  | Name        | Latitude   | Longitude   | Description | Category    |
 ------------|-------------|--------------------------|-------------|-------------|
 1           | Starbucks   | 37.337034, | -122.035963 | Starbucks   | Coffee Shop |
 2           | Burger King | 37.309433, | -121.993708 | Burger King | Restaurant  |
+
+</div>
 
 reviews:
 
