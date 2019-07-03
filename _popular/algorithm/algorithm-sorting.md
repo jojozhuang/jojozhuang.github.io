@@ -16,6 +16,8 @@ mathjax: true
 
 ## 1. Common Sorting Algorithms
 
+<div class="table-responsive-sm" markdown="block">  
+
  Name           | Average       | Best Case     | Worst Case    | Space Complexity | Stable
 ----------------|---------------|---------------|---------------|------------------|--------
  Bubble Sort    | $O(n^2)$      | $O(n)$        | $O(n^2)$      | $O(1)$           | Yes
@@ -28,6 +30,9 @@ mathjax: true
  Bucket Sort    | --            | $O(n+r)$      | $O(n+r)$      | $O(n+r)$         | Yes
  Counting Sort  | --            | $O(n+r)$      | $O(n+r)$      | $O(n+r)$         | Yes
  Radix Sort     | --            | $O(nk/d)$     | $O(nk/d)$     | $O(n+2^d)$       | Yes
+{: .table-striped }
+
+</div>
 
 ## 2. Bubble Sort
 ### 2.1 How It Works?

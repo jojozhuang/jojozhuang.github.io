@@ -18,11 +18,22 @@ img.my_photo {
 
 table {
   border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 table, th, td {
   border: 1px solid $border-color;
   padding: 10px;
+}
+
+@media (max-width: 576px) {
+  table tr th {
+    font-size: 14px;
+  }
+  table tr td {
+    font-size: 13px;
+  }
 }
 
 footer {
@@ -70,6 +81,13 @@ pre {
     font-size: 11px;
     line-height: 1.3;
   }
+}
+
+.language-raw {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  background: #F0F0F0;
 }
 
 /* breadcrumb */

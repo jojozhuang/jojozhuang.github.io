@@ -37,6 +37,8 @@ In Java, access specifiers are the keywords which are used to define the access 
 * `default`: Default are accessible within the package only. By default, all the classes, methods, and variables are of default scope.
 * `private`: The private class, methods, or variables defined as private can be accessed within the class only.
 
+<div class="table-responsive-sm" markdown="block">  
+
 Access Modifiers        | private | default | protected | public
 ------------------------|---------|---------|-----------|--------
 Inside Class            | Y       | Y       | Y         | Y
@@ -44,6 +46,9 @@ Same Package Class      | N       | Y       | Y         | Y
 Same Package Sub-Class  | N       | Y       | Y         | Y
 Other Package Class     | N       | N       | N         | Y
 Other Package Sub-Class | N       | N       | Y         | Y
+{: .table-striped }
+
+</div>
 
 ### 1.4 Difference between Constructor and Method
 A constructor in Java is a block of code similar to a method that’s called when an instance of an object is created.
@@ -272,7 +277,7 @@ Reference Type - Reference       | Copied       | Copied
 Reference Type - Referred Object | Not copied   | Copied
 
 Object clone.
-![image](/public/images/note/java-core-shallow-copy-vs-deep-copy/object_clone.jpg){:width="400px"}  
+![image](/public/images/java/java-core-shallow-copy-vs-deep-copy/object_clone.jpg){:width="400px"}  
 
 ## 1. String, StringBuilder, StringBuffer
 
