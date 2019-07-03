@@ -27,7 +27,7 @@ I built four mobile apps with multiple different technologies. Apart from the na
 * Xamarin iOS App
 * Xamarin Android App
 
-| Dev Tools       | Simulator/Emulator | Product List | Product Detail | Product Deletion |
+| Dev Tools       | Simulator | Product List | Product Detail | Product Deletion |
 |-----------------|--------------------|--------------|----------------|------------------|
 | iOS(Native)     | ![image](/public/images/portfolio/gamestoremulti/ios_native_simulator.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/ios_native_productlist.png){:width="220px"} | ![image](/public/images/portfolio/gamestoremulti/ios_native_productdetail.png){:width="220px"} | ![image](/public/images/portfolio/gamestoremulti/ios_native_productdeletion.png){:width="220px"} |
 | Android(Native) | ![image](/public/images/portfolio/gamestoremulti/android_native_emulator.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_native_productlist.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_native_productdetail.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_native_productdeletion.png){:width="200px"} |
