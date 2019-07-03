@@ -39,6 +39,7 @@ Save data locally for the app or save it to remote server, or use both two appro
 RSETful Web Service.
 
 ## 3. Development
+<div class="table-responsive-sm" markdown="block">
 
 |        | Language          | IDE                   | UI Design  | Simulator                    |  Data Persistence|
 |--------|-------------------|-----------------------|------------|------------------------------|------------------|
@@ -46,6 +47,8 @@ RSETful Web Service.
 |Android | Java              | Android Studio        | fragment   | Android Simulator/Genymotion | Local/Remote     |
 |Xamarin | C#                | Visual Studio + xcode | storyboard | Platform specific            | Local/Remote     |
 |Cordova | HTML + JS         | Visual Studio Code    | html + CSS | Platform specific            | Local/Remote     |
+
+</div>
 
 ## 4. Tutorials
 * [Building iOS App with Xcode]({% link _tutorial/mobile/building-ios-app-with-xcode.md %})

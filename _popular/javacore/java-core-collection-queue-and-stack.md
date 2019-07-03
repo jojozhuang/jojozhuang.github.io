@@ -16,6 +16,8 @@ tags: [List, Set, Map, Stack]
 ## 1. Overview
 Commonly used collection classes.
 
+<div class="table-responsive-sm" markdown="block">
+
 Collection | Ordering | Random Access | KeyValue | Duplicate Elements | Null Element | Thread Safety
 -----------|----------|---------------|----------|--------------------|--------------|---------------
 ArrayList  | Yes      | Yes           | No       | Yes                | Yes          | No
@@ -31,6 +33,8 @@ Stack      | Yes      | No            | No       | Yes                | Yes     
 CopyOnWriteArrayList  | Yes | Yes     | No       | Yes                | Yes          | Yes
 ConcurrentHashMap     | No  | Yes     | Yes      | No                 | Yes          | Yes
 CopyOnWriteArraySet   | No  | No      | No       | No                 | Yes          | Yes
+
+</div>
 
 ## 2. Queue
 ### 2.1 Constructor
