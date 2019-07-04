@@ -5,9 +5,6 @@ librarydesc: Combination of my posting and portfolio with the bookmark list.
 bookmarks:
   - category: Online Tools
     links:
-      - name: Markdown Cheatsheet
-        description: Quick reference and showcase for Markdown
-        url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
       - name: XML Formatter
         description: Format XML string
         url: https://www.freeformatter.com/xml-formatter.html
@@ -510,6 +507,12 @@ bookmarks:
         url: https://shopify.github.io/liquid/
   - category: Resources
     links:
+      - name: GitHub Markdown Cheatsheet
+        description: Quick reference and showcase for Markdown
+        url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+      - name: kramdown Quick Reference
+        description: Quick reference and showcase for kramdown
+        url: https://kramdown.gettalong.org/quickref.html
       - name: Icons8
         description: Free Icons
         url: https://icons8.com
