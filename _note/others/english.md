@@ -93,6 +93,7 @@ tags: [English]
 * pruning: 剪枝
 * xor: Exclusive Or
 * throughput: 吞吐量
+* idempotent: 幂等的
 
 ## 4. Others:
 * within bound: 在边界之内
