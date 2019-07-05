@@ -2,12 +2,12 @@
 layout: tutorial
 key: note
 title: "Computer Network"
-index: 201
+index: 203
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: interview.png
-date: 2016-03-03
-postdate: 2016-03-03
+image: system-design.png
+date: 2017-01-03
+postdate: 2019-01-05
 tags: [OSI, HTTP, TCP, UDP]
 ---
 
@@ -69,11 +69,11 @@ Open Systems Interconnection(OSI) 7 layer model.
 </table>
 
 Each layer has particular protocols for communication.
-![image](/public/images/note/201/osi_model.jpg){:width="750px"}
+![image](/public/images/note/203/osi_model.jpg){:width="700px"}
 OSI is a 7 layer architecture with each layer having specific functionality to perform. All these 7 layers work collaboratively to transmit the data from one person to another across the globe.
-![image](/public/images/note/201/osi_model2.png){:width="600px"}
+![image](/public/images/note/203/osi_model2.png){:width="500px"}
 A simple mnemonic for memorizing the names of OSI layers - `All People Seem To Need Data Processing`.
-![image](/public/images/note/201/osi_memorize.png){:width="400px"}
+![image](/public/images/note/203/osi_memorize.png){:width="300px"}
 
 ## 2. Hypertext Transfer Protocol (HTTP)
 HTTP is a method for encoding and transporting data between a client and a server.  It is a `request/response` protocol: clients issue requests and servers issue responses with relevant content and completion status info about the request.  HTTP is self-contained, allowing requests and responses to flow through many intermediate routers and servers that perform load balancing, caching, encryption, and compression.
@@ -95,7 +95,7 @@ HTTP is an `application layer` protocol relying on lower-level protocols such as
 
 ## 3. Transmission Control Protocol (TCP)
 TCP is one of the main protocols in TCP/IP networks. Whereas the IP protocol deals only with `packets`, TCP enables two hosts to establish a connection and exchange streams of data. TCP guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent.
-![image](/public/images/note/201/tcp.jpg){:width="600px"}
+![image](/public/images/note/203/tcp.jpg){:width="600px"}
 
 TCP is a connection-oriented protocol over an [IP network](https://en.wikipedia.org/wiki/Internet_Protocol).  Connection is established and terminated using a [handshake](https://en.wikipedia.org/wiki/Handshaking).  All packets sent are guaranteed to reach the destination in the original order and without corruption through:
 
@@ -112,20 +112,28 @@ Use TCP over UDP when:
 * You need all of the data to arrive intact
 * You want to automatically make a best estimate use of the network throughput
 
-### 3.1 TCP 3-Way Handshakes
-To establish a connection, TCP uses a `three-way handshake`. Before a client attempts to connect with a server, the server must first bind to and listen at a port to open it up for connections: this is called a `passive open`. Once the passive open is established, a client may initiate an `active open`. To establish a connection, the three-way (or 3-step) handshake occurs:
+### 3.1 TCP Connection Establishment
+To establish a connection, TCP uses a `3-way handshake`. Before a client attempts to connect with a server, the server must first bind to and listen at a port to open it up for connections: this is called a `passive open`. Once the passive open is established, a client may initiate an `active open`. To establish a connection, the three-way (or 3-step) handshake occurs:
 * `SYN`: The active open is performed by the client sending a SYN to the server. The client sets the segment's sequence number to a random value A.
 * `SYN-ACK`: In response, the server replies with a SYN-ACK. The acknowledgment number is set to one more than the received sequence number i.e. A+1, and the sequence number that the server chooses for the packet is another random number, B.
 * `ACK`: Finally, the client sends an ACK back to the server. The sequence number is set to the received acknowledgement value i.e. A+1, and the acknowledgement number is set to one more than the received sequence number i.e. B+1.
 
 At this point, both the client and server have received an acknowledgment of the connection. The steps 1, 2 establish the connection parameter (sequence number) for one direction and it is acknowledged. The steps 2, 3 establish the connection parameter (sequence number) for the other direction and it is acknowledged. With these, a full-duplex communication is established.
 
-![image](/public/images/note/201/three_way_handshake.gif){:width="600px"}
+![image](/public/images/note/203/three_way_handshake.gif){:width="600px"}
 
+### 3.2 TCP Connection Termination
+Termination of TCP Connection, which uses `4-way handshake`.
+* Step 1 (FIN From Client) – Suppose that the client application decides it wants to close the connection. (Note that the server could also choose to close the connection). This causes the client send a TCP segment with the FIN bit set to 1 to server and to enter the FIN_WAIT_1 state. While in the FIN_WAIT_1 state, the client waits for a TCP segment from the server with an acknowledgment (ACK).
+* Step 2 (ACK From Server) – When Server received FIN bit segment from Sender (Client), Server Immediately send acknowledgement (ACK) segment to the Sender (Client).
+* Step 3 (Client waiting) – While in the FIN_WAIT_1 state, the client waits for a TCP segment from the server with an acknowledgment. When it receives this segment, the client enters the FIN_WAIT_2 state. While in the FIN_WAIT_2 state, the client waits for another segment from the server with the FIN bit set to 1.
+* Step 4 (FIN from Server) – Server sends FIN bit segment to the Sender(Client) after some time when Server send the ACK segment (because of some closing process in the Server).
+* Step 5 (ACK from Client) – When Client receive FIN bit segment from the Server, the client acknowledges the server’s segment and enters the TIME_WAIT state. The TIME_WAIT state lets the client resend the final acknowledgment in case the ACK is lost.The time spent by client in the TIME_WAIT state is depend on their implementation, but their typical values are 30 seconds, 1 minute, and 2 minutes. After the wait, the connection formally closes and all resources on the client side (including port numbers and buffer data) are released.
+![image](/public/images/note/203/four_way_handshake.png){:width="500px"}
 
 ## 4. User Datagram Protocol (UDP)
 User Datagram Protocol (UDP) is part of the Internet Protocol suite used by programs running on different computers on a network. UDP is used to send short messages called datagrams but overall, it is an unreliable, connectionless protocol.
-![image](/public/images/note/201/udp.jpg){:width="600px"}
+![image](/public/images/note/203/udp.jpg){:width="600px"}
 
 UDP is connectionless. Datagrams (analogous to packets) are guaranteed only at the `datagram` level.  Datagrams might reach their destination out of order or not at all.  UDP does not support congestion control.  Without the guarantees that TCP support, UDP is generally more efficient.
 
@@ -143,6 +151,8 @@ Use UDP over TCP when:
 * [Wikipedia - OSI model](https://en.wikipedia.org/wiki/OSI_model)
 * [OSI Model Layers](https://medium.com/@madhavbahl10/osi-model-layers-explained-ee1d43058c1f)
 * [Computer Network - Layers of OSI Model](https://www.geeksforgeeks.org/layers-osi-model/)
+* [Computer Network - TCP 3-Way Handshake Process](https://www.geeksforgeeks.org/computer-network-tcp-3-way-handshake-process/)
+* [Computer Network - TCP Connection Termination](https://www.geeksforgeeks.org/computer-network-tcp-connection-termination/)
 * [TCP 3-way handshake](https://ddos-guard.net/en/terminology/protocols/tcp-3-way-handshake)
 
 #### Source(s) and further reading: HTTP
