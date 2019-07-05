@@ -11,7 +11,7 @@ postdate: 2019-01-01
 tags: [System Design, Trade-Offs, CAP, BASE]
 ---
 
-> Learn how to design large-scale systems and prepare for the system design interview.
+> Learn how to design large-scale systems.
 
 ## 1. Getting Started
 First, get a basic understanding of common principles, learning about what they are, how they are used, and their pros and cons.
@@ -50,91 +50,57 @@ Another way to look at performance vs scalability:
 * If you have a **performance** problem, your system is slow for a single user.
 * If you have a **scalability** problem, your system is fast for a single user but slow under heavy load.
 
-### Source(s) and further reading
-
+**Source(s) and further reading:**
 * [A word on scalability](http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html)
 * [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 
-## Latency vs throughput
-
-**Latency** is the time to perform some action or to produce some result.
-
-**Throughput** is the number of such actions or results per unit of time.
+### 2.2 Latency vs throughput
+* **Latency** is the time to perform some action or to produce some result.
+* **Throughput** is the number of such actions or results per unit of time.
 
 Generally, you should aim for **maximal throughput** with **acceptable latency**.
 
-### Source(s) and further reading
-
+**Source(s) and further reading:**
 * [Understanding latency vs throughput](https://community.cadence.com/cadence_blogs_8/b/sd/archive/2010/09/13/understanding-latency-vs-throughput)
 
-## Availability vs consistency
-
-### CAP theorem
-
-<p align="center">
-  <img src="http://i.imgur.com/bgLMI2u.png"/>
-  <br/>
-  <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>Source: CAP theorem revisited</a></i>
-</p>
-
+### 2.3 Availability vs consistency
+##### `CAP theorem`
 In a distributed computer system, you can only support two of the following guarantees:
-
 * **Consistency** - Every read receives the most recent write or an error
 * **Availability** - Every request receives a response, without guarantee that it contains the most recent version of the information
 * **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures
 
-*Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.*
+![image](/public/images/note/201/cap-theorem.png){:width="400px"}
+* Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.
 
-#### CP - consistency and partition tolerance
-
+**CP - consistency and partition tolerance**  
 Waiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.
 
-#### AP - availability and partition tolerance
-
-Responses return the most recent version of the data available on a node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.
-
+**AP - availability and partition tolerance**  
+Responses return the most recent version of the data available on a node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.  
 AP is a good choice if the business needs allow for [eventual consistency](#eventual-consistency) or when the system needs to continue working despite external errors.
 
-### Source(s) and further reading
-
+**Source(s) and further reading:**
 * [CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
 * [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
 * [CAP FAQ](https://github.com/henryr/cap-faq)
 
-## Consistency patterns
-
+## 3. Consistency Patterns
 With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data.  Recall the definition of consistency from the [CAP theorem](#cap-theorem) - Every read receives the most recent write or an error.
+### 3.1 Weak Consistency
+After a write, reads may or may not see it. A best effort approach is taken. This approach is seen in systems such as memcached.  Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games.  For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
+### 3.2 Eventual Consistency
+After a write, reads will eventually see it (typically within milliseconds). Data is replicated asynchronously. This approach is seen in systems such as DNS and email.  Eventual consistency works well in highly available systems.
+### 3.3 Strong Consistency
+After a write, reads will see it. Data is replicated synchronously. This approach is seen in file systems and RDBMSes. Strong consistency works well in systems that need transactions.
 
-### Weak consistency
-
-After a write, reads may or may not see it.  A best effort approach is taken.
-
-This approach is seen in systems such as memcached.  Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games.  For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
-
-### Eventual consistency
-
-After a write, reads will eventually see it (typically within milliseconds).  Data is replicated asynchronously.
-
-This approach is seen in systems such as DNS and email.  Eventual consistency works well in highly available systems.
-
-### Strong consistency
-
-After a write, reads will see it.  Data is replicated synchronously.
-
-This approach is seen in file systems and RDBMSes.  Strong consistency works well in systems that need transactions.
-
-### Source(s) and further reading
-
+**Source(s) and further reading:**
 * [Transactions across data centers](http://snarfed.org/transactions_across_datacenters_io.html)
 
-## Availability patterns
-
-There are two main patterns to support high availability: **fail-over** and **replication**.
-
-### Fail-over
-
+## 4. Availability Patterns
+There are two main patterns to support high availability: `fail-over` and `replication`.
+### 4.1 Fail-over
 #### Active-passive
-
 With active-passive fail-over, heartbeats are sent between the active and the passive server on standby.  If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
 
 The length of downtime is determined by whether the passive server is already running in 'hot' standby or whether it needs to start up from 'cold' standby.  Only the active server handles traffic.
@@ -142,29 +108,24 @@ The length of downtime is determined by whether the passive server is already ru
 Active-passive failover can also be referred to as master-slave failover.
 
 #### Active-active
-
 In active-active, both servers are managing traffic, spreading the load between them.
 
 If the servers are public-facing, the DNS would need to know about the public IPs of both servers.  If the servers are internal-facing, application logic would need to know about both servers.
 
 Active-active failover can also be referred to as master-master failover.
 
-### Disadvantage(s): failover
+#### Disadvantage(s): failover
 
 * Fail-over adds more hardware and additional complexity.
 * There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.
 
-### Replication
-
+### 4.2 Replication
 #### Master-slave and master-master
+This topic is further discussed in the [Database]({% link _note/designknowledge/database.md %}):
+* `Master-slave` replication
+* `Master-master` replication
 
-This topic is further discussed in the [Database](#database) section:
-
-* [Master-slave replication](#master-slave-replication)
-* [Master-master replication](#master-master-replication)
-
-### Availability in numbers
-
+### 4.3 Availability in numbers
 Availability is often quantified by uptime (or downtime) as a percentage of time the service is available.  Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s.
 
 #### 99.9% availability - three 9s
@@ -185,26 +146,24 @@ Availability is often quantified by uptime (or downtime) as a percentage of time
 | Downtime per week   | 1m 5s              |
 | Downtime per day    | 8.6s               |
 
-#### Availability in parallel vs in sequence
+### 4.4 Availability in parallel vs in sequence
+If a service consists of multiple components prone to failure, the service's overall availability depends on whether the components are in `sequence` or in `parallel`.
 
-If a service consists of multiple components prone to failure, the service's overall availability depends on whether the components are in sequence or in parallel.
-
-###### In sequence
-
+**In sequence**  
 Overall availability decreases when two components with availability < 100% are in sequence:
-
 ```
 Availability (Total) = Availability (Foo) * Availability (Bar)
 ```
 
 If both `Foo` and `Bar` each had 99.9% availability, their total availability in sequence would be 99.8%.
 
-###### In parallel
-
+**In parallel**  
 Overall availability increases when two components with availability < 100% are in parallel:
-
 ```
 Availability (Total) = 1 - (1 - Availability (Foo)) * (1 - Availability (Bar))
 ```
 
 If both `Foo` and `Bar` each had 99.9% availability, their total availability in parallel would be 99.9999%.
+
+## 5. Reference
+* [The System Design Primer](https://github.com/donnemartin/system-design-primer/blob/master/README.md)
