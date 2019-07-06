@@ -79,6 +79,7 @@ REST is focused on exposing data.  It minimizes the coupling between client/serv
 * Over time, more fields might be added to an API response and older clients will receive all new data fields, even those that they do not need, as a result, it bloats the payload size and leads to larger latencies.
 
 ### 2.4 RPC and REST calls comparison
+<div class="table-responsive-sm" markdown="block">  
 
 | Operation | RPC | REST |
 |---|---|---|
@@ -89,6 +90,8 @@ REST is focused on exposing data.  It minimizes the coupling between client/serv
 | Add an item to a person’s items | **POST** /addItemToUsersItemsList<br/>{<br/>"personid": "1234";<br/>"itemid": "456"<br/>} | **POST** /persons/1234/items<br/>{<br/>"itemid": "456"<br/>} |
 | Update an item    | **POST** /modifyItem<br/>{<br/>"itemid": "456";<br/>"key": "value"<br/>} | **PUT** /items/456<br/>{<br/>"key": "value"<br/>} |
 | Delete an item | **POST** /removeItem<br/>{<br/>"itemid": "456"<br/>} | **DELETE** /items/456 |
+
+</div>
 
 ### 2.5 Source(s) and further reading: REST and RPC
 * [Do you really know why you prefer REST over RPC](https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc/)
