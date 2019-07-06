@@ -85,6 +85,11 @@ AP is a good choice if the business needs allow for [eventual consistency](#even
 * [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
 * [CAP FAQ](https://github.com/henryr/cap-faq)
 
+`BASE` is often used to describe the properties of NoSQL databases.  In comparison with the `CAP Theorem`, BASE chooses availability over consistency.
+* **Basically available** - the system guarantees availability.
+* **Soft state** - the state of the system may change over time, even without input.
+* **Eventual consistency** - the system will become consistent over a period of time, given that the system doesn't receive input during that period.
+
 ## 3. Consistency Patterns
 With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data.  Recall the definition of consistency from the [CAP theorem](#cap-theorem) - Every read receives the most recent write or an error.
 ### 3.1 Weak Consistency

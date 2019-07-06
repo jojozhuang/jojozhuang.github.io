@@ -8,15 +8,12 @@ breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
 date: 2017-01-11
 postdate: 2019-01-25
-tags: [DNS and CDN]
+tags: [Security]
 ---
 
-> DNS and CDN
+> Security
 
-## Security
-
-This section could use some updates.  Consider [contributing](#contributing)!
-
+## 1. Security
 Security is a broad topic.  Unless you have considerable experience, a security background, or are applying for a position that requires knowledge of security, you probably won't need to know more than the basics:
 
 * Encrypt in transit and at rest.
@@ -24,9 +21,6 @@ Security is a broad topic.  Unless you have considerable experience, a security 
 * Use parameterized queries to prevent SQL injection.
 * Use the principle of [least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
 
-### Source(s) and further reading
-
+## 3. Reference
 * [Security guide for developers](https://github.com/FallibleInc/security-guide-for-developers)
 * [OWASP top ten](https://www.owasp.org/index.php/OWASP_Top_Ten_Cheat_Sheet)
-
-# 5. Reference

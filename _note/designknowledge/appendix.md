@@ -8,19 +8,16 @@ breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
 date: 2017-01-12
 postdate: 2019-01-26
-tags: [DNS and CDN]
+tags: [Powers of two]
 ---
 
-> DNS and CDN
+> Powers of two
 
+## 1. Appendix
+You'll sometimes be asked to do 'back-of-the-envelope' estimates. For example, you might need to determine how long it will take to generate 100 image thumbnails from disk or how much memory a data structure will take.  The **Powers of two table** and **Latency numbers every programmer should know** are handy references.
 
-## Appendix
-
-You'll sometimes be asked to do 'back-of-the-envelope' estimates.  For example, you might need to determine how long it will take to generate 100 image thumbnails from disk or how much memory a data structure will take.  The **Powers of two table** and **Latency numbers every programmer should know** are handy references.
-
-### Powers of two table
-
-```
+### 1.1 Powers of two table
+```sh
 Power           Exact Value         Approx Value        Bytes
 ---------------------------------------------------------------
 7                             128
@@ -33,13 +30,8 @@ Power           Exact Value         Approx Value        Bytes
 40              1,099,511,627,776   1 trillion           1 TB
 ```
 
-#### Source(s) and further reading
-
-* [Powers of two](https://en.wikipedia.org/wiki/Power_of_two)
-
-### Latency numbers every programmer should know
-
-```
+### 1.2 Latency numbers every programmer should know
+```sh
 Latency Comparison Numbers
 --------------------------
 L1 cache reference                           0.5 ns
@@ -66,7 +58,6 @@ Notes
 ```
 
 Handy metrics based on numbers above:
-
 * Read sequentially from disk at 30 MB/s
 * Read sequentially from 1 Gbps Ethernet at 100 MB/s
 * Read sequentially from SSD at 1 GB/s
@@ -74,20 +65,12 @@ Handy metrics based on numbers above:
 * 6-7 world-wide round trips per second
 * 2,000 round trips per second within a data center
 
-#### Latency numbers visualized
+**Latency numbers visualized**
+![image](/public/images/note/212/latency-numbers-visualized.png)
 
-![](https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67)
-
-#### Source(s) and further reading
-
+## 2. Reference
+* [Powers of two](https://en.wikipedia.org/wiki/Power_of_two)
 * [Latency numbers every programmer should know - 1](https://gist.github.com/jboner/2841832)
 * [Latency numbers every programmer should know - 2](https://gist.github.com/hellerbarde/2843375)
 * [Designs, lessons, and advice from building large distributed systems](http://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf)
 * [Software Engineering Advice from Building Large-Scale Distributed Systems](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/stanford-295-talk.pdf)
-
-
-
-
-
-
-# 5. Reference
