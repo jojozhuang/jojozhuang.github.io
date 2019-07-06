@@ -91,7 +91,7 @@ title: Favorites
                                     {% assign strlink = "" %}
                                 {% endif %}
                                 {% assign strlink = strlink | append: popoverlink %}
-                                <span class="list-sub-link"><a href="{{ link.url }}" data-container="body" class="pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge badge-secondary">{% if counter > 0 %}{{counter}}{% endif %}</span></a></span>
+                                <span class="list-sub-link"><a href="{{ link.url }}" data-container="body" class="pop" data-toggle="popover" title="" data-trigger="hover" data-content="{{strlink}}" data-original-title="{{link.description}}">{{ link.name }} <span class="badge badge-pill badge-dark">{% if counter > 0 %}{{counter}}{% endif %}</span></a></span>
                                 </div>
                             {% if col == 2 or forloop.last == true %}
                                 </div>

@@ -23,6 +23,20 @@ title: Rong Zhuang's Note
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
+          <div id="category-list">
+            {% for category in subject.categories %}
+              <div class="list-group">
+                <h3>{{category.name}}</h3>
+                {% for subcategory in category.subcategories %}
+                {% assign list = postings | where: 'category', subcategory.type %}
+                {% assign url = "/note/?navigation=" | append: subject.name | append: ", " | append: category.name | append: ", " | append: subcategory.name %}
+                <a href="{{url}}" class="list-group-item list-group-item-action">
+                    <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
+                </a>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
           <dl class="dl-unsur" id="posting-list">
         </div>
         <div class="col-md-1"></div>
