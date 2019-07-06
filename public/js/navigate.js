@@ -70,12 +70,18 @@
     return title;
   }
 
+  var categoryList = document.getElementById('category-list');
+  var postingList = document.getElementById('posting-list');
   var subject = document.getElementById('subject').value;
   var navigation = getQueryVariable('navigation');
   var results = [];
   if (navigation) {
     //$(".page-wrapper").removeClass("toggled");
+    categoryList.style.display = "none";
+    postingList.style.display = "block";
   } else {
+    categoryList.style.display = "block";
+    postingList.style.display = "none";
     //$(".page-wrapper").addClass("toggled");
     navigation = jsUcfirst(subject) + ",";
   }

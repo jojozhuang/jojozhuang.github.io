@@ -3,7 +3,7 @@ description: Book Notes, Interview Questions
 categories:
   - name: System Design
     subcategories:
-      - name: Knowledge
+      - name: Design Knowledge
         description: Network, Distributed System
         icon: fas fa-sitemap
         type: design-knowledge
