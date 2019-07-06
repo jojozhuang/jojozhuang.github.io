@@ -16,6 +16,7 @@ tags: [OSI, HTTP, TCP, UDP]
 ## 1. OSI Model
 ### 1.1 Seven-Layer OSI Model
 Open Systems Interconnection(OSI) 7 layer model.
+<div class="table-responsive-sm">  
 <table>
     <tr>
        <th colspan="6" style="text-align:center;">OSI model</th>
@@ -68,6 +69,7 @@ Open Systems Interconnection(OSI) 7 layer model.
        <td><small>Transmission and reception of raw bit streams over a physical medium</small></td>
     </tr>
 </table>
+</div>
 ### 1.2 Protocols
 Each layer has particular protocols for communication.
 ![image](/public/images/note/203/osi_model.jpg){:width="700px"}
@@ -84,6 +86,8 @@ HTTP is a method for encoding and transporting data between a client and a serve
 ### 2.2 HTTP Verbs
 A basic HTTP request consists of a verb (method) and a resource (endpoint).  Below are common HTTP verbs:
 
+<div class="table-responsive-sm" markdown="block">  
+
 | Verb | Description | Idempotent* | Safe | Cacheable |
 |---|---|---|---|---|
 | GET | Reads a resource | Yes | Yes | Yes |
@@ -93,6 +97,7 @@ A basic HTTP request consists of a verb (method) and a resource (endpoint).  Bel
 | DELETE | Deletes a resource | Yes | No | No |
 {: .table-striped }
 
+</div>
 * `Idempotent`: Can be called many times without different outcomes.
 
 ### 2.3 Source(s) and further reading: HTTP
