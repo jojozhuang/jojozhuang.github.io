@@ -11,7 +11,7 @@ categories:
         description: Algorithm
         icon: fas fa-square-root-alt
         type: algorithm
-      - name: Design Patterns
+      - name: Design Pattern
         description: Object-Orientation, Inheritance
         icon: fas fa-pencil-ruler
         type: designpattern
@@ -25,11 +25,11 @@ categories:
         description: New features in Java 8
         icon: fab fa-java
         type: java8
-      - name: Advanced
+      - name: Java Advanced
         description: Advanced topics of Java
         icon: fab fa-java
         type: advanced
-      - name: Concurrency
+      - name: Java Concurrency
         description: Concurrency and MultiThreading
         icon: fab fa-java
         type: multithreading

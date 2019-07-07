@@ -4,7 +4,7 @@ key: popular
 title: "Java 8 - Functional Interfaces"
 index: 254
 category: java8
-breadcrumb: [Popular, Java, Java8]
+breadcrumb: [Popular, Java, Java 8]
 image: java.png
 date: 2017-05-04
 postdate: 2017-05-04

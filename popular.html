@@ -16,13 +16,32 @@ title: Popular Topics
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <h1 class="page-header">{{subject.name}} <small>{{subject.description}}</small></h1>
-        </div>
-        <div class="col-md-1"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
+          <div id="category-list">
+            {% for category in subject.categories %}
+              {% assign col = forloop.index | modulo: 3 %}
+              {% if col == 1 %}
+                <div class="card-deck">
+              {% endif %}
+                  <div class="card">
+                    <div class="card-header">
+                      {{category.name}}
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    {% for subcategory in category.subcategories %}
+                    {% assign list = postings | where: 'category', subcategory.type %}
+                    {% assign url = "/popular/?navigation=" | append: subject.name | append: ", " | append: category.name | append: ", " | append: subcategory.name | append: ", "%}
+                    <a href="{{url}}" class="list-group-item list-group-item-action">
+                        <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
+                    </a>
+                    {% endfor %}
+                    </ul>
+                  </div>
+              {% if col == 0 or forloop.last == true %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
           <dl class="dl-unsur" id="posting-list">
         </div>
         <div class="col-md-1"></div>

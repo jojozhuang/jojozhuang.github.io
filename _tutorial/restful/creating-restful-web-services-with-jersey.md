@@ -4,7 +4,7 @@ key: tutorial
 title: "Creating RESTful Web Services with Jersey"
 index: 161
 category: restful
-breadcrumb: [Tutorial, Backend, RESTful]
+breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
 date: 2016-07-11
 postdate: 2017-10-30
