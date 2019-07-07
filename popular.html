@@ -18,6 +18,23 @@ title: Popular Topics
           <h1 class="page-header">{{subject.name}} <small>{{subject.description}}</small></h1>
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
           <div id="category-list">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Data Structure and Algorithm</h5>
+                  <p class="card-text">Learn data structure and algorithm with examples.</p>
+                  <a href="/popular/?navigation=Popular,%20General,%20Data%20Structure," class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
+                  <a href="/popular/?navigation=Popular,%20General,%20Algorithm," class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Personal Website</h5>
+                  <p class="card-text">Learn how to use Jekyll to setup your personal website.</p>
+                  <a href="/popular/?navigation=Popular,%20Personal%20Website,%20GitHub%20Pages%20and%20Jekyll," class="btn btn-outline-primary"><i class="fab fa-github"></i> GitHub Pages and Jekyll</a>
+                </div>
+              </div>
+            </div>
             {% for category in subject.categories %}
               {% assign col = forloop.index | modulo: 3 %}
               {% if col == 1 %}
