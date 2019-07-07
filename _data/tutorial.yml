@@ -51,12 +51,6 @@ categories:
         description: Mobile
         icon: fas fa-mobile-alt
         type: mobile
-  - name: Project
-    subcategories:
-      - name: Online Judge
-        description: Online Judge
-        icon: fab fa-js-square
-        type: onlinejudge
   - name: Distributed System
     subcategories:
       - name: Network
@@ -91,3 +85,9 @@ categories:
         description: Big Data
         icon: fas fa-tachometer-alt
         type: bigdata
+  - name: Project
+    subcategories:
+      - name: Online Judge
+        description: Online Judge
+        icon: fab fa-js-square
+        type: onlinejudge
