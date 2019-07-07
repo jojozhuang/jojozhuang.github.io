@@ -528,6 +528,9 @@ bookmarks:
       - name: Upgrade to Bootstrap 4
         description: A service helps to upgrade from Bootstrap 3 to Bootstrap 4.
         url: http://upgrade-bootstrap.bootply.com/
+      - name: Bootstrap Panels
+        description: Examples of Panels built with Bootstrap 4.
+        url: https://mdbootstrap.com/docs/jquery/components/panels/
       - name: highlight.js
         description: Javascript syntax highlighter
         url: https://highlightjs.org/

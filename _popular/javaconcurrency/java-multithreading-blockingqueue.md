@@ -4,7 +4,7 @@ key: popular
 title: "Java Multithreading - BlockingQueue"
 index: 222
 category: multithreading
-breadcrumb: [Popular, Java, Java Advanced]
+breadcrumb: [Popular, Java, Java Concurrency]
 image: java.png
 date: 2017-02-02
 postdate: 2017-02-02

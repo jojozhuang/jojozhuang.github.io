@@ -4,7 +4,7 @@ key: popular
 title: "Java 8 - Functional programming"
 index: 252
 category: java8
-breadcrumb: [Popular, Java, Java8]
+breadcrumb: [Popular, Java, Java 8]
 image: java.png
 date: 2017-05-02
 postdate: 2017-05-02

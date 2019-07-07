@@ -4,7 +4,7 @@ key: tutorial
 title: "Building RESTful API with Spring Boot"
 index: 156
 category: restful
-breadcrumb: [Tutorial, Backend, RESTful]
+breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
 date: 2016-07-06
 postdate: 2017-12-13
