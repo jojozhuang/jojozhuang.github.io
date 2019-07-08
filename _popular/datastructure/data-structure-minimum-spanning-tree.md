@@ -2,12 +2,12 @@
 layout: tutorial
 key: popular
 title: "Minimum Spanning Tree - Draft"
-index: 318
+index: 319
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
-date: 2016-03-18
-postdate: 2016-03-18
+date: 2016-03-19
+postdate: 2016-03-19
 tags: [MST]
 ---
 

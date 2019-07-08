@@ -2,12 +2,12 @@
 layout: tutorial
 key: popular
 title: "Directed Graph - Draft"
-index: 317
+index: 318
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
-date: 2016-03-17
-postdate: 2016-03-17
+date: 2016-03-18
+postdate: 2016-03-18
 tags: [Directed Graph, Topological Sorting]
 ---
 

@@ -1,94 +1,84 @@
 ---
 layout: tutorial
 key: popular
-title: "Binary Search Tree"
-index: 308
+title: "Red Black Tree - draft"
+index: 309
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
-date: 2016-03-08
-postdate: 2016-03-08
-tags: [BST]
+date: 2016-03-09
+postdate: 2016-03-09
+tags: [RBT]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of binary search tree.
+> Introduce the definition, implementation and usage of red black tree.
 
-## 1. Binary Search Tree
-### 1.1 Definition of BST
-Binary Search Tree(BST) is a node-based binary tree data structure which has the following properties:
-* The left subtree of a node contains only nodes with values lesser than the node’s value.
-* The right subtree of a node contains only nodes with values greater than the node’s values.
-* The left and right subtree each must also be a binary search tree.
-* There must be no duplicate nodes.
+## 1. Problems with Binary Search Tree
+For Binary Search Tree, although the average time complexity for the search, insertion and deletion are all $O(\log{}n)$, where **n** is the number of nodes in the tree, the time complexity becomes to $O(n)$ in worst case - BST is not balanced.
+![image](/public/images/dsa/309/bst.png){:width="800px"}
 
-![image](/public/images/dsa/308/bst.png){:width="450px"}  
+We can guarantee $O(\log{}n)$ time for all three operations by using a balanced tree - a tree that always has height `log(n)`.
 
-### 1.2 Common Operations on BST
+## 2. Red Black Tree
+### 2.1 Definition of RBT
+A red black tree is a binary search tree with following four properties.
+* `Color property`: Each node has a color (red or black) associated with it (in addition to its key, left and right children).
+* `Root property`: The root of the red-black tree is black.
+* `Red property`: The children of a red node are black.
+* `Black property`: For each node with at least one null child, the number of black nodes on the path from the root to the null child is the same.
+
+Examples of Red Black Tree.
+![image](/public/images/dsa/309/red-black-tree.png)
+The following examples are **NOT** Red Black Tree.
+![image](/public/images/dsa/309/not-rbt.png)
+### 1.2 Time Complexity
 * Search - $O(\log{}n)$
 * Insertion - $O(\log{}n)$
 * Deletion - $O(\log{}n)$
 
-## 2. Search
-Given a binary search tree as follows, search node with value 7.
-![image](/public/images/dsa/308/search7.png){:width="450px"}
-Binary Search Tree is constructed with nodes recursively. The following example shows how the node is defined.
-```java
-public class BSTNode {
-    public int val;
-    public BSTNode left, right;
+### 1.3 Space Complexity
+* $O(n)$
 
-    public BSTNode(int value) {
-        this.val = value;
-    }
-}
-```
-To search a given value in Binary Search Tree, we first compare it with root, if the key is present at root, we return root. If the value is greater than root’s value, we search further in the right subtree. Otherwise we search further in the left subtree.
-```java
-public boolean search(int val) {
-    BSTNode current = root;
-    while ( current != null) {
-        if (current.val == val) {
-            return true;
-        } else if (current.val > val) {
-            current = current.left;
-        } else {
-            current = current.right;
-        }
-    }
-    return false;
-}
-```
+## 2. Search
+Same as [Binary Search Tree](/popular/datastructure/data-structure-binary-search-tree/#2-search).
 
 ## 3. Insertion
-Given a binary search tree as follows, insert new value 5 into this tree.
-![image](/public/images/dsa/308/insert5.png)
-A new value is always inserted at leaf. Similar with the search operation, we start searching the given value from root till we hit a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node. At each step, we compare the given value with the node value to determine whether to go left or right.
-```java
-public void insert(int val) {
-    BSTNode newNode = new BSTNode(val);
-    if (root == null) {
-        root = newNode;
-        return;
-    }
-    BSTNode current = root;
-    while (true) {
-        if (val < current.val) {
-            if (current.left == null) {
-                current.left = newNode;
-                return;
-            }
-            current = current.left;
-        } else {
-            if (current.right == null) {
-                current.right = newNode;
-                return;
-            }
-            current = current.right;
-        }
-    }
-}
-```
+The goal of the insert operation is to insert key `x` into tree `T`, and keep T's red-black tree properties. We use `Recoloring` and `Rotation` to achieve that.
+
+There are several cases when inserting a new key to RBT. We will go through all of them below.
+### 3.1 Special Case: Empty Tree
+A special case is required for an empty tree. If T is empty, replace it with a single black node containing x. This ensures that the root property is satisfied.
+![image](/public/images/dsa/309/insertion-special-case.png){:width="700px"}
+### 3.2 Non-empty Tree
+If T is a non-empty tree, then we do the following:
+* 1) Use the BST insert algorithm to add x to the tree
+* 2) color the node containing x to red
+* 3) restore red-black tree properties (if necessary)
+
+For step 3, what we need to do depends on the color of x's parent. Let `p` be x's parent. We need to consider two cases:
+* **Case 1**: x's parent p is **black**. The insertion of x does not result in the red property being violated, so there's nothing more to do.
+* **Case 2**: K's parent p is <span style="color:red">**red**</span>.  
+For easy understanding, we have the following naming convention.
+![image](/public/images/dsa/309/naming.png){:width="700px"}
+If `p` is red, then p now has a red child, which violates the red property. Note that p's parent, `g`, must be black. In order to handle this double-red situation, we will need to consider the color of g's other child, that is, p's sibling, `s`. (Note that s might be null, i.e., g only has one child and that child is p.) We have two cases:
+  * **Case 2a**: `p`'s sibling `s` is <span style="color:red">**red**</span>.  
+    Perform recoloring of `p`, `s` and `g`: the color of `p` and `s` is changed to **black** and the color of `g` is changed to <span style="color:red">**red**</span> (unless `g` is the root, in which case we leave `g` **black** to preserve the root property).
+    ![image](/public/images/dsa/309/case2a.png){:width="900px"}
+    Recoloring does not affect the black property of a tree: the number of black nodes on any path that goes through `p` and `g` is unchanged when `p` and `g` switch colors (similarly for `s` and `g`). But, the recoloring may have introduced a double-red situation between `g` and `g`'s parent. If that is the case, then we `recursively` handle the double-red situation starting at `g` and `g`'s parent (instead of `x` and `x`'s parent).
+  * **Case 2b**: `p`'s sibling `s` is **black** or **null**.  
+    If `s` is black or null, then we will do a tri-node restructuring of `x`, `p` and `g`. There are four subcases for the relative ordering of x, p and g. The way a restructuring is done for each of the possibilities is shown below.
+    * i) Left Left Case (p is left child of g and x is left child of p)
+    ![image](/public/images/dsa/309/case2b1.png){:width="900px"}
+    * ii) Left Right Case (p is left child of g and x is right child of p)
+    ![image](/public/images/dsa/309/case2b2.png){:width="900px"}
+    * iii) Right Right Case (Mirror of case i)
+    ![image](/public/images/dsa/309/case2b3.png){:width="900px"}
+    * iv) Right Left Case (Mirror of case ii)
+    ![image](/public/images/dsa/309/case2b4.png){:width="900px"}
+
+### 3.3 Example of Insertion
+![image](/public/images/dsa/309/example-insertion.png)
 
 ## 4. Deletion
 There are three cases when deleting a node from Binary Search Tree.
@@ -97,18 +87,18 @@ There are three cases when deleting a node from Binary Search Tree.
 * Node has two children.
 
 ### 4.1 Node Has No Children
-![image](/public/images/dsa/308/delete4.png)
+![image](/public/images/dsa/data-structure-binary-search-tree/delete4.png)
 The solution is easy, simply remove the node from the tree.
 ### 4.2 Node Has One Child
-![image](/public/images/dsa/308/delete9.png)
+![image](/public/images/dsa/data-structure-binary-search-tree/delete9.png)
 If node has only one child, then replace this node with its child.
 ### 4.3 Node Has Two Children
 This case is more complex, and we have two options.  
 1) Populate successor
-![image](/public/images/dsa/308/delete3successor.png)
+![image](/public/images/dsa/data-structure-binary-search-tree/delete3successor.png)
 Find inorder successor of the node. Replace the node with its successor and delete the successor from its original parent.  
 2) Populate predecessor  
-![image](/public/images/dsa/308/delete3predecessor.png)
+![image](/public/images/dsa/data-structure-binary-search-tree/delete3predecessor.png)
 Find inorder predecessor of the node. Replace the node with its predecessor and delete the predecessor from its original parent.  
 
 The following implementation populates the successor of the deleted node.
@@ -201,7 +191,7 @@ private BSTNode getSuccessor(BSTNode deleleNode) {
 
 ## 5. Balanced Binary Search Tree
 In some cases, we need to convert a normal BST tree to a balanced BST.
-![image](/public/images/dsa/308/balanced_bst.png){:width="800px"}
+![image](/public/images/dsa/data-structure-binary-search-tree/balanced_bst.png){:width="800px"}
 We can convert it with the following two steps.
 * Get the sorted node list from existing bst tree by traversing it inorder.
 * Binary construct the balanced BST with the sorted node list.
@@ -286,7 +276,11 @@ public class BSTIterator {
 * [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
 
 ## 9. Reference
-* [Binary Search Tree - Search and Insertion](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/)
-* [Binary Search Tree - Delete](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
-* [Binary Search Tree Complete Implementation](https://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/)
-* [Sorted Array to Balanced BST](https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)
+* [Red-Black Trees](http://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Red-Black-Trees/)
+* [Red-Black Tree - Set 1 (Introduction)](https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/)
+* [Red-Black Tree - Set 2 (Insert)](https://www.geeksforgeeks.org/red-black-tree-set-2-insert/)
+* [Red-Black Tree - Set 3 (Delete)](https://www.geeksforgeeks.org/red-black-tree-set-3-delete-2/)
+* [Red-black trees in 4 minutes — The basics](https://www.youtube.com/watch?v=qvZGUFHWChY)
+* [Red-Black Trees - Data Structures](https://www.youtube.com/watch?v=ZxCvM-9BaXE)
+* [Insertion for Red-Black Trees](https://www.youtube.com/watch?v=JwgeECkckRo)
+* [Red/Black Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)

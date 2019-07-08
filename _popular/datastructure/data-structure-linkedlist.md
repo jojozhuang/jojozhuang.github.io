@@ -20,10 +20,10 @@ A linked list is represented by a sequence of nodes. Each node contains a link t
 
 ### 1.1 Singly Linked List
 Each node has an attribute to represent its value. It also has one pointer, linking it to the next node in the linked list.
-![image](/public/images/dsa/data-structure-linkedlist/singlylinkedlist.png)
+![image](/public/images/dsa/301/singlylinkedlist.png)
 ### 1.2 Doubly Linked List
 Each node has an attribute to represent its value. Meanwhile, it has two pointers, the first pointer links to the next node, and the second pointer links to the previous node.
-![image](/public/images/dsa/data-structure-linkedlist/doublylinkedlist.png)
+![image](/public/images/dsa/301/doublylinkedlist.png)
 
 ## 2. Implementation
 ### 2.1 Creating Singly Linked List
@@ -197,7 +197,7 @@ public boolean hasCycle(ListNode head) {
 Find the node where cycle begins in a given linked list. If there is no cycle, return null.
 
 We use the following figure to illustrate the solution. We will use the fast pointer and the slow pointer to solve this problem.
-![image](/public/images/dsa/data-structure-linkedlist/cycle.png){:width="600px"}  
+![image](/public/images/dsa/301/cycle.png){:width="600px"}  
 * X is the start node of the linked list.
 * Y is the node where the cycle begins. It is the node we are looking for.
 * Z is the node where the fast and slow pointers meet for the first time.
