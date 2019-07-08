@@ -2,12 +2,12 @@
 layout: tutorial
 key: popular
 title: "Bipartite Graph"
-index: 316
+index: 317
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
-date: 2016-03-16
-postdate: 2016-03-16
+date: 2016-03-17
+postdate: 2016-03-17
 tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true
 ---

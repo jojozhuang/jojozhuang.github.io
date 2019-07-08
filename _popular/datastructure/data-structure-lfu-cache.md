@@ -23,12 +23,12 @@ The `LFU` cache provides two methods: `add` and `get`.
 * get(key) - If the key doesn't exist in the cache, return the minimum value of Integer. Otherwise, return the value of the key and move this element to the proper position of the cache.
 
 The following diagram illustrates how LFU works.
-![image](/public/images/dsa/data-structure-lfu-cache/lfu.png)
+![image](/public/images/dsa/306/lfu.png)
 
 ## 2. Implementation
 ### 2.1 Data Structure
 LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
-![image](/public/images/dsa/data-structure-lfu-cache/structure.png)
+![image](/public/images/dsa/306/structure.png)
 * The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
 * Nodes between the head and tail nodes are used to store data, each node for one value. Every node has two pointers, pointing to the previous and the next nodes. Each node has two attributes, one is the value and another is the count of this node.
 * Nodes near the tail are least frequently accessed. They will be removed if cache reaches to its capacity.
@@ -36,31 +36,31 @@ LFU algorithm can be easily implemented with HashMap and Doubly Linked List.
 
 ### 2.2 Operations On LFU
 1) Initialization
-![image](/public/images/dsa/data-structure-lfu-cache/initialization.png){:width="400px"}  
+![image](/public/images/dsa/306/initialization.png){:width="400px"}  
 * Only two dummy nodes, head and tail.
 * Notice that there is another HashMap which stores the value-node pair.
 
 2) Add (Cache is not full and maximum frequency = 0)
-![image](/public/images/dsa/data-structure-lfu-cache/add1.png)
+![image](/public/images/dsa/306/add1.png)
 * Create new node for the given value and insert it to the head of the linked list.
 * Add the new node to HashMap with the given value as key.
 * Size is increased by one.
 
 3) Add (Cache is not full and maximum frequency > 0)
-![image](/public/images/dsa/data-structure-lfu-cache/add2.png)
+![image](/public/images/dsa/306/add2.png)
 * Create new node for the given value and insert it before the node which has the same frequency or to the tail.
 * Add the new node to HashMap with the given value as key.
 * Size is increased by one.
 
 4) Add (Cache is full)
-![image](/public/images/dsa/data-structure-lfu-cache/add3.png)
+![image](/public/images/dsa/306/add3.png)
 * Remove the last element(The one tail.prev is pointing) from the list.
 * Create new node for the given value and insert it before the node which has the same frequency or to the tail.
 * Add the new node to HashMap with the given value as key.
 * Size remains unchanged.
 
 5) Get
-![image](/public/images/dsa/data-structure-lfu-cache/get.png)
+![image](/public/images/dsa/306/get.png)
 * Find the given value in HashMap.
 * Increase the frequency of this node by one. Move it to proper position of the linked list.
 * Return the value.

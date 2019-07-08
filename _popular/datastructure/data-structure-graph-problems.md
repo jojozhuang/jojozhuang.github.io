@@ -2,12 +2,12 @@
 layout: tutorial
 key: popular
 title: "Graph Problems"
-index: 315
+index: 316
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
-date: 2016-03-15
-postdate: 2016-03-15
+date: 2016-03-16
+postdate: 2016-03-16
 tags: [Graph, DFS, BFS]
 mathjax: true
 ---

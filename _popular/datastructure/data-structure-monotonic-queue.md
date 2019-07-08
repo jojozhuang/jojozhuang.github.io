@@ -2,12 +2,12 @@
 layout: tutorial
 key: popular
 title: "Monotonic Queue - Draft"
-index: 319
+index: 320
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
-date: 2016-03-19
-postdate: 2016-03-19
+date: 2016-03-20
+postdate: 2016-03-20
 tags: [Monotonic Queue]
 ---
 
