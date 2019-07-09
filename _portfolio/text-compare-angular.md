@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Text Compare(Angular)"
-index: 240
+index: PF270
 tags: [Angular, Monaco Editor]
 image: /public/images/portfolio/textcompareangular/thumbnail.png
 excerpt: A web application for text compare, built with Angular and Monaco Editor.

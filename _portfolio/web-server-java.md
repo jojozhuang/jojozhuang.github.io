@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Web Server(Java)"
-index: 230
+index: PF310
 tags: [Socket, Java, HTTP]
 image: /public/images/portfolio/webserverjava/thumbnail.png
 excerpt: A web server built with sockets in Java, capable of handling general HTTP requests.

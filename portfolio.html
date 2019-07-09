@@ -14,7 +14,6 @@ categories:
     type: dotnet
 ---
 <div class="container">
-  {% assign list = site.portfolio | sort: 'index' | reverse %}
   {% for category in page.categories %}
     <div class="row">
       <div class="col-lg-12">
@@ -22,7 +21,7 @@ categories:
       </div>
     </div>
     <div class="row">
-    {% assign portfolios = list | where: "category", category.type %}
+    {% assign portfolios = site.portfolio | where: "category", category.type | sort: 'index' | reverse %}
     {% for portfolio in portfolios %}
         {% if category.type == 'mobile' %}
           <div class="col-6 col-lg-3 portfolio-item">

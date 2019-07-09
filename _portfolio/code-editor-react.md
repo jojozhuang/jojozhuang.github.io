@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Code Editor(React)"
-index: 230
+index: PF260
 tags: [React]
 image: /public/images/portfolio/codeeditorreact/thumbnail.png
 excerpt: A full stack web application for online programming, built with React and Express.
