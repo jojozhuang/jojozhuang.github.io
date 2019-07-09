@@ -17,7 +17,7 @@ title: Rong Zhuang's Note
         <div class="col-md-10">
           <h1 class="page-header">{{subject.name}} <small>{{subject.description}}</small></h1>
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
-          <div id="category-list">
+          <div id="category-list" style="display: none">
             {% for category in subject.categories %}
               {% assign col = forloop.index | modulo: 3 %}
               {% if col == 1 %}
@@ -42,7 +42,7 @@ title: Rong Zhuang's Note
               {% endif %}
             {% endfor %}
           </div>
-          <dl class="dl-unsur" id="posting-list">
+          <dl class="dl-unsur" id="posting-list"/>
         </div>
         <div class="col-md-1"></div>
       </div>
