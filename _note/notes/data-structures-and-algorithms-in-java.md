@@ -1,13 +1,13 @@
 ---
-layout: note
-key: programming
+layout: tutorial
+key: note
 title: "Data Structures and Algorithms in Java"
-index: 351
-category: algorithm
-breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
-date: 2016-04-11
-postdate: 2016-04-11
+index: 201
+category: notes
+breadcrumb: [Note, Work Space, Book Notes]
+image: note.png
+date: 2016-02-01
+postdate: 2016-02-01
 tags: [Data Structure, Algorithm]
 ---
 
