@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Course Player(React)"
-index: 200
+index: PF250
 tags: [React, Socket.IO]
 image: /public/images/portfolio/courseplayerreact/thumbnail.png
 excerpt: A realtime online course player, built with React and Socket.IO.

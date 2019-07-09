@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Online Game Store(ASP.NET)"
-index: 300
+index: PF350
 tags: [ASP.NET MVC, RESTful WebAPI, jQuery]
 image: /public/images/portfolio/gamestoreaspnet/thumbnail.png
 excerpt: An online eCommerce web store, built with ASP.NET MVC in C#.

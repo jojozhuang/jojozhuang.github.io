@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Online Game Store(JSP)"
-index: 290
+index: PF340
 tags: [Java, Servlet, JSP, Beans, MySQL]
 image: /public/images/portfolio/gamestorejsp/thumbnail.png
 excerpt: An online eCommerce web store, built with MySQL and Servlet/JSP in Java.

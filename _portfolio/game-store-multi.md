@@ -2,7 +2,7 @@
 layout: portfolio
 key: portfolio
 title: "Game Store(Multi)"
-index: 80
+index: PF120
 tags: [iOS, Android, Xamarin, Cordova]
 image: /public/images/portfolio/gamestoremulti/thumbnail.png
 excerpt: 4 different implementations for product management.
