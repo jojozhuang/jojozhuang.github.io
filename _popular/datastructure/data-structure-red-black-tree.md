@@ -273,7 +273,7 @@ public class BSTIterator {
 
 ## 8. Source Files
 * [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-binary-search-tree)
-* [Binary Search Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1tN8psEEeoMUMGsdppDaUnq0NRX4Y_ToG/view?usp=sharing)
+* [Red Black Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1YKBH9VD-vg7LqoYj77tjU6sEQ64y9StE/view?usp=sharing)
 
 ## 9. Reference
 * [Red-Black Trees](http://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Red-Black-Trees/)
