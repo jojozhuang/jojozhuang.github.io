@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Express Routing"
-index: EP256
+index: 256
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Online Code Editor with React and Express"
-index: RT422
+index: 422
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

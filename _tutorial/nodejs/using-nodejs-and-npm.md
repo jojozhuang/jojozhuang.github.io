@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Node.js and NPM"
-index: NJ202
+index: 202
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png

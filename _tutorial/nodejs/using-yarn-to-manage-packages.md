@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Yarn to Manage Packages"
-index: NJ203
+index: 203
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png

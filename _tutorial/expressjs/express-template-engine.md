@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Template Engine"
-index: EP257
+index: 257
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

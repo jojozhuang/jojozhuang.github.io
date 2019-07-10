@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "TO DO"
-index: SD123
+index: 123
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png

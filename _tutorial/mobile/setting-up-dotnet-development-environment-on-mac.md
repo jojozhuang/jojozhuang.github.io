@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up .Net Development Environment on Mac"
-index: MB605
+index: 605
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Java Interview Questions - String"
-index: IQ104
+index: 104
 category: interview-java
 breadcrumb: [Note, Interview Questions, Java Questions]
 image: interview.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Angular Testing - Draft"
-index: NG314
+index: 314
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

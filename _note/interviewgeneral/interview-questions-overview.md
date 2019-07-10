@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Interview Questions - Overview"
-index: IQ101
+index: 101
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

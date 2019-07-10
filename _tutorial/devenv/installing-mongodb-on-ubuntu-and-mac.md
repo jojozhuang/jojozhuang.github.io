@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing MongoDB on Ubuntu and Mac"
-index: CS32
+index: 32
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

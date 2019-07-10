@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating MySQL Image with Docker File"
-index: DK704
+index: 704
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

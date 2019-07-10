@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "JavaScript Guide MDN(Online Doc)"
-index: NT611
+index: 611
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

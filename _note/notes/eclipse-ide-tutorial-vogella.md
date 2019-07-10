@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Eclipse IDE Tutorial (Vogella)"
-index: NT801
+index: 801
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

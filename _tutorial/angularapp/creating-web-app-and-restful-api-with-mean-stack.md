@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating Web App and RESTful API with MEAN Stack"
-index: NG324
+index: 324
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

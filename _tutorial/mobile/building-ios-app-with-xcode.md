@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building iOS App with Xcode"
-index: MB602
+index: 602
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

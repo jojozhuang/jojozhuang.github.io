@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing and Using Git"
-index: CS15
+index: 15
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

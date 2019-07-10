@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Web Application with React and Redux"
-index: RT405
+index: 405
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing and Using Docker on Ubuntu"
-index: DK701
+index: 701
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Authenticating Users with Passport - Draft"
-index: EP260
+index: 260
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

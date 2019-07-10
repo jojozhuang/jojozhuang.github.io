@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Algorithm Interview Questions - Draft"
-index: IQ171
+index: 171
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

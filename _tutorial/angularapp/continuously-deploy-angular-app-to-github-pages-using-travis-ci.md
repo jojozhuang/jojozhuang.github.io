@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy Angular App to GitHub Pages using Travis-CI"
-index: NG331
+index: 331
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

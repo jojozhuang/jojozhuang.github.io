@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Full Stack Angular App to Heroku"
-index: NG364
+index: 364
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

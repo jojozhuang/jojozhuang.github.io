@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Enabling Tomcat Debugging in Docker for Eclipse"
-index: DK708
+index: 708
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

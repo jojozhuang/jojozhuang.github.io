@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with Express"
-index: EP251
+index: 251
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

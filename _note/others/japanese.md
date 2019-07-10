@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Japanese"
-index: NT902
+index: 902
 category: others
 breadcrumb: [Note, Work Space, Others]
 image: note.png

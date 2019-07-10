@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Online Text Compare Tool with Angular"
-index: NG326
+index: 326
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

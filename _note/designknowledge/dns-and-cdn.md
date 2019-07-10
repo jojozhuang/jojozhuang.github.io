@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "DNS and CDN"
-index: SD204
+index: 204
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

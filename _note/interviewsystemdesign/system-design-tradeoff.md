@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "System Design - Tradeoff - Draft"
-index: IQ153
+index: 153
 category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
 image: interview.png
