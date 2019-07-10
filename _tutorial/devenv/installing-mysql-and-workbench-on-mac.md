@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing MySQL and Workbench on Mac"
-index: 31
+index: CS31
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

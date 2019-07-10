@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Export Data"
-index: 358
+index: NG358
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

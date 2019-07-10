@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Web Application with React"
-index: 403
+index: RT403
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

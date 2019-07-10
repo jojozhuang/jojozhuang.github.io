@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building RESTful API with ASP.NET Core"
-index: 153
+index: NG153
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

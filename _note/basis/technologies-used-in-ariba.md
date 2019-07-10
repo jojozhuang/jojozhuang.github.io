@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Technologies Used in Ariba(Draft)"
-index: 720
+index: SD720
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png

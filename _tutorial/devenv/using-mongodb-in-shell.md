@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using MongoDB in Shell"
-index: 33
+index: CS33
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

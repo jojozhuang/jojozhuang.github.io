@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Advanced Topics - Draft"
-index: 315
+index: NG315
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

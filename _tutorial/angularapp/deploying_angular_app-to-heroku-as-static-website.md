@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Angular App to Heroku as Static Website"
-index: 341
+index: NG341
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Data Structures and Algorithms in Java"
-index: 201
+index: NT201
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building CRUD Application With Angular"
-index: 323
+index: NG323
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

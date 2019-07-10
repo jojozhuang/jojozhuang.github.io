@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Progress Bar"
-index: 360
+index: NG360
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png
