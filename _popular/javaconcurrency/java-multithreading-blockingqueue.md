@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Multithreading - BlockingQueue"
-index: 222
+index: JV222
 category: multithreading
 breadcrumb: [Popular, Java, Java Concurrency]
 image: java.png

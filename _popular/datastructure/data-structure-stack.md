@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Stack"
-index: 302
+index: DS302
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

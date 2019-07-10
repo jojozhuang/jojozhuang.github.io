@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Message Queue - Draft"
-index: 236
+index: JV236
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Adapter"
-index: 510
+index: DP510
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

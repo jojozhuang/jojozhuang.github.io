@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Functional Composition"
-index: 255
+index: JV255
 category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png

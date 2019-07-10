@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "LFU Cache"
-index: 306
+index: DS306
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

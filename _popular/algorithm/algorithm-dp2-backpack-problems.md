@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Backpack Problems"
-index: 328
+index: AG328
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "SkipList - Draft"
-index: 320
+index: DS320
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

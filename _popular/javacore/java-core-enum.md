@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Enum"
-index: 206
+index: JV206
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

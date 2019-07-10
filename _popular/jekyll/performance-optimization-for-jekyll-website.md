@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Performance Optimization for Jekyll Website"
-index: 924
+index: JK924
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

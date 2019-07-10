@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Builder"
-index: 504
+index: DP504
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

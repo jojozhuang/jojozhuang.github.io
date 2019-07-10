@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Monotonic Queue - Draft"
-index: 320
+index: DS320
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

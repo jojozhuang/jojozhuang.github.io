@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Data Persistence with JPA & Eclipselink"
-index: 535
+index: JV535
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Graph"
-index: 315
+index: DS315
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "DTO - Draft"
-index: 507
+index: DP507
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

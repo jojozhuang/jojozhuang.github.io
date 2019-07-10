@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Red Black Tree - draft"
-index: 309
+index: DS309
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

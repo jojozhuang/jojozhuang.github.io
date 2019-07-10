@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Iterator"
-index: 243
+index: JV243
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

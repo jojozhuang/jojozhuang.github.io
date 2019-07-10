@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Customization of Jekyll"
-index: 905
+index: JK905
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
@@ -125,7 +125,7 @@ If you don’t like the automatically-generated post excerpt, it can be explicit
 layout: portfolio
 key: portfolio
 title: "2048"
-index: 65
+index: JK65
 tags: Electron, Node.js, Cross-platform
 image: /assets/2048/thumbnail.png
 excerpt: A cross-platform desktop app for 2048, developed with Electron and Node.js
@@ -229,7 +229,7 @@ Each posting Markdown file contains following attributes.
 layout: portfolio
 key: portfolio
 title: "Trip Planner"
-index: 40
+index: JK40
 tags: iOS, Swift, XCode
 image: /assets/travelnote/thumbnail.png
 excerpt: An iOS App for managing itineraries, built with Swift.

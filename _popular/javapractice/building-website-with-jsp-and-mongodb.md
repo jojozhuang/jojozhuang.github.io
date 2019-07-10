@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Building Website with JSP and MongoDB"
-index: 533
+index: JV533
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

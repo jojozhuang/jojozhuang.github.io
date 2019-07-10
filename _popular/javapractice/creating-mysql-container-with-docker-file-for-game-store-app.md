@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Creating MySQL Container with Docker File for Game Store App"
-index: 529
+index: JV529
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
