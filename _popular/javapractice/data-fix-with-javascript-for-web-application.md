@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Data Fix with Javascript For Web Application"
-index: 540
+index: JV540
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

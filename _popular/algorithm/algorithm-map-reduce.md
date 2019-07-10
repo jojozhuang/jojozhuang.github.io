@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Map Reduce - Draft"
-index: 331
+index: AG331
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

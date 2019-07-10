@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Functional programming"
-index: 252
+index: JV252
 category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png

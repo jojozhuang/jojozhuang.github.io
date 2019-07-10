@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Observer"
-index: 527
+index: DP527
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

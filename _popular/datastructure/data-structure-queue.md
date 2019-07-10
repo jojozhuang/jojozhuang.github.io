@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Queue"
-index: 303
+index: DS303
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

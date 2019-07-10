@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Sweep Line"
-index: 329
+index: AG329
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Pre Sum - Draft"
-index: 331
+index: AG331
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

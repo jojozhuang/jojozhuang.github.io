@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Formatting"
-index: 203
+index: JV203
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Binary Search"
-index: 322
+index: AG322
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

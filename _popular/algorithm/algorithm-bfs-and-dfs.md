@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "BFS and DFS"
-index: 326
+index: AG326
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

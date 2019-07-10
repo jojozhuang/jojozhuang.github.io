@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Decorator"
-index: 513
+index: DP513
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

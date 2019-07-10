@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Segment Tree"
-index: 312
+index: DS312
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

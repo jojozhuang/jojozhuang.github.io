@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Null Object"
-index: 526
+index: DP526
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

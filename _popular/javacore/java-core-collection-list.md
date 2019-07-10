@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Collection - List"
-index: 207
+index: JV207
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

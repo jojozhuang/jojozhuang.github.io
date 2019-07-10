@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Dead Lock"
-index: 242
+index: JV242
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

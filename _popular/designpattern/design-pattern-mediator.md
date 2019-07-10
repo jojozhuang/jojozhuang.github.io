@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Mediator"
-index: 524
+index: DP524
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

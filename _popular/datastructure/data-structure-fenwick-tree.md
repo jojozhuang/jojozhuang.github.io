@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Fenwick Tree - Draft"
-index: 311
+index: DS311
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Improving Website Security"
-index: 925
+index: JK925
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
