@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Flyweight"
-index: DP515
+index: 515
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

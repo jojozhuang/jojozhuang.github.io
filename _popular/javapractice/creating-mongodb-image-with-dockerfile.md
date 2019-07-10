@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Creating MongoDB Image with Dockerfile"
-index: JV534
+index: 534
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

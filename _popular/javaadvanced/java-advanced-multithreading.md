@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - MultiThreading"
-index: JV244
+index: 244
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

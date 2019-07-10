@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Bridge"
-index: DP511
+index: 511
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

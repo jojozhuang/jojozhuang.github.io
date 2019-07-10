@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Customizing HTML Table with Markdown"
-index: JK914
+index: 914
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

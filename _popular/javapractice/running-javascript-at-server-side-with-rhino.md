@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Running JavaScript at Server Side with Rhino"
-index: JV538
+index: 538
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

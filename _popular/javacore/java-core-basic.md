@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Basic - Draft"
-index: JV201
+index: 201
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

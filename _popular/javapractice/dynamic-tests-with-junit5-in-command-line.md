@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Dynamic Tests with JUnit 5 in Command Line"
-index: JV523
+index: 523
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

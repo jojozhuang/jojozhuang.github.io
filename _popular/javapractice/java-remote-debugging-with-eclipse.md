@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Remote Debugging with Eclipse"
-index: JV513
+index: 513
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

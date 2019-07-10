@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Memento"
-index: DP525
+index: 525
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

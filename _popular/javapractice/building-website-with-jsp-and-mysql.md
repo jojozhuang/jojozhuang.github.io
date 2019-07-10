@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Building Website with JSP and MySQL"
-index: JV532
+index: 532
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Template Method"
-index: DP530
+index: 530
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

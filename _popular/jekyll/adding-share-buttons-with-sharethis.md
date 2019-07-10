@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Adding Share Buttons with ShareThis"
-index: JK908
+index: 908
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

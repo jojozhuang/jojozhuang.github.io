@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Data Persistence with Hibernate"
-index: JV536
+index: 536
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

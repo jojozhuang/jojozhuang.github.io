@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "SEO Optimizations for Jekyll Websites"
-index: JK923
+index: 923
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

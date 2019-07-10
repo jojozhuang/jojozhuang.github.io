@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Bipartite Graph"
-index: DS317
+index: 317
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

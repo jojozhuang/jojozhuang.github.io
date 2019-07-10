@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Directed Graph - Draft"
-index: DS318
+index: 318
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

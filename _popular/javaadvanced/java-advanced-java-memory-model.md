@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Java Memory Model - Draft"
-index: JV231
+index: 231
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

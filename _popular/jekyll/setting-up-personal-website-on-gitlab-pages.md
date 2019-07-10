@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Setting up Personal Website on GitLab Pages(Draft)"
-index: JK930
+index: 930
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

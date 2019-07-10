@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Proxy"
-index: DP516
+index: 516
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

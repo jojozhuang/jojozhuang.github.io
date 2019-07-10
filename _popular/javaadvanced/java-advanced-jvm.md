@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - JVM - Draft"
-index: JV237
+index: 237
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

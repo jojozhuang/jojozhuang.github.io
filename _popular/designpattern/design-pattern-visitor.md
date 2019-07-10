@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Visitor"
-index: DP531
+index: 531
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Cryptography - Draft"
-index: JV233
+index: 233
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

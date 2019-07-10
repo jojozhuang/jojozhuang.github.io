@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Adding Social Media Share Buttons to Jekyll Site"
-index: JK907
+index: 907
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
