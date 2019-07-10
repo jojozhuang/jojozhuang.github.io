@@ -5,7 +5,6 @@ title: "Code Editor(React)"
 index: 260
 category: web
 image: codeeditorreact/thumbnail.png
-excerpt: A full stack web application for online programming, built with React and Express.
 tags: [React]
 ---
 

@@ -5,7 +5,6 @@ title: "Trip Planner(iOS)"
 index: 140
 category: mobile
 image: tripplannerios/thumbnail.png
-excerpt: An iOS App for managing itineraries, built with Swift.
 tags: [iOS, Swift, XCode]
 ---
 

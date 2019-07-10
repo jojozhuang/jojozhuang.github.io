@@ -5,11 +5,10 @@ title: "Online Judge(MEAN)"
 index: 280
 category: web
 image: onlinejudgemean/thumbnail.png
-excerpt: A web application for online judge(Algorithm questions), built with MEAN stack.
 tags: [MongoDB, Express, Angular, Node.js]
 ---
 
-> A web application for online judge, built with MEAN stack(MongoDB, Express, Angular and Node.js)
+> A web application for online judge(Algorithm questions), built with MEAN stack.
 
 ## 1. Online Judge
 This application is used to solve algorithm questions. You can submit the solution to see if it passes all test cases. Below are the available features.

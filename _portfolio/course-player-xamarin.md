@@ -5,7 +5,6 @@ title: "CoursePlayer(Xamarin)"
 index: 110
 category: mobile
 image: courseplayerxamarin/thumbnail.png
-excerpt: An iOS App for playing course, built with Xamarin in C#.
 tags: [Xamarin, C#, Cross-platform]
 ---
 

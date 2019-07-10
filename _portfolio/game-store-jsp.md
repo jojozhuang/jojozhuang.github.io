@@ -5,7 +5,6 @@ title: "Online Game Store(JSP)"
 index: 340
 category: dotnet
 image: gamestorejsp/thumbnail.png
-excerpt: An online eCommerce web store, built with MySQL and Servlet/JSP in Java.
 tags: [Java, Servlet, JSP, Beans, MySQL]
 ---
 

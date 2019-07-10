@@ -5,11 +5,10 @@ title: "Game Store(Angular)"
 index: 220
 category: web
 image: gamestoreangular/thumbnail.png
-excerpt: A web app to manage products, built with Angular.
 tags: [Angular, TypeScript]
 ---
 
-> A web app for managing products, built with Angular and RESTful API.
+> A web app to manage products, built with Angular.
 
 ## 1. Function
 This application is used to manage products. It implements all CRUD operations. Below are the available features.

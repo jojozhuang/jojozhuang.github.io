@@ -5,11 +5,10 @@ title: "Game Store(React)"
 index: 210
 category: web
 image: gamestorereact/thumbnail.png
-excerpt: A web app to manage products, built with React.
 tags: [React, Redux]
 ---
 
-> A web app for managing products, built with React/Redux and RESTful API.
+> A web app to manage products, built with React.
 
 ## 1. Function
 This application is used to manage products. It implements all CRUD operations. Below are the available features.

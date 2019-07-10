@@ -5,7 +5,6 @@ title: "Web Server(Java)"
 index: 310
 category: dotnet
 image: webserverjava/thumbnail.png
-excerpt: A web server built with sockets in Java, capable of handling general HTTP requests.
 tags: [Socket, Java, HTTP]
 ---
 

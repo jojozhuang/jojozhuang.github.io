@@ -5,11 +5,10 @@ title: "Course Player(Socket)"
 index: 240
 category: web
 image: courseplayersocketio/thumbnail.png
-excerpt: A realtime online course player, built with Socket.IO, HTML5 Canvas and Node.js.
 tags: [WebSocket, Socket.IO, Node.js, jQuery]
 ---
 
-> A realtime online course player, built with [Socket.IO](http://socket.io/), HTML5 Canva, [Node.js](https://nodejs.org/en/) and [jQuery](https://jquery.com/).
+> A realtime online course player, built with Socket.IO, HTML5 Canvas and Node.js.
 
 ## 1. Course Player
 A course player consists of three components: video, screenshot and whiteboard. Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.

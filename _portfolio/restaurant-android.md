@@ -5,11 +5,10 @@ title: "Restaurant(Anroid)"
 index: 130
 category: mobile
 image: restaurantandroid/thumbnail.png
-excerpt: An Android App for searching restaurants, built with Java.
 tags: [Android, Java, Android Studio, Genymotion]
 ---
 
-> An Android app for searching restaurants, built with Java.
+> An Android App for searching restaurants, built with Java.
 
 ## 1. Function
 This Android app is used to search restaurants, view details and submit comments. The available features are listed below.
