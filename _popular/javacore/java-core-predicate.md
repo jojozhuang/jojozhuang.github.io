@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Predicate - Draft"
-index: JV247
+index: 247
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

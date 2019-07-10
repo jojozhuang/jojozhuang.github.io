@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Practice - Useful Math Knowledge"
-index: AG345
+index: 345
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

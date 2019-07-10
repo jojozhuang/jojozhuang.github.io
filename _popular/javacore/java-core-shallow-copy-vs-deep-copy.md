@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Shallow Copy vs Deep Copy"
-index: JV205
+index: 205
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

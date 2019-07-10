@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Tricks in Java"
-index: JV502
+index: 502
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

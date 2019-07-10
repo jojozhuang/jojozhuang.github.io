@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Scripting Java With Rhino"
-index: JV537
+index: 537
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

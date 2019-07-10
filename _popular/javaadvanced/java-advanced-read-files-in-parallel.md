@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Read Files in Parallel - Draft"
-index: JV245
+index: 245
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Encryption and Decryption in Java"
-index: JV503
+index: 503
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

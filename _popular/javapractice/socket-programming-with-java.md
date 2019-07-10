@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Socket Programming with Java"
-index: JV504
+index: 504
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

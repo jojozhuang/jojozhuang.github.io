@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Composite"
-index: DP512
+index: 512
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

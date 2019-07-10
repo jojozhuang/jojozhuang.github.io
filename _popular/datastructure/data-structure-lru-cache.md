@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "LRU Cache"
-index: DS305
+index: 305
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

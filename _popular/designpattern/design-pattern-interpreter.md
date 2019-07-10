@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Interpreter"
-index: DP522
+index: 522
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

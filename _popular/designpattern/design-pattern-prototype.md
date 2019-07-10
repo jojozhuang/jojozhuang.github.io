@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Prototype"
-index: DP506
+index: 506
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

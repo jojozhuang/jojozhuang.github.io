@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Checking Which JDK Eclipse is Using"
-index: JV511
+index: 511
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

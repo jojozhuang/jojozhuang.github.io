@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Practice - Algorithm Best Practice"
-index: AG342
+index: 342
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Minimum Spanning Tree - Draft"
-index: DS319
+index: 319
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

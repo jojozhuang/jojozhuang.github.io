@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Singleton"
-index: DP502
+index: 502
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

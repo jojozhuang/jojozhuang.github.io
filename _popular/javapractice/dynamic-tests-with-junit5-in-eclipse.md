@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Dynamic Tests with JUnit 5 in Eclipse"
-index: JV522
+index: 522
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

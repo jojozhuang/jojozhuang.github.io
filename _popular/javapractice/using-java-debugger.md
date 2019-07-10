@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Using Java Debugger"
-index: JV512
+index: 512
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

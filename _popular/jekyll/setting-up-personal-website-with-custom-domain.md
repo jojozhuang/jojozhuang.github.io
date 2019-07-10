@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Setting up Personal Website with Custom Domain"
-index: JK921
+index: 921
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

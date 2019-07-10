@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "State"
-index: DP528
+index: 528
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

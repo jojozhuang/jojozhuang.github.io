@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Iterator"
-index: DP523
+index: 523
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

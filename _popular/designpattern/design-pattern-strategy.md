@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Strategy"
-index: DP529
+index: 529
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

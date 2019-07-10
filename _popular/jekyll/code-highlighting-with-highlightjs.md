@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Code Highlighting with highlight.js"
-index: JK910
+index: 910
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Tree"
-index: DS307
+index: 307
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

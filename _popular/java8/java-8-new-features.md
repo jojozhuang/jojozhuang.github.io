@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - New Features"
-index: JV251
+index: 251
 category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png

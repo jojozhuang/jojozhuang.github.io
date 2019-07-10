@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Object Class - Draft"
-index: JV232
+index: 232
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

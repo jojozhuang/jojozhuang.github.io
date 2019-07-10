@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Data Structure Overview"
-index: DS301
+index: 301
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

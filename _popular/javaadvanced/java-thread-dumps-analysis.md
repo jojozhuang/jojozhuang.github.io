@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java - Thread Dumps & Analysis"
-index: JV604
+index: 604
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

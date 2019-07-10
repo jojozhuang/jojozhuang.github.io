@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Web Service - Draft"
-index: JV235
+index: 235
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

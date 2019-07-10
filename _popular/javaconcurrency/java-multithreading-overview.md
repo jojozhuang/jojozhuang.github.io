@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Multithreading - Overview"
-index: JV221
+index: 221
 category: multithreading
 breadcrumb: [Popular, Java, Java Concurrency]
 image: java.png
