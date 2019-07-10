@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Game 2048(Electron)"
-index: PF230
-tags: [Electron, Node.js, Cross-platform]
-image: /public/images/portfolio/game2048electron/thumbnail.png
-excerpt: A cross-platform desktop app for Game 2048, built with Electron and Node.js
+index: 230
 category: web
+image: game2048electron/thumbnail.png
+excerpt: A cross-platform desktop app for Game 2048, built with Electron and Node.js
+tags: [Electron, Node.js, Cross-platform]
 ---
 
 > A cross-platform desktop app for Game 2048, built with Electron and Node.js.

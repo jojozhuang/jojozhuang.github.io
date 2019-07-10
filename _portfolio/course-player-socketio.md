@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Course Player(Socket)"
-index: PF240
-tags: [WebSocket, Socket.IO, Node.js, jQuery]
-image: /public/images/portfolio/courseplayersocketio/thumbnail.png
-excerpt: A realtime online course player, built with Socket.IO, HTML5 Canvas and Node.js.
+index: 240
 category: web
+image: courseplayersocketio/thumbnail.png
+excerpt: A realtime online course player, built with Socket.IO, HTML5 Canvas and Node.js.
+tags: [WebSocket, Socket.IO, Node.js, jQuery]
 ---
 
 > A realtime online course player, built with [Socket.IO](http://socket.io/), HTML5 Canva, [Node.js](https://nodejs.org/en/) and [jQuery](https://jquery.com/).

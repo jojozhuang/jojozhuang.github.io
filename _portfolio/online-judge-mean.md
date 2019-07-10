@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Online Judge(MEAN)"
-index: PF280
-tags: [MongoDB, Express, Angular, Node.js]
-image: /public/images/portfolio/onlinejudgemean/thumbnail.png
-excerpt: A web application for online judge(Algorithm questions), built with MEAN stack.
+index: 280
 category: web
+image: onlinejudgemean/thumbnail.png
+excerpt: A web application for online judge(Algorithm questions), built with MEAN stack.
+tags: [MongoDB, Express, Angular, Node.js]
 ---
 
 > A web application for online judge, built with MEAN stack(MongoDB, Express, Angular and Node.js)

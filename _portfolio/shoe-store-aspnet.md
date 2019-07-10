@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Shoe Store(ASP.NET)"
-index: PF320
-tags: [ASP.NET MVC, C#, Bootstrap]
-image: /public/images/portfolio/shoestoreaspnet/thumbnail.png
-excerpt: An online store website with responsive UI, built with ASP.NET MVC in C#.
+index: 320
 category: dotnet
+image: shoestoreaspnet/thumbnail.png
+excerpt: An online store website with responsive UI, built with ASP.NET MVC in C#.
+tags: [ASP.NET MVC, C#, Bootstrap]
 ---
 
 > An online store website with responsive UI, built with ASP.NET MVC in C#.
