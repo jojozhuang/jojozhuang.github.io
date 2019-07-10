@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Game Store(Angular)"
-index: PF220
-tags: [Angular, TypeScript]
-image: /public/images/portfolio/gamestoreangular/thumbnail.png
-excerpt: A web app to manage products, built with Angular.
+index: 220
 category: web
+image: gamestoreangular/thumbnail.png
+excerpt: A web app to manage products, built with Angular.
+tags: [Angular, TypeScript]
 ---
 
 > A web app for managing products, built with Angular and RESTful API.

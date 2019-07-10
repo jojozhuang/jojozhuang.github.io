@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Course Player(SignalR)"
-index: PF330
-tags: [WebSocket, SignalR, ASP.NET]
-image: /public/images/portfolio/courseplayersignalr/thumbnail.png
-excerpt: A realtime online course player, built with SignalR and ASP.NET.
+index: 330
 category: dotnet
+image: courseplayersignalr/thumbnail.png
+excerpt: A realtime online course player, built with SignalR and ASP.NET.
+tags: [WebSocket, SignalR, ASP.NET]
 ---
 
 > A realtime online course player, built with [SignalR](https://www.asp.net/signalr), HTML5 Canva, ASP.NET and [jQuery](https://jquery.com/).

@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Game Store(React)"
-index: PF210
-tags: [React, Redux]
-image: /public/images/portfolio/gamestorereact/thumbnail.png
-excerpt: A web app to manage products, built with React.
+index: 210
 category: web
+image: gamestorereact/thumbnail.png
+excerpt: A web app to manage products, built with React.
+tags: [React, Redux]
 ---
 
 > A web app for managing products, built with React/Redux and RESTful API.

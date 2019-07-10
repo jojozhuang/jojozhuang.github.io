@@ -2,11 +2,11 @@
 layout: portfolio
 key: portfolio
 title: "Game Store(Multi)"
-index: PF120
-tags: [iOS, Android, Xamarin, Cordova]
-image: /public/images/portfolio/gamestoremulti/thumbnail.png
-excerpt: 4 different implementations for product management.
+index: 120
 category: mobile
+image: gamestoremulti/thumbnail.png
+excerpt: 4 different implementations for product management.
+tags: [iOS, Android, Xamarin, Cordova]
 ---
 
 > Use different technologies to build mobile apps with the same function: Product Management.
