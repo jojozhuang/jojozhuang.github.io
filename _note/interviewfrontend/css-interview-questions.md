@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "CSS Interview Questions"
-index: 113
+index: IQ113
 category: interview-frontend
 breadcrumb: [Note, Interview Questions, Frontend Questions]
 image: interview.png

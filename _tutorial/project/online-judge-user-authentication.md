@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "User Authentication"
-index: 354
+index: NG354
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

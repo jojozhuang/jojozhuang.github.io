@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy Angular App to Heroku using Travis-CI"
-index: 343
+index: NG343
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

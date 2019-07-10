@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Algorithm - Convert Number into Negative Base Representation - Draft"
-index: 170
+index: IQ170
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

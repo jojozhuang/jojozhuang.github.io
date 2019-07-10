@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Running Multiple Containers with Docker Compose"
-index: 710
+index: DK710
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

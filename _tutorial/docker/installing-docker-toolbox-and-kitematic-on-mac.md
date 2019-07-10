@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing Docker Toolbox and Kitematic on Mac"
-index: 702
+index: DK702
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

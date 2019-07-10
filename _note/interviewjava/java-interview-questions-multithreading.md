@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Java Interview Questions - Multithreading"
-index: 105
+index: IQ105
 category: interview-java
 breadcrumb: [Note, Interview Questions, Java Questions]
 image: interview.png

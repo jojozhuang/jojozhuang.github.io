@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Logging with Morgan"
-index: 253
+index: EP253
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

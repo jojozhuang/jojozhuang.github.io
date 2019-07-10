@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Front-End Interview Questions"
-index: 111
+index: IQ111
 category: interview-frontend
 breadcrumb: [Note, Interview Questions, Frontend Questions]
 image: interview.png

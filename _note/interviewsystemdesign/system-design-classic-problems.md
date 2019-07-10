@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "System Design - Classic Problems"
-index: 154
+index: IQ154
 category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
 image: interview.png
