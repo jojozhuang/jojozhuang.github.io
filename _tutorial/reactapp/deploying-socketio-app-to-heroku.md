@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Socket.IO App to Heroku"
-index: RT416
+index: 416
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

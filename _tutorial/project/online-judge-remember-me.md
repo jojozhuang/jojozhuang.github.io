@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Remember Me"
-index: NG355
+index: 355
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

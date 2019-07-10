@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Bootstrap in Angular"
-index: NG307
+index: 307
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

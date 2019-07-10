@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Accessing Website Hosted in Docker of VirtualBox from Another Machine"
-index: DK714
+index: 714
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

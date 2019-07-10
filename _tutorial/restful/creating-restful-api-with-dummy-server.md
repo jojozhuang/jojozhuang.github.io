@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating RESTful API with Dummy Server"
-index: NG152
+index: 152
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

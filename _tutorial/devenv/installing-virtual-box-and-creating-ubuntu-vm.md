@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing VirtualBox and Creating Ubuntu VM"
-index: CS11
+index: 11
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

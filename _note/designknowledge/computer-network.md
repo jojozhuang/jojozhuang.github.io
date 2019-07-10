@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Computer Network"
-index: SD203
+index: 203
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

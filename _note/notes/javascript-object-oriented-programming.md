@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "JavaScript object oriented programming(Online Doc)"
-index: NT612
+index: 612
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

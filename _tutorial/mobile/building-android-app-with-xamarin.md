@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Android App with Xamarin"
-index: MB608
+index: 608
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

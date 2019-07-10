@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Angular Components"
-index: NG303
+index: 303
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

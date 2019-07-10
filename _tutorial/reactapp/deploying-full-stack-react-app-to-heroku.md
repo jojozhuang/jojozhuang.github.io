@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Full Stack React App to Heroku"
-index: RT424
+index: 424
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

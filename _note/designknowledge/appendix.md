@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Appendix"
-index: SD212
+index: 212
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

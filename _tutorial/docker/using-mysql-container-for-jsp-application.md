@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using MySQL Container for JSP Application"
-index: DK703
+index: 703
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

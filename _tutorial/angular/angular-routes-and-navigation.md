@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Routes and Navigation"
-index: NG308
+index: 308
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

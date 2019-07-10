@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Html Interview Questions"
-index: IQ112
+index: 112
 category: interview-frontend
 breadcrumb: [Note, Interview Questions, Frontend Questions]
 image: interview.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Basic Knowledge of React"
-index: RT402
+index: 402
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png

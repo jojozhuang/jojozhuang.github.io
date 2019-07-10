@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Express Security - Draft"
-index: EP258
+index: 258
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

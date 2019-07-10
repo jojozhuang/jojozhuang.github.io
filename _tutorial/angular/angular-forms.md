@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Angular Forms"
-index: NG311
+index: 311
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with Linux"
-index: CS1
+index: 1
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

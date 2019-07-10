@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating RESTful Web Services with Spring Boot"
-index: NG162
+index: 162
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

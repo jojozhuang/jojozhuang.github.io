@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Core Java Volume I--Fundamentals (10th Edition)"
-index: NT601
+index: 601
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

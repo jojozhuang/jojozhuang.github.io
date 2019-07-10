@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying ASP.NET RESTful API to Azure"
-index: NG155
+index: 155
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

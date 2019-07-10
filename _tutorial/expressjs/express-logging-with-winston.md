@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Logging with Winston"
-index: EP254
+index: 254
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

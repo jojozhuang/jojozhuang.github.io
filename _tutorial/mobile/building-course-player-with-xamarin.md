@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with Xamarin"
-index: MB609
+index: 609
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Real World Architectures"
-index: SD213
+index: 213
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

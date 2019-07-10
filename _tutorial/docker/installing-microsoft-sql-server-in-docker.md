@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing Microsoft SQL Server in Docker"
-index: DK712
+index: 712
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

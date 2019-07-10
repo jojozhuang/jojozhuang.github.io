@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "System Design - Common Principles"
-index: SD201
+index: 201
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

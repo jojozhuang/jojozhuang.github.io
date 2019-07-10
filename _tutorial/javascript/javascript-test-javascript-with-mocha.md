@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "JavaScript - Test JavaScript with Mocha(Draft)"
-index: JS105
+index: 105
 category: javascript
 breadcrumb: [Tutorial, Frontend, Javascript]
 image: javascript.png

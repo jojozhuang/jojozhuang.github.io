@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing and Using Cordova on MacOS"
-index: MB610
+index: 610
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

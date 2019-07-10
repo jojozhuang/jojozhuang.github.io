@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Angular CLI"
-index: NG301
+index: 301
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

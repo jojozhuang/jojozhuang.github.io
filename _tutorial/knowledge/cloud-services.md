@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Cloud Services"
-index: NG44
+index: 44
 category: knowledge
 breadcrumb: [Tutorial, Prerequisites, Knowledge]
 image: code.png

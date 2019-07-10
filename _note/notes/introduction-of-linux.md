@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Introduction to Linux(Book)"
-index: NT101
+index: 101
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

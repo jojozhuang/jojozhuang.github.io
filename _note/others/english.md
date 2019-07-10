@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Computer English"
-index: NT901
+index: 901
 category: others
 breadcrumb: [Note, Work Space, Others]
 image: note.png

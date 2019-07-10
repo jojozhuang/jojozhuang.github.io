@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with macOS"
-index: CS2
+index: 2
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

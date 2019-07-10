@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Mobile App Development"
-index: MB601
+index: 601
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

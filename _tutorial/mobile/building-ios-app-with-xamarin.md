@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building iOS App with Xamarin"
-index: MB607
+index: 607
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

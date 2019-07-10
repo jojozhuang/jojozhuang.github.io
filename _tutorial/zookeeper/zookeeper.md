@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "ZooKeeper"
-index: NG50
+index: 50
 category: zookeeper
 breadcrumb: [Tutorial, Distributed System, Zookeeper]
 image: code.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Socket.IO Application with ExpressJS[Draft]"
-index: NJ215
+index: 215
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "AWS - Certified Solutions Architect"
-index: NT804
+index: 804
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

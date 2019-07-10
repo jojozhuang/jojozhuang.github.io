@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Building Scalable Web Sites"
-index: NT702
+index: 702
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

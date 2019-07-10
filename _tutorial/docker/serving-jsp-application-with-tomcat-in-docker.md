@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Serving JSP Application With Tomcat In Docker"
-index: DK707
+index: 707
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

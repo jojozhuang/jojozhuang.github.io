@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Massive Data Processing Interview Questions - Draft"
-index: IQ172
+index: 172
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

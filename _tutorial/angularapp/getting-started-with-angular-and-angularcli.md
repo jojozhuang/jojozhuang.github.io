@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with Angular and Angular CLI"
-index: NG321
+index: 321
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
