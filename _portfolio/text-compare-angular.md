@@ -5,7 +5,6 @@ title: "Text Compare(Angular)"
 index: 270
 category: web
 image: textcompareangular/thumbnail.png
-excerpt: A web application for text compare, built with Angular and Monaco Editor.
 tags: [Angular, Monaco Editor]
 ---
 

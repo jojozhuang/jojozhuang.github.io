@@ -5,11 +5,10 @@ title: "Course Player(SignalR)"
 index: 330
 category: dotnet
 image: courseplayersignalr/thumbnail.png
-excerpt: A realtime online course player, built with SignalR and ASP.NET.
 tags: [WebSocket, SignalR, ASP.NET]
 ---
 
-> A realtime online course player, built with [SignalR](https://www.asp.net/signalr), HTML5 Canva, ASP.NET and [jQuery](https://jquery.com/).
+> A realtime online course player, built with SignalR and ASP.NET.
 
 ## 1. Course Player
 A course player consists of three components: video, screenshot and whiteboard.

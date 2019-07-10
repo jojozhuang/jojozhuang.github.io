@@ -5,7 +5,6 @@ title: "Course Player(React)"
 index: 250
 category: web
 image: courseplayerreact/thumbnail.png
-excerpt: A realtime online course player, built with React and Socket.IO.
 tags: [React, Socket.IO]
 ---
 

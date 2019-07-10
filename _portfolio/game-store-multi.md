@@ -5,11 +5,10 @@ title: "Game Store(Multi)"
 index: 120
 category: mobile
 image: gamestoremulti/thumbnail.png
-excerpt: 4 different implementations for product management.
 tags: [iOS, Android, Xamarin, Cordova]
 ---
 
-> Use different technologies to build mobile apps with the same function: Product Management.
+> 4 different implementations for product management.
 
 ## 1. Introduction
 ### 1.1 Game Store Web Application

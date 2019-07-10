@@ -34,7 +34,7 @@ categories:
             </a>
             <div class="item-detail">
               <h3><a href="{{ portfolio.url }}">{{ portfolio.title }}</a></h3>
-              <p>{{ portfolio.excerpt }}</p>
+              <p>{{ portfolio.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}</p>
             </div>
           </div>
         </div>

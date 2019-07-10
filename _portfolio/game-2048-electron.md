@@ -5,11 +5,10 @@ title: "Game 2048(Electron)"
 index: 230
 category: web
 image: game2048electron/thumbnail.png
-excerpt: A cross-platform desktop app for Game 2048, built with Electron and Node.js
 tags: [Electron, Node.js, Cross-platform]
 ---
 
-> A cross-platform desktop app for Game 2048, built with Electron and Node.js.
+> A cross-platform desktop app for Game 2048, built with Electron and Node.js
 
 ## 1. 2048
 2048 is a famous number puzzle game, you can play it online at https://gabrielecirulli.github.io/2048/. It also has iOS and Android apps for mobile devices. I converted this game from a web application to `desktop` application with [Electron](https://electron.atom.io/) for all platforms, OS X, Windows and Linux.

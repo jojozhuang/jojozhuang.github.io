@@ -5,7 +5,6 @@ title: "Shoe Store(ASP.NET)"
 index: 320
 category: dotnet
 image: shoestoreaspnet/thumbnail.png
-excerpt: An online store website with responsive UI, built with ASP.NET MVC in C#.
 tags: [ASP.NET MVC, C#, Bootstrap]
 ---
 
