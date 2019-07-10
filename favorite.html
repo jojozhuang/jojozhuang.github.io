@@ -44,9 +44,8 @@ title: Favorites
             {% assign portfolios = site.portfolio %}
             {% assign populars = site.popular %}
             {% assign tutorials = site.tutorial %}
-            {% assign githubpages = site.githubpage %}
             {% assign blogs = site.posts %}
-            {% assign postings = portfolios | concat: populars | concat: tutorials | concat: githubpages | concat: blogs %}
+            {% assign postings = portfolios | concat: populars | concat: tutorials | concat: blogs %}
             {%- for bookmark in favorite.bookmarks -%}
                 {% assign idx1 = forloop.index %}
                 <div class="list-category">
