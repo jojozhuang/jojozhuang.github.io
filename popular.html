@@ -70,7 +70,6 @@ title: Popular Topics
 
 <script>
   window.store = {
-    {% assign postings = site.popular %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",

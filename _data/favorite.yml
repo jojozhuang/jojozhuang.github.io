@@ -5,6 +5,9 @@ librarydesc: Combination of my posting and portfolio with the bookmark list.
 bookmarks:
   - category: Online Tools
     links:
+      - name: Rico's cheatsheets
+        description: Cheatsheets 
+        url: https://devhints.io/
       - name: XML Formatter
         description: Format XML string
         url: https://www.freeformatter.com/xml-formatter.html
@@ -29,6 +32,17 @@ bookmarks:
       - name: Plunker
         description: An online real-time collaborative code editor
         url: https://plnkr.co/
+  - category: Personal Website
+    links:
+      - name: Liquid
+        description: An open-source template language written in Ruby
+        url: https://shopify.github.io/liquid/
+      - name: Jekyll
+        description: A blog-aware, static site generator in Ruby.
+        url: https://jekyllrb.com/
+      - name: Jekyll cheatsheet
+        description: Cheatsheet for Jekyll.
+        url: https://devhints.io/jekyll
   - category: SEO
     links:
       - name: Varvy SEO tool
@@ -456,7 +470,7 @@ bookmarks:
         url: http://www.putty.org/
       - name: Cyberduck
         description: A free FTP clients for Mac and Windows
-        url: https://jekyllrb.com/
+        url: https://cyberduck.io/
       - name: FileZilla
         description: A free cross-platform FTP application
         url: https://filezilla-project.org/
@@ -499,12 +513,9 @@ bookmarks:
       - name: Netlify
         description: A cloud service for hosting websites
         url: https://www.netlify.com/
-      - name: Jekyll
-        description: A blog-aware, static site generator in Ruby.
-        url: https://jekyllrb.com/
-      - name: Liquid
-        description: An open-source template language written in Ruby
-        url: https://shopify.github.io/liquid/
+      - name: Heroku
+        description: A PaaS platform supported by Salesforce
+        url: https://www.heroku.com/
   - category: Resources
     links:
       - name: GitHub Markdown Cheatsheet
