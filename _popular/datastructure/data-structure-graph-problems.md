@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Graph Problems"
-index: 316
+index: 1117
+courseid: DS117
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

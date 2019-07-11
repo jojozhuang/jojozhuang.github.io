@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "HashMap"
-index: 313
+index: 1114
+courseid: DS114
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

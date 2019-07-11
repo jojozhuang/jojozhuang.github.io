@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Viewing Jekyll Build Error with Travis CI"
-index: 912
+index: 1612
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

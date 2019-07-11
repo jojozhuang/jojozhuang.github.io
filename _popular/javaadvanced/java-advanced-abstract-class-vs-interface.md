@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Abstract Class Vs Interface"
-index: 241
+index: 1441
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Command"
-index: 521
+index: 1321
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Trie"
-index: 310
+index: 1111
+courseid: DS111
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

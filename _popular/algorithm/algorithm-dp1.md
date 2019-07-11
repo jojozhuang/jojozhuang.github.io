@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Dynamic Programming"
-index: 328
+index: 1228
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Binary Search Tree"
-index: 308
+index: 1109
+courseid: DS109
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

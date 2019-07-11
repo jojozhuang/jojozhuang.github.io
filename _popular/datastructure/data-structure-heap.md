@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Heap"
-index: 314
+index: 1115
+courseid: DS115
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

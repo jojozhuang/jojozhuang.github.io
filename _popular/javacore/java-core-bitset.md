@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "BitSet"
-index: 212
+index: 1412
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "LRU Cache"
-index: 305
+index: 1106
+courseid: DS106
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

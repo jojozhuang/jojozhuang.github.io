@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Deque"
-index: 304
+index: 1105
+courseid: DS105
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

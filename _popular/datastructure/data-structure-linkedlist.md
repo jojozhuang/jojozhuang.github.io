@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Linked List"
-index: 302
+index: 1102
+courseid: DS102
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
