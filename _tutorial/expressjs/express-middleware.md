@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Middleware"
-index: 2352
+index: 2552
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

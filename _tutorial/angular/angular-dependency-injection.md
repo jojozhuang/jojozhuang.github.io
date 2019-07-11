@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Dependency Injection"
-index: 2406
+index: 2706
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

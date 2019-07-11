@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Combine Morgan & Winston"
-index: 2355
+index: 2555
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

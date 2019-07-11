@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Interview Questions - Overview"
-index: 4501
+index: 9601
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

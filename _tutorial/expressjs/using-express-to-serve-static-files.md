@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Express to Serve Static Files"
-index: 2361
+index: 2561
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png

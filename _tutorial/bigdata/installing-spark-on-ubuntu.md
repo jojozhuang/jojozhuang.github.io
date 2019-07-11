@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing Spark on Ubuntu"
-index: 2835
+index: 3135
 category: bigdata
 breadcrumb: [Tutorial, Distributed System, Big Data]
 image: code.png

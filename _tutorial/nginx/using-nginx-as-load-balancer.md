@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Nginx as Load Balancer"
-index: 2843
+index: 3143
 category: nginx
 breadcrumb: [Tutorial, Distributed System, Nginx]
 image: code.png

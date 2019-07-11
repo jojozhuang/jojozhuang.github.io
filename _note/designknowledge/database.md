@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Database Scaling"
-index: 4108
+index: 9508
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

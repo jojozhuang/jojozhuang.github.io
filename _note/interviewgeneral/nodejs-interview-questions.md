@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Node.js Interview Questions - Draft"
-index: 4521
+index: 9621
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

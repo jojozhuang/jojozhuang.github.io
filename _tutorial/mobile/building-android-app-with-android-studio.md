@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Android App with Android Studio"
-index: 2604
+index: 2304
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

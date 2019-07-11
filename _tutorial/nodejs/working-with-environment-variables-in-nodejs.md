@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Working with Environment Variables in Node.js[Draft]"
-index: 2322
+index: 2522
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png

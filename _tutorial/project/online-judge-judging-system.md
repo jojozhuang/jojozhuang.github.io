@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Judging System"
-index: 2761
+index: 2861
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

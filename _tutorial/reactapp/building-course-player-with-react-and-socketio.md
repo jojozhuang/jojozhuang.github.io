@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with React and Socket.IO"
-index: 2518
+index: 2618
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
