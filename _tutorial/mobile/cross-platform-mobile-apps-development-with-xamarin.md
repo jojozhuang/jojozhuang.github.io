@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Cross-platform Mobile Apps Development with Xamarin"
-index: 606
+index: 2606
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

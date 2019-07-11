@@ -71,7 +71,6 @@ title: Tutorials
 
 <script>
   window.store = {
-    {% assign postings = site.tutorial %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",

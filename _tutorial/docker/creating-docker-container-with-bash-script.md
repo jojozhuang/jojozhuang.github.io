@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating Docker Container with Bash Script[Draft]"
-index: 713
+index: 2813
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Javascript Interview Questions"
-index: 114
+index: 4514
 category: interview-frontend
 breadcrumb: [Note, Interview Questions, Frontend Questions]
 image: interview.png

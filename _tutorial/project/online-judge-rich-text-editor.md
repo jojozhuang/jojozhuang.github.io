@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Rich Text Editor"
-index: 356
+index: 2756
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

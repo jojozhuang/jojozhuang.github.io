@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Designing Popular Website or App"
-index: 112
+index: 9912
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png

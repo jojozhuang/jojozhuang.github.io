@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
-index: 802
+index: 9102
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

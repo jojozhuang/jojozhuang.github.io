@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Introduction to JavaScript Object Notation(Draft)"
-index: 614
+index: 9114
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Mobile App with React Native - Draft"
-index: 611
+index: 2611
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

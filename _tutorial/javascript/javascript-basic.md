@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "JavaScript - Basic"
-index: 101
+index: 2201
 category: javascript
 breadcrumb: [Tutorial, Frontend, Javascript]
 image: javascript.png

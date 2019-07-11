@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "System Design Interview Questions"
-index: 151
+index: 4551
 category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
 image: interview.png

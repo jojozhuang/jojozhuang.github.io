@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Socket.IO App to Azure"
-index: 417
+index: 2517
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

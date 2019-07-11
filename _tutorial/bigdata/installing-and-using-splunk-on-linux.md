@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing and Using Splunk on Linux"
-index: 34
+index: 2834
 category: bigdata
 breadcrumb: [Tutorial, Distributed System, Big Data]
 image: code.png

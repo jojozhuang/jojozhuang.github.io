@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Code Editor"
-index: 357
+index: 2757
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

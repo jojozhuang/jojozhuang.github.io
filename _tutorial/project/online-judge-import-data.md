@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Import Data"
-index: 359
+index: 2759
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

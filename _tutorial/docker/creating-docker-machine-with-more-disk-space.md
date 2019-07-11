@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating Docker Machine with More Disk Space"
-index: 711
+index: 2811
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

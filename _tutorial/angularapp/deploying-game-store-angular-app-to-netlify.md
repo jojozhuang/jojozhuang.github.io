@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Game Store Angular App to Netlify"
-index: 330
+index: 2430
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

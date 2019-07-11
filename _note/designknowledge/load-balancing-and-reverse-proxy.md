@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Load Balancing and Reverse Proxy"
-index: 206
+index: 4106
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

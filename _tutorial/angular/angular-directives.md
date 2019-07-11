@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Angular Directives"
-index: 305
+index: 2405
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
