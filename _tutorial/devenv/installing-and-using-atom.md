@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing and Using Atom"
-index: 16
+index: 2116
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

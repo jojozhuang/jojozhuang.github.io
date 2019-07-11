@@ -53,7 +53,6 @@ title: Rong Zhuang's Note
 
 <script>
   window.store = {
-    {% assign postings = site.note %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Web Application with Angular"
-index: 322
+index: 2422
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

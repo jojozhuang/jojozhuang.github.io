@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Angular Pipes"
-index: 312
+index: 2412
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

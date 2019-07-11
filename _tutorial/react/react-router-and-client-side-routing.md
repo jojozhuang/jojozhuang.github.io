@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "React Router and Client Side Routing"
-index: 423
+index: 2523
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png

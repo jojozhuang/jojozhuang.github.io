@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Generic Interview Questions - Draft"
-index: 102
+index: 4502
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

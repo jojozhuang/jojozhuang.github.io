@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Text Compare Angular App to Netlify"
-index: 329
+index: 2429
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

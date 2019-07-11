@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Android Development Environment on Mac"
-index: 603
+index: 2603
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png

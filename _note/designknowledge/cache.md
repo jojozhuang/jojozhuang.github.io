@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Cache"
-index: 209
+index: 4109
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png

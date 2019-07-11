@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Online Judge Application With MEAN Stack"
-index: 351
+index: 2751
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

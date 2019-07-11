@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Frontend UI with Angular"
-index: 353
+index: 2753
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

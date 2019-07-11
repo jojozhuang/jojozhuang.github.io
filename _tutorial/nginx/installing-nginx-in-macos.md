@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing Nginx in MacOS"
-index: 41
+index: 2841
 category: nginx
 breadcrumb: [Tutorial, Distributed System, Nginx]
 image: code.png
