@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Customization of Jekyll"
-index: 905
+index: 1605
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Collection - Queue & Stack"
-index: 209
+index: 1409
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Factory"
-index: 503
+index: 1303
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Setting up Jekyll on Windows 10"
-index: 902
+index: 1602
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

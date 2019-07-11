@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Red Black Tree - draft"
-index: 309
+index: 1110
+courseid: DS110
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

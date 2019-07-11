@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Monotonic Queue - Draft"
-index: 320
+index: 1121
+courseid: DS121
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Building Web Server with Java Socket"
-index: 531
+index: 1531
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

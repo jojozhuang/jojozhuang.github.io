@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Running JUnit Tests in Command Line"
-index: 521
+index: 1521
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

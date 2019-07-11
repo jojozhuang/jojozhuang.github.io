@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Practice - Sliding Window Template for Substring Problems - Draft"
-index: 346
+index: 1246
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

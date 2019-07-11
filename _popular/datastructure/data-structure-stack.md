@@ -2,7 +2,8 @@
 layout: tutorial
 key: popular
 title: "Stack"
-index: 302
+index: 1103
+courseid: DS103
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png

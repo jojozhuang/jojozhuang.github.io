@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Practice - Bit Manipulation"
-index: 343
+index: 1243
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png
