@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Redis Commands Quick Reference"
-index: 2846
+index: 3146
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
 image: code.png

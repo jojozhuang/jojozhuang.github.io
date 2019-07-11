@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Text Compare Angular App to Docker"
-index: 2428
+index: 2728
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

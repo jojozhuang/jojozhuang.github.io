@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Zone.js - Draft"
-index: 2413
+index: 2713
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using TypeScript in Angular"
-index: 2402
+index: 2702
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

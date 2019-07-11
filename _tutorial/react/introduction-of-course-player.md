@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Introduction of Course Player"
-index: 2511
+index: 2611
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Web Applications to Cloud Services"
-index: 2844
+index: 3144
 category: knowledge
 breadcrumb: [Tutorial, Prerequisites, Knowledge]
 image: code.png

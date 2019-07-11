@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Flux and Redux"
-index: 2504
+index: 2604
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png

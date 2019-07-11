@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Node.js Application to Amazon EC2"
-index: 2325
+index: 2525
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png

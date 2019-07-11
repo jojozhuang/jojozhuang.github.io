@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deployment with Shell Script - Draft"
-index: 2763
+index: 2863
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: angular.png

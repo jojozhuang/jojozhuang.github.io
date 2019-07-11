@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with React"
-index: 2501
+index: 2601
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png

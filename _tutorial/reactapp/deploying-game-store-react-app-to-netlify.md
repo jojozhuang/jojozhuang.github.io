@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Game Store React App to Netlify"
-index: 2506
+index: 2606
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

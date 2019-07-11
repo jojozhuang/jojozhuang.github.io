@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating RESTful Web Services with Jersey"
-index: 2961
+index: 2261
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

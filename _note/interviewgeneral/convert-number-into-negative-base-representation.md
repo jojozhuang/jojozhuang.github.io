@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Algorithm - Convert Number into Negative Base Representation - Draft"
-index: 4570
+index: 9670
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png

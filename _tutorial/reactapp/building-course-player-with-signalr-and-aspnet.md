@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with SignalR and ASP.NET"
-index: 2514
+index: 2614
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

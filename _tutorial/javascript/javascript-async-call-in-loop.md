@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "JavaScript - Async Call in Loop[Draft]"
-index: 2205
+index: 2405
 category: javascript
 breadcrumb: [Tutorial, Frontend, Javascript]
 image: javascript.png
