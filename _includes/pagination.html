@@ -34,8 +34,8 @@ document.body.onkeyup = function(e){
 </script>
 {% if page.collection %}
   {% assign posts = site[page.collection] | sort: 'index' %}
-  {% for links in posts %}
-    {% if links.title == page.title %}
+  {% for posting in posts %}
+    {% if posting.title == page.title %}
       {% unless forloop.first %}
         {% assign prevurl = prev.url %}
       {% endunless %}
@@ -44,7 +44,7 @@ document.body.onkeyup = function(e){
         {% assign nexturl = next.url %}
       {% endunless %}
     {% endif %}
-    {% assign prev = links %}
+    {% assign prev = posting %}
   {% endfor %}
 
   <ul class="pager">
