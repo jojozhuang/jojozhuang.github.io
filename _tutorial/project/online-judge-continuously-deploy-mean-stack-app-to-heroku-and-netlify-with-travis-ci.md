@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI"
-index: 2765
-category: angularapp
-breadcrumb: [Tutorial, Frontend, Angular App]
-image: angular.png
+title: "Online Judge - Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI"
+index: 2842
+category: onlinejudge
+breadcrumb: [Tutorial, Project, Online Judge]
+image: online-judge.png
 date: 2017-03-15
 postdate: 2018-08-11
 tags: [Heroku, Travis CI, Netlify]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Online Judge - Deployment with Shell Script - Draft"
-index: 2842
+index: 2843
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: online-judge.png

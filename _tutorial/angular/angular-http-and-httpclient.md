@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: tutorial
-title: "HTTP and HttpClient - Draft"
-index: 2710
+title: "Angular - HTTP and HttpClient - Draft"
+index: 2703
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png

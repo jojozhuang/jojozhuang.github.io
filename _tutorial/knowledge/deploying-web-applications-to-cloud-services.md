@@ -58,7 +58,7 @@ Continuous integration and continuous delivery.
 * [Continuously Deploy Spring Boot App to Heroku with Travis-CI]({% link _tutorial/restful/continuously-deploy-spring-boot-app-to-heroku-with-travis-ci.md %})
 * [Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI]({% link _tutorial/reactapp/continuously-deploy-full-stack-react-app-to-heroku-and-netlify-with-travis-ci.md %})
 * [Continuously Deploy React and Socket.IO App to Heroku with Travis-CI]({% link _tutorial/reactapp/continuously-deploy-react-and-socketio-app-to-heroku-with-travis-ci.md %})
-* [Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI]({% link _tutorial/angularapp/continuously-deploy-mean-stack-app-to-heroku-and-netlify-with-travis-ci.md %})
+* [Online Judge - Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI]({% link _tutorial/project/online-judge-continuously-deploy-mean-stack-app-to-heroku-and-netlify-with-travis-ci.md %})
 * [Continuously Deploy Full Stack React App to Heroku with Travis-CI]({% link _tutorial/reactapp/continuously-deploy-full-stack-react-app-to-heroku-with-travis-ci.md %})
 
 ## 4. References

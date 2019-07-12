@@ -4,7 +4,7 @@ key: tutorial
 title: "Online Judge - Deploying Full Stack Angular App to Heroku"
 index: 2841
 category: onlinejudge
-breadcrumb: [Tutorial, Frontend, Angular App]
+breadcrumb: [Tutorial, Project, Online Judge]
 image: online-judge.png
 date: 2017-03-14
 postdate: 2018-08-02

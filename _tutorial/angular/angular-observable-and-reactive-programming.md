@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Observable and Reactive Programming - Draft"
-index: 2709
+title: "Angular - Observable and Reactive Programming - Draft"
+index: 2704
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
