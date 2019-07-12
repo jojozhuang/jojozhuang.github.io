@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Recently Visited Websites and Links"
-index: 9022
+index: 9002
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png

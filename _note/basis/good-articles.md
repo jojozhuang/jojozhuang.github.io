@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Good Articles"
-index: 9020
+index: 9011
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png

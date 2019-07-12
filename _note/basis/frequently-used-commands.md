@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Frequently Used Commands"
-index: 9021
+index: 9001
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
