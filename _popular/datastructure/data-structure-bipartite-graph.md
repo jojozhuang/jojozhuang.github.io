@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Bipartite Graph"
-index: 1118
+index: 1143
 courseid: DS118
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

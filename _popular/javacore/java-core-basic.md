@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Basic - Draft"
+title: "Java Core - Basic - Draft"
 index: 1401
 category: core
 breadcrumb: [Popular, Java, Java Core]

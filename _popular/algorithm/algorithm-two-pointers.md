@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Two Pointers"
-index: 1223
+index: 1212
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Divide and Conquer"
-index: 1225
+index: 1213
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

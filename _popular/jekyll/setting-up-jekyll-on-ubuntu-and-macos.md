@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Setting up Jekyll on Ubuntu and MacOS"
-index: 1601
+index: 1603
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

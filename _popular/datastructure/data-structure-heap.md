@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Heap"
-index: 1115
+index: 1132
 courseid: DS115
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

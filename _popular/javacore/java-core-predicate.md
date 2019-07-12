@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Predicate - Draft"
-index: 1447
+title: "Java Core - Predicate - Draft"
+index: 1418
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

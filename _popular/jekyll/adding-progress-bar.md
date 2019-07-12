@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Adding Progress Bar"
-index: 1609
+index: 1613
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

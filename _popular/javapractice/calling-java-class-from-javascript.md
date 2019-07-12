@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Calling Java Class from Javascript"
-index: 1539
+index: 1543
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png

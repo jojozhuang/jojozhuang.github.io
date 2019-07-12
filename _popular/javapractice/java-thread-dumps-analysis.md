@@ -2,9 +2,9 @@
 layout: tutorial
 key: popular
 title: "Java - Thread Dumps & Analysis"
-index: 1446
-category: advanced
-breadcrumb: [Popular, Java, Java Advanced]
+index: 1503
+category: practice
+breadcrumb: [Popular, Java, Practice]
 image: java.png
 date: 2017-06-04
 postdate: 2017-06-04

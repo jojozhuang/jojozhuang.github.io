@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Stack"
-index: 1103
+index: 1112
 courseid: DS103
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

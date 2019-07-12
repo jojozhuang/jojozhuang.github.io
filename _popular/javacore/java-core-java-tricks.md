@@ -1,10 +1,10 @@
 ---
 layout: tutorial
 key: popular
-title: "Tricks in Java"
-index: 1502
-category: practice
-breadcrumb: [Popular, Java, Practice]
+title: "Java Core - Tricks"
+index: 1402
+category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-09-02
 postdate: 2016-03-25

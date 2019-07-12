@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Practice - Template for Subset Problems"
-index: 1244
+title: "Algorithm - Template for Subset Problems"
+index: 1216
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

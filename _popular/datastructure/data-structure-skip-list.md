@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "SkipList - Draft"
-index: 1122
+index: 1119
 courseid: DS122
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

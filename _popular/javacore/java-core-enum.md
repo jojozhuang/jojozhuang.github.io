@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Enum"
-index: 1406
+title: "Java Core - Enum"
+index: 1415
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

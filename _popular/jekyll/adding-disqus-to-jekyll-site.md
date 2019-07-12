@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Adding Disqus to Jekyll Site"
-index: 1606
+index: 1611
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

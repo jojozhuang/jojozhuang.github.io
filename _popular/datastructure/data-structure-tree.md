@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Tree"
-index: 1108
+index: 1121
 courseid: DS108
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

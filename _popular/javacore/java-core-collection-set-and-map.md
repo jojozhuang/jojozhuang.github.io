@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Collection - Set and Map"
-index: 1408
+title: "Java Core - Collection - Set and Map"
+index: 1423
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

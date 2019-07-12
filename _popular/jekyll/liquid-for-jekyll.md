@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Liquid for Jekyll"
-index: 1604
+index: 1606
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

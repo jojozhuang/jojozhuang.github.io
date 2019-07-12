@@ -32,7 +32,7 @@ categories:
       - name: Java Concurrency
         description: Concurrency and MultiThreading
         icon: fab fa-java
-        type: multithreading
+        type: concurrency
       - name: Practice
         description: Practice of Java
         icon: fab fa-java

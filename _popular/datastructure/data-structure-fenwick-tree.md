@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Fenwick Tree - Draft"
-index: 1112
+index: 1126
 courseid: DS112
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

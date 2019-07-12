@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Adding Search Function for Static Website with Lunr.js"
-index: 1611
+title: "Adding Search Function for Static Website with Lunr.js - draft"
+index: 1617
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png
