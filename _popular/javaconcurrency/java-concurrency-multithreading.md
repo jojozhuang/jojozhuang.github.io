@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - MultiThreading"
-index: 1444
-category: advanced
-breadcrumb: [Popular, Java, Java Advanced]
+title: "Java Concurrency - MultiThreading"
+index: 1432
+category: concurrency
+breadcrumb: [Popular, Java, Java Concurrency]
 image: java.png
 date: 2017-04-04
 postdate: 2017-04-04
-tags: [Thread, Runnable, concurrency]
+tags: [Thread, Runnable, Concurrency]
 ---
 
 > Concurrent

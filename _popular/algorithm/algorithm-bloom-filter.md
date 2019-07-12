@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Bloom Filter - Draft"
-index: 1231
+index: 1234
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

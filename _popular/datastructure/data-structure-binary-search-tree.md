@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Binary Search Tree"
-index: 1109
+index: 1122
 courseid: DS109
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

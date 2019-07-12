@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Stream API"
-index: 1456
+index: 1476
 category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png

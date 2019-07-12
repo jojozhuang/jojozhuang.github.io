@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Using MathJax in Jekyll"
-index: 1613
+index: 1618
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

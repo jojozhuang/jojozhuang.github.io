@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Sqrt Decomposition"
-index: 1230
+index: 1232
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

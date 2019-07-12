@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "User Input"
-index: 1402
+title: "Java Core - User Input"
+index: 1412
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

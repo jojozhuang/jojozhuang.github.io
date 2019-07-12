@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Formatting"
+title: "Java Core - Formatting"
 index: 1403
 category: core
 breadcrumb: [Popular, Java, Java Core]

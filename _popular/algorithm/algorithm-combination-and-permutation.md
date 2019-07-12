@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Combination and Permutation"
-index: 1227
+index: 1215
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

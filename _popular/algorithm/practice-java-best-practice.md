@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Practice - Java Best Practice"
-index: 1241
+index: 1251
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

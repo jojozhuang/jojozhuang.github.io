@@ -1,10 +1,10 @@
 ---
 layout: tutorial
 key: popular
-title: "Shallow Copy vs Deep Copy"
-index: 1405
-category: core
-breadcrumb: [Popular, Java, Java Core]
+title: "Java Advanced - Shallow Copy vs Deep Copy"
+index: 1447
+category: advanced
+breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-01-05
 postdate: 2017-01-05

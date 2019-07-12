@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Array and List"
-index: 1404
+title: "Java Core - Array and List"
+index: 1413
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

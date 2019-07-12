@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Sorting"
-index: 1221
+index: 1201
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

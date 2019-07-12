@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Deque"
-index: 1105
+index: 1114
 courseid: DS105
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

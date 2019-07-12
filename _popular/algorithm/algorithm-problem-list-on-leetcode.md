@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Problem List on LeetCode"
-index: 1250
+index: 1255
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

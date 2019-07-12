@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "LFU Cache"
-index: 1107
+index: 1117
 courseid: DS107
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

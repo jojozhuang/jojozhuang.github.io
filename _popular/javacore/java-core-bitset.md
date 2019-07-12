@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "BitSet"
-index: 1412
+title: "Java Core - BitSet"
+index: 1416
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

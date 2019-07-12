@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Union Find"
-index: 1224
+index: 1217
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

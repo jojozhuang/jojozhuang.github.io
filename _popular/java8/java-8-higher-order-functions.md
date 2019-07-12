@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Higher Order Functions"
-index: 1453
+index: 1473
 category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png

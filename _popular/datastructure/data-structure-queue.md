@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Queue"
-index: 1104
+index: 1113
 courseid: DS104
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

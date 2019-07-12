@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Deploying Jekyll Website to Netlify"
-index: 1622
+index: 1642
 category: jekyll
 breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
 image: github-pages.png

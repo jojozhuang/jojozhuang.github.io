@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Linked List"
-index: 1102
+index: 1111
 courseid: DS102
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

@@ -1,10 +1,10 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Read Files in Parallel - Draft"
-index: 1445
-category: advanced
-breadcrumb: [Popular, Java, Java Advanced]
+title: "Java Concurrency - Read Files in Parallel - Draft"
+index: 1433
+category: concurrency
+breadcrumb: [Popular, Java, Java Concurrency]
 image: java.png
 date: 2017-04-05
 postdate: 2017-04-05

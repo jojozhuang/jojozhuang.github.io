@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Static Block - Draft"
-index: 1448
+title: "Java Core - Static Block - Draft"
+index: 1417
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

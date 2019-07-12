@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Trie"
-index: 1111
+index: 1125
 courseid: DS111
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

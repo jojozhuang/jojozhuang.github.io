@@ -1,10 +1,10 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Iterator"
-index: 1443
-category: advanced
-breadcrumb: [Popular, Java, Java Advanced]
+title: "Java Core - Iterator"
+index: 1419
+category: core
+breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-04-03
 postdate: 2017-04-03

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Minimax Algorithm - Draft"
-index: 1231
+index: 1233
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png

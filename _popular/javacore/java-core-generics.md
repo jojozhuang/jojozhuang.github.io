@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Generics - Draft"
-index: 1413
+title: "Java Core - Generics - Draft"
+index: 1426
 category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png

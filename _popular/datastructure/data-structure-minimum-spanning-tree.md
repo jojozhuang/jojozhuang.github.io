@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Minimum Spanning Tree - Draft"
-index: 1120
+index: 1145
 courseid: DS120
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]

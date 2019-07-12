@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Segment Tree"
-index: 1113
+index: 1127
 courseid: DS113
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
