@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Angular App to Heroku with Express Server"
-index: 2742
+index: 2765
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png

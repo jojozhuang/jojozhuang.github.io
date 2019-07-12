@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular CLI"
+title: "Angular - Getting Started with Angular CLI"
 index: 2701
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]

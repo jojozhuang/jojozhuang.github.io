@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Angular Modules"
-index: 2704
+title: "Angular - Modules"
+index: 2713
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
