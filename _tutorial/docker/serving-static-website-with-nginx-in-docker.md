@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Serving Static Website With Nginx In Docker"
-index: 3106
+index: 3121
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

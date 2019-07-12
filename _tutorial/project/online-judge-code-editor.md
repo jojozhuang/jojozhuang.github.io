@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Code Editor"
-index: 2857
+title: "Online Judge - Code Editor"
+index: 2822
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-07
 postdate: 2018-04-16
 tags: [Monaco Editor]

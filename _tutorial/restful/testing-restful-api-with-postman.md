@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Testing RESTful API with Postman"
-index: 2254
+index: 2213
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

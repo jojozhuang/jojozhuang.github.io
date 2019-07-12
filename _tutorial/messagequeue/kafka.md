@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Kafka"
-index: 3155
+index: 3541
 category: messagequeue
 breadcrumb: [Tutorial, Distributed System, Message Queue]
 image: code.png

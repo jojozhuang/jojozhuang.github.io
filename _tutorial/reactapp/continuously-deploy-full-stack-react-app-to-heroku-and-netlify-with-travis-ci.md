@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy Full Stack React App to Heroku and Netlify with Travis-CI"
-index: 2625
+index: 2645
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy Full Stack React App to Heroku with Travis-CI"
-index: 2626
+index: 2646
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

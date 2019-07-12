@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Redis Tutorial"
-index: 3145
+index: 3521
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
 image: code.png

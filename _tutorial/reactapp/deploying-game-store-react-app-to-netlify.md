@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Game Store React App to Netlify"
-index: 2606
+index: 2614
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
@@ -46,7 +46,7 @@ Our app is now running in the domain of Netlify.
 ![image](/public/images/frontend/406/home.png)
 However, we got 'Page Not found' error when access the 'products' page. The same error occurs when access the 'productpage' page.
 ![image](/public/images/frontend/406/pagenotfound.png)
-Actually, I've already discussed this issue in tutorial [React Router and Client Side Routing]({% link _tutorial/react/react-router-and-client-side-routing.md %}).
+Actually, I've already discussed this issue in tutorial [React Router and Client Side Routing]({% link _tutorial/reactapp/react-router-and-client-side-routing.md %}).
 ### 2.4 Fixing the Issue
 To solve this React Routing issue on Netlify, we need to handling redirects for single page apps, see below. Read more about it in [Netlify Document](https://www.netlify.com/docs/redirects/#history-pushstate-and-single-page-apps).
 

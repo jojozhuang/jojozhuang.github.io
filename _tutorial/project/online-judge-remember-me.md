@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Remember Me"
-index: 2855
+title: "Online Judge - Remember Me"
+index: 2812
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-05
 postdate: 2018-04-13
 tags: [Token, Cookies]

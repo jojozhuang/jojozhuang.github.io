@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Redis in Java"
-index: 3147
+index: 3523
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
 image: code.png

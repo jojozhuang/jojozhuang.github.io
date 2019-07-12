@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating Tomcat Image with Docker File"
-index: 3109
+index: 3124
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy React and Socket.IO App to Heroku with Travis-CI"
-index: 2620
+index: 2640
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

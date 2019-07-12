@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Frontend UI with Angular"
-index: 2853
+title: "Online Judge - Frontend with Angular"
+index: 2803
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-03
 postdate: 2018-04-11
 tags: [Angular]

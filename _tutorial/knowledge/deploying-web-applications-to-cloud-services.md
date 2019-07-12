@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Web Applications to Cloud Services"
-index: 3144
+index: 3502
 category: knowledge
 breadcrumb: [Tutorial, Prerequisites, Knowledge]
 image: code.png
@@ -43,7 +43,7 @@ In the most of cases, when we are talking about Node.js apps, we are actually ta
 
 ### 2.3 Full Stack Sites
 We may have the capability to build the entire web application from backend to front end. For example, we use so called MEAN stack (MongoDB+Express+Angular+Node.js) to build an online judge application. In this case, we need to deploy both the client and the server.
-* [Deploying Full Stack Angular App to Heroku]({% link _tutorial/angularapp/deploying-full-stack-angular-app-to-heroku.md %})
+* [Online Judge - Deploying Full Stack Angular App to Heroku]({% link _tutorial/project/online-judge-deploying-full-stack-angular-app-to-heroku.md %})
 * [Deploying Full Stack React App to Heroku]({% link _tutorial/reactapp/deploying-full-stack-react-app-to-heroku.md %})
 
 ### 2.4 Three Ways to Deploy Angular App to Heroku
