@@ -34,7 +34,7 @@ Tutorial | Project             | 2801 ~ 2900
 Tutorial | Distributed System  | 3101 ~ 3200
 Note     | Basis               | 9001 ~ 9099
 Note     | Book Notes          | 9101 ~ 9200
-Note     | System Design       | 9401 ~ 9500
-Note     | Interview Questions | 9501 ~ 9600
+Note     | System Design       | 9501 ~ 9600
+Note     | Interview Questions | 9601 ~ 9700
 Note     | Others              | 9901 ~ 9999
 {: .table-striped }
