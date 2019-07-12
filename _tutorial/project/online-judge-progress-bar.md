@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Progress Bar"
-index: 2860
+title: "Online Judge - Progress Bar"
+index: 2823
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-10
 postdate: 2018-05-01
 tags: [ngx-progressbar]

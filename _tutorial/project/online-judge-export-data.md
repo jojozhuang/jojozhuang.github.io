@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Export Data"
-index: 2858
+title: "Online Judge - Export Data"
+index: 2813
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-08
 postdate: 2018-04-20
 tags: [csv-express]

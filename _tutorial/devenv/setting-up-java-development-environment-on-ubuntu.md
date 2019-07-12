@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Java Development Environment on Ubuntu"
-index: 2113
+index: 2121
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

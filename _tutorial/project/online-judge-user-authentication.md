@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "User Authentication"
-index: 2854
+title: "Online Judge - User Authentication"
+index: 2811
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-04
 postdate: 2018-04-12
 tags: [Sign Up, Login, Return URL]

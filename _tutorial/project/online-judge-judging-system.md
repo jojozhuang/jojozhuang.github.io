@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Judging System"
-index: 2861
+title: "Online Judge - Judging System"
+index: 2831
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-11
 postdate: 2018-05-04
 tags: [spawn]

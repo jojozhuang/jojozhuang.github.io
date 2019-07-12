@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting Up Reverse Proxy with Nginx for Node Server"
-index: 3142
+index: 3512
 category: nginx
 breadcrumb: [Tutorial, Distributed System, Nginx]
 image: code.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Game Store React App to Azure with FTP"
-index: 2607
+index: 2615
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

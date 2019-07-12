@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Realtime Application with SignalR"
-index: 2613
+index: 2633
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png

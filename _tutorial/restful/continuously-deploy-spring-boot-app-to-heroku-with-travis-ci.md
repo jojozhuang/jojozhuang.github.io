@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy Spring Boot App to Heroku with Travis-CI"
-index: 2258
+index: 2223
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with Node.js and Socket.IO"
-index: 2615
+index: 2635
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
@@ -21,7 +21,7 @@ A course player consists of three components: video, screenshot and whiteboard.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-Check the posting [Introduction of Course Player]({% link _tutorial/react/introduction-of-course-player.md %}) to learn the details.
+Check the posting [Introduction of Course Player]({% link _tutorial/reactapp/introduction-of-course-player.md %}) to learn the details.
 
 ## 2. Course Player Project
 ### 2.1 Creating New Project

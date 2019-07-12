@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Spring Boot RESTful API to Heroku"
-index: 2257
+index: 2222
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png

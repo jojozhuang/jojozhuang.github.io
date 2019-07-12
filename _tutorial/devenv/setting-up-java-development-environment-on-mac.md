@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Java Development Environment on Mac"
-index: 2114
+index: 2122
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png

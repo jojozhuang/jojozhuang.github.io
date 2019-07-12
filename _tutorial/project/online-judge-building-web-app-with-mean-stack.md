@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Building Online Judge Application With MEAN Stack"
-index: 2851
+title: "Online Judge - Building Web App with MEAN Stack"
+index: 2801
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: angular.png
+image: online-judge.png
 date: 2017-03-01
 postdate: 2018-04-09
 tags: [MEAN, Angular, Express, MongoDB]
@@ -71,7 +71,7 @@ Progress Bar, Loading icon, WYSIWYG editor, code editor, etc.
 ## 5. More Tutorials
 Read the following tutorials to learn more details about this online judge application.
 * [Online Judge - Backend RESTful API Server]({% link _tutorial/project/online-judge-backend-restful-api-server.md %})
-* [Online Judge - Frontend UI with Angular]({% link _tutorial/project/online-judge-frontend-ui-with-angular.md %})
+* [Online Judge - Frontend with Angular]({% link _tutorial/project/online-judge-frontend-with-angular.md %})
 * [Online Judge - Judging System]({% link _tutorial/project/online-judge-judging-system.md %})
 * [Online Judge - User Authentication]({% link _tutorial/project/online-judge-user-authentication.md %})
 * [Online Judge - Remember Me]({% link _tutorial/project/online-judge-remember-me.md %})
