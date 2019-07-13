@@ -251,9 +251,9 @@ this.authService.autologin().subscribe(
 
 ## 3. Testing
 Use select the 'Remember me' option when login for the first time.
-![image](/public/images/frontend/355/login_remember.png)
+![image](/public/images/frontend/2812/login_remember.png)
 You should login successfully. Now close the browser and access the homepage again, http://localhost:12080/. You see the user name is already in the top menu.
-![image](/public/images/frontend/355/login_auto.png)
+![image](/public/images/frontend/2812/login_auto.png)
 
 ## 4. References
 * [Express Cookies](http://expressjs.com/en/api.html#res.cookie)

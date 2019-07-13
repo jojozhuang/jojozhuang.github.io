@@ -18,7 +18,7 @@ Build a simple product management app called GameStore. This app shows a list of
 ## 1. Prerequisite
 ### 1.1 Xcode Installed
 Xcode includes all the features you need to design, develop, and debug an app. It also contains the iOS SDK, which extends Xcode to include the tools, compilers, and frameworks you need specifically for iOS development. Go to App Store, search 'xcode', install.
-![image](/public/images/frontend/602/appstore.png)  
+![image](/public/images/frontend/2311/appstore.png)  
 ### 1.2 iOS Simulator Installed
 iOS simulator will be installed along with Xcode.
 ### 1.3 Knowledge of Swift
@@ -26,7 +26,7 @@ Go to [The Swift Programming Language (Swift 4)](https://developer.apple.com/lib
 
 ## 2. Creating New Project
 1) In Xcode, File->New-Project..., select `'Single View App'` and click 'Next'.
-![image](/public/images/frontend/602/newproject1.png){:width="700px"}  
+![image](/public/images/frontend/2311/newproject1.png){:width="700px"}  
 2) In the dialog that appears, use the following values to name your app and choose additional options for your project, click 'Next'.
 * Product Name: GameStoreiOS
 * Team: None
@@ -35,21 +35,21 @@ Go to [The Swift Programming Language (Swift 4)](https://developer.apple.com/lib
 * Language: Swift
 * Include Unit Tests: Selected.
 
-![image](/public/images/frontend/602/newproject2.png){:width="700px"}  
+![image](/public/images/frontend/2311/newproject2.png){:width="700px"}  
 3) In the next dialog, select a location to save your project and click Create. Xcode opens the new project in the workspace window.
-![image](/public/images/frontend/602/workspacewindow.png)
+![image](/public/images/frontend/2311/workspacewindow.png)
 
 ## 3. UI Design
 1) In Xcode, click on `'Main.storyboard'`, add one view controller for 'New Product'.
-![image](/public/images/frontend/602/storyboardadd.png){:width="400px"}  
+![image](/public/images/frontend/2311/storyboardadd.png){:width="400px"}  
 2) Add another view controller for 'Product List'.
-![image](/public/images/frontend/602/storyboardlist.png){:width="400px"}  
+![image](/public/images/frontend/2311/storyboardlist.png){:width="400px"}  
 3) Then, add two navigation controllers, one points to 'Product List' controller, another points to 'New Product' controller. The final storyboard looks like below.
-![image](/public/images/frontend/602/storyboard.png)
+![image](/public/images/frontend/2311/storyboard.png)
 
 ## 4. Creating Files
 1) In Xcode, File->New-File..., select 'Swift File' and click 'Next'. Specify the name to 'Product.swift' and Save.
-![image](/public/images/frontend/602/productswift.png){:width="700px"}  
+![image](/public/images/frontend/2311/productswift.png){:width="700px"}  
 2) Input the following content to `Product.swift`.
 ```swift
 //
@@ -224,16 +224,16 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, UIIma
 }
 ```
 You may need to re-connect the controllers on canvas to swift code manually.
-![image](/public/images/frontend/602/connectbydragging.png)
-![image](/public/images/frontend/602/connectbydragging2.png)
+![image](/public/images/frontend/2311/connectbydragging.png)
+![image](/public/images/frontend/2311/connectbydragging2.png)
 4) In Xcode, File->New-File..., select 'Cocoa Touch Class' and click 'Next'.
-![image](/public/images/frontend/602/tableviewcontroller.png){:width="700px"}  
+![image](/public/images/frontend/2311/tableviewcontroller.png){:width="700px"}  
 In the dialog that appears, use the following values, click 'Next'.
 * Class: ProductTableViewController
 * Subclass of: UITableViewController
 * Language: Swift
 
-![image](/public/images/frontend/602/tableviewcontroller2.png){:width="700px"}  
+![image](/public/images/frontend/2311/tableviewcontroller2.png){:width="700px"}  
 5) Provide the following content to `ProductTableViewController.swift`.
 ```swift
 //
@@ -432,7 +432,7 @@ In the dialog that appears, use the following values, click 'Next'.
 * Subclass of: UITableViewCell
 * Language: Swift
 
-![image](/public/images/frontend/602/tableviewcell.png){:width="700px"}  
+![image](/public/images/frontend/2311/tableviewcell.png){:width="700px"}  
 7) Provide the following content to `ProductTableViewCell.swift`.
 ```swift
 //
@@ -470,19 +470,19 @@ Add three images to Assets.xcassets.
 * wii
 * xbox360
 
-![image](/public/images/frontend/602/productimages.png)
+![image](/public/images/frontend/2311/productimages.png)
 
 ## 6. Testing
 In Xcode, click the arrow button to run the app in simulator.
-![image](/public/images/frontend/602/simulator.png){:width="400px"}  
+![image](/public/images/frontend/2311/simulator.png){:width="400px"}  
 Product list.
-![image](/public/images/frontend/602/runproductlist.png){:width="350px"}  
+![image](/public/images/frontend/2311/runproductlist.png){:width="350px"}  
 Edit product.
-![image](/public/images/frontend/602/runproductadd.png){:width="350px"}  
+![image](/public/images/frontend/2311/runproductadd.png){:width="350px"}  
 Delete product.
-![image](/public/images/frontend/602/runproductdelete.png){:width="350px"}  
+![image](/public/images/frontend/2311/runproductdelete.png){:width="350px"}  
 In landscape view.
-![image](/public/images/frontend/602/runlandscape.png){:width="700px"}  
+![image](/public/images/frontend/2311/runlandscape.png){:width="700px"}  
 
 ## 7. Source Files
 * [Source files of Game Store(iOS) on Github](https://github.com/jojozhuang/game-store-ios)

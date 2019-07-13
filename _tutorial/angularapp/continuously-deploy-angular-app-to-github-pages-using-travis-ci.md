@@ -58,39 +58,39 @@ deploy:
 ## 2. GitHub
 ### 2.1 GitHub Token
 Go to 'Settings' -> 'Developer Settings', or access link 'https://github.com/settings/developers' directly, switch to 'Personal access tokens', click 'Generate new token'.
-![image](/public/images/frontend/331/github_developer_settings.png)
+![image](/public/images/frontend/2763/github_developer_settings.png)
 Input description and select scopes. Here, just mark the 'repo' checkbox. Scroll down the page and click 'Generate token' button.
-![image](/public/images/frontend/331/github_token.png)
+![image](/public/images/frontend/2763/github_token.png)
 Copy the new generated token, we will use it later.
-![image](/public/images/frontend/331/github_copy_token.png)  
+![image](/public/images/frontend/2763/github_copy_token.png)  
 
 ## 3. Travis
 Go to https://travis-ci.com/ to sign up with your GitHub account. After login, go to 'Profile'. We see the 'GitHub App Integration' section, click 'Activate' button.
-![image](/public/images/frontend/331/travis_integration.png)
+![image](/public/images/frontend/2763/travis_integration.png)
 Grant with GitHub authority, choose the repository you want to integrate, click 'Approve & install' button.
-![image](/public/images/frontend/331/travis_select_repository.png)
+![image](/public/images/frontend/2763/travis_select_repository.png)
 After a while, your GitHub repository is integrated to Travis, click 'Settings'.
-![image](/public/images/frontend/331/travis_integrated.png)
+![image](/public/images/frontend/2763/travis_integrated.png)
 Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/images/frontend/331/travis_settings.png)
+![image](/public/images/frontend/2763/travis_settings.png)
 In the 'Environment Variables' section, paste your GitHub token in the field ‘Value’ and name it ‘GITHUB_TOKEN’, click 'Add' button.
-![image](/public/images/frontend/331/travis_environment_variable.png)
+![image](/public/images/frontend/2763/travis_environment_variable.png)
 
 ## 4. Deployment
 Make any change to your Angular app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/images/frontend/331/travis_build.png)
+![image](/public/images/frontend/2763/travis_build.png)
 If the build is finished successfully, your site is deployed to GitHub page.
-![image](/public/images/frontend/331/travis_deploy.png)  
+![image](/public/images/frontend/2763/travis_deploy.png)  
 
 ## 5. Testing
 Go to your GitHub repository, there will be one more branch named 'gh-pages'.
-![image](/public/images/frontend/331/github_gh_pages.png)
+![image](/public/images/frontend/2763/github_gh_pages.png)
 Go to 'Settings', scroll down the page to 'GitHub Pages', you should see the link, click on it.
-![image](/public/images/frontend/331/github_page_link.png)
+![image](/public/images/frontend/2763/github_page_link.png)
 The Angular app is live in the GitHub page.
-![image](/public/images/frontend/331/gamestore_home.png)
+![image](/public/images/frontend/2763/gamestore_home.png)
 It works properly, wee see the products.
-![image](/public/images/frontend/331/gamestore_list.png)  
+![image](/public/images/frontend/2763/gamestore_list.png)  
 
 ## 6. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

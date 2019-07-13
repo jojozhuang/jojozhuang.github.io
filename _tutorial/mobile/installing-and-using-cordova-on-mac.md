@@ -60,10 +60,10 @@ cordova platform add browser
 cordova run browser
 ```
 Access http://localhost:8000/index.html in web browser.
-![image](/public/images/frontend/610/run_browser.png){:width="800px"}
+![image](/public/images/frontend/2341/run_browser.png){:width="800px"}
 ### 3.2 iOS
 Install Xcode, then set command line tools. In Xcode, go to Preferences > Location > Command Line Tools. It's blank by default. Select Xcode version.
-![image](/public/images/frontend/610/xcode_commandlinetools.png){:width="800px"}
+![image](/public/images/frontend/2341/xcode_commandlinetools.png){:width="800px"}
 Install xcode-select.
 ```sh
 $ xcode-select --install
@@ -81,9 +81,9 @@ Deploying to Simulator. Open the workspace file (platforms/ios/HelloWorld.xcwork
 ```sh
 open ./platforms/ios/HelloCordova.xcworkspace
 ```
-![image](/public/images/frontend/610/xcode_project.png)
+![image](/public/images/frontend/2341/xcode_project.png)
 In Xcode, click run button to start simulator.
-![image](/public/images/frontend/610/run_ios.png){:width="400px"}  
+![image](/public/images/frontend/2341/run_ios.png){:width="400px"}  
 ### 3.3 Android
 Install JDK, Android SDK and AVD first.
 
@@ -100,7 +100,7 @@ Open Android Studio, launch Emulator, then run.
 ```sh
 cordova run android
 ```
-![image](/public/images/frontend/610/run_android.png){:width="400px"}  
+![image](/public/images/frontend/2341/run_android.png){:width="400px"}  
 
 ## 4. Others
 config.xml, local storage

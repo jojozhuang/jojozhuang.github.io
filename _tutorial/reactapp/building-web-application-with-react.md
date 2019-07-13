@@ -821,7 +821,7 @@ class FileApi {
 export default FileApi;
 ```
 ### 3.4 Final Project Structure
-![image](/public/images/frontend/403/projectstructure.png){:width="350px"}
+![image](/public/images/frontend/2611/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
@@ -829,21 +829,21 @@ Start the RESTful service first, and start this React app, serve it in web serve
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.
-![image](/public/images/frontend/403/homepage.png)
+![image](/public/images/frontend/2611/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/images/frontend/403/productlist.png)
+![image](/public/images/frontend/2611/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/public/images/frontend/403/productadd.png)
+![image](/public/images/frontend/2611/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/images/frontend/403/productlistafteradd.png)
+![image](/public/images/frontend/2611/productlistafteradd.png)
 Click 'Edit' button of the new product. Change the product name and price.
-![image](/public/images/frontend/403/productedit.png)
+![image](/public/images/frontend/2611/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/public/images/frontend/403/productlistafteredit.png)
+![image](/public/images/frontend/2611/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/images/frontend/403/deleteconfirm.png)
+![image](/public/images/frontend/2611/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/images/frontend/403/productlistafterdel.png)
+![image](/public/images/frontend/2611/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of Game Store(React) on Github](https://github.com/jojozhuang/game-store-react)

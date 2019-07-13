@@ -22,37 +22,37 @@ In this tutorial, I will deploy my [Game Store Angular](https://github.com/jojoz
 Go to https://app.netlify.com/signup to create a Netlify account with your GitHub account.
 ### 2.2 New Site from GitHub
 After login, you are in the app home page, click 'New site from Git'.
-![image](/public/images/frontend/329/app.png)
+![image](/public/images/frontend/2773/app.png)
 Choose 'Github', next.
-![image](/public/images/frontend/329/newsite.png)
+![image](/public/images/frontend/2773/newsite.png)
 Authorize Netlify to access your GitHub account, next.
-![image](/public/images/frontend/329/authorize.png)
+![image](/public/images/frontend/2773/authorize.png)
 Choose the repository 'text-compare-angular', next.
-![image](/public/images/frontend/329/repository.png)
+![image](/public/images/frontend/2773/repository.png)
 Choose `master` for the Branch to deploy, set `ng build --prod` to the Build command, and set `dist` to the Publish directory, click the 'Deploy site' button.
-![image](/public/images/frontend/329/options.png)
+![image](/public/images/frontend/2773/options.png)
 Netlify will start to deploy your site.
-![image](/public/images/frontend/329/inprogress.png)
+![image](/public/images/frontend/2773/inprogress.png)
 Switch to 'Deploy' tab to monitor the status and check the logs.
-![image](/public/images/frontend/329/monitor.png)
+![image](/public/images/frontend/2773/monitor.png)
 If the deployment fails, click on the FAILED build, check the log and you should see the error in details.
-![image](/public/images/frontend/329/errorlog.png)
+![image](/public/images/frontend/2773/errorlog.png)
 If no issue occurs, the publish will be done after few seconds(or minutes).
-![image](/public/images/frontend/329/published.png)
+![image](/public/images/frontend/2773/published.png)
 ### 2.3 Testing
 Switch back to the 'Overview' tab, click on the green link.
-![image](/public/images/frontend/329/overview.png)
+![image](/public/images/frontend/2773/overview.png)
 Our app is now running in the domain of Netlify.
-![image](/public/images/frontend/329/diff.png)
+![image](/public/images/frontend/2773/diff.png)
 Try to input some texts in the two input boxes and click 'Find Difference' button. You should be able to see the difference.
-![image](/public/images/frontend/329/compare.png)
+![image](/public/images/frontend/2773/compare.png)
 ### 2.4 Changing Site Name
 Switch to Settings tab, scroll down and click the 'Change site name' button.
-![image](/public/images/frontend/329/settings.png)
+![image](/public/images/frontend/2773/settings.png)
 Change the name to 'text-compare' and save.
-![image](/public/images/frontend/329/changename.png)
+![image](/public/images/frontend/2773/changename.png)
 Access your site with the new URL, it should work.
-![image](/public/images/frontend/329/newname.png)
+![image](/public/images/frontend/2773/newname.png)
 
 ## 3. Reference
 * [Deploy Angular 6 Application to Netlify](https://medium.com/@geeksamu/deploy-angular-6-application-to-netlify-60b39b9df61c)

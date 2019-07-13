@@ -603,21 +603,21 @@ Start the RESTful service first, and start this Angular app, serve it at port 12
 $ ng serve
 ```
 Open web browser, access 'http://localhost:12080/'.
-![image](/public/images/frontend/323/homepage.png)
+![image](/public/images/frontend/2752/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/images/frontend/323/productlist.png)
+![image](/public/images/frontend/2752/productlist.png)
 Click the 'Create' button, input product name and price.
-![image](/public/images/frontend/323/productadd.png)
+![image](/public/images/frontend/2752/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/images/frontend/323/productlistafteradd.png)
+![image](/public/images/frontend/2752/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/public/images/frontend/323/productedit.png)
+![image](/public/images/frontend/2752/productedit.png)
 Click 'Save' button, the fourth product is updated.
-![image](/public/images/frontend/323/productlistafteredit.png)
+![image](/public/images/frontend/2752/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/images/frontend/323/deleteconfirm.png)
+![image](/public/images/frontend/2752/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/images/frontend/323/productlistafterdel.png)
+![image](/public/images/frontend/2752/productlistafterdel.png)
 
 ## 6. Source Files
 * [Source files of Angular Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/AngularTutorial)

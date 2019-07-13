@@ -145,9 +145,9 @@ $ git push heroku master
 
 ## 4. Testing
 Open web browser, access 'https://course-player-socketio.herokuapp.com/'. The player is working now.
-![image](/public/images/frontend/416/home.png)  
+![image](/public/images/frontend/2636/home.png)  
 Click the 'Play' button and drag to slider bar.
-![image](/public/images/frontend/416/play.png)  
+![image](/public/images/frontend/2636/play.png)  
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

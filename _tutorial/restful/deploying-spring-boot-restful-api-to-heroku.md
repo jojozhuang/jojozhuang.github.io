@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Spring Boot RESTful API to Heroku"
-index: 2222
+index: 2223
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
@@ -147,9 +147,9 @@ $ heroku git:remote -a gamestore-api
 
 ## 3. Testing
 Open web browser, access 'https://gamestore-api.herokuapp.com/api/products'. The API is working now.
-![image](/public/images/frontend/157/api.png)
+![image](/public/images/frontend/2223/api.png)
 It returns some products in JSON format. Notice, the image URL contains the correct API server address.
-![image](/public/images/frontend/157/json.png)
+![image](/public/images/frontend/2223/json.png)
 
 ## 4. References
 * [Deploying Spring Boot Applications to Heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku)
