@@ -8,7 +8,6 @@ category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-10
-postdate: 2016-03-10
 tags: [Trie, Prefix Tree]
 ---
 

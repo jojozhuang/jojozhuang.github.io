@@ -6,8 +6,7 @@ index: 2771
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-01-26
-postdate: 2018-07-28
+date: 2018-07-28
 tags: [Angular, Monaco Editor]
 ---
 

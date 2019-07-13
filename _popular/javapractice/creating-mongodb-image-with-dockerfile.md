@@ -6,8 +6,7 @@ index: 1534
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-10-04
-postdate: 2016-11-23
+date: 2016-11-23
 tags: [MongoDB, Dockerfile, Docker]
 ---
 

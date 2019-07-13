@@ -6,8 +6,7 @@ index: 2611
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-05-03
-postdate: 2017-08-16
+date: 2017-08-16
 tags: [React, ESLint, Webpack]
 ---
 

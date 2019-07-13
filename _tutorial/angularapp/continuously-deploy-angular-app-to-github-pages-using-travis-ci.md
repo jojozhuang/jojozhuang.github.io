@@ -6,8 +6,7 @@ index: 2763
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-01-31
-postdate: 2018-08-09
+date: 2018-08-09
 tags: [GitHub Pages, Travis CI]
 ---
 

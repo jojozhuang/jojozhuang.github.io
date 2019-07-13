@@ -6,8 +6,7 @@ index: 2632
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-06-02
-postdate: 2016-03-13
+date: 2016-03-13
 tags: [WebSocket, Socket.IO, SignalR]
 ---
 

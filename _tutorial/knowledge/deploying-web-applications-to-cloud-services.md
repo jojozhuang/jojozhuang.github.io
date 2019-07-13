@@ -6,8 +6,7 @@ index: 3502
 category: knowledge
 breadcrumb: [Tutorial, Prerequisites, Knowledge]
 image: code.png
-date: 2016-04-04
-postdate: 2018-08-05
+date: 2018-08-05
 tags: [Heroku, Azure, EC2, Netlify, Travis CI]
 ---
 
@@ -48,8 +47,8 @@ We may have the capability to build the entire web application from backend to f
 
 ### 2.4 Three Ways to Deploy Angular App to Heroku
 For Angular or React apps, we can deploy them as static websites after build them locally. Or, we can let the server to build and serve them with express server. In addition, we can use Travis to deploy them continuously.
-* [Deploying Angular App to Heroku as Static Website]({% link _tutorial/angularapp/deploying_angular_app-to-heroku-as-static-website.md %})
-* [Deploying Angular App to Heroku with Express Server]({% link _tutorial/angularapp/deploying_angular_app-to-heroku-with-express-server.md %})
+* [Deploying Angular App to Heroku as Static Website]({% link _tutorial/angularapp/deploying-angular-app-to-heroku-as-static-website.md %})
+* [Deploying Angular App to Heroku with Express Server]({% link _tutorial/angularapp/deploying-angular-app-to-heroku-with-express-server.md %})
 * [Continuously Deploy Angular App to Heroku using Travis-CI]({% link _tutorial/angularapp/continuously-deploy-angular-app-to-heroku-using-travis-ci.md %})
 
 ## 3. CI/CD

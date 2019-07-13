@@ -6,8 +6,7 @@ index: 2532
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
-date: 2016-09-29
-postdate: 2017-11-03
+date: 2017-11-03
 tags: [Electron, 2048]
 ---
 

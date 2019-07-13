@@ -6,8 +6,7 @@ index: 1632
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-24
-postdate: 2019-06-28
+date: 2019-06-28
 tags: [Performance]
 ---
 

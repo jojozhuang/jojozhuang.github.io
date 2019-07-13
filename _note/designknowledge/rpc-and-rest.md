@@ -6,8 +6,7 @@ index: 9505
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
-date: 2017-01-05
-postdate: 2019-01-08
+date: 2019-01-08
 tags: [RPC and REST]
 ---
 

@@ -7,7 +7,6 @@ category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2017-09-01
-postdate: 2017-09-01
 tags: [Index]
 ---
 

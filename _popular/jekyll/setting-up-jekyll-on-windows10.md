@@ -6,8 +6,7 @@ index: 1604
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-02
-postdate: 2018-04-01
+date: 2018-04-01
 tags: [Jekyll, Windows10]
 ---
 

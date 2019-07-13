@@ -6,8 +6,7 @@ index: 1505
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-10-01
-postdate: 2016-02-24
+date: 2016-02-24
 tags: [Http, Socket]
 categories:
 - blog

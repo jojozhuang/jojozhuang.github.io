@@ -6,8 +6,7 @@ index: 2603
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
 image: reactjs.png
-date: 2017-05-04
-postdate: 2017-08-18
+date: 2017-08-18
 tags: [Flux, Redux]
 ---
 

@@ -7,7 +7,6 @@ category: interview-general
 breadcrumb: [Note, Interview Questions, General]
 image: interview.png
 date: 2016-04-02
-postdate: 2016-04-02
 tags: [Generic Questions]
 ---
 

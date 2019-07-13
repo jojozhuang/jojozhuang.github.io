@@ -7,7 +7,6 @@ category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-01-05
-postdate: 2017-01-05
 tags: [Shallow Copy, Deep Copy]
 ---
 

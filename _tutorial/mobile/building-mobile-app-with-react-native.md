@@ -6,8 +6,7 @@ index: 2342
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-11
-postdate: 2017-08-28
+date: 2017-08-28
 tags: [React Native, Yarn]
 ---
 

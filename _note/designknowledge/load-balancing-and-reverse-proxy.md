@@ -6,8 +6,7 @@ index: 9506
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
-date: 2017-01-06
-postdate: 2019-01-10
+date: 2019-01-10
 tags: [Load Balancing, Reverse Proxy]
 ---
 

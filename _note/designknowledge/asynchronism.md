@@ -6,8 +6,7 @@ index: 9510
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
-date: 2017-01-10
-postdate: 2019-01-23
+date: 2019-01-23
 tags: [Message Queue]
 ---
 

@@ -6,8 +6,7 @@ index: 1626
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-13
-postdate: 2018-09-10
+date: 2018-09-10
 tags: [MathJax, Mathematic]
 mathjax: true
 ---

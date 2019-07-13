@@ -6,8 +6,7 @@ index: 2122
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-14
-postdate: 2016-11-01
+date: 2016-11-01
 tags: [JDK, Tomcat, Eclipse]
 ---
 

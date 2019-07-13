@@ -7,7 +7,6 @@ category: interview-java
 breadcrumb: [Note, Interview Questions, Java Questions]
 image: interview.png
 date: 2016-01-04
-postdate: 2016-01-04
 tags: [Java, Interview]
 ---
 

@@ -6,8 +6,7 @@ index: 2614
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-05-06
-postdate: 2018-07-31
+date: 2018-07-31
 tags: [Netlify]
 ---
 

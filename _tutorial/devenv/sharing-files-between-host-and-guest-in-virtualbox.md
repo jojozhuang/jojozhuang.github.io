@@ -6,8 +6,7 @@ index: 2112
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-12
-postdate: 2016-10-10
+date: 2016-10-10
 tags: [VirtualBox, Ubuntu, Mac]
 ---
 

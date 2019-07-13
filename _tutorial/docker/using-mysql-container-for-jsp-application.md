@@ -6,8 +6,7 @@ index: 3111
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-03
-postdate: 2017-10-13
+date: 2017-10-13
 tags: [JSP, MySQL, Docker]
 ---
 

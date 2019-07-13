@@ -6,8 +6,7 @@ index: 3522
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
 image: code.png
-date: 2016-04-06
-postdate: 2018-08-07
+date: 2018-08-07
 tags: [Redis]
 ---
 

@@ -6,8 +6,7 @@ index: 2719
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
-date: 2017-01-12
-postdate: 2018-03-20
+date: 2018-03-20
 tags: [Angular, Pipes]
 ---
 

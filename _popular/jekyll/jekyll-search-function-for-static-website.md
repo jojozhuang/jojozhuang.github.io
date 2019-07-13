@@ -6,8 +6,7 @@ index: 1625
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-11
-postdate: 2019-05-23
+date: 2019-05-23
 tags: [Search, Lunr.js]
 ---
 

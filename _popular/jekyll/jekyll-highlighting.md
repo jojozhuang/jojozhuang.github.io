@@ -6,8 +6,7 @@ index: 1623
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-10
-postdate: 2019-06-18
+date: 2019-06-18
 tags: [Highlighting, highlight.js]
 ---
 

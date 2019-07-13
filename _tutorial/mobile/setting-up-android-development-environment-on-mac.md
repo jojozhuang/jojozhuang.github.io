@@ -6,8 +6,7 @@ index: 2321
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-03
-postdate: 2017-07-13
+date: 2017-07-13
 tags: [Android Studio, Genymotion, JDK]
 ---
 

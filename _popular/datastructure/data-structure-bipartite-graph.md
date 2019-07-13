@@ -8,7 +8,6 @@ category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-17
-postdate: 2016-03-17
 tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true
 ---

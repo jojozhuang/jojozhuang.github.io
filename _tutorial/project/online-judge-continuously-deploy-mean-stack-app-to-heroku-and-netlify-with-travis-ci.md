@@ -6,8 +6,7 @@ index: 2842
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: online-judge.png
-date: 2017-03-15
-postdate: 2018-08-11
+date: 2018-08-11
 tags: [Heroku, Travis CI, Netlify]
 ---
 

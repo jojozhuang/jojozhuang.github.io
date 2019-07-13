@@ -6,8 +6,7 @@ index: 2812
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: online-judge.png
-date: 2017-03-05
-postdate: 2018-04-13
+date: 2018-04-13
 tags: [Token, Cookies]
 ---
 

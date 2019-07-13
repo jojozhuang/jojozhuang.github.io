@@ -6,8 +6,7 @@ index: 2214
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-05
-postdate: 2018-07-31
+date: 2018-07-31
 tags: [Azure]
 ---
 

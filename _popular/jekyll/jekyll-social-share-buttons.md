@@ -6,9 +6,8 @@ index: 1617
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-07
-postdate: 2017-08-19
-tags: [Disqus]
+date: 2017-08-19
+tags: [Social Share]
 ---
 
 > Create share buttons for the most popular social medias.

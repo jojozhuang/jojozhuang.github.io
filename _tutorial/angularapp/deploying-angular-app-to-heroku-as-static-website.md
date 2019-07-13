@@ -6,8 +6,7 @@ index: 2764
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-02-01
-postdate: 2019-05-25
+date: 2019-05-25
 tags: [Angular, Heroku]
 ---
 

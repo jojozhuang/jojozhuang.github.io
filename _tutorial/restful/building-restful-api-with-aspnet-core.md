@@ -6,8 +6,7 @@ index: 2212
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-03
-postdate: 2017-12-11
+date: 2017-12-11
 tags: [ASP.NET Core, RESTful, WebAPI 2.0]
 ---
 

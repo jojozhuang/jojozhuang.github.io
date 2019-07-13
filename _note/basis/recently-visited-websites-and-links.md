@@ -7,7 +7,6 @@ category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
 image: cs.png
 date: 2016-01-22
-postdate: 2016-01-22
 tags: [Chrome, MacOS]
 ---
 

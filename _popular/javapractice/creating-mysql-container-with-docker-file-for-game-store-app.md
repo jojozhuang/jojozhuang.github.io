@@ -6,8 +6,7 @@ index: 1529
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-09-29
-postdate: 2016-09-12
+date: 2016-09-12
 tags: [JSP, MySQL, Docker]
 ---
 

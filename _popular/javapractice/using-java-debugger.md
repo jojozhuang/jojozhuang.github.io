@@ -6,8 +6,7 @@ index: 1512
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-09-12
-postdate: 2016-03-21
+date: 2016-03-21
 tags: [JDB, Debugging]
 ---
 

@@ -6,8 +6,7 @@ index: 1611
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-04
-postdate: 2016-01-19
+date: 2016-01-19
 tags: [Jekyll, Liquid]
 ---
 

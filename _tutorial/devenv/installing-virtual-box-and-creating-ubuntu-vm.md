@@ -6,8 +6,7 @@ index: 2111
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-11
-postdate: 2016-10-03
+date: 2016-10-03
 tags: [VirtualBox, Ubuntu]
 ---
 

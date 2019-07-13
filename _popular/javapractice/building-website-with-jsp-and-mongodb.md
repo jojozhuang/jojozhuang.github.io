@@ -6,8 +6,7 @@ index: 1533
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-10-03
-postdate: 2016-11-22
+date: 2016-11-22
 tags: [JSP, MongoDB, Maven]
 ---
 

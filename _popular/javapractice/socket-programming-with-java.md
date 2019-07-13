@@ -6,8 +6,7 @@ index: 1504
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-09-04
-postdate: 2016-02-22
+date: 2016-02-22
 tags: [Socket, TCP, UDP]
 categories:
 - blog

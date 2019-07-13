@@ -6,8 +6,7 @@ index: 3102
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-02
-postdate: 2017-10-11
+date: 2017-10-11
 tags: [Docker, Kitematic]
 ---
 

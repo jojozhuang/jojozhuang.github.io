@@ -6,8 +6,7 @@ index: 1642
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-22
-postdate: 2019-06-22
+date: 2019-06-22
 tags: [Jekyll, Netlify]
 ---
 

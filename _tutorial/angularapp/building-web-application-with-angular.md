@@ -6,8 +6,7 @@ index: 2761
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-01-22
-postdate: 2017-12-14
+date: 2017-12-14
 tags: [Angular]
 ---
 

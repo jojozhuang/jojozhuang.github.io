@@ -7,7 +7,6 @@ category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
 image: interview.png
 date: 2016-03-02
-postdate: 2016-03-02
 tags: [System Design]
 ---
 

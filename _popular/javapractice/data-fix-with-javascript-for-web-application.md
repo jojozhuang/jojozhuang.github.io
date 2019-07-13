@@ -6,8 +6,7 @@ index: 1544
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-10-10
-postdate: 2017-10-13
+date: 2017-10-13
 tags: [Rhino, Javascript]
 ---
 

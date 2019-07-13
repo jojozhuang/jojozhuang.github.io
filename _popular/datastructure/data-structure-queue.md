@@ -8,7 +8,6 @@ category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-03
-postdate: 2016-03-03
 tags: [Queue, FIFO]
 mathjax: true
 ---

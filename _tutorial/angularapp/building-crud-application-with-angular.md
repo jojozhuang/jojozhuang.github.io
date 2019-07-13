@@ -6,8 +6,7 @@ index: 2752
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-01-23
-postdate: 2018-01-22
+date: 2018-01-22
 tags: [Angular, MEAN, Node.js]
 ---
 

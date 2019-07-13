@@ -8,7 +8,6 @@ category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-16
-postdate: 2016-03-16
 tags: [Graph, DFS, BFS]
 mathjax: true
 ---

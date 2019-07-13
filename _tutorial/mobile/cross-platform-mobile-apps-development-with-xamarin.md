@@ -6,8 +6,7 @@ index: 2332
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-06
-postdate: 2017-07-20
+date: 2017-07-20
 tags: [Xamarin, Visual Studio, Mono, Xcode]
 ---
 

@@ -61,7 +61,7 @@
                 <p class="excerpt">{{ posting.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip }}</p>
                 <div class="pull-left">
                     <ul class="list-inline list-unstyled">
-                      <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> {{ posting.postdate | date_to_string }}</li>
+                      <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> {{ posting.date | date_to_string }}</li>
                       <li class="list-inline-item">|</li>
                       <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="{{ posting.url }}#disqus_thread">Comments</a></li>
                       <li class="list-inline-item hidden-extra">|</li>

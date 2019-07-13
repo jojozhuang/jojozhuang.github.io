@@ -7,7 +7,6 @@ category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-09
-postdate: 2017-01-09
 tags: [List, Set, Map, Stack]
 ---
 

@@ -6,8 +6,7 @@ index: 2515
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
-date: 2016-09-15
-postdate: 2016-03-16
+date: 2016-03-16
 tags: [Node.js]
 ---
 

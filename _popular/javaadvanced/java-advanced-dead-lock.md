@@ -7,7 +7,6 @@ category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-04-02
-postdate: 2017-04-02
 tags: [synchronized, deadlock]
 ---
 

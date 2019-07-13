@@ -6,8 +6,7 @@ index: 1523
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-09-23
-postdate: 2018-02-22
+date: 2018-02-22
 tags: [JUnit 5]
 ---
 

@@ -6,8 +6,7 @@ index: 3113
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-05
-postdate: 2017-10-16
+date: 2017-10-16
 tags: [MySQL, Docker]
 ---
 

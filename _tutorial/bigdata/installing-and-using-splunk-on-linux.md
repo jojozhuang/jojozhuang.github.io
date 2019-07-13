@@ -6,8 +6,7 @@ index: 3551
 category: bigdata
 breadcrumb: [Tutorial, Distributed System, Big Data]
 image: code.png
-date: 2016-03-04
-postdate: 2017-08-23
+date: 2017-08-23
 tags: [RedHat, Ubuntu, Splunk]
 ---
 

@@ -6,8 +6,7 @@ index: 2123
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-15
-postdate: 2017-08-31
+date: 2017-08-31
 tags: [Git, GitHub, SourceTree]
 ---
 

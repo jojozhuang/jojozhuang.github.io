@@ -7,7 +7,6 @@ category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png
 date: 2017-05-05
-postdate: 2017-05-05
 tags: [Functional Composition]
 ---
 

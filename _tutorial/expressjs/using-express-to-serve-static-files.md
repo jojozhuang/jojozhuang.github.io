@@ -6,8 +6,7 @@ index: 2561
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png
-date: 2016-11-11
-postdate: 2018-01-18
+date: 2018-01-18
 tags: [Node.js, Express]
 ---
 

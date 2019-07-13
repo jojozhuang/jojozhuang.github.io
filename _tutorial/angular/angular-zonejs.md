@@ -6,8 +6,7 @@ index: 2705
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
-date: 2017-01-13
-postdate: 2018-03-21
+date: 2018-03-21
 tags: [Angular, Zone.js]
 ---
 

@@ -6,8 +6,7 @@ index: 2401
 category: javascript
 breadcrumb: [Tutorial, Frontend, Javascript]
 image: javascript.png
-date: 2016-05-01
-postdate: 2018-03-21
+date: 2018-03-21
 tags: [JavaScript]
 ---
 

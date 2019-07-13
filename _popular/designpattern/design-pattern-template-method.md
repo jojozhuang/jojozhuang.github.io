@@ -7,7 +7,6 @@ category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
 image: designpattern.png
 date: 2016-05-30
-postdate: 2016-05-30
 tags: [Template Method Pattern]
 ---
 

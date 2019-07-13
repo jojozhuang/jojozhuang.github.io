@@ -6,8 +6,7 @@ index: 3541
 category: messagequeue
 breadcrumb: [Tutorial, Distributed System, Message Queue]
 image: code.png
-date: 2016-04-15
-postdate: 2018-08-15
+date: 2018-08-15
 tags: [Kafka]
 ---
 
