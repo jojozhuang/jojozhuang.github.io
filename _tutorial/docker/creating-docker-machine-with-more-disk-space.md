@@ -18,15 +18,15 @@ When trying to install the image of `mssql-server-linux`(Official SQL Server ima
 ```sh
 failed to register layer: Error processing tar file(exit status 1): write /opt/mssql/lib/system.common.sfp: no space left on device
 ```
-![image](/public/images/devops/711/error.png)
+![image](/public/images/devops/3131/error.png)
 
 ## 2. Diagnosis
 The cause is obvious - disk in docker machine is out of space.
 ### 2.1 Storage of Virtual Machine
 In VirtualBox, you see the VM named `default`. It was initially created when we install the Docker Toolbox. The storage size is 19.53GB.
-![image](/public/images/devops/711/vmstorageold.png){:width="800px"}  
+![image](/public/images/devops/3131/vmstorageold.png){:width="800px"}  
 You can also check this size by selecting the `default` VM, then Settings -> Storage.
-![image](/public/images/devops/711/vmstorageold2.png){:width="600px"}  
+![image](/public/images/devops/3131/vmstorageold2.png){:width="600px"}  
 ### 2.2 Disk Space of Docker Machine
 The docker machine is actually hosted by the `default` virtual machine. In terminal, SSH into docker VM.
 ```sh
@@ -36,7 +36,7 @@ Inside the docker VM, run `df -h` or `df -i` to get an overview of the disk spac
 ```sh
 docker@default:~$ df -h
 ```
-![image](/public/images/devops/711/diskspaceold.png){:width="700px"}  
+![image](/public/images/devops/3131/diskspaceold.png){:width="700px"}  
 ### 2.3 Solution
 Now we are running out of space in the Docker machine, we can delete some Docker images and containers to save some room. However, this is just a workaround.
 
@@ -53,33 +53,33 @@ Check all existing docker machines.
 ```sh
 $ docker-machine ls
 ```
-![image](/public/images/devops/711/dockermachine.png){:width="700px"}  
+![image](/public/images/devops/3131/dockermachine.png){:width="700px"}  
 
 Delete the docker machine named `default`.
 ```sh
 $ docker-machine rm default
 ```
-![image](/public/images/devops/711/deletedockermachine.png){:width="700px"}  
+![image](/public/images/devops/3131/deletedockermachine.png){:width="700px"}  
 ### 3.4 Creating New Docker Machine
 Create a new docker machine with name=`default`, memory size=`8GB` and disk size=`100GB`.
 ```sh
 $ docker-machine -D create -d virtualbox --virtualbox-memory 8096 --virtualbox-disk-size "100000" default
 ```
 After the creation is done, check the disk space of the new docker machine. Now it has 88GB free space.
-![image](/public/images/devops/711/diskspacenew.png){:width="700px"}  
+![image](/public/images/devops/3131/diskspacenew.png){:width="700px"}  
 In VirtualBox, a new default VM is created. Notice that the storage of it is changed to `97.66`GB.
-![image](/public/images/devops/711/vmnew.png){:width="800px"}  
+![image](/public/images/devops/3131/vmnew.png){:width="800px"}  
 Open Kitematic, it is running properly and ready for use.
-![image](/public/images/devops/711/kitematic.png)  
+![image](/public/images/devops/3131/kitematic.png)  
 ### 3.5 Installing MSSQL Server
 Try to install 'mssql-serveer-linux' again. This time, it is successfully installed.
-![image](/public/images/devops/711/containercreated.png)  
+![image](/public/images/devops/3131/containercreated.png)  
 Switch to Settings tab, add new Environment Variable `ACCEPT_EULA = Y`, save.
-![image](/public/images/devops/711/accepteula.png)  
+![image](/public/images/devops/3131/accepteula.png)  
 Now, the container for MSSQL Server is running. One issue is, the IP address of docker machine becomes 192.168.99.101.
-![image](/public/images/devops/711/mssqlrunning.png)  
+![image](/public/images/devops/3131/mssqlrunning.png)  
 If you check with `docker-machine ls` command, you will see the same IP address.
-![image](/public/images/devops/711/dockermachineip.png){:width="700px"}  
+![image](/public/images/devops/3131/dockermachineip.png){:width="700px"}  
 
 ## 4. Resetting IP Address for Docker Machine
 If you want the original IP address 192.168.99.100 back for the docker machine, take the following actions.
@@ -93,12 +93,12 @@ Regenerate TLS certificates and update the machine with new certs.
 ```sh
 $ docker-machine regenerate-certs default
 ```
-![image](/public/images/devops/711/resetip.png){:width="700px"}  
+![image](/public/images/devops/3131/resetip.png){:width="700px"}  
 ### 4.3 Verifying IP Address
 Reboot the virtual machine. Check the docker machine again, you will see the IP address is changed to `192.168.99.100`.
-![image](/public/images/devops/711/newipaddress.png){:width="700px"}  
+![image](/public/images/devops/3131/newipaddress.png){:width="700px"}  
 In Kitematic, same original IP.
-![image](/public/images/devops/711/newipaddress2.png)  
+![image](/public/images/devops/3131/newipaddress2.png)  
 If you get any error, try to regenerate certificates one more time.
 
 ## 5. References

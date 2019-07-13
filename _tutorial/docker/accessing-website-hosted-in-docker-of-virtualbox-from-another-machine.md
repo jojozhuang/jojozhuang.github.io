@@ -39,7 +39,7 @@ sudo usermod -a -G vboxusers [your_user_name]
 Go to https://ubuntu.com/#download to download Ubuntu Desktop. Refer to [Installing VirtualBox and Creating Ubuntu VM]({% link _tutorial/devenv/installing-virtual-box-and-creating-ubuntu-vm.md %}) to install Ubuntu in virtual machine.
 ### 2.3 Creating Sharing Folder
 First, create shared folder in host machine. Second, install VirtualBox Guest Additions for the Ubuntu VM. Devices -> Insert Guest Additions CD images..
-![image](/public/images/devops/714/guest_additions.png){:width="650px"}
+![image](/public/images/devops/3134/guest_additions.png){:width="650px"}
 Then, refer to [Sharing Files between Host and Guest in VirtualBox]({% link _tutorial/devenv/sharing-files-between-host-and-guest-in-virtualbox.md %}) to connect the shared folder in host machine to guest machine.
 Finally, the shared folder in RedHat locates in
 ```sh
@@ -68,14 +68,14 @@ Run a Docker container and mount these two directories: src and data; this will 
 $ docker run --name=opengrok-cus1 -v /opengrok/src:/src -v /opengrok/data:/data -p 31030:8080 scue/docker-opengrok
 ```
 The OpenGrok application is now running on http://localhost:31030/source/
-![image](/public/images/devops/714/access_localhost.png)
+![image](/public/images/devops/3134/access_localhost.png)
 ### 2.6 Accessing OpenGrok from Host Machine
 Stop Ubuntu VM, then click Settings, switch to Network. It already has the `NAT` Network Adapter in Adapter 1.
-![image](/public/images/devops/714/nat.png)
+![image](/public/images/devops/3134/nat.png)
 Switch to Adapter 2 tab, enable `Bridged Adapter`.
-![image](/public/images/devops/714/bridged.png)
+![image](/public/images/devops/3134/bridged.png)
 Restart the Ubuntu VM. Go to Network to get the IP address `10.48.104.190` for bridged adapter.
-![image](/public/images/devops/714/bridged_ip.png)
+![image](/public/images/devops/3134/bridged_ip.png)
 Start the OpenGrok from docker. You may first need to delete the existing container created previously.
 
 Show all existing containers.
@@ -87,16 +87,16 @@ Remove one particular container with id.
 docker rm [container id]
 ```
 The OpenGrok application can be accessed through http://10.48.104.190:31030/source/
-![image](/public/images/devops/714/access_bridged.png)
+![image](/public/images/devops/3134/access_bridged.png)
 With the IP address, we can also access OpenGrok from host machine(RedHat).
-![image](/public/images/devops/714/access_host.png)
+![image](/public/images/devops/3134/access_host.png)
 
 ### 2.7 Access OpenGrok from Another Machine
 Stop Ubuntu VM, then click Settings, switch to Network. In `NAT` Network Adapter, click 'Port Forwarding' button. Setup Port Forwarding rule. `10.48.105.128` is the public IP address of the host machine. The following rule means, the request to http://10.48.105.128:31030 will be forwarded to http://10.48.104.190:31030.
-![image](/public/images/devops/714/port_forwarding.png)
+![image](/public/images/devops/3134/port_forwarding.png)
 
 Finally, the OpenGrok application can be accessed through http://10.48.105.128:31030/source/ from another machine.
-![image](/public/images/devops/714/access_mac.png)
+![image](/public/images/devops/3134/access_mac.png)
 
 ## 3. References
 * [Network Configuration in VirtualBox](https://www.thomas-krenn.com/en/wiki/Network_Configuration_in_VirtualBox)
