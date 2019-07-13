@@ -51,7 +51,7 @@ public boolean isPairSumNaive(int[] nums, int target) {
 
 ### 2.2 Two Pointers Solution
 As the array is sorted, we can use two pointers to solve this problem. One pointer is initially at header, another pointer is initially at tail. Get the sum of the values represented by these two pointers. If sum is equal to target value, then return. If it is smaller than the target, move the left pointer to right; otherwise, move the right pointer to left. Thus, narrow down the scope of the candidates.
-![image](/public/images/dsa/algorithm-two-pointers/two_pointers.png){:width="700px"}
+![image](/public/images/dsa/1212/two_pointers.png){:width="700px"}
 See the following implementation.
 ```java
 // Two pointers, O(n)

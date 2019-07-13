@@ -27,7 +27,7 @@ Search a sorted array by repeatedly dividing the search interval in half. Begin 
 * 4) Otherwise(x is smaller), recur for the left half.
 
 See the example below.
-![image](/public/images/dsa/algorithm-binary-search/binarysearch.png){:width="700px"}
+![image](/public/images/dsa/1211/binarysearch.png){:width="700px"}
 ### 2.3 Variants
 Given an sorted integer array - nums, and an integer - target. Find the `any/first/last` position of target in nums, return -1 if target doesn’t exist.
 
