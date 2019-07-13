@@ -83,7 +83,7 @@ t.setDaemon(true);
 * `Timed Waiting` - A thread lies in timed waiting state when it calls a method with a time out parameter. (Thread.sleep(1000);)
 * `Terminated` -  A thread terminates because of either of the following reasons: Normally exits or interrupted.
 
-![image](/public/notes/multi-threading-in-java/threadstate.png){:width="800px"}  
+![image](/public/images/java/1432/threadstate.png){:width="800px"}  
 
 ## 2. Thread Pool
 Create Task.

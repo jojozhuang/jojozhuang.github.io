@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Code Highlighting with highlight.js"
-index: 1615
+title: "Jekyll - Highlighting"
+index: 1623
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-10
 postdate: 2019-06-18
 tags: [Highlighting, highlight.js]
@@ -23,7 +23,7 @@ java code
 ````
 
 Be default, there is only a grey rectangle as background, no highlighting on the codes. See the below screenshot.
-![image](/public/images/githubpages/910/withouthighlight.png)  
+![image](/public/images/jekyll/1623/withouthighlight.png)  
 ### 1.2 Highlighting in Jekyll Site
 To enable the highlighting, you need to edit `_config.yml` file which is located in the root directory of the website, add following lines.
 ```
@@ -35,7 +35,7 @@ Then, create css file, for example, [highlight.scss]({% link /public/css/highlig
 <link href="/public/css/highlight.css" rel="stylesheet" />
 ```
 Refresh the page. The highlighting is working now.
-![image](/public/images/githubpages/910/javahighlight.png)  
+![image](/public/images/jekyll/1623/javahighlight.png)  
 
 ## 2. Generic Highlighting Solution
 ### 2.1 highlight.js
@@ -50,7 +50,7 @@ Add highlight js and css of the color scheme you want in the header page. Either
 * You can download the latest highlight.js and css from https://highlightjs.org/download/.
 
 The highlighting works as follows.
-![image](/public/images/githubpages/910/highlighting_with_js.png)  
+![image](/public/images/jekyll/1623/highlighting_with_js.png)  
 
 ## 3. Reference
 * [Code highlighting in Jekyll blog using highlight.js](http://www.vishalsinha.in/2017/04/23/highlight-code-jekyll.html)

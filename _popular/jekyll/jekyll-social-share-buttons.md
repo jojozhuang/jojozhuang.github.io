@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Adding Social Media Share Buttons to Jekyll Site"
-index: 1612
+title: "Jekyll - Social Share Buttons"
+index: 1617
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-07
 postdate: 2017-08-19
 tags: [Disqus]
@@ -162,7 +162,7 @@ Include the share bar html file in the `_layouts/tutorial.html` template.
 
 ## 4. Wrapping Up
 We see the share buttons below the pagination bar.
-![image](/public/images/githubpages/907/sharelinks.png)
+![image](/public/images/jekyll/1617/sharelinks.png)
 
 ## 5. References:
 * [Social Media Share Bar for Jekyll blog/website](https://mycyberuniverse.com/web/social-media-share-bar-jekyll-blog-website.html)

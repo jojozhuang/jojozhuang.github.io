@@ -36,31 +36,31 @@ Copy JAR files which are listed below, from hibernate distribution that you have
 * jboss-logging-3.3.0.Final.jar
 
 In addition, go to [https://dev.mysql.com/downloads/connector/j/5.1.html](https://dev.mysql.com/downloads/connector/j/5.1.html), download MySQL Connector/J(ZIP Archive).
-![image](/public/images/java/536/mysqlconnectordownload.png)  
+![image](/public/images/java/1537/mysqlconnectordownload.png)  
 Extract `mysql-connector-java-5.1.44-bin.jar` from the the downloaded zip file, and copy it to the `lib` directory of the `HibernateTutorial` project.
 * mysql-connector-java-5.1.44-bin.jar
 
 After all above steps, `HibernateTutorial` project will look like this:
-![image](/public/images/java/536/projectstructure.png){:width="350px"}  
+![image](/public/images/java/1537/projectstructure.png){:width="350px"}  
 ### 2.4 Adding Reference
 Eclipse->Preferences, Java->Build Path->User Libraries, add new user library `Hibernate`.
-![image](/public/images/java/536/adduserlibrary.png){:width="700px"}  
+![image](/public/images/java/1537/adduserlibrary.png){:width="700px"}  
 Select `Hibernate` User library that we just created and click `Add JARS…` button.
-![image](/public/images/java/536/addjars.png){:width="700px"}  
+![image](/public/images/java/1537/addjars.png){:width="700px"}  
 Select all JAR files in the `lib` folder of the HibernateTutorial project and click Open button to add all JAR files to `Hibernate` User library.
-![image](/public/images/java/536/selectall.png){:width="400px"}  
+![image](/public/images/java/1537/selectall.png){:width="400px"}  
 Now `Hibernate` User library is ready and we can add this User library to `HibernateTutorial` project build path.
-![image](/public/images/java/536/userlibrarycreated.png){:width="700px"}  
+![image](/public/images/java/1537/userlibrarycreated.png){:width="700px"}  
 Right click to project and click Build Path–>Configure Build Path
-![image](/public/images/java/536/addbuildpath.png)
+![image](/public/images/java/1537/addbuildpath.png)
 Then, click `Add Library`.
-![image](/public/images/java/536/addlibrary.png){:width="700px"}
+![image](/public/images/java/1537/addlibrary.png){:width="700px"}
 Select `User Library` and click Next button.
-![image](/public/images/java/536/chooseuserlibrary.png){:width="600px"}
+![image](/public/images/java/1537/chooseuserlibrary.png){:width="600px"}
 Finally, check the box of `Hibernate` User library and click Finish button.
-![image](/public/images/java/536/finaladduserlibrary.png){:width="600px"}
+![image](/public/images/java/1537/finaladduserlibrary.png){:width="600px"}
 After adding `Hibernate` User library to `HibernateTutorial` project, it will look like this:
-![image](/public/images/java/536/structure2.png){:width="350px"}
+![image](/public/images/java/1537/structure2.png){:width="350px"}
 
 ## 3. Setting up MySQL Container
 We use docker container to host our MySQL database.
@@ -99,19 +99,19 @@ The new image is created with named `hbn-mysql` and tag `0.1`.
 ```sh
 $ docker images
 ```
-![image](/public/images/java/536/dockerimage.png){:width="700px"}  
+![image](/public/images/java/1537/dockerimage.png){:width="700px"}  
 ### 3.3 Running MySQL Container
 In Docker Terminal, run command to launch MySQL container with the new image 'hbn-mysql:0.1'.
 ```sh
 $ docker run --detach --name=hnbmysql --publish 11050:3306 hbn-mysql:0.1
 ```
 You will see that a container named `hnbmysql` is running now. Note the IP address `192.168.99.100` and port `11050`. We will use them to configure the database connection in eclipse and MySQL Workbench later.
-![image](/public/images/java/536/kitematic.png)  
+![image](/public/images/java/1537/kitematic.png)  
 ### 3.4 Connecting MySQL Container With MySQL Workbench
 In MySQL Workbench, create a new connection with name 'Hibernate Tutorial'. Set IP address to `192.168.99.100` and port to `11050`. And set password `hbn` for user `root`.
-![image](/public/images/java/536/newconnection.png){:width="800px"}
+![image](/public/images/java/1537/newconnection.png){:width="800px"}
 Test the connection and connect the MySQL container. You will see database `hbndb` and table `EMPLOYEE` are created, but there is no data created yet in table `EMPLOYEE`.
-![image](/public/images/java/536/workbench.png)
+![image](/public/images/java/1537/workbench.png)
 
 ## 4. Making Changes to HibernateTutorial Project
 ### 4.1 Creating Entity
@@ -332,7 +332,7 @@ Create `hibernate.cfg.xml` under `src`.
 ```
 ### 4.5 Final Project Structure
 Finally, the project looks as follows.
-![image](/public/images/java/536/finalstructure.png){:width="400px"}  
+![image](/public/images/java/1537/finalstructure.png){:width="400px"}  
 
 ## 5. Testing
 ### 5.1 Running ManageEmployee Class
@@ -344,13 +344,13 @@ Name: Johnny Walker Salary: 10000.0
 Name: Rong Zhuang Salary: 7000.0
 Name: Johnny Walker Salary: 10000.0
 ```
-![image](/public/images/java/536/console.png)
+![image](/public/images/java/1537/console.png)
 ### 5.2 Checking Data in MySQL
 In MySQL Workbench, run sql query to find all rows in table `Employee`. You will see two entries.
 ```sql
 SELECT * FROM hbndb.EMPLOYEE;
 ```
-![image](/public/images/java/536/datacreated.png)
+![image](/public/images/java/1537/datacreated.png)
 
 ## 6. Source Files
 * [Source files of Hibernate Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/HibernateTutorial)

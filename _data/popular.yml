@@ -39,7 +39,7 @@ categories:
         type: practice
   - name: Personal Website
     subcategories:
-      - name: GitHub Pages and Jekyll
-        description: GitHub Pages and Jekyll
-        icon: fab fa-github
+      - name: Jekyll
+        description: Jekyll
+        icon: fas fa-globe
         type: jekyll

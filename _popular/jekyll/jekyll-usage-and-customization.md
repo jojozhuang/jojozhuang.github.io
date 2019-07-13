@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Customization of Jekyll"
-index: 1607
+title: "Jekyll - Usage and Customization"
+index: 1612
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-05
 postdate: 2016-11-18
 tags: [Jekyll, Excerpt]
@@ -50,7 +50,7 @@ Add the following codes to post.html, which is the template of posting.
 {% endraw %}
 ```
 Previous and Next buttons are added to the posting. Now, you can click on either of them to navigate to another posting.
-![image](/public/images/githubpages/905/pagination.png)  
+![image](/public/images/jekyll/1612/pagination.png)  
 
 ## 3. Code Snippet Highlighting
 When insert codes to markdown, you can specify the programming language of the code. For example:
@@ -61,7 +61,7 @@ java code
 ````
 
 Be default, there is only a grey rectangle as background, no highlighting on the codes. See the below screenshot.
-![image](/public/images/githubpages/905/withouthighlight.png)  
+![image](/public/images/jekyll/1612/withouthighlight.png)  
 
 To enable the highlighting, you need to edit `_config.yml` file which is located in the root directory of the website, add following lines.
 ```
@@ -73,7 +73,7 @@ Then, create css file, for example, [highlight.scss]({% link /public/css/highlig
 <link href="/public/css/highlight.css" rel="stylesheet" />
 ```
 Refresh the page. The highlighting is working now.
-![image](/public/images/githubpages/905/javahighlight.png)  
+![image](/public/images/jekyll/1612/javahighlight.png)  
 
 ## 4. Links
 In Markdown, we can create hyperlinks to the pages of our own website or external website with the following codes:
@@ -133,12 +133,12 @@ category: java
 ---
 ```
 Again, use `post.excerpt` to get customized excerpt and display it on page.
-![image](/public/images/githubpages/905/excerpt.png){:width="400px"}  
+![image](/public/images/jekyll/1612/excerpt.png){:width="400px"}  
 
 ## 6. Data File
 All the links in [favorite page](http://rongzhuang.me/favorite/) are from `Data File`.  
 Create `_data` folder in the root directory, add create a data file named `favorite.yml`.
-![image](/public/images/githubpages/905/datafile.png){:width="400px"}  
+![image](/public/images/jekyll/1612/datafile.png){:width="400px"}  
 Add following content to `favorite.yml`.
 ```
 title: My Favorites
@@ -211,7 +211,7 @@ title: Rong Zhuang's Favorite Bookmarks
 {% endraw %}
 ```
 Open browser, access the favorite page.
-![image](/public/images/githubpages/905/favorite.png)  
+![image](/public/images/jekyll/1612/favorite.png)  
 
 ## 7. Collection
 Use `Collection` to create similar pages. The [portfolio index page](http://rongzhuang.me/portfolio/) is created by collection.
@@ -222,7 +222,7 @@ collections:
     output: true
 ```
 Create new folder named `_portfolio` in root directory, and put all portfolio postings into it.
-![image](/public/images/githubpages/905/collection.png){:width="400px"}  
+![image](/public/images/jekyll/1612/collection.png){:width="400px"}  
 Each posting Markdown file contains following attributes.
 ```
 ---
@@ -260,11 +260,169 @@ At last, create portfolio.html in the root directory, add codes to read data fro
 {% endraw %}
 ```
 Open browser, access the collection page.
-![image](/public/images/githubpages/905/portfolio.png)  
+![image](/public/images/jekyll/1612/portfolio.png)  
 
-## 8. References
+## 8. Striped Rows in Table
+Define a table in markdown as follows.
+```raw
+Access Modifiers        | private | default | protected | public
+------------------------|---------|---------|-----------|--------
+Inside Class            | Y       | Y       | Y         | Y
+Same Package Class      | N       | Y       | Y         | Y
+Same Package Sub-Class  | N       | Y       | Y         | Y
+Other Package Class     | N       | N       | N         | Y
+Other Package Sub-Class | N       | N       | Y         | Y
+```
+The table in html looks like this.
+![image](/public/images/jekyll/1612/table_markdown.png)
+
+If we want to add class to html table, we can append class to the table in markdown, see sample below. Class `table-striped` is defined in Bootstrap 4, which is used to add zebra-stripes to a table.
+```raw
+Access Modifiers        | private | default | protected | public
+------------------------|---------|---------|-----------|--------
+Inside Class            | Y       | Y       | Y         | Y
+Same Package Class      | N       | Y       | Y         | Y
+Same Package Sub-Class  | N       | Y       | Y         | Y
+Other Package Class     | N       | N       | N         | Y
+Other Package Sub-Class | N       | N       | Y         | Y
+{: .table-striped }
+```
+Once the table is generated in html, it looks like this.
+```html
+<table class="table-striped">
+  <thead>
+    <tr>
+      <th>Access Modifiers</th>
+      <th>private</th>
+      <th>default</th>
+      <th>protected</th>
+      <th>public</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Inside Class</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <td>Same Package Class</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <td>Same Package Sub-Class</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <td>Other Package Class</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Y</td>
+    </tr>
+    <tr>
+      <td>Other Package Sub-Class</td>
+      <td>N</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>Y</td>
+    </tr>
+  </tbody>
+</table>
+```
+Now, the table has striped rows.
+![image](/public/images/jekyll/1612/table_striped.png)
+
+## 9. Responsive Tables
+If table has many columns, some of them may be cut off in small screen.
+![image](/public/images/jekyll/1612/table_partial.png){:width="450px"}
+One solution is to create a responsive table. We can embed the table into a div, which has the class `table-responsive-sm`. Class table-responsive-sm is defined in Bootstrap 4 for creating responsive tables.
+```raw
+<div class="table-responsive-sm" markdown="block">  
+
+Access Modifiers        | private | default | protected | public
+------------------------|---------|---------|-----------|--------
+Inside Class            | Y       | Y       | Y         | Y
+Same Package Class      | N       | Y       | Y         | Y
+Same Package Sub-Class  | N       | Y       | Y         | Y
+Other Package Class     | N       | N       | N         | Y
+Other Package Sub-Class | N       | N       | Y         | Y
+{: .table-striped }
+
+</div>
+```
+Once the table is generated in html, it looks like this.
+```html
+<div class="table-responsive-sm">
+
+  <table class="table-striped">
+    <thead>
+      <tr>
+        <th>Access Modifiers</th>
+        <th>private</th>
+        <th>default</th>
+        <th>protected</th>
+        <th>public</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Inside Class</td>
+        <td>Y</td>
+        <td>Y</td>
+        <td>Y</td>
+        <td>Y</td>
+      </tr>
+      <tr>
+        <td>Same Package Class</td>
+        <td>N</td>
+        <td>Y</td>
+        <td>Y</td>
+        <td>Y</td>
+      </tr>
+      <tr>
+        <td>Same Package Sub-Class</td>
+        <td>N</td>
+        <td>Y</td>
+        <td>Y</td>
+        <td>Y</td>
+      </tr>
+      <tr>
+        <td>Other Package Class</td>
+        <td>N</td>
+        <td>N</td>
+        <td>N</td>
+        <td>Y</td>
+      </tr>
+      <tr>
+        <td>Other Package Sub-Class</td>
+        <td>N</td>
+        <td>N</td>
+        <td>Y</td>
+        <td>Y</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+```
+One horizontal scrollbar is added to the table on screen.
+![image](/public/images/jekyll/1612/table_scroll.png){:width="450px"}
+
+## 10. References
 * [Official Jekyll Document](https://jekyllrb.com/docs/home/)
 * [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
 * [Links](https://jekyllrb.com/docs/templates/#links)
 * [3 Easy Steps To Implement Jekyll Collections!](https://blog.webjeda.com/jekyll-collections/)
 * [Get Pagination working in Jekyll Collection in Github pages](http://anjesh.github.io/2015/01/25/collection-pagination-working-github-pages/)
+* [Adding a class to a table in markdown](https://gist.github.com/tamouse/4204dddabb6b072b0242)
+* [Is there a way to overflow a markdown table using HTML?](https://stackoverflow.com/questions/41076390/is-there-a-way-to-overflow-a-markdown-table-using-html)
+* [Bootstrap 4 Tables](https://www.w3schools.com/bootstrap4/bootstrap_tables.asp)

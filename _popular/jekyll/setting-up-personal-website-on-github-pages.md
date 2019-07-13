@@ -4,8 +4,8 @@ key: popular
 title: "Setting up Personal Website on GitHub Pages(Draft)"
 index: 1601
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-30
 postdate: 2018-06-06
 tags: [GitLab Pages]

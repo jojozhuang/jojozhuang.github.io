@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "SEO Optimizations for Jekyll Websites"
-index: 1643
+title: "Jekyll - SEO Optimizations"
+index: 1631
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-23
 postdate: 2019-06-27
 tags: [SEO]
@@ -55,7 +55,7 @@ type: blog
 </feed>
 {% endraw %}
 ```
-![image](/public/images/githubpages/923/rssfeed.png)
+![image](/public/images/jekyll/1631/rssfeed.png)
 ### 1.3 Sitemap
 ```xml
 {%- raw -%}
@@ -83,7 +83,7 @@ type: blog
 </urlset>
 {% endraw %}
 ```
-![image](/public/images/githubpages/923/sitemap.png)
+![image](/public/images/jekyll/1631/sitemap.png)
 
 ## 2. Caching with CDN
 ### 2.1 Create a new account in Cloudflare
@@ -93,15 +93,15 @@ Add a new site, note the two name servers
 
 ### 2.2 Update Name server in GoDaddy
 Find your domain, click the three dot button, choose 'Manage DNS'.
-![image](/public/images/githubpages/923/godaddy_mydomains.png)
+![image](/public/images/jekyll/1631/godaddy_mydomains.png)
 Scroll down, see the Nameservers section, click 'Change' btton.
-![image](/public/images/githubpages/923/godaddy_nameservers.png)
+![image](/public/images/jekyll/1631/godaddy_nameservers.png)
 Select 'Custom' type and input two Cloudflare name servers.
-![image](/public/images/githubpages/923/godaddy_changenameserver.png)
+![image](/public/images/jekyll/1631/godaddy_changenameserver.png)
 Done.
-![image](/public/images/githubpages/923/godaddy_done.png)
+![image](/public/images/jekyll/1631/godaddy_done.png)
 You will receive an email from CloudFlare.
-![image](/public/images/githubpages/923/cloudflare_notification.png)
+![image](/public/images/jekyll/1631/cloudflare_notification.png)
 
 ## 3. Move Javascript to Bottom
 SEO plugin

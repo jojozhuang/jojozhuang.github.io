@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Pagination for List View"
-index: 1614
+title: "Jekyll - Pagination - Draft"
+index: 1622
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-09
 postdate: 2019-06-04
 tags: [Pagination]
@@ -80,7 +80,7 @@ The above pagination based on the `date` of posts. The posts are sorted by `date
 
 ### 2.6 Test
 Access any page, there is a green top bar below the navigation bar.
-![image](/public/images/githubpages/909/progress_bar.png)
+![image](/public/images/jekyll/1614/xxx.png)
 
 ## 3. Reference
 * [Creating previous and next links within a Jekyll Collection](http://stories.upthebuzzard.com/jekyll_notes/2017-02-19-prev-and-next-within-a-jekyll-collection.html)
