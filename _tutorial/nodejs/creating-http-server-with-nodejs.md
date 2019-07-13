@@ -47,9 +47,9 @@ You should see the following log.
 Server running at http://127.0.0.1:8086/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 8086.
-![startserver](/public/images/frontend/205/startserver.png){:width="600px"}  
+![startserver](/public/images/frontend/2511/startserver.png){:width="600px"}  
  Open web browser, access http://127.0.0.1:8086/.
-![browser](/public/images/frontend/205/browser.png){:width="600px"}  
+![browser](/public/images/frontend/2511/browser.png){:width="600px"}  
 
 ## 3. Source Files
 * [Source files of Nodejs Http Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/NodeHttpServer)

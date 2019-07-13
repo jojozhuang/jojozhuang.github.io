@@ -429,17 +429,17 @@ Start this app, serve it in web server.
 $ npm start
 ```
 Open web browser, access ‘http://localhost:4200/’.
-![image](/public/images/frontend/326/home.png)
+![image](/public/images/frontend/2771/home.png)
 Click the 'Text Compare' menu.
-![image](/public/images/frontend/326/textcompare.png)
+![image](/public/images/frontend/2771/textcompare.png)
 Input some text in both the original and modified text boxes, and click 'Find Difference' button.
-![image](/public/images/frontend/326/plaintext.png)
+![image](/public/images/frontend/2771/plaintext.png)
 Check the 'Inline Style' to view the difference in inline mode.
-![image](/public/images/frontend/326/inline.png)
+![image](/public/images/frontend/2771/inline.png)
 Input some typescripts and set the language to 'typescript'.
-![image](/public/images/frontend/326/typescript.png)
+![image](/public/images/frontend/2771/typescript.png)
 Change theme to 'Visual Studio Dark'.
-![image](/public/images/frontend/326/darktheme.png)
+![image](/public/images/frontend/2771/darktheme.png)
 
 ## 5. Source Files
 * [Source files of Text Compare on Github](https://github.com/jojozhuang/text-compare-angular)

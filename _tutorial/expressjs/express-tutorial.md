@@ -35,7 +35,7 @@ app.listen(3000, function() {
   console.log("Express app started on port 3000.");
 });
 ```
-![image](/public/images/frontend/251/helloworld.png){:width="600px"}  
+![image](/public/images/frontend/2551/helloworld.png){:width="600px"}  
 
 ## 2. Express Core
 Express has four major features:
@@ -150,7 +150,7 @@ To see all the internal logs used in Express, set the DEBUG environment variable
 "debug": "DEBUG=express:* node helloworld.js"
 ```
 Run 'npm run debug'.
-![image](/public/images/frontend/251/debug.png){:width="1000px"}  
+![image](/public/images/frontend/2551/debug.png){:width="1000px"}  
 
 ## 5. Source Files
 * [Source files of Express Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressTutorial)

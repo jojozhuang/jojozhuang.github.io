@@ -101,7 +101,7 @@ If everything is fine with your installation, this should produce the following 
 ```sh
 Hello, World!
 ```
-![image](/public/images/frontend/201/testnode.png){:width="600px"}
+![image](/public/images/frontend/2501/testnode.png){:width="600px"}
 
 ## 7. References
 * [Nodejs Guides](https://nodejs.org/en/docs/guides/)

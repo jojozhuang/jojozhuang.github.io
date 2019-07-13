@@ -261,7 +261,7 @@ var winston = require("./config/winston-config-rotate");
 ```
 ### 3.2 Testing
 Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You would see two log files in directory ./logs with proper log entries. The file name has the format 'application-YYYY-MM-DD-HH-[level].log'.
-![image](/public/images/frontend/255/logfiles.png){:width="350px"}  
+![image](/public/images/frontend/2555/logfiles.png){:width="350px"}  
 
 ## 4. Source Files
 * [Source files of Express Combine Morgan and Winston on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressLoggingCombine)
