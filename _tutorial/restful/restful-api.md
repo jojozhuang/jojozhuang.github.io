@@ -6,8 +6,7 @@ index: 2201
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-01
-postdate: 2017-08-06
+date: 2017-08-06
 tags: [JSON Server]
 ---
 

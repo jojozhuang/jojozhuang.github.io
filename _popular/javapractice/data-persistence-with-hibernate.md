@@ -6,8 +6,7 @@ index: 1537
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-10-06
-postdate: 2016-12-23
+date: 2016-12-23
 tags: [Hibernate, ORM]
 ---
 

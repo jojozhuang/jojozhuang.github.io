@@ -6,8 +6,7 @@ index: 2301
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-01
-postdate: 2017-07-08
+date: 2017-07-08
 tags: [iOS, Android, Cordova, Xamarin]
 ---
 

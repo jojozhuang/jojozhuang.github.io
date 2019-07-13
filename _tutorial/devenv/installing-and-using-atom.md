@@ -6,8 +6,7 @@ index: 2124
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-16
-postdate: 2017-10-15
+date: 2017-10-15
 tags: [Atom, Markdown]
 ---
 

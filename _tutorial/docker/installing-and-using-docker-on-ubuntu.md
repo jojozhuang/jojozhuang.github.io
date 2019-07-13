@@ -6,8 +6,7 @@ index: 3101
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-01
-postdate: 2017-10-10
+date: 2017-10-10
 tags: [Docker, Docker Hub]
 ---
 

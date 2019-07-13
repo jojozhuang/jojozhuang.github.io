@@ -6,8 +6,7 @@ index: 2224
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-08
-postdate: 2018-08-10
+date: 2018-08-10
 tags: [Heroku, Travis CI]
 ---
 

@@ -6,8 +6,7 @@ index: 2643
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-07-02
-postdate: 2018-06-04
+date: 2018-06-04
 tags: [React, Express]
 ---
 

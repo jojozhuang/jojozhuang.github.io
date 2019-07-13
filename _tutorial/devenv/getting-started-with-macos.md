@@ -6,8 +6,7 @@ index: 2102
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-02
-postdate: 2017-06-17
+date: 2017-06-17
 tags: [Mac, Bash, Shell]
 ---
 

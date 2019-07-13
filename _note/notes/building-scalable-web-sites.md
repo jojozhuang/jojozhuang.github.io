@@ -7,7 +7,6 @@ category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png
 date: 2017-07-02
-postdate: 2017-07-02
 tags: [Scalable]
 ---
 

@@ -6,8 +6,7 @@ index: 2555
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png
-date: 2016-11-05
-postdate: 2018-01-09
+date: 2018-01-09
 tags: [Express, Morgan, Winston]
 ---
 

@@ -6,8 +6,7 @@ index: 1618
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-08
-postdate: 2017-08-20
+date: 2017-08-20
 tags: [ShareThis]
 ---
 

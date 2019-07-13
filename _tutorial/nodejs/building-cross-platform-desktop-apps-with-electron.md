@@ -6,8 +6,7 @@ index: 2531
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
-date: 2016-09-28
-postdate: 2017-11-02
+date: 2017-11-02
 tags: [Electron, Node.js, Visual Studio Code]
 ---
 

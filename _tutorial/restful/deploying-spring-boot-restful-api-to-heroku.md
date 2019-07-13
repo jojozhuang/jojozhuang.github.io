@@ -6,8 +6,7 @@ index: 2223
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-07
-postdate: 2018-08-05
+date: 2018-08-05
 tags: [Spring Boot, Heroku]
 ---
 

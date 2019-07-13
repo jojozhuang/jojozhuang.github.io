@@ -7,7 +7,6 @@ category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png
 date: 2016-02-01
-postdate: 2016-02-01
 tags: [Data Structure, Algorithm]
 ---
 

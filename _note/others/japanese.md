@@ -7,7 +7,6 @@ category: others
 breadcrumb: [Note, Work Space, Others]
 image: note.png
 date: 2017-09-02
-postdate: 2017-09-02
 tags: [Japanese]
 ---
 

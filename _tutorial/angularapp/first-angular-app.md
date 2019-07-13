@@ -6,8 +6,7 @@ index: 2751
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-01-21
-postdate: 2017-08-08
+date: 2017-08-08
 tags: [Angular4, Angular CLI]
 ---
 

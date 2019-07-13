@@ -81,7 +81,7 @@ title: Tutorials
         "index": "{{ post.index | xml_escape }}",
         "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
         "tags": "{{ post.tags | join: ", "}}",
-        "postdate": "{{ post.postdate | date_to_string}}",
+        "date": "{{ post.date | date_to_string}}",
         "image": "{{ post.image | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}

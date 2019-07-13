@@ -7,7 +7,6 @@ category: notes
 breadcrumb: [Note, Work Space, Book Notes]
 image: note.png
 date: 2016-06-12
-postdate: 2016-06-12
 tags: [Javascript OO]
 ---
 

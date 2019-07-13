@@ -6,8 +6,7 @@ index: 3132
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-12
-postdate: 2017-11-16
+date: 2017-11-16
 tags: [SQL Server, Docker]
 ---
 

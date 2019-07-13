@@ -7,7 +7,6 @@ category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
 date: 2017-04-01
-postdate: 2017-04-01
 tags: [Abstract Class, Interface]
 ---
 

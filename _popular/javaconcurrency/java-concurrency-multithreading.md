@@ -7,7 +7,6 @@ category: concurrency
 breadcrumb: [Popular, Java, Java Concurrency]
 image: java.png
 date: 2017-04-04
-postdate: 2017-04-04
 tags: [Thread, Runnable, Concurrency]
 ---
 

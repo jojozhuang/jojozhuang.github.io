@@ -6,8 +6,7 @@ index: 2613
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-07-03
-postdate: 2018-06-05
+date: 2018-06-05
 tags: [Routing, CSR, Webpack, Nginx]
 ---
 

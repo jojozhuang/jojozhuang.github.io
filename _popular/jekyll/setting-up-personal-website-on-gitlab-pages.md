@@ -6,8 +6,7 @@ index: 1602
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-30
-postdate: 2018-06-06
+date: 2018-06-06
 tags: [GitLab Pages]
 ---
 

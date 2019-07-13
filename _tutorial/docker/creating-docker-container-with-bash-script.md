@@ -6,8 +6,7 @@ index: 3133
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-13
-postdate: 2018-04-15
+date: 2018-04-15
 tags: [Docker, Bash]
 ---
 

@@ -19,7 +19,7 @@
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled more-att">';
-        appendString += '            <li class="list-inline-item hidden-extra"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.postdate + '</li>';
+        appendString += '            <li class="list-inline-item hidden-extra"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> ' + item.date + '</li>';
         appendString += '            <li class="list-inline-item hidden-extra">|</li>';
         appendString += '            <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="' + item.url + '#disqus_thread">Comments</a></li>';
         appendString += '            <li class="list-inline-item">|</li>';
@@ -116,7 +116,7 @@
           'index': window.store[key].index,
           'excerpt': window.store[key].excerpt,
           'tags': window.store[key].tags,
-          'postdate': window.store[key].postdate,
+          'date': window.store[key].date,
           'image': window.store[key].image
         });
       }

@@ -6,8 +6,7 @@ index: 1451
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
 image: java.png
-date: 2017-03-03
-postdate: 2018-05-10
+date: 2018-05-10
 tags: [Encryption, Decryption]
 ---
 

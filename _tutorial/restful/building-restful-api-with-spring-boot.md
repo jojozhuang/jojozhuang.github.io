@@ -6,8 +6,7 @@ index: 2222
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-06
-postdate: 2017-12-13
+date: 2017-12-13
 tags: [Spring Boot, RESTful, Maven]
 ---
 

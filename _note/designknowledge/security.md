@@ -6,8 +6,7 @@ index: 9511
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
-date: 2017-01-11
-postdate: 2019-01-25
+date: 2019-01-25
 tags: [Security]
 ---
 

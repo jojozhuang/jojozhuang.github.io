@@ -6,8 +6,7 @@ index: 2322
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-04
-postdate: 2017-07-16
+date: 2017-07-16
 tags: [Android, Android Studio, SQLite]
 ---
 

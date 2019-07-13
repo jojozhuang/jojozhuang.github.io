@@ -6,8 +6,7 @@ index: 2766
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-02-03
-postdate: 2019-05-27
+date: 2019-05-27
 tags: [Heroku, Travis CI]
 ---
 
@@ -20,7 +19,7 @@ Download the source files for this Angular app. Create your own repository on Gi
 git clone https://github.com/jojozhuang/game-store-angular.git
 ```
 ### 1.2 Express Server
-We will use express to serve our angular app in heroku. Check the posting [Deploying Angular App to Heroku with Express Server]({% link _tutorial/angularapp/deploying_angular_app-to-heroku-with-express-server.md %}) to make the required changes to Angular app.
+We will use express to serve our angular app in heroku. Check the posting [Deploying Angular App to Heroku with Express Server]({% link _tutorial/angularapp/deploying-angular-app-to-heroku-with-express-server.md %}) to make the required changes to Angular app.
 ### 1.3 Travis Config File
 Create a file named '.travis.yml' in the root folder. Submit this file to GitHub as well.
 ```yml

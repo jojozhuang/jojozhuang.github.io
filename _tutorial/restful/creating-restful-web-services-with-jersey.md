@@ -6,8 +6,7 @@ index: 2232
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-11
-postdate: 2017-10-30
+date: 2017-10-30
 tags: [Jersey, RESTful, Maven]
 ---
 

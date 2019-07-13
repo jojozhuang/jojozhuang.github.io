@@ -6,8 +6,7 @@ index: 2773
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
 image: angular.png
-date: 2017-01-29
-postdate: 2018-07-29
+date: 2018-07-29
 tags: [Netlify]
 ---
 

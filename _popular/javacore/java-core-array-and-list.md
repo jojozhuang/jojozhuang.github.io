@@ -7,7 +7,6 @@ category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-04
-postdate: 2017-01-04
 tags: [Array, ArrayList]
 ---
 

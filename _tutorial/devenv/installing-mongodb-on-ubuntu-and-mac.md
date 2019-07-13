@@ -6,8 +6,7 @@ index: 2132
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-03-02
-postdate: 2017-11-08
+date: 2017-11-08
 tags: [MongoDB]
 ---
 

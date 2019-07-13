@@ -6,8 +6,7 @@ index: 3513
 category: nginx
 breadcrumb: [Tutorial, Distributed System, Nginx]
 image: code.png
-date: 2016-04-03
-postdate: 2018-05-28
+date: 2018-05-28
 tags: [Nginx, Proxy, Load Balancing]
 ---
 

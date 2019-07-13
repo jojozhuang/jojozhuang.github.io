@@ -6,8 +6,7 @@ index: 1511
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-09-11
-postdate: 2018-05-12
+date: 2018-05-12
 tags: [JDK, Eclipse]
 ---
 

@@ -6,8 +6,7 @@ index: 1605
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-03
-postdate: 2016-01-17
+date: 2016-01-17
 tags: [Jekyll, Port]
 ---
 

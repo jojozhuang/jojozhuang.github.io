@@ -6,8 +6,7 @@ index: 2631
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-06-01
-postdate: 2016-03-12
+date: 2016-03-12
 tags: [Course Player]
 ---
 

@@ -6,8 +6,7 @@ index: 2125
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-17
-postdate: 2018-07-13
+date: 2018-07-13
 tags: [Visual Studio Code]
 ---
 

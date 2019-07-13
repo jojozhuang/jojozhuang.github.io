@@ -6,8 +6,7 @@ index: 2311
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-02
-postdate: 2017-07-10
+date: 2017-07-10
 tags: [iOS, Swift, Xcode]
 ---
 

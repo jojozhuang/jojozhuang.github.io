@@ -6,8 +6,7 @@ index: 3125
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-10
-postdate: 2017-10-30
+date: 2017-10-30
 tags: [Docker, Compose]
 ---
 

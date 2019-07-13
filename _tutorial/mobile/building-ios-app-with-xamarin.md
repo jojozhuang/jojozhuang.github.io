@@ -6,8 +6,7 @@ index: 2333
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
 image: mobiledev.png
-date: 2018-01-07
-postdate: 2017-07-21
+date: 2017-07-21
 tags: [Xamarin, Xcode, SQLite, C#]
 ---
 

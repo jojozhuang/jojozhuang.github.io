@@ -8,7 +8,6 @@ category: datastructure
 breadcrumb: [Popular, General, Data Structure]
 image: dsa.png
 date: 2016-03-09
-postdate: 2016-03-09
 tags: [RBT]
 mathjax: true
 ---

@@ -59,7 +59,7 @@ categories:
               <p>{{ tutorial.excerpt | remove: "<blockquote>" | remove: "</blockquote>"}}</p>
               <div class="pull-left">
                   <ul class="list-inline list-unstyled">
-                    <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> {{ tutorial.postdate | date_to_string }}</li>
+                    <li class="list-inline-item"><span><i class="far fa-calendar-alt" style="color:#bc2105"></i></span> {{ tutorial.date | date_to_string }}</li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item"><span><i class="fas fa-comments" style="color:#008c25"></i></span> <a href="{{ tutorial.url }}#disqus_thread">Comments</a></li>
                     <li class="list-inline-item hidden-extra">|</li>

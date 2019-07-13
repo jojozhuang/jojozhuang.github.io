@@ -6,8 +6,7 @@ index: 1603
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
 image: jekyll.png
-date: 2018-07-01
-postdate: 2016-01-16
+date: 2016-01-16
 tags: [GitHub Pages, Jekyll, Ruby]
 ---
 

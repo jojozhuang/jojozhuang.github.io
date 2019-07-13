@@ -6,8 +6,7 @@ index: 2525
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
 image: nodejs.png
-date: 2016-09-25
-postdate: 2016-03-18
+date: 2016-03-18
 tags: [Amazon EC2, Node.js, Putty]
 ---
 

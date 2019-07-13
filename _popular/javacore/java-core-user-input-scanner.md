@@ -7,7 +7,6 @@ category: core
 breadcrumb: [Popular, Java, Java Core]
 image: java.png
 date: 2017-01-02
-postdate: 2016-01-02
 tags: [Scanner]
 ---
 

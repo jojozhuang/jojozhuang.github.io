@@ -6,8 +6,7 @@ index: 2564
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
 image: expressjs.png
-date: 2016-11-14
-postdate: 2018-01-28
+date: 2018-01-28
 tags: [RESTful]
 ---
 

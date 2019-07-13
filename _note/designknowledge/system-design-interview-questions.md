@@ -6,8 +6,7 @@ index: 9502
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
-date: 2017-01-02
-postdate: 2019-01-03
+date: 2019-01-03
 tags: [Tradeoffs]
 ---
 

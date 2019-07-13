@@ -6,8 +6,7 @@ index: 2731
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
-date: 2017-01-15
-postdate: 2018-03-23
+date: 2018-03-23
 tags: [Angular, Karma, Jasmine]
 ---
 

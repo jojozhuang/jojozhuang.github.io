@@ -6,8 +6,7 @@ index: 2821
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: online-judge.png
-date: 2017-03-06
-postdate: 2018-04-15
+date: 2018-04-15
 tags: [ngx-editor]
 ---
 

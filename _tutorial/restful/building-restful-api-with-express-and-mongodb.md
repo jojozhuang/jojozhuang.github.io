@@ -6,8 +6,7 @@ index: 2231
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
 image: restfulapi.png
-date: 2016-07-10
-postdate: 2018-06-08
+date: 2018-06-08
 tags: [RESTful, Express, MongoDB]
 ---
 

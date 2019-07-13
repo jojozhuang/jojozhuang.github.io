@@ -7,7 +7,6 @@ category: java8
 breadcrumb: [Popular, Java, Java 8]
 image: java.png
 date: 2017-05-04
-postdate: 2017-05-04
 tags: [Predicate, Supplier, Consumer]
 ---
 

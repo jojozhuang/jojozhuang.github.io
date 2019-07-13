@@ -6,8 +6,7 @@ index: 2131
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-03-01
-postdate: 2017-10-30
+date: 2017-10-30
 tags: [MySQL, MySQL Workbench]
 categories:
 - blog

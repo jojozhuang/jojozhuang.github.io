@@ -6,8 +6,7 @@ index: 3134
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-14
-postdate: 2019-06-30
+date: 2019-06-30
 tags: [Docker, OpenGrok, VirtualBox]
 ---
 

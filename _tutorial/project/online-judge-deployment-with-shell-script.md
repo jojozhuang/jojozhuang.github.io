@@ -6,8 +6,7 @@ index: 2843
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
 image: online-judge.png
-date: 2017-03-13
-postdate: 2018-04-28
+date: 2018-04-28
 tags: [Online Judge]
 ---
 

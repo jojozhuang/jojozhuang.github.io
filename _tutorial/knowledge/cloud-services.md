@@ -6,8 +6,7 @@ index: 3501
 category: knowledge
 breadcrumb: [Tutorial, Prerequisites, Knowledge]
 image: code.png
-date: 2016-04-04
-postdate: 2018-08-05
+date: 2018-08-05
 tags: [Heroku, Azure, EC2, Netlify, Travis CI]
 ---
 

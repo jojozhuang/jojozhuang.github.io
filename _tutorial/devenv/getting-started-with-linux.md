@@ -6,8 +6,7 @@ index: 2101
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 image: code.png
-date: 2016-01-01
-postdate: 2017-07-26
+date: 2017-07-26
 tags: [Unix, Linux, Shell, Bash]
 ---
 

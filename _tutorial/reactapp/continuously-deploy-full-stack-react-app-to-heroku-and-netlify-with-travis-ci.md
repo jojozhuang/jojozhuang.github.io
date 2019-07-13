@@ -6,8 +6,7 @@ index: 2645
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
 image: reactjs.png
-date: 2017-07-05
-postdate: 2018-08-10
+date: 2018-08-10
 tags: [Heroku, Travis CI, Netlify]
 ---
 

@@ -6,8 +6,7 @@ index: 2712
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 image: angular.png
-date: 2017-01-03
-postdate: 2018-03-11
+date: 2018-03-11
 tags: [Angular Components]
 ---
 

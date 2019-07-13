@@ -7,7 +7,6 @@ category: algorithm
 breadcrumb: [Popular, General, Algorithm]
 image: dsa.png
 date: 2016-03-23
-postdate: 2016-03-23
 tags: [Two Pointers]
 mathjax: true
 ---

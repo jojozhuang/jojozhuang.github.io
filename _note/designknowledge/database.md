@@ -6,8 +6,7 @@ index: 9508
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
 image: system-design.png
-date: 2017-01-08
-postdate: 2019-01-15
+date: 2019-01-15
 tags: [RDBMS, NoSQL]
 ---
 

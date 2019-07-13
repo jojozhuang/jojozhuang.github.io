@@ -6,8 +6,7 @@ index: 3121
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
 image: docker.png
-date: 2018-04-06
-postdate: 2017-10-18
+date: 2017-10-18
 tags: [Docker, Nginx]
 ---
 

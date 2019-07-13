@@ -6,8 +6,7 @@ index: 1532
 category: practice
 breadcrumb: [Popular, Java, Practice]
 image: java.png
-date: 2017-10-02
-postdate: 2016-02-26
+date: 2016-02-26
 tags: [JSP, MySQL]
 categories:
 - blog
