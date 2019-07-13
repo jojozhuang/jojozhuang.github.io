@@ -16,7 +16,7 @@ tags: [Load Balancing, Reverse Proxy]
 ## 1. Load Balancing
 ### 1.1 What is Load Balancer?
 Load balancers distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client. Load balancers can be implemented with hardware (expensive) or with software such as HAProxy.
-![image](/public/images/note/206/loadbalancing.png){:width="700px"}
+![image](/public/images/note/9506/loadbalancing.png){:width="700px"}
 ### 1.2 Usage of Load Balancer
 Load balancers are effective at:
 * Preventing requests from going to unhealthy servers
@@ -71,7 +71,7 @@ Load balancers can also help with horizontal scaling, improving performance and 
 ## 2. Reverse Proxy (web server)
 ### 2.1 What is Reverse Proxy?
 A reverse proxy is a web server that centralizes internal services and provides unified interfaces to the public.  Requests from clients are forwarded to a server that can fulfill it before the reverse proxy returns the server's response to the client.
-![image](/public/images/note/206/reverseproxy.png){:width="450px"}
+![image](/public/images/note/9506/reverseproxy.png){:width="450px"}
 ### 2.2 Usage of Reverse Proxy
 Benefits include:
 * **Increased security** - Hide information about backend servers, blacklist IPs, limit number of connections per client

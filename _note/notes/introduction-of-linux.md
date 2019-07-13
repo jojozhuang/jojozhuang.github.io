@@ -14,7 +14,7 @@ tags: [Linux, Bash]
 > Notes of Book: Introduction to Linux - A beginner's Guide  
 
 Author: Machtelt Garrels  
-![image](/public/images/note/introduction-to-linux/cover.jpg){:width="300px"}  
+![image](/public/images/note/9101/cover.jpg){:width="300px"}  
 
 Summary:
 * Linux is an implementation of UNIX.
@@ -157,7 +157,7 @@ df
 ```
 #### 3.1.3. More file system layout
 For convenience, the Linux file system is usually thought of in a tree structure. On a standard Linux system you will find the layout generally follows the scheme presented below.
-![image](/public/images/note/introduction-to-linux/fs-layout.png){:width="700px"}  
+![image](/public/images/note/9101/fs-layout.png){:width="700px"}  
 
 Subdirectories of the root directory:
 

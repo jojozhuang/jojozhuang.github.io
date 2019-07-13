@@ -41,7 +41,7 @@ Generally, the performance of a system, although designed (or claimed) to be sca
 With horizontal-scaling it is often easier to scale dynamically by adding more machines into the existing pool; Vertical-scaling is usually limited to the capacity of a single server and scaling beyond that capacity often involves downtime and comes with an upper limit.
 
 Good examples of horizontal scaling are Cassandra and MongoDB as they both provide an easy way to scale horizontally by adding more machines to meet growing needs. Similarly, a good example of vertical scaling is MySQL as it allows for an easy way to scale vertically by switching from smaller to bigger machines. However, this process often involves downtime.
-![image](/public/images/note/grokking-the-system-design-interview/scalability.png)
+![image](/public/images/note/9652/scalability.png)
 
 ### 2.2 Reliability
 By definition, reliability is the probability a system will fail in a given period. In simple terms, a distributed system is considered reliable if it keeps delivering its services even when one or several of its software or hardware components fail. Reliability represents one of the main characteristics of any distributed system, since in such systems any failing machine can always be replaced by another healthy one, ensuring the completion of the requested task.
@@ -74,14 +74,14 @@ Early detection of faults can decrease or avoid system downtime. For example, so
 Load Balancer (LB) is another critical component of any distributed system. It helps to spread the traffic across a cluster of servers to improve responsiveness and availability of applications, websites or databases. LB also keeps track of the status of all the resources while distributing requests. If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to such a server.
 
 Typically a load balancer sits between the client and the server accepting incoming network and application traffic and distributing the traffic across multiple backend servers using various algorithms. By balancing application requests across multiple servers, a load balancer reduces individual server load and prevents any one application server from becoming a single point of failure, thus improving overall application availability and responsiveness.
-![image](/public/images/note/grokking-the-system-design-interview/load_balancing.png)
+![image](/public/images/note/9652/load_balancing.png)
 
 To utilize full scalability and redundancy, we can try to balance the load at each layer of the system. We can add LBs at three places:
 * Between the user and the web server
 * Between web servers and an internal platform layer, like application servers or cache servers
 * Between internal platform layer and database.
 
-![image](/public/images/note/grokking-the-system-design-interview/load_balancing2.png)
+![image](/public/images/note/9652/load_balancing2.png)
 
 ### 3.1 Benefits of Load Balancing
 * Users experience faster, uninterrupted service. Users won’t have to wait for a single struggling server to finish its previous tasks. Instead, their requests are immediately passed on to a more readily available resource.
@@ -106,7 +106,7 @@ There is a variety of load balancing methods, which use different algorithms for
 
 ### 3.3 Redundant Load Balancers
 The load balancer can be a single point of failure; to overcome this, a second load balancer can be connected to the first to form a cluster. Each LB monitors the health of the other and, since both of them are equally capable of serving traffic and failure detection, in the event the main load balancer fails, the second load balancer takes over.
-![image](/public/images/note/grokking-the-system-design-interview/load_balancing3.png)
+![image](/public/images/note/9652/load_balancing3.png)
 
 ## 4. Caching
 Load balancing helps you scale horizontally across an ever-increasing number of servers, but caching will enable you to make vastly better use of the resources you already have as well as making otherwise unattainable product requirements feasible. Caches take advantage of the locality of reference principle: recently requested data is likely to be requested again. They are used in almost every layer of computing: hardware, operating systems, web browsers, web applications, and more. A cache is like short-term memory: it has a limited amount of space, but is typically faster than the original data source and contains the most recently accessed items. Caches can exist at all levels in architecture, but are often found at the level nearest to the front end where they are implemented to return data quickly without taxing downstream levels.
@@ -195,7 +195,7 @@ The goal of creating an index on a particular table in a database is to make it 
 A library catalog is a register that contains the list of books found in a library. The catalog is organized like a database table generally with four columns: book title, writer, subject, and date of publication. There are usually two such catalogs: one sorted by the book title and one sorted by the writer name. That way, you can either think of a writer you want to read and then look through their books or look up a specific book title you know you want to read in case you don’t know the writer’s name. These catalogs are like indexes for the database of books. They provide a sorted list of data that is easily searchable by relevant information.
 
 Simply saying, an index is a data structure that can be perceived as a table of contents that points us to the location where actual data lives. So when we create an index on a column of a table, we store that column and a pointer to the whole row in the index. Let’s assume a table containing a list of books, the following diagram shows how an index on the ‘Title’ column looks like:
-![image](/public/images/note/grokking-the-system-design-interview/indexes.png)
+![image](/public/images/note/9652/indexes.png)
 
 Just like a traditional relational data store, we can also apply this concept to larger datasets. The trick with indexes is that we must carefully consider how users will access the data. In the case of data sets that are many terabytes in size, but have very small payloads (e.g., 1 KB), indexes are a necessity for optimizing data access. Finding a small payload in such a large dataset can be a real challenge, since we can’t possibly iterate over that much data in any reasonable time. Furthermore, it is very likely that such a large data set is spread over several physical devices—this means we need some way to find the correct physical location of the desired data. Indexes are the best way to do this.
 
@@ -208,7 +208,7 @@ When adding rows or making updates to existing rows for a table with an active i
 A proxy server is an intermediate server between the client and the back-end server. Clients connect to proxy servers to request for a service like a web page, file, connection, etc. In short, a proxy server is a piece of software or hardware that acts as an intermediary for requests from clients seeking resources from other servers.
 
 Typically, proxies are used to filter requests, log requests, or sometimes transform requests (by adding/removing headers, encrypting/decrypting, or compressing a resource). Another advantage of a proxy server is that its cache can serve a lot of requests. If multiple clients access a particular resource, the proxy server can cache it and serve it to all the clients without going to the remote server.
-![image](/public/images/note/grokking-the-system-design-interview/proxy.png)
+![image](/public/images/note/9652/proxy.png)
 
 ### 7.1 Proxy Server Types
 Proxies can reside on the client’s local server or anywhere between the client and the remote servers. Here are a few famous types of proxy servers:
@@ -225,7 +225,7 @@ Proxies can reside on the client’s local server or anywhere between the client
 Redundancy is the duplication of critical components or functions of a system with the intention of increasing the reliability of the system, usually in the form of a backup or fail-safe, or to improve actual system performance. For example, if there is only one copy of a file stored on a single server, then losing that server means losing the file. Since losing data is seldom a good thing, we can create duplicate or redundant copies of the file to solve this problem.
 
 Redundancy plays a key role in removing the single points of failure in the system and provides backups if needed in a crisis. For example, if we have two instances of a service running in production and one fails, the system can failover to the other one.
-![image](/public/images/note/grokking-the-system-design-interview/redundancy.png)
+![image](/public/images/note/9652/redundancy.png)
 
 Replication means sharing information to ensure consistency between redundant resources, such as software or hardware components, to improve reliability, fault-tolerance, or accessibility.
 
@@ -272,7 +272,7 @@ CAP theorem states that it is impossible for a distributed software system to si
 * `Consistency`: All nodes see the same data at the same time. Consistency is achieved by updating several nodes before allowing further reads.
 * `Availability`: Every request gets a response on success/failure. Availability is achieved by replicating the data across different servers.
 * `Partition tolerance`: The system continues to work despite message loss or partial failure. A system that is partition-tolerant can sustain any amount of network failure that doesn’t result in a failure of the entire network. Data is sufficiently replicated across combinations of nodes and networks to keep the system up through intermittent outages.
-![image](/public/images/note/grokking-the-system-design-interview/cap.png)
+![image](/public/images/note/9652/cap.png)
 
 We cannot build a general data store that is continually available, sequentially consistent, and tolerant to any partition failures. We can only build a system that has any two of these three properties. Because, to be consistent, all nodes should see the same set of updates in the same order. But if the network suffers a partition, updates in one partition might not make it to the other partitions before a client reads from the out-of-date partition after having read from the up-to-date one. The only thing that can be done to cope with this possibility is to stop serving requests from the out-of-date partition, but then the service is no longer 100% available.
 
@@ -304,11 +304,11 @@ Here’s how consistent hashing works:
   * Move clockwise on the ring until finding the first cache it encounters.
   * That cache is the one that contains the key. See animation below as an example: key1 maps to cache A; key2 maps to cache C.
 
-![image](/public/images/note/grokking-the-system-design-interview/consistent_hashing1.png)
-![image](/public/images/note/grokking-the-system-design-interview/consistent_hashing2.png)
-![image](/public/images/note/grokking-the-system-design-interview/consistent_hashing3.png)
-![image](/public/images/note/grokking-the-system-design-interview/consistent_hashing4.png)
-![image](/public/images/note/grokking-the-system-design-interview/consistent_hashing5.png)
+![image](/public/images/note/9652/consistent_hashing1.png)
+![image](/public/images/note/9652/consistent_hashing2.png)
+![image](/public/images/note/9652/consistent_hashing3.png)
+![image](/public/images/note/9652/consistent_hashing4.png)
+![image](/public/images/note/9652/consistent_hashing5.png)
 To add a new server, say D, keys that were originally residing at C will be split. Some of them will be shifted to D, while other keys will not be touched.
 
 To remove a cache or, if a cache fails, say A, all keys that were originally mapped to A will fall into B, and only those keys need to be moved to B; other keys will not be affected.
@@ -325,7 +325,7 @@ Long-Polling, WebSockets, and Server-Sent Events are popular communication proto
 2. The server calculates the response.
 3. The server sends the response back to the client on the opened request.
 
-![image](/public/images/note/grokking-the-system-design-interview/http.png)
+![image](/public/images/note/9652/http.png)
 
 ### 12.1 Ajax Polling
 Polling is a standard technique used by the vast majority of AJAX applications. The basic idea is that the client repeatedly polls (or requests) a server for data. The client makes a request and waits for the server to respond with data. If no data is available, an empty response is returned.
@@ -335,7 +335,7 @@ Polling is a standard technique used by the vast majority of AJAX applications. 
 4. The client repeats the above three steps periodically to get updates from the server.
 
 The problem with Polling is that the client has to keep asking the server for any new data. As a result, a lot of responses are empty, creating HTTP overhead.
-![image](/public/images/note/grokking-the-system-design-interview/ajax.png)
+![image](/public/images/note/9652/ajax.png)
 
 ### 12.2 HTTP Long-Polling
 This is a variation of the traditional polling technique that allows the server to push information to a client whenever the data is available. With Long-Polling, the client requests information from the server exactly as in normal polling, but with the expectation that the server may not respond immediately. That’s why this technique is sometimes referred to as a “Hanging GET”.
@@ -349,11 +349,11 @@ The basic life cycle of an application using HTTP Long-Polling is as follows:
 4. The client typically sends a new long-poll request, either immediately upon receiving a response or after a pause to allow an acceptable latency period.
 5. Each Long-Poll request has a timeout. The client has to reconnect periodically after the connection is closed due to timeouts.
 
-![image](/public/images/note/grokking-the-system-design-interview/long_polling.png)
+![image](/public/images/note/9652/long_polling.png)
 
 ### 12.3 WebSockets
 WebSocket provides Full duplex communication channels over a single TCP connection. It provides a persistent connection between a client and a server that both parties can use to start sending data at any time. The client establishes a WebSocket connection through a process known as the WebSocket handshake. If the process succeeds, then the server and client can exchange data in both directions at any time. The WebSocket protocol enables communication between a client and a server with lower overheads, facilitating real-time data transfer from and to the server. This is made possible by providing a standardized way for the server to send content to the browser without being asked by the client and allowing for messages to be passed back and forth while keeping the connection open. In this way, a two-way (bi-directional) ongoing conversation can take place between a client and a server.
-![image](/public/images/note/grokking-the-system-design-interview/web_socket.png)
+![image](/public/images/note/9652/web_socket.png)
 
 ### 12.4 Server-Sent Events (SSEs)
 Under SSEs the client establishes a persistent and long-term connection with the server. The server uses this connection to send data to a client. If the client wants to send data to the server, it would require the use of another technology/protocol to do so.
@@ -362,7 +362,7 @@ Under SSEs the client establishes a persistent and long-term connection with the
 3. The server sends the data to the client whenever there’s new information available.
 
 SSEs are best when we need real-time traffic from the server to the client or if the server is generating data in a loop and will be sending multiple events to the client.
-![image](/public/images/note/grokking-the-system-design-interview/sse.png)
+![image](/public/images/note/9652/sse.png)
 
 
 

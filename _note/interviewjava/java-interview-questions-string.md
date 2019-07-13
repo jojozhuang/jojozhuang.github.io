@@ -52,7 +52,7 @@ thread-safe | Yes    | No            | Yes
 
 ### 1.4 CharSequence VS String
 CharSequence is an interface that represents a sequence of characters. Mutability is not enforced by this interface. Therefore, both mutable and immutable classes implement this interface. String class implements this interface. Besides, StringBuilder and StringBuffer are both implements this interface.
-![image](/public/images/note/java-string-interview-questions/charsequence.png){:width="600px"}  
+![image](/public/images/note/9604/charsequence.png){:width="600px"}  
 
 ### 1.5 Why String is immutable or final in Java
 There are several benefits of String because it’s immutable and final.

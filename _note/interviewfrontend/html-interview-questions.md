@@ -391,7 +391,7 @@ HTML5 offers new semantic elements that define the different parts of a web page
 * `<details>` - Defines additional details
 * `<summary>` - Defines a heading for the details element
 
-![image](/public/images/note/front-end-html/html_layout.png){:width="200px"}  
+![image](/public/images/note/9612/html_layout.png){:width="200px"}  
 
 Layout Techniques  
 There are five different ways to create multicolumn layouts. Each way has its pros and cons:

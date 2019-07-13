@@ -16,7 +16,7 @@ tags: [RPC and REST]
 ## 1. Remote procedure call (RPC)
 ### 1.1 What is RPC?
 In an RPC, a client causes a procedure to execute on a different address space, usually a remote server.  The procedure is coded as if it were a local procedure call, abstracting away the details of how to communicate with the server from the client program.  Remote calls are usually slower and less reliable than local calls so it is helpful to distinguish RPC calls from local calls.  Popular RPC frameworks include [Protobuf](https://developers.google.com/protocol-buffers/), [Thrift](https://thrift.apache.org/), and [Avro](https://avro.apache.org/docs/current/).
-![image](/public/images/note/205/rpc.png){:width="700px"}
+![image](/public/images/note/9505/rpc.png){:width="700px"}
 ### 1.2 How it Works?
 RPC is a request-response protocol:
 * **Client program** - Calls the client stub procedure.  The parameters are pushed onto the stack like a local procedure call.

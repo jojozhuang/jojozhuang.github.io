@@ -2,13 +2,13 @@
 layout: tutorial
 key: note
 title: "Index Id"
-index: 9903
-category: others
-breadcrumb: [Note, Work Space, Others]
-image: note.png
+index: 9004
+category: basis
+breadcrumb: [Note, Work Space, Basic Knowledge]
+image: cs.png
 date: 2017-09-01
 postdate: 2017-09-01
-tags: []
+tags: [Index]
 ---
 
 > index id for this website
