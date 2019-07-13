@@ -56,7 +56,7 @@ js> var a = 68;
 js> f()
 68
 ```
-![image](/public/images/java/537/javascript.png){:width="600px"}
+![image](/public/images/java/1541/javascript.png){:width="600px"}
 ### 4.2 Loading Javascript File
 Create a file named `test.js` with following content.
 ```javascript
@@ -72,7 +72,7 @@ js> hello('johnny')
 hello,johnny!
 js>
 ```
-![image](/public/images/java/537/loadjsfile.png){:width="600px"}
+![image](/public/images/java/1541/loadjsfile.png){:width="600px"}
 ### 4.3 Working with Java
 Create an object with `new` keyword.
 ```
@@ -130,7 +130,7 @@ $ javac Embedding.java
 $ java Embedding
 hello from js function!
 ```
-![image](/public/images/java/537/embedding.png){:width="600px"}
+![image](/public/images/java/1541/embedding.png){:width="600px"}
 
 ## 5. Source Files
 * [Source files of Rhino Scripting Java on Github](https://github.com/jojozhuang/Tutorials/tree/master/RhinoScriptingJava)

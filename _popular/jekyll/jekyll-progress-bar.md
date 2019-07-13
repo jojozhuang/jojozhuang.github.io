@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Adding Progress Bar"
-index: 1613
+title: "Jekyll - Progress Bar"
+index: 1621
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-09
 postdate: 2019-06-04
 tags: [Nanobar, Progress Bar]
@@ -63,7 +63,7 @@ Create nanobar with javascript and assign it to div with classname `nanobar`. No
 ```
 ### 2.6 Test
 Access any page, there is a green top bar below the navigation bar.
-![image](/public/images/githubpages/909/progress_bar.png)
+![image](/public/images/jekyll/1613/progress_bar.png)
 
 ## 3. Reference
 * [Adding Top Progress Bar to Websites](https://blog.webjeda.com/top-bar-website/)

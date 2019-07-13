@@ -18,7 +18,7 @@ tags: [Shallow Copy, Deep Copy]
 
 `Deep copy` is creating a new object and then copying the non-static fields of the current object to the new object. If a field is a value type, a bit by bit copy of the field is performed. If a field is a reference type, a new copy of the referred object is performed. A deep copy of an object is a new object with entirely new instance variables, it does not share objects with the old.
 
-![image](/public/images/java/java-core-shallow-copy-vs-deep-copy/object_clone.jpg){:width="400px"}  
+![image](/public/images/java/1447/object_clone.jpg){:width="400px"}  
 
 ## 2. Example
 ### 2.1 Person Class

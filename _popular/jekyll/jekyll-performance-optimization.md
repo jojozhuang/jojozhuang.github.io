@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Performance Optimization for Jekyll Website"
-index: 1644
+title: "Jekyll - Performance Optimization"
+index: 1632
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-24
 postdate: 2019-06-28
 tags: [Performance]
@@ -22,7 +22,7 @@ When you use cookie-free domains you are able to separate the content that doesn
 Testing
 
 
-![image](/public/images/githubpages/924/imagesize_before.png)
+![image](/public/images/jekyll/1632/imagesize_before.png)
 
 ## 1. Cache Header
 Create netlify.toml

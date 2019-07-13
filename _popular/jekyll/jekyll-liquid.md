@@ -1,17 +1,22 @@
 ---
 layout: tutorial
 key: popular
-title: "Liquid for Jekyll"
-index: 1606
+title: "Jekyll - Liquid"
+index: 1611
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-04
 postdate: 2016-01-19
 tags: [Jekyll, Liquid]
 ---
 
 > Useful tricks of Liquid, which are used along with Jekyll for GitHub Page.
+
+## 1. Liquid
+Jekyll uses the `Liquid` templating language to process templates.
+
+Generally in Liquid you output content using two curly braces e.g. `{%- raw -%}{{ variable }}{% endraw %}` and perform logic statements by surrounding them in a curly brace percentage sign e.g. `{%- raw -%}{% if statement %}{% endraw %}`. To learn more about Liquid, check out the [official Liquid Documentation](https://shopify.github.io/liquid/).
 
 ## 1. Comment
 Allows you to leave un-rendered code inside a Liquid template. Any text within the opening and closing comment blocks will not be output, and any Liquid code within will not be executed.  

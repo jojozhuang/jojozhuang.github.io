@@ -19,7 +19,7 @@ In the posting [Building Website with JSP and MySQL]({% link _popular/javapracti
 ## 2. Setting up MySQL Database
 ### 2.1 Creating Connection
 In MySQL Workbench, create a new connection to local MySQL database, specify the connection name `JSP Debugging`.
-![image](/public/images/java/514/newconnection.png){:width="800px"}
+![image](/public/images/java/1514/newconnection.png){:width="800px"}
 ### 2.2 Creating Database and Table
 In Query tab of Workbench, execute following sql script to create a new database named `jsptutorial`.
 ```sql
@@ -43,29 +43,29 @@ Run the following script to show all data in table `Product`.
 ```sql
 SELECT * FROM jsptutorial.Product;
 ```
-![image](/public/images/java/514/mysqlworkbench.png)
+![image](/public/images/java/1514/mysqlworkbench.png)
 
 ## 3. Setting Up JSP Project
 ### 3.1 Getting JSP Project
 We will use the same JSP application for [Building Website with JSP and MySQL]({% link _popular/javapractice/building-website-with-jsp-and-mysql.md %}). Download the source files from [JSPTutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial). Rename it to `JSPDebugging` and refactor package names accordingly. The project in Eclipse looks like this.
-![image](/public/images/java/514/project.png){:width="350px"}
+![image](/public/images/java/1514/project.png){:width="350px"}
 Build the project, then deploy it to tomcat's default web folder `/usr/local/apache-tomcat-9.0.1/webapps`.  
 1) Create a new folder `jspdeployed` under webapps.  
 2) Copy all of the files from `/JSPDebugging/WebContent/` to `/usr/local/apache-tomcat-9.0.1/webapps/jspdeployed/`.  
 3) Copy the entire 'classes' folder from `/JSPDebugging/build/` to `/usr/local/apache-tomcat-9.0.1/webapps/jspdeployed/WEB-INF/`.  
 4) The final structure of `jspdeployed` folder looks like below. All the files for this JSP Tutorial application are deployed.  
-![image](/public/images/java/514/final.png)  
+![image](/public/images/java/1514/final.png)  
 ### 3.2 Starting Tomcat
 Run following command to start tomcat.
 ```sh
 $ /usr/local/apache-tomcat-9.0.1/bin/startup.sh
 ```
 Access http://localhost:8080/jspdeployed/productlist.jsp in web browser. You should see three products in the list.
-![image](/public/images/java/514/productlist.png)
+![image](/public/images/java/1514/productlist.png)
 Click the Edit button for line 3. Change the product name and price, click 'Save' button.
-![image](/public/images/java/514/update3.png)
+![image](/public/images/java/1514/update3.png)
 Nothing happened, the name and price of the third product are not changed. We need to find out why.
-![image](/public/images/java/514/productlist2.png)
+![image](/public/images/java/1514/productlist2.png)
 ### 3.3 Restart Tomcat in Debug Mode
 First, stop tomcat with following command.
 ```sh
@@ -80,21 +80,21 @@ $ /usr/local/apache-tomcat-9.0.1/bin/catalina.sh jpda start
 ## 4. Debugging in Eclipse
 ### 4.1 Creating Debug Configuration
 In Eclipse, Run -> Debug Configurations..., create a new 'Remote Java Application' named `Remote Debugging`. Specify the Host to `localhost` and Port to `8028`.
-![debugconfig](/public/images/java/514/debugconfig.png){:width="800px"}
+![debugconfig](/public/images/java/1514/debugconfig.png){:width="800px"}
 ### 4.2 Setting Breakpoint
 In Eclipse, set breakpoint to line 58 of `ProductDao.java`, inspecting the `update` method.
-![breakpoint](/public/images/java/514/breakpoint.png)
+![breakpoint](/public/images/java/1514/breakpoint.png)
 ### 4.3 Starting Debugging
 In Eclipse, click the `Debug As..` button on toolbar and select `RemoteDebugging`.
-![debugging](/public/images/java/514/debugging.png)
+![debugging](/public/images/java/1514/debugging.png)
 In web browser, try to update the third product again, click the Save button.
-![debugging](/public/images/java/514/updateagain.png)
+![debugging](/public/images/java/1514/updateagain.png)
 In Eclipse, you will see the debugging is working now. The breakpoint in `update` method is activated.
-![debugperspective](/public/images/java/514/debugperspective.png)
+![debugperspective](/public/images/java/1514/debugperspective.png)
 Click the `Step Over` button(F6) in the tool bar to step the execution to the next line. Meanwhile, you see the value of variable `query` is 'UPDATE Product SET ProductName = ?, Price = 0 `WHERE ProductName = ?`'. However, the correct query should be 'UPDATE Product SET ProductName = ?, Price = 0 `WHERE ProductId = ?`'. We find the root cause.
-![stepover](/public/images/java/514/stepover.png)
+![stepover](/public/images/java/1514/stepover.png)
 Stop debugging, try to fix the bug by replacing `ProductName` with `ProductId` in the 'Where' clause. Compile the project and deploy the new classes into `/webapps/jspdeployed/`. Restart tomcat, then try to update the third product again. Refresh the product list page. You will see the product name and price have been updated properly.
-![afterfix](/public/images/java/514/afterfix.png)
+![afterfix](/public/images/java/1514/afterfix.png)
 
 ## 5. Source Files
 * [Source files for JSPDebugging on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPDebugging)

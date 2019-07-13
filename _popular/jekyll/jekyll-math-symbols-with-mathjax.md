@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Using MathJax in Jekyll"
-index: 1618
+title: "Jekyll - Math Symbols with MathJax"
+index: 1626
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-13
 postdate: 2018-09-10
 tags: [MathJax, Mathematic]
@@ -57,7 +57,7 @@ Let's consider <math><mi>a</mi><mo>≠</mo><mn>0</mn></math>.
 </body>
 </html>
 ```
-![image](/public/images/githubpages/913/mathml.png){:width="600px"}
+![image](/public/images/jekyll/1626/mathml.png){:width="600px"}
 
 ## 3. Using MathJax in Jekyll with Markdown
 ### 3.1 Page Template

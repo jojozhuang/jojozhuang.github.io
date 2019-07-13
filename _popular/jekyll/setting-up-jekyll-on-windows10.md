@@ -4,8 +4,8 @@ key: popular
 title: "Setting up Jekyll on Windows 10"
 index: 1604
 category: jekyll
-breadcrumb: [Popular, Personal Website, GitHub Pages and Jekyll]
-image: github-pages.png
+breadcrumb: [Popular, Personal Website, Jekyll]
+image: jekyll.png
 date: 2018-07-02
 postdate: 2018-04-01
 tags: [Jekyll, Windows10]
@@ -15,9 +15,9 @@ tags: [Jekyll, Windows10]
 
 ## 1. Setup Ruby and Ruby Dev Kit.
 Get Ruby Installer from https://rubyinstaller.org/downloads/. Execute it to start the installation, check the option 'Add Ruby executables to your PATH'.
-![image](/public/images/githubpages/902/setupruby.png){:width="600px"}
+![image](/public/images/jekyll/1604/setupruby.png){:width="600px"}
 After Ruby is installed, check the option 'Run 'ridk install' to install MSYS2 and development toolchain.'
-![image](/public/images/githubpages/902/installmsys2.png){:width="500px"}
+![image](/public/images/jekyll/1604/installmsys2.png){:width="500px"}
 A new command windows will be opened. Select the first option '1 - MSYS2 base installation'.
 ```raw
 _____       _           _____           _        _ _         ___
@@ -39,7 +39,7 @@ Which components shall be installed? If unsure press ENTER [1,2,3] 1
 You can also go to http://www.msys2.org/ to download the installer and install it manually.
 
 After the installation, MSYS2 is installed to folder `C:\msys64\`. You can start it by running `msys2_shell.cmd`.
-![image](/public/images/githubpages/902/msys.png){:width="500px"}
+![image](/public/images/jekyll/1604/msys.png){:width="500px"}
 
 ## 2. Install Jekyll gem
 Run `gem install jekyll` to install jekyll. However, there is an error, see below.
@@ -113,7 +113,7 @@ Configuration file: d:/test/blog/_config.yml
   Server running... press ctrl-c to stop.
 ```
 Access http://127.0.0.1:4000/ in web browser. The new 'blog' website is live now.
-![image](/public/images/githubpages/902/jekyllsite.png)
+![image](/public/images/jekyll/1604/jekyllsite.png)
 
 ## 4. Hosting Existing GitHub Page Website
 Clone the source code of your GitHub Page Website from GitHub to your local directory. Run 'bundle exec jekyll serve \-\-port 12001'.
@@ -134,7 +134,7 @@ Configuration file: d:/Johnny/GitHub/jojozhuang.github.io/_config.yml
     Server address: http://127.0.0.1:12001
 ```
 Access http://127.0.0.1:12001 in web browser. GitHub Page website is live in local.
-![image](/public/images/githubpages/902/githubpage.png)
+![image](/public/images/jekyll/1604/githubpage.png)
 
 ## 5. Hosting GitHub Page on Ubuntu
 Another option to run Jekyll on Windows is to install Ubuntu on Windows 10. Check the link https://jekyllrb.com/docs/windows/.
@@ -146,7 +146,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 Then, restart your computer when prompted.
 
 ### 5.2 Installing Ubuntu from Microsoft Store
-![image](/public/images/githubpages/902/ubuntuapp.png){:width="800px"}
+![image](/public/images/jekyll/1604/ubuntuapp.png){:width="800px"}
 
 ### 5.3 Installing Jekyll on Ubuntu
 Follow the steps mentioned in Jekyll official site https://jekyllrb.com/docs/windows/.
