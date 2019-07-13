@@ -45,7 +45,7 @@ In our implementation whenever we add a key value pair to the Hash Table we chec
 ## 2. Implementing HashMap
 ### 2.1 Structure of HashMap
 An array list contains Hash Nodes. Each node can have none or multiple descendant nodes. They have the same index, but contains different hashcode.
-![image](/public/images/dsa/313/hashmap.png){:width="800px"}  
+![image](/public/images/dsa/1131//hashmap.png){:width="800px"}  
 
 ### 2.2 Common Operations for HashMap
 * get(key): returns the value corresponding to the key if the key is present in HashMap

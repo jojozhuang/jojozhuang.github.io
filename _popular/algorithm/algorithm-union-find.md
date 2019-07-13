@@ -62,7 +62,7 @@ public class DSU { // Disjoint Set Union
 * Array `parents` stores the information that who is the parent of the current node.
 
 Let's take a look how it works.
-![image](/public/images/dsa/algorithm-union-and-find/union_find.png){:width="800px"}
+![image](/public/images/dsa/1217/union_find.png){:width="800px"}
 * a) Initially, we have 5 elements and each of them in their own subset.
 * b) Call 'union(0,2)' to set parent node 2 for node 0. Notice, the value at position 0 of the array is changed to 2.
 * c) Call 'union(4,2)' to set parent node 2 for node 4. Notice, the value at position 4 of the array is changed to 2.
@@ -100,7 +100,7 @@ Both the find() and union() methods can be optimized.
 
 ### 3.1 Path Compression
 The idea of `Path Compression` is to flatten the tree when find() is called. The naive `find()` method is read-only. When find() is called for an element `i`, root of the tree is returned. The find() operation traverses up from `i` to find root. The idea of path compression is to make the found root as parent of `i` so that we don’t have to traverse all intermediate nodes again. If `i` is root of a subtree, then path (to root) from all nodes under `i` also compresses.
-![image](/public/images/dsa/algorithm-union-and-find/path_compression.png){:width="800px"}
+![image](/public/images/dsa/1217/path_compression.png){:width="800px"}
 * If we call naive find(3), the tree(array) remains unchanged. The next time you call find(3), it again traverses up from node 4 to node 5.
 * With the optimized find() method, the parent of node 3 is updated after calling find(3). When you call find(3) for the second time, it returns parent node 5 directly. Actually, the path for node 3 and its children(node 1 and node 2) are all compressed.
 
@@ -128,11 +128,11 @@ public int find(int i) {
 
 ### 3.2 Union by Rank
 Problem with naive union method. Following is an example of worst case scenario. Union the nodes in sequence, the tree becomes like a linked list.
-![image](/public/images/dsa/algorithm-union-and-find/naive_union.png){:width="800px"}
+![image](/public/images/dsa/1217/naive_union.png){:width="800px"}
 * If we call find(0) after the last step d), it will traverse up from node 0 to node 1, node 2, ..., inefficient.
 
 The solution is to always attach smaller depth tree under the root of the deeper tree.
-![image](/public/images/dsa/algorithm-union-and-find/union_by_rank.png){:width="800px"}
+![image](/public/images/dsa/1217/union_by_rank.png){:width="800px"}
 * a) Initially, we have 5 elements and each of them in their own subset. In addition, we have same size rank array, the default value is zero.
 * b) When calling 'union(0,1)', node 0 and node 1 have the same rank 0. We can choose either of them as the root. In this case, we choose node 1 as root, so set parents[0] = 1. Since node 1 is now as root, so set rank[1] = 1.
 * c) When calling 'union(1,2)', node 1 has larger rank than node 2, so take node 1 as root, set parents[2] = 1.

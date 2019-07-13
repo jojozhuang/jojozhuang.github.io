@@ -26,7 +26,7 @@ Divide and Conquer is an algorithmic paradigm. A typical Divide and Conquer algo
 
 ### 1.3  Merge Sort
 A classic example of Divide and Conquer is Merge Sort demonstrated below. In Merge Sort, we divide array into two halves, sort the two halves recursively, and then merge the sorted halves.
-![image](/public/images/dsa/algorithm-sorting/merge_sort.png){:width="800px"}  
+![image](/public/images/dsa/1213/merge_sort.png){:width="800px"}  
 
 Implementation:
 ```java

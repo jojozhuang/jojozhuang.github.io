@@ -29,10 +29,10 @@ For example, we have 5 persons with their birth and death year.
 * E: 1945 ~ 2018
 
 The maximum population happens between 1953 and 1965, which is 4.
-![image](/public/images/dsa/algorithm-sweep-line/birth_death_year.png){:width="800px"}  
+![image](/public/images/dsa/1231/birth_death_year.png){:width="800px"}  
 ### 2.2 Brute Force Solution
 First, find the first year(birth) and the last year(death) of the given persons, create an array with the same length of the year range. Then, calculate the population for each year. Finally, find the maximum population.
-![image](/public/images/dsa/algorithm-sweep-line/brute_force.png)
+![image](/public/images/dsa/1231/brute_force.png)
 Below is the implementation.
 ```java
 // brute force,
@@ -71,9 +71,9 @@ public int getMostPopulationBruteForce(int[][] persons) {
 
 ### 2.3 Time Line Solution
 Create a same array as discussed in the previous solution. Sweep the time line from left to right, when we meet a birth, increment the count for that year by one; when we meet a death, decrement the count for that year by one. At last, go through the array, summarize the count for all years from left to right. Meanwhile, note down the maximum count.
-![image](/public/images/dsa/algorithm-sweep-line/sweep_time_line.png)
+![image](/public/images/dsa/1231/sweep_time_line.png)
 Notice that, when decreasing the count, we don't care who was actually dead in that year. For example, if we exchange the death year for person A and person B, our algorithm produces same array.
-![image](/public/images/dsa/algorithm-sweep-line/exchange_death.png)
+![image](/public/images/dsa/1231/exchange_death.png)
 Below is the implementation.
 ```java
 // timeline, add 1 if born, minus 1 if dead, count the maximum of the timeline.
