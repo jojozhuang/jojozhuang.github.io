@@ -19,8 +19,8 @@ tags: [Java, Interview]
 * JRE - Java Runtime Environment: provides the libraries, the Java Virtual Machine, and other components to run applications written in the Java programming language.
 * JDK - Java Development Kit: The JDK is a superset of the JRE, and contains everything that is in the JRE, plus tools such as the compilers and debuggers necessary for developing applets and applications.
 
-![image](/public/images/note/java-interview-questions/jvm_jre_jdk.png){:width="500px"}  
-![image](/public/images/note/java-interview-questions/jvm_jre_jdk2.png){:width="400px"}  
+![image](/public/images/note/9603/jvm_jre_jdk.png){:width="500px"}  
+![image](/public/images/note/9603/jvm_jre_jdk2.png){:width="400px"}  
 
 ### 1.2 ClassLoader
 Classloader is a subsystem of JVM which is used to load class files. Whenever we run the java program, it is loaded first by the classloader. There are three built-in classloaders in Java.

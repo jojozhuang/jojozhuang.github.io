@@ -19,7 +19,7 @@ A `forward proxy` provides proxy services to a `client` or a group of clients. A
 
 A `reverse proxy` does the exact opposite of what a forward proxy does. While a forward proxy proxies in behalf of clients (or requesting hosts), a reverse proxy proxies in behalf of `servers`. A reverse proxy accepts requests from external clients on behalf of servers stationed behind it. To the client, it is the reverse proxy that is providing file transfer services. The client is unknown to the file transfer servers behind the proxy, which are actually providing those services. In effect, whereas **a forward proxy hides the identities of clients, a reverse proxy hides the identities of servers**.
 
-![image](/public/images/note/interview-questions/forward_reverse_proxy.png)
+![image](/public/images/note/9602/forward_reverse_proxy.png)
 
 Forward Proxies are good for:
 * Content Filtering
@@ -82,7 +82,7 @@ which data is on which machine.
 * Directory-Based Partitioning
 
 ### 2.6 SQL vs NoSQL
-![image](/public/images/note/interview-questions/nosql-dec-tree.png)
+![image](/public/images/note/9602/nosql-dec-tree.png)
 
 ### 2.7 References
 * [NoSQL Key-Value Database Simplicity vs. Document Database Flexibility](http://www.informit.com/articles/article.aspx?p=2429466)
@@ -91,7 +91,7 @@ which data is on which machine.
 
 ## 3. Design Pattern
 ### 3.1 Observer vs Publisher-Subscriber
-![image](/public/images/note/interview-questions/observer_vs_pubsub.jpeg)
+![image](/public/images/note/9602/observer_vs_pubsub.jpeg)
 * In Publisher/Subscriber pattern, components are loosely coupled as opposed to Observer pattern.
 * Observer pattern is mostly implemented in a `synchronous` way, i.e. the Subject calls the appropriate method of all its observers when some event occurs. The Publisher/Subscriber pattern is mostly implemented in an `asynchronous` way (using message queue).
 

@@ -131,7 +131,7 @@ A few observations about the nature of the data we will store:
 
 Database Schema:
 We would need two tables: one for storing information about the URL mappings, and one for the user’s data who created the short link.
-![image](/public/images/note/designing-popular-website-or-app/database.png)
+![image](/public/images/note/9012/database.png)
 What kind of database should we use? Since we anticipate storing billions of rows, and we don’t need to use relationships between objects – a NoSQL key-value store like DynamoDB, Cassandra or Riak is a better choice. A NoSQL choice would also be easier to scale. Please see SQL vs NoSQL for more details.
 
 ### 1.6 Basic System Design and Algorithm
@@ -177,7 +177,7 @@ Can each app server cache some keys from key-DB? Yes, this can surely speed thin
 How would we perform a key lookup? We can look up the key in our database or key-value store to get the full URL. If it’s present, issue an “HTTP 302 Redirect” status back to the browser, passing the stored URL in the “Location” field of the request. If that key is not present in our system, issue an “HTTP 404 Not Found” status or redirect the user back to the homepage.
 
 Should we impose size limits on custom aliases? Our service supports custom aliases. Users can pick any ‘key’ they like, but providing a custom alias is not mandatory. However, it is reasonable (and often desirable) to impose a size limit on a custom alias to ensure we have a consistent URL database. Let’s assume users can specify a maximum of 16 characters per customer key (as reflected in the above database schema).
-![image](/public/images/note/designing-popular-website-or-app/tinyurl_high_level.png)
+![image](/public/images/note/9012/tinyurl_high_level.png)
 
 ### 1.7 Data Partitioning and Replication
 To scale out our DB, we need to partition it so that it can store information about billions of URLs. We need to come up with a partitioning scheme that would divide and store our data to different DB servers.
@@ -223,7 +223,7 @@ If we chose to actively search for expired links to remove them, it would put a 
 * After removing an expired link, we can put the key back in the key-DB to be reused.
 * Should we remove links that haven’t been visited in some length of time, say six months? This could be tricky. Since storage is getting cheap, we can decide to keep links forever.
 
-![image](/public/images/note/designing-popular-website-or-app/tinyurl_component.png)
+![image](/public/images/note/9012/tinyurl_component.png)
 
 ### 1.11 Telemetry
 How many times a short URL has been used, what were user locations, etc.? How would we store these statistics? If it is part of a DB row that gets updated on each view, what will happen when a popular URL is slammed with a large number of concurrent requests?

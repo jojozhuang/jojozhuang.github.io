@@ -84,28 +84,28 @@ Common system design interview questions with sample discussions, code, and diag
 
 ### 2.1 Design Pastebin.com (or Bit.ly)
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/pastebin/README.md)
-![image](/public/images/note/202/pastebin.png){:width="600px"}
+![image](/public/images/note/9502/pastebin.png){:width="600px"}
 ### 2.2 Design the Twitter timeline and search (or Facebook feed and search)
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/twitter/README.md)
-![image](/public/images/note/202/twitter_timeline.png){:width="800px"}
+![image](/public/images/note/9502/twitter_timeline.png){:width="800px"}
 ### 2.3 Design a web crawler
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/web_crawler/README.md)
-![image](/public/images/note/202/webcrawler.png){:width="700px"}
+![image](/public/images/note/9502/webcrawler.png){:width="700px"}
 ### 2.4 Design Mint.com
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/mint/README.md)
-![image](/public/images/note/202/mint.png){:width="800px"}
+![image](/public/images/note/9502/mint.png){:width="800px"}
 ### 2.5 Design the data structures for a social network
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/social_graph/README.md)
-![image](/public/images/note/202/socialnetwork.png){:width="600px"}
+![image](/public/images/note/9502/socialnetwork.png){:width="600px"}
 ### 2.6 Design a key-value store for a search engine
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/query_cache/README.md)
-![image](/public/images/note/202/keyvaluestore.png){:width="450px"}
+![image](/public/images/note/9502/keyvaluestore.png){:width="450px"}
 ### 2.7 Design Amazon's sales ranking by category feature
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/sales_rank/README.md)
-![image](/public/images/note/202/salesrank.png){:width="600px"}
+![image](/public/images/note/9502/salesrank.png){:width="600px"}
 ### 2.8 Design a system that scales to millions of users on AWS
 [View exercise and solution](https://github.com/donnemartin/system-design-primer/blob/master/solutions/system_design/scaling_aws/README.md)
-![image](/public/images/note/202/millionsuser.png){:width="800px"}
+![image](/public/images/note/9502/millionsuser.png){:width="800px"}
 
 ## 3. Object-oriented design interview questions with solutions
 Common object-oriented design interview questions with sample discussions, code, and diagrams.

@@ -38,7 +38,7 @@ The `ruleset` is used to identify that selectors can be attached with other sele
 * `Selector` - Selector indicates the HTML element you want to style.
 * `Declaration Block` - The declaration block can contain one or more declarations separated by a semicolon.
 
-![image](/public/images/note/front-end-css/selector.gif){:width="500px"}  
+![image](/public/images/note/9611/selector.gif){:width="500px"}  
 
 ### 2.2 Individual Sides
 In CSS, there are also properties for specifying each of the borders (`top, right, bottom, and left`).
@@ -192,7 +192,7 @@ var z = x ** 2;          // result is 25, same as Math.pow(5,2):
 ### 3.6 Javascript BOM
 `BOM` stands for `Browser Object Model`. It provides interaction with the browser. The default object of a browser is a window. So, you can call all the functions of the window by specifying the window or directly. The window object provides various properties like document, history, screen, navigator, location.
 
-![image](/public/images/note/front-end-interview-questions/javascript_bom.png){:width="800px"}  
+![image](/public/images/note/9611/javascript_bom.png){:width="800px"}  
 
 ### 3.7 HTML DOM
 When a web page is loaded, the browser creates a `Document Object Model` of the page. The HTML DOM is an Object Model for HTML. It defines:
@@ -209,7 +209,7 @@ The HTML DOM is an API (Programming Interface) for JavaScript:
 * JavaScript can add/change/remove HTML events
 
 The HTML DOM Tree of Objects
-![image](/public/images/note/front-end-interview-questions/html_dom.gif){:width="650px"}  
+![image](/public/images/note/9611/html_dom.gif){:width="650px"}  
 
 ### 3.8 Popup Dialog in Window
 
@@ -294,7 +294,7 @@ div {
 If a web page has a large number of images that take a longer time to load because each image separately sends out an HTTP request. The concept of CSS sprites is used to reduce the loading time for a web page because it combines the various small images into one image. It `reduces` the number of HTTP requests and hence the loading time.
 ### 4.4 CSS Box Model
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
-![image](/public/images/note/front-end-css/box_model.css){:width="500px"}  
+![image](/public/images/note/9611/box_model.css){:width="500px"}  
 * `Content` - The content of the box, where text and images appear
 * `Padding` - Clears an area around the content. The padding is transparent
 * `Border` - A border that goes around the padding and content
@@ -309,7 +309,7 @@ The color of the bullet is always the color of the `first text` of the list. So,
 
 ### 4.7 Explain the layout of HTML?
 HTML layout specifies a way in which the web page is arranged.
-![image](/public/images/note/front-end-html/html_layout.png){:width="200px"}  
+![image](/public/images/note/9611/html_layout.png){:width="200px"}  
 * `<header>` - Defines a header for a document or a section
 * `<nav>` - Defines a container for navigation links
 * `<section>` - Defines a section in a document
@@ -319,13 +319,11 @@ HTML layout specifies a way in which the web page is arranged.
 * `<details>` - Defines additional details
 * `<summary>` - Defines a heading for the details element
 
-
 ## 5. Node.js
 ### 5.1 What is Event Loop?
 Node.js is a `single threaded` application but it support concurrency via concept of `event and callbacks`. As every API of Node.js are asynchronous and being a single thread, it uses async function calls to maintain the concurrency. Node uses `observer` pattern. Node thread keeps an event loop and whenever any task get completed, it fires the corresponding event which signals the event listener function to get executed.
 ### 5.2 What are the features of Node.js?
 Node.js is a single-threaded but highly scalable system that utilizes JavaScript as its scripting language. It uses asynchronous, event-driven I/O instead of separate processes or threads. It is able to achieve high output via single-threaded event loop and non-blocking I/O.
-
 
 ## 6. References
 * [CSS Interview Questions](https://www.javatpoint.com/css-interview-questions)
