@@ -74,9 +74,9 @@ Launch Spark Shell with following command.
 $ spark-shell
 ```
 You will get the following output if spark is installed successfully.
-![image](/public/images/devops/35/sparklaunched.png){:width="700px"}  
+![image](/public/images/devops/3561/sparklaunched.png){:width="700px"}  
 Access [http://10.0.2.15:4040/jobs/](http://10.0.2.15:4040/jobs/) in web browser to open Spark Web UI.
-![image](/public/images/devops/35/sparkwebui.png)
+![image](/public/images/devops/3561/sparkwebui.png)
 
 ## 4. References
 * [Official Website for Spark](https://spark.apache.org/)

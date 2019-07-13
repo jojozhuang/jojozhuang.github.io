@@ -189,7 +189,7 @@ Use `pretty()` command to show the documents in a formatted way.
 }
 >
 ```
-![image](/public/images/devops/33/create.png){:width="700px"}  
+![image](/public/images/devops/2133/create.png){:width="700px"}  
 
 You can also insert multiple documents by passing an array of documents in insert method.
 ```sh
@@ -231,7 +231,7 @@ Check the updated document.
 { "_id" : ObjectId("5a04e0b14ddc534948a491a8"), "name" : "iPhone", "price" : "888" }
 >
 ```
-![image](/public/images/devops/33/update.png){:width="700px"}  
+![image](/public/images/devops/2133/update.png){:width="700px"}  
 
 ### 5.3 Deleting Document
 Syntax for deleting document.
@@ -258,7 +258,7 @@ Check the documents again.
 { "_id" : ObjectId("5a04e0b14ddc534948a491a7"), "name" : "PS4", "price" : 400 }
 >
 ```
-![image](/public/images/devops/33/delete.png){:width="700px"}  
+![image](/public/images/devops/2133/delete.png){:width="700px"}  
 
 Specify '1' in the delete method to delete only the first one if there are multiple records.
 ```sh
@@ -301,19 +301,19 @@ Find products whose price is greater than or equals to 400, and its price is les
 ```sh
 > db.product.find({$and:[{"price":{$gte:400}},{"price":{$lt:800}}]})
 ```
-![image](/public/images/devops/33/findand.png){:width="700px"}  
+![image](/public/images/devops/2133/findand.png){:width="700px"}  
 ### 6.4 OR in MongoDB
 Find products whose name is 'Xbox', or its price is greater than 600.
 ```sh
 > db.product.find({$or:[{"name":"Xbox"},{"price":{$gt:600}}]})
 ```
-![image](/public/images/devops/33/findor.png){:width="700px"}  
+![image](/public/images/devops/2133/findor.png){:width="700px"}  
 ### 6.5 Using AND and OR Together
 Find products whose name is 'Xbox', or its price is greater than 600, and its price is less than 300.
 ```sh
 > db.product.find({"price":{$lt:300}, $or:[{"name":"Xbox"},{"price":{$gt:600}}]})
 ```
-![image](/public/images/devops/33/findandor.png){:width="700px"}  
+![image](/public/images/devops/2133/findandor.png){:width="700px"}  
 
 ## 7. References
 * [MongoDB Official Website](https://www.mongodb.com)

@@ -25,10 +25,10 @@ A reverse proxy is an intermediary proxy service which takes a client request, p
 ## 3. How To Setup an Nginx Reverse Proxy
 ### 3.1 Node Server
 First, follow the steps mentioned in [Creating Http Server with Node.js]({% link _tutorial/nodejs/creating-http-server-with-nodejs.md %}) to setup a node server. It is served at post 8086.
-![image](/public/images/devops/42/nodeserver.png){:width="700px"}  
+![image](/public/images/devops/3512/nodeserver.png){:width="700px"}  
 ### 3.2 Nginx Server
 Second, follow the steps mentioned in [Installing Nginx in MacOS]({% link _tutorial/nginx/installing-nginx-in-macos.md %}) to setup a nginx server. It is served at post 9096.
-![image](/public/images/devops/42/nginxserver.png){:width="700px"}  
+![image](/public/images/devops/3512/nginxserver.png){:width="700px"}  
 ### 3.3 Configuring Nginx Server as Reverse Proxy Server
 Edit the configuration file of Nginx, which is located at /usr/local/etc/nginx/nginx.conf. Add the `proxy_pass` directive inside a location. Set its value to the address of the node server.
 ```raw
@@ -45,7 +45,7 @@ server {
     }
 ```
 Stop and restart nginx, then refresh the web browser. Nginx is now serving as proxy server for the node server.
-![image](/public/images/devops/42/proxy.png){:width="700px"}  
+![image](/public/images/devops/3512/proxy.png){:width="700px"}  
 ### 3.4 More Options
 ```raw
 location /some/path/ {
