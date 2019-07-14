@@ -9,7 +9,7 @@ tags: [Graph, DFS, BFS]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of graph.
+> Implement undirected graph.
 
 ## 1. Graph
 ### 1.1 Definition of Graph

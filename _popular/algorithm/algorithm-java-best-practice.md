@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Practice - Java Best Practice"
-index: 1251
+title: "Algorithm - Java Best Practice"
+index: 1253
 subcategory: algorithm
 date: 2016-04-01
 tags: [Java]

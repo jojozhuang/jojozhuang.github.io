@@ -8,7 +8,7 @@ date: 2016-03-11
 tags: [Fenwick]
 ---
 
-> Introduce the definition, implementation and usage of minimum spanning tree.
+> Implement fenwick tree.
 
 ## 1. Motivation
 We have a 1D array nums[0 . . . n-1]. We should be able to

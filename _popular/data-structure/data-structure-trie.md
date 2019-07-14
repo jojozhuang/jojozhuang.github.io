@@ -8,7 +8,7 @@ date: 2016-03-10
 tags: [Trie, Prefix Tree]
 ---
 
-> Introduce to use trie for word search.
+> Implement trie for word search.
 
 ## 1. Trie
 ### 1.1 Definition of Trie

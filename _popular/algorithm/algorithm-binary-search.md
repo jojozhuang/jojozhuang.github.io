@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Binary Search"
+title: "Algorithm - Binary Search"
 index: 1211
 subcategory: algorithm
 date: 2016-03-22
@@ -9,7 +9,7 @@ tags: [Binary Search]
 mathjax: true
 ---
 
-> Introduce binary search algorithm.
+> Binary search template.
 
 ## 1. Search Problem
 Given a `sorted` array with n elements, write a function to search a given element x in array. A simple approach is to do linear search. The time complexity of above algorithm is $O(n)$. Another approach to perform the same task is using Binary Search. The time complexity of binary search algorithm is $O(\log{}n)$.

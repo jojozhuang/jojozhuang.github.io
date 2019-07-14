@@ -9,7 +9,7 @@ tags: [Queue, FIFO]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of queue.
+> Implement queue with linked list and array.
 
 ## 1. Queue
 ### 1.1 Real-life Example

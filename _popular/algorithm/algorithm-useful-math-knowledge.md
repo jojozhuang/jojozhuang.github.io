@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Useful Math Knowledge"
+title: "Algorithm - Useful Math Knowledge"
 index: 1202
 subcategory: algorithm
 date: 2016-04-05
 tags: [Math]
 ---
 
-> Common useful math knowledge used in algorithms.
+> Useful math knowledge for algorithm problems.
 
 ## 1. Formulas
 ### 1.1 Sum of Integers 1 through N

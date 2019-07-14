@@ -5,11 +5,11 @@ title: "Binary Search Tree"
 index: 1122
 subcategory: data-structure
 date: 2016-03-08
-tags: [BST]
+tags: [BST, Inorder]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of binary search tree.
+> Implement and traverse binary search tree.
 
 ## 1. Binary Search Tree
 ### 1.1 Definition of BST

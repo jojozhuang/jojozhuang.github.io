@@ -1,16 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Minimax Algorithm - Draft"
+title: "Algorithm - Minimax Algorithm - Draft"
 index: 1233
 subcategory: algorithm
 date: 2016-03-31
-tags: [Map, Reduce]
+tags: [Minimax]
 ---
 
-> Useful tricks for algorithm, Java.
-
-
+> Implement Minimax algorithm.
 
 
 ## 7. References

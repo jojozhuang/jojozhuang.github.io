@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Divide and Conquer"
+title: "Algorithm - Divide and Conquer"
 index: 1213
 subcategory: algorithm
 date: 2016-03-25

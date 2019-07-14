@@ -9,7 +9,7 @@ tags: [RBT]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of red black tree.
+> Introduce red black tree and its properties.
 
 ## 1. Problems with Binary Search Tree
 For Binary Search Tree, although the average time complexity for the search, insertion and deletion are all $O(\log{}n)$, where **n** is the number of nodes in the tree, the time complexity becomes to $O(n)$ in worst case - BST is not balanced.

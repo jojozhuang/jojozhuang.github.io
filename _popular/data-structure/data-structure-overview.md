@@ -5,25 +5,23 @@ title: "Data Structure Overview"
 index: 1101
 subcategory: data-structure
 date: 2016-03-01
-tags: [List, Tree]
+tags: [List, Tree, Time Complexity, Space Complexity]
 ---
 
-> Introduce the definition, implementation and usage of directed graph.
+> Overview of common data structures.
 
-## 1.
+## 1. Data Structure
 
-Data Structure           | Search  | Insertion | Deletion | Traversal
--------------------------|---------|-----------|----------|-----------
-Array                    | O(N)    | O(1)      | O(N)     | —
-Ordered array            | O(logN) | O(N)      | O(N)     | O(N)  
-Linked list              | O(N)    | O(1)      | O(N)     | -
-Ordered linked list      | O(N)    | O(N)      | O(N)     | O(N)
-Binary tree (average)    | O(logN) | O(logN)   | O(logN)  | O(N)   
-Binary tree (worst case) | O(N)    | O(N)      | O(N)     | O(N)
-Balanced tree (average and worst case)  | O(logN) | O(logN)   | O(logN)  | O(N)   
-Hash table               | O(1)    | O(1)      | O(1)     | -
+Data Structure                  | Search  | Insertion | Deletion  
+--------------------------------|---------|-----------|----------
+Array                           | O(N)    | O(1)      | O(N)     
+[Linked List]({% link _popular/data-structure/data-structure-linked-list.md %}) | O(N)    | O(1)      | O(N)     
+[Binary Tree]({% link _popular/data-structure/data-structure-tree.md %})        | -       | -         | -
+[Binary Search Tree]({% link _popular/data-structure/data-structure-binary-search-tree.md %}) (average)    | O(logN) | O(logN)   | O(logN)  
+[Binary Search Tree]({% link _popular/data-structure/data-structure-binary-search-tree.md %}) (worst case) | O(N)    | O(N)      | O(N)
+[Red Black Tree]({% link _popular/data-structure/data-structure-red-black-tree.md %}) | O(logN) | O(logN)   | O(logN)
+[HashMap]({% link _popular/data-structure/data-structure-hashmap.md %})                      | O(1)    | O(1)      | O(1)     
+{: .table-striped }
 
-
-## 6. Reference
-* [Detect Cycle in a Directed Graph](https://www.geeksforgeeks.org/?p=18516/)
-* [Topological Sorting](https://www.geeksforgeeks.org/topological-sorting/)
+* N is the number of elements.
+* The time complexity of Balanced Search Tree is guaranteed, O(logN).

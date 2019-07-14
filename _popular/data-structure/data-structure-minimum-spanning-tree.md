@@ -8,7 +8,7 @@ date: 2016-03-19
 tags: [MST]
 ---
 
-> Introduce the definition, implementation and usage of minimum spanning tree.
+> Implement minimum spanning tree.
 
 ## 3. Minimum Spanning Trees
 A `minimum spanning tree` (MST) is a graph with the minimum number of edges necessary to connect the vertices.

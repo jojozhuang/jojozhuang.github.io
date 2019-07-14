@@ -9,7 +9,7 @@ tags: [Hash, Load Factor, Rehashing]
 mathjax: true
 ---
 
-> Implement a generic HashMap with Separate Chaining technique by using linked list.
+> Implement HashMap with array and linked list.
 
 ## 1. Concepts in HashMap(or Hash Table)
 ### 1.1 Hash Code and Compressor

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Sorting"
+title: "Algorithm - Sorting"
 index: 1201
 subcategory: algorithm
 date: 2016-03-21
@@ -9,7 +9,7 @@ tags: [Sorting]
 mathjax: true
 ---
 
-> Most popular sorting algorithms.
+> Classic sorting algorithms.
 
 ## 1. Common Sorting Algorithms
 

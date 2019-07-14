@@ -35,7 +35,7 @@
             <span>{{category.name}}</span>
           </li>
           {% for subcategory in category.subcategories %}
-          {% assign list = postings | where: 'category', subcategory.subcategory %}
+          {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
           <li class="sidebar-dropdown">
             <a href="#">
               <i class="{{subcategory.icon}}"></i>

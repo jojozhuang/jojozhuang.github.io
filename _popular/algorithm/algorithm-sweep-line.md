@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Sweep Line"
+title: "Algorithm - Sweep Line"
 index: 1231
 subcategory: algorithm
 date: 2016-03-29
@@ -9,7 +9,7 @@ tags: [Sweep Line]
 mathjax: true
 ---
 
-> Sweep line approach to solve interval problems.
+> Sweep line approach for solving interval problems.
 
 ## 1. Sweep Line
 A sweep line is an imaginary vertical line which is swept across the plane rightwards.
