@@ -29,7 +29,7 @@ title: Rong Zhuang's Note
                     </div>
                     <ul class="list-group list-group-flush">
                     {% for subcategory in category.subcategories %}
-                    {% assign list = postings | where: 'category', subcategory.type %}
+                    {% assign list = postings | where: 'category', subcategory.subcategory %}
                     {% assign url = "/note/?navigation=" | append: subject.name | append: ", " | append: category.name | append: ", " | append: subcategory.name | append: ", "%}
                     <a href="{{url}}" class="list-group-item list-group-item-action">
                         <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
@@ -72,7 +72,7 @@ title: Rong Zhuang's Note
   window.category = {
     {% for category in subject.categories %}
       {% for subcategory in category.subcategories %}
-        "{{subcategory.type}}": "{{ subcategory.image }}",
+        "{{subcategory.subcategory}}": "{{ subcategory.image }}",
       {% endfor %}
     {% endfor %}
   };
