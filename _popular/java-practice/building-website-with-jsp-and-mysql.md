@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Building Website with JSP and MySQL"
 index: 1532
-category: java-practice
+subcategory: java-practice
 date: 2016-02-26
 tags: [JSP, MySQL]
 categories:

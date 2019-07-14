@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Tree"
 index: 1121
-category: data-structure
+subcategory: data-structure
 date: 2016-03-07
 tags: [Tree, Binary Tree]
 mathjax: true

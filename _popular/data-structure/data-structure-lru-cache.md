@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "LRU Cache"
 index: 1116
-category: data-structure
+subcategory: data-structure
 date: 2016-03-05
 tags: [LRU]
 mathjax: true

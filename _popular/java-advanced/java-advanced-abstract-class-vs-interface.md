@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Advanced - Abstract Class Vs Interface"
 index: 1445
-category: java-advanced
+subcategory: java-advanced
 date: 2017-04-01
 tags: [Abstract Class, Interface]
 ---

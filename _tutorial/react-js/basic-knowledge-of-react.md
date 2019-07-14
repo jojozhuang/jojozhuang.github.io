@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Basic Knowledge of React"
 index: 2602
-category: react-js
+subcategory: react-js
 date: 2017-08-13
 tags: [React, React Developer Tools]
 ---

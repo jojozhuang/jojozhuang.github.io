@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Java Interview Questions - Multithreading"
 index: 9605
-category: interview-java
+subcategory: interview-java
 date: 2016-01-05
 tags: [Java, Interview]
 ---

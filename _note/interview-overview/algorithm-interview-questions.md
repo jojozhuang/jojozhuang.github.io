@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Algorithm Interview Questions - Draft"
 index: 9671
-category: interview-overview
+subcategory: interview-overview
 date: 2016-04-01
 tags: [Algorithm]
 ---

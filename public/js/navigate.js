@@ -10,7 +10,7 @@
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
         appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '        <img src="../public/assets/category/' + getImage(item.category) + '" class="rounded">';
+        appendString += '        <img src="../public/assets/category/' + getImage(item.subcategory) + '" class="rounded">';
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
@@ -135,14 +135,14 @@
 
    // match
     for (var key in window.store) {
-      var subcategory = window.store[key].category;
+      var subcategory = window.store[key].subcategory;
       if (subcat && subcategory == subcat ||
           isNullOrUndefined(subcat) && cat && getParentCategory(subcategory) === cat ||
           isNullOrUndefined(cat)) {
         results.push({
           'id': key,
           'title': window.store[key].title,
-          'category': window.store[key].category,
+          'subcategory': window.store[key].subcategory,
           'url': window.store[key].url,
           'index': window.store[key].index,
           'excerpt': window.store[key].excerpt,

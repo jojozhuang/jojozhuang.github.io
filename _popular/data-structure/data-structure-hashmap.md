@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "HashMap"
 index: 1131
-category: data-structure
+subcategory: data-structure
 date: 2016-03-13
 tags: [Hash, Load Factor, Rehashing]
 mathjax: true

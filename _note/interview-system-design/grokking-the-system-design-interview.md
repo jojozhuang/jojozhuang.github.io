@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Grokking the System Design Interview"
 index: 9652
-category: interview-system-design
+subcategory: interview-system-design
 date: 2016-03-02
 tags: [System Design]
 ---

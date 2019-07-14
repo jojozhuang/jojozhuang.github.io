@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - Formatting"
 index: 1403
-category: java-core
+subcategory: java-core
 date: 2017-01-03
 tags: [Formatting]
 ---

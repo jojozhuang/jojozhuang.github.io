@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Data Structure Overview"
 index: 1101
-category: data-structure
+subcategory: data-structure
 date: 2016-03-01
 tags: [List, Tree]
 ---

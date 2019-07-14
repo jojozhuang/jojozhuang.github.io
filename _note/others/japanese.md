@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Japanese"
 index: 9902
-category: others
+subcategory: others
 date: 2017-09-02
 tags: [Japanese]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Redis Tutorial"
 index: 3521
-category: redis
+subcategory: redis
 date: 2018-08-06
 tags: [Redis]
 ---

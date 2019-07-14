@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Computer English"
 index: 9901
-category: others
+subcategory: others
 date: 2017-09-01
 tags: [English]
 ---

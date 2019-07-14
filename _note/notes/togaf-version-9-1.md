@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "TOGAF Version 9.1(Draft)"
 index: 9151
-category: notes
+subcategory: notes
 date: 2017-07-01
 tags: [TOGAF]
 ---

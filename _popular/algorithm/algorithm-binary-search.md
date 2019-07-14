@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Binary Search"
 index: 1211
-category: algorithm
+subcategory: algorithm
 date: 2016-03-22
 tags: [Binary Search]
 mathjax: true

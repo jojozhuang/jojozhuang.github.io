@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java - Thread Dumps & Analysis"
 index: 1503
-category: java-practice
+subcategory: java-practice
 date: 2017-06-04
 tags: [Thread Dumps]
 ---

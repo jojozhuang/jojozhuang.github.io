@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Combination and Permutation"
 index: 1215
-category: algorithm
+subcategory: algorithm
 date: 2016-03-27
 tags: [Combination, Permutation, Subset]
 ---

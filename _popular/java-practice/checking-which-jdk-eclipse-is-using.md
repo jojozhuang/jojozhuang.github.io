@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Checking Which JDK Eclipse is Using"
 index: 1511
-category: java-practice
+subcategory: java-practice
 date: 2018-05-12
 tags: [JDK, Eclipse]
 ---

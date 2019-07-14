@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Memento"
 index: 1325
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-25
 tags: [Memento Pattern]
 ---

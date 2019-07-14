@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "System Design - Classic Problems"
 index: 9654
-category: interview-system-design
+subcategory: interview-system-design
 date: 2016-03-04
 tags: [Tradeoffs]
 ---

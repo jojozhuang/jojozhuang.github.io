@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Web Application with React and Redux"
 index: 2612
-category: react-app
+subcategory: react-app
 date: 2017-08-20
 tags: [React, Redux]
 ---

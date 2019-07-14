@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Setting up Java Development Environment on Ubuntu"
 index: 2121
-category: dev-env
+subcategory: dev-env
 date: 2016-10-31
 tags: [JDK, Tomcat, Eclipse]
 ---

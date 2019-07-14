@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Viewing Jekyll Build Error with Travis CI"
 index: 1606
-category: jekyll
+subcategory: jekyll
 date: 2017-12-10
 tags: [Github Pages, Travis CI]
 ---

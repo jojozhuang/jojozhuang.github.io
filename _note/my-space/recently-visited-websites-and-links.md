@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Recently Visited Websites and Links"
 index: 9002
-category: my-space
+subcategory: my-space
 date: 2016-01-22
 tags: [Chrome, MacOS]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Creating RESTful Web Services with Spring Boot"
 index: 2221
-category: restful
+subcategory: restful
 date: 2017-10-30
 tags: [Spring Boot, RESTful, Maven]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Deploying Personal Website with Custom Domain"
 index: 1641
-category: jekyll
+subcategory: jekyll
 date: 2019-06-21
 tags: [Custom Domain]
 ---

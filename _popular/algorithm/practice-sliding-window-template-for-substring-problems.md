@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Practice - Sliding Window Template for Substring Problems - Draft"
 index: 1254
-category: algorithm
+subcategory: algorithm
 date: 2016-04-06
 tags: [Sliding Window]
 ---

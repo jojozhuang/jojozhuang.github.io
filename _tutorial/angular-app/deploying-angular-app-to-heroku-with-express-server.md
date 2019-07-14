@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying Angular App to Heroku with Express Server"
 index: 2765
-category: angular-app
+subcategory: angular-app
 date: 2019-05-26
 tags: [Angular, Express, Heroku]
 ---

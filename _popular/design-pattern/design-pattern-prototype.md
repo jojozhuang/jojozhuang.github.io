@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Prototype"
 index: 1306
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-06
 tags: [Prototype Pattern]
 ---

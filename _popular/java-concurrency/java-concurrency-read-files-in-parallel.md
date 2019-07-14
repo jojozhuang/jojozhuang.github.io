@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Concurrency - Read Files in Parallel - Draft"
 index: 1433
-category: java-concurrency
+subcategory: java-concurrency
 date: 2017-04-05
 tags: [Javascript, Html, Css]
 ---

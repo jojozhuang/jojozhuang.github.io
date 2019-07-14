@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Dependency Injection"
 index: 2715
-category: angular-js
+subcategory: angular-js
 date: 2018-03-14
 tags: [Dependency Injection]
 ---

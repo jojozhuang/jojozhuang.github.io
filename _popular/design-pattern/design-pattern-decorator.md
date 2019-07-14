@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Decorator"
 index: 1313
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-13
 tags: [Decorator Pattern]
 ---

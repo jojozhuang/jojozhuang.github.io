@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Installing and Using Docker on Ubuntu"
 index: 3101
-category: docker
+subcategory: docker
 date: 2017-10-10
 tags: [Docker, Docker Hub]
 ---

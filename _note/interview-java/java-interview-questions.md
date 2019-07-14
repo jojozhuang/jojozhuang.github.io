@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Java Interview Questions"
 index: 9603
-category: interview-java
+subcategory: interview-java
 date: 2016-01-03
 tags: [Java, Interview]
 ---

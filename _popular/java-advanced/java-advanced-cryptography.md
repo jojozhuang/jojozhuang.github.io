@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Advanced - Cryptography"
 index: 1451
-category: java-advanced
+subcategory: java-advanced
 date: 2018-05-10
 tags: [Encryption, Decryption]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Useful Math Knowledge"
 index: 1202
-category: algorithm
+subcategory: algorithm
 date: 2016-04-05
 tags: [Math]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - Tricks"
 index: 1402
-category: java-core
+subcategory: java-core
 date: 2017-09-02
 tags: [Java]
 ---

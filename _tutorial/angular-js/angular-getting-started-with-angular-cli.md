@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Getting Started with Angular CLI"
 index: 2701
-category: angular-js
+subcategory: angular-js
 date: 2018-03-09
 tags: [Angular CLI]
 ---

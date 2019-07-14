@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Modules"
 index: 2713
-category: angular-js
+subcategory: angular-js
 date: 2018-03-12
 tags: [Angular Modules]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "React Router and Client Side Routing"
 index: 2613
-category: react-app
+subcategory: react-app
 date: 2018-06-05
 tags: [Routing, CSR, Webpack, Nginx]
 ---

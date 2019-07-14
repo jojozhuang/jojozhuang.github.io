@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Export Data"
 index: 2813
-category: online-judge
+subcategory: online-judge
 date: 2018-04-20
 tags: [csv-express]
 ---

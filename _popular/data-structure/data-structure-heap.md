@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Heap"
 index: 1132
-category: data-structure
+subcategory: data-structure
 date: 2016-03-14
 tags: [Max Heap, Min Heap]
 mathjax: true

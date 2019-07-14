@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Observer"
 index: 1327
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-27
 tags: [Observer Pattern]
 ---

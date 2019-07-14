@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Database Scaling"
 index: 9508
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-15
 tags: [RDBMS, NoSQL]
 ---

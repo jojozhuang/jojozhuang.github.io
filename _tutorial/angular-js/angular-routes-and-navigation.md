@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Routes and Navigation"
 index: 2717
-category: angular-js
+subcategory: angular-js
 date: 2018-03-16
 tags: [Angular Routes]
 ---

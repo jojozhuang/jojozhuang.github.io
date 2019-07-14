@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Android App with Android Studio"
 index: 2322
-category: mobile
+subcategory: mobile
 date: 2017-07-16
 tags: [Android, Android Studio, SQLite]
 ---

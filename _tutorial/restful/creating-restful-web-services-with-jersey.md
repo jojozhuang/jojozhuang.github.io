@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Creating RESTful Web Services with Jersey"
 index: 2232
-category: restful
+subcategory: restful
 date: 2017-10-30
 tags: [Jersey, RESTful, Maven]
 ---

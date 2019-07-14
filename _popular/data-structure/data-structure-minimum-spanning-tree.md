@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Minimum Spanning Tree - Draft"
 index: 1145
-category: data-structure
+subcategory: data-structure
 date: 2016-03-19
 tags: [MST]
 ---

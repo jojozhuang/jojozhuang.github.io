@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Calling spawn with Arguments[Draft]"
 index: 2513
-category: node-js
+subcategory: node-js
 date: 2018-05-29
 tags: [Node.js]
 ---

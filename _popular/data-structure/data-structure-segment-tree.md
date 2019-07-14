@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Segment Tree"
 index: 1127
-category: data-structure
+subcategory: data-structure
 date: 2016-03-12
 tags: [Segment Tree, Interval Tree]
 mathjax: true

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Serving JSP Application With Tomcat In Docker"
 index: 3122
-category: docker
+subcategory: docker
 date: 2017-10-20
 tags: [Docker, Tomcat]
 ---

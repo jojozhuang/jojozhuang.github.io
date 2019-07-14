@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Linked List"
 index: 1111
-category: data-structure
+subcategory: data-structure
 date: 2016-03-01
 tags: [Singly Linked List, Doubly Linked List]
 ---

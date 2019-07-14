@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Scripting Java With Rhino"
 index: 1541
-category: java-practice
+subcategory: java-practice
 date: 2017-10-10
 tags: [Rhino, Javascript]
 ---

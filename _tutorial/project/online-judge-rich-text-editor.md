@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Rich Text Editor"
 index: 2821
-category: online-judge
+subcategory: online-judge
 date: 2018-04-15
 tags: [ngx-editor]
 ---

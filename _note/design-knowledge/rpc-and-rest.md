@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "RPC and REST"
 index: 9505
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-08
 tags: [RPC, REST]
 ---

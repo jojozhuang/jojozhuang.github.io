@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Components 2"
 index: 2712
-category: angular-js
+subcategory: angular-js
 date: 2018-03-11
 tags: [Angular Components]
 ---

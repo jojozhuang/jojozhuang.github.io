@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Load Balancing and Reverse Proxy"
 index: 9506
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-10
 tags: [Load Balancing, Reverse Proxy]
 ---

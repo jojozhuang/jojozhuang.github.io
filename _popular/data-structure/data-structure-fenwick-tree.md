@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Fenwick Tree - Draft"
 index: 1126
-category: data-structure
+subcategory: data-structure
 date: 2016-03-11
 tags: [Fenwick]
 ---

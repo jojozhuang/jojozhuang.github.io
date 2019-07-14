@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Dynamic Tests with JUnit 5 in Command Line"
 index: 1523
-category: java-practice
+subcategory: java-practice
 date: 2018-02-22
 tags: [JUnit 5]
 ---

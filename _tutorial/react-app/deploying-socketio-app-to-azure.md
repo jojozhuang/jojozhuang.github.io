@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying Socket.IO App to Azure"
 index: 2637
-category: react-app
+subcategory: react-app
 date: 2018-08-03
 tags: [Azure]
 ---

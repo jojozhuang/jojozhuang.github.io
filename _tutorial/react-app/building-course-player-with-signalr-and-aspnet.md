@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Course Player with SignalR and ASP.NET"
 index: 2634
-category: react-app
+subcategory: react-app
 date: 2016-03-15
 tags: [SignalR, ASP.NET, jQuery]
 ---

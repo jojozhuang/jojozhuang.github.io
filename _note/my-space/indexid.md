@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Index Id"
 index: 9004
-category: my-space
+subcategory: my-space
 date: 2017-09-01
 tags: [Index]
 ---

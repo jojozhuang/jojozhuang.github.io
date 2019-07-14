@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Backpack Problems"
 index: 1222
-category: algorithm
+subcategory: algorithm
 date: 2016-03-28
 tags: [DP]
 mathjax: true

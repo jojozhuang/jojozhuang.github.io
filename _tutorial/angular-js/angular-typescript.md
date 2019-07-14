@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - TypeScript"
 index: 2702
-category: angular-js
+subcategory: angular-js
 date: 2018-03-06
 tags: [TypeScript, tsc]
 ---

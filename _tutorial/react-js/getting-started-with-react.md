@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Getting Started with React"
 index: 2601
-category: react-js
+subcategory: react-js
 date: 2017-08-12
 tags: [React]
 ---

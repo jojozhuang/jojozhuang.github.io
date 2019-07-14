@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Code Editor"
 index: 2822
-category: online-judge
+subcategory: online-judge
 date: 2018-04-16
 tags: [Monaco Editor]
 ---

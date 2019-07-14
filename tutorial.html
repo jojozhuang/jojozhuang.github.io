@@ -47,7 +47,7 @@ title: Tutorials
                     </div>
                     <ul class="list-group list-group-flush">
                     {% for subcategory in category.subcategories %}
-                    {% assign list = postings | where: 'category', subcategory.subcategory %}
+                    {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
                     {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
                     <a href="{{url}}" class="list-group-item list-group-item-action">
                         <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
@@ -74,7 +74,7 @@ title: Tutorials
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
+        "subcategory": "{{ post.subcategory | xml_escape }}",
         "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",

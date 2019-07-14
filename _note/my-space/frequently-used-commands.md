@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Frequently Used Commands"
 index: 9001
-category: my-space
+subcategory: my-space
 date: 2016-01-21
 tags: [Linux, MacOS]
 ---

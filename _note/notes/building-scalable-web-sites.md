@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Building Scalable Web Sites"
 index: 9152
-category: notes
+subcategory: notes
 date: 2017-07-02
 tags: [Scalable]
 ---

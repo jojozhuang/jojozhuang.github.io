@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Creating Web App and RESTful API with MEAN Stack"
 index: 2753
-category: angular-app
+subcategory: angular-app
 date: 2018-01-25
 tags: [MEAN, MongoDB, Express, Angular]
 ---

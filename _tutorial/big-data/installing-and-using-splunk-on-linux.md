@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Installing and Using Splunk on Linux"
 index: 3551
-category: big-data
+subcategory: big-data
 date: 2017-08-23
 tags: [RedHat, Ubuntu, Splunk]
 ---

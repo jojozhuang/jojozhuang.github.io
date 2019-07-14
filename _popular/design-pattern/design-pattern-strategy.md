@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Strategy"
 index: 1329
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-29
 tags: [Strategy Pattern]
 ---

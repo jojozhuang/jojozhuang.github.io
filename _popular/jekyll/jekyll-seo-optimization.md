@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Jekyll - SEO Optimizations"
 index: 1631
-category: jekyll
+subcategory: jekyll
 date: 2019-06-27
 tags: [SEO]
 ---

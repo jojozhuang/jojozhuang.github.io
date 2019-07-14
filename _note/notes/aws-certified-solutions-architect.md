@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "AWS - Certified Solutions Architect"
 index: 9154
-category: notes
+subcategory: notes
 date: 2017-08-04
 tags: [AWS]
 ---

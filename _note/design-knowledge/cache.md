@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Cache"
 index: 9509
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-20
 tags: [Cache]
 ---

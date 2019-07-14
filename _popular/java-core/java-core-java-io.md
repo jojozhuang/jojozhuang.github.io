@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - Java IO - Draft"
 index: 1411
-category: java-core
+subcategory: java-core
 date: 2017-01-11
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---

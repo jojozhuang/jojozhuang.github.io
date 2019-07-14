@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Using Redis in Java"
 index: 3523
-category: redis
+subcategory: redis
 date: 2018-08-08
 tags: [Redis]
 ---

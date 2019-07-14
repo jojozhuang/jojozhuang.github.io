@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Design Pattern - Overview"
 index: 1301
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-01
 tags: [Design Pattern]
 ---

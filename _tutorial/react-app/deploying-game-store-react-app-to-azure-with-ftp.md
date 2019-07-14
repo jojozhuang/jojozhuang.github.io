@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying Game Store React App to Azure with FTP"
 index: 2615
-category: react-app
+subcategory: react-app
 date: 2018-08-04
 tags: [Azure, FTP, FileZilla]
 ---

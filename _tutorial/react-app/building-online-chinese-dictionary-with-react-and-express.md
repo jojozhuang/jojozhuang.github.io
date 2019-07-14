@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Online Chinese Dictionary with React and Express"
 index: 2643
-category: react-app
+subcategory: react-app
 date: 2018-06-04
 tags: [React, Express]
 ---

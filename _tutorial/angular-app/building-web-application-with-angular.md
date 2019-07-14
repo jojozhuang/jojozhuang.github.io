@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Web Application with Angular"
 index: 2761
-category: angular-app
+subcategory: angular-app
 date: 2017-12-14
 tags: [Angular]
 ---
