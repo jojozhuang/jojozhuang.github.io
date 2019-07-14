@@ -5,7 +5,6 @@ title: "Building Online Chinese Dictionary with React and Express"
 index: 2643
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2018-06-04
 tags: [React, Express]
 ---

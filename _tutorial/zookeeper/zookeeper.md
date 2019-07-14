@@ -5,7 +5,6 @@ title: "ZooKeeper"
 index: 3531
 category: zookeeper
 breadcrumb: [Tutorial, Distributed System, Zookeeper]
-image: code.png
 date: 2018-08-10
 tags: [ZooKeeper]
 ---

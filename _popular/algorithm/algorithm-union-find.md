@@ -5,7 +5,6 @@ title: "Union Find"
 index: 1217
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: algorithms.png
 date: 2016-03-24
 tags: [Disjoint Set, Union, Find]
 ---

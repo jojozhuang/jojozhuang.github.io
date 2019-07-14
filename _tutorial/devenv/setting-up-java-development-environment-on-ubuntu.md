@@ -5,7 +5,6 @@ title: "Setting up Java Development Environment on Ubuntu"
 index: 2121
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
-image: code.png
 date: 2016-10-31
 tags: [JDK, Tomcat, Eclipse]
 ---

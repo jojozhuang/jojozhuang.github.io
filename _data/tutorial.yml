@@ -61,7 +61,7 @@ categories:
         description: Mobile
         icon: fas fa-mobile-alt
         type: mobile
-        image: mobiledev.png
+        image: mobile.png
   - name: Distributed System
     subcategories:
       - name: Network

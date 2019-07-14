@@ -5,7 +5,6 @@ title: "Builder"
 index: 1304
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-04
 tags: [Builder Pattern]
 ---

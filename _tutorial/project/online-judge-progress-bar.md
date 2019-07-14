@@ -5,7 +5,6 @@ title: "Online Judge - Progress Bar"
 index: 2823
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-05-01
 tags: [ngx-progressbar]
 ---

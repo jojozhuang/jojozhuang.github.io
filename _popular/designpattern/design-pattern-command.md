@@ -5,7 +5,6 @@ title: "Command"
 index: 1321
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-21
 tags: [Command Pattern]
 ---

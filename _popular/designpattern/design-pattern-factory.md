@@ -5,7 +5,6 @@ title: "Factory"
 index: 1303
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-03
 tags: [Abstract Factory, Factory Method]
 ---

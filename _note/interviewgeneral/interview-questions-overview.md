@@ -5,7 +5,6 @@ title: "Interview Questions - Overview"
 index: 9601
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
-image: interview.png
 date: 2016-01-01
 tags: [Technique Interview]
 ---

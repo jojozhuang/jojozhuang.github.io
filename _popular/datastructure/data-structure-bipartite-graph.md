@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Bipartite Graph"
 index: 1143
-courseid: DS118
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-17
 tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true

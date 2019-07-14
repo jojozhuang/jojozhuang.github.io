@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Segment Tree"
 index: 1127
-courseid: DS113
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-12
 tags: [Segment Tree, Interval Tree]
 mathjax: true

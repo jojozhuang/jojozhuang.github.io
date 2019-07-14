@@ -5,7 +5,6 @@ title: "Mediator"
 index: 1324
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-24
 tags: [Mediator Pattern]
 ---

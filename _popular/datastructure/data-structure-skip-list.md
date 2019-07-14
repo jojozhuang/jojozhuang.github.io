@@ -3,12 +3,10 @@ layout: tutorial
 key: popular
 title: "SkipList - Draft"
 index: 1119
-courseid: DS122
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-20
-tags: [Monotonic Queue]
+tags: [SkipList]
 ---
 
 > Introduce the definition, implementation and usage of minimum spanning tree.

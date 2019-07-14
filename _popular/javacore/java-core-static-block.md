@@ -5,7 +5,6 @@ title: "Java Core - Static Block - Draft"
 index: 1417
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-04-08
 tags: [Static Block]
 ---

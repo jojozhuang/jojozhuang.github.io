@@ -5,7 +5,6 @@ title: "System Design - Tradeoff - Draft"
 index: 9653
 category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
-image: interview.png
 date: 2016-03-03
 tags: [Tradeoffs]
 ---

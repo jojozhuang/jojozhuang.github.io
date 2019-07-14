@@ -5,7 +5,6 @@ title: "Java Advanced - Shallow Copy vs Deep Copy"
 index: 1447
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
-image: java.png
 date: 2017-01-05
 tags: [Shallow Copy, Deep Copy]
 ---

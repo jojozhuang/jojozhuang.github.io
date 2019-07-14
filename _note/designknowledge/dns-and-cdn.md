@@ -5,7 +5,6 @@ title: "DNS and CDN"
 index: 9504
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: system-design.png
 date: 2019-01-06
 tags: [DNS and CDN]
 ---

@@ -5,7 +5,6 @@ title: "Installing and Using Visual Studio Code"
 index: 2125
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
-image: code.png
 date: 2018-07-13
 tags: [Visual Studio Code]
 ---

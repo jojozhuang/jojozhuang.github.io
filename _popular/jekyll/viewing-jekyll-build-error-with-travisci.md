@@ -5,7 +5,6 @@ title: "Viewing Jekyll Build Error with Travis CI"
 index: 1606
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2017-12-10
 tags: [Github Pages, Travis CI]
 ---

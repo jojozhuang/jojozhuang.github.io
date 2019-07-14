@@ -5,7 +5,6 @@ title: "Angular - TypeScript"
 index: 2702
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-06
 tags: [TypeScript, tsc]
 ---

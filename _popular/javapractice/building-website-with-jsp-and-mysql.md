@@ -5,7 +5,6 @@ title: "Building Website with JSP and MySQL"
 index: 1532
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-02-26
 tags: [JSP, MySQL]
 categories:

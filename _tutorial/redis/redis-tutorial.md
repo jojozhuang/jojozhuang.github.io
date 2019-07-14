@@ -5,7 +5,6 @@ title: "Redis Tutorial"
 index: 3521
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
-image: code.png
 date: 2018-08-06
 tags: [Redis]
 ---

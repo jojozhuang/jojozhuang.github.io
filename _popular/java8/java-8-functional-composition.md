@@ -5,7 +5,6 @@ title: "Java 8 - Functional Composition"
 index: 1475
 category: java8
 breadcrumb: [Popular, Java, Java 8]
-image: java.png
 date: 2017-05-05
 tags: [Functional Composition]
 ---

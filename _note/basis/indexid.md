@@ -5,7 +5,6 @@ title: "Index Id"
 index: 9004
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
-image: cs.png
 date: 2017-09-01
 tags: [Index]
 ---

@@ -5,7 +5,6 @@ title: "Getting Started with Express"
 index: 2551
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-05
 tags: [Express]
 ---

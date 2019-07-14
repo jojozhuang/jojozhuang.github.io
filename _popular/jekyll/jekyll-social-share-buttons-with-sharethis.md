@@ -5,7 +5,6 @@ title: "Jekyll - Social Share Buttons with ShareThis"
 index: 1618
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2017-08-20
 tags: [ShareThis]
 ---

@@ -5,7 +5,6 @@ title: "RPC and REST"
 index: 9505
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: system-design.png
 date: 2019-01-08
 tags: [RPC and REST]
 ---

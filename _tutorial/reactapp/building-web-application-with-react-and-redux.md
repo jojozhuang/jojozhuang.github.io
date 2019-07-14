@@ -5,7 +5,6 @@ title: "Building Web Application with React and Redux"
 index: 2612
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2017-08-20
 tags: [React, Redux]
 ---

@@ -5,7 +5,6 @@ title: "Creating Http Server with Node.js"
 index: 2511
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
-image: nodejs.png
 date: 2016-03-10
 tags: [Node.js]
 ---

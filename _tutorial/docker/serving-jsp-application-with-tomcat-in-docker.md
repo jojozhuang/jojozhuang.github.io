@@ -5,7 +5,6 @@ title: "Serving JSP Application With Tomcat In Docker"
 index: 3122
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
-image: docker.png
 date: 2017-10-20
 tags: [Docker, Tomcat]
 ---

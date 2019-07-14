@@ -5,7 +5,6 @@ title: "Building Course Player with Xamarin"
 index: 2335
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
-image: mobiledev.png
 date: 2017-07-24
 tags: [Xamarin, C#]
 ---

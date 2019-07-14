@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Data Structure Overview"
 index: 1101
-courseid: DS101
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-01
 tags: [List, Tree]
 ---

@@ -5,7 +5,6 @@ title: "Java Core - Basic - Draft"
 index: 1401
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-01
 tags: [String, Integer, Array, List]
 ---

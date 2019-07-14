@@ -5,7 +5,6 @@ title: "Designing Popular Website or App"
 index: 9012
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
-image: cs.png
 date: 2016-01-12
 tags: [System Design]
 ---

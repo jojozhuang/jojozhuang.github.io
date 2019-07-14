@@ -5,7 +5,6 @@ title: "Express Routing"
 index: 2556
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-10
 tags: [Express, Routing]
 ---

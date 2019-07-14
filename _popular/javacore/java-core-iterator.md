@@ -5,7 +5,6 @@ title: "Java Core - Iterator"
 index: 1419
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-04-03
 tags: [Iterator, Predicate]
 ---

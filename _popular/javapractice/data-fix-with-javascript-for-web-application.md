@@ -5,7 +5,6 @@ title: "Data Fix with Javascript For Web Application"
 index: 1544
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2017-10-13
 tags: [Rhino, Javascript]
 ---

@@ -5,7 +5,6 @@ title: "Angular - Modules"
 index: 2713
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-12
 tags: [Angular Modules]
 ---

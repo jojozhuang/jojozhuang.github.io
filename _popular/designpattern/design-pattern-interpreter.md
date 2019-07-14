@@ -5,7 +5,6 @@ title: "Interpreter"
 index: 1322
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-22
 tags: [Interpreter Pattern]
 ---

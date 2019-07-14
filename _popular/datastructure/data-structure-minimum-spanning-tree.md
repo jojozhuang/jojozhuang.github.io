@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Minimum Spanning Tree - Draft"
 index: 1145
-courseid: DS120
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-19
 tags: [MST]
 ---

@@ -5,7 +5,6 @@ title: "Online Judge - Export Data"
 index: 2813
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-04-20
 tags: [csv-express]
 ---

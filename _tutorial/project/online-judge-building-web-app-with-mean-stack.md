@@ -5,7 +5,6 @@ title: "Online Judge - Building Web App with MEAN Stack"
 index: 2801
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-04-09
 tags: [MEAN, Angular, Express, MongoDB]
 ---

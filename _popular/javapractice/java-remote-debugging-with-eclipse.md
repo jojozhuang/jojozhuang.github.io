@@ -5,7 +5,6 @@ title: "Java Remote Debugging with Eclipse"
 index: 1513
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-03-22
 tags: [Eclipse, Debugging]
 ---

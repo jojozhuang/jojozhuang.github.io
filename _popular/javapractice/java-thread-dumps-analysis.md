@@ -5,7 +5,6 @@ title: "Java - Thread Dumps & Analysis"
 index: 1503
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2017-06-04
 tags: [Thread Dumps]
 ---

@@ -5,7 +5,6 @@ title: "TO DO"
 index: 9003
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
-image: cs.png
 date: 2016-01-23
 tags: [Todo List]
 ---

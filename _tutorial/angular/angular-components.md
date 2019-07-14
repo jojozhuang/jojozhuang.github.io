@@ -5,7 +5,6 @@ title: "Angular - Components"
 index: 2711
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-10
 tags: [Angular Components]
 ---

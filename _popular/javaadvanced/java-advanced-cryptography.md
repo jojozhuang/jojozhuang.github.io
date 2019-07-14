@@ -5,7 +5,6 @@ title: "Java Advanced - Cryptography"
 index: 1451
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
-image: java.png
 date: 2018-05-10
 tags: [Encryption, Decryption]
 ---

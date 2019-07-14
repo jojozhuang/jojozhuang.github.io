@@ -5,7 +5,6 @@ title: "Null Object"
 index: 1326
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-26
 tags: [Null Object]
 ---

@@ -5,7 +5,6 @@ title: "Combine Morgan & Winston"
 index: 2555
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-09
 tags: [Express, Morgan, Winston]
 ---

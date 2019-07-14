@@ -5,7 +5,6 @@ title: "Logging with Morgan"
 index: 2553
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-07
 tags: [Express, Morgan]
 ---

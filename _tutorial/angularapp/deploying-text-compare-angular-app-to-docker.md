@@ -5,7 +5,6 @@ title: "Deploying Text Compare Angular App to Docker"
 index: 2772
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
-image: angular.png
 date: 2018-07-28
 tags: [Angular, Docker]
 ---

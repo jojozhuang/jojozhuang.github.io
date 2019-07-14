@@ -5,7 +5,6 @@ title: "Java Core - Collection - Queue & Stack"
 index: 1422
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-09
 tags: [List, Set, Map, Stack]
 ---

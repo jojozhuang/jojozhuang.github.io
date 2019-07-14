@@ -5,7 +5,6 @@ title: "Java Concurrency - Overview"
 index: 1431
 category: concurrency
 breadcrumb: [Popular, Java, Java Concurrency]
-image: java.png
 date: 2017-02-01
 tags: [Multi Threading]
 ---

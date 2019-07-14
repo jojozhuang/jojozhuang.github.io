@@ -5,7 +5,6 @@ title: "Sorting"
 index: 1201
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: algorithms.png
 date: 2016-03-21
 tags: [Sorting]
 mathjax: true

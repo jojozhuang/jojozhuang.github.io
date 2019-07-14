@@ -5,7 +5,6 @@ title: "Design Pattern - Overview"
 index: 1301
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-01
 tags: [Design Pattern]
 ---

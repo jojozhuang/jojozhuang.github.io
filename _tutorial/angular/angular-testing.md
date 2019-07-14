@@ -5,7 +5,6 @@ title: "Angular - Testing - Draft"
 index: 2732
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-22
 tags: [Angular, Karma, Jasmine]
 ---

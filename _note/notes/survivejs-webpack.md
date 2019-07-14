@@ -5,7 +5,6 @@ title: "SurviveJS - Webpack(Online Doc)"
 index: 9134
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
-image: note.png
 date: 2017-08-03
 tags: [Webpack]
 ---

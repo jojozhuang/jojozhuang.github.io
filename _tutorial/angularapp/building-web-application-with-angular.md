@@ -5,7 +5,6 @@ title: "Building Web Application with Angular"
 index: 2761
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
-image: angular.png
 date: 2017-12-14
 tags: [Angular]
 ---

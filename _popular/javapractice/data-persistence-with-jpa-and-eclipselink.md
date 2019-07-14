@@ -5,7 +5,6 @@ title: "Data Persistence with JPA & Eclipselink"
 index: 1536
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-12-21
 tags: [JPA, Eclipse, Eclipselink, ORM]
 ---

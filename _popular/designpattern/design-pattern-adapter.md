@@ -5,7 +5,6 @@ title: "Adapter"
 index: 1310
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-10
 tags: [Adapter Pattern]
 ---

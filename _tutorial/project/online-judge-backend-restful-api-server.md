@@ -5,7 +5,6 @@ title: "Online Judge - Backend RESTful API Server"
 index: 2802
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-04-10
 tags: [Express, MongoDB, Mongoose]
 ---

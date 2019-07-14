@@ -5,7 +5,6 @@ title: "Using Java Debugger"
 index: 1512
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-03-21
 tags: [JDB, Debugging]
 ---

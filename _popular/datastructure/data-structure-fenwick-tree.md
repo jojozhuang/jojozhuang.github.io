@@ -3,12 +3,10 @@ layout: tutorial
 key: popular
 title: "Fenwick Tree - Draft"
 index: 1126
-courseid: DS112
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-11
-tags: [BIT]
+tags: [Fenwick]
 ---
 
 > Introduce the definition, implementation and usage of minimum spanning tree.

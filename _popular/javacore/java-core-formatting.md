@@ -5,7 +5,6 @@ title: "Java Core - Formatting"
 index: 1403
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-03
 tags: [Formatting]
 ---

@@ -5,7 +5,6 @@ title: "Java Advanced - Web Service - Draft"
 index: 1452
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
-image: java.png
 date: 2017-03-05
 tags: [SOAP, WSDL]
 ---

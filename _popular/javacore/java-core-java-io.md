@@ -5,7 +5,6 @@ title: "Java Core - Java IO - Draft"
 index: 1411
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-11
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---

@@ -5,7 +5,6 @@ title: "Jekyll - Progress Bar"
 index: 1621
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2019-06-04
 tags: [Nanobar, Progress Bar]
 ---

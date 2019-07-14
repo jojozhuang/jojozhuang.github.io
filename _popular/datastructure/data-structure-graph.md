@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Graph"
 index: 1141
-courseid: DS116
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-15
 tags: [Graph, DFS, BFS]
 mathjax: true

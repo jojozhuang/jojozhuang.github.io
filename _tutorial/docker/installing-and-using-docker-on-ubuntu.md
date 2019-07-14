@@ -5,7 +5,6 @@ title: "Installing and Using Docker on Ubuntu"
 index: 3101
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
-image: docker.png
 date: 2017-10-10
 tags: [Docker, Docker Hub]
 ---

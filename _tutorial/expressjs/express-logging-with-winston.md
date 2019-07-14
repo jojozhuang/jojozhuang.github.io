@@ -5,7 +5,6 @@ title: "Logging with Winston"
 index: 2554
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-08
 tags: [Express, Winston]
 ---

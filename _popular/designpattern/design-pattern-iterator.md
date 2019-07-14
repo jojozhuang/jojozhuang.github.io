@@ -5,7 +5,6 @@ title: "Iterator"
 index: 1323
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-23
 tags: [Iterator Pattern]
 ---

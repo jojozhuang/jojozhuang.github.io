@@ -5,7 +5,6 @@ title: "Getting Started with React"
 index: 2601
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
-image: reactjs.png
 date: 2017-08-12
 tags: [React]
 ---

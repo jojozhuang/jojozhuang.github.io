@@ -5,7 +5,6 @@ title: "Online Judge - Others"
 index: 2832
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-04-17
 tags: [MEAN, Angular, Express, MongoDB]
 ---

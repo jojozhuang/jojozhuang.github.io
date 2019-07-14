@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Binary Search Tree"
 index: 1122
-courseid: DS109
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-08
 tags: [BST]
 mathjax: true

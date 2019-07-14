@@ -5,7 +5,6 @@ title: "Getting Started with Linux"
 index: 2101
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
-image: code.png
 date: 2017-07-26
 tags: [Unix, Linux, Shell, Bash]
 ---

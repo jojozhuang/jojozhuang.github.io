@@ -5,7 +5,6 @@ title: "Observer"
 index: 1327
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-27
 tags: [Observer Pattern]
 ---

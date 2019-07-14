@@ -5,7 +5,6 @@ title: "Using Redis in Java"
 index: 3523
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
-image: code.png
 date: 2018-08-08
 tags: [Redis]
 ---

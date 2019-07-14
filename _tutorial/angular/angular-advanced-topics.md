@@ -5,7 +5,6 @@ title: "Angular - Advanced Topics - Draft"
 index: 2731
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-23
 tags: [Angular, Karma, Jasmine]
 ---

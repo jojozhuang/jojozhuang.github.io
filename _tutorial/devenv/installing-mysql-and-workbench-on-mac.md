@@ -5,7 +5,6 @@ title: "Installing MySQL and Workbench on Mac"
 index: 2131
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
-image: code.png
 date: 2017-10-30
 tags: [MySQL, MySQL Workbench]
 categories:

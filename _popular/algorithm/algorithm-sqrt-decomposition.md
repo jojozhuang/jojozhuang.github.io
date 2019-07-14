@@ -5,7 +5,6 @@ title: "Sqrt Decomposition"
 index: 1232
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: algorithms.png
 date: 2016-03-30
 tags: [Sqrt Decomposition]
 mathjax: true

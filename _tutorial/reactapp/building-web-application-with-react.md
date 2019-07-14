@@ -5,7 +5,6 @@ title: "Building Web Application with React"
 index: 2611
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2017-08-16
 tags: [React, ESLint, Webpack]
 ---

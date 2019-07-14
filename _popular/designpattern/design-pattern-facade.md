@@ -5,7 +5,6 @@ title: "Facade"
 index: 1314
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-14
 tags: [Facade Pattern]
 ---

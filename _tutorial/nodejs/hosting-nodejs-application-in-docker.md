@@ -5,7 +5,6 @@ title: "Hosting Node.js Application in Docker[Draft]"
 index: 2521
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
-image: nodejs.png
 date: 2018-03-11
 tags: [Node.js]
 ---

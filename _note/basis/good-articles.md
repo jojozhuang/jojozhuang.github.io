@@ -5,7 +5,6 @@ title: "Good Articles"
 index: 9011
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
-image: cs.png
 date: 2016-01-20
 tags: [Web, Architect]
 ---

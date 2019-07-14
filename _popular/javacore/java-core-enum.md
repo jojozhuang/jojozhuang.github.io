@@ -5,7 +5,6 @@ title: "Java Core - Enum"
 index: 1415
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-06
 tags: [Enum, EnumSet, EnumMap]
 ---

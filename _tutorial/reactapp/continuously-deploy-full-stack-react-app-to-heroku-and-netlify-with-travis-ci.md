@@ -5,7 +5,6 @@ title: "Continuously Deploy Full Stack React App to Heroku and Netlify with Trav
 index: 2645
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2018-08-10
 tags: [Heroku, Travis CI, Netlify]
 ---

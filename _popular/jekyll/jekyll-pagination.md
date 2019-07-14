@@ -5,7 +5,6 @@ title: "Jekyll - Pagination - Draft"
 index: 1622
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2019-06-04
 tags: [Pagination]
 ---

@@ -5,7 +5,6 @@ title: "Checking Which JDK Eclipse is Using"
 index: 1511
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2018-05-12
 tags: [JDK, Eclipse]
 ---

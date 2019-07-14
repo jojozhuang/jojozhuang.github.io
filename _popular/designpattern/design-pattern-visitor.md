@@ -5,7 +5,6 @@ title: "Visitor"
 index: 1331
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-31
 tags: [Visitor Pattern]
 ---

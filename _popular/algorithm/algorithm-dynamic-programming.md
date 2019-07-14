@@ -5,7 +5,6 @@ title: "Dynamic Programming"
 index: 1221
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: algorithms.png
 date: 2016-03-28
 tags: [DP]
 mathjax: true

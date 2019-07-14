@@ -5,7 +5,6 @@ title: "Calling spawn with Arguments[Draft]"
 index: 2513
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
-image: nodejs.png
 date: 2018-05-29
 tags: [Node.js]
 ---

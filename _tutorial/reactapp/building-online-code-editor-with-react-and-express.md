@@ -5,7 +5,6 @@ title: "Building Online Code Editor with React and Express"
 index: 2642
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2018-06-04
 tags: [React, Express]
 ---

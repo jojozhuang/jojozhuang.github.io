@@ -5,7 +5,6 @@ title: "JavaScript - Async Call in Loop[Draft]"
 index: 2405
 category: javascript
 breadcrumb: [Tutorial, Frontend, Javascript]
-image: javascript.png
 date: 2018-03-28
 tags: [Async]
 ---

@@ -5,7 +5,6 @@ title: "Decorator"
 index: 1313
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-13
 tags: [Decorator Pattern]
 ---

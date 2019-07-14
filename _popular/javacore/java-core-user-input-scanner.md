@@ -5,7 +5,6 @@ title: "Java Core - User Input"
 index: 1412
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-02
 tags: [Scanner]
 ---

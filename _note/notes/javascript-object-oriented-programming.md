@@ -5,7 +5,6 @@ title: "JavaScript object oriented programming(Online Doc)"
 index: 9132
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
-image: note.png
 date: 2016-06-12
 tags: [Javascript OO]
 ---
