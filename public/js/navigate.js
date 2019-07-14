@@ -61,6 +61,10 @@
       return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
+  function isNullOrUndefined(val) {
+    return val === undefined || val === null;
+  }
+
   function formatTitle(title) {
     if (title) {
       if (title.length > 37) {
@@ -70,8 +74,20 @@
     return title;
   }
 
-  function getImage(category) {
-    var image = window.category[category];
+  function getCategoryName(category) {
+    return window.category[category];
+  }
+
+  function getSubCategoryName(subcategory) {
+    return window.subcategory[subcategory];
+  }
+
+  function getParentCategory(subcategory) {
+    return window.parentcategory[subcategory];
+  }
+
+  function getImage(subcategory) {
+    var image = window.image[subcategory];
     image = (image === undefined) ? "empty.png" : image;
     return image;
   }
@@ -79,9 +95,12 @@
   var categoryList = document.getElementById('category-list');
   var postingList = document.getElementById('posting-list');
   var subject = document.getElementById('subject').value;
-  var navigation = getQueryVariable('navigation');
+  var nav = getQueryVariable('n');
+  var cat = getQueryVariable('c');
+  var subcat = getQueryVariable('s');
   var results = [];
-  if (navigation) {
+  console.log(nav);
+  if (nav) {
     //$(".page-wrapper").removeClass("toggled");
     categoryList.style.display = "none";
     postingList.style.display = "block";
@@ -89,31 +108,37 @@
     categoryList.style.display = "block";
     postingList.style.display = "none";
     //$(".page-wrapper").addClass("toggled");
-    navigation = jsUcfirst(subject) + ",";
+    nav = subject;
   }
 
-  if (navigation) {
+  if (nav) {
     // bread crumb
-    navigation = navigation.substring(0, navigation.length - 1);
-    var items = navigation.split(",");
     var appendString = '';
-    var navigationPath = '';
     appendString += '<ol class="breadcrumb">';
-    for (i = 0; i < items.length; i++) {
-      navigationPath += items[i] + ",";
-      appendString += '  <li class="breadcrumb-item"><a href="/' + subject + '?navigation=' + navigationPath + '">'+items[i]+'</a></li>';
+    var q = subject;
+    if (nav) {
+      q += "?n=" + nav;
     }
+    appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">'+jsUcfirst(subject)+'</a></li>';
+    if (cat) {
+      q += "&c=" + cat;
+      appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">'+getCategoryName(cat)+'</a></li>';
+    }
+    if (subcat) {
+      q += "&s=" + subcat;
+      appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">'+getSubCategoryName(subcat)+'</a></li>';
+    }
+
     appendString += '</ol>';
     var breadcrumbCtrl = document.getElementById('bread-crumb');
     breadcrumbCtrl.innerHTML = appendString;
 
-   // search
+   // match
     for (var key in window.store) {
-      var breadcrumb = window.store[key].breadcrumb;
-      if (breadcrumb) {
-        //console.log(breadcrumb);
-      }
-      if (breadcrumb.startsWith("["+navigation)) {
+      var subcategory = window.store[key].category;
+      if (subcat && subcategory == subcat ||
+          isNullOrUndefined(subcat) && cat && getParentCategory(subcategory) === cat ||
+          isNullOrUndefined(cat)) {
         results.push({
           'id': key,
           'title': window.store[key].title,

@@ -23,16 +23,16 @@ title: Tutorials
                 <div class="card-body">
                   <h5 class="card-title">Angular</h5>
                   <p class="card-text">Learn how to use Angular to build front-end application with examples.</p>
-                  <a href="/tutorial/?navigation=Tutorial,%20Frontend,%20Angular%20Tutorial," class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular Tutorial</a>
-                  <a href="/tutorial/?navigation=Tutorial,%20Frontend,%20Angular%20App," class="btn btn-outline-danger"><i class="fab fa-angular"></i> Aggular App</a>
+                  <a href="/tutorial/?n=tutorial&c=frontend&s=angular-js" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular Tutorial</a>
+                  <a href="/tutorial/?n=tutorial&c=frontend&s=angular-app" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Aggular App</a>
                 </div>
               </div>
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">React</h5>
                   <p class="card-text">Learn how to use React to build front-end application with examples.</p>
-                  <a href="/tutorial/?navigation=Tutorial,%20Frontend,%20React%20Tutorial," class="btn btn-outline-primary"><i class="fab fa-react"></i> React Tutorial</a>
-                  <a href="/tutorial/?navigation=Tutorial,%20Frontend,%20React%20App," class="btn btn-outline-primary"><i class="fab fa-react"></i> React App</a>
+                  <a href="/tutorial/?n=tutorial&c=frontend&s=react-js" class="btn btn-outline-primary"><i class="fab fa-react"></i> React Tutorial</a>
+                  <a href="/tutorial/?n=tutorial&c=frontend&s=react-app" class="btn btn-outline-primary"><i class="fab fa-react"></i> React App</a>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ title: Tutorials
                     <ul class="list-group list-group-flush">
                     {% for subcategory in category.subcategories %}
                     {% assign list = postings | where: 'category', subcategory.subcategory %}
-                    {% assign url = "/tutorial/?navigation=" | append: subject.name | append: ", " | append: category.name | append: ", " | append: subcategory.name | append: ", "%}
+                    {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
                     <a href="{{url}}" class="list-group-item list-group-item-action">
                         <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
                     </a>
@@ -87,13 +87,36 @@ title: Tutorials
     {% endfor %}
   };
   // mapping of category and image
-  window.category = {
+  window.image = {
     {% for category in subject.categories %}
       {% for subcategory in category.subcategories %}
         "{{subcategory.subcategory}}": "{{ subcategory.image }}",
       {% endfor %}
     {% endfor %}
   };
+
+  window.category = {
+    {% for category in subject.categories %}
+        "{{category.category}}": "{{ category.name }}",
+    {% endfor %}
+  };
+
+  window.subcategory = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.subcategory}}": "{{ subcategory.name }}",
+      {% endfor %}
+    {% endfor %}
+  };
+
+  window.parentcategory = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.subcategory}}": "{{ category.category }}",
+      {% endfor %}
+    {% endfor %}
+  };
+
   // tutorial category
   //window.tc = {{ site.data.tutorial | replace: '=>', ':'}};
 

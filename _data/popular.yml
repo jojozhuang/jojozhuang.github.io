@@ -1,7 +1,9 @@
+key: popular
 name: Popular
 description: Data Structure, Algorithm, Java, Jekyll
 categories:
-  - name: General
+  - category: general
+    name: General
     subcategories:
       - name: Data Structure
         description: Data Structure
@@ -18,7 +20,8 @@ categories:
         icon: fas fa-pencil-ruler
         subcategory: design-pattern
         image: design-pattern.png
-  - name: Java
+  - category: java
+    name: Java
     subcategories:
       - name: Java Core
         description: Core features of Java
@@ -45,7 +48,8 @@ categories:
         icon: fab fa-java
         subcategory: java-practice
         image: java.png
-  - name: Personal Website
+  - category: website
+    name: Personal Website
     subcategories:
       - name: Jekyll
         description: Jekyll

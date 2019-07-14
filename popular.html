@@ -23,15 +23,15 @@ title: Popular Topics
                 <div class="card-body">
                   <h5 class="card-title">Data Structure and Algorithm</h5>
                   <p class="card-text">Learn data structure and algorithm with examples.</p>
-                  <a href="/popular/?navigation=Popular,%20General,%20Data%20Structure," class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
-                  <a href="/popular/?navigation=Popular,%20General,%20Algorithm," class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
+                  <a href="/popular/?n=popular&c=general&s=data-structure" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
+                  <a href="/popular/?n=popular&c=general&s=algorithm" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
                 </div>
               </div>
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Personal Website</h5>
                   <p class="card-text">Learn how to use Jekyll to setup your personal website.</p>
-                  <a href="/popular/?navigation=Popular,%20Personal%20Website,%20Jekyll," class="btn btn-outline-primary"><i class="fas fa-globe"></i> Jekyll</a>
+                  <a href="/popular/?n=popular&c=website&s=jekyll" class="btn btn-outline-primary"><i class="fas fa-globe"></i> Jekyll</a>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@ title: Popular Topics
                     <ul class="list-group list-group-flush">
                     {% for subcategory in category.subcategories %}
                     {% assign list = postings | where: 'category', subcategory.subcategory %}
-                    {% assign url = "/popular/?navigation=" | append: subject.name | append: ", " | append: category.name | append: ", " | append: subcategory.name | append: ", "%}
+                    {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
                     <a href="{{url}}" class="list-group-item list-group-item-action">
                         <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
                     </a>
@@ -86,7 +86,7 @@ title: Popular Topics
     {% endfor %}
   };
   // mapping of category and image
-  window.category = {
+  window.image = {
     {% for category in subject.categories %}
       {% for subcategory in category.subcategories %}
         "{{subcategory.subcategory}}": "{{ subcategory.image }}",
@@ -94,6 +94,27 @@ title: Popular Topics
     {% endfor %}
   };
 
+  window.category = {
+    {% for category in subject.categories %}
+        "{{category.category}}": "{{ category.name }}",
+    {% endfor %}
+  };
+
+  window.subcategory = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.subcategory}}": "{{ subcategory.name }}",
+      {% endfor %}
+    {% endfor %}
+  };
+
+  window.parentcategory = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.subcategory}}": "{{ category.category }}",
+      {% endfor %}
+    {% endfor %}
+  };
   // tutorial category
   //window.tc = {{ site.data.tutorial | replace: '=>', ':'}};
 
