@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Backend RESTful API Server"
 index: 2802
-category: onlinejudge
+category: online-judge
 breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-10
 tags: [Express, MongoDB, Mongoose]
@@ -148,7 +148,7 @@ In 'package.json', we defined three commands to start server. 'local' and 'dev' 
 
 ## 2. Express Server
 ### 2.1 Logging
-Use both Morgan and Winston for logging. Read tutorial [Express - Combine Morgan and Winston]({% link _tutorial/expressjs/express-combine-morgan-and-winston.md %}) to learn more details.
+Use both Morgan and Winston for logging. Read tutorial [Express - Combine Morgan and Winston]({% link _tutorial/express-js/express-combine-morgan-and-winston.md %}) to learn more details.
 ### 2.2 Routing
 We define the following routers for the RESTful API.
 

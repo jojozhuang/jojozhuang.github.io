@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Building Web App with MEAN Stack"
 index: 2801
-category: onlinejudge
+category: online-judge
 breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-09
 tags: [MEAN, Angular, Express, MongoDB]

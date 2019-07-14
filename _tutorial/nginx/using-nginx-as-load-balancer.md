@@ -24,7 +24,7 @@ The following load balancing mechanisms (or methods) are supported in nginx:
 
 ## 3. Setting up Load Balancer
 ### 3.1 Node Servers
-First, follow the steps mentioned in [Creating Http Server with Node.js]({% link _tutorial/nodejs/creating-http-server-with-nodejs.md %}) to setup three node servers. They are served at different ports, 8086, 8087 and 8088.  
+First, follow the steps mentioned in [Creating Http Server with Node.js]({% link _tutorial/node-js/creating-http-server-with-nodejs.md %}) to setup three node servers. They are served at different ports, 8086, 8087 and 8088.  
 Server1.
 ![image](/public/images/devops/3513/nodeserver1.png){:width="700px"}
 Server2.

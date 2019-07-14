@@ -19,7 +19,7 @@ A course player consists of three components: video, screenshot and whiteboard.
 * Screenshot is captured from computer monitor shared by teachers. It contains handouts and materials for the course. Screenshot are actually images.
 * Whiteboard is captured from special pens and brushes. Any operation on the board, such as writing, drawing or brushing is recorded.
 
-Check the posting [Introduction of Course Player]({% link _tutorial/reactapp/introduction-of-course-player.md %}) to learn the details.
+Check the posting [Introduction of Course Player]({% link _tutorial/react-app/introduction-of-course-player.md %}) to learn the details.
 ### 1.2 Online Players
 DePaul University has two types of course players in its Course OnLine (COL) system, online course player and mobile app players.
 

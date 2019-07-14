@@ -118,7 +118,7 @@ _includes/pagination.html                                                |   358
 index_tutorial.html                                                      |     1 |   154.98K | 0.054
 note.html                                                                |     1 |   486.75K | 0.054
 _layouts/post.html                                                       |    28 |   242.22K | 0.033
-_popular/designpattern/design-pattern-overview.md                        |     1 |     1.90K | 0.033
+_popular/design-pattern/design-pattern-overview.md                        |     1 |     1.90K | 0.033
 _tutorial/knowledge/deploying-web-applications-to-cloud-services.md      |     1 |     4.42K | 0.022
 blog/atom.xml                                                            |     1 |   252.76K | 0.022
 _layouts/note.html                                                       |    17 |   184.04K | 0.016
@@ -131,17 +131,17 @@ _portfolio/game-store-multi.md                                           |     1
 _tutorial/mobile/mobile-app-development.md                               |     1 |     2.01K | 0.008
 _layouts/portfolio.html                                                  |    21 |   106.48K | 0.008
 _tutorial/project/building-online-judge-application-with-mean-stack.md   |     1 |     4.07K | 0.007
-_popular/javapractice/data-fix-with-javascript-for-web-application.md    |     1 |     8.77K | 0.006
+_popular/java-practice/data-fix-with-javascript-for-web-application.md    |     1 |     8.77K | 0.006
 _portfolio/course-player-socketio.md                                     |     1 |     2.61K | 0.005
-_tutorial/reactapp/building-course-player-with-signalr-and-aspnet.md     |     1 |    28.92K | 0.005
+_tutorial/react-app/building-course-player-with-signalr-and-aspnet.md     |     1 |    28.92K | 0.005
 _portfolio/course-player-signalr.md                                      |     1 |     2.15K | 0.005
 _tutorial/docker/creating-mysql-image-with-docker-file.md                |     1 |     7.27K | 0.005
 _tutorial/react/introduction-of-course-player.md                         |     1 |     5.27K | 0.004
 _portfolio/course-player-xamarin.md                                      |     1 |     4.17K | 0.004
 _portfolio/course-player-react.md                                        |     1 |     2.07K | 0.004
-_popular/javapractice/building-website-with-jsp-and-mysql.md             |     1 |    26.81K | 0.004
-_tutorial/reactapp/building-online-code-editor-with-react-and-express.md |     1 |    25.71K | 0.004
-_tutorial/angularapp/creating-web-app-and-restful-api-with-mean-stack.md |     1 |     6.72K | 0.004
+_popular/java-practice/building-website-with-jsp-and-mysql.md             |     1 |    26.81K | 0.004
+_tutorial/react-app/building-online-code-editor-with-react-and-express.md |     1 |    25.71K | 0.004
+_tutorial/angular-app/creating-web-app-and-restful-api-with-mean-stack.md |     1 |     6.72K | 0.004
 ```
 Use Jekyll incremental build
 ```sh
