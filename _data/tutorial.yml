@@ -11,7 +11,7 @@ categories:
       - name: Dev Environment
         description: Development Environment
         icon: fab fa-dev
-        type: devenv
+        type: dev-env
         image: code.png
   - name: Backend
     subcategories:
@@ -23,13 +23,13 @@ categories:
       - name: Node.js
         description: Node.js
         icon: fab fa-node-js
-        type: nodejs
-        image: nodejs.png
+        type: node-js
+        image: node-js.png
       - name: Express.js
         description: Express.js
         icon: fab fa-node-js
-        type: expressjs
-        image: expressjs.png
+        type: express-js
+        image: express-js.png
   - name: Frontend
     subcategories:
       - name: Javascript
@@ -40,23 +40,23 @@ categories:
       - name: Angular Tutorial
         description: Angular Tutorial
         icon: fab fa-angular
-        type: angular
-        image: angular.png
+        type: angular-js
+        image: angular-js.png
       - name: Angular App
         description: Angular App
         icon: fab fa-angular
-        type: angularapp
-        image: angular.png
+        type: angular-app
+        image: angular-js.png
       - name: React Tutorial
         description: React Tutorial
         icon: fab fa-react
-        type: reactjs
-        image: reactjs.png
+        type: react-js
+        image: react-js.png
       - name: React App
         description: React App
         icon: fab fa-react
-        type: reactapp
-        image: reactjs.png
+        type: react-app
+        image: react-js.png
       - name: Mobile
         description: Mobile
         icon: fas fa-mobile-alt
@@ -68,16 +68,16 @@ categories:
         description: Network
         icon: fas fa-tachometer-alt
         type: network
-        image: angular.png
+        image: code.png
       - name: NoSQL
         description: MongoDB
         icon: fas fa-tachometer-alt
         type: nosql
-        image: angular.png
+        image: code.png
       - name: Message Queue
         description: Kafka, RabbitQueue
         icon: fas fa-tachometer-alt
-        type: messagequeue
+        type: message-queue
         image: code.png
       - name: Redis
         description: Redis
@@ -102,12 +102,12 @@ categories:
       - name: Big Data
         description: Big Data
         icon: fas fa-tachometer-alt
-        type: bigdata
+        type: big-data
         image: code.png
   - name: Project
     subcategories:
       - name: Online Judge
         description: Online Judge
         icon: fab fa-js-square
-        type: onlinejudge
+        type: online-judge
         image: online-judge.png

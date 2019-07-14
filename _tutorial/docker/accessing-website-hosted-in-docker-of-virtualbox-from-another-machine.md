@@ -34,11 +34,11 @@ Add yourself to the `vboxusers` group using the “Users and Groups” applicati
 sudo usermod -a -G vboxusers [your_user_name]
 ```
 ### 2.2 Installing Ubuntu VM
-Go to https://ubuntu.com/#download to download Ubuntu Desktop. Refer to [Installing VirtualBox and Creating Ubuntu VM]({% link _tutorial/devenv/installing-virtual-box-and-creating-ubuntu-vm.md %}) to install Ubuntu in virtual machine.
+Go to https://ubuntu.com/#download to download Ubuntu Desktop. Refer to [Installing VirtualBox and Creating Ubuntu VM]({% link _tutorial/dev-env/installing-virtual-box-and-creating-ubuntu-vm.md %}) to install Ubuntu in virtual machine.
 ### 2.3 Creating Sharing Folder
 First, create shared folder in host machine. Second, install VirtualBox Guest Additions for the Ubuntu VM. Devices -> Insert Guest Additions CD images..
 ![image](/public/images/devops/3134/guest_additions.png){:width="650px"}
-Then, refer to [Sharing Files between Host and Guest in VirtualBox]({% link _tutorial/devenv/sharing-files-between-host-and-guest-in-virtualbox.md %}) to connect the shared folder in host machine to guest machine.
+Then, refer to [Sharing Files between Host and Guest in VirtualBox]({% link _tutorial/dev-env/sharing-files-between-host-and-guest-in-virtualbox.md %}) to connect the shared folder in host machine to guest machine.
 Finally, the shared folder in RedHat locates in
 ```sh
 /home/johnny/SharedUbuntu

@@ -10,10 +10,10 @@ categories:
         image: system-design.png
   - name: Work Space
     subcategories:
-      - name: Basic Knowledge
+      - name: My Space
         description: OS, Database
         icon: fas fa-sitemap
-        type: basis
+        type: my-space
         image: cs.png
       - name: Book Notes
         description: Notes for books or online doc
@@ -27,23 +27,23 @@ categories:
         image: note.png
   - name: Interview Questions
     subcategories:
-      - name: General
-        description: OS, Database
+      - name: Overview
+        description: Interview Question Overview
         icon: fas fa-sitemap
-        type: interview-general
+        type: interview-overview
         image: interview.png
       - name: Frontend Questions
-        description: OS, Database
+        description: Frontend Interview Questions
         icon: fas fa-sitemap
         type: interview-frontend
         image: interview.png
       - name: Java Questions
-        description: Interview
+        description: Java Interview Questions
         icon: fas fa-sitemap
         type: interview-java
         image: interview.png
       - name: System Design
-        description: Notes for books or online doc
+        description: System Design Interview Questions
         icon: fas fa-sitemap
-        type: interview-systemdesign
+        type: interview-system-design
         image: interview.png

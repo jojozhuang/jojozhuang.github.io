@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java 8 - Higher Order Functions"
 index: 1473
-category: java8
+category: java-java8
 breadcrumb: [Popular, Java, Java 8]
 date: 2017-05-03
 tags: [Higher Order Functions]

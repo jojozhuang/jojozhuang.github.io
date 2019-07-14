@@ -1,12 +1,12 @@
 name: Popular
-description: Data Structure, Algorithm
+description: Data Structure, Algorithm, Java, Jekyll
 categories:
   - name: General
     subcategories:
       - name: Data Structure
         description: Data Structure
         icon: fas fa-sitemap
-        type: datastructure
+        type: data-structure
         image: data-structure.png
       - name: Algorithm
         description: Algorithm
@@ -16,34 +16,34 @@ categories:
       - name: Design Pattern
         description: Object-Orientation, Inheritance
         icon: fas fa-pencil-ruler
-        type: designpattern
-        image: designpattern.png
+        type: design-pattern
+        image: design-pattern.png
   - name: Java
     subcategories:
       - name: Java Core
         description: Core features of Java
         icon: fab fa-java
-        type: core
+        type: java-core
         image: java.png
       - name: Java 8
         description: New features in Java 8
         icon: fab fa-java
-        type: java8
+        type: java-java8
         image: java.png
       - name: Java Advanced
         description: Advanced topics of Java
         icon: fab fa-java
-        type: advanced
+        type: java-advanced
         image: java.png
       - name: Java Concurrency
         description: Concurrency and MultiThreading
         icon: fab fa-java
-        type: concurrency
+        type: java-concurrency
         image: java.png
       - name: Practice
         description: Practice of Java
         icon: fab fa-java
-        type: practice
+        type: java-practice
         image: java.png
   - name: Personal Website
     subcategories:
