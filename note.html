@@ -68,6 +68,14 @@ title: Rong Zhuang's Note
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
+  // mapping of category and image
+  window.category = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.type}}": "{{ subcategory.image }}",
+      {% endfor %}
+    {% endfor %}
+  };
   //"content": {{ post.content | strip_html | strip_newlines | jsonify }},
 
   // tutorial category

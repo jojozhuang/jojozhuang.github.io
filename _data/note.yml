@@ -7,35 +7,43 @@ categories:
         description: Network, Distributed System
         icon: fas fa-sitemap
         type: design-knowledge
+        image: system-design.png
   - name: Work Space
     subcategories:
       - name: Basic Knowledge
         description: OS, Database
         icon: fas fa-sitemap
         type: basis
+        image: cs.png
       - name: Book Notes
         description: Notes for books or online doc
         icon: fas fa-sitemap
         type: notes
+        image: note.png
       - name: Others
         description: Japanese
         icon: fas fa-sitemap
         type: others
+        image: note.png
   - name: Interview Questions
     subcategories:
       - name: General
         description: OS, Database
         icon: fas fa-sitemap
         type: interview-general
+        image: interview.png
       - name: Frontend Questions
         description: OS, Database
         icon: fas fa-sitemap
         type: interview-frontend
+        image: interview.png
       - name: Java Questions
         description: Interview
         icon: fas fa-sitemap
         type: interview-java
+        image: interview.png
       - name: System Design
         description: Notes for books or online doc
         icon: fas fa-sitemap
         type: interview-systemdesign
+        image: interview.png
