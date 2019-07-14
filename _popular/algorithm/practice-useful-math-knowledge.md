@@ -5,7 +5,7 @@ title: "Useful Math Knowledge"
 index: 1202
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-04-05
 tags: [Math]
 ---

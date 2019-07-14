@@ -6,7 +6,7 @@ index: 1112
 courseid: DS103
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-02
 tags: [Stack, LIFO]
 mathjax: true

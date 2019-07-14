@@ -58,7 +58,6 @@ title: Rong Zhuang's Note
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
         "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",
         "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
@@ -69,6 +68,7 @@ title: Rong Zhuang's Note
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
+  //"content": {{ post.content | strip_html | strip_newlines | jsonify }},
 
   // tutorial category
   //window.tc = {{ site.data.tutorial | replace: '=>', ':'}};

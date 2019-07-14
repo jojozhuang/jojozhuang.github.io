@@ -111,7 +111,6 @@
         results.push({
           'id': key,
           'title': window.store[key].title,
-          'content': window.store[key].content,
           'url': window.store[key].url,
           'index': window.store[key].index,
           'excerpt': window.store[key].excerpt,

@@ -6,7 +6,7 @@ index: 1123
 courseid: DS110
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-09
 tags: [RBT]
 mathjax: true

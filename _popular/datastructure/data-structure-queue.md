@@ -6,7 +6,7 @@ index: 1113
 courseid: DS104
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-03
 tags: [Queue, FIFO]
 mathjax: true

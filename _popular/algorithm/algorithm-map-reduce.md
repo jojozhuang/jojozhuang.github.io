@@ -5,7 +5,7 @@ title: "Map Reduce - Draft"
 index: 1235
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-03-31
 tags: [Map, Reduce]
 ---

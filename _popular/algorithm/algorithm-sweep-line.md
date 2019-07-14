@@ -5,7 +5,7 @@ title: "Sweep Line"
 index: 1231
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-03-29
 tags: [Sweep Line]
 mathjax: true

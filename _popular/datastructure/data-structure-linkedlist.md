@@ -6,7 +6,7 @@ index: 1111
 courseid: DS102
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-01
 tags: [Singly Linked List, Doubly Linked List]
 ---

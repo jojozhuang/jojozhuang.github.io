@@ -6,7 +6,7 @@ index: 1114
 courseid: DS105
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-04
 tags: [Deque]
 mathjax: true
