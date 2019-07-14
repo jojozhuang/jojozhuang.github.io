@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Adapter"
 index: 1310
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-10
 tags: [Adapter Pattern]
 ---

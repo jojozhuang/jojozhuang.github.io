@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Judging System"
 index: 2831
-category: online-judge
+subcategory: online-judge
 date: 2018-05-04
 tags: [spawn]
 ---

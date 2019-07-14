@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Zone.js - Draft"
 index: 2705
-category: angular-js
+subcategory: angular-js
 date: 2018-03-21
 tags: [Angular, Zone.js]
 ---

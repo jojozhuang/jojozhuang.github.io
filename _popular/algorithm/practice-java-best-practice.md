@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Practice - Java Best Practice"
 index: 1251
-category: algorithm
+subcategory: algorithm
 date: 2016-04-01
 tags: [Java]
 ---

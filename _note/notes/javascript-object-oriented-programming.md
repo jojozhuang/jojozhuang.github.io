@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "JavaScript object oriented programming(Online Doc)"
 index: 9132
-category: notes
+subcategory: notes
 date: 2016-06-12
 tags: [Javascript OO]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Real World Architectures"
 index: 9513
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-27
 tags: [Architecture]
 ---

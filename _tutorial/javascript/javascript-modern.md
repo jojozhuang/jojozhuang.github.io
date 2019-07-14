@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "JavaScript - Modern"
 index: 2402
-category: javascript
+subcategory: javascript
 date: 2018-07-26
 tags: [Promise, Observable, Axios]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "System Design - Tradeoff - Draft"
 index: 9653
-category: interview-system-design
+subcategory: interview-system-design
 date: 2016-03-03
 tags: [Tradeoffs]
 ---

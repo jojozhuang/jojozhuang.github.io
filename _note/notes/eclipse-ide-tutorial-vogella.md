@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Eclipse IDE Tutorial (Vogella)"
 index: 9122
-category: notes
+subcategory: notes
 date: 2017-08-01
 tags: [Eclipse]
 ---

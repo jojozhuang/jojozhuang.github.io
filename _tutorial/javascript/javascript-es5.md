@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "JavaScript - ES5"
 index: 2403
-category: javascript
+subcategory: javascript
 date: 2018-03-24
 tags: [ES5]
 ---

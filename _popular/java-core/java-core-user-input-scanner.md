@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - User Input"
 index: 1412
-category: java-core
+subcategory: java-core
 date: 2017-01-02
 tags: [Scanner]
 ---

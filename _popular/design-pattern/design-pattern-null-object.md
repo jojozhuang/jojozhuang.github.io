@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Null Object"
 index: 1326
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-26
 tags: [Null Object]
 ---

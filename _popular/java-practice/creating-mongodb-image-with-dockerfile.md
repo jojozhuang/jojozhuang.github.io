@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Creating MongoDB Image with Dockerfile"
 index: 1534
-category: java-practice
+subcategory: java-practice
 date: 2016-11-23
 tags: [MongoDB, Dockerfile, Docker]
 ---

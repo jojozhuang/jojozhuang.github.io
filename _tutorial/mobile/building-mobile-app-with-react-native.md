@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Mobile App with React Native - Draft"
 index: 2342
-category: mobile
+subcategory: mobile
 date: 2017-08-28
 tags: [React Native, Yarn]
 ---

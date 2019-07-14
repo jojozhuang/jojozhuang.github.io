@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building RESTful API with Spring Boot"
 index: 2222
-category: restful
+subcategory: restful
 date: 2017-12-13
 tags: [Spring Boot, RESTful, Maven]
 ---

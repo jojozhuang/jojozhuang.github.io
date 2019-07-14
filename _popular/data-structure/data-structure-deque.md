@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Deque"
 index: 1114
-category: data-structure
+subcategory: data-structure
 date: 2016-03-04
 tags: [Deque]
 mathjax: true

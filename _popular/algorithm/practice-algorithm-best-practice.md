@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Practice - Algorithm Best Practice"
 index: 1252
-category: algorithm
+subcategory: algorithm
 date: 2016-04-02
 tags: [Algorithm]
 ---

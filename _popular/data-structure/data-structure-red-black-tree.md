@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Red Black Tree - draft"
 index: 1123
-category: data-structure
+subcategory: data-structure
 date: 2016-03-09
 tags: [RBT]
 mathjax: true

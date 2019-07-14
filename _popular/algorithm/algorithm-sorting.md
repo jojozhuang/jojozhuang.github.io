@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Sorting"
 index: 1201
-category: algorithm
+subcategory: algorithm
 date: 2016-03-21
 tags: [Sorting]
 mathjax: true

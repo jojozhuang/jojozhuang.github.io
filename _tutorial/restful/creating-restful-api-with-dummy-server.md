@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Creating RESTful API with Dummy Server"
 index: 2211
-category: restful
+subcategory: restful
 date: 2017-12-15
 tags: [JSON Server]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "CSS Interview Questions"
 index: 9613
-category: interview-frontend
+subcategory: interview-frontend
 date: 2016-01-13
 tags: [CSS]
 ---

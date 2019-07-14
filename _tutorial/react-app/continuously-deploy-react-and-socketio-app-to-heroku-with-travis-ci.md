@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Continuously Deploy React and Socket.IO App to Heroku with Travis-CI"
 index: 2640
-category: react-app
+subcategory: react-app
 date: 2018-08-11
 tags: [Heroku, Travis CI]
 ---

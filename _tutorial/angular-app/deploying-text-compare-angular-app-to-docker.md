@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying Text Compare Angular App to Docker"
 index: 2772
-category: angular-app
+subcategory: angular-app
 date: 2018-07-28
 tags: [Angular, Docker]
 ---

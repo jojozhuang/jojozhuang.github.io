@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Appendix"
 index: 9512
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-26
 tags: [Powers of two]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Continuously Deploy MEAN Stack App to Heroku and Netlify with Travis-CI"
 index: 2842
-category: online-judge
+subcategory: online-judge
 date: 2018-08-11
 tags: [Heroku, Travis CI, Netlify]
 ---

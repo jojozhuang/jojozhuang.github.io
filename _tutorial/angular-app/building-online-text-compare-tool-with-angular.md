@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Online Text Compare Tool with Angular"
 index: 2771
-category: angular-app
+subcategory: angular-app
 date: 2018-07-28
 tags: [Angular, Monaco Editor]
 ---

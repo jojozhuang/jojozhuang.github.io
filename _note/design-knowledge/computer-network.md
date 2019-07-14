@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Computer Network"
 index: 9503
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-05
 tags: [OSI, HTTP, TCP, UDP]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Generic Interview Questions - Draft"
 index: 9602
-category: interview-overview
+subcategory: interview-overview
 date: 2016-01-02
 tags: [Generic Questions]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Singleton"
 index: 1302
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-02
 tags: [Singleton Pattern]
 ---

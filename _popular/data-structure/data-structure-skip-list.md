@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "SkipList - Draft"
 index: 1119
-category: data-structure
+subcategory: data-structure
 date: 2016-03-20
 tags: [SkipList]
 ---

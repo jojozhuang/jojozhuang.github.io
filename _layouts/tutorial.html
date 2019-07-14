@@ -34,7 +34,7 @@ layout: default
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="/{{page.key}}?n={{page.key | downcase}}">{{page.key | capitalize}}</a></li>
                   {% for category in categories %}
-                    {% assign subcategory = category.subcategories | where: "subcategory", page.category | first %}
+                    {% assign subcategory = category.subcategories | where: "subcategory", page.subcategory | first %}
                     {% if subcategory %}
                       {% assign navigatePath = page.key | downcase %}
                       {% assign navigatePath = navigatePath | append: "&c=" | append: category.category %}

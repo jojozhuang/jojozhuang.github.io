@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "LFU Cache"
 index: 1117
-category: data-structure
+subcategory: data-structure
 date: 2016-03-06
 tags: [LFU]
 mathjax: true

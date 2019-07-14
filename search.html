@@ -25,7 +25,7 @@ tutorial: list
       "{{ post.url | slugify }}": {
         "key": "{{ post.key | xml_escape }}",
         "title": "{{ post.title | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
+        "subcategory": "{{ post.subcategory | xml_escape }}",
         "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",
@@ -38,12 +38,12 @@ tutorial: list
   };
   //        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
 
-  // mapping of category and image
+  // mapping of subcategory and image
   {% assign popular = site.data.popular.categories %}
   {% assign tutorial = site.data.tutorial.categories %}
   {% assign note = site.data.note.categories %}
   {% assign categories = popular | concat: tutorial | concat: note %}
-  window.category = {
+  window.image = {
     {% for category in categories %}
       {% for subcategory in category.subcategories %}
         "{{subcategory.subcategory}}": "{{ subcategory.image }}",

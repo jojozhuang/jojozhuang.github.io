@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Data Fix with Javascript For Web Application"
 index: 1544
-category: java-practice
+subcategory: java-practice
 date: 2017-10-13
 tags: [Rhino, Javascript]
 ---

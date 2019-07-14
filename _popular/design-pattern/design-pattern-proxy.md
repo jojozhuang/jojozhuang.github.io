@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Proxy"
 index: 1316
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-16
 tags: [Proxy Pattern]
 ---

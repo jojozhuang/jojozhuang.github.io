@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Flux and Redux"
 index: 2603
-category: react-js
+subcategory: react-js
 date: 2017-08-18
 tags: [Flux, Redux]
 ---

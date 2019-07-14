@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "System Design Interview Questions"
 index: 9502
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-03
 tags: [Tradeoffs]
 ---

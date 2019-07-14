@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Kafka"
 index: 3541
-category: message-queue
+subcategory: message-queue
 date: 2018-08-15
 tags: [Kafka]
 ---

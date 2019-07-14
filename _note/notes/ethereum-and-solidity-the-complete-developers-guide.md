@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 9141
-category: notes
+subcategory: notes
 date: 2017-08-02
 tags: [Block Chain, Digital Currency]
 ---

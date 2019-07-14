@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Flyweight"
 index: 1315
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-15
 tags: [Flyweight Pattern]
 ---

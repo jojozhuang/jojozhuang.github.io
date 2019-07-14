@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Testing RESTful API with Postman"
 index: 2213
-category: restful
+subcategory: restful
 date: 2017-12-12
 tags: [HTTP, Postman]
 ---

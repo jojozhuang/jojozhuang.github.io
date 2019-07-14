@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Command"
 index: 1321
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-21
 tags: [Command Pattern]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - Generics - Draft"
 index: 1426
-category: java-core
+subcategory: java-core
 date: 2017-01-13
 tags: [Generic Types]
 ---

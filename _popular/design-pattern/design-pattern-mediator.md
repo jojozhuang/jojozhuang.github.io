@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Mediator"
 index: 1324
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-24
 tags: [Mediator Pattern]
 ---

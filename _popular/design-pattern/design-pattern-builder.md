@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Builder"
 index: 1304
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-04
 tags: [Builder Pattern]
 ---

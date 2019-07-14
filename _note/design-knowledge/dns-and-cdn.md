@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "DNS and CDN"
 index: 9504
-category: design-knowledge
+subcategory: design-knowledge
 date: 2019-01-06
 tags: [DNS, CDN]
 ---

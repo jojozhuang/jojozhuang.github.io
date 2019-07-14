@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building Web Application with React"
 index: 2611
-category: react-app
+subcategory: react-app
 date: 2017-08-16
 tags: [React, ESLint, Webpack]
 ---

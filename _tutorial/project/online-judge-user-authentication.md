@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - User Authentication"
 index: 2811
-category: online-judge
+subcategory: online-judge
 date: 2018-04-12
 tags: [Sign Up, Login, Return URL]
 ---

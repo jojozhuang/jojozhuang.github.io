@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Online Judge - Frontend with Angular"
 index: 2803
-category: online-judge
+subcategory: online-judge
 date: 2018-04-11
 tags: [Angular]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Introduction to JavaScript Object Notation(Draft)"
 index: 9133
-category: notes
+subcategory: notes
 date: 2016-06-14
 tags: [JSON]
 ---

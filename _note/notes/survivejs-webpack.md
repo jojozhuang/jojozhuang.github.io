@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "SurviveJS - Webpack(Online Doc)"
 index: 9134
-category: notes
+subcategory: notes
 date: 2017-08-03
 tags: [Webpack]
 ---

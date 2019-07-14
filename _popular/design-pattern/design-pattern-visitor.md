@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Visitor"
 index: 1331
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-31
 tags: [Visitor Pattern]
 ---

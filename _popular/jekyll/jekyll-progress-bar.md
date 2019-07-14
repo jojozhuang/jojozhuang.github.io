@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Jekyll - Progress Bar"
 index: 1621
-category: jekyll
+subcategory: jekyll
 date: 2019-06-04
 tags: [Nanobar, Progress Bar]
 ---

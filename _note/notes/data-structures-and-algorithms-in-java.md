@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Data Structures and Algorithms in Java"
 index: 9111
-category: notes
+subcategory: notes
 date: 2016-02-01
 tags: [Data Structure, Algorithm]
 ---

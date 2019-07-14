@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Stack"
 index: 1112
-category: data-structure
+subcategory: data-structure
 date: 2016-03-02
 tags: [Stack, LIFO]
 mathjax: true

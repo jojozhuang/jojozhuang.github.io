@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Getting Started with Linux"
 index: 2101
-category: dev-env
+subcategory: dev-env
 date: 2017-07-26
 tags: [Unix, Linux, Shell, Bash]
 ---

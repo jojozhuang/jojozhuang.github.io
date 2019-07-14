@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - HTTP and HttpClient - Draft"
 index: 2703
-category: angular-js
+subcategory: angular-js
 date: 2018-03-18
 tags: [Angular, HttpClient]
 ---

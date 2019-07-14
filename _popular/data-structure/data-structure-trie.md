@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Trie"
 index: 1125
-category: data-structure
+subcategory: data-structure
 date: 2016-03-10
 tags: [Trie, Prefix Tree]
 ---

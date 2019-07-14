@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Remote Debugging JSP Application"
 index: 1514
-category: java-practice
+subcategory: java-practice
 date: 2016-03-23
 tags: [Eclipse, Debugging]
 ---

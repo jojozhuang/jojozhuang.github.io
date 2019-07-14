@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Observable and Reactive Programming - Draft"
 index: 2704
-category: angular-js
+subcategory: angular-js
 date: 2018-03-17
 tags: [Observable]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Bipartite Graph"
 index: 1143
-category: data-structure
+subcategory: data-structure
 date: 2016-03-17
 tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true

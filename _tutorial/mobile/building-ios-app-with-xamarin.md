@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Building iOS App with Xamarin"
 index: 2333
-category: mobile
+subcategory: mobile
 date: 2017-07-21
 tags: [Xamarin, Xcode, SQLite, C#]
 ---

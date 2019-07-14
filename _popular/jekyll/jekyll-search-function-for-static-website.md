@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Jekyll - Search Function for Static Website - draft"
 index: 1625
-category: jekyll
+subcategory: jekyll
 date: 2019-05-23
 tags: [Search, Lunr.js]
 ---

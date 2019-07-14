@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Setting up .Net Development Environment on Mac"
 index: 2331
-category: mobile
+subcategory: mobile
 date: 2017-07-19
 tags: [Visual Studio, NuGet]
 ---

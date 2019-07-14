@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "System Design Interview Questions"
 index: 9651
-category: interview-system-design
+subcategory: interview-system-design
 date: 2016-03-01
 tags: [System Design]
 ---

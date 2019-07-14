@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - Basic - Draft"
 index: 1401
-category: java-core
+subcategory: java-core
 date: 2017-01-01
 tags: [String, Integer, Array, List]
 ---

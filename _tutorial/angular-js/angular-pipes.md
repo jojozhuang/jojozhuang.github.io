@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Pipes"
 index: 2719
-category: angular-js
+subcategory: angular-js
 date: 2018-03-20
 tags: [Angular, Pipes]
 ---

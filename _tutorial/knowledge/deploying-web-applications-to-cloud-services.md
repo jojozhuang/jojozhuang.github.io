@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying Web Applications to Cloud Services"
 index: 3502
-category: knowledge
+subcategory: knowledge
 date: 2018-08-05
 tags: [Heroku, Azure, EC2, Netlify, Travis CI]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Pre Sum - Draft"
 index: 1236
-category: algorithm
+subcategory: algorithm
 date: 2016-03-31
 tags: [Pre sum]
 ---

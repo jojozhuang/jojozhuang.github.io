@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Redis Commands Quick Reference"
 index: 3522
-category: redis
+subcategory: redis
 date: 2018-08-07
 tags: [Redis]
 ---

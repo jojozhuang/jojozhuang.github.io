@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Binary Search Tree"
 index: 1122
-category: data-structure
+subcategory: data-structure
 date: 2016-03-08
 tags: [BST]
 mathjax: true

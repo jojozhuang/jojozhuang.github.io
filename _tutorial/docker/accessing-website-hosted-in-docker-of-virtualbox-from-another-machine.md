@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Accessing Website Hosted in Docker of VirtualBox from Another Machine"
 index: 3134
-category: docker
+subcategory: docker
 date: 2019-06-30
 tags: [Docker, OpenGrok, VirtualBox]
 ---

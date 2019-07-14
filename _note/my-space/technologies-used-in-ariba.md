@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Technologies Used in Ariba(Draft)"
 index: 9020
-category: my-space
+subcategory: my-space
 date: 2017-07-20
 tags: [Ariba]
 ---

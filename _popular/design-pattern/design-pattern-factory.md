@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Factory"
 index: 1303
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-03
 tags: [Abstract Factory, Factory Method]
 ---

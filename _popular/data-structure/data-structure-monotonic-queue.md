@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Monotonic Queue - Draft"
 index: 1118
-category: data-structure
+subcategory: data-structure
 date: 2016-03-20
 tags: [Monotonic Queue]
 ---

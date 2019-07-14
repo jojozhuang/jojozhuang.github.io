@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "BFS and DFS"
 index: 1214
-category: algorithm
+subcategory: algorithm
 date: 2016-03-26
 tags: [BFS, DFS]
 ---

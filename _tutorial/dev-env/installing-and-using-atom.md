@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Installing and Using Atom"
 index: 2124
-category: dev-env
+subcategory: dev-env
 date: 2017-10-15
 tags: [Atom, Markdown]
 ---

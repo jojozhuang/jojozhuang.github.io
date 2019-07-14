@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Composite"
 index: 1312
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-12
 tags: [Composite Pattern]
 ---

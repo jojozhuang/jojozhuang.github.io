@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Creating Tomcat Image with Docker File"
 index: 3124
-category: docker
+subcategory: docker
 date: 2017-10-25
 tags: [Docker, Dockerfile, Tomcat]
 ---

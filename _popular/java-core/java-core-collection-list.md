@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Core - Collection - List"
 index: 1421
-category: java-core
+subcategory: java-core
 date: 2017-01-07
 tags: [List, Set, Map, Stack]
 ---

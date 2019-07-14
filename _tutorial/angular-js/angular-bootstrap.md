@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Angular - Bootstrap"
 index: 2716
-category: angular-js
+subcategory: angular-js
 date: 2018-03-15
 tags: [Bootstrap]
 ---

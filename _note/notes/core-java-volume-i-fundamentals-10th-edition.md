@@ -3,7 +3,7 @@ layout: tutorial
 key: note
 title: "Core Java Volume I--Fundamentals (10th Edition)"
 index: 9121
-category: notes
+subcategory: notes
 date: 2016-06-01
 tags: [Java]
 ---

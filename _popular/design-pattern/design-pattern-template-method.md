@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Template Method"
 index: 1330
-category: design-pattern
+subcategory: design-pattern
 date: 2016-05-30
 tags: [Template Method Pattern]
 ---

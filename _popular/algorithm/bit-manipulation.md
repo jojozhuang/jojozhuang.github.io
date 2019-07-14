@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Bit Manipulation"
 index: 1203
-category: algorithm
+subcategory: algorithm
 date: 2016-04-03
 tags: [Bit]
 ---

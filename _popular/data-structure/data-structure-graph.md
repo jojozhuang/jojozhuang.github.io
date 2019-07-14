@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Graph"
 index: 1141
-category: data-structure
+subcategory: data-structure
 date: 2016-03-15
 tags: [Graph, DFS, BFS]
 mathjax: true
