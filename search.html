@@ -46,7 +46,7 @@ tutorial: list
   window.category = {
     {% for category in categories %}
       {% for subcategory in category.subcategories %}
-        "{{subcategory.type}}": "{{ subcategory.image }}",
+        "{{subcategory.subcategory}}": "{{ subcategory.image }}",
       {% endfor %}
     {% endfor %}
   };

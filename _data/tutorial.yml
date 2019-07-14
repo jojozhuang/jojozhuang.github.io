@@ -6,108 +6,108 @@ categories:
       - name: Knowledge
         description: Knowledge
         icon: fas fa-tachometer-alt
-        type: knowledge
+        subcategory: knowledge
         image: code.png
       - name: Dev Environment
         description: Development Environment
         icon: fab fa-dev
-        type: dev-env
+        subcategory: dev-env
         image: code.png
   - name: Backend
     subcategories:
       - name: RESTful API
         description: RESTful API
         icon: fas fa-tachometer-alt
-        type: restful
+        subcategory: restful
         image: restfulapi.png
       - name: Node.js
         description: Node.js
         icon: fab fa-node-js
-        type: node-js
+        subcategory: node-js
         image: node-js.png
       - name: Express.js
         description: Express.js
         icon: fab fa-node-js
-        type: express-js
+        subcategory: express-js
         image: express-js.png
   - name: Frontend
     subcategories:
       - name: Javascript
         description: Javascript
         icon: fab fa-js-square
-        type: javascript
+        subcategory: javascript
         image: javascript.png
       - name: Angular Tutorial
         description: Angular Tutorial
         icon: fab fa-angular
-        type: angular-js
+        subcategory: angular-js
         image: angular-js.png
       - name: Angular App
         description: Angular App
         icon: fab fa-angular
-        type: angular-app
+        subcategory: angular-app
         image: angular-js.png
       - name: React Tutorial
         description: React Tutorial
         icon: fab fa-react
-        type: react-js
+        subcategory: react-js
         image: react-js.png
       - name: React App
         description: React App
         icon: fab fa-react
-        type: react-app
+        subcategory: react-app
         image: react-js.png
       - name: Mobile
         description: Mobile
         icon: fas fa-mobile-alt
-        type: mobile
+        subcategory: mobile
         image: mobile.png
   - name: Distributed System
     subcategories:
       - name: Network
         description: Network
         icon: fas fa-tachometer-alt
-        type: network
+        subcategory: network
         image: code.png
       - name: NoSQL
         description: MongoDB
         icon: fas fa-tachometer-alt
-        type: nosql
+        subcategory: nosql
         image: code.png
       - name: Message Queue
         description: Kafka, RabbitQueue
         icon: fas fa-tachometer-alt
-        type: message-queue
+        subcategory: message-queue
         image: code.png
       - name: Redis
         description: Redis
         icon: fas fa-tachometer-alt
-        type: redis
+        subcategory: redis
         image: code.png
       - name: Nginx
         description: Nginx
         icon: fas fa-tachometer-alt
-        type: nginx
+        subcategory: nginx
         image: code.png
       - name: Zookeeper
         description: Zookeeper
         icon: fas fa-tachometer-alt
-        type: zookeeper
+        subcategory: zookeeper
         image: code.png
       - name: Docker
         description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
         icon: fas fa-tachometer-alt
-        type: docker
+        subcategory: docker
         image: docker.png
       - name: Big Data
         description: Big Data
         icon: fas fa-tachometer-alt
-        type: big-data
+        subcategory: big-data
         image: code.png
   - name: Project
     subcategories:
       - name: Online Judge
         description: Online Judge
         icon: fab fa-js-square
-        type: online-judge
+        subcategory: online-judge
         image: online-judge.png
