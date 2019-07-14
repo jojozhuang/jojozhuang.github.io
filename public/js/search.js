@@ -77,7 +77,9 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('content');
+      this.field('tag', { boost: 20 });
+      this.field('excerpt', { boost: 5 });
+      //this.field('content');
       this.field('url');
 
       for (var url in window.store) { // Add the data to lunr

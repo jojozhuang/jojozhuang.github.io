@@ -28,7 +28,6 @@ tutorial: list
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
         "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",
         "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
@@ -39,6 +38,7 @@ tutorial: list
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
+  //        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
