@@ -77,10 +77,10 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('tag', { boost: 20 });
+      this.field('tags', { boost: 20 });
       this.field('excerpt', { boost: 5 });
-      //this.field('content');
       this.field('url');
+      //this.field('content');
 
       for (var url in window.store) { // Add the data to lunr
         var key = window.store[url].key;
@@ -88,10 +88,10 @@
           this.add({
             'id': url,
             'title': window.store[url].title,
-            'content': window.store[url].content,
-            'url': window.store[url].url,
-            'index': window.store[url].index,
-            'excerpt': window.store[url].excerpt
+            'tags': window.store[url].tags,
+            'excerpt': window.store[url].excerpt,
+            'url': window.store[url].url
+            //'content': window.store[url].content
           });
         }
       }
