@@ -10,7 +10,7 @@
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
         appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '        <img src="../public/assets/category/' + item.image + '" class="rounded">';
+        appendString += '        <img src="../public/assets/category/' + getImage(item.category) + '" class="rounded">';
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
@@ -64,6 +64,12 @@
       }
     }
     return title;
+  }
+
+  function getImage(category) {
+    var image = window.category[category];
+    image = (image === undefined) ? "empty.png" : image;
+    return image;
   }
 
   var keyword = getQueryVariable('k');
