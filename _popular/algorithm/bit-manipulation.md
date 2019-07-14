@@ -5,7 +5,7 @@ title: "Bit Manipulation"
 index: 1203
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-04-03
 tags: [Bit]
 ---

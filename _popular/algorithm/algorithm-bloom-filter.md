@@ -5,7 +5,7 @@ title: "Bloom Filter - Draft"
 index: 1234
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-03-31
 tags: [Bloom Filter]
 ---

@@ -6,7 +6,7 @@ index: 1125
 courseid: DS111
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-10
 tags: [Trie, Prefix Tree]
 ---

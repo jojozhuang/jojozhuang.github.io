@@ -6,7 +6,7 @@ index: 1116
 courseid: DS106
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-05
 tags: [LRU]
 mathjax: true

@@ -5,7 +5,7 @@ title: "BFS and DFS"
 index: 1214
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-03-26
 tags: [BFS, DFS]
 ---

@@ -6,7 +6,7 @@ index: 1145
 courseid: DS120
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-19
 tags: [MST]
 ---

@@ -5,7 +5,7 @@ title: "Practice - Sliding Window Template for Substring Problems - Draft"
 index: 1254
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-04-06
 tags: [Sliding Window]
 ---

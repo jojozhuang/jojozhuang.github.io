@@ -6,7 +6,7 @@ index: 1143
 courseid: DS118
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-17
 tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true

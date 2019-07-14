@@ -6,7 +6,7 @@ index: 1142
 courseid: DS117
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-16
 tags: [Graph, DFS, BFS]
 mathjax: true

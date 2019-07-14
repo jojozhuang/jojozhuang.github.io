@@ -6,7 +6,7 @@ index: 1126
 courseid: DS112
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-11
 tags: [BIT]
 ---

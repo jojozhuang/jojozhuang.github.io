@@ -6,7 +6,7 @@ index: 1127
 courseid: DS113
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: dsa.png
+image: data-structure.png
 date: 2016-03-12
 tags: [Segment Tree, Interval Tree]
 mathjax: true

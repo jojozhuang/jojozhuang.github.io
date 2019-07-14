@@ -5,7 +5,7 @@ title: "Backpack Problems"
 index: 1222
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-03-28
 tags: [DP]
 mathjax: true

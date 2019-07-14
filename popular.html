@@ -75,7 +75,6 @@ title: Popular Topics
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
         "breadcrumb": "{{ post.breadcrumb | replace: '&quot', '' | replace: '"','' }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",
         "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",

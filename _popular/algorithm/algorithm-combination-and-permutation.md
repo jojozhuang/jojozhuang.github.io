@@ -5,7 +5,7 @@ title: "Combination and Permutation"
 index: 1215
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: dsa.png
+image: algorithms.png
 date: 2016-03-27
 tags: [Combination, Permutation, Subset]
 ---
