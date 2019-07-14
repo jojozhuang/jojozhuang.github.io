@@ -5,7 +5,6 @@ title: "Java Advanced - Object Class - Draft"
 index: 1446
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
-image: java.png
 date: 2017-03-02
 tags: [Encryption, Decryption]
 ---

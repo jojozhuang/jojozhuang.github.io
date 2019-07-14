@@ -5,7 +5,6 @@ title: "Building Website with JSP and MongoDB"
 index: 1533
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-11-22
 tags: [JSP, MongoDB, Maven]
 ---

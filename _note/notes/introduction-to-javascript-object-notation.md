@@ -5,7 +5,6 @@ title: "Introduction to JavaScript Object Notation(Draft)"
 index: 9133
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
-image: note.png
 date: 2016-06-14
 tags: [JSON]
 ---

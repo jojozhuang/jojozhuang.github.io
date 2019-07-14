@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Queue"
 index: 1113
-courseid: DS104
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-03
 tags: [Queue, FIFO]
 mathjax: true

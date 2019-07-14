@@ -5,7 +5,6 @@ title: "Online Judge - Code Editor"
 index: 2822
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-04-16
 tags: [Monaco Editor]
 ---

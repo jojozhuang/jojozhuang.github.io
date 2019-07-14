@@ -5,7 +5,6 @@ title: "Core Java Volume I--Fundamentals (10th Edition)"
 index: 9121
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
-image: note.png
 date: 2016-06-01
 tags: [Java]
 ---

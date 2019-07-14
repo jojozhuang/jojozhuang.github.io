@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Deque"
 index: 1114
-courseid: DS105
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-04
 tags: [Deque]
 mathjax: true

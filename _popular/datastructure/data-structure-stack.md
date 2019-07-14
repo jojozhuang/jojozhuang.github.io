@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Stack"
 index: 1112
-courseid: DS103
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-02
 tags: [Stack, LIFO]
 mathjax: true

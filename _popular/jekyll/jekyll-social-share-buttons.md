@@ -5,7 +5,6 @@ title: "Jekyll - Social Share Buttons"
 index: 1617
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2017-08-19
 tags: [Social Share]
 ---

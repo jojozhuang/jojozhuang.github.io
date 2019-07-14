@@ -5,7 +5,6 @@ title: "Redis Commands Quick Reference"
 index: 3522
 category: redis
 breadcrumb: [Tutorial, Distributed System, Redis]
-image: code.png
 date: 2018-08-07
 tags: [Redis]
 ---

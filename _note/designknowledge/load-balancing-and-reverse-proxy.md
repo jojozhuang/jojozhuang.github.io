@@ -5,7 +5,6 @@ title: "Load Balancing and Reverse Proxy"
 index: 9506
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: system-design.png
 date: 2019-01-10
 tags: [Load Balancing, Reverse Proxy]
 ---

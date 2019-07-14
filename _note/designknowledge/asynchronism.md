@@ -5,7 +5,6 @@ title: "Asynchronism"
 index: 9510
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: system-design.png
 date: 2019-01-23
 tags: [Message Queue]
 ---

@@ -5,7 +5,6 @@ title: "Setting up Android Development Environment on Mac"
 index: 2321
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
-image: mobiledev.png
 date: 2017-07-13
 tags: [Android Studio, Genymotion, JDK]
 ---

@@ -5,7 +5,6 @@ title: "Java Core - Collection - Set and Map"
 index: 1423
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-08
 tags: [List, Set, Map, Stack]
 ---

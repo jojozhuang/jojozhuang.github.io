@@ -5,7 +5,6 @@ title: "Java Core - Generics - Draft"
 index: 1426
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-13
 tags: [Generic Types]
 ---

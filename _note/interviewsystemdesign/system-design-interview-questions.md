@@ -5,7 +5,6 @@ title: "System Design Interview Questions"
 index: 9651
 category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
-image: interview.png
 date: 2016-03-01
 tags: [System Design]
 ---

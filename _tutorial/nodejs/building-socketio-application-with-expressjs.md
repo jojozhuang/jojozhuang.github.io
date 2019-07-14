@@ -5,7 +5,6 @@ title: "Building Socket.IO Application with ExpressJS[Draft]"
 index: 2515
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
-image: nodejs.png
 date: 2016-03-16
 tags: [Node.js]
 ---

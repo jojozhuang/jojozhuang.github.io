@@ -5,7 +5,6 @@ title: "Angular - Observable and Reactive Programming - Draft"
 index: 2704
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-17
 tags: [Observable]
 ---

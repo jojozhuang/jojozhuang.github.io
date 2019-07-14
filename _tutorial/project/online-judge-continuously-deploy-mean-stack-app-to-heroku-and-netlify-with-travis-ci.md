@@ -5,7 +5,6 @@ title: "Online Judge - Continuously Deploy MEAN Stack App to Heroku and Netlify 
 index: 2842
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-08-11
 tags: [Heroku, Travis CI, Netlify]
 ---

@@ -5,7 +5,6 @@ title: "Deploying Text Compare Angular App to Netlify"
 index: 2773
 category: angularapp
 breadcrumb: [Tutorial, Frontend, Angular App]
-image: angular.png
 date: 2018-07-29
 tags: [Netlify]
 ---

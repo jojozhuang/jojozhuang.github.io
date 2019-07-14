@@ -5,7 +5,6 @@ title: "Flux and Redux"
 index: 2603
 category: reactjs
 breadcrumb: [Tutorial, Frontend, React Tutorial]
-image: reactjs.png
 date: 2017-08-18
 tags: [Flux, Redux]
 ---

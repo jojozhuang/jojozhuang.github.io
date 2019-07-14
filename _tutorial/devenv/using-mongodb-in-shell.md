@@ -5,7 +5,6 @@ title: "Using MongoDB in Shell"
 index: 2133
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
-image: code.png
 date: 2017-11-09
 tags: [MongoDB, CRUD]
 ---

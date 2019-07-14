@@ -5,7 +5,6 @@ title: "Remote Debugging JSP Application"
 index: 1514
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-03-23
 tags: [Eclipse, Debugging]
 ---

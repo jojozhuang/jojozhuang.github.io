@@ -5,7 +5,6 @@ title: "Creating RESTful API with Dummy Server"
 index: 2211
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
-image: restfulapi.png
 date: 2017-12-15
 tags: [JSON Server]
 ---

@@ -5,7 +5,6 @@ title: "Jekyll - Performance Optimization"
 index: 1632
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2019-06-28
 tags: [Performance]
 ---

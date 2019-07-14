@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "Directed Graph - Draft"
 index: 1144
-courseid: DS119
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-18
 tags: [Directed Graph, Topological Sorting]
 ---

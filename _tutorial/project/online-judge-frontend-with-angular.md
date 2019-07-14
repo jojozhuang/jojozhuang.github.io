@@ -5,7 +5,6 @@ title: "Online Judge - Frontend with Angular"
 index: 2803
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-04-11
 tags: [Angular]
 ---

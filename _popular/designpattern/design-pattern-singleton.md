@@ -5,7 +5,6 @@ title: "Singleton"
 index: 1302
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-02
 tags: [Singleton Pattern]
 ---

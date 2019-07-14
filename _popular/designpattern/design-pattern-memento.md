@@ -5,7 +5,6 @@ title: "Memento"
 index: 1325
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-25
 tags: [Memento Pattern]
 ---

@@ -5,7 +5,6 @@ title: "Building Android App with Android Studio"
 index: 2322
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
-image: mobiledev.png
 date: 2017-07-16
 tags: [Android, Android Studio, SQLite]
 ---

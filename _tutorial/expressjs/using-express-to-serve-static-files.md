@@ -5,7 +5,6 @@ title: "Using Express to Serve Static Files"
 index: 2561
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-18
 tags: [Node.js, Express]
 ---

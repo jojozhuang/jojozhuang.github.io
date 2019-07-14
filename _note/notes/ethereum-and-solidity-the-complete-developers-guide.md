@@ -5,7 +5,6 @@ title: "Ethereum and Solidity: The Complete Developer's Guide(Draft)"
 index: 9141
 category: notes
 breadcrumb: [Note, Work Space, Book Notes]
-image: note.png
 date: 2017-08-02
 tags: [Block Chain, Digital Currency]
 ---

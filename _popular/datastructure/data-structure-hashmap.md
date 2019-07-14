@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "HashMap"
 index: 1131
-courseid: DS114
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-13
 tags: [Hash, Load Factor, Rehashing]
 mathjax: true

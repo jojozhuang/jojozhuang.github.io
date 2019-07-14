@@ -5,7 +5,6 @@ title: "Socket Programming with Java"
 index: 1504
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2016-02-22
 tags: [Socket, TCP, UDP]
 categories:

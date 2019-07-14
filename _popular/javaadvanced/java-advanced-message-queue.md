@@ -5,7 +5,6 @@ title: "Java Advanced - Message Queue - Draft"
 index: 1453
 category: advanced
 breadcrumb: [Popular, Java, Java Advanced]
-image: java.png
 date: 2017-03-06
 tags: [Message Queue, JMS]
 ---

@@ -5,7 +5,6 @@ title: "Installing Spark on Ubuntu"
 index: 3561
 category: bigdata
 breadcrumb: [Tutorial, Distributed System, Big Data]
-image: code.png
 date: 2017-11-06
 tags: [Spark, Scala]
 ---

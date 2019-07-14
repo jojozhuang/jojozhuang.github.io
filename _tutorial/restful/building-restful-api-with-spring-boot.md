@@ -5,7 +5,6 @@ title: "Building RESTful API with Spring Boot"
 index: 2222
 category: restful
 breadcrumb: [Tutorial, Backend, RESTful API]
-image: restfulapi.png
 date: 2017-12-13
 tags: [Spring Boot, RESTful, Maven]
 ---

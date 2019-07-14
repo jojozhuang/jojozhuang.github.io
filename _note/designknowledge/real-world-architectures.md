@@ -5,7 +5,6 @@ title: "Real World Architectures"
 index: 9513
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: system-design.png
 date: 2019-01-27
 tags: [DNS and CDN]
 ---

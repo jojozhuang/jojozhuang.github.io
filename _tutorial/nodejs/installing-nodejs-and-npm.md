@@ -5,7 +5,6 @@ title: "Installing Node.js and NPM"
 index: 2501
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
-image: nodejs.png
 date: 2016-03-06
 tags: [Node.js, NPM]
 ---

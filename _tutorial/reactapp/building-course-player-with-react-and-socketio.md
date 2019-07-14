@@ -5,7 +5,6 @@ title: "Building Course Player with React and Socket.IO"
 index: 2638
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2017-08-25
 tags: [React, Socket.IO]
 ---

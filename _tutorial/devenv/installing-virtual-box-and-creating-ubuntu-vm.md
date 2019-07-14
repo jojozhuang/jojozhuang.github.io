@@ -5,7 +5,6 @@ title: "Installing VirtualBox and Creating Ubuntu VM"
 index: 2111
 category: devenv
 breadcrumb: [Tutorial, Prerequisites, Dev Environment]
-image: code.png
 date: 2016-10-03
 tags: [VirtualBox, Ubuntu]
 ---

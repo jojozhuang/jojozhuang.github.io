@@ -5,7 +5,6 @@ title: "Jekyll - Security"
 index: 1633
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2019-06-29
 tags: [Security]
 ---

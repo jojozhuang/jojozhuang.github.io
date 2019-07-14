@@ -5,7 +5,6 @@ title: "Deploying Socket.IO App to Heroku"
 index: 2636
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2018-07-30
 tags: [Nodejs, Heroku]
 ---

@@ -5,7 +5,6 @@ title: "Binary Search"
 index: 1211
 category: algorithm
 breadcrumb: [Popular, General, Algorithm]
-image: algorithms.png
 date: 2016-03-22
 tags: [Binary Search]
 mathjax: true

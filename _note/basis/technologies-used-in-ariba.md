@@ -5,7 +5,6 @@ title: "Technologies Used in Ariba(Draft)"
 index: 9020
 category: basis
 breadcrumb: [Note, Work Space, Basic Knowledge]
-image: cs.png
 date: 2017-07-20
 tags: [Ariba]
 ---

@@ -5,7 +5,6 @@ title: "Jekyll - Search Function for Static Website - draft"
 index: 1625
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2019-05-23
 tags: [Search, Lunr.js]
 ---

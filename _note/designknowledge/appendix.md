@@ -5,7 +5,6 @@ title: "Appendix"
 index: 9512
 category: design-knowledge
 breadcrumb: [Note, System Design, Design Knowledge]
-image: system-design.png
 date: 2019-01-26
 tags: [Powers of two]
 ---

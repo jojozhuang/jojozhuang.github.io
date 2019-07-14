@@ -5,7 +5,6 @@ title: "Building Realtime Application with SignalR"
 index: 2633
 category: reactapp
 breadcrumb: [Tutorial, Frontend, React App]
-image: reactjs.png
 date: 2016-03-14
 tags: [Chat Room, Sketch Pad, SignalR]
 ---

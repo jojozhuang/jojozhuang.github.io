@@ -5,7 +5,6 @@ title: "DTO - Draft"
 index: 1307
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-07
 tags: [Data Transfer Object]
 ---

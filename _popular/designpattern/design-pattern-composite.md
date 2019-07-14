@@ -5,7 +5,6 @@ title: "Composite"
 index: 1312
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-12
 tags: [Composite Pattern]
 ---

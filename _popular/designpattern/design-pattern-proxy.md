@@ -5,7 +5,6 @@ title: "Proxy"
 index: 1316
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-16
 tags: [Proxy Pattern]
 ---

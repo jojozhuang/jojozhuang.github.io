@@ -5,7 +5,6 @@ title: "Building Android App with Xamarin"
 index: 2334
 category: mobile
 breadcrumb: [Tutorial, Frontend, Mobile]
-image: mobiledev.png
 date: 2017-07-22
 tags: [Xamarin, Android, SQLite, C#]
 ---

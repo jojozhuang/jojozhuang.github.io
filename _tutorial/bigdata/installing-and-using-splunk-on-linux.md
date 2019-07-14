@@ -5,7 +5,6 @@ title: "Installing and Using Splunk on Linux"
 index: 3551
 category: bigdata
 breadcrumb: [Tutorial, Distributed System, Big Data]
-image: code.png
 date: 2017-08-23
 tags: [RedHat, Ubuntu, Splunk]
 ---

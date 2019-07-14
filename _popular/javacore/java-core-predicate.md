@@ -5,7 +5,6 @@ title: "Java Core - Predicate - Draft"
 index: 1418
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-04-07
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---

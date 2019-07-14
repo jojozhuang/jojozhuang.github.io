@@ -5,7 +5,6 @@ title: "Creating Docker Machine with More Disk Space"
 index: 3131
 category: docker
 breadcrumb: [Tutorial, Distributed System, Docker]
-image: docker.png
 date: 2017-11-15
 tags: [Docker Machine, Docker]
 ---

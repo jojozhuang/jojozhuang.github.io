@@ -5,7 +5,6 @@ title: "Angular - Bootstrap"
 index: 2716
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-15
 tags: [Bootstrap]
 ---

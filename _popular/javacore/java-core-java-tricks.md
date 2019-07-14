@@ -5,7 +5,6 @@ title: "Java Core - Tricks"
 index: 1402
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-09-02
 tags: [Java]
 ---

@@ -5,7 +5,6 @@ title: "Running C and Java in Node.js"
 index: 2512
 category: nodejs
 breadcrumb: [Tutorial, Backend, Node.js]
-image: nodejs.png
 date: 2018-05-28
 tags: [Nodejs, Java]
 ---

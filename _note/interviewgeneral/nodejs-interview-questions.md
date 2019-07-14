@@ -5,7 +5,6 @@ title: "Node.js Interview Questions - Draft"
 index: 9621
 category: interview-general
 breadcrumb: [Note, Interview Questions, General]
-image: interview.png
 date: 2016-01-21
 tags: [Node.js]
 ---

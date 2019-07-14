@@ -5,7 +5,6 @@ title: "Process Manager - Draft"
 index: 2559
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-13
 tags: [PM2]
 ---

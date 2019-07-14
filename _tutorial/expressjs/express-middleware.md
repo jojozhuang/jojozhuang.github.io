@@ -5,7 +5,6 @@ title: "Middleware"
 index: 2552
 category: expressjs
 breadcrumb: [Tutorial, Backend, Express.js]
-image: expressjs.png
 date: 2018-01-06
 tags: [Express, Middleware]
 ---

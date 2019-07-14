@@ -3,10 +3,8 @@ layout: tutorial
 key: popular
 title: "LFU Cache"
 index: 1117
-courseid: DS107
 category: datastructure
 breadcrumb: [Popular, General, Data Structure]
-image: data-structure.png
 date: 2016-03-06
 tags: [LFU]
 mathjax: true

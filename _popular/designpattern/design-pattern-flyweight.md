@@ -5,7 +5,6 @@ title: "Flyweight"
 index: 1315
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-15
 tags: [Flyweight Pattern]
 ---

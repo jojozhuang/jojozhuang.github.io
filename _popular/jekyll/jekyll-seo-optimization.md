@@ -5,7 +5,6 @@ title: "Jekyll - SEO Optimizations"
 index: 1631
 category: jekyll
 breadcrumb: [Popular, Personal Website, Jekyll]
-image: jekyll.png
 date: 2019-06-27
 tags: [SEO]
 ---

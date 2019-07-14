@@ -5,7 +5,6 @@ title: "Angular - Dependency Injection"
 index: 2715
 category: angular
 breadcrumb: [Tutorial, Frontend, Angular Tutorial]
-image: angular.png
 date: 2018-03-14
 tags: [Dependency Injection]
 ---

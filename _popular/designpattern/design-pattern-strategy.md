@@ -5,7 +5,6 @@ title: "Strategy"
 index: 1329
 category: designpattern
 breadcrumb: [Popular, General, Design Pattern]
-image: designpattern.png
 date: 2016-05-29
 tags: [Strategy Pattern]
 ---

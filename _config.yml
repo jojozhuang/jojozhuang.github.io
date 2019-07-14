@@ -103,11 +103,10 @@ collections:
     output: true
   tutorial:
     output: true
-  githubpage:
-    output: true
   note:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
+#exclude: ["note", "popular", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml

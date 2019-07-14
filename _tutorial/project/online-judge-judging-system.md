@@ -5,7 +5,6 @@ title: "Online Judge - Judging System"
 index: 2831
 category: onlinejudge
 breadcrumb: [Tutorial, Project, Online Judge]
-image: online-judge.png
 date: 2018-05-04
 tags: [spawn]
 ---

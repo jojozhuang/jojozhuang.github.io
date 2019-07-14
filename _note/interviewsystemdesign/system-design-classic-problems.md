@@ -5,7 +5,6 @@ title: "System Design - Classic Problems"
 index: 9654
 category: interview-systemdesign
 breadcrumb: [Note, Interview Questions, System Design]
-image: interview.png
 date: 2016-03-04
 tags: [Tradeoffs]
 ---

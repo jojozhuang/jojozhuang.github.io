@@ -5,7 +5,6 @@ title: "Java Core - BitSet"
 index: 1416
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-12
 tags: [BitSet, BitMap]
 ---

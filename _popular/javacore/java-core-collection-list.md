@@ -5,7 +5,6 @@ title: "Java Core - Collection - List"
 index: 1421
 category: core
 breadcrumb: [Popular, Java, Java Core]
-image: java.png
 date: 2017-01-07
 tags: [List, Set, Map, Stack]
 ---

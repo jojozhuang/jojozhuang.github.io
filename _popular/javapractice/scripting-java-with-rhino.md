@@ -5,7 +5,6 @@ title: "Scripting Java With Rhino"
 index: 1541
 category: practice
 breadcrumb: [Popular, Java, Practice]
-image: java.png
 date: 2017-10-10
 tags: [Rhino, Javascript]
 ---
