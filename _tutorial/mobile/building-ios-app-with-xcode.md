@@ -4,7 +4,6 @@ key: tutorial
 title: "Building iOS App with Xcode"
 index: 2311
 category: mobile
-breadcrumb: [Tutorial, Frontend, Mobile]
 date: 2017-07-10
 tags: [iOS, Swift, Xcode]
 ---

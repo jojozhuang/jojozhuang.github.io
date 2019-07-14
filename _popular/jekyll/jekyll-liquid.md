@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Liquid"
 index: 1611
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2016-01-19
 tags: [Jekyll, Liquid]
 ---

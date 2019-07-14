@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Zone.js - Draft"
 index: 2705
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-21
 tags: [Angular, Zone.js]
 ---

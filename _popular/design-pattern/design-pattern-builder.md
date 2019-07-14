@@ -4,7 +4,6 @@ key: popular
 title: "Builder"
 index: 1304
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-04
 tags: [Builder Pattern]
 ---

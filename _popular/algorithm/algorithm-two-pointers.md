@@ -4,7 +4,6 @@ key: popular
 title: "Two Pointers"
 index: 1212
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-03-23
 tags: [Two Pointers]
 mathjax: true

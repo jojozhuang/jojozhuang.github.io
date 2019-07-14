@@ -4,7 +4,6 @@ key: tutorial
 title: "Installing and Using Git"
 index: 2123
 category: dev-env
-breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 date: 2017-08-31
 tags: [Git, GitHub, SourceTree]
 ---

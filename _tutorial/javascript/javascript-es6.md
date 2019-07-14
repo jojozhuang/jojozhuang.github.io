@@ -4,7 +4,6 @@ key: tutorial
 title: "JavaScript - ES6"
 index: 2404
 category: javascript
-breadcrumb: [Tutorial, Frontend, Javascript]
 date: 2018-03-25
 tags: [ES6]
 ---

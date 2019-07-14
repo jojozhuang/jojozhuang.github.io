@@ -4,7 +4,6 @@ key: popular
 title: "Java Core - User Input"
 index: 1412
 category: java-core
-breadcrumb: [Popular, Java, Java Core]
 date: 2017-01-02
 tags: [Scanner]
 ---

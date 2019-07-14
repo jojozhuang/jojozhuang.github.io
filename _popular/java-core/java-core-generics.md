@@ -4,7 +4,6 @@ key: popular
 title: "Java Core - Generics - Draft"
 index: 1426
 category: java-core
-breadcrumb: [Popular, Java, Java Core]
 date: 2017-01-13
 tags: [Generic Types]
 ---

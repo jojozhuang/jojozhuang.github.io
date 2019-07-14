@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - SEO Optimizations"
 index: 1631
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2019-06-27
 tags: [SEO]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Prototype"
 index: 1306
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-06
 tags: [Prototype Pattern]
 ---

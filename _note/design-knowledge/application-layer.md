@@ -4,7 +4,6 @@ key: note
 title: "Application Layer"
 index: 9507
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-11
 tags: [Microservices]
 ---

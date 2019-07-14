@@ -4,7 +4,6 @@ key: popular
 title: "Observer"
 index: 1327
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-27
 tags: [Observer Pattern]
 ---

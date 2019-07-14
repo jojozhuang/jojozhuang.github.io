@@ -4,7 +4,6 @@ key: popular
 title: "Java Concurrency - Read Files in Parallel - Draft"
 index: 1433
 category: java-concurrency
-breadcrumb: [Popular, Java, Java Concurrency]
 date: 2017-04-05
 tags: [Javascript, Html, Css]
 ---

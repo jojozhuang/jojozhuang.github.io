@@ -4,7 +4,6 @@ key: tutorial
 title: "Template Engine"
 index: 2557
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-11
 tags: [Express, Template Engine, EJS]
 ---

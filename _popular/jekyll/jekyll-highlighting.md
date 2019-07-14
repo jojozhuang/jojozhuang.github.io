@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Highlighting"
 index: 1623
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2019-06-18
 tags: [Highlighting, highlight.js]
 ---

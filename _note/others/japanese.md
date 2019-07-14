@@ -4,7 +4,6 @@ key: note
 title: "Japanese"
 index: 9902
 category: others
-breadcrumb: [Note, Work Space, Others]
 date: 2017-09-02
 tags: [Japanese]
 ---

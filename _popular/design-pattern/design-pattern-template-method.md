@@ -4,7 +4,6 @@ key: popular
 title: "Template Method"
 index: 1330
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-30
 tags: [Template Method Pattern]
 ---

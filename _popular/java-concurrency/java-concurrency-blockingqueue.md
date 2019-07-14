@@ -4,7 +4,6 @@ key: popular
 title: "Java Concurrency - BlockingQueue"
 index: 1435
 category: java-concurrency
-breadcrumb: [Popular, Java, Java Concurrency]
 date: 2017-02-02
 tags: [BlockingQueue, ArrayBlockingQueue]
 ---

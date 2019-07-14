@@ -4,7 +4,6 @@ key: note
 title: "System Design - Common Principles"
 index: 9501
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-01
 tags: [System Design, Trade-Offs, CAP, BASE]
 ---

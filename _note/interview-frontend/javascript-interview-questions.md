@@ -4,7 +4,6 @@ key: note
 title: "Javascript Interview Questions"
 index: 9614
 category: interview-frontend
-breadcrumb: [Note, Interview Questions, Frontend Questions]
 date: 2016-01-14
 tags: [Javascript]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Minimum Spanning Tree - Draft"
 index: 1145
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-19
 tags: [MST]
 ---

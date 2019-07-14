@@ -4,7 +4,6 @@ key: note
 title: "Computer English"
 index: 9901
 category: others
-breadcrumb: [Note, Work Space, Others]
 date: 2017-09-01
 tags: [English]
 ---

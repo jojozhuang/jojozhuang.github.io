@@ -4,7 +4,6 @@ key: popular
 title: "Running JavaScript at Server Side with Rhino"
 index: 1542
 category: java-practice
-breadcrumb: [Popular, Java, Practice]
 date: 2017-10-11
 tags: [Rhino, Javascript, Servlet]
 ---

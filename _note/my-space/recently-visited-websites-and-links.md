@@ -4,7 +4,6 @@ key: note
 title: "Recently Visited Websites and Links"
 index: 9002
 category: my-space
-breadcrumb: [Note, Work Space, My Space]
 date: 2016-01-22
 tags: [Chrome, MacOS]
 ---

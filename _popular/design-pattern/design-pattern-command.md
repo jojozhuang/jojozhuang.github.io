@@ -4,7 +4,6 @@ key: popular
 title: "Command"
 index: 1321
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-21
 tags: [Command Pattern]
 ---

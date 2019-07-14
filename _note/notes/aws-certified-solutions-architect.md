@@ -4,7 +4,6 @@ key: note
 title: "AWS - Certified Solutions Architect"
 index: 9154
 category: notes
-breadcrumb: [Note, Work Space, Book Notes]
 date: 2017-08-04
 tags: [AWS]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Proxy"
 index: 1316
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-16
 tags: [Proxy Pattern]
 ---

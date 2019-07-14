@@ -4,7 +4,6 @@ key: tutorial
 title: "Using Yarn to Manage Packages"
 index: 2503
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2018-02-01
 tags: [Yarn]
 ---

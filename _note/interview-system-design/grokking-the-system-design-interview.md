@@ -4,7 +4,6 @@ key: note
 title: "Grokking the System Design Interview"
 index: 9652
 category: interview-system-design
-breadcrumb: [Note, Interview Questions, System Design]
 date: 2016-03-02
 tags: [System Design]
 ---

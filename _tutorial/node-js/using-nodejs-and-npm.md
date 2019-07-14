@@ -4,7 +4,6 @@ key: tutorial
 title: "Using Node.js and NPM"
 index: 2502
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2016-03-07
 tags: [Node.js, NPM]
 ---

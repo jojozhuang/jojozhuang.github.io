@@ -4,7 +4,6 @@ key: note
 title: "Cache"
 index: 9509
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-20
 tags: [Cache]
 ---

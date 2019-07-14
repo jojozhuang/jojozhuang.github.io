@@ -4,7 +4,6 @@ key: popular
 title: "DTO - Draft"
 index: 1307
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-07
 tags: [Data Transfer Object]
 ---

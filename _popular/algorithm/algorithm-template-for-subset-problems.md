@@ -4,7 +4,6 @@ key: popular
 title: "Algorithm - Template for Subset Problems"
 index: 1216
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-04-04
 tags: [Algorithm, Subsets]
 ---

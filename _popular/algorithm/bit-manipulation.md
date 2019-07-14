@@ -4,7 +4,6 @@ key: popular
 title: "Bit Manipulation"
 index: 1203
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-04-03
 tags: [Bit]
 ---

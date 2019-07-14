@@ -4,7 +4,6 @@ key: popular
 title: "Deploying Personal Website with Custom Domain"
 index: 1641
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2019-06-21
 tags: [Custom Domain]
 ---

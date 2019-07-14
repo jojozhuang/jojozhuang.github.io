@@ -4,7 +4,6 @@ key: popular
 title: "Practice - Algorithm Best Practice"
 index: 1252
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-04-02
 tags: [Algorithm]
 ---

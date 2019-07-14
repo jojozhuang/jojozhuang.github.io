@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Google Analytics - Draft"
 index: 1615
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2017-08-17
 tags: [Google Analytics]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Building Web Application with Angular"
 index: 2761
 category: angular-app
-breadcrumb: [Tutorial, Frontend, Angular App]
 date: 2017-12-14
 tags: [Angular]
 ---

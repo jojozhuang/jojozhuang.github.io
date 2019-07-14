@@ -4,7 +4,6 @@ key: tutorial
 title: "Using MySQL Container for JSP Application"
 index: 3111
 category: docker
-breadcrumb: [Tutorial, Distributed System, Docker]
 date: 2017-10-13
 tags: [JSP, MySQL, Docker]
 ---

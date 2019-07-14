@@ -4,7 +4,6 @@ key: tutorial
 title: "Using Express to Serve Static Files"
 index: 2561
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-18
 tags: [Node.js, Express]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Deploying Spring Boot RESTful API to Heroku"
 index: 2223
 category: restful
-breadcrumb: [Tutorial, Backend, RESTful API]
 date: 2018-08-05
 tags: [Spring Boot, Heroku]
 ---

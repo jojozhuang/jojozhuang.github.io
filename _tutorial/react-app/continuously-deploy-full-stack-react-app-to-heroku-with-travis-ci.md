@@ -4,7 +4,6 @@ key: tutorial
 title: "Continuously Deploy Full Stack React App to Heroku with Travis-CI"
 index: 2646
 category: react-app
-breadcrumb: [Tutorial, Frontend, React App]
 date: 2018-08-11
 tags: [Heroku, Travis CI]
 ---

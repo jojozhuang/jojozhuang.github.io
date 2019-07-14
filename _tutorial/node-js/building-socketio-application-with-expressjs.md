@@ -4,7 +4,6 @@ key: tutorial
 title: "Building Socket.IO Application with ExpressJS[Draft]"
 index: 2515
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2016-03-16
 tags: [Node.js]
 ---

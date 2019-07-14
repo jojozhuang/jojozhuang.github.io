@@ -4,7 +4,6 @@ key: popular
 title: "Factory"
 index: 1303
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-03
 tags: [Abstract Factory, Factory Method]
 ---

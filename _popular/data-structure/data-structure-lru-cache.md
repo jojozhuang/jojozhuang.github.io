@@ -4,7 +4,6 @@ key: popular
 title: "LRU Cache"
 index: 1116
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-05
 tags: [LRU]
 mathjax: true

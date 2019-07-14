@@ -4,7 +4,6 @@ key: popular
 title: "Java Concurrency - MultiThreading"
 index: 1432
 category: java-concurrency
-breadcrumb: [Popular, Java, Java Concurrency]
 date: 2017-04-04
 tags: [Thread, Runnable, Concurrency]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - TypeScript"
 index: 2702
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-06
 tags: [TypeScript, tsc]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Composite"
 index: 1312
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-12
 tags: [Composite Pattern]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Import Data"
 index: 2814
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-23
 tags: [Multer, Fast-csv]
 ---

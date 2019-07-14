@@ -4,7 +4,6 @@ key: note
 title: "System Design - Classic Problems"
 index: 9654
 category: interview-system-design
-breadcrumb: [Note, Interview Questions, System Design]
 date: 2016-03-04
 tags: [Tradeoffs]
 ---

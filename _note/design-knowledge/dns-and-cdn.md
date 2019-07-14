@@ -4,9 +4,8 @@ key: note
 title: "DNS and CDN"
 index: 9504
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-06
-tags: [DNS and CDN]
+tags: [DNS, CDN]
 ---
 
 > DNS and CDN

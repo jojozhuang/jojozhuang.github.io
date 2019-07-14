@@ -4,7 +4,6 @@ key: popular
 title: "Mediator"
 index: 1324
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-24
 tags: [Mediator Pattern]
 ---

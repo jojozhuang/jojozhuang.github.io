@@ -4,7 +4,6 @@ key: tutorial
 title: "Kafka"
 index: 3541
 category: message-queue
-breadcrumb: [Tutorial, Distributed System, Message Queue]
 date: 2018-08-15
 tags: [Kafka]
 ---

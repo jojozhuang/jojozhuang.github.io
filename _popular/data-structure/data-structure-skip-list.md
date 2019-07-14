@@ -4,7 +4,6 @@ key: popular
 title: "SkipList - Draft"
 index: 1119
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-20
 tags: [SkipList]
 ---

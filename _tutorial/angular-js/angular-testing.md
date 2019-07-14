@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Testing - Draft"
 index: 2732
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-22
 tags: [Angular, Karma, Jasmine]
 ---

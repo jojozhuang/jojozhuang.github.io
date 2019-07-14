@@ -4,7 +4,6 @@ key: note
 title: "Asynchronism"
 index: 9510
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-23
 tags: [Message Queue]
 ---

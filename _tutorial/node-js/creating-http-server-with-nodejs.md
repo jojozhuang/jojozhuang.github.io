@@ -4,7 +4,6 @@ key: tutorial
 title: "Creating Http Server with Node.js"
 index: 2511
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2016-03-10
 tags: [Node.js]
 ---

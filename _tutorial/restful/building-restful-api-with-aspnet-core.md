@@ -4,7 +4,6 @@ key: tutorial
 title: "Building RESTful API with ASP.NET Core"
 index: 2212
 category: restful
-breadcrumb: [Tutorial, Backend, RESTful API]
 date: 2017-12-11
 tags: [ASP.NET Core, RESTful, WebAPI 2.0]
 ---

@@ -4,7 +4,6 @@ key: note
 title: "Data Structures and Algorithms in Java"
 index: 9111
 category: notes
-breadcrumb: [Note, Work Space, Book Notes]
 date: 2016-02-01
 tags: [Data Structure, Algorithm]
 ---

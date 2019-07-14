@@ -4,7 +4,6 @@ key: popular
 title: "Visitor"
 index: 1331
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-31
 tags: [Visitor Pattern]
 ---

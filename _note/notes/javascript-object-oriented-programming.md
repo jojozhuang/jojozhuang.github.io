@@ -4,7 +4,6 @@ key: note
 title: "JavaScript object oriented programming(Online Doc)"
 index: 9132
 category: notes
-breadcrumb: [Note, Work Space, Book Notes]
 date: 2016-06-12
 tags: [Javascript OO]
 ---

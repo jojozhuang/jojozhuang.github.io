@@ -4,7 +4,6 @@ key: note
 title: "System Design Interview Questions"
 index: 9502
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-03
 tags: [Tradeoffs]
 ---

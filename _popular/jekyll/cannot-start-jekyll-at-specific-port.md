@@ -4,7 +4,6 @@ key: popular
 title: "Cannot Start Jekyll at Specific Port"
 index: 1605
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2016-01-17
 tags: [Jekyll, Port]
 ---

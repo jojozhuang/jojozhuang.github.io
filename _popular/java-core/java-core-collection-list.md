@@ -4,7 +4,6 @@ key: popular
 title: "Java Core - Collection - List"
 index: 1421
 category: java-core
-breadcrumb: [Popular, Java, Java Core]
 date: 2017-01-07
 tags: [List, Set, Map, Stack]
 ---

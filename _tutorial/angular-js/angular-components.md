@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Components"
 index: 2711
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-10
 tags: [Angular Components]
 ---

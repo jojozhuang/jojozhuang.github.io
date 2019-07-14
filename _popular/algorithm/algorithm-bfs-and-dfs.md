@@ -4,7 +4,6 @@ key: popular
 title: "BFS and DFS"
 index: 1214
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-03-26
 tags: [BFS, DFS]
 ---

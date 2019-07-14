@@ -4,7 +4,6 @@ key: tutorial
 title: "Getting Started with Linux"
 index: 2101
 category: dev-env
-breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 date: 2017-07-26
 tags: [Unix, Linux, Shell, Bash]
 ---

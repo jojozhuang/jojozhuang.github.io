@@ -4,7 +4,6 @@ key: popular
 title: "Divide and Conquer"
 index: 1213
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-03-25
 tags: [Divide, Conquer]
 ---

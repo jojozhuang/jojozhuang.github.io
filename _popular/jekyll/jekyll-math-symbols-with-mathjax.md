@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Math Symbols with MathJax"
 index: 1626
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2018-09-10
 tags: [MathJax, Mathematic]
 mathjax: true

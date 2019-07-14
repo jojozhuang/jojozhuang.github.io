@@ -4,7 +4,6 @@ key: tutorial
 title: "Building RESTful API with Express And MongoDB"
 index: 2231
 category: restful
-breadcrumb: [Tutorial, Backend, RESTful API]
 date: 2018-06-08
 tags: [RESTful, Express, MongoDB]
 ---

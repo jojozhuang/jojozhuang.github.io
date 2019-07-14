@@ -4,7 +4,6 @@ key: popular
 title: "Java Advanced - Java Memory Model - Draft"
 index: 1441
 category: java-advanced
-breadcrumb: [Popular, Java, Java Advanced]
 date: 2017-03-01
 tags: [Memory Model, JVM]
 ---

@@ -4,7 +4,6 @@ key: note
 title: "Html Interview Questions"
 index: 9612
 category: interview-frontend
-breadcrumb: [Note, Interview Questions, Frontend Questions]
 date: 2016-01-12
 tags: [Html, html5]
 ---

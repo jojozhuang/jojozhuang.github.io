@@ -4,7 +4,6 @@ key: popular
 title: "Java Remote Debugging with Eclipse"
 index: 1513
 category: java-practice
-breadcrumb: [Popular, Java, Practice]
 date: 2016-03-22
 tags: [Eclipse, Debugging]
 ---

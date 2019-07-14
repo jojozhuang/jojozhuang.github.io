@@ -4,7 +4,6 @@ key: popular
 title: "Practice - Java Best Practice"
 index: 1251
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-04-01
 tags: [Java]
 ---

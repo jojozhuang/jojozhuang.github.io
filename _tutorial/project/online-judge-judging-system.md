@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Judging System"
 index: 2831
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-05-04
 tags: [spawn]
 ---

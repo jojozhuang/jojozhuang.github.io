@@ -4,7 +4,6 @@ key: popular
 title: "Bipartite Graph"
 index: 1143
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-17
 tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true

@@ -4,7 +4,6 @@ key: popular
 title: "Decorator"
 index: 1313
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-13
 tags: [Decorator Pattern]
 ---

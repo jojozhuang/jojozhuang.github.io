@@ -4,7 +4,6 @@ key: tutorial
 title: "Installing and Using Atom"
 index: 2124
 category: dev-env
-breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 date: 2017-10-15
 tags: [Atom, Markdown]
 ---

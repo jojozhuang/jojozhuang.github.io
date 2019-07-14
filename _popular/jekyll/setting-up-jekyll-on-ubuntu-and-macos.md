@@ -4,7 +4,6 @@ key: popular
 title: "Setting up Jekyll on Ubuntu and MacOS"
 index: 1603
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2016-01-16
 tags: [GitHub Pages, Jekyll, Ruby]
 ---

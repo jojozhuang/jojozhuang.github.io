@@ -4,7 +4,6 @@ key: note
 title: "TO DO"
 index: 9003
 category: my-space
-breadcrumb: [Note, Work Space, My Space]
 date: 2016-01-23
 tags: [Todo List]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Getting Started with Angular CLI"
 index: 2701
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-09
 tags: [Angular CLI]
 ---

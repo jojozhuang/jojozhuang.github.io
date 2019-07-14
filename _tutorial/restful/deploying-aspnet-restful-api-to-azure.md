@@ -4,7 +4,6 @@ key: tutorial
 title: "Deploying ASP.NET RESTful API to Azure"
 index: 2214
 category: restful
-breadcrumb: [Tutorial, Backend, RESTful API]
 date: 2018-07-31
 tags: [Azure]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Remote Debugging JSP Application"
 index: 1514
 category: java-practice
-breadcrumb: [Popular, Java, Practice]
 date: 2016-03-23
 tags: [Eclipse, Debugging]
 ---

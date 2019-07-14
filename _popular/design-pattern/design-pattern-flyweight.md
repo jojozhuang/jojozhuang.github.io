@@ -4,7 +4,6 @@ key: popular
 title: "Flyweight"
 index: 1315
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-15
 tags: [Flyweight Pattern]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Red Black Tree - draft"
 index: 1123
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-09
 tags: [RBT]
 mathjax: true

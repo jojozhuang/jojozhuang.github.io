@@ -4,7 +4,6 @@ key: popular
 title: "Binary Search Tree"
 index: 1122
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-08
 tags: [BST]
 mathjax: true

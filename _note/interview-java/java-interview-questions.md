@@ -4,7 +4,6 @@ key: note
 title: "Java Interview Questions"
 index: 9603
 category: interview-java
-breadcrumb: [Note, Interview Questions, Java Questions]
 date: 2016-01-03
 tags: [Java, Interview]
 ---
