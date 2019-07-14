@@ -4,7 +4,6 @@ key: tutorial
 title: "Mobile App Development"
 index: 2301
 category: mobile
-breadcrumb: [Tutorial, Frontend, Mobile]
 date: 2017-07-08
 tags: [iOS, Android, Cordova, Xamarin]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Strategy"
 index: 1329
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-29
 tags: [Strategy Pattern]
 ---

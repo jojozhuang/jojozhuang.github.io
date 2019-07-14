@@ -4,7 +4,6 @@ key: popular
 title: "Java Advanced - Dead Lock"
 index: 1448
 category: java-advanced
-breadcrumb: [Popular, Java, Java Advanced]
 date: 2017-04-02
 tags: [synchronized, deadlock]
 ---

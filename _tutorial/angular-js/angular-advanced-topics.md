@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Advanced Topics - Draft"
 index: 2731
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-23
 tags: [Angular, Karma, Jasmine]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Setting Up Reverse Proxy with Nginx for Node Server"
 index: 3512
 category: nginx
-breadcrumb: [Tutorial, Distributed System, Nginx]
 date: 2018-05-27
 tags: [Nginx, Proxy, Node.js]
 ---

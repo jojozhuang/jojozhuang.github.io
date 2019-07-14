@@ -4,7 +4,6 @@ key: popular
 title: "Java Advanced - Shallow Copy vs Deep Copy"
 index: 1447
 category: java-advanced
-breadcrumb: [Popular, Java, Java Advanced]
 date: 2017-01-05
 tags: [Shallow Copy, Deep Copy]
 ---

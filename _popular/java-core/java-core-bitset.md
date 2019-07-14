@@ -4,7 +4,6 @@ key: popular
 title: "Java Core - BitSet"
 index: 1416
 category: java-core
-breadcrumb: [Popular, Java, Java Core]
 date: 2017-01-12
 tags: [BitSet, BitMap]
 ---

@@ -4,7 +4,6 @@ key: note
 title: "Designing Popular Website or App"
 index: 9012
 category: my-space
-breadcrumb: [Note, Work Space, My Space]
 date: 2016-01-12
 tags: [System Design]
 ---

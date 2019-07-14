@@ -4,7 +4,6 @@ key: popular
 title: "Problem List on LeetCode"
 index: 1255
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-04-10
 tags: [Algorithm, Leetcode]
 ---

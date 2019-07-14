@@ -4,7 +4,6 @@ key: note
 title: "Good Articles"
 index: 9011
 category: my-space
-breadcrumb: [Note, Work Space, My Space]
 date: 2016-01-20
 tags: [Web, Architect]
 ---

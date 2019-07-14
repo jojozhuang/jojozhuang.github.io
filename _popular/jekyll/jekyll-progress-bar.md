@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Progress Bar"
 index: 1621
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2019-06-04
 tags: [Nanobar, Progress Bar]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Working with Environment Variables in Node.js[Draft]"
 index: 2522
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2016-03-15
 tags: [Node.js]
 ---

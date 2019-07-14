@@ -4,7 +4,6 @@ key: note
 title: "System Design - Tradeoff - Draft"
 index: 9653
 category: interview-system-design
-breadcrumb: [Note, Interview Questions, System Design]
 date: 2016-03-03
 tags: [Tradeoffs]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Frontend with Angular"
 index: 2803
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-11
 tags: [Angular]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Java Advanced - Object Class - Draft"
 index: 1446
 category: java-advanced
-breadcrumb: [Popular, Java, Java Advanced]
 date: 2017-03-02
 tags: [Encryption, Decryption]
 ---

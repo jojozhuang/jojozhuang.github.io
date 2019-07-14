@@ -4,7 +4,6 @@ key: tutorial
 title: "Introduction of Course Player"
 index: 2631
 category: react-app
-breadcrumb: [Tutorial, Frontend, React App]
 date: 2016-03-12
 tags: [Course Player]
 ---

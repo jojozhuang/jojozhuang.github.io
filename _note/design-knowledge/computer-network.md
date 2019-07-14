@@ -4,7 +4,6 @@ key: note
 title: "Computer Network"
 index: 9503
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-05
 tags: [OSI, HTTP, TCP, UDP]
 ---

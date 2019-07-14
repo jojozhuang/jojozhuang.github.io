@@ -4,7 +4,6 @@ key: popular
 title: "Tree"
 index: 1121
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-07
 tags: [Tree, Binary Tree]
 mathjax: true

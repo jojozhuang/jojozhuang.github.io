@@ -4,7 +4,6 @@ key: note
 title: "JavaScript Guide MDN(Online Doc)"
 index: 9131
 category: notes
-breadcrumb: [Note, Work Space, Book Notes]
 date: 2016-06-11
 tags: [Javascript]
 ---

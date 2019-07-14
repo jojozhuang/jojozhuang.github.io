@@ -4,7 +4,6 @@ key: popular
 title: "Queue"
 index: 1113
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-03
 tags: [Queue, FIFO]
 mathjax: true

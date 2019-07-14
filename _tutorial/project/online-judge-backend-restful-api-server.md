@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Backend RESTful API Server"
 index: 2802
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-10
 tags: [Express, MongoDB, Mongoose]
 ---

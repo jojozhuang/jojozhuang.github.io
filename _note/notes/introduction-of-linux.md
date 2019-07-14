@@ -4,7 +4,6 @@ key: note
 title: "Introduction to Linux(Book)"
 index: 9101
 category: notes
-breadcrumb: [Note, Work Space, Book Notes]
 date: 2016-01-01
 tags: [Linux, Bash]
 ---

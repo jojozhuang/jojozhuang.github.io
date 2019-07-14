@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Modules"
 index: 2713
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-12
 tags: [Angular Modules]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Middleware"
 index: 2552
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-06
 tags: [Express, Middleware]
 ---

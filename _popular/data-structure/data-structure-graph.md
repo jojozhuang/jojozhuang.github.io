@@ -4,7 +4,6 @@ key: popular
 title: "Graph"
 index: 1141
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-15
 tags: [Graph, DFS, BFS]
 mathjax: true

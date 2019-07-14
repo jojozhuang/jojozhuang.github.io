@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Pagination - Draft"
 index: 1622
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2019-06-04
 tags: [Pagination]
 ---

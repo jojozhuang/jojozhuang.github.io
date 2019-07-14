@@ -4,7 +4,6 @@ key: note
 title: "Front-End Interview Questions"
 index: 9611
 category: interview-frontend
-breadcrumb: [Note, Interview Questions, Frontend Questions]
 date: 2019-01-11
 tags: [Html, CSS, javascript]
 ---

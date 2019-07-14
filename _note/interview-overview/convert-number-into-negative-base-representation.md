@@ -4,7 +4,6 @@ key: note
 title: "Algorithm - Convert Number into Negative Base Representation - Draft"
 index: 9670
 category: interview-overview
-breadcrumb: [Note, Interview Questions, Overview]
 date: 2019-01-20
 tags: [Javascript, Html, Css]
 ---

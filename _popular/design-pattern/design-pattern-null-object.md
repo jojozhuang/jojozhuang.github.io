@@ -4,7 +4,6 @@ key: popular
 title: "Null Object"
 index: 1326
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-26
 tags: [Null Object]
 ---

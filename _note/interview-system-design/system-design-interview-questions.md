@@ -4,7 +4,6 @@ key: note
 title: "System Design Interview Questions"
 index: 9651
 category: interview-system-design
-breadcrumb: [Note, Interview Questions, System Design]
 date: 2016-03-01
 tags: [System Design]
 ---

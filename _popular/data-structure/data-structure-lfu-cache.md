@@ -4,7 +4,6 @@ key: popular
 title: "LFU Cache"
 index: 1117
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-06
 tags: [LFU]
 mathjax: true

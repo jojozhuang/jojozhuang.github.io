@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Performance Optimization"
 index: 1632
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2019-06-28
 tags: [Performance]
 ---

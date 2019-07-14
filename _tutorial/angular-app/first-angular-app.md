@@ -4,7 +4,6 @@ key: tutorial
 title: "First Angular App"
 index: 2751
 category: angular-app
-breadcrumb: [Tutorial, Frontend, Angular App]
 date: 2017-08-08
 tags: [Angular4, Angular CLI]
 ---

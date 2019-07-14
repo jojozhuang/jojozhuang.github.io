@@ -4,7 +4,6 @@ key: tutorial
 title: "Combine Morgan & Winston"
 index: 2555
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-09
 tags: [Express, Morgan, Winston]
 ---

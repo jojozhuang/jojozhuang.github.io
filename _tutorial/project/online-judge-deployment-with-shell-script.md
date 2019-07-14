@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Deployment with Shell Script - Draft"
 index: 2843
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-28
 tags: [Online Judge]
 ---

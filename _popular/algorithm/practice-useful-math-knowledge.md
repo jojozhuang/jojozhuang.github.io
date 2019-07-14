@@ -4,7 +4,6 @@ key: popular
 title: "Useful Math Knowledge"
 index: 1202
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-04-05
 tags: [Math]
 ---

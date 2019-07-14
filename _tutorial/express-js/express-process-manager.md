@@ -4,7 +4,6 @@ key: tutorial
 title: "Process Manager - Draft"
 index: 2559
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-13
 tags: [PM2]
 ---

@@ -4,7 +4,6 @@ key: tutorial
 title: "Installing MongoDB on Ubuntu and Mac"
 index: 2132
 category: dev-env
-breadcrumb: [Tutorial, Prerequisites, Dev Environment]
 date: 2017-11-08
 tags: [MongoDB]
 ---

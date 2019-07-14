@@ -4,7 +4,6 @@ key: popular
 title: "Trie"
 index: 1125
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-10
 tags: [Trie, Prefix Tree]
 ---

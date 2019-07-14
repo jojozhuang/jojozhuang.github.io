@@ -4,7 +4,6 @@ key: tutorial
 title: "Express Routing"
 index: 2556
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-10
 tags: [Express, Routing]
 ---

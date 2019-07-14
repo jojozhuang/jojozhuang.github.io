@@ -4,7 +4,6 @@ key: tutorial
 title: "JavaScript - Basic"
 index: 2401
 category: javascript
-breadcrumb: [Tutorial, Frontend, Javascript]
 date: 2018-03-21
 tags: [JavaScript]
 ---

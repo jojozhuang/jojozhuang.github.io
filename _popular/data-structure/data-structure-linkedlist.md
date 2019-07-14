@@ -4,7 +4,6 @@ key: popular
 title: "Linked List"
 index: 1111
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-01
 tags: [Singly Linked List, Doubly Linked List]
 ---

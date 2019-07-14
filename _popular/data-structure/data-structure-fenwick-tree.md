@@ -4,7 +4,6 @@ key: popular
 title: "Fenwick Tree - Draft"
 index: 1126
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-11
 tags: [Fenwick]
 ---

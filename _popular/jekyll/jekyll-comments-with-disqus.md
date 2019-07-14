@@ -4,7 +4,6 @@ key: popular
 title: "Jekyll - Comments with Disqus"
 index: 1616
 category: jekyll
-breadcrumb: [Popular, Personal Website, Jekyll]
 date: 2017-08-17
 tags: [Disqus]
 ---

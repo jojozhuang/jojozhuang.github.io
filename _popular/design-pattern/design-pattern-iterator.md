@@ -4,7 +4,6 @@ key: popular
 title: "Iterator"
 index: 1323
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-23
 tags: [Iterator Pattern]
 ---

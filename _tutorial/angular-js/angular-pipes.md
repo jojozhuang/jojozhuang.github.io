@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Pipes"
 index: 2719
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-20
 tags: [Angular, Pipes]
 ---

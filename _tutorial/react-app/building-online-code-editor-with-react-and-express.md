@@ -4,7 +4,6 @@ key: tutorial
 title: "Building Online Code Editor with React and Express"
 index: 2642
 category: react-app
-breadcrumb: [Tutorial, Frontend, React App]
 date: 2018-06-04
 tags: [React, Express]
 ---

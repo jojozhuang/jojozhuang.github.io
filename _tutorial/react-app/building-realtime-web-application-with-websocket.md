@@ -4,7 +4,6 @@ key: tutorial
 title: "Building Realtime Web Application with WebSocket"
 index: 2632
 category: react-app
-breadcrumb: [Tutorial, Frontend, React App]
 date: 2016-03-13
 tags: [WebSocket, Socket.IO, SignalR]
 ---

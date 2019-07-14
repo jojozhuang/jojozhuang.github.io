@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Bootstrap"
 index: 2716
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-15
 tags: [Bootstrap]
 ---

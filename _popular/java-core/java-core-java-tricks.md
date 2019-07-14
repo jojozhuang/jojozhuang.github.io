@@ -4,7 +4,6 @@ key: popular
 title: "Java Core - Tricks"
 index: 1402
 category: java-core
-breadcrumb: [Popular, Java, Java Core]
 date: 2017-09-02
 tags: [Java]
 ---

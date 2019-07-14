@@ -4,7 +4,6 @@ key: tutorial
 title: "Cloud Services"
 index: 3501
 category: knowledge
-breadcrumb: [Tutorial, Prerequisites, Knowledge]
 date: 2018-08-05
 tags: [Heroku, Azure, EC2, Netlify, Travis CI]
 ---

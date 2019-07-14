@@ -4,7 +4,6 @@ key: note
 title: "Building Scalable Web Sites"
 index: 9152
 category: notes
-breadcrumb: [Note, Work Space, Book Notes]
 date: 2017-07-02
 tags: [Scalable]
 ---

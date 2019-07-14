@@ -4,9 +4,8 @@ key: note
 title: "Real World Architectures"
 index: 9513
 category: design-knowledge
-breadcrumb: [Note, System Design, Design Knowledge]
 date: 2019-01-27
-tags: [DNS and CDN]
+tags: [Architecture]
 ---
 
 > DNS and CDN

@@ -4,7 +4,6 @@ key: popular
 title: "Segment Tree"
 index: 1127
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-12
 tags: [Segment Tree, Interval Tree]
 mathjax: true

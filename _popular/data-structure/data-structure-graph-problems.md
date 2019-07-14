@@ -4,7 +4,6 @@ key: popular
 title: "Graph Problems"
 index: 1142
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-16
 tags: [Graph, DFS, BFS]
 mathjax: true

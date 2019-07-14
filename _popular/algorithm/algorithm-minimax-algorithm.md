@@ -4,7 +4,6 @@ key: popular
 title: "Minimax Algorithm - Draft"
 index: 1233
 category: algorithm
-breadcrumb: [Popular, General, Algorithm]
 date: 2016-03-31
 tags: [Map, Reduce]
 ---

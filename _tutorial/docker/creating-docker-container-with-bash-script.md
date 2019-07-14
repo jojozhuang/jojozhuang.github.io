@@ -4,7 +4,6 @@ key: tutorial
 title: "Creating Docker Container with Bash Script[Draft]"
 index: 3133
 category: docker
-breadcrumb: [Tutorial, Distributed System, Docker]
 date: 2018-04-15
 tags: [Docker, Bash]
 ---

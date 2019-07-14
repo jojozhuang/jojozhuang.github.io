@@ -4,7 +4,6 @@ key: note
 title: "CSS Interview Questions"
 index: 9613
 category: interview-frontend
-breadcrumb: [Note, Interview Questions, Frontend Questions]
 date: 2016-01-13
 tags: [CSS]
 ---

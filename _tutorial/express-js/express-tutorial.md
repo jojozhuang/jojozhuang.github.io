@@ -4,7 +4,6 @@ key: tutorial
 title: "Getting Started with Express"
 index: 2551
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-05
 tags: [Express]
 ---

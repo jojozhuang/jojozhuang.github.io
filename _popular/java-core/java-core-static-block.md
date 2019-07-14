@@ -4,7 +4,6 @@ key: popular
 title: "Java Core - Static Block - Draft"
 index: 1417
 category: java-core
-breadcrumb: [Popular, Java, Java Core]
 date: 2017-04-08
 tags: [Static Block]
 ---

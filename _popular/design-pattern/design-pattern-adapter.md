@@ -4,7 +4,6 @@ key: popular
 title: "Adapter"
 index: 1310
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-10
 tags: [Adapter Pattern]
 ---

@@ -4,7 +4,6 @@ key: popular
 title: "Java - Thread Dumps & Analysis"
 index: 1503
 category: java-practice
-breadcrumb: [Popular, Java, Practice]
 date: 2017-06-04
 tags: [Thread Dumps]
 ---

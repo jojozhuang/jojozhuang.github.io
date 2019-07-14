@@ -4,7 +4,6 @@ key: tutorial
 title: "Creating Full Stack App with React and Node.js"
 index: 2641
 category: react-app
-breadcrumb: [Tutorial, Frontend, React App]
 date: 2018-05-29
 tags: [React, Nodejs, Express, Webpack]
 ---

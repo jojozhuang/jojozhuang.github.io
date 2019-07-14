@@ -4,7 +4,6 @@ key: popular
 title: "HashMap"
 index: 1131
 category: data-structure
-breadcrumb: [Popular, General, Data Structure]
 date: 2016-03-13
 tags: [Hash, Load Factor, Rehashing]
 mathjax: true

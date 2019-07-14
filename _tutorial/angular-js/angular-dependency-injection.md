@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Dependency Injection"
 index: 2715
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-14
 tags: [Dependency Injection]
 ---

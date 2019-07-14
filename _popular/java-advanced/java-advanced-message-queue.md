@@ -4,7 +4,6 @@ key: popular
 title: "Java Advanced - Message Queue - Draft"
 index: 1453
 category: java-advanced
-breadcrumb: [Popular, Java, Java Advanced]
 date: 2017-03-06
 tags: [Message Queue, JMS]
 ---

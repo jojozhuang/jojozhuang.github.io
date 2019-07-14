@@ -4,7 +4,6 @@ key: note
 title: "Frequently Used Commands"
 index: 9001
 category: my-space
-breadcrumb: [Note, Work Space, My Space]
 date: 2016-01-21
 tags: [Linux, MacOS]
 ---

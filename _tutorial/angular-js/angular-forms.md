@@ -4,7 +4,6 @@ key: tutorial
 title: "Angular - Forms"
 index: 2718
 category: angular-js
-breadcrumb: [Tutorial, Frontend, Angular Tutorial]
 date: 2018-03-19
 tags: [Angular, Forms]
 ---

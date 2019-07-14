@@ -4,7 +4,6 @@ key: tutorial
 title: "Deploying Socket.IO App to Heroku"
 index: 2636
 category: react-app
-breadcrumb: [Tutorial, Frontend, React App]
 date: 2018-07-30
 tags: [Nodejs, Heroku]
 ---

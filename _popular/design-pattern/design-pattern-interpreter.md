@@ -4,7 +4,6 @@ key: popular
 title: "Interpreter"
 index: 1322
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-22
 tags: [Interpreter Pattern]
 ---

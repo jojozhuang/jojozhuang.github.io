@@ -4,7 +4,6 @@ key: tutorial
 title: "Installing Node.js and NPM"
 index: 2501
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2016-03-06
 tags: [Node.js, NPM]
 ---

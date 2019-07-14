@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Progress Bar"
 index: 2823
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-05-01
 tags: [ngx-progressbar]
 ---

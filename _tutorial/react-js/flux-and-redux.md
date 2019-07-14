@@ -4,7 +4,6 @@ key: tutorial
 title: "Flux and Redux"
 index: 2603
 category: react-js
-breadcrumb: [Tutorial, Frontend, React Tutorial]
 date: 2017-08-18
 tags: [Flux, Redux]
 ---

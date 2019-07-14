@@ -4,7 +4,6 @@ key: popular
 title: "Bridge"
 index: 1311
 category: design-pattern
-breadcrumb: [Popular, General, Design Pattern]
 date: 2016-05-11
 tags: [Bridge Pattern]
 ---

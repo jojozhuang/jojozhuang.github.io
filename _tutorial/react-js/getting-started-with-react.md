@@ -4,7 +4,6 @@ key: tutorial
 title: "Getting Started with React"
 index: 2601
 category: react-js
-breadcrumb: [Tutorial, Frontend, React Tutorial]
 date: 2017-08-12
 tags: [React]
 ---

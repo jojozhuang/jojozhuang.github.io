@@ -4,7 +4,6 @@ key: tutorial
 title: "Building Cross-platform Desktop Apps with Electron"
 index: 2531
 category: node-js
-breadcrumb: [Tutorial, Backend, Node.js]
 date: 2017-11-02
 tags: [Electron, Node.js, Visual Studio Code]
 ---

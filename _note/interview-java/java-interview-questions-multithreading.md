@@ -4,7 +4,6 @@ key: note
 title: "Java Interview Questions - Multithreading"
 index: 9605
 category: interview-java
-breadcrumb: [Note, Interview Questions, Java Questions]
 date: 2016-01-05
 tags: [Java, Interview]
 ---

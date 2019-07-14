@@ -4,7 +4,6 @@ key: tutorial
 title: "Online Judge - Others"
 index: 2832
 category: online-judge
-breadcrumb: [Tutorial, Project, Online Judge]
 date: 2018-04-17
 tags: [MEAN, Angular, Express, MongoDB]
 ---

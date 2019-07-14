@@ -4,7 +4,6 @@ key: tutorial
 title: "Logging with Winston"
 index: 2554
 category: express-js
-breadcrumb: [Tutorial, Backend, Express.js]
 date: 2018-01-08
 tags: [Express, Winston]
 ---
