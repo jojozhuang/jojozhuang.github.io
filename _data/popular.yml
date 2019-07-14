@@ -7,39 +7,48 @@ categories:
         description: Data Structure
         icon: fas fa-sitemap
         type: datastructure
+        image: data-structure.png
       - name: Algorithm
         description: Algorithm
         icon: fas fa-square-root-alt
         type: algorithm
+        image: algorithms.png
       - name: Design Pattern
         description: Object-Orientation, Inheritance
         icon: fas fa-pencil-ruler
         type: designpattern
+        image: designpattern.png
   - name: Java
     subcategories:
       - name: Java Core
         description: Core features of Java
         icon: fab fa-java
         type: core
+        image: java.png
       - name: Java 8
         description: New features in Java 8
         icon: fab fa-java
         type: java8
+        image: java.png
       - name: Java Advanced
         description: Advanced topics of Java
         icon: fab fa-java
         type: advanced
+        image: java.png
       - name: Java Concurrency
         description: Concurrency and MultiThreading
         icon: fab fa-java
         type: concurrency
+        image: java.png
       - name: Practice
         description: Practice of Java
         icon: fab fa-java
         type: practice
+        image: java.png
   - name: Personal Website
     subcategories:
       - name: Jekyll
         description: Jekyll
         icon: fas fa-globe
         type: jekyll
+        image: jekyll.png

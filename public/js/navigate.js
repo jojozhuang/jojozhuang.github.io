@@ -1,5 +1,5 @@
 (function() {
-  function displaySearchResults(results, store) {
+  function displayListView(results) {
     var searchResults = document.getElementById('posting-list');
 
     if (results.length) { // Are there any results?
@@ -10,7 +10,7 @@
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
         appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '        <img src="../public/assets/category/' + item.image + '" class="rounded">';
+        appendString += '        <img src="../public/assets/category/' + getImage(item.category) + '" class="rounded">';
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
@@ -70,6 +70,12 @@
     return title;
   }
 
+  function getImage(category) {
+    var image = window.category[category];
+    image = (image === undefined) ? "empty.png" : image;
+    return image;
+  }
+
   var categoryList = document.getElementById('category-list');
   var postingList = document.getElementById('posting-list');
   var subject = document.getElementById('subject').value;
@@ -111,18 +117,18 @@
         results.push({
           'id': key,
           'title': window.store[key].title,
+          'category': window.store[key].category,
           'url': window.store[key].url,
           'index': window.store[key].index,
           'excerpt': window.store[key].excerpt,
           'tags': window.store[key].tags,
-          'date': window.store[key].date,
-          'image': window.store[key].image
+          'date': window.store[key].date
         });
       }
     }
 
     //console.log("results:");
     //console.log(results);
-    displaySearchResults(results, window.store); // We'll write this in the next section
+    displayListView(results);
   }
 })();

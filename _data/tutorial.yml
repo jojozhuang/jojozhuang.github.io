@@ -7,87 +7,107 @@ categories:
         description: Knowledge
         icon: fas fa-tachometer-alt
         type: knowledge
+        image: code.png
       - name: Dev Environment
         description: Development Environment
         icon: fab fa-dev
         type: devenv
+        image: code.png
   - name: Backend
     subcategories:
       - name: RESTful API
         description: RESTful API
         icon: fas fa-tachometer-alt
         type: restful
+        image: restfulapi.png
       - name: Node.js
         description: Node.js
         icon: fab fa-node-js
         type: nodejs
+        image: nodejs.png
       - name: Express.js
         description: Express.js
         icon: fab fa-node-js
         type: expressjs
+        image: expressjs.png
   - name: Frontend
     subcategories:
       - name: Javascript
         description: Javascript
         icon: fab fa-js-square
         type: javascript
+        image: javascript.png
       - name: Angular Tutorial
         description: Angular Tutorial
         icon: fab fa-angular
         type: angular
+        image: angular.png
       - name: Angular App
         description: Angular App
         icon: fab fa-angular
         type: angularapp
+        image: angular.png
       - name: React Tutorial
         description: React Tutorial
         icon: fab fa-react
         type: reactjs
+        image: reactjs.png
       - name: React App
         description: React App
         icon: fab fa-react
         type: reactapp
+        image: reactjs.png
       - name: Mobile
         description: Mobile
         icon: fas fa-mobile-alt
         type: mobile
+        image: mobiledev.png
   - name: Distributed System
     subcategories:
       - name: Network
         description: Network
         icon: fas fa-tachometer-alt
         type: network
+        image: angular.png
       - name: NoSQL
         description: MongoDB
         icon: fas fa-tachometer-alt
         type: nosql
+        image: angular.png
       - name: Message Queue
         description: Kafka, RabbitQueue
         icon: fas fa-tachometer-alt
         type: messagequeue
+        image: code.png
       - name: Redis
-        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        description: Redis
         icon: fas fa-tachometer-alt
         type: redis
+        image: code.png
       - name: Nginx
-        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        description: Nginx
         icon: fas fa-tachometer-alt
         type: nginx
+        image: code.png
       - name: Zookeeper
-        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        description: Zookeeper
         icon: fas fa-tachometer-alt
         type: zookeeper
+        image: code.png
       - name: Docker
         description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
         icon: fas fa-tachometer-alt
         type: docker
+        image: docker.png
       - name: Big Data
         description: Big Data
         icon: fas fa-tachometer-alt
         type: bigdata
+        image: code.png
   - name: Project
     subcategories:
       - name: Online Judge
         description: Online Judge
         icon: fab fa-js-square
         type: onlinejudge
+        image: online-judge.png
