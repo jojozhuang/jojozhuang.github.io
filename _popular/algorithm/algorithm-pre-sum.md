@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Pre Sum - Draft"
+title: "Algorithm - Pre Sum - Draft"
 index: 1236
 subcategory: algorithm
 date: 2016-03-31
 tags: [Pre sum]
 ---
 
-> Presum for multiple queries, Java.
+> Presum for multiple queries.
 
 ## 1. Range Sum Query - Immutable
 ```java

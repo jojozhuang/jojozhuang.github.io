@@ -9,7 +9,7 @@ tags: [LFU]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of Least Frequently Used(LFU) cache.
+> Implement Least Frequently Used(LFU) cache.
 
 ## 1. LFU
 ### 1.1 LFU Cache Algorithm

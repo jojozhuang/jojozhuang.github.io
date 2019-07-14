@@ -8,7 +8,7 @@ date: 2016-03-18
 tags: [Directed Graph, Topological Sorting]
 ---
 
-> Introduce the definition, implementation and usage of directed graph.
+> Implement directed graph.
 
 ## 1. Directed Graph
 

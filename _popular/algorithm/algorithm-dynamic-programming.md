@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Dynamic Programming"
+title: "Algorithm - Dynamic Programming"
 index: 1221
 subcategory: algorithm
 date: 2016-03-28

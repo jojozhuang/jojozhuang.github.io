@@ -9,7 +9,7 @@ tags: [Deque]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of Deque.
+> Implement deque with linked list and circular array.
 
 ## 1. Deque
 ### 1.1 Real-life Example

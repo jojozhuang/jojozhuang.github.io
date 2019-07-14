@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Two Pointers"
+title: "Algorithm - Two Pointers"
 index: 1212
 subcategory: algorithm
 date: 2016-03-23

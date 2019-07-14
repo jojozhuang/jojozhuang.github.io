@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Problem List on LeetCode"
-index: 1255
+title: "Algorithm - Problem List at LeetCode"
+index: 1251
 subcategory: algorithm
 date: 2016-04-10
 tags: [Algorithm, Leetcode]
 ---
 
-> Introduce how the Subset template comes up.
+> Problem List at LeetCode.
 
 ## 1. Array
 * [1. Two Sum](https://leetcode.com/problems/two-sum/) (HashMap)

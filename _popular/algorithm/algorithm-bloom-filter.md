@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Bloom Filter - Draft"
+title: "Algorithm - Bloom Filter - Draft"
 index: 1234
 subcategory: algorithm
 date: 2016-03-31

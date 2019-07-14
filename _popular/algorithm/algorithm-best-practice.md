@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Practice - Algorithm Best Practice"
+title: "Algorithm - Best Practice"
 index: 1252
 subcategory: algorithm
 date: 2016-04-02
 tags: [Algorithm]
 ---
 
-> Useful tricks for algorithms.
+> Useful tricks for solving algorithms problems
 
 ## 1. Templates
 ### 1.1 Defining Customized Comparator

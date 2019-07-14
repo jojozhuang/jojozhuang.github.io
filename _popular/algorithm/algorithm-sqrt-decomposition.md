@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Sqrt Decomposition"
+title: "Algorithm - Sqrt Decomposition"
 index: 1232
 subcategory: algorithm
 date: 2016-03-30
@@ -9,7 +9,7 @@ tags: [Sqrt Decomposition]
 mathjax: true
 ---
 
-> Introduce Sqrt Decomposition and how to use this approach in solving algorithm questions.
+> Implement Sqrt Decomposition for range search problems.
 
 ## 1. Range Query
 ### 1.1 Problem Description

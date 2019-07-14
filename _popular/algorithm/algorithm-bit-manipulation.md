@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Bit Manipulation"
+title: "Algorithm - Bit Manipulation"
 index: 1203
 subcategory: algorithm
 date: 2016-04-03
-tags: [Bit]
+tags: [Xor, Shifting]
 ---
 
-> Bit Manipulation
+> Bit Manipulation.
 
 ## 1. Operations for Bit
 * & (And)

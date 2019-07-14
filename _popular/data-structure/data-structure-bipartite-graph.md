@@ -9,7 +9,7 @@ tags: [Bipartite Graph, Hungarian Algorithm]
 mathjax: true
 ---
 
-> Bipartite Graph, Hungarian Algorithm.
+> Bipartite Graph.
 
 ## 1. Is Graph Bipartite?
 ### 1.1 Description

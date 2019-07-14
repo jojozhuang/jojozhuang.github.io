@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Combination and Permutation"
+title: "Algorithm - Combination and Permutation"
 index: 1215
 subcategory: algorithm
 date: 2016-03-27
 tags: [Combination, Permutation, Subset]
 ---
 
-> Implementation of search methods to get combination, permutation and subset.
+> Implement DFS for combination, permutation and subset.
 
 ## 1. Combination
 ### 1.1 Description

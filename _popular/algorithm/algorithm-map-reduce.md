@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: popular
-title: "Map Reduce - Draft"
+title: "Algorithm - Map Reduce - Draft"
 index: 1235
 subcategory: algorithm
 date: 2016-03-31
 tags: [Map, Reduce]
 ---
 
-> Useful tricks for algorithm, Java.
+> Implement Map Reduce.
 
 ## 1. Map Reduce
 ```java

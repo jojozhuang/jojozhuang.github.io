@@ -8,7 +8,7 @@ date: 2016-03-01
 tags: [Singly Linked List, Doubly Linked List]
 ---
 
-> Introduce the definition, implementation and usage of linked list.
+> Implement linked list.
 
 ## 1. Linked List
 A linked list is represented by a sequence of nodes. Each node contains a link to another node. There are two main types of linked list.

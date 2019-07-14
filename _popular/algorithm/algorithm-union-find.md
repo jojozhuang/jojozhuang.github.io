@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Union Find"
+title: "Algorithm - Union Find"
 index: 1217
 subcategory: algorithm
 date: 2016-03-24

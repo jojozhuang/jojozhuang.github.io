@@ -9,7 +9,7 @@ tags: [Max Heap, Min Heap]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of heap.
+> Implement heap with array.
 
 ## 1. Heap
 ### 1.1 Definition of Heap

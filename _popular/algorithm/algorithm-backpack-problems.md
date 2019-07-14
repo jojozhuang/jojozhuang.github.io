@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Backpack Problems"
+title: "Algorithm - Backpack Problems"
 index: 1222
 subcategory: algorithm
 date: 2016-03-28

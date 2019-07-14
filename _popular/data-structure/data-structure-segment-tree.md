@@ -9,7 +9,7 @@ tags: [Segment Tree, Interval Tree]
 mathjax: true
 ---
 
-> Introduce use segment tree for range search.
+> Implement segment tree for range search.
 
 ## 1. Segment Tree
 Segment Tree (a.k.a Interval Tree) is an advanced data structure which can support queries like:

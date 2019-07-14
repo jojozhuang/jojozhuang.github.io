@@ -9,7 +9,7 @@ tags: [Graph, DFS, BFS]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of graph.
+> Popular graph problems.
 
 ## 1. Number of Islands
 ### 1.1 Description

@@ -9,7 +9,7 @@ tags: [LRU]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of Least Recently Used(LRU) cache.
+> Implement Least Recently Used(LRU) cache.
 
 ## 1. LRU
 ### 1.1 LRU Cache Algorithm

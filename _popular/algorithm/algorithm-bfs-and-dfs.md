@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "BFS and DFS"
+title: "Algorithm - BFS and DFS"
 index: 1214
 subcategory: algorithm
 date: 2016-03-26

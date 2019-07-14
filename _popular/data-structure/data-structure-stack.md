@@ -9,7 +9,7 @@ tags: [Stack, LIFO]
 mathjax: true
 ---
 
-> Introduce the definition, implementation and usage of stack.
+> Implement stack with linked list and array.
 
 ## 1. Stack
 ### 1.1 Real-life Example
