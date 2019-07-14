@@ -16,12 +16,11 @@ tutorial: list
 </div>
 
 <script>
+  {% assign popular = site.popular %}
+  {% assign tutorial = site.tutorial %}
+  {% assign note = site.note %}
+  {% assign postings = popular | concat: tutorial | concat: note %}
   window.store = {
-    {% assign tutorials = site.tutorial %}
-    {% assign populars = site.popular %}
-    {% assign notes = site.note %}
-    {% assign githubpages = site.githubpage %}
-    {% assign postings = tutorials | concat: populars | concat: notes | concat: githubpages %}
     {% for post in postings %}
       "{{ post.url | slugify }}": {
         "key": "{{ post.key | xml_escape }}",
@@ -32,13 +31,25 @@ tutorial: list
         "index": "{{ post.index | xml_escape }}",
         "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
         "tags": "{{ post.tags | join: ", "}}",
-        "date": "{{ post.date | date_to_string}}",
-        "image": "{{ post.image | xml_escape }}"
+        "date": "{{ post.date | date_to_string}}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
   //        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+
+  // mapping of category and image
+  {% assign popular = site.data.popular.categories %}
+  {% assign tutorial = site.data.tutorial.categories %}
+  {% assign note = site.data.popular.categories %}
+  {% assign categories = popular | concat: tutorial | concat: note %}
+  window.category = {
+    {% for category in categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.type}}": "{{ subcategory.image }}",
+      {% endfor %}
+    {% endfor %}
+  };
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
