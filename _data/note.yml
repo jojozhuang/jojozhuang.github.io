@@ -1,14 +1,17 @@
+key: note
 name: Note
 description: Book Notes, Interview Questions
 categories:
-  - name: System Design
+  - category: system-design
+    name: System Design
     subcategories:
       - name: Design Knowledge
         description: Network, Distributed System
         icon: fas fa-sitemap
         subcategory: design-knowledge
         image: system-design.png
-  - name: Work Space
+  - category: workspace
+    name: Workspace
     subcategories:
       - name: My Space
         description: OS, Database
@@ -25,7 +28,8 @@ categories:
         icon: fas fa-sitemap
         subcategory: others
         image: note.png
-  - name: Interview Questions
+  - category: interview
+    name: Interview Questions
     subcategories:
       - name: Overview
         description: Interview Question Overview

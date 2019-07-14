@@ -41,7 +41,7 @@ tutorial: list
   // mapping of category and image
   {% assign popular = site.data.popular.categories %}
   {% assign tutorial = site.data.tutorial.categories %}
-  {% assign note = site.data.popular.categories %}
+  {% assign note = site.data.note.categories %}
   {% assign categories = popular | concat: tutorial | concat: note %}
   window.category = {
     {% for category in categories %}

@@ -30,7 +30,7 @@ title: Rong Zhuang's Note
                     <ul class="list-group list-group-flush">
                     {% for subcategory in category.subcategories %}
                     {% assign list = postings | where: 'category', subcategory.subcategory %}
-                    {% assign url = "/note/?navigation=" | append: subject.name | append: ", " | append: category.name | append: ", " | append: subcategory.name | append: ", "%}
+                    {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
                     <a href="{{url}}" class="list-group-item list-group-item-action">
                         <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
                     </a>
@@ -68,15 +68,37 @@ title: Rong Zhuang's Note
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
+  //"content": {{ post.content | strip_html | strip_newlines | jsonify }},
+
   // mapping of category and image
-  window.category = {
+  window.image = {
     {% for category in subject.categories %}
       {% for subcategory in category.subcategories %}
         "{{subcategory.subcategory}}": "{{ subcategory.image }}",
       {% endfor %}
     {% endfor %}
   };
-  //"content": {{ post.content | strip_html | strip_newlines | jsonify }},
+  window.category = {
+    {% for category in subject.categories %}
+        "{{category.category}}": "{{ category.name }}",
+    {% endfor %}
+  };
+
+  window.subcategory = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.subcategory}}": "{{ subcategory.name }}",
+      {% endfor %}
+    {% endfor %}
+  };
+
+  window.parentcategory = {
+    {% for category in subject.categories %}
+      {% for subcategory in category.subcategories %}
+        "{{subcategory.subcategory}}": "{{ category.category }}",
+      {% endfor %}
+    {% endfor %}
+  };
 
   // tutorial category
   //window.tc = {{ site.data.tutorial | replace: '=>', ':'}};

@@ -15,6 +15,8 @@ layout: default
         {% assign postings = site.note | sort: 'index' %}
       {% endif %}
       {% include sidebar.html %}
+      <!-- category for breadcrumb -->
+      {% assign categories = subject.categories %}
       <!-- page-content" -->
       <main class="page-content">
         <!--
@@ -30,10 +32,16 @@ layout: default
             <div class="col-md-10 post-content"">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  {% assign navigatePath = '' %}
-                  {% for item in page.breadcrumb %}
-                    {% assign navigatePath = navigatePath | append: item | append: ', ' %}
-                    <li class="breadcrumb-item"><a href="/{{page.key}}?navigation={{navigatePath}}">{{item}}</a></li>
+                  <li class="breadcrumb-item"><a href="/{{page.key}}?n={{page.key | downcase}}">{{page.key | capitalize}}</a></li>
+                  {% for category in categories %}
+                    {% assign subcategory = category.subcategories | where: "subcategory", page.category | first %}
+                    {% if subcategory %}
+                      {% assign navigatePath = page.key | downcase %}
+                      {% assign navigatePath = navigatePath | append: "&c=" | append: category.category %}
+                      <li class="breadcrumb-item"><a href="/{{page.key}}?n={{navigatePath}}">{{category.name}}</a></li>
+                      {% assign navigatePath = navigatePath | append: "&s=" | append: subcategory.subcategory %}
+                      <li class="breadcrumb-item"><a href="/{{page.key}}?n={{navigatePath}}">{{subcategory.name }}</a></li>
+                    {% endif %}
                   {% endfor %}
                   <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
                 </ol>

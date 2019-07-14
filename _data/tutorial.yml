@@ -1,7 +1,9 @@
+key: tutorial
 name: Tutorial
 description: Node.js, Angular, React
 categories:
-  - name: Prerequisites
+  - category: prerequisites
+    name: Prerequisites
     subcategories:
       - name: Knowledge
         description: Knowledge
@@ -13,7 +15,8 @@ categories:
         icon: fab fa-dev
         subcategory: dev-env
         image: code.png
-  - name: Backend
+  - category: backend
+    name: Backend
     subcategories:
       - name: RESTful API
         description: RESTful API
@@ -30,7 +33,8 @@ categories:
         icon: fab fa-node-js
         subcategory: express-js
         image: express-js.png
-  - name: Frontend
+  - category: frontend
+    name: Frontend
     subcategories:
       - name: Javascript
         description: Javascript
@@ -62,7 +66,8 @@ categories:
         icon: fas fa-mobile-alt
         subcategory: mobile
         image: mobile.png
-  - name: Distributed System
+  - category: distributed-system
+    name: Distributed System
     subcategories:
       - name: Network
         description: Network
@@ -104,7 +109,8 @@ categories:
         icon: fas fa-tachometer-alt
         subcategory: big-data
         image: code.png
-  - name: Project
+  - category: project
+    name: Project
     subcategories:
       - name: Online Judge
         description: Online Judge
