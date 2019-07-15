@@ -66,6 +66,7 @@ Add line numbers with highlightjs-line-numbers.js, which is a plug-in for highli
 Add additional CSS style.
 ```css
 table.hljs-ln {
+  width: auto;
   border-width: 0px;
 }
 table.hljs-ln td {
