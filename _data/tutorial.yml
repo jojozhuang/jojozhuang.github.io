@@ -7,7 +7,7 @@ categories:
     subcategories:
       - name: Knowledge
         description: Knowledge
-        icon: fas fa-tachometer-alt
+        icon: fas fa-cloud
         subcategory: knowledge
         image: code.png
       - name: Dev Environment
@@ -20,7 +20,7 @@ categories:
     subcategories:
       - name: RESTful API
         description: RESTful API
-        icon: fas fa-tachometer-alt
+        icon: fas fa-cogs
         subcategory: restful
         image: restfulapi.png
       - name: Node.js
@@ -71,7 +71,7 @@ categories:
     subcategories:
       - name: Network
         description: Network
-        icon: fas fa-tachometer-alt
+        icon: fas fa-network-wired
         subcategory: network
         image: code.png
       - name: NoSQL
@@ -86,7 +86,7 @@ categories:
         image: code.png
       - name: Redis
         description: Redis
-        icon: fas fa-tachometer-alt
+        icon: fas fa-layer-group
         subcategory: redis
         image: code.png
       - name: Nginx
@@ -101,12 +101,12 @@ categories:
         image: code.png
       - name: Docker
         description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
-        icon: fas fa-tachometer-alt
+        icon: fab fa-docker
         subcategory: docker
         image: docker.png
       - name: Big Data
         description: Big Data
-        icon: fas fa-tachometer-alt
+        icon: fas fa-chart-line
         subcategory: big-data
         image: code.png
   - category: project
@@ -114,6 +114,6 @@ categories:
     subcategories:
       - name: Online Judge
         description: Online Judge
-        icon: fab fa-js-square
+        icon: fas fa-gavel
         subcategory: online-judge
         image: online-judge.png

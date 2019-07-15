@@ -7,7 +7,7 @@ categories:
     subcategories:
       - name: Design Knowledge
         description: Network, Distributed System
-        icon: fas fa-sitemap
+        icon: fas fa-drafting-compass
         subcategory: design-knowledge
         image: system-design.png
   - category: workspace
@@ -15,17 +15,17 @@ categories:
     subcategories:
       - name: My Space
         description: OS, Database
-        icon: fas fa-sitemap
+        icon: fas fa-user-lock
         subcategory: my-space
         image: cs.png
       - name: Book Notes
         description: Notes for books or online doc
-        icon: fas fa-sitemap
+        icon: fas fa-book
         subcategory: notes
         image: note.png
       - name: Others
         description: Japanese
-        icon: fas fa-sitemap
+        icon: fas fa-language
         subcategory: others
         image: note.png
   - category: interview
@@ -33,21 +33,21 @@ categories:
     subcategories:
       - name: Overview
         description: Interview Question Overview
-        icon: fas fa-sitemap
+        icon: fas fa-user-tie
         subcategory: interview-overview
         image: interview.png
       - name: Frontend Questions
         description: Frontend Interview Questions
-        icon: fas fa-sitemap
+        icon: fab fa-html5
         subcategory: interview-frontend
         image: interview.png
       - name: Java Questions
         description: Java Interview Questions
-        icon: fas fa-sitemap
+        icon: fab fa-java
         subcategory: interview-java
         image: interview.png
       - name: System Design
         description: System Design Interview Questions
-        icon: fas fa-sitemap
+        icon: fas fa-pencil-ruler
         subcategory: interview-system-design
         image: interview.png
