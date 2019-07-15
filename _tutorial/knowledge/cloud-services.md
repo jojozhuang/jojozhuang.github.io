@@ -5,7 +5,7 @@ title: "Cloud Services"
 index: 3501
 subcategory: knowledge
 date: 2018-08-05
-tags: [Heroku, Azure, EC2, Netlify, Travis CI]
+tags: [SaaS, PaaS, IaaS]
 ---
 
 > Cloud Services
