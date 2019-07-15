@@ -46,10 +46,58 @@ Add highlight js and css of the color scheme you want in the header page. Either
 ```
 * You can download the latest highlight.js and css from https://highlightjs.org/download/.
 
+Besides, add customized css.
+```css
+pre {
+  font-size: 13px;
+  line-height: 1.42857143;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+```
 The highlighting works as follows.
 ![image](/public/images/jekyll/1623/highlighting_with_js.png)  
+### 2.3 Line Numbers
+Add line numbers with highlightjs-line-numbers.js, which is a plug-in for highlight.js.
+```html
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<script>hljs.initLineNumbersOnLoad();</script>
+```
+Add additional CSS style.
+```css
+table.hljs-ln {
+  border-width: 0px;
+}
+table.hljs-ln td {
+  border-width: 0px;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #ccc;
+  border-right: 1px solid #CCC !important;
+  vertical-align: top;
+	padding-right: 5px !important;
+}
+
+/* for block of code */
+.hljs-ln-code {
+  padding-left: 10px !important;
+}
+```
+The line numbers are displayed as follows.
+![image](/public/images/jekyll/1623/line-numbers.png)
 
 ## 3. Reference
 * [Code highlighting in Jekyll blog using highlight.js](http://www.vishalsinha.in/2017/04/23/highlight-code-jekyll.html)
 * [Getting highlight.js](https://highlightjs.org/download/)
 * [highlight.js on GitHub](https://github.com/highlightjs/highlight.js)
+* [Highlight.js line numbers plugin](https://github.com/wcoder/highlightjs-line-numbers.js)

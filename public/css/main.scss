@@ -76,6 +76,34 @@ pre {
   border-radius: 4px;
 }
 
+table.hljs-ln {
+  border-width: 0px;
+}
+table.hljs-ln td {
+  border-width: 0px;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  text-align: center;
+  color: #ccc;
+  border-right: 1px solid #CCC !important;
+  vertical-align: top;
+  padding-right: 5px !important;
+}
+
+/* for block of code */
+.hljs-ln-code {
+  padding-left: 10px !important;
+}
+
 @media (max-width: 424px) {
   pre {
     font-size: 11px;
