@@ -5,7 +5,7 @@ title: "Data Structure Overview"
 index: 1101
 subcategory: data-structure
 date: 2016-03-01
-tags: [List, Tree, Time Complexity, Space Complexity]
+tags: [List, Tree, Time Complexity]
 ---
 
 > Overview of common data structures.
