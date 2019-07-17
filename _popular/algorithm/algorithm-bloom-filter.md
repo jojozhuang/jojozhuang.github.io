@@ -20,3 +20,5 @@ Bloom filter is a data structure designed to rapidly and memory-efficiently tell
 * [Bloom filter - Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter)
 * [Bloom Filters by Example](https://llimllib.github.io/bloomfilter-tutorial/)
 * [BloomFilter——大规模数据处理利器](http://www.cnblogs.com/heaad/archive/2011/01/02/1924195.html)
+* [如何判断一个元素在亿级数据中是否存在？](https://mp.weixin.qq.com/s/b5bIcNAc-f3c5eQCv9bWMg)
+* [Java Core Sprout](https://crossoverjie.top/JCSprout/#/?id=introduction)

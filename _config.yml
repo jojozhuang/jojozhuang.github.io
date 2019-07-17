@@ -79,6 +79,10 @@ navlist:
         description: Blank Page
         url: /blank
         icon: fas fa-chalkboard
+      - key: searchadv
+        description: Advanced Search
+        url: /searchadv
+        icon: fas fa-search
       - key: system-design
         description: 系统设计(System Design)
         url: /public/pdf/system-design-cn.pdf
