@@ -10,7 +10,8 @@ tags: [Array, ArrayList]
 
 > Array, ArrayList and their conversion.
 
-## 1. Initializing Array
+## 1. Array
+### 1.1 Initializing Array
 An array in java is a container that can hold a `fixed` number of values of the same type. The values can be of the primitive type like int, short, byte or it can be an object like String, Integer etc.
 
 How to initialize an Array in Java?
@@ -51,7 +52,7 @@ int[] a = new int[];
 int[][] aa = new int[][5];
 ```
 
-## 2. Array of List
+### 1.2 Array of List
 We can create a Java array of list, each element in the array is a list.
 ```java
 private static void arrayOfList() {
@@ -82,7 +83,7 @@ Output.
 [3, 4, 5]
 ```
 
-## 3. List of Array
+### 1.3 List of Array
 We can also create a Java list of array, each element in the list is an array.
 ```java
 private static void listOfArray() {
@@ -105,7 +106,8 @@ Output.
 [1, 2, 3, 4]
 ```
 
-## 4. Array to List
+## 2. Conversion
+### 2.1 Array to List
 There are two built-in ways to convert Array to List in Java.
 * `Arrays.asList(T… a)`: This is the simplest way to convert Array to ArrayList in java but this method returns the underlying representation of the array in the form of ArrayList. The returned ArrayList is `fixed-sized` and any attempt to modify that will result in `UnsupportedOperationException` at runtime. Also, any change in the array will change the elements in ArrayList also.
 * `Collections.addAll(ArrayList<T> strList, T[] strArr)`: This is the best way to convert array to ArrayList because the array data is copied to the list and both are independent object - `deep copy`. Once the array is copied, you can modify both the objects independently. Collections is a very useful class in Java Collections Framework that provides a lot of utility methods.
@@ -180,13 +182,13 @@ ArrayList after array is changed: [a, b, c, d], list is not impacted.
 ArrayList after new element is added: [a, b, c, d, e]
 ```
 
-## 5. List to Array
+### 2.2 List to Array
 There is three built-in ways to convert List to Array in Java. All utilize the `toArray()` method.
 * Using Object Array: `Object[] List.toArray()` - This is the simplest way to convert List to Array in java but this method returns the array with Object type.
 * Using Generic Type: `T[] List.toArray(T[] array)` - This is the best way to convert List to Array because it supports generic types.
 * Using Stream: `stream.toArray()` - We can use stream in Java 8.
 
-### 5.1 Using Object Array
+**Using Object Array**  
 ```java
 private static void usingObject() {
     List<Integer> list = new ArrayList<>();
@@ -202,7 +204,7 @@ Output.
 ```sh
 Object: arr1 = [1, 2, 3]
 ```
-### 5.2 Using Generic Type
+**Using Generic Type**  
 ```java
 private static void usingGeneric() {
     List<Integer> list = new ArrayList<>();
@@ -241,7 +243,7 @@ Note: toArray() method returns an array of type Object(Object[]). We need to `ty
 Integer[] arr1 = list.toArray();
 System.out.println("arr1 = " + Arrays.toString(arr1));
 ```
-### 5.3 Using Stream
+**Using Stream**  
 ```java
 private static void usingStream() {
     List<Integer> list = new ArrayList<>();
@@ -259,7 +261,7 @@ Output.
 Stream: arr6 = [1, 2, 3]
 ```
 
-## 6. Copy Array
+## 3. Copy Array
 There are four built-in approaches to copy array.
 * `Arrays.copyOf()`: If you want to copy first few elements of an array or full copy of array, you can use this method. This method internally use System.arraycopy() method.
 * `Arrays.copyOfRange()`: If you want few elements of an array to be copied, where starting index is not 0, you can use this method to copy partial array. Again this method is also using System.arraycopy() method itself.
@@ -299,10 +301,10 @@ Object.clone(): clone = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 Note that all the inbuilt methods discussed above for array copy perform `shallow copy`, so they are good for primitive data types and immutable objects such as String. If you want to copy an array of mutable objects, you should do it by writing code for a `deep copy` yourself.
 
-## 7. Source Files
+## 4. Source Files
 * [Source files for Java Array and List on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-array-list)
 
-## 8. References
+## 5. References
 * [Java Array of ArrayList, ArrayList of Array](https://www.journaldev.com/744/java-array-of-arraylist-of-array)
 * [ArrayList to Array Conversion in Java : toArray() Methods](https://www.geeksforgeeks.org/arraylist-array-conversion-java-toarray-methods/)
 * [Java Array to List](https://www.journaldev.com/756/java-array-to-list-arraylist)

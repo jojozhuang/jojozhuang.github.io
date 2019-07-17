@@ -42,7 +42,8 @@ title: Popular Topics
               {% endif %}
                   <div class="card">
                     <div class="card-header">
-                      {{category.name}}
+                      {% assign categoryurl = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category %}
+                      <a href="{{categoryurl}}" class="card-link">{{category.name}}</a>
                     </div>
                     <ul class="list-group list-group-flush">
                     {% for subcategory in category.subcategories %}
