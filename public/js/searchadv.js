@@ -76,7 +76,7 @@
   var category = getQueryVariable('c');
 
   if (keyword) {
-    document.getElementById('search-key').innerHTML = keyword;
+    //document.getElementById('search-key').innerHTML = keyword;
 
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
@@ -111,9 +111,9 @@
     displaySearchResults(results, window.store); // We'll write this in the next section
   }
 
-  var searchTitle = document.getElementById('search-title');
+  var searchbox = document.getElementById('searchbox');
   var spinner = document.getElementById('spinner');
-  searchTitle.style.display = "block";
+  searchbox.style.display = "block";
   spinner.style.display = "none";
 
 })();

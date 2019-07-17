@@ -7,8 +7,26 @@ tutorial: list
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-      <div class="spinner-border text-success" id="spinner"></div>
-      <h1 class="page-header" id="search-title" style="display:none">Search result for "<label id="search-key"></label>"</h1>
+      <div>
+        <div class="row">
+          <div class="col-sm-6 offset-sm-3 text-center">
+            <div class="spinner-border text-success" id="spinner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="searchbox" id="searchbox" style="display:none">
+        <h1 class="text-center">Advanced Search</h1>
+        <div class="row">
+          <div class="col-sm-6 offset-sm-3 text-center">
+            <form action="" class="form-inline justify-content-center">
+              <div class="form-group">
+                <input class="form-control mr-sm-3" type="text" placeholder="Search this site" name="k" id="search-box">
+                <button class="btn btn-success" type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
       <dl class="dl-unsur" id="search-results">
     </div>
     <div class="col-md-1"></div>
