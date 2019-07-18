@@ -15,6 +15,11 @@ categories:
         icon: fab fa-dev
         subcategory: dev-env
         image: code.png
+      - name: Security
+        description: Security
+        icon: fas fa-shield-alt
+        subcategory: security
+        image: security.png
   - category: backend
     name: Backend
     subcategories:

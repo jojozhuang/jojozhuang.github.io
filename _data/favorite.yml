@@ -80,6 +80,9 @@ bookmarks:
       - name: Hashkiller(Hash Cracker)
         description: Online tool for cracking hash
         url: https://hashkiller.co.uk/
+      - name: Have i been pwned
+        description: Check if your email address is pwned
+        url: https://haveibeenpwned.com/
   - category: Algorithm
     links:
       - name: Leetcode
