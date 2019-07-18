@@ -6,7 +6,7 @@ bookmarks:
   - category: Online Tools
     links:
       - name: Rico's cheatsheets
-        description: Cheatsheets 
+        description: Cheatsheets
         url: https://devhints.io/
       - name: XML Formatter
         description: Format XML string
@@ -72,6 +72,14 @@ bookmarks:
       - name: GoDaddy
         description: An American publicly traded Internet domain registrar and web hosting company.
         url: https://www.godaddy.com
+  - category: Security
+    links:
+      - name: MD5 Hash Generator
+        description: MD5 Hash Generator
+        url: https://www.md5hashgenerator.com/
+      - name: Hashkiller(Hash Cracker)
+        description: Online tool for cracking hash
+        url: https://hashkiller.co.uk/
   - category: Algorithm
     links:
       - name: Leetcode

@@ -63,6 +63,15 @@ navlist:
     visible: true
     subkeys: ["contact","rss","blank"]
     sublist:
+      - key: searchadv
+        description: Advanced Search
+        url: /searchadv
+        icon: fas fa-search
+      - key: resource
+        description: Resources
+        url: /resource
+        icon: fas fa-boxes
+      - key: separator
       - key: contact
         description: Contact me
         url: /contact
@@ -79,10 +88,7 @@ navlist:
         description: Blank Page
         url: /blank
         icon: fas fa-chalkboard
-      - key: searchadv
-        description: Advanced Search
-        url: /searchadv
-        icon: fas fa-search
+      - key: separator
       - key: system-design
         description: 系统设计(System Design)
         url: /public/pdf/system-design-cn.pdf

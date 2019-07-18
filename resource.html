@@ -1,0 +1,36 @@
+---
+layout: default
+key: resource
+title: Resources
+---
+<div class="main-contents container">
+    <div class="main-contents-inner">
+      <h1 class="page-header">{{ page.title }}</h2>
+      {%- assign resource = site.data.resource -%}
+      <p>{{resource.description}}</p>
+      <div>
+          {%- for bookmark in resource.bookmarks -%}
+              {% assign idx1 = forloop.index %}
+              <div class="list-category">
+                  <div class="list-category-title">{{ bookmark.category }}</div>
+                  <div class="list-sublist">
+                      {%- for link in bookmark.links -%}
+                        <div>
+                          <span class="list-sub-index">{{ idx1 }}.{{ forloop.index }}</span>
+                          <span class="list-sub-link">
+                            <a href="{{ link.url }}" title="{{ link.description }}">{{ link.name }}
+                            {% if link.type == "video" %}
+                              <i class="fas fa-video" style="color:#f74716;"></i>
+                            {% else %}
+                              <i class="fas fa-file-word" style="color:#2953e6;"></i>
+                            {% endif %}
+                            </a>
+                          </span>
+                        </div>
+                      {%- endfor -%}
+                  </div>
+              </div>
+          {%- endfor -%}
+      </div>
+    </div>
+</div>

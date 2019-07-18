@@ -91,7 +91,7 @@
 
       for (var url in window.store) { // Add the data to lunr
         var key = window.store[url].key;
-        if ((!category && key!='note') || key==category) {
+        if ((!category) || key==category) {
           this.add({
             'id': url,
             'title': window.store[url].title,
