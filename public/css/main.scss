@@ -358,3 +358,19 @@ code.highlighter-rouge {
     font-size: 12px;
   }
 }
+
+/* resource.html */
+.resource .title-org {
+  display: inline-block;
+}
+.resource .title-abb {
+  display: none;
+}
+@media (max-width: 424px) {
+  .resource .title-org {
+    display: none;
+  }
+  .resource .title-abb {
+    display: inline-block;
+  }
+}
