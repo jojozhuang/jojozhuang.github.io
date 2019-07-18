@@ -1,0 +1,23 @@
+title: Resources
+description: Best online resources for learning the knowledge of computer science.
+bookmarks:
+  - category: System Design
+    links:
+      - name: Grokking the System Design Interview
+        description: Grokking the System Design Interview
+        url: https://www.educative.io/collection/5668639101419520/5649050225344512
+        type: webpage
+  - category: Security
+    links:
+      - name: Password Hashing, Salts, Peppers
+        description: Password Hashing, Salts, Peppers
+        url: https://www.youtube.com/watch?v=--tnZMuoK3E
+        type: video
+      - name: Passwords & hash functions (Simply Explained)
+        description: Passwords & hash functions (Simply Explained)
+        url: https://www.youtube.com/watch?v=cczlpiiu42M
+        type: video
+      - name: How Dropbox securely stores your passwords
+        description: How Dropbox securely stores your passwords
+        url: https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/
+        type: webpage
