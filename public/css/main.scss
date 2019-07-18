@@ -63,10 +63,15 @@ blockquote {
 
 /* scroll bar for drowdown button */
 @media (max-width: 500px) {
-.dropdown-menu{
+  #navbarCollapse {
+    overflow-y: scroll !important;
+    max-height: 330px !important;
+  }
+  /*
+  .dropdown-menu{
       height:200px;
       overflow-y:auto;
-   }
+   }*/
 }
 
 /* search */
