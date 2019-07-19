@@ -1,9 +1,9 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Using Redis in Java"
+title: "Redis - Using Redis in Java"
 index: 3523
-subcategory: redis
+subcategory: database
 date: 2018-08-08
 tags: [Redis]
 ---

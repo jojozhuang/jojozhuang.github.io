@@ -14,7 +14,7 @@ categories:
         description: Development Environment
         icon: fab fa-dev
         subcategory: dev-env
-        image: code.png
+        image: dev.png
       - name: Security
         description: Security
         icon: fas fa-shield-alt
@@ -78,42 +78,27 @@ categories:
         description: Network
         icon: fas fa-network-wired
         subcategory: network
-        image: code.png
-      - name: NoSQL
-        description: MongoDB
-        icon: fas fa-tachometer-alt
-        subcategory: nosql
-        image: code.png
+        image: network.png
+      - name: Database and Cache
+        description: MongoDB, Cassandra, Redis, Memcached
+        icon: fas fa-database
+        subcategory: database
+        image: database.png
       - name: Message Queue
         description: Kafka, RabbitQueue
-        icon: fas fa-tachometer-alt
+        icon: fas fa-mail-bulk
         subcategory: message-queue
-        image: code.png
-      - name: Redis
-        description: Redis
-        icon: fas fa-layer-group
-        subcategory: redis
-        image: code.png
-      - name: Nginx
-        description: Nginx
-        icon: fas fa-tachometer-alt
-        subcategory: nginx
-        image: code.png
-      - name: Zookeeper
-        description: Zookeeper
-        icon: fas fa-tachometer-alt
-        subcategory: zookeeper
-        image: code.png
+        image: message-queue.png
       - name: Docker
         description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
         icon: fab fa-docker
         subcategory: docker
         image: docker.png
-      - name: Big Data
-        description: Big Data
-        icon: fas fa-chart-line
-        subcategory: big-data
-        image: code.png
+      - name: DevOps
+        description: Nginx, Zookeeper, Splunk, Spark
+        icon: fas fa-tools
+        subcategory: devops
+        image: devops.png
   - category: project
     name: Project
     subcategories:

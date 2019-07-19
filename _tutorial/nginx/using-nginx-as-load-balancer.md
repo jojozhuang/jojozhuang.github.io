@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Using Nginx as Load Balancer"
 index: 3513
-subcategory: nginx
+subcategory: devops
 date: 2018-05-28
 tags: [Nginx, Proxy, Load Balancing]
 ---

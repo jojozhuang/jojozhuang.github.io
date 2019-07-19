@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "ZooKeeper"
 index: 3531
-subcategory: zookeeper
+subcategory: devops
 date: 2018-08-10
 tags: [ZooKeeper]
 ---

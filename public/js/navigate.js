@@ -99,7 +99,7 @@
   var cat = getQueryVariable('c');
   var subcat = getQueryVariable('s');
   var results = [];
-  console.log(nav);
+
   if (nav) {
     //$(".page-wrapper").removeClass("toggled");
     categoryList.style.display = "none";

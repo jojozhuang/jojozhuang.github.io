@@ -33,7 +33,7 @@ title: Rong Zhuang's Note
                     {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
                     {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
                     <a href="{{url}}" class="list-group-item list-group-item-action">
-                        <i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span>
+                      <span data-toggle="tooltip" data-placement="right" title="{{subcategory.description}}"><i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span></span>
                     </a>
                     {% endfor %}
                     </ul>

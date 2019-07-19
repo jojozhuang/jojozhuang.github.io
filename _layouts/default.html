@@ -122,6 +122,9 @@ link href="/public/css/navbar.css" rel="stylesheet" />
 {% if page.layout == "tutorial" or page.layout == "portfolio" or page.layout == "blog" or page.layout == "note"%}
   <script src="/public/js/img.js"></script>
 {% endif %}
+{% if page.layout == "default" and page.key == "tutorial" or page.key == "popular" or page.key == "note"%}
+  <script src="/public/js/tooltip.js"></script>
+{% endif %}
 {% if page.mathjax %}
   {% include mathjax.html %}
 {% endif %}
