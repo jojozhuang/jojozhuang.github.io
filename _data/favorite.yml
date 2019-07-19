@@ -26,6 +26,12 @@ bookmarks:
       - name: Icon Converter
         description: Convert PNG to ICO/ICNS
         url: https://iconverticons.com/online/
+      - name: Online Image Editor
+        description: An online image editor tool
+        url: https://www.online-image-editor.com/
+      - name: Colors From Image
+        description: Get HEX Value of color from image
+        url: https://html-color-codes.info/colors-from-image/
       - name: Text Compare
         description: An online text compare tool
         url: https://text-compare.netlify.com/

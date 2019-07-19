@@ -1,9 +1,9 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Redis Commands Quick Reference"
+title: "Redis - Commands Quick Reference"
 index: 3522
-subcategory: redis
+subcategory: database
 date: 2018-08-07
 tags: [Redis]
 ---
