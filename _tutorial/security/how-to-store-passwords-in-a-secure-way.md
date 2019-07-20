@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Password Storage"
+title: "How To Store Passwords In a Secure Way?"
 index: 3611
 subcategory: security
 date: 2019-07-17
-tags: [Hashing, Salt, Pepper, SHA1]
+tags: [Hashing, Salt, Pepper]
 ---
 
 > Protect password.
@@ -65,22 +65,22 @@ The problem of the encryption approach is that it is `bidirectional`. If attacke
 
 ## 4. Hashing
 ### 4.1 Hashing the Password
-A more secure way to store a password is to transform it into data that **cannot** be converted back to the original password. This mechanism is known as `hashing`, which is `unidirectional`. Hashing is a complex mathematical function that transform data with arbitrary size to data with a fixed size.
+A more secure way to store a password is to transform it into data that **cannot** be converted back to the original password. This mechanism is known as `hashing`, which is `unidirectional`. Hashing is a complex mathematical function that transform data with arbitrary size to data with a `fixed` size.
 
 Commonly used hashing algorithms include Message Digest (MDx) algorithms, such as `MD5`, and Secure Hash Algorithms (SHA), such as SHA-1 and the SHA-2 family that includes the widely used `SHA-256` algorithm.
 
-The MD5 hash of 'abc123'.
+The MD5 hash of 'abc123'. You can try the [online tool](https://emn178.github.io/online-tools/md5.html) to generated MD5 hash or other type hashes.
 ```raw
 e99a18c428cb38d5f260853678922e03
 ```
-The MD5 hash of 'ASC#iu12!'.
+If the input string is changed even by just one single character, the output hash string will be entirely different. For example, The MD5 hash of 'abc129'.
 ```raw
-612c4c40e0f5c226eebc738133ba447b
+83bd4ae2d244d72f27e8300722bb4c96
 ```
 ### 4.2 Cracking Hash
-Is hashing enough? Not really. Though hashing is unidirectional and the hashed text can't be converted back, attackers can use `Dictionary Attack` or `Bruteforce Attack` to search for a match.
-* Dictionary Attack: Attempting to find the original plaintext by hashing common password and comparing them to the target hash.
-* Bruteforce Attack: Trying every possible combination of characters against the hashed password, time taken increases exponentially as password length.
+Is hashing enough? Not really. Though hashing is unidirectional and the hashed text can't be converted back, attackers can use dictionary attack or Bruteforce Attack to search for a match.
+* `Dictionary Attack`: Attempting to find the original plaintext by hashing common password and comparing them to the target hash.
+* `Bruteforce Attack`: Trying every possible combination of characters against the hashed password, time taken increases exponentially as password length.
 
 **Example for the Dictionary Attack**  
 Some websites provide the hash lookup service, which allows you to input a hash and search for its corresponding plaintext in its database of already-cracked hashes.
@@ -99,7 +99,7 @@ The idea of salt is to append a random short text to the end of password before 
 Password: abc123
 Salt: W!)%z
 Salted Password: abc123W!)%z
-Hash(MD5): 90426e8c76023a00f9dec51b60a33879
+Hash(SHA3-256): 35fdfd6564fe248c8412b71f6a331c593665b12646d28e54cb8270d579ece966
 ```
 
 **Best Practice**  
@@ -107,16 +107,99 @@ Hash(MD5): 90426e8c76023a00f9dec51b60a33879
 * Each user should have a unique salt, so that the generated hashes are totally different for the same password from different users.
 ![image](/public/images/devops/3611/password-salt.png)
 
-## 5. Bcrypt, Scrypt, Argon2
+## 6. Bcrypt
+From above, we learned that a better way to store passwords is to add a salt to the hashing process: adding additional random data to the input of a hashing function that makes each password hash unique.
 
-Use Bcrypt (or Scrypt)
-Goals for password security
-Never use a bare hash (e.g. MD5, SHA1)
-They’re too fast
-If you can’t use those, use PBKDF2 and slow it way down
+There are plenty of cryptographic functions to choose from such as the SHA2 family and the SHA-3 family. However, one design problem with the SHA families is that they were designed to be computationally fast. How fast a cryptographic function can calculate a hash has an immediate and significant bearing on how safe the password is. Faster calculations mean faster brute-force attacks.
 
+### 6.1 What is Bcrypt?
+`bcrypt` was designed by Niels Provos and David Mazières based on the Blowfish cipher: `b` for `Blowfish` and `crypt` for the name of the hashing function used by the UNIX password system.
 
-## 6. References
+`bcrypt` was designed for password hashing hence it is a `slow` algorithm. This is good for password hashing as it reduces the number of passwords by second an attacker could hash when crafting a dictionary attack. Another benefit of bcrypt is that it requires a `salt` by default. It uses a 128-bit salt and encrypts a 192-bit magic value.
+
+### 6.2 How does bcrypt work?
+Bcrypt uses the expensive key setup phase of the Blowfish cipher to develop a new key setup algorithm for Blowfish named `eksblowfish`, which stands for "expensive key schedule Blowfish."
+
+bcrypt runs in two phases:
+* Phase 1: A function called `EksBlowfishSetup` is setup using the desired cost, the salt, and the password to initialize the state of eksblowfish. Then, bcrypt spends a lot of time running an expensive key schedule which consists of performing a `key derivation` where we derive a set of subkeys from a primary key. Here, the password is used as the primary key.
+* Phase 2: The magic value is the 192-bit value `OrpheanBeholderScryDoubt`. This value is encrypted 64 times using eksblowfish in ECB mode with the state from the previous phase. The output of this phase is the cost and the 128-bit salt value concatenated with the result of the encryption loop.
+![image](/public/images/devops/3611/bcrypt.png){:width="600px"}
+
+### 6.3 Implementing bcrypt
+**Generate hash for password**
+Technique 1: Generate a salt and hash on separate function calls.
+```javascript
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+const plainTextPassword1 = "DFGh5546*%^__90";
+
+bcrypt
+  .genSalt(saltRounds)
+  .then(salt => {
+    console.log(`Salt: ${salt}`);
+
+    return bcrypt.hash(plainTextPassword1, salt);
+  })
+  .then(hash => {
+    console.log(`Hash: ${hash}`);
+
+    // Store hash in your password DB.
+  })
+  .catch(err => console.error(err.message));
+```
+Output.
+```raw
+Salt: $2b$10$3euPcmQFCiblsZeEu5s7p.
+Hash: $2b$10$3euPcmQFCiblsZeEu5s7p.9OVHgeHWFDk9nhMqZ0m/3pd/lhwZgES
+```
+Technique 2: Auto-generate a salt and a hash
+```javascript
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+const plainTextPassword1 = "DFGh5546*%^__90";
+
+bcrypt
+  .hash(plainTextPassword1, saltRounds)
+  .then(hash => {
+    console.log(`Hash: ${hash}`);
+
+    // Store hash in your password DB.
+  })
+  .catch(err => console.error(err.message));
+```
+**Validate Password**
+```java
+const bcrypt = require("bcrypt");
+const plainTextPassword1 = "DFGh5546*%^__90";
+
+const hash = "$2b$10$69SrwAoAUNC5F.gtLEvrNON6VQ5EX89vNqLEqU655Oy9PeT/HRM/a";
+
+bcrypt
+  .compare(plainTextPassword1, hash)
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => console.error(err.message));
+```
+We did not store the salt though, so how does bcrypt.compare know which salt to use? Looking at a previous hash/salt result, notice how the hash is the salt with the hash appended to it:
+```raw
+Salt: $2b$10$3euPcmQFCiblsZeEu5s7p.
+Hash: $2b$10$3euPcmQFCiblsZeEu5s7p.9OVHgeHWFDk9nhMqZ0m/3pd/lhwZgES
+```
+This is actually three fields, delimited by `$`:
+* `2b` identifies the bcrypt algorithm version that was used.
+* `10` is the cost factor; 2^10 iterations of the key derivation function are used
+* `3euPcmQFCiblsZeEu5s7p.9OVHgeHWFDk9nhMqZ0m/3pd/lhwZgES` is the salt and the cipher text, concatenated and encoded in a modified Base-64. The first 22 characters decode to a 16-byte value for the salt. The remaining characters are cipher text to be compared for authentication.
+
+## 7. More
+Choice of Password Hashing:
+* Bcrypt
+* Scrypt
+* Argon2
+
+`Argon2` is the best.
+
+## 8. References
 * [Password Hashing, Salts, Peppers](https://www.youtube.com/watch?v=--tnZMuoK3E)
 * [Passwords & hash functions (Simply Explained)](https://www.youtube.com/watch?v=cczlpiiu42M)
 * [How Dropbox securely stores your passwords](https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/)
@@ -124,3 +207,10 @@ If you can’t use those, use PBKDF2 and slow it way down
 * [Rainbow table](https://whatis.techtarget.com/definition/rainbow-table)
 * [Symmetric Key Encryption - why, where and how it’s used in banking](https://www.cryptomathic.com/news-events/blog/symmetric-key-encryption-why-where-and-how-its-used-in-banking)
 * [Symmetric vs. Asymmetric Encryption – What are differences?](https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences)
+* [Hashing in Action: Understanding bcrypt](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/)
+* [scrypt - wikipedia](https://en.wikipedia.org/wiki/Scrypt)
+* [Key derivation function](https://en.wikipedia.org/wiki/Key_derivation_function)
+* [bcrypt - npm](https://www.npmjs.com/package/bcrypt)
+* [How can bcrypt have built-in salts?](https://stackoverflow.com/questions/6832445/how-can-bcrypt-have-built-in-salts)
+* [Password Hashing: Scrypt, Bcrypt and ARGON2](https://medium.com/@mpreziuso/password-hashing-pbkdf2-scrypt-bcrypt-and-argon2-e25aaf41598e)
+* [Argon2 on Github](https://github.com/P-H-C/phc-winner-argon2)
