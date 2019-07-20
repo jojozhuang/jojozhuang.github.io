@@ -32,6 +32,9 @@ bookmarks:
       - name: Colors From Image
         description: Get HEX Value of color from image
         url: https://html-color-codes.info/colors-from-image/
+      - name: Convert WebP to PNG / APNG
+        description: Convert WebP to PNG / APNG
+        url: https://ezgif.com/webp-to-png
       - name: Text Compare
         description: An online text compare tool
         url: https://text-compare.netlify.com/
@@ -80,9 +83,9 @@ bookmarks:
         url: https://www.godaddy.com
   - category: Security
     links:
-      - name: MD5 Hash Generator
-        description: MD5 Hash Generator
-        url: https://www.md5hashgenerator.com/
+      - name: MD5 SHA256 Online
+        description: Online tool to generate hash
+        url: https://emn178.github.io/online-tools/index.html
       - name: Hashkiller(Hash Cracker)
         description: Online tool for cracking hash
         url: https://hashkiller.co.uk/
@@ -222,6 +225,9 @@ bookmarks:
       - name: Serverless Architecture
         description: A way to build and run applications and services without having to manage infrastructure
         url: https://aws.amazon.com/lambda/serverless-architectures-learn-more/
+      - name: WebP
+        description: A new image format for the Web
+        url: https://developers.google.com/speed/webp/
   - category: Basis
     links:
       - name: Ubuntu
