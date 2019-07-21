@@ -194,6 +194,15 @@ bookmarks:
         url: https://www.heroku.com/
   - category: OS, Virtualization, Containerization
     links:
+      - name: macOS
+        description: A series of graphical operating systems developed and marketed by Apple
+        url: https://www.apple.com/macos
+      - name: Windows
+        description: A group of several graphical operating system families, developed by Microsoft
+        url: https://www.microsoft.com/en-us/windows
+      - name: Linux
+        description: A family of open source Unix-like operating systems based on the Linux kernel
+        url: https://www.linux.org/
       - name: Ubuntu
         description: An open source operating system
         url: https://www.ubuntu.com/

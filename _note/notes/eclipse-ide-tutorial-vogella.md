@@ -17,7 +17,7 @@ Author: Lars Vogel
 
 ## 1. Shortcuts in Eclipse:
 
-  Description                       | Shortcut in Linux | Shortcut in MacOS
+  Description                       | Shortcut in Linux | Shortcut in macOS
 ------------------------------------|-------------------|-------------
 Quick Access                        | Ctrl + 3          | Command + 3
 Open a Class                        | Ctrl + Shift + T  | Command + Shift + T

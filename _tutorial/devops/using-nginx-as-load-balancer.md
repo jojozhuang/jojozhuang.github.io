@@ -31,7 +31,7 @@ Server2.
 Server3.
 ![image](/public/images/devops/3513/nodeserver3.png){:width="700px"}
 ### 3.2 Nginx Server
-Second, follow the steps mentioned in [Installing Nginx in MacOS]({% link _tutorial/nginx/installing-nginx-in-macos.md %}) to setup a nginx server. It is served at post 9096.
+Second, follow the steps mentioned in [Installing Nginx on macOS]({% link _tutorial/devops/installing-nginx-on-macos.md %}) to setup a nginx server. It is served at post 9096.
 ![image](/public/images/devops/3513/nginxserver.png){:width="700px"}  
 ### 3.3 Configuring Nginx Server as Load Balancer
 Edit Nginx's configuration file /usr/local/etc/nginx/nginx.conf. Create server list in `upstream`, and link them to `proxy_pass` directive in `location`. Here, we use the default load balancing method: round-robin.

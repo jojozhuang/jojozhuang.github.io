@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Setting up Jekyll on Ubuntu and MacOS"
+title: "Setting up Jekyll on Ubuntu and macOS"
 index: 1603
 subcategory: jekyll
 date: 2016-01-16
-tags: [GitHub Pages, Jekyll, Ruby]
+tags: [GitHub Pages, Jekyll, Ruby, macOS]
 ---
 
 > Set up a local version of Jekyll GitHub Pages site to test changes before submitting to github.

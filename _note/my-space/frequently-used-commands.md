@@ -5,7 +5,7 @@ title: "Frequently Used Commands"
 index: 9001
 subcategory: my-space
 date: 2016-01-21
-tags: [Linux, MacOS]
+tags: [Linux, macOS]
 ---
 
 > Some frequently used commands in linux.
@@ -40,7 +40,7 @@ grep -Ril "text-to-find-here" /
 * `l` - show the file name, not the result itself.
 * `/` - starting at the root of your machine.
 
-### 4. Open Finder of Current Directory from Command Line in MacOS
+### 4. Open Finder of Current Directory from Command Line in macOS
 ```sh
 open .
 ```
