@@ -17,7 +17,7 @@ bookmarks:
         description: Cassandra内部原理和底层实现
         url: https://www.youtube.com/watch?v=BUjcS4q86jQ
         type: video
-      - name: NewSQL大神黄东旭：从0到1，如何设计一个分布式数据库
+      - name: NewSQL大神黄东旭:设计一个分布式数据库
         description: NewSQL大神黄东旭：从0到1，如何设计一个分布式数据库
         url: https://www.youtube.com/watch?v=xAiuLJtCZOg&t=5689s
         type: video

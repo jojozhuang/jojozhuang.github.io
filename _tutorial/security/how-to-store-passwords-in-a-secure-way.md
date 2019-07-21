@@ -8,7 +8,7 @@ date: 2019-07-17
 tags: [Hashing, Salt, Pepper]
 ---
 
-> Protect password.
+> Hashing the passwords before storing them.
 
 ## 1. Storing Password
 Authentication provides users with a set of credentials, such as username and password, and verifies them whenever users want access to the application. We need a way to store these credentials in our database for future comparisons.

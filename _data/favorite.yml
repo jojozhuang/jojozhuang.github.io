@@ -600,6 +600,9 @@ bookmarks:
         url: https://tinypng.com/
   - category: Cyber Security
     links:
+      - name: OWASP Cheat Sheet
+        description: A concise collection of high value information on specific application security topics
+        url: https://cheatsheetseries.owasp.org/
       - name: Hashkiller(Hash Cracker)
         description: Online tool for cracking hash
         url: https://hashkiller.co.uk/

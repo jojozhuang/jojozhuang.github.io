@@ -5,10 +5,10 @@ title: "Securely Implement Remember Me"
 index: 3612
 subcategory: security
 date: 2019-07-19
-tags: [DDos, XSS]
+tags: [Token]
 ---
 
-> Protect password.
+> Implement Remember Me(auto login) in a secure way.
 
 ## 1. Storing Password
 
