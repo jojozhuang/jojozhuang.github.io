@@ -1,11 +1,11 @@
 ---
 layout: default
 key: favorite
-title: Favorites
+title: Favorite
 ---
 <div class="main-contents container">
     <div class="main-contents-inner">
-      <h1 class="page-header">{{ page.title }}</h2>
+      <h1 class="page-header">{{ page.title }}</h1>
       {%- assign favorite = site.data.favorite -%}
       <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link active" href="#favorite"><h5 class="tab-title">{{favorite.title}}</h5></a></li>
@@ -27,7 +27,7 @@ title: Favorites
                               {% endif %}
                                   <div class="col-sm-4">
                                   <span class="list-sub-index">{{ idx1 }}.{{ forloop.index }}</span>
-                                  <span class="list-sub-link"><a href="{{ link.url }}" data-container="body" data-toggle="tooltip" data-placement="right" title="{{ link.description }}">{{ link.name }}</a></span>
+                                  <span class="list-sub-link"><a href="{{ link.url }}" data-container="body" data-toggle="tooltip" data-placement="right" title="{{ link.description }}">{{ link.name }} </a>{% if link.favorite == true %}<i class="fas fa-star" style='color:#ffcc00'></i>{% endif %}</span>
                                   </div>
                               {% if col == 2 or forloop.last == true %}
                                   </div>

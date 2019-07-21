@@ -1,16 +1,18 @@
 title: Bookmarks
 description: List of famous websites, popular opensource projects and useful online tools for software development.
-librarytitle: Library
+librarytitle: Index of Postings
 librarydesc: Combination of my posting and portfolio with the bookmark list.
 bookmarks:
   - category: Online Tools
     links:
-      - name: Rico's cheatsheets
-        description: Cheatsheets
-        url: https://devhints.io/
+      - name: Text Compare
+        description: An online text compare tool
+        url: https://text-compare.netlify.com/
+        favorite: true
       - name: XML Formatter
         description: Format XML string
         url: https://www.freeformatter.com/xml-formatter.html
+        favorite: true
       - name: HTML Formatter
         description: Format HTML string
         url: https://www.freeformatter.com/html-formatter.html
@@ -35,79 +37,26 @@ bookmarks:
       - name: Convert WebP to PNG / APNG
         description: Convert WebP to PNG / APNG
         url: https://ezgif.com/webp-to-png
-      - name: Text Compare
-        description: An online text compare tool
-        url: https://text-compare.netlify.com/
       - name: Plunker
         description: An online real-time collaborative code editor
         url: https://plnkr.co/
-  - category: Personal Website
-    links:
-      - name: Liquid
-        description: An open-source template language written in Ruby
-        url: https://shopify.github.io/liquid/
-      - name: Jekyll
-        description: A blog-aware, static site generator in Ruby.
-        url: https://jekyllrb.com/
-      - name: Jekyll cheatsheet
-        description: Cheatsheet for Jekyll.
-        url: https://devhints.io/jekyll
-  - category: SEO
-    links:
-      - name: Varvy SEO tool
-        description: An online tool for testing your site to see if it follows the Google guidelines.
-        url: https://varvy.com/
-      - name: GTmetrix
-        description: An online tool to test the site loads and provide optimization suggestions.
-        url: https://gtmetrix.com/
-      - name: Web Page Performance Test
-        description: An online tool to run a speed test from multiple locations with different browsers.
-        url: https://www.webpagetest.org/
-      - name: Google PageSpeed Insights
-        description: An online tool for analyzing the page’s loading performance
-        url: https://developers.google.com/speed/pagespeed/insights/
-      - name: Mobile Friendly Test
-        description: An online tool for testing how easily a visitor can use your page on a mobile device
-        url: https://search.google.com/test/mobile-friendly
-      - name: Security Headers
-        description: An online tool for testing security headers of website.
-        url: https://securityheaders.com/
-      - name: SSL Labs
-        description: A free online service to perform analysis of the configuration of any SSL web server on the public Internet.
-        url: https://www.ssllabs.com/ssltest/
-      - name: TinyPNG
-        description: An online tool to reduce the file size of JPG and PNG files.
-        url: https://tinypng.com/
-      - name: GoDaddy
-        description: An American publicly traded Internet domain registrar and web hosting company.
-        url: https://www.godaddy.com
-  - category: Security
-    links:
-      - name: MD5 SHA256 Online
+      - name: Online Hashing
         description: Online tool to generate hash
         url: https://emn178.github.io/online-tools/index.html
-      - name: Hashkiller(Hash Cracker)
-        description: Online tool for cracking hash
-        url: https://hashkiller.co.uk/
-      - name: Have i been pwned
-        description: Check if your email address is pwned
-        url: https://haveibeenpwned.com/
-  - category: Algorithm
+        favorite: true
+  - category: Quick Reference
     links:
-      - name: Leetcode
-        description: Practice algorithms online
-        url: https://leetcode.com/problemset/algorithms/
-      - name: Lintcode
-        description: Practice algorithms online
-        url: http://www.lintcode.com/en/problem/
-      - name: JiuZhang(Chinese)
-        description: A chinese algorithms training website
-        url: http://www.jiuzhang.com/
-  - category: System Design
-    links:
-      - name: The System Design Primer
-        description: Summaries of various system design topics, including pros and cons. Everything is a trade-off.
-        url: https://github.com/donnemartin/system-design-primer/blob/master/README.md
+      - name: Rico's cheatsheets
+        description: Cheatsheets
+        url: https://devhints.io/
+        favorite: true
+      - name: Font Awesome
+        description: Free icons from Font Awecome
+        url: https://fontawesome.com/icons?d=gallery&m=free
+        favorite: true
+      - name: HTTP Status Codes
+        description: HTTP Status Codes
+        url: https://www.restapitutorial.com/httpstatuscodes.html
   - category: Online Learning
     links:
       - name: Stack Overflow
@@ -119,13 +68,70 @@ bookmarks:
       - name: W3Schools
         description: A popular web site for learning web technologies
         url: https://www.w3schools.com/
+        favorite: true
       - name: TutorialsPoint
         description: Huge amount of tutorials for different technologies
         url: https://www.tutorialspoint.com/
       - name: The Modern JavaScript Tutorial
         description: A good tutorial for javascript
         url: https://javascript.info/
-  - category: Programming Language
+  - category: Basic Concepts in Computer Science
+    links:
+      - name: Data Structure
+        description: A data organization, management, and storage format that enables efficient access and modification
+        url: https://en.wikipedia.org/wiki/Data_structure
+      - name: Algorithm
+        description: An unambiguous specification of how to solve a class of problems
+        url: https://en.wikipedia.org/wiki/Algorithm
+      - name: Design Pattern
+        description: A general, reusable solution to a commonly occurring problem within a given context in software design
+        url: https://en.wikipedia.org/wiki/Software_design_pattern
+      - name: Microservices
+        description: A service-oriented architecture that structures an application as a collection of loosely coupled services
+        url: https://en.wikipedia.org/wiki/Microservices
+      - name: Cache
+        description: A hardware or software component that stores data so that future requests for that data can be served faster
+        url: https://en.wikipedia.org/wiki/Cache_(computing)
+      - name: Load Balancing
+        description: A mechanism to improve the distribution of workloads across multiple computing resources
+        url: https://en.wikipedia.org/wiki/Load_balancing_(computing)
+      - name: Debugging
+        description: The process of finding and resolving of defects
+        url: https://en.wikipedia.org/wiki/Debugging
+      - name: Markdown
+        description: A lightweight markup language with plain text formatting syntax
+        url: https://en.wikipedia.org/wiki/Markdown
+      - name: JSP
+        description: JavaServer Pages
+        url: https://en.wikipedia.org/wiki/JavaServer_Pages
+      - name: ORM
+        description: Object-relational mapping
+        url: https://en.wikipedia.org/wiki/Object-relational_mapping
+      - name: HTTP
+        description: Hypertext Transfer Protocol
+        url: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+      - name: TCP
+        description: Transmission Control Protocol
+        url: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+      - name: UDP
+        description: User Datagram Protocol
+        url: https://en.wikipedia.org/wiki/User_Datagram_Protocol
+      - name: WebSocket
+        description: A computer communications protocol
+        url: https://en.wikipedia.org/wiki/WebSocket
+      - name: CORS
+        description: Cross-origin resource sharing
+        url: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+      - name: CDN
+        description: Content Delivery Network
+        url: https://en.wikipedia.org/wiki/Content_delivery_network
+      - name: Lambda Architecture
+        description: A data-processing architecture designed to handle massive quantities of data
+        url: https://en.wikipedia.org/wiki/Lambda_architecture
+      - name: Serverless Architecture
+        description: A way to build and run applications and services without having to manage infrastructure
+        url: https://aws.amazon.com/lambda/serverless-architectures-learn-more/
+  - category: Programming Languages
     links:
       - name: C
         description: A general-purpose, imperative computer programming language
@@ -169,66 +175,24 @@ bookmarks:
       - name: TypeScript
         description: Strict syntactical superset of JavaScript maintained by Microsoft
         url: https://www.typescriptlang.org/
-  - category: Knowledge
+  - category: Cloud Service Provider
     links:
-      - name: Data structure
-        description: A data organization, management, and storage format that enables efficient access and modification
-        url: https://en.wikipedia.org/wiki/Data_structure
-      - name: Algorithm
-        description: An unambiguous specification of how to solve a class of problems
-        url: https://en.wikipedia.org/wiki/Algorithm
-      - name: Design Pattern
-        description: A general, reusable solution to a commonly occurring problem within a given context in software design
-        url: https://en.wikipedia.org/wiki/Software_design_pattern
-      - name: Microservices
-        description: A service-oriented architecture that structures an application as a collection of loosely coupled services
-        url: https://en.wikipedia.org/wiki/Microservices
-      - name: Cache
-        description: A hardware or software component that stores data so that future requests for that data can be served faster
-        url: https://en.wikipedia.org/wiki/Cache_(computing)
-      - name: Load Balancing
-        description: A mechanism to improve the distribution of workloads across multiple computing resources
-        url: https://en.wikipedia.org/wiki/Load_balancing_(computing)
-      - name: Debugging
-        description: The process of finding and resolving of defects
-        url: https://en.wikipedia.org/wiki/Debugging
-      - name: Markdown
-        description: A lightweight markup language with plain text formatting syntax
-        url: https://en.wikipedia.org/wiki/Markdown
-      - name: JSP
-        description: JavaServer Pages
-        url: https://en.wikipedia.org/wiki/JavaServer_Pages
-      - name: ORM
-        description: Object-relational mapping
-        url: https://en.wikipedia.org/wiki/Object-relational_mapping
-      - name: HTTP
-        description: Hypertext Transfer Protocol
-        url: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-      - name: HTTP Status Codes
-        description: HTTP Status Codes
-        url: https://www.restapitutorial.com/httpstatuscodes.html
-      - name: TCP
-        description: Transmission Control Protocol
-        url: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
-      - name: UDP
-        description: User Datagram Protocol
-        url: https://en.wikipedia.org/wiki/User_Datagram_Protocol
-      - name: WebSocket
-        description: A computer communications protocol
-        url: https://en.wikipedia.org/wiki/WebSocket
-      - name: CORS
-        description: Cross-origin resource sharing
-        url: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-      - name: Lambda Architecture
-        description: A data-processing architecture designed to handle massive quantities of data
-        url: https://en.wikipedia.org/wiki/Lambda_architecture
-      - name: Serverless Architecture
-        description: A way to build and run applications and services without having to manage infrastructure
-        url: https://aws.amazon.com/lambda/serverless-architectures-learn-more/
-      - name: WebP
-        description: A new image format for the Web
-        url: https://developers.google.com/speed/webp/
-  - category: Basis
+      - name: Amazon EC2
+        description: World largest cloud platform
+        url: https://aws.amazon.com/ec2/
+      - name: Amazon S3
+        description: The largest and most performant, secure, and feature-rich object storage service
+        url: https://aws.amazon.com/s3/
+      - name: Google Cloud
+        description: Google's cloud platform
+        url: https://cloud.google.com/
+      - name: Microsoft Azure
+        description: Microsoft's cloud platform
+        url: https://azure.microsoft.com
+      - name: Heroku
+        description: A PaaS platform supported by Salesforce
+        url: https://www.heroku.com/
+  - category: OS, Virtualization, Containerization
     links:
       - name: Ubuntu
         description: An open source operating system
@@ -236,9 +200,25 @@ bookmarks:
       - name: RedHat
         description: Another linux-based operating system
         url: https://www.redhat.com
+      - name: Vmware
+        description: A virtualization software
+        url: https://www.vmware.com/
       - name: VirtualBox
         description: A free virtual machine box
         url: https://www.virtualbox.org/
+      - name: Docker
+        description: A software technology providing containers
+        url: https://www.docker.com/
+        favorite: true
+      - name: Docker Hub
+        description: A repository where open Docker images are stored
+        url: https://hub.docker.com/
+      - name: Kitematic
+        description: A tool to maintain docker containers through GUI
+        url: https://kitematic.com/
+      - name: Kubernetes(K8s)
+        description: an open-source container orchestration system for automating application deployment, scaling, and management.
+        url: https://kubernetes.io/
   - category: Database
     links:
       - name: Oracle
@@ -259,6 +239,7 @@ bookmarks:
       - name: MongoDB
         description: A cross-platform document-oriented NoSQL database program
         url: https://www.mongodb.com/
+        favorite: true
       - name: Apache HBase
         description: Wide-column store based on Apache Hadoop and on concepts of BigTable
         url: https://couchdb.apache.org/
@@ -271,27 +252,36 @@ bookmarks:
       - name: Amazon DynamoDB
         description: A fully managed NoSQL database that supports key-value and document
         url: https://aws.amazon.com/dynamodb/
-  - category: Cloud
+  - category: Distributed System
     links:
-      - name: Amazon EC2
-        description: World largest cloud platform
-        url: https://aws.amazon.com/ec2/
-      - name: Amazon S3
-        description: The largest and most performant, secure, and feature-rich object storage service
-        url: https://aws.amazon.com/s3/
-      - name: Google Cloud
-        description: Google's cloud platform
-        url: https://cloud.google.com/
-      - name: Microsoft Azure
-        description: Microsoft's cloud platform
-        url: https://azure.microsoft.com
-      - name: Heroku
-        description: A PaaS platform supported by Salesforce
-        url: https://www.heroku.com/
-      - name: Travis CI
-        description: A continuous integration service used to build projects hosted at GitHub
-        url: https://travis-ci.org/
-  - category: Big Data/AI
+      - name: Elasticsearch
+        description: A distributed, RESTful search and analytics engine
+        url: https://www.elastic.co/
+      - name: Tomcat
+        description: An open source web server
+        url: https://tomcat.apache.org/
+      - name: Nginx
+        description: A free, open-source, high-performance HTTP server
+        url: https://nginx.org
+      - name: Apache Kafka
+        description: An open-source stream-processing software platform
+        url: https://kafka.apache.org/
+      - name: Redis
+        description: An open source in-memory data structure store, used as a database, cache and message broker
+        url: https://redis.io/
+      - name: Memcached
+        description: A general-purpose distributed memory caching system
+        url: https://memcached.org/
+      - name: Apache ZooKeeper
+        description: A centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services
+        url: https://zookeeper.apache.org/
+      - name: Netty
+        description: A non-blocking I/O client-server framework for the development of Java network applications such as protocol servers and clients
+        url: https://netty.io/
+      - name: Apache Dubbo
+        description: A high-performance, light weight, java based RPC framework
+        url: https://dubbo.apache.org/
+  - category: Big Data, Machine Learning, AI
     links:
       - name: Apache Hadoop
         description: An open-source framework designed for distributed storage and processing of very large data sets across clusters of computers
@@ -311,12 +301,101 @@ bookmarks:
       - name: Apache Spark
         description: A fast and general engine for large-scale data processing
         url: https://spark.apache.org/
+        favorite: true
       - name: Apache Storm
         description: A free and open source distributed realtime computation system
         url: https://storm.apache.org/
       - name: IBM Watson
         description: An AI system developed by IBM
         url: https://www.ibm.com/watson
+  - category: Open Source/Popular Projects
+    links:
+      - name: Jersey
+        description: An open-source RESTful Web Services framework
+        url: https://jersey.github.io/
+      - name: JPA
+        description: Java Persistence API
+        url: https://en.wikipedia.org/wiki/Java_Persistence_API
+      - name: EclipseLink
+        description: Comprehensive open-source Java persistence solution
+        url: http://www.eclipse.org/eclipselink/
+      - name: Hibernate
+        description: A high-performance Object/Relational persistence and query service
+        url: http://hibernate.org/
+      - name: Maven
+        description: A software project management and comprehension tool
+        url: https://maven.apache.org/
+      - name: Gradle
+        description: An open source build automation system
+        url: https://gradle.org/
+      - name: SDKMAN
+        description: A tool for managing parallel versions of multiple SDKs
+        url: http://sdkman.io/
+      - name: Mono
+        description: A cross-platform, open-source .NET framework
+        url: http://www.mono-project.com/
+      - name: Rhino
+        description: An open-source implementation of JavaScript written entirely in Java
+        url: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
+      - name: Writage
+        description: Markdown plugin for Microsoft Word
+        url: http://www.writage.com/
+      - name: MathJax
+        description: An open source JavaScript display engine for mathematics.
+        url: https://www.mathjax.org/
+      - name: MermaidJs
+        description: A simple markdown-like script language for generating charts from text via javascript
+        url: https://mermaidjs.github.io/
+  - category: Source Control, Version Control
+    links:
+      - name: Git
+        description: A free and open source distributed version control system
+        url: https://git-scm.com/
+      - name: GitHub
+        description: A web-based Git or version control repository
+        url: https://github.com/
+        favorite: true
+      - name: GitIgnore
+        description: Create useful .gitignore files for your project
+        url: https://www.gitignore.io/
+        favorite: true
+      - name: SourceTree
+        description: A free Git client for Windows and Mac
+        url: https://www.sourcetreeapp.com/
+  - category: Integrated Development Environment(IDE)
+    links:
+      - name: IntelliJ IDEA
+        description: A Java integrated development environment for developing computer software
+        url: https://www.jetbrains.com/idea/
+        favorite: true
+      - name: Visual Studio Code
+        description: A free code editor for web and cloud applications
+        url: https://code.visualstudio.com/
+        favorite: true
+      - name: Xcode
+        description: An IDE for macOS
+        url: https://developer.apple.com/xcode/
+      - name: Android Studio
+        description: The official IDE for Android
+        url: https://developer.android.com/studio/index.html
+      - name: Eclipse
+        description: A free Java IDE
+        url: https://eclipse.org
+      - name: Netbeans
+        description: Another free Java IDE
+        url: https://netbeans.org/
+  - category: Text Editor
+    links:
+      - name: Sublime Text
+        description: A sophisticated text editor for code, markup and prose
+        url: https://www.sublimetext.com/
+      - name: Atom
+        description: A free source code editor for macOS, Linux, and Windows
+        url: https://atom.io/
+        favorite: true
+      - name: Notepad++
+        description: a free source code editor for Microsoft Windows
+        url: https://notepad-plus-plus.org/
   - category: Mobile Development
     links:
       - name: iOS
@@ -334,17 +413,28 @@ bookmarks:
       - name: Cordova
         description: Cross-platform solution for mobile apps
         url: https://cordova.apache.org/
-  - category: Frontend
+  - category: Web Development
     links:
+      - name: Node.js
+        description: A JavaScript runtime built on Chrome's V8 JavaScript engine
+        url: https://nodejs.org/
+        favorite: true
+      - name: NPM
+        description: The package manager for JavaScript and the world’s largest software registry
+        url: https://www.npmjs.com/
       - name: React
         description: A javascript library maintained by Facebook
         url: https://facebook.github.io/react/
       - name: Angular
         description: A javascript library maintained by Google
         url: https://angularjs.org/
+      - name: Vue
+        description: The Progressive JavaScript Framework
+        url: https://vuejs.org/
       - name: Bootstrap
         description: A free framework for developing responsive, mobile-first web sites.
         url: http://getbootstrap.com/
+        favorite: true
       - name: Jquery
         description: A popular JavaScript library
         url: https://jquery.com/
@@ -366,128 +456,34 @@ bookmarks:
       - name: SignalR
         description: Allow bi-directional communication between server and client
         url: https://www.asp.net/signalr
-  - category: Open Source/Popular Projects
-    links:
-      - name: Node.js
-        description: A JavaScript runtime built on Chrome's V8 JavaScript engine
-        url: https://nodejs.org/
-      - name: NPM
-        description: The package manager for JavaScript and the world’s largest software registry
-        url: https://www.npmjs.com/
-      - name: Elasticsearch
-        description: A distributed, RESTful search and analytics engine
-        url: https://www.elastic.co/
-      - name: Tomcat
-        description: An open source web server
-        url: https://tomcat.apache.org/
-      - name: Nginx
-        description: A free, open-source, high-performance HTTP server
-        url: https://nginx.org
-      - name: Jersey
-        description: An open-source RESTful Web Services framework
-        url: https://jersey.github.io/
-      - name: JPA
-        description: Java Persistence API
-        url: https://en.wikipedia.org/wiki/Java_Persistence_API
-      - name: EclipseLink
-        description: Comprehensive open-source Java persistence solution
-        url: http://www.eclipse.org/eclipselink/
-      - name: Hibernate
-        description: A high-performance Object/Relational persistence and query service
-        url: http://hibernate.org/
-      - name: Maven
-        description: A software project management and comprehension tool
-        url: https://maven.apache.org/
-      - name: SDKMAN
-        description: A tool for managing parallel versions of multiple SDKs
-        url: http://sdkman.io/
-      - name: Log4j
-        description: A popular logging package written in Java
-        url: https://logging.apache.org/log4j/2.x/
-      - name: Mono
-        description: A cross-platform, open-source .NET framework
-        url: http://www.mono-project.com/
-      - name: Rhino
-        description: An open-source implementation of JavaScript written entirely in Java
-        url: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
-      - name: Writage
-        description: Markdown plugin for Microsoft Word
-        url: http://www.writage.com/
-      - name: MathJax
-        description: An open source JavaScript display engine for mathematics.
-        url: https://www.mathjax.org/
-      - name: MermaidJs
-        description: A simple markdown-like script language for generating charts from text via javascript
-        url: https://mermaidjs.github.io/
-      - name: Apache Kafka
-        description: An open-source stream-processing software platform
-        url: https://kafka.apache.org/
-      - name: Redis
-        description: An open source in-memory data structure store, used as a database, cache and message broker
-        url: https://redis.io/
-      - name: Memcached
-        description: A general-purpose distributed memory caching system
-        url: https://memcached.org/
-      - name: Apache ZooKeeper
-        description: A centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services
-        url: https://zookeeper.apache.org/
-      - name: Netty
-        description: A non-blocking I/O client-server framework for the development of Java network applications such as protocol servers and clients
-        url: https://netty.io/
-      - name: Apache Dubbo
-        description: A high-performance, light weight, java based RPC framework
-        url: https://dubbo.apache.org/
-  - category: Development
-    links:
-      - name: Git
-        description: A free and open source distributed version control system
-        url: https://git-scm.com/
-      - name: GitIgnore
-        description: Create useful .gitignore files for your project
-        url: https://www.gitignore.io/
-      - name: SourceTree
-        description: A free Git client for Windows and Mac
-        url: https://www.sourcetreeapp.com/
-      - name: GitHub
-        description: A web-based Git or version control repository
-        url: https://github.com/
       - name: Electron
         description: Build cross-platform desktop apps with JavaScript, HTML, and CSS.
         url: https://electron.atom.io/
-  - category: DevOps
+      - name: Postman
+        description: A lightweight tool for testing web APIs
+        url: https://www.getpostman.com/
+        favorite: true
+      - name: Fiddler
+        description: The free web debugging proxy for any browser, system or platform
+        url: https://www.telerik.com/fiddler
+      - name: Monaco Editor
+        description: The code editor that powers VS Code
+        url: https://microsoft.github.io/monaco-editor/index.html
+      - name: WebP
+        description: A new image format for the Web
+        url: https://developers.google.com/speed/webp/
+  - category: DevOps, Deployment, Continuous integration (CI)
     links:
-      - name: Gradle
-        description: An open source build automation system
-        url: https://gradle.org/
       - name: Jenkins
         description: An open source automation server written in Java
         url: https://jenkins.io/
       - name: Bamboo
         description: A continuous integration and continuous deployment server developed by Atlassian
         url: https://www.atlassian.com/software/bamboo
-      - name: Docker
-        description: A software technology providing containers
-        url: https://www.docker.com/
-      - name: Docker Hub
-        description: A repository where open Docker images are stored
-        url: https://hub.docker.com/
-      - name: Kitematic
-        description: A tool to maintain docker containers through GUI
-        url: https://kitematic.com/
-      - name: Kubernetes(K8s)
-        description: an open-source container orchestration system for automating application deployment, scaling, and management.
-        url: https://kubernetes.io/
-      - name: Splunk
-        description: Search, analyze and visualize the machine-generated data
-        url: https://www.splunk.com/
-      - name: Dynatrace
-        description: A performance monitoring tool
-        url: https://www.dynatrace.com/
-  - category: Tools
-    links:
-      - name: Postman
-        description: A lightweight tool for testing web APIs
-        url: https://www.getpostman.com/
+      - name: Travis CI
+        description: A continuous integration service used to build projects hosted at GitHub
+        url: https://travis-ci.org/
+        favorite: true
       - name: Putty
         description: A free SSH and telnet client for Windows
         url: http://www.putty.org/
@@ -497,50 +493,52 @@ bookmarks:
       - name: FileZilla
         description: A free cross-platform FTP application
         url: https://filezilla-project.org/
-      - name: Fiddler
-        description: The free web debugging proxy for any browser, system or platform
-        url: https://www.telerik.com/fiddler
-  - category: Free Text Editor
+  - category: Logging, Monitoring
     links:
-      - name: Atom
-        description: A free source code editor for macOS, Linux, and Windows
-        url: https://atom.io/
-      - name: Notepad++
-        description: a free source code editor for Microsoft Windows
-        url: https://notepad-plus-plus.org/
-  - category: Integrated Development Environment(IDE)
+      - name: Log4j
+        description: A popular logging package written in Java
+        url: https://logging.apache.org/log4j/2.x/
+      - name: Splunk
+        description: Search, analyze and visualize the machine-generated data
+        url: https://www.splunk.com/
+        favorite: true
+      - name: Dynatrace
+        description: A performance monitoring tool
+        url: https://www.dynatrace.com/
+  - category: Personal Website
     links:
-      - name: Eclipse
-        description: A free Java IDE
-        url: https://eclipse.org
-      - name: Netbeans
-        description: Another free Java IDE
-        url: https://netbeans.org/
-      - name: Visual Studio Code
-        description: A free code editor for web and cloud applications
-        url: https://code.visualstudio.com/
-      - name: Xcode
-        description: An IDE for macOS
-        url: https://developer.apple.com/xcode/
-      - name: Android Studio
-        description: The official IDE for Android
-        url: https://developer.android.com/studio/index.html
-      - name: IntelliJ IDEA
-        description: A Java integrated development environment for developing computer software
-        url: https://www.jetbrains.com/idea/
-  - category: Free Hosting Service
-    links:
-      - name: Github Page
+      - name: Liquid
+        description: An open-source template language written in Ruby
+        url: https://shopify.github.io/liquid/
+      - name: Jekyll
+        description: A blog-aware, static site generator in Ruby.
+        url: https://jekyllrb.com/
+        favorite: true
+      - name: Google Analytics
+        description: A web analytics service offered by Google that tracks and reports website traffic
+        url: https://analytics.google.com/analytics/web/
+      - name: Disqus
+        description: A blog comment hosting service for web sites
+        url: https://disqus.com/
+      - name: ShareThis
+        description: Free Social Share Buttons for Websites & Blogs
+        url: https://sharethis.com/
+      - name: Github Pages
         description: Free internet hosting service
         url: https://pages.github.com/
       - name: Netlify
         description: A cloud service for hosting websites
         url: https://www.netlify.com/
-      - name: Heroku
-        description: A PaaS platform supported by Salesforce
-        url: https://www.heroku.com/
-  - category: Resources
-    links:
+        favorite: true
+      - name: GoDaddy
+        description: An American publicly traded Internet domain registrar and web hosting company.
+        url: https://www.godaddy.com
+      - name: Cloudflare
+        description: A content delivery network service provider.
+        url: https://www.cloudflare.com
+      - name: Jekyll cheatsheet
+        description: Cheatsheet for Jekyll.
+        url: https://devhints.io/jekyll
       - name: GitHub Markdown Cheatsheet
         description: Quick reference and showcase for Markdown
         url: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
@@ -550,9 +548,6 @@ bookmarks:
       - name: Icons8
         description: Free Icons
         url: https://icons8.com
-      - name: Font Awesome
-        description: Free icons from Font Awecome
-        url: https://fontawesome.com/icons?d=gallery&m=free
       - name: Bootsnipp
         description: Free Bootstrap themes and templates
         url: https://bootsnipp.com/
@@ -568,9 +563,49 @@ bookmarks:
       - name: highlight.js
         description: Javascript syntax highlighter
         url: https://highlightjs.org/
-      - name: Monaco Editor
-        description: The code editor that powers VS Code
-        url: https://microsoft.github.io/monaco-editor/index.html
-      - name: Disqus
-        description: A blog comment hosting service for web sites
-        url: https://disqus.com/
+  - category: Search Engine Optimization (SEO)
+    links:
+      - name: Varvy SEO tool
+        description: An online tool for testing your site to see if it follows the Google guidelines.
+        url: https://varvy.com/
+      - name: GTmetrix
+        description: An online tool to test the site loads and provide optimization suggestions.
+        url: https://gtmetrix.com/
+      - name: Web Page Performance Test
+        description: An online tool to run a speed test from multiple locations with different browsers.
+        url: https://www.webpagetest.org/
+      - name: Google PageSpeed Insights
+        description: An online tool for analyzing the page’s loading performance
+        url: https://developers.google.com/speed/pagespeed/insights/
+      - name: Mobile Friendly Test
+        description: An online tool for testing how easily a visitor can use your page on a mobile device
+        url: https://search.google.com/test/mobile-friendly
+      - name: Security Headers
+        description: An online tool for testing security headers of website.
+        url: https://securityheaders.com/
+      - name: SSL Labs
+        description: A free online service to perform analysis of the configuration of any SSL web server on the public Internet.
+        url: https://www.ssllabs.com/ssltest/
+      - name: TinyPNG
+        description: An online tool to reduce the file size of JPG and PNG files.
+        url: https://tinypng.com/
+  - category: Cyber Security
+    links:
+      - name: Hashkiller(Hash Cracker)
+        description: Online tool for cracking hash
+        url: https://hashkiller.co.uk/
+      - name: Have i been pwned
+        description: Check if your email address is pwned
+        url: https://haveibeenpwned.com/
+  - category: Online Judge for Practising Algorithm
+    links:
+      - name: Leetcode
+        description: Practice algorithms online
+        url: https://leetcode.com/problemset/algorithms/
+        favorite: true
+      - name: Lintcode
+        description: Practice algorithms online
+        url: http://www.lintcode.com/en/problem/
+      - name: JiuZhang(Chinese)
+        description: A chinese algorithms training website
+        url: http://www.jiuzhang.com/
