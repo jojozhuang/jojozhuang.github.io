@@ -5,7 +5,7 @@ title: "Recently Visited Websites and Links"
 index: 9002
 subcategory: my-space
 date: 2016-01-22
-tags: [Chrome, MacOS]
+tags: [Chrome, macOS]
 ---
 
 > Some recently visited websites and links.

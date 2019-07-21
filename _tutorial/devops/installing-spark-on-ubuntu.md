@@ -5,7 +5,7 @@ title: "Installing Spark on Ubuntu"
 index: 3561
 subcategory: devops
 date: 2017-11-06
-tags: [Spark, Scala]
+tags: [Apache Spark, Scala]
 ---
 
 > Install Spark, Scala on Ubuntu

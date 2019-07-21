@@ -32,4 +32,4 @@ Access http://localhost:12001/ in web browser, enjoy!
 Follow tutorial [Deploying Jekyll Website to Netlify](https://rongzhuang.me/popular/jekyll/deploying-jekyll-website-to-netlify/) to continuously deploy this personal website to Netlify.
 
 # Tutorial
-Read tutorial [Setting up Jekyll on Ubuntu and MacOS](https://rongzhuang.me/popular/jekyll/setting-up-jekyll-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages.
+Read tutorial [Setting up Jekyll on Ubuntu and macOS](https://rongzhuang.me/popular/jekyll/setting-up-jekyll-on-ubuntu-and-macos/) and follow-on tutorials to learn how to build personal website and deploy to GitHub Pages.

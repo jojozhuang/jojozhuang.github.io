@@ -53,7 +53,7 @@ tcp        0      0 :::6699     :::*     LISTEN    (port for Dynatrace collector
 tcp        0      0 :::9998     :::*     LISTEN    (port for Dynatrace agent connections)
 ```
 
-### 2.2 Installing Dynatrace Client on MacOS
+### 2.2 Installing Dynatrace Client on macOS
 
 
 ## 3. Reference

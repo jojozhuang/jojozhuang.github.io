@@ -53,7 +53,7 @@ $ sudo service mongod start       // Start MongoDB
 $ sudo service mongod stop        // Stop MongoDB
 $ sudo service mongod restart     // Restart MongoDB
 ```
-## 3. Installing MongoDB on MacOS with Homebrew
+## 3. Installing MongoDB on macOS with Homebrew
 1) Update Homebrew’s package database.
 ```sh
 $ brew update
@@ -83,7 +83,7 @@ $ mongo
 ## 4. Others
 ### 4.1 How to clear console in MongoDB?
 * Ubuntu: CTRL + L
-* MacOS:  Command + K
+* macOS:  Command + K
 
 ## 5. References
 * [MongoDB Official Website](https://www.mongodb.com)

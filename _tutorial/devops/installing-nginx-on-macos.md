@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Installing Nginx in MacOS"
+title: "Installing Nginx on macOS"
 index: 3511
 subcategory: devops
 date: 2018-05-26
-tags: [Nginx]
+tags: [Nginx, macOS]
 ---
 
 > Tutorial for how to install and use Nginx.
@@ -13,7 +13,7 @@ tags: [Nginx]
 ## 1. Nginx
 [Nginx](https://www.nginx.com/) is a free, open-source and high-performance HTTP server.
 
-## 2. Installing Nginx on MacOS
+## 2. Installing Nginx on macOS
 Use brew to install nginx.
 ```sh
 $ brew install nginx

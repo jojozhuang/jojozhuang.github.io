@@ -23,7 +23,7 @@ tags: [Visual Studio, NuGet]
 ## 3. Installing Visual Studio on Mac
 Generally, we setup dotnet development environment on Windows. Now we can also setup it on Mac, and run .net applications on Mac.
 ### 3.1 Downloading Visual Studio Community Installer
-Go to [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/), switch MacOS, select 'Community for Mac' to download.
+Go to [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/), switch macOS, select 'Community for Mac' to download.
 ### 3.2 Installing
 After downloading, click the 'VisualStudioforMacInstaller.dmg' file. In the installer window, double click the install logo.
 ![image](/public/images/frontend/2331/install_vs.png){:width="400px"}  

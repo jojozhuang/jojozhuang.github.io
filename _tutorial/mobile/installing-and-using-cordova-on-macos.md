@@ -1,11 +1,11 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Installing and Using Cordova on MacOS"
+title: "Installing and Using Cordova on macOS"
 index: 2341
 subcategory: mobile
 date: 2017-07-26
-tags: [Cordova]
+tags: [Cordova, macOS]
 ---
 
 > Tutorial for how to install and use Cordova for hybrid mobile development.

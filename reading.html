@@ -18,13 +18,12 @@ title: Further Reading
                         <div>
                           <span class="list-sub-index">{{ idx1 }}.{{ forloop.index }}</span>
                           <span class="list-sub-link">
-                            <a href="{{ link.url }}" title="{{ link.description }}"><span class="title-org" >{{ link.name }}</span><span class="title-abb" >{{ link.name | truncate: 30 }}</span>
+                            <a href="{{ link.url }}" title="{{ link.description }}"><span class="title-org" >{{ link.name }}</span><span class="title-abb" >{{ link.name | truncate: 30 }}</span></a>
                             {% if link.type == "video" %}
                               <i class="fas fa-video" style="color:#f74716;"></i>
                             {% else %}
-                              <i class="fas fa-link" style="color:#2953e6;"></i>
-                            {% endif %}
-                            </a>
+                              <i class="fas fa-link" style="color:#339933;"></i>
+                            {% endif %}                            
                           </span>
                         </div>
                       {%- endfor -%}
