@@ -1,12 +1,12 @@
 ---
 layout: default
-key: resource
-title: Resources
+key: reading
+title: Further Reading
 ---
 <div class="main-contents container">
     <div class="main-contents-inner">
       <h1 class="page-header">{{ page.title }}</h2>
-      {%- assign resource = site.data.resource -%}
+      {%- assign resource = site.data.reading -%}
       <p>{{resource.description}}</p>
       <div class="resource">
           {%- for bookmark in resource.bookmarks -%}
@@ -18,11 +18,11 @@ title: Resources
                         <div>
                           <span class="list-sub-index">{{ idx1 }}.{{ forloop.index }}</span>
                           <span class="list-sub-link">
-                            <a href="{{ link.url }}" title="{{ link.description }}"><span class="title-org" >{{ link.name }}</span><span class="title-abb" >{{ link.name | strip_html | truncate: 30 }}</span>
+                            <a href="{{ link.url }}" title="{{ link.description }}"><span class="title-org" >{{ link.name }}</span><span class="title-abb" >{{ link.name | truncate: 30 }}</span>
                             {% if link.type == "video" %}
                               <i class="fas fa-video" style="color:#f74716;"></i>
                             {% else %}
-                              <i class="fas fa-file-word" style="color:#2953e6;"></i>
+                              <i class="fas fa-link" style="color:#2953e6;"></i>
                             {% endif %}
                             </a>
                           </span>

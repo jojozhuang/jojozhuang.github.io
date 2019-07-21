@@ -61,16 +61,16 @@ navlist:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["contact","rss","blank"]
+    subkeys: ["searchadv","reading","contact"]
     sublist:
       - key: searchadv
         description: Advanced Search
         url: /searchadv
         icon: fas fa-search
-      - key: resource
-        description: Resources
-        url: /resource
-        icon: fas fa-boxes
+      - key: reading
+        description: Further Reading
+        url: /reading
+        icon: fas fa-book-reader
       - key: separator
       - key: contact
         description: Contact me

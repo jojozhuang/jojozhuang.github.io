@@ -1,4 +1,4 @@
-title: Resources
+title: Further Reading
 description: Best online resources for learning the knowledge of computer science.
 bookmarks:
   - category: System Design
@@ -6,6 +6,10 @@ bookmarks:
       - name: Grokking the System Design Interview
         description: Grokking the System Design Interview
         url: https://www.educative.io/collection/5668639101419520/5649050225344512
+        type: webpage
+      - name: The System Design Primer
+        description: Summaries of various system design topics, including pros and cons. Everything is a trade-off.
+        url: https://github.com/donnemartin/system-design-primer/blob/master/README.md
         type: webpage
   - category: Database
     links:
