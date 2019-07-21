@@ -16,9 +16,15 @@ I'm using Jekyll to build my personal website [jojozhuang.github.io](jojozhuang.
 On the other hand, Netlify supports more features than GitHub Pages and it is also free. [Netlify](https://www.netlify.com/) is an online service which builds, deploys, and manages modern web projects.  Netlify basically initiates its own kind of repository that pushes both to a Github repository and its own services. It offers hosting for front-end projects with many options.
 
 ## 2. Deploying Application From Github Repository
-### 2.1 New Netlify Account
+### 2.1 Preparation
+Since I'm deploying a Jekyll website, run the following commands in local repository to update `Gemfile.lock`. Netlify will use this file for the deployment.
+```raw
+bundle install
+bundle update
+```
+### 2.2 New Netlify Account
 If you don't have netlify account yet, go to https://app.netlify.com/signup to create a Netlify account with your GitHub account. Once you have the account, follow the steps below to deploy static website to Netlify.
-### 2.2 New Site from GitHub
+### 2.3 New Site from GitHub
 After login, you are in the app home page, click 'New site from Git'.
 ![image](/public/images/jekyll/1642/app.png)
 Choose 'Github', next.
@@ -35,12 +41,12 @@ Switch to 'Deploy' tab to monitor the status and check the logs.
 ![image](/public/images/jekyll/1642/monitor.png)
 If no issue occurs, the publish will be done after few seconds(or minutes).
 ![image](/public/images/jekyll/1642/published.png)
-### 2.3 Testing
+### 2.4 Testing
 Click on the green link. Our app is now running in the domain of Netlify.
 ![image](/public/images/jekyll/1642/homepage.png)
 Try to switch other pages, all work fine.
 ![image](/public/images/jekyll/1642/portfolio.png)
-### 2.4 Changing Site Name
+### 2.5 Changing Site Name
 Switch to Settings tab, scroll down and click the 'Change site name' button.
 ![image](/public/images/jekyll/1642/settings.png)
 Change the name to 'jojozhuang' and save.
