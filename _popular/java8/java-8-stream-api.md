@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Stream API"
-index: 1476
+index: 1457
 subcategory: java-java8
 date: 2017-05-06
 tags: [Stream API]

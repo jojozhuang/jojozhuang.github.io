@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Functional programming"
-index: 1472
+index: 1453
 subcategory: java-java8
 date: 2017-05-02
 tags: [Functional programming]

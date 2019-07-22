@@ -33,21 +33,21 @@ categories:
         icon: fab fa-java
         subcategory: java-java8
         image: java.png
-      - name: Java Advanced
-        description: Advanced topics of Java
-        icon: fab fa-java
-        subcategory: java-advanced
-        image: java.png
       - name: Java Concurrency
         description: Concurrency and MultiThreading
         icon: fab fa-java
         subcategory: java-concurrency
         image: java.png
+      - name: Java Advanced
+        description: Advanced topics of Java
+        icon: fab fa-java
+        subcategory: java-advanced
+        image: java2.png
       - name: Practice
         description: Practice of Java
         icon: fab fa-java
         subcategory: java-practice
-        image: java.png
+        image: java3.png
   - category: website
     name: Personal Website
     subcategories:
