@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Tricks"
-index: 1470
+index: 1451
 subcategory: java-java8
 date: 2017-05-01
 tags: [Lamda Expression]
@@ -34,7 +34,7 @@ inventory.sort(comparing(Apple::getWeight));
 
 
 
-![image](/public/images/java/1470/lambda-expression.png){:width="700px"}
+![image](/public/images/java/1451/lambda-expression.png){:width="700px"}
 
 A lambda expression is composed of parameters, an arrow, and a body.
 

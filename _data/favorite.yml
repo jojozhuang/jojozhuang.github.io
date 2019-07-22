@@ -535,6 +535,9 @@ bookmarks:
       - name: Github Pages
         description: Free internet hosting service
         url: https://pages.github.com/
+      - name: Github Pages Dependency Versions
+        description: What dependencies and versions that Github Pages are using
+        url: https://pages.github.com/versions/
       - name: Netlify
         description: A cloud service for hosting websites
         url: https://www.netlify.com/

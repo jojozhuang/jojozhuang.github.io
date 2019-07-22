@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - New Features"
-index: 1471
+index: 1452
 subcategory: java-java8
 date: 2017-05-01
 tags: [Message Queue, JMS]

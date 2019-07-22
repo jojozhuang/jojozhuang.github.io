@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Dead Lock"
-index: 1448
+index: 1478
 subcategory: java-advanced
 date: 2017-04-02
 tags: [synchronized, deadlock]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java 8 - Higher Order Functions"
-index: 1473
+index: 1454
 subcategory: java-java8
 date: 2017-05-03
 tags: [Higher Order Functions]

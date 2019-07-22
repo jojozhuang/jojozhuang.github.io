@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Java Memory Model - Draft"
-index: 1441
+index: 1471
 subcategory: java-advanced
 date: 2017-03-01
 tags: [Memory Model, JVM]
