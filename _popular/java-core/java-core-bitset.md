@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - BitSet"
-index: 1416
+index: 1421
 subcategory: java-core
 date: 2017-01-12
 tags: [BitSet, BitMap]

@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Core - User Input"
-index: 1412
+title: "Java Core - Scanner"
+index: 1405
 subcategory: java-core
 date: 2017-01-02
 tags: [Scanner]

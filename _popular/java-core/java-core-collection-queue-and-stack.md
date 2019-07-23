@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Collection - Queue & Stack"
-index: 1422
+index: 1417
 subcategory: java-core
 date: 2017-01-09
 tags: [List, Set, Map, Stack]

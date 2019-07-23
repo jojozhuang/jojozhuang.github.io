@@ -3,6 +3,10 @@ description: Best online resources for learning the knowledge of computer scienc
 bookmarks:
   - category: System Design
     links:
+      - name: 后端架构师技术图谱
+        description: 后端架构师技术图谱
+        url: https://github.com/xingshaocheng/architect-awesome
+        type: webpage
       - name: Grokking the System Design Interview
         description: Grokking the System Design Interview
         url: https://www.educative.io/collection/5668639101419520/5649050225344512
@@ -10,6 +14,12 @@ bookmarks:
       - name: The System Design Primer
         description: Summaries of various system design topics, including pros and cons. Everything is a trade-off.
         url: https://github.com/donnemartin/system-design-primer/blob/master/README.md
+        type: webpage
+  - category: Java
+    links:
+      - name: Java 技术书籍大全
+        description: Java 技术书籍大全
+        url: https://github.com/sorenduan/awesome-java-books
         type: webpage
   - category: Database
     links:
@@ -34,4 +44,10 @@ bookmarks:
       - name: How Dropbox securely stores your passwords
         description: How Dropbox securely stores your passwords
         url: https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/
+        type: webpage
+  - category: Interview
+    links:
+      - name: 2019年最新总结,国内大厂面试指南
+        description: 2019年最新总结,国内大厂面试指南
+        url: https://github.com/0voice/interview_internal_reference
         type: webpage
