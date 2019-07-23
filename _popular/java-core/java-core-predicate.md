@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Predicate - Draft"
-index: 1418
+index: 1423
 subcategory: java-core
 date: 2017-04-07
 tags: [BlockingQueue, ArrayBlockingQueue]

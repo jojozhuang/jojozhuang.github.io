@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Java IO - Draft"
-index: 1411
+index: 1406
 subcategory: java-core
 date: 2017-01-11
 tags: [File]
