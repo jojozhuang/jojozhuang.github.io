@@ -75,7 +75,7 @@ Define a flow chart containing 3 nodes.
 ![image](/public/images/blog/2018-09-14/firstsample.png/){:width="600px"}
 
 ## 3. Basic Support for fontawesome
-It is possible to add icons from [fontawesome](https://fontawesome.com/).
+It is possible to add icons from [fontawesome](https://fontawesome.com/) for Mermaid diagrams.
 ### 3.1 Including fontawesome Style File
 ```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">

@@ -8,7 +8,7 @@ date: 2018-04-01
 tags: [Jekyll, Windows10]
 ---
 
-> Set up a local Jekyll on Windows 10 to host GitHub Pages site.
+> Setup Jekyll on Windows 10.
 
 ## 1. Setup Ruby and Ruby Dev Kit.
 Get Ruby Installer from https://rubyinstaller.org/downloads/. Execute it to start the installation, check the option 'Add Ruby executables to your PATH'.

@@ -87,5 +87,13 @@ called add (one is inherited from Adder).
 * `Nothing` isn’t a functional interface because it declares no abstract method at all.
 
 
+Collection
+* removeIf
+* replaceAll
+* Map.forEach
+* Entry.comparingByValue
+* Entry.comparingByKey
+
+
 
 ## 11. References
