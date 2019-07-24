@@ -8,7 +8,7 @@ date: 2016-01-16
 tags: [GitHub Pages, Jekyll, Ruby, macOS]
 ---
 
-> Set up a local version of Jekyll GitHub Pages site to test changes before submitting to github.
+> Setup Jekyll on Ubuntu and macOS.
 
 ## 1. What is Jekyll?
 [Jekyll](https://jekyllrb.com) is a simple, blog-aware, static site generator. Jekyll is the engine behind [GitHub Pages](https://pages.github.com/), which means you can use Jekyll to host your page, blog, or website from GitHub’s servers for free.

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Core - Java IO - Draft"
+title: "Java Core - Non-blocking IO - Draft"
 index: 1406
 subcategory: java-core
 date: 2017-01-11
@@ -18,3 +18,4 @@ tags: [File]
 
 
 ## 4. References
+* [Java NIO Tutorial](http://tutorials.jenkov.com/java-nio/index.html)

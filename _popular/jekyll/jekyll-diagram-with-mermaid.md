@@ -1,13 +1,15 @@
 ---
-layout: post
-key: blog
-title: "Using Mermaid in Markdown"
+layout: tutorial
+key: popular
+title: "Jekyll - Diagram with Mermaid"
+index: 1627
+subcategory: jekyll
 date: 2018-09-15
-tags: [Mermaid]
+tags: [Mermaid, Diagram]
 mermaid: true
 ---
 
-> Introduce how to use Mermaid in Markdown and GithHub Pages.
+> Use Mermaid in Markdown to draw diagrams.
 
 ## 1. Mermaid
 [Mermaid](https://mermaidjs.github.io/) a simple markdown-like script language for generating charts from text via javascript.
@@ -32,7 +34,7 @@ graph TD;
     B-->D;
     C-->D;
 </div>
-However, this plugin is not officially supported by GitHub Pages. The above markdown diagram definition won't work if you push it to GitHub Pages.
+However, this plugin is `not` officially supported by GitHub Pages. The above markdown diagram definition won't work if you push it to GitHub Pages.
 ### 1.3 GitHub Pages
  Unfortunately, GitHub Pages currently doesn't support Mermaid, see the [issue](https://github.com/github/markup/issues/533). The workaround is to use html tag directly in markdown file. Instead of using the `code block`, we can wrap the diagram definition into a `<div>` tag. The following definition of a flowchart works in GitHub Pages.
 ~~~markdown
