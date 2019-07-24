@@ -1,16 +1,17 @@
 ---
 layout: tutorial
 key: popular
-title: "Jekyll - SEO Optimizations"
+title: "Jekyll - SEO"
 index: 1631
 subcategory: jekyll
 date: 2019-06-27
 tags: [SEO]
 ---
 
-> Search.
+> Optimize the website to improve the rankings.
 
 ## 1. SEO
+Search engine optimization (`SEO`) is the process of increasing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.
 ### 1.1 robots.txt
 Avoid web crawler to visit specific content, eg. /note.
 ```sh
@@ -100,10 +101,10 @@ Done.
 You will receive an email from CloudFlare.
 ![image](/public/images/jekyll/1631/cloudflare_notification.png)
 
-## 3. Move Javascript to Bottom
-SEO plugin
+## 3. Move Javascript Files to Bottom
+Put javascript files to the bottom of the page can speed up the loading.
 
-## 7. Reference
+## 4. Reference
 * [About robots.txt](https://www.robotstxt.org/robotstxt.html)
 * [How to Use XML Sitemaps to Boost SEO](https://www.searchenginejournal.com/xml-sitemaps-seo/)
 * [JEKYLL - GENERATING A SITEMAP.XML WITHOUT A PLUGIN](http://www.independent-software.com/generating-a-sitemap-xml-with-jekyll-without-a-plugin.html)
