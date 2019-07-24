@@ -8,20 +8,20 @@ date: 2019-06-28
 tags: [Performance]
 ---
 
-> Search.
+> Performance.
 
 ## 1. Use Cookie-Free Domains
-Why Use Cookie-Free Domains?#
+Why Use Cookie-Free Domains?
+
 Although cookies are very useful in some cases, in other cases - such as the delivery of static content, they can hinder performance. When a browser makes a request for a static asset such as an image or CSS file, there is no need for it to also send a cookie to the server. This only creates additional network traffic and since the files are static (they do not change) the server has no use for the added cookie.
 
 When you use cookie-free domains you are able to separate the content that doesn’t require cookies from the content that does. This helps improve your site’s performance by eliminating unneeded network traffic.
 
 Testing
 
-
 ![image](/public/images/jekyll/1632/imagesize_before.png)
 
-## 1. Cache Header
+## 2. Cache Header
 Create netlify.toml
 ```toml
 [build]
@@ -42,7 +42,7 @@ Create netlify.toml
     Cache-Control = "public, s-max-age=604800"
 ```
 
-## 7. Reference
+## 3. Reference
 * [Free Secure Web: Jekyll & Github Pages & Cloudflare](https://martin.ankerl.com/2017/07/22/free-secure-web-jekyll-github-pages-cloudflare/)
 * [How to Deploy Websites on Custom Domains using Cloudflare and Github Pages](https://medium.com/crowdbotics/annie-azana-how-to-deploy-websites-using-cloudflare-and-github-pages-c415c55fea36)
 * [Fix Defer Parsing of Javascript Warning in WordPress Using Async](https://www.collectiveray.com/defer-parsing-of-javascript-wordpress-async)

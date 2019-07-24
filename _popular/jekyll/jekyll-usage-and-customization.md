@@ -8,7 +8,7 @@ date: 2016-11-18
 tags: [Jekyll, Excerpt]
 ---
 
-> Several useful approaches used to customize Jekyll for my personal website hosted on GitHub Pages.
+> Customize Jekyll website.
 
 ## 1. Getting Entries from List
 Suppose site.portfolio is the list of all portfolios, use the following pipes to get desired entries from this list.

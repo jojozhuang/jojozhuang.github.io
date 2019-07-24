@@ -8,7 +8,7 @@ date: 2017-08-17
 tags: [Disqus]
 ---
 
-> Use a 3rd party library to enable reader to comment on Jekyll site.
+> Use Disqus to enable reader to comment on Jekyll site.
 
 ## 1. Disqus
 [Disqus](https://disqus.com/) is a worldwide blog comment hosting service for web sites and online communities that use a networked platform.

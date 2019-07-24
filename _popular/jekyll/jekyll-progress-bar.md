@@ -8,7 +8,7 @@ date: 2019-06-04
 tags: [Nanobar, Progress Bar]
 ---
 
-> Add progress bar at top of every page.
+> Show progress bar when page is loading.
 
 ## 1. Progress Bar
 [Nanobar](http://nanobar.jacoborus.codes/) is a very lightweight progress bar which generates a highly customizable top bar.

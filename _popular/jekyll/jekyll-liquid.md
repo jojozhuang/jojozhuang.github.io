@@ -8,7 +8,7 @@ date: 2016-01-19
 tags: [Jekyll, Liquid]
 ---
 
-> Useful tricks of Liquid, which are used along with Jekyll for GitHub Page.
+> Useful tricks of Liquid, which are used in Jekyll.
 
 ## 1. Liquid
 Jekyll uses the `Liquid` templating language to process templates.

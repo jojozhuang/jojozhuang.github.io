@@ -8,10 +8,9 @@ date: 2017-08-17
 tags: [Google Analytics]
 ---
 
-> Use a 3rd party library to enable reader to comment on Jekyll site.
+> Use Google Analytics to track website traffic.
 
 
 
 ## 4. References:
-* [DISQUS universal code](https://disqus.com/admin/install/platforms/universalcode/)
-* [HOW TO ADD DISQUS TO YOUR JEKYLL SITE?](https://poanchen.github.io/blog/2017/07/27/how-to-add-disqus-to-your-jekyll-sitel)
+* [Google Analytics](https://analytics.google.com/analytics/)

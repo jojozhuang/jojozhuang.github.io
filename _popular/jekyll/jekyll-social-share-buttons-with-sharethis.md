@@ -8,7 +8,7 @@ date: 2017-08-20
 tags: [ShareThis]
 ---
 
-> Create share buttons for the most popular social medias.
+> Integrate ShareThis to Jekyll website.
 
 ## 1. ShareThis
 The [ShareThis](https://www.sharethis.com/) button is an all-in-one widget that lets people share any content on the web with friends via e-mail, AIM, or text message.
