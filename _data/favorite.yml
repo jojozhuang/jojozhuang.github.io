@@ -9,6 +9,10 @@ bookmarks:
         description: An online text compare tool
         url: https://text-compare.netlify.com/
         favorite: true
+      - name: Markdown Editor
+        description: An online wysiwyg markdown editor
+        url: https://pandao.github.io/editor.md/en.html
+        favorite: true
       - name: XML Formatter
         description: Format XML string
         url: https://www.freeformatter.com/xml-formatter.html
@@ -478,6 +482,9 @@ bookmarks:
       - name: Monaco Editor
         description: The code editor that powers VS Code
         url: https://microsoft.github.io/monaco-editor/index.html
+      - name: Editor.md Markdown Editor
+        description: A wysiwyg Markdown Editor
+        url: https://github.com/pandao/editor.md
       - name: WebP
         description: A new image format for the Web
         url: https://developers.google.com/speed/webp/
@@ -523,8 +530,11 @@ bookmarks:
         description: A blog-aware, static site generator in Ruby.
         url: https://jekyllrb.com/
         favorite: true
+      - name: Hugo
+        description: A blog-aware, static site generator in Ruby.
+        url: https://gohugo.io/
       - name: Google Analytics
-        description: A web analytics service offered by Google that tracks and reports website traffic
+        description: An open-source static site generators.
         url: https://analytics.google.com/analytics/web/
       - name: Disqus
         description: A blog comment hosting service for web sites
@@ -535,7 +545,7 @@ bookmarks:
       - name: Github Pages
         description: Free internet hosting service
         url: https://pages.github.com/
-      - name: Github Pages Dependency Versions
+      - name: Github Pages Dependency
         description: What dependencies and versions that Github Pages are using
         url: https://pages.github.com/versions/
       - name: Netlify

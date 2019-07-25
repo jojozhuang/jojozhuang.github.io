@@ -72,6 +72,15 @@ navlist:
         url: /reading
         icon: fas fa-book-reader
       - key: separator
+      - key: Markdown Editor
+        description: Markdown Editor
+        url: /editormd
+        icon: fas fa-edit
+      - key: blank
+        description: Blank Page
+        url: /blank
+        icon: fas fa-chalkboard
+      - key: separator
       - key: contact
         description: Contact me
         url: /contact
@@ -84,10 +93,6 @@ navlist:
         description: Sitemap
         url: /sitemap.xml
         icon: fas fa-sitemap
-      - key: blank
-        description: Blank Page
-        url: /blank
-        icon: fas fa-chalkboard
       - key: separator
       - key: system-design
         description: 系统设计(System Design)
