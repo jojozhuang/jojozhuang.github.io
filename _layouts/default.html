@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
   <link href="/public/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  {% if page.key == "editormd" %}
+    <link rel="stylesheet" href="/public/3rdparty/editormd/style.css" />
+    <link rel="stylesheet" href="/public/3rdparty/editormd/editormd.min.css" />
+  {% endif %}
   <link rel="stylesheet" href="/public/css/allinone.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
@@ -25,49 +29,49 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          {% for link in site.navlist %}
-            {% if link.visible == true %}
-              {% if link.sublist %}
-              <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a>
-                <div class="dropdown-menu">
-                  {% for sublink in link.sublist %}
-                    {% if sublink.key == "separator"%}
-                      <div class="dropdown-divider"></div>
-                    {% else %}
-                      <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description | capitalize }}</a>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </li>
-              {% else %}
-                <li class="nav-item {% if page.key == link.key %} active {% endif %}"><a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a></li>
-              {% endif %}
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        {% for link in site.navlist %}
+          {% if link.visible == true %}
+            {% if link.sublist %}
+            <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a>
+              <div class="dropdown-menu">
+                {% for sublink in link.sublist %}
+                  {% if sublink.key == "separator"%}
+                    <div class="dropdown-divider"></div>
+                  {% else %}
+                    <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </li>
+            {% else %}
+              <li class="nav-item {% if page.key == link.key %} active {% endif %}"><a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a></li>
             {% endif %}
-          {% endfor %}
-        </ul>
-        <ul class="nav navbar-nav ml-auto">
-          <!--<li><a href="/public/cv/cv.pdf"><i class="fas fa-download"></i> Download CV</a></li>-->
-        </ul>
-        <form class="form-inline ml-auto" action="/search">
-          <!--<div class="input-group">
-             <input class="form-control border-secondary py-2" style="width:100px" type="search" name="k" placeholder="Search this site">
-             <div class="input-group-append">
-                 <button class="btn btn-outline-secondary" type="submit">
-                     <i class="fa fa-search"></i>
-                 </button>
-             </div>
-           </div>-->
-          <div class="form-group">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search this site" name="k" id="search-box">
-          </div>
-          <div class="form-group">
-            <button class="btn btn-outline-light search-btn" type="submit">Search</button>
-          </div>
-        </form>
-      </div>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <!--<li><a href="/public/cv/cv.pdf"><i class="fas fa-download"></i> Download CV</a></li>-->
+      </ul>
+      <form class="form-inline ml-auto" action="/search">
+        <!--<div class="input-group">
+           <input class="form-control border-secondary py-2" style="width:100px" type="search" name="k" placeholder="Search this site">
+           <div class="input-group-append">
+               <button class="btn btn-outline-secondary" type="submit">
+                   <i class="fa fa-search"></i>
+               </button>
+           </div>
+         </div>-->
+        <div class="form-group">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search this site" name="k" id="search-box">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-outline-light search-btn" type="submit">Searc</button>
+        </div>
+      </form>
+    </div>
   </nav>
   <div class="nanobar" id="top-progress-bar" style="position: fixed;">
     <div class="bar"></div>
