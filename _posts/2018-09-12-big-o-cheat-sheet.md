@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Big O Cheat Sheet"
 date: 2018-09-12
+subcategory: blog
 tags: [Big O, Time Complexity]
 ---
 

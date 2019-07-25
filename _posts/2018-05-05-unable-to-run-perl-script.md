@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Unable to Run Perl Script"
 date: 2018-05-05
+subcategory: blog
 tags: [Perl]
 ---
 

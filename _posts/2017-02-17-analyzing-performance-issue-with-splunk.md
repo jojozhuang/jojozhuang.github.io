@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Analyzing Performance Issue with Splunk"
 date: 2017-02-17
+subcategory: blog
 tags: [Splunk, Log Analysis]
 ---
 

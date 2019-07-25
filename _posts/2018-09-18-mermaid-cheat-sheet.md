@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Mermaid Cheat Sheet"
 date: 2018-09-18
+subcategory: blog
 tags: [Mermaid]
 mermaid: true
 ---

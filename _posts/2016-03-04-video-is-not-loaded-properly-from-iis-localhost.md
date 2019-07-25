@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Video Is Not Loaded Properly From IIS Localhost"
 date: 2016-03-04
+subcategory: blog
 tags: [IIS, MIME Type]
 ---
 

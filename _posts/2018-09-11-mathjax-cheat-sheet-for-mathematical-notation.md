@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "MathJax Cheat Sheet for Mathematical Notation"
 date: 2018-09-11
+subcategory: blog
 tags: [MathJax, Time Complexity]
 mathjax: true
 ---

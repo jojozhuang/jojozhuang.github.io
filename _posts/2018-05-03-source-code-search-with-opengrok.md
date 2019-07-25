@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Source Code Search with OpenGrok"
 date: 2018-05-03
+subcategory: blog
 tags: [OpenGrok]
 ---
 

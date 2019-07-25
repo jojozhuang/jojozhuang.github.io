@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Common Math Formulas"
 date: 2018-01-03
+subcategory: blog
 tags: [Math Formulas]
 mathjax: true
 ---

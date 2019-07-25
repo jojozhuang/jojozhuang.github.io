@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Tracking Changes with Blame View on GitHub"
 date: 2018-09-01
+subcategory: blog
 tags: [GitHub]
 ---
 

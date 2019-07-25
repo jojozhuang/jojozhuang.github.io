@@ -1,3 +1,42 @@
+<script>
+{% assign popular = site.popular %}
+{% assign tutorial = site.tutorial %}
+{% assign note = site.note %}
+{% assign blog = site.posts %}
+{% assign postings = popular | concat: tutorial | concat: note | concat: blog %}
+window.store = {
+  {% for post in postings %}
+    "{{ post.url | slugify }}": {
+      "key": "{{ post.key | xml_escape }}",
+      "title": "{{ post.title | xml_escape }}",
+      "subcategory": "{{ post.subcategory | xml_escape }}",
+      {%- if page.advanced -%}
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+      {%- endif -%}
+      "url": "{{ post.url | xml_escape }}",
+      "index": "{{ post.index | xml_escape }}",
+      "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
+      "tags": "{{ post.tags | join: ", "}}",
+      "date": "{{ post.date | date_to_string}}"
+    }
+    {%- unless forloop.last -%},{%- endunless -%}
+  {% endfor %}
+};
+
+// mapping of subcategory and image
+{% assign popular = site.data.popular.categories %}
+{% assign tutorial = site.data.tutorial.categories %}
+{% assign note = site.data.note.categories %}
+{% assign blog = site.data.blog.categories %}
+{% assign categories = popular | concat: tutorial | concat: note | concat: blog %}
+window.image = {
+  {% for category in categories %}
+    {% for subcategory in category.subcategories %}
+      "{{subcategory.subcategory}}": "{{ subcategory.image }}",
+    {% endfor %}
+  {% endfor %}
+};
+
 (function() {
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
@@ -6,6 +45,10 @@
       var appendString = '';
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
+        var strIndex = "";
+        if (item.index) {
+          strIndex = item.index + '. ';
+        }
         appendString += '<dd>';
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
@@ -14,8 +57,8 @@
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
-        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title+ '</span></div></a>';
-        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
+        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + strIndex + item.title+ '</span></div></a>';
+        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + strIndex + formatTitle(item.title)+ '</span></div></a>';
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled more-att">';
@@ -76,8 +119,9 @@
   var category = getQueryVariable('c');
 
   if (keyword) {
-    document.getElementById('search-key').innerHTML = keyword;
-
+    {% if page.advanced == false %}
+      document.getElementById('search-key').innerHTML = keyword;
+    {% endif %}
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
@@ -86,16 +130,22 @@
       this.field('tags', { boost: 20 });
       this.field('excerpt', { boost: 5 });
       this.field('url');
-      //this.field('content');
+      {% if page.advanced %}
+        this.field('content');
+      {% endif%}
 
       for (var url in window.store) { // Add the data to lunr
         var key = window.store[url].key;
-        if ((!category && key!='note') || key==category) {
+        var advanced = {% if page.advanced %} true {% else %} false {% endif %}
+        if (advanced || (!category && key!='note') || key==category) {
           this.add({
             'id': url,
             'title': window.store[url].title,
             'tags': window.store[url].tags,
             'excerpt': window.store[url].excerpt,
+            {% if page.advanced %}
+              'content': window.store[url].content,
+            {% endif %}
             'url': window.store[url].url
             //'content': window.store[url].content
           });
@@ -109,9 +159,16 @@
     displaySearchResults(results, window.store); // We'll write this in the next section
   }
 
-  var searchTitle = document.getElementById('search-title');
   var spinner = document.getElementById('spinner');
-  searchTitle.style.display = "block";
   spinner.style.display = "none";
 
+  {% if page.advanced %}
+    var searchbox = document.getElementById('searchbox');
+    searchbox.style.display = "block";
+  {% else %}
+    var searchTitle = document.getElementById('search-title');
+    searchTitle.style.display = "block";
+  {% endif %}
+
 })();
+</script>
