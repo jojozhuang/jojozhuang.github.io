@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-incremental: true
+#incremental: true
 
 sass:
   sass_dir: public/css
@@ -56,7 +56,7 @@ navlist:
   - key: note
     url: /note
     icon: fas fa-book-open
-    visible: true
+    visible: false
   - key: more
     url: /#
     icon: fas fa-chevron-circle-down
