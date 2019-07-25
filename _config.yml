@@ -61,7 +61,7 @@ navlist:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["searchadv","reading","contact"]
+    subkeys: ["searchadv","reading","contact","editormd"]
     sublist:
       - key: searchadv
         description: Advanced Search
@@ -82,7 +82,7 @@ navlist:
         icon: fas fa-chalkboard
       - key: separator
       - key: contact
-        description: Contact me
+        description: Contact Me
         url: /contact
         icon: fas fa-address-book
       - key: rss
