@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Migrating Repositories From GitHub to GitLab"
 date: 2018-07-21
+subcategory: blog
 tags: [GitHub, GitLab]
 ---
 

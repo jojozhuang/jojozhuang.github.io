@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Installing Elasticsearch in Ubuntu"
 date: 2017-06-21
+subcategory: blog
 tags: [Elasticsearch]
 ---
 

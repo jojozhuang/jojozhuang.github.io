@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Upgrading Angular App from 5 to 6"
 date: 2018-07-05
+subcategory: blog
 tags: [Angular]
 ---
 

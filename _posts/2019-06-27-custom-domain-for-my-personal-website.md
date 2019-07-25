@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Custom Domain for My Personal Website"
 date: 2019-06-27
+subcategory: blog
 tags: [Bootstrap]
 ---
 

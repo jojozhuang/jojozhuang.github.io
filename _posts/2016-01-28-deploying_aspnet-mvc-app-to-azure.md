@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Deploying ASP.NET MVC Application to Azure"
 date: 2016-01-28
+subcategory: blog
 tags: [Microsoft Azure, ASP.NET]
 ---
 

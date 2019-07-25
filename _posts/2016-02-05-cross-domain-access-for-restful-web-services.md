@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Cross Domain Access for RESTful Web Services"
 date: 2016-02-05
+subcategory: blog
 tags: [CORS, ASP.NET WebAPI]
 ---
 

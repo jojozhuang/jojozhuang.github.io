@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Creating Data Structure Diagrams with Mermaid"
 date: 2018-09-16
+subcategory: blog
 tags: [Mermaid, Tree]
 mermaid: true
 ---

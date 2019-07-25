@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Git Commands"
 date: 2019-01-17
+subcategory: blog
 tags: [Git]
 ---
 

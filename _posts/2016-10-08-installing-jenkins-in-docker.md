@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Installing Jenkins in Docker"
 date: 2016-10-08
+subcategory: blog
 tags: [Docker, Jenkins]
 ---
 

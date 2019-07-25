@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Hashing Passwords with Bcrypt"
 date: 2018-04-07
+subcategory: blog
 tags: [Bcrypt]
 ---
 

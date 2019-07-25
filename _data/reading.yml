@@ -45,6 +45,12 @@ bookmarks:
         description: How Dropbox securely stores your passwords
         url: https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/
         type: webpage
+  - category: Website
+    links:
+      - name: How I’m using Jekyll in 2017
+        description: How I’m using Jekyll in 2017
+        url: https://mademistakes.com/articles/using-jekyll-2017/
+        type: webpage
   - category: Interview
     links:
       - name: 2019年最新总结,国内大厂面试指南

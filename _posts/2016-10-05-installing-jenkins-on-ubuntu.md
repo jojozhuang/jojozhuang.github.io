@@ -3,6 +3,7 @@ layout: post
 key: blog
 title: "Installing Jenkins On Ubuntu"
 date: 2016-10-05
+subcategory: blog
 tags: [Ubuntu, Jenkins]
 ---
 
