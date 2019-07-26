@@ -19,3 +19,4 @@ tags: [File]
 
 ## 4. References
 * [Java NIO Tutorial](http://tutorials.jenkov.com/java-nio/index.html)
+* [Java NIO vs. IO](http://tutorials.jenkov.com/java-nio/nio-vs-io.html)
