@@ -97,6 +97,16 @@ table.hljs-ln td {
 The line numbers are displayed as follows.
 ![image](/public/images/jekyll/1623/line-numbers.png)
 
+### 2.4 Styles
+If you don't like the default style, you can change it with other styles. highlight.js supports 185 languages and 89 styles. Check all styles through the [demo page](https://highlightjs.org/static/demo/), then pick up your favorite one.
+
+For example, I choose the style which is named `Atom One Light`. Concatenate all words of the style name with dash and append '.min.css' to get the css file name. For example, the css file name for `Atom One Light` style is `atom-one-light.min.css`. The entire url from cloudflare looks as follows.
+```raw
+https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css
+```
+Replace the URL for the default style with the URL for the new style. Refresh the page to see the new style.
+![image](/public/images/jekyll/1623/custom-style.png)
+
 ## 3. Reference
 * [Code highlighting in Jekyll blog using highlight.js](http://www.vishalsinha.in/2017/04/23/highlight-code-jekyll.html)
 * [Getting highlight.js](https://highlightjs.org/download/)

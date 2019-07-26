@@ -21,8 +21,12 @@ bookmarks:
         description: Java 技术书籍大全
         url: https://github.com/sorenduan/awesome-java-books
         type: webpage
-  - category: Database
+  - category: Distributed System
     links:
+      - name: Load Balancer原理和实战：最终如何实现？
+        description: Load Balancer原理和实战：最终如何实现？
+        url: https://www.youtube.com/watch?v=6R-RYVehQNg
+        type: video
       - name: Cassandra内部原理和底层实现
         description: Cassandra内部原理和底层实现
         url: https://www.youtube.com/watch?v=BUjcS4q86jQ
