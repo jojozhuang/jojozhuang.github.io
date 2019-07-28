@@ -15,7 +15,7 @@ A thread dump is a snapshot of the state of all threads that are part of the pro
 
 ## 2. Capturing Thread Dumps
 `jps` is useful tools for viewing information about running java processes.
-```sh
+```raw
 $ jps -l
 13856 johnny.algorithm.advanced.CyclicBarrierTest
 13218 johnny.algorithm.advanced.CyclicBarrierTest
@@ -24,15 +24,15 @@ $ jps -l
 14600 sun.tools.jps.Jps
 ```
 `jstack` is an effective command line tool to capture thread dumps.
-```sh
+```raw
 jstack -l  13218
 ```
 Java VisualVM is a graphical user interface tool that provides detailed information about the applications while they are running on a specified Java Virtual Machine (JVM).
-```sh
+```raw
 jvisualvm
 ```
 Java Mission Control (JMC) is a tool that collects and analyze data from Java applications running locally or deployed in production environments.
-```sh
+```raw
 jmc
 ```
 
@@ -44,7 +44,7 @@ jmc
 * `Thread status`: Represents the status of the threads.
 * `Thread callstack`: Represents the call stack information of the threads.
 
-```sh
+```raw
 "pool-1-thread-13" prio=6 tid=0x000000000729a000 nid=0x2fb4 runnable [0x0000000007f0f000] java.lang.Thread.State: RUNNABLE
 ```
 ### 3.2 Deadlock

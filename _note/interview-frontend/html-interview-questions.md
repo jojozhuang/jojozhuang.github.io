@@ -879,7 +879,7 @@ Event bubbling and capturing are two ways of event propagation in the HTML DOM A
 * With capturing, the event is first captured by the outermost element and propagated to the inner elements.
 
 Capturing is also called "trickling", which helps remember the propagation order:
-```sh
+```raw
 trickle down, bubble up
 ```
 Back in the old days, Netscape advocated event capturing, while Microsoft promoted event bubbling. Both are part of the W3C Document Object Model Events standard (2000).

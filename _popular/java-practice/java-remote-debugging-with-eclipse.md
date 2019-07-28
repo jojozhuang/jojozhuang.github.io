@@ -34,11 +34,11 @@ In Eclipse, Run -> Debug Configurations..., create a new 'Remote Java Applicatio
 
 ### 2.3 Compiling and Running
 Open terminal, navigate to the folder where Sum.java locates, use `javac` to compile it. The `g` option adds extra debug info to the class.
-```sh
+```raw
 $ javac -g Sum.java
 ```
 Run `Sum` in debug mode with providing two input parameters, 3 and 4. Now we have the application listening on port 4000 waiting for connections.
-```sh
+```raw
 $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=y Sum 3 4
 ```
 * With `suspend=y` the Java-process will wait until the debugger connects, with suspend=n you will be also able to debug the application servers startup process.

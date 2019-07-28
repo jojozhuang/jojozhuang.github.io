@@ -23,14 +23,14 @@ Check the posting [Introduction of Course Player]({% link _tutorial/react-app/in
 ## 2. Course Player Project
 ### 2.1 Creating New Project
 Create new Node.js app named `course-player-socketio`.
-```sh
+```raw
 $ mkdir course-player-socketio
 $ cd course-player-socketio
 $ npm init
 ```
 ### 2.2 Installing Packages
 Install `express` and `socket.io` locally.
-```sh
+```raw
 $ npm install express --save
 $ npm install socket.io --save
 ```
@@ -730,7 +730,7 @@ Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ## 3. Running and Testing
 Start the app.
-```sh
+```raw
 $ npm start
 ```
 View the course player at http://localhost:12103/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.

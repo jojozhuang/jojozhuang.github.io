@@ -123,7 +123,7 @@ Produces:
 ## 3. Custom Pipes
 ### 3.1 Creating Pipe
 Generate a custom pipe.
-```sh
+```raw
 $ ng generate pipe reverse
 ```
 ### 3.2 Pipe Definition

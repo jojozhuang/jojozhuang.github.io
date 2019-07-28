@@ -17,7 +17,7 @@ When Angular calls RESTful API to fetch data, it may take some time(few seconds 
 For the online judge app, I use 'ngx-progressbar', which is a progress bar widget specifically for Angular. There are two ways to use it. You can use it in each component separately, or use it as automagic loading bar, meaning the progress will start and complete automatically with your HTTP requests. The following steps are for the second approach.
 ### 2.1 Installation
 Install package 'ngx-progressbar'.
-```sh
+```raw
 npm install ngx-progressbar --save
 ```
 Import the NgProgressModule to module.

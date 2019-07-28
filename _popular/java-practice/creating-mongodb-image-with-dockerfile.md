@@ -13,14 +13,14 @@ tags: [MongoDB, Dockerfile, Docker]
 ## 1. Creating MongoDB Image with Dockerfile
 ### 1.1 Creating Docker File
 Create one file named `Dockerfile` in any directory on local machine.
-```sh
+```raw
 $ cd ~/Johnny
 $ mkdir Docker
 $ cd Docker
 $ vim Dockerfile
 ```
 Edit Dockerfile, fill with following content.
-```sh
+```raw
 #Create MongoDB Image for MongoDB Tutorial Application
 FROM mongo
 MAINTAINER jojozhuang@gmail.com
@@ -35,11 +35,11 @@ The following points need to be noted about the above file.
 
 ### 1.2 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile locates. Run the following command.
-```sh
+```raw
 $ docker build -t jspmongo:0.1 .
 ```
 Here, `jspmongo` is the name we are giving to the Image and `0.1` is the tag number. The last dot `.` indicates the current location. Check whether the image is created.
-```sh
+```raw
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
@@ -48,7 +48,7 @@ As you see, the new image is created with tag 0.1.
 ## 2. Testing The New Image
 ### 2.1 Running Container
 In docker terminal, run the following command.
-```sh
+```raw
 $ docker run --detach --name=jspmongo --publish 37017:27017 jspmongo:0.1
 ```
 ### 2.2 Verifying Container in Kitematic
@@ -63,7 +63,7 @@ In container terminal, launch MongoDB Shell with `mongo` command.
 >
 ```
 Create a database named `mongodbtutorial` and three documents for collection `product`.
-```sh
+```raw
 > use mongodbtutorial
 > db.product.insert([{name: 'Xbox', price: 100},{name: 'PS4',price: 400},{name: 'iPhone',price: 699}])
 ```

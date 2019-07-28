@@ -31,24 +31,24 @@ Run it in Tomcat. Access http://localhost:8080/JSPTutorialContainer/productlist.
 ## 2. Setting up MySQL Container
 ### 2.1 Creating MySQL Container
 Get official MySQL image.
-```sh
+```raw
 $ docker pull mysql
 ```
 
 Run a MySQL container.
-```sh
+```raw
 $ docker run --name=jspmysql mysql
 error: database is uninitialized and password option is not specified
   You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD
 ```
 Failed, try again by providing the MySQL_ROOT_PASSWORD environment variable.
-```sh
+```raw
 $ docker run --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" mysql
 docker: Error response from daemon: Conflict. The container name "/jspmysql" is already in use by container "2b6115f2d2f4865362366d7859a2023d5a1e0f604387d95d737e00baa2066212". You have to remove (or rename) that container to be able to reuse that name.
 See 'docker run --help'.
 ```
 Another error occurred. We need to remove the exiting container we just created and try again.
-```sh
+```raw
 $ docker rm jspmysql
 jspmysql
 $ docker run --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" mysql
@@ -70,14 +70,14 @@ Now, it starts without error.
 
 ### 2.2 Running Container in Background
 Our MySQL container is now running. However, you are now stuck in the terminal and can’t do anything because the container is running in attach mode (running in foreground). This is so inconvenient. We would expect MySQL to run as a service instead. Let’s consider this as a failed deployment and stop the current container. In another terminal, stop the running container and run it again in detach mode (running as background):
-```sh
+```raw
 $ docker stop jspmysql
 $ docker rm jspmysql
 $ docker run --detach --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" mysql
 77d6f463c31efc1a62235867e66f576af3f564ef1d03b064de274f813695d159
 ```
 You will get an output of the container ID, indicating the container is successfully running in the background. Let’s verify the status of the container:
-```sh
+```raw
 $ docker ps
 CONTAINER ID    IMAGE     COMMAND                  CREATED          STATUS            PORTS        NAMES
 77d6f463c31e    mysql     "docker-entrypoint..."   9 seconds ago    Up 6 seconds      3306/tcp     jspmysql
@@ -85,7 +85,7 @@ CONTAINER ID    IMAGE     COMMAND                  CREATED          STATUS      
 
 ### 2.3 Exposing MySQL Container to Host
 Expose the MySQL container to the outside world by mapping the container’s MySQL port to the host machine port using the publish flag. Now, we can connect to the MySQL container through port 6703. Notice, the IP address comes from docker machine. For my docker machine, it is `192.168.99.100`.
-```sh
+```raw
 $ docker rm -f jspmysql
 $ docker run --detach --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" --publish 6703:3306 mysql
 889aa7224b2544023069559de5bd1f214ddbda9cb327fc3a4771eddc25bb1b7b
@@ -94,11 +94,11 @@ $ docker run --detach --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" --
 ## 3. Restoring MySQL Database in Container
 ### 3.1 Copying MySQL Backup File From Host To Container
 I put the backup file `jsp_backup.sql` in 'dbbackup' folder for JSPTutorialContainer project. Run the following command to copy it to container's root directory.
-```sh
+```raw
 $ docker cp ~/JSPTutorialContainer/dbbackup/jsp_backup.sql jspmysql:/jsp_backup.sql
 ```
 Start terminal in jspmysql container with the following command:
-```sh
+```raw
 $ docker exec -i -t jspmysql sh
 ```
 Use 'ls' to display all files. 'jsp_backup.sql' is there.
@@ -106,11 +106,11 @@ Use 'ls' to display all files. 'jsp_backup.sql' is there.
 
 ### 3.2 Restoring Database Schema and Data
 Create Database, password 'jsppassword'.
-```sh
+```raw
 $ mysqladmin -u root -p create jsptutorial
 ```
 Restore Tables and Data, password 'jsppassword'.
-```sh
+```raw
 $ mysql -u root -p jsptutorial < jsp_backup.sql
 ```
 ![image](/public/images/devops/3111/restoredb.png){:width="600px"}  

@@ -21,7 +21,7 @@ For this online judge app, I use [Monaco Editor](https://microsoft.github.io/mon
 Instead of using Monaco Editor directly in Angular, we can `ngx-monaco-editor` which is [Monaco Editor for Angular](https://github.com/atularen/ngx-monaco-editor).
 
 Install package `ngx-monaco-editor`,
-```sh
+```raw
 npm install ngx-monaco-editor --save        # By default, the latest version is Angular 6.
 npm install ngx-monaco-editor@5.0.0 --save  # For angular version 5
 ```
@@ -62,7 +62,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 export class AppModule { }
 ```
 `Notice`: You must install the correct version of ngx-monaco-editor, otherwise, you will get the following error in browser and monaco editor won't work properly.
-```sh
+```raw
 TypeError: Object(...) is not a function
 ```
 In the 'package.json' file, make sure that the main version of `@angular/core` is same with the main version of `ngx-monaco-editor`. For example, the following package definition in 'package.json' generates the above error. Because the angular version is 5, however, the monaco version is 6.

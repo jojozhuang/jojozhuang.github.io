@@ -15,7 +15,7 @@ baseurl: "/blog"
 ```
 
 .gitlab-ci.yml
-```sh
+```raw
 image: ruby:2.3
 
 variables:

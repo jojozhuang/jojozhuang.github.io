@@ -11,7 +11,7 @@ tags: [Docker, Bash]
 > Introduce how to create docker container with bash script.
 
 ## 1. GitHub Pages & Jekyll
-```sh
+```raw
 #!/bin/bash
 # a script that create a docker container
 MYPATH=$1
@@ -53,7 +53,7 @@ docker run --name django-test \
 ```
 
 run
-```sh
+```raw
 bash ./script.sh ~/your/local/path/folder
 ```
 

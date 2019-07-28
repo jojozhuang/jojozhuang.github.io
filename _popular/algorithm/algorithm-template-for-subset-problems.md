@@ -17,7 +17,7 @@ Given a set of distinct integers, nums, return all possible subsets (the power s
 Note: The solution set must not contain duplicate subsets.
 
 Example:
-```sh
+```raw
 Input: nums = [1,2,3]
 Output:
 [
@@ -95,7 +95,7 @@ The following points needs to be noticed for the above codes.
 * The inline comments assume nums=[1,2,3] and you can see the value of 'list' and 'res' in each step. The sample just shows the case when 'i=0'.
 
 Both approaches give the following output. Notice, the output is in sequence, based on the order of the elements in the 'nums' array.
-```sh
+```raw
 // []
 // [1], [1,2], [1,2,3],[1,3]
 // [2], [2,3]
@@ -158,7 +158,7 @@ private void helper(int[] nums, int pos, List<Integer> list, List<List<Integer>>
 What if the given 'nums' array contains duplicated elements?
 
 Example:
-```sh
+```raw
 Input: [1,2,2]
 Output:
 [
@@ -172,14 +172,14 @@ Output:
 ```
 ### 2.2 Analysis
 If we use the solution for subset, we will get the following outputs.
-```sh
+```raw
 // []
 // [1], [1,2], [1,2,2], [1,2]
 // [2], [2,2]
 // [2]
 ```
 However, the expected output should not contain any duplicated elements.
-```sh
+```raw
 // []
 // [1], [1,2], [1,2,2]
 // [2], [2,2]

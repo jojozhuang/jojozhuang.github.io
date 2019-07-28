@@ -109,7 +109,7 @@ compiler.java('HelloJava.java');
 ```
 
 ## 4. Testing
-```sh
+```raw
 $ node run_c.js
 $ node run_java.js
 ```

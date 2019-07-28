@@ -22,33 +22,33 @@ Go to https://devcenter.heroku.com/articles/heroku-cli#download-and-install to d
 ### 2.3 Getting Started
 First, read the official tutorial [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to get familiar with the basic functions of Heroku. Below are some of the highlights from the tutorial.  
 1) Log into Heroku
-```sh
+```raw
 $ heroku login
 Enter your Heroku credentials.
 Email: jojozhuang@gmail.com
 Password: **********
 ```
 2) Create Heroku App
-```sh
+```raw
 $ heroku create                        // no name, a random name will be assigned to the app
 $ heroku create course-player-react // create app with the given name
 ```
 3) View logs
-```sh
+```raw
 $ heroku logs --tail
 ```
 4) Scale the app
-```sh
+```raw
 $ heroku ps //check how many dynos are running
 $ heroku ps:scale web=0 // scale down
 $ heroku ps:scale web=1 // scale up
 ```
 5) Run the app locally
-```sh
+```raw
 $ heroku local web // same as 'npm start'
 ```
 6) Heroku Console
-```sh
+```raw
 $ heroku run bash
 Running bash on ⬢ damp-springs-52045... up, run.3598 (Free)
 ~ $ ls
@@ -58,12 +58,12 @@ Procfile  README.md  app.json  index.js  node_modules  package-lock.json  packag
 
 ## 3. Deployment
 ### 3.1 Cloning Source Code
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/course-player-react
 $ cd course-player-react
 ```
 ### 3.2 Creating App on Heroku
-```sh
+```raw
 $ heroku create course-player-react
 Creating ⬢ course-player-react... done
 https://course-player-react.herokuapp.com/ | https://git.heroku.com/course-player-react.git
@@ -71,7 +71,7 @@ https://course-player-react.herokuapp.com/ | https://git.heroku.com/course-playe
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
 ### 3.3 Pushing Files to Heroku
-```sh
+```raw
 $ git push heroku master
 Counting objects: 89, done.
 Delta compression using up to 8 threads.
@@ -138,7 +138,7 @@ To https://git.heroku.com/course-player-react.git
  * [new branch]      master -> master
 ```
 If you need to push some updated files, run following commands.
-```sh
+```raw
 $ git add .
 $ git commit -m "<comments>"
 $ git push heroku master

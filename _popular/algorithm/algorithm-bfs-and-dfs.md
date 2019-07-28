@@ -27,7 +27,7 @@ A Tree is typically traversed in two ways:
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
 For example:
-```sh
+```raw
 Given binary tree [3,9,20,null,null,15,7],
     3
    / \
@@ -74,7 +74,7 @@ public List<List<Integer>> levelOrder(TreeNode root) {
 Given a binary tree, return the pre-order traversal of its nodes' values.
 
 For example:
-```sh
+```raw
 Given binary tree [3,9,20,null,null,15,7],
     3
    / \
@@ -161,7 +161,7 @@ public List<String> bfs(Node root) {
 Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 
 Example 1:
-```sh
+```raw
 Input:
 11110
 11010
@@ -171,7 +171,7 @@ Output: 1
 ```
 
 Example 2:
-```sh
+```raw
 Input:
 11000
 11000

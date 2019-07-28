@@ -71,7 +71,7 @@ Create `index.html` with following codes.
 ```  
 
 In terminal, execute clock-server.js with node command.
-```sh
+```raw
 $ node clock-server.js
 ```
 Open browser, access http://127.0.0.1:8080/. The time will be updated for every one second.  
@@ -80,11 +80,11 @@ Open browser, access http://127.0.0.1:8080/. The time will be updated for every 
 ### 2.2 Online Painting Application
 Another example of Socket.IO usage is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/). This sample shows the Broadcasting feature of Socket.IO.  
 Download the source files from [SocketIOCanvas from GitHub](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOCanvas), run
-```sh
+```raw
 $ npm install
 ```
 Then start it with:
-```sh
+```raw
 $ npm start
 ```
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.

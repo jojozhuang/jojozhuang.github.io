@@ -13,29 +13,29 @@ tags: [Node.js, NPM]
 ## 1. Node Package Manager (npm)
 Node provides dependency management with Node Package Manager(npm). It is used to manage project’s dependencies on 3rd party JavaScript libraries.
 ### 1.1 Installing New Package
-```sh
+```raw
 $ npm install express --save
 ```
 * If you left off the --save flag, you’d see the new node_modules folder and it would have express inside, but nothing would be present in your `package.json`.
 
 ### 1.2 Node Module Installation Levels
 Modules can be installed globally or locally.
-```sh
+```raw
 $ npm install -g typescript  # global
 $ npm install express        # local
 ```
 ### 1.3 Checking Modules Outdated
 Check whether your installed modules are outdated.
-```sh
+```raw
 $ npm outdated
 ```
 ### 1.4 Updating Node Modules
-```sh
+```raw
 $ npm update
 $ npm update -g #update globally installed packages
 ```
 ### 1.5 Uninstalling Node Modules
-```sh
+```raw
 $ npm uninstall express
 $ npm uninstall -g typescript
 ```
@@ -45,7 +45,7 @@ Use 'npm start' instead of 'node server.js' to start the application.
 ## 2. Packages
 ### 2.1 NPM and Modules
 After running the following command, express is installed to the project.
-```sh
+```raw
 $ npm install express --save
 ```
 The npm command also updates the package.json file. It adds dependency with the module name and its version.
@@ -101,12 +101,12 @@ Specify the dependency to an exact version.
 * Removing the `^` and `~` characters from the version number indicates only that specific version of the package should be downloaded and used.
 
 This simple solution has a drawback: it doesn’t pin down the version of subdependencies (the dependencies of your dependencies).
-```sh
+```raw
 your-express-app@0.0.0
 └─┬ backbone@1.2.3
 └── underscore@1.0.0
 ```
-```sh
+```raw
 your-express-app@0.0.0
 └─┬ backbone@1.2.3
 └── underscore@1.1.0

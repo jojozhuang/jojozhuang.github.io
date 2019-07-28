@@ -35,7 +35,7 @@ We will have two servers running. The front end code will be served by the Angul
 
 ## 3. Running and Testing
 Start both the client and server with 'npm run dev'.
-```sh
+```raw
 $ npm run dev
 ```
 You will see two services are started. The server is served at port 5000 and the client is served at port 12080.
@@ -51,7 +51,7 @@ Through the debug tool, we can see, the name is fetched from the api.
 ## 4. Enable Logging(Optional)
 ### 4.1 Installing Packages
 Use both [Morgan](https://github.com/expressjs/morgan) and [Winston](https://github.com/winstonjs/winston) for logging.  
-```sh
+```raw
 $ npm install morgan winston --save
 ```
 ### 4.2 Winston Configuration

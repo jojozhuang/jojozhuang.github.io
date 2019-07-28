@@ -96,7 +96,7 @@ app.listen(3000, function() {
 });
 ```
 Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You should see the logs in the console like this.
-```sh
+```raw
 [nodemon] starting `node rotation.js`
 Web Server started on port 3000
 ::1 - GET / HTTP/1.1 200 13 - 2.474 ms

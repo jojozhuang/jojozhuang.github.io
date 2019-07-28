@@ -15,12 +15,12 @@ tags: [Spring Boot, RESTful, Maven]
 Install JDK, Eclipse and Tomcat first.
 ### 1.2 Maven
 In addition, we will use maven as build tool. So Maven is also required to be installed.
-```sh
+```raw
 $ brew install maven // Mac OS
 $ sudo apt-get install maven // Linux
 ```
 Check maven version.
-```sh
+```raw
 $ mvn -version
 Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2016-02-20T12:39:06-07:00)
 Maven home: /usr/local/Cellar/maven/3.5.0/libexec
@@ -300,7 +300,7 @@ This is the final structure of this tutorial project.
 
 ### 2.6 Running and Testing
 run spring boot project with maven
-```sh
+```raw
 $ mvn spring-boot:run
 ```
 Use Postman to access http://localhost:8080/ for testing.  
@@ -326,7 +326,7 @@ URL: http://localhost:8080/product/1
 
 ### 3.2 Running and Testing
 restart spring boot.
-```sh
+```raw
 $ mvn spring-boot:run
 ```
 In Postman, add Accept = "application/xml" to Header.  

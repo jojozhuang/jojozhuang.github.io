@@ -95,7 +95,7 @@ Routing Module allows the user to map components to URLs and navigate the user i
 Shared modules contain the most commonly used code that’s modularized so it can be reused as much as possible. When required, the root module can include as many shared modules as required.
 
 Use the following CLI command to generate a new module.
-```sh
+```raw
 $ ng g module shared
 ```
 ### 3.5 Useful Node Commands

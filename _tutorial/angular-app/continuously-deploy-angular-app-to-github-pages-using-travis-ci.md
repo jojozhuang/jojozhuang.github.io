@@ -13,7 +13,7 @@ tags: [GitHub Pages, Travis CI]
 ## 1. Angular Project
 ### 1.1 Source Files
 Download the source files for this Angular app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/game-store-angular.git
 ```
 ### 1.2 Travis Config File

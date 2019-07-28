@@ -20,7 +20,7 @@ Go to [https://community.dynatrace.com/community/display/EVAL/My+dynaTrace+Trial
 The downloaded file is a jar package.
 In terminal, navigate to the folder which contains the downloaded file, run  
 
-```sh
+```raw
 $ cd /home/Downloads
 $ java -jar dynatrace-full-linux-x86-64.jar
 ```
@@ -28,7 +28,7 @@ $ java -jar dynatrace-full-linux-x86-64.jar
 By default, it should be installed to the home directory.  
 
 3) start the Dynatrace AppMon server process and Dynatrace AppMon collector process
-```sh
+```raw
 $ cd /~/dynatrace-7.0
 $ ./dtserver -bg
 $ ./dtfrontendserver -bg
@@ -43,7 +43,7 @@ $ ./dtcollector -bg
  5949 ?        00:00:42 dtfrontendserver
 ```
 Also check if the Dynatrace services ports (8021, 2021, 6699, 9998) are openend and allowed in firewall rules:
-```sh
+```raw
  netstat -an | grep 021
 tcp        0      0 :::2021     :::*     LISTEN    (port for Dynatrace client connections)     
 tcp        0      0 :::8021     :::*     LISTEN    (the Dynatrace server web interface)

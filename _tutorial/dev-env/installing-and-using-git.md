@@ -16,35 +16,35 @@ Git is a distributed revision control and source code management system with an 
 ## 2. Installing Git
 ### 2.1 Installing Git on Mac OS
 Install [Homebrew](https://brew.sh/) first if it hasn't been installed yet on your Mac.
-```sh
+```raw
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 Install Git with Homebrew
-```sh
+```raw
 $ brew install git
 ```
 
 Check versions
-```sh
+```raw
 $ git --version
 git version 2.11.0 (Apple Git-81)
 ```
 Configure your Git username and email using the following commands:
-```sh
+```raw
 $ git config --global user.name "Johnny"
 $ git config --global user.email "jojozhuang@gmail.com"
 ```
 
 ### 2.2 Installing Git on Ubuntu
 Update packages
-```sh
+```raw
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install -f
 ```
 
 Install Git
-```sh
+```raw
 $ sudo apt-get install git
 $ sudo git --version
 git version 2.7.4
@@ -68,7 +68,7 @@ After creation, some instructions show how to submit files to this repository th
 
 ## 4. Pushing Local File to GitHub
 ### 4.1 Creating Local Repository
-```sh
+```raw
 $ mkdir GitTutorial
 $ cd GitTutorial/
 $ vi hello.txt // input 'Hello Git!'
@@ -85,7 +85,7 @@ $ git commit -m "first commit"
  create mode 100644 hello.txt
 ```
 ## 4.2 Pushing to GitHub
-```sh
+```raw
 $ git remote add origin https://github.com/jojozhuang/github-test.git
 $ git push -u origin master
 Username for 'https://github.com': jojozhuang
@@ -106,7 +106,7 @@ Click on the file, check the content of it.
 
 ## 5. Pulling Files From GitHub
 Below commands show how to pull the files from GitHub repository 'github-test' to local Mac.
-```sh
+```raw
 $ cd PullTest/
 $ ls
 $ git clone https://github.com/jojozhuang/github-test.git
@@ -122,7 +122,7 @@ hello.txt
 ```
 
 Next time, use the following commands to get latest commits from the same repository.
-```sh
+```raw
 $ cd PullTest/
 $ git pull origin master
 ```

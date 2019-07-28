@@ -16,12 +16,12 @@ Text compare tool is very useful when find the different content of two files, o
 ## 2. Angular Project
 ### 2.1 Creating New Project
 In terminal, create new angular app named 'text-compare-angular' through Angular-CLI.
-```sh
+```raw
 $ ng new text-compare-angular
 ```
 ### 2.2 Components
 Then, create 4 components.
-```sh
+```raw
 $ cd text-compare-angular
 $ ng g component header
 $ ng g component footer
@@ -105,7 +105,7 @@ Apply the router by updating ./app/app.component.html with the following content
 ```
 ### 2.4 Monaco Editor
 Install package `ngx-monaco-editor`, which is [Monaco Editor for Angular](https://github.com/atularen/ngx-monaco-editor).
-```sh
+```raw
 npm install ngx-monaco-editor --save        # By default, the latest version is Angular 6.
 npm install ngx-monaco-editor@5.0.0 --save  # For angular version 5
 ```
@@ -146,7 +146,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 export class AppModule { }
 ```
 `Notice`: You must install the correct version of ngx-monaco-editor, otherwise, you will get the following error in browser and monaco editor won't work properly.
-```sh
+```raw
 TypeError: Object(...) is not a function
 ```
 In the 'package.json' file, make sure that the main version of `@angular/core` is same with the main version of `ngx-monaco-editor`. For example, the following package definition in 'package.json' generates the above error. Because the angular version is 5, however, the monaco version is 6.
@@ -170,7 +170,7 @@ In the 'package.json' file, make sure that the main version of `@angular/core` i
 ```
 ### 2.5 BootStrap CSS
 Add bootstrap to the project.
-```sh
+```raw
 $ npm install bootstrap --save
 ```
 Open 'angular-cli.json' and insert a new entry into the styles array.
@@ -422,7 +422,7 @@ The following points need to be noted about the above code.
 
 ## 4. Running and Testing
 Start this app, serve it in web server.
-```sh
+```raw
 $ npm start
 ```
 Open web browser, access ‘http://localhost:4200/’.

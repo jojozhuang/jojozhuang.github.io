@@ -19,7 +19,7 @@ Go to https://disqus.com/ to create a Disqus account. Login and go to settings->
 ![image](/public/images/jekyll/1611/account.png)
 ### 2.2 Universal Code
 Access the following link to find the universal code of your Disqus. Replace the shortname with yours.
-```sh
+```raw
 https://[shortname].disqus.com/admin/universalcode
 
 //e.g.

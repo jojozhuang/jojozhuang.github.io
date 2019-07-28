@@ -12,7 +12,7 @@ tags: [Azure]
 
 ## 1. ASP.NET Core Project
 Download the project from Github.
-```sh
+```raw
 git clone https://github.com/jojozhuang/restful-api-aspnet.git
 ```
 

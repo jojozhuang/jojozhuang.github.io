@@ -75,7 +75,7 @@ shape.draw();
 System.out.println("Area = " + shape.area());
 ```
 Output.
-```sh
+```raw
 Drawing circle...
 Area = 78.53981633974483
 Drawing rectangle...
@@ -159,7 +159,7 @@ shape.draw();
 System.out.println("Area = " + shape.area());
 ```
 Output.
-```sh
+```raw
 Drawing circle...
 Area = 78.53981633974483
 Drawing rectangle...

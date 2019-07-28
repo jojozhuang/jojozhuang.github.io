@@ -13,13 +13,13 @@ tags: [Angular, Docker]
 ## 1. Angular Project
 I will use the angular project 'Text Compare' and deploy it to Docker container.
 ### 1.1 Download
-```sh
+```raw
 git clone https://github.com/jojozhuang/text-compare-angular.git
 cd text-compare-angular
 ```
 ### 1.2 Installing Packages
 Install package rimraf and cross-env.
-```sh
+```raw
 npm install rimraf --save
 npm install cross-env --save-dev
 ```
@@ -108,7 +108,7 @@ The following points need to be noted about the above code.
 
 ### 2.2 Docker Image
 Open docker terminal, go to main project folder. Run the following command:
-```sh
+```raw
 docker build -t text-compare .
 ```
 It will take two or three minutes to build the image. Nodejs and Nginx have been downloaded to local docker virtual machine. New image 'text-compare' has been created successfully.
@@ -117,7 +117,7 @@ It will take two or three minutes to build the image. Nodejs and Nginx have been
 
 ## 3. Running and Testing
 Run the image in container.
-```sh
+```raw
 docker run --name text-compare -p 8080:80 text-compare &
 ```
 Open web browser, access http://192.168.99.100:8080.

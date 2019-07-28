@@ -36,11 +36,11 @@ The following points need to be noted about the above file.
 
 ## 2. Running and Testing
 In terminal, execute main.js with `node` command.
-```sh
+```raw
 $ node main.js
 ```
 You should see the following log.
-```sh
+```raw
 Server running at http://127.0.0.1:8086/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 8086.

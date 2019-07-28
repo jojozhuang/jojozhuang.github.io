@@ -103,7 +103,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 Displaying Mouse.
 Displaying Keyboard.
 Displaying Monitor.

@@ -15,11 +15,11 @@ tags: [System Design]
 URL shortening is used to create shorter aliases for long URLs. We call these shortened aliases “short links.” Users are redirected to the original URL when they hit these short links. Short links save a lot of space when displayed, printed, messaged, or tweeted. Additionally, users are less likely to mistype shorter URLs.
 
 For example, if we shorten this page through TinyURL:
-```sh
+```raw
 https://rongzhuang.me/portfolio/online-judge-mean/
 ```
 We would get:
-```sh
+```raw
 http://tinyurl.com/y3uabmra
 ```
 The shortened URL is one-half the size of the actual URL.
@@ -48,41 +48,41 @@ Our URL shortening system should meet the following requirements:
 ### 1.3 Capacity Estimation and Constraints
 Our system will be read-heavy. There will be lots of redirection requests compared to new URL shortenings. Let’s assume 100:1 ratio between read and write.
 `Traffic estimates`: Assuming, we will have 500M new URL shortenings per month, with 100:1 read/write ratio, we can expect 50B redirections during the same period:
-```sh
+```raw
 100 * 500M => 50B
 ```
 What would be Queries Per Second (QPS) for our system? New URLs shortenings per second:
-```sh
+```raw
 500 million / (30 days * 24 hours * 3600 seconds) = ~200 URLs/s
 ```
 Considering 100:1 read/write ratio, URLs redirections per second will be:
-```sh
+```raw
 100 * 200 URLs/s = 20K/s
 ```
 `Storage estimates`: Let’s assume we store every URL shortening request (and associated shortened link) for 5 years. Since we expect to have 500M new URLs every month, the total number of objects we expect to store will be 30 billion:
-```sh
+```raw
 500 million * 5 years * 12 months = 30 billion
 ```
 Let’s assume that each stored object will be approximately 500 bytes (just a ballpark estimate–we will dig into it later). We will need 15TB of total storage:
-```sh
+```raw
 30 billion * 500 bytes = 15 TB
 ```
 `Bandwidth estimates`: For write requests, since we expect 200 new URLs every second, total incoming data for our service will be 100KB per second:
-```sh
+```raw
 200 * 500 bytes = 100 KB/s
 ```
 For read requests, since every second we expect ~19K URLs redirections, total outgoing data for our service would be 9MB per second.
-```sh
+```raw
 19K * 500 bytes = ~9 MB/s
 ```
 `Memory estimates`: If we want to cache some of the hot URLs that are frequently accessed, how much memory will we need to store them? If we follow the 80-20 rule, meaning 20% of URLs generate 80% of traffic, we would like to cache these 20% hot URLs.
 
 Since we have 19K requests per second, we will be getting 1.7 billion requests per day:
-```sh
+```raw
 19K * 3600 seconds * 24 hours = ~1.7 billion
 ```
 To cache 20% of these requests, we will need 170GB of memory.
-```sh
+```raw
 0.2 * 1.7 billion * 500 bytes = ~170GB
 ```
 One thing to note here is that since there will be a lot of duplicate requests (of the same URL), therefore, our actual memory usage will be less than 170GB.
@@ -100,7 +100,7 @@ Memory for cache    | 170GB
 
 ### 1.4 System APIs
 We can have SOAP or REST APIs to expose the functionality of our service. Following could be the definitions of the APIs for creating and deleting URLs:
-```sh
+```raw
 createURL(api_dev_key, original_url, custom_alias=None, user_name=None, expire_date=None)
 ```
 **Parameters**:
@@ -112,7 +112,7 @@ createURL(api_dev_key, original_url, custom_alias=None, user_name=None, expire_d
 
 **Returns**: (string)
 A successful insertion returns the shortened URL; otherwise, it returns an error code.
-```sh
+```raw
 deleteURL(api_dev_key, url_key)
 ```
 Where “url_key” is a string representing the shortened URL to be retrieved. A successful deletion returns ‘URL Removed’.
@@ -164,7 +164,7 @@ For simplicity, as soon as KGS loads some keys in memory, it can move them to th
 KGS also has to make sure not to give the same key to multiple servers. For that, it must synchronize (or get a lock on) the data structure holding the keys before removing keys from it and giving them to a server
 
 What would be the key-DB size? With base64 encoding, we can generate 68.7B unique six letters keys. If we need one byte to store one alpha-numeric character, we can store all these keys in:
-```sh
+```raw
 6 (characters per key) * 68.7B (unique keys) = 412 GB.
 ```
 Isn’t KGS a single point of failure? Yes, it is. To solve this, we can have a standby replica of KGS. Whenever the primary server dies, the standby server can take over to generate and provide keys.

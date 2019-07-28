@@ -15,25 +15,25 @@ Angular 6 was released on May 4th, 2018. That is 6 months after its predecessor'
 ## 2. Upgrade
 ### 2.1 Upgrade Angular CLI
 Update Angular CLI from globally. In my local, Angular CLI is upgraded from 1.7.4 to 6.1.3.
-```sh
+```raw
 npm uninstall -g angular-cli
 npm cache clean
 npm install -g @angular/cli@latest
 ```
 Update Angular CLI dev. Go to the root folder of the Angular project, then run following commands.
-```sh
+```raw
 npm uninstall --save-dev angular-cli
 npm install --save-dev @angular/cli@latest
 npm install
 ```
 ### 2.2 Upgrade Angular Core 5 to Angular 6
-```sh
+```raw
 ng update @angular/core
 ```
 * Note, after upgrading, `.angular-cli.json` will be deleted, instead, `angular.json` will be created.
 
 Install all related packages.
-```sh
+```raw
 npm install
 ```
 

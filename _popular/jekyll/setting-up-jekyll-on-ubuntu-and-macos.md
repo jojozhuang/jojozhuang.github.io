@@ -15,66 +15,66 @@ tags: [GitHub Pages, Jekyll, Ruby, macOS]
 
 ## 2. Installing Jekyll on Ubuntu
 Make sure gcc and make are installed. Check version of them with the following commands.
-```sh
+```raw
 $ gcc -v
 $ make -v
 $ ruby -v //version must be 2.1 or above
 ```
 Run the following command to install Jekyll.
-```sh
+```raw
 $ sudo apt install jekyll
 ```
 Check version.
-```sh
+```raw
 $ jekyll --version
 ```
 
 ## 3. Installing Jekyll on Mac
 Make sure gcc and make are installed. Check version of them with the following commands.
-```sh
+```raw
 $ gcc -v
 $ make -v
 $ ruby -v //version must be 2.1 or above
 ```
 Install Ruby.
-```sh
+```raw
 $ brew install ruby
 ```
 
 Install Jekyll.
-```sh
+```raw
 $ sudo gem install jekyll
 ```
 Check version.
-```sh
+```raw
 $ jekyll -v
 jekyll 3.6.2
 ```
 
 ## 4. Running Website with Jekyll
 Get source files of my person website from Github.
-```sh
+```raw
 $ cd /Johnny/Github/
 $ git clone https://github.com/jojozhuang/jojozhuang.github.io
 $ cd jojozhuang.github.io
 ```
 
 Build and launch the website. All of the files will be deployed to a new folder named '\_site'. Open web browser and access  http://127.0.0.1:4000/.
-```sh
+```raw
 $ jekyll build
 $ jekyll serve
 ```
 If you want jekyll to start at different port, add `port` option when using jekyll serve.
-```sh
+```raw
 $ jekyll serve --port 12001
 ```
 
 If you used bundle command, then you need to install the bundler.
-```sh
+```raw
 $ gem install bundler
 ```
 And prepending `bundle exec` to the jekyll command.
-```sh
+```raw
 $ bundle exec jekyll serve --port 12001
 ```
 Open web browser to access your local jekyll website.
@@ -84,15 +84,15 @@ Open web browser to access your local jekyll website.
 Jekyll build speed slows down with the increase in the number of files, posts, images etc. Below are some options to speed up the build.
 
 Exclude files that are not required. Add `exclude` into `_config.yml`.
-```sh
+```raw
 exclude: [node_modules, README.md]
 ```
 Keep files that are required as-is. Add `keep_files` into `_config.yml`.
-```sh
+```raw
 keep_files: [images]
 ```
 Generate a Liquid rendering profile to help you identify performance bottlenecks.
-```sh
+```raw
 jekyll serve --profile
 $ bundle exec jekyll build --profile
 Configuration file: /Users/Johnny/GitHub/jojozhuang.github.io/_config.yml
@@ -143,21 +143,21 @@ _tutorial/react-app/building-online-code-editor-with-react-and-express.md |     
 _tutorial/angular-app/creating-web-app-and-restful-api-with-mean-stack.md |     1 |     6.72K | 0.004
 ```
 Use Jekyll incremental build
-```sh
+```raw
 jekyll serve -I
 jekyll serve --incremental
 ```
 Let Jekyll build only the necessary posts.
-```sh
+```raw
 jekyll serve --watch --limit_posts 1
 ```
 Alternatively, we can set `incremental: true` in Jekyll’s `_config.yml` file. Notice, if the file name is changed, you have to restart the build.
-```sh
+```raw
 incremental: true
 ```
 
 ## 6. Upgrade Jekyll
-```sh
+```raw
 $ brew update
 $ brew upgrade ruby
 $ gem update jekyll

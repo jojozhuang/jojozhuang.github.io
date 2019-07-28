@@ -63,7 +63,7 @@ After adding `Hibernate` User library to `HibernateTutorial` project, it will lo
 We use docker container to host our MySQL database.
 ### 3.1 Creating Dockerfile
 Create a file named `Dockerfile` with the following content.
-```sh
+```raw
 #Create MySQL Image for Hibernate Tutorial
 FROM mysql
 MAINTAINER jojozhuang@gmail.com
@@ -89,17 +89,17 @@ CREATE TABLE `EMPLOYEE` (
 ```
 ### 3.2 Creating Image with Dockerfile
 In Docker Terminal, navigate to /HibernateTutorial/Docker/, run the following command the create MySQL image.
-```sh
+```raw
 $ docker build -t hbn-mysql:0.1 .
 ```
 The new image is created with named `hbn-mysql` and tag `0.1`.
-```sh
+```raw
 $ docker images
 ```
 ![image](/public/images/java/1537/dockerimage.png){:width="700px"}  
 ### 3.3 Running MySQL Container
 In Docker Terminal, run command to launch MySQL container with the new image 'hbn-mysql:0.1'.
-```sh
+```raw
 $ docker run --detach --name=hnbmysql --publish 11050:3306 hbn-mysql:0.1
 ```
 You will see that a container named `hnbmysql` is running now. Note the IP address `192.168.99.100` and port `11050`. We will use them to configure the database connection in eclipse and MySQL Workbench later.
@@ -334,7 +334,7 @@ Finally, the project looks as follows.
 ## 5. Testing
 ### 5.1 Running ManageEmployee Class
 In Eclipse, right click on `ManageEmployee.java` file -> Run AS -> Java Application. You will get the following output in the console panel of eclipse IDE.
-```sh
+```raw
 Name: Rong Zhuang Salary: 1000.0
 Name: Michael Jackson Salary: 5000.0
 Name: Johnny Walker Salary: 10000.0

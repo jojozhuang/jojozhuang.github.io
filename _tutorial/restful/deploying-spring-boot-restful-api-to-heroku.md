@@ -19,33 +19,33 @@ Go to https://devcenter.heroku.com/articles/heroku-cli#download-and-install to d
 ### 1.3 Getting Started
 First, read the official tutorial [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to get familiar with the basic functions of Heroku. Below are some of the highlights from the tutorial.  
 1) Log into Heroku
-```sh
+```raw
 $ heroku login
 Enter your Heroku credentials.
 Email: jojozhuang@gmail.com
 Password: **********
 ```
 2) Create Heroku App
-```sh
+```raw
 $ heroku create                 // no name, a random name will be assigned to the app
 $ heroku create gamestore-api   // create app with the given name
 ```
 3) View logs
-```sh
+```raw
 $ heroku logs --tail
 ```
 4) Scale the app
-```sh
+```raw
 $ heroku ps //check how many dynos are running
 $ heroku ps:scale web=0 // scale down
 $ heroku ps:scale web=1 // scale up
 ```
 5) Run the app locally
-```sh
+```raw
 $ heroku local web // same as 'npm start'
 ```
 6) Heroku Console
-```sh
+```raw
 $ heroku run bash
 Running bash on ⬢ gamestore-api... up, run.4976 (Free)
 ~ $ ls
@@ -56,31 +56,31 @@ LICENSE.md	README.md	pom.xml		src		target
 ## 2. Deployment
 ### 2.1 Source Code
 Clone Spring Boot Project from Github.
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/restful-api-springboot.git
 $ cd restful-api-springboot
 ```
 ### 2.2 Setting API Url
 Edit '/src/main/resources/application.properties', replace empty string with the remote api url for 'site.api-url'.
-```sh
+```raw
 ...
 
 ## Site Configuration Properties, set "" by default.
 site.api-url="https://gamestore-api.herokuapp.com/"
 ```
 * Note: When I tried to use 'RequestContext' to get the base API Url, it works fine locally. It returns 'http://localhost:8080/'. However, it won't work if I deploy this Spring Boot rest api on Heroku. The URL returned by Heroku contains Heroku's internal host address and port number, see below sample url of the uploaded image. This address is not accessible for the front-end web app.
-```sh
+```raw
 https://59cd2cb3-bfd1-4ae2-a266-982aaa55f7d0.prvt.dyno.rt.heroku.com:35113/images/636690875005430000_wiiu_fightingpad.jpg
 ```
 
 ### 2.3 Creating App on Heroku
-```sh
+```raw
 $ heroku create gamestore-api
 ```
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
 ### 2.4 Pushing files to Heroku
-```sh
+```raw
 $ git push heroku master
 Counting objects: 40, done.
 Delta compression using up to 8 threads.
@@ -137,7 +137,7 @@ To https://git.heroku.com/gamestore-api.git
 The deployment is finished.
 
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
-```sh
+```raw
 $ git remote rm heroku
 $ heroku git:remote -a gamestore-api
 ```

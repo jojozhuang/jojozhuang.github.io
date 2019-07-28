@@ -25,16 +25,16 @@ Some general methods for making backups in MySQL.
 We will focus on `mysqldump`.  
 ### 2.2 Dumping Data in SQL Format with mysqldump
 Dump all databases and save to file.
-```sh
+```raw
 $ mysqldump --all-databases > dump.sql
 ```
 Dump only specific databases and save to file.
-```sh
+```raw
 $ mysqldump --databases db1 db2 db3 > dump.sql
 ```
 ### 2.3 Using mysqldump for MySQL Container
 Dump specific database in container. The format looks as follows.
-```sh
+```raw
 $ docker exec CONTAINER /usr/bin/mysqldump -u root --password=PASSWORD DATABASE > backup.sql
 ```
 
@@ -46,13 +46,13 @@ Verify that the new product is in the list.
 ![image](/public/images/devops/3113/productlist.png)
 ### 3.2 Dump Database jsptutorial
 Check the container id.
-```sh
+```raw
 $ docker ps
 CONTAINER ID  IMAGE         COMMAND                CREATED         STATUS         PORTS                   NAMES
 f91d97a62086  jspmysql:0.1  "docker-entrypoint..." 28 minutes ago  Up 28 minutes  0.0.0.0:6603->3306/tcp  jspmysql
 ```
 Execute `mysqldump` in docker terminal.
-```sh
+```raw
 $ docker exec f91d97a62086 /usr/bin/mysqldump -u root --password=jsppassword jsptutorial > backup.sql
 ```
 Notice `f91d97a62086` is the container id, `jsptutorial` is the database and `backup.sql` is the output file. After running the above command, a new backup.sql file is created.
@@ -63,7 +63,7 @@ Notice that new product `(4,'iPad',399)` is added to the sql for restoring table
 Now you can rename this file to jsp_backup.sql or use it directly in Dockerfile to create MySQL image.
 ### 3.4 Restoring Data to MySQL Container
 You can also restore the data directly to the container. In docker terminal, run the following command.
-```sh
+```raw
 $ cat backup.sql | docker exec -i f91d97a62086 /usr/bin/mysql -u root --password=jsppassword jsptutorial
 ```
 

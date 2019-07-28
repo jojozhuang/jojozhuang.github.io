@@ -199,12 +199,12 @@ public class CryptoUtilsTest {
 ## 3. Testing
 ### 3.1 Orignal File
 Create a text file in the project root folder with name 'document.txt' and the following content.
-```sh
+```raw
 Happy work, happy life!
 ```
 ### 3.2 Run Junit
 In the console, you should see the following output. The encrypted content is unreadable.
-```sh
+```raw
 Original content: Happy work, happy life!
 
 Encrypted content: �C�D3\(��u7��칿~�qN��]ZJ��l

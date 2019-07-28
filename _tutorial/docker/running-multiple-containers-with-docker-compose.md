@@ -35,14 +35,14 @@ Download the source files of JSP Tutorial application from [My GitHub](https://g
 ![image](/public/images/devops/3125/tomcatdeploy.png){:width="800px"}  
 ### 3.3 Creating Compose File
 Create one file named `docker-compose.yml` in any directory on local machine.
-```sh
+```raw
 $ cd ~/Johnny
 $ mkdir DockerCompose
 $ cd DockerCompose
 $ vim docker-compose.yml
 ```
 Edit docker-compose.yml, fill with following content.
-```sh
+```raw
 version: '3.0'
 services:
   web:
@@ -72,21 +72,21 @@ The following points need to be noted about the above file.
 
 ### 3.4 Running Docker Compose file
 Open Docker terminal, navigate to the folder where the Docker compose file locates. Run the following command. (Make sure remove or stop the existing MySQL and Tomcat container first.)
-```sh
+```raw
 $ docker-compose up -d
 ```
 This command will take the docker-compose.yml file in your local directory and start building the containers. Option -d makes this process run in background.
 Once executed, all the images will start downloading and the containers will start automatically.
 
 Check the containers.
-```sh
+```raw
 $ docker ps
 ```
 As you see, two containers are running now.
 ![image](/public/images/devops/3125/run.png)  
 
 Use the following command to stop the containers.
-```sh
+```raw
 $ docker-compose down
 ```
 

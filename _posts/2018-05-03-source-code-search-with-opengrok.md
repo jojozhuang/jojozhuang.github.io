@@ -18,21 +18,21 @@ You can manually setup OpenGrok from scratch, but it is much easier to use the d
 ## 3. Setting up OpenGrok with Docker
 ### 3.1 Preparing Source Code
 Create two directories in local disk.
-```sh
+```raw
 $ mkdir -p /opengrok/src /opengrok/data
 ```
 * `src` - Contains your source files.
 * `data` - Used by OpenGrok. OpenGrok will generate indexes for the source files and store them here.
 
 Download source code from GitHub to 'src' folder. Here, I cloned my three repositories.
-```sh
+```raw
 $ cd /opengrok/src
 $ git clone https://github.com/jojozhuang/Algorithm
 $ git clone https://github.com/jojozhuang/Portfolio
 $ git clone https://github.com/jojozhuang/Tutorials
 ```
 Check directories/files.
-```sh
+```raw
 Johnny@Johnny-Mac:~$ ls -all
 total 0
 drwxr-xr-x   5 Johnny  1694527156   160 May 03 21:34 .
@@ -43,11 +43,11 @@ drwxr-xr-x  59 Johnny  1694527156  1888 May 03 21:10 Tutorials
 ```
 ### 3.2 Installing Image and Running Container
 Pull the OpenGrok docker image.
-```sh
+```raw
 $ docker pull scue/docker-opengrok
 ```
 Run a Docker container and mount these two directories: src and data; this will automatically run indexing as a part of startup.
-```sh
+```raw
 $ docker run --name=opengrok-git -v /opengrok/src:/src -v /opengrok/data:/data -p 31030:8080 scue/docker-opengrok
 ```
 

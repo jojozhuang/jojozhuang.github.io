@@ -13,12 +13,12 @@ tags: [Heroku, Travis CI]
 ## 1. React & Socket.IO Project
 ### 1.1 Source Files
 Download the source files for this course player app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/course-player-react.git
 ```
 ### 1.2 Commands
 In 'package.json', notice there is a command named 'start', which is used to launch the express server. Also, notice the 'test' command. It is empty as we don't need any testing for this app. Do not specify 'exit 1' in the end of this command. Otherwise, the deployment will fail.
-```sh
+```raw
 ...
   "scripts": {
     "start": "NODE_ENV=development npm run open:src",

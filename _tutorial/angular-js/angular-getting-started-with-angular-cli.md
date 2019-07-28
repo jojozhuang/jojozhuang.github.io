@@ -18,20 +18,20 @@ tags: [Angular CLI]
 ## 2. Angular CLI
 ### 2.1 Installing Angular CLI
 Install Angular CLI globally and check the version.
-```sh
+```raw
 $ npm install -g angular-cli
 $ ng --version
 ```
 ### 2.2 Upgrading CLI
 Uninstall and install again to upgrade CLI.
-```sh
+```raw
 $ npm uninstall -g angular-cli
 $ npm cache clean
 $ npm install -g angular-cli
 ```
 ### 2.3 Common CLI Commands
 Useful commands to create angular components, services, etc.
-```sh
+```raw
 $ ng g component header // create a new component
 $ ng g service product  // create a new service
 $ ng g module shared    // create a new module
@@ -47,14 +47,14 @@ When calling the CLI commands, we have following options.
 * --minimal
 
 For example, the following command create new Angular project with inline template and inline style(No additional html and css file).
-```sh
+```raw
 $ ng new helloworld --inline-template --inline-style
 ```
 
 ## 3. Starting to Code with CLI
 ### 3.1 Creating New Project
 Generate a new project and skeleton application named 'helloworld' by running the following commands:
-```sh
+```raw
 $ ng new helloworld
 ```
 ### 3.2 What’s in the Root Folder?
@@ -107,12 +107,12 @@ Angular offers two ways to compile your application:
 * Ahead-of-Time (`AOT`), which compiles your app at build time.
 
 JIT compilation is the default when you run the build-only or the build-and-serve-locally CLI commands:
-```sh
+```raw
 $ ng build
 $ ng serve
 ```
 For AOT compilation, append the `--aot` flags to the build-only or the build-and-serve-locally CLI commands:
-```sh
+```raw
 $ ng build --aot
 $ ng serve --aot
 ```
@@ -122,7 +122,7 @@ $ ng serve --aot
 The Angular CLI uses `Webpack` to transpile, compile, and deploy project code. It also uses the webpack-dev-server as its web server by default.
 
 By default, WebPack configuration file `webpack.config.js` is hidden. The following Angular CLI command makes it available:
-```sh
+```raw
 $ ng eject
 ```
 * Be careful, running this command will change the commands in package.json.

@@ -156,7 +156,7 @@ app.listen(3000, function() {
 Start the server and access http://localhost:3000/ in browser. You will see the error instead of the image.
 ![image](/public/images/frontend/2552/internalerror.png){:width="600px"}
 In the console, we see the error log.
-```sh
+```raw
 $ node error.js
 Web Server started on port 3000
 Error: Failed to send file: Error: ENOENT: no such file or directory, stat '/Users/Johnny/GitHub/Tutorials/ExpressTutorial/celine.jpg'

@@ -15,7 +15,7 @@ Docker can build images automatically by reading the instructions from a Dockerf
 
 ## 2. What We've Done Until Now?
 In the previous posting [Using MySQL Container for JSP Application]({% link _tutorial/docker/using-mysql-container-for-jsp-application.md %}), we created a MySQL container to store data for our JSP Tutorial application. Previously, we used the following command to create MySQL container.
-```sh
+```raw
 $ docker run --detach --name=jspmysql --env="MYSQL_ROOT_PASSWORD=jsppassword" --publish 6603:3306 mysql
 ```
 What is this command doing?
@@ -24,7 +24,7 @@ What is this command doing?
 * Expose 3306 and map to `6603` for outside world to connect to this MySQL database.
 
 In addition, we manually created database `jsptutorial` and table `Product`.
-```sh
+```raw
 $ mysqladmin -u root -p create jsptutorial
 $ mysql -u root -p jsptutorial < jsp_backup.sql
 ```
@@ -34,14 +34,14 @@ In this posting, we will use Dockerfile to simplify the way how to create MySQL 
 ## 3. Creating MySQL Image with Dockerfile
 ### 3.1 Creating Docker File
 Create one file named `Dockerfile` in any directory on local machine.
-```sh
+```raw
 $ cd ~/Johnny
 $ mkdir DockerMySQL
 $ cd DockerMySQL
 $ vim Dockerfile
 ```
 Edit Dockerfile, fill with following content.
-```sh
+```raw
 #Create MySQL Image for JSP Tutorial Application
 FROM mysql
 MAINTAINER jojozhuang@gmail.com
@@ -65,11 +65,11 @@ Download the backup file `jsp_backup.sql` from [My GitHub](https://github.com/jo
 
 ### 3.3 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile and MySQL backup file locates. Run the following command.
-```sh
+```raw
 $ docker build -t jspmysql:0.1 .
 ```
 Here, `jspmysql` is the name we are giving to the Image and `0.1` is the tag number. The last dot `.` indicates the current location. Check whether the image is created.
-```sh
+```raw
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
@@ -78,7 +78,7 @@ As you see, the new image is created with tag 0.1.
 ## 4. Testing The New Image
 ### 4.1 Running Container
 In docker terminal, run the following command.
-```sh
+```raw
 $ docker run --detach --name=jspmysql --publish 6603:3306 jspmysql:0.1
 ```
 Notice we don't need to set the environment variable MYSQL_ROOT_PASSWORD any more.
@@ -101,24 +101,24 @@ Try to add, edit or delete product. Then, verify the data in workbench, you will
 ## 5. Publishing MySQL Container
 ### 5.1 Creating Image from Current Container
 Check the container id.
-```sh
+```raw
 $ docker ps
 CONTAINER ID  IMAGE         COMMAND                 CREATED        STATUS         PORTS                   NAMES
 f91d97a62086  jspmysql:0.1  "docker-entrypoint..."  5 minutes ago  Up 5 minutes   0.0.0.0:6603->3306/tcp  jspmysql
 ```
 Create new image based on this container. Notice `f91d97a62086` is the container id, `jojozhuang/jspmysql` is the name of the new image. `jojozhuang` is my user name of Docker Hub.
-```sh
+```raw
 $ docker commit -m "db restored" -a "Johnny" f91d97a62086 jojozhuang/jspmysql
 sha256:e939b88d1cec5781a96b5b46c5426b9f0a8334e1f06da69f599882eb3f0f5139
 ```
 Check the new image.
-```sh
+```raw
 $ docker images
 ```
 ![image](/public/images/devops/3112/newimage.png)  
 ### 5.2 Publishing New Image to Docker Hub
 Push to Docker Hub
-```sh
+```raw
 $ docker login -u jojozhuang
 Password:
 Login Succeeded
@@ -132,7 +132,7 @@ latest: digest: sha256:7294344f8f94cb4018368a8f3171b1052ebaac84f1776e5d5d4a544c1
 ### 5.3 Checking New Image on Docker Hub
 ![image](/public/images/devops/3112/dockerhub.png)  
 Now, you can use the following command to install this image.
-```sh
+```raw
 $ docker pull jojozhuang/jspmysql
 ```
 

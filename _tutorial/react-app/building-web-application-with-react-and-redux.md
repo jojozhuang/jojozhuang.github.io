@@ -16,13 +16,13 @@ In the posting [Building Web Application with React]({% link _tutorial/react-app
 ## 2. React Project
 ### 2.1 Source Files
 Download the source files from [Game Store(React) on GitHub](https://github.com/jojozhuang/game-store-react), open the project in Visual Studio Code.
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/game-store-react.git
 $ cd game-store-react
 ```
 ### 2.2 Installing Packages
 Install new packages `redux`, `redux-thunk` and `react-redux`.
-```sh
+```raw
 $ npm install redux -save
 $ npm install redux-thunk -save
 $ npm install react-redux -save
@@ -649,7 +649,7 @@ Following changes are made to this component.
 ### 2.8 Navigation in Actions
 Though we can define routes in components, we still need to navigate programmatically with javascript for some cases. To achieve this, we need to use history.  
 Install the `history` module.
-```sh
+```raw
 $ npm install history --save
 ```
 Create file `src/history.js`.
@@ -775,7 +775,7 @@ dispatch(fetchResoucesFail(Object.assign(error, {product: product})));
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
-```sh
+```raw
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.

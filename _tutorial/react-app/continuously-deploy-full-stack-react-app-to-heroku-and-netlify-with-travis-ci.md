@@ -13,7 +13,7 @@ tags: [Heroku, Travis CI, Netlify]
 ## 1. Full Stack Project
 ### 1.1 Source Files
 Download the source files for this full stack app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/code-editor-react.git
 ```
 ### 1.2 Deployment Target
@@ -28,7 +28,7 @@ Our target is to use the same GitHub repository to deploy both the client and se
 ## 2. Server Deployment
 ### 2.1 Start Command
 In 'package.json', notice there is a command named 'start', which is used to launch the express server.
-```sh
+```raw
 ...
   "scripts": {
     "start": "node src/server/index.js",
@@ -91,7 +91,7 @@ Access https://code-editor-api.herokuapp.com/api/file/java in browser, we see it
 ## 3. Client Deployment
 ### 3.1 Build Command
 In 'package.json', notice there is a command named 'build', which is used to compile the React app and save the output to 'dist' folder.
-```sh
+```raw
 ...
   "scripts": {
     ...

@@ -22,33 +22,33 @@ Go to https://devcenter.heroku.com/articles/heroku-cli#download-and-install to d
 ### 2.3 Getting Started
 First, read the official tutorial [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to get familiar with the basic functions of Heroku. Below are some of the highlights from the tutorial.  
 1) Log into Heroku
-```sh
+```raw
 $ heroku login
 Enter your Heroku credentials.
 Email: jojozhuang@gmail.com
 Password: **********
 ```
 2) Create Heroku App
-```sh
+```raw
 $ heroku create                     // no name, a random name will be assigned to the app
 $ heroku create online-judge-api // create app with the given name
 ```
 3) View logs
-```sh
+```raw
 $ heroku logs --tail
 ```
 4) Scale the app
-```sh
+```raw
 $ heroku ps //check how many dynos are running
 $ heroku ps:scale web=0 // scale down
 $ heroku ps:scale web=1 // scale up
 ```
 5) Run the app locally
-```sh
+```raw
 $ heroku local web // same as 'npm start'
 ```
 6) Heroku Console
-```sh
+```raw
 $ heroku run bash
 Running bash on ⬢ damp-springs-52045... up, run.3598 (Free)
 ~ $ ls
@@ -65,19 +65,19 @@ Steps:
 
 ### 3.1 Source Files
 Download the source files for this Angular app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/game-store-angular.git
 ```
 ### 3.2 Build
 Build and navigate to the output folder `dist`.
-```sh
+```raw
 $ cd GitHub/game-store-angular
 $ npm run build
 $ cd dist
 ```
 ### 3.3 Create App in Heroku
 Login to heroku.
-```sh
+```raw
 $ heroku login
 heroku: Press any key to open up the browser to login or q to exit:
 Opening browser to https://cli-auth.heroku.com/auth/browser/d849177a-d6f2-492e-88f5-8ad8ea019a90
@@ -85,25 +85,25 @@ Logging in... done
 Logged in as jojozhuang@gmail.com
 ```
 Create new app.
-```sh
+```raw
 $ heroku create game-store-angular
 Creating ⬢ game-store-angular... done
 https://game-store-angular.herokuapp.com/ | https://git.heroku.com/game-store-angular.git
 ```
 ### 3.4 Push Files to Heroku
 Use git commands to push files to Heroku.
-```sh
+```raw
 git init
 git add .
 git commit -m "initial"
 git push heroku master
 ```
 If above git push doesn't work, try again with the following command.
-```sh
+```raw
 git push --set-upstream https://git.heroku.com/text-compare-angular.git master
 ```
 You may get the following error.
-```sh
+```raw
 $ git push heroku master
 Counting objects: 100% (243/243), done.
 Delta compression using up to 8 threads
@@ -127,7 +127,7 @@ To https://git.heroku.com/game-store-angular.git
 error: failed to push some refs to 'https://git.heroku.com/game-store-angular.git'
 ```
 This is because Heroku is not able to determine the language of the app. Actually, it is just a static web site since we have compiled the Angular app. The solution is: rename './dist/index.html' to './dist/index.php'. Then, push again.
-```sh
+```raw
 mv index.html index.php
 git add index.html
 git add index.php

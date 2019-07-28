@@ -20,15 +20,15 @@ See the ip address, eg. '192.168.182.130'.
 ![image](/public/images/devops/3523/ipaddress.png){:width="500px"}
 
 Edit file `/etc/redis/redis.conf` in Ubuntu. Change bind from '127.0.0.1 ::1' to '0.0.0.0 ::1'. Or directly comment out.
-```sh
+```raw
 bind 127.0.0.1 ::1
 ```
 Restart redis server.
-```sh
+```raw
 sudo systemctl restart redis
 ```
 Check if redis can be access with non-local ip address.
-```sh
+```raw
 $ redis-cli -h 192.168.182.130
 192.168.182.130:6379>ping
 PONG
@@ -82,7 +82,7 @@ public class RedisExample {
 }
 ```
 Output.
-```sh
+```raw
 Connection to server successfully
 Server is running: PONG
 Stored string in redis:: Redis tutorial

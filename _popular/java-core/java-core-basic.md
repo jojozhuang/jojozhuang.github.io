@@ -210,7 +210,7 @@ for (int i = 0; i < intArr.length; i++) {
 }
 ```
 Output.
-```sh
+```raw
 Java for loop example - 6
 Java for loop example - 7
 Java for loop example - 8
@@ -263,7 +263,7 @@ while(true) {
 }
 ```
 Output.
-```sh
+```raw
 6
 7
 8
@@ -302,7 +302,7 @@ do {
 } while(true);
 ```
 Output.
-```sh
+```raw
 6
 7
 8

@@ -70,33 +70,33 @@ Go to https://devcenter.heroku.com/articles/heroku-cli#download-and-install to d
 ### 2.3 Getting Started
 First, read the official tutorial [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to get familiar with the basic functions of Heroku. Below are some of the highlights from the tutorial.  
 1) Log into Heroku
-```sh
+```raw
 $ heroku login
 Enter your Heroku credentials.
 Email: jojozhuang@gmail.com
 Password: **********
 ```
 2) Create Heroku App
-```sh
+```raw
 $ heroku create                   // no name, a random name will be assigned to the app
 $ heroku create code-editor-api   // create app with the given name
 ```
 3) View logs
-```sh
+```raw
 $ heroku logs --tail
 ```
 4) Scale the app
-```sh
+```raw
 $ heroku ps //check how many dynos are running
 $ heroku ps:scale web=0 // scale down
 $ heroku ps:scale web=1 // scale up
 ```
 5) Run the app locally
-```sh
+```raw
 $ heroku local web // same as 'npm start'
 ```
 6) Heroku Console
-```sh
+```raw
 $ heroku run bash
 Running bash on ⬢ damp-springs-52045... up, run.3598 (Free)
 ~ $ ls
@@ -107,18 +107,18 @@ Procfile  README.md  app.json  index.js  node_modules  package-lock.json  packag
 ## 3. Deployment
 ### 3.1 Server
 1) Clone Source Code
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/code-editor-react
 $ cd code-editor-react
 ```
 2) Create App on Heroku
-```sh
+```raw
 $ heroku create code-editor-api
 ```
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
 3) Push files to Heroku
-```sh
+```raw
 $ git push heroku master
 Counting objects: 7, done.
 Delta compression using up to 8 threads.
@@ -162,7 +162,7 @@ To https://git.heroku.com/code-editor-api.git
 error: failed to push some refs to 'https://git.heroku.com/code-editor-api.git'
 ```
 Error occurs, we need to decide whether to use `npm` or `yarn` to manage dependencies. Notice that when the React App was created, both yarn lock file `yarn.lock` and npm lock file `package-lock.json` were generated. I decide to use npm, so remove yarn.lock from git staging and try to push again.
-```sh
+```raw
 $ git rm yarn.lock
 rm 'yarn.lock'
 $ git commit -m "remove yarn.lock"
@@ -172,7 +172,7 @@ $ git commit -m "remove yarn.lock"
 $ git push heroku master
 ```
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
-```sh
+```raw
 $ git remote rm heroku
 $ heroku git:remote -a code-editor-api
 ```
@@ -184,17 +184,17 @@ If we access https://code-editor-api.herokuapp.com/api/file/Java, it returns som
 
 ### 3.2 Client
 1) Build react app.
-```sh
+```raw
 $ npm run build
 ```
 The React app is built and exported to dist folder. All are static files(html, js and images).
 ![image](/public/images/frontend/2644/build.png){:width="800px"}  
 2) Create App on Heroku
-```sh
+```raw
 $ heroku create code-editor
 ```
 3) Create git repository.
-```sh
+```raw
 $ cd dist
 $ git init
 $ git add .
@@ -202,7 +202,7 @@ $ git commit -m "initial"
 $ git push heroku master
 ```
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
-```sh
+```raw
 $ git remote rm heroku
 $ heroku git:remote -a code-editor
 ```

@@ -81,7 +81,7 @@ The container is started. And you see that Access URL, which is the public addre
 ![image](/public/images/devops/3102/mysqlstarted.png)  
 ### 6.1 Starting Terminal in Container
 To open the container terminal, we can type the following command in docker terminal.
-```sh
+```raw
 $ docker exec -i -t <container> sh
 ```
 In Kitematic, we just need to click the 'EXEC' button on the top, which is more convenient.

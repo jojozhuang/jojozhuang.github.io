@@ -476,7 +476,7 @@ POST /api/upload          | Upload an image     | POST [http://localhost:8080/ap
 
 ## 5. Running and Testing
 Run this spring boot project with maven.
-```sh
+```raw
 $ mvn spring-boot:run
 ```
 Use Postman to access http://localhost:8080/ for testing. Create new collection named 'RESTfulSpringBoot', all requests will be saved to this collection.

@@ -13,7 +13,7 @@ tags: [Heroku, Travis CI]
 ## 1. Angular Project
 ### 1.1 Source Files
 Download the source files for this Angular app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/game-store-angular.git
 ```
 ### 1.2 Express Server
@@ -62,7 +62,7 @@ If the build is finished successfully, your site is deployed to GitHub page.
 ![image](/public/images/frontend/2766/travis_deploy.png)  
 
 If you see below error, remove the cache settings in traivs.yml.
-```sh
+```raw
 The command "eval npm ci  " failed 3 times.
 The command "npm ci " failed and exited with 127 during .
 ```

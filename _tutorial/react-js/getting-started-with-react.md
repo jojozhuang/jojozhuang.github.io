@@ -15,11 +15,11 @@ tags: [React]
 
 ## 2. Creating React App
 Install 'create-react-app' globally.
-```sh
+```raw
 $ npm install create-react-app -g
 ```
 Use 'create-react-app' to create new React application named 'react-app'
-```sh
+```raw
 $ create-react-app react-app
 ```
 Open 'react-app' in Visual Studio Code.
@@ -27,7 +27,7 @@ Open 'react-app' in Visual Studio Code.
 
 ## 3. Serving the Application
 Start 'react-app' through npm.
-```sh
+```raw
 $ npm start
 ```
 ![image](/public/images/frontend/2601/npmstart.png){:width="600px"}

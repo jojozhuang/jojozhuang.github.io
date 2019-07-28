@@ -13,7 +13,7 @@ tags: [Angular, Express, Heroku]
 ## 1. Angular Project
 ### 1.1 Source Files
 Download the source files for this Angular app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/game-store-angular.git
 ```
 ### 1.2 Post Install
@@ -54,7 +54,7 @@ Later on, we’re going to create a simple Node server to actually serve the app
 ```
 ### 1.6 Create an Express Server
 Install express.
-```sh
+```raw
 npm install --save express
 ```
 Create `server.js` with following content.
@@ -111,21 +111,21 @@ app.get('/*', function(req, res) {
 
 ## 2. Deployment
 Switch to root directory of the app.
-```sh
+```raw
 cd game-store-angular/
 ```
 Create new app.
-```sh
+```raw
 $ heroku create game-store-angular
 Creating ⬢ game-store-angular... done
 https://game-store-angular.herokuapp.com/ | https://git.heroku.com/game-store-angular.git
 ```
 Or connect to the existing app.
-```sh
+```raw
 heroku git:remote -a game-store-angular
 ```
 Then push all files to heroku.
-```sh
+```raw
 $ git push heroku master
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.

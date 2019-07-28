@@ -93,7 +93,7 @@ This is a directive for setting the CSS styles of an element.
 ## 2. Creating Directives
 Directives are very useful when reused to add common behavior to user interfaces. They’re often placed into shared modules so they can be reused across applications.
 ### 2.1 Generating New Directive
-```sh
+```raw
 $ ng g directive sizer
 ```
 ### 2.2 Defining Behavior
@@ -165,7 +165,7 @@ class MyDirective {
 }
 ```
 ### 4.1 Creating a Directive with Events
-```sh
+```raw
 $ ng g directive hoverer
 ```
 Edit hoverer.directive.ts, change it to the following:

@@ -104,7 +104,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 Message Server is updating message: Hello from Rong!
 Johnny received message from server: Hello from Rong!
 George received message from server: Hello from Rong!

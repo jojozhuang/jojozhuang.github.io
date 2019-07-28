@@ -48,7 +48,7 @@ executor.on("close", output => {
 });
 ```
 Run in terminal.
-```sh
+```raw
 $ node SolutionTester.js 1 0 -1 -1
 ```
 

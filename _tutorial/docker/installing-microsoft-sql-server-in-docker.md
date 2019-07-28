@@ -40,7 +40,7 @@ Now, we are in the bash shell for sql server.
 ## 4. Creating SQL Server Container in Command Line
 ### 4.1 Creating SQL Server Container
 Download mssql-server-linux image and create container for it.
-```sh
+```raw
 $ docker pull microsoft/mssql-server-linux
 $ docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Abc%123456789' -p 1401:1433 --name mssql -d microsoft/mssql-server-linux
 ```
@@ -52,19 +52,19 @@ What is this command doing?
 * Expose 1433 and map to 1401 for outside world to connect to this SQL Server database.
 
 Check the running containers with following command.
-```sh
+```raw
 $ docker ps -a
 ```
 ![image](/public/images/devops/3132/createcontainer.png)  
 In Kitematic, we also see a new container.
 ![image](/public/images/devops/3132/containercreated2.png)  
 If the container is not launched properly, check logs with following command to get some clues.
-```sh
+```raw
 $ docker logs <containerid>
 ```
 ### 4.2 Interactive Shell
 Start an interactive bash shell with following command.
-```sh
+```raw
 docker exec -it mssql "bash"
 ```
 ![image](/public/images/devops/3132/terminalmssql2.png){:width="600px"}  
@@ -72,7 +72,7 @@ docker exec -it mssql "bash"
 ## 5. Using SQL Server
 ### 5.1 Connecting SQL Server
 Inside the interactive shell, connect SQL Server locally with `sqlcmd`.
-```sh
+```raw
 $ /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Abc%123456789'
 ```
 ### 5.2 Creating Database
@@ -128,18 +128,18 @@ SELECT * FROM Inventory;
 ## 7. Others
 ### 7.1 Restoring Database with Backup File
 The following command copies the backup file named `ShoeStore.bak` to the root directory of SQLServer container named `mssql`.
-```sh
+```raw
 $ docker cp ShoeStore.bak mssql:/ShoeStore.bak
 ```
 
 Go to interactive bash shell and connect to SQL Server.
-```sh
+```raw
 $ docker exec -it mssql "bash"
 $ /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Abc%123456789'
 ```
 
 Use the following sql script to restore the database.
-```sh
+```raw
 RESTORE DATABASE ShoeStore
 FROM DISK = '/ShoeStore.bak'
 WITH MOVE 'ShoeStore' TO '/var/opt/mssql/data/ShoeStore.mdf',

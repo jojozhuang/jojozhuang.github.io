@@ -26,7 +26,7 @@ This means that if you need to use Bootstrap version 3, then ngx-bootstrap is yo
 
 ## 3. Installing ngx-bootstrap
 Run the following command to install ngx-bootstrap and Bootstrap 3.3.7. If you want to use Bootstrap 4, do not specify the version.
-```sh
+```raw
 $ npm install --save ngx-bootstrap
 $ npm install --save bootstrap@3.3.7
 ```

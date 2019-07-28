@@ -13,12 +13,12 @@ tags: [Azure, FTP, FileZilla]
 ## 1. React App
 ### 1.1 Source Code
 Get the source code of Game Store app from GitHub.
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/game-store-react.git
 $ cd game-store-react
 ```
 Compile the app.
-```sh
+```raw
 $ npm run build
 ```
 The compiled files are put into 'dist' folder. Please ignore file '\_redirects', it's used to solve the client routing issue when deploying this app to Netlify. We will encounter the similar issue on Azure, see below.

@@ -17,21 +17,21 @@ tags: [Angular4, Angular CLI]
 
 ## 2. Installing Angular CLI
 Install the Angular CLI globally.
-```sh
+```raw
 $ npm install -g @angular/cli
 ```
 Check CLI version.
-```sh
+```raw
 $ ng --version
 ```
 Update Angular CLI.
-```sh
+```raw
 $ npm update -g @angular/cli
 ```
 
 ## 3. Creating New Project
 Generate a new project and skeleton application named 'helloworld' by running the following commands:
-```sh
+```raw
 $ ng new helloworld
 ```
 
@@ -40,7 +40,7 @@ Open this project in Visual Studio Code.
 
 ## 4. Serving the Application
 Start the app, server it in web server.
-```sh
+```raw
 $ cd helloworld
 $ ng serve
 ```

@@ -301,7 +301,7 @@ sequenceDiagram
 </div>
 ### 2.3 Messages
 Messages can be of two displayed either solid or with a dotted line.
-```sh
+```raw
 [Actor][Arrow][Actor]:Message text
 ```
 There are six types of arrows currently supported:
@@ -359,7 +359,7 @@ sequenceDiagram
 </div>
 ### 2.5 Notes
 Add notes to a sequence diagram by the notation `Note`.
-```sh
+```raw
 Note [ right of | left of | over ] [Actor]: Text in note content
 ```
 1) Right Side
@@ -408,7 +408,7 @@ sequenceDiagram
 </div>
 ### 2.6 Loops
 Express loops in a sequence diagram by the notation `loop`.
-```sh
+```raw
 loop Loop text
 ... statements ...
 end

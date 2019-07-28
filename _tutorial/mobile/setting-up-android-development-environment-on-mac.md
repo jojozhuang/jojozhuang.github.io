@@ -24,11 +24,11 @@ After downloading finish, double click on the installer. Follow the wizard to in
 ![image](/public/images/frontend/2321/jdkinstall.png){:width="600px"}  
 Finally, JDK is installed to /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/.
 ### 2.3 Checking Java Version
-```sh
+```raw
 $ java -version
 ```
 You should be able to see the java information like below.
-```sh
+```raw
 java version "1.8.0_151"
 Java(TM) SE Runtime Environment (build 1.8.0_151-b12)
 Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)

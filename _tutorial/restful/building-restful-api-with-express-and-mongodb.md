@@ -64,14 +64,14 @@ We will use the following three packages.
 * [body-parser](https://github.com/expressjs/body-parser): It's a Node.js body parsing middleware.
 
 ### 3.3 Creating Project
-```sh
+```raw
 mkdir RESTfulExpressMongoDB
 cd RESTfulExpressMongoDB
 npm init
 npm install --save express mongoose body-parser
 ```
 I also highly recommend installing `nodemon` as a dev dependency. [nodemon](https://nodemon.io/) is a simple little package that automatically restarts your server when files change.
-```sh
+```raw
 npm install --save-dev nodemon
 ```
 You can then add the following script to package.json. We start our server with 'nodemon server' instead of 'node server'.
@@ -265,7 +265,7 @@ The final structure of the express server project.
 
 ## 4. Running and Testing
 Start the server and begin to test with [Postman](https://www.getpostman.com/).
-```sh
+```raw
 $ npm start
 ```
 ### 4.1 Get All Products

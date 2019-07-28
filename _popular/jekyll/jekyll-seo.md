@@ -14,7 +14,7 @@ tags: [SEO]
 Search engine optimization (`SEO`) is the process of increasing the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine.
 ### 1.1 robots.txt
 Avoid web crawler to visit specific content, eg. /note.
-```sh
+```raw
 User-agent: *
 Disallow: /note/
 ```

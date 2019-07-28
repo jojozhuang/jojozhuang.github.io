@@ -22,37 +22,37 @@ Install the following tools first.
 
 ### 2.2 Installing Cordova
 Install and check version.
-```sh
+```raw
 npm install -g cordova
 cordova -v
 7.1.0
 ```
 ### 2.3 Using Cordova
 Create cordova app.
-```sh
+```raw
 cordova create MyApp
 ```
 Add platforms.
-```sh
+```raw
 cordova platform add browser
 cordova platform add ios
 cordova platform add android
 ```
 Remove platform.
-```sh
+```raw
 cordova platform rm browser
 cordova platform rm ios
 cordova platform rm android
 ```
 Build and run.
-```sh
+```raw
 cordova build android
 cordova emulate android
 cordova run android
 ```
 ## 3. Cordova Projects
 ### 3.1 Browser
-```sh
+```raw
 cordova platform add browser
 cordova run browser
 ```
@@ -62,20 +62,20 @@ Access http://localhost:8000/index.html in web browser.
 Install Xcode, then set command line tools. In Xcode, go to Preferences > Location > Command Line Tools. It's blank by default. Select Xcode version.
 ![image](/public/images/frontend/2341/xcode_commandlinetools.png){:width="800px"}
 Install xcode-select.
-```sh
+```raw
 $ xcode-select --install
 ```
 Install deployment tools.
-```sh
+```raw
 npm install -g ios-deploy
 ```
 Compile for iOS.
-```sh
+```raw
 cordova platform add ios
 cordova build ios
 ```
 Deploying to Simulator. Open the workspace file (platforms/ios/HelloWorld.xcworkspace) from Xcode, or from the command line:
-```sh
+```raw
 open ./platforms/ios/HelloCordova.xcworkspace
 ```
 ![image](/public/images/frontend/2341/xcode_project.png)
@@ -85,16 +85,16 @@ In Xcode, click run button to start simulator.
 Install JDK, Android SDK and AVD first.
 
 Compile android.
-```sh
+```raw
 cordova platform add android
 cordova build android
 ```
 If you get 'Error: spawn EACCES' error. Execute the following command to set the permissions for gradle. Then, run build again.
-```sh
+```raw
 chmod 777 /Applications/Android\ Studio.app/Contents/gradle/gradle-4.1/bin/gradle
 ```
 Open Android Studio, launch Emulator, then run.
-```sh
+```raw
 cordova run android
 ```
 ![image](/public/images/frontend/2341/run_android.png){:width="400px"}  

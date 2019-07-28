@@ -31,19 +31,19 @@ I'm using VirtualBox on my MacBook to install Ubuntu as virtual machine, so the 
   2) Install  
   In terminal, navigate to the folder which contains the downloaded file, run  
 
-```sh
+```raw
 $ sudo dpkg -i elasticsearch-5.5.0.deb
 ```
 
   When finished, Elasticsearch is installed into /usr/share/elasticsearch/. And the configuration files are in /etc/elasticsearch.  
   You can edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot access /etc/elasticsearch, run
 
-```shell
+```rawell
 $ sudo chmod -R 755 /etc/elasticsearch
 ```
 
   3) Commands for ES  
-```shell
+```rawell
 $ sudo service elasticsearch start   //start elasticsearch  
 $ sudo service elasticsearch status  //check status  
 $ sudo service elasticsearch stop    //stop elasticsearch
@@ -77,18 +77,18 @@ $ curl "http://localhost:9200"
 Go to [https://www.elastic.co/downloads](https://www.elastic.co/downloads), click 'Download' for Kibana, choose DEB 64-BIT version.  
 2) Install  
 In terminal, navigate to the folder which contains the downloaded file, run  
-```sh
+```raw
 $ sudo dpkg -i kibana-5.5.0-amd64.deb  
 ```
 3) Commands for Kibana
-```sh
+```raw
 $ sudo service kibana start   //start kibana  
 $ sudo service kibana status  //check status  
 $ sudo service kibana stop    //stop kibana  
 ```
 4) Kibana configuration - Change log file (Optional)  
 a. Ceate log file and grant write permission, the log file is /var/log/kibana/log.
-```sh
+```raw
 $ cd /var/log/
 $ mkdir kibana
 $ cd kibana
@@ -97,7 +97,7 @@ $ sudo chmod 777 log
 ```  
 
 b. Specify a file where Kibana stores log output
-```sh
+```raw
 $ sudo service kibana stop           //stop kibana  
 $ sudo nano /etc/kibana/kibana.yml   //open the configuration file
   logging.dest: /var/log/kibana/log  //set new file path for the log file
@@ -108,7 +108,7 @@ a. Set Network connection for guest(Ubuntu)
 * [Accessing your Virtualbox Guest from your Host OS](https://2buntu.com/articles/1513/accessing-your-virtualbox-guest-from-your-host-os/)  
 
 b. Set guest's IP address to server.host for kibana
-```sh
+```raw
 $ ifconfig                          //find Ubuntu\'s IP address, eg 192.168.56.101, specified in DHCP server.
 $ sudo service kibana stop          //stop kibana  
 $ sudo nano /etc/kibana/kibana.yml  //open kibana configuration file

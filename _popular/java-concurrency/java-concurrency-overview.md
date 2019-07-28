@@ -335,7 +335,7 @@ public class ThreadLocalExample {
 }
 ```
 The two output numbers will probably be different.
-```sh
+```raw
 68
 72
 ```
@@ -456,7 +456,7 @@ public static void main(String[] args) throws Exception
   }
 ```
 Output:
-```sh
+```raw
 4
 2
 3
@@ -760,7 +760,7 @@ public class Tester implements Runnable
 }
 ```
 Output.
-```sh
+```raw
 Number of parties required to trip the barrier = 3
 Product of Computation1 = 0
 Sum of Computation2 = 0
@@ -981,7 +981,7 @@ public class SemaphoreDemo
 }
 ```
 Output.
-```sh
+```raw
 Starting A
 Starting B
 B is waiting for a permit.

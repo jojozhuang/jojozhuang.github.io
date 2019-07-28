@@ -61,7 +61,7 @@ private static void constructList() {
 }
 ```
 Output.
-```sh
+```raw
 Construct list: [5, 9, 4, 2]
 Construct list with another list: [5, 9, 4, 2]
 Construct list with tree set: [2, 4, 5, 9]
@@ -101,7 +101,7 @@ private static void commonOperations() {
 }
 ```
 Output.
-```sh
+```raw
 Common operations - add : [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Insert 12 at index 0 : [12, 0, 1, 2, 3, 4, 5, 6, 7, 8]
 Insert 9 at index 5 : [12, 0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
@@ -124,7 +124,7 @@ private static void sortList() {
 }
 ```
 Output.
-```sh
+```raw
 Sort list in ascending order: [1, 2, 3]
 Sort list in descending order: [3, 2, 1]
 ```
@@ -167,7 +167,7 @@ private static void traverseList() {
 }
 ```
 Output.
-```sh
+```raw
 Traverse List(basic for): processing - Apple
 Traverse List(basic for): processing - Banana
 Traverse List(basic for): processing - Orange
@@ -246,7 +246,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Remove element: processing - Apple
 Remove element: processing - Banana
 Remove element: processing - Orange
@@ -283,7 +283,7 @@ private static void constructList() {
 }
 ```
 Output.
-```sh
+```raw
 Construct list: [5, 9, 4, 4, 2]
 Construct list with another list: [5, 9, 4, 4, 2]
 Construct list with tree set: [2, 4, 5, 9]
@@ -320,7 +320,7 @@ private static void commonOperations() {
 }
 ```
 Output.
-```sh
+```raw
 Common operations - add : [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Insert 12 at index 0 : [12, 0, 1, 2, 3, 4, 5, 6, 7, 8]
 Insert 9 at index 5 : [12, 0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
@@ -343,7 +343,7 @@ private static void sortList() {
 }
 ```
 Output.
-```sh
+```raw
 Sort list in ascending order: [1, 2, 3]
 Sort list in descending order: [3, 2, 1]
 ```
@@ -378,7 +378,7 @@ private static void traverseList() {
 }
 ```
 Output.
-```sh
+```raw
 Traverse List(for each): processing - Apple
 Traverse List(for each): processing - Banana
 Traverse List(for each): processing - Orange
@@ -451,7 +451,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Remove element: processing - Apple
 Remove element: processing - Banana
 Remove element: processing - Orange

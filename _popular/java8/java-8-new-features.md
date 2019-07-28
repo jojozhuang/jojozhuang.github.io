@@ -27,7 +27,7 @@ New Features:
 Lambda expressions are introduced in Java 8 and are touted to be the biggest feature of Java 8. Lambda expression facilitates functional programming, and simplifies the development a lot.
 ### 2.1 Syntax
 A lambda expression is characterized by the following syntax.
-```sh
+```raw
 parameter -> expression body
 ```
 * `Optional type declaration` − No need to declare the type of a parameter. The compiler can inference the same from the value of the parameter.
@@ -85,7 +85,7 @@ public static void main(String args[]) {
 }
 ```
 Output.
-```sh
+```raw
 10 + 5 = 15
 10 - 5 = 5
 10 x 5 = 50
@@ -112,7 +112,7 @@ public class MethodReferencesExample {
 
 ```
 Output.
-```sh
+```raw
 1
 2
 3
@@ -175,7 +175,7 @@ public class FunctionalInterfaceExample {
 }
 ```
 Output.
-```sh
+```raw
 Print all numbers: 1,2,3,4,5,6,7,8,9,
 Print even numbers: 2,4,6,8,
 Print numbers greater than 3: 4,5,6,7,8,9,
@@ -220,7 +220,7 @@ class Car implements Vehicle, FourWheeler {
 }
 ```
 Output.
-```sh
+```raw
 I am a vehicle!
 I am a four wheeler!
 Blowing horn!!!
@@ -290,7 +290,7 @@ private static void streamMethods() {
 }
 ```
 Output.
-```sh
+```raw
 forEach
 3
 7
@@ -324,7 +324,7 @@ private static void pipeline() {
 }
 ```
 Output.
-```sh
+```raw
 pipelining: [25, 36, 49]
 ```
 ### 6.5 Collectors
@@ -343,7 +343,7 @@ private static void collectors() {
 }
 ```
 Output.
-```sh
+```raw
 Filtered List: [Johnny, Peter, Sean, George]
 Merged String: Johnny, Peter, Sean, George
 ```
@@ -362,7 +362,7 @@ private static void statistics() {
 }
 ```
 Output.
-```sh
+```raw
 Maximum number in List : 9
 Minimum number in List : 1
 Sum of all numbers : 41
@@ -404,7 +404,7 @@ class OptionalSum {
 }
 ```
 Output.
-```sh
+```raw
 First parameter is present: false
 Second parameter is present: true
 10
@@ -421,11 +421,11 @@ Create a javascript file name 'sample.js' as follows.
 print('Hello World from javascript!');
 ```
 Use jjs to execute this js file.
-```sh
+```raw
 jjs sample.js
 ```
 Output.
-```sh
+```raw
 Hello World from javascript!
 ```
 ### 8.2 Calling JavaScript from Java
@@ -455,7 +455,7 @@ public class NashornExample {
 }
 ```
 Output.
-```sh
+```raw
 Johnny
 12
 ```
@@ -476,7 +476,7 @@ var result = calculate(568000000000000000023,13.9);
 print(result);
 ```
 Run it with jjs.
-```sh
+```raw
 > jjs calljava.js
 78952000000000002017.94
 ```
@@ -531,7 +531,7 @@ private static void testLocalDateTime() {
 }
 ```
 Output.
-```sh
+```raw
 Current DateTime: 2019-04-14T10:15:37.325
 Current Date: 2019-04-14
 Month: APRIL, day: 14, seconds: 37
@@ -558,7 +558,7 @@ public static void testZonedDateTime() {
 }
 ```
 Output.
-```sh
+```raw
 Zone DateTime: 2007-12-03T10:15:30+08:00[Asia/Shanghai]
 Zone Id: Asia/Shanghai
 ZoneId: Europe/Paris
@@ -591,7 +591,7 @@ public static void testChromoUnits() {
 }
 ```
 Output.
-```sh
+```raw
 Current date: 2019-04-14
 Next week: 2019-04-21
 Next month: 2019-05-14
@@ -630,7 +630,7 @@ public static void testDuration() {
 }
 ```
 Output.
-```sh
+```raw
 Current date: 2019-04-14
 Next month: 2019-05-14
 Period: P-1M
@@ -657,7 +657,7 @@ public static void testAdjusters() {
 }
 ```
 Output.
-```sh
+```raw
 Current date: 2019-04-14
 Next Tuesday on : 2019-04-16
 Second Saturday on : 2019-04-13
@@ -683,7 +683,7 @@ public static void testBackwardCompatability() {
 }
 ```
 Output.
-```sh
+```raw
 Current date: Sun Apr 14 10:30:19 PDT 2019
 Local date: 2019-04-14T10:30:19.572
 Zoned date: 2019-04-14T10:30:19.572-07:00[America/Los_Angeles]
@@ -731,7 +731,7 @@ public static void main(String args[]) {
 }
 ```
 Output.
-```sh
+```raw
 Original String: rongzhuang.me?java8
 Base64 Encoded String (Basic) :am9qb3podWFuZy5naXRodWIuaW8/amF2YTg=
 Decoded String: rongzhuang.me?java8

@@ -31,24 +31,24 @@ https://github.com/npm/npm/issues/16991
 *******************************************************************************
 ```
 Install Yarn.
-```sh
+```raw
 brew install yarn
 ```
 
 ## 2. React Project
 ### 2.1 React Native CLI
 Install 'create-react-native-app' globally.
-```sh
+```raw
 yarn global add create-react-native-app
 //npm install -g create-react-native-app
 ```
 ### 2.2 Creating New Project
 Create new app named `GameStoreReactNative`.
-```sh
+```raw
 $ create-react-native-app GameStoreReactNative
 ```
 Start app, you will get following error.
-```sh
+```raw
 $ yarn start
 yarn run v1.3.2
 $ react-native-scripts start
@@ -61,7 +61,7 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 Follow the instruction and run sysctl, and try again.
-```sh
+```raw
 sudo sysctl -w kern.maxfiles=5242880
 sudo sysctl -w kern.maxfilesperproc=524288
 yarn start
@@ -74,7 +74,7 @@ Note: start your desired simulator before running it with expo and expo will det
 
 ### 2.2 Installing Packages
 Install native-base and mobx.
-```sh
+```raw
 $ yarn add native-base --save
 $ yarn add mobx --save
 $ yarn add react-navigation --save

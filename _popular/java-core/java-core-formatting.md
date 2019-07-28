@@ -37,7 +37,7 @@ public static void formatString() {
 }
 ```
 Output.
-```sh
+```raw
 Format String:
 Physics
         Physics
@@ -81,7 +81,7 @@ public static void formatInt() {
 }
 ```
 Output.
-```sh
+```raw
 Format Int:
 123456
 +123456
@@ -123,7 +123,7 @@ public static void formatDouble() {
 }
 ```
 Output.
-```sh
+```raw
 Format Double:
 1234.567000
 +1234.567000

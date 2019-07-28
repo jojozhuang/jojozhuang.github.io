@@ -109,7 +109,7 @@ public static void main(String[] args) {
 }
 ```
 Output.
-```sh
+```raw
 Shallow copy example:
 Original List = [Johnny, Sean]
 Array from ArrayList = [Johnny, Sean]

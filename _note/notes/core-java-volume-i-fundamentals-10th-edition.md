@@ -71,7 +71,7 @@ Update                   | u       | Oracle’s term for a bug  x release
 NetBeans                 | -       | Oracle’s integrated development environment
 
 Building and Running Applets
-```sh
+```raw
 javac RoadApplet.java
 jar cvfm RoadApplet.jar RoadApplet.mf *.class
 appletviewer RoadApplet.html
@@ -256,7 +256,7 @@ public class DoubleLoop {
 }
 ```
 See the below output that before x gets bigger than 2. `x` jumps from `0.9999999999999999` to `1.0999999999999999`. It never equals to `1.0`.
-```sh
+```raw
 0.0
 0.1
 0.2
@@ -772,7 +772,7 @@ public class JdkProxyDemo {
 }
 ```
 Output
-```sh
+```raw
 BEFORE
 Hello
 AFTER
@@ -899,7 +899,7 @@ public class Finally {
 }
 ```
 The output:
-```sh
+```raw
 res=0
 res2=4
 res3=4
@@ -933,7 +933,7 @@ assert x >= 0;
 double y = Math.sqrt(x);
 ```
 Enable/Disable assertion
-```sh
+```raw
 java -enableassertions MyApp  // enable MyApp
 java -ea:MyClass -ea:com.mycompany.mylib... MyApp // enable MyClass, and classes in package com.mycompany.mylib
 java -ea:... -da:MyClass MyApp // disable MyClass
@@ -1080,7 +1080,7 @@ public static void main(String[] args)
 }
 ```
 If you call the add method multiple times, the elements are simply added in the order in which you supplied them. They are all added in turn before the current iterator position(eg. 'Bob').
-```sh
+```raw
 Amy
 Juliet
 John
@@ -1124,7 +1124,7 @@ while (!pq.isEmpty()) {
 }
 ```
 output
-```sh
+```raw
 Iterating over elements...
 1815-12-10
 1906-12-09
@@ -1289,7 +1289,7 @@ private static void testAccessOrder() {
 }
 ```
 Output:
-```sh
+```raw
 Insertion Order of LinkedHashMap...
 key=1, value=Peter
 key=2, value=Mike
@@ -1388,7 +1388,7 @@ numList2.removeAll(Collections.singleton("3"));
 System.out.println("numList2 after removal of 3 with singleton: " + numList2);
 ```
 Output:
-```sh
+```raw
 Original: [1, 2, 4, 2, 1, 2, 3, 1, 3, 4, 3, 3]
 numList after removal of 1 [2, 4, 2, 1, 2, 3, 1, 3, 4, 3, 3]
 numList after removal of 1  [2, 4, 2, 2, 3, 1, 3, 4, 3, 3]
@@ -1602,7 +1602,7 @@ private static String toBinaryString(BitSet bi) {
 }
 ```
 Output
-```sh
+```raw
 Initial pattern in bits1:
 0101010101010101,{0, 2, 4, 6, 8, 10, 12, 14}
 Initial pattern in bits2:
@@ -1624,7 +1624,7 @@ Skipped.
 ### 13.1 JAR Files
 A Java Archive(JAR) file can contain both class files and other file types such as image and sound files. Moreover, JAR files are compressed, using the familiar ZIP compression format.
 #### 13.1.1 Creating JAR files
-```sh
+```raw
 // syntax
 jar options File1 File2 . . .
 // Example
@@ -1634,20 +1634,20 @@ The options are similar to the options of the UNIX `tar` command.
 #### 13.1.2 The Manifest
 MANIFEST.MF, META-INF subdirectory, main section  
 Make a new JAR file with a manifest.
-```sh
+```raw
 jar cfm MyArchive.jar manifest.mf com/mycompany/mypkg/*.class
 ```
 #### 13.1.3 Executable JAR Files
 Create an executable JAR file. Need to add `e` option and specify the entry point main class.
-```sh
+```raw
 jar cvfe MyProgram.jar com.mycompany.mypkg.MainAppClass com/mycompany/mypkg/*.class
 ```
 Or, use manifest file.
-```sh
+```raw
 Main-Class: com.mycompany.mypkg.MainAppClass
 ```
 Start the program.
-```sh
+```raw
 java -jar MyProgram.jar
 ```
 #### 13.1.4 Resources  
@@ -1662,7 +1662,7 @@ InputStream stream = ResourceTest.class.getResourceAsStream("about.txt");
 Scanner in = new Scanner(stream, "UTF-8");
 ```
 Pacakge.
-```sh
+```raw
 jar cvfm ResourceTest.jar resource/ResourceTest.mf resource/*.class resource/*.gif resource/*.txt
 ```
 #### 13.1.5 Sealing
@@ -1671,7 +1671,7 @@ Name: com/mycompany/util/
 Sealed: true
 ```
 then, package.
-```sh
+```raw
 jar cvfm MyArchive.jar manifest.mf *.class
 ```
 ### 13.2 Storage of Application Preferences
@@ -2186,7 +2186,7 @@ class RunnableThread implements Runnable {
 }
 ```
 Output:
-```sh
+```raw
 run:0
 run:1
 run:2

@@ -12,7 +12,7 @@ tags: [Netlify]
 
 ## 1. Game Store Angular
 Get source code.
-```sh
+```raw
 git clone https://github.com/jojozhuang/game-store-angular.git
 ```
 ## 2. Angular Project
@@ -70,7 +70,7 @@ Access https://game-store-angular.netlify.com/ in browser, and click the 'List' 
 However, when trying to create a new product, I got this 'post() map' error.
 ![image](/public/images/frontend/2762/maperror.png)
 And similar error occurs for put and delete when trying to update and delete product.
-```sh
+```raw
 ERROR TypeError: this.http.post(...).map is not a function
 ERROR TypeError: this.http.put(...).map is not a function
 ERROR TypeError: this.http.delete(...).map is not a function

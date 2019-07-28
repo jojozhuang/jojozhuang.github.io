@@ -227,7 +227,7 @@ public class RandomIdGeneratorTest {
 }
 ```
 Output.
-```sh
+```raw
 kXyqhd
 dj2hRs
 HuuCar

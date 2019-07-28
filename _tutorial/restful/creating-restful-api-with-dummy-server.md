@@ -17,17 +17,17 @@ When developing web application, we properly need RESTful APIs to provide some J
 
 ## 2. Installing JSON Server
 Use npm to install json server. Option '-g' makes it installed globally.
-```sh
+```raw
 $ npm install -g json-server
 ```
 
 Create a folder in your local machine.
-```sh
+```raw
 $ mkdir dummyserver
 $ cd dummyserver
 ```
 Then, create a file named 'products.json' with json object.
-```sh
+```raw
 $ touch products.json
 ```
 ```json
@@ -57,12 +57,12 @@ $ touch products.json
 
 ## 3. Running JSON Server
 Start the dummy server.
-```sh
+```raw
 $ json-server --watch products.json
 ```
 ![image](/public/images/frontend/2211/defaultport.png){:width="600px"}  
 You can start JSON Server on other ports with the --port option.
-```sh
+```raw
 $ json-server --watch products.json --port 5000
 ```
 ![image](/public/images/frontend/2211/differentport.png){:width="600px"}  
@@ -85,7 +85,7 @@ Create a routes.json file under the root folder, add the following route.
 }
 ```
 Start JSON Server with --routes option.
-```sh
+```raw
 $ json-server --watch products.json --port 5000 --routes routes.json
 ```
 ![image](/public/images/frontend/2211/routes.png){:width="600px"}  

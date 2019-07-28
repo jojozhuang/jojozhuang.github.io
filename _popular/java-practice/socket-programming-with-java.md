@@ -106,18 +106,18 @@ class TCPClient {
 ```
 ### 2.3 Compiling
 Open terminal, navigate to the folder where these two java files locate. Use `javac` to compile them.
-```sh
+```raw
 $ javac TCPServer.java
 $ javac TCPClient.java
 ```
 ### 2.4 Testing
 Launch TCP server with following command.
-```sh
+```raw
 $ java TCPServer
 TCP Server is starting up, listening at port 8722.
 ```
 Open another terminal, launch TCP client.
-```sh
+```raw
 $ java TCPClient
 TCP Client launched, using server: localhost, Port: 8722
 Enter any string now, (quit) to end:
@@ -212,18 +212,18 @@ class UDPClient {
 ```
 ### 3.3 Compiling
 Open terminal, navigate to the folder where these two java files locate. Use `javac` to compile them.
-```sh
+```raw
 $ javac UDPServer.java
 $ javac UDPClient.java
 ```
 ### 3.4 Testing
 Launch UDP server with following command.
-```sh
+```raw
 $ java UDPServer
 UDP Server is starting up, waiting for request...
 ```
 Open another terminal, launch UDP client.
-```sh
+```raw
 $ java UDPClient
 UDP Client launched, using server: localhost, Port: 8722
 Enter any string now, (quit) to end:

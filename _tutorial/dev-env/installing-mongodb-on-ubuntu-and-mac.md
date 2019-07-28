@@ -21,62 +21,62 @@ A document is a set of key-value pairs. Documents have dynamic schema. Dynamic s
 
 ## 2. Installing MongoDB on Ubuntu
 1) Import the MongoDB public GPG Key.
-```sh
+```raw
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 2) Create a list file for MongoDB.
-```sh
+```raw
 $ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
 ```
 3) Reload local package database.
-```sh
+```raw
 $ sudo apt-get update
 ```
 4) Install the MongoDB packages.
-```sh
+```raw
 $ sudo apt-get install -y mongodb-org
 ```
 5) Check MongoDB version.
-```sh
+```raw
 $ mongo -version
 ```
 ![image](/public/images/devops/2132/versionubuntu.png){:width="600px"}  
 6) Start MongoDB service and using it with `mongo` command.
-```sh
+```raw
 $ sudo service mongod start
 $ mongo
 >
 ```
 7) Generic Commands
-```sh
+```raw
 $ sudo service mongod start       // Start MongoDB
 $ sudo service mongod stop        // Stop MongoDB
 $ sudo service mongod restart     // Restart MongoDB
 ```
 ## 3. Installing MongoDB on macOS with Homebrew
 1) Update Homebrew’s package database.
-```sh
+```raw
 $ brew update
 ```
 2) Installing MongoDB.
-```sh
+```raw
 $ brew install mongodb
 ```
 3) Check MongoDB version.
-```sh
+```raw
 $ mongo -version
 ```
 ![image](/public/images/devops/2132/versionmac.png){:width="600px"}  
 4) Create the data directory.
-```sh
+```raw
 $ mkdir -p /data/db
 ```
 5) Start MongoDB service.
-```sh
+```raw
 $ sudo mongod
 ```
 6) Open another terminal, launch MongoDB Shell with `mongo` command.
-```sh
+```raw
 $ mongo
 >
 ```

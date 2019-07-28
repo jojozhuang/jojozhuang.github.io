@@ -21,17 +21,17 @@ Scripting Java has many uses. It allows us to write powerful scripts quickly by 
 Go to [https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino), select the latest version to download, for example, rhino1.7.7.2.zip.
 ### 3.2 Configuring Rhino
 Extract rhino1.7.7.2.zip, copy `rhino-1.7.7.2.jar` from /rhino1.7.7.2/lib to Java's extension folder.
-```sh
+```raw
 Library/Java/Extensions/   // On Mac
 java\jdk1.8.2\jre\lib\ext  // On Windows
 ```
 ### 3.3 Running Rhino Shell
 Open terminal, type following command to launch Rhino Shell.
-```sh
+```raw
 $ java org.mozilla.javascript.tools.shell.Main
 ```
 You will get the output as follows.
-```sh
+```raw
 Rhino 1.7.7.2 2017 09 27
 js>
 ```
@@ -43,7 +43,7 @@ js> quit()
 
 ## 4. Testing Scripts In Shell
 ### 4.1 Running Javascript In Shell
-```sh
+```raw
 js> print('hi, Johnny')
 hi, Johnny
 js> 4*5
@@ -120,7 +120,7 @@ public class Embedding {
 }
 ```
 Compile the java file and run it.
-```sh
+```raw
 $ ls
 Embedding.java
 $ javac Embedding.java
