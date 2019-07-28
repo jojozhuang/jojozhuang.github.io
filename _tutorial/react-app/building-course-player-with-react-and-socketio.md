@@ -16,7 +16,7 @@ In the posting [Building Course Player with Node.js and Socket.IO]({% link _tuto
 ## 2. React Project
 ### 2.1 Creating New Project
 Create new Node.js app named `course-player-react`.
-```sh
+```raw
 $ mkdir course-player-react
 $ cd course-player-react
 $ npm init
@@ -24,11 +24,11 @@ $ npm init
 
 ### 2.2 Installing Packages
 Install 'npm-run-all' globally.
-```sh
+```raw
 $ npm install npm-run-all -g
 ```
 And install following packages locally.
-```sh
+```raw
 $ npm install socket.io --save
 $ npm install socket.io-client --save
 $ npm install styled-components --save
@@ -82,7 +82,7 @@ Open `package.json`, update it as follows.
 }
 ```
 Then install packages defined in 'package.json' with the following command.
-```sh
+```raw
 $ npm install
 ```
 ### 2.3 ES2015
@@ -1245,7 +1245,7 @@ Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ## 4. Running and Testing
 Start this React app, serve it in web server.
-```sh
+```raw
 $ npm start
 ```
 View the course player at http://localhost:12100/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.

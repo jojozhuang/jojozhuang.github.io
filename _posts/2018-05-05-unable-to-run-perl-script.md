@@ -45,7 +45,7 @@ Characteristics of this binary (from libperl):
 
 ### 3.2 Import Module
 One approach to solve this error is to use `-I` option to manually import the module.
-```sh
+```raw
 $ perl -I /Users/Johnny/project/InstalledProduct.pm  encryptionoptin.pl
 ```
 

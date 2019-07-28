@@ -64,7 +64,7 @@ private static void constructList() {
 }
 ```
 Output.
-```sh
+```raw
 [one, two, three, four]
 [one, two, four]
 Queue Size: 3
@@ -151,7 +151,7 @@ private static void examine() {
 }
 ```
 Output.
-```sh
+```raw
 Queue - insert
 true
 true
@@ -220,7 +220,7 @@ public static void main(String a[]){
 ```
 Output.
 
-```sh
+```raw
 stack : []
 Empty stack : true
 stack : [11, 12, 13, 14]

@@ -109,12 +109,12 @@ public int search(int[] nums, int target) {
 Sort a linked list in O(nlog(n)) time using constant space complexity.
 
 Example 1:
-```sh
+```raw
 Input: 4->2->1->3
 Output: 1->2->3->4
 ```
 Example 2:
-```sh
+```raw
 Input: -1->5->3->4->0
 Output: -1->0->3->4->5
 ```
@@ -174,7 +174,7 @@ public ListNode merge(ListNode l1, ListNode l2) {
 ## 3. Using Divide & Conquer for Tree Problems
 ### 3.1 Binary Tree Traversal
 Given a binary tree, return the preorder/inorder/postorder traversal of its nodes' values.
-```sh
+```raw
 Input: [1,null,2,3]
    1
     \
@@ -240,7 +240,7 @@ public List<Integer> postorderTraversal2(TreeNode root) {
 Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not. You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.
 
 Example:
-```sh
+```raw
 Input:
 	Tree 1                     Tree 2                  
           1                         2                             

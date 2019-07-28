@@ -78,7 +78,7 @@ private static void arrayOfList() {
 }
 ```
 Output.
-```sh
+```raw
 [1, 2]
 [3, 4, 5]
 ```
@@ -101,7 +101,7 @@ private static void listOfArray() {
 }
 ```
 Output.
-```sh
+```raw
 [a, b, c]
 [1, 2, 3, 4]
 ```
@@ -167,7 +167,7 @@ public class ArrayToList {
 }
 ```
 Output.
-```sh
+```raw
 Convert array to list with Arrays.asList()
 Original array: [a, b, c, d]
 Converted ArrayList: [a, b, c, d]
@@ -201,7 +201,7 @@ private static void usingObject() {
 }
 ```
 Output.
-```sh
+```raw
 Object: arr1 = [1, 2, 3]
 ```
 **Using Generic Type**  
@@ -231,7 +231,7 @@ private static void usingGeneric() {
 }
 ```
 Output.
-```sh
+```raw
 Generic Type: arr2 = [1, 2, 3]
 Generic Type: arr3 = [1, 2, 3]
 Generic Type: arr4 = [1, 2, 3]
@@ -257,7 +257,7 @@ private static void usingStream() {
 }
 ```
 Output.
-```sh
+```raw
 Stream: arr6 = [1, 2, 3]
 ```
 
@@ -292,7 +292,7 @@ public class CopyArray {
 }
 ```
 Output.
-```sh
+```raw
 Original array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 Arrays.copyOf(): copy = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 Arrays.copyOfRange(): copyRange = [4, 5, 6]

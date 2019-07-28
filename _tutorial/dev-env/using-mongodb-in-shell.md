@@ -12,41 +12,41 @@ tags: [MongoDB, CRUD]
 
 ## 1. Start MongoDB
 Start MongoDB service.
-```sh
+```raw
 $ sudo service mongod start   // linux
 $ brew services start mongodb // macOS
 ```
 Launch MongoDB Shell with `mongo` command.
-```sh
+```raw
 $ mongo
 >
 ```
 To exit the Shell, type `quit()` or use the `<Ctrl+C>` shortcut.
-```sh
+```raw
 > quit()
 ```
 
 ## 2. Database
 ### 2.1 Show Existing Database
 Check the current databases with `show dbs` command.
-```sh
+```raw
 > show dbs
 admin  0.000GB
 local  0.000GB
 ```
 ### 2.2 Create Database
 Create a database named `mymdb` with `use <DATABASE>` command.
-```sh
+```raw
 > use mymdb
 switched to db mymdb
 ```
 To check your currently selected database, use the command `db`.
-```sh
+```raw
 > db
 mymdb
 ```
 If you use `show dbs` command to show the databases, `mymdb` is not present in list. To display the database, you need to insert at least one document into it.
-```sh
+```raw
 > db.mymdb.insert({"name":"iPhone 8"})
 WriteResult({ "nInserted" : 1 })
 > show dbs
@@ -83,11 +83,11 @@ db.createUser({'user':'testuser', 'pwd':'abc123', roles:['read']});
 ```
 ### 3.2 Connecting Database with the New User
 Syntax:
-```sh
+```raw
 mongo -u 'username' -p 'password' <servername>/databasename
 ```
 Example:
-```sh
+```raw
 $ mongo -u 'testuser' -p 'abc123' localhost:27017/mymdb
 MongoDB shell version v3.4.10
 connecting to: mongodb://localhost:27017/mymdb
@@ -96,7 +96,7 @@ connecting to: mongodb://localhost:27017/mymdb
 ## 4. Collection
 ### 4.1 Syntax of Creating Collection
 Basic syntax of creating new collection in MongoDB.
-```sh
+```raw
 db.createCollection(name, options)
 ```
 Option list:
@@ -115,7 +115,7 @@ switched to db store
 ```
 
 Check the created collection with `show collection` command.
-```sh
+```raw
 > show collections
 product
 ```
@@ -127,14 +127,14 @@ Create collection named `productOptions` with explicit options.
 ```
 
 Check the collection list.
-```sh
+```raw
 > show collections
 product
 productOptions
 ```
 ### 4.4 Creating Collection Implicitly
 Collection named `productImplicit` is created automatically, when document is inserted into it.
-```sh
+```raw
 > db.productImplicit.insert({"name":"iPhone 8"})
 WriteResult({ "nInserted" : 1 })
 > show collections
@@ -146,7 +146,7 @@ productOptions
 
 ### 4.5 Dropping Collection
 Drop a collection from the database `store` with `db.<Collection>.drop()` command.
-```sh
+```raw
 > use store
 switched to db store
 > db.productImplicit.drop()
@@ -160,12 +160,12 @@ productOptions
 ## 5. Document
 ### 5.1 Creating Document
 Syntax for creating document.
-```sh
+```raw
 db.<Collection>.insert(document)
 ```
 
 Create a document with two attributes in collection `product`.
-```sh
+```raw
 > db.product.insert({name: 'Xbox', price: 100})
 WriteResult({ "nInserted" : 1 })
 ```
@@ -177,7 +177,7 @@ Use `db.<Collection>.find()` command to show the documents.
 ```
 
 Use `pretty()` command to show the documents in a formatted way.
-```sh
+```raw
 > db.product.find().pretty()
 {
     "_id" : ObjectId("5a04df9a4ddc534948a491a6"),
@@ -189,7 +189,7 @@ Use `pretty()` command to show the documents in a formatted way.
 ![image](/public/images/devops/2133/create.png){:width="700px"}  
 
 You can also insert multiple documents by passing an array of documents in insert method.
-```sh
+```raw
 > db.product.insert([{name: 'PS4',price: 400},{name: 'iPhone',price: 699}])
 BulkWriteResult({
     "writeErrors" : [ ],
@@ -204,7 +204,7 @@ BulkWriteResult({
 ```
 ### 5.2 Updating Document
 Syntax for updating document.
-```sh
+```raw
 db.<Collection>.update(SELECTION_CRITERIA, UPDATED_DATA)
 ```
 Check the existing documents.
@@ -216,7 +216,7 @@ Check the existing documents.
 >
 ```
 Update the price to '888' for the product whose name is 'iPhone'.
-```sh
+```raw
 > db.product.update({'name':'iPhone'},{$set:{'price':'888'}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
@@ -232,7 +232,7 @@ Check the updated document.
 
 ### 5.3 Deleting Document
 Syntax for deleting document.
-```sh
+```raw
 db.<Collection>.remove(DELLETION_CRITTERIA)
 ```
 Check the existing documents.
@@ -244,7 +244,7 @@ Check the existing documents.
 >
 ```
 Delete the document whose name is 'iPhone'.
-```sh
+```raw
 > db.product.remove({'name':'iPhone'})
 WriteResult({ "nRemoved" : 1 })
 ```
@@ -258,27 +258,27 @@ Check the documents again.
 ![image](/public/images/devops/2133/delete.png){:width="700px"}  
 
 Specify '1' in the delete method to delete only the first one if there are multiple records.
-```sh
+```raw
 > db.<Collection>.remove(DELETION_CRITERIA,1)
 ```
 
 Delete all documents if no deletion criteria is specified.
-```sh
+```raw
 > db.<Collection>.remove()
 ```
 
 ## 6. Query In MongoDB
 ### 6.1 Finding Document
 Display all the documents in collection.
-```sh
+```raw
 > db.<Collection>.find()
 ```
 Display all the documents in formatted way with `pretty()`;
-```sh
+```raw
 > db.<Collection>.find().pretty()
 ```
 Return only one document from the collection.
-```sh
+```raw
 > db.<Collection>.findOne()
 ```
 ### 6.2 Where Clause
@@ -295,19 +295,19 @@ Use following operations to query documents with some conditions.
 
 ### 6.3 AND in MongoDB
 Find products whose price is greater than or equals to 400, and its price is less than 800.
-```sh
+```raw
 > db.product.find({$and:[{"price":{$gte:400}},{"price":{$lt:800}}]})
 ```
 ![image](/public/images/devops/2133/findand.png){:width="700px"}  
 ### 6.4 OR in MongoDB
 Find products whose name is 'Xbox', or its price is greater than 600.
-```sh
+```raw
 > db.product.find({$or:[{"name":"Xbox"},{"price":{$gt:600}}]})
 ```
 ![image](/public/images/devops/2133/findor.png){:width="700px"}  
 ### 6.5 Using AND and OR Together
 Find products whose name is 'Xbox', or its price is greater than 600, and its price is less than 300.
-```sh
+```raw
 > db.product.find({"price":{$lt:300}, $or:[{"name":"Xbox"},{"price":{$gt:600}}]})
 ```
 ![image](/public/images/devops/2133/findandor.png){:width="700px"}  

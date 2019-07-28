@@ -87,7 +87,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 testClient
 johnny.designpattern.common.Line@5442a311
 johnny.designpattern.common.Line@5442a311

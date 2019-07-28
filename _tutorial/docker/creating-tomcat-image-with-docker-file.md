@@ -15,7 +15,7 @@ Docker can build images automatically by reading the instructions from a Dockerf
 
 ## 2. What We've Done Until Now?
 In posting [Serving JSP Application With Tomcat In Docker]({% link _tutorial/docker/serving-jsp-application-with-tomcat-in-docker.md %}) and [Enabling Tomcat Debugging in Docker for Eclipse]({% link _tutorial/docker/enabling-tomcat-debugging-in-docker-for-eclipse.md %}), we deployed the JSP Tutorial application to Tomcat container with enabling the remote debugging. Below is the command we used.
-```sh
+```raw
 $ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
 ```
 What is this command doing?
@@ -32,14 +32,14 @@ In this posting, we will use Dockerfile to create a tomcat image with the same c
 ## 3. Creating Tomcat Image with Dockerfile
 ### 3.1 Creating Docker File
 Create one file named `Dockerfile` in any directory on local machine.
-```sh
+```raw
 $ cd ~/Johnny
 $ mkdir DockerTomcat
 $ cd DockerTomcat
 $ vim Dockerfile
 ```
 Edit Dockerfile, fill with following content.
-```sh
+```raw
 #Create Tomcat Image for JSP Tutorial Application
 FROM tomcat
 MAINTAINER jojozhuang@gmail.com
@@ -61,11 +61,11 @@ The following points need to be noted about the above file.
 
 ### 2.2 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile locates. Run the following command.
-```sh
+```raw
 $ docker build -t jsptomcat:0.2 .
 ```
 Here, `jsptomcat` is the name we are giving to the Image and `0.2` is the tag number. The last dot `.` indicates the current location. Check whether the image is created.
-```sh
+```raw
 $ docker images
 ```
 As you see, the new image is created with tag 0.2.
@@ -74,7 +74,7 @@ As you see, the new image is created with tag 0.2.
 ## 3. Testing Tomcat Image
 ### 3.1 Running Container
 In docker terminal, run the following command. (Make sure remove the tomcat container we created before.)
-```sh
+```raw
 $ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 -p 8000:8000 jsptomcat:0.2
 ```
 Notice we don't need to set the environment variable `JPDA_ADDRESS`, and execute `catalina.sh jpda run` any more. They are already set in the Dockerfile.

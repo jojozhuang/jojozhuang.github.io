@@ -15,20 +15,20 @@ In some cases, we need to share information in the html files to others. It is n
 
 ## 2. Creating Server
 Create a folder in local disk.
-```sh
+```raw
 $ mkdir StaticWebServer
 $ cd StaticWebServer
 ```
 Create new node app with 'npm init' command.
-```sh
+```raw
 $ npm init
 ```
 Install express locally.
-```sh
+```raw
 $ npm install express --save
 ```
 Create two files, 'server.js' and 'index.html'.
-```sh
+```raw
 $ touch server.js index.html
 ```
 
@@ -81,11 +81,11 @@ And put some static files, images to the both root folder and sub folder.
 
 ## 3. Running and Testing
 In terminal, start the server with `node` command.
-```sh
+```raw
 $ node server.js
 ```
 You should see the following log.
-```sh
+```raw
 Server running at http://localhost:12000/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 12000.

@@ -16,7 +16,7 @@ For each question, we have multiple language specified solution. Currently, this
 ![image](/public/images/frontend/2831/solution_project.png){:width="400px"}  
 ### 1.2 Test Case
 For each question, there is one test case file shared by all solutions. For example, below is the test case for 'Two Sum' questions. There are 5 test cases in the test file. Each test case consists of three lines.
-```sh
+```raw
 # ./server/solution/two-sum/testcase.txt
 null
 0
@@ -39,14 +39,14 @@ null
 ```
 
 Example of two sum:
-```sh
+```raw
 Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 Corresponding test case. The first line is the 'nums' array, the second line is the 'target' value and the third line is the expected result.
-```sh
+```raw
 [2,7,11,15]
 9
 [0,1]

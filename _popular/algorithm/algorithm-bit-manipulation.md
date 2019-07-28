@@ -181,7 +181,7 @@ Step 2: Calculate sum of two number by only getting the carry, 138 + 296 = 011
 Step 3: Shift the carry result to left by 1 then add sum1, 0324 + 0110 = 434.
 
 ## 6. Decimal to Binary
-```sh
+```raw
  2147483647 = 011111111111111111111111111111111
           3 = 000000000000000000000000000000011
           2 = 000000000000000000000000000000010

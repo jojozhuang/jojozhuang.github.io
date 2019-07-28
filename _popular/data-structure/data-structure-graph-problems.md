@@ -16,7 +16,7 @@ mathjax: true
 Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 
 Example 1:
-```sh
+```raw
 Input:
 11110
 11010
@@ -26,7 +26,7 @@ Output: 1
 ```
 
 Example 2:
-```sh
+```raw
 Input:
 11000
 11000
@@ -171,17 +171,17 @@ Now, we may change 0s to 1s so as to connect the two islands together to form 1 
 Return the smallest number of 0s that must be flipped.  (It is guaranteed that the answer is at least 1.)
 
 Example 1:
-```sh
+```raw
 Input: [[0,1],[1,0]]
 Output: 1
 ```
 Example 2:
-```sh
+```raw
 Input: [[0,1,0],[0,0,0],[0,0,1]]
 Output: 2
 ```
 Example 3:
-```sh
+```raw
 Input: [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
 Output: 1
 ```
@@ -257,7 +257,7 @@ Here, nearest to a leaf means the least number of edges travelled on the binary 
 
 In the following examples, the input tree is represented in flattened form row by row. The actual root tree given will be a TreeNode object.
 
-```sh
+```raw
 Example 3:
 
 Input:
@@ -346,7 +346,7 @@ The given input is a graph that started as a tree with N nodes (with distinct va
 The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
 
 Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge [u, v] should be in the same format, with u < v.
-```sh
+```raw
 Example 1:
 Input: [[1,2], [1,3], [2,3]]
 Output: [2,3]

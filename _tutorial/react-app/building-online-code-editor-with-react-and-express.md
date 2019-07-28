@@ -882,7 +882,7 @@ The only thing needs to be taken care is nodemon. Add 'temp' folder to ignore in
 
 ## 5. Testing
 Start both the client and server with 'npm run dev'. The client is served at port 3000 and the server is served at port 8080.
-```sh
+```raw
 $ npm run dev
 ```
 Open web browser, access 'http://localhost:3000/'.

@@ -275,7 +275,7 @@ We cannot build a general data store that is continually available, sequentially
 
 ## 11. Consistent Hashing
 Distributed Hash Table (DHT) is one of the fundamental components used in distributed scalable systems. Hash Tables need a key, a value, and a hash function where hash function maps the key to a location where the value is stored.
-```sh
+```raw
 index = hash_function(key)
 ```
 Suppose we are designing a distributed caching system. Given ‘n’ cache servers, an intuitive hash function would be ‘key % n’. It is simple and commonly used. But it has two major drawbacks:

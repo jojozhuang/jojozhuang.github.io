@@ -110,7 +110,7 @@ public class BitSetExample {
 }
 ```
 Output.
-```sh
+```raw
 Initial pattern in bits1: {0, 2, 4, 6, 8, 10, 12, 14}
 Initial pattern in bits2: {1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14}
 bits2 AND bits1: {2, 4, 6, 8, 12, 14}

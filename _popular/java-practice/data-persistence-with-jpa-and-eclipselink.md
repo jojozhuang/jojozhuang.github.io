@@ -52,7 +52,7 @@ Extract `mysql-connector-java-5.1.44-bin.jar` from the the downloaded zip file, 
 We use docker container to host our MySQL database.
 ### 4.1 Creating Dockerfile
 Create a file named `Dockerfile` with the following content.
-```sh
+```raw
 #Create MySQL Image for JPA Tutorial
 FROM mysql
 MAINTAINER jojozhuang@gmail.com
@@ -68,17 +68,17 @@ CREATE DATABASE IF NOT EXISTS `jpadb`
 ```
 ### 4.2 Creating Image with Dockerfile
 In Docker Terminal, navigate to /JPATutorial/Docker/, run the following command the create MySQL image.
-```sh
+```raw
 $ docker build -t jpa-mysql:0.1 .
 ```
 The new image is created with named `jpa-mysql` and tag `0.1`.
-```sh
+```raw
 $ docker images
 ```
 ![image](/public/images/java/1536/dockerimage.png){:width="700px"}  
 ### 4.3 Running MySQL Container
 In Docker Terminal, run command to launch MySQL container with the new image 'jpa-mysql:0.1'.
-```sh
+```raw
 $ docker run --detach --name=jpamysql --publish 11020:3306 jpa-mysql:0.1
 ```
 You will see that a container named `jpamysql` is running now. Note the IP address `192.168.99.100` and port `11020`. We will use them to configure the database connection in eclipse and MySQL Workbench later.

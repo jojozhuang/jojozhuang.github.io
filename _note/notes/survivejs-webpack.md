@@ -75,17 +75,17 @@ module.exports = {
 ## 2. Developing
 ### 2.1 Getting Started
 **Setting Up the Project**
-```sh
+```raw
 $ mkdir webpack-demo
 $ cd webpack-demo
 $ npm init -y # -y generates *package.json*, skip for more
 ```
 **Installing Webpack**
-```sh
+```raw
 $ npm install webpack webpack-cli --save-dev # -D to type less
 ```
 **Executing Webpack**
-```sh
+```raw
 $ node_modules/.bin/webpack                      # default mode
 $ node_modules/.bin/webpack --mode development   # development mode
 $ node_modules/.bin/webpack --mode production    # production mode
@@ -111,7 +111,7 @@ document.body.appendChild(component());
 ```
 **Configuring html-webpack-plugin**  
 Create index.html file that points to the generated file this plugin.
-```sh
+```raw
 $ npm install html-webpack-plugin --save-dev
 ```
 Create file 'webpack.config.js'.
@@ -127,7 +127,7 @@ module.exports = {
 };
 ```
 Run
-```sh
+```raw
 node_modules/.bin/webpack --mode production
 ```
 In the 'dist' directory, a file named index.html will be created with the content as follows.
@@ -165,16 +165,16 @@ Now, we can run `npm run build` instead.
 
 ### 2.2 webpack-dev-server
 **Webpack watch Mode and webpack-dev-server**  
-```sh
+```raw
 npm run build -- --watch
 ```
 **Getting Started with WDS(webpack-dev-server)**  
 Install WDS.
-```sh
+```raw
 npm install webpack-dev-server --save-dev
 ```
 Start dev server.
-```sh
+```raw
 node_modules/.bin/webpack-dev-server --mode development
 ```
 Open broswer and access 'http://localhost:8080/'.
@@ -216,7 +216,7 @@ module.exports = {
 };
 ```
 Then, run the following command to start the dev server at port 1234.
-```sh
+```raw
 $ PORT=1234 npm start
 ```
 And, notice that the browser is opened automatically, because we set the 'open:true' in devServer.
@@ -238,7 +238,7 @@ module.exports = {
 ```
 ### 2.3 Composing Configuration
 **Setting Up webpack-merge**
-```sh
+```raw
 npm install webpack-merge --save-dev
 ```
 Create file named webpack.parts.js.
@@ -298,7 +298,7 @@ package.json
 * Instead of returning a configuration directly, a function capturing the passed `env` is returned. The function returns configuration based on it and also maps webpack `mode` to it.
 
 Run.
-```sh
+```raw
 $ PORT=1234 npm start
 ```
 * [Source Codes for Composing Configuration](https://github.com/jojozhuang/Note/tree/master/SurvivejsWebpack/WebpackComposing)
@@ -307,7 +307,7 @@ $ PORT=1234 npm start
 ### 3.1 Loading Styles
 **Loading CSS**  
 Install css-loader and style-loader.
-```sh
+```raw
 npm install css-loader style-loader --save-dev
 ```
 webpack.parts.js
@@ -372,7 +372,7 @@ Notice that the styles are added to the header. It is inline css.
 ### 3.2 Separating CSS
 Using `mini-css-extract-plugin` with styling solves the problem of **Flash of Unstyled Content(FOUC)**. Separating CSS from JavaScript also improves caching behavior and removes a potential attack vector.
 Install the plugin first:
-```sh
+```raw
 $ npm install mini-css-extract-plugin --save-dev
 ```
 Update webpack.parts.js.
@@ -461,7 +461,7 @@ Frameworks like Bootstrap tend to come with a lot of CSS. Often you use only a s
 **Setting Up Pure.css(For Demo)**  
 Create a sample page with using styles defined Pure.css  
 Install purecss
-```sh
+```raw
 npm install purecss --save
 ```
 Import it in src/index.js
@@ -486,7 +486,7 @@ export default (text = "Hello world, Unused CSS!") => {
 Run 'npm start' and take a look the UI change.
 ![image](/public/images/note/9134/purebutton.png){:width="600px"}
 Run 'npm run build' to build the application.
-```sh
+```raw
 Hash: 72fa55ecdebc33f6635a
 Version: webpack 4.5.0
 Time: 833ms
@@ -500,7 +500,7 @@ The size of the main.css grows to 16.1 KiB. Before using purecss, the size is on
 
 **Enabling PurifyCSS**  
 Install glob and purifycss-webpack.
-```sh
+```raw
 npm install glob purifycss-webpack purify-css --save-dev
 ```
 Update webpack.parts.js, create purifyCSS configuration.
@@ -540,7 +540,7 @@ const productionConfig = merge([
 ]);
 ```
 Run 'npm run build' again to build the application.
-```sh
+```raw
 Hash: 72fa55ecdebc33f6635a
 Version: webpack 4.5.0
 Time: 642ms
@@ -570,7 +570,7 @@ body {
 }
 ```
 Install file-loader and url-loader.
-```sh
+```raw
 npm install file-loader url-loader --save-dev
 ```
 Update webpack.parts.js, create loadImages module.
@@ -634,7 +634,7 @@ const developmentConfig = merge([
 ]);
 ```
 Run 'npm run build' to build the application. You see the background image is put into images folder.
-```sh
+```raw
 Hash: 0a719c3df65f97a6cc27
 Version: webpack 4.5.0
 Time: 646ms
@@ -666,7 +666,7 @@ const productionConfig = merge([
 ]);
 ```
 Run 'npm run build' again to build the application. This time, the background image is not in the output list.
-```sh
+```raw
 Hash: e64d69c06992d29282a6
 Version: webpack 4.5.0
 Time: 743ms
@@ -798,7 +798,7 @@ const developmentConfig = merge([
 ]);
 ```
 Run 'npm run build' to build the application. You see the two font files are put into fonts folder.
-```sh
+```raw
 Hash: ad5cd87f63994dd3046a
 Version: webpack 4.5.0
 Time: 918ms

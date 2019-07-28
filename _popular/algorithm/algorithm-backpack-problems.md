@@ -13,7 +13,7 @@ mathjax: true
 
 ## 1. Backpack Problem 1 - Capacity only
 Given N items, `A[i]` is the weight of the i-th item. And given a backpack with capacity `w`, maximize the **total weight** that the backpack can be filled. Each item can be use 0 or 1 time.
-```sh
+```raw
 Example 1:
     Input:  [3,4,8,5], backpack capacity=10
     Output:  9
@@ -39,7 +39,7 @@ public int backPack(int[] A, int w) {
 
 ## 2. Backpack Problem 2 - Capacity + Value
 Given N items, `A[i]` is the weight of the i-th item and `V[i]` is the value of the i-th item. Given a backpack with capacity `w`, maximize the **total value**. Each item can be use 0 or 1 time.
-```sh
+```raw
 Example 1:
     Input:  A=[1, 1, 2, 2], V=[1, 3, 4, 5], backpack capacity=4
     Output:  9
@@ -69,7 +69,7 @@ public int backPack(int[] A, int[] V, int w) {
 ## 3. Coin Change
 You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 
-```sh
+```raw
 Example 1:
 
 Input: coins = [1, 2, 5], amount = 11

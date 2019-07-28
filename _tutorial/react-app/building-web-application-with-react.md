@@ -17,7 +17,7 @@ In the posting [Building Web Application with Angular]({% link _tutorial/angular
 [ReactJS](https://reactjs.org/) is a front-end library developed by Facebook. It is used for handling the view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It uses the virtual DOM to track the state of the actual DOM, only re-rendering discrete sections of the DOM as changes to application state dictate.
 ### 2.1 Creating New Project
 Create new Node.js app named `game-store-react`.
-```sh
+```raw
 $ mkdir game-store-react
 $ cd game-store-react
 $ npm init
@@ -25,7 +25,7 @@ $ npm init
 
 ### 2.2 Installing Packages
 Install 'npm-run-all' globally.
-```sh
+```raw
 $ npm install npm-run-all -g
 ```
 Open `package.json`, update it as follows.
@@ -76,7 +76,7 @@ Open `package.json`, update it as follows.
 }
 ```
 Then install packages defined in 'package.json' with the following command.
-```sh
+```raw
 $ npm install
 ```
 ### 2.3 ES2015
@@ -822,7 +822,7 @@ export default FileApi;
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
-```sh
+```raw
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.

@@ -101,7 +101,7 @@ npm install –g nsp
 nsp audit-package
 
 Handling server crashes, forever
-```sh
+```raw
 npm install forever --save
 ```
 ```javascript

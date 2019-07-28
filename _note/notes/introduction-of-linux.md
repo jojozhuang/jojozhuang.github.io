@@ -80,7 +80,7 @@ Key or key combination  |  Function
 ### 2.3. Getting help
 #### 2.3.2. The man pages
 Find official manual pages with `man` command.
-```sh
+```raw
 man man
 man ls
 ```
@@ -91,17 +91,17 @@ Navigation in man.
 
 #### 2.3.3. More info
 The Info pages
-```sh
+```raw
 info info
 info ls
 ```
 A short index of explanations for commands is available using the `whatis` command.
-```sh
+```raw
 whatis ls
 apropos browser
 ```
 The −−help option
-```sh
+```raw
 cat −−help
 ```
 ## 3. About files and the file system
@@ -136,7 +136,7 @@ There are two kinds of major partitions on a Linux system:
 * swap partition: expansion of the computer's physical memory, extra memory on hard disk.
 
 Use `fdisk` to set the partition type.
-```sh
+```raw
 fdisk
 ```
 
@@ -147,7 +147,7 @@ Partition Samples:
 * a partition for third party and extra software (/opt)
 
 Mount points: All partitions are attached to the system via a mount point. The mount point defines the place of a particular data set in the file system.
-```sh
+```raw
 file /etc/fstab
 mount command
 df
@@ -180,7 +180,7 @@ Directory   | Content
 /var        | Storage for all variable files and temporary files created by users, such as log files, the mail queue, the print spooler area, space for temporary storage of files downloaded from the Internet, or to keep an image of a CD before burning it.
 
 Find out which partition a directory is on?
-```sh
+```raw
 df −h .
 Filesystem Size Used Avail Use% Mounted on
 /dev/hda7  980M 163M 767M  18% /
@@ -196,24 +196,24 @@ At the time a new file is created, it gets a free `inode`. In that inode is the 
 * An address defining the actual location of the file data.
 
 The only information not included in an inode, is the file name and directory. These are stored in the special directory files. By comparing file names and inode numbers, the system can make up a tree−structure that the user understands. Users can display inode numbers using the −i option to ls. The inodes have their own separate space on the disk.
-```sh
+```raw
 ls -i  // use -i option to print the file serial number (inode number)
 ```
 ### 3.2. Orientation in the file system
 #### 3.2.1. The path
 The `PATH` environment variable. Use `echo` command to display the content ("$") of the variable PATH:
-```sh
+```raw
 $ echo $PATH
 /mnt/rc/ez:/usr/local/ActivePerl-5.10/bin:.:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
 Use `export` to change the environment variable.
-```sh
+```raw
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin: /usr/bin:/usr/sbin:/bin:/sbin:/home/jumper/bin
 ```
 Note that when using the export command in a shell, the changes are temporary and only valid for this session (until you log out). Opening new sessions, even while the current one is still running, will not result in a new path in the new session.
 #### 3.2.2. Absolute and relative paths
 Paths that don't start with a slash are always relative.
-```sh
+```raw
 cd /  // go to the root directory.
 ```
 #### 3.2.3. The most important files and directories
@@ -226,7 +226,7 @@ Shell types:
 Bourne shell; with standard configuration a nightmare for beginning users.
 
 The file /etc/shells gives an overview of known shells on a Linux system:
-```sh
+```raw
 $ cat /etc/shells
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
@@ -241,13 +241,13 @@ $ cat /etc/shells
 ```
 
 Which shell am I using?
-```sh
+```raw
 $ echo $SHELL
 /bin/bash
 ```
 
 Find out home directory.
-```sh
+```raw
 $ echo $HOME
 /Users/johnny
 ```
@@ -294,22 +294,22 @@ xinetd.* or inetd.conf | Configuration files for Internet services that are run 
 The default location of all logs is `/var/log`.  
 #### 3.3.1. Viewing file properties
 Show hidden files.
-```sh
+```raw
 $ ls -a
 ```
 Find which kind of file with `file` command.
-```sh
+```raw
 $ file Documents/
 Documents/: directory
 $ file high−tech−stats.pdf
 high−tech−stats.pdf: PDF document, version 1.2
 ```
 Open file manager with `nautilus` command.
-```sh
+```raw
 $ nautilus
 ```
 File manipulation:
-```sh
+```raw
 $ mkdir folder1
 $ cd folder1
 $ touch file1
@@ -323,48 +323,48 @@ $ cp -r folder2 folder3
 ```
 #### 3.3.3. Finding files
 Use `which` command to look up files. The which command is useful when troubleshooting "Command not Found" problems. Suppose user cannot use acroread command. Use `which acroread` to find out that none of the directories in the PATH environment variable contains this command.
-```sh
+```raw
 $ which acroread
 /usr/bin/which: no acroread in (/bin:/usr/bin:/usr/bin/X11)
 ```
 Using the which command also checks to see if a command is an alias for another command:
-```sh
+```raw
 $ which −a ls
 ls is aliased to 'ls −F −−color=auto'
 ls is /bin/ls
 ```
 Find all files in the current directory or one of its subdirectories, that are bigger than 50 MB.
-```sh
+```raw
 $ find . -size +50000k
 ./EBooks/CareerCup-Cracking_The_Coding_Interview_Ed6_712pages-2016.pdf
 ```
 Find all files in the current directory or one of its subdirectories, that their name contains string 'Interview'.
-```sh
+```raw
 $ find . -name '*Interview*'
 ./EBooks/CareerCup-Cracking_The_Coding_Interview_Ed6_712pages-2016.pdf
 ./EBooks/Cracking the Coding Interview.pdf
 ./EBooks/Programming Interviews Exposed.pdf
 ```
 `locate` command is easier to use, but more restricted than find, since its output is based on a file index database that is updated only once every day. On the other hand, a search in the locate database uses less resources than find and therefore shows the results nearly instantly.
-```sh
+```raw
 $ locate Working_RH.txt
 /home/johnny/work/Working_RH.txt
 ```
 Most Linux distributions use `slocate` these days, security enhanced locate, the modern version of locate that prevents users from getting output they have no right to read. On most systems, locate is a symbolic link to the slocate program:
-```sh
+```raw
 $ ls −l /usr/bin/locate
 -rwx--s--x. 1 root slocate 40504 Feb  4  2016 /usr/bin/locate
 ```
 `grep` is used for filtering input lines and returning certain patterns to the output.  
 Quickly check the correct spelling of word 'penguin'.
-```sh
+```raw
 $ grep penguin /usr/share/dict/words
 penguin
 penguinery
 ```
 #### 3.3.4. More ways to view file content
 Show the content of the file.
-```sh
+```raw
 cat running.log
 more running.log
 less running.log  //less is more
@@ -384,13 +384,13 @@ Hardlink and softlink:
 ### 3.4. File security
 #### 3.4.1. Access rights: Linux's first line of defense
 The first character is the file type indicator. The next nine characters display the file permissions(read, write, execute) for these three user categories(the user, the group and the others).
-```sh
+```raw
 $ ls −l To_Do
 −rw−rw−r−− 1 johnny users 5 Jan 15 12:39 To_Do
 ```
 The first file is a regular file (first dash). Users with user name johnny or users belonging to the group users can read and write (change/move/delete) the file, but they can't execute it (second and third dash). All other users are only allowed to read this file, but they can't write or execute it (fourth and fifth dash).
 
-```sh
+```raw
 $ ls −l /bin/ls
 −rwxr−xr−x 1 root root 45948 Aug 9 15:01 /bin/ls*
 ```
@@ -415,13 +415,13 @@ g    | group permissions
 o    | permissions for others
 
 Use `id` command and USER environment variable to find out the current user name.
-```sh
+```raw
 $ id
 $ echo $USER
 ```
 #### 3.4.2. The tools
 Use `chmod` command to change permissions.
-```sh
+```raw
 $ hello
 -bash: ./hello: Permission denied
 $ cat hello
@@ -463,7 +463,7 @@ g(roup)  | 4      | 2       | 1
 o(ther)  | 4      | 2       | 1
 
 Use `newgrp` command to log into another group.  
-```sh
+```raw
 asim:/var/www/html> newgrp web  // User asim use the `newgrp` to log into group `web`.
 asim:/var/www/html> touch test
 asim:/var/www/html> ls −l test
@@ -471,12 +471,12 @@ asim:/var/www/html> ls −l test
 ```
 
 When a new file is saved somewhere, it is first subjected to the standard security procedure. The standard file permission is determined by the `mask` for new file creation. The value of this mask can be displayed using the umask command:
-```sh
+```raw
 $ umask
 0022
 ```
 chown and chgrp.
-```sh
+```raw
 # Changes ownership of the directories from root to yourself
 sudo chown $USER /ariba
 sudo chown $USER /ariba/ezone
@@ -490,7 +490,7 @@ sudo chgrp `id -g` /ariba/ezone
 ### 4.1. Processes inside out
 #### 4.1.4. Displaying process information
 Display process.
-```sh
+```raw
 $ ps
 $ pstree
 ```
@@ -507,7 +507,7 @@ SIGHUP      | 1             | For daemons: reread the configuration file.
 #### 4.1.6. SUID and SGID
 SUID: set user ID. Enable a common user to edit the password file which is owned by the system admin.  
 SGID: set group ID.
-```sh
+```raw
 Johnny@Johnny-Mac:~$ who
 Johnny  console  Mar  7 13:26
 Johnny  ttys000  Mar  7 13:26
@@ -550,7 +550,7 @@ IO/Resourses
 ps, vmstat, top
 
 Kill process.
-```sh
+```raw
 $ ps −ef | grep mozilla
 $ kill −9 25915
 ```
@@ -592,7 +592,7 @@ Command    | Meaning
 ### 5.1. Simple redirections
 #### 5.1.2. The redirection operators
 Output redirection with > and |. Use `cat` command to concatenate content from two files and put them all together to the third file.
-```sh
+```raw
 $ cat test1
 some words
 $ cat test2
@@ -604,26 +604,26 @@ some other words
 ```
 
 To find a word within some text, display all lines matching "pattern1", and exclude lines also matching "pattern2" from being displayed:
-```sh
+```raw
 grep pattern1 file | grep −v pattern2
 ```
 To display output of a directory listing one page at a time:
-```sh
+```raw
 ls −la | less
 ```
 To find a file in a directory:
-```sh
+```raw
 ls −l | grep part_of_file_name
 ```
 
 Find the lines with containing 'level=0' in file logFieldTimingSummary.txt, and save the result to file levelzero.txt.
-```sh
+```raw
 less logFieldTimingSummary.txt | grep -i level=0 > levelzero.txt
 ```
 * The `−i` option is used for case−insensitive searches.
 
 Append text to existing file.
-```sh
+```raw
 mike:~> cat wishlist more money
 less work
 mike:~> date >> wishlist
@@ -633,7 +633,7 @@ less work
 ```
 ### 5.2. Advanced redirection features
 Get the file list and output to dirlist.
-```sh
+```raw
 ls 2>&1 > dirlist
 ```
 
@@ -671,7 +671,7 @@ Commands that switch the editor to insert mode
 * `o` will insert a blank line under the current cursor position and move the cursor to that line.
 
 Vim tutorial.
-```sh
+```raw
 vimtutor
 ```
 
@@ -680,7 +680,7 @@ vimtutor
 #### 7.1.2. Make space
 The process of reducing an existing file to a file with the same name that is 0 bytes large is called "truncating."
 empty file 'placeholder'.
-```sh
+```raw
 $ ls −la placeholder
 −rw−rw−r−− 1 andy andy 200 Jun 12 13:34 placeholder
 $ > placeholder
@@ -688,14 +688,14 @@ $ ls −la placeholder
 −rw−rw−r−− 1 andy andy 0 Jun 12 13:35 placeholder
 ```
 Keep the last five items.
-```sh
+```raw
 $ tail −5 wishlist > newlist
 $ cat newlist > wishlist
 $ rm newlist
 ```
 ### 7.2. Your text environment
 #### 7.2.1. Environment variables
-```sh
+```raw
 $ echo $PATH
 /usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin:/usr/local/bin
 $ PATH=$PATH:/opt/FlightGear/bin
@@ -703,7 +703,7 @@ $ echo $PATH
 /usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin:/usr/local/bin:/opt/FlightGear/bin
 ```
 export environment variable
-```sh
+```raw
 debby:~> export PATH=$PATH:/opt/FlightGear/man
 ```
 Common environment variables:
@@ -759,7 +759,7 @@ Package formats
 * apt(Advanced Package Tool)
 * Yellowdog's Updater Modified (yum)
 
-```sh
+```raw
 apt-get update
 apt-get upgrade
 apt-get install xsnow
@@ -768,12 +768,12 @@ apt-get install xsnow
 Create a dual boot system that will allow you to choose which kernel to boot by updating your boot loader configuration file `grub.conf`.
 
 Mount
-```sh
+```raw
 mount /dev/cdrom /mnt/cdrom
 ```
 
 /etc/fstab
-```sh
+```raw
 $ grep cdrom /etc/fstab
 /dev/cdrom /mnt/cdrom iso9660 noauto,owner,ro 0 0
 ```
@@ -787,7 +787,7 @@ Skipped.
 Archive with `tar` command. In Linux, this is commonly done with the tar command. tar was originally designed to archive data on tapes, but it can also make archives, known as tarballs.
 
 Compress a directory
-```sh
+```raw
 $ ls images/
 me+tux.jpg nimf.jpg
 $ tar cvf images−in−a−dir.tar images/
@@ -797,7 +797,7 @@ images/me+tux.jpg
 ```
 
 Compress files without directory.
-```sh
+```raw
 $ cd images
 $ tar cvf images−without−a−dir.tar *.jpg
 me+tux.jpg
@@ -805,7 +805,7 @@ nimf.jpg
 ```
 
 Compressing and unpacking with gzip or bzip2
-```sh
+```raw
 $ ls −la | grep tar
 −rw−rw−r−− 1 jimmy jimmy 61440 Jun 6 14:08 images−without−dir.tar
 $ gzip images−without−dir.tar
@@ -813,11 +813,11 @@ $ ls −la images−without−dir.tar.gz
 −rw−rw−r−− 1 jimmy jimmy 50562 Jun 6 14:08 images−without−dir.tar.gz
 ```
 The GNU tar command is aware of gzipped files. Use the following command for unzipping and untarring `.tar.gz` or `.tgz` files.
-```sh
+```raw
 tar zxvf file.tar.gz
 ```
 Use the following command for unpacking tar archives that were compressed with bzip2.
-```sh
+```raw
 tar jxvf file.tar.bz2
 ```
 ### 9.4. Summary

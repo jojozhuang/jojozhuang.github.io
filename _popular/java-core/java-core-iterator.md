@@ -45,7 +45,7 @@ public class IteratorDemo {
 }
 ```
 Output.
-```sh
+```raw
 Peter
 Paul
 Johnny
@@ -72,7 +72,7 @@ public class ModificationExceptionDemo {
 }
 ```
 ConcurrentModificationException occurs at line of `books.add("C++")`.
-```sh
+```raw
 Exception in thread "main" java.util.ConcurrentModificationException
     at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
     at java.util.ArrayList$Itr.next(ArrayList.java:851)
@@ -133,7 +133,7 @@ public static void main(String args[]) {
 }
 ```
 Output
-```sh
+```raw
 1
 2
 3
@@ -223,7 +223,7 @@ public static void main(String args[]) {
 }
 ```
 Output
-```sh
+```raw
 3
 9
 ```
@@ -292,7 +292,7 @@ public static void main(String args[]) {
 }
 ```
 Output.
-```sh
+```raw
 Processing - 3
 Processing - 5
 Processing - 6

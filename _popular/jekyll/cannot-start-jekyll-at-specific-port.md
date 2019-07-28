@@ -12,17 +12,17 @@ tags: [Jekyll, Port]
 
 ## 1. Issue of 'Address Already in Use'
 I've set up my [GitHub Page website](http://rongzhuang.me/) locally. It works as expected. But sometimes, I'm unable to start Jekyll. I keep getting the following error after running 'jekyll serve' command.
-```sh
+```raw
 jekyll 3.5.2 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
 ```
 Port 4000 has already been occupied. To solve this issue, kill the process that is using this port.  
 Find the process which is using port 4000.
-```sh
+```raw
 $ sudo lsof -i :4000
 ```
 
 Kill the process with its id.
-```sh
+```raw
 $ sudo kill -9 <PID>
 ```
 ![image](/public/images/jekyll/1605/port.png){:width="700px"}  
@@ -31,7 +31,7 @@ Retry 'jekyll serve', the error 'Port Already in Use' is gone.
 
 ## 2. NoMachine Process
 Similar problem - Port 4000 is occupied by NoMachine(nxd).
-```sh
+```raw
 Johnny@Johnny-Mac:~$ sudo lsof -i :4000
 COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 nxd     11199   nx    3u  IPv4 0x2fad2a11645a3de5      0t0  TCP *:terabase (LISTEN)
@@ -44,18 +44,18 @@ Killing the thread won't work, because NoMachine's nxd process will keep restart
 We can also shutdown NoMachine and disable the automatic start at next boot via command line.
 
 On Linux:
-```sh
+```raw
 sudo /etc/NX/nxserver --shutdown
 sudo /etc/NX/nxserver --startmode manual
 ```
 On Mac:
-```sh
+```raw
 sudo /etc/NX/nxserver --shutdown
 sudo /etc/NX/nxserver --startmode manual
 ```
 On Windows:
 Open the CMD console as administrator and move to the bin folder under the NoMachine installation directory and run:
-```sh
+```raw
 nxserver --shutdown
 nxserver --startmode manual
 ```

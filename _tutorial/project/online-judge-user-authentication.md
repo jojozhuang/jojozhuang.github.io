@@ -321,7 +321,7 @@ public login(user: TokenPayload, savecookie): Observable<any> {
 ```
 ### 3.2 Express(Server)
 We user [Passport](https://www.npmjs.com/package/passport) for user authentication. Install the relevant packages.
-```sh
+```raw
 npm install passport passport-jwt passport-local --save
 ```
 Define router in './server/routes/authentication.js'. Server side validation is applied.

@@ -17,14 +17,14 @@ MongoDB provides two mechanisms for importing and exporting data. One way is via
 ![image](/public/images/frontend/2813/mlab_commands.png)
 
 For example, we can use the following command to export data from MongoDB to `csv` format file.
-```sh
+```raw
 mongoexport -h ds163781.mlab.com:63781 -d onlinejudge_dev -c <collection> -u <user> -p <password> -o <output .csv file> --csv -f <comma-separated list of field names>
 ```
 
 ## 2. Export Data with Mongoose
 ### 2.1 Installing Package
 Install 'csv-express'. It's a CSV response module for Express.
-```sh
+```raw
 npm install csv-express --save
 ```
 ### 2.2 Data from MongoDB at Server Side

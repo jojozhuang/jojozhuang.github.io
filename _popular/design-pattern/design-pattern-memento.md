@@ -78,7 +78,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 Originator: Setting state to State1
 Originator: Setting state to State2
 Originator: Saving to Memento.

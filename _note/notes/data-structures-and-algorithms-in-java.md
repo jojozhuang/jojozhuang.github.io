@@ -269,7 +269,7 @@ public static void doTowers(int topN, char from, char inter, char to) {
 }
 ```
 Output:
-```sh
+```raw
 Disk 1 from A to C
 Disk 2 from A to B
 Disk 1 from C to B

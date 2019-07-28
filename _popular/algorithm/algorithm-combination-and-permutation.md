@@ -15,7 +15,7 @@ tags: [Combination, Permutation, Subset]
 Given two integers `n` and `k`, return all possible combinations of `k` numbers out of 1 ... n.
 
 Example:
-```sh
+```raw
 Input: n = 4, k = 2
 Output:
 [
@@ -59,7 +59,7 @@ private void dfs(int n, int k, int pos, List<Integer> list, List<List<Integer>> 
 Given a collection of distinct integers, return all possible permutations.
 
 Example:
-```sh
+```raw
 Input: [1,2,3]
 Output:
 [
@@ -109,7 +109,7 @@ Given a set of distinct integers, nums, return all possible subsets (the power s
 Note: The solution set must not contain duplicate subsets.
 
 Example:
-```sh
+```raw
 Input: nums = [1,2,3]
 Output:
 [

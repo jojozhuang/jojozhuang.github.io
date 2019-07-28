@@ -12,7 +12,7 @@ tags: [Scalable]
 
 ## 1. Introduction
 aAcontinuous spectrum called the Web Applications Scale of Stupidity
-```sh
+```raw
 OGF <---------- sanity ----------> OOP
 ```
 * The spectrum runs from One Giant Function on the left through to Object-Oriented Programming on the right.

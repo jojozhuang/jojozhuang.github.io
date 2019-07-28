@@ -88,7 +88,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 [In Store] Customer selects products and puts to shopping cart.
 [In Store] Customer places the order.
 [In Store] Customer pays the money with credit card or cash.

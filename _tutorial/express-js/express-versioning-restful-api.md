@@ -90,7 +90,7 @@ http://mean.io/
 https://www.quora.com/What-is-the-difference-between-http-mean-io-and-Mean-JS
 https://stackoverflow.com/questions/23199392/difference-between-mean-js-and-mean-io
 
-```sh
+```raw
 ng g directive disablecontrol
 ```
 

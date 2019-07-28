@@ -40,7 +40,7 @@ After the installation, MSYS2 is installed to folder `C:\msys64\`. You can start
 
 ## 2. Install Jekyll gem
 Run `gem install jekyll` to install jekyll. However, there is an error, see below.
-```sh
+```raw
 c:\Ruby24-x64>gem install jekyll
 Temporarily enhancing PATH for MSYS/MINGW...
 Building native extensions.  This could take a while...
@@ -86,13 +86,13 @@ c:\Ruby24-x64\bin>ridk install
 Which components shall be installed? If unsure press ENTER [1,2,3] 3
 ```
 Then, try to install jekyll again. This time, there should be no more error.
-```sh
+```raw
 gem install jekyll
 ```
 
 ## 3. Creating New Jekyll Website
 Create a new website to test whether Jekyll works properly.
-```sh
+```raw
 $ cd d:/test
 $ jekyll new blog
 $ cd blog
@@ -137,7 +137,7 @@ Access http://127.0.0.1:12001 in web browser. GitHub Page website is live in loc
 Another option to run Jekyll on Windows is to install Ubuntu on Windows 10. Check the link https://jekyllrb.com/docs/windows/.
 ### 5.1 Installing the Windows Subsystem for Linux
 Run Powershell as administrator
-```sh
+```raw
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 Then, restart your computer when prompted.

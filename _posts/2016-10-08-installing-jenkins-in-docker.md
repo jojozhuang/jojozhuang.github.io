@@ -24,7 +24,7 @@ Jenkins image will be downloaded and a Jenkins container will be created and run
 Click the Preview button, web browser will be opened to access Jenkins application. You need to find the password in the given file to unlock Jenkins.
 ![image](/public/images/blog/2016-10-08/dockerunlock.png)
 Open container terminal by clicking on the 'EXEC' button in Kitematic. Run the following commands to get the password from secret file `initialAdminPassword`.
-```sh
+```raw
 $ cd var/jenkins_home/secrets/
 $ more initialAdminPassword
 ```

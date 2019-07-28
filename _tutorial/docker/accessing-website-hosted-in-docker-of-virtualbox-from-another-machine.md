@@ -25,11 +25,11 @@ Steps:
 ## 2. Installation
 ### 2.1 Installing VirtualBox
 Download proper VirtualBox for RedHat from https://www.virtualbox.org/wiki/Downloads. Then, install VirtualBox
-```sh
+```raw
 sudo yum install VirtualBox-5.2-5.2.10_122088_el7-1.x86_64.rpm
 ```
 Add yourself to the `vboxusers` group using the “Users and Groups” application or the command line:
-```sh
+```raw
 sudo usermod -a -G vboxusers [your_user_name]
 ```
 ### 2.2 Installing Ubuntu VM
@@ -39,29 +39,29 @@ First, create shared folder in host machine. Second, install VirtualBox Guest Ad
 ![image](/public/images/devops/3134/guest_additions.png){:width="650px"}
 Then, refer to [Sharing Files between Host and Guest in VirtualBox]({% link _tutorial/dev-env/sharing-files-between-host-and-guest-in-virtualbox.md %}) to connect the shared folder in host machine to guest machine.
 Finally, the shared folder in RedHat locates in
-```sh
+```raw
 /home/johnny/SharedUbuntu
 ```
 The shared folder in Ubuntu VM locates in
-```sh
+```raw
 /media/sf_SharedUbuntu
 ```
 ### 2.4 Installing Docker in Ubuntu VM
 Refer to [Installing and Using Docker on Ubuntu]({% link _tutorial/docker/installing-and-using-docker-on-ubuntu.md %}) to install Docker.
 ### 2.5 Creating OpenGrok Container
 Create two directories in the shared folder. Put the xml files into the `src` folder.
-```sh
+```raw
 $ mkdir -p /opengrok/src /opengrok/data
 ```
 * `src` - Contains your source files.
 * `data` - Used by OpenGrok. OpenGrok will generate indexes for the source files and store them here.
 
 Download OpenGrok Docker Image
-```sh
+```raw
 docker pull scue/docker-opengrok
 ```
 Run a Docker container and mount these two directories: src and data; this will automatically run indexing as a part of startup.
-```sh
+```raw
 $ docker run --name=opengrok-cus1 -v /opengrok/src:/src -v /opengrok/data:/data -p 31030:8080 scue/docker-opengrok
 ```
 The OpenGrok application is now running on http://localhost:31030/source/
@@ -76,11 +76,11 @@ Restart the Ubuntu VM. Go to Network to get the IP address `10.48.104.190` for b
 Start the OpenGrok from docker. You may first need to delete the existing container created previously.
 
 Show all existing containers.
-```sh
+```raw
 docker ps -a
 ```
 Remove one particular container with id.
-```sh
+```raw
 docker rm [container id]
 ```
 The OpenGrok application can be accessed through http://10.48.104.190:31030/source/

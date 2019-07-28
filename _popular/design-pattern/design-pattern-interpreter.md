@@ -78,7 +78,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 28 in Binary = 11100
 28 in Hexadecimal = 1c
 28 in Roman = XXVIII

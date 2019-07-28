@@ -56,7 +56,7 @@ You can go to http://www.typescriptlang.org/play/index.html to try it. Input Typ
 ![image](/public/images/frontend/2702/playground.png)
 ### 1.4 Local Environment Setup
 Type the following command in terminal to install TypeScript.
-```sh
+```raw
 $ npm install -g typescript
 ```
 Create file named hello.ts with the following content.
@@ -66,7 +66,7 @@ var message:string = "Hello World"
 console.log(message)
 ```
 Compile it to js file with `tsc` command.
-```sh
+```raw
 $ tsc hello.ts
 ```
 A new file named hello.js will be created in the sample folder. Open it, you will see the following javascript codes.
@@ -162,7 +162,7 @@ contactInfo.forEach(function (value) {
 });
 ```
 Output.
-```sh
+```raw
 length: 3
 Johnny
 3410
@@ -221,7 +221,7 @@ for (i = 0; i < arr.length; i++) {
 }
 ```
 output.
-```sh
+```raw
 **numeric array**
 1
 2
@@ -332,7 +332,7 @@ var obj = new Numbers();
 console.log("Global num: " + obj.num_val);
 ```
 Output.
-```sh
+```raw
 Global num: 12
 10
 Global num: 13
@@ -364,7 +364,7 @@ showName("John", "Miller");
 showName("Mary", "Menlo", "Suki");
 ```
 Output
-```sh
+```raw
 firstname: John
 lastname: Miller
 firstname: Mary
@@ -404,7 +404,7 @@ addNumbers(1, 2, 3);
 addNumbers(10, 10, 10, 10, 10);
 ```
 Output
-```sh
+```raw
 sum of the numbers: 6
 sum of the numbers: 50
 ```
@@ -429,7 +429,7 @@ calculate_discount(1000);
 calculate_discount(1000, 0.30);
 ```
 Output
-```sh
+```raw
 Discount Amount:  500
 Discount Amount:  300
 ```
@@ -782,7 +782,7 @@ var obj = new StringPrinter()
 obj.doPrint()
 ```
 output.
-```sh
+```raw
 doPrint() from Parent called…
 doPrint() is printing a string…
 ```
@@ -801,7 +801,7 @@ Person.max = 101     // initialize the static variable
 Person.disp()        // invoke the static method
 ```
 Output
-```sh
+```raw
 The value of num is: 101
 ```
 ### 6.6 The instanceof operator
@@ -842,7 +842,7 @@ var obj = new Pizza('Inferno', ['cheese', 'peppers'])
 console.log("Pizza is : "+obj.name+" with topping : "+obj.toppings )
 ```
 output
-```sh
+```raw
 Pizza is : Inferno with topping : cheese,peppers
 ```
 
@@ -911,7 +911,7 @@ drawAllShapes(new circle.Circle());
 drawAllShapes(new triangle.Triangle());
 ```
 Compile for AMD systems.
-```sh
+```raw
 tsc --module amd TestShape.ts
 ```
 On compiling, it will generate following JavaScript code for AMD.
@@ -962,7 +962,7 @@ define(["require", "exports", "./Circle", "./Triangle"],
 ```
 
 The command to compile the TypeScript file for Commonjs systems is
-```sh
+```raw
 tsc --module commonjs TestShape.ts
 ```
 On compiling, it will generate following JavaScript code for Commonjs.
@@ -1004,7 +1004,7 @@ drawAllShapes(new circle.Circle());
 drawAllShapes(new triangle.Triangle());
 ```
 Output
-```sh
+```raw
 Cirlce is drawn (external module)
 Triangle is drawn (external module)
 ```

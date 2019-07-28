@@ -80,7 +80,7 @@ The vi editor (short for visual editor) is a screen editor which is available on
 `.bash_profile` is executed for login shells, while `.bashrc` is executed for interactive non-login shells.
 
 Most of the time you don’t want to maintain two separate config files for login and non-login shells — when you set a PATH, you want it to apply to both. You can fix this by sourcing .bashrc from your .bash_profile file, then putting PATH and common settings in .bashrc. To do this, add the following lines to .bash_profile:
-```sh
+```raw
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
@@ -88,7 +88,7 @@ fi
 Now when you login to your machine from a console .bashrc will be called.
 
 ## 4. useful commands
-```sh
+```raw
 $ which -a ls  // list where the command locates, sample output: /bin/ls
 $ su -a tony   // switch to another user named 'tony'
 $ sudo chown -R $USER /opt/tomcat/  // grant current user with all access rights to folder /opt/tomcat/
@@ -107,61 +107,61 @@ Side effect: Black screen is issued when connected to a Linux physical desktop w
 Right-click the Desktop, select 'Open in Terminal'.  
 2) VirtualBox  
 Open VirtualBox GUI
-```sh
+```raw
 $ virtualbox
 ```
 Start virtual machine
-```sh
+```raw
 $ VBoxManage startvm "Oracle 12c"
 ```
 3) Start Chrome in Terminal
-```sh
+```raw
 $ google-chrome
 ```
 4) Restart Red Hat in Terminal
-```sh
+```raw
 sudo reboot
 ```
 5) Which graphics card is installed?
-```sh
+```raw
 $ lspci
 ```
 Then, check the 'VGA' line.
-```sh
+```raw
 01:00.0 VGA compatible controller: NVIDIA Corporation GM107GL [Quadro K1200] (rev a2)
 ```
 ![image](/public/images/devops/2101/download_drivers_nvidia.png)
 6) Switch Between console and GUI mode.
-```sh
+```raw
 sudo init 3 //console
 sudo init 5 //Gnome
 ```
 7) Check how many kernels are Installed
-```sh
+```raw
 rpm -q kernel
 kernel-2.6.32-279.el6.x86_64
 kernel-2.6.32-279.2.1.el6.x86_64
 ```
 Remove kernal
-```sh
+```raw
 yum remove kernel-2.6.32-279.el6.x86_64
 ```
 8)
 To switch from GNOME Classic to GNOME from within the user session, run the following command:
-```sh
+```raw
 $ gnome-shell --mode=user -r &
 ```
 To switch back to GNOME Classic from within the same user session, run the following command:
-```sh
+```raw
 $ gnome-shell --mode=classic -r &
 ```
 ## 7. Install and Upgrade RPM Package
 1) Install VirtualBox 5.2.6
-```sh
+```raw
 rpm -ivh VirtualBox-5.2-5.2.6_122088_el7-1.x86_64.rpm
 ```
 2) Upgrade VirtualBox to 5.2.10
-```sh
+```raw
 rpm -Uvh VirtualBox-5.2-5.2.10_122088_el7-1.x86_64.rpm
 ```
 

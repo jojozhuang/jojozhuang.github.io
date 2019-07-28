@@ -577,17 +577,17 @@ Finally, the project structure looks like this.
 ## 3. Setting up MongoDB
 ### 3.1 Starting MongoDB
 Start MongoDB service.
-```sh
+```raw
 $ sudo mongod
 ```
 Open another terminal, launch MongoDB Shell with `mongo` command.
-```sh
+```raw
 $ mongo
 >
 ```
 ### 3.2 Creating Database and Documents
 Create a database named `mongodbtutorial` and three documents for collection `product`.
-```sh
+```raw
 > db.product.insert([{name: 'Xbox', price: 100},{name: 'PS4',price: 400},{name: 'iPhone',price: 699}])
 ```
 ![image](/public/images/java/1533/initialization.png){:width="800px"}  

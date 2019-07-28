@@ -18,7 +18,7 @@ If you haven’t installed Docker and Kitematic, please install Docker Toolbox b
 
 ## 3. Setting Up MySQL Container
 I've already created the Dockerfile to quickly setup MySQL container in docker. Download it from [here](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/Dockerfile), save it to you local machine. Besides, download the MySQL backup file from [here](https://github.com/jojozhuang/Tutorials/blob/master/RhinoDataFix/Docker/df_backup.sql) and put it with the Dockerfile in the same folder. In Docker terminal, run the following script to launch a MySQL container.
-```sh
+```raw
 $ docker build -t datafix-mysql:0.1 .
 $ docker run --detach --name=dfmysql --publish 10202:3306 datafix-mysql:0.1
 ```

@@ -59,32 +59,32 @@ To use ubuntu more efficiently, you need to install some highly recommended soft
 1) Install Google Chrome  
 By default, Ubuntu has Firefox installed as default web browser, but I prefer Chrome.
 Go to Google's website, search Chrome and download the installation file. It should have the extension .deb
-```sh
+```raw
 $ sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 Note that all of the installation files for Ubuntu have the `.deb` extension. We always use `dpkg` to install them.
 If the icon for Chrome is missing after launching. Try to edit file google-chrome.desktop.
-```sh
+```raw
 $ nano /usr/share/applications/google-chrome.desktop
 ```
 There is a line specifying the icon location. Change it according to location of google chrome icon (I have google-chrome installed in /opt):
-```sh
+```raw
 $ Icon=/opt/google/chrome/product_logo_64.png
 ```
 ![image](/public/images/devops/2111/chromeicon.png){:width="700px"}  
 
 ## 3. Commands for VirtualBox
 ### 3.1 List Existing Virtual Machines
-```sh
+```raw
 $ VBoxManage list vms
 ```
 ### 3.2 Increasing Hard Disk Size of Virtual Machine
 Sometimes, hard disk of your VM is out of storage. You need to manually increase the storage. Here is the syntax in VirtualBox.
-```sh
+```raw
 VBoxManage modifyhd YOUR_HARD_DISK.vdi --resize SIZE_IN_MB
 ```
 Issue the following command to increase the disk storage of VM Ubuntu to 20GB.
-```sh
+```raw
 $ cd /home/johnny/VitualBox VMs/Ubuntu          // navigate to the location of VM
 $ VBoxManage modifyhd Ubuntu.vdi --resize 20480 // resize the the storage of Ubuntu.vdi to 20GB.
 ```

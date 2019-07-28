@@ -35,7 +35,7 @@ Thread thread = new Thread(new MyRunnable());
 thread.start();
 ```
 Output.
-```sh
+```raw
 MyRunnable is running ...
 ```
 ### 1.2 Thread Class
@@ -53,7 +53,7 @@ MyThread myThread = new MyThread();
 myThread.start();
 ```
 Output.
-```sh
+```raw
 MyThread is running ...
 ```
 
@@ -129,7 +129,7 @@ public class ThreadPoolExample {
 }
 ```
 Output.
-```sh
+```raw
 Created : Task 1
 Created : Task 2
 Created : Task 3
@@ -252,7 +252,7 @@ public class MyThreadPoolExample {
 }
 ```
 Similar output.
-```sh
+```raw
 Created : Task 1
 Created : Task 2
 Created : Task 3

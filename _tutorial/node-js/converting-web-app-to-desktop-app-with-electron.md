@@ -20,7 +20,7 @@ If you haven't installed [Electron](https://electron.atom.io/) or you want to le
 ## 3. Steps for Conversion
 ### 3.1 Getting Source Files for 2048
 Clone source code from github.
-```sh
+```raw
 $ mkdir Game2048
 $ cd Game2048
 $ git clone https://github.com/gabrielecirulli/2048
@@ -69,7 +69,7 @@ Create package.json.
 }
 ```
 Run, you should see 2048 is running.
-```sh
+```raw
 $ npm install
 $ npm start
 ```
@@ -79,7 +79,7 @@ $ npm start
 * Disable resizable
 * Set window title to 2048
 
-```sh
+```raw
 function createWindow() {
    win = new BrowserWindow({
         width: 530,
@@ -176,7 +176,7 @@ function setMainMenu() {
 ```
 ### 3.4 Running and Testing
 Run the following command to start the app.
-```sh
+```raw
 $ npm start
 ```
 Notice, the window title has been set to 2048. And the menu is also changed except the first one.
@@ -216,7 +216,7 @@ To use electron-build for building, we need to create a folder named 'build' and
 ![image](/public/images/frontend/2532/structure.png){:width="400px"}  
 ### 4.3 Running Packaging
 1) Run following command to start packaging.
-```sh
+```raw
 $ npm run dist
 ```
 2) Mac  
@@ -227,7 +227,7 @@ Click on the executable file, run 2048. Notice, we have the icon on dock and cor
 
 3) Linux  
 Specify icon directory for linux in package.json.
-```sh
+```raw
 "linux": {
       "target": [
         "AppImage",

@@ -155,7 +155,7 @@ public static void main(String[] args) {
 }
 ```
 We will get following error. This is because the `Arrays.sort()` or `Collections.sort()` method rely on Comparable interface.
-```sh
+```raw
 Exception in thread "main" java.lang.ClassCastException: johnny.java.compare.Employee cannot be cast to java.lang.Comparable
     at java.util.ComparableTimSort.countRunAndMakeAscending(ComparableTimSort.java:320)
     at java.util.ComparableTimSort.sort(ComparableTimSort.java:188)
@@ -186,7 +186,7 @@ public class Employee implements Comparable<Employee> {
 }
 ```
 Run the test again and we get the following output. Now, we see the employee array is sorted by id in ascending order.
-```sh
+```raw
 Sort Employee list with default Comparable interface:
 [[id=1, name=Terry, age=32, salary=50000], [id=5, name=George, age=35, salary=5000], [id=10, name=Johnny, age=25, salary=10000], [id=20, name=Peter, age=29, salary=20000]]
 ```
@@ -248,7 +248,7 @@ public static void main(String[] args) {
 }
 ```
 See the result. The second array is sorted by age and the third array is based salary.
-```sh
+```raw
 Sort Employee list with default Comparable interface:
 [[id=1, name=Terry, age=32, salary=50000], [id=5, name=George, age=35, salary=5000], [id=10, name=Johnny, age=25, salary=10000], [id=20, name=Peter, age=29, salary=20000]]
 Sort Employee list with custom comparator interface:
@@ -320,7 +320,7 @@ private static void wrongWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Processing - Apple
 Processing - Banana
 Processing - Orange
@@ -355,7 +355,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Processing - Apple
 Processing - Banana
 Processing - Orange

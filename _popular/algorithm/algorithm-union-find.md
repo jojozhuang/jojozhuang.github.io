@@ -221,7 +221,7 @@ There are N students in a class. Some of them are friends, while some are not. T
 Given a N*N matrix M representing the friend relationship between students in the class. If M[i][j] = 1, then the ith and jth students are direct friends with each other, otherwise not. And you have to output the total number of friend circles among all the students.
 
 Example 1:
-```sh
+```raw
 Input:
 [[1,1,0],
  [1,1,0],
@@ -231,7 +231,7 @@ Explanation:The 0th and 1st students are direct friends, so they are in a friend
 The 2nd student himself is in a friend circle. So return 2.
 ```
 Example 2:
-```sh
+```raw
 Input:
 [[1,1,0],
  [1,1,1],
@@ -341,7 +341,7 @@ The given input is a graph that started as a tree with N nodes (with distinct va
 The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
 
 Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge [u, v] should be in the same format, with u < v.
-```sh
+```raw
 Example 1:
 Input: [[1,2], [1,3], [2,3]]
 Output: [2,3]

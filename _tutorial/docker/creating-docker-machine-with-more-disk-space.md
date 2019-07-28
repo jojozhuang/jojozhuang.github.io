@@ -12,7 +12,7 @@ tags: [Docker Machine, Docker]
 
 ## 1. Introduction
 When trying to install the image of `mssql-server-linux`(Official SQL Server image from Microsoft) in Kitematic, I got the following error.
-```sh
+```raw
 failed to register layer: Error processing tar file(exit status 1): write /opt/mssql/lib/system.common.sfp: no space left on device
 ```
 ![image](/public/images/devops/3131/error.png)
@@ -26,11 +26,11 @@ You can also check this size by selecting the `default` VM, then Settings -> Sto
 ![image](/public/images/devops/3131/vmstorageold2.png){:width="600px"}  
 ### 2.2 Disk Space of Docker Machine
 The docker machine is actually hosted by the `default` virtual machine. In terminal, SSH into docker VM.
-```sh
+```raw
 $ docker-machine ssh default
 ```
 Inside the docker VM, run `df -h` or `df -i` to get an overview of the disk space. `/dev/sda1` is used by docker.
-```sh
+```raw
 docker@default:~$ df -h
 ```
 ![image](/public/images/devops/3131/diskspaceold.png){:width="700px"}  
@@ -47,19 +47,19 @@ Clone the current default VM in case we need to restore the docker machine. Back
 In VirtualBox, delete the 'default' VM.
 ### 3.3 Deleting Docker Machine
 Check all existing docker machines.
-```sh
+```raw
 $ docker-machine ls
 ```
 ![image](/public/images/devops/3131/dockermachine.png){:width="700px"}  
 
 Delete the docker machine named `default`.
-```sh
+```raw
 $ docker-machine rm default
 ```
 ![image](/public/images/devops/3131/deletedockermachine.png){:width="700px"}  
 ### 3.4 Creating New Docker Machine
 Create a new docker machine with name=`default`, memory size=`8GB` and disk size=`100GB`.
-```sh
+```raw
 $ docker-machine -D create -d virtualbox --virtualbox-memory 8096 --virtualbox-disk-size "100000" default
 ```
 After the creation is done, check the disk space of the new docker machine. Now it has 88GB free space.
@@ -82,12 +82,12 @@ If you check with `docker-machine ls` command, you will see the same IP address.
 If you want the original IP address 192.168.99.100 back for the docker machine, take the following actions.
 ### 4.1 Resetting IP Address
 Run the following command to reset the IP address of `default` docker machine to `192.168.99.100`.
-```sh
+```raw
 $ echo "ifconfig eth1 192.168.99.100 netmask 255.255.255.0 broadcast 192.168.99.255 up" | docker-machine ssh default sudo tee /var/lib/boot2docker/bootsync.sh > /dev/null
 ```
 ### 4.2 Regenerating Certificates
 Regenerate TLS certificates and update the machine with new certs.
-```sh
+```raw
 $ docker-machine regenerate-certs default
 ```
 ![image](/public/images/devops/3131/resetip.png){:width="700px"}  

@@ -11,7 +11,7 @@ tags: [React, Express]
 > Build an online code editor with React as front end and Express as back end.
 
 ## 1. Introduction
-```sh
+```raw
 npm install json-query
 npm i -S app-root-path
 ```

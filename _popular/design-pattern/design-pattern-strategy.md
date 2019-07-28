@@ -179,7 +179,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 Bubble sort on array:[3, 5, 1, 8, 2, 9, 7, 4]
 [1, 2, 3, 4, 5, 7, 8, 9]
 Merge sort on array:[3, 5, 1, 8, 2, 9, 7, 4]

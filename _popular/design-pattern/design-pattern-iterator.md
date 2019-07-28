@@ -125,7 +125,7 @@ public class Client {
 }
 ```
 Output
-```sh
+```raw
 Course {title='Algorithms and Structures', credit=5}
 Course {title='Database Technologies', credit=4}
 Course {title='Mobile App Development', credit=3}

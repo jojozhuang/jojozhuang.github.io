@@ -20,26 +20,26 @@ Redis has three main peculiarities that sets it apart.
 
 ## 2. Install Redis on Ubuntu
 ### 2.1 Install Redis
-```sh
+```raw
 $sudo apt-get update
 $sudo apt-get install redis-server
 ```
 Open redis prompt.
-```sh
+```raw
 $ redis-cli
 redis 127.0.0.1:6379>
 ```
 Test connection.
-```sh
+```raw
 redis 127.0.0.1:6379> ping
 PONG
 ```
 Syntax for remote server.
-```sh
+```raw
 $ redis-cli -h host -p port -a password
 ```
 Example for connecting to remote redis server.
-```sh
+```raw
 $redis-cli -h 127.0.0.1 -p 6379 -a "mypass"
 redis 127.0.0.1:6379>
 redis 127.0.0.1:6379> PING  
@@ -49,15 +49,15 @@ PONG
 First, find the ip address of Ubuntu. Settings->Network, click the setting icon, see the ip address, eg. '192.168.182.129'.
 
 Edit file /etc/redis/redis.conf in Ubuntu. Change bind from '127.0.0.1 ::1' to '0.0.0.0 ::1'. Or directly comment out.
-```sh
+```raw
 bind 127.0.0.1 ::1
 ```
 Restart redis server.
-```sh
+```raw
 sudo systemctl restart redis
 ```
 Check if redis can be access with non-local ip address.
-```sh
+```raw
 $ redis-cli -h 192.168.182.129
 192.168.182.129:6379>ping
 PONG
@@ -67,12 +67,12 @@ PONG
 Go to https://redisdesktop.com/download download and install Redis Desktop Manager.
 ### 2.4 Configuration
 Syntax.
-```sh
+```raw
 CONFIG GET CONFIG_SETTING_NAME
 CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE
 ```
 Example.
-```sh
+```raw
 redis 127.0.0.1:6379> CONFIG SET loglevel "notice"
 OK
 redis 127.0.0.1:6379> CONFIG GET loglevel  
@@ -82,7 +82,7 @@ redis 127.0.0.1:6379> CONFIG GET loglevel
 ## 3. Date Type
 ### 3.1 Strings
 Redis string is a sequence of bytes.
-```sh
+```raw
 redis 127.0.0.1:6379> SET name "johnny"
 OK
 redis 127.0.0.1:6379> GET name
@@ -90,7 +90,7 @@ redis 127.0.0.1:6379> GET name
 ```
 ### 3.2 Hashes
 Redis hash is a collection of key value pairs. Redis Hashes are maps between string fields and string values. Hence, they are used to represent `objects`.
-```sh
+```raw
 redis 127.0.0.1:6379> HMSET user:1 username johnny password 123456 email jojozhuang@gmail.com
 OK
 redis 127.0.0.1:6379> HGETALL user:1  
@@ -103,7 +103,7 @@ redis 127.0.0.1:6379> HGETALL user:1
 ```
 ### 3.3 Lists
 Redis Lists are simply lists of strings, sorted by insertion order. You can add elements to a Redis List on the head or on the tail.
-```sh
+```raw
 redis 127.0.0.1:6379> lpush database redis
 (integer) 1
 redis 127.0.0.1:6379> lpush database mongodb
@@ -118,7 +118,7 @@ redis 127.0.0.1:6379> lrange database 0 10
 ```
 ### 3.4 Sets
 Redis Sets are an unordered collection of strings.
-```sh
+```raw
 redis 127.0.0.1:6379> sadd database redis
 (integer) 1
 redis 127.0.0.1:6379> sadd database mongodb
@@ -137,7 +137,7 @@ redis 127.0.0.1:6379> smembers database
 
 ### 3.5 Sorted Sets
 Redis Sorted Sets are similar to Redis Sets, non-repeating collections of Strings. The difference is, every member of a Sorted Set is associated with a score, that is used in order to take the sorted set ordered, from the smallest to the greatest score. While members are unique, the scores may be repeated.
-```sh
+```raw
 redis 127.0.0.1:6379> zadd database 0 redis
 (integer) 1
 redis 127.0.0.1:6379> zadd database 0 mongodb

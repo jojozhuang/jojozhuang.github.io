@@ -48,11 +48,11 @@ Actually, I've already discussed this issue in tutorial [React Router and Client
 To solve this React Routing issue on Netlify, we need to handling redirects for single page apps, see below. Read more about it in [Netlify Document](https://www.netlify.com/docs/redirects/#history-pushstate-and-single-page-apps).
 
 Create a file named '\_redirects' to the 'public' folder of the React project with the following content.
-```sh
+```raw
 /*    /index.html   200
 ```
 Then we need this file to be copied to 'dist' folder when building. To do so, we can use library 'copy-webpack-plugin'.
-```sh
+```raw
 npm i -D copy-webpack-plugin
 ```
 Edit 'webpack.parts.js', add the following codes.
@@ -101,7 +101,7 @@ Access your site with the new URL, it should work.
 ![image](/public/images/frontend/2614/newname.png)
 ### 2.6 Hot Module Replacement Error
 In addition, I got the following HMR issue somehow after I changed the build command.
-```sh
+```raw
 VM72 bundle.js:16 Uncaught Error: locals[0] does not appear to be a `module` object with Hot Module replacement API enabled. You should disable react-transform-hmr in production by using `env` section in Babel configuration. See the example in README: https://github.com/gaearon/react-transform-hmr
 ```
 ![image](/public/images/frontend/2614/hmr.png)

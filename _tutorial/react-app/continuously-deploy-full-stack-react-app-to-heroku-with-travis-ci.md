@@ -24,12 +24,12 @@ Our target is to use the same GitHub repository to deploy both the client and se
 ## 2. Full Stack Project
 ### 2.1 Source Files
 Download the source files for this full stack app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/code-editor-react.git
 ```
 ### 2.2 Engine
 In 'package.json', add nodejs and npm version.
-```sh
+```raw
 "engines": {
   "node": "9.4.0",
   "npm": "6.9.0"
@@ -37,7 +37,7 @@ In 'package.json', add nodejs and npm version.
 ```
 ### 2.3 Procfile
 Heroku apps include a `Procfile` that specifies the commands that are executed by the app on startup. If there is no such file, Heroku will run `npm start` by default. The following setting tells Heroku to start the application with the given command, which will be running the server in our case.
-```sh
+```raw
 web: node src/server/index.js
 ```
 ### 2.4 Server for React
@@ -117,7 +117,7 @@ Details of the above configuration:
 
 ### 2.6 Bash Script File
 Create a file named `procfile_upd.sh` as follows. This bash script is used to update Procfile to make the deployed app to launch the client.
-```sh
+```raw
 # Update Procfile from web: node src/server/index.js -> web: node server.js
 rm Procfile
 touch Procfile

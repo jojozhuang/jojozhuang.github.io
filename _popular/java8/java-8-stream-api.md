@@ -168,7 +168,7 @@ List<String> distinctStrings = stream
 System.out.println(distinctStrings);
 ```
 In this example the element one appears 2 times in the original stream. Only the first occurrence of this element will be included in the Stream returned by distinct(). Thus, the resulting List (from calling collect()) will only contain one, two and three. The output printed from this example will be:
-```sh
+```raw
 [one, two, three]
 ```
 ### 5.5 limit()

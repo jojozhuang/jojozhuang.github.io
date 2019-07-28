@@ -23,7 +23,7 @@ For this online judge app, I use [ngx-editor](https://www.npmjs.com/package/ngx-
 
 ### 2.1 Ngx-Bootstrap
 Install bootstrap.
-```sh
+```raw
 $ npm install ngx-bootstrap bootstrap --save
 ```
 Open 'angular-cli.json' and insert a new entry into the 'styles' array.
@@ -35,7 +35,7 @@ Open 'angular-cli.json' and insert a new entry into the 'styles' array.
 ```
 ### 2.2 Font-Awesome
 Install Font Awesome.
-```sh
+```raw
 npm install font-awesome --save
 ```
 Add font-awesome style file to 'angular-cli.json'.
@@ -48,7 +48,7 @@ Add font-awesome style file to 'angular-cli.json'.
 ```
 ### 2.3 ngx-editor
 Install ngx-editor.
-```sh
+```raw
 npm install ngx-editor --save
 ```
 Edit './src/app/app.module.ts', import 'ngx-editor' module.

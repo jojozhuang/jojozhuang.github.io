@@ -28,7 +28,7 @@ There is one issue with this Tomcat container, volume is not configured.
 ### 2.2 Creating Tomcat Container with Bindmounting a Volume
 Let's manually create another Tomcat container for the same tomcat image.
 In docker terminal, run the following command.
-```sh
+```raw
 $ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 tomcat
 ```
 Let's take a moment to examine this command in detail:
@@ -58,7 +58,7 @@ We will use the same JSP application for [Creating MySQL Image with Docker File]
 
 ### 3.3 Checking webapps Directory in Tomcat Container
 Inspect to tomcat container, and navigate to the default web folder of tomcat.
-```sh
+```raw
 $ docker exec -it jsptomcat sh
 $ cd webapps/jsptutorial
 $ ls

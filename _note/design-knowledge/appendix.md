@@ -14,7 +14,7 @@ tags: [Powers of two]
 You'll sometimes be asked to do 'back-of-the-envelope' estimates. For example, you might need to determine how long it will take to generate 100 image thumbnails from disk or how much memory a data structure will take.  The **Powers of two table** and **Latency numbers every programmer should know** are handy references.
 
 ### 1.1 Powers of two table
-```sh
+```raw
 Power           Exact Value         Approx Value        Bytes
 ---------------------------------------------------------------
 7                             128
@@ -28,7 +28,7 @@ Power           Exact Value         Approx Value        Bytes
 ```
 
 ### 1.2 Latency numbers every programmer should know
-```sh
+```raw
 Latency Comparison Numbers
 --------------------------
 L1 cache reference                           0.5 ns

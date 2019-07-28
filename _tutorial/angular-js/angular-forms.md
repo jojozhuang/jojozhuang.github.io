@@ -20,7 +20,7 @@ Template forms use directives to create the form model objects.
 
 ### 2.1 Example
 Create angular project with inline template and style.
-```sh
+```raw
 $ ng new templateForm --inline-template --inline-style
 ```
 Edit app.component.ts.
@@ -54,7 +54,7 @@ In reactive forms, we build the model objects ourselves (including validation fo
 
 ### 3.1 Example
 Create angular project with inline template and style.
-```sh
+```raw
 $ ng new reactiveForm --inline-template --inline-style
 ```
 Edit app.component.ts.

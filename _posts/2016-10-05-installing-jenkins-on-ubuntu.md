@@ -17,19 +17,19 @@ To use Jenkins, you can either install it on a physical/virtual machine, or crea
 ### 2.1 Installing and Setting up Jenkins on Ubuntu
 Go to [https://jenkins.io/download/](https://jenkins.io/download/), choose 'Ubuntu/Debian' for Long-term Support (LTS) version. Follow the steps mentioned in the page.  
 1) Add the key to your system:
-```sh
+```raw
 $ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 ```
 2) Open /etc/apt/sources.list with editor:
-```sh
+```raw
 $ sudo nano /etc/apt/sources.list
 ```
 Add the following entry to the end.
-```sh
+```raw
 $ deb https://pkg.jenkins.io/debian-stable binary/
 ```
 3) Update your local packages, then finally install Jenkins:
-```sh
+```raw
 $ sudo apt-get update
 $ sudo apt-get install jenkins
 ```
@@ -45,13 +45,13 @@ Open a web browser, access http://localhost:8080/. You need to find the password
 ![image](/public/images/blog/2016-10-05/unlock.png)  
 
 In terminal, navigate to the given directory.
-```sh
+```raw
 $ cd /var/lib/jenkins/secrets/
 ```
 If you encounter the permission denied error, use 'sudo su' command (without another user name) to allow you to run commands as the super-user (root).
 ![image](/public/images/blog/2016-10-05/secretfile.png){:width="700px"}
 Use any text editor to open file initialAdminPassword, you should see the password.
-```sh
+```raw
 $ nano initialAdminPassword
 ```
 ![image](/public/images/blog/2016-10-05/password.png){:width="700px"}

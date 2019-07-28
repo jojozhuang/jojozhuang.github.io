@@ -32,7 +32,7 @@ I have already put this jar file to WEB-INF. So, actually, you don't need to do 
 
 ### 1.2 JSP Application
 Pull the source files of this JSP application from my GitHub repository.
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/game-store-mysql.git
 ```
 Launch Eclipse, File->'Open Projects from File System' to import the JSP project.
@@ -53,7 +53,7 @@ Now, let's start this JSP application. Right click on the project, select 'Run A
 ## 2. MySQL in Docker
 ### 2.1 Docker File
 In 'Docker' directory, there is a file named `Dockerfile` which has the following content.
-```sh
+```raw
 #Create MySQL Image for JSP Tutorial Application
 FROM mysql:5.7
 MAINTAINER jojozhuang@gmail.com
@@ -74,11 +74,11 @@ The following points need to be noted about the above file.
 
 ### 2.2 Creating Image with Dockerfile
 Open Docker terminal, navigate to the folder where the Dockerfile and MySQL backup file locates. Run the following command.
-```sh
+```raw
 $ docker build -t gsmysql:0.1 .
 ```
 Here, `gsmysql` is the name we are giving to the Image and `0.1` is the tag number. The last dot `.` indicates the current location. See the output.
-```sh
+```raw
 Johnny@Johnny-Mac:~$ docker build -t gsmysql:0.1 .
 Sending build context to Docker daemon  8.192kB
 Step 1/5 : FROM mysql
@@ -117,7 +117,7 @@ Successfully tagged gsmysql:0.1
 Johnny@Johnny-Mac:~$ docker images
 ```
 Now, check whether the image is created.
-```sh
+```raw
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
@@ -125,7 +125,7 @@ As you see, the new image is created with tag 0.1.
 
 ### 2.3 Running Container
 In docker terminal, run the following command.
-```sh
+```raw
 $ docker run --detach --name=gsmysql --publish 6605:3306 gsmysql:0.1
 ```
 ### 2.4 Container in Kitematic

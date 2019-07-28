@@ -78,7 +78,7 @@ Rebuild with webpack and refresh the browser. You may need to clean web browser 
 ![image](/public/images/frontend/2613/fixed.png){:width="900px"}
 ### 3.2 Nginx Server
 Add following line to the Nginx configuration file /usr/local/etc/nginx/nginx.conf.
-```sh
+```raw
 try_files $uri /index.html;
 ```
 This lets nginx serve static asset files and serves your index.html file when any file isn't found on the server.

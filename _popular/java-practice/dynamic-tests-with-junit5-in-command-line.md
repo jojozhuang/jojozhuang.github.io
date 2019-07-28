@@ -225,13 +225,13 @@ Now, our project folder looks as follows. Currently, the bin folder is empty. Cl
 ## 3. Testing
 ### 3.1 Compiling Java Code
 In terminal, navigate to the root folder, that is JUnit5DynamicConsole. Run the following command to compile java file.
-```sh
+```raw
 javac -d bin -sourcepath src -cp .:lib/junit-platform-console-standalone-1.1.0.jar src/SolutionDynamicTest.java
 ```
 * Notice, on Unix system, the path separation symbol is `:`. On Windows OS, the path separation symbol is `;`.
 
 ### 3.2 Running Java Code
-```sh
+```raw
 java -jar lib/junit-platform-console-standalone-1.1.0.jar --cp bin/ -c SolutionDynamicTest
 ```
 All the 5 test cases defined in the `testcase.txt` are executed and passed.

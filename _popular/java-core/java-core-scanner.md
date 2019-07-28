@@ -49,7 +49,7 @@ public class ScannerTest {
 }
 ```
 Output.
-```sh
+```raw
 Enter name, age and salary
 Johnny
 30
@@ -79,7 +79,7 @@ public class Solution {
 }
 ```
 Output.
-```sh
+```raw
 Testing hasNext and next, input string:
 aa bb cc
 11 22 33
@@ -106,7 +106,7 @@ public class Solution {
 }
 ```
 Output.
-```sh
+```raw
 Testing hasNextLine and nextLine, input string:
 aa bb cc
 11 22 33
@@ -134,7 +134,7 @@ public class Solution {
 }
 ```
 Output.
-```sh
+```raw
 Testing default delimiter, input string:
 aa bb, cc,dd ff,gg
 ^D
@@ -162,7 +162,7 @@ public class Solution {
 }
 ```
 Input 'aa bb, cc,dd ff,gg', the output looks as follows.
-```sh
+```raw
 Testing custom delimiter, input string:
 aa bb, cc,dd ff,gg
 ^D
@@ -181,7 +181,7 @@ System.out.println(sum); // will be printed to the file
 ```
 
 ### 2.6 Dummy servers
-```sh
+```raw
 cd /Users/i857285/Johnny/GitHub/Tutorials/DummyServer
 json-server --watch products.json --port 5000
 
@@ -269,14 +269,14 @@ public class WordCounterTest {
 }
 ```
 Input.
-```sh
+```raw
 hello world
 world hello
 hello
 howdy
 ```
 Output.
-```sh
+```raw
 hello 3
 howdy 1
 world 2
@@ -452,7 +452,7 @@ public class ImageCacheTest {
 }
 ```
 input.
-```sh
+```raw
 204288
 6
 http://localhost:5000/images/xbox360.jpg
@@ -463,7 +463,7 @@ http://localhost:5000/images/controller.jpg
 http://localhost:5000/images/wii.jpg
 ```
 Output.
-```sh
+```raw
 http://localhost:5000/images/xbox360.jpg DOWNLOADED 61584
 http://localhost:5000/images/wii.jpg DOWNLOADED 108475
 http://localhost:5000/images/xbox360.jpg IN_CACHE 61584

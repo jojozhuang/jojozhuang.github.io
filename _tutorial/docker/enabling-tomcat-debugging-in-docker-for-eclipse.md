@@ -24,14 +24,14 @@ Now, one question is how to debug this JSP application? Actually, Tomcat support
 ## 2. Setting up Tomcat Container
 ## 2.1 Remote Debugging in Tomcat
 In general, tomcat can be configured to allow a program such as eclipse to connect remotely using JPDA and see debugging information. To configure tomcat to allow remote debugging, start tomcat using the catalina startup script (from your tomcat home) instead of the normal startup script like so (tomcat must be stopped before you can change over):
-```sh
+```raw
 $ export JPDA_ADDRESS=8000
 $ export JPDA_TRANSPORT=dt_socket
 $ bin/catalina.sh jpda run
 ```
 ### 2.2 Creating Tomcat Container with Enabling Remote Debugging
 Manually create Tomcat container with Remote Debugging enabled. In docker terminal, run the following command.
-```sh
+```raw
 $ docker run --name=jsptomcatdebug -d -v ~/Documents/jsptomcat:/usr/local/tomcat/webapps/jsptutorial -p 31020:8080 -p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run
 ```
 Compare with the similar command used in the last posting, we append `-p 8000:8000 -e JPDA_ADDRESS=8000 tomcat catalina.sh jpda run` to the end.  

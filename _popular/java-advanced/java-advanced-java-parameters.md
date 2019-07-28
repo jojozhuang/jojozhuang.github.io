@@ -13,19 +13,19 @@ tags: [JVM Parameters]
 ## 1. Memory
 ### 1.1 Explicit Heap Memory – Xms and Xmx Options
 Syntax.
-```sh
+```raw
 -Xms<heap size>[unit]
 -Xmx<heap size>[unit]
 ```
 * `unit` can be marked as `g` for GB, `m` for MB and `k` for KB.
 
 Example: Assign minimum 2 GB and maximum 5 GB to JVM.
-```sh
+```raw
 -Xms2G -Xmx5G
 ```
 ### 1.2 Handling Out of Memory
 Dump heap memory into a physical file for analyzing the memory leak.
-```sh
+```raw
 -XX:+HeapDumpOnOutOfMemoryError
 -XX:HeapDumpPath=./java_pid<pid>.hprof
 -XX:OnOutOfMemoryError="< cmd args >;< cmd args >"
@@ -34,7 +34,7 @@ Dump heap memory into a physical file for analyzing the memory leak.
 * `HeapDumpOnOutOfMemoryError` instructs the JVM to dump heap into physical file in case of OutOfMemoryError
 * `HeapDumpPath` denotes the path where the file is to be written; any filename can be given; however, if JVM finds a <pid> tag in the name, the process id of the current process causing the out of memory error will be appended to the file name with .hprof format
 * `OnOutOfMemoryError` is used to issue emergency commands to be executed in case of out of memory error; proper command should be used in the space of cmd args. For example, if we want to restart the server as soon as out of memory occur, we can set the parameter:
-```sh
+```raw
 -XX:OnOutOfMemoryError="shutdown -r"
 ```
 * `UseGCOverheadLimit` is a policy that limits the proportion of the VM’s time that is spent in GC before an OutOfMemory error is thrown.
@@ -48,7 +48,7 @@ Choosing a right Garbage Collection algorithm is critical for better stability o
 * G1 Garbage Collector
 
 These implementations can be declared with the below parameters:
-```sh
+```raw
 -XX:+UseSerialGC
 -XX:+UseParallelGC
 -XX:+USeParNewGC
@@ -56,7 +56,7 @@ These implementations can be declared with the below parameters:
 ```
 ### 2.2 GC Logging
 Monitor the JVM’s Garbage Collection performance by logging the GC activity.
-```sh
+```raw
 -XX:+UseGCLogFileRotation
 -XX:NumberOfGCLogFiles=< number of log files >
 -XX:GCLogFileSize=< file size >[ unit ]
@@ -68,7 +68,7 @@ Monitor the JVM’s Garbage Collection performance by logging the GC activity.
 * `loggc` denotes its location.
 
 Example: Assign a maximum of 100 GC log files, each having a maximum size of 50 MB and want to store them in ‘/home/user/log/’ location.
-```sh
+```raw
 -XX:+UseGCLogFileRotation  
 -XX:NumberOfGCLogFiles=10
 -XX:GCLogFileSize=50M

@@ -14,7 +14,7 @@ PM2 is a Production Runtime and Process Manager for Node.js applications with a 
 
 Starting an application in production mode is as easy as:
 
-```sh
+```raw
 $ pm2 start app.js
 ```
 

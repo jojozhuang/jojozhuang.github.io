@@ -12,48 +12,48 @@ tags: [macOS, Bash, Shell]
 
 ## 1. bash Configuration File Broken
 Most of the bash commands are not working, `.bash_profile` or `.bashrc` is broken.
-```sh
+```raw
 $ ls
 -bash: ls: command not found
 ```
 Use full paths to the commands until fix the PATH:
-```sh
+```raw
 $ /bin/ls
 $ /usr/bin/vi ~/.bash_profile
 ```
 
 ## 2. Run Atom in Command Line on macOS
 Execute following script to link atom executable to local user directory.
-```sh
+```raw
 $ sudo ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 ```
 Then, you can open Atom in command prompt by just typing 'atom'.
-```sh
+```raw
 $ atom
 ```
 
 ## 3. Remove mount
 Execute the following script
 
-```sh
+```raw
 $ sudo umount -f /sapmnt/rc
 ```
 
 ## 4. Open a folder from terminal on Mac
 Navigate to the dir and type:
-```sh
+```raw
 open .
 ```
 The dot represents the current location.
 
 ## 5. Change the Default Terminal Prompt in Mac OS X
 Navigate to the dir and type:
-```sh
+```raw
 cd ~
 vi .bash_profile
 ```
 Add the following line (press i)
-```sh
+```raw
 export PS1="Johnny@Johnny-Mac:~$ "
 ```
 Save the file (press ESC, type :wq and hit Enter), restart Terminal.
@@ -61,17 +61,17 @@ Save the file (press ESC, type :wq and hit Enter), restart Terminal.
 
 ## 6. Open Two or More Windows of Visual Studio for Mac
 Navigate to the folder where Visual Studio Solution file(.sln) locates. Type the following command.
-```sh
+```raw
 $ open -n MySolution.sln
 ```
 
 ## 7. Change File's Created Date and Modified Date.
 In terminal, change created date with 'SetFile' command.
-```sh
+```raw
 SetFile -d '05/30/2017 02:15:49' default.png
 ```
 In terminal, change modified date with 'touch' command.
-```sh
+```raw
 touch -m -t201607081029.44 default.png
 ```
 

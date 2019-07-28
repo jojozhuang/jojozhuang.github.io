@@ -20,7 +20,7 @@ Recall that a graph is bipartite if we can split it's set of nodes into two inde
 The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.  Each node is an integer between 0 and graph.length - 1.  There are no self edges or parallel edges: graph[i] does not contain i, and it doesn't contain any element twice.
 
 Example 1:
-```sh
+```raw
 Input: [[1,3], [0,2], [1,3], [0,2]]
 Output: true
 Explanation:
@@ -32,7 +32,7 @@ The graph looks like this:
 We can divide the vertices into two groups: {0, 2} and {1, 3}.
 ```
 Example 2:
-```sh
+```raw
 Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
 Output: false
 Explanation:
@@ -93,18 +93,18 @@ Given a set of N people (numbered 1, 2, ..., N), we would like to split everyone
 Return true if and only if it is possible to split everyone into two groups in this way.
 
 Example 1:
-```sh
+```raw
 Input: N = 4, dislikes = [[1,2],[1,3],[2,4]]
 Output: true
 Explanation: group1 [1,4], group2 [2,3]
 ```
 Example 2:
-```sh
+```raw
 Input: N = 3, dislikes = [[1,2],[1,3],[2,3]]
 Output: false
 ```
 Example 3:
-```sh
+```raw
 Input: N = 5, dislikes = [[1,2],[2,3],[3,4],[4,5],[1,5]]
 Output: false
 ```

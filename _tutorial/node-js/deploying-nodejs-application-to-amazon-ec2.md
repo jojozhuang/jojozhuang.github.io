@@ -60,16 +60,16 @@ Note, the IP address here is internal IP. When using putty to connect EC2 remote
 
 ## 3.  Setting up Node.js environment in EC2 Instance
 ### 3.1 Updating your EC2 Amazon Linux
-```sh
+```raw
 $ sudo yum update
 ```
 ### 3.2 Installing GCC  
-```sh
+```raw
 $ sudo yum install gcc-c++ make
 $ sudo yum install openssl-devel
 ```
 ### 3.3 Installing Node.js
-```sh
+```raw
 $ sudo yum install git
 $ git clone git://github.com/nodejs/node
 $ cd node
@@ -78,7 +78,7 @@ $ make //it may take long time to compile
 $ sudo make install
 ```
 ### 3.4 Adding node folder to secure\_path  
-```sh
+```raw
 $ sudo su
 $ nano /etc/sudoers
 ```
@@ -86,7 +86,7 @@ $ nano /etc/sudoers
 Append :/usr/local/bin to the end of secure\_path  
 ![image15](/public/images/frontend/2525/image15.png)  
 ### 3.5 Installing npm  
-```sh
+```raw
 $ git clone https://github.com/npm/npm
 $ cd npm
 $ sudo make install
@@ -94,11 +94,11 @@ $ sudo make install
 
 ## 4. Creating simple node app and start Node server  
 ### 4.1 Creating folder ‘site’
-```sh
+```raw
 $ mkdir site
 ```
 ### 4.2 Creating file ‘server.js’
-```sh
+```raw
 $ nano server.js
 ```
 
@@ -121,7 +121,7 @@ console.log("The server is running at 80...");
 ### 4.3 Redirecting Port  
 You cannot make node server listen to port 80. Run the following command to redirect requests from port 80 of EC2 server to port 8080 of our Node server. You must execute it in root role. And it needs to be reset each time your EC2 instnace is restarted.
 
-```sh
+```raw
 $ iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080
 ```
 
@@ -147,7 +147,7 @@ Refresh the folder in putty, the new folder exits.
 ![image26](/public/images/frontend/2525/image26.png)  
 ### 5.3 Running the node application
 Go into the folder, and run the following commands.
-```sh
+```raw
 $ npm install
 $ npm start
 ```
@@ -185,11 +185,11 @@ Until now, the application is running properly.
 Sometime, npm itself doesn’t work properly.  
 ![image31](/public/images/frontend/2525/image31.png)  
 Then we have to uninstall and install it again.
-```sh
+```raw
 $ sudo npm uninstall npm -g
 ```
 If it doesn’t work, go the ‘npm’ folder, run:  
-```sh
+```raw
 $ sudo make uninstall
 ```
 

@@ -90,7 +90,7 @@ VIM - https://github.com/tomlion/vim-solidity
 
 
 ## Project File Walkthrough
-```sh
+```raw
 npm install solc --save
 ```
 
@@ -105,11 +105,11 @@ const source = fs.readFileSync(inboxPath, 'utf8');
 console.log(solc.compile(source, 1));
 ```
 Compile.
-```sh
+```raw
 node compile.js
 ```
 
-```sh
+```raw
 npm install mocha ganache-cli web3@1.0.0-beta.26 --save
 ```
 
@@ -146,11 +146,11 @@ update package.json
  },
 ```
 run test.
-```sh
+```raw
 npm run test
 ```
 output
-```sh
+```raw
 > mocha
 
 
@@ -184,12 +184,12 @@ describe('Inbox', () => {
 });
 ```
 run test.
-```sh
+```raw
 npm run test
 ```
 output
 ![image](/public/images/note/9141/ganacheaccounts.png)
-```sh
+```raw
 > mocha
 
 
@@ -279,13 +279,13 @@ describe('Inbox', () => {
 
 50. Deployment with Infura
 Register on https://infura.io/.
-```sh
+```raw
 npm install truffle-hdwallet-provider --save
 ```
 https://rinkeby.etherscan.io/
 
 54. Deployment to Rinkeby
-```sh
+```raw
 Johnny@Johnny-Mac:~$ node deploy.js
 Attempting to deploy from account 0xC0413358d6C103f0cdf7f50BA8EEf83bBDA70051
 Contract deployed to 0x672DBd70e0E4AD5FB59f1B1269535cB03f06Eb8A

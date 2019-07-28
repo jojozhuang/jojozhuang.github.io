@@ -24,7 +24,7 @@ Start VS Code through Launch pad.
 ![image](/public/images/devops/2125/vscode.png)
 ### 3.2 Launch from Terminal
 In terminal, navigate to the folder where your code file locates, type the following command.
-```sh
+```raw
 $ code .
 ```
 * `.` represents the current directory.

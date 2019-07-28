@@ -108,12 +108,12 @@ Suppose we have a stand java project that consists of three top level folders:
 Firstly, we will use `javac` command to compile the source files in `src` folder and output the compiled .class files to `bin` folder. Secondly, we will use `java` command to run the classes in `bin` folder. If these java classes are relied on other third-party libraries, then we need to put these library jar files into the `lib` folder, and include these them when compiling and running the java classes.
 ### 3.2 Compiling Java Code
 Compile the source file Application.java with lib1.jar and output the class files to bin folder.
-```sh
+```raw
 javac -d bin -sourcepath src -cp lib/lib1.jar src/com/example/Application.java
 ```
 ### 3.3 Running Java Code
 Run the Application class with lib1.jar.
-```sh
+```raw
 java -cp bin;lib/lib1.jar com.example.Application
 ```
 * Notice, on Unix system, the path separation symbol is `:`. On Windows OS, the path separation symbol is `;`.
@@ -164,11 +164,11 @@ Go to https://github.com/junit-team/junit4/wiki/download-and-install, Download t
 * hamcrest-core.jar
 
 ### 4.4 Compiling Java Code
-```sh
+```raw
 javac -d bin -sourcepath src -cp .:lib/junit-4.12.jar src/TestRunner.java
 ```
 ### 4.5 Running Java Code
-```sh
+```raw
 java -cp .:bin/:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar TestRunner
 ```
 ![image](/public/images/java/1521/commandline.png){:width="700px"}  

@@ -17,12 +17,12 @@ Previously, I introduced how to use JSP and MySQL/MongoDB to build web applicati
 [Angular](https://angular.io/) is a JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript. Angular provides built-in features for animation, http service, and materials which in turn has features such as auto-complete, navigation, toolbar, menus, etc.
 ### 2.1 Creating New Project
 In terminal, create new angular app named 'game-store-angular'.
-```sh
+```raw
 $ ng new game-store-angular
 ```
 ### 2.2 Components
 Then, create 5 components.
-```sh
+```raw
 $ cd game-store-angular
 $ ng g component header
 $ ng g component footer
@@ -106,7 +106,7 @@ Apply the router by updating ./app/app.component.html with the following content
 ```
 ### 2.4 BootStrap CSS
 Add bootstrap to the project.
-```sh
+```raw
 $ npm install ngx-bootstrap bootstrap --save
 ```
 Open 'angular-cli.json' and insert a new entry into the styles array
@@ -118,7 +118,7 @@ Open 'angular-cli.json' and insert a new entry into the styles array
 ```
 ### 2.5 Install Material Package
 We will use the Alert component provided by Angular. We need to install material package.
-```sh
+```raw
 $ npm install --save @angular/material @angular/cdk
 ```
 In 'app.module.ts', inclucde 'AlertModule'.
@@ -194,7 +194,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 ### 3.2 Service
 Create service for CRUD operations.
-```sh
+```raw
 $ ng g service product
 ```
 Two new files 'product.service.specs.ts' and 'product.service.ts' are created in the './src/app/' folder.
@@ -641,7 +641,7 @@ Method filechanged() shows file name after user selects local image. Method uplo
 
 ## 5. Running and Testing
 Start the RESTful service first, and start this Angular app, serve it in web server.
-```sh
+```raw
 $ ng serve
 ```
 Open web browser, access 'http://localhost:12080/'.

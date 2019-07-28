@@ -65,7 +65,7 @@ public class Client {
 }
 ```
 Output.
-```sh
+```raw
 Buy stock
 Sell stock
 ```

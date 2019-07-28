@@ -16,12 +16,12 @@ tags: [Angular, MEAN, Node.js]
 ## 2. Angular Project
 ### 2.1 Creating New Project
 In terminal, create new angular app named 'AngularTutorial'.
-```sh
+```raw
 $ ng new AngularTutorial
 ```
 ### 2.2 Components
 Then, create 5 components.
-```sh
+```raw
 $ cd AngularTutorial
 $ ng g component header
 $ ng g component footer
@@ -105,7 +105,7 @@ Apply the router by updating ./app/app.component.html with the following content
 ```
 ### 2.4 BootStrap CSS
 Install bootstrap related packages to the project.
-```sh
+```raw
 $ npm install ngx-bootstrap bootstrap --save
 ```
 Open 'angular-cli.json' and insert a new entry into the styles array.
@@ -117,7 +117,7 @@ Open 'angular-cli.json' and insert a new entry into the styles array.
 ```
 ### 2.5 Install Material Package
 We will use the Alert component provided by Angular. We need to install material package.
-```sh
+```raw
 $ npm install --save @angular/material @angular/cdk
 ```
 In 'app.module.ts', inclucde 'AlertModule'.
@@ -185,7 +185,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 ### 3.2 Services
 Create service for CRUD operations.
-```sh
+```raw
 $ ng g service product
 ```
 Two new files 'product.service.specs.ts' and 'product.service.ts' are created in the './src/app/' folder.
@@ -596,7 +596,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 ## 5. Running and Testing
 Start the RESTful service first, and start this Angular app, serve it at port 12080.
-```sh
+```raw
 $ ng serve
 ```
 Open web browser, access 'http://localhost:12080/'.

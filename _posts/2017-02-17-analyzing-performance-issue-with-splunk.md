@@ -36,7 +36,7 @@ Turn on the logging function, reproduce the issue, export the log file.
 In Splunk, import log file.
 ### 3.3 Searching the Logs for Header Level
 Get the logs for level=0(header level).
-```sh
+```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=0"
 ```
 ![image](/public/images/blog/2017-02-17/level0.png)  
@@ -52,7 +52,7 @@ Then, sort the 'TimeSpent' column in descending order. Now, we see that field 'L
 
 ### 3.6 Searching the Logs for Line Level
 Now, we take the same steps to get the logs for level=1(line level).
-```sh
+```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=1"
 ```
 ![image](/public/images/blog/2017-02-17/level1.png)  

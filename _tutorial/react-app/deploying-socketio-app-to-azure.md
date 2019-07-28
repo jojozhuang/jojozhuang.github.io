@@ -12,7 +12,7 @@ tags: [Azure]
 
 ## 1. Socket.IO Project
 ### 1.1 Cloning Source Code
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/course-player-socketio.git
 ```
 ### 1.2 IIS

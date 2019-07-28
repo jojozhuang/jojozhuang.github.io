@@ -16,47 +16,47 @@ tags: [Electron, Node.js, Visual Studio Code]
 ## 2. Setting up Development Environment
 ## 2.1 Installing Homebrew on Mac
 Homebrew is package manager for Macs which makes installing lots of different software like Git, Ruby, and Node simpler. Homebrew lets you avoid possible security problems associated with using the sudo command to install software like Node.
-```sh
+```raw
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew update // Update Homebrew
 ```
 
 ## 2.2 Installing Node.js and NPM
-```sh
+```raw
 $ brew install node
 ```
 
 npm will be installed along with nodejs.   
 Run following commands in terminal to check versions, to make sure node and npm are installed properly.
-```sh
+```raw
 $ node -v   //mac
 $ nodejs -v //linux
 $ npm -v  
 ```
 
 Update node and npm
-```sh
+```raw
 $ brew upgrade node
 ```
 
 ## 2.3 Installing Electron
 Install Electron globally.
-```sh
+```raw
 $ npm install -g electron
 ```
 If you get permission denied error, run the following command instead.
-```sh
+```raw
 $ sudo npm install -g electron --unsafe-perm=true --allow-root
 ```
 
 Check version
-```sh
+```raw
 $ electron --version
 v1.7.9
 ```
 
 You can also install Electron at package level.
-```sh
+```raw
 $ npm install electron --save-dev
 ```
 
@@ -71,7 +71,7 @@ your-app/
 ├── main.js  
 └── index.html  
 ## 3.1 Creating Project Folder and package.json
-```sh
+```raw
 $ cd ~
 $ mkdir ElectronTutorial
 $ cd ElectronTutorial
@@ -135,7 +135,7 @@ app.on('ready', createWindow)
 
 ## 3.4 Launching Electron App
 Run this app using the following command:
-```sh
+```raw
 $ electron ./main.js
 ```
 A new window will open up, showing 'Hello World'.
@@ -145,7 +145,7 @@ A new window will open up, showing 'Hello World'.
 We can leverage all the available tools for front-end web development in Electron. For example, you can use bootstrap, jQuery, AngularJs or ReactJs to build Electron apps.
 
 ## 4.1 Installing Packages
-```sh
+```raw
 $ npm install -g bower       //Install Bower
 $ bower install bootstrap    //Install bootstrap
 $ npm install --save jquery  //Install jQuery
@@ -186,7 +186,7 @@ $('#countbtn').on('click', () => {
 ```
 
 3) Run this app using the following command:
-```sh
+```raw
 $ electron ./main.js
 ```
 A new window will open up, showing bootstrap UI.
@@ -284,7 +284,7 @@ $('#open').on('click', () => {
 
 ## 5.4 Running
 Run this app using the following command:
-```sh
+```raw
 $ electron ./main.js
 ```
 A new window will open up, showing a textbox and a button. Click on that button, select a txt file, then its content would be shown in the textbox.
@@ -345,7 +345,7 @@ There are two modules support you to package your Electron apps.
 I will use the electron-builder for packaging.
 
 Install electron-builder
-```sh
+```raw
 $ npm install electron-builder --save-dev
 ```
 
@@ -389,12 +389,12 @@ Add the following content to package.json.
 ```
 
 Use the following command to package your app into an installer:
-```sh
+```raw
 $ npm run dist
 ```
 
 You will get the update from builder.
-```sh
+```raw
 $ npm run dist
 > electron-tutorial@1.0.0 dist /Tutorials/ElectronTutorial
 > build

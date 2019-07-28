@@ -11,59 +11,59 @@ tags: [Git]
 
 ## 1. Git Configuration
 List all git settings.
-```sh
+```raw
 git config --list
 ```
 Change configuration. For example, change the remote url.
-```sh
+```raw
 git config remote.origin.url "https://github.com/jojozhuang"
 ```
 ## 2. Branch
 Check current branch
-```sh
+```raw
 git branch --list
 ```
 Switch Branch
-```sh
+```raw
 git checkout [name_of_branch]
 ```
 Create new Branch
-```sh
+```raw
 $ git checkout -b [name_of_your_new_branch]
 $ git branch [name_of_your_new_branch]
 ```
 Delete Branch
-```sh
+```raw
 $ git branch -d <branchname>
 ```
 
 ## 3. Status
 Check all change status
-```sh
+```raw
 git status
 ```
 Check log
-```sh
+```raw
 git log
 ```
 
 ## 4. Files
 Add file
-```sh
+```raw
 git add [path_of_file]
 ```
 Remove file
-```sh
+```raw
 git checkout [path_of_file]
 ```
 
 ## 5. Submit change
 Commit change
-```sh
+```raw
 git commit -m "message of the commit"
 ```
 Push to remote
-```sh
+```raw
 git push
 ```
 

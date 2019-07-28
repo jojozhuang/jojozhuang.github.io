@@ -17,7 +17,7 @@ tags: [Apache Spark, Scala]
 ### 2.1 Installing JDK
 Refer to [Setting up Java Development Environment on Ubuntu]({% link _tutorial/dev-env/setting-up-java-development-environment-on-ubuntu.md %}) to install JDK on Linux.
 Check java version with the following command.
-```sh
+```raw
 $ java -version
 java version "1.8.0_144"
 Java(TM) SE Runtime Environment (build 1.8.0_144-b01)
@@ -27,11 +27,11 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
 ### 2.2 Installing Scala
 Go to [http://www.scala-lang.org/download/](http://www.scala-lang.org/download/), download scala-2.12.3.deb.
 Navigate to the folder where the new installation file locates. Install Scala with following command.
-```sh
+```raw
 $ sudo dpkg -i scala-2.12.3.deb
 ```
 Verify Scala installation by checking Scala version.
-```sh
+```raw
 $ scala -version
 Scala code runner version 2.12.3 -- Copyright 2002-2017, LAMP/EPFL and Lightbend, Inc.
 ```
@@ -41,33 +41,33 @@ Scala code runner version 2.12.3 -- Copyright 2002-2017, LAMP/EPFL and Lightbend
 Go to [https://spark.apache.org/downloads.html](https://spark.apache.org/downloads.html), select release and package type, download spark-2.2.0-bin-hadoop2.7.tgz.
 
 Extract the spark tar file with the following command.
-```sh
+```raw
 $ tar xvf spark-2.2.0-bin-hadoop2.7.tgz
 ```
 Move spark files to `/usr/local/spark`.
-```sh
+```raw
 $ mv spark-2.2.0-bin-hadoop2.7 /usr/local/spark
 ```
 
 ### 3.2 Setting up the environment for Spark
 Open `~/.bashrc` file with any text editor.
-```sh
+```raw
 $ nano ~/.bashrc
 ```
 
 Add the following line to ~/.bashrc file.
-```sh
+```raw
 export PATH=$PATH:/usr/local/spark/bin
 ```
 
 Source the bash file
-```sh
+```raw
 $ source ~/.bashrc
 ```
 
 ### 3.3 Verifying the Spark Installation
 Launch Spark Shell with following command.
-```sh
+```raw
 $ spark-shell
 ```
 You will get the following output if spark is installed successfully.

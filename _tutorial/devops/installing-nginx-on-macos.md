@@ -15,23 +15,23 @@ tags: [Nginx, macOS]
 
 ## 2. Installing Nginx on macOS
 Use brew to install nginx.
-```sh
+```raw
 $ brew install nginx
 ```
 Start nginx after installation.
-```sh
+```raw
 $ sudo nginx
 ```
 Access 'http://localhost:8080' in web browser.
 ![image](/public/images/devops/3511/startserver.png){:width="700px"}  
 
 Use the following command to stop nginx.
-```sh
+```raw
 $ sudo nginx -s stop
 ```
 ## 3. Configuration
 The default place of `nginx.conf` on Mac after installing with brew is:
-```sh
+```raw
 /usr/local/etc/nginx/nginx.conf
 ```
 ### 3.1 Changing the Default Port(8080)
@@ -92,7 +92,7 @@ Many front-end libraries like React and Angular are using client side routing(CS
 One limitation of CSR is, it assumes user always accesses the index page first. If user directly access the routing page, for example, http://localhost:3000/productlist, “Cannot GET /URL Error” will appear. Notice, after we deploy the Single Page Application, there is only one index.html file and several assets file in the server folder. This is no file named productlist.html. To solve this issue, we can force web browser access the index file.
 
 For nginx, add following line to the configuration file /usr/local/etc/nginx/nginx.conf.
-```sh
+```raw
 try_files $uri /index.html;
 ```
 This lets nginx serve static asset files and serves your index.html file when any file isn't found on the server.

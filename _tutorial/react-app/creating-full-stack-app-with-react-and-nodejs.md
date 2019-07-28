@@ -235,7 +235,7 @@ Create ./public/index.html
 
 ## 4. Running and Testing
 Start both the client and server with 'npm run dev'.
-```sh
+```raw
 $ npm run dev
 ```
 Other commands.

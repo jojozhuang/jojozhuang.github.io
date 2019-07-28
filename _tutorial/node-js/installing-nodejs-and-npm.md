@@ -22,64 +22,64 @@ tags: [Node.js, NPM]
 
 ## 3. Installing Node.js and NPM on Ubuntu
 Update your local package index:
-```sh
+```raw
 $ sudo apt-get update
 ```
 Install potential unmet dependencies:
-```sh
+```raw
 $ sudo apt-get -f install
 ```
 Install Node.js:
-```sh
+```raw
 $ sudo apt-get install nodejs
 ```
 Check Node.js version to make sure it has been installed properly.
-```sh
+```raw
 $ nodejs -v
 ```
 Install NPM:
-```sh
+```raw
 $ sudo apt-get install npm
 ```
 Check NPM version:
-```sh
+```raw
 $ npm -v  
 ```
 
 ## 4. Installing Node.js and NPM on RedHat
 Enter the following command to download the scripts that are required to set up Node.js:
-```sh
+```raw
 $ sudo rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 ```
 Install Node.js:
-```sh
+```raw
 $ sudo yum install -y nodejs
 ```
 
 Check versions to make sure nodejs and npm are both installed properly.
-```sh
+```raw
 $ node -v   // check node.js version
 $ npm -v    // check npm version
 ```
 
 ## 5. Installing Node.js and NPM on Mac
 Updates Homebrew with a list of the latest version of Node.
-```sh
+```raw
 $ brew update
 ```
 Run the below command to install node.js. Notice that npm will be installed together with nodejs.
-```sh
+```raw
 $ brew install node
 ```
 
 Check versions to make sure nodejs and npm are both installed properly.
-```sh
+```raw
 $ node -v   // check node.js version
 $ npm -v    // check npm version
 ```
 
 Use the following command to update node and npm if necessary.
-```sh
+```raw
 $ brew upgrade node
 ```
 
@@ -91,11 +91,11 @@ Create a file named main.js having the following codes.
 console.log("Hello, World!")
 ```
 Execute main.js with `node` command.
-```sh
+```raw
 $ node main.js
 ```
 If everything is fine with your installation, this should produce the following result:
-```sh
+```raw
 Hello, World!
 ```
 ![image](/public/images/frontend/2501/testnode.png){:width="600px"}

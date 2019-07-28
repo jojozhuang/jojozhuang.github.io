@@ -22,7 +22,7 @@ The following architecture defines the role of JDB in JDK. It contains mainly th
 ## 3. Using JDB
 ### 3.1 Syntax
 The syntax of JDB is as follows.
-```sh
+```raw
 jdb [ options ] [ class ] [ arguments ]
 ```
 * JDB - It calls jdb.exe from the Java Development Kit.
@@ -44,11 +44,11 @@ public class Sum {
 ```
 ### 3.3 Compiling and Running
 Navigate to the folder where Sum.java locates, use `javac` to compile it. The `g` option adds extra debug info to the class.
-```sh
+```raw
 $ javac -g Sum.java
 ```
 Run `Sum` in debug mode with providing two input parameters, 3 and 4. Now we have the application listening on port 4000 waiting for connections.
-```sh
+```raw
 $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=y Sum 3 4
 ```
 * With `suspend=y` the Java-process will wait until the debugger connects, with suspend=n you will be also able to debug the application servers startup process.
@@ -58,21 +58,21 @@ $ java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4000,server=y,suspend=
 
 ### 3.4 Debugging with JDB
 Open another terminal, use `jdb` to start a new debug session. The `attach` option attaches the debugger to the running VM by specifying the specific port 4000.
-```sh
+```raw
 jdb -attach 4000
 ```
 ![attachport](/public/images/java/1512/attachport.png){:width="600px"}
 
 Use `stop` command to set breakpoint to line 6, which is 'System.out.println("Sum is " + sum);'.
-```sh
+```raw
 main[1] stop at Sum:6
 ```
 Use `step` command to step the execution to the next line.
-```sh
+```raw
 main[1] step
 ```
 Use `list` command to know the line in the code up to which the program control has reached. Notice the arrow mark => in the following screenshot that shows the current position of the program control.
-```sh
+```raw
 main[1] list
 ```
 ![step](/public/images/java/1512/step.png){:width="600px"}

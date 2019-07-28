@@ -54,7 +54,7 @@ Build the project, then deploy it to tomcat's default web folder `/usr/local/apa
 ![image](/public/images/java/1514/final.png)  
 ### 3.2 Starting Tomcat
 Run following command to start tomcat.
-```sh
+```raw
 $ /usr/local/apache-tomcat-9.0.1/bin/startup.sh
 ```
 Access http://localhost:8080/jspdeployed/productlist.jsp in web browser. You should see three products in the list.
@@ -65,11 +65,11 @@ Nothing happened, the name and price of the third product are not changed. We ne
 ![image](/public/images/java/1514/productlist2.png)
 ### 3.3 Restart Tomcat in Debug Mode
 First, stop tomcat with following command.
-```sh
+```raw
 $ /usr/local/apache-tomcat-9.0.1/bin/shutdown.sh
 ```
 Run followings commands to start tomcat with enabling remote debugging.
-```sh
+```raw
 $ export JPDA_ADDRESS=8028
 $ export JPDA_TRANSPORT=dt_socket
 $ /usr/local/apache-tomcat-9.0.1/bin/catalina.sh jpda start

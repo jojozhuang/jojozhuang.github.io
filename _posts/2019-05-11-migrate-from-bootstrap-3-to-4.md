@@ -15,7 +15,7 @@ tags: [Bootstrap]
 ### 2.1 Git Branch
 I create a [new branch ](https://github.com/jojozhuang/jojozhuang.github.io/tree/bootstrap-4) for this migration.
 The pull request is [here](https://github.com/jojozhuang/jojozhuang.github.io/pull/1/commits).
-```sh
+```raw
 git checkout -b bootstrap-4
 ```
 ### 2.2 References for CSS and JS

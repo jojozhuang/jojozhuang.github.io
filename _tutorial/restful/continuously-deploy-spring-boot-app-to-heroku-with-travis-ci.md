@@ -13,12 +13,12 @@ tags: [Heroku, Travis CI]
 ## 1. Spring Boot
 ### 1.1 Source Files
 Download the source files for this Spring Boot app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/restful-api-springboot.git
 ```
 ### 1.2 Procfile
 To teach Heroku how to deploy the app correctly, create a new file with name `Procfile` in the root path of our project. Submit this file to GitHub.
-```sh
+```raw
 web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar -Dspring.profiles.active=prod
 ```
 ### 1.3 Travis Config File
@@ -41,7 +41,7 @@ In addition, go to 'Account settings', copy the 'API Key'. We will use it to set
 ![image](/public/images/frontend/2224/heroku_apikey.png)  
 
 **In case, the continuous deployment doesn't work. Try to deploy it to Heroku manually first.**
-```sh
+```raw
 cd restful-api-springboot
 heroku create gamestore-api
 git push heroku master

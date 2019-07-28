@@ -93,7 +93,7 @@ app.listen(3000, function() {
 });
 ```
 Start the server and access http://localhost:3000/ and http://localhost:3000/random in browser. You should see the output in console.
-```sh
+```raw
 Web Server started on port 3000
 {"message":"File not found","level":"error"}
 {"message":"Hello world","level":"info"}

@@ -152,33 +152,33 @@ Go to https://devcenter.heroku.com/articles/heroku-cli#download-and-install to d
 ### 2.3 Getting Started
 First, read the official tutorial [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) to get familiar with the basic functions of Heroku. Below are some of the highlights from the tutorial.  
 1) Log into Heroku
-```sh
+```raw
 $ heroku login
 Enter your Heroku credentials.
 Email: jojozhuang@gmail.com
 Password: **********
 ```
 2) Create Heroku App
-```sh
+```raw
 $ heroku create                     // no name, a random name will be assigned to the app
 $ heroku create online-judge-api // create app with the given name
 ```
 3) View logs
-```sh
+```raw
 $ heroku logs --tail
 ```
 4) Scale the app
-```sh
+```raw
 $ heroku ps //check how many dynos are running
 $ heroku ps:scale web=0 // scale down
 $ heroku ps:scale web=1 // scale up
 ```
 5) Run the app locally
-```sh
+```raw
 $ heroku local web // same as 'npm start'
 ```
 6) Heroku Console
-```sh
+```raw
 $ heroku run bash
 Running bash on ⬢ damp-springs-52045... up, run.3598 (Free)
 ~ $ ls
@@ -189,12 +189,12 @@ Procfile  README.md  app.json  index.js  node_modules  package-lock.json  packag
 ## 3. Deployment
 ### 3.1 Server
 1) Clone Source Code
-```sh
+```raw
 $ git clone https://github.com/jojozhuang/online-judge-mean.git
 $ cd online-judge-mean
 ```
 2) Create App on Heroku
-```sh
+```raw
 $ heroku create online-judge-api
 Creating ⬢ online-judge-api... done
 https://online-judge-api.herokuapp.com/ | https://git.heroku.com/online-judge-api.git
@@ -202,7 +202,7 @@ https://online-judge-api.herokuapp.com/ | https://git.heroku.com/online-judge-ap
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
 3) Push files to Heroku
-```sh
+```raw
 $ git push heroku master
 Counting objects: 307, done.
 Delta compression using up to 8 threads.
@@ -312,7 +312,7 @@ Login to Heroku, go to Settings, click 'Reveal Config Vars' button. Add new Key:
 ![image](/public/images/frontend/2841/configvar.png)
 5) Testing Server  
 Open web browser, access 'https://online-judge-api.herokuapp.com/api/'. The API is working now.
-```sh
+```raw
 {"message":"Hello! welcome to our api!"}
 ```
 ![image](/public/images/frontend/2841/api.png){:width="650px"}  
@@ -320,17 +320,17 @@ If you access https://online-judge-api.herokuapp.com/api/submission/questions, y
 ![image](/public/images/frontend/2841/questionsjson.png)
 ### 3.2 Client
 1) Build Angular app.
-```sh
+```raw
 $ npm run build
 ```
 The Angular app is built and exported to dist folder. All are static files(html, js and images).
 ![image](/public/images/frontend/2841/build.png){:width="800px"}  
 2) Create App on Heroku
-```sh
+```raw
 $ heroku create online-judge-mean
 ```
 3) Create git repository.
-```sh
+```raw
 $ cd dist
 $ git init
 $ git add .
@@ -358,7 +358,7 @@ To https://git.heroku.com/online-judge-mean.git
 error: failed to push some refs to 'https://git.heroku.com/online-judge-mean.git'
 ```
 Error occurs, Heroku is not able to determine the language of the app. Actually, it is just a static web site since we compile the Angular app. The solution is: rename './dist/index.html' to './dist/index.php'. Then, push again.
-```sh
+```raw
 Johnny@Johnny-Mac:~$ git init
 Reinitialized existing Git repository in /Users/Johnny/GitHub/online-judge-mean/dist/.git/
 Johnny@Johnny-Mac:~$ git add .
@@ -421,7 +421,7 @@ To https://git.heroku.com/online-judge-mean.git
 The push is successful.
 
 If you changed the app name or you are deploying new changes. You need to re-connect your git repository to Heroku app.
-```sh
+```raw
 $ git remote rm heroku
 $ heroku git:remote -a online-judge-mean
 ```

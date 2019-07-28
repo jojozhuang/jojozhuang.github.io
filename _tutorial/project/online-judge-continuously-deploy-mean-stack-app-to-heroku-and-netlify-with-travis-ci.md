@@ -13,7 +13,7 @@ tags: [Heroku, Travis CI, Netlify]
 ## 1. MEAN Stack Project
 ### 1.1 Source Files
 Download the source files for this mean stack app. Create your own repository on GitHub and submit this project.
-```sh
+```raw
 git clone https://github.com/jojozhuang/online-judge-mean.git
 ```
 ### 1.2 Deployment Target
@@ -28,7 +28,7 @@ Our target is to use the same GitHub repository to deploy both the client and se
 ## 2. Server Deployment
 ### 2.1 Commands
 In 'package.json', notice there is a command named 'start', which is used to launch the express server. Also, notice the 'test' command. It is empty as we don't need any testing for this app. Do not specify 'exit 1' in the end of this command. Otherwise, the deployment will fail.
-```sh
+```raw
 ...
   "scripts": {
     "start": "NODE_ENV=production node ./server/server",
@@ -90,7 +90,7 @@ Access https://online-judge-api.herokuapp.com/api/submission/questions in browse
 ## 3. Client Deployment
 ### 3.1 Build Command
 In 'package.json', notice there is a command named 'build', which is used to compile the Angular app and save the output to 'dist' folder.
-```sh
+```raw
 ...
   "scripts": {
     ...

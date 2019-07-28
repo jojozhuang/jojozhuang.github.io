@@ -305,7 +305,7 @@ Then, use Bootstrap tags and styles to create html controls in React components.
 ### 3.2 React-Bootstrap
 [React-Bootstrap](https://react-bootstrap.github.io/introduction.html) is a library of reusable front-end components. You'll get the look-and-feel of Twitter Bootstrap, but with much cleaner code, via Facebook's React.js framework.  
 First, install 'react-bootstrap'.
-```sh
+```raw
 $ npm install react-bootstrap --saves
 ```
 And, import 'react-bootstrap' to React component.

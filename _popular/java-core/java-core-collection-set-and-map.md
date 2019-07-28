@@ -67,7 +67,7 @@ private static void constructHashSet() {
 }
 ```
 Output.
-```sh
+```raw
 Construct set: [1, 2, 3, 4]
 Construct set with list: [1, 2, 3, 4, 5, 6, 7]
 Construct set with another set: [1, 2, 3, 4]
@@ -96,7 +96,7 @@ private static void commonOperations() {
 }
 ```
 Output.
-```sh
+```raw
 Common operations - add : [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Check whether element 3 exists : true
 Remove element 6 : [0, 1, 2, 3, 4, 5, 7, 8]
@@ -131,7 +131,7 @@ private static void traverseSet() {
 }
 ```
 Output.
-```sh
+```raw
 Traverse Set(for each): processing - Apple
 Traverse Set(for each): processing - Mango
 Traverse Set(for each): processing - Orange
@@ -201,7 +201,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Remove element: processing - Apple
 Remove element: processing - Watermelon
 Remove element: processing - Mango
@@ -248,7 +248,7 @@ private static void constructTreeSet() {
 }
 ```
 Output.
-```sh
+```raw
 Construct TreeSet: [2, 4, 5, 9]
 Construct TreeSet with comparator: [9, 5, 4, 2]
 Construct TreeSet with list: [1, 2, 4, 5, 6, 7]
@@ -313,7 +313,7 @@ private static void commonOperations() {
 }
 ```
 Output.
-```sh
+```raw
 Common operations - add : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 Check whether element 3 exists : true
 First element is: 0
@@ -361,7 +361,7 @@ private static void traverseTreeSet() {
 }
 ```
 Output.
-```sh
+```raw
 Traverse TreeSet(for each): processing - Apple
 Traverse TreeSet(for each): processing - Banana
 Traverse TreeSet(for each): processing - Mango
@@ -430,7 +430,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Remove element: processing - Apple
 Remove element: processing - Banana
 Remove element: processing - Mango
@@ -470,7 +470,7 @@ private static void constructHashMap() {
 }
 ```
 Output.
-```sh
+```raw
 Construct HashMap: {null=Z, A=A, B=B, C=C, D=null}
 Construct HashMap with another map: {null=Z, A=A, B=B, C=C, D=null}
 ```
@@ -522,7 +522,7 @@ private static void commonOperations() {
 }
 ```
 Output.
-```sh
+```raw
 Check whether key 'A' exists: true
 Check whether key 'D' exists: true
 Check whether key 'M' exists: false
@@ -602,7 +602,7 @@ private static void traverseHashMap() {
 }
 ```
 Output.
-```sh
+```raw
 Traverse Key(for each): processing - 2
 Traverse Key(for each): processing - 4
 Traverse Key(for each): processing - 5
@@ -691,7 +691,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Remove element: processing - 2=Mango
 Remove element: processing - 4=Banana
 Remove element: processing - 5=Orange
@@ -742,7 +742,7 @@ private static void constructTreeMap() {
 }
 ```
 Output.
-```sh
+```raw
 Construct TreeMap: {A=A, B=B, C=C, D=null}
 Construct TreeMap with comparator: {D=D, C=C, B=B, A=A}
 Construct TreeMap with map: {A=A, B=B, C=C, D=D}
@@ -833,7 +833,7 @@ private static void commonOperations() {
 }
 ```
 Output.
-```sh
+```raw
 Common operations - add : {0=0, 1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9}
 Check whether key 1 exists: true
 Check whether key 3 exists: true
@@ -928,7 +928,7 @@ private static void traverseTreeMap() {
 }
 ```
 Output.
-```sh
+```raw
 Traverse Key(for each): processing - 2
 Traverse Key(for each): processing - 4
 Traverse Key(for each): processing - 5
@@ -1017,7 +1017,7 @@ private static void correctWayToRemoveElement() {
 }
 ```
 Output.
-```sh
+```raw
 Remove element: processing - 2=Mango
 Remove element: processing - 4=Banana
 Remove element: processing - 5=Orange
