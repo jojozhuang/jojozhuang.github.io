@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Core - Non-blocking IO - Draft"
+title: "Java Core - NIO - Draft"
 index: 1406
 subcategory: java-core
 date: 2017-01-11
@@ -10,7 +10,7 @@ tags: [File]
 
 > Read and write file in java.
 
-## 1. IO
+## 1. Non-blocking IO
 
 
 

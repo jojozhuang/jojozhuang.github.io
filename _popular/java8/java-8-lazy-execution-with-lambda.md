@@ -47,5 +47,33 @@ public class NonLazyCodeExample {
 }
 ```
 
+logging function in lambda.
+```java
+List<Integer> result = numbers.stream()
+         .peek(x -> System.out.println("from stream: " + x))
+         .map(x -> x + 17)
+         .peek(x -> System.out.println("after map: " + x))
+         .filter(x -> x % 2 == 0)
+         .peek(x -> System.out.println("after filter: " + x))
+         .limit(3)
+         .peek(x -> System.out.println("after limit: " + x))
+         .collect(toList());
+```
+This code produces useful output at each step of the pipeline:
+```raw
+from stream: 2
+after map: 19
+from stream: 3
+after map: 20
+after filter: 20
+after limit: 20
+from stream: 4
+after map: 21
+from stream: 5
+after map: 22
+after filter: 22
+after limit: 22
+```
+
 ## 6. References
 * [A Little Lazy Lambda Tutorial](https://dzone.com/articles/a-little-lazy-lambda-tutorial)

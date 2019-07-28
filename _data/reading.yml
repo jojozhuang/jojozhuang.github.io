@@ -61,3 +61,17 @@ bookmarks:
         description: 2019年最新总结,国内大厂面试指南
         url: https://github.com/0voice/interview_internal_reference
         type: webpage
+  - category: Others
+    links:
+      - name: The introduction to Reactive Programming you've been missing
+        description: The introduction to Reactive Programming you've been missing
+        url: https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
+        type: webpage
+      - name: DevOps Concepts - Stateless Servers - YouTube
+        description: DevOps Concepts - Stateless Servers - YouTube
+        url: https://www.youtube.com/watch?v=FmctmpybIKs
+        type: video
+      - name: 一个月被动收入赚到$12037.09秘密
+        description: 一个月被动收入赚到$12037.09秘密
+        url: https://www.youtube.com/watch?v=cs-L3LeLu2o
+        type: video
