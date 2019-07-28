@@ -48,6 +48,10 @@ bookmarks:
         description: Online tool to generate hash
         url: https://emn178.github.io/online-tools/index.html
         favorite: true
+      - name: Mermaid Live Editor
+        description: Mermaid Live Editor
+        url: https://mermaidjs.github.io/mermaid-live-editor/
+        favorite: true
   - category: Quick Reference
     links:
       - name: Rico's cheatsheets
@@ -76,6 +80,12 @@ bookmarks:
       - name: TutorialsPoint
         description: Huge amount of tutorials for different technologies
         url: https://www.tutorialspoint.com/
+      - name: HowToDoInJava
+        description: Java Tutorials at HowToDoInJava.com
+        url: https://howtodoinjava.com/
+      - name: Java & Distributed Systems
+        description: Java & Distributed Systems
+        url: http://tutorials.jenkov.com/
       - name: The Modern JavaScript Tutorial
         description: A good tutorial for javascript
         url: https://javascript.info/

@@ -21,6 +21,10 @@ bookmarks:
         description: Java 技术书籍大全
         url: https://github.com/sorenduan/awesome-java-books
         type: webpage
+      - name: How Java I/O Works Internally at Lower Level?
+        description: How Java I/O Works Internally at Lower Level?
+        url: https://howtodoinjava.com/java/io/how-java-io-works-internally-at-lower-level/
+        type: webpage
   - category: Distributed System
     links:
       - name: Load Balancer原理和实战：最终如何实现？
