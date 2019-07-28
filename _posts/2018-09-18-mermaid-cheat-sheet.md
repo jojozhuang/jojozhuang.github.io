@@ -684,6 +684,6 @@ sequenceDiagram
 </div>
 
 ## 5. References
-* [Mermaid Flowcharts - Basic Syntax](https://mermaidjs.github.io/flowchart.html)
-* [Mermaid Sequence diagrams](https://mermaidjs.github.io/sequenceDiagram.html)
-* [Mermaid Gant diagrams](https://mermaidjs.github.io/gantt.html)
+* [Mermaid Flowcharts - Basic Syntax](https://mermaidjs.github.io/#/flowchart)
+* [Mermaid Sequence diagrams](https://mermaidjs.github.io/#/sequenceDiagram)
+* [Mermaid Gant diagrams](https://mermaidjs.github.io/#/gantt)

@@ -64,6 +64,7 @@ $(document).ready(function() {
 </script>
 ```
 * Go to https://unpkg.com/mermaid to search the latest version or specific version.
+* Go to https://github.com/knsv/mermaid/tree/master/src/themes to check available `themes`.
 
 Update file `_inlude/head.html`, include the above template file if `page.mermaid` is true.
 ```javascript
