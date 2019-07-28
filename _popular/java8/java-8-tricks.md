@@ -95,5 +95,37 @@ Collection
 * Entry.comparingByKey
 
 
+Null check. Optional Class
+```java
+public String getCarInsuranceName(Person person) {
+    if (person != null) {
+        Car car = person.getCar();
+        if (car != null) {
+            Insurance insurance = car.getInsurance();
+            if (insurance != null) {
+              return insurance.getName();
+            }
+        }
+    }
+    return "Unknown";
+}
+```
+java.util.Optional<T>
+
+Manipulating a stream of optionals
+
+```java
+public Set<String> getCarInsuranceNames(List<Person> persons) {
+   return persons.stream()
+
+   Collect the result Strings into a Set to obtain only the distinct values.
+   .map(Person::getCar)
+   .map(optCar -> optCar.flatMap(Car::getInsurance))
+   .map(optIns -> optIns.map(Insurance::getName))
+   .flatMap(Optional::stream)
+   .collect(toSet());
+```
+
 
 ## 11. References
+* [Java 8 Optional In Depth](https://www.mkyong.com/java8/java-8-optional-in-depth/)

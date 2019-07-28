@@ -158,6 +158,9 @@ bookmarks:
       - name: Go
         description: A statically typed, compiled programming language
         url: https://golang.org/
+      - name: Rust
+        description: A language empowering everyone to build reliable and efficient software
+        url: https://www.rust-lang.org/
       - name: Erlang
         description: A general-purpose, concurrent, functional programming language
         url: https://www.erlang.org/
