@@ -1,5 +1,6 @@
 ---
 layout: about
+key: about
 title: About This Website
 ---
 
