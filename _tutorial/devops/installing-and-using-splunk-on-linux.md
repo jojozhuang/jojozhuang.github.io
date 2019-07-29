@@ -33,7 +33,7 @@ After running the commands, Splunk is installed into /opt/splunk/.
 3) Configure Environment Variable for Splunk  
 Set SPLUNK_HOME to point to the top-level installation directory, and add $SPLUNK_HOME/bin to the shell's path.
 
-```rawell
+```raw
 $ export SPLUNK_HOME=/opt/splunk
 $ export PATH=$SPLUNK_HOME/bin:$PATH
 ```
@@ -89,7 +89,7 @@ Now, you can use the search function.
 After data is imported to splunk, we can now create queries for searching data from logs.
 ### 4.1 Creating Query
 By default, Splunk specifies three condition: source, host and sourcetype.
-```
+```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j"
 ```
 You can append more conditions to the end of the query. Click the Search icon to execute the query. You will see the result immediately.

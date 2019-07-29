@@ -38,12 +38,12 @@ $ sudo dpkg -i elasticsearch-5.5.0.deb
   When finished, Elasticsearch is installed into /usr/share/elasticsearch/. And the configuration files are in /etc/elasticsearch.  
   You can edit /etc/elasticsearch/elasticsearch.yml for customization. If you cannot access /etc/elasticsearch, run
 
-```rawell
+```raw
 $ sudo chmod -R 755 /etc/elasticsearch
 ```
 
   3) Commands for ES  
-```rawell
+```raw
 $ sudo service elasticsearch start   //start elasticsearch  
 $ sudo service elasticsearch status  //check status  
 $ sudo service elasticsearch stop    //stop elasticsearch

@@ -61,8 +61,12 @@ navlist:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["searchadv","reading","contact","editormd","about"]
+    subkeys: ["searchadv","reading","contact","editormd","about","commands"]
     sublist:
+      - key: commands
+        description: Commands
+        url: /commands
+        icon: fas fa-terminal
       - key: searchadv
         description: Advanced Search
         url: /searchadv
