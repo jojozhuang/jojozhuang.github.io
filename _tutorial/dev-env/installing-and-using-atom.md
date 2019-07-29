@@ -26,11 +26,11 @@ $ sudo dpkg -i atom_amd64.deb // for Ubuntu
 ## 3. Plug-In System for Atom
 There are lots of plug-ins(Packages) available for Atom. They make Atom more powerful.
 
-## 3.1 Searching and Installing Plug-In
+### 3.1 Searching and Installing Plug-In
 Atom->Preferences->Install, search package. Click 'Install' button of the package you want to install.
 ![image](/public/images/devops/2124/installplugin.png){:width="800px"}  
 
-## 3.2 Popular Plug-Ins
+### 3.2 Popular Plug-Ins
 * Compare File  
 [https://atom.io/packages/compare-files](https://atom.io/packages/compare-files)  
 Select two files, then Command + Shift + P, search 'Compare', click command button, you will see the diff.
@@ -60,11 +60,11 @@ The most important shortcut key is 'Command + Shift + P'(Toggle command palette)
 ![image](/public/images/devops/2124/shortcut.png)  
 
 ## 4. Working with Markdown
-## 4.1 Markdown Syntax
+### 4.1 Markdown Syntax
 Before trying to use Markdown to edit documents, you should first get familiar with the Markdown syntaxes.
 Some syntax samples for [Github Markdown](https://guides.github.com/features/mastering-markdown/).
 
-## 4.2 Markdown Preview in Atom
+### 4.2 Markdown Preview in Atom
 When using Atom, you can use the preview function before submitting the document.  
 Right click on the file you are editing, choose Markdown Preview at the top of context menu.
 ![image](/public/images/devops/2124/preview.png)  

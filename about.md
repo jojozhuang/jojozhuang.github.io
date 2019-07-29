@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: general
 key: about
 title: About This Website
 ---
