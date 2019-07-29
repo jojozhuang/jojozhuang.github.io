@@ -39,6 +39,10 @@ bookmarks:
         description: NewSQL大神黄东旭：从0到1，如何设计一个分布式数据库
         url: https://www.youtube.com/watch?v=xAiuLJtCZOg&t=5689s
         type: video
+      - name: 离不开的微服务架构，脱不开的RPC细节
+        description: 离不开的微服务架构，脱不开的RPC细节
+        url: https://mp.weixin.qq.com/s/CepNdL2A_QMcESgQVZBn2g
+        type: webpage
   - category: Security
     links:
       - name: Password Hashing, Salts, Peppers
