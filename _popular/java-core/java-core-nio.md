@@ -2,14 +2,14 @@
 layout: tutorial
 key: popular
 title: "Java Core - NIO"
-index: 1406
+index: 1407
 subcategory: java-core
 date: 2017-01-11
 tags: [NIO, Channel]
 mermaid: true
 ---
 
-> Read and write file in java.
+> Read and write file with NIO APIs.
 
 ## 1. NIO Overview
 The new input/output (`NIO`) library was introduced with JDK 1.4. Java NIO offers a different way of working with IO than the standard IO API's.
@@ -34,9 +34,7 @@ In NIO you work with `channels` and `buffers`. Data is always read from a channe
 <div class="mermaid">
 graph LR;
     Source-->Channel/Buffer
-    Channel/Buffer-->Program
-    Program-->Channel/Buffer2
-    Channel/Buffer2-->Destination
+    Channel/Buffer-->Destination
 </div>
 
 ### 1.2 Non-blocking IO
@@ -86,27 +84,7 @@ Here is a list of the core Buffer implementations in Java NIO:
 
 *These Buffer's cover the basic data types that you can send via IO: byte, short, int, long, float, double and characters.*
 
-## 3. Selectors
-A Selector allows a single thread to handle multiple Channel's. This is handy if your application has many connections (Channels) open, but only has low traffic on each connection. For instance, in a chat server.
-
-Here is an illustration of a thread using a Selector to handle 3 Channel's:
-<div class="mermaid">
-graph TD
-    rr[Thread] --> rf{Selector}
-    rf -->|One| sr1(Channel)
-    rf -->|Two| sr2(Channel)
-    rf -->|Three| sr3(Channel)
-    classDef orange fill:#F9B075,stroke:#E77C23,stroke-width:3px
-    classDef red fill:#CF7875,stroke:#9F4A47,stroke-width:3px
-    classDef purple fill:#C8BCD7,stroke:#5F497A,stroke-width:3px
-    class sr1 orange
-    class sr2 orange
-    class sr3 orange
-    class rf red
-    class rr purple
-</div>
-
-## 4. Read Files
+## 3. Read Files
 Suppose we have a file named 'text.txt' with the following content.
 ```raw
 iPad Pro(Latest Version)
@@ -116,9 +94,9 @@ Storage: 256GB
 Connectivity: WiFI
 Price: $1149.00
 ```
-### 4.1 Read File with BufferedReader
+### 3.1 Read File with BufferedReader
 ```java
-// Read file with classic IO APIs
+// Read file with standard IO APIs
 public static void main(String[] args) {
     BufferedReader br = null;
     String line = null;
@@ -145,7 +123,7 @@ Storage: 256GB
 Connectivity: WiFI
 Price: $1149.00
 ```
-### 4.2 Read File with Buffer of File Size
+### 3.2 Read File with Buffer of File Size
 ```java
 // Read a small file with buffer of file size
 public static void main(String[] args) {
@@ -180,7 +158,7 @@ Storage: 256GB
 Connectivity: WiFI
 Price: $1149.00
 ```
-### 4.3 Read File with Fixed Buffer Size
+### 3.3 Read File with Fixed Buffer Size
 In case the file is very large, we can't read all contents into memory at once. In this case, we read it chunk by chunk. Each time, only small size is read.
 ```java
 // Read a large file with fixed size buffer
@@ -217,6 +195,211 @@ Color: Space Gray
 Storage: 256GB
 Connectivity: WiFI
 Price: $1149.00
+```
+
+## 4. Selectors
+The Java `NIO Selector` is a component which can examine one or more Java NIO Channel instances, and determine which channels are ready for e.g. reading or writing. This way a single thread can manage multiple channels, and thus multiple network connections.
+
+### 4.1 Why Use a Selector?
+The advantage of using just a single thread to handle multiple channels is that you need less threads to handle the channels. Actually, you can use just one thread to handle all of your channels. Switching between threads is expensive for an operating system, and each thread takes up some resources (memory) in the operating system too. Therefore, the less threads you use, the better.
+
+Here is an illustration of a thread using a Selector to handle 3 Channel's:
+<div class="mermaid">
+graph TD
+    rr[Thread] --> rf{Selector}
+    rf -->|One| sr1(Channel)
+    rf -->|Two| sr2(Channel)
+    rf -->|Three| sr3(Channel)
+    classDef orange fill:#F9B075,stroke:#E77C23,stroke-width:3px
+    classDef red fill:#CF7875,stroke:#9F4A47,stroke-width:3px
+    classDef purple fill:#C8BCD7,stroke:#5F497A,stroke-width:3px
+    class sr1 orange
+    class sr2 orange
+    class sr3 orange
+    class rf red
+    class rr purple
+</div>
+### 4.2 Channels & Selector
+In order to use a Channel with a Selector you must register the Channel with the Selector. Four events are available:
+- Connect
+- Accept
+- Read
+- Write
+
+These four events are represented by the four SelectionKey constants:
+- SelectionKey.OP_CONNECT
+- SelectionKey.OP_ACCEPT
+- SelectionKey.OP_READ
+- SelectionKey.OP_WRITE-
+
+```java
+Selector selector = Selector.open();
+channel.configureBlocking(false);
+SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
+```
+
+### 4.3 Example
+We’ll create an echo server and an echo client. The client connects to the server and starts sending messages to it. The server echoes back messages sent by each client. When the server encounters a specific message("Poison Pill"), it interprets it as the end of the communication and closes the connection with the client.
+
+Below is a complete client-server example built with NIO Selector.
+
+1) The Server.
+```java
+public class EchoServer {
+    private static final String POISON_PILL = "POISON_PILL";
+
+    public static void main(String[] args) throws IOException {
+        Selector selector = Selector.open();
+        ServerSocketChannel serverSocket = ServerSocketChannel.open();
+        serverSocket.bind(new InetSocketAddress("localhost", 5454));
+        serverSocket.configureBlocking(false);
+        serverSocket.register(selector, SelectionKey.OP_ACCEPT);
+        ByteBuffer buffer = ByteBuffer.allocate(256);
+
+        while (true) {
+            int readyChannels = selector.selectNow();
+            if(readyChannels == 0) {
+                continue;
+            }
+            Set<SelectionKey> selectedKeys = selector.selectedKeys();
+            Iterator<SelectionKey> iter = selectedKeys.iterator();
+            while (iter.hasNext()) {
+                SelectionKey key = iter.next();
+
+                if(key.isAcceptable()) {
+                    // a connection was accepted by a ServerSocketChannel.
+                    register(selector, serverSocket);
+                } else if (key.isConnectable()) {
+                    // a connection was established with a remote server.
+                } else if (key.isReadable()) {
+                    // a channel is ready for reading
+                    answerWithEcho(buffer, key);
+                } else if (key.isWritable()) {
+                    // a channel is ready for writing
+                }
+                iter.remove();
+            }
+        }
+    }
+
+    private static void answerWithEcho(ByteBuffer buffer, SelectionKey key)
+            throws IOException {
+
+        SocketChannel client = (SocketChannel) key.channel();
+        client.read(buffer);
+        if (new String(buffer.array()).trim().equals(POISON_PILL)) {
+            client.close();
+            System.out.println("Not accepting client messages anymore");
+        }
+
+        buffer.flip();
+        client.write(buffer);
+        buffer.clear();
+    }
+
+    private static void register(Selector selector, ServerSocketChannel serverSocket)
+            throws IOException {
+
+        SocketChannel client = serverSocket.accept();
+        client.configureBlocking(false);
+        client.register(selector, SelectionKey.OP_READ);
+    }
+
+    public static Process start() throws IOException {
+        String javaHome = System.getProperty("java.home");
+        String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
+        String classpath = System.getProperty("java.class.path");
+        String className = EchoServer.class.getCanonicalName();
+
+        ProcessBuilder builder = new ProcessBuilder(javaBin, "-cp", classpath, className);
+
+        return builder.start();
+    }
+}
+```
+2) The client.
+```java
+public class EchoClient {
+    private static SocketChannel client;
+    private static ByteBuffer buffer;
+    private static EchoClient instance;
+
+    public static EchoClient start() {
+        if (instance == null)
+            instance = new EchoClient();
+
+        return instance;
+    }
+
+    public static void stop() throws IOException {
+        client.close();
+        buffer = null;
+    }
+
+    private EchoClient() {
+        try {
+            client = SocketChannel.open(new InetSocketAddress("localhost", 5454));
+            buffer = ByteBuffer.allocate(256);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String sendMessage(String msg) {
+        buffer = ByteBuffer.wrap(msg.getBytes());
+        String response = null;
+        try {
+            client.write(buffer);
+            buffer.clear();
+            client.read(buffer);
+            response = new String(buffer.array()).trim();
+            System.out.println("response=" + response);
+            buffer.clear();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+}
+```
+3) Test class.
+```java
+public class EchoTest {
+
+    Process server;
+    EchoClient client;
+
+    @Before
+    public void setup() throws IOException, InterruptedException {
+        server = EchoServer.start();
+        Thread.sleep(2000); // sleep to make sure server is up.
+        client = EchoClient.start();
+    }
+
+    @Test
+    public void givenServerClient_whenServerEchosMessage_thenCorrect() {
+        String resp1 = client.sendMessage("hello");
+        String resp2 = client.sendMessage("world");
+        String disconnect = client.sendMessage("POISON_PILL");
+        //String error = client.sendMessage("welcome"); // will fail as connection is closed
+
+        assertEquals("hello", resp1);
+        assertEquals("world", resp2);
+        assertEquals("POISON_PILL", disconnect);
+    }
+
+    @After
+    public void teardown() throws IOException {
+        server.destroy();
+        EchoClient.stop();
+    }
+}
+```
+Output.
+```raw
+response=hello
+response=world
+response=POISON_PILL
 ```
 
 ## 5. Memory-Mapped Files
@@ -350,5 +533,5 @@ Price: $1149.00
 * [Java NIO Tutorial](http://tutorials.jenkov.com/java-nio/index.html)
 * [3 Ways to Read Files – Java NIO](https://howtodoinjava.com/java7/nio/3-ways-to-read-files-using-java-nio/)
 * [Java Memory-Mapped Files – Java MappedByteBuffer](https://howtodoinjava.com/java7/nio/memory-mapped-files-mappedbytebuffer/)
-* [Java NIO vs. IO](http://tutorials.jenkov.com/java-nio/nio-vs-io.html)
-* [Java Standard IO vs. Java NIO](https://howtodoinjava.com/java/io/difference-between-standard-io-and-nio/)
+* [Java NIO Selector](http://tutorials.jenkov.com/java-nio/selectors.html)
+* [Introduction to the Java NIO Selector](https://www.baeldung.com/java-nio-selector)
