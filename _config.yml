@@ -98,10 +98,6 @@ navlist:
         description: About
         url: /about
         icon: fas fa-info-circle
-  - key: about
-    url: /about
-    icon: fas fa-info-circle
-    visible: false
 
 collections:
   portfolio:
