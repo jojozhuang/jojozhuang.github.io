@@ -15,12 +15,20 @@ bookmarks:
         description: Summaries of various system design topics, including pros and cons. Everything is a trade-off.
         url: https://github.com/donnemartin/system-design-primer/blob/master/README.md
         type: webpage
+      - name: 系统设计(System Design)
+        description: 系统设计(System Design)
+        url: /public/pdf/system-design-cn.pdf
+        type: doc
   - category: Java
     links:
       - name: Java 技术书籍大全
         description: Java 技术书籍大全
         url: https://github.com/sorenduan/awesome-java-books
         type: webpage
+      - name: Modern Java
+        description: Modern Java in Action
+        url: /public/pdf/Manning.Modern.Java.in.Action.2018.9.pdf
+        type: doc
       - name: How Java I/O Works Internally at Lower Level?
         description: How Java I/O Works Internally at Lower Level?
         url: https://howtodoinjava.com/java/io/how-java-io-works-internally-at-lower-level/
@@ -65,12 +73,20 @@ bookmarks:
         type: webpage
   - category: Interview
     links:
+      - name: Algorithm Essentials
+        description: Algorithm Essentials
+        url: /public/pdf/algorithm-essentials-java.pdf
+        type: doc
       - name: 2019年最新总结,国内大厂面试指南
         description: 2019年最新总结,国内大厂面试指南
         url: https://github.com/0voice/interview_internal_reference
         type: webpage
   - category: Others
     links:
+      - name: Beginning visualization with GRAFANA and INFLUXDB
+        description: Beginning visualization with GRAFANA and INFLUXDB
+        url: https://medium.com/@ashrafur/beginning-visualization-with-grafana-and-influxdb-81701e10569d
+        type: webpage
       - name: The introduction to Reactive Programming you've been missing
         description: The introduction to Reactive Programming you've been missing
         url: https://gist.github.com/staltz/868e7e9bc2a7b8c1f754

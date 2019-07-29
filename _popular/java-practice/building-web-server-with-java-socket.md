@@ -6,8 +6,6 @@ index: 1505
 subcategory: java-practice
 date: 2016-02-24
 tags: [Http, Socket]
-categories:
-- blog
 ---
 
 > Build a tiny http server with Java Sockets.

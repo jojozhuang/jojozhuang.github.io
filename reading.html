@@ -21,6 +21,8 @@ title: Further Reading
                             <a href="{{ link.url }}" title="{{ link.description }}"><span class="title-org" >{{ link.name }}</span><span class="title-abb" >{{ link.name | truncate: 40 }}</span></a>
                             {% if link.type == "video" %}
                               <i class="fas fa-video" style="color:#f74716;"></i>
+                            {% elsif link.type == "doc" %}
+                              <i class="fas fa-file-pdf" style="color:#d1ad1b;"></i>
                             {% else %}
                               <i class="fas fa-link" style="color:#339933;"></i>
                             {% endif %}

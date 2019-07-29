@@ -5,7 +5,7 @@ title: "Jekyll - SEO"
 index: 1631
 subcategory: jekyll
 date: 2019-06-27
-tags: [SEO]
+tags: [SEO, CDN, DNS]
 ---
 
 > Optimize the website to improve the rankings.

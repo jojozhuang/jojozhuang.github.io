@@ -6,8 +6,6 @@ index: 1532
 subcategory: java-practice
 date: 2016-02-26
 tags: [JSP, MySQL]
-categories:
-- blog
 ---
 
 > Build a web application with Java Server Pages (JSP) and MySQL database.
