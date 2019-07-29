@@ -5,7 +5,7 @@ title: "LFU Cache"
 index: 1117
 subcategory: data-structure
 date: 2016-03-06
-tags: [LFU]
+tags: [LFU, Cache]
 mathjax: true
 ---
 

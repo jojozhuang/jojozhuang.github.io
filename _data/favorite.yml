@@ -52,6 +52,10 @@ bookmarks:
         description: Mermaid Live Editor
         url: https://mermaidjs.github.io/mermaid-live-editor/
         favorite: true
+      - name: gitignore.io
+        description: Create useful .gitignore files for your project
+        url: https://www.gitignore.io/
+        favorite: true
   - category: Quick Reference
     links:
       - name: Rico's cheatsheets
@@ -145,6 +149,18 @@ bookmarks:
       - name: Serverless Architecture
         description: A way to build and run applications and services without having to manage infrastructure
         url: https://aws.amazon.com/lambda/serverless-architectures-learn-more/
+      - name: LAMP Stack
+        description: Linux + Apache + MySQL + PHP
+        url: https://en.wikipedia.org/wiki/LAMP_(software_bundle)
+      - name: MEAN Stack
+        description: MongoDB + Express.js + AngularJS + Node.js
+        url: https://en.wikipedia.org/wiki/MEAN_(software_bundle)
+      - name: ELK Stack
+        description: Elasticsearch + Logstash + Kibana
+        url: https://www.elastic.co/what-is/elk-stack
+      - name: TICK Stack
+        description: Telegraf + InfluxDB + Chronograf + Kapacitor
+        url: https://en.wikipedia.org/wiki/MEAN_(software_bundle)
   - category: Programming Languages
     links:
       - name: C
@@ -278,8 +294,17 @@ bookmarks:
       - name: Amazon DynamoDB
         description: A fully managed NoSQL database that supports key-value and document
         url: https://aws.amazon.com/dynamodb/
+      - name: InfluxDB
+        description: A time series database
+        url: https://github.com/influxdata/influxdb
   - category: Distributed System
     links:
+      - name: Paxos
+        description: A consensus protocol
+        url: https://en.wikipedia.org/wiki/Paxos_(computer_science)
+      - name: Raft
+        description: The Raft Consensus Algorithm
+        url: https://raft.github.io/
       - name: Elasticsearch
         description: A distributed, RESTful search and analytics engine
         url: https://www.elastic.co/
@@ -380,10 +405,6 @@ bookmarks:
       - name: GitHub
         description: A web-based Git or version control repository
         url: https://github.com/
-        favorite: true
-      - name: GitIgnore
-        description: Create useful .gitignore files for your project
-        url: https://www.gitignore.io/
         favorite: true
       - name: SourceTree
         description: A free Git client for Windows and Mac
@@ -522,6 +543,9 @@ bookmarks:
       - name: FileZilla
         description: A free cross-platform FTP application
         url: https://filezilla-project.org/
+      - name: Grafana
+        description: The open platform for beautiful analytics and monitoring
+        url: https://grafana.com/
   - category: Logging, Monitoring
     links:
       - name: Log4j
@@ -626,6 +650,15 @@ bookmarks:
         url: https://tinypng.com/
   - category: Cyber Security
     links:
+      - name: DDos
+        description: The distributed denial-of-service attack
+        url: https://en.wikipedia.org/wiki/Denial-of-service_attack
+      - name: XSS
+        description: Thhe cross-site scripting attach
+        url: https://en.wikipedia.org/wiki/Cross-site_scripting
+      - name: CSRF
+        description: The cross-site request forgery attack
+        url: https://en.wikipedia.org/wiki/Cross-site_request_forgery
       - name: OWASP Cheat Sheet
         description: A concise collection of high value information on specific application security topics
         url: https://cheatsheetseries.owasp.org/

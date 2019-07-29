@@ -6,8 +6,6 @@ index: 1504
 subcategory: java-practice
 date: 2016-02-22
 tags: [Socket, TCP, UDP]
-categories:
-- blog
 ---
 
 > Introduce how to use socket to communicate between applications in Java.

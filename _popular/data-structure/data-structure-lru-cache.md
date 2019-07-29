@@ -5,7 +5,7 @@ title: "LRU Cache"
 index: 1116
 subcategory: data-structure
 date: 2016-03-05
-tags: [LRU]
+tags: [LRU, Cache]
 mathjax: true
 ---
 

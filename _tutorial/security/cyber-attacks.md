@@ -5,7 +5,7 @@ title: "Cyber Attacks"
 index: 3601
 subcategory: security
 date: 2019-07-17
-tags: [DDos, XSS, CSRF]
+tags: [DNS, DDos, XSS, CSRF]
 ---
 
 > The common cyber attacks like DDos, XSS and CSRF.
