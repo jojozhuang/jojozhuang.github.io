@@ -6,7 +6,36 @@ title: Commands
 
 > Quick reference for common commands.
 
-## 1. Git Commands
+## 1. Linux/macOS Commands
+```sh
+# Start Local Jekyll
+cd Johnny/GitHub/jojozhuang.github.io/
+bundle exec jekyll serve --port 12001
+
+# Search Files by Name
+find . -name 'filename' -R
+
+# Search Directories end with '-T'.
+find . -name "*-T" -type d
+
+# Search Directories end with '-T' and delete them.
+find . -name "*-T" -type d -exec rm -rf {} \;
+
+# Search Files Containing Specific Text
+grep -Ril "text-to-find-here" /
+
+# Open current directory in command line
+open .   #macOS
+nautilus . #linux
+
+# Copy Files from/to Remote Machine
+scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
+
+# Change Owner of Entire Directory to Current User
+sudo chown $USER /ariba/ssp_git/ -R
+```
+
+## 2. Git Commands
 <table>
   <tbody>
     <tr>
@@ -138,15 +167,15 @@ title: Commands
    </tbody>
   </table>
 
-## 2. Docker Commands
-### 2.1 Docker
+## 3. Docker Commands
+### 3.1 Docker
 
 | Command | Description|
 ----------|-------------
 docker version  |  Check docker version
 docker info | Check system-wide information about Docker
 
-### 2.2 Docker Hub
+### 3.2 Docker Hub
 
 | Command | Description|
 ----------|-------------
@@ -155,7 +184,7 @@ docker pull [user/image] | Downloads an image from Docker Hub.
 docker login | Authenticate to Docker Hub
 docker push [user/image] | Uploads an image to Docker Hub.
 
-### 2.3 Docker Image
+### 3.3 Docker Image
 
 | Command | Description|
 ----------|-------------
@@ -168,7 +197,7 @@ docker save user/image | Save an image to a tar archive.
 docker build -t sampleuser/ubuntu . | Builds a Docker image from a Dockerfile in the current directory.
 docker load | Loads an image from file.
 
-### 2.4 Docker Container
+### 3.4 Docker Container
 
 | Command | Description|
 ----------|-------------
@@ -187,6 +216,6 @@ docker diff [container name or ID] | Lists the changes made to a container.
 docker attach [container name or ID] | Changes the command prompt from the host to a running container.
 docker exec [container name or ID] shell command | Executes a command within a running container.
 
-## 3. References
+## 4. References
 * [Basic Git commands](https.//confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
 * [Docker Commands Quick Reference Cheat Sheet](https://www.linode.com/docs/applications/containers/docker-commands-quick-reference-cheat-sheet/)

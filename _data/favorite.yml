@@ -13,6 +13,9 @@ bookmarks:
         description: An online wysiwyg markdown editor
         url: https://pandao.github.io/editor.md/en.html
         favorite: true
+      - name: HTML5 Editor
+        description: An online wysiwyg html5 editor
+        url: https://html5-editor.net/
       - name: XML Formatter
         description: Format XML string
         url: https://www.freeformatter.com/xml-formatter.html
