@@ -33,6 +33,10 @@ bookmarks:
         description: How Java I/O Works Internally at Lower Level?
         url: https://howtodoinjava.com/java/io/how-java-io-works-internally-at-lower-level/
         type: webpage
+      - name: Hot Swapping Java Code on Runtime
+        description: Hot Swapping Java Code on Runtime
+        url: https://dzone.com/articles/hot-swap-java-bytecode-on-runtime
+        type: webpage
   - category: Distributed System
     links:
       - name: Load Balancer原理和实战：最终如何实现？
@@ -51,9 +55,9 @@ bookmarks:
         description: 离不开的微服务架构，脱不开的RPC细节
         url: https://mp.weixin.qq.com/s/CepNdL2A_QMcESgQVZBn2g
         type: webpage
-      - name: 如何判断一个元素在亿级数据中是否存在？
-        description: 如何判断一个元素在亿级数据中是否存在？
-        url: https://mp.weixin.qq.com/s/b5bIcNAc-f3c5eQCv9bWMg
+      - name: Beginning visualization with GRAFANA and INFLUXDB
+        description: Beginning visualization with GRAFANA and INFLUXDB
+        url: https://medium.com/@ashrafur/beginning-visualization-with-grafana-and-influxdb-81701e10569d
         type: webpage
   - category: Security
     links:
@@ -84,6 +88,10 @@ bookmarks:
       - name: 2019年最新总结,国内大厂面试指南
         description: 2019年最新总结,国内大厂面试指南
         url: https://github.com/0voice/interview_internal_reference
+        type: webpage
+      - name: 如何判断一个元素在亿级数据中是否存在？
+        description: 如何判断一个元素在亿级数据中是否存在？
+        url: https://mp.weixin.qq.com/s/b5bIcNAc-f3c5eQCv9bWMg
         type: webpage
   - category: Others
     links:
