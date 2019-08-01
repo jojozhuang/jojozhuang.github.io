@@ -11,7 +11,7 @@ tags: [JSP, MySQL, Docker]
 > Introduce how to use MySQL docker container as database for JSP Application.
 
 ## 1. Introduction
-In the posting [Building Website with JSP and MySQL]({% link _popular/java-practice/building-website-with-jsp-and-mysql.md %}), we created a JSPTutorial application to manage products. This application is hosted on Tomcat web server, and it uses MySQL for storing data. This MySQL database is running on the same machine with Tomcat. Now, I want to setup a Docker container for this MySQL database. So, it can be easily deployed to other machine/server. Some configuration of my JSP application needs to be updated to connect to new address of the MySQL container.
+In the posting [Building Website with JSP and MySQL]({% link _popular/java-app/building-website-with-jsp-and-mysql.md %}), we created a JSPTutorial application to manage products. This application is hosted on Tomcat web server, and it uses MySQL for storing data. This MySQL database is running on the same machine with Tomcat. Now, I want to setup a Docker container for this MySQL database. So, it can be easily deployed to other machine/server. Some configuration of my JSP application needs to be updated to connect to new address of the MySQL container.
 
 ### 1.1 Database
 The instance of MySQL for this JSP application looks like the below structure.  
