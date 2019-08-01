@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Running JavaScript at Server Side with Rhino"
 index: 1542
-subcategory: java-practice
+subcategory: java-app
 date: 2017-10-11
 tags: [Rhino, Javascript, Servlet]
 ---
@@ -11,7 +11,7 @@ tags: [Rhino, Javascript, Servlet]
 > Use Rhino to run javascript at server side which is built with Java Servlet.
 
 ## 1. Prerequisite
-In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Scripting Java With Rhino]({% link _popular/java-practice/scripting-java-with-rhino.md %}) to get Rhino installed on your local machine.
+In addition, if you haven’t downloaded and setup Rhino, please refer to my previous posting [Scripting Java With Rhino]({% link _popular/java-app/scripting-java-with-rhino.md %}) to get Rhino installed on your local machine.
 
 ## 2. Creating Server
 ### 2.1 Creating Servlet Project

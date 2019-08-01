@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Using Java Debugger"
 index: 1512
-subcategory: java-practice
+subcategory: java-app
 date: 2016-03-21
 tags: [JDB, Debugging]
 ---

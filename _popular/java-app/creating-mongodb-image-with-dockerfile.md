@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Creating MongoDB Image with Dockerfile"
 index: 1534
-subcategory: java-practice
+subcategory: java-app
 date: 2016-11-23
 tags: [MongoDB, Dockerfile, Docker]
 ---
@@ -71,7 +71,7 @@ Create a database named `mongodbtutorial` and three documents for collection `pr
 
 ## 3. Testing
 ### 3.1 Getting MongoDB Tutorial Application
-In Eclipse, open the MongoDB Tutorial project which we created for [Building Website with JSP and MongoDB]({% link _popular/java-practice/building-website-with-jsp-and-mongodb.md %}). Rename it to `MongoDBDockerfile`.
+In Eclipse, open the MongoDB Tutorial project which we created for [Building Website with JSP and MongoDB]({% link _popular/java-app/building-website-with-jsp-and-mongodb.md %}). Rename it to `MongoDBDockerfile`.
 ### 3.2 Updating Connection Host and Port
 Edit `web.xml`, change the host to `192.168.99.100`, and port to `37017`.
 ```xml
