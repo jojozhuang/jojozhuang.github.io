@@ -130,7 +130,7 @@ _portfolio/game-store-multi.md                                           |     1
 _tutorial/mobile/mobile-app-development.md                               |     1 |     2.01K | 0.008
 _layouts/portfolio.html                                                  |    21 |   106.48K | 0.008
 _tutorial/project/building-online-judge-application-with-mean-stack.md   |     1 |     4.07K | 0.007
-_popular/java-practice/data-fix-with-javascript-for-web-application.md    |     1 |     8.77K | 0.006
+_popular/java-app/data-fix-with-javascript-for-web-application.md    |     1 |     8.77K | 0.006
 _portfolio/course-player-socketio.md                                     |     1 |     2.61K | 0.005
 _tutorial/react-app/building-course-player-with-signalr-and-aspnet.md     |     1 |    28.92K | 0.005
 _portfolio/course-player-signalr.md                                      |     1 |     2.15K | 0.005
@@ -138,7 +138,7 @@ _tutorial/docker/creating-mysql-image-with-docker-file.md                |     1
 _tutorial/react/introduction-of-course-player.md                         |     1 |     5.27K | 0.004
 _portfolio/course-player-xamarin.md                                      |     1 |     4.17K | 0.004
 _portfolio/course-player-react.md                                        |     1 |     2.07K | 0.004
-_popular/java-practice/building-website-with-jsp-and-mysql.md             |     1 |    26.81K | 0.004
+_popular/java-app/building-website-with-jsp-and-mysql.md             |     1 |    26.81K | 0.004
 _tutorial/react-app/building-online-code-editor-with-react-and-express.md |     1 |    25.71K | 0.004
 _tutorial/angular-app/creating-web-app-and-restful-api-with-mean-stack.md |     1 |     6.72K | 0.004
 ```
