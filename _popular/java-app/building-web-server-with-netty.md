@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Building Web Server with Netty"
 index: 1506
-subcategory: java-practice
+subcategory: java-app
 date: 2019-07-28
 tags: [Netty]
 ---

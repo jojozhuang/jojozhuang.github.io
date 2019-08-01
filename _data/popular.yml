@@ -43,11 +43,16 @@ categories:
         icon: fab fa-java
         subcategory: java-advanced
         image: java2.png
-      - name: Practice
-        description: Practice of Java
+      - name: Java App
+        description: Java Application
+        icon: fab fa-java
+        subcategory: java-app
+        image: java3.png
+      - name: Java Practice
+        description: Java Practice
         icon: fab fa-java
         subcategory: java-practice
-        image: java3.png
+        image: target.png
   - category: website
     name: Personal Website
     subcategories:

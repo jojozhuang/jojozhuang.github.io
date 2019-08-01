@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Java Remote Debugging with Eclipse"
 index: 1513
-subcategory: java-practice
+subcategory: java-app
 date: 2016-03-22
 tags: [Eclipse, Debugging]
 ---
@@ -11,7 +11,7 @@ tags: [Eclipse, Debugging]
 > Tutorial for how to remote debugging with Eclipse.
 
 ## 1. Introduction
-In the posting [Using Java Debugger]({% link _popular/java-practice/using-java-debugger.md %}), we learned how to debug a Java application with Java debugger (JDB). In this posting, I will introduce how to debug the same Java application in Eclipse, which would be much easier and more convenient than using JDB.
+In the posting [Using Java Debugger]({% link _popular/java-app/using-java-debugger.md %}), we learned how to debug a Java application with Java debugger (JDB). In this posting, I will introduce how to debug the same Java application in Eclipse, which would be much easier and more convenient than using JDB.
 
 ## 2. Debugging in Eclipse
 ### 2.1 Preparing Project

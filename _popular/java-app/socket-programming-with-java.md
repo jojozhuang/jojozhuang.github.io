@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Socket Programming with Java"
 index: 1504
-subcategory: java-practice
+subcategory: java-app
 date: 2016-02-22
 tags: [Socket, TCP, UDP]
 ---

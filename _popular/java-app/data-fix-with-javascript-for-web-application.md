@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Data Fix with Javascript For Web Application"
 index: 1544
-subcategory: java-practice
+subcategory: java-app
 date: 2017-10-13
 tags: [Rhino, Javascript]
 ---
@@ -11,7 +11,7 @@ tags: [Rhino, Javascript]
 > Use Rhino to run javascript to fix data for a web application.
 
 ## 1. Introduction
-In the previous posting [Building Website with JSP and MySQL]({% link _popular/java-practice/building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service and Customer is using it right now. However, there are some issues with this web application, the price of the product is incorrect. Customer requests us to fix the wrong price. The problem is, for cloud service, you are not allowed to shut it down and apply any java patch to fix the data. We have to fix the data while the application is still running. One approach is to call Java from javascript and run the script at server side.
+In the previous posting [Building Website with JSP and MySQL]({% link _popular/java-app/building-website-with-jsp-and-mysql.md %}), we built a web application with JSP and MySQL. Suppose it has been deployed on cloud service and Customer is using it right now. However, there are some issues with this web application, the price of the product is incorrect. Customer requests us to fix the wrong price. The problem is, for cloud service, you are not allowed to shut it down and apply any java patch to fix the data. We have to fix the data while the application is still running. One approach is to call Java from javascript and run the script at server side.
 
 ## 2. Prerequisite
 If you haven’t installed Docker and Kitematic, please install Docker Toolbox by referring to my previous posting [Install Docker Toolbox and Kitematic on Mac]({% link _tutorial/docker/installing-docker-toolbox-and-kitematic-on-mac.md %}). We will use Docker to host MySQL database for this JSP Tutorial Application. Refer [Creating MySQL Image with Docker File]({% link _tutorial/docker/creating-mysql-image-with-docker-file.md %}) to learn how to use Dockerfile to create image.

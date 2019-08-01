@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Remote Debugging JSP Application"
 index: 1514
-subcategory: java-practice
+subcategory: java-app
 date: 2016-03-23
 tags: [Eclipse, Debugging]
 ---
@@ -11,7 +11,7 @@ tags: [Eclipse, Debugging]
 > Introduce how to remote debug JSP application which is hosted in Tomcat.
 
 ## 1. Introduction
-In the posting [Building Website with JSP and MySQL]({% link _popular/java-practice/building-website-with-jsp-and-mysql.md %}), we created a JSPTutorial application to manage products. This application is hosted on Tomcat web server, and it uses MySQL for storing data. Suppose there is an issue that the update function is not working. We need to debug the application to figure out what is happening.
+In the posting [Building Website with JSP and MySQL]({% link _popular/java-app/building-website-with-jsp-and-mysql.md %}), we created a JSPTutorial application to manage products. This application is hosted on Tomcat web server, and it uses MySQL for storing data. Suppose there is an issue that the update function is not working. We need to debug the application to figure out what is happening.
 
 ## 2. Setting up MySQL Database
 ### 2.1 Creating Connection
@@ -44,7 +44,7 @@ SELECT * FROM jsptutorial.Product;
 
 ## 3. Setting Up JSP Project
 ### 3.1 Getting JSP Project
-We will use the same JSP application for [Building Website with JSP and MySQL]({% link _popular/java-practice/building-website-with-jsp-and-mysql.md %}). Download the source files from [JSPTutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial). Rename it to `JSPDebugging` and refactor package names accordingly. The project in Eclipse looks like this.
+We will use the same JSP application for [Building Website with JSP and MySQL]({% link _popular/java-app/building-website-with-jsp-and-mysql.md %}). Download the source files from [JSPTutorial on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial). Rename it to `JSPDebugging` and refactor package names accordingly. The project in Eclipse looks like this.
 ![image](/public/images/java/1514/project.png){:width="350px"}
 Build the project, then deploy it to tomcat's default web folder `/usr/local/apache-tomcat-9.0.1/webapps`.  
 1) Create a new folder `jspdeployed` under webapps.  

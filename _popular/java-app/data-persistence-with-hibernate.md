@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Data Persistence with Hibernate"
 index: 1537
-subcategory: java-practice
+subcategory: java-app
 date: 2016-12-23
 tags: [Hibernate, ORM]
 ---

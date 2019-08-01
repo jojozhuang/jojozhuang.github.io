@@ -3,7 +3,7 @@ layout: tutorial
 key: popular
 title: "Building Web Server with Java Socket"
 index: 1505
-subcategory: java-practice
+subcategory: java-app
 date: 2016-02-24
 tags: [Http, Socket]
 ---
