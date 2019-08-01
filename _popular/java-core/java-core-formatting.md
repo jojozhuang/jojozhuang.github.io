@@ -140,4 +140,4 @@ Format Double:
 ```
 
 ## 4. Source Files
-* [Source files for Java Formatting on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-formatting)
+* [Source files for Java Formatting on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-formatting)

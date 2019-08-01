@@ -302,7 +302,7 @@ Object.clone(): clone = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 Note that all the inbuilt methods discussed above for array copy perform `shallow copy`, so they are good for primitive data types and immutable objects such as String. If you want to copy an array of mutable objects, you should do it by writing code for a `deep copy` yourself.
 
 ## 4. Source Files
-* [Source files for Java Array and List on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-array-list)
+* [Source files for Java Array and List on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-arraylist)
 
 ## 5. References
 * [Java Array of ArrayList, ArrayList of Array](https://www.journaldev.com/744/java-array-of-arraylist-of-array)
