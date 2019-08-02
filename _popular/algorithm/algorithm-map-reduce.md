@@ -6,6 +6,7 @@ index: 1235
 subcategory: algorithm
 date: 2016-03-31
 tags: [Map, Reduce]
+draft: true
 ---
 
 > Implement Map Reduce.
