@@ -6,6 +6,7 @@ index: 2521
 subcategory: node-js
 date: 2018-03-11
 tags: [Node.js]
+draft: true
 ---
 
 > Tutorial for how to create docker image for Node.js and host node.js application in docker container.

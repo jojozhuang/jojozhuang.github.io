@@ -6,6 +6,7 @@ index: 1233
 subcategory: algorithm
 date: 2016-03-31
 tags: [Minimax]
+draft: true
 ---
 
 > Implement Minimax algorithm.

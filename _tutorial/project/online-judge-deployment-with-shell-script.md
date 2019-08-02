@@ -6,6 +6,7 @@ index: 2843
 subcategory: online-judge
 date: 2018-04-28
 tags: [Online Judge]
+draft: true
 ---
 
 > Learn how to deployment the online Judge application through shell script.

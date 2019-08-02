@@ -6,6 +6,7 @@ index: 1601
 subcategory: jekyll
 date: 2018-06-06
 tags: [GitLab Pages]
+draft: true
 ---
 
 > Introduce how to setup personal website on GitLab.

@@ -6,6 +6,7 @@ index: 1307
 subcategory: design-pattern
 date: 2016-05-07
 tags: [Data Transfer Object]
+draft: true
 ---
 
 > Data Transfer Object design pattern for creating objects.

@@ -6,6 +6,7 @@ index: 1433
 subcategory: java-concurrency
 date: 2017-04-05
 tags: [Javascript, Html, Css]
+draft: true
 ---
 
 > Knowledges of front end.

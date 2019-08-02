@@ -6,6 +6,7 @@ index: 2515
 subcategory: node-js
 date: 2016-03-16
 tags: [Node.js]
+draft: true
 ---
 
 > Tutorial for how to create web application with Socket.IO and ExpressJs.

@@ -6,6 +6,7 @@ index: 1471
 subcategory: java-advanced
 date: 2017-03-01
 tags: [Memory Model, JVM]
+draft: true
 ---
 
 > Java Virtual Machine

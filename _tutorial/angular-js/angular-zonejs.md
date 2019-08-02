@@ -6,6 +6,7 @@ index: 2705
 subcategory: angular-js
 date: 2018-03-21
 tags: [Angular, Zone.js]
+draft: true
 ---
 
 > Learn how Zone.js works for Angular application.

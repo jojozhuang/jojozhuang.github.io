@@ -6,6 +6,7 @@ index: 1482
 subcategory: java-advanced
 date: 2017-03-05
 tags: [SOAP, WSDL]
+draft: true
 ---
 
 > Create concurrent application with threadings.
