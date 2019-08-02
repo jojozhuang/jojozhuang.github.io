@@ -20,6 +20,11 @@ categories:
         icon: fas fa-pencil-ruler
         subcategory: design-pattern
         image: design-pattern.png
+      - name: Practice Problems
+        description: Practice Problems
+        icon: fab fa-resolving
+        subcategory: practice-problems
+        image: target.png
   - category: java
     name: Java
     subcategories:
@@ -48,11 +53,6 @@ categories:
         icon: fab fa-java
         subcategory: java-app
         image: java3.png
-      - name: Java Practice
-        description: Java Practice
-        icon: fab fa-java
-        subcategory: java-practice
-        image: target.png
   - category: website
     name: Personal Website
     subcategories:
