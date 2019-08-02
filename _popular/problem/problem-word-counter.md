@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Problem - Word Counter(Draft)"
-index: 1701
+index: 1702
 subcategory: practice-problems
 date: 2019-08-01
 tags: [Word Counter]
