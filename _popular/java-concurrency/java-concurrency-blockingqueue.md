@@ -203,7 +203,7 @@ Process finished with exit code 0
 ```
 
 ## 3. Source Files
-* [Source files for Java BlockingQueue on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-blockingqueue)
+* [Source files for Java BlockingQueue on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-concurrency-blockingqueue)
 
 ## 4. References
 * [Java Doc - Interface BlockingQueue](https://docs.oracle.com/javase/8/docs/api/?java/util/concurrent/BlockingQueue.html)
