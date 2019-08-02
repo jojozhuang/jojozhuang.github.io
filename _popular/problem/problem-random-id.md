@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Problem - Random ID"
-index: 1703
+index: 1704
 subcategory: practice-problems
 date: 2019-08-01
 tags: [Random ID]
