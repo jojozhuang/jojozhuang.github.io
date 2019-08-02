@@ -14,7 +14,7 @@
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
-        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + item.title+ '</span></div></a>';
+        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + item.title+ '</span></div></a>';
         appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
@@ -72,6 +72,14 @@
       }
     }
     return title;
+  }
+
+  function formatColor(isDraft) {
+    //console.log(isDraft);
+    if (isDraft) {
+      return 'style="color:#c7ad06"';
+    }
+    return '';
   }
 
   function getCategoryName(category) {
@@ -147,7 +155,8 @@
           'index': window.store[key].index,
           'excerpt': window.store[key].excerpt,
           'tags': window.store[key].tags,
-          'date': window.store[key].date
+          'date': window.store[key].date,
+          'draft': window.store[key].draft
         });
       }
     }

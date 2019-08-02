@@ -1,16 +1,16 @@
 ---
 layout: tutorial
 key: note
-title: "Index Id"
+title: "Page Index"
 index: 9004
 subcategory: my-space
 date: 2017-09-01
 tags: [Index]
 ---
 
-> index id for this website
+> Index for each category used for this website
 
-## 1. Id
+## 1. Index
 
 Category | Subcategory         | Range
 ---------|---------------------|------------
@@ -20,6 +20,7 @@ Popular  | Design Pattern      | 1301 ~ 1400
 Popular  | Java                | 1401 ~ 1500
 Popular  | Java Practice       | 1501 ~ 1600
 Popular  | Jekyll              | 1601 ~ 1700
+Popular  | Homework            | 1701 ~ 1800
 Tutorial | DevEnv              | 2101 ~ 2200
 Tutorial | RESTful API         | 2201 ~ 2300
 Tutorial | Mobile              | 2301 ~ 2400
