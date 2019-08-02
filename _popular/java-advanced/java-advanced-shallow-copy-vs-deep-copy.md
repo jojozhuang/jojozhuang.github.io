@@ -11,9 +11,9 @@ tags: [Shallow Copy, Deep Copy]
 > Compare the difference between shallow copy and deep copy.
 
 ## 1. Shallow Copy and Deep Copy
-`Shallow copy` is creating a new object and then copying the non static fields of the current object to the new object. If the field is a value type, a bit by bit copy of the field is performed. If the field is a reference type, the reference is copied but the referred object is not, therefore the original object and its clone refer to the same object. A shallow copy of an object is a new object whose instance variables are identical to the old object.
+`Shallow copy` is creating a new object and then copying the non static fields of the current object to the new object. If the field is a value type, a bit by bit copy of the field is performed. If the field is a reference type, the reference is copied but **the referred object is not copied**, therefore the original object and its clone refer to the **same** object. A shallow copy of an object is a new object whose instance variables are identical to the old object.
 
-`Deep copy` is creating a new object and then copying the non-static fields of the current object to the new object. If a field is a value type, a bit by bit copy of the field is performed. If a field is a reference type, a new copy of the referred object is performed. A deep copy of an object is a new object with entirely new instance variables, it does not share objects with the old.
+`Deep copy` is creating a new object and then copying the non-static fields of the current object to the new object. If a field is a value type, a bit by bit copy of the field is performed. If a field is a reference type, a new copy of the referred object is performed. A deep copy of an object is a new object with **entirely new** instance variables, it does **not** share objects with the old.
 
 ![image](/public/images/java/1477/object_clone.jpg){:width="400px"}  
 
@@ -126,7 +126,7 @@ Modified Array = [Johnny, Peter]
 * In deep copy, the change to array or list doesn't impact the other.
 
 ## 3. Source Files
-* [Source files for Java Shallow Copy on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-shallow-copy)
+* [Source files for Java Shallow Copy on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-advanced-shallowcopy)
 
 ## 4. References
 * [Java ArrayList to Array](https://www.journaldev.com/760/java-arraylist-to-array)
