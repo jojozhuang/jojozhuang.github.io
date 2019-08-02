@@ -6,6 +6,7 @@ index: 1459
 subcategory: java-java8
 date: 2019-04-07
 tags: [Lazy, Supplier]
+draft: true
 ---
 
 > Functional Interfaces in Java 8.

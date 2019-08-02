@@ -6,6 +6,7 @@ index: 9602
 subcategory: interview-overview
 date: 2016-01-02
 tags: [Generic Questions]
+draft: true
 ---
 
 > Generic interview questions.

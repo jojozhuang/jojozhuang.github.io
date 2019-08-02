@@ -6,6 +6,7 @@ index: 2201
 subcategory: restful
 date: 2017-08-06
 tags: [JSON Server]
+draft: true
 ---
 
 > Setup a dummy server to provide fake data as RESTful APIs.

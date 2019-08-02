@@ -77,7 +77,7 @@
   function formatColor(isDraft) {
     //console.log(isDraft);
     if (isDraft) {
-      return 'style="color:#c7ad06"';
+      return 'style="color:#e8073b"';
     }
     return '';
   }

@@ -6,6 +6,7 @@ index: 1236
 subcategory: algorithm
 date: 2016-03-31
 tags: [Pre sum]
+draft: true
 ---
 
 > Presum for multiple queries.

@@ -6,6 +6,7 @@ index: 1145
 subcategory: data-structure
 date: 2016-03-19
 tags: [MST]
+draft: true
 ---
 
 > Implement minimum spanning tree.

@@ -6,6 +6,7 @@ index: 9670
 subcategory: interview-overview
 date: 2019-01-20
 tags: [Javascript, Html, Css]
+draft: true
 ---
 
 > Knowledges of front end.

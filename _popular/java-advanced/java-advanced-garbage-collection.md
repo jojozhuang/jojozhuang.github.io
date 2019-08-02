@@ -6,6 +6,7 @@ index: 1473
 subcategory: java-advanced
 date: 2017-03-03
 tags: [GC]
+draft: true
 ---
 
 > Garbage Collection

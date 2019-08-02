@@ -6,6 +6,7 @@ index: 9653
 subcategory: interview-system-design
 date: 2016-03-03
 tags: [Tradeoffs]
+draft: true
 ---
 
 > Tradeoffs(pros and cons) when choosing different technologies.

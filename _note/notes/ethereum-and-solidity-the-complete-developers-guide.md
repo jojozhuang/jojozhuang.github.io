@@ -6,6 +6,7 @@ index: 9141
 subcategory: notes
 date: 2017-08-02
 tags: [Block Chain, Digital Currency]
+draft: true
 ---
 
 > Learn Block Chain, Digital Currency and Ethereum.

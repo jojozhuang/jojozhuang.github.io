@@ -6,6 +6,7 @@ index: 1126
 subcategory: data-structure
 date: 2016-03-11
 tags: [Fenwick]
+draft: true
 ---
 
 > Implement fenwick tree.

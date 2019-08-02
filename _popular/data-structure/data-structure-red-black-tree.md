@@ -7,6 +7,7 @@ subcategory: data-structure
 date: 2016-03-09
 tags: [RBT]
 mathjax: true
+draft: true
 ---
 
 > Introduce red black tree and its properties.

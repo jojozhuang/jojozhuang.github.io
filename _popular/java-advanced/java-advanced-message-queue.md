@@ -6,6 +6,7 @@ index: 1483
 subcategory: java-advanced
 date: 2017-03-06
 tags: [Message Queue, JMS]
+draft: true
 ---
 
 > Message Queue, Java Message Service

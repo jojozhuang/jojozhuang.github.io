@@ -6,6 +6,7 @@ index: 3133
 subcategory: docker
 date: 2018-04-15
 tags: [Docker, Bash]
+draft: true
 ---
 
 > Introduce how to create docker container with bash script.

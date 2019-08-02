@@ -6,6 +6,7 @@ index: 2559
 subcategory: express-js
 date: 2018-01-13
 tags: [PM2]
+draft: true
 ---
 
 > Introduce how to user PM2 to setup load balancer.

@@ -6,9 +6,18 @@ index: 1701
 subcategory: practice-problems
 date: 2019-08-01
 tags: [Word Counter]
+draft: true
 ---
 
 > Count the number of word in file.
+
+## 0. More Requirements
+- 1) What if the given file is very large? Read file by chunk, NIO maybe?
+- 2) What if most of the words are unique? Use Trie to reduce the memory storage.
+- 3) What if you are not given a file but a stream?
+- 4) If you are given many servers, how will you use them to improve the performance? Map Reduce.
+- 5) What if we just need to return the first 10 popular words?
+- 6) How to return the top 10 words in the last one hour? Use hashmap. Create one hashmap for every minute.
 
 ## 1. Requirement
 Write a program to count the words in a given file. You can assume the file is very small.

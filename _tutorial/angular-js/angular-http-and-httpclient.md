@@ -6,6 +6,7 @@ index: 2703
 subcategory: angular-js
 date: 2018-03-18
 tags: [Angular, HttpClient]
+draft: true
 ---
 
 > Learn how to use HttpClient module to communicate with external services in Angular application.

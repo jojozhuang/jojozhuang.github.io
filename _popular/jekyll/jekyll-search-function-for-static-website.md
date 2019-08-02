@@ -6,6 +6,7 @@ index: 1625
 subcategory: jekyll
 date: 2019-05-23
 tags: [Search, Lunr.js]
+draft: true
 ---
 
 > Search.

@@ -6,6 +6,7 @@ index: 9151
 subcategory: notes
 date: 2017-07-01
 tags: [TOGAF]
+draft: true
 ---
 
 > Notes of Book: The Open Group Architecture Framework (TOGAF)

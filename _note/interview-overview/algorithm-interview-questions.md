@@ -6,6 +6,7 @@ index: 9671
 subcategory: interview-overview
 date: 2016-04-01
 tags: [Algorithm]
+draft: true
 ---
 
 > Knowledges of Algorithm

@@ -6,6 +6,7 @@ index: 2732
 subcategory: angular-js
 date: 2018-03-22
 tags: [Angular, Karma, Jasmine]
+draft: true
 ---
 
 > Learn how to write automation tests in Angular application.
