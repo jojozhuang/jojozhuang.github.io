@@ -133,6 +133,7 @@ The next zero bit for index 2 of bits2? 2
 The next one bit for index 2 of bits1? 2
 The next one bit for index 2 of bits2? -1
 ```
+
 ## 3. Source Files
 * [Source files for Java BitSet on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-bitset)
 
