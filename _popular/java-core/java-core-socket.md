@@ -1,18 +1,20 @@
 ---
 layout: tutorial
 key: popular
-title: "Socket Programming with Java"
-index: 1504
-subcategory: java-app
+title: "Java Core - Socket"
+index: 1423
+subcategory: java-core
 date: 2016-02-22
 tags: [Socket, TCP, UDP]
 ---
 
 > Introduce how to use socket to communicate between applications in Java.
 
+## 1. Socket
 Sockets provide the communication mechanism between two computers. A client program creates a socket on its end of the communication and attempts to connect that socket to a server.
 
-## 1. Two Common Network Protocols
+There are two common network protocols: TCP and UDP.
+
 ### 1.1 TCP
 TCP stands for Transmission Control Protocol, which allows for reliable communication between two applications. TCP is typically used over the Internet Protocol, which is referred to as TCP/IP.
 ### 1.2 UDP
@@ -122,17 +124,14 @@ Enter any string now, (quit) to end:
 ```
 
 In the terminal for TCP Client(Right one of the following screenshot), input any string and Enter. You will see the response from TCP Server.
-![image](/public/images/java/1504/tcpserver.png)  
+![image](/public/images/java/1423/tcpserver.png)  
 
 ## 3. UDP Example
 Create UDP Server and UDP Client with same function as TCP Server and TCP Client.
 ### 3.1 Creating UDP Server
 Create a file named `UDPServer.java` with following content.
 ```java
-import java.io.*;
-import java.net.*;
-
-class UDPServer {
+public class UDPServer {
     public static void main(String args[]) throws Exception {
         int port = 8722; // Same port number with the server
         Socket socket = null;
@@ -144,7 +143,11 @@ class UDPServer {
             receiveData = new byte[1024];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             serverSocket.receive(receivePacket);
-            String clientInput = new String(receivePacket.getData());
+            // get actual date with proper length
+            byte[] actualData = new byte[receivePacket.getLength()];
+            System.arraycopy(receivePacket.getData(), receivePacket.getOffset(),
+                    actualData, 0, receivePacket.getLength());
+            String clientInput = new String(actualData);
             System.out.println("[UPDServer] Received input [" + clientInput + "] from Client.");
             // Find the ip address and port of sender
             InetAddress IPAddress = receivePacket.getAddress();
@@ -164,10 +167,7 @@ class UDPServer {
 ### 3.2 Creating UDP Client
 Create a file named `UDPClient.java` with following content.
 ```java
-import java.io.*;
-import java.net.*;
-
-class UDPClient {
+public class UDPClient {
     public static void main(String args[]) throws Exception {
         String serverName = "localhost";
         int port = 8722; // Same port number with the server
@@ -197,7 +197,11 @@ class UDPClient {
             //
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             clientSocket.receive(receivePacket);
-            String responseFromServer = new String(receivePacket.getData());
+            // get actual date with proper length
+            byte[] actualData = new byte[receivePacket.getLength()];
+            System.arraycopy(receivePacket.getData(), receivePacket.getOffset(),
+                    actualData, 0, receivePacket.getLength());
+            String responseFromServer = new String(actualData);
             System.out.println("[UDPClient] Get response [" + responseFromServer + "] from Server.");
         } while (!userInput.equals("quit")); // End the client if 'quit' is an input
 
@@ -228,11 +232,10 @@ Enter any string now, (quit) to end:
 ```
 
 In the terminal for UDP Client(Right one of the following screenshot), input any string and Enter. You will see the response from UDP Server.
-![image](/public/images/java/1504/udpserver.png)  
+![image](/public/images/java/1423/udpserver.png)  
 
 ## 4. Source Files
-* [Source files of TCP Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/TCPServer)
-* [Source files of UDP Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/UDPServer)
+* [Source files of Java Socket on Github](https://github.com/jojozhuang/java-programming/tree/master/java-core-socket)
 
 ## 5. References
 * [Java - Networking](https://www.tutorialspoint.com/java/java_networking.htm)
