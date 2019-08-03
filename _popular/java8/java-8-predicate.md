@@ -8,9 +8,9 @@ date: 2017-04-07
 tags: [Predicate]
 ---
 
-> BlockingQueue interface and its implementations.
+> Predicate interface and its implementations.
 
-## 1. Predicate
+## 1. Predicate Interface
 The Java `Predicate` interface, java.util.function.Predicate, represents a simple function that takes a single value as parameter, and returns true or false. Here is how the Predicate functional interface definition looks:
 ```java
 public interface Predicate {
@@ -34,9 +34,65 @@ Predicate predicate = (value) -> value != null;
 ```
 This lambda implementation of the Predicate interface effectively does the same as the implementation above that uses a class.
 
-## 2. Predicate + Iterator
+## 2. Predicate Example
+One usage of Predicate is to filter elements in list.
+```java
+public class PredicateExample {
+    public static void main(String args[]) {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        // Predicate<Integer> predicate = n -> true
+        // n is passed as parameter to test method of Predicate interface
+        // test method will always return true no matter what value n has.
+
+        System.out.print("Print all numbers: ");
+
+        //pass n as parameter
+        evaluate(list, n->true);
+
+        // Predicate<Integer> predicate1 = n -> n%2 == 0
+        // n is passed as parameter to test method of Predicate interface
+        // test method will return true if n%2 comes to be zero
+
+        System.out.print("Print even numbers: ");
+        //evaluate(list, n-> n%2 == 0 );
+        evaluate(list, new evenPredicate());
+
+        // Predicate<Integer> predicate2 = n -> n > 3
+        // n is passed as parameter to test method of Predicate interface
+        // test method will return true if n is greater than 3.
+
+        System.out.print("Print numbers greater than 3: ");
+        evaluate(list, n-> n > 3 );
+    }
+
+    public static void evaluate(List<Integer> list, Predicate<Integer> predicate) {
+        for(Integer num: list) {
+            if (predicate.test(num)) {
+                System.out.print(num + ",");
+            }
+        }
+        System.out.println();
+    }
+
+    private static class evenPredicate implements Predicate<Integer> {
+        @Override
+        public boolean test(Integer num) {
+            return num % 2 == 0;
+        }
+    }
+}
+```
+Output.
+```raw
+Print all numbers: 1,2,3,4,5,6,7,8,9,
+Print even numbers: 2,4,6,8,
+Print numbers greater than 3: 4,5,6,7,8,9,
+```
+
+## 3. Predicate + Iterator
 Implement an iterator with predicate interface.
-### 2.1 Custom Predicate
+### 3.1 Custom Predicate
 Create a custom predicate, which returns true only if the given value is larger than 5.
 ```java
 import java.util.function.Predicate;
@@ -51,7 +107,7 @@ public class BiggerThanFivePredicate implements Predicate<Integer> {
     }
 }
 ```
-### 2.2 Predicate Iterator
+### 3.2 Predicate Iterator
 Create a class, implement Iterator interface. Override the `hasNext()` and `next()` method. Use the custom predicate to filter out unmatched data.
 ```java
 import java.util.Iterator;
@@ -115,10 +171,10 @@ Output.
 7
 ```
 
-## 3. Source Files
+## 4. Source Files
 * [Source files for Java 8 Predicate on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-java8-predicate)
 
-## 4. References
+## 5. References
 * [Java Predicate](http://zetcode.com/java/predicate/)
 * [Java Predicate – Java 8 Predicate](https://www.journaldev.com/17072/java-predicate)
 * [Java 8 - Functional Interfaces](https://www.tutorialspoint.com/java8/java8_functional_interfaces.htm)
