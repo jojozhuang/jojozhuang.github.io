@@ -8,7 +8,7 @@ date: 2016-02-22
 tags: [Socket, TCP, UDP]
 ---
 
-> Introduce how to use socket to communicate between applications in Java.
+> Use socket to communicate through TCP and UDP between applications.
 
 ## 1. Socket
 Sockets provide the communication mechanism between two computers. A client program creates a socket on its end of the communication and attempts to connect that socket to a server.
