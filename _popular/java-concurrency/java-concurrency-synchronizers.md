@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - Synchronizers"
-index: 1437
+index: 1438
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [CyclicBarrier, CountDownLatch, Semaphore]

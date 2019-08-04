@@ -2,11 +2,10 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - Fork Join"
-index: 1435
+index: 1436
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [RecursiveTask, Fork Join]
-draft: true
 ---
 
 > Learn the fork-join framework
