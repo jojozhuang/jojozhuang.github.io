@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Static Block and Initialization Block"
-index: 1422
+index: 1421
 subcategory: java-core
 date: 2017-04-08
 tags: [Static Block, Initialization Block, IIB]

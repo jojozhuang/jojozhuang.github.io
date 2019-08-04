@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Queue and Stack"
-index: 1417
+index: 1413
 subcategory: java-core
 date: 2017-01-09
 tags: [Queue, Stack]

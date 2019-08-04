@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Comparable vs Comparator"
-index: 1420
+index: 1416
 subcategory: java-core
 date: 2019-08-02
 tags: [Comparable, Comparator]

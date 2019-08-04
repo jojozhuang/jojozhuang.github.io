@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Core - Generics"
-index: 1426
+index: 1417
 subcategory: java-core
 date: 2017-01-13
 tags: [Generics, Bounded Wildcards]
@@ -619,7 +619,7 @@ Wildcards can be used in three ways −
 * Lower Bounded Wildcard − `? super` Type.
 
 See the difference between upper bound wildcard and lower bound wildcard.
-![image](/public/images/java/1426/wildcards.png)
+![image](/public/images/java/1417/wildcards.png)
 
 ### 5.2 Unbounded Wildcards
 The question mark (?), represents the wildcard, stands for `unknown` type in generics. There may be times when any object can be used when a method can be implemented using functionality provided in the Object class or When the code is independent of the type parameter. To declare a Unbounded Wildcard parameter, list the `?` only.
