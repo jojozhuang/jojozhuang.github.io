@@ -29,6 +29,10 @@ bookmarks:
         description: Modern Java in Action
         url: /public/pdf/Manning.Modern.Java.in.Action.2018.9.pdf
         type: doc
+      - name: Java Concurrency and Multithreading Tutorial
+        description: Java Concurrency and Multithreading Tutorial
+        url: http://tutorials.jenkov.com/java-concurrency/index.html
+        type: webpage
       - name: How Java I/O Works Internally at Lower Level?
         description: How Java I/O Works Internally at Lower Level?
         url: https://howtodoinjava.com/java/io/how-java-io-works-internally-at-lower-level/
@@ -81,6 +85,10 @@ bookmarks:
         type: webpage
   - category: Interview
     links:
+      - name: Coding Interview University
+        description: Coding Interview University
+        url: https://github.com/jwasham/coding-interview-university
+        type: webpage
       - name: Algorithm Essentials
         description: Algorithm Essentials
         url: /public/pdf/algorithm-essentials-java.pdf

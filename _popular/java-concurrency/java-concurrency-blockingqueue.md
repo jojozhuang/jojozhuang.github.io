@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - BlockingQueue"
-index: 1435
+index: 1442
 subcategory: java-concurrency
 date: 2017-02-02
 tags: [BlockingQueue, ArrayBlockingQueue]
@@ -133,10 +133,10 @@ public class Consumer implements Runnable{
     }
 }
 ```
-### 2.4 Service
-Create BlockingQueue service for producer and consumer. This service will create the BlockingQueue with fixed size and share with both producers and consumers. This service will start producer and consumer threads and exit.
+### 2.4 Test Class
+This test class will create the BlockingQueue with fixed size and share with both producers and consumers. It will start producer and consumer threads and exit.
 ```java
-public class Service {
+public class BlockingQueueExample {
     public static void main(String[] args) {
 
         //Creating BlockingQueue of size 10
@@ -155,7 +155,7 @@ public class Service {
     }
 }
 ```
-Output
+Output.
 ```raw
 Producer and Consumer has been started
 Produced Message-0

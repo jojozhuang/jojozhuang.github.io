@@ -1004,6 +1004,7 @@ count: 0
 ```
 
 ## 9. References
+* [](http://tutorials.jenkov.com/java-concurrency/index.html)
 * [Lifecycle and States of a Thread in Java](https://www.geeksforgeeks.org/lifecycle-and-states-of-a-thread-in-java/)
 * [Synchronized in Java](https://www.geeksforgeeks.org/synchronized-in-java/)
 * [Remember the types of intrinsic lock](http://www.javapractices.com/topic/TopicAction.do?Id=35)
