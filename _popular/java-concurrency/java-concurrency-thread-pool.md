@@ -5,15 +5,27 @@ title: "Java Concurrency - Thread Pool"
 index: 1433
 subcategory: java-concurrency
 date: 2017-04-04
-tags: [Thread Pool]
+tags: [Executors, ExecutorService]
 draft: true
 ---
 
-> Thread Pool
+> Create fixed thread pool and scheduled thread pool.
 
-## 5. ThreadPool
-### 5.1 Executors
-If your program creates a large number of short-lived threads, it should use a `thread pool` instead. Factory methods of class Executors.
+## 1. Thread Pool
+### 1.1 What is Thread Pool?
+Thread Pools are useful when you need to **limit** the number of threads running in your application at the same time. There is a performance overhead associated with starting a new thread, and each thread is also allocated some memory for its stack etc.
+
+Instead of starting a new thread for every task to execute concurrently, the task can be passed to a thread pool. As soon as the pool has any idle threads the task is assigned to one of them and executed. Internally the tasks are inserted into a `Blocking Queue` which the threads in the pool are dequeuing from. When a new task is inserted into the queue one of the idle threads will dequeue it successfully and execute it. The rest of the idle threads in the pool will be blocked waiting to dequeue tasks.
+
+### 1.2 Interface and Class
+Java 5 comes with built in thread pools in the `java.util.concurrent` package, so you don't have to implement your own thread pool. Below are the important interfaces and classes for using thread pool.
+* Interface `Executor`
+* Interface `ExecutorService`
+* Class `Executors`
+* Class `ThreadPoolExecutor`
+
+### 1.3 Types of Thread Pool
+Class `Executors` supports to create five types of thread pool with corresponding factory methods. You can choose any of them based to your requirement.
 
 Method                           | Description
 ---------------------------------|----------------------------
@@ -23,120 +35,14 @@ newSingleThreadExecutor          | A “pool” with a single thread that execut
 newScheduledThreadPool           | A fixed-thread pool for scheduled execution; a replacement for java.util.Timer.
 newSingleThreadScheduledExecutor | A single-thread “pool” for scheduled execution.
 
-### 5.2 Interface and Class
-A thread pool reuses previously created threads to execute current tasks and offers a solution to the problem of thread cycle overhead and resource thrashing. Thread Queue and Thread Pool.
-* Interface Executor
-* Interface ExecutorService
-* Class ThreadPoolExecutor
-
-### 5.3 Example
+## 2. Examples
+### 2.1 Fixed Thread Pool
+Create task thread by implementing Runnable interface. It takes random seconds to run the task.
 ```java
-class Task implements Runnable   
-{
+public class FixedTask implements Runnable {
     private String name;
 
-    public Task(String s)
-    {
-        name = s;
-    }
-
-    public void run()
-    {
-        // run some task.
-    }
-}
-
-public static void main(String[] args)
-{
-    // creates five tasks
-    Runnable r1 = new Task("task 1");
-    Runnable r2 = new Task("task 2");
-    Runnable r3 = new Task("task 3");
-    Runnable r4 = new Task("task 4");
-    Runnable r5 = new Task("task 5");      
-
-    // creates a thread pool with 3 of threads as the fixed pool size
-    ExecutorService pool = Executors.newFixedThreadPool(3);  
-
-    // passes the Task objects to the pool to execute
-    pool.execute(r1);
-    pool.execute(r2);
-    pool.execute(r3);
-    pool.execute(r4);
-    pool.execute(r5);
-
-    pool.shutdown();    
-}
-```
-### 5.4 RecursiveTask
-The Fork-Join Framework.
-
-Create an array with random numbers, then count how many numbers are larger than 0.5.
-```java
-public static void main(String[] args) {
-    final int size = 1000000;
-    double[] numbers = new double[size];
-    for (int i = 0; i < size; i++) {
-        numbers[i] = Math.random(); // generate random numbers
-    }
-    Counter counter = new Counter(numbers, 0, numbers.length, new Filter() {
-        public boolean accept(double x) {
-            return x > 0.5;
-        }
-    });
-    ForkJoinPool pool = new ForkJoinPool();
-    pool.invoke(counter); // Performs the given task, returning its result upon completion.
-    System.out.println(counter.join()); // output: 500305
-}
-
-interface Filter {
-    boolean accept(double t);
-}
-
-static class Counter extends RecursiveTask<Integer> {
-    public static final int THRESHOLD = 1000;
-    private double[] values;
-    private int from;
-    private int to;
-    private Filter filter;
-
-    public Counter(double[] numbers, int i, int length, Filter filter) {
-        this.values = numbers;
-        this.from = i;
-        this.to = length;
-        this.filter = filter;
-    }
-
-    @Override
-    protected Integer compute() {
-        if (to - from < THRESHOLD) {
-            int count = 0;
-            for (int i = from; i < to; i++) {
-                if (filter.accept(values[i])) count++;
-            }
-            return count;
-        } else {
-            int mid = (from + to) / 2;
-            Counter first = new Counter(values, from, mid, filter);
-            Counter second = new Counter(values, mid, to, filter);
-            invokeAll(first, second); //
-            return first.join() + second.join();
-        }
-    }
-}
-```
-* RecursiveTask in inherited from ForkJoinTask.
-* Override the `compute` method to generate and invoke subtasks, and to combine their results.
-* The `invokeAll` method receives a number of tasks and blocks until all of them have completed.
-* The `join` method yields the result.
-
-## 1. Thread Pool
-Create Task.
-```java
-public class Task implements Runnable {
-    private String name;
-
-    public Task(String name) {
+    public FixedTask(String name) {
         this.name = name;
     }
 
@@ -147,7 +53,7 @@ public class Task implements Runnable {
     public void run() {
         try {
             Long duration = (long) (Math.random() * 10);
-            System.out.println("Executing : " + name + " at " + LocalDateTime.now().toString());
+            System.out.println("Executing: " + name + " at " + LocalDateTime.now().toString());
             TimeUnit.SECONDS.sleep(duration);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -155,7 +61,7 @@ public class Task implements Runnable {
     }
 }
 ```
-Create `ThreadPoolExecutor` instance to run the task.
+Create a fixed thread pool which has two numbers of thread in the pool. We can use it as either `ExecutorService` interface or `ThreadPoolExecutor` class. Then, we create 5 tasks and submit them to thread pool.
 ```java
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -163,6 +69,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class ThreadPoolExample {
     public static void main(String[] args)
     {
+        //ExecutorService executor = Executors.newFixedThreadPool(2);
         ThreadPoolExecutor executor = (ThreadPoolExecutor)Executors.newFixedThreadPool(2);
 
         for (int i = 1; i <= 5; i++)
@@ -178,16 +85,66 @@ public class ThreadPoolExample {
 ```
 Output.
 ```raw
-Created : Task 1
-Created : Task 2
-Created : Task 3
-Created : Task 4
-Created : Task 5
-Executing : Task 2 at 2019-03-27T10:02:32.272
-Executing : Task 1 at 2019-03-27T10:02:32.272
-Executing : Task 3 at 2019-03-27T10:02:33.324
-Executing : Task 4 at 2019-03-27T10:02:38.321
-Executing : Task 5 at 2019-03-27T10:02:39.327
+Created: Task 1
+Created: Task 2
+Created: Task 3
+Created: Task 4
+Created: Task 5
+Executing: Task 2 at 2019-03-27T10:02:32.272
+Executing: Task 1 at 2019-03-27T10:02:32.272
+Executing: Task 3 at 2019-03-27T10:02:33.324
+Executing: Task 4 at 2019-03-27T10:02:38.321
+Executing: Task 5 at 2019-03-27T10:02:39.327
+```
+### 2.2 Scheduled Thread Pool
+We can create scheduled thread pool to run a task periodically.
+
+Create task thread by implementing Runnable interface.
+```java
+public class ScheduledTask implements Runnable {
+    private String name;
+
+    public ScheduledTask(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void run() {
+        System.out.println("Executing: " + name + " at " + LocalDateTime.now().toString());
+    }
+}
+```
+Create a scheduled thread pool which has only one thread in the pool. The task is scheduled to run every 3 seconds.
+```java
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+public class ScheduledThreadPoolExample {
+    public static void main(String[] args)
+    {
+        ScheduledExecutorService ses = Executors.newScheduledThreadPool(1);
+
+        ScheduledTask task = new ScheduledTask("Scheduled Task");
+
+        ses.scheduleAtFixedRate(task, 0, 3, TimeUnit.SECONDS);
+
+    }
+}
+```
+Output.
+```raw
+Executing: Scheduled Task at 2019-03-28T09:23:58.476
+Executing: Scheduled Task at 2019-03-28T09:24:01.444
+Executing: Scheduled Task at 2019-03-28T09:24:04.445
+Executing: Scheduled Task at 2019-03-28T09:24:07.441
+Executing: Scheduled Task at 2019-03-28T09:24:10.442
+Executing: Scheduled Task at 2019-03-28T09:24:13.445
+Executing: Scheduled Task at 2019-03-28T09:24:16.444
+...
 ```
 
 ## 3. Source Files
