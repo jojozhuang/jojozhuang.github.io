@@ -1,12 +1,11 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Concurrency - Callables and Futures"
+title: "Java Concurrency - Callable and Future"
 index: 1436
 subcategory: java-concurrency
 date: 2017-04-04
-tags: [Callables, Futures]
-draft: true
+tags: [Callable, Future, FutureTask]
 ---
 
 > Volatile, Final and Atomics.
@@ -40,80 +39,25 @@ t.start();
 ...
 Integer result = task.get(); // it's a Future
 ```
-Callable Example, return random number.
+
+## 2. Example
+The following two examples show how get to get result from from thread.
+### 2.1 Runnable Only
+Create a work thread with `Runnable` get generate random number.
 ```java
-class CallableExample implements Callable
-{
-  public Object call() throws Exception
-  {
-    Random generator = new Random();
-    Integer randomNumber = generator.nextInt(5);
-
-    Thread.sleep(randomNumber * 1000);
-
-    return randomNumber;
-  }
-}
-```
-Use Future to get result from Callable.
-```java
-public static void main(String[] args) throws Exception
-  {
-    // FutureTask is a concrete class that implements both Runnable and Future
-    FutureTask[] randomNumberTasks = new FutureTask[5];
-
-    for (int i = 0; i < 5; i++)
-    {
-      Callable callable = new CallableExample();
-
-      // Create the FutureTask with Callable
-      randomNumberTasks[i] = new FutureTask(callable);
-
-      // As it implements Runnable, create Thread
-      // with FutureTask
-      Thread t = new Thread(randomNumberTasks[i]);
-      t.start();
-    }
-
-    for (int i = 0; i < 5; i++)
-    {
-      // As it implements Future, we can call get()
-      System.out.println(randomNumberTasks[i].get());
-
-      // This method blocks till the result is obtained
-      // The get method can throw checked exceptions
-      // like when it is interrupted. This is the reason
-      // for adding the throws clause to main
-    }
-  }
-```
-Output:
-```raw
-4
-2
-3
-3
-0
-```
-Similar function using only Runnable.
-```java
-class RunnableExample implements Runnable
-{
+public class RunnableWorker implements Runnable {
     // Shared object to store result
     private Object result = null;
 
-    public void run()
-    {
-        Random generator = new Random();
-        Integer randomNumber = generator.nextInt(5);
+    public void run() {
+        Random random = new Random();
+        Integer randomNumber = random.nextInt(5);
 
         // As run cannot throw any Exception
-        try
-        {
+        try {
             Thread.sleep(randomNumber * 1000);
         }
-        catch (InterruptedException e)
-        {
+        catch (InterruptedException e) {
             e.printStackTrace();
         }
 
@@ -121,105 +65,114 @@ class RunnableExample implements Runnable
         result = randomNumber;
 
         // Wake up threads blocked on the get() method
-        synchronized(this)
-        {
+        synchronized(this) {
             notifyAll();
         }
     }
 
-    public synchronized Object get() throws InterruptedException
-    {
+    public synchronized Object get() throws InterruptedException {
         while (result == null) {
             wait();
         }
-
         return result;
     }
 }
 ```
-Use Future to get result from Runnable.
+* Use `notifyAll()` method to notify other threads that the result is ready.
+* Use `wait()` method to let the caller keep waiting until the result is ready.
+
+Create a main thread with 5 tasks. Call the `get()` method to receive the result for each task.
 ```java
-public static void main(String[] args) throws Exception
-{
-    RunnableExample[] randomNumberTasks = new RunnableExample[5];
+public class RunnableExample {
+    public static void main(String[] args) throws Exception {
+        RunnableWorker[] tasks = new RunnableWorker[5];
 
-    for (int i = 0; i < 5; i++)
-    {
-        randomNumberTasks[i] = new RunnableExample();
-        Thread t = new Thread(randomNumberTasks[i]);
-        t.start();
-    }
-
-    for (int i = 0; i < 5; i++)
-        System.out.println(randomNumberTasks[i].get());
-}
-```
-
-### 5.4 RecursiveTask
-The Fork-Join Framework.
-
-Create an array with random numbers, then count how many numbers are larger than 0.5.
-```java
-public static void main(String[] args) {
-    final int size = 1000000;
-    double[] numbers = new double[size];
-    for (int i = 0; i < size; i++) {
-        numbers[i] = Math.random(); // generate random numbers
-    }
-    Counter counter = new Counter(numbers, 0, numbers.length, new Filter() {
-        public boolean accept(double x) {
-            return x > 0.5;
+        System.out.println("Creating tasks...");
+        for (int i = 0; i < 5; i++) {
+            tasks[i] = new RunnableWorker();
+            Thread t = new Thread(tasks[i]);
+            t.start();
         }
-    });
-    ForkJoinPool pool = new ForkJoinPool();
-    pool.invoke(counter); // Performs the given task, returning its result upon completion.
-    System.out.println(counter.join()); // output: 500305
-}
 
-interface Filter {
-    boolean accept(double t);
-}
-
-static class Counter extends RecursiveTask<Integer> {
-    public static final int THRESHOLD = 1000;
-    private double[] values;
-    private int from;
-    private int to;
-    private Filter filter;
-
-    public Counter(double[] numbers, int i, int length, Filter filter) {
-        this.values = numbers;
-        this.from = i;
-        this.to = length;
-        this.filter = filter;
-    }
-
-    @Override
-    protected Integer compute() {
-        if (to - from < THRESHOLD) {
-            int count = 0;
-            for (int i = from; i < to; i++) {
-                if (filter.accept(values[i])) count++;
-            }
-            return count;
-        } else {
-            int mid = (from + to) / 2;
-            Counter first = new Counter(values, from, mid, filter);
-            Counter second = new Counter(values, mid, to, filter);
-            invokeAll(first, second); //
-            return first.join() + second.join();
+        System.out.println("Waiting results...");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(tasks[i].get());
         }
     }
 }
 ```
-* RecursiveTask in inherited from ForkJoinTask.
-* Override the `compute` method to generate and invoke subtasks, and to combine their results.
-* The `invokeAll` method receives a number of tasks and blocks until all of them have completed.
-* The `join` method yields the result.
+Output.
+```raw
+Creating tasks...
+Waiting results...
+3
+1
+0
+3
+2
+```
+### 2.2 Callable + FurtureTask
+Create a work thread with `Callable` get generate random number.
+```java
+public class CallableWorker implements Callable {
+    public Object call() throws Exception {
+        Random random = new Random();
+        Integer randomNumber = random.nextInt(5);
 
-## 5. Source Files
-* [Source files for Java Synchronization on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-concurrency-synchronization)
+        Thread.sleep(randomNumber * 1000);
 
-## 6. References
-* [Synchronization in Java](https://www.javatpoint.com/synchronization-in-java)
-* [Race Conditions and Critical Sections](http://tutorials.jenkov.com/java-concurrency/race-conditions-and-critical-sections.html)
+        return randomNumber;
+    }
+}
+```
+Create a main thread to use `Future` to get result from Callable.
+```java
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+
+public class CallableExample {
+    public static void main(String[] args) throws Exception {
+        // FutureTask is a concrete class that implements both Runnable and Future
+        FutureTask[] tasks = new FutureTask[5];
+
+        System.out.println("Creating tasks...");
+        for (int i = 0; i < 5; i++) {
+            Callable callable = new CallableWorker();
+
+            // Create the FutureTask with Callable
+            tasks[i] = new FutureTask(callable);
+
+            // As it implements Runnable, create Thread with FutureTask
+            Thread t = new Thread(tasks[i]);
+            t.start();
+        }
+
+        System.out.println("Waiting results...");
+        for (int i = 0; i < 5; i++) {
+            // As it implements Future, we can call get()
+            System.out.println(tasks[i].get());
+
+            // This method blocks till the result is obtained
+            // The get method can throw checked exceptions
+            // like when it is interrupted. This is the reason
+            // for adding the throws clause to main
+        }
+    }
+}
+```
+Output:
+```raw
+Creating tasks...
+Waiting results...
+2
+4
+0
+0
+3
+```
+
+## 3. Source Files
+* [Source files for Java Callable on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-concurrency-callable)
+
+## 4. References
+* [Callable and Future in Java](https://www.geeksforgeeks.org/callable-future-java/)
