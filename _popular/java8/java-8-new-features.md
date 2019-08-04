@@ -5,10 +5,10 @@ title: "Java 8 - New Features"
 index: 1452
 subcategory: java-java8
 date: 2017-05-01
-tags: [Message Queue, JMS]
+tags: [Lambda, Stream, Optional]
 ---
 
-> New features in java 8
+> New features in java 8.
 
 ## 1. Overview
 JAVA 8 is a major feature release of JAVA programming language development. Its initial version was released on 18 March 2014. With the Java 8 release, Java provided supports for functional programming, new JavaScript engine, new APIs for date time manipulation, new streaming API, etc.
