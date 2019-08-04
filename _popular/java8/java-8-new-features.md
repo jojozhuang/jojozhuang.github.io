@@ -741,6 +741,9 @@ Base64 Encoded String (MIME) :NTY1Y2UxMjUtNjYxNS00NDFlLTg3MTktZjdjZDcyMWUwMDc3
 Decoded UUID: 565ce125-6615-441e-8719-f7cd721e0077
 ```
 
-## 11. References
+## 11. Source Files
+* [Source files for Java 8 New Features on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-java8-newfeatures)
+
+## 12. References
 * [Java 8 - Overview](https://www.tutorialspoint.com/java8/java8_overview.htm)
 * [Java Method References](https://www.javatpoint.com/java-8-method-reference)
