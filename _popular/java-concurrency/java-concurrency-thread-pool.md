@@ -6,7 +6,6 @@ index: 1433
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [Executors, ExecutorService]
-draft: true
 ---
 
 > Create fixed thread pool and scheduled thread pool.
