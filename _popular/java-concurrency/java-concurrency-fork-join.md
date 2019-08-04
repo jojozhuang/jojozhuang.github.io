@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - Fork Join"
-index: 1438
+index: 1435
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [RecursiveTask, Fork Join]
@@ -11,70 +11,87 @@ draft: true
 
 > Learn the fork-join framework
 
-### 5.4 RecursiveTask
-The Fork-Join Framework.
+## 1. Fork-join Framework
+The `fork-join` framework allows to break a certain task on several workers and then wait for the result to combine them. It leverages multi-processor machine's capacity to great extent.
+* `Fork` - A process in which a task splits itself into smaller and independent sub-tasks which can be executed concurrently.
+* `Join` - A process in which a task join all the results of sub-tasks once the subtasks have finished executing, otherwise it keeps waiting.
 
+Classes:
+* `ForkJoinPool` - A special thread pool designed to work with fork-and-join task splitting.
+* `RecursiveTask<V>` - RecursiveTask represents a task which returns a value.
+* `RecursiveAction` - Just like RecursiveTask except it does not return a result
+* `ForkJoinTask<V>` - Superclass of RecursiveTask<V> and RecursiveAction. fork() and join() are methods defined in this class.
+
+## 2. Example
 Create an array with random numbers, then count how many numbers are larger than 0.5.
+
+### 2.1 Counter
 ```java
-public static void main(String[] args) {
-    final int size = 1000000;
-    double[] numbers = new double[size];
-    for (int i = 0; i < size; i++) {
-        numbers[i] = Math.random(); // generate random numbers
-    }
-    Counter counter = new Counter(numbers, 0, numbers.length, new Filter() {
-        public boolean accept(double x) {
-            return x > 0.5;
-        }
-    });
-    ForkJoinPool pool = new ForkJoinPool();
-    pool.invoke(counter); // Performs the given task, returning its result upon completion.
-    System.out.println(counter.join()); // output: 500305
-}
+import java.util.concurrent.RecursiveTask;
+import java.util.function.Predicate;
 
-interface Filter {
-    boolean accept(double t);
-}
-
-static class Counter extends RecursiveTask<Integer> {
-    public static final int THRESHOLD = 1000;
-    private double[] values;
+public class Counter extends RecursiveTask<Integer> {
+    static final int THRESHOLD = 100;
+    private double[] numbers;
     private int from;
     private int to;
-    private Filter filter;
+    private Predicate<Double> filter;
 
-    public Counter(double[] numbers, int i, int length, Filter filter) {
-        this.values = numbers;
-        this.from = i;
-        this.to = length;
+    public Counter(double[] numbers, int from, int to, Predicate<Double> filter) {
+        this.numbers = numbers;
+        this.from = from;
+        this.to = to;
         this.filter = filter;
     }
 
     @Override
     protected Integer compute() {
-        if (to - from < THRESHOLD) {
+        if (to - from < THRESHOLD) { // no need to split, calculate the result
             int count = 0;
             for (int i = from; i < to; i++) {
-                if (filter.accept(values[i])) count++;
+                if (filter.test(numbers[i])) {
+                    count++;
+                }
             }
             return count;
-        } else {
-            int mid = (from + to) / 2;
-            Counter first = new Counter(values, from, mid, filter);
-            Counter second = new Counter(values, mid, to, filter);
+        } else { // split to smaller tasks
+            int mid = (to - from ) / 2 + from;
+            Counter first = new Counter(numbers, from, mid, filter);
+            Counter second = new Counter(numbers, mid, to, filter);
             invokeAll(first, second); //
             return first.join() + second.join();
         }
     }
 }
 ```
-* RecursiveTask in inherited from ForkJoinTask.
-* Override the `compute` method to generate and invoke subtasks, and to combine their results.
+* Override the `compute()` method to generate and invoke subtasks, and to combine their results.
+* `THRESHOLD` is used to determine whether to execute the calculation or continue splitting.
 * The `invokeAll` method receives a number of tasks and blocks until all of them have completed.
 * The `join` method yields the result.
 
-## 5. Source Files
+```java
+public class ForkJoinExample {
+    static final int size = 10000;
+    public static void main(String[] args) {
+        double[] numbers = new double[size];
+        // generate random numbers
+        for (int i = 0; i < size; i++) {
+            numbers[i] = Math.random();
+        }
+        Counter counter = new Counter(numbers, 0, numbers.length, x->x > 0.5);
+        ForkJoinPool pool = new ForkJoinPool();
+        pool.invoke(counter); // Performs the given task, returning its result upon completion.
+        System.out.println(counter.join()); // output: 500305
+    }
+}
+```
+Output.
+```raw
+5036
+```
+
+## 3. Source Files
 * [Source files for Java Fork-Join on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-concurrency-forkjoin)
 
-## 6. References
+## 4. References
 * [Java Concurrency - Fork-Join framework](https://www.tutorialspoint.com/java_concurrency/concurrency_fork_join)
