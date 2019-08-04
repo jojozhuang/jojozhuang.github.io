@@ -1,40 +1,17 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Core - Collection - List"
+title: "Java Core - ArrayList and LinkedList"
 index: 1416
 subcategory: java-core
 date: 2017-01-07
-tags: [List, Set, Map, Stack]
+tags: [ArrayList, LinkedList]
 ---
 
-> Usage of different collection objects, including list, set, map, thread-safe collection objects.
+> ArrayList and LinkedList
 
-## 1. Overview
-Commonly used collection classes.
-
-<div class="table-responsive-sm" markdown="block">
-
-Collection | Ordering | Random Access | KeyValue | Duplicate Elements | Null Element | Thread Safety
------------|----------|---------------|----------|--------------------|--------------|---------------
-ArrayList  | Yes      | Yes           | No       | Yes                | Yes          | No
-LinkedList | Yes      | No            | No       | Yes                | Yes          | No
-HashSet    | No       | No            | No       | No                 | Yes          | No
-TreeSet    | Yes      | No            | No       | No                 | No           | No
-HashMap    | No       | Yes           | Yes      | No                 | Yes          | No
-TreeMap    | Yes      | Yes           | Yes      | No                 | No           | No
-Vector     | Yes      | Yes           | No       | Yes                | Yes          | Yes
-HashTable  | No       | Yes           | Yes      | No                 | No           | Yes
-Properties | No       | Yes           | Yes      | No                 | No           | Yes
-Stack      | Yes      | No            | No       | Yes                | Yes          | Yes
-CopyOnWriteArrayList  | Yes | Yes     | No       | Yes                | Yes          | Yes
-ConcurrentHashMap     | No  | Yes     | Yes      | No                 | Yes          | Yes
-CopyOnWriteArraySet   | No  | No      | No       | No                 | Yes          | Yes
-
-</div>
-
-## 2. ArrayList
-### 2.1 Constructor
+## 1. ArrayList
+### 1.1 Constructor
 There are three constructors in Java ArrayList class.
 * public ArrayList()
 * public ArrayList(int initialCapacity)
@@ -66,7 +43,7 @@ Construct list: [5, 9, 4, 2]
 Construct list with another list: [5, 9, 4, 2]
 Construct list with tree set: [2, 4, 5, 9]
 ```
-### 2.2 Common Operations
+### 1.2 Common Operations
 * list.add(item);
 * list.add(0, item);
 * list.remove(index);
@@ -109,7 +86,7 @@ Remove element which is at index 0 : [0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
 Get element which is at index 3 : 3
 Sub list from index 2(inclusive) to index 4(exclusive) : [2, 3]
 ```
-### 2.3 Sorting
+### 1.3 Sorting
 ```java
 private static void sortList() {
     // Sorting
@@ -128,7 +105,7 @@ Output.
 Sort list in ascending order: [1, 2, 3]
 Sort list in descending order: [3, 2, 1]
 ```
-### 2.4 Traversal
+### 1.4 Traversal
 There are three ways to traverse a list.
 * basic for
 * for each
@@ -186,7 +163,7 @@ Traverse List(iterator): processing - Orange
 Traverse List(iterator): processing - Watermelon
 Traverse List(iterator): processing - Kiwi
 ```
-### 2.5 Remove Element
+### 1.5 Remove Element
 Below is the example showing the wrong way to remove element during traversal. We will get java.util.ConcurrentModificationException if we call `List.remove()` inside the for loop.
 ```java
 private static void wrongWayToRemoveElement() {
@@ -255,8 +232,8 @@ Remove element: processing - Kiwi
 Fruits list after deletion = [Apple, Banana, Watermelon, Kiwi]
 ```
 
-## 3. LinkedList
-### 3.1 Constructor
+## 2. LinkedList
+### 2.1 Constructor
 There are two constructors in Java LinkedList class.
 * public LinkedList()
 * public LinkedList(Collection<? extends E> c)
@@ -288,7 +265,7 @@ Construct list: [5, 9, 4, 4, 2]
 Construct list with another list: [5, 9, 4, 4, 2]
 Construct list with tree set: [2, 4, 5, 9]
 ```
-### 3.2 Common Operations
+### 2.2 Common Operations
 * list.add(item);
 * list.add(0, item);
 * list.remove(index);
@@ -327,7 +304,7 @@ Insert 9 at index 5 : [12, 0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
 Remove element which is at index 0 : [0, 1, 2, 3, 9, 4, 5, 6, 7, 8]
 Sub list from index 2(inclusive) to index 4(exclusive) : [2, 3]
 ```
-### 3.3 Sorting
+### 2.3 Sorting
 ```java
 private static void sortList() {
     // Sorting
@@ -347,7 +324,7 @@ Output.
 Sort list in ascending order: [1, 2, 3]
 Sort list in descending order: [3, 2, 1]
 ```
-### 3.4 Traversal
+### 2.4 Traversal
 There are two ways to traverse a list.
 * for each
 * iterator
@@ -391,7 +368,7 @@ Traverse List(iterator): processing - Orange
 Traverse List(iterator): processing - Watermelon
 Traverse List(iterator): processing - Kiwi
 ```
-### 3.5 Remove Element
+### 2.5 Remove Element
 Below is the example showing the wrong way to remove element during traversal. We will get java.util.ConcurrentModificationException if we call `List.remove()` inside the for loop.
 ```java
 private static void wrongWayToRemoveElement() {
@@ -459,7 +436,7 @@ Remove element: processing - Watermelon
 Remove element: processing - Kiwi
 Fruits list after deletion = [Apple, Banana, Watermelon, Kiwi]
 ```
-### 3.6 Interface
+### 2.6 Interface
 LinkedList implements three interfaces: List, Queue and Queue.
 ```java
 private static void interfaces() {
@@ -491,71 +468,15 @@ private static void interfaces() {
 }
 ```
 
-## 3. Set, HashSet, SortedSet, TreeSet
-HashSet.
-```java
-public static void main(String[] args) {
-    Set<String> set = new HashSet<>();
+## 3. ArrayList vs LinkedList
+1) The insert and remove operations give good performance (O(1)) in LinkedList compared to ArrayList(O(n)). Hence if there is a requirement of frequent addition and deletion in application then LinkedList is a best choice.
 
-    //initial capacity should be power of 2
-    set = new HashSet<>(32);
+2) Search (get method) operations are fast in Arraylist (O(1)) but not in LinkedList (O(n)) so If there are less add and remove operations and more search operations requirement, ArrayList would be your best bet.
 
-    //setting backing HashMap initial capacity and load factor
-    set = new HashSet<>(32, 0.80f);
+## 4. Source Files
+* [Source files for Java ArrayList and LinkedList on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-list)
 
-    //creating HashSet from another Collection
-    Set<String> set1 = new HashSet<>(set);
-    Set<String> set2 = new HashSet<>(new ArrayList<>());
-}
-```
-Traverse set by for each or iterator.
-```java
-private static void traverseSet() {
-    Set<String> fruits = new HashSet<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Mango");
-
-    // by for each
-    for (String fruit : fruits) {
-        System.out.println("Processing - " + fruit);
-    }
-
-    // by iterator
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()) {
-        String fruit = iterator.next();
-        System.out.println("Processing - " + fruit);
-    }
-}
-```
-Remove element during traverse.
-```java
-private static void correctWayToRemoveElement() {
-    Set<String> fruits = new HashSet<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Mango");
-
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            iterator.remove(); // iterator.remove not set.remove
-        }
-    }
-
-    System.out.println("fruits set after iteration = " + fruits);
-}
-```
-
-## 4. References
+## 5. References
 * [Java Doc - Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 * [Core Java Tutorial](https://www.journaldev.com/24601/java-11-features)
 * [Java Data Types](https://www.w3schools.com/java/java_data_types.asp)

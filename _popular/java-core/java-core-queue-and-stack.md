@@ -1,40 +1,17 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Core - Collection - Queue & Stack"
+title: "Java Core - Queue and Stack"
 index: 1417
 subcategory: java-core
 date: 2017-01-09
-tags: [List, Set, Map, Stack]
+tags: [Queue, Stack]
 ---
 
-> Usage of different collection objects, including list, set, map, thread-safe collection objects.
+> Queue and Stack
 
-## 1. Overview
-Commonly used collection classes.
-
-<div class="table-responsive-sm" markdown="block">
-
-Collection | Ordering | Random Access | KeyValue | Duplicate Elements | Null Element | Thread Safety
------------|----------|---------------|----------|--------------------|--------------|---------------
-ArrayList  | Yes      | Yes           | No       | Yes                | Yes          | No
-LinkedList | Yes      | No            | No       | Yes                | Yes          | No
-HashSet    | No       | No            | No       | No                 | Yes          | No
-TreeSet    | Yes      | No            | No       | No                 | No           | No
-HashMap    | No       | Yes           | Yes      | No                 | Yes          | No
-TreeMap    | Yes      | Yes           | Yes      | No                 | No           | No
-Vector     | Yes      | Yes           | No       | Yes                | Yes          | Yes
-HashTable  | No       | Yes           | Yes      | No                 | No           | Yes
-Properties | No       | Yes           | Yes      | No                 | No           | Yes
-Stack      | Yes      | No            | No       | Yes                | Yes          | Yes
-CopyOnWriteArrayList  | Yes | Yes     | No       | Yes                | Yes          | Yes
-ConcurrentHashMap     | No  | Yes     | Yes      | No                 | Yes          | Yes
-CopyOnWriteArraySet   | No  | No      | No       | No                 | Yes          | Yes
-
-</div>
-
-## 2. Queue
-### 2.1 Constructor
+## 1. Queue
+### 1.1 Constructor
 ```java
 private static void constructList() {
     Queue<String> queue = new LinkedList<>();
@@ -72,7 +49,7 @@ Queue Contains element 'two' or not? : true
 [one, two, three, four, five]
 [one, two, three, four, five]
 ```
-### 2.2 Common Operations
+### 1.2 Common Operations
 Java Queue supports all operations supported by Collection interface and some more operations. It supports almost all operations in two forms.
 * One set of operations throws an exception if the operation fails.
 * The other set of operations returns a special value if the operation fails.
@@ -177,7 +154,7 @@ one
 [one]
 null
 ```
-### 2.3 Java Queue Categories
+### 1.3 Java Queue Categories
 `Bounded Queues` are queues which are bounded by capacity that means we need to provide the max size of the queue at the time of creation. For example ArrayBlockingQueue (see previous example).
 * Bounded Queues
 * Unbounded Queues
@@ -192,7 +169,7 @@ Insert    | add(e)           | offer(e)      | put(e) | offer(e, time, unit)
 Remove    | remove()         | poll()        | take() | poll(time, unit)
 Examine   | element()        | peek()        | N/A    | N/A
 
-## 3. Stack
+## 2. Stack
 Java Stack extends Vector class with the following five operations only.
 * boolean empty(): Tests if this stack is empty.
 * E peek(): Looks at the object at the top of this stack without removing it from the stack.
@@ -230,14 +207,17 @@ search() Operation : 2
 stack : false
 ```
 
-## 5. Heap
+## 3. Heap
 Interface: java.util.Queue
 Class: java.util.PriorityQueue
 ```java
 Queue<Long> small = new PriorityQueue<Long>(),
 ```
 
-## 9. References
+## 4. Source Files
+* [Source files for Java Queue and Stack on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-queuestack)
+
+## 5. References
 * [Java Doc - Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 * [Core Java Tutorial](https://www.journaldev.com/24601/java-11-features)
 * [Java Data Types](https://www.w3schools.com/java/java_data_types.asp)
