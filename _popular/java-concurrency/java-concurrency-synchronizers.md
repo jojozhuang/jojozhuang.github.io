@@ -6,7 +6,6 @@ index: 1437
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [CyclicBarrier, CountDownLatch, Semaphore]
-draft: true
 ---
 
 > Synchronizers for multithreading.
@@ -25,106 +24,94 @@ Class              | What It Does | Notes
 
 ## 2. CyclicBarrier
 CyclicBarrier is used to make threads wait for each other. It is used when different threads process a part of computation and when all threads have completed the execution, the result needs to be combined in the parent thread. In other words, a CyclicBarrier is used when multiple thread carry out different sub tasks and the output of these sub tasks need to be combined to form the final output.
+
+The following example is to calculate the result of (2 * 3) + (10 * 20), which is 206.
+
+Create two sub task threads.
 ```java
-//JAVA program to demonstrate execution on Cyclic Barrier
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
-
-class Computation1 implements Runnable
-{
+public class Computation1 implements Runnable {
     public static int product = 0;
-    public void run()
-    {
-        product = 2 * 3;
-        try
-        {
-            Tester.newBarrier.await();
-        }
-        catch (InterruptedException | BrokenBarrierException e)
-        {
-            e.printStackTrace();
-        }
+    private final CyclicBarrier cyclicBarrier;
+
+    public Computation1(CyclicBarrier cyclicBarrier) {
+        this.cyclicBarrier = cyclicBarrier;
     }
-}
 
-class Computation2 implements Runnable
-{
-    public static int sum = 0;
-    public void run()
-    {
-        // check if newBarrier is broken or not
-        System.out.println("Is the barrier broken? - " + Tester.newBarrier.isBroken());
-        sum = 10 + 20;
-        try
-        {
-            Tester.newBarrier.await(3000, TimeUnit.MILLISECONDS);
-
+    public void run() {
+        product = 2 * 3;
+        try {
+            Thread.sleep(1000);
             // number of parties waiting at the barrier
             System.out.println("Number of parties waiting at the barrier "+
-            "at this point = " + Tester.newBarrier.getNumberWaiting());
+                    "at this point = " + cyclicBarrier.getNumberWaiting());
+            cyclicBarrier.await();
         }
-        catch (InterruptedException | BrokenBarrierException e)
-        {
-            e.printStackTrace();
-        }
-        catch (TimeoutException e)
-        {
+        catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
     }
 }
 
+public class Computation2 implements Runnable {
+    public static int product = 0;
+    private final CyclicBarrier cyclicBarrier;
 
-public class Tester implements Runnable
-{
-    public static CyclicBarrier newBarrier = new CyclicBarrier(3);
-
-    public static void main(String[] args)
-    {
-        // parent thread
-        Tester test = new Tester();
-
-        Thread t1 = new Thread(test);
-        t1.start();
+    public Computation2(CyclicBarrier cyclicBarrier) {
+        this.cyclicBarrier = cyclicBarrier;
     }
-    public void run()
-    {
-        System.out.println("Number of parties required to trip the barrier = "+
-        newBarrier.getParties());
+
+    public void run() {
+        product = 10 * 20;
+        try {
+            Thread.sleep(2000);
+            // number of parties waiting at the barrier
+            System.out.println("Number of parties waiting at the barrier "+
+                    "at this point = " + cyclicBarrier.getNumberWaiting());
+            cyclicBarrier.await();
+        }
+        catch (InterruptedException | BrokenBarrierException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+The main thread creates two sub threads and will wait them to finish their execution.
+```java
+/*
+    Calculate result of (2*3) + (10*20) = 206
+ */
+public class CyclicBarrierExample {
+    public static void main(String[] args) {
+        final CyclicBarrier barrier = new CyclicBarrier(3);
+        System.out.println("Number of parties required to trip the barrier = " +
+                barrier.getParties());
         System.out.println("Product of Computation1 = " + Computation1.product);
-        System.out.println("Sum of Computation2 = " + Computation2.sum);
+        System.out.println("Product of Computation2 = " + Computation2.product);
 
-        // objects on which the child thread has to run
-        Computation1 comp1 = new Computation1();
-        Computation2 comp2 = new Computation2();
-
-        // creation of child thread
-        Thread t1 = new Thread(comp1);
-        Thread t2 = new Thread(comp2);
-
-        // moving child thread to runnable state
+        Thread t1 = new Thread(new Computation1(barrier));
+        Thread t2 = new Thread(new Computation2(barrier));
         t1.start();
         t2.start();
 
-        try
-        {
-            Tester.newBarrier.await();
+        try {
+            barrier.await();
         }
         catch (InterruptedException | BrokenBarrierException e)
         {
             e.printStackTrace();
         }
 
-        // barrier breaks as the number of thread waiting for the barrier
-        // at this point = 3
+        // number of parties waiting at the barrier
+        System.out.println("Number of parties waiting at the barrier "+
+                "at this point = " + barrier.getNumberWaiting());
+        // barrier breaks as the number of thread waiting for the barrier at this point = 0
         System.out.println("Product of Computation1 = " + Computation1.product);
-        System.out.println("Sum of Computation2 = " + Computation2.sum);
+        System.out.println("Product of Computation2 = " + Computation2.product);
+
+        System.out.println("Final result = " + (Computation1.product + Computation2.product));
 
         // Resetting the newBarrier
-        newBarrier.reset();
+        barrier.reset();
         System.out.println("Barrier reset successful");
     }
 }
@@ -133,46 +120,60 @@ Output.
 ```raw
 Number of parties required to trip the barrier = 3
 Product of Computation1 = 0
-Sum of Computation2 = 0
-Is the barrier broken? - false
+Product of Computation2 = 0
+Number of parties waiting at the barrier at this point = 1
+Number of parties waiting at the barrier at this point = 2
 Number of parties waiting at the barrier at this point = 0
 Product of Computation1 = 6
-Sum of Computation2 = 30
+Product of Computation2 = 200
+Final result = 206
 Barrier reset successful
 ```
 
-Difference between a CyclicBarrier and a CountDownLatch
-* A `CountDownLatch` can be used only once in a program(until it’s count reaches 0).
-* A `CyclicBarrier` can be used again and again once all the threads in a barriers is released.
-
 ## 3. CountDownLatch
 CountDownLatch is used to make sure that a task waits for other threads before it starts.
-```java
-// Java Program to demonstrate how
-// to use CountDownLatch, Its used
-// when a thread needs to wait for other
-// threads before starting its work.
-import java.util.concurrent.CountDownLatch;
 
-public class CountDownLatchDemo
-{
-    public static void main(String args[])
-                   throws InterruptedException
-    {
-        // Let us create task that is going to
-        // wait for four threads before it starts
+Create a worker thread. It accepts a CountDownLatch object passed from the main thread.
+```java
+public class Worker extends Thread {
+    private int delay;
+    private CountDownLatch latch;
+
+    public Worker(String name, int delay, CountDownLatch latch) {
+        super(name);
+        this.delay = delay;
+        this.latch = latch;
+    }
+
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(delay);
+            latch.countDown();
+
+            System.out.println(Thread.currentThread().getName() +
+                    " finished, remaining count = " + latch.getCount());
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+* `countDown()` method decrements the count.
+
+Then, create the main thread with four workers. Create an object of CountDownLatch by passing an int to its constructor (the count), which is actually the number of invited parties (threads) for an event. The main thread is dependent on other threads to start processing, waits on until every other thread has called count down.
+```java
+public class CountDownLatchExample {
+    public static void main(String args[]) throws InterruptedException {
+        // Create task that is going to wait for four threads before it starts
         CountDownLatch latch = new CountDownLatch(4);
 
-        // Let us create four worker
-        // threads and start them.
-        Worker first = new Worker(1000, latch,
-                                  "WORKER-1");
-        Worker second = new Worker(2000, latch,
-                                  "WORKER-2");
-        Worker third = new Worker(3000, latch,
-                                  "WORKER-3");
-        Worker fourth = new Worker(4000, latch,
-                                  "WORKER-4");
+        // Create four worker threads and start them
+        Worker first = new Worker("Worker1", 1000, latch);
+        Worker second = new Worker("Worker2", 2000, latch);
+        Worker third = new Worker("Worker3", 3000, latch);
+        Worker fourth = new Worker("Worker4", 4000, latch);
         first.start();
         second.start();
         third.start();
@@ -182,201 +183,143 @@ public class CountDownLatchDemo
         latch.await();
 
         // Main thread has started
-        System.out.println(Thread.currentThread().getName() +
-                           " has finished");
-    }
-}
-
-// A class to represent threads for which
-// the main thread waits.
-class Worker extends Thread
-{
-    private int delay;
-    private CountDownLatch latch;
-
-    public Worker(int delay, CountDownLatch latch,
-                                    String name)
-    {
-        super(name);
-        this.delay = delay;
-        this.latch = latch;
-    }
-
-    @Override
-    public void run()
-    {
-        try
-        {
-            Thread.sleep(delay);
-            latch.countDown();
-            System.out.println(Thread.currentThread().getName()
-                            + " finished");
-        }
-        catch (InterruptedException e)
-        {
-            e.printStackTrace();
-        }
+        System.out.println(Thread.currentThread().getName() + " has finished");
     }
 }
 ```
-* Creating an object of CountDownLatch by passing an int to its constructor (the count), is actually number of invited parties (threads) for an event.
-* The thread, which is dependent on other threads to start processing, waits on until every other thread has called count down. All threads, which are waiting on `await()` proceed together once count down reaches to zero.
-* `countDown()` method decrements the count and await() method blocks until count == 0
+* `await()` method blocks until count == 0.
+
+Output.
+```raw
+Worker1 finished, remaining count = 3
+Worker2 finished, remaining count = 2
+Worker3 finished, remaining count = 1
+Worker4 finished, remaining count = 0
+main has finished
+```
 
 ## 4. Semaphore
-Conceptually, a semaphore manages a number of permits.
+Semaphore is a class in java.util.concurrent package introduced in JDK 5. Semaphore basically maintains a set of permits, so there are two methods which are mainly used for semaphore.
+* acquire
+* release
+
+`acquire()` method is used to get a permit and if no. of permits reaches max allowed permits then thread has to wait to get permit which will be released by some other thread by calling `release()` method.
+
+Semaphores are generally used to restrict the number of threads to access resources. Real time examples:
+* Semaphores can be used to restrict number of database connections at a time
+* Semaphores can also be used to bound any collection.
+
+Create a worker thread. It accepts a Semaphore object passed from the main thread.
 ```java
-// java program to demonstrate
-// use of semaphores Locks
-import java.util.concurrent.*;
-
-//A shared resource/class.
-class Shared
-{
-    static int count = 0;
-}
-
-class MyThread extends Thread
-{
-    Semaphore sem;
-    String threadName;
-    public MyThread(Semaphore sem, String threadName)
-    {
-        super(threadName);
-        this.sem = sem;
-        this.threadName = threadName;
+public class Worker extends Thread {
+    private String name;
+    private Semaphore semaphore;
+    public Worker(String name, Semaphore semaphore) {
+        super(name);
+        this.name = name;
+        this.semaphore = semaphore;
     }
 
     @Override
     public void run() {
+        System.out.println("Starting " + name + "...");
+        try {
+            System.out.println(name + ": acquiring a permit, available Semaphore permits: "
+                    + semaphore.availablePermits());
 
-        // run by thread A
-        if(this.getName().equals("A"))
-        {
-            System.out.println("Starting " + threadName);
-            try
-            {
-                // First, get a permit.
-                System.out.println(threadName + " is waiting for a permit.");
+            // Acquiring the permit
+            semaphore.acquire();
 
-                // acquiring the lock
-                sem.acquire();
+            System.out.println(name + " gets a permit.");
 
-                System.out.println(threadName + " gets a permit.");
-
-                // Now, accessing the shared resource.
-                // other waiting threads will wait, until this
-                // thread release the lock
-                for(int i=0; i < 5; i++)
-                {
-                    Shared.count++;
-                    System.out.println(threadName + ": " + Shared.count);
-
-                    // Now, allowing a context switch -- if possible.
-                    // for thread B to execute
-                    Thread.sleep(10);
-                }
-            } catch (InterruptedException exc) {
-                    System.out.println(exc);
-                }
-
-                // Release the permit.
-                System.out.println(threadName + " releases the permit.");
-                sem.release();
+            for (int i=0; i < 3; i++) {
+                System.out.println(name + ": is performing operation " + (i + 1)
+                        + ", available Semaphore permits: "
+                        + semaphore.availablePermits());
+                Thread.sleep( (long) (Math.random() * 2000));
+            }
+        } catch (InterruptedException exc) {
+            System.out.println(exc);
         }
 
-        // run by thread B
-        else
-        {
-            System.out.println("Starting " + threadName);
-            try
-            {
-                // First, get a permit.
-                System.out.println(threadName + " is waiting for a permit.");
-
-                // acquiring the lock
-                sem.acquire();
-
-                System.out.println(threadName + " gets a permit.");
-
-                // Now, accessing the shared resource.
-                // other waiting threads will wait, until this
-                // thread release the lock
-                for(int i=0; i < 5; i++)
-                {
-                    Shared.count--;
-                    System.out.println(threadName + ": " + Shared.count);
-
-                    // Now, allowing a context switch -- if possible.
-                    // for thread A to execute
-                    Thread.sleep(10);
-                }
-            } catch (InterruptedException exc) {
-                    System.out.println(exc);
-                }
-                // Release the permit.
-                System.out.println(threadName + " releases the permit.");
-                sem.release();
-        }
+        // Release the permit
+        semaphore.release();
+        System.out.println(name + " releases the permit, available Semaphore permits: "
+                + semaphore.availablePermits());
     }
 }
-
-// Driver class
-public class SemaphoreDemo
-{
+```
+Then, create the main thread with four workers. Create an object of Semaphore with 2 permits.
+```java
+public class SemaphoreExample {
     public static void main(String args[]) throws InterruptedException
     {
-        // creating a Semaphore object
-        // with number of permits 1
-        Semaphore sem = new Semaphore(1);
+        // Create a Semaphore object with number of permits 2
+        Semaphore semaphore = new Semaphore(2);
 
-        // creating two threads with name A and B
-        // Note that thread A will increment the count
-        // and thread B will decrement the count
-        MyThread mt1 = new MyThread(sem, "A");
-        MyThread mt2 = new MyThread(sem, "B");
+        // Create 4 worker threads
+        Worker worker1 = new Worker("Work1", semaphore);
+        Worker worker2 = new Worker("Work2", semaphore);
+        Worker worker3 = new Worker("Work3", semaphore);
+        Worker worker4 = new Worker("Work4", semaphore);
+        worker1.start();
+        worker2.start();
+        worker3.start();
+        worker4.start();
 
-        // stating threads A and B
-        mt1.start();
-        mt2.start();
+        // Wait until all workers are completed
+        worker1.join();
+        worker2.join();
+        worker3.join();
+        worker4.join();
 
-        // waiting for threads A and B
-        mt1.join();
-        mt2.join();
-
-        // count will always remain 0 after
-        // both threads will complete their execution
-        System.out.println("count: " + Shared.count);
+        // Check the final permits
+        System.out.println("All tasks are completed. Available Semaphore permits: "
+                + semaphore.availablePermits());
     }
 }
 ```
 Output.
 ```raw
-Starting A
-Starting B
-B is waiting for a permit.
-B gets a permit.
-A is waiting for a permit.
-B: -1
-B: -2
-B: -3
-B: -4
-B: -5
-B releases the permit.
-A gets a permit.
-A: -4
-A: -3
-A: -2
-A: -1
-A: 0
-A releases the permit.
-count: 0
+Starting Work2...
+Starting Work4...
+Work4: acquiring a permit, available Semaphore permits: 2
+Starting Work3...
+Starting Work1...
+Work3: acquiring a permit, available Semaphore permits: 1
+Work4 gets a permit.
+Work2: acquiring a permit, available Semaphore permits: 2
+Work4: is performing operation 1, available Semaphore permits: 0
+Work3 gets a permit.
+Work1: acquiring a permit, available Semaphore permits: 1
+Work3: is performing operation 1, available Semaphore permits: 0
+Work4: is performing operation 2, available Semaphore permits: 0
+Work3: is performing operation 2, available Semaphore permits: 0
+Work4: is performing operation 3, available Semaphore permits: 0
+Work3: is performing operation 3, available Semaphore permits: 0
+Work4 releases the permit, available Semaphore permits: 1
+Work2 gets a permit.
+Work2: is performing operation 1, available Semaphore permits: 0
+Work2: is performing operation 2, available Semaphore permits: 0
+Work3 releases the permit, available Semaphore permits: 1
+Work1 gets a permit.
+Work1: is performing operation 1, available Semaphore permits: 0
+Work2: is performing operation 3, available Semaphore permits: 0
+Work2 releases the permit, available Semaphore permits: 1
+Work1: is performing operation 2, available Semaphore permits: 1
+Work1: is performing operation 3, available Semaphore permits: 1
+Work1 releases the permit, available Semaphore permits: 2
+All tasks are completed. Available Semaphore permits: 2
 ```
 
-## 5. Source Files
-* [Source files for Java Synchronization on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-concurrency-synchronization)
+## 5. Difference between a CyclicBarrier and a CountDownLatch
+* A `CountDownLatch` can be used only once in a program(until it’s count reaches 0).
+* A `CyclicBarrier` can be used again and again once all the threads in a barriers is released.
 
-## 6. References
+## 6. Source Files
+* [Source files for Java Synchronizers on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-concurrency-synchronizer)
+
+## 7. References
 * [Java Concurrency and Multithreading Tutorial](http://tutorials.jenkov.com/java-concurrency/index.html)
 * [Lifecycle and States of a Thread in Java](https://www.geeksforgeeks.org/lifecycle-and-states-of-a-thread-in-java/)
 * [Synchronized in Java](https://www.geeksforgeeks.org/synchronized-in-java/)
@@ -388,3 +331,5 @@ count: 0
 * [Callable and Future in Java](https://www.geeksforgeeks.org/callable-future-java/)
 * [Semaphore in Java](https://www.geeksforgeeks.org/semaphore-in-java/)
 * [CountDownLatch in Java](https://www.geeksforgeeks.org/countdownlatch-in-java/)
+* [Java.util.concurrent.CyclicBarrier Example](https://examples.javacodegeeks.com/core-java/util/concurrent/cyclicbarrier/java-util-concurrent-cyclicbarrier-example/)
+* [Java Thread – Mutex and Semaphore example](Java Thread – Mutex and Semaphore example)
