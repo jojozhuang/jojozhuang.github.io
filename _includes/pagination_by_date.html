@@ -1,0 +1,44 @@
+<style>
+.pager {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.pager li {
+  float: left;
+}
+.pager .next {
+  float:right
+}
+.pager .disable a {
+  border-color: #ccc;
+  color: #808080;
+}
+@media (max-width: 424px) {
+    .pager .btn {
+        font-size: 13px;
+        padding: 0.2rem;
+    }
+}
+</style>
+
+<script>
+document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = '{{page.previous.url}}'; }
+  if (e.keyCode == '39') { window.location = '{{page.next.url}}'; }
+};
+</script>
+
+<ul class="pager">
+  {% if page.previous.url %}
+    <li><a class="btn btn-outline-primary" href="{{page.previous.url}}">Previous</a></li>
+  {% else %}
+    <li class="disable"><a class="btn btn-outline-primary disabled" href="{{page.previous.url}}">Previous</a></li>
+  {% endif %}
+  {% if page.next.url %}
+    <li class="next"><a class="btn btn-outline-primary" href="{{page.next.url}}">Next</a></li>
+  {% else %}
+    <li class="next disable"><a class="btn btn-outline-primary disabled" href="{{page.next.url}}">Next</a></li>
+  {% endif %}
+</ul>
