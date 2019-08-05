@@ -53,52 +53,7 @@ long id = nextNumber.incrementAndGet();
 ```
 * The 'incrementAndGet' method atomically increments the AtomicLong and returns the post- increment value. That is, the operations of getting the value, adding 1, setting it, and producing the new value cannot be interrupted. It is guaranteed that the correct value is computed and returned, even if multiple threads access the same instance concurrently.
 
-## 4. Dead Lock
-Deadlock describes a situation where two or more threads are blocked forever, waiting for each other.
-```java
-public class TestThread {
-   public static Object Lock1 = new Object();
-   public static Object Lock2 = new Object();
 
-   public static void main(String args[]) {
-      ThreadDemo1 T1 = new ThreadDemo1();
-      ThreadDemo2 T2 = new ThreadDemo2();
-      T1.start();
-      T2.start();
-   }
-
-   private static class ThreadDemo1 extends Thread {
-      public void run() {
-         synchronized (Lock1) {
-            System.out.println("Thread 1: Holding lock 1...");
-
-            try { Thread.sleep(10); }
-            catch (InterruptedException e) {}
-            System.out.println("Thread 1: Waiting for lock 2...");
-
-            synchronized (Lock2) {
-               System.out.println("Thread 1: Holding lock 1 & 2...");
-            }
-         }
-      }
-   }
-   private static class ThreadDemo2 extends Thread {
-      public void run() {
-         synchronized (Lock2) {
-            System.out.println("Thread 2: Holding lock 2...");
-
-            try { Thread.sleep(10); }
-            catch (InterruptedException e) {}
-            System.out.println("Thread 2: Waiting for lock 1...");
-
-            synchronized (Lock1) {
-               System.out.println("Thread 2: Holding lock 1 & 2...");
-            }
-         }
-      }
-   }
-}
-```
 ## 5. ThreadLocal
 The `ThreadLocal` class in Java enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to a ThreadLocal variable, then the two threads cannot see each other's ThreadLocal variables.
 

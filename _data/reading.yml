@@ -3,6 +3,10 @@ description: Best online resources for learning the knowledge of computer scienc
 bookmarks:
   - category: System Design
     links:
+      - name: 架构师技术图谱，助你早日成为架构师
+        description: 架构师技术图谱，助你早日成为架构师
+        url: https://github.com/toutiaoio/awesome-architecture
+        type: webpage
       - name: 后端架构师技术图谱
         description: 后端架构师技术图谱
         url: https://github.com/xingshaocheng/architect-awesome
