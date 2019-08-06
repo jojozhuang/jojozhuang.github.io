@@ -262,8 +262,11 @@ bookmarks:
         description: A tool to maintain docker containers through GUI
         url: https://kitematic.com/
       - name: Kubernetes(K8s)
-        description: an open-source container orchestration system for automating application deployment, scaling, and management.
+        description: An open-source container orchestration system for automating application deployment, scaling, and management.
         url: https://kubernetes.io/
+      - name: Vagrant
+        description: A tool for building and distributing development environments.
+        url: https://github.com/hashicorp/vagrant        
   - category: Database
     links:
       - name: Oracle

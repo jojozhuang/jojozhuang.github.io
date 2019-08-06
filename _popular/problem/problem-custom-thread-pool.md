@@ -12,6 +12,8 @@ tags: [Thread Pool, BlockingQueue]
 
 ## 1. Requirement
 Implement a thread pool with blocking queue. Use `BlockingQueue` to store the tasks from client. The `Worker` will take one task from BlockingQueue and run it.
+
+## 2. Solution
 ```java
 import java.util.ArrayList;
 import java.util.List;
