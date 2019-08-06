@@ -22,6 +22,7 @@ draft: true
 ## 1. Requirement
 Write a program to count the words in a given file. You can assume the file is very small.
 
+## 2. Solution
 ```java
 public class WordCounter {
     public static void main(String[] args) {

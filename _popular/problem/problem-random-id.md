@@ -16,6 +16,7 @@ Implement an ID generator, which can generate random unique id. You are able to 
 * Ideally should be 5 or 6 chars long.
 * Scalable.
 
+## 2. Solution
 ```java
 public class RandomIdGenerator {
     private static char[] base62chars =

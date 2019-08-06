@@ -6,6 +6,7 @@ index: 1407
 subcategory: java-core
 date: 2017-01-02
 tags: [Scanner]
+draft: true
 ---
 
 > Scanner, System.io, System.out
