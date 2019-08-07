@@ -6,7 +6,6 @@ index: 1407
 subcategory: java-core
 date: 2017-01-02
 tags: [Scanner]
-draft: true
 ---
 
 > Scanner, System.io, System.out
@@ -182,19 +181,84 @@ String: It's a nice day- isn't it?
 -
 ```
 
-## 3. Read from and Write to File
+## 3. Read and Write File
+The above examples show how to read input from screen and print output to screen. We can also use Scanner to read and write with files, if the standard in/out is set to file channel.
 
-### 2.5 Read Files and Write Files
-```java
-System.setIn(new FileInputStream(new File("input.txt")));
-...
-//read from file
-....
-
-System.setOut(new PrintStream(new File("filename.txt")));
-System.out.println(sum); // will be printed to the file    
+### 3.1 Example
+Suppose we have a file with following content. Each line is an order item, which contains name, price and quantity. We will use Scanner to read this file, calculate the cost(price * quantity) and write the result to another file.
+```raw
+apple 4.2 2
+pear 5.0 3
+peach 10.3 1
+blueberry 15.0 2
+coconut 8.6 1
 ```
+OrderItem bean.
+```java
+public class OrderItem {
+    public String name;
+    public double price;
+    public int quantity;
 
+    public OrderItem(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+}
+```
+ScannerFileExample.
+```java
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.PrintStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ScannerFileExample {
+    private static final String INPUT_FILE = "input.txt";
+    private static final String OUTPUT_FILE = "output.txt";
+
+    public static void main(String args[]) throws Exception {
+        String currentDir = System.getProperty("user.dir");
+
+        List<OrderItem> items = new ArrayList<>();
+        // Set system.io
+        Path path = Paths.get(currentDir, "java-core-scanner", "files", INPUT_FILE);
+        File file = path.toFile();
+        System.setIn(new FileInputStream(file));
+
+        // Get items from file
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNextLine()) {
+            items.add(new OrderItem(sc.next(), sc.nextDouble(), sc.nextInt()));
+        }
+        sc.close();
+
+        // Set system.out
+        Path output = Paths.get(currentDir, "java-core-scanner", "files", OUTPUT_FILE);
+        File outputFile = output.toFile();
+        System.setOut(new PrintStream(outputFile));
+
+        // Calculate the cost
+        for (OrderItem item : items) {
+            System.out.print(item.name + ": ");
+            System.out.println(item.price * item.quantity);
+        }
+    }
+}
+```
+After executing this program, we can get the result in file output.txt.
+```raw
+apple: 8.4
+pear: 15.0
+peach: 10.3
+blueberry: 30.0
+coconut: 8.6
+```
 
 ## 4. Source Files
 * [Source files for Java Scanner on GitHub](https://github.com/jojozhuang/java-programming/tree/master/java-core-scanner)
