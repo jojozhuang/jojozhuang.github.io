@@ -2,9 +2,9 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Garbage Collection - Draft"
-index: 1473
+index: 1474
 subcategory: java-advanced
-date: 2017-03-03
+date: 2017-03-04
 tags: [GC]
 draft: true
 ---
