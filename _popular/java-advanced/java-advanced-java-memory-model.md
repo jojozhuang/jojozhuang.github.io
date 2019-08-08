@@ -2,9 +2,9 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Java Memory Model - Draft"
-index: 1471
+index: 1473
 subcategory: java-advanced
-date: 2017-03-01
+date: 2017-03-03
 tags: [Memory Model, JVM]
 draft: true
 ---
@@ -14,5 +14,5 @@ draft: true
 
 ## 6. References
 * [Java Memory Model](http://tutorials.jenkov.com/java-concurrency/java-memory-model.html)
-* * [Java Virtual Machine Tutorial](https://www.tutorialspoint.com/java_virtual_machine/index.htm)
+* [Java Virtual Machine Tutorial](https://www.tutorialspoint.com/java_virtual_machine/index.htm)
 * [ClassNotFoundException vs. NoClassDefFoundError](https://dzone.com/articles/java-classnotfoundexception-vs-noclassdeffounderro)
