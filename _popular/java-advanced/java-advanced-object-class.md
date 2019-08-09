@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Advanced - Object Class - Draft"
-index: 1476
+index: 1482
 subcategory: java-advanced
 date: 2017-03-02
 tags: [Encryption, Decryption]
