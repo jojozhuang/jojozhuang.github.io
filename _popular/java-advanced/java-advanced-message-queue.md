@@ -12,4 +12,5 @@ draft: true
 > Message Queue, Java Message Service
 
 ## 1. Message Queue
-https://howtodoinjava.com/jms/jms-java-message-service-tutorial/
+* [JMS Tutorial – Java Message Service Tutorial](https://howtodoinjava.com/jms/jms-java-message-service-tutorial/)
+* [JMS Tutorial](https://www.javatpoint.com/jms-tutorial)
