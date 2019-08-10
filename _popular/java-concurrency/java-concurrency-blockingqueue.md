@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - BlockingQueue"
-index: 1442
+index: 1446
 subcategory: java-concurrency
 date: 2017-02-02
 tags: [BlockingQueue, ArrayBlockingQueue]

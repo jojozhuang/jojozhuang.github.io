@@ -1,9 +1,9 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - ThreadLocal"
-index: 1478
-subcategory: java-advanced
+title: "Java Concurrency - ThreadLocal"
+index: 1441
+subcategory: java-concurrency
 date: 2017-03-02
 tags: [ThreadLocal]
 ---

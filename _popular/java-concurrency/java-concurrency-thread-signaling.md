@@ -1,9 +1,9 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Thread Signaling"
-index: 1479
-subcategory: java-advanced
+title: "Java Concurrency - Thread Signaling"
+index: 1442
+subcategory: java-concurrency
 date: 2017-03-02
 tags: [Thread Signaling]
 ---
