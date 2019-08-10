@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - Volatile, Final and Atomics"
-index: 1441
+index: 1445
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [Volatile, Final, Atomics]

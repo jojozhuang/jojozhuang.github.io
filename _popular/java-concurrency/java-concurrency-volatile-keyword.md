@@ -1,9 +1,9 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Volatile Keyword"
-index: 1477
-subcategory: java-advanced
+title: "Java Concurrency - Volatile Keyword"
+index: 1440
+subcategory: java-concurrency
 date: 2017-03-02
 tags: [Volatile]
 ---

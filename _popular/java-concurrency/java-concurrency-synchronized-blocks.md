@@ -1,9 +1,9 @@
 ---
 layout: tutorial
 key: popular
-title: "Java Advanced - Synchronized Blocks"
-index: 1476
-subcategory: java-advanced
+title: "Java Concurrency - Synchronized Blocks"
+index: 1439
+subcategory: java-concurrency
 date: 2017-03-02
 tags: [Synchronized]
 ---
