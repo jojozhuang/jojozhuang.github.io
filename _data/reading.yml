@@ -36,7 +36,7 @@ bookmarks:
       - name: JVM (java virtual machine) architecture - tutorial
         description: JVM (java virtual machine) architecture - tutorial
         url: https://www.youtube.com/watch?v=ZBJ0u9MaKtM
-        type: webpage
+        type: video
       - name: Java Concurrency and Multithreading Tutorial
         description: Java Concurrency and Multithreading Tutorial
         url: http://tutorials.jenkov.com/java-concurrency/index.html
