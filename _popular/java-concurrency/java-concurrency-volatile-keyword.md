@@ -8,35 +8,31 @@ date: 2017-03-02
 tags: [Volatile]
 ---
 
-> Most well-known options for JVM configuration.
+> Use volatile keyword to guarantee threads read variable value directly from main memory.
 
 ## 1. Introduction
 The Java `volatile` keyword is used to mark a Java variable as **being stored in main memory**. More precisely that means, that every read of a volatile variable will be read from the computer's main memory, and not from the CPU cache, and that every write to a volatile variable will be written to main memory, and not just to the CPU cache.
 
-Actually, since Java 5 the volatile keyword guarantees more than just that volatile variables are written to and read from main memory. I will explain that in the following sections.
+Actually, since Java 5 the volatile keyword guarantees more than just that volatile variables are written to and read from main memory.
 
 ## 2. Variable Visibility Problems
-The Java volatile keyword guarantees visibility of changes to variables across threads. This may sound a bit abstract, so let me elaborate.
-
-In a multithreaded application where the threads operate on non-volatile variables, each thread may copy variables from main memory into a CPU cache while working on them, for performance reasons. If your computer contains more than one CPU, each thread may run on a different CPU. That means, that each thread may copy the variables into the CPU cache of different CPUs. This is illustrated here:
-![image](/public/images/java/1477/java-volatile-1.png){:width="650px"}
+The Java volatile keyword guarantees visibility of changes to variables across threads. In a multithreaded application where the threads operate on non-volatile variables, each thread may copy variables from main memory into a CPU cache while working on them, for performance reasons. If the computer contains more than one CPU, each thread may run on a different CPU. That means, each thread may copy the variables into the CPU cache of different CPUs. This is illustrated here:
+![image](/public/images/java/1477/java-volatile-1.png){:width="500px"}
 Threads may hold copies of variables from main memory in CPU caches.
-With non-volatile variables there are no guarantees about when the Java Virtual Machine (JVM) reads data from main memory into CPU caches, or writes data from CPU caches to main memory. This can cause several problems which I will explain in the following sections.
+With non-volatile variables there are no guarantees about when the Java Virtual Machine (JVM) reads data from main memory into CPU caches, or writes data from CPU caches to main memory. This can cause several problems.
 
 Imagine a situation in which two or more threads have access to a shared object which contains a counter variable declared like this:
 ```java
 public class SharedObject {
-
     public int counter = 0;
-
 }
 ```
 Imagine too, that only Thread 1 increments the counter variable, but both Thread 1 and Thread 2 may read the counter variable from time to time.
 
 If the counter variable is not declared volatile there is no guarantee about when the value of the counter variable is written from the CPU cache back to main memory. This means, that the counter variable value in the CPU cache may not be the same as in main memory. This situation is illustrated here:
-![image](/public/images/java/1477/java-volatile-2.png){:width="650px"}
+![image](/public/images/java/1477/java-volatile-2.png){:width="500px"}
 The CPU cache used by Thread 1 and main memory contains different values for the counter variable.
-The problem with threads not seeing the latest value of a variable because it has not yet been written back to main memory by another thread, is called a "visibility" problem. The updates of one thread are not visible to other threads.
+The problem with threads not seeing the latest value of a variable because it has not yet been written back to main memory by another thread, is called a `visibility problem`. The updates of one thread are not visible to other threads.
 
 ## 3. The Java volatile Visibility Guarantee
 The Java volatile keyword is intended to address variable visibility problems. By declaring the counter variable volatile all writes to the counter variable will be written back to main memory immediately. Also, all reads of the counter variable will be read directly from main memory.
@@ -44,9 +40,7 @@ The Java volatile keyword is intended to address variable visibility problems. B
 Here is how the volatile declaration of the counter variable looks:
 ```java
 public class SharedObject {
-
     public volatile int counter = 0;
-
 }
 ```
 Declaring a variable volatile thus guarantees the visibility for other threads of writes to that variable.
@@ -60,7 +54,8 @@ Actually, the visibility guarantee of Java volatile goes beyond the volatile var
 
 If Thread A writes to a volatile variable and Thread B subsequently reads the same volatile variable, then all variables visible to Thread A before writing the volatile variable, will also be visible to Thread B after it has read the volatile variable.
 If Thread A reads a volatile variable, then all all variables visible to Thread A when reading the volatile variable will also be re-read from main memory.
-Let me illustrate that with a code example:
+
+Use the following code example to illustrate that.
 ```java
 public class MyClass {
     private int years;
@@ -119,13 +114,12 @@ a++;
 int b = 2;
 b++;
 ```
-However, instruction reordering present a challenge when one of the variables is a volatile variable. Let us look at the MyClass class from the example earlier in this Java volatile tutorial:
+However, instruction reordering present a challenge when one of the variables is a volatile variable. Let us look at the MyClass class from the example earlier.
 ```java
 public class MyClass {
     private int years;
     private int months
     private volatile int days;
-
 
     public void update(int years, int months, int days){
         this.years  = years;
@@ -155,29 +149,34 @@ The reads / writes before a write to a volatile variable are guaranteed to "happ
 The above happens-before guarantee assures that the visibility guarantee of the volatile keyword are being enforced.
 
 ### 3.4 volatile is Not Always Enough
-Even if the volatile keyword guarantees that all reads of a volatile variable are read directly from main memory, and all writes to a volatile variable are written directly to main memory, there are still situations where it is not enough to declare a variable volatile.
+Even if the volatile keyword guarantees that all reads of a volatile variable are read directly from `main memory`, and all writes to a volatile variable are written directly to main memory, there are still situations where it is not enough to declare a variable volatile.
 
 In the situation explained earlier where only Thread 1 writes to the shared counter variable, declaring the counter variable volatile is enough to make sure that Thread 2 always sees the latest written value.
 
 In fact, multiple threads could even be writing to a shared volatile variable, and still have the correct value stored in main memory, if the new value written to the variable does not depend on its previous value. In other words, if a thread writing a value to the shared volatile variable does not first need to read its value to figure out its next value.
 
-As soon as a thread needs to first read the value of a volatile variable, and based on that value generate a new value for the shared volatile variable, a volatile variable is no longer enough to guarantee correct visibility. The short time gap in between the reading of the volatile variable and the writing of its new value, creates an race condition where multiple threads might read the same value of the volatile variable, generate a new value for the variable, and when writing the value back to main memory - overwrite each other's values.
+As soon as a thread needs to first read the value of a volatile variable, and based on that value generate a new value for the shared volatile variable, a volatile variable is no longer enough to guarantee correct visibility. The short time gap in between the reading of the volatile variable and the writing of its new value, creates a `race condition` where multiple threads might read the same value of the volatile variable, generate a new value for the variable, and when writing the value back to main memory - overwrite each other's values.
 
 The situation where multiple threads are incrementing the same counter is exactly such a situation where a volatile variable is not enough. The following sections explain this case in more detail.
 
 Imagine if Thread 1 reads a shared counter variable with the value 0 into its CPU cache, increment it to 1 and not write the changed value back into main memory. Thread 2 could then read the same counter variable from main memory where the value of the variable is still 0, into its own CPU cache. Thread 2 could then also increment the counter to 1, and also not write it back to main memory. This situation is illustrated in the diagram below:
-![image](/public/images/java/1477/java-volatile-3.png){:width="650px"}
+![image](/public/images/java/1477/java-volatile-3.png){:width="500px"}
 Two threads have read a shared counter variable into their local CPU caches and incremented it.
 Thread 1 and Thread 2 are now practically out of sync. The real value of the shared counter variable should have been 2, but each of the threads has the value 1 for the variable in their CPU caches, and in main memory the value is still 0. It is a mess! Even if the threads eventually write their value for the shared counter variable back to main memory, the value will be wrong.
 
-### 3.4 When is volatile Enough?
+### 3.5 When is volatile Enough?
 As I have mentioned earlier, if two threads are both reading and writing to a shared variable, then using the volatile keyword for that is not enough. You need to use a synchronized in that case to guarantee that the reading and writing of the variable is atomic. Reading or writing a volatile variable does not block threads reading or writing. For this to happen you must use the synchronized keyword around critical sections.
 
-As an alternative to a synchronized block you could also use one of the many atomic data types found in the java.util.concurrent package. For instance, the AtomicLong or AtomicReference or one of the others.
+As an alternative to a synchronized block you could also use one of the many atomic data types found in the java.util.concurrent package. For instance, the **AtomicLong** or AtomicReference or one of the others.
 
 In case only one thread reads and writes the value of a volatile variable and other threads only read the variable, then the reading threads are guaranteed to see the latest value written to the volatile variable. Without making the variable volatile, this would not be guaranteed.
 
 The volatile keyword is guaranteed to work on 32 bit and 64 variables.
+
+### 3.6 Summary
+* Only one thread reads and writes the value of a volatile variable and `other threads only read` the variable, volatile is enough.
+* Suppose there are multiple threads write the value of a volatile variable, if the new value written to the variable `does not depend on its previous value`, volatile is enough.
+* If two threads are `both` reading and writing to a shared variable, volatile is **not** enough.
 
 ## 4. Performance Considerations of volatile
 Reading and writing of volatile variables causes the variable to be read or written to main memory. Reading from and writing to main memory is more expensive than accessing the CPU cache. Accessing volatile variables also prevent instruction reordering which is a normal performance enhancement technique. Thus, you should only use volatile variables when you really need to enforce visibility of variables.

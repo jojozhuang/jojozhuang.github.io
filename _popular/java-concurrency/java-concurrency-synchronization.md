@@ -206,6 +206,19 @@ Each use of the synchronized keyword is associated with one of the two types of 
 * an "instance lock", attached to a single object
 * a "static lock", attached to a class
 
+Here is a synchronized instance method:
+```java
+public synchronized void add(int value){
+    this.count += value;
+}
+```
+Here is a synchronized static method:
+```java
+public static synchronized void add(int value){
+    count += value;
+}
+```
+
 If a method is declared as synchronized, then it will acquire either the instance lock or the static lock when it is invoked, according to whether it is an instance method or a static method.
 
 The two types of lock have similar behavior, but are completely independent of each other.
