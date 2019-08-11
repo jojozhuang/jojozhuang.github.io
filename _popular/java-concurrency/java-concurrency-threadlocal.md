@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Java Concurrency - ThreadLocal"
-index: 1441
+index: 1440
 subcategory: java-concurrency
 date: 2017-03-02
 tags: [ThreadLocal, InheritableThreadLocal, ThreadLocalRandom]
