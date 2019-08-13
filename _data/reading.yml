@@ -37,6 +37,10 @@ bookmarks:
         description: JVM (java virtual machine) architecture - tutorial
         url: https://www.youtube.com/watch?v=ZBJ0u9MaKtM
         type: video
+      - name: Java Core Sprout：处于萌芽阶段的 Java 核心知识库。
+        description: Java Core Sprout：处于萌芽阶段的 Java 核心知识库。
+        url: https://crossoverjie.top/JCSprout/#/?id=introduction
+        type: webpage
       - name: Java Concurrency and Multithreading Tutorial
         description: Java Concurrency and Multithreading Tutorial
         url: http://tutorials.jenkov.com/java-concurrency/index.html
