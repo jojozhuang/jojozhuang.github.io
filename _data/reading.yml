@@ -109,6 +109,12 @@ bookmarks:
         description: 如何判断一个元素在亿级数据中是否存在？
         url: https://mp.weixin.qq.com/s/b5bIcNAc-f3c5eQCv9bWMg
         type: webpage
+  - category: Paper
+    links:
+      - name: High Performance Dynamic Lock-Free Hash Tables and List-Based Sets
+        description: High Performance Dynamic Lock-Free Hash Tables and List-Based Sets
+        url: http://www.liblfds.org/downloads/white%20papers/%5BHash%5D%20-%20%5BMichael%5D%20-%20High%20Performance%20Dynamic%20Lock-Free%20Hash%20Tables%20and%20List-Based%20Sets.pdf
+        type: doc
   - category: Others
     links:
       - name: Beginning visualization with GRAFANA and INFLUXDB
