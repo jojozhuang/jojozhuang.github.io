@@ -36,15 +36,15 @@ categories:
         icon: fas fa-user-tie
         subcategory: interview-overview
         image: interview.png
-      - name: Frontend Questions
-        description: Frontend Interview Questions
-        icon: fab fa-html5
-        subcategory: interview-frontend
-        image: interview.png
       - name: Java Questions
         description: Java Interview Questions
         icon: fab fa-java
         subcategory: interview-java
+        image: interview.png
+      - name: Frontend Questions
+        description: Frontend Interview Questions
+        icon: fab fa-html5
+        subcategory: interview-frontend
         image: interview.png
       - name: System Design
         description: System Design Interview Questions
