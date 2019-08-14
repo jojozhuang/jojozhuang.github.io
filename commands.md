@@ -7,13 +7,18 @@ title: Commands
 > Quick reference for common commands.
 
 ## 1. Linux/macOS Commands
+### 1.1 Jekyll
 ```sh
 # Start Local Jekyll
 cd Johnny/GitHub/jojozhuang.github.io/
 bundle exec jekyll serve --port 12001
-
+```
+### 1.2 File and Directory
+```sh
 # Search Files by Name
 find . -name 'filename' -R
+### `.` -> path, the current directory
+### `R` -> recursive
 
 # Search Directories end with '-T'.
 find . -name "*-T" -type d
@@ -23,6 +28,9 @@ find . -name "*-T" -type d -exec rm -rf {} \;
 
 # Search Files Containing Specific Text
 grep -Ril "text-to-find-here" /
+### `i` - ignore case (optional in your case).
+### `R` - recursive.
+### `l` - show the file name, not the result itself.
 
 # Open current directory in command line
 open .   #macOS
@@ -30,9 +38,13 @@ nautilus . #linux
 
 # Copy Files from/to Remote Machine
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
-
+### `r` - Recursively copy entire directories.
+```
+### 1.3 Permission
+```sh
 # Change Owner of Entire Directory to Current User
 sudo chown $USER /ariba/ssp_git/ -R
+### `R` - Recursively change the owner for sub directories.
 ```
 
 ## 2. Git Commands

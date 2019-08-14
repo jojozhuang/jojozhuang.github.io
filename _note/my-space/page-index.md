@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "Page Index"
-index: 9004
+index: 9001
 subcategory: my-space
 date: 2017-09-01
 tags: [Index]

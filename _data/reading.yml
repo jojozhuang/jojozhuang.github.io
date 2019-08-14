@@ -23,6 +23,10 @@ bookmarks:
         description: 系统设计(System Design)
         url: /public/pdf/system-design-cn.pdf
         type: doc
+      - name: How to Design Twitter 1
+        description: How to Design Twitter 1
+        url: http://blog.gainlo.co/index.php/2016/02/17/system-design-interview-question-how-to-design-twitter-part-1/
+        type: webpage
   - category: Java
     links:
       - name: Java 技术书籍大全
@@ -37,8 +41,8 @@ bookmarks:
         description: JVM (java virtual machine) architecture - tutorial
         url: https://www.youtube.com/watch?v=ZBJ0u9MaKtM
         type: video
-      - name: Java Core Sprout：处于萌芽阶段的 Java 核心知识库。
-        description: Java Core Sprout：处于萌芽阶段的 Java 核心知识库。
+      - name: 处于萌芽阶段的 Java 核心知识库。
+        description: 处于萌芽阶段的 Java 核心知识库。
         url: https://crossoverjie.top/JCSprout/#/?id=introduction
         type: webpage
       - name: Java Concurrency and Multithreading Tutorial
@@ -75,6 +79,12 @@ bookmarks:
         description: Beginning visualization with GRAFANA and INFLUXDB
         url: https://medium.com/@ashrafur/beginning-visualization-with-grafana-and-influxdb-81701e10569d
         type: webpage
+  - category: Frontend
+    links:
+      - name: Front-end Developer Handbook 2019
+        description: Front-end Developer Handbook 2019
+        url: https://frontendmasters.com/books/front-end-handbook/2019/
+        type: webpage
   - category: Security
     links:
       - name: Password Hashing, Salts, Peppers
@@ -91,9 +101,17 @@ bookmarks:
         type: webpage
   - category: Website
     links:
+      - name: 大公司里怎样开发和部署前端代码
+        description: 大公司里怎样开发和部署前端代码
+        url: https://www.toutiao.com/a6576410871935795725/
+        type: webpage
       - name: How I’m using Jekyll in 2017
         description: How I’m using Jekyll in 2017
         url: https://mademistakes.com/articles/using-jekyll-2017/
+        type: webpage
+      - name: Publish GitBook to Your GitHub Pages
+        description: Publish GitBook to Your GitHub Pages
+        url: http://sangsoonam.github.io/2016/08/02/publish-gitbook-to-your-github-pages.html
         type: webpage
   - category: Interview
     links:
@@ -113,14 +131,26 @@ bookmarks:
         description: 如何判断一个元素在亿级数据中是否存在？
         url: https://mp.weixin.qq.com/s/b5bIcNAc-f3c5eQCv9bWMg
         type: webpage
+      - name: Lyft Manager:如何做Salary Negotiation?
+        description: Lyft Manager:如何做Salary Negotiation?
+        url: https://www.youtube.com/watch?v=V09yYac4KWk&feature=push-sd&attr_tag=tKmxOfLo67zjpc4G%3A6
+        type: video
   - category: Paper
     links:
+      - name: GFS/MAPREDUCE/BIGTABLE中文版论文
+        description: GFS/MAPREDUCE/BIGTABLE中文版论文
+        url: http://blog.bizcloudsoft.com/?p=292
+        type: webpage
       - name: High Performance Dynamic Lock-Free Hash Tables and List-Based Sets
         description: High Performance Dynamic Lock-Free Hash Tables and List-Based Sets
         url: http://www.liblfds.org/downloads/white%20papers/%5BHash%5D%20-%20%5BMichael%5D%20-%20High%20Performance%20Dynamic%20Lock-Free%20Hash%20Tables%20and%20List-Based%20Sets.pdf
         type: doc
   - category: Others
     links:
+      - name: 100-Days-Of-ML-Code
+        description: 100-Days-Of-ML-Code
+        url: https://github.com/Avik-Jain/100-Days-Of-ML-Code
+        type: webpage
       - name: Beginning visualization with GRAFANA and INFLUXDB
         description: Beginning visualization with GRAFANA and INFLUXDB
         url: https://medium.com/@ashrafur/beginning-visualization-with-grafana-and-influxdb-81701e10569d

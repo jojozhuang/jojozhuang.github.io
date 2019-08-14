@@ -2,7 +2,7 @@
 layout: tutorial
 key: note
 title: "TO DO"
-index: 9003
+index: 9002
 subcategory: my-space
 date: 2016-01-23
 tags: [Todo List]
@@ -15,19 +15,15 @@ Todo:
 * Convert datetime based on timezone. Here is the [example](https://www.timeanddate.com/worldclock/converted.html?iso=20190311T00&p1=198&p2=137).
 * move portfolio 'web server' to popular->java->posting
 * Java Memory Model
-*  Nodejs Memory Model
+* Nodejs Memory Model
 * Functional Programming
-* Upgrade Bootstrap 3 to 4.
-* Shallow Copy Vs Deep Copy
+* ~~Upgrade Bootstrap 3 to 4.~~
+* ~~Shallow Copy Vs Deep Copy~~
 * Improving SEO for Github Pages or Jekyll Sites(https://www.readmodwrite.com/2019-01-18-jekyll-seo-tags/)
-* using SCSS for Jekyll
+* ~~using SCSS for Jekyll~~
 * Building a Sitemap with Jekyll(https://mijingo.com/blog/building-a-sitemap-with-jekyll)
 * Building a Better Sitemap.xml with Jekyll(http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/)
 * 13 Steps to a Faster Jekyll Website(https://wiredcraft.com/blog/make-jekyll-fast/)
-
-
-
-
 
 
 Tutorials:

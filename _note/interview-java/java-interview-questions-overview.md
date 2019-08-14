@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: note
-title: "Java Interview Questions"
+title: "Java Interview Questions - Overview"
 index: 9603
 subcategory: interview-java
 date: 2016-01-03
@@ -70,7 +70,14 @@ We don't need to create the objects to call the static methods. | The object is 
 Non-static (instance) members cannot be accessed in the static context (static method, static block, and static nested class) directly. | Static and non-static variables both can be accessed in instance methods.
 
 ## 2. Frequently Asked Questions
-### 2.1 Errors vs Exceptions In Java
+### 2.1 String, StringBuilder, StringBuffer
+
+Feature     | String | StringBuilder | StringBuffer
+------------|--------|---------------|-------------
+mutable     | No     | Yes           | Yes
+thread-safe | Yes    | No            | Yes
+
+### 2.2 Errors vs Exceptions In Java
 Both Errors and Exceptions are the subclasses of `java.lang.Throwable` class.
 
 `Errors` are the conditions which cannot get recovered by any handling techniques. It surely cause termination of the program abnormally. Errors belong to unchecked type and mostly occur at runtime. Some of the examples of errors are Out of memory error or a System crash error.
@@ -86,30 +93,7 @@ Errors occur at runtime and not known to the compiler. | All exceptions occurs a
 They are defined in java.lang.Error package. | They are defined in java.lang.Exception package
 Examples: <br> java.lang.StackOverflowError, java.lang.OutOfMemoryError | Examples : <br> Checked Exceptions : SQLException, IOException <br> Unchecked Exceptions :  ArrayIndexOutOfBoundException, NullPointerException, ArithmeticException.
 
-### 2.2 Comparable vs Comparator in Java
-A comparable object is capable of comparing itself with another object. The class itself must implements the `java.lang.Comparable` interface to compare its instances. Below is the definition of `Comparable` Interface.
-```java
-public interface Comparable<T> {
-    public int compareTo(T o); // the only method
-}
-```
-Below is the definition of `Comparator` Interface.
-```java
-public interface Comparator<T> {
-    int compare(T o1, T o2);
-    // other methods
-}
-```
-
-Comparable vs Comparator
-* Comparable interface can be used to provide `single` way of sorting whereas Comparator interface is used to provide `different` ways of sorting.
-* For using Comparable, Class needs to implement it whereas for using Comparator we don’t need to make any change in the class.
-* Comparable interface is in `java.lang` package whereas Comparator interface is present in `java.util` package.
-* We don’t need to make any code changes at client side for using Comparable, `Arrays.sort()` or `Collection.sort()` methods automatically uses the `compareTo()` method of the class. For Comparator, client needs to provide the Comparator class to use in compare() method.
-
-### 2.3 OOP vs Functional Programming vs Procedural Programming
-
-### 2.4 Shallow copy VS Deep copy
+### 2.3 Shallow copy VS Deep copy
 
 Values                           | Shallow copy | Deep copy
 ---------------------------------|--------------|-----------
@@ -120,164 +104,17 @@ Reference Type - Referred Object | Not copied   | Copied
 Object clone.
 ![image](/public/images/java/java-core-shallow-copy-vs-deep-copy/object_clone.jpg){:width="400px"}  
 
-## 1. String, StringBuilder, StringBuffer
 
-Feature     | String | StringBuilder | StringBuffer
-------------|--------|---------------|-------------
-mutable     | No     | Yes           | Yes
-thread-safe | Yes    | No            | Yes
+### 2.4 OOP vs Functional Programming vs Procedural Programming
 
-## 2. Collections
-### 2.1 How to remove element in for each loop?
-It is wrong to call `List.remove()` method in the loop. `ConcurrentModificationException` will be thrown.
-```java
-private static void wrongWayToRemoveElement() {
-    List<String> fruits = new ArrayList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
 
-    // in for each loop
-    for (String fruit : fruits) {
-        System.out.println("Processing - " + fruit);
+### 2.5 Finalize, Final, Finally
 
-        if ("Orange".equals(fruit)) {
-            fruits.remove("Orange");  // java.util.ConcurrentModificationException is thrown
-        }
-    }
+### 2.6 Exception
 
-    // in iterator loop
-    Iterator<String> iterator = fruits.iterator();
+## 3. Lamda expression
 
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            fruits.remove("Orange");  // java.util.ConcurrentModificationException is thrown
-        }
-    }
-
-    System.out.println("fruits set after iteration = " + fruits);
-}
-```
-Output.
-```raw
-Processing - Apple
-Processing - Banana
-Processing - Orange
-java.util.ConcurrentModificationException
-	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
-	at java.util.ArrayList$Itr.next(ArrayList.java:851)
-	at johnny.java.collection.ArrayListExample.wrongWayToRemoveElement(ArrayListExample.java:55)
-	at johnny.java.collection.ArrayListExample.main(ArrayListExample.java:20)
-```
-Instead, call `Iterator.remove()` method.
-```java
-private static void correctWayToRemoveElement() {
-    List<String> fruits = new ArrayList<>();
-    fruits.add("Apple");
-    fruits.add("Banana");
-    fruits.add("Orange");
-    fruits.add("Watermelon");
-    fruits.add("Kiwi");
-
-    Iterator<String> iterator = fruits.iterator();
-
-    while (iterator.hasNext()){
-        String fruit = iterator.next();
-        System.out.println("Processing - " + fruit);
-
-        if("Orange".equals(fruit)) {
-            iterator.remove();  // iterator.remove not list.remove
-        }
-    }
-
-    System.out.println("fruits set after iteration = " + fruits);
-}
-```
-Output.
-```raw
-Processing - Apple
-Processing - Banana
-Processing - Orange
-Processing - Watermelon
-Processing - Kiwi
-fruits set after iteration = [Apple, Banana, Watermelon, Kiwi]
-```
-### 2.2 ArrayList VS LinkedList
-1) The insert and remove operations give good performance (O(1)) in LinkedList compared to ArrayList(O(n)). Hence if there is a requirement of frequent addition and deletion in application then LinkedList is a best choice.
-
-2) Search (get method) operations are fast in Arraylist (O(1)) but not in LinkedList (O(n)) so If there are less add and remove operations and more search operations requirement, ArrayList would be your best bet.
-
-### 2.3 Stack and Queue
-```java
-Deque<String> stack = new ArrayDeque<String>();
-Deque<String> queue = new ArrayDeque<String>();
-
-stack.push("A");
-stack.push("B");
-stack.push("C");
-stack.push("D");
-
-while (!stack.isEmpty()) {
-  System.out.print(stack.pop() + " ");
-}
-
-queue.add("A");
-queue.add("B");
-queue.add("C");
-queue.add("D");
-while (!queue.isEmpty()) {
-  System.out.print(queue.remove() + " ");
-}
-```
-Output
-```raw
-D C B A A B C D
-```
-### 2.4 Queue VS Deque
-```java
-Queue queue = new LinkedList();
-Queue queue = new PriorityQueue();
-Deque<Integer> deque = new ArrayDeque<Integer>();
-Deque<Integer> deque = new LinkedList<Integer>();
-```
-### 2.5 Use Deque over Stack?
-* Stack is concrete class, inherited from Vector. It has no interface.
-* Stack is not implemented with linked list.
-* Deque is interface. Deque exposes a set of operations which is all about being able to fetch/add/remove items from the start or end of a collection.
-
-```java
-Stack<Integer> stack = new Stack<Integer>();
-Deque<Integer> stack = new ArrayDeque<Integer>();
-Deque<Integer> stack = new LinkedList<Integer>();
-Deque<Integer> queue = new ArrayDeque<Integer>();
-Deque<Integer> queue = new LinkedList<Integer>();
-Deque<Integer> deque = new ArrayDeque<Integer>();
-Deque<Integer> deque = new LinkedList<Integer>();
-```
-### 2.6 ArrayDeque Vs LinkedList
-ArrayDeque is new with Java 6. If you need add/remove of the both ends, ArrayDeque is significantly better than a linked list. Random access each element is also O(1) for a cyclic queue.
-
-The only better operation of a linked list is removing the current element during iteration.
-
-## 2. Hash Collision Resolution
-* Separate chaining
-* Linear Probing (Clustering problem)
-* Quadratic Probing (May not find a vacant cell)
-
-http://www.cs.cmu.edu/~ab/15-121N11/lectures/lecture16.pdf
-
-## 3. Finalize, Final, Finally
-
-## 4. Exception
-
-## 5. Lamda expression
-
-## 6. References
+## 4. References
 * [Java Interview Questions](https://www.tutorialspoint.com/java/java_interview_questions.htm)
 * [Java Interview Questions](https://www.journaldev.com/java-interview-questions)
 * [300 Core Java Interview Questions](https://www.javatpoint.com/corejava-interview-questions)
