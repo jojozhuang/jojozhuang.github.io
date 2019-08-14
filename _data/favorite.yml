@@ -9,6 +9,10 @@ bookmarks:
         description: An online text compare tool
         url: https://text-compare.netlify.com/
         favorite: true
+      - name: draw.io
+        description: An online diagramming tool.
+        url: https://www.draw.io/
+        favorite: true
       - name: Markdown Editor
         description: An online wysiwyg markdown editor
         url: https://pandao.github.io/editor.md/en.html
@@ -266,7 +270,7 @@ bookmarks:
         url: https://kubernetes.io/
       - name: Vagrant
         description: A tool for building and distributing development environments.
-        url: https://github.com/hashicorp/vagrant        
+        url: https://github.com/hashicorp/vagrant
   - category: Database
     links:
       - name: Oracle
