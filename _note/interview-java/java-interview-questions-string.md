@@ -99,8 +99,6 @@ Strings are immutable, so we can’t change it’s value in program. Hence it’
 Since String is immutable, its hashcode is cached at the time of creation and it doesn’t need to be calculated again. This makes it a great candidate for the key in a Map and it’s processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
 
 ## 2. References
-* [Java Interview Questions](https://www.tutorialspoint.com/java/java_interview_questions.htm)
-* [Java Interview Questions](https://www.journaldev.com/java-interview-questions)
 * [Java String Interview Questions and Answers](https://www.journaldev.com/1321/java-string-interview-questions-and-answers)
 * [CharSequence VS String in Java?](https://stackoverflow.com/questions/1049228/charsequence-vs-string-in-java)
 * [CharSequence vs. String in Java](https://www.baeldung.com/java-char-sequence-string)

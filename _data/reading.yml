@@ -163,6 +163,10 @@ bookmarks:
         description: DevOps Concepts - Stateless Servers - YouTube
         url: https://www.youtube.com/watch?v=FmctmpybIKs
         type: video
+      - name: Server with GUI Failing After NVIDIA Driver Install
+        description: Server with GUI Failing After NVIDIA Driver Install
+        url: https://access.redhat.com/discussions/3489411
+        type: webpage
       - name: 一个月被动收入赚到$12037.09秘密
         description: 一个月被动收入赚到$12037.09秘密
         url: https://www.youtube.com/watch?v=cs-L3LeLu2o
