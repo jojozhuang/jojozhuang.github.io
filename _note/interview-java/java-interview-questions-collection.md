@@ -10,8 +10,48 @@ tags: [Java, Interview, Collection]
 
 > Frequently asked Java Collection questions.
 
-## 1. Collection Usage
-### 1.1 ArrayList and LinkedList
+## 1. Collection Comparison
+### 1.1 ArrayList vs. LinkedList
+Example of ArrayList.
+```java
+// construct array list
+List<Integer> list = new ArrayList<>();
+// add
+list.add(1);
+list.add(2);
+// insert
+list.add(0, 8);
+// get by index
+list.get(0);
+// remove
+list.remove(0);
+```
+Example of LinkedList.
+```java
+// construct linked list
+List<Integer> list = new LinkedList<>();
+// add
+list.add(1);
+list.add(2);
+// insert
+list1.add(0, 8);
+// get by index
+list.get(0);
+// remove
+list.remove(0);
+```
+Performance of ArrayList vs. LinkedList
+
+ Method                               | ArrayList | LinkedList
+--------------------------------------|-----------|-------------
+get(index)                            | O(1)      | O(n)
+add(value) <sup>* append</sup>        | O(1)      | O(1)
+add(index, value) <sup>* insert</sup> | O(n)      | O(1) if position is known
+remove(index)                         | O(n)      | O(1) if position is known
+
+* The insert and remove operations give good performance O(1) in LinkedList compared to ArrayList O(n). Hence if there is a requirement of frequent **addition** and **deletion** in application then **LinkedList** is a best choice.
+* Random access(get method) is fast in Arraylist O(1) but not in LinkedList O(n). So if there are less add and remove operations and more **random access** operations requirement, **ArrayList** would be your best bet.
+
 ### 1.2 Stack, Queue and Deque
 ```java
 Deque<String> stack = new ArrayDeque<String>();
@@ -41,10 +81,7 @@ D C B A A B C D
 ### 1.3 Set and Map
 ### 1.4 SortedSet and SortedMap
 ## 2. Collection Comparison
-### 2.1 ArrayList vs. LinkedList
-1) The insert and remove operations give good performance (O(1)) in LinkedList compared to ArrayList(O(n)). Hence if there is a requirement of frequent addition and deletion in application then LinkedList is a best choice.
 
-2) Search (get method) operations are fast in Arraylist (O(1)) but not in LinkedList (O(n)) so If there are less add and remove operations and more search operations requirement, ArrayList would be your best bet.
 ### 2.2 ArrayDeque vs. LinkedList
 ArrayDeque is new with Java 6. If you need add/remove of the both ends, ArrayDeque is significantly better than a linked list. Random access each element is also O(1) for a cyclic queue.
 
