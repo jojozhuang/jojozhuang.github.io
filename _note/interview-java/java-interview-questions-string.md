@@ -8,7 +8,7 @@ date: 2016-01-04
 tags: [Java, Interview]
 ---
 
-> Popular interview questions for Java.
+> Frequently asked Java String questions.
 
 ## 1. String Questions
 ### 1.1 What is String in Java? String is a data type?

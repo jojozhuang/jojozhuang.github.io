@@ -8,7 +8,7 @@ date: 2016-01-03
 tags: [Java, Interview]
 ---
 
-> Popular interview questions for Java.
+> Frequently asked Java questions.
 
 ## 1. JVM
 ### 1.1 JVM vs JRE vs JDK
