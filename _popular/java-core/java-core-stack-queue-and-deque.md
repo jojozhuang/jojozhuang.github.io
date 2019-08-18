@@ -301,8 +301,8 @@ The Java Deque interface, java.util.Deque, represents a `double ended queue`, me
 ### 3.1 Common Operations
 Constructing:
 ```java
-Deque deque = new LinkedList();
-Deque deque = new ArrayDeque();
+Deque<String> deque = new LinkedList<>();
+Deque<String> deque = new ArrayDeque<>();
 ```
 Add Element to Deque
 * add()
