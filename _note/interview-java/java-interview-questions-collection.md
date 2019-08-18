@@ -405,14 +405,36 @@ Deque<Integer> deque2 = new LinkedList<>();
 
 ### 2.8 HashMap vs. LinkedHashMap vs. TreeMap
 All three classes implement the Map interface and offer mostly the same functionality. The most important difference is the order in which iteration through the entries will happen:
-* `HashMap` makes absolutely no guarantees about the iteration order. It can (and will) even change completely when new elements are added.
+* `HashMap` makes no guarantees about the iteration order. It can (and will) even change completely when new elements are added.
 * `TreeMap` will iterate according to the "natural ordering" of the keys according to their `compareTo()` method (or an externally supplied `Comparator`). Additionally, it implements the SortedMap interface, which contains methods that depend on this sort order.
 * `LinkedHashMap` will iterate in the order in which the entries were put into the map.
 
 ### 2.9 HashTable vs. HashMap vs. ConcurrentHashMap
 `Hashtable` is the generic name for hash-based maps. In the context of the Java API, HashTable is an obsolete class from the days of Java 1.1 before the collections framework existed. It should not be used anymore, because its API is cluttered with obsolete methods that duplicate functionality, and its methods are synchronized (which can decrease performance and is generally useless). Use `ConcurrentHashMap` instead of Hashtable. `HashMap` is not thread safe.
 
-### 2.10 Summary
+### 2.10 TreeMap, HashMap, LinkedHashMap, Hashtable, WeakHashMap
+* HashMap is implemented as a hash table, and there is no ordering on keys or values.
+* TreeMap is implemented based on red-black tree structure, and it is ordered by the key.
+* LinkedHashMap preserves the insertion order.
+* Hashtable is synchronized, in contrast to HashMap.
+
+LinkedHashMap = DoublyLinkedList + HashMap
+```java
+HashMap<key, DoublyListNode>
+DoublyListNode {
+    prev, next, key, value;
+}
+```
+
+For thread-unsafe hashmap, infinite loop may occur during rehashing. One thread is setting node1.next to node2. Meanwhile, another thread is setting node2.next = node1. Cycle exists in the node list.
+
+## 2.11 HashMap vs. WeakHashMap
+* Strong vs Weak References: `Weak Reference` Objects are not the default type/class of Reference Object and they should be explicitly specified while using them. This type of reference is used in WeakHashMap to reference the entry objects.
+`Strong References`: This is the default type/class of Reference Object. Any object which has an active strong reference are not eligible for garbage collection. In HashMap, key objects have strong reference.
+* Role of `Garbage Collector`: In HashMap , entry object(entry object stores key-value pairs) is not eligible for garbage collection i.e Hashmap is dominant over Garbage Collector. In WeakHashmap, when a key is discarded then its entry is automatically removed from the map, in other words, it is garbage collected.
+* Clone method Implementation: HashMap implements `Cloneable` interface. WeakHashMap does not implement Cloneable interface , it only implements Map interface. Hence , there is no clone() method in the WeakHashMap class.
+
+### 2.12 Summary
 
 <div class="table-responsive-sm" markdown="block">
 

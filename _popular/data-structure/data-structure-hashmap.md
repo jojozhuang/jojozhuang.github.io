@@ -411,28 +411,11 @@ public class MyHashSet {
 * [LeetCode 1 - Two Sum](https://leetcode.com/problems/two-sum/)
 * [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
-## 4. HashMap in Java
-TreeMap, HashMap, LinkedHashMap, Hashtable, WeakHashMap
-* HashMap is implemented as a hash table, and there is no ordering on keys or values.
-* TreeMap is implemented based on red-black tree structure, and it is ordered by the key.
-* LinkedHashMap preserves the insertion order
-* Hashtable is synchronized, in contrast to HashMap.
-
-LinkedHashMap = DoublyLinkedList + HashMap
-```java
-HashMap<key, DoublyListNode>
-DoublyListNode {
-    prev, next, key, value;
-}
-```
-
-For thread-unsafe hashmap, infinite loop may occur during rehashing. One thread is setting node1.next to node2. Meanwhile, another thread is setting node2.next = node1. Cycle exists in the node list.
-
-## 5. Source Files
+## 4. Source Files
 * [Source files for HashMap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-hashmap)
 * [HashMap Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/17exDp3INEXpg8-Sk46gR9rLWYTo1Uckn/view?usp=sharing)
 
-## 6. Reference
+## 5. Reference
 * [Java.util.HashMap in Java](https://www.geeksforgeeks.org/java-util-hashmap-in-java/)
 * [Implementing our Own Hash Table with Separate Chaining in Java](https://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/)
 * [HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap](https://dzone.com/articles/hashmap-vs-treemap-vs)
