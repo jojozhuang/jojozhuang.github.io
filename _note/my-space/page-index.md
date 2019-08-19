@@ -20,7 +20,7 @@ Popular  | Design Pattern      | 1301 ~ 1400
 Popular  | Java                | 1401 ~ 1500
 Popular  | Java Practice       | 1501 ~ 1600
 Popular  | Jekyll              | 1601 ~ 1700
-Popular  | Homework            | 1701 ~ 1800
+Popular  | Practice Problems   | 1701 ~ 1800
 Tutorial | DevEnv              | 2101 ~ 2200
 Tutorial | RESTful API         | 2201 ~ 2300
 Tutorial | Mobile              | 2301 ~ 2400
@@ -30,6 +30,7 @@ Tutorial | React               | 2601 ~ 2700
 Tutorial | Angular             | 2701 ~ 2800
 Tutorial | Project             | 2801 ~ 2900
 Tutorial | Docker & K8s        | 3101 ~ 3200
+Tutorial | Theory              | 3201 ~ 3300
 Tutorial | Distributed System  | 3501 ~ 3600
 Tutorial | Security            | 3601 ~ 3700
 Note     | Basis               | 9001 ~ 9099
