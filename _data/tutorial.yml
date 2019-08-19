@@ -15,11 +15,6 @@ categories:
         icon: fab fa-dev
         subcategory: dev-env
         image: dev.png
-      - name: Security
-        description: Security
-        icon: fas fa-shield-alt
-        subcategory: security
-        image: security.png
   - category: backend
     name: Backend
     subcategories:
@@ -74,6 +69,11 @@ categories:
   - category: distributed-system
     name: Distributed System
     subcategories:
+      - name: Theory
+        description: Theory
+        icon: fas fa-lightbulb
+        subcategory: theory
+        image: theory.png
       - name: Network
         description: Network
         icon: fas fa-network-wired
@@ -99,6 +99,11 @@ categories:
         icon: fas fa-tools
         subcategory: devops
         image: devops.png
+      - name: Security
+        description: Security
+        icon: fas fa-shield-alt
+        subcategory: security
+        image: security.png
   - category: project
     name: Project
     subcategories:
