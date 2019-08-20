@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Protocols"
-index: 3201
+title: "Distributed System - Consensus Protocols"
+index: 3202
 subcategory: theory
 date: 2018-08-15
 tags: [Paxos, Raft]
@@ -15,10 +15,13 @@ Consensus is a fundamental problem in fault-tolerant distributed systems. Consen
 
 Consensus typically arises in the context of replicated state machines, a general approach to building fault-tolerant systems. Each server has a state machine and a log. The state machine is the component that we want to make fault-tolerant, such as a hash table. It will appear to clients that they are interacting with a single, reliable state machine, even if a minority of the servers in the cluster fail. Each state machine takes as input commands from its log. In our hash table example, the log would include commands like set x to 3. A consensus algorithm is used to agree on the commands in the servers' logs. The consensus algorithm must ensure that if any state machine applies set x to 3 as the nth command, no other state machine will ever apply a different nth command. As a result, each state machine processes the same series of commands and thus produces the same series of results and arrives at the same series of states.
 
-## 1. Paxos
+## 2. Paxos
+Paxos is a family of protocols for solving consensus in a network of unreliable processors (that is, processors that may fail).
 
-## 2. Raft
+## 3. Raft
+`Raft` is a consensus algorithm that is designed to be easy to understand. It's equivalent to Paxos in fault-tolerance and performance. The difference is that it's decomposed into relatively independent subproblems, and it cleanly addresses all major pieces needed for practical systems.
+
 
 ## 9. References
-* [Kafka Quickstart](https://kafka.apache.org/quickstart)
-* [Apache Kafka Tutorial](https://www.tutorialspoint.com/apache_kafka/index.htm)
+* [Paxos protocols at wikipedia](https://en.wikipedia.org/wiki/Paxos_(computer_science))
+* [The Raft Consensus Algorithm](https://raft.github.io/)

@@ -46,6 +46,8 @@ scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 sudo chown $USER /ariba/ssp_git/ -R
 ### `R` - Recursively change the owner for sub directories.
 ```
+### 1.4 Shortcut Keys for Mac
+* CMD + SHIFT + G, paste path in finder to open a file.
 
 ## 2. Git Commands
 <table>
