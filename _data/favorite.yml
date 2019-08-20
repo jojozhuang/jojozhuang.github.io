@@ -114,6 +114,12 @@ bookmarks:
       - name: Microservices
         description: A service-oriented architecture that structures an application as a collection of loosely coupled services
         url: https://en.wikipedia.org/wiki/Microservices
+      - name: RDBMS
+        description: Relational Database Management System
+        url: https://en.wikipedia.org/wiki/Relational_database#RDBMS
+      - name: NoSQL
+        description: NoSQL
+        url: https://en.wikipedia.org/wiki/NoSQL
       - name: Cache
         description: A hardware or software component that stores data so that future requests for that data can be served faster
         url: https://en.wikipedia.org/wiki/Cache_(computing)
@@ -324,6 +330,9 @@ bookmarks:
       - name: Nginx
         description: A free, open-source, high-performance HTTP server
         url: https://nginx.org
+      - name: Varnish Cache
+        description: A web application accelerator also known as a caching HTTP reverse proxy
+        url: https://varnish-cache.org
       - name: Apache Kafka
         description: An open-source stream-processing software platform
         url: https://kafka.apache.org/
