@@ -66,6 +66,7 @@ Tools/Softwares:
 * Hadoop/Spark/Storm, HDFS,HBase
 * OpenStack/KVM
 * Yarn(Resource Manager, Node Manager, Application Master, Container)
+* Chubby
 
 
 
@@ -87,17 +88,17 @@ In a distributed computer system, you can only support two of the following guar
 * **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures
 
 ![image](/public/images/note/9501/cap-theorem.png){:width="400px"}
-* Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.
+* Networks aren't reliable, so you'll need to support partition tolerance. You'll need to make a software tradeoff between consistency and availability.
 
 **CP - consistency and partition tolerance**  
-Waiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.
+Waiting for a response from the partitioned node might result in a timeout error. CP is a good choice if your business needs require atomic reads and writes.
 
 **AP - availability and partition tolerance**  
-Responses return the most recent version of the data available on a node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.  
+Responses return the most recent version of the data available on a node, which might not be the latest. Writes might take some time to propagate when the partition is resolved.
 AP is a good choice if the business needs allow for **eventual consistency** or when the system needs to continue working despite external errors.
 
 ### 2.2 BASE
-`BASE` is often used to describe the properties of NoSQL databases.  In comparison with the **CAP Theorem**, BASE chooses availability over consistency.
+`BASE` is often used to describe the properties of NoSQL databases. In comparison with the **CAP Theorem**, BASE chooses availability over consistency.
 * **Basically available** - the system guarantees availability.
 * **Soft state** - the state of the system may change over time, even without input.
 * **Eventual consistency** - the system will become consistent over a period of time, given that the system doesn't receive input during that period.
@@ -135,9 +136,9 @@ Networks aren’t reliable, so you’ll need to support partition tolerance. Acc
 * Partition Tolerance - The system continues to operate despite arbitrary partitioning due to network failures
 
 ## 3. Consistency Patterns
-With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data.  Recall the definition of consistency from the CAP theorem - Every read receives the most recent write or an error.
+With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data. Recall the definition of consistency from the CAP theorem - Every read receives the most recent write or an error.
 ### 3.1 Weak Consistency
-After a write, reads may or may not see it. A best effort approach is taken. This approach is seen in systems such as memcached.  Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games.  For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
+After a write, reads may or may not see it. A best effort approach is taken. This approach is seen in systems such as memcached. Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games. For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.
 ### 3.2 Eventual Consistency
 After a write, reads will eventually see it (typically within milliseconds). Data is replicated **asynchronously**. This approach is seen in systems such as DNS and email. Eventual consistency works well in **highly available systems**.
 ### 3.3 Strong Consistency
@@ -147,16 +148,16 @@ After a write, reads will see it. Data is replicated **synchronously**. This app
 There are two main patterns to support high availability: `fail-over` and `replication`.
 ### 4.1 Fail-over
 #### Active-passive
-With `active-passive` fail-over, heartbeats are sent between the active and the passive server on standby.  If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
+With `active-passive` fail-over, heartbeats are sent between the active and the passive server on standby. If the heartbeat is interrupted, the passive server takes over the active's IP address and resumes service.
 
-The length of downtime is determined by whether the passive server is already running in 'hot' standby or whether it needs to start up from 'cold' standby.  Only the active server handles traffic.
+The length of downtime is determined by whether the passive server is already running in 'hot' standby or whether it needs to start up from 'cold' standby. Only the active server handles traffic.
 
 Active-passive failover can also be referred to as `master-slave` failover.
 
 #### Active-active
 In `active-active`, both servers are managing traffic, spreading the load between them.
 
-If the servers are public-facing, the DNS would need to know about the public IPs of both servers.  If the servers are internal-facing, application logic would need to know about both servers.
+If the servers are public-facing, the DNS would need to know about the public IPs of both servers. If the servers are internal-facing, application logic would need to know about both servers.
 
 Active-active failover can also be referred to as `master-master` failover.
 
@@ -172,7 +173,7 @@ This topic is further discussed in the Database:
 * `Master-master` replication
 
 ### 4.3 Availability in numbers
-Availability is often quantified by uptime (or downtime) as a percentage of time the service is available.  Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s.
+Availability is often quantified by uptime (or downtime) as a percentage of time the service is available. Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s.
 
 #### 99.9% availability - three 9s
 
