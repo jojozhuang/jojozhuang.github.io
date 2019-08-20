@@ -69,8 +69,8 @@ categories:
   - category: distributed-system
     name: Distributed System
     subcategories:
-      - name: Theory
-        description: Theory
+      - name: Theory and Principle
+        description: Theory and Principle
         icon: fas fa-lightbulb
         subcategory: theory
         image: theory.png
