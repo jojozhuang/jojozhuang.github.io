@@ -34,7 +34,7 @@ The master serves reads and writes, replicating writes to one or more slaves, wh
 ![image](/public/images/note/9508/master-slave.png){:width="550px"}
 **Disadvantage(s): master-slave replication**
 * Additional logic is needed to promote a slave to a master.
-* See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
+* See 'Disadvantage(s): replication' for points related to **both** master-slave and master-master.
 
 ### 1.4 Master-master replication
 Both masters serve reads and writes and coordinate with each other on writes.  If either master goes down, the system can continue to operate with both reads and writes.
@@ -43,7 +43,7 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 * You'll need a load balancer or you'll need to make changes to your application logic to determine where to write.
 * Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.
 * Conflict resolution comes more into play as more write nodes are added and as latency increases.
-* See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
+* See 'Disadvantage(s): replication' for points related to **both** master-slave and master-master.
 
 **Disadvantage(s): replication**
 * There is a potential for loss of data if the master fails before any newly written data can be replicated to other nodes.
@@ -59,7 +59,7 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 
 ### 1.5 Federation
 Federation (or functional partitioning) splits up databases by function. For example, instead of a single, monolithic database, you could have three databases: **forums**, **users**, and **products**, resulting in less read and write traffic to each database and therefore less replication lag.
-![image](/public/images/note/9508/federation.png){:width="400px"}
+![image](/public/images/note/9508/federation.png){:width="350px"}
 Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.
 
 **Disadvantage(s): federation**
