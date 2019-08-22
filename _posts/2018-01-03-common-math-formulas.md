@@ -126,6 +126,23 @@ Example 2:
 
 $$S_5=2^0+2^1+2^2+...+2^5 = 111111(Binary) = 2^{6+1} - 1$$
 
+### 5.3 Permutation and Combination
+Permutation:
+
+$$P(n,r)=\frac{n!}{(n-r)!}$$
+
+Example: Choose 2 numbers from array [1,2,3,4], return the total number of all possible permutations.
+
+$$P(4,2)=\frac{4!}{(4-2)!}=\frac{4!}{(2)!}=\frac{24}{2}=12$$
+
+Combination:
+
+$$C(n,r)=\frac{n!}{r!(n-r)!}$$
+
+Example: Choose 2 numbers from array [1,2,3,4], return the total number of all possible combinations.
+
+$$C(4,2)=\frac{4!}{2!(4-2)!}=\frac{4!}{2!(2!)}=\frac{24}{2*2}=6$$
+
 ## 6. References
 * [The 28 Critical SAT Math Formulas You MUST Know](https://blog.prepscholar.com/critical-sat-math-formulas-you-must-know)
 * [COMMON MATH FORMULAS](http://www.mdc.edu/main/images/common_math_formulas_tcm6-33520.pdf)
