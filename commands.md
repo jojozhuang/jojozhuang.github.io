@@ -178,6 +178,11 @@ sudo chown $USER /ariba/ssp_git/ -R
       <td colspan="1">git grep "foo()"</td>
       <td colspan="1">Search the working directory for foo().</td>
     </tr>
+    <tr>
+      <td>Stash</td>
+      <td colspan="1">git stash list<br/>git stash save "message"<br/>git stash pop<br/>git stash pop stash@{0}</td>
+      <td colspan="1">Store the modifications in the working directory and restore them back later</td>
+    </tr>
    </tbody>
   </table>
 
@@ -233,3 +238,4 @@ docker exec [container name or ID] shell command | Executes a command within a r
 ## 4. References
 * [Basic Git commands](https.//confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
 * [Docker Commands Quick Reference Cheat Sheet](https://www.linode.com/docs/applications/containers/docker-commands-quick-reference-cheat-sheet/)
+* [Saving Changes with Git Stash](https://mijingo.com/blog/saving-changes-with-git-stash)
