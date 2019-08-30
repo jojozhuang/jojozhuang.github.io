@@ -6,7 +6,7 @@ index: 1118
 subcategory: data-structure
 date: 2016-03-20
 tags: [Monotonic Queue]
-draft: true
+mathjax: true
 ---
 
 > Implement monotonic queue.
@@ -78,30 +78,25 @@ public int[] firstSmallerRight(int[] nums) {
     return ans;
 }
 ```
-### 2.2 Solution with Monotonic Queue
-We can use monotonic queue with better performance, the time complexity is $O(n)$.
+### 2.2 Solution with Stack
+We can use stack with better performance, the time complexity is $O(n)$.
 ```java
 // input:  [ 5, 3,  1, 2, 4]
 // output: [-1,-1, -1, 1, 2]
 // O(n)
 public int[] firstSmallerLeft(int[] nums) {
     int[] ans = new int[nums.length];
-    Stack<Integer> stack = new Stack<>(); // increasing stack
+    Stack<Integer> stack = new Stack<>();   // increasing stack
     for (int i = 0; i < nums.length; i++) { // left to right
-        while (!stack.isEmpty()) {
-            if (stack.peek() >= nums[i]) {
-                stack.pop();
-            } else {
-                break;
-            }
+        while (!stack.isEmpty() && stack.peek() >= nums[i]) {
+            stack.pop();
         }
         if (stack.isEmpty()) {
-            stack.push(nums[i]);
             ans[i] = -1;
         } else {
             ans[i] = stack.peek();
-            stack.push(nums[i]);
         }
+        stack.push(nums[i]);
     }
 
     return ans;
@@ -112,25 +107,72 @@ public int[] firstSmallerLeft(int[] nums) {
 // O(n)
 public int[] firstSmallerRight(int[] nums) {
     int[] ans = new int[nums.length];
-    Stack<Integer> stack = new Stack<>(); // increasing stack
+    Stack<Integer> stack = new Stack<>();        // increasing stack
     for (int i = nums.length - 1; i >= 0; i--) { // right to left
-        while (!stack.isEmpty()) {
-            if (stack.peek() >= nums[i]) {
-                stack.pop();
-            } else {
-                break;
-            }
+        while (!stack.isEmpty() && stack.peek() >= nums[i]) {
+            stack.pop();
         }
         if (stack.isEmpty()) {
-            stack.push(nums[i]);
             ans[i] = -1;
         } else {
             ans[i] = stack.peek();
-            stack.push(nums[i]);
         }
+        stack.push(nums[i]);
     }
 
     return ans;
+}
+```
+### 2.3 Solution with Monotonic Queue
+We can use monotonic queue with better performance, the time complexity is $O(n)$. Instead of creating two methods to get smaller left and smaller right separately, we can use one method to get both results at once.
+```java
+// input:  [5, 3, 1, 2, 4]
+// output: [[-1,-1, -1, 1, 2], [3, 1, -1, -1, -1]]
+// O(n)
+public int[][] firstSmaller(int[] nums) {
+    int[] leftSmaller = new int[nums.length];
+    int[] rightSmaller = new int[nums.length];
+    Arrays.fill(leftSmaller, -1);
+    Arrays.fill(rightSmaller, -1);
+    Deque<Integer> queue = new LinkedList<>(); // increasing queue
+    for (int i = 0; i < nums.length; i++) {    // left to right
+        while (!queue.isEmpty() && nums[queue.peekLast()] >= nums[i]) {
+            rightSmaller[queue.pollLast()] = nums[i];
+        }
+        if (!queue.isEmpty()) {
+            leftSmaller[i] = nums[queue.peekLast()];
+        }
+        queue.offerLast(i);
+    }
+
+    return new int[][]{leftSmaller, rightSmaller};
+}
+```
+* Use Deque as monotonic queue.
+* The deque stores the index of the element, not the value of it.
+
+Similarly, we can get larger left and larger right at once with monotonic queue.
+```java
+// input:  [5, 3, 1, 2, 4]
+// output: [[-1, 5, 3, 3, 5], [-1, 4, 2, 4, -1]]
+// O(n)
+public int[][] firstLarger(int[] nums) {
+    int[] leftLarger = new int[nums.length];
+    int[] rightLarger = new int[nums.length];
+    Arrays.fill(leftLarger, -1);
+    Arrays.fill(rightLarger, -1);
+    Deque<Integer> queue = new LinkedList<>(); // decreasing queue
+    for (int i = 0; i < nums.length; i++) {    // left to right
+        while (!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]) {
+            rightLarger[queue.pollLast()] = nums[i];
+        }
+        if (!queue.isEmpty()) {
+            leftLarger[i] = nums[queue.peekLast()];
+        }
+        queue.offerLast(i);
+    }
+
+    return new int[][]{leftLarger, rightLarger};
 }
 ```
 
