@@ -27,6 +27,9 @@ bookmarks:
       - name: HTML Formatter
         description: Format HTML string
         url: https://www.freeformatter.com/html-formatter.html
+      - name: SQL Formatter
+        description: Format SQL string
+        url: https://www.freeformatter.com/sql-formatter.html
       - name: HTML Escape/Unescape
         description: Escapes/unescapes HTML
         url: https://www.freeformatter.com/html-escape.html
