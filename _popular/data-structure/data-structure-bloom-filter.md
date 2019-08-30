@@ -13,7 +13,7 @@ tags: [Bloom Filter]
 ## 1. Bloom Filter
 `Bloom filter` is a data structure designed to rapidly and memory-efficiently tell whether an element is present in a set.
 
-The price paid for this efficiency is that a Bloom filter is a `probabilistic data structure`: it tells us that the element either definitely is **not** in the set or **may be** in the set.
+The cost paid for this efficiency is that a Bloom filter is a `probabilistic data structure`: it tells us that the element either definitely is **not** in the set or **may be** in the set.
 
 The base data structure of a Bloom filter is a `Bit Vector`.
 ![image](/public/images/dsa/1133//bloom-filter.png){:width="700px"}
@@ -160,11 +160,10 @@ Executed Time: 1171
 ```
 
 ## 4. Source Files
-* [Source files for Heap on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-heap)
+* [Source files for Bloom Filter on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-bloom-filter)
 
 ## 5. References
 * [Bloom filter - Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter)
 * [Bloom Filters by Example](https://llimllib.github.io/bloomfilter-tutorial/)
 * [BloomFilter——大规模数据处理利器](http://www.cnblogs.com/heaad/archive/2011/01/02/1924195.html)
 * [如何判断一个元素在亿级数据中是否存在？](https://mp.weixin.qq.com/s/b5bIcNAc-f3c5eQCv9bWMg)
-* [Java Core Sprout](https://crossoverjie.top/JCSprout/#/?id=introduction)

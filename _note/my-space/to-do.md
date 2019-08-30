@@ -32,6 +32,11 @@ Tutorials:
 * Kafka
 * Cassandra
 
+Reading:
+* [CIFS vs SMB: What’s the Difference?](https://www.varonis.com/blog/cifs-vs-smb/)
+* [The difference between NFS / CIFS / SMB / Samba](https://www.reddit.com/r/sysadmin/comments/1ei3ht/the_difference_between_nfs_cifs_smb_samba/)
+
+
 ## 1. Latest
 * [How to Disable Google Chrome UI Theme Redesign and Return to Classic UI](http://osxdaily.com/2018/09/10/disable-chrome-ui-theme-redesign/)
 * [Front-End Handbook](https://www.frontendhandbook.com/)
