@@ -84,16 +84,11 @@ There are three cases when deleting a node from Binary Search Tree.
 * Node has only one child.
 * Node has two children.
 
-
-
-## 7. Classic Problems
-* [LeetCode 501 - Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)
-
-## 8. Source Files
-* [Source files for Binary Search Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-binary-search-tree)
+## 5. Source Files
+* [Source files for Red Black Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-red-black-tree)
 * [Red Black Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1YKBH9VD-vg7LqoYj77tjU6sEQ64y9StE/view?usp=sharing)
 
-## 9. Reference
+## 6. Reference
 * [Red-Black Trees](http://pages.cs.wisc.edu/~skrentny/cs367-common/readings/Red-Black-Trees/)
 * [Red-Black Tree - Set 1 (Introduction)](https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/)
 * [Red-Black Tree - Set 2 (Insert)](https://www.geeksforgeeks.org/red-black-tree-set-2-insert/)
