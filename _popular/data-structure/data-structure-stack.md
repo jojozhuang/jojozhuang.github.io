@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Stack"
+title: "Data Structure - Stack"
 index: 1112
 subcategory: data-structure
 date: 2016-03-02

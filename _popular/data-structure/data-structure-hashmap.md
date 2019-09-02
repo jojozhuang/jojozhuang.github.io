@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "HashMap"
+title: "Data Structure - HashMap"
 index: 1131
 subcategory: data-structure
 date: 2016-03-13

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Bloom Filter"
+title: "Data Structure - Bloom Filter"
 index: 1133
 subcategory: data-structure
 date: 2016-03-31

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Template Method"
+title: "Design Pattern - Template Method"
 index: 1330
 subcategory: design-pattern
 date: 2016-05-30

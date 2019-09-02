@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Deque"
+title: "Data Structure - Deque"
 index: 1114
 subcategory: data-structure
 date: 2016-03-04

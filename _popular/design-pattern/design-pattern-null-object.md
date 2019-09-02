@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Null Object"
+title: "Design Pattern - Null Object"
 index: 1326
 subcategory: design-pattern
 date: 2016-05-26

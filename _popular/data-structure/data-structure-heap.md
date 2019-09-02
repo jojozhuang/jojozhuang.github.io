@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Heap"
+title: "Data Structure - Heap"
 index: 1132
 subcategory: data-structure
 date: 2016-03-14

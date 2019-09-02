@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Trie"
+title: "Data Structure - Trie"
 index: 1126
 subcategory: data-structure
 date: 2016-03-10

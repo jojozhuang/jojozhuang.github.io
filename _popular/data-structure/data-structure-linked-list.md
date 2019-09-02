@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Linked List"
+title: "Data Structure - Linked List"
 index: 1111
 subcategory: data-structure
 date: 2016-03-01

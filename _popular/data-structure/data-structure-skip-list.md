@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "SkipList"
+title: "Data Structure - Skip List"
 index: 1119
 subcategory: data-structure
 date: 2016-03-20

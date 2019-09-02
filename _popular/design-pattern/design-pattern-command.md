@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Command"
+title: "Design Pattern - Command"
 index: 1321
 subcategory: design-pattern
 date: 2016-05-21

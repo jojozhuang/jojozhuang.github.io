@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Monotonic Queue"
+title: "Data Structure - Monotonic Queue"
 index: 1118
 subcategory: data-structure
 date: 2016-03-20

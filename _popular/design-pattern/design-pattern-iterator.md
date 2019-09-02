@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Iterator"
+title: "Design Pattern - Iterator"
 index: 1323
 subcategory: design-pattern
 date: 2016-05-23

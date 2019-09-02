@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Singleton"
+title: "Design Pattern - Singleton"
 index: 1302
 subcategory: design-pattern
 date: 2016-05-02

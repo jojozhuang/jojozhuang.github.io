@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Observer"
+title: "Design Pattern - Observer"
 index: 1327
 subcategory: design-pattern
 date: 2016-05-27

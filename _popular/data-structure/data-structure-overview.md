@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Data Structure Overview"
+title: "Data Structure - Overview"
 index: 1101
 subcategory: data-structure
 date: 2016-03-01

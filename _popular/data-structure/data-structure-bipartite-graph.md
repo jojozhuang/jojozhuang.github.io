@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Bipartite Graph"
+title: "Data Structure - Bipartite Graph"
 index: 1143
 subcategory: data-structure
 date: 2016-03-17

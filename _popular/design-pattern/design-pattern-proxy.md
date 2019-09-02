@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Proxy"
+title: "Design Pattern - Proxy"
 index: 1316
 subcategory: design-pattern
 date: 2016-05-16

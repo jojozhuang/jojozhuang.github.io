@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Visitor"
+title: "Design Pattern - Visitor"
 index: 1331
 subcategory: design-pattern
 date: 2016-05-31

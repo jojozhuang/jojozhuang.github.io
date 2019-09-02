@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Queue"
+title: "Data Structure - Queue"
 index: 1113
 subcategory: data-structure
 date: 2016-03-03

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Factory"
+title: "Design Pattern - Factory"
 index: 1303
 subcategory: design-pattern
 date: 2016-05-03
