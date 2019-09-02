@@ -2,14 +2,14 @@
 layout: tutorial
 key: popular
 title: "Fenwick Tree"
-index: 1127
+index: 1128
 subcategory: data-structure
 date: 2016-03-11
 tags: [Fenwick, Binary Indexed Tree]
 mathjax: true
 ---
 
-> Use fenwick tree to solve prefix sum efficiently.
+> Use fenwick tree to efficiently solve the prefix sum problem.
 
 ## 1. What is Fenwick Tree?
 `Binary Indexed Tree` also called `Fenwick Tree` provides a way to represent an array of numbers in an array, allowing prefix sums to be calculated efficiently. For example, an array [2, 3, -1, 0, 6] is given, then the prefix sum of first 3 elements [2, 3, -1] is 2 + 3 + -1 = 4.
@@ -202,7 +202,7 @@ public class SegmentTree {
     }
 }
 ```
-* Space Complexity: $O(2n)$
+* Space Complexity: $O(n)$
 * Time Complexity:
   - constructor - $O(n)$
   - update - $O(\log{}n)$
@@ -219,10 +219,10 @@ In addition, `x & (-x)` gives the last set bit in a number.
 
 ### 3.2 Representation of BIT
 Binary Indexed Tree(BIT) is represented as an array. Let the array be BIT[]. Each node of the Binary Indexed Tree stores the sum of some elements of the input array. The size of the Binary Indexed Tree is equal to the size of the input array, denoted as n. In the code below, we use a size of n+1 for ease of implementation.
-![image](/public/images/dsa/1127/array-and-bit.png){:width="800px"}  
+![image](/public/images/dsa/1128/array-and-bit.png){:width="800px"}  
 ### 3.3 Get Sum Function
 Fenwick Tree is constructed as follows.
-![image](/public/images/dsa/1127/getsum-view.png){:width="800px"}
+![image](/public/images/dsa/1128/getsum-view.png){:width="800px"}
 Create method prefixSum() to get the sum for the given index. We just need to summarize all the values along the path from dummy node to targeted node. Here are some examples.
 * prefixSum(1) = BIT[1] = 2.
 * prefixSum(3) = BIT[3] + BIT[2] = 6 + 1 = 7.
@@ -236,7 +236,7 @@ index -= index & (-index);
 ```
 
 Below is another view of the BIT, which helps to understand how getsum works.
-![image](/public/images/dsa/1127/tree-view.png){:width="850px"}
+![image](/public/images/dsa/1128/tree-view.png){:width="850px"}
 * prefixSum(10) = range(1, 8) + range(9, 10) = BIT[8] + BIT[10]
 * prefixSum(8) = range(1, 8) = BIT[8]
 * prefixSum(7) = range(1, 4) + range(5, 6) + range(7) = BIT[4] + BIT[6] + BIT[7]
@@ -245,7 +245,7 @@ Below is another view of the BIT, which helps to understand how getsum works.
 
 ### 3.4 Update Function
 The update function needs to make sure that all the BIT nodes which contain arr[i] within their ranges being updated. We loop over such nodes in the BIT by repeatedly adding the decimal number corresponding to the last set bit of the current index. Notice that the import parameter is the 'delta value' not an absolute value. For example, if the original array is [2, -1, 6, 1, 5, -3, 4, 1, -2, 7] and we want to update the second element arr[1] to 2, we should put 3 as import parameter when calling update() method.
-![image](/public/images/dsa/1127/update-view.png){:width="650px"}
+![image](/public/images/dsa/1128/update-view.png){:width="650px"}
 Here are some examples.
 * To update node1(BIT[1]), we need to update BIT[1], BIT[2], BIT[4], BIT[8].
 * To update node2(BIT[2]), we need to update BIT[2], BIT[4], BIT[8].
@@ -259,7 +259,7 @@ index += index & (-index);
 ```
 
 ### 3.5 Implementation
-Create class named FenwickTree with two main method.
+Create class named FenwickTree with two important methods.
 * prefixSum(index) - get the pre sum from 0...index.
 * update(index, value) - update with the given index and value(delta).
 
@@ -321,44 +321,13 @@ public class FenwickTree {
     }
 }
 ```
-Test.
-```java
- @Test
-public void testFenwickTree() {
-    System.out.println("testFenwickTree");
-    int[] nums = new int[]{2, -1, 6, 1, 5, -3, 4, 1, -2, 7};
-    FenwickTree instance = new FenwickTree(nums);
-    assertEquals(2, instance.prefixSum(0));
-    assertEquals(1, instance.prefixSum(1));
-    assertEquals(7, instance.prefixSum(2));
-    assertEquals(8, instance.prefixSum(3));
-    assertEquals(13, instance.prefixSum(4));
-    assertEquals(10, instance.prefixSum(5));
-    assertEquals(14, instance.prefixSum(6));
-    assertEquals(15, instance.prefixSum(7));
-    assertEquals(13, instance.prefixSum(8));
-    assertEquals(20, instance.prefixSum(9));
-    assertEquals(8, instance.rangeSum(0, 3));
-    assertEquals(13, instance.rangeSum(0, 4));
-    assertEquals(6, instance.rangeSum(3, 4));
-    assertEquals(5, instance.rangeSum(4, 4));
-    assertEquals(-1, instance.rangeSum(7, 8));
-    assertEquals(20, instance.rangeSum(0, 9));
-    instance.update(1, 3); // change -1 to 2,the changed value is 3
-    assertEquals(2, instance.prefixSum(0));
-    assertEquals(4, instance.prefixSum(1));
-    assertEquals(10, instance.prefixSum(2));
-    assertEquals(11, instance.prefixSum(3));
-    assertEquals(16, instance.prefixSum(4));
-    assertEquals(18, instance.prefixSum(7));
-    assertEquals(11, instance.rangeSum(0, 3));
-    assertEquals(16, instance.rangeSum(0, 4));
-    assertEquals(6, instance.rangeSum(3, 4));
-    assertEquals(5, instance.rangeSum(4, 4));
-    assertEquals(-1, instance.rangeSum(7, 8));
-    assertEquals(23, instance.rangeSum(0, 9));
-}
-```
+* Space Complexity: $O(n)$
+* Time Complexity:
+  - constructor - $O(n)$
+  - update - $O(\log{}n)$
+  - prefixSum - $O(\log{}n)$
+  - rangeSum - $O(\log{}n)$
+
 Simplified version of BIT.
 ```java
 public class FenwickTreeSimplified {
@@ -396,11 +365,24 @@ public class FenwickTreeSimplified {
 }
 ```
 
-## 4. Source Files
+## 4. Performance Comparison
+
+ Solution     | Space Complexity | Construct | Update       | Get Sum      | Range Sum
+--------------|------------------|-----------|--------------|--------------|------------
+ Naive        | $O(n)$           | $O(1)$    | $O(1)$       | $O(n)$       | $O(n)$
+ Improved     | $O(2n)$          | $O(n)$    | $O(n)$       | $O(1)$       | $O(1)$
+ Segment Tree | $O(n)$           | $O(n)$    | $O(\log{}n)$ | $O(\log{}n)$ | $O(\log{}n)$
+ Fenwick Tree | $O(n)$           | $O(n)$    | $O(\log{}n)$ | $O(\log{}n)$ | $O(\log{}n)$
+
+* Fenwick Tree has same performance with segment tree, but it is much easier to implement BIT than segment tree.
+* If update operation is rare, we should use the improved solution.
+* If update operation is frequent, then we should use either segment tree or fenwick tree.
+
+## 5. Source Files
 * [Source files for Fenwick Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-fenwick-tree)
 * [Fenwick Tree Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/15FCWO-Xp00NC-VsX7xmbmm4F2iZdHIgs/view?usp=sharing)
 
-## 5. Reference
+## 6. Reference
 * [Binary Indexed Tree or Fenwick Tree](https://www.geeksforgeeks.org/binary-indexed-tree-or-fenwick-tree-2/)
 * [Fenwick (Binary Indexed) Trees](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/fenwick-binary-indexed-trees/tutorial/)
 * [Fenwick Tree / Binary Indexed Tree(Video)](https://www.youtube.com/watch?v=WbafSgetDDk&t=19s)
