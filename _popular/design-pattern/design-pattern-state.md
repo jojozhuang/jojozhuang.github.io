@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "State"
+title: "Design Pattern - State"
 index: 1328
 subcategory: design-pattern
 date: 2016-05-28

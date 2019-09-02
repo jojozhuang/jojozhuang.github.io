@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Graph"
+title: "Data Structure - Graph"
 index: 1141
 subcategory: data-structure
 date: 2016-03-15

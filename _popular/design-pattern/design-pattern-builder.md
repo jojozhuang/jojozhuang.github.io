@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Builder"
+title: "Design Pattern - Builder"
 index: 1304
 subcategory: design-pattern
 date: 2016-05-04

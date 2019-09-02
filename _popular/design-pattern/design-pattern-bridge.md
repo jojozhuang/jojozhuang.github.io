@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Bridge"
+title: "Design Pattern - Bridge"
 index: 1311
 subcategory: design-pattern
 date: 2016-05-11

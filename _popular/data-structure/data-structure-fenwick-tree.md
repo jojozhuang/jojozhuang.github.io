@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Fenwick Tree"
+title: "Data Structure - Fenwick Tree"
 index: 1128
 subcategory: data-structure
 date: 2016-03-11

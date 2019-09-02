@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Flyweight"
+title: "Design Pattern - Flyweight"
 index: 1315
 subcategory: design-pattern
 date: 2016-05-15

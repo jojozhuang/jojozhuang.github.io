@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "LRU Cache"
+title: "Data Structure - LRU Cache"
 index: 1116
 subcategory: data-structure
 date: 2016-03-05

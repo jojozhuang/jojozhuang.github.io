@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Adapter"
+title: "Design Pattern - Adapter"
 index: 1310
 subcategory: design-pattern
 date: 2016-05-10

@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Directed Graph - Draft"
+title: "Data Structure - Directed Graph - Draft"
 index: 1144
 subcategory: data-structure
 date: 2016-03-18

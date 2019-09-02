@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "B+ Tree"
+title: "Data Structure - B+ Tree"
 index: 1125
 subcategory: data-structure
 date: 2016-03-09

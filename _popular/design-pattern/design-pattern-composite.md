@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Composite"
+title: "Design Pattern - Composite"
 index: 1312
 subcategory: design-pattern
 date: 2016-05-12

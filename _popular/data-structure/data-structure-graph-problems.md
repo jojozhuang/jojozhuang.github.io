@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: popular
-title: "Graph Problems"
+title: "Data Structure - Graph Problems"
 index: 1142
 subcategory: data-structure
 date: 2016-03-16
