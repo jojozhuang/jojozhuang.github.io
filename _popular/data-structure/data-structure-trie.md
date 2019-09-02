@@ -2,7 +2,7 @@
 layout: tutorial
 key: popular
 title: "Trie"
-index: 1125
+index: 1126
 subcategory: data-structure
 date: 2016-03-10
 tags: [Trie, Prefix Tree]
@@ -18,7 +18,7 @@ represent a word.
 Very commonly, a trie is used to store the entire (English) language for quick prefix lookups. While a hash table can quickly look up whether a string is a valid word, however it cannot tell us if a string is a prefix of any valid words. A trie can do this very quickly.
 
 Below picture shows how words are stored in trie. This trie stores five words: dog, dot, pump, fat, fire. Each node has a hashmap and a flag to indicate whether the current node is a leaf(a complete path for a word).
-![image](/public/images/dsa/1125/trie.png){:width="800px"}
+![image](/public/images/dsa/1126/trie.png){:width="800px"}
 * In trie, each path from root to any node represents a word.
 * It is not necessary that leaf has to be the node without children. For example, suppose 'dog' and 'dot' are words in this trie. Then, node 'g' and node 't' are obviously marked as leaves. If word 'do' is also in this trie, then node 'o' is also marked as leaf, even if it has two children, 'g' and 't'.
 
@@ -29,7 +29,7 @@ Below picture shows how words are stored in trie. This trie stores five words: d
 
 ## 2. Search
 Given a trie as follows, search word 'dot'.
-![image](/public/images/dsa/1125/search.png){:width="700px"}
+![image](/public/images/dsa/1126/search.png){:width="700px"}
 There are two search approaches in trie.
 * Find whether the given word exists.
 * Find whether any word starts with the given prefix exists.
@@ -123,11 +123,11 @@ private void dfs(TrieNode node, String prefix, List<String> list) {
 
 ## 3. Insertion
 Given a trie as follows, insert new word 'firm' into this trie.
-![image](/public/images/dsa/1125/insertfirm.png)
+![image](/public/images/dsa/1126/insertfirm.png)
 We start searching the given word from root till we cannot find one particular character. Then we construct new trie nodes recursively for the rest characters. In the end, set the leaf attribute of the last node to true.
 
 One case needs to be noticed here. If the new word(eg. 'do') is prefix of other words(word 'do' is prefix of word 'dot'),  we just need to mark the last node(eg. node 'o') of the new word as leaf without creating any new node. Even though node 'o' has children, it is marked as leaf since the path from root to node 'o' represents word 'do'.
-![image](/public/images/dsa/1125/insertdo.png)
+![image](/public/images/dsa/1126/insertdo.png)
 Below is the implementation of the insert method.
 ```java
 // Insert a word into trie
@@ -154,15 +154,15 @@ There are three cases when deleting a word from Trie.
 
 ### 4.1 Word Is Prefix of Other Words
 Word 'do' is the prefix of word 'dot' and 'dog'.
-![image](/public/images/dsa/1125/deletedo.png)
+![image](/public/images/dsa/1126/deletedo.png)
 The solution is easy, just unmark the leaf node. The leaf node for word 'do' is node 'o'.
 ### 4.2 Word Has Prefix of Other Words
 Word 'fat' has same prefix with word 'fire'. They share the prefix 'f'.
-![image](/public/images/dsa/1125/deletefat.png)
+![image](/public/images/dsa/1126/deletefat.png)
 If word has prefix of other words, then delete nodes from prefix to end of the word.
 ### 4.3 Word Is Unique
 Word 'pump' is a standalone word. It doesn't share any prefix with others.
-![image](/public/images/dsa/1125/deletepump.png)
+![image](/public/images/dsa/1126/deletepump.png)
 If word neither is prefix of other words, nor has prefix of other words, then just delete all the nodes.
 
 The following implementation covers all above scenarios.
