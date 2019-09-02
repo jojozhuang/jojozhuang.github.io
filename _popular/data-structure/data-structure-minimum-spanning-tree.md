@@ -11,7 +11,16 @@ draft: true
 
 > Implement minimum spanning tree.
 
-## 3. Minimum Spanning Trees
+## 1. Spanning Tree
+Spanning tree can be defined as a sub-graph of connected, undirected graph G that is a tree produced by removing the desired number of edges from a graph. In other words, Spanning tree is a non-cyclic sub-graph of a connected and undirected graph G that connects all the vertices together. A graph G can have multiple spanning trees.
+
+## 2. Minimum Spanning Tree
+There can be weights assigned to every edge in a weighted graph. However, A minimum spanning tree is a spanning tree which has minimal total weight. In other words, minimum spanning tree is the one which contains the least weight among all other spanning tree of some particular graph.
+
+Shortest path algorithms
+In this section of the tutorial, we will discuss the algorithms to calculate the shortest path between two nodes in a graph.
+
+## 3. Implementation of Minimum Spanning Trees
 A `minimum spanning tree` (MST) is a graph with the minimum number of edges necessary to connect the vertices.
 ```java
 public class MinimumSpanningTree {
@@ -128,11 +137,8 @@ public void testMST() {
 }
 ```
 
-## 5. Source Files
-* [Source files for Graph on GitHub](https://github.com/jojozhuang/DataStructure/tree/master/Graph)
+## 4. Source Files
+* [Source files for Minimum Spanning Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-spanning-tree)
 
-## 6. Reference
-* [Data Structure - Graph Data Structure](https://www.tutorialspoint.com/data_structures_algorithms/graph_data_structure.htm)
-* [Graph and its representations](https://www.geeksforgeeks.org/graph-and-its-representations/)
-* [Breadth First Search or BFS for a Graph](https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/)
-* [Depth First Search or DFS for a Graph](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)
+## 5. Reference
+* [Spanning Tree](https://www.javatpoint.com/spanning-tree)
