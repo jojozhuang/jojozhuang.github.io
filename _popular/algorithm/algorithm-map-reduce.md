@@ -11,7 +11,15 @@ draft: true
 
 > Implement Map Reduce.
 
-## 1. Map Reduce
+## 1. What is MapReduce?
+`MapReduce` is a processing technique and a program model for distributed computing based on java. The major advantage of MapReduce is that it is easy to scale data processing over multiple computing nodes. The MapReduce algorithm contains two important tasks, namely `Map` and `Reduce`.
+* Map takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (key/value pairs).
+* Secondly, reduce task, which takes the output from a map as an input and combines those data tuples into a smaller set of tuples. As the sequence of the name MapReduce implies, the reduce task is always performed after the map job.
+
+Below diagram shows the process of using MapReduce to count the number of words from multiple sources.
+![image](/public/images/dsa/1235/map-reduce-word-count.png){:width="700px"}
+
+## 2. Implementation of MapReduce
 ```java
 public class TopKFrequentWords {
     //HashMap<String, Integer> map = new HashMap<String, Integer>();
@@ -116,8 +124,5 @@ public class TopKFrequentWords {
 ## 5. Source Files
 * [Source files for Map Reduce on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-map-reduce)
 
-
-## 7. References
-* [Data Structures - Algorithms Basics](https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm)
-* [Data Structure and Algorithms Binary Search](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
-* [Why should I use Deque over Stack?](https://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack)
+## 6. References
+* [Hadoop - MapReduce](https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm)

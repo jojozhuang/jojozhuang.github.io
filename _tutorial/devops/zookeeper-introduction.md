@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: tutorial
-title: "ZooKeeper"
-index: 3531
+title: "ZooKeeper - Introduction"
+index: 3521
 subcategory: devops
 date: 2018-08-10
 tags: [ZooKeeper]
@@ -11,6 +11,10 @@ tags: [ZooKeeper]
 > ZooKeeper Tutorial
 
 ## 1. ZooKeeper
+* Brief Introduction
+* Principle
+* Architecture
+* Comparison with other similar softwares.
 
 
 ## 9. References
