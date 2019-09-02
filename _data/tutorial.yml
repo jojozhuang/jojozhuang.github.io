@@ -79,6 +79,11 @@ categories:
         icon: fas fa-network-wired
         subcategory: network
         image: network.png
+      - name: Softwares
+        description: Softwares
+        icon: fas fa-compact-disc
+        subcategory: softwares
+        image: softwares.png
       - name: Database and Cache
         description: MongoDB, Cassandra, Redis, Memcached
         icon: fas fa-database
