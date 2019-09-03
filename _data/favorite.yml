@@ -398,6 +398,9 @@ bookmarks:
       - name: Maven
         description: A software project management and comprehension tool
         url: https://maven.apache.org/
+      - name: Nexus
+        description: An open source repository that supports many artifact formats, including Docker, Java, and npm.
+        url: https://www.sonatype.com/nexus-repository-sonatype
       - name: Gradle
         description: An open source build automation system
         url: https://gradle.org/

@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: tutorial
-title: "K8s - Introduction - Draft"
-index: 3706
+title: "Kubernetes - Real World Usage - Draft"
+index: 3708
 subcategory: softwares
 date: 2018-08-10
 tags: [K8s]
@@ -12,10 +12,9 @@ draft: true
 > K8s Tutorial
 
 ## 1. K8s
-* Brief Introduction
-* Principle
-* Architecture
-* Comparison with other similar softwares.
+* Scenario
+* Configuration Steps
+* Launch and Test
 
 
 ## 9. References

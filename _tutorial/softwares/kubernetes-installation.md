@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "K8s - Installation - Draft"
+title: "Kubernetes - Installation - Draft"
 index: 3707
 subcategory: softwares
 date: 2018-08-10
