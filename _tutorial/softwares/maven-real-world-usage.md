@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Maven - Real World Usage - Draft"
-index: 3713
+index: 3714
 subcategory: softwares
 date: 2018-08-10
 tags: [Maven]
