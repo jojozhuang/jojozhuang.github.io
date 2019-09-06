@@ -9,7 +9,9 @@ tags: [GFS]
 draft: true
 ---
 
-> Paper of Google File System.
+> Paper of The Google File System.
+
+Google File System is a scalable distributed file system for large distributed & data-intensive applications. This paper is the inspiration for HDFS, the file system that powers `Hadoop`.
 
 ## 1. Introduction
 * Running on inexpensive commodity hardware.
@@ -52,9 +54,23 @@ The master stores three major types of metadata:
 * The locations of each chunk’s replicas.
 
 The first two types (namespaces and file-to-chunk mapping) are also kept persistent by logging mutations to an `operation log` stored on the master’s local disk and replicated on remote machines. Using a log allows us to update the master state simply, reliably, and without risking inconsistencies in the event of a **master crash**.
+### 2.7 Consistency Model
 
+## 3. System Interactions
+### 3.1 Leases and Mutation Order
+Each mutation is performed at all the chunk’s replicas. We use `leases` to maintain a consistent mutation order across replicas. The master grants a chunk lease to one of the replicas, which we call the `primary`. The primary picks a serial order for all mutations to the chunk.
+![image](/public/images/devops/3221/gfs-control-flow.png){:width="600px"}
+1. The client asks the master which chunkserver holds the current lease for the chunkand the locations of the other replicas. If no one has a lease, the master grants one to a replica it chooses.
+2. The master replies with the identity of the primary and the locations of the other (secondary) replicas. The client caches this data for future mutations. It needs to contact the master again only when the primary becomes unreachable or replies that it no longer holds a lease.
+3. The client pushes the data to all the replicas. A client can do so in any order. Each chunkserver will store the data in an internal `LRU buffer` cache until the data is used or aged out. By decoupling the data flow from the control flow, we can improve performance by scheduling the expensive data flow based on the network topology regardless of which chunkserver is the primary.
+4. Once all the replicas have acknowledged receiving the data, the client sends a write request to the primary. The request identifies the data pushed earlier to all of the replicas. The primary assigns consecutive serial numbers to all the mutations it receives, possibly from multiple clients, which provides the necessary serialization. It applies the mutation to its own local state in serial number order.
+5. The primary forwards the write request to all secondary replicas. Each secondary replica applies mutations in the same serial number order assigned by the primary.
+6. The secondaries all reply to the primary indicating that they have completed the operation.
+7. The primary replies to the client. Any errors encountered at any of the replicas are reported to the client.
 
+## 4.
 
-## 3. Company engineering blogs
+## 4. References
 * [PDF of The Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf)
 * [GFS/MAPREDUCE/BIGTABLE中文版论文](http://blog.bizcloudsoft.com/?p=292)
+* [Reading Notes - Google File System](http://krishnabhargav.github.io/architecture/notes,/publication/notes/2014/06/22/Google-File-System-Notes.html)
