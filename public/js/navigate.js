@@ -15,7 +15,7 @@
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
         appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + item.title+ '</span></div></a>';
-        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span>' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
+        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled more-att">';
