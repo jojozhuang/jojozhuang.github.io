@@ -69,5 +69,49 @@ When using Atom, you can use the preview function before submitting the document
 Right click on the file you are editing, choose Markdown Preview at the top of context menu.
 ![image](/public/images/devops/2124/preview.png)  
 
-## 5. References
+## 5. Shortcuts
+### 5.1 Inserting characters at the beginning of multiple lines
+For example, insert bullet number at the head of each line.
+
+From:
+```raw
+Introduction To VPCs
+Build A Custom VPC - Part 1
+Build A Custom VPC - Part 2
+Network Address Translation (NAT)
+Access Control Lists (ACL)
+Custom VPCs and ELBs
+VPC Flow Logs
+Bastions
+Direct Connect
+VPC End Points
+Summary
+VPCs Quiz
+```
+To:
+```raw
+### 7.1 Introduction To VPCs
+### 7.1 Build A Custom VPC - Part 1
+### 7.1 Build A Custom VPC - Part 2
+### 7.1 Network Address Translation (NAT)
+### 7.1 Access Control Lists (ACL)
+### 7.1 Custom VPCs and ELBs
+### 7.1 VPC Flow Logs
+### 7.1 Bastions
+### 7.1 Direct Connect
+### 7.1 VPC End Points
+### 7.1 Summary
+### 7.1 VPCs Quiz
+```
+Do as follows:
+1. Select the lines, or [`ctrl+A`] to select all.
+2. Go to Selection Tab > Click on 'Split into lines', or [`Cmd+Shift+L`]
+3. Move the cursor to leftmost by clicking `Left` arrow, or [`Cmd+Left Arrow`]
+4. Now, you can type anything and it will be added to the starting of each line!
+
+![image](/public/images/devops/2124/multiple-lines.png){:width="600px"}
+
+
+## 6. References
 * [https://atom.io/](https://atom.io/)
+* [Inserting characters at the beginning of multiple lines](https://discuss.atom.io/t/inserting-characters-at-the-beginning-of-multiple-lines/9775)

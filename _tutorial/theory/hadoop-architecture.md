@@ -11,12 +11,89 @@ draft: true
 
 > Hadoop Architecture Overview.
 
-## 1. Hadoop Architecture Overview
-Apache Hadoop offers a scalable, flexible and reliable distributed computing big data framework for a cluster of systems with storage capacity and local computing power by leveraging commodity hardware. Hadoop follows a `Master-Slave` architecture for the transformation and analysis of large datasets using Hadoop `MapReduce` paradigm. The 3 important hadoop components that play a vital role in the Hadoop architecture are:
-* Hadoop Distributed File System (HDFS) – Patterned after the UNIX file system
-* Hadoop MapReduce
-* Yet Another Resource Negotiator (YARN)
+## 1. Hadoop Overview
+### 1.1 What is Hadoop?
+[Apache Hadoop](https://hadoop.apache.org/) is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage. Rather than rely on hardware to deliver high-availability, the library itself is designed to detect and handle failures at the application layer, so delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
+![image](/public/images/devops/3224/hadoop-framework.png){:width="700px"}
+### 1.2 Advantages of Hadoop
+* It gives access to the user to rapidly write and test the distributed systems and then automatically distributes the data and works across the machines and in turn utilizes the primary parallelism of the CPU cores.
+* Hadoop libraries are developed to find/search and handle the failures at the application layer.
+* Servers can be added or removed from the cluster dynamically at any point of time.
+* It is open source based on Java applications and hence compatible on all the platforms.
 
+### 1.3 Hadoop Features and Characteristics
+Apache Hadoop is the most popular and powerful big data tool, which  provides world’s best reliable storage layer –HDFS(Hadoop Distributed File System), a batch Processing engine namely  MapReduce and a Resource Management Layer like YARN.
+* `Distributed Processing`: The data storage is maintained in a distributed manner in HDFS across the cluster, data is processed in parallel on cluster of nodes.
+* `Fault Tolerance`: By default the three replicas of each block is stored across the cluster in Hadoop and it’s changed only when required. Hadoop’s fault tolerance can be examined in such cases when any node goes down, the data on that node can be recovered easily from other nodes. Failures of a particular node or task are recovered automatically by the framework.
+* `Reliability`: Due to replication of data in the cluster, data can be reliable which is stored on the cluster of machine despite machine failures. Even if your machine goes down, your data will be stored reliably.
+* `High Availability`: Data is available and accessible even hardware failure occurs. If any incidents occurred such as if your machine or few hardware crashes, then data will be accessed from other path.
+* `Scalability`: Hadoop is highly scalable and hardware can be easily added to the nodes in a unique way. It also provides horizontal scalability which means new nodes can be added on the top without any downtime.
+* `Economic`: Hadoop is not very expensive as it runs on cluster of commodity hardware. We do not require any specialized machine for it. Hadoop provides huge cost reduction since it is very easy to add more nodes on the top here. So if the requirement increases, then there is an increase of nodes, without any downtime and without any much of pre planning.
+* `Easy to use`: No need for client to deal with distributed computing, framework takes care of all the things. So it is easy to use.
+* `Data Locality`: Hadoop works on data locality principle. When client submits the program for computing, then the program is moved to the cluster where data locates instead of moving data to the location where the program locates.
+
+## 2. Hadoop Design
+### 2.1 Assumptions
+Hadoop is composed of large number of computers and is built upon the following assumptions:
+* Hardware may fail due to any external or technical malfunction where instead commodity hardware can be used.
+* Processing will be run in batches and there is an emphasis on high throughput as opposed to low latency.
+* Applications which run on HDFS have large sets of data. A typical file in HDFS may be from gigabytes to terabytes in size.
+* Applications require a write-once-read-many access model.
+* Moving computation programs is cheaper than moving data.
+
+### 2.2 Hadoop Design Principles
+The following are the design principles on which Hadoop works:
+* System shall manage and heal itself as per the requirement occurred.
+* Fault tolerance happens automatically and transparent to client.
+* Performance is scaled based on linearity.
+* Computation programs must be moved to data, not data to programs.
+* Data locality leads to lower latency and lower bandwidth.
+* It is based on simple core, modular and extensible (Economical).
+
+## 3. Hadoop Architecture
+### 3.1 Core Concepts
+* `Hadoop MapReduce` (Processing/Computation layer): MapReduce is a parallel programming model mainly used for writing large amount of data distribution applications devised from Google for efficient processing of large amounts of datasets, on large group of clusters.
+* `Hadoop HDFS` (Storage layer): Hadoop Distributed File System or HDFS is based on the Google File System (GFS) which provides a distributed file system that is especially designed to run on commodity hardwares. It reduces the faults or errors and helps incorporate low-cost hardware. It gives high level processing throughput access to application data and is suitable for applications with large datasets.
+* `Hadoop YARN`: Hadoop YARN is a framework  used for job scheduling and cluster resource management.
+* `Hadoop Common`: This includes Java libraries and utilities which provide those java files which are essential to start Hadoop.
+* `Task Tracker`: It is a node which is used to accept the tasks such as shuffle and Mapreduce form job tracker.
+* `Job Tracker`: It is a service provider which runs Mapreduce jobs on cluster.
+* `Name Node`: It is a node where Hadoop stores all file location information(data stored location) in Hadoop distributed file system.
+* `Data Node`: The data is stored in the Hadoop distributed file system.
+
+### 3.2 High-level Architecture
+Hadoop follows a `master-slave` architecture design for data storage and distributed data processing, which uses HDFS and MapReduce respectively. The master node for data storage in hadoop HDFS is the `Name Node` and the master node for parallel processing of data using Hadoop MapReduce is the `Job Tracker`. The slave nodes in the hadoop architecture are the other machines which store data and perform complex computations. Every slave node has a `Task Tracker` daemon and a `Data Node` that synchronizes the processes with the Job Tracker and NameNode respectively. In Hadoop architectural implementation the master or slave systems can be setup in the cloud or on-premise.
+![image](/public/images/devops/3224/mapreduce-hdfs.png){:width="700px"}
+Other Hadoop views.
+![image](/public/images/devops/3224/hadoop-view.png){:width="700px"}
+### 3.3 Hadoop Modules
+![image](/public/images/devops/3224/hadoop-ecosystem.png){:width="700px"}
+Hadoop comprises of 4 core components:
+* `Hadoop Common`: Common utilities which support other Hadoop modules.
+* `HDFS`: Hadoop Distributed File System provides unrestricted, high-speed access to the data application.
+* `MapReduce`: A highly efficient methodology for parallel processing of huge volumes of data.
+* `YARN`: Stands for Yet Another Resource Negotiato. This technology is basically used for scheduling of job and efficient management of the cluster resource.
+
+Other Hadoop ecosystem components:
+* `Ambari`: It is a tool for managing, monitoring and provisioning of the Hadoop clusters. Apache Ambari supports the HDFS and MapReduce programs. Major highlights of Ambari are:
+  - Managing of the Hadoop framework is highly efficient, secure and consistent.
+  - Management of cluster operations with an intuitive web UI and a robust API
+  - The installation and configuration of Hadoop cluster are simplified effectively.
+  - It is used to support automation, smart configuration and recommendations.
+  - Advanced cluster security set-up comes additional with this tool kit.
+  - The entire cluster can be controlled using the metrics, heat maps, analysis and troubleshooting.
+  - Increased levels of customization and extension make this more valuable.
+
+* `Cassandra`: It is a distributed system to handle extremely huge amount of data which is stored across several commodity servers. The database management system (DBMS)is highly available  with no single point of failure.
+* `HBase`: it is a non-relational, distributed database management system that works efficiently on sparse data sets and it is highly scalable.
+* `Spark`: This is highly agile, scalable and secure, the Big Data compute engine, versatiles the sufficient work on a wide variety of applications like real-time processing, machine learning, ETL and so on.
+* `Hive`: It is a data warehouse tool basically used for analyzing, querying and summarizing of analyzed data concepts on top of the Hadoop framework.
+* `Pig`: Pig is a high-level framework which ensures us to work in coordination either with Apache Spark or MapReduce to analyze the data. The language used to code for the frameworks are known as Pig Latin.
+* `Sqoop`: This framework is used for transferring the data to Hadoop from relational databases. This application is based on a command-line interface.
+* `Oozie`: This is a scheduling system for workflow management, executing workflow routes for successful completion of the task in Hadoop.
+* `Zookeeper`: Open source centralized service which is used to provide coordination between distributed applications of Hadoop. It offers the registry and synchronization service at a high level.
+
+## 4. Hadoop Details
 ### 1.1 Hadoop Architecture Explained
 Hadoop skillset requires thoughtful knowledge of every layer in the hadoop stack right from understanding about the various components in the hadoop architecture, designing a hadoop cluster, performance tuning it and setting up the top chain responsible for data processing.
 
@@ -56,34 +133,63 @@ The processing of the Map phase begins where the Task Tracker extracts the input
 * Design the Hadoop architecture for multi-tenancy by sharing the compute capacity with capacity scheduler and share HDFS storage.
 Do not edit the metadata files as it can corrupt the state of the Hadoop cluster.
 
-### 2.1 Facebook Hadoop Architecture
-With 1.59 billion accounts (approximately 1/5th of worlds total population) ,  30 million FB users updating their status at least once each day, 10+ million videos uploaded every month, 1+ billion content pieces shared every week and more than 1 billion photos uploaded every month – Facebook  uses hadoop to interact with petabytes of data. Facebook runs world’s largest Hadoop Cluster with more than 4000 machine storing hundreds of millions of gigabytes of data. The biggest hadoop cluster at Facebook has about 2500 CPU cores and 1 PB of disk space and the engineers at Facebook load more than 250 GB of compressed data  (is greater than 2 TB of uncompressed data) into HDFS daily and there are 100’s of hadoop jobs running daily on these datasets.
-
-**Where is the data stored at Facebook?**  
-135 TB of compressed data is scanned daily and 4 TB compressed data is added daily. Wondering where is all this data stored?  Facebook has a Hadoop/Hive warehouse with two level network topology having 4800 cores, 5.5 PB storing up to 12TB per node. 7500+ hadoop hive jobs run in production  cluster per day with an average of 80K compute hours. Non-engineers i.e. analysts at Facebook use Hadoop through hive and aprroximately 200 people/month run jobs on Apache Hadoop.
-
-Hadoop/Hive warehouse at Facebook uses a two level network topology -
-* 4 Gbit/sec to top level rack switch
-* 1 Gbit/sec from node to rack switch
-
-### 2.2 Yahoo Hadoop Architecture
-Hadoop at Yahoo has 36 different hadoop clusters spread across Apache HBase, Storm and YARN, totalling 60,000 servers made from 100's of different hardware configurations built up over generations.Yahoo runs the largest multi-tenant hadoop installation in the world withh broad set of use cases. Yahoo runs 850,000 hadoop jobs daily.
-
-For organizations planning to implement hadoop architecture in production, the best way to determine whether Hadoop is right for their company is - to determine the cost of storing and processing data using Hadoop. Compare the determined cost to the cost of legacy approach for managing data.
-
-### 3. Core Hadoop Components
+## 3. Hadoop Ecosystem Components and Its Architecture
+### 3.1 Hadoop Ecosystem Components
+![image](/public/images/devops/3224/hadoop-ecosystem.png){:width="650px"}
+### 3.2 Core Hadoop Components
 The Hadoop Ecosystem comprises of 4 core components:
-1) Hadoop Common  
+**1) Hadoop Common**  
 Apache Foundation has pre-defined set of utilities and libraries that can be used by other modules within the Hadoop ecosystem. For example, if HBase and Hive want to access HDFS they need to make of Java archives (JAR files) that are stored in Hadoop Common.
 
-2) Hadoop Distributed File System (HDFS) -
+**2) Hadoop Distributed File System (HDFS)**  
 The default big data storage layer for Apache Hadoop is HDFS. HDFS is the “Secret Sauce” of Apache Hadoop components as users can dump huge datasets into HDFS and the data will sit there nicely until the user wants to leverage it for analysis. HDFS component creates several replicas of the data block to be distributed across different clusters for reliable and quick data access. HDFS comprises of 3 important components-NameNode, DataNode and Secondary NameNode. HDFS operates on a Master-Slave architecture model where the NameNode acts as the master node for keeping a track of the storage cluster and the DataNode acts as a slave node summing up to the various systems within a Hadoop cluster.
 
-3) HDFS Use Case
-Nokia deals with more than 500 terabytes of unstructured data and close to 100 terabytes of structured data. Nokia uses HDFS for storing all the structured and unstructured data sets as it allows processing of the stored data at a petabyte scale.
+**3) MapReduce**  
+MapReduce is a Java-based system created by Google where the actual data from the HDFS store gets processed efficiently. MapReduce breaks down a big data processing job into smaller tasks. MapReduce is responsible for the analysing large datasets in parallel before reducing it to find the results. In the Hadoop ecosystem, Hadoop MapReduce is a framework based on YARN architecture. YARN based Hadoop architecture, supports parallel processing of huge data sets and MapReduce provides the framework for easily writing applications on thousands of nodes, considering fault and failure management.
 
-MapReduce
+The basic principle of operation behind MapReduce is that the “Map” job sends a query for processing to various nodes in a Hadoop cluster and the “Reduce” job collects all the results to output into a single value. Map Task in the Hadoop ecosystem takes input data and splits into independent chunks and output of this task will be the input for Reduce Task. In The same Hadoop ecosystem Reduce task combines Mapped data tuples into smaller set of tuples. Meanwhile, both input and output of tasks are stored in a file system. MapReduce takes care of scheduling jobs, monitoring jobs and re-executes the failed task.
+
+MapReduce framework forms the compute node while the HDFS file system forms the data node. Typically in the Hadoop ecosystem architecture both data node and compute node are considered to be the same.
+
+The delegation tasks of the MapReduce component are tackled by two daemons- Job Tracker and Task Tracker as shown in the image below.
+![image](/public/images/devops/3224/map-reduce.png){:width="650px"}
+
+**4) YARN**  
+YARN forms an integral part of Hadoop 2.0.YARN is great enabler for dynamic resource utilization on Hadoop framework as users can run various Hadoop applications without having to bother about increasing workloads.
+![image](/public/images/devops/3224/yarn.png){:width="650px"}
+Key Benefits of Hadoop 2.0 YARN Component-
+* It offers improved cluster utilization
+* Highly scalable
+* Beyond Java
+* Novel programming models and services
+* Agility
+
+ Pig and Hive
+​Apache Pig is a convenient tools developed by Yahoo for analysing huge data sets efficiently and easily. It provides a high level data flow language Pig Latin that is optimized, extensible and easy to use. The most outstanding feature of Pig programs is that their structure is open to considerable parallelization making it easy for handling large data sets.
+
+​ Hive developed by Facebook is a data warehouse built on top of Hadoop and provides a simple language known as HiveQL similar to SQL for querying, data summarization and analysis. Hive makes querying faster through indexing.
+
+Sqoop
+​​Sqoop component is used for importing data from external sources into related Hadoop components like HDFS, HBase or Hive. It can also be used for exporting data from Hadoop o other external structured data stores. Sqoop parallelized data transfer, mitigates excessive loads, allows data imports, efficient data analysis and copies data quickly.
+
+​Flume component is used to gather and aggregate large amounts of data. Apache Flume is used for collecting data from its origin and sending it back to the resting location (HDFS).Flume accomplishes this by outlining data flows that consist of 3 primary structures channels, sources and sinks. The processes that run the dataflow with flume are known as agents and the bits of data that flow via flume are known as events.
+
+HBase –
+HBase is a column-oriented database that uses HDFS for underlying storage of data. HBase supports random reads and also batch computations using MapReduce. With HBase NoSQL database enterprise can create large tables with millions of rows and columns on hardware machine. The best practice to use HBase is when there is a requirement for random ‘read or write’ access to big datasets.
+
+​Oozie is a workflow scheduler where the workflows are expressed as Directed Acyclic Graphs. Oozie runs in a Java servlet container Tomcat and makes use of a database to store all the running workflow instances, their states ad variables along with the workflow definitions to manage Hadoop jobs (MapReduce, Sqoop, Pig and Hive).The workflows in Oozie are executed based on data and time dependencies.
+
+
+
+​Zookeeper is the king of coordination and provides simple, fast, reliable and ordered operational services for a Hadoop cluster. Zookeeper is responsible for synchronization service, distributed configuration service and for providing a naming registry for distributed systems.
+
+### 1.2 Hadoop Stack
+![image](/public/images/devops/3224/hadoop-stack.png){:width="700px"}
+
 
 ## 3. References
+* [Apache Hadoop HDFS Architecture](https://www.edureka.co/blog/apache-hadoop-hdfs-architecture/)
 * [Hadoop Architecture Explained-What it is and why it matters](https://www.dezyre.com/article/hadoop-architecture-explained-what-it-is-and-why-it-matters/317)
 * [Hadoop Ecosystem Components and Its Architecture](https://www.dezyre.com/article/hadoop-ecosystem-components-and-its-architecture/114)
+* [Hadoop Tutorial](https://www.tutorialspoint.com/hadoop/index.htm)
+* [Introduction to Hadoop](https://intellipaat.com/blog/tutorial/hadoop-tutorial/introduction-hadoop/)
