@@ -13,30 +13,216 @@ draft: true
 
 ## 1. Introduction
 ### 1.1 Introduction
+* Course: https://acloud.guru/learn/aws-certified-solutions-architect-associate
+* AWS Sign In: https://signin.aws.amazon.com
+
 ### 1.2 The Exam Blue Print
+Home page of CSAA on AWS: https://aws.amazon.com/certification/certified-solutions-architect-associate/
 ### 1.3 Why Should I Learn AWS?
+Empty.
 
 ## 2. AWS - 10,000 Foot Overview
 ### 2.1 The History Of AWS
-### 2.2 AWS - 10,000 Foot Overview
-### 2.3 How To Sign Up To AWS
-### 2.4 10,000 Foot Overview Quiz
+* AWS launched in 2006.
+* Certifications was launched in 2013.
+* 10 different certs until 2019.
 
+### 2.2 AWS - 10,000 Foot Overview
+AWS Console 2016.
+![image](/public/images/note/9160/2-2-aws-console-2016.png)
+AWS Console 2017.
+![image](/public/images/note/9160/2-2-aws-console-2017.png)
+AWS Console 2019.
+![image](/public/images/note/9160/2-2-aws-console-2019.png)
+AWS High Level Services.
+![image](/public/images/note/9160/2-2-aws-high-level-services.png)
+Data Center and availabilities.
+![image](/public/images/note/9160/2-2-aws-data-center-availabilities.png)
+Region.
+![image](/public/images/note/9160/2-2-aws-region.png)
+Current regions divided by georigion.
+![image](/public/images/note/9160/2-2-aws-region2.png)
+Edge location.
+![image](/public/images/note/9160/2-2-aws-edge-location.png)
+Services need to know to pass the CSAA.
+![image](/public/images/note/9160/2-2-services-need-to-know.png)
+Core Services need to know to pass the CSAA.
+![image](/public/images/note/9160/2-2-services-need-to-know2.png)
+Exam tips.
+* Region
+* Availability Zone
+* Edge Location
+
+![image](/public/images/note/9160/2-2-exam-tips.png)
+### 2.3 How To Sign Up To AWS
+Empty.
+### 2.4 10,000 Foot Overview Quiz
+Quiz:
+* Both `Lambda` and `EC2` offer computing in the cloud. `S3` is a storage offering while `VPC` is a network service.
+* `VPC` allows you to provision a logically isolated section of the AWS where you can launch AWS resources in a virtual network. Cloudfront is a fast, highly secure and programmable content delivery network (CDN). EC2 provides compute resources while RDS is Amazon's Relational Database System.
+* `CloudFront` content is cached in Edge Locations.
+* A `region` is a geographical area divided into `Availability Zones`. Each region contains at least two Availability Zones.
+* A `Virtual Private Cloud (VPC)` is a virtual network dedicated to a single AWS account. It is logically isolated from other virtual networks in the AWS cloud, providing compute resources with security and robust networking functionality.
+* Each `region` is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones.
+* An `Availability Zone` (AZ) is a distinct location within an AWS Region. Each Region comprises at least two AZs.
+* `Public cloud` allows organisations to try out new ideas, new approaches and experiment with little upfront commitment. If it doesn't work out, organisations have the ability to terminate the resources and stop paying for them.
+* `RDS` is a service for relational databases provided by AWS. `DynamoDB` is AWS' fast, flexible, no-sql database service. `S3` provides the ability to store files in the cloud and is not suitable for databases, while `EC2` is part of the compute family of services.
+* `S3` and `EFS` both provide the ability to store files in the cloud. EC2 provides compute, and is often augmented with other storage services. VPC is a networking service.
 
 ## 3. Identity Access Management & S3
 ### 3.1 IAM 101
+Identity Access Management.
+![image](/public/images/note/9160/3-1-iam-features.png)
+Key Terminologies.
+* Users
+* Groups
+* Policies(Permissions)
+* Roles
+
+![image](/public/images/note/9160/3-1-iam-terminologies.png)
+
 ### 3.2 IAM Lab
+QR Code for MFA.
+![image](/public/images/note/9160/3-2-iam-qrcode.png)
+Problem with the MFA setup.
+![image](/public/images/note/9160/3-2-iam-mfa-setup-problem.png)
+* [Problem with AWS MFA setup](https://help.acloud.guru/hc/en-us/articles/360000782135-Problem-with-AWS-MFA-setup)
+
+Exam Tips.
+![image](/public/images/note/9160/3-2-exam-tips.png)
+![image](/public/images/note/9160/3-2-exam-tips2.png)
 ### 3.3 Create A Billing Alarm
+Top Menu -> johnnyaws-> My Billing Address.
+
+![image](/public/images/note/9160/3-3-billing-dashboard.png)
+Billing preferences.
+![image](/public/images/note/9160/3-3-billing-preferences.png)
+Top Menu -> Services->CloudWatch, then Alarms->Billing->Create alarm.
+
 ### 3.4 S3 101
+S3 Objects.
+![image](/public/images/note/9160/3-4-s3-objects.png)
+Data consistency.
+![image](/public/images/note/9160/3-4-s3-data-consistency.png)
+S3 Features.
+![image](/public/images/note/9160/3-4-s3-features.png)
+S3 Storage Classes.
+![image](/public/images/note/9160/3-4-s3-storage-classes.png)
+S3 Storage Classes2.
+![image](/public/images/note/9160/3-4-s3-storage-classes2.png)
+S3 Storage Comparison.
+![image](/public/images/note/9160/3-4-s3-storage-comparison.png)
+S3 Storage Charge.
+![image](/public/images/note/9160/3-4-s3-storage-charge.png)
+Exam tips.
+![image](/public/images/note/9160/3-4-s3-storage-exam-tips.png)
+![image](/public/images/note/9160/3-4-s3-storage-exam-tips2.png)
+![image](/public/images/note/9160/3-4-s3-storage-exam-tips3.png)
+![image](/public/images/note/9160/3-4-s3-storage-exam-tips4.png)
+![image](/public/images/note/9160/3-4-s3-storage-exam-tips5.png)
+* [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
+
 ### 3.5 Let's Create An S3 Bucket
+Create Bucket.
+![image](/public/images/note/9160/3-5-create-s3-bucket.png)
+![image](/public/images/note/9160/3-5-create-s3-bucket-config.png)
+![image](/public/images/note/9160/3-5-create-s3-bucket-permission.png)
+Upload files to bucket.
+![image](/public/images/note/9160/3-5-upload-file.png)
+![image](/public/images/note/9160/3-5-upload-file-permission.png)
+![image](/public/images/note/9160/3-5-upload-file-properties.png)
+Publish file.
+![image](/public/images/note/9160/3-5-file-link.png)
+https://johnnyawsguru-s3-01.s3.amazonaws.com/IMG_5807.JPG
+![image](/public/images/note/9160/3-5-file-access-denied.png)
+Public bucket.
+![image](/public/images/note/9160/3-5-public-bucket.png)
+Then, public file.
+![image](/public/images/note/9160/3-5-public-file.png)
+Now, the file is accessible.
+![image](/public/images/note/9160/3-5-public-file-success.png)
+Change storage class for one file. Click on the file, switch to 'Properties' tab -> Storage Class.
+![image](/public/images/note/9160/3-5-change-storage-class.png)
+Exam tips.
+![image](/public/images/note/9160/3-5-exam-tips.png)
 ### 3.6 S3 Security And Encryption
+S3 bucket.
+![image](/public/images/note/9160/3-6-s3-basics.png)
+S3 encryption.
+![image](/public/images/note/9160/3-6-s3-encryption.png)
+Change encryption type of file.
+![image](/public/images/note/9160/3-6-change-encryption-type.png)
+![image](/public/images/note/9160/3-6-change-encryption-type2.png)
 ### 3.7 S3 Version Control
+![image](/public/images/note/9160/3-7-s3-versioning.png)
+Exam tips.
+![image](/public/images/note/9160/3-7-s3-versioning-exam.png)
 ### 3.8 S3 Lifecycle Management and Glacier
+Bucket->Management->Lifecycle, add Lifecycle rule.
+![image](/public/images/note/9160/3-8-create-lifecycle-rule-1.png)
+Set transitions.
+![image](/public/images/note/9160/3-8-create-lifecycle-rule-transitions.png)
+Expiration.
+![image](/public/images/note/9160/3-8-create-lifecycle-rule-expiration.png)
+Save and done.
+![image](/public/images/note/9160/3-8-create-lifecycle-rule-done.png)
+Exam tips.
+![image](/public/images/note/9160/3-8-lifecycle-rule-exam-tips.png)
 ### 3.9 Cross Region Replication
+Bucket->Management->Replication, add rule.
+![image](/public/images/note/9160/3-9-create-replication-rule-source.png)
+Set destination, Create new bucket.
+![image](/public/images/note/9160/3-9-create-replication-rule-destination.png)
+Rule options, create new role.
+![image](/public/images/note/9160/3-9-create-replication-rule-role.png)
+Done.
+![image](/public/images/note/9160/3-9-create-replication-rule-done.png)
+Nothing in the new bucket.
+![image](/public/images/note/9160/3-9-new-replication-bucket.png)
+Try to add and remove some versions to see the impact.
+![image](/public/images/note/9160/3-9-new-replication-bucket-replicated.png)
+Exam tips.
+![image](/public/images/note/9160/3-9-replication-rule-exam-tips.png)
 ### 3.10 Transfer Acceleration
+![image](/public/images/note/9160/3-10-s3-transfer-acceleration.png)
+
+[Amazon S3 Transfer Acceleration Speed Comparison](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)
+![image](/public/images/note/9160/3-10-transfer-acceleration-speed-comparison.png)
+![image](/public/images/note/9160/3-10-transfer-acceleration-speed-comparison2.png)
+
 ### 3.11 CloudFront Overview
+![image](/public/images/note/9160/3-11-s3-cloudfront.png)
+CloundFront Terminologies.
+![image](/public/images/note/9160/3-11-s3-cloudfront-terminologies.png)
+What is CloudFront?
+![image](/public/images/note/9160/3-11-s3-what-is-cloudfront.png)
+CloundFront Terminologies2.
+![image](/public/images/note/9160/3-11-s3-cloudfront-terminologies2.png)
+Exam tips.
+![image](/public/images/note/9160/3-11-s3-cloudfront-exam-tips.png)
+![image](/public/images/note/9160/3-11-s3-cloudfront-exam-tips2.png)
 ### 3.12 CloudFront Lab
+Services->Networking & Content Delivery->CloudFront, click "Create distribution", select "Web", then select the S3 bucket to distribute.
+![image](/public/images/note/9160/3-12-cloundfront-create-distribution.png)
+Some settings:
+* Restrict View Access
+* TTL
+
+Keep the default settings, create distribution.
+![image](/public/images/note/9160/3-12-cloundfront-create-distribution-in-progress.png)
+
+
 ### 3.13 Snowball Overview
+Snowball.
+![image](/public/images/note/9160/3-13-snowball.png)
+Snowball Edge.
+![image](/public/images/note/9160/3-13-snowball-edge.png)
+Snowball Mobile.
+![image](/public/images/note/9160/3-13-snowball-mobile.png)
+When to use Snowball.
+![image](/public/images/note/9160/3-13-snowball-when-to-use.png)
+Exam tips.
+![image](/public/images/note/9160/3-13-snowball-exam-tips.png)
 ### 3.14 Snowball Lab
 ### 3.15 Storage Gateway
 ### 3.16 Identity Access Management & S3 Summary
