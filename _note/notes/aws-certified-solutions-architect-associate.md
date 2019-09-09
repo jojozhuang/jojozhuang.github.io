@@ -433,8 +433,106 @@ Exam tips.
 ![image](/public/images/note/9160/4-8-ec2-volume-snapshot-exam-tips.png)
 ![image](/public/images/note/9160/4-8-ec2-volume-snapshot-exam-tips2.png)
 ### 4.9 CloudWatch 101
+CloudWatch.
+![image](/public/images/note/9160/4-9-ec2-cloudwatch-monitor.png)
+![image](/public/images/note/9160/4-9-ec2-cloudwatch-monitor2.png)
+CloudTrail.
+![image](/public/images/note/9160/4-9-ec2-cloudtrail.png)
+CloudWatch exam tips.
+![image](/public/images/note/9160/4-9-ec2-cloudwatch-exam-tips.png)
 ### 4.10 CloudWatch Lab
+Create instance with enabling the cloundwatch. Don't do it for experiment as it charges.
+![image](/public/images/note/9160/4-10-ec2-create-instance-with-cloudwatch.png)
+Create cloudwatch alarm for CPU usage, Services->Management & Governance -> CloudWatch, Create Alarm.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-1.png)
+Select EC2.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-2.png)
+Per-Instance Metrics.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-3.png)
+Choose 'CPUUtilization' for the target instance.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-4.png)
+Set condition, threshold.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-5.png)
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-6.png)
+Create topic and set email address.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-7.png)
+Ssh to remote ec2 instance and run following command.
+```raw
+> ssh ec2-user@10.23.123.12 -i johnny-aws-keypair
+> sudo su
+> while true; do echo; done
+```
+CPU usage will increase to high level to trigger the alarm and you will receive the alarm email.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-create-alarm-8.png)
+CloudWatch exam tips.
+![image](/public/images/note/9160/4-10-ec2-cloudwatch-exam-tips.png)
 ### 4.11 The AWS Command Line
+Start EC2 instance and get its public IP. SSH to it remotely.
+```raw
+>ssh ec2-user@18.234.185.140 -i johnny-aws-ec2-keypair.pem
+The authenticity of host '18.234.185.140 (18.234.185.140)' can't be established.
+ECDSA key fingerprint is SHA256:U8mtdYsvO0ltiT2L/GY+p+4+n/td8Q7qzWkGovkIlPI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '18.234.185.140' (ECDSA) to the list of known hosts.
+Last login: Mon Sep  9 15:40:49 2019 from 169.145.92.73
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-93-212 ~]$ sudo su
+[root@ip-172-31-93-212 ec2-user]# ls
+```
+Use `aws s3 ls` to list all existing s3 buckets, error occurs.
+```raw
+[root@ip-172-31-93-212 ec2-user]# aws s3 ls
+Unable to locate credentials. You can configure credentials by running "aws configure".
+[root@ip-172-31-93-212 ec2-user]#
+```
+Create a new user and download the secure csv which contains id/keys as follows.
+* Access key ID: AKIAVTWZ2FEKC3TIKCME
+* Secret access key: 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
+
+Use `aws configure` to setup configration.
+```raw
+[root@ip-172-31-93-212 ec2-user]# aws configure
+AWS Access Key ID [None]: AKIAVTWZ2FEKC3TIKCME
+AWS Secret Access Key [None]: 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
+Default region name [None]: us-east-1
+Default output format [None]:
+[root@ip-172-31-93-212 ec2-user]#
+```
+Then, try again. All existing s3 buckets are listed.
+```raw
+[root@ip-172-31-93-212 ec2-user]# aws s3 ls
+2019-09-08 23:29:38 bucket-replication-destination
+2019-09-08 20:34:17 johnnyawsguru-s3-01
+2019-09-08 22:41:06 johnnyawsguru-version-01
+```
+Find the credentials, which is stored in file '~/.aws/credentials'.
+```raw
+[root@ip-172-31-93-212 ec2-user]# cd ~
+[root@ip-172-31-93-212 ~]# ls -la
+total 20
+dr-xr-x---  4 root root 115 Sep  9 20:53 .
+dr-xr-xr-x 18 root root 257 Sep  9 15:39 ..
+drwxr-xr-x  2 root root  39 Sep  9 20:53 .aws
+-rw-r--r--  1 root root  18 Oct 18  2017 .bash_logout
+-rw-r--r--  1 root root 176 Oct 18  2017 .bash_profile
+-rw-r--r--  1 root root 176 Oct 18  2017 .bashrc
+-rw-r--r--  1 root root 100 Oct 18  2017 .cshrc
+drwx------  2 root root  29 Sep  9 15:39 .ssh
+-rw-r--r--  1 root root 129 Oct 18  2017 .tcshrc
+[root@ip-172-31-93-212 ~]# cd .aws
+[root@ip-172-31-93-212 .aws]# ls
+config  credentials
+[root@ip-172-31-93-212 .aws]# nano credentials
+```
+![image](/public/images/note/9160/4-11-ec2-command-line-credentials.png)
+Exam tips.
+![image](/public/images/note/9160/4-11-ec2-command-line-exam-tips.png)
+
 ### 4.12 Using IAM Roles With EC2
 ### 4.13 Using Boot Strap Scripts
 ### 4.14 EC2 Instance Meta Data
