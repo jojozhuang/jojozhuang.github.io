@@ -317,7 +317,7 @@ Choose AMI.
 ![image](/public/images/note/9160/4-2-ec2-create-instance-2.png)
 Choose Instance Type.
 ![image](/public/images/note/9160/4-2-ec2-create-instance-3.png)
-Configure Instance Details.
+Configure Instance Details, check "Protect against accidental termination".
 ![image](/public/images/note/9160/4-2-ec2-create-instance-4.png)
 Add Storage.
 ![image](/public/images/note/9160/4-2-ec2-create-instance-5.png)
@@ -327,7 +327,7 @@ Security Group.
 ![image](/public/images/note/9160/4-2-ec2-create-instance-7.png)
 Launch.
 ![image](/public/images/note/9160/4-2-ec2-create-instance-8.png)
-Create key pair.
+Create key pair, johnny-aws-ec2-keypair
 ![image](/public/images/note/9160/4-2-ec2-create-instance-9.png)
 Download Key Pair and Launch Instances.
 ![image](/public/images/note/9160/4-2-ec2-create-instance-10.png)
@@ -340,8 +340,9 @@ IMG_5807.JPG			johnny-aws-ec2-keypair.pem
 IMG_5819.JPG			vertioning-test.txt
 > chmod 400 johnny-aws-ec2-keypair.pem
 > ssh ec2-user@3.83.9.181 -i johnny-aws-ec2-keypair.pem
-Last login: Mon Sep  9 05:45:32 2019 from c-24-6-102-88.hsd1.ca.comcast.net
-
+ECDSA key fingerprint is SHA256:U8mtdYsvO0ltiT2L/GY+p+4+n/td8Q7qzWkGovkIlPI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '3.83.9.181' (ECDSA) to the list of known hosts.
        __|  __|_  )
        _|  (     /   Amazon Linux 2 AMI
       ___|\___|___|
@@ -378,10 +379,59 @@ Access 3.83.9.181 or http://3.83.9.181/index.html through web browser.
 Exam tips.
 ![image](/public/images/note/9160/4-3-ec2-exam-tips.png)
 ### 4.4 Security Groups Basics
+All outbound traffic is allowed.
+![image](/public/images/note/9160/4-4-ec2-security-group-outbound.png)
+You can have multiple security groups attached to EC2 instance. (Instance->Actions->NetWorking->Change Security Groups)
+![image](/public/images/note/9160/4-4-ec2-security-group-multiple-groups.png)
+Exam tips.
+![image](/public/images/note/9160/4-4-ec2-security-group-exam-tips.png)
+![image](/public/images/note/9160/4-4-ec2-security-group-exam-tips2.png)
 ### 4.5 EBS 101
+![image](/public/images/note/9160/4-5-ec2-ebs.png)
+![image](/public/images/note/9160/4-5-ec2-ebs-volumes.png)
+![image](/public/images/note/9160/4-5-ec2-ebs-types.png)
 ### 4.6 Volumes & Snapshots
+TODO, labs.
+![image](/public/images/note/9160/4-6-ec2-ebs-exam-tips.png)
+![image](/public/images/note/9160/4-6-ec2-ebs-exam-tips2.png)
+![image](/public/images/note/9160/4-6-ec2-ebs-exam-tips3.png)
 ### 4.7 AMI Types (EBS vs Instance Store)
+![image](/public/images/note/9160/4-7-ec2-ami-types.png)
+![image](/public/images/note/9160/4-7-ec2-ebs-vs-instance-store.png)
+
+Create instance store.
+![image](/public/images/note/9160/4-7-ec2-create-instance-store.png)
+Check instance store.
+![image](/public/images/note/9160/4-7-ec2-create-instance-store-2.png)
+Select the top one, then choose the first available instance type.
+![image](/public/images/note/9160/4-7-ec2-create-instance-store-3.png)
+Keep the default settings. In step "Add Storage", notice the volume type is Instance Store.
+![image](/public/images/note/9160/4-7-ec2-create-instance-store-4.png)
+Continue with the default settings and reuse the security group created previously and launch.
+![image](/public/images/note/9160/4-7-ec2-create-instance-store-5.png)
+Instance store can't be stopped. Terminate it as it is not in the free trial.
+![image](/public/images/note/9160/4-7-ec2-create-instance-store-6.png)
+EBS and instance store, exam tips.
+![image](/public/images/note/9160/4-7-ec2-ebs-instance-store-exam-tips.png)
 ### 4.8 Encrypted Root Device Volumes & Snapshots
+Volumes->Select one volume, Actions->Create Snapshot.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-1.png)
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-2.png)
+Switch to Snapshots view and wait until it's finished.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-3.png)
+Copy and choose encrypted.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-4.png)
+The new instance is launched.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-5.png)
+Select it and create image with it.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-6.png)
+Switch to Images view and see the AMI.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-7.png)
+Now, we can use this image to launch new instance, notice it is encrypted by default.
+![image](/public/images/note/9160/4-8-ec2-volume-create-snapshot-8.png)
+Exam tips.
+![image](/public/images/note/9160/4-8-ec2-volume-snapshot-exam-tips.png)
+![image](/public/images/note/9160/4-8-ec2-volume-snapshot-exam-tips2.png)
 ### 4.9 CloudWatch 101
 ### 4.10 CloudWatch Lab
 ### 4.11 The AWS Command Line
