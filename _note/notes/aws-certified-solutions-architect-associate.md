@@ -152,6 +152,7 @@ S3 encryption.
 ![image](/public/images/note/9160/3-6-s3-encryption.png)
 Change encryption type of file.
 ![image](/public/images/note/9160/3-6-change-encryption-type.png)
+Encrypt with AWS KMS.
 ![image](/public/images/note/9160/3-6-change-encryption-type2.png)
 ### 3.7 S3 Version Control
 ![image](/public/images/note/9160/3-7-s3-versioning.png)
@@ -210,7 +211,22 @@ Some settings:
 
 Keep the default settings, create distribution.
 ![image](/public/images/note/9160/3-12-cloundfront-create-distribution-in-progress.png)
+Wait for few minutes until the deployment is done.
+![image](/public/images/note/9160/3-12-cloundfront-create-distribution-enabled.png)
+Copy the domain name, which is 'digq5vi21aheh.cloudfront.net' here.
 
+There are two images files in the original bucket.
+
+Access the first one, http://digq5vi21aheh.cloudfront.net/IMG_5807.JPG, failed. because this file is encrypted with AWS KMS.
+![image](/public/images/note/9160/3-12-cloundfront-distributed-encrypted-file.png)
+Access the second file, http://digq5vi21aheh.cloudfront.net/IMG_5819.JPG, succeeded.
+![image](/public/images/note/9160/3-12-cloundfront-distributed-file.png)
+
+Create invalidation for distribution.
+![image](/public/images/note/9160/3-12-cloundfront-distribution-invalidation.png)
+Exam tips.
+![image](/public/images/note/9160/3-12-cloundfront-exam-tips.png)
+![image](/public/images/note/9160/3-12-cloundfront-exam-tips2.png)
 
 ### 3.13 Snowball Overview
 Snowball.
@@ -224,14 +240,143 @@ When to use Snowball.
 Exam tips.
 ![image](/public/images/note/9160/3-13-snowball-exam-tips.png)
 ### 3.14 Snowball Lab
+See the similar video [How Amazon Uses Explosive-Resistant Devices To Transfer Data To AWS](https://www.youtube.com/watch?v=H3_ZqnqLyVo).
 ### 3.15 Storage Gateway
+![image](/public/images/note/9160/3-15-storage-gateway.png)
+![image](/public/images/note/9160/3-15-storage-gateway2.png)
+Gateway types.
+![image](/public/images/note/9160/3-15-storage-gateway-types.png)
+File gateway.
+![image](/public/images/note/9160/3-15-file-gateway.png)
+![image](/public/images/note/9160/3-15-file-gateway2.png)
+Volume gateway.
+![image](/public/images/note/9160/3-15-volume-gateway.png)
+Volume gateway, stored volumes.
+![image](/public/images/note/9160/3-15-volume-gateway-stored-volumes.png)
+![image](/public/images/note/9160/3-15-volume-gateway-stored-volumes2.png)
+Volume gateway, cached volumes.
+![image](/public/images/note/9160/3-15-volume-gateway-cached-volumes.png)
+![image](/public/images/note/9160/3-15-volume-gateway-cached-volumes2.png)
+Tape gateway.
+![image](/public/images/note/9160/3-15-tape-gateway.png)
+![image](/public/images/note/9160/3-15-tape-gateway2.png)
+Exam tips.
+![image](/public/images/note/9160/3-15-tape-gateway-exam-tips.png)
 ### 3.16 Identity Access Management & S3 Summary
+![image](/public/images/note/9160/3-16-s3-exam-tips-1.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-2.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-3.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-4.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-5.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-6.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-7.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-8.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-9.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-10.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-11.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-12.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-13.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-14.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-15.png)
+![image](/public/images/note/9160/3-16-s3-exam-tips-16.png)
+* [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
+
 ### 3.17 Identity Access Management & S3 Quiz
+* S3 - One Zone-Infrequent Access: The key driver here is cost, so an awareness of cost is necessary to answer this. Full S3 is quite expensive at around $0.023 per GB for the lowest band. S3 standard IA is $0.0125 per GB, S3 One-Zone-IA is $0.01 per GB, and Legacy S3-RRS is around $0.024 per GB for the lowest band. Of the offered solutions SS3 One-Zone-IA is the cheapest suitable option. Glacier cannot be considered as it is not intended for direct access, however it comes in at around $0.004 per GB. Of course you spotted that RRS is being deprecated, and there is no such thing as S3 - Provisioned IOPS. In this case OneZone IA should be fine as users will 'post' material but only the organization will access it and only to find relevant material. The question states that there is no concern if some material is lost.
+* https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html
+* To access the console you use an account and password combination. To access AWS programmatically you use a Key and Secret Key combination
+* Three options to allow users to have secure access to private files located in S3. Signed URLs and Signed Cookies are different ways to ensure that users attempting access to files in an S3 bucket can be authorised. One method generates URLs and the other generates special cookies but they both require the creation of an application and policy to generate and control these items. An Origin Access Identity on the other hand, is a virtual user identity that is used to give the CloudFront distribution permission to fetch a private object from an S3 bucket. Public S3 buckets should never be used unless you are using the bucket to host a public website and therefore this is an incorrect option.
 
 ## 4. EC2
 ### 4.1 EC2 101
+![image](/public/images/note/9160/4-1-ec2.png)
+EC2 Pricing models.
+![image](/public/images/note/9160/4-1-ec2-pricing-model.png)
+On demand.
+![image](/public/images/note/9160/4-1-ec2-on-demand.png)
+Reserved Pricing.
+![image](/public/images/note/9160/4-1-ec2-reserved-pricing.png)
+Reserved pricing types.
+![image](/public/images/note/9160/4-1-ec2-reserved-types.png)
+Spot pricing.
+![image](/public/images/note/9160/4-1-ec2-spot-pricing.png)
+Dedicated Hosts pricing.
+![image](/public/images/note/9160/4-1-ec2-dedicated-hosts-pricing.png)
+Instance Types
+![image](/public/images/note/9160/4-1-ec2-instance-types.png)
+Mnemonic.
+![image](/public/images/note/9160/4-1-ec2-reserved-types-mnemonic.png)
+EC2 exam tips.
+![image](/public/images/note/9160/4-1-ec2-exam-tips.png)
+![image](/public/images/note/9160/4-1-ec2-exam-tips2.png)
+![image](/public/images/note/9160/4-1-ec2-exam-tips3.png)
 ### 4.2 Let's Get Our Hands Dirty With EC2 - Part 1
+Services->EC2, Launch Instance.
+![image](/public/images/note/9160/4-2-ec2-create-instance-1.png)
+Choose AMI.
+![image](/public/images/note/9160/4-2-ec2-create-instance-2.png)
+Choose Instance Type.
+![image](/public/images/note/9160/4-2-ec2-create-instance-3.png)
+Configure Instance Details.
+![image](/public/images/note/9160/4-2-ec2-create-instance-4.png)
+Add Storage.
+![image](/public/images/note/9160/4-2-ec2-create-instance-5.png)
+Add Tags.
+![image](/public/images/note/9160/4-2-ec2-create-instance-6.png)
+Security Group.
+![image](/public/images/note/9160/4-2-ec2-create-instance-7.png)
+Launch.
+![image](/public/images/note/9160/4-2-ec2-create-instance-8.png)
+Create key pair.
+![image](/public/images/note/9160/4-2-ec2-create-instance-9.png)
+Download Key Pair and Launch Instances.
+![image](/public/images/note/9160/4-2-ec2-create-instance-10.png)
+Instance created and launched. Note down the public ip '3.83.9.181'.
+![image](/public/images/note/9160/4-2-ec2-create-instance-11.png)
+Connect to EC2 instance remotely.
+```raw
+> ls
+IMG_5807.JPG			johnny-aws-ec2-keypair.pem
+IMG_5819.JPG			vertioning-test.txt
+> chmod 400 johnny-aws-ec2-keypair.pem
+> ssh ec2-user@3.83.9.181 -i johnny-aws-ec2-keypair.pem
+Last login: Mon Sep  9 05:45:32 2019 from c-24-6-102-88.hsd1.ca.comcast.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-83-218 ~]$
+```
+Install httpd.
+```raw
+[ec2-user@ip-172-31-83-218 ~]$ sudo su
+[root@ip-172-31-83-218 ec2-user]# yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                            | 2.4 kB  00:00:00     
+No packages marked for update
+[root@ip-172-31-83-218 ec2-user]# yum install httpd -y
+```
+Create an html page under /var/www/html with the following content.
+```html
+<html><h1>Hello	Johnny from EC2!</h1></html>
+```
+In remote ec2.
+```raw
+[root@ip-172-31-83-218 ec2-user]# cd /var/www/html
+[root@ip-172-31-83-218 html]# nano index.html
+[root@ip-172-31-83-218 html]# ls
+index.html
+[root@ip-172-31-83-218 html]# service httpd start
+Redirecting to /bin/systemctl start httpd.service
+[root@ip-172-31-83-218 html]# chkconfig on
+```
+Access 3.83.9.181 or http://3.83.9.181/index.html through web browser.
+![image](/public/images/note/9160/4-2-ec2-create-instance-12.png)
 ### 4.3 Let's Get Our Hands Dirty With EC2 - Part 2
+Exam tips.
+![image](/public/images/note/9160/4-3-ec2-exam-tips.png)
 ### 4.4 Security Groups Basics
 ### 4.5 EBS 101
 ### 4.6 Volumes & Snapshots
