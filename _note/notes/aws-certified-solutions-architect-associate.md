@@ -857,10 +857,60 @@ Redshift exam tips.
 ### 5.7 Aurora
 ![image](/public/images/note/9160/5-7-aurora-1.png)
 ![image](/public/images/note/9160/5-7-aurora-2.png)
+Scaling Aurora.
+![image](/public/images/note/9160/5-7-aurora-3.png)
+Compare Aurora replica and MySQL replica.
+![image](/public/images/note/9160/5-7-aurora-4.png)
+Backup Aurora.
+![image](/public/images/note/9160/5-7-aurora-5.png)
+TODO, lab, create Aurora Read Replica.
+![image](/public/images/note/9160/5-7-aurora-exam-tips.png)
 ### 5.8 Elasticache
+![image](/public/images/note/9160/5-8-elastic-cache-1.png)
+Redis vs Memcache.
+![image](/public/images/note/9160/5-8-elastic-cache-2.png)
+Exam tips.
+![image](/public/images/note/9160/5-8-elastic-cache-3.png)
 ### 5.9 Databases Summary
+![image](/public/images/note/9160/5-9-database-summary-1.png)
+![image](/public/images/note/9160/5-9-database-summary-2.png)
+![image](/public/images/note/9160/5-9-database-summary-3.png)
+![image](/public/images/note/9160/5-9-database-summary-4.png)
+![image](/public/images/note/9160/5-9-database-summary-5.png)
+![image](/public/images/note/9160/5-9-database-summary-6.png)
+![image](/public/images/note/9160/5-9-database-summary-7.png)
+![image](/public/images/note/9160/5-9-database-summary-8.png)
+![image](/public/images/note/9160/5-9-database-summary-9.png)
+![image](/public/images/note/9160/5-9-database-summary-10.png)
+![image](/public/images/note/9160/5-9-database-summary-11.png)
+![image](/public/images/note/9160/5-9-database-summary-12.png)
 ### 5.10 Databases On AWS Quiz
-
+![image](/public/images/note/9160/5-10-database-quiz-1.png)
+![image](/public/images/note/9160/5-10-database-quiz-2.png)
+![image](/public/images/note/9160/5-10-database-quiz-3.png)
+![image](/public/images/note/9160/5-10-database-quiz-4.png)
+![image](/public/images/note/9160/5-10-database-quiz-5.png)
+![image](/public/images/note/9160/5-10-database-quiz-6.png)
+![image](/public/images/note/9160/5-10-database-quiz-7.png)
+![image](/public/images/note/9160/5-10-database-quiz-8.png)
+![image](/public/images/note/9160/5-10-database-quiz-9.png)
+![image](/public/images/note/9160/5-10-database-quiz-10.png)
+![image](/public/images/note/9160/5-10-database-quiz-11.png)
+![image](/public/images/note/9160/5-10-database-quiz-12.png)
+![image](/public/images/note/9160/5-10-database-quiz-13.png)
+![image](/public/images/note/9160/5-10-database-quiz-14.png)
+![image](/public/images/note/9160/5-10-database-quiz-15.png)
+![image](/public/images/note/9160/5-10-database-quiz-16.png)
+![image](/public/images/note/9160/5-10-database-quiz-17.png)
+![image](/public/images/note/9160/5-10-database-quiz-18.png)
+![image](/public/images/note/9160/5-10-database-quiz-19.png)
+![image](/public/images/note/9160/5-10-database-quiz-20.png)
+![image](/public/images/note/9160/5-10-database-quiz-21.png)
+![image](/public/images/note/9160/5-10-database-quiz-22.png)
+![image](/public/images/note/9160/5-10-database-quiz-23.png)
+![image](/public/images/note/9160/5-10-database-quiz-24.png)
+![image](/public/images/note/9160/5-10-database-quiz-25.png)
+![image](/public/images/note/9160/5-10-database-quiz-26.png)
 ## 6. Route53
 ### 6.1 DNS 101
 ### 6.2 Route53 - Register A Domain Name Lab
