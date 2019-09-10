@@ -17,6 +17,9 @@ draft: true
 * AWS Sign In: https://signin.aws.amazon.com
 * [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
 * [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
+* [AWS Whitepapers & Guides](https://aws.amazon.com/whitepapers)
+* [SAA-C01 Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf)
+* [Sample Questions](https://d1.awsstatic.com/training-and-certification/docs/AWS_Certified_Solutions_Architect_Associate_Sample_Questions.pdf)
 
 ### 1.2 The Exam Blue Print
 Home page of CSAA on AWS: https://aws.amazon.com/certification/certified-solutions-architect-associate/
@@ -492,15 +495,11 @@ Use `aws s3 ls` to list all existing s3 buckets, error occurs.
 Unable to locate credentials. You can configure credentials by running "aws configure".
 [root@ip-172-31-93-212 ec2-user]#
 ```
-Create a new user and download the secure csv which contains id/keys as follows.
-* Access key ID: AKIAVTWZ2FEKC3TIKCME
-* Secret access key: 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
-
-Use `aws configure` to setup configration.
+Create a new user and download the secure csv which contains id/keys. Use them with `aws configure` to setup configration.
 ```raw
 [root@ip-172-31-93-212 ec2-user]# aws configure
-AWS Access Key ID [None]: AKIAVTWZ2FEKC3TIKCME
-AWS Secret Access Key [None]: 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
+AWS Access Key ID [None]: ******************
+AWS Secret Access Key [None]: ***************************************
 Default region name [None]: us-east-1
 Default output format [None]:
 [root@ip-172-31-93-212 ec2-user]#
@@ -857,6 +856,7 @@ Redshift exam tips.
 ![image](/public/images/note/9160/5-6-redshift-exam-tips-2.png)
 ### 5.7 Aurora
 ![image](/public/images/note/9160/5-7-aurora-1.png)
+![image](/public/images/note/9160/5-7-aurora-2.png)
 ### 5.8 Elasticache
 ### 5.9 Databases Summary
 ### 5.10 Databases On AWS Quiz
