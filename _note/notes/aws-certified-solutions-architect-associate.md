@@ -15,6 +15,8 @@ draft: true
 ### 1.1 Introduction
 * Course: https://acloud.guru/learn/aws-certified-solutions-architect-associate
 * AWS Sign In: https://signin.aws.amazon.com
+* [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
+* [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
 
 ### 1.2 The Exam Blue Print
 Home page of CSAA on AWS: https://aws.amazon.com/certification/certified-solutions-architect-associate/
@@ -510,7 +512,7 @@ Then, try again. All existing s3 buckets are listed.
 2019-09-08 20:34:17 johnnyawsguru-s3-01
 2019-09-08 22:41:06 johnnyawsguru-version-01
 ```
-Find the credentials, which is stored in file '~/.aws/credentials'.
+Actually, the 'aws configure' command stores the credentials to file, which is stored in '~/.aws/credentials'.
 ```raw
 [root@ip-172-31-93-212 ec2-user]# cd ~
 [root@ip-172-31-93-212 ~]# ls -la
@@ -532,15 +534,237 @@ config  credentials
 ![image](/public/images/note/9160/4-11-ec2-command-line-credentials.png)
 Exam tips.
 ![image](/public/images/note/9160/4-11-ec2-command-line-exam-tips.png)
-
 ### 4.12 Using IAM Roles With EC2
-### 4.13 Using Boot Strap Scripts
-### 4.14 EC2 Instance Meta Data
-### 4.15 Elastic File System
-### 4.16 EC2 Placement Groups
-### 4.17 EC2 Summary
-### 4.18 EC2 Quiz
+Services -> IAM -> Roles -> Create Role, choose EC2.
+![image](/public/images/note/9160/4-12-ec2-iam-role-1.png)
+Select AdministratorAccess.
+![image](/public/images/note/9160/4-12-ec2-iam-role-2.png)
+Input name.
+![image](/public/images/note/9160/4-12-ec2-iam-role-3.png)
+New role created.
+![image](/public/images/note/9160/4-12-ec2-iam-role-4.png)
 
+Use role. ssh to remote ec2 instance, try 'aws s3 ls' command. It doesn't work if credentials are not there in '.aws' folder.
+```raw
+[ec2-user@ip-172-31-93-212 ~]$ cd ~
+[ec2-user@ip-172-31-93-212 ~]$ ls -la
+total 16
+drwx------ 3 ec2-user ec2-user  95 Sep  9 17:05 .
+drwxr-xr-x 3 root     root      22 Sep  9 15:39 ..
+-rw------- 1 ec2-user ec2-user  18 Sep  9 21:04 .bash_history
+-rw-r--r-- 1 ec2-user ec2-user  18 Jul 27  2018 .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 Jul 27  2018 .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 Jul 27  2018 .bashrc
+drwx------ 2 ec2-user ec2-user  29 Sep  9 15:39 .ssh
+[ec2-user@ip-172-31-93-212 ~]$ aws s3 ls
+Unable to locate credentials. You can configure credentials by running "aws configure".
+[ec2-user@ip-172-31-93-212 ~]$
+```
+Attach role to ec2 instance.
+![image](/public/images/note/9160/4-12-ec2-attach-role-to-instance.png)
+Select the role created in previous step and click Apply button.
+![image](/public/images/note/9160/4-12-ec2-attach-role-to-instance-2.png)
+Then, we will see the role visible for the instance.
+![image](/public/images/note/9160/4-12-ec2-attach-role-to-instance-3.png)
+Click on the role to see the details.
+![image](/public/images/note/9160/4-12-ec2-attach-role-to-instance-4.png)
+Back to the ssh terminal, and try the command again. This time, we will see all the s3 buckets.
+```raw
+[ec2-user@ip-172-31-93-212 ~]$ aws s3 ls
+Unable to locate credentials. You can configure credentials by running "aws configure".
+[ec2-user@ip-172-31-93-212 ~]$ aws s3 ls
+2019-09-08 23:29:38 bucket-replication-destination
+2019-09-08 20:34:17 johnnyawsguru-s3-01
+2019-09-08 22:41:06 johnnyawsguru-version-01
+[ec2-user@ip-172-31-93-212 ~]$
+```
+By doing this, there is no credentials are stored in the server directory.
+
+Role exam tips.
+![image](/public/images/note/9160/4-12-ec2-iam-role-exam-tips.png)
+* [Easily Replace or Attach an IAM Role to an Existing EC2 Instance by Using the EC2 Console](https://aws.amazon.com/blogs/security/easily-replace-or-attach-an-iam-role-to-an-existing-ec2-instance-by-using-the-ec2-console/)
+
+### 4.13 Using Boot Strap Scripts
+Launch instance with bootstrap script. Select the role created in previous lecture for IAM role.
+![image](/public/images/note/9160/4-13-ec2-bootstrap-script-1.png)
+And paste the following script to the user data text box. The script will install httpd service and start it, then create an html page. It then, creates an s3 bucket and copy the html file into it.
+```raw
+#!/bin/bash  
+yum update -y  
+yum install httpd -y  
+service httpd start  
+chkconfig httpd on  
+cd /var/www/html  
+echo 'Hello Johnny, Welcome To My Webpage' > index.html  
+aws s3 mb s3://johnny-aws-guru-s3-bootstrap-01  
+aws s3 cp index.html s3://johnny-aws-guru-s3-bootstrap-01  
+```
+After the instance is running successfully, access its public ip address, we should see the web page.
+![image](/public/images/note/9160/4-13-ec2-bootstrap-script-2.png)
+And we will find the new s3 bucket.
+![image](/public/images/note/9160/4-13-ec2-bootstrap-script-3.png)
+The index.html file is copied to this bucket.
+![image](/public/images/note/9160/4-13-ec2-bootstrap-script-4.png)
+### 4.14 EC2 Instance Meta Data
+Use the following two commands to get user data and meta data.
+* curl http://169.254.169.254/latest/user-data/
+* curl http://169.254.169.254/latest/meta-data/
+
+```raw
+services/[root@ip-172-31-94-19 ec2-user]# curl http://169.254.169.254/latest/user-data/
+#!/bin/bash  
+yum update -y  
+yum install httpd -y  
+service httpd start  
+chkconfig httpd on  
+cd /var/www/html  
+echo 'Hello Johnny, Welcome To My Webpage' > index.html  
+aws s3 mb s3://johnny-aws-guru-s3-bootstrap-01  
+aws s3 cp index.html s3://johnny-aws-guru-s3-bootstrap-01  [root@ip-172-31-94-19 ec2-user]#
+[root@ip-172-31-94-19 ec2-user]# curl http://169.254.169.254/latest/meta-data/public-ipv4
+3.84.101.140[root@ip-172-31-94-19 ec2-user]#
+```
+Save to files.
+```raw
+[root@ip-172-31-94-19 ec2-user]# curl http://169.254.169.254/latest/user-data/ > bootstrap.bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   281  100   281    0     0  56200      0 --:--:-- --:--:-- --:--:-- 56200
+[root@ip-172-31-94-19 ec2-user]# ls
+bootstrap.bash
+[root@ip-172-31-94-19 ec2-user]# curl http://169.254.169.254/latest/meta-data/public-ipv4 > public-ip.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    12  100    12    0     0   2400      0 --:--:-- --:--:-- --:--:--  2400
+[root@ip-172-31-94-19 ec2-user]# ls
+bootstrap.bash  public-ip.txt
+```
+Meta data exam tips.
+![image](/public/images/note/9160/4-14-ec2-metadata-exam-tips.png)
+* [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
+
+### 4.15 Elastic File System
+![image](/public/images/note/9160/4-15-ec2-efs.png)
+1) Create EFS, Services -> EFS, Create File System.
+![image](/public/images/note/9160/4-15-ec2-create-efs-1.png)
+Keep default.
+![image](/public/images/note/9160/4-15-ec2-create-efs-2.png)
+Just enable the encryption.
+![image](/public/images/note/9160/4-15-ec2-create-efs-3.png)
+Keep default.
+![image](/public/images/note/9160/4-15-ec2-create-efs-4.png)
+It will take few minutes to finish.
+![image](/public/images/note/9160/4-15-ec2-create-efs-5.png)
+![image](/public/images/note/9160/4-15-ec2-create-efs-6.png)
+Wait until efs are created. Services->EFS, expand the arrow, click on "Amazon EC2 mount instructions (from local VPC)".
+![image](/public/images/note/9160/4-15-ec2-create-efs-7.png)
+Copy the tls command , 'sudo mount -t efs -o tls fs-9c5a377e:/ efs'. We will use it in terminal.
+![image](/public/images/note/9160/4-15-ec2-create-efs-8.png)
+
+2) Meanwhile, edit Security Group, select the 'default' group, switch to 'Inbound' tab.
+![image](/public/images/note/9160/4-15-ec2-add-nfs-1.png)
+Click Edit, add new rule, choose NFS and select 'WebDMZ' security group, Save.
+![image](/public/images/note/9160/4-15-ec2-add-nfs-2.png)
+NFS is in the inbound.
+![image](/public/images/note/9160/4-15-ec2-add-nfs-3.png)
+
+3) Create new instance and add bootstrap script. Specify 2 instances.
+![image](/public/images/note/9160/4-15-ec2-create-instance-1.png)
+
+Put the following script to user data.
+```raw
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+yum install amazon-efs-utils -y
+```
+![image](/public/images/note/9160/4-15-ec2-create-instance-2.png)
+Once the two instances are launched, note the public IP addresses.
+![image](/public/images/note/9160/4-15-ec2-create-instance-3.png)
+ Open two terminals to SSH to these two EC2 instances. In the first terminal, navigate to '/var/www/html', nothing there.
+ ```raw
+[ec2-user@ip-172-31-88-216 ~]$ sudo su
+[root@ip-172-31-88-216 ec2-user]# cd /var/www
+[root@ip-172-31-88-216 www]# ls
+cgi-bin  html
+[root@ip-172-31-88-216 www]# cd html
+[root@ip-172-31-88-216 html]# ls
+[root@ip-172-31-88-216 html]#
+ ```
+ Repeat the same steps in second terminal.
+ ```raw
+[ec2-user@ip-172-31-83-133 ~]$ sudo su
+[root@ip-172-31-83-133 ec2-user]# cd /var/www
+[root@ip-172-31-83-133 www]# ls
+cgi-bin  html
+[root@ip-172-31-83-133 www]# cd html
+[root@ip-172-31-83-133 html]# ls
+[root@ip-172-31-83-133 html]#
+ ```
+Mount EFS to /var/www/html for both ec2 instances. Do this in the www folder.
+```raw
+[root@ip-172-31-88-216 html]# cd ..
+[root@ip-172-31-88-216 www]# mount -t efs -o tls fs-9c5a377e:/ /var/www/html
+```
+In the first terminal, create index.html in 'html' folder.
+```raw
+[root@ip-172-31-88-216 www]# cd html
+[root@ip-172-31-83-133 html]# echo '<html><h1>hello,file system</h1></html>' > index.html
+[root@ip-172-31-83-133 html]# ls
+index.html
+```
+In the second terminal, we will see the same file.
+```raw
+[root@ip-172-31-83-133 www]# cd html/
+[root@ip-172-31-83-133 html]# ls
+index.html
+[root@ip-172-31-83-133 html]# cat index.html
+<html><h1>hello,file system</h1></html>
+[root@ip-172-31-83-133 html]#
+```
+EFS Exam tips.
+![image](/public/images/note/9160/4-15-ec2-efs-exam-tips.png)
+### 4.16 EC2 Placement Groups
+![image](/public/images/note/9160/4-16-ec2-placement-group.png)
+![image](/public/images/note/9160/4-16-ec2-cluster-placement-group.png)
+![image](/public/images/note/9160/4-16-ec2-spread-placement-group.png)
+![image](/public/images/note/9160/4-16-ec2-partition-placement-group.png)
+![image](/public/images/note/9160/4-16-ec2-placement-group-types.png)
+Exam tips.
+![image](/public/images/note/9160/4-16-ec2-placement-group-exam-tips.png)
+### 4.17 EC2 Summary
+![image](/public/images/note/9160/4-17-ec2-summary-1.png)
+TODO.
+### 4.18 EC2 Quiz
+![image](/public/images/note/9160/4-18-ec2-quiz-1.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-2.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-3.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-4.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-5.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-6.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-7.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-8.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-9.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-10.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-11.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-12.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-13.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-14.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-15.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-16.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-17.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-18.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-19.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-20.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-21.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-22.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-23.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-24.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-25.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-26.png)
+![image](/public/images/note/9160/4-18-ec2-quiz-27.png)
 ## 5. Databases On AWS
 ### 5.1 Databases 101
 ### 5.2 Let's Create An RDS Instance
