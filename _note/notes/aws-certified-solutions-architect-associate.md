@@ -767,12 +767,96 @@ TODO.
 ![image](/public/images/note/9160/4-18-ec2-quiz-27.png)
 ## 5. Databases On AWS
 ### 5.1 Databases 101
+AWS supported databases.
+![image](/public/images/note/9160/5-1-database-aws-supported.png)
+RDS features.
+![image](/public/images/note/9160/5-1-database-rds-features.png)
+Multi AZ.
+![image](/public/images/note/9160/5-1-database-rds-multi-az.png)
+Replica.
+![image](/public/images/note/9160/5-1-database-rds-replica.png)
+Data warehouse.
+![image](/public/images/note/9160/5-1-database-data-warehouse.png)
+OLTP
+![image](/public/images/note/9160/5-1-database-oltp.png)
+OLAP.
+![image](/public/images/note/9160/5-1-database-olap.png)
+Amazon's data warehouse, RedShift.
+![image](/public/images/note/9160/5-1-database-amazon-redshift.png)
+Elastic Cache.
+![image](/public/images/note/9160/5-1-database-elasticcache.png)
+Cache types: Redis and Memcache.
+![image](/public/images/note/9160/5-1-database-cache-types.png)
+Database exam tips.
+![image](/public/images/note/9160/5-1-database-exam-tips-1.png)
+![image](/public/images/note/9160/5-1-database-exam-tips-2.png)
+![image](/public/images/note/9160/5-1-database-exam-tips-3.png)
+![image](/public/images/note/9160/5-1-database-exam-tips-4.png)
 ### 5.2 Let's Create An RDS Instance
+TOD
+![image](/public/images/note/9160/5-2-rds-instance-summary.png)
 ### 5.3 RDS Backups, Multi-AZ & Read Replicas
+Backup types.
+![image](/public/images/note/9160/5-3-rds-backup-types.png)
+Automated backup.
+![image](/public/images/note/9160/5-3-rds-backup-automated.png)
+Snapshot backup.
+![image](/public/images/note/9160/5-3-rds-backup-snapshot.png)
+Restore back.
+![image](/public/images/note/9160/5-3-rds-backup-restore.png)
+Encryption.
+![image](/public/images/note/9160/5-3-rds-backup-encryption.png)
+Multi-AZ.
+![image](/public/images/note/9160/5-3-rds-backup-multi-az.png)
+![image](/public/images/note/9160/5-3-rds-backup-multi-az2.png)
+![image](/public/images/note/9160/5-3-rds-backup-multi-az3.png)
+![image](/public/images/note/9160/5-3-rds-backup-multi-az4.png)
+Read Replica.
+![image](/public/images/note/9160/5-3-rds-backup-read-replica-1.png)
+![image](/public/images/note/9160/5-3-rds-backup-read-replica-2.png)
+![image](/public/images/note/9160/5-3-rds-backup-read-replica-3.png)
+![image](/public/images/note/9160/5-3-rds-backup-read-replica-4.png)
+![image](/public/images/note/9160/5-3-rds-backup-read-replica-5.png)
 ### 5.4 RDS Backups, Multi-AZ & Read Replicas - Lab
+TODO.
+![image](/public/images/note/9160/5-4-rds-backup-exam-tips-1.png)
+![image](/public/images/note/9160/5-4-rds-backup-exam-tips-2.png)
+![image](/public/images/note/9160/5-4-rds-backup-exam-tips-3.png)
+![image](/public/images/note/9160/5-4-rds-backup-exam-tips-4.png)
 ### 5.5 DynamoDB
+![image](/public/images/note/9160/5-5-dynamodb-1.png)
+![image](/public/images/note/9160/5-5-dynamodb-2.png)
+Eventual Consistent Reads.
+![image](/public/images/note/9160/5-5-dynamodb-3.png)
+Strongly Consistent Reads.
+![image](/public/images/note/9160/5-5-dynamodb-4.png)
+Exam tips.
+![image](/public/images/note/9160/5-5-dynamodb-exam-tips.png)
 ### 5.6 Redshift
+![image](/public/images/note/9160/5-6-redshift-1.png)
+OLAP vs. OLTP
+![image](/public/images/note/9160/5-6-redshift-2.png)
+Redshift from Amazon for data warehouse.
+![image](/public/images/note/9160/5-6-redshift-3.png)
+RedShift Configuration.
+![image](/public/images/note/9160/5-6-redshift-4.png)
+Advanced Compression.
+![image](/public/images/note/9160/5-6-redshift-5.png)
+Massively Parallel Processing(MPP)
+![image](/public/images/note/9160/5-6-redshift-6.png)
+Redshift backup.
+![image](/public/images/note/9160/5-6-redshift-7.png)
+Redshift pricing.
+![image](/public/images/note/9160/5-6-redshift-8.png)
+Redshift Security.
+![image](/public/images/note/9160/5-6-redshift-9.png)
+Redshift Availability.
+![image](/public/images/note/9160/5-6-redshift-10.png)
+Redshift exam tips.
+![image](/public/images/note/9160/5-6-redshift-exam-tips-1.png)
+![image](/public/images/note/9160/5-6-redshift-exam-tips-2.png)
 ### 5.7 Aurora
+![image](/public/images/note/9160/5-7-aurora-1.png)
 ### 5.8 Elasticache
 ### 5.9 Databases Summary
 ### 5.10 Databases On AWS Quiz
