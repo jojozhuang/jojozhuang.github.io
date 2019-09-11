@@ -913,13 +913,60 @@ Exam tips.
 ![image](/public/images/note/9160/5-10-database-quiz-26.png)
 ## 6. Route53
 ### 6.1 DNS 101
+![image](/public/images/note/9160/6-1-dns-1.png)
+IPV4, IPV6
+![image](/public/images/note/9160/6-1-dns-2.png)
+Top level Domain.
+![image](/public/images/note/9160/6-1-dns-3.png)
+IANA.
+![image](/public/images/note/9160/6-1-dns-4.png)
+Domain registrars.
+![image](/public/images/note/9160/6-1-dns-5.png)
+SOA.
+![image](/public/images/note/9160/6-1-dns-6.png)
+NS Records.
+![image](/public/images/note/9160/6-1-dns-7.png)
+A records.
+![image](/public/images/note/9160/6-1-dns-8.png)
+TTL.
+![image](/public/images/note/9160/6-1-dns-9.png)
+CName.
+![image](/public/images/note/9160/6-1-dns-10.png)
+Alias Records.
+![image](/public/images/note/9160/6-1-dns-11.png)
+![image](/public/images/note/9160/6-1-dns-12.png)
+Exam tips.
+![image](/public/images/note/9160/6-1-dns-exam-tips-1.png)
+![image](/public/images/note/9160/6-1-dns-exam-tips-2.png)
 ### 6.2 Route53 - Register A Domain Name Lab
+Services -> Networking & Content Delivery -> Route 53, Registered domains
+![image](/public/images/note/9160/6-2-domain-name-1.png)
+![image](/public/images/note/9160/6-2-domain-name-2.png)
+TODO, create three ec2 instance with different index.html.
+Exam tips.
+![image](/public/images/note/9160/6-2-domain-name-exam-tips.png)
 ### 6.3 Route53 Routing Policies Available On AWS
+![image](/public/images/note/9160/6-3-routing-policies.png)
 ### 6.4 Simple Routing Policy Lab
+1 to N.
+![image](/public/images/note/9160/6-4-simple-routing-policy-1.png)
+TODO, create record set for the domain name with three different ip addresses from 3 ec2 instances.
 ### 6.5 Weighted Routing Policy Lab
+![image](/public/images/note/9160/6-5-weighted-routing-policy-1.png)
+![image](/public/images/note/9160/6-5-weighted-routing-policy-2.png)
+![image](/public/images/note/9160/6-5-weighted-routing-policy-3.png)
+TODO, create weighted routing.
 ### 6.6 Latency Routing Policy
+![image](/public/images/note/9160/6-6-latency-routing-policy-1.png)
+![image](/public/images/note/9160/6-6-latency-routing-policy-2.png)
+TODO.
 ### 6.7 Failover Routing Policy
+![image](/public/images/note/9160/6-7-failover-routing-policy-1.png)
+![image](/public/images/note/9160/6-7-failover-routing-policy-2.png)
+TODO.
 ### 6.8 Geolocation Routing Policy
+![image](/public/images/note/9160/6-8-geolocation-routing-policy-1.png)
+![image](/public/images/note/9160/6-8-geolocation-routing-policy-2.png)
 ### 6.9 Geoproximity Routing Policy (Traffic Flow Only)
 ### 6.10 Multivalue Answer
 ### 6.12 Route53 Summary
