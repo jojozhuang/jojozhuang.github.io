@@ -200,7 +200,90 @@ Until now, we have created the VPC from scratch and it looks as follows.
 Exam tips.
 ![image](/public/images/note/9160/7-2-create-vpc-exam-tips.png)
 ### 7.3 Build A Custom VPC - Part 2
+Now we have to instances, one web server and one db server. Currently, the web server can't connect to db server. We will create security group to enable the communication from web server to db server.
+
+Create new security group.
+![image](/public/images/note/9160/7-3-create-security-group.png)
+It is created.
+![image](/public/images/note/9160/7-3-create-security-group-2.png)
+Change the security group for db server.
+![image](/public/images/note/9160/7-3-create-security-group-3.png)
+![image](/public/images/note/9160/7-3-create-security-group-4.png)
+ssh to web server and ping the database server from it. '54.175.89.128' is the public ip of web server and '10.0.2.140' is the private ip of database server. If you upload the keypair to web server, you can also ssh to database server from webserver.
+```raw
+$ ssh ec2-user@54.175.89.128 -i johnny-aws-ec2-keypair.pem
+The authenticity of host '54.175.89.128 (54.175.89.128)' can't be established.
+ECDSA key fingerprint is SHA256:+IhFl1sALdOm4yIQbmA0OIyrG8jpfkufQfmmAlbnDNA.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '54.175.89.128' (ECDSA) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2018.03-release-notes/
+[ec2-user@ip-10-0-1-251 ~]$ ping 10.0.2.140
+PING 10.0.2.140 (10.0.2.140) 56(84) bytes of data.
+64 bytes from 10.0.2.140: icmp_seq=1 ttl=255 time=0.750 ms
+64 bytes from 10.0.2.140: icmp_seq=2 ttl=255 time=0.881 ms
+64 bytes from 10.0.2.140: icmp_seq=3 ttl=255 time=0.946 ms
+64 bytes from 10.0.2.140: icmp_seq=4 ttl=255 time=0.807 ms
+```
 ### 7.4 Network Address Translation (NAT)
+Currently, there is one problem with the database server, it has no public connection to internet. We will create NAT instance and NAT Gateway to setup the connection for database server.
+![image](/public/images/note/9160/7-4-nat-gateway-1.png)
+Launch new instance, search 'nat' in the 'Community AMIs', select the first one.
+![image](/public/images/note/9160/7-4-nat-gateway-2.png)
+Select the custom VPC and choose the public subnet.
+![image](/public/images/note/9160/7-4-nat-gateway-3.png)
+Add name to indicate it is a NAT instance.
+![image](/public/images/note/9160/7-4-nat-gateway-4.png)
+Select the WebDMZ group.
+![image](/public/images/note/9160/7-4-nat-gateway-5.png)
+![image](/public/images/note/9160/7-4-nat-gateway-6.png)
+The NAT instance is created, it's running in the same AZ with the web server. It has its own public ip address.
+![image](/public/images/note/9160/7-4-nat-gateway-7.png)
+Disabling Source/Destination Checks, see [NAT Instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html).
+
+Select the NAT instance, actions->Networking->Change Source/Dest. Check.
+![image](/public/images/note/9160/7-4-nat-gateway-8.png)
+Disable it.
+![image](/public/images/note/9160/7-4-nat-gateway-9.png)
+Create route to let database server talk to nat instance.
+
+Services -> VPC->Route Tables, select the main route table of the custom VPC, click "Edit rules".
+![image](/public/images/note/9160/7-4-nat-gateway-10.png)
+Select the nat instance as target.
+![image](/public/images/note/9160/7-4-nat-gateway-11.png)
+Done.
+![image](/public/images/note/9160/7-4-nat-gateway-12.png)
+Now, if you ssh to your webserver, then ssh to your database server, you can run "yum install update", and it will be able to download files from internet.
+
+NAT instance is not good as it may be overloaded. If it is stopped, then database server will lose the internet connection and you will see the route status becomes to 'blackhole'.
+![image](/public/images/note/9160/7-4-nat-gateway-13.png)
+
+Create NAT gateway which is more reliable and flexible.
+
+VPC->NAT Gateways->Create NAT Gateway.
+![image](/public/images/note/9160/7-4-nat-gateway-14.png)
+Select the public subnet, click "Create New EIP".
+![image](/public/images/note/9160/7-4-nat-gateway-15.png)
+Edit route tables.
+![image](/public/images/note/9160/7-4-nat-gateway-16.png)
+Select the main route table, click "Edit routes".
+![image](/public/images/note/9160/7-4-nat-gateway-17.png)
+Select the NAT gateway as target.
+![image](/public/images/note/9160/7-4-nat-gateway-18.png)
+Done.
+![image](/public/images/note/9160/7-4-nat-gateway-19.png)
+Switch to "NAT Gateways", the new gateway is there.
+![image](/public/images/note/9160/7-4-nat-gateway-20.png)
+Now, the database server has the internet connection again.
+
+Exam tips.
+![image](/public/images/note/9160/7-4-nat-gateway-exam-tips.png)
+![image](/public/images/note/9160/7-4-nat-gateway-exam-tips-2.png)
+![image](/public/images/note/9160/7-4-nat-gateway-exam-tips-3.png)
 ### 7.5 Access Control Lists (ACL)
 ### 7.6 Custom VPCs and ELBs
 ### 7.7 VPC Flow Logs
