@@ -17,6 +17,7 @@ draft: true
 * AWS Sign In: https://signin.aws.amazon.com
 * [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
 * [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
+* [Elastic Load Balancing FAQs](https://aws.amazon.com/elasticloadbalancing/faqs/)
 * [AWS Whitepapers & Guides](https://aws.amazon.com/whitepapers)
 * [SAA-C01 Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf)
 * [Sample Questions](https://d1.awsstatic.com/training-and-certification/docs/AWS_Certified_Solutions_Architect_Associate_Sample_Questions.pdf)
