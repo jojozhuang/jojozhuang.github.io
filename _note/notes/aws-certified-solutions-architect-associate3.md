@@ -135,14 +135,114 @@ Exam tips.
 ![image](/public/images/note/9160/9-1-sqs-exam-tips-2.png)
 ![image](/public/images/note/9160/9-1-sqs-exam-tips-3.png)
 ### 9.2 SWF
+![image](/public/images/note/9160/9-2-swf-1.png)
+SWF tasks.
+![image](/public/images/note/9160/9-2-swf-2.png)
+SWF vs. SQS
+![image](/public/images/note/9160/9-2-swf-3.png)
+SWF Actors.
+![image](/public/images/note/9160/9-2-swf-4.png)
 ### 9.3 SNS
+![image](/public/images/note/9160/9-3-sns-1.png)
+![image](/public/images/note/9160/9-3-sns-2.png)
+Topics.
+![image](/public/images/note/9160/9-3-sns-3.png)
+SNS Availability.
+![image](/public/images/note/9160/9-3-sns-4.png)
+SNS Benefits.
+![image](/public/images/note/9160/9-3-sns-5.png)
+SNS vs. SQS
+![image](/public/images/note/9160/9-3-sns-6.png)
 ### 9.4 Elastic Transcoder
+![image](/public/images/note/9160/9-4-elastic-transcoder-1.png)
+![image](/public/images/note/9160/9-4-elastic-transcoder-2.png)
+![image](/public/images/note/9160/9-4-elastic-transcoder-3.png)
 ### 9.5 API Gateway
+![image](/public/images/note/9160/9-5-api-gateway-1.png)
+![image](/public/images/note/9160/9-5-api-gateway-2.png)
+How API Gateway works?
+![image](/public/images/note/9160/9-5-api-gateway-3.png)
+API Gateway Options.
+![image](/public/images/note/9160/9-5-api-gateway-4.png)
+API Gateway Configuration.
+![image](/public/images/note/9160/9-5-api-gateway-5.png)
+API Gateway Deployment.
+![image](/public/images/note/9160/9-5-api-gateway-6.png)
+API Gateway Caching.
+![image](/public/images/note/9160/9-5-api-gateway-7.png)
+How cache works?
+![image](/public/images/note/9160/9-5-api-gateway-8.png)
+Same origin policy. Cross-site-scripting(XSS).
+![image](/public/images/note/9160/9-5-api-gateway-9.png)
+CORS.
+![image](/public/images/note/9160/9-5-api-gateway-10.png)
+![image](/public/images/note/9160/9-5-api-gateway-11.png)
+Exam tips.
+![image](/public/images/note/9160/9-5-api-gateway-exam-tips.png)
 ### 9.6 Kinesis
+Streaming data.
+![image](/public/images/note/9160/9-6-kinesis-1.png)
+Kinesis.
+![image](/public/images/note/9160/9-6-kinesis-2.png)
+Types of kinesis.
+![image](/public/images/note/9160/9-6-kinesis-3.png)
+Kinesis streaming.
+![image](/public/images/note/9160/9-6-kinesis-4.png)
+Kinesis streaming shards.
+![image](/public/images/note/9160/9-6-kinesis-5.png)
+Kinesis firehose. Data can be exported to S3, Redfhift or ElasticSearch.
+![image](/public/images/note/9160/9-6-kinesis-6.png)
+![image](/public/images/note/9160/9-6-kinesis-7.png)
+Kinesis Analytics.
+![image](/public/images/note/9160/9-6-kinesis-8.png)
+Exam tips.
+![image](/public/images/note/9160/9-6-kinesis-exam-tips.png)
 ### 9.7 Web Identity Federation & Cognito
+Web Identity Federation.
+![image](/public/images/note/9160/9-7-wif-1.png)
+Cognito.
+![image](/public/images/note/9160/9-7-wif-2.png)
+Cognito Use case.
+![image](/public/images/note/9160/9-7-wif-3.png)
+![image](/public/images/note/9160/9-7-wif-4.png)
+Cognito User Pools.
+![image](/public/images/note/9160/9-7-wif-5.png)
+Cognito Identity Pools.
+![image](/public/images/note/9160/9-7-wif-6.png)
+How they work?
+![image](/public/images/note/9160/9-7-wif-7.png)
+Cognito Synchronization.
+![image](/public/images/note/9160/9-7-wif-8.png)
+How Synchronization works?
+![image](/public/images/note/9160/9-7-wif-9.png)
+Cognito exam tips.
+![image](/public/images/note/9160/9-7-wif-exam-tips-1.png)
+![image](/public/images/note/9160/9-7-wif-exam-tips-2.png)
 ### 9.8 Summary
+![image](/public/images/note/9160/9-8-summary-1.png)
+![image](/public/images/note/9160/9-8-summary-2.png)
+![image](/public/images/note/9160/9-8-summary-3.png)
+![image](/public/images/note/9160/9-8-summary-4.png)
+![image](/public/images/note/9160/9-8-summary-5.png)
+![image](/public/images/note/9160/9-8-summary-6.png)
+![image](/public/images/note/9160/9-8-summary-7.png)
+![image](/public/images/note/9160/9-8-summary-8.png)
+![image](/public/images/note/9160/9-8-summary-9.png)
+![image](/public/images/note/9160/9-8-summary-10.png)
+![image](/public/images/note/9160/9-8-summary-11.png)
+![image](/public/images/note/9160/9-8-summary-12.png)
 ### 9.9 Applications Quiz
-
+![image](/public/images/note/9160/9-9-application-quiz-1.png)
+![image](/public/images/note/9160/9-9-application-quiz-2.png)
+![image](/public/images/note/9160/9-9-application-quiz-3.png)
+![image](/public/images/note/9160/9-9-application-quiz-4.png)
+![image](/public/images/note/9160/9-9-application-quiz-5.png)
+![image](/public/images/note/9160/9-9-application-quiz-6.png)
+![image](/public/images/note/9160/9-9-application-quiz-7.png)
+![image](/public/images/note/9160/9-9-application-quiz-8.png)
+![image](/public/images/note/9160/9-9-application-quiz-9.png)
+![image](/public/images/note/9160/9-9-application-quiz-10.png)
+![image](/public/images/note/9160/9-9-application-quiz-11.png)
 ## 10. Serverless
 ### 10.1 Lambda Concepts
 ### 10.2 Let's Build A Serverless Webpage
