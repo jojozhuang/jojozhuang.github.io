@@ -285,53 +285,134 @@ Exam tips.
 ![image](/public/images/note/9160/7-4-nat-gateway-exam-tips-2.png)
 ![image](/public/images/note/9160/7-4-nat-gateway-exam-tips-3.png)
 ### 7.5 Access Control Lists (ACL)
+![image](/public/images/note/9160/7-5-acl-1.png)
+Create new ACL.
+![image](/public/images/note/9160/7-5-acl-2.png)
+By default all inbound and outbound requests are denied.
+![image](/public/images/note/9160/7-5-acl-3.png)
+Test the port 80. SSh to web server, run commands to create a web page and start web service.
+```raw
+[root@ip-10-0-1-251 ec2-user]# yum install httpd -y
+[root@ip-10-0-1-251 ec2-user]# chkconfig httpd on
+[root@ip-10-0-1-251 ec2-user]# service httpd start
+Starting httpd:
+[root@ip-10-0-1-251 ec2-user]# cd /var/www/html/
+[root@ip-10-0-1-251 html]# ls
+[root@ip-10-0-1-251 html]# echo '<html><h1>hello, johnny</h1></html>' > index.html
+[root@ip-10-0-1-251 html]# ls
+index.html
+```
+Access the public ip address, we should see the page.
+![image](/public/images/note/9160/7-5-acl-4.png)
+It's currently working, because the ACL for subnet is public to all inbound ports.
+![image](/public/images/note/9160/7-5-acl-5.png)
+Associate the new ACL to current subnet. Select the new ACL and click "Edit subnet associations".
+![image](/public/images/note/9160/7-5-acl-6.png)
+Choose the subnet which is for web server.
+![image](/public/images/note/9160/7-5-acl-7.png)
+Notice, the old ACL doesn't associate the same subnet anymore.
+![image](/public/images/note/9160/7-5-acl-8.png)
+Refresh the page, it will be timeout.
+![image](/public/images/note/9160/7-5-acl-9.png)
+Add some rules(80,443,22) to inbound of the new ACL.
+![image](/public/images/note/9160/7-5-acl-10.png)
+Similar, add rules for outbound of the new ACL. Check [Ephemeral Ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports) to understand why we set the range 1024-65535.
+![image](/public/images/note/9160/7-5-acl-11.png)
+Refresh the page, we get the page back.
+![image](/public/images/note/9160/7-5-acl-12.png)
+ACL exam tips.
+![image](/public/images/note/9160/7-5-acl-exam-tips-1.png)
+![image](/public/images/note/9160/7-5-acl-exam-tips-2.png)
 ### 7.6 Custom VPCs and ELBs
+ELB requires at least two subnets with gateway configured for all.
+![image](/public/images/note/9160/7-6-load-balancer-1.png)
 ### 7.7 VPC Flow Logs
+![image](/public/images/note/9160/7-7-vpc-flow-1.png)
+![image](/public/images/note/9160/7-7-vpc-flow-2.png)
+Create Log Group in CloudWatch. Services->Management & Governance->CloudWatch
+![image](/public/images/note/9160/7-7-vpc-flow-3.png)
+Go to VPC console, select the custom VPC, actions->Create flow log.
+![image](/public/images/note/9160/7-7-vpc-flow-4.png)
+Click the link "Set Up Permissions".
+![image](/public/images/note/9160/7-7-vpc-flow-5.png)
+Allow.
+![image](/public/images/note/9160/7-7-vpc-flow-6.png)
+Go back to create the flow log.
+![image](/public/images/note/9160/7-7-vpc-flow-7.png)
+Now the flow log is enabled. Refresh the web page.
+![image](/public/images/note/9160/7-7-vpc-flow-8.png)
+Then go to CloudWatch, select Logs and click the log group.
+![image](/public/images/note/9160/7-7-vpc-flow-9.png)
+You will see some log streams.
+![image](/public/images/note/9160/7-7-vpc-flow-10.png)
+Click on any of them, you will see the detailed logs.
+![image](/public/images/note/9160/7-7-vpc-flow-11.png)
+Exam tips.
+![image](/public/images/note/9160/7-7-vpc-flow-exam-tips-1.png)
+![image](/public/images/note/9160/7-7-vpc-flow-exam-tips-2.png)
 ### 7.8 Bastions
+![image](/public/images/note/9160/7-8-bastions-1.png)
+![image](/public/images/note/9160/7-8-bastions-2.png)
+![image](/public/images/note/9160/7-8-bastions-exam-tips.png)
 ### 7.9 Direct Connect
+![image](/public/images/note/9160/7-9-direct-connect-1.png)
+![image](/public/images/note/9160/7-9-direct-connect-2.png)
+![image](/public/images/note/9160/7-9-direct-connect-exam-tips.png)
 ### 7.10 VPC End Points
+![image](/public/images/note/9160/7-10-vpc-endpoints-1.png)
+![image](/public/images/note/9160/7-10-vpc-endpoints-2.png)
+![image](/public/images/note/9160/7-10-vpc-endpoints-3.png)
+![image](/public/images/note/9160/7-10-vpc-endpoints-4.png)
+Current solution: Use NAT gateway to let private subnet to access public internet.
+![image](/public/images/note/9160/7-10-vpc-endpoints-5.png)
+Use VPC gateway to achieve the same purpose.
+![image](/public/images/note/9160/7-10-vpc-endpoints-6.png)
+TODO, Labs
+
+Exam tips.
+![image](/public/images/note/9160/7-10-vpc-endpoints-exam-tips-1.png)
+![image](/public/images/note/9160/7-10-vpc-endpoints-exam-tips-2.png)
 ### 7.11 Summary
+![image](/public/images/note/9160/7-11-vpc-summary-1.png)
+![image](/public/images/note/9160/7-11-vpc-summary-2.png)
+![image](/public/images/note/9160/7-11-vpc-summary-3.png)
+![image](/public/images/note/9160/7-11-vpc-summary-4.png)
+![image](/public/images/note/9160/7-11-vpc-summary-5.png)
+![image](/public/images/note/9160/7-11-vpc-summary-6.png)
+![image](/public/images/note/9160/7-11-vpc-summary-7.png)
+![image](/public/images/note/9160/7-11-vpc-summary-8.png)
+![image](/public/images/note/9160/7-11-vpc-summary-9.png)
+![image](/public/images/note/9160/7-11-vpc-summary-10.png)
+![image](/public/images/note/9160/7-11-vpc-summary-11.png)
+![image](/public/images/note/9160/7-11-vpc-summary-12.png)
+![image](/public/images/note/9160/7-11-vpc-summary-13.png)
+![image](/public/images/note/9160/7-11-vpc-summary-14.png)
+![image](/public/images/note/9160/7-11-vpc-summary-15.png)
+![image](/public/images/note/9160/7-11-vpc-summary-16.png)
+![image](/public/images/note/9160/7-11-vpc-summary-17.png)
 ### 7.12 VPCs Quiz
-
-## 8. HA Architecture
-### 8.1 Load Balancers Theory
-### 8.2 Load Balancers And Health Checks Lab
-### 8.3 Advanced Load Balancer Theory
-### 8.4 Autoscaling Groups Lab
-### 8.5 HA Architecture
-### 8.6 HA Word Press Site
-### 8.7 Setting Up EC2
-### 8.8 Adding Resilience And Autoscaling
-### 8.9 Cleaning Up
-### 8.10 CloudFormation
-### 8.11 Elastic Beanstalk
-### 8.12 HA Summary
-### 8.13 HA Architecture Quiz
-
-## 9. Applications
-### 9.1 SQS
-### 9.2 SWF
-### 9.3 SNS
-### 9.4 Elastic Transcoder
-### 9.5 API Gateway
-### 9.6 Kinesis
-### 9.7 Web Identity Federation & Cognito
-### 9.8 Summary
-### 9.9 Applications Quiz
-
-## 10. Serverless
-### 10.1 Lambda Concepts
-### 10.2 Let's Build A Serverless Webpage
-### 10.3 Let's Build An Alexa Skill
-### 10.4 Summary
-### 10.5 Serverless Quiz
-### 10.6 CHAPTER 11
-
-## 11. Good Luck!
-### 11.1 Good Luck & How To Book Your Exam
-### 11.2 Thank You and Next Steps
-### 11.3 Practice Test 1
-### 11.4 Practice Test 2
-
-## 12. Reference
-* [AWS Certified Solutions Architect Associate 2019](https://acloud.guru/learn/aws-certified-solutions-architect-associate)
+![image](/public/images/note/9160/7-12-vpc-quiz-1.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-2.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-3.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-4.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-5.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-6.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-7.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-8.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-9.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-10.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-11.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-12.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-13.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-14.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-15.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-16.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-17.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-18.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-19.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-20.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-21.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-22.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-23.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-24.png)
+![image](/public/images/note/9160/7-12-vpc-quiz-25.png)
