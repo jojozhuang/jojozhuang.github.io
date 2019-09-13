@@ -245,17 +245,50 @@ Cognito exam tips.
 ![image](/public/images/note/9160/9-9-application-quiz-11.png)
 ## 10. Serverless
 ### 10.1 Lambda Concepts
+History of cloud: Data center->IAAS->PAAS->Containers->Serverless.
+![image](/public/images/note/9160/10-1-lambda-1.png)
+Lamda.
+![image](/public/images/note/9160/10-1-lambda-2.png)
+![image](/public/images/note/9160/10-1-lambda-3.png)
+![image](/public/images/note/9160/10-1-lambda-4.png)
+Lamda usage cases.
+![image](/public/images/note/9160/10-1-lambda-5.png)
+![image](/public/images/note/9160/10-1-lambda-6.png)
+Traditional vs. Serverless Architecture
+![image](/public/images/note/9160/10-1-lambda-7.png)
+What languages does lamda support?
+![image](/public/images/note/9160/10-1-lambda-8.png)
+How lamda is priced?
+![image](/public/images/note/9160/10-1-lambda-9.png)
+Why lamda is cool?
+![image](/public/images/note/9160/10-1-lambda-10.png)
+Lamda exam tips.
+![image](/public/images/note/9160/10-1-lambda-exam-tips-1.png)
+![image](/public/images/note/9160/10-1-lambda-exam-tips-2.png)
 ### 10.2 Let's Build A Serverless Webpage
+![image](/public/images/note/9160/10-2-build-serverless-1.png)
+TODO lab.
 ### 10.3 Let's Build An Alexa Skill
+TODO lab: Alexa.
 ### 10.4 Summary
+![image](/public/images/note/9160/10-4-lamda-summary-1.png)
+![image](/public/images/note/9160/10-4-lamda-summary-2.png)
+![image](/public/images/note/9160/10-4-lamda-summary-3.png)
 ### 10.5 Serverless Quiz
-### 10.6 CHAPTER 11
+![image](/public/images/note/9160/10-5-serverless-quiz-1.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-2.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-3.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-4.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-5.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-6.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-7.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-8.png)
+![image](/public/images/note/9160/10-5-serverless-quiz-9.png)
 
 ## 11. Good Luck!
 ### 11.1 Good Luck & How To Book Your Exam
 ### 11.2 Thank You and Next Steps
 ### 11.3 Practice Test 1
+![image](/public/images/note/9160/11-3-practice-1.png)
 ### 11.4 Practice Test 2
-
-## 12. Reference
-* [AWS Certified Solutions Architect Associate 2019](https://acloud.guru/learn/aws-certified-solutions-architect-associate)
+![image](/public/images/note/9160/11-4-practice-1.png)

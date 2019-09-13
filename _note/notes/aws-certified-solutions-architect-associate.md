@@ -13,7 +13,7 @@ draft: true
 
 ## 1. Introduction
 ### 1.1 Introduction
-* Course: https://acloud.guru/learn/aws-certified-solutions-architect-associate
+* [AWS Certified Solutions Architect Associate 2019](https://acloud.guru/learn/aws-certified-solutions-architect-associate)
 * AWS Sign In: https://signin.aws.amazon.com
 * [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
 * [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
