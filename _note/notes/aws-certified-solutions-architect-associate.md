@@ -63,6 +63,18 @@ Exam tips.
 ### 2.3 How To Sign Up To AWS
 Empty.
 ### 2.4 10,000 Foot Overview Quiz
+![image](/public/images/note/9160/2-4-overview-quiz-1.png)
+![image](/public/images/note/9160/2-4-overview-quiz-2.png)
+![image](/public/images/note/9160/2-4-overview-quiz-3.png)
+![image](/public/images/note/9160/2-4-overview-quiz-4.png)
+![image](/public/images/note/9160/2-4-overview-quiz-5.png)
+![image](/public/images/note/9160/2-4-overview-quiz-6.png)
+![image](/public/images/note/9160/2-4-overview-quiz-7.png)
+![image](/public/images/note/9160/2-4-overview-quiz-8.png)
+![image](/public/images/note/9160/2-4-overview-quiz-9.png)
+![image](/public/images/note/9160/2-4-overview-quiz-10.png)
+![image](/public/images/note/9160/2-4-overview-quiz-11.png)
+![image](/public/images/note/9160/2-4-overview-quiz-12.png)
 Quiz:
 * Both `Lambda` and `EC2` offer computing in the cloud. `S3` is a storage offering while `VPC` is a network service.
 * `VPC` allows you to provision a logically isolated section of the AWS where you can launch AWS resources in a virtual network. Cloudfront is a fast, highly secure and programmable content delivery network (CDN). EC2 provides compute resources while RDS is Amazon's Relational Database System.
@@ -288,6 +300,47 @@ Exam tips.
 * [Amazon S3 FAQs](https://aws.amazon.com/s3/faqs/)
 
 ### 3.17 Identity Access Management & S3 Quiz
+![image](/public/images/note/9160/3-17-s3-quiz-1.png)
+![image](/public/images/note/9160/3-17-s3-quiz-2.png)
+![image](/public/images/note/9160/3-17-s3-quiz-3.png)
+![image](/public/images/note/9160/3-17-s3-quiz-4.png)
+![image](/public/images/note/9160/3-17-s3-quiz-5.png)
+![image](/public/images/note/9160/3-17-s3-quiz-6.png)
+![image](/public/images/note/9160/3-17-s3-quiz-7.png)
+![image](/public/images/note/9160/3-17-s3-quiz-8.png)
+![image](/public/images/note/9160/3-17-s3-quiz-9.png)
+![image](/public/images/note/9160/3-17-s3-quiz-10.png)
+![image](/public/images/note/9160/3-17-s3-quiz-11.png)
+![image](/public/images/note/9160/3-17-s3-quiz-12.png)
+![image](/public/images/note/9160/3-17-s3-quiz-13.png)
+![image](/public/images/note/9160/3-17-s3-quiz-14.png)
+![image](/public/images/note/9160/3-17-s3-quiz-15.png)
+![image](/public/images/note/9160/3-17-s3-quiz-16.png)
+![image](/public/images/note/9160/3-17-s3-quiz-17.png)
+![image](/public/images/note/9160/3-17-s3-quiz-18.png)
+![image](/public/images/note/9160/3-17-s3-quiz-19.png)
+![image](/public/images/note/9160/3-17-s3-quiz-20.png)
+![image](/public/images/note/9160/3-17-s3-quiz-21.png)
+![image](/public/images/note/9160/3-17-s3-quiz-22.png)
+![image](/public/images/note/9160/3-17-s3-quiz-23.png)
+![image](/public/images/note/9160/3-17-s3-quiz-24.png)
+![image](/public/images/note/9160/3-17-s3-quiz-25.png)
+![image](/public/images/note/9160/3-17-s3-quiz-26.png)
+![image](/public/images/note/9160/3-17-s3-quiz-27.png)
+![image](/public/images/note/9160/3-17-s3-quiz-28.png)
+![image](/public/images/note/9160/3-17-s3-quiz-29.png)
+![image](/public/images/note/9160/3-17-s3-quiz-30.png)
+![image](/public/images/note/9160/3-17-s3-quiz-31.png)
+![image](/public/images/note/9160/3-17-s3-quiz-32.png)
+![image](/public/images/note/9160/3-17-s3-quiz-33.png)
+![image](/public/images/note/9160/3-17-s3-quiz-34.png)
+![image](/public/images/note/9160/3-17-s3-quiz-35.png)
+![image](/public/images/note/9160/3-17-s3-quiz-36.png)
+![image](/public/images/note/9160/3-17-s3-quiz-37.png)
+![image](/public/images/note/9160/3-17-s3-quiz-38-1.png)
+![image](/public/images/note/9160/3-17-s3-quiz-38-2.png)
+![image](/public/images/note/9160/3-17-s3-quiz-39.png)
+todo
 * S3 - One Zone-Infrequent Access: The key driver here is cost, so an awareness of cost is necessary to answer this. Full S3 is quite expensive at around $0.023 per GB for the lowest band. S3 standard IA is $0.0125 per GB, S3 One-Zone-IA is $0.01 per GB, and Legacy S3-RRS is around $0.024 per GB for the lowest band. Of the offered solutions SS3 One-Zone-IA is the cheapest suitable option. Glacier cannot be considered as it is not intended for direct access, however it comes in at around $0.004 per GB. Of course you spotted that RRS is being deprecated, and there is no such thing as S3 - Provisioned IOPS. In this case OneZone IA should be fine as users will 'post' material but only the organization will access it and only to find relevant material. The question states that there is no concern if some material is lost.
 * https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html
 * To access the console you use an account and password combination. To access AWS programmatically you use a Key and Secret Key combination
