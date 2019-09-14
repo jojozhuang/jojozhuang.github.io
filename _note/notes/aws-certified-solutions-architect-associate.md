@@ -22,6 +22,7 @@ draft: true
 * [SAA-C01 Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf)
 * [Sample Questions](https://d1.awsstatic.com/training-and-certification/docs/AWS_Certified_Solutions_Architect_Associate_Sample_Questions.pdf)
 
+
 ### 1.2 The Exam Blue Print
 Home page of CSAA on AWS: https://aws.amazon.com/certification/certified-solutions-architect-associate/
 ### 1.3 Why Should I Learn AWS?
@@ -340,7 +341,6 @@ Exam tips.
 ![image](/public/images/note/9160/3-17-s3-quiz-38-1.png)
 ![image](/public/images/note/9160/3-17-s3-quiz-38-2.png)
 ![image](/public/images/note/9160/3-17-s3-quiz-39.png)
-todo
 * S3 - One Zone-Infrequent Access: The key driver here is cost, so an awareness of cost is necessary to answer this. Full S3 is quite expensive at around $0.023 per GB for the lowest band. S3 standard IA is $0.0125 per GB, S3 One-Zone-IA is $0.01 per GB, and Legacy S3-RRS is around $0.024 per GB for the lowest band. Of the offered solutions SS3 One-Zone-IA is the cheapest suitable option. Glacier cannot be considered as it is not intended for direct access, however it comes in at around $0.004 per GB. Of course you spotted that RRS is being deprecated, and there is no such thing as S3 - Provisioned IOPS. In this case OneZone IA should be fine as users will 'post' material but only the organization will access it and only to find relevant material. The question states that there is no concern if some material is lost.
 * https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html
 * To access the console you use an account and password combination. To access AWS programmatically you use a Key and Secret Key combination
@@ -450,7 +450,48 @@ Exam tips.
 ![image](/public/images/note/9160/4-5-ec2-ebs-volumes.png)
 ![image](/public/images/note/9160/4-5-ec2-ebs-types.png)
 ### 4.6 Volumes & Snapshots
-TODO, labs.
+When launching a new instance, one EBS volume is attached automatically and they are in the same Available Zone.
+![image](/public/images/note/9160/4-6-volumes-snapshots-1.png)
+![image](/public/images/note/9160/4-6-volumes-snapshots-2.png)
+Screenshots from course video.
+
+Launch a new instance with adding three additional EBS volumes.
+![image](/public/images/note/9160/4-6-volumes-snapshots-3.png)
+After the instance is started, we will see four volumes.
+![image](/public/images/note/9160/4-6-volumes-snapshots-4.png)
+Here, we can change the size of volume. For example, change the size of HDD from 500GB to 1000GB.
+![image](/public/images/note/9160/4-6-volumes-snapshots-5.png)
+We can also change the Volume type from Standard SDD to Provisioned IOPS SSD for root volume.
+![image](/public/images/note/9160/4-6-volumes-snapshots-6.png)
+Save the change, after a while, we will see the change is go live. For the root volume, type is changed from gp2 to io1.
+![image](/public/images/note/9160/4-6-volumes-snapshots-7.png)
+
+Create new instance in another AZ.
+
+Select root volume, Actions->Create Snapshot.
+![image](/public/images/note/9160/4-6-volumes-snapshots-8.png)
+Wait for a while, we will see the snapshot is ready.
+![image](/public/images/note/9160/4-6-volumes-snapshots-9.png)
+Now we can create image with this snapshot.
+![image](/public/images/note/9160/4-6-volumes-snapshots-10.png)
+The new image appears in the AMIs, and it is ready to use.
+![image](/public/images/note/9160/4-6-volumes-snapshots-11.png)
+Let's launch a new instance with this image, choose a different AZ.
+![image](/public/images/note/9160/4-6-volumes-snapshots-12.png)
+After launch, notice it is in a different AZ(us-east-1a) from the original one(us-east-1b).
+![image](/public/images/note/9160/4-6-volumes-snapshots-13.png)
+We can also move the EBS volume to another region by copying AMI image to another region and launch new instance with it. And we can choose any AZ in that region.
+![image](/public/images/note/9160/4-6-volumes-snapshots-14.png)
+
+What happens to volumes if instances are terminated, will they all be deleted as well? see below.
+
+Now we have two instance running.
+![image](/public/images/note/9160/4-6-volumes-snapshots-15.png)
+And we have 5 volumes for above two instances.
+![image](/public/images/note/9160/4-6-volumes-snapshots-16.png)
+After the instances are terminated, the addition volumes are still there, their states are changed to 'available' though. Only the root volumes are deleted.
+![image](/public/images/note/9160/4-6-volumes-snapshots-17.png)
+Exam tips.
 ![image](/public/images/note/9160/4-6-ec2-ebs-exam-tips.png)
 ![image](/public/images/note/9160/4-6-ec2-ebs-exam-tips2.png)
 ![image](/public/images/note/9160/4-6-ec2-ebs-exam-tips3.png)
