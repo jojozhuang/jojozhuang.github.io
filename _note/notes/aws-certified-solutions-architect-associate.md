@@ -654,7 +654,7 @@ drwx------ 2 ec2-user ec2-user  29 Sep  9 15:39 .ssh
 Unable to locate credentials. You can configure credentials by running "aws configure".
 [ec2-user@ip-172-31-93-212 ~]$
 ```
-Attach role to ec2 instance.
+Attach role to ec2 instance. Select the instance, Actions->Instance Settings->Attach/Replace IAM Role.
 ![image](/public/images/note/9160/4-12-ec2-attach-role-to-instance.png)
 Select the role created in previous step and click Apply button.
 ![image](/public/images/note/9160/4-12-ec2-attach-role-to-instance-2.png)
@@ -700,7 +700,7 @@ And we will find the new s3 bucket.
 The index.html file is copied to this bucket.
 ![image](/public/images/note/9160/4-13-ec2-bootstrap-script-4.png)
 ### 4.14 EC2 Instance Meta Data
-Use the following two commands to get user data and meta data.
+Use the following two commands to get user data and meta data. The IP address `169.254.169.254` is a link-local address and is valid only from the instance.
 * curl http://169.254.169.254/latest/user-data/
 * curl http://169.254.169.254/latest/meta-data/
 
@@ -739,7 +739,7 @@ Meta data exam tips.
 
 ### 4.15 Elastic File System
 ![image](/public/images/note/9160/4-15-ec2-efs.png)
-1) Create EFS, Services -> EFS, Create File System.
+1) Create EFS, Services -> Storage -> EFS, Create File System.
 ![image](/public/images/note/9160/4-15-ec2-create-efs-1.png)
 Keep default.
 ![image](/public/images/note/9160/4-15-ec2-create-efs-2.png)
@@ -750,7 +750,7 @@ Keep default.
 It will take few minutes to finish.
 ![image](/public/images/note/9160/4-15-ec2-create-efs-5.png)
 ![image](/public/images/note/9160/4-15-ec2-create-efs-6.png)
-Wait until efs are created. Services->EFS, expand the arrow, click on "Amazon EC2 mount instructions (from local VPC)".
+Wait until efs are created. Services->Storage->EFS, expand the arrow, click on "Amazon EC2 mount instructions (from local VPC)".
 ![image](/public/images/note/9160/4-15-ec2-create-efs-7.png)
 Copy the tls command , 'sudo mount -t efs -o tls fs-9c5a377e:/ efs'. We will use it in terminal.
 ![image](/public/images/note/9160/4-15-ec2-create-efs-8.png)
@@ -826,11 +826,38 @@ EFS Exam tips.
 ![image](/public/images/note/9160/4-16-ec2-spread-placement-group.png)
 ![image](/public/images/note/9160/4-16-ec2-partition-placement-group.png)
 ![image](/public/images/note/9160/4-16-ec2-placement-group-types.png)
+Labs. Create Placement Group: In the EC2 page, find 'Placement Groups' in Network & Security.
+![image](/public/images/note/9160/4-16-ec2-placement-group-lab-1.png)
+![image](/public/images/note/9160/4-16-ec2-placement-group-lab-2.png)
+Use Placement Group when launch new instance.
+![image](/public/images/note/9160/4-16-ec2-placement-group-lab-3.png)
 Exam tips.
 ![image](/public/images/note/9160/4-16-ec2-placement-group-exam-tips.png)
 ### 4.17 EC2 Summary
 ![image](/public/images/note/9160/4-17-ec2-summary-1.png)
-TODO.
+![image](/public/images/note/9160/4-17-ec2-summary-2.png)
+![image](/public/images/note/9160/4-17-ec2-summary-3.png)
+![image](/public/images/note/9160/4-17-ec2-summary-4.png)
+![image](/public/images/note/9160/4-17-ec2-summary-5.png)
+![image](/public/images/note/9160/4-17-ec2-summary-6.png)
+![image](/public/images/note/9160/4-17-ec2-summary-7.png)
+![image](/public/images/note/9160/4-17-ec2-summary-8.png)
+![image](/public/images/note/9160/4-17-ec2-summary-9.png)
+![image](/public/images/note/9160/4-17-ec2-summary-10.png)
+![image](/public/images/note/9160/4-17-ec2-summary-11.png)
+![image](/public/images/note/9160/4-17-ec2-summary-12.png)
+![image](/public/images/note/9160/4-17-ec2-summary-13.png)
+![image](/public/images/note/9160/4-17-ec2-summary-14.png)
+![image](/public/images/note/9160/4-17-ec2-summary-15.png)
+![image](/public/images/note/9160/4-17-ec2-summary-16.png)
+![image](/public/images/note/9160/4-17-ec2-summary-17.png)
+![image](/public/images/note/9160/4-17-ec2-summary-18.png)
+![image](/public/images/note/9160/4-17-ec2-summary-19.png)
+![image](/public/images/note/9160/4-17-ec2-summary-20.png)
+![image](/public/images/note/9160/4-17-ec2-summary-21.png)
+![image](/public/images/note/9160/4-17-ec2-summary-22.png)
+![image](/public/images/note/9160/4-17-ec2-summary-23.png)
+![image](/public/images/note/9160/4-17-ec2-summary-24.png)
 ### 4.18 EC2 Quiz
 ![image](/public/images/note/9160/4-18-ec2-quiz-1.png)
 ![image](/public/images/note/9160/4-18-ec2-quiz-2.png)
@@ -887,7 +914,57 @@ Database exam tips.
 ![image](/public/images/note/9160/5-1-database-exam-tips-3.png)
 ![image](/public/images/note/9160/5-1-database-exam-tips-4.png)
 ### 5.2 Let's Create An RDS Instance
-TOD
+Create MySql database. Services->Storage->RDS.
+![image](/public/images/note/9160/5-2-rds-wordpress-1.png)
+Select free tier and set database name and password.
+![image](/public/images/note/9160/5-2-rds-wordpress-2.png)
+Choose to create security group.
+![image](/public/images/note/9160/5-2-rds-wordpress-3.png)
+Set database name, so when this database is launched, a new db will be created automatically.
+![image](/public/images/note/9160/5-2-rds-wordpress-4.png)
+Set retention period to 0 days to disable backup.
+![image](/public/images/note/9160/5-2-rds-wordpress-5.png)
+It takes some time until the MySQL instance is launched.
+![image](/public/images/note/9160/5-2-rds-wordpress-6.png)
+Copy the endpoint value, we will use it later.
+![image](/public/images/note/9160/5-2-rds-wordpress-7.png)
+Create new instance with the following bootstrap script, which will install Apache, php mysql driver and wordpress.
+```raw
+#!/bin/bash
+yum install httpd php php-mysql -y
+cd /var/www/html
+wget https://wordpress.org/wordpress-5.1.1.tar.gz
+tar -xzf wordpress-5.1.1.tar.gz
+cp -r wordpress/* /var/www/html/
+rm -rf wordpress
+rm -rf wordpress-5.1.1.tar.gz
+chmod -R 755 wp-content
+chown -R apache:apache wp-content
+service httpd start
+chkconfig httpd on
+```
+![image](/public/images/note/9160/5-2-rds-wordpress-8.png)
+Add tag "WordPressServer".
+![image](/public/images/note/9160/5-2-rds-wordpress-9.png)
+Add 'WebDMZ' security group into the inbound rule of 'rds-launch-wizard', so that the web server instance can access the MySQL instance.
+![image](/public/images/note/9160/5-2-rds-wordpress-10.png)
+Access the public ip of web server. We will see the webpress admin page.
+![image](/public/images/note/9160/5-2-rds-wordpress-11.png)
+Setup the data connection, including database name, use name, password. Put the endpoint value(MySQL instance) into Database Host.
+![image](/public/images/note/9160/5-2-rds-wordpress-12.png)
+Error occurs: can't write the wp-config.php file.
+![image](/public/images/note/9160/5-2-rds-wordpress-13.png)
+Copy the script, then ssh to the web server. Create a file named `wp-config.php` in folder `/var/www/html` with the content from latest step.
+![image](/public/images/note/9160/5-2-rds-wordpress-14.png)
+Refresh the page, now, the wordpress admin page is displayed properly. Set title, name, etc.
+![image](/public/images/note/9160/5-2-rds-wordpress-15.png)
+WordPress is installed successfully.
+![image](/public/images/note/9160/5-2-rds-wordpress-16.png)
+Login.
+![image](/public/images/note/9160/5-2-rds-wordpress-17.png)
+Home page of WordPress.
+![image](/public/images/note/9160/5-2-rds-wordpress-18.png)
+Exam tips.
 ![image](/public/images/note/9160/5-2-rds-instance-summary.png)
 ### 5.3 RDS Backups, Multi-AZ & Read Replicas
 Backup types.
@@ -912,7 +989,27 @@ Read Replica.
 ![image](/public/images/note/9160/5-3-rds-backup-read-replica-4.png)
 ![image](/public/images/note/9160/5-3-rds-backup-read-replica-5.png)
 ### 5.4 RDS Backups, Multi-AZ & Read Replicas - Lab
-TODO.
+Choose the Mysql database create in previous session, click modify button.
+![image](/public/images/note/9160/5-4-rds-backup-1.png)
+Enable Multi-AZ deployment.
+![image](/public/images/note/9160/5-4-rds-backup-2.png)
+Click 'Modify' button, warning appears. Select 'Apply immediately' option.
+![image](/public/images/note/9160/5-4-rds-backup-3.png)
+The status of the database instance will be in modifying status. Wait for a while until the status is changed to 'Available'.
+![image](/public/images/note/9160/5-4-rds-backup-4.png)
+Click it to see the details, switch to Configuration tab, you can see Multi AZ is set to yes.
+![image](/public/images/note/9160/5-4-rds-backup-5.png)
+Modify the database instance, turn on backup by setting the retention period to 35 days, then choose "Apply immediately" option.
+![image](/public/images/note/9160/5-4-rds-backup-6.png)
+The database instance will change to modifying status again, wait until it becomes to Available status. Actions->Create read replica.
+![image](/public/images/note/9160/5-4-rds-backup-7.png)
+Choose a different region to replica, eg. EU West(Ireland). Provide database identify name and keep other settings as default, click "Create read replica".
+![image](/public/images/note/9160/5-4-rds-backup-8.png)
+A new database instance is created with role 'Replica' in a different AZ.
+![image](/public/images/note/9160/5-4-rds-backup-9.png)
+Click Actions->Promote read replica to convert a MySQL Read Replica into a “standalone” RDS database instance.
+![image](/public/images/note/9160/5-4-rds-backup-10.png)
+Exam tips.
 ![image](/public/images/note/9160/5-4-rds-backup-exam-tips-1.png)
 ![image](/public/images/note/9160/5-4-rds-backup-exam-tips-2.png)
 ![image](/public/images/note/9160/5-4-rds-backup-exam-tips-3.png)
