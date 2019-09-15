@@ -283,8 +283,9 @@ One more entry in Network ACLs.
 ![image](/public/images/note/9160/7-2-create-vpc-6.png)
 One more entry in Security Group, the second one.
 ![image](/public/images/note/9160/7-2-create-vpc-7.png)
-Create Subnet.
+Create Subnet, 10.0.1.0.
 ![image](/public/images/note/9160/7-2-create-subnet-1.png)
+Create another Subnet, 10.0.2.0.
 ![image](/public/images/note/9160/7-2-create-subnet-2.png)
 Two subnets are created.
 ![image](/public/images/note/9160/7-2-create-subnet-3.png)
@@ -295,10 +296,10 @@ You see the "Available IPv4" is 251(total should be 256, CIDR.xyz), 5 ip address
 * 10.0.0.3: Reserved by AWS for future use.
 * 10.0.0.255: Network broadcast address. We do not support broadcast in a VPC, therefore we reserve this address.
 
-Select the first line, click Actions->Modify auto-assign IP settings.
+Select the first subnet, click Actions->Modify auto-assign IP settings.
 ![image](/public/images/note/9160/7-2-create-subnet-4.png)
 ![image](/public/images/note/9160/7-2-create-subnet-5.png)
-Now, auto public ip address is enabled to this subnet.
+Now, auto public ip address is enabled to the subnet 10.0.1.0.
 ![image](/public/images/note/9160/7-2-create-subnet-6.png)
 Now, our VPC looks like this.
 ![image](/public/images/note/9160/7-2-create-subnet-7.png)
@@ -312,17 +313,17 @@ Choose the VPC.
 ![image](/public/images/note/9160/7-2-create-gateway-4.png)
 Now, it is attached.
 ![image](/public/images/note/9160/7-2-create-gateway-5.png)
-* Notice, you can attach only one gateway to VPC.
+* Notice, you can attach only one internet gateway to VPC.
 
 Check the status of the current route table for new VPC. It has route for internal only.
 ![image](/public/images/note/9160/7-2-create-route-tables-1.png)
-And it has two subnets associated.
+There are two subnets, but none of them is associated to this route table.
 ![image](/public/images/note/9160/7-2-create-route-tables-2.png)
 Create new route table for public access.
 ![image](/public/images/note/9160/7-2-create-route-tables-3.png)
 The new route table is created, notice it is not main.
 ![image](/public/images/note/9160/7-2-create-route-tables-4.png)
-Click "Edit routes" button. Add two routes "0.0.0.0/0" for ipv4 and "::/0" for ipv6. Select the gateway created above as target.
+Click "Edit routes" button. Add two routes "0.0.0.0/0" for ipv4 and "::/0" for ipv6. Select the internet gateway created above as target.
 ![image](/public/images/note/9160/7-2-create-route-tables-5.png)
 Now we have two more routes.
 ![image](/public/images/note/9160/7-2-create-route-tables-6.png)
@@ -332,7 +333,7 @@ Select the first one and save.
 ![image](/public/images/note/9160/7-2-create-route-tables-8.png)
 Now, the first subnet is associated with the public route table.
 ![image](/public/images/note/9160/7-2-create-route-tables-9.png)
-If we check the subnet associations of the main route tables, the first subnet is not there anymore. Now we have the private subnet and public subnet as well.
+If we check the subnet associations of the main route tables, the first subnet is not there anymore. Now we have the private subnet and the public subnet.
 ![image](/public/images/note/9160/7-2-create-route-tables-10.png)
 Create instance for web server, select the second AMI.
 ![image](/public/images/note/9160/7-2-create-instance-1.png)
@@ -340,7 +341,7 @@ Select the VPC created previously and select the first subnet. Notice the public
 ![image](/public/images/note/9160/7-2-create-instance-2.png)
 Add tags to indicate this is a web server.
 ![image](/public/images/note/9160/7-2-create-instance-3.png)
-There is no existing security groups here, as now we are using the new VPC.
+There is no existing security groups here(Not seeing the WebDMZ), since we are using the new VPC now.
 ![image](/public/images/note/9160/7-2-create-instance-4.png)
 Create new security group.
 ![image](/public/images/note/9160/7-2-create-instance-5.png)
@@ -357,14 +358,15 @@ Until now, we have created the VPC from scratch and it looks as follows.
 Exam tips.
 ![image](/public/images/note/9160/7-2-create-vpc-exam-tips.png)
 ### 7.3 Build A Custom VPC - Part 2
-Now we have to instances, one web server and one db server. Currently, the web server can't connect to db server. We will create security group to enable the communication from web server to db server.
+Now we have two instances, one is web server and another is db server. Currently, the web server can't connect to db server. We will create security group to enable the connection from web server to db server.
 
 Create new security group.
 ![image](/public/images/note/9160/7-3-create-security-group.png)
 It is created.
 ![image](/public/images/note/9160/7-3-create-security-group-2.png)
-Change the security group for db server.
+Change the security group for db server. Select the database instance, Actions->Networking->Change Security Group.
 ![image](/public/images/note/9160/7-3-create-security-group-3.png)
+Only select the new security group for database.
 ![image](/public/images/note/9160/7-3-create-security-group-4.png)
 ssh to web server and ping the database server from it. '54.175.89.128' is the public ip of web server and '10.0.2.140' is the private ip of database server. If you upload the keypair to web server, you can also ssh to database server from webserver.
 ```raw
@@ -442,12 +444,13 @@ Exam tips.
 ![image](/public/images/note/9160/7-4-nat-gateway-exam-tips-2.png)
 ![image](/public/images/note/9160/7-4-nat-gateway-exam-tips-3.png)
 ### 7.5 Access Control Lists (ACL)
+We have two ACLs. One is default ACL, another is custom ACL for the custom VPC.
 ![image](/public/images/note/9160/7-5-acl-1.png)
 Create new ACL.
 ![image](/public/images/note/9160/7-5-acl-2.png)
 By default all inbound and outbound requests are denied.
 ![image](/public/images/note/9160/7-5-acl-3.png)
-Test the port 80. SSh to web server, run commands to create a web page and start web service.
+Test the port 80. SSh to web server, run commands to create a web page and start web server.
 ```raw
 [root@ip-10-0-1-251 ec2-user]# yum install httpd -y
 [root@ip-10-0-1-251 ec2-user]# chkconfig httpd on
@@ -461,7 +464,7 @@ index.html
 ```
 Access the public ip address, we should see the page.
 ![image](/public/images/note/9160/7-5-acl-4.png)
-It's currently working, because the ACL for subnet is public to all inbound ports.
+It's currently working, because the default ACL has inbound rules for all public sources.
 ![image](/public/images/note/9160/7-5-acl-5.png)
 Associate the new ACL to current subnet. Select the new ACL and click "Edit subnet associations".
 ![image](/public/images/note/9160/7-5-acl-6.png)
@@ -524,8 +527,14 @@ Current solution: Use NAT gateway to let private subnet to access public interne
 ![image](/public/images/note/9160/7-10-vpc-endpoints-5.png)
 Use VPC gateway to achieve the same purpose.
 ![image](/public/images/note/9160/7-10-vpc-endpoints-6.png)
-TODO, Labs
-
+Create endpoint: Service->VPC->Endpoints, Create Endpoint, select s3 and gateway.
+![image](/public/images/note/9160/7-10-vpc-endpoints-7.png)
+Select the custom VPC, and choose the main subnet, 10.0.2.0.
+![image](/public/images/note/9160/7-10-vpc-endpoints-8.png)
+Now, the end point is created.
+![image](/public/images/note/9160/7-10-vpc-endpoints-9.png)
+Go to the Route Tables, select the main route table, wait for few minutes, the endpoint will show up in the routes. With this endpoint, the private subnet can connect to outside world.
+![image](/public/images/note/9160/7-10-vpc-endpoints-10.png)
 Exam tips.
 ![image](/public/images/note/9160/7-10-vpc-endpoints-exam-tips-1.png)
 ![image](/public/images/note/9160/7-10-vpc-endpoints-exam-tips-2.png)
