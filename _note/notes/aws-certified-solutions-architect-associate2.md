@@ -40,9 +40,23 @@ Exam tips.
 ![image](/public/images/note/9160/6-1-dns-exam-tips-2.png)
 ### 6.2 Route53 - Register A Domain Name Lab
 Services -> Networking & Content Delivery -> Route 53, Registered domains
+
+Search available domain, add you want to purchase into cart.
 ![image](/public/images/note/9160/6-2-domain-name-1.png)
+Provide the personal information.
 ![image](/public/images/note/9160/6-2-domain-name-2.png)
-TODO, create three ec2 instance with different index.html.
+It takes sometime before your new domain is ready.
+![image](/public/images/note/9160/6-2-domain-name-3.png)
+Use the following bootstrap script to create three ec2 instance in different regions. For instance, we will create three instances in Ireland, Sydney and Ohio. Change the content in the index.html for each instance to make them unique. So later we know which instance we are visiting.
+```raw
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+echo "<html><h1>Hello Cloud Gurus! This is the X Web Server</h1></html>" > index.html
+```
 Exam tips.
 ![image](/public/images/note/9160/6-2-domain-name-exam-tips.png)
 ### 6.3 Route53 Routing Policies Available On AWS
@@ -50,27 +64,170 @@ Exam tips.
 ### 6.4 Simple Routing Policy Lab
 1 to N.
 ![image](/public/images/note/9160/6-4-simple-routing-policy-1.png)
-TODO, create record set for the domain name with three different ip addresses from 3 ec2 instances.
+Preparation: Get the three public ip addresses of the three instances we created in 6.2.
+
+Go to Route53 -> Host Zones, select the domain created in 6.2, click "Create record set".
+![image](/public/images/note/9160/6-4-simple-routing-policy-2.png)
+Paste the three ip addresses into values box, choose 'Simple' as route policy, click Create.
+![image](/public/images/note/9160/6-4-simple-routing-policy-3.png)
+Record sets are created.
+![image](/public/images/note/9160/6-4-simple-routing-policy-4.png)
+Access the domain, we will be able to see the page. If you keep refreshing the page, the content won't change. The server always stay in the Ireland.
+![image](/public/images/note/9160/6-4-simple-routing-policy-5.png)
+Change the TTL to 1 minutes.
+![image](/public/images/note/9160/6-4-simple-routing-policy-6.png)
+Wait for 60 seconds and refresh the page. The content is returned from Ohio server.
+![image](/public/images/note/9160/6-4-simple-routing-policy-7.png)
+Exam tips.
+![image](/public/images/note/9160/6-4-simple-routing-policy-exam-tips.png)
 ### 6.5 Weighted Routing Policy Lab
 ![image](/public/images/note/9160/6-5-weighted-routing-policy-1.png)
 ![image](/public/images/note/9160/6-5-weighted-routing-policy-2.png)
 ![image](/public/images/note/9160/6-5-weighted-routing-policy-3.png)
-TODO, create weighted routing.
+Preparation: Delete the record sets for simple routing policy created in previous section. Notice, page won't be accessible(after TTL is past).
+
+Create first record set as follows:
+* TTL = 1m
+* Value = ip addresses of Sydney instance
+* Route policy = Weighted
+* Weight = 20
+* Set ID = Sydney
+![image](/public/images/note/9160/6-5-weighted-routing-policy-4.png)
+
+Create second record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ohio instance
+* Route policy = Weighted
+* Weight = 30
+* Set ID = Ohio
+
+Create third record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ireland instance
+* Route policy = Weighted
+* Weight = 50
+* Set ID = Ireland
+
+Refresh the page, you will get response from Ireland with 50% chance, 30% chance from Ohio and 20% from Sydney.  
+
+Exam tips.
+![image](/public/images/note/9160/6-5-latency-routing-policy-exam-tips-1.png)
+![image](/public/images/note/9160/6-5-latency-routing-policy-exam-tips-2.png)
 ### 6.6 Latency Routing Policy
 ![image](/public/images/note/9160/6-6-latency-routing-policy-1.png)
 ![image](/public/images/note/9160/6-6-latency-routing-policy-2.png)
-TODO.
+Preparation 1: Delete the record sets for weighted routing policy created in previous section. Notice, page won't be accessible(after TTL is past).
+
+Preparation 2: Create health check, Route53 -> Health checks, create Health Check, Name=Sydney.
+![image](/public/images/note/9160/6-6-create-health-checks-1.png)
+Set the ip address of Sydney server and domain for host name. Set path to index.html, click Next.
+![image](/public/images/note/9160/6-6-create-health-checks-2.png)
+Create another two health checks for Ohio and Ireland instances. Totally, we have three health checks.
+![image](/public/images/note/9160/6-6-create-health-checks-3.png)
+
+Create first record set as follows:
+* TTL = 1m
+* Value = ip addresses of Sydney instance
+* Route policy = Latency
+* Region = ap-southeast-2
+* Set ID = Sydney
+* Associate with Health check = true
+* Health check to associate = The health check of Sydney.
+![image](/public/images/note/9160/6-6-latency-routing-policy-3.png)
+* Notice that when input the ip address, region is automatically selected based on the location.
+
+Create second record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ohio instance
+* Route policy = Latency
+* Region = us-east-2
+* Set ID = Ohio
+* Associate with Health check = true
+* Health check to associate = The health check of Ohio.
+
+Create second record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ireland instance
+* Route policy = Latency
+* Region = eu-west-1
+* Set ID = Ireland
+* Associate with Health check = true
+* Health check to associate = The health check of Ireland.
+
+Refresh the page, it should show in the content fetched from the closest server. Use a VPN tool to change you machines ip to verify that you always get the content from the closest server.
+![image](/public/images/note/9160/6-6-latency-routing-policy-4.png)
+
 ### 6.7 Failover Routing Policy
 ![image](/public/images/note/9160/6-7-failover-routing-policy-1.png)
 ![image](/public/images/note/9160/6-7-failover-routing-policy-2.png)
-TODO.
+Preparation: Delete the record sets for latency routing policy created in previous section. Notice, page won't be accessible(after TTL is past).
+
+Create first record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ireland instance
+* Route policy = Failover
+* Failover Record Type = Primary
+* Set ID = Primary
+* Associate with Health check = true
+* Health check to associate = The health check of Ireland.
+![image](/public/images/note/9160/6-7-failover-routing-policy-3.png)
+
+Create second record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ohio instance
+* Route policy = Failover
+* Failover Record Type = Secondary
+* Set ID = Secondary
+* Associate with Health check = true
+* Health check to associate = The health check of Ohio.
+
+Access the page, we should see the Irish page.
+![image](/public/images/note/9160/6-7-failover-routing-policy-4.png)
+Stop the Ireland instance. Go to health check, wait for a while. It becomes unhealthy.
+![image](/public/images/note/9160/6-7-failover-routing-policy-5.png)
+Refresh the page, it connects to ohio automatically.
+![image](/public/images/note/9160/6-7-failover-routing-policy-6.png)
+Exam tips.
+![image](/public/images/note/9160/6-7-failover-routing-policy-exam-tips.png)
 ### 6.8 Geolocation Routing Policy
 ![image](/public/images/note/9160/6-8-geolocation-routing-policy-1.png)
 ![image](/public/images/note/9160/6-8-geolocation-routing-policy-2.png)
 ![image](/public/images/note/9160/6-8-geolocation-routing-policy-3.png)
-TODO.
+
+Preparation: Delete the record sets for latency routing policy created in previous section. Notice, page won't be accessible(after TTL is past).
+
+Create first record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ireland instance
+* Route policy = Geolocation
+* Location = Europe
+* Set ID = Europe
+* Associate with Health check = true
+* Health check to associate = The health check of Ireland.
+![image](/public/images/note/9160/6-8-geolocation-routing-policy-4.png)
+
+Create second record set as follows:
+* TTL = 1m
+* Value = ip addresses of Ohio instance
+* Route policy = Geolocation
+* Location = North America
+* Set ID = USA
+* Associate with Health check = true
+* Health check to associate = The health check of Ohio.
+
+Access the web page, it should return the Irish page. If we change the location to USA using VPN tools, the page will return Ohio.
+
+Exam tips.
+![image](/public/images/note/9160/6-8-geolocation-routing-policy-exam-tips.png)
+
 ### 6.9 Geoproximity Routing Policy (Traffic Flow Only)
 ![image](/public/images/note/9160/6-9-geoproximity-routing-policy-1.png)
+Go to Route53 -> Traffic policies->Create Traffic policy.
+![image](/public/images/note/9160/6-9-geoproximity-routing-policy-2.png)
+Set policy name.
+![image](/public/images/note/9160/6-9-geoproximity-routing-policy-3.png)
+Customize Geoproximity rules.
+![image](/public/images/note/9160/6-9-geoproximity-routing-policy-4.png)
 ### 6.10 Multivalue Answer
 ![image](/public/images/note/9160/6-10-multivalue-answer-policy-1.png)
 ![image](/public/images/note/9160/6-10-multivalue-answer-policy-2.png)

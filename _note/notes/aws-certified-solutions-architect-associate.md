@@ -1055,7 +1055,15 @@ Compare Aurora replica and MySQL replica.
 ![image](/public/images/note/9160/5-7-aurora-4.png)
 Backup Aurora.
 ![image](/public/images/note/9160/5-7-aurora-5.png)
-TODO, lab, create Aurora Read Replica.
+Select the MySQL instance, actions->Create Aurora read replica
+![image](/public/images/note/9160/5-7-aurora-6.png)
+Choose 'Create Replica in Different Zone' and set DB instance identifier, keep other settings as default, click "Create read replica" button in the bottom.
+![image](/public/images/note/9160/5-7-aurora-7.png)
+Aurora replica is created.
+![image](/public/images/note/9160/5-7-aurora-8.png)
+Wait for a while, there is one writer instance and one reader instance.
+![image](/public/images/note/9160/5-7-aurora-9.png)
+Exam tips.
 ![image](/public/images/note/9160/5-7-aurora-exam-tips.png)
 ### 5.8 Elasticache
 ![image](/public/images/note/9160/5-8-elastic-cache-1.png)
