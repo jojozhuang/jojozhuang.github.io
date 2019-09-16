@@ -182,11 +182,186 @@ After a while, new instances are launched.
 ![image](/public/images/note/9160/8-5-ha-architecture-4.png)
 ![image](/public/images/note/9160/8-5-ha-architecture-5.png)
 ### 8.6 HA Word Press Site
-TODO.
+The architecture of the wordpress website.
 ![image](/public/images/note/9160/8-6-wordpress-1.png)
+1) Create two S3 buckets, one for storing codes, another for media files.
+![image](/public/images/note/9160/8-6-wordpress-2.png)
+2) Create distribution: Services->Networking & Content Delivery->CloudFront, Create Distribution.
+![image](/public/images/note/9160/8-6-wordpress-3.png)
+Choose the **media** bucket for the Origin Domain Name, leave others as default.
+![image](/public/images/note/9160/8-6-wordpress-4.png)
+The distribution is created and it takes some time to be ready.
+![image](/public/images/note/9160/8-6-wordpress-5.png)
+3) Security Group  
+Make sure the WebDMZ group has port 80 opened for all incoming requests.
+![image](/public/images/note/9160/8-6-wordpress-6.png)
+And make sure rds group has opened mysql database port to WebDMZ group.
+![image](/public/images/note/9160/8-6-wordpress-7.png)
+4) Create MySQL database, Services->RDS->Create Database, choose 'Dev/Test'.  
+![image](/public/images/note/9160/8-6-wordpress-8.png)
+Specify db identifier, db name and password.
+![image](/public/images/note/9160/8-6-wordpress-9.png)
+Select 't2.micro' for DB instance class, set storage size to 1000GB.
+![image](/public/images/note/9160/8-6-wordpress-10.png)
+Enable Multi-AZ.
+![image](/public/images/note/9160/8-6-wordpress-11.png)
+Expand 'Additional connectivity configuration', choose the 'rds-launch-wizard' as the security group.
+![image](/public/images/note/9160/8-6-wordpress-12.png)
+Specify the initial database name, so that a new database will be created once the rds instance is launched.
+![image](/public/images/note/9160/8-6-wordpress-13.png)
+MySQL instance is created.
+![image](/public/images/note/9160/8-6-wordpress-14.png)
+5) Create new Role, Services->IAM->Roles->Create Role, choose EC2.
+![image](/public/images/note/9160/8-6-wordpress-15.png)
+Search 's3', choose 'AmazonS3FullAccess'.
+![image](/public/images/note/9160/8-6-wordpress-16.png)
+Skip the tag, provide the name for the new role.
+![image](/public/images/note/9160/8-6-wordpress-17.png)
+6) Create EC2 instance.  
+In 'Configure Instance' step, leave others unchanged, just change the role with the one we just created, S3ForWP. And paste the bootstrap script to user data.
+```raw
+#!/bin/bash
+yum update -y
+yum install httpd php php-mysql -y
+cd /var/www/html
+echo "healthy" > healthy.html
+wget https://wordpress.org/wordpress-5.1.1.tar.gz
+tar -xzf wordpress-5.1.1.tar.gz
+cp -r wordpress/* /var/www/html/
+rm -rf wordpress
+rm -rf wordpress-5.1.1.tar.gz
+chmod -R 755 wp-content
+chown -R apache:apache wp-content
+wget https://s3.amazonaws.com/bucketforwordpresslab-donotdelete/htaccess.txt
+mv htaccess.txt .htaccess
+chkconfig httpd on
+service httpd start
+```
+![image](/public/images/note/9160/8-6-wordpress-18.png)
+Set Tag.
+![image](/public/images/note/9160/8-6-wordpress-19.png)
+Select the WebDMZ security group, launch instance.
+![image](/public/images/note/9160/8-6-wordpress-20.png)
+Lab problem.
+![image](/public/images/note/9160/8-6-wordpress-lab-problem.png)
 ### 8.7 Setting Up EC2
-TODO.
-![image](/public/images/note/9160/8-6-wordpress-122.png)
+1) Preparation:  
+Check that FrontCloud Distribution created in previous lab is enabled and deployed.
+![image](/public/images/note/9160/8-7-wordpress-1.png)
+The RDS(MySQL) is also available.
+![image](/public/images/note/9160/8-7-wordpress-2.png)
+EC2 Instance is up now, copy the public ip address.
+![image](/public/images/note/9160/8-7-wordpress-3.png)
+ssh to the web server instance, navigate to /var/www/html directory, check if all wp files are there.
+![image](/public/images/note/9160/8-7-wordpress-4.png)
+Also check if htaccess is configured.
+```raw
+cat .htaccess
+```
+![image](/public/images/note/9160/8-7-wordpress-5.png)
+2) Launch WordPress and create a new post with images.  
+Start the apache server and visit the ip address in web browser, wordpress is started.
+![image](/public/images/note/9160/8-7-wordpress-6.png)
+Setup wordpress, the database host is the endpoint of the MySQL instance.
+![image](/public/images/note/9160/8-7-wordpress-7.png)
+Error occurs: can’t write the wp-config.php file.
+![image](/public/images/note/9160/8-7-wordpress-8.png)
+Copy the script, then ssh to the web server. Create a file named wp-config.php in folder /var/www/html with the script. Refresh the page, you should see the wordpress configuration page successfully. Put the required information here, click "Install WordPress".
+![image](/public/images/note/9160/8-7-wordpress-9.png)
+WordPress is installed successfully.
+![image](/public/images/note/9160/8-7-wordpress-10.png)
+Login with acloudgur/acloudguru.
+![image](/public/images/note/9160/8-7-wordpress-11.png)
+Home page of WordPress.
+![image](/public/images/note/9160/8-7-wordpress-12.png)
+Create a new post with two images.
+![image](/public/images/note/9160/8-7-wordpress-13.png)
+Click publish, new the post is published and we are able to view it.
+![image](/public/images/note/9160/8-7-wordpress-14.png)
+In the web server, we will see the upload folder with two image files.
+![image](/public/images/note/9160/8-7-wordpress-15.png)
+3) Next, we want each time user uploads the images, they can be replicated to S3 automatically.
+
+Use `aws s3 ls` to show the existing buckets in s3. Use `aws s3 cp` command to copy files from web server to s3 **media** buckets.
+![image](/public/images/note/9160/8-7-wordpress-16.png)
+Moreover, use `aws s3 cp` to copy the entire wordpress files into s3 **code** bucket.
+![image](/public/images/note/9160/8-7-wordpress-17.png)
+Use `aws s3 ls` to check all files are copied to s3 bucket.
+![image](/public/images/note/9160/8-7-wordpress-18.png)
+4) Setup redirect, whenever user accesses the post, all the image requests will be redirected to s3.  
+Get the domain name of the cloudfront distribution.
+![image](/public/images/note/9160/8-7-wordpress-19.png)
+Edit the '.htaccess' file.
+![image](/public/images/note/9160/8-7-wordpress-20.png)
+Update the `rewriterrule` with the domain name of cloudfront distribution, which is pointing to s3.
+![image](/public/images/note/9160/8-7-wordpress-21.png)
+Use `aws s3 sync` to sync the changed files from web server to s3 buckets. This time, only the '.htaccess' file is synced.
+![image](/public/images/note/9160/8-7-wordpress-22.png)
+Edit file `/etc/httpd/conf/httpd.conf`.
+![image](/public/images/note/9160/8-7-wordpress-23.png)
+Change the value of `AllowOverride` from None to All.
+![image](/public/images/note/9160/8-7-wordpress-24.png)
+Run `service httpd restart` to restart apache.
+5) Update bucket policy for **media** bucket.  
+Paste the following script into Bucket Policy, replace the arn.
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject"
+        ],
+      "Resource": [
+        "arn:aws:s3:::BUCKET_NAME/*"
+        ]
+    }
+  ]
+}
+```
+![image](/public/images/note/9160/8-7-wordpress-25.png)
+After clicking "Save" button, both permission and bucket policy are marked as public.
+![image](/public/images/note/9160/8-7-wordpress-26.png)
+If you encounter any error, select the s3 bucket, click "Edit public access settings".
+![image](/public/images/note/9160/8-7-wordpress-27.png)
+Make sure none of the options are checked, and save.
+![image](/public/images/note/9160/8-7-wordpress-28.png)
+Wait for a while, revisit the post, the image should be fetched from the cloudfront, which is pointing to s3 media bucket.
+![image](/public/images/note/9160/8-7-wordpress-29.png)
+5) Create new application load balancer.  
+Put the name.
+![image](/public/images/note/9160/8-7-wordpress-30.png)
+Select all available AZs.
+![image](/public/images/note/9160/8-7-wordpress-31.png)
+Select the WebDMZ security group.
+![image](/public/images/note/9160/8-7-wordpress-32.png)
+Create a new target group, set path to healthy.html.
+![image](/public/images/note/9160/8-7-wordpress-33.png)
+Choose the instance, then create.
+![image](/public/images/note/9160/8-7-wordpress-34.png)
+Load balancer is created, wait for few minutes, the status is changed to 'active'.
+![image](/public/images/note/9160/8-7-wordpress-35.png)
+6) Optional step, domain name, Services->Route 53->Hosted Zone.
+![image](/public/images/note/9160/8-7-wordpress-36.png)
+Select the existing domain, click 'Create Record Sets'.
+![image](/public/images/note/9160/8-7-wordpress-37.png)
+Choose 'Alias'=Yes, Alias Target = application load balancer.
+![image](/public/images/note/9160/8-7-wordpress-38.png)
+Now the dns is pointing to the load balancer.
+![image](/public/images/note/9160/8-7-wordpress-39.png)
+7) Target Group. Add instance into target group.
+
+Services->EC2->Target Group, select the target group, click Edit button in Targets tab.
+![image](/public/images/note/9160/8-7-wordpress-40.png)
+Select the instance and click 'Add to registered'.
+![image](/public/images/note/9160/8-7-wordpress-41.png)
+Wait for a while, the status becomes healthy.
+![image](/public/images/note/9160/8-7-wordpress-42.png)
+Visit the domain, we should see the post.
+![image](/public/images/note/9160/8-7-wordpress-43.png)
 ### 8.8 Adding Resilience And Autoscaling
 ![image](/public/images/note/9160/8-8-resilience-autoscaling-1.png)
 TODO.
