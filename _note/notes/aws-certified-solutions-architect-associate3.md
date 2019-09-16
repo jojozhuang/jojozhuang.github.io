@@ -29,9 +29,88 @@ Exam tips.
 ![image](/public/images/note/9160/8-1-load-balancer-exam-tips-2.png)
 ![image](/public/images/note/9160/8-1-load-balancer-exam-tips-3.png)
 ### 8.2 Load Balancers And Health Checks Lab
-TODO, create two instances with show different web pages, then create load balancer.
-![image](/public/images/note/9160/8-2-load-balancer-1.png)
-Exam tips
+Reminder: Load Balancers are **not** free.
+
+Diagram: Load Balancer & Health Check Architecture
+![image](/public/images/note/9160/8-2-load-balancer-architecture.png)
+
+Lab1: Create two instances with show different web pages, then create classic load balancer.
+
+1) Create first instance with the following bootstrap script, make it showing "This is WebServer 01" in the web page.
+```raw
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+echo "<html><h1>This is WebServer 01</h1></html>" > index.html
+```
+Specify the subnet/AZ to 'eu-west-1a'.
+![image](/public/images/note/9160/8-2-classic-load-balancer-1.png)
+2) Create second instance with the same bootstrap script, make it showing "This is WebServer 02" in the web page. Specify the subnet/AZ to 'eu-west-1b'. Now, we have two instances running in different AZs.
+![image](/public/images/note/9160/8-2-classic-load-balancer-2.png)
+If we access the public id address, we will see the "This is WebServer 01" or "This is WebServer 02" respectively.
+![image](/public/images/note/9160/8-2-classic-load-balancer-3.png)
+3) Create new classic load balancer. Services->EC2->Load Balancers, Create Load Balancer, provider name for it.
+![image](/public/images/note/9160/8-2-classic-load-balancer-4.png)
+Choose the existing security group.
+![image](/public/images/note/9160/8-2-classic-load-balancer-5.png)
+Configure health check.
+![image](/public/images/note/9160/8-2-classic-load-balancer-6.png)
+Add two EC2 instances.
+![image](/public/images/note/9160/8-2-classic-load-balancer-7.png)
+Keep tag empty and create. The load balancer is created, wait until the status is changed from "OutService" to "InService".
+![image](/public/images/note/9160/8-2-classic-load-balancer-8.png)
+Copy the dns name and visit it in web browser.
+![image](/public/images/note/9160/8-2-classic-load-balancer-9.png)
+We will see the content. Keep refreshing the page, sometimes we hit WebServer 1 and sometime we hit WebServer 2.
+![image](/public/images/note/9160/8-2-classic-load-balancer-10.png)
+Stop the first instance which is Webserver 1.
+![image](/public/images/note/9160/8-2-classic-load-balancer-11.png)
+The health check will notice this and the status of web server 1 instance is changed to "OutService".
+![image](/public/images/note/9160/8-2-classic-load-balancer-12.png)
+If we refresh the page, we will only see webserver 2, as load balancer detects webserver 1 is not available, it is sending all traffic to web server 2.
+![image](/public/images/note/9160/8-2-classic-load-balancer-13.png)
+
+Lab2: Create target group and application load balancer.
+
+1) Create Target Group: Services->EC2->Target Groups, Create Target Group, provide the group name.
+![image](/public/images/note/9160/8-2-application-load-balancer-1.png)
+Set path, threshold, timeout and interval.
+![image](/public/images/note/9160/8-2-application-load-balancer-2.png)
+Once the group is created, switch to "Targets" tab, click "Edit" button.
+![image](/public/images/note/9160/8-2-application-load-balancer-3.png)
+Add the two web server instances.
+![image](/public/images/note/9160/8-2-application-load-balancer-4.png)
+2) Create new application load balancer. Services->EC2->Load Balancers, Create Load Balancer, select Application Load Balancer, provider name for it.
+![image](/public/images/note/9160/8-2-application-load-balancer-5.png)
+Select all availability zones, next.
+![image](/public/images/note/9160/8-2-application-load-balancer-6.png)
+Skip the warning, next.
+![image](/public/images/note/9160/8-2-application-load-balancer-7.png)
+Select the WebDMZ security group, next.
+![image](/public/images/note/9160/8-2-application-load-balancer-8.png)
+Select the existing group created in previous lab, next.
+![image](/public/images/note/9160/8-2-application-load-balancer-9.png)
+Leave as it is.
+![image](/public/images/note/9160/8-2-application-load-balancer-10.png)
+Go back the target group, click Edit.
+![image](/public/images/note/9160/8-2-application-load-balancer-11.png)
+Select the two instances and click 'Add to registered'.
+![image](/public/images/note/9160/8-2-application-load-balancer-12.png)
+Wait for a while, until the status become 'healthy'.
+![image](/public/images/note/9160/8-2-application-load-balancer-13.png)
+Go to the load balancer, copy the dns name, visit it in the web browser.
+![image](/public/images/note/9160/8-2-application-load-balancer-14.png)
+We will see the content. Keep refreshing the page, sometimes we hit WebServer 1 and sometime we hit WebServer 2.
+![image](/public/images/note/9160/8-2-application-load-balancer-15.png)
+Why application load balancer is more intelligent than classic load balancer? Check the listeners in the load balancer, click on the listener.
+![image](/public/images/note/9160/8-2-application-load-balancer-21.png)
+You can create rules with conditions and corresponding actions.
+![image](/public/images/note/9160/8-2-application-load-balancer-22.png)
+![image](/public/images/note/9160/8-2-application-load-balancer-23.png)
+Exam tips.
 ![image](/public/images/note/9160/8-2-load-balancer-exam-tips-1.png)
 ![image](/public/images/note/9160/8-2-load-balancer-exam-tips-2.png)
 ![image](/public/images/note/9160/8-2-load-balancer-exam-tips-3.png)
@@ -51,8 +130,49 @@ Path Patterns.
 Exam tips.
 ![image](/public/images/note/9160/8-3-advanced-load-balancer-exam-tips.png)
 ### 8.4 Autoscaling Groups Lab
-TODO: labs. Create autoscaling group with 3 instances. Create 3 instances and terminate two, after a while, new two instances will be launched automatically.
+Create autoscaling group with 3 instances. Create 3 instances and terminate two, after a while, new two instances will be launched automatically.
+
+Create Launch Configuration: Services->EC2->Auto Scaling->Launch Configurations, Create launch configuration.
 ![image](/public/images/note/9160/8-4-autoscaling-groups-1.png)
+Select the first AMI.
+![image](/public/images/note/9160/8-4-autoscaling-groups-2.png)
+Select the free tier one.
+![image](/public/images/note/9160/8-4-autoscaling-groups-3.png)
+Set name and put the bootstrap script.
+```raw
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+echo "<html><h1>Welcome to the EC2 Fleet!</h1></html>" > index.html
+```
+![image](/public/images/note/9160/8-4-autoscaling-groups-4.png)
+Leave unchanged for the storage.
+![image](/public/images/note/9160/8-4-autoscaling-groups-5.png)
+Select the WebDMZ security group, next.
+![image](/public/images/note/9160/8-4-autoscaling-groups-6.png)
+Click "Create an AutoScaling Group using this launch configuration".
+![image](/public/images/note/9160/8-4-autoscaling-groups-7.png)
+Set the group size=3.
+![image](/public/images/note/9160/8-4-autoscaling-groups-8.png)
+Set the scale group size.
+![image](/public/images/note/9160/8-4-autoscaling-groups-9.png)
+Skip the notification.
+![image](/public/images/note/9160/8-4-autoscaling-groups-10.png)
+Set instance tag.
+![image](/public/images/note/9160/8-4-autoscaling-groups-11.png)
+The AutoScaling group is created. Three instances are under this group.
+![image](/public/images/note/9160/8-4-autoscaling-groups-12.png)
+Go to EC2 instance, we see all instances are up.
+![image](/public/images/note/9160/8-4-autoscaling-groups-13.png)
+Terminate two of them.
+![image](/public/images/note/9160/8-4-autoscaling-groups-14.png)
+In the Activity history of the AutoScaling group, we can see it detects the termination and launch new instances automatically.
+![image](/public/images/note/9160/8-4-autoscaling-groups-15.png)
+After a while, new instances are launched.
+![image](/public/images/note/9160/8-4-autoscaling-groups-16.png)
 ### 8.5 HA Architecture
 ![image](/public/images/note/9160/8-5-ha-architecture-1.png)
 ![image](/public/images/note/9160/8-5-ha-architecture-2.png)
