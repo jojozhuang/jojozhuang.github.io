@@ -364,7 +364,87 @@ Visit the domain, we should see the post.
 ![image](/public/images/note/9160/8-7-wordpress-43.png)
 ### 8.8 Adding Resilience And Autoscaling
 ![image](/public/images/note/9160/8-8-resilience-autoscaling-1.png)
-TODO.
+Lab: The left node will be used for writing only and all the read request will be sent to the right node, which is a replica of the left.
+
+1) Automate files synchronization from web server to s3 bucket.  
+Create file named `crontab` in `/etc` directory.
+```raw
+cd /etc
+nano crontab
+```
+Put the following content into it. The sync happens in every minute.
+```raw
+*/1 * * * * root aws s3 sync --delete s3://acloudguruwp-code-rjk19 /var/www/html
+```
+![image](/public/images/note/9160/8-8-resilience-autoscaling-2.png)
+
+Run following command to start the `cront` service.
+```raw
+service cront restart
+```
+![image](/public/images/note/9160/8-8-resilience-autoscaling-3.png)
+Test this by uploading a file into the **code** bucket.
+![image](/public/images/note/9160/8-8-resilience-autoscaling-4.png)
+Restart the cront service, find the file in /etc/www/html directory.
+![image](/public/images/note/9160/8-8-resilience-autoscaling-5.png)
+2) Setup the read replica and put it behind the load balancer.  
+Select the WordPress EC2 instance, Actions->Image->Create Image.
+![image](/public/images/note/9160/8-8-read-replica-1.png)
+Set the name and description, create image.
+![image](/public/images/note/9160/8-8-read-replica-2.png)
+The EC2 instance will reboot and an AMI is create.
+![image](/public/images/note/9160/8-8-read-replica-3.png)
+
+3) Update crontab configuration in the first WP instance, which will be used as write node.
+```raw
+*/1 * * * * root aws s3 sync --delete /var/www/html s3://acloudguruwp-code-rjk19
+*/1 * * * * root aws s3 sync --delete /var/www/html/wp-content/uploads/ s3://acloudguruwp-media-rjk19
+```
+* Be aware of that this web server a writing node.
+* The first rule: sync all files from write instance to **code** bucket.
+* The second rule: sync all uploaded images from write instance to **media** bucket.
+
+![image](/public/images/note/9160/8-8-read-replica-4.png)
+Testing the settings. Create a file named test.txt in the /var/www/html directory and restart the cront service.
+![image](/public/images/note/9160/8-8-read-replica-5.png)
+Go to the s3 **code** bucket, test.txt is there. You may not be able to see it immediately due to the eventual consistency.
+![image](/public/images/note/9160/8-8-read-replica-6.png)
+4) Launch new instance for read node.  
+Create auto scaling group, Services->EC2->Auto Scaling Group.
+![image](/public/images/note/9160/8-8-launch-read-replica-1.png)
+Select the option 'Create a new launch configuration'.
+![image](/public/images/note/9160/8-8-launch-read-replica-2.png)
+Select the own AMI image.
+![image](/public/images/note/9160/8-8-launch-read-replica-3.png)
+
+Set name, choose IAM role and put the bootstrap script into user data.
+```raw
+#!/bin/bash
+yum update -y
+aws s3 sync --delete s3://YOUR_S3_BUCKET_NAME /var/www/html
+```
+![image](/public/images/note/9160/8-8-launch-read-replica-4.png)
+Keep the default values for storage.
+![image](/public/images/note/9160/8-8-launch-read-replica-5.png)
+Select the WebDMZ security group.
+![image](/public/images/note/9160/8-8-launch-read-replica-6.png)
+After clicking the launch instance, you will see the 'configure autoscaling group' page. Set name, select all available AZs.
+![image](/public/images/note/9160/8-8-launch-read-replica-7.png)
+Choose the Target Group and set the grace period to 60 seconds, next.
+![image](/public/images/note/9160/8-8-launch-read-replica-8.png)
+Leave as it is.
+![image](/public/images/note/9160/8-8-launch-read-replica-9.png)
+Skip the notification, set instance tag.
+![image](/public/images/note/9160/8-8-launch-read-replica-10.png)
+Review, create auto scaling group.
+![image](/public/images/note/9160/8-8-launch-read-replica-11.png)
+5) Remove the write node from the target group. Select the target group, click edit button.
+![image](/public/images/note/9160/8-8-launch-read-replica-12.png)
+Select the instance, click remove button.
+![image](/public/images/note/9160/8-8-launch-read-replica-13.png)
+Now we see the two read nodes.
+![image](/public/images/note/9160/8-8-launch-read-replica-14.png)
+todo, remaing 05:04.
 ### 8.9 Cleaning Up
 TODO.
 ### 8.10 CloudFormation
