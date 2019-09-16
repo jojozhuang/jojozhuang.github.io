@@ -444,11 +444,80 @@ Select the instance, click remove button.
 ![image](/public/images/note/9160/8-8-launch-read-replica-13.png)
 Now we see the two read nodes.
 ![image](/public/images/note/9160/8-8-launch-read-replica-14.png)
-todo, remaing 05:04.
+Rename the write node to MyWP-WN to make more clear.
+![image](/public/images/note/9160/8-8-launch-read-replica-15.png)
+Check the target group, both two read nodes are healthy.
+![image](/public/images/note/9160/8-8-launch-read-replica-16.png)
+6) Testing  
+Visit the site with the domain name, it should return the images from s3 bucket.
+![image](/public/images/note/9160/8-8-read-replica-testing-1.png)
+Visit the admin page of wordpress, http://domain/wp-admin/, input user name and password.
+![image](/public/images/note/9160/8-8-read-replica-testing-2.png)
+Now we are in the admin page. Notice that the domain is an ip address, which is write's node public ip.
+![image](/public/images/note/9160/8-8-read-replica-testing-3.png)
+Create a new post with uploading a picture.
+![image](/public/images/note/9160/8-8-read-replica-testing-4.png)
+The image is not showing properly. This is because the image is not propagated from s3 bucket yet.
+![image](/public/images/note/9160/8-8-read-replica-testing-5.png)
+Publish the post and wait for few minutes. Refresh the page, we should be able to see the image.
+![image](/public/images/note/9160/8-8-read-replica-testing-6.png)
+If we visit the frontend, we should see the new post with image propagated properly.
+![image](/public/images/note/9160/8-8-read-replica-testing-7.png)
+If we copy the image url and view it in browser, we should see it is from the cloudfront, from s3 bucket.
+![image](/public/images/note/9160/8-8-read-replica-testing-8.png)
+7) Test High Availability.  
+Terminate one of the read node.
+![image](/public/images/note/9160/8-8-testing-availability-1.png)
+Check the target group, there is only one healthy instance. If we visit the site, it is still responsive, though there may be some latency.
+![image](/public/images/note/9160/8-8-testing-availability-2.png)
+Check the auto scaling group, check the history, it detects the unhealthy occurrence.
+![image](/public/images/note/9160/8-8-testing-availability-3.png)
+New instance will be launched automatically.
+![image](/public/images/note/9160/8-8-testing-availability-4.png)
+Check the target group, wait until the healthy node comes back. Again, we have to healthy read nodes.
+![image](/public/images/note/9160/8-8-testing-availability-5.png)
+Refresh the site, it is still running properly. We have auto healing system!
+![image](/public/images/note/9160/8-8-testing-availability-6.png)
+
 ### 8.9 Cleaning Up
-TODO.
+Lab: RDS failover, High availability of database.  
+
+Reboot the database.
+![image](/public/images/note/9160/8-9-rds-failover-1.png)
+Select the "Reboot With Failover" option. The database will be failed over from one availability zone to another.
+![image](/public/images/note/9160/8-9-rds-failover-2.png)
+The database will be rebooted.
+![image](/public/images/note/9160/8-9-rds-failover-3.png)
+The website will not be accessible, 504 error is returned.
+![image](/public/images/note/9160/8-9-rds-failover-4.png)
+Once the database comes back, our site will work again.
+![image](/public/images/note/9160/8-9-rds-failover-5.png)
+![image](/public/images/note/9160/8-9-rds-failover-6.png)
+Delete all assets, instance, database, buckets, etc for clean up.
 ### 8.10 CloudFormation
-TODO.
+Create cloudformation, Services->Management & Governance->CloudFormation, create stack.
+![image](/public/images/note/9160/8-10-cloudformation-1.png)
+Choose 'Use a sample template' option, and select WordPress blog template.
+![image](/public/images/note/9160/8-10-cloudformation-2.png)
+Set name and database parameters.
+![image](/public/images/note/9160/8-10-cloudformation-3.png)
+Add tag, next, review and create.
+![image](/public/images/note/9160/8-10-cloudformation-4.png)
+It is created.
+![image](/public/images/note/9160/8-10-cloudformation-5.png)
+Wait for a while, the creation is completed. We see some web servers and security groups are created.
+![image](/public/images/note/9160/8-10-cloudformation-6.png)
+Switch to the Outputs tab, hit the link.
+![image](/public/images/note/9160/8-10-cloudformation-7.png)
+We should see the word press configuration page. WordPress site is ready to use.
+![image](/public/images/note/9160/8-10-cloudformation-8.png)
+Switch to Resources tab. Notice that only web server and security group are created. There is no RDS is created. You can confirm this by going to RDS to see if there is any new instance is launched.
+![image](/public/images/note/9160/8-10-cloudformation-9.png)
+Only one EC2 instance we can find.
+![image](/public/images/note/9160/8-10-cloudformation-10.png)
+* Visit https://aws.amazon.com/quickstart/?quick to see available templates.
+
+Exam tips.
 ![image](/public/images/note/9160/8-10-cloudformation-exam-tips.png)
 ### 8.11 Elastic Beanstalk
 Create Elastic Beanstalk, Services->Compute->Elastic Beanstalk.
@@ -642,7 +711,74 @@ Lamda exam tips.
 ![image](/public/images/note/9160/10-1-lambda-exam-tips-2.png)
 ### 10.2 Let's Build A Serverless Webpage
 ![image](/public/images/note/9160/10-2-build-serverless-1.png)
-TODO lab.
+Services->Compute->Lambda, create a function.
+![image](/public/images/note/9160/10-2-build-serverless-2.png)
+Set name, choose python 3.6 for runtime.
+![image](/public/images/note/9160/10-2-build-serverless-3.png)
+Create a new role and select 'Simple microservice permissions' policy template, Create Function.
+![image](/public/images/note/9160/10-2-build-serverless-4.png)
+Lambda function is created.
+![image](/public/images/note/9160/10-2-build-serverless-5.png)
+Scroll down and copy the python code to the function code editor, save the change.
+```python
+def lambda_handler(event, context):
+    print("In lambda handler")
+
+    resp = {
+        "statusCode": 200,
+        "headers": {
+            "Access-Control-Allow-Origin": "*",
+        },
+        "body": "Johnny"
+    }
+
+    return resp
+```
+![image](/public/images/note/9160/10-2-build-serverless-6.png)
+Scroll down and set the description.
+![image](/public/images/note/9160/10-2-build-serverless-7.png)
+Scroll up, select the 'API Gateway' trigger.
+![image](/public/images/note/9160/10-2-build-serverless-8.png)
+Create a new api and select AWS IAM as the security mechanism. Click add and save.
+![image](/public/images/note/9160/10-2-build-serverless-9.png)
+The API Gateway trigger is created.
+![image](/public/images/note/9160/10-2-build-serverless-10.png)
+Hit the name of the gateway "MyFirstLambdaFunction-API".
+![image](/public/images/note/9160/10-2-build-serverless-11.png)
+Delete the existing ANY method and create a new get method.
+![image](/public/images/note/9160/10-2-build-serverless-12.png)
+Then deploy this api.
+![image](/public/images/note/9160/10-2-build-serverless-13.png)
+Expand the get method, click the invoke url. It should return "Johnny", which is defined in the python script.
+![image](/public/images/note/9160/10-2-build-serverless-14.png)
+
+Copy the invoke url, replace YOUR-API-GATEWAY-LINK-HERE with it in the html.
+```html
+<html>
+<script>
+
+function myFunction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("my-demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "YOUR-API-GATEWAY-LINK-HERE", true);
+    xhttp.send();
+
+}
+
+</script>
+<body><div align="center"><br><br><br><br>
+<h1>Hello <span id="my-demo">Cloud Gurus!</span></h1>
+<button onclick="myFunction()">Click me</button><br>
+<img src="https://s3.amazonaws.com/acloudguru-opsworkslab-donotdelete/ACG_Austin.JPG"></div>
+</body>
+</html>
+```
+todo
+![image](/public/images/note/9160/10-3-serverless-diagram.png)
 ### 10.3 Let's Build An Alexa Skill
 TODO lab: Alexa.
 ### 10.4 Summary
