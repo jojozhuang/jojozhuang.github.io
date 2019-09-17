@@ -752,7 +752,9 @@ Then deploy this api.
 Expand the get method, click the invoke url. It should return "Johnny", which is defined in the python script.
 ![image](/public/images/note/9160/10-2-build-serverless-14.png)
 
-Copy the invoke url, replace YOUR-API-GATEWAY-LINK-HERE with it in the html.
+Now, our lambda function is working. We will create a web page to call this function.
+
+Replace YOUR-API-GATEWAY-LINK-HERE with the invoke URL in the index.html.
 ```html
 <html>
 <script>
@@ -777,7 +779,35 @@ function myFunction() {
 </body>
 </html>
 ```
-todo
+Create a s3 bucket.
+![image](/public/images/note/9160/10-2-build-serverless-15.png)
+Notice the bucket is not public.
+![image](/public/images/note/9160/10-2-build-serverless-16.png)
+Select the bucket, click "Edit public access settings", clear all checks, save.
+![image](/public/images/note/9160/10-2-build-serverless-17.png)
+Switch to Properties tab, choose "Static website hosting".
+![image](/public/images/note/9160/10-2-build-serverless-18.png)
+Choose the "Use this bucket to host a website" option, set the index document and error document.
+![image](/public/images/note/9160/10-2-build-serverless-19.png)
+error.html.
+```html
+<html><body><h1>There has been an error!</h1></body></html>
+```
+Bucket hosting is setup.
+![image](/public/images/note/9160/10-2-build-serverless-20.png)
+Upload the two html files into the bucket and make them public.
+![image](/public/images/note/9160/10-2-build-serverless-21.png)
+Access the link of index.html in web browser. We should see the page.
+![image](/public/images/note/9160/10-2-build-serverless-22.png)
+Click on the button, the title will be changed.
+![image](/public/images/note/9160/10-2-build-serverless-23.png)
+Further more, you can bind your domain name to the s3 bucket by creating an A Record.
+![image](/public/images/note/9160/10-2-build-serverless-24.png)
+Now, when we visit the domain, it shows the same content.
+![image](/public/images/note/9160/10-2-build-serverless-25.png)
+* Wait for a while if you see a blank page as dns takes some time to work.
+
+Architecture of Lambda.
 ![image](/public/images/note/9160/10-3-serverless-diagram.png)
 ### 10.3 Let's Build An Alexa Skill
 TODO lab: Alexa.
