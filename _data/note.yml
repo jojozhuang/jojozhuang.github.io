@@ -10,6 +10,11 @@ categories:
         icon: fas fa-drafting-compass
         subcategory: design-knowledge
         image: system-design.png
+      - name: Amazon AWS
+        description: AWS, EC2, S3
+        icon: fab fa-aws
+        subcategory: amazon-aws
+        image: aws.png
   - category: workspace
     name: Workspace
     subcategories:
