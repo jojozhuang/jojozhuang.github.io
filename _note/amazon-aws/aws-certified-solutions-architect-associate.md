@@ -1619,6 +1619,7 @@ Exam tips.
 ![image](/public/images/note/9551/7-9-direct-connect-2.png)
 ![image](/public/images/note/9551/7-9-direct-connect-exam-tips.png)
 ### 7.10 VPC End Points
+VPC Endpoint.
 ![image](/public/images/note/9551/7-10-vpc-endpoints-1.png)
 ![image](/public/images/note/9551/7-10-vpc-endpoints-2.png)
 ![image](/public/images/note/9551/7-10-vpc-endpoints-3.png)
