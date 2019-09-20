@@ -44,8 +44,9 @@ tags: [AWS]
 2) sdfsdf
 ### 4.2 Network
 1) Security Group vs. Network ACL
-* You can only config allow rules in Security Group.
+* You can only config allow rules in Security Group, you can't config deny rules.
 * The change of security group impacts instance, whereas Network ACL impacts more.
+* When config security group, you need only to set inbound, whereas you have to config inbound and outbound both for ACL.
 
 2) NAT Instance vs. NAT Gateway vs VPC Endpoint
 * All of them are used to enable internet access for private subnet.
