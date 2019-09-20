@@ -23,6 +23,10 @@ bookmarks:
         description: 系统设计(System Design)
         url: /public/pdf/system-design-cn.pdf
         type: doc
+      - name: AWS Exam
+        description: AWS Exam
+        url: /public/pdf/awsexam.pdf
+        type: doc
       - name: How to Design Twitter 1
         description: How to Design Twitter 1
         url: http://blog.gainlo.co/index.php/2016/02/17/system-design-interview-question-how-to-design-twitter-part-1/
