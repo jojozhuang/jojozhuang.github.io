@@ -31,6 +31,10 @@ bookmarks:
         description: How to Design Twitter 1
         url: http://blog.gainlo.co/index.php/2016/02/17/system-design-interview-question-how-to-design-twitter-part-1/
         type: webpage
+      - name: TAO - The power of the graph(Facebook)
+        description: TAO - The power of the graph
+        url: https://www.facebook.com/notes/facebook-engineering/tao-the-power-of-the-graph/10151525983993920/
+        type: webpage
   - category: Java
     links:
       - name: Java 技术书籍大全
