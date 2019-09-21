@@ -166,7 +166,111 @@ $ bundle update
 $ bundle exec jekyll serve --port 12001
 ```
 
-## 7. References
+## 7. Using RVM to Manage Multiple Ruby Versions
+### 7.1 System Ruby
+Don't delete the system ruby on macos.
+```raw
+$ ruby -v
+ruby 2.3.7p456 (2018-03-28 revision 63024) [universal.x86_64-darwin18]
+$ which ruby
+/usr/bin/ruby
+```
+### 7.2 Installing Rvm
+Install rvm and use it to manage multiple ruby versions.
+
+1) Install gnupg
+```raw
+brew install gnupg
+```
+2) Install GPG keys
+Go to https://rvm.io/rvm/install, find the link for gpg, execute it. You may get the "No route to host" error, find the host's ip address and try again.
+```raw
+$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: keyserver receive failed: No route to host
+$ host pool.sks-keyservers.net
+pool.sks-keyservers.net has address 24.134.103.65
+pool.sks-keyservers.net has address 194.95.66.28
+pool.sks-keyservers.net has address 138.68.241.223
+pool.sks-keyservers.net has address 134.93.178.170
+pool.sks-keyservers.net has address 91.143.92.136
+pool.sks-keyservers.net has address 198.46.203.97
+pool.sks-keyservers.net has address 95.216.167.177
+pool.sks-keyservers.net has address 144.76.43.40
+pool.sks-keyservers.net has address 178.209.51.99
+pool.sks-keyservers.net has address 4.35.226.103
+pool.sks-keyservers.net has IPv6 address 2a01:4f8:c2c:19a3::1
+pool.sks-keyservers.net has IPv6 address 2620:128:2000::371b:8858:51f1:5681
+pool.sks-keyservers.net has IPv6 address 2a01:4f9:c010:206b::1
+pool.sks-keyservers.net has IPv6 address 2a02:168:f405::37
+pool.sks-keyservers.net has IPv6 address 2604:a880:2:d0::3c1d:6001
+pool.sks-keyservers.net has IPv6 address ::ffff:198.46.203.97
+pool.sks-keyservers.net has IPv6 address 2001:4c80:40:628:5c70:d1ff:fe44:1424
+pool.sks-keyservers.net has IPv6 address 2001:19f0:5001:2dba:ec4:7aff:fe8e:faf2
+pool.sks-keyservers.net has IPv6 address 2001:67c:26b4::99:0
+pool.sks-keyservers.net has IPv6 address 2607:f140:8801::1:65
+$ gpg --keyserver hkp://24.134.103.65 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg: key 105BD0E739499BDB: public key "Piotr Kuczynski <piotr.kuczynski@gmail.com>" imported
+gpg: key 3804BB82D39DC0E3: "Michal Papis (RVM signing) <mpapis@gmail.com>" 1 new signature
+gpg: key 3804BB82D39DC0E3: "Michal Papis (RVM signing) <mpapis@gmail.com>" 49 signatures cleaned
+gpg: Total number processed: 2
+gpg:               imported: 1
+gpg:         new signatures: 1
+gpg:     signatures cleaned: 49
+```
+3) Install RVM with the latest stable version of Ruby.
+```raw
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+Source the path, so that we can use rvm.
+```raw
+$ source ~/.rvm/scripts/rvm
+```
+4) Show all ruby versions.
+```raw
+rvm list
+=* ruby-2.6.3 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+5) Use the specific version.
+```raw
+$ rvm use 2.6.3
+Using /Users/johnny/.rvm/gems/ruby-2.6.3
+$ which ruby
+/Users/johnny/.rvm/rubies/ruby-2.6.3/bin/ruby
+$ ruby -v
+ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
+```
+### 7.3 Installing Jekyll
+Install Jekyll.
+```raw
+$ gem install jekyll
+```
+Check version.
+```raw
+$ jekyll -v
+jekyll 4.0.0
+```
+Install bundle and update its components.
+```raw
+$ gem install bundler
+$ bundle pack
+```
+Launch Jekyll site with bundle.
+```raw
+$ bundle exec jekyll serve --port 12001
+```
+### 7.4 Security Vulnerability of Dependencies
+Frequently receive notifications from GitHub about the security vulnerability in one of GitHub dependencies.
+
+Run the following command to update `Gemfile.lock` file.
+```raw
+$ bundle update
+```
+
+## 8. References
 * [Jekyll - Official Installation Guide](https://jekyllrb.com/docs/installation/)
 * [Setting up your GitHub Pages site locally with Jekyll
 ](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
@@ -174,3 +278,5 @@ $ bundle exec jekyll serve --port 12001
 * [How to Set Up a Jekyll Development Site on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jekyll-development-site-on-ubuntu-16-04)
 * [Increase Jekyll Build Speed](https://blog.webjeda.com/jekyll-build-speed/)
 * [How I reduced my Jekyll build time by 61%](https://forestry.io/blog/how-i-reduced-my-jekyll-build-time-by-61/)
+* [How to Install Ruby on Mac OS X with RVM](https://usabilityetc.com/articles/ruby-on-mac-os-x-with-rvm/)
+* [gpg: keyserver receive failed: No route to host #4215](https://github.com/rvm/rvm/issues/4215)
