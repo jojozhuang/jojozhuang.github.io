@@ -424,8 +424,8 @@ Create file '`index.html`'. It is the default page for this app.
       drawWhiteboard(data.wbdata, $('#workingwb'), $('#playerwb'));
     });
   </script>
-  <link href="/public/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="/public/css/Site.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/Site.css" rel="stylesheet" type="text/css" />
   <script src="/public/scripts/jquery-1.10.2.min.js"></script>
   <script src="/public/scripts/bootstrap.min.js"></script>
   <!--jquery slider bar-->

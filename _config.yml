@@ -3,7 +3,7 @@ highlighter: rouge
 #incremental: true
 
 sass:
-  sass_dir: public/css
+  sass_dir: assets/css
   style: compressed
 
 plugins:

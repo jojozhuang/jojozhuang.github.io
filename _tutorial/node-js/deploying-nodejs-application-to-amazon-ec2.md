@@ -194,4 +194,4 @@ $ sudo make uninstall
 ```
 
 ## 9. Document
-* [Deploy Node.js Application to Amazon EC2]({% link /public/docs/deploy_nodejs_to_ec2.pdf %})
+* [Deploy Node.js Application to Amazon EC2]({% link /assets/docs/deploy_nodejs_to_ec2.pdf %})

@@ -40,7 +40,7 @@ Developers have to use two different programming languages Swift and Java to bui
 
 ## 2. Building iOS App with Xamarin
 ### 2.1 Xamarin
-Xamarin is based on [Mono](http://www.mono-project.com/) and .NET framework, written in C#. With the help of Xamarin platform, we can use C# to build iOS and Android Apps. The benefit by using Xamarin is obvious, the development and maintenance cost are reduced, since the common libraries can be centralized and reused by other components. For developers, they can focus on UI of iOS and Android once the lower business logic component is finalized. You can find more details of Xamarin from my [Xamarin Research Document]({% link /public/docs/xamarin_research.pdf %}).
+Xamarin is based on [Mono](http://www.mono-project.com/) and .NET framework, written in C#. With the help of Xamarin platform, we can use C# to build iOS and Android Apps. The benefit by using Xamarin is obvious, the development and maintenance cost are reduced, since the common libraries can be centralized and reused by other components. For developers, they can focus on UI of iOS and Android once the lower business logic component is finalized. You can find more details of Xamarin from my [Xamarin Research Document]({% link /assets/docs/xamarin_research.pdf %}).
 ### 2.2 Xamarin Course Player(iOS)
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The first one is for screenshot and the second one is for whiteboard.
 ![image](/public/images/portfolio/courseplayerxamarin/homepage.png){:width="350px"}  

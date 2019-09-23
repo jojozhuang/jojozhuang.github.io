@@ -53,7 +53,7 @@ Create a new HTML file inside the `_includes` folder and call it `sharebar.html`
 ```
 
 ## 2. Styling the Widget
-Create a new css file inside the `public/css` folder and call it `sharebar.css`. Then place the following code to this file:
+Create a new css file inside the `assets/css` folder and call it `sharebar.css`. Then place the following code to this file:
 ```css
 /* Share Bar */
 #share-bar {

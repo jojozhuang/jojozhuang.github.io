@@ -27,9 +27,9 @@ To enable the highlighting, you need to edit `_config.yml` file which is located
 markdown: kramdown
 highlighter: rouge
 ```
-Then, create css file, for example, [highlight.scss]({% link /public/css/highlight.scss %}). And include this css file to the page.
+Then, create css file, for example, [highlight.scss]({% link /assets/css/highlight.scss %}). And include this css file to the page.
 ```html
-<link href="/public/css/highlight.css" rel="stylesheet" />
+<link href="/assets/css/highlight.css" rel="stylesheet" />
 ```
 Refresh the page. The highlighting is working now.
 ![image](/public/images/jekyll/1623/javahighlight.png)  

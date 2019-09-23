@@ -15,11 +15,11 @@ tags: [Nanobar, Progress Bar]
 
 ## 2. Generate Top Bar
 ### 2.1 Download Nanobar
-Download and extract the [latest release](https://github.com/jacoborus/nanobar/archive/master.zip). Unzip the package and copy the `nanobar.min.js` file your project or website folder, for example `/public/js/nanobar.min.js`.
+Download and extract the [latest release](https://github.com/jacoborus/nanobar/archive/master.zip). Unzip the package and copy the `nanobar.min.js` file your project or website folder, for example `/assets/js/nanobar.min.js`.
 ### 2.2 Include Nanobar
 Edit `_layouts/default.html`, insert script tag and set src to the path of the minimized version nonabar.
 ```html
-<script src="/public/js/nanobar.min.js"></script>
+<script src="/assets/js/nanobar.min.js"></script>
 ```
 ### 2.3 Nanobar in Html
 Edit `_layouts/default.html`, add nanobar below the navigation bar.
@@ -36,7 +36,7 @@ Edit `_layouts/default.html`, add nanobar below the navigation bar.
 </body>
 ```
 ### 2.4 Customize Top Progress Bar
-Add the following css for nanobar into `/public/css/main.scss`.
+Add the following css for nanobar into `/assets/css/main.scss`.
 ```css
 .nanobar .bar {
   margin-top: 56px;
