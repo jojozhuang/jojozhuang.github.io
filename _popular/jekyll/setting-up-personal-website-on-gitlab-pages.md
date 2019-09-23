@@ -113,11 +113,37 @@ pages:
 * `public` is the default folder for GitLab Pages.
 
 ### 3.4 Test
-After the site is successfully compiled and deployed, we are able to access it. The migration is done.
+**Test locally**  
+Start Jekyll with command 'bundle exec jekyll serve'.
+```raw
+$ bundle exec jekyll serve
+Configuration file: /Users/Johnny/GitLab/jojozhuang.gitlab.io/_config.yml
+            Source: /Users/Johnny/GitLab/jojozhuang.gitlab.io
+       Destination: /Users/Johnny/GitLab/jojozhuang.gitlab.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 31.496 seconds.
+ Auto-regeneration: enabled for '/Users/Johnny/GitLab/jojozhuang.gitlab.io'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+Access http://127.0.0.1:4000 or http://localhost:4000.
+![image](/assets/images/jekyll/1602/test-local.png)
+**Test on GitLab**  
+Push the changes to gitlab. After the site is successfully compiled and deployed, we are able to access it. The migration is done.
 ![image](/assets/images/jekyll/1602/test-migration.png)
 
+**Error**  
+There is a limitation of GitLab Pages, each size can't be larger than 1GB. My website has lots of images, now it can't be deployed due to the 'too large' error.
+```raw
+ERROR: Uploading artifacts to coordinator... too large archive  id=301083722 responseStatus=413 Request Entity Too Large status=413 Request Entity Too Large token=GqZyjRGe
+FATAL: too large                                   
+ERROR: Job failed: exit code 1
+```
+![image](/assets/images/jekyll/1602/error-too-large.png)
 ## 4. References
 * [GitLab Pages Getting Started](https://docs.gitlab.com/ee/user/project/pages/index.html)
+* [Exploring GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/introduction.html)
 * [Getting started with GitLab CI/CD](https://docs.GitLab.com/ee/ci/quick_start/README.html)
 * [GitLab Google Kubernetes Engine integration](https://about.GitLab.com/google-cloud-platform/)
 * [How to Publish a Website with GitLab Pages](https://www.youtube.com/watch?v=TWqh9MtT4Bg)
