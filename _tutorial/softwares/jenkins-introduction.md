@@ -47,7 +47,7 @@ The code is deployed once all the errors are fixed and tested. | The code is dep
 Development Cycle is slow | The development cycle is fast. New features are more readily available to users. Increases profits.
 
 CI with Jenkins:
-![image](/public/images/devops/3716/jenkin-ci.jpg){:width="600px"}
+![image](/assets/images/devops/3716/jenkin-ci.jpg){:width="600px"}
 
 ## 4. Advantages of using Jenkins
 * Jenkins is being managed by the community which is very open. Every month, they hold public meetings and take inputs from the public for the development of Jenkins project.

@@ -34,7 +34,7 @@ mathjax: true
 ## 2. Bubble Sort
 ### 2.1 How It Works?
 Each time, start taking the last element and compare it with the previous one, swap them if the latter is smaller than the former. By doing this repetitively, bubble up the smallest element and append it to the sorted head list.
-![image](/public/images/dsa/1201/bubble_sort.png){:width="500px"}  
+![image](/assets/images/dsa/1201/bubble_sort.png){:width="500px"}  
 ### 2.2 Implementation
 ```java
 public void bubbleSort(int[] nums) {
@@ -60,7 +60,7 @@ public void bubbleSort(int[] nums) {
 ## 3. Insertion Sort
 ### 3.1 How It Works?
 Start from the second element, compare it with the previous one. Swap them if the latter is larger than the former, otherwise, stop comparing, move to the next element. By doing this repetitively, we always take the first element for the unsorted tail list and insert it to the proper position of sorted head list.
-![image](/public/images/dsa/1201/insertion_sort.png){:width="500px"}  
+![image](/assets/images/dsa/1201/insertion_sort.png){:width="500px"}  
 ### 2.2 Implementation
 ```java
 public void insertionSort(int[] nums) {
@@ -86,7 +86,7 @@ public void insertionSort(int[] nums) {
 ## 4. Shell Sort
 ### 4.1 How It Works?
 Swap two items who has the distance of the gap. Gap is reduced by half in every iteration, until it becomes to one.
-![image](/public/images/dsa/1201/shell_sort.png){:width="800px"}  
+![image](/assets/images/dsa/1201/shell_sort.png){:width="800px"}  
 ### 4.2 Implementation
 ```java
 public void shellSort(int[] nums) {
@@ -113,7 +113,7 @@ public void shellSort(int[] nums) {
 ## 5. Selection Sort
 ### 5.1 How It Works?
 Start from the first element, each time, find the smallest element after this element. Swap it with current element if it is smaller. By doing this repetitively, we always select the smallest element in the unsorted tail list and append it to the end of the sorted head list.
-![image](/public/images/dsa/1201/selection_sort.png){:width="500px"}  
+![image](/assets/images/dsa/1201/selection_sort.png){:width="500px"}  
 ### 5.2 Implementation
 ```java
 public void selectionSort(int[] nums) {
@@ -144,11 +144,11 @@ public void selectionSort(int[] nums) {
 ## 6. Heap Sort
 ### 6.1 How It Works?
 1) Build a max heap with the given array.
-![image](/public/images/dsa/1201/heap_sort_build.png){:width="800px"}
+![image](/assets/images/dsa/1201/heap_sort_build.png){:width="800px"}
 2) The root contains the largest item. Swap root with last node, remove the last node(the largest item), then heapify the new root. The following diagrams shows how to use heap to find the largest and the second largest items.
-![image](/public/images/dsa/1201/heap_sort_swap.png)
+![image](/assets/images/dsa/1201/heap_sort_swap.png)
 3) Repeat above steps while size of heap is greater than 1. Below is the entire sorting process.
-![image](/public/images/dsa/1201/heap_sort_flow.png)
+![image](/assets/images/dsa/1201/heap_sort_flow.png)
 
 ### 6.2 Implementation
 ```java
@@ -207,7 +207,7 @@ private void heapify(int nums[], int n, int i) {
 ## 7. Merge Sort
 ### 7.1 How It Works?
 Binary split the original arrays to smaller groups until each group contains only one element. Then, binary merge these groups to larger groups until we have the final one group with all sorted elements.
-![image](/public/images/dsa/1201/merge_sort.png){:width="800px"}  
+![image](/assets/images/dsa/1201/merge_sort.png){:width="800px"}  
 ### 7.2 Implementation
 ```java
 public void mergeSort(int[] nums) {
@@ -263,7 +263,7 @@ private void merge(int[] nums, int start, int mid, int end) {
 1) Take the first element as pivot, split the elements to two groups. All elements in first group are smaller than pivot and all elements in second group are larger than pivot.  
 2) The new position of the pivot is fixed(sorted).  
 3) Repeat above steps until group contains only one element. Below is the entire sorting process.
-![image](/public/images/dsa/1201/quick_sort.png){:width="800px"}
+![image](/assets/images/dsa/1201/quick_sort.png){:width="800px"}
 ### 8.2 Implementation
 ```java
 public void quickSort(int[] nums) {
@@ -313,7 +313,7 @@ private int partition(int[] nums, int start, int end) {
 2) Create and initialize buckets.  
 3) Go through the original array, update corresponding bucket if that value exists.  
 4) Go through the buckets from the smallest index, build the sorted array.  
-![image](/public/images/dsa/1201/bucket_sort.png){:width="800px"}
+![image](/assets/images/dsa/1201/bucket_sort.png){:width="800px"}
 ### 9.2 Implementation
 ```java
 public void bucketSort(int[] nums) {

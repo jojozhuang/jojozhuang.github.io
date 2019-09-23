@@ -238,9 +238,9 @@ To https://git.heroku.com/game-store-angular.git
 
 ## 4. Testing
 Access https://game-store-angular.herokuapp.com/, we see the homepage.
-![image](/public/images/frontend/2764/gamestore_home.png)
+![image](/assets/images/frontend/2764/gamestore_home.png)
 It works properly, wee see the products.
-![image](/public/images/frontend/2764/gamestore_list.png)  
+![image](/assets/images/frontend/2764/gamestore_list.png)  
 
 ## 5. References
 * [Deploying Node.js Apps on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)

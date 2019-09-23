@@ -130,7 +130,7 @@ Then, check the 'VGA' line.
 ```raw
 01:00.0 VGA compatible controller: NVIDIA Corporation GM107GL [Quadro K1200] (rev a2)
 ```
-![image](/public/images/devops/2101/download_drivers_nvidia.png)
+![image](/assets/images/devops/2101/download_drivers_nvidia.png)
 6) Switch Between console and GUI mode.
 ```raw
 sudo init 3 //console

@@ -13,7 +13,7 @@ tags: [DNS, CDN]
 ## 1. Domain Name System(DNS)
 ### 1.1 What is DNS?
 A Domain Name System (DNS) translates a domain name such as www.example.com to an IP address.
-![image](/public/images/note/9504/dns.jpg){:width="650px"}
+![image](/assets/images/note/9504/dns.jpg){:width="650px"}
 DNS is hierarchical, with a few authoritative servers at the top level. Your router or ISP provides information about which DNS server(s) to contact when doing a lookup. Lower level DNS servers cache mappings, which could become stale due to DNS propagation delays. DNS results can also be cached by your browser or OS for a certain period of time, determined by the [time to live (TTL)](https://en.wikipedia.org/wiki/Time_to_live).
 
 * **NS record (name server)** - Specifies the DNS servers for your domain/subdomain.
@@ -38,7 +38,7 @@ Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](ht
 ## 2. Content Delivery Network(CDN)
 ### 2.1 What is CDN?
 A content delivery network (CDN) is a globally distributed network of proxy servers, serving content from locations closer to the user.
-![image](/public/images/note/9504/cdn.jpg){:width="900px"}
+![image](/assets/images/note/9504/cdn.jpg){:width="900px"}
 
 Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN, although some CDNs such as Amazon's CloudFront support dynamic content. The site's DNS resolution will tell clients which server to contact.
 

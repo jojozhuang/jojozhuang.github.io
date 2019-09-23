@@ -87,7 +87,7 @@ In a distributed computer system, you can only support two of the following guar
 * **Availability** - Every request receives a response, without guarantee that it contains the most recent version of the information
 * **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures
 
-![image](/public/images/note/9501/cap-theorem.png){:width="400px"}
+![image](/assets/images/note/9501/cap-theorem.png){:width="400px"}
 * Networks aren't reliable, so you'll need to support partition tolerance. You'll need to make a software tradeoff between consistency and availability.
 
 **CP - consistency and partition tolerance**  

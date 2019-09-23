@@ -12,7 +12,7 @@ tags: [Asynchronism, Message Queue]
 
 ## 1. Asynchronism
 Asynchronous workflows help reduce request times for expensive operations that would otherwise be performed in-line. They can also help by doing time-consuming work in advance, such as periodic aggregation of data.
-![image](/public/images/note/9510/scalable-system.png){:width="800px"}
+![image](/assets/images/note/9510/scalable-system.png){:width="800px"}
 ### 1.1 Message queues
 Message queues receive, hold, and deliver messages. If an operation is too slow to perform inline, you can use a message queue with the following workflow:
 * An application publishes a job to the queue, then notifies the user of job status

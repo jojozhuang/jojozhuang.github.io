@@ -14,4 +14,4 @@ draft: true
 ## 1. Co
 
 Author: Lindsay Bassett
-![image](/public/images/note/9133/cover.jpg){:width="300px"}  
+![image](/assets/images/note/9133/cover.jpg){:width="300px"}  

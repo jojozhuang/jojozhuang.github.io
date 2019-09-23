@@ -14,7 +14,7 @@ draft: true
 ## 1. Hadoop Overview
 ### 1.1 What is Hadoop?
 [Apache Hadoop](https://hadoop.apache.org/) is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage. Rather than rely on hardware to deliver high-availability, the library itself is designed to detect and handle failures at the application layer, so delivering a highly-available service on top of a cluster of computers, each of which may be prone to failures.
-![image](/public/images/devops/3224/hadoop-framework.png){:width="700px"}
+![image](/assets/images/devops/3224/hadoop-framework.png){:width="700px"}
 ### 1.2 Advantages of Hadoop
 * It gives access to the user to rapidly write and test the distributed systems and then automatically distributes the data and works across the machines and in turn utilizes the primary parallelism of the CPU cores.
 * Hadoop libraries are developed to find/search and handle the failures at the application layer.
@@ -63,11 +63,11 @@ The following are the design principles on which Hadoop works:
 
 ### 3.2 High-level Architecture
 Hadoop follows a `master-slave` architecture design for data storage and distributed data processing, which uses HDFS and MapReduce respectively. The master node for data storage in hadoop HDFS is the `Name Node` and the master node for parallel processing of data using Hadoop MapReduce is the `Job Tracker`. The slave nodes in the hadoop architecture are the other machines which store data and perform complex computations. Every slave node has a `Task Tracker` daemon and a `Data Node` that synchronizes the processes with the Job Tracker and NameNode respectively. In Hadoop architectural implementation the master or slave systems can be setup in the cloud or on-premise.
-![image](/public/images/devops/3224/mapreduce-hdfs.png){:width="700px"}
+![image](/assets/images/devops/3224/mapreduce-hdfs.png){:width="700px"}
 Other Hadoop views.
-![image](/public/images/devops/3224/hadoop-view.png){:width="700px"}
+![image](/assets/images/devops/3224/hadoop-view.png){:width="700px"}
 ### 3.3 Hadoop Modules
-![image](/public/images/devops/3224/hadoop-ecosystem.png){:width="700px"}
+![image](/assets/images/devops/3224/hadoop-ecosystem.png){:width="700px"}
 Hadoop comprises of 4 core components:
 * `Hadoop Common`: Common utilities which support other Hadoop modules.
 * `HDFS`: Hadoop Distributed File System provides unrestricted, high-speed access to the data application.
@@ -98,10 +98,10 @@ Other Hadoop ecosystem components:
 Hadoop skillset requires thoughtful knowledge of every layer in the hadoop stack right from understanding about the various components in the hadoop architecture, designing a hadoop cluster, performance tuning it and setting up the top chain responsible for data processing.
 
 Hadoop follows a master slave architecture design for data storage and distributed data processing using HDFS and MapReduce respectively. The master node for data storage is hadoop HDFS is the NameNode and the master node for parallel processing of data using Hadoop MapReduce is the Job Tracker. The slave nodes in the hadoop architecture are the other machines in the Hadoop cluster which store data and perform complex computations. Every slave node has a Task Tracker daemon and a DataNode that synchronizes the processes with the Job Tracker and NameNode respectively. In Hadoop architectural implementation the master or slave systems can be setup in the cloud or on-premise.
-![image](/public/images/devops/3224/hadoop-architecture-high-level.png){:width="600px"}
+![image](/assets/images/devops/3224/hadoop-architecture-high-level.png){:width="600px"}
 ### 1.2 Role of Distributed Storage - HDFS
 A file on HDFS is split into multiple bocks and each is replicated within the Hadoop cluster. A block on HDFS is a blob of data within the underlying file system with a default size of 64MB.The size of a block can be extended up to 256 MB based on the requirements.
-![image](/public/images/devops/3224/hadoop-hdfs-architecture.jpg){:width="600px"}
+![image](/assets/images/devops/3224/hadoop-hdfs-architecture.jpg){:width="600px"}
 Hadoop Distributed File System (HDFS) stores the application data and file system metadata separately on dedicated servers. `NameNode` and `DataNode` are the two critical components of the Hadoop HDFS architecture. Application data is stored on servers referred to as DataNodes and file system metadata is stored on servers referred to as NameNode. HDFS replicates the file content on multiple DataNodes based on the replication factor to ensure reliability of data. The NameNode and DataNode communicate with each other using TCP based protocols. For the Hadoop architecture to be performance efficient, HDFS must satisfy certain pre-requisites:
 * All the hard drives should have a high throughput.
 * Good network speed to manage intermediate data transfer and block replications.
@@ -135,7 +135,7 @@ Do not edit the metadata files as it can corrupt the state of the Hadoop cluster
 
 ## 3. Hadoop Ecosystem Components and Its Architecture
 ### 3.1 Hadoop Ecosystem Components
-![image](/public/images/devops/3224/hadoop-ecosystem.png){:width="650px"}
+![image](/assets/images/devops/3224/hadoop-ecosystem.png){:width="650px"}
 ### 3.2 Core Hadoop Components
 The Hadoop Ecosystem comprises of 4 core components:
 **1) Hadoop Common**  
@@ -152,11 +152,11 @@ The basic principle of operation behind MapReduce is that the “Map” job send
 MapReduce framework forms the compute node while the HDFS file system forms the data node. Typically in the Hadoop ecosystem architecture both data node and compute node are considered to be the same.
 
 The delegation tasks of the MapReduce component are tackled by two daemons- Job Tracker and Task Tracker as shown in the image below.
-![image](/public/images/devops/3224/map-reduce.png){:width="650px"}
+![image](/assets/images/devops/3224/map-reduce.png){:width="650px"}
 
 **4) YARN**  
 YARN forms an integral part of Hadoop 2.0.YARN is great enabler for dynamic resource utilization on Hadoop framework as users can run various Hadoop applications without having to bother about increasing workloads.
-![image](/public/images/devops/3224/yarn.png){:width="650px"}
+![image](/assets/images/devops/3224/yarn.png){:width="650px"}
 Key Benefits of Hadoop 2.0 YARN Component-
 * It offers improved cluster utilization
 * Highly scalable
@@ -184,7 +184,7 @@ HBase is a column-oriented database that uses HDFS for underlying storage of dat
 ​Zookeeper is the king of coordination and provides simple, fast, reliable and ordered operational services for a Hadoop cluster. Zookeeper is responsible for synchronization service, distributed configuration service and for providing a naming registry for distributed systems.
 
 ### 1.2 Hadoop Stack
-![image](/public/images/devops/3224/hadoop-stack.png){:width="700px"}
+![image](/assets/images/devops/3224/hadoop-stack.png){:width="700px"}
 
 
 ## 3. References

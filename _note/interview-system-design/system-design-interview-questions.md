@@ -156,15 +156,15 @@ What kind of database should we use? Since we anticipate storing billions of row
 
 ### 2.5 Basic System Design and Algorithm
 a) Encoding actual URL
-![image](/public/images/note/9651/tinyurl_encoding.png){:width="800px"}
+![image](/assets/images/note/9651/tinyurl_encoding.png){:width="800px"}
 b) Generating keys offline
-![image](/public/images/note/9651/tinyurl_offline.png){:width="800px"}
+![image](/assets/images/note/9651/tinyurl_offline.png){:width="800px"}
 
 ### 2.6 Cache
 * Cache capacity: 20% of daily traffic
 * Cache eviction policy: Least Recently Used (LRU)
 * Update cache
-![image](/public/images/note/9651/tinyurl_cache.png){:width="800px"}
+![image](/assets/images/note/9651/tinyurl_cache.png){:width="800px"}
 
 ### 2.7 Load Balancer
 We can add a Load balancing layer at three places in our system:
@@ -174,7 +174,7 @@ We can add a Load balancing layer at three places in our system:
 
 ### 2.8 Purging or DB cleanup
 Delete links which are expired.
-![image](/public/images/note/9651/tinyurl_achitecture.png){:width="800px"}
+![image](/assets/images/note/9651/tinyurl_achitecture.png){:width="800px"}
 
 ### 2.9 Random Id Generator
 Base62 and Base36
@@ -262,16 +262,16 @@ Extended Requirements:
 * Our service should also be accessible through REST APIs by other services.
 
 ### 3.2 High Level Design
-![image](/public/images/note/9651/pastebin_highlevel.png){:width="600px"}
+![image](/assets/images/note/9651/pastebin_highlevel.png){:width="600px"}
 ### 3.3 Database Design
-![image](/public/images/note/9651/pastebin_db.png){:width="600px"}
+![image](/assets/images/note/9651/pastebin_db.png){:width="600px"}
 ### 3.4 Component Design
 * Application Server
 * Key Generation Service
 * Metadata database
 * Object storage
 
-![image](/public/images/note/9651/pstebin_architecture.png){:width="800px"}
+![image](/assets/images/note/9651/pstebin_architecture.png){:width="800px"}
 
 ## 4. Design Instagram(Photo Sharing)
 ### 4.1 Requirements
@@ -299,16 +299,16 @@ Not in scope:
 * Low latency is expected while viewing photos.
 
 ### 4.3 High Level System Design
-![image](/public/images/note/9651/instagram_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/instagram_highlevel.png){:width="800px"}
 ### 4.4 Database
-![image](/public/images/note/9651/instagram_db.png){:width="800px"}
+![image](/assets/images/note/9651/instagram_db.png){:width="800px"}
 * Store photos in a distributed file storage like HDFS or S3.
 * Store schema in a distributed key-value store, like Cassandra.
 
 ### 4.5 Component Design
-![image](/public/images/note/9651/instagram_component.png){:width="800px"}
+![image](/assets/images/note/9651/instagram_component.png){:width="800px"}
 ### 4.6 Reliability and Redundancy
-![image](/public/images/note/9651/instagram_redundancy.png){:width="800px"}
+![image](/assets/images/note/9651/instagram_redundancy.png){:width="800px"}
 
 ## 5. Design Dropbox(File Hosting)
 Cloud Storage, Cloud file storage services
@@ -330,7 +330,7 @@ Cloud Storage, Cloud file storage services
 * For small changes, clients can intelligently upload the diffs instead of the whole chunk.
 
 ### 5.4 High Level Design
-![image](/public/images/note/9651/dropbox_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/dropbox_highlevel.png){:width="800px"}
 * `Workspace folder` on client device.
 * Any change in the workspace will be reflected to cloud storage, vice versa.
 * `Metadata server` to store file name, file size, directory, etc. to `Metadata storage`(SQL or NoSQL Database).
@@ -346,7 +346,7 @@ a. Client:
 How can clients efficiently listen to changes happening with other clients? `HTTP long polling`.
 
 Four parts of the client:
-![image](/public/images/note/9651/dropbox_client.png){:width="800px"}
+![image](/assets/images/note/9651/dropbox_client.png){:width="800px"}
 * Internal Metadata Database: Keep track of all the files, chunks, their versions, and their location in the file system.
 * Chunker: Split the files into smaller chunks and reconstruct a file from its chunks.
 * Watcher: Monitor the local workspace folders and notify the Indexer.
@@ -364,12 +364,12 @@ The Synchronization Service is the component that processes file updates made by
 
 d. Message Queuing Service  
 Two types of queues:
-![image](/public/images/note/9651/dropbox_messagequeue.png){:width="800px"}
+![image](/assets/images/note/9651/dropbox_messagequeue.png){:width="800px"}
 * Request Queue: Clients’ requests to update the Metadata Database will be sent to the Request Queue.
 * Response Queue: Response Queues that correspond to individual subscribed clients are responsible for delivering the update messages to each client.
 
 e. Cloud/Block Storage
-![image](/public/images/note/9651/dropbox_block.png){:width="800px"}
+![image](/assets/images/note/9651/dropbox_block.png){:width="800px"}
 
 ### 5.6 File Processing Workflow
 * 1) Client A uploads chunks to cloud storage.
@@ -419,10 +419,10 @@ Incomming data | 25MB/s
 Outgoing data | 25MB/s
 
 ### 6.3 High Level Design
-![image](/public/images/note/9651/facebook_msg_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/facebook_msg_highlevel.png){:width="800px"}
 
 Messaging workflow would look like this:
-![image](/public/images/note/9651/facebook_msg_flow.png){:width="800px"}
+![image](/assets/images/note/9651/facebook_msg_flow.png){:width="800px"}
 * 1) User-A sends a message to User-B through the chat server.
 * 2) The server receives the message and sends an acknowledgment to User-A.
 * 3) The server stores the message in its database and sends the message to User-B.
@@ -465,7 +465,7 @@ Pagination. Page size could be different for different clients.
 
 c. Managing user’s status
 We need to keep track of user’s `online/offline status` and notify all the relevant users whenever a status change happens.
-![image](/public/images/note/9651/facebook_msg_detail.png){:width="800px"}
+![image](/assets/images/note/9651/facebook_msg_detail.png){:width="800px"}
 
 Design Summary:
 * Clients will open a connection to the chat server to send a message;
@@ -504,7 +504,7 @@ Extended Requirements:
 
 ### 7.2 High Level Design
 Read-heavy system.
-![image](/public/images/note/9651/twitter_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/twitter_highlevel.png){:width="800px"}
 1) Posting Twitter
 * User Alice posts a twitter
 * The twitter is sent to Load Balancer
@@ -528,7 +528,7 @@ Tables:
 * Tweet
 * UserFollow
 
-![image](/public/images/note/9651/twitter_db.png){:width="800px"}
+![image](/assets/images/note/9651/twitter_db.png){:width="800px"}
 
 Samples for table and their content.
 
@@ -563,7 +563,7 @@ ID | Follower ID
 
 ### 7.5 Cache
 LRU, cache the past three days tweets/images/videos only.
-![image](/public/images/note/9651/twitter_cache.png){:width="800px"}
+![image](/assets/images/note/9651/twitter_cache.png){:width="800px"}
 
 ## 8. Design Youtube(Video Sharing)
 ### 8.1 Requirements
@@ -591,14 +591,14 @@ At a high-level we would need the following components:
 * `User Database`: To store user’s information, e.g., name, email, address, etc.
 * `Video metadata storage`: A metadata database to store all the information about videos like title, file path in the system, uploading user, total views, likes, dislikes, etc. It will also be used to store all the video comments.
 
-![image](/public/images/note/9651/youtube_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/youtube_highlevel.png){:width="800px"}
 
 ### 8.3 Database Schema
 * Video metadata storage - MySql
 * User data storage - MySql
 
 ### 8.4 Detailed Component Design
-![image](/public/images/note/9651/youtube_detailed.png){:width="800px"}
+![image](/assets/images/note/9651/youtube_detailed.png){:width="800px"}
 ### 8.5 Metadata Sharding
 * Sharding based on UserID
 * Sharding based on VideoID
@@ -640,12 +640,12 @@ Different types of throttling:
 * Fixed Window Algorithm
 * Rolling Window Algorithm
 
-![image](/public/images/note/9651/ratelimiter_algorithm.png){:width="800px"}
+![image](/assets/images/note/9651/ratelimiter_algorithm.png){:width="800px"}
 Problem with fixed window. It may allow twice the number of requests per minute.
-![image](/public/images/note/9651/ratelimiter_problemoffixed.png){:width="800px"}
+![image](/assets/images/note/9651/ratelimiter_problemoffixed.png){:width="800px"}
 
 ### 9.5 High level design
-![image](/public/images/note/9651/ratelimiter_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/ratelimiter_highlevel.png){:width="800px"}
 
 ## 10. Design Twitter Search
 ### 10.1 Requirements
@@ -658,9 +658,9 @@ Assumption:
 
 We need to design a system that can efficiently store and query tweets.
 ### 10.2 High Level Design
-![image](/public/images/note/9651/twittersearch_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/twittersearch_highlevel.png){:width="800px"}
 ### 10.3 Detailed Component Design
-![image](/public/images/note/9651/twittersearch_detaileddesign.png){:width="800px"}
+![image](/assets/images/note/9651/twittersearch_detaileddesign.png){:width="800px"}
 
 ## 11. Design a Web Crawler
 ### 11.1 Requirements
@@ -700,10 +700,10 @@ Components for a minimum crawler:
 4. Duplicate Eliminator: To make sure the same content is not extracted twice unintentionally.
 5. Datastore: To store retrieved pages, URLs, and other metadata.
 
-![image](/public/images/note/9651/webcrawler_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/webcrawler_highlevel.png){:width="800px"}
 
 ### 11.4 Detailed Component Design
-![image](/public/images/note/9651/webcrawler_detaileddesign.png){:width="800px"}
+![image](/assets/images/note/9651/webcrawler_detaileddesign.png){:width="800px"}
 Document Dedupe test: To prevent processing of a document more than once, we perform a dedupe test on each document to remove duplication.
 URL filters: Blacklist websites.
 URL dedupe test: Multiple links to the same document.
@@ -746,7 +746,7 @@ Relationships between these entities:
 * Each FeedItem will have a UserID which will point to the User who created it. For simplicity, let’s assume that only users can create feed items, although, on Facebook Pages can post feed item too.
 * Each FeedItem can optionally have an EntityID pointing to the page or the group where that post was created.
 
-![image](/public/images/note/9651/facebooknewsfeed_database.png){:width="800px"}
+![image](/assets/images/note/9651/facebooknewsfeed_database.png){:width="800px"}
 
 ### 12.4 High Level Design
 At a high level this problem can be divided into two parts:
@@ -767,7 +767,7 @@ At a high level, we will need following components in our Newsfeed service:
 * `Newsfeed generation service`: To gather and rank all the relevant posts for a user to generate newsfeed and store in the cache. This service will also receive live updates and will add these newer feed items to any user’s timeline.
 * `Feed notification service`: To notify the user that there are newer items available for their newsfeed.
 
-![image](/public/images/note/9651/facebooknewsfeed_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/facebooknewsfeed_highlevel.png){:width="800px"}
 
 ### 12.5 Detailed Component Design
 a. Feed generation
@@ -832,16 +832,16 @@ A JSON containing information about a list of businesses matching the search que
 Different ways to store locations and search them which are nearby me.
 * SQL solution: Store longitude and latitude separately in two different columns, and index them.
 * Grids: Divide the whole map into smaller grids to group locations into smaller sets. Search the neighboring eight grids of the given location.
-![image](/public/images/note/9651/yelp_gridmap.png){:width="800px"}
+![image](/assets/images/note/9651/yelp_gridmap.png){:width="800px"}
 * Dynamic size grids: QuadTree. It is not guaranteed that we will have an equal number of places in any given grid.
-![image](/public/images/note/9651/yelp_quadtree.png){:width="800px"}
+![image](/assets/images/note/9651/yelp_quadtree.png){:width="800px"}
 
 ### 13.5 Data Partitioning
 * Sharding based on regions
 * Sharding based on LocationID
 
 We will have different QuadTree structure on different partitions.
-![image](/public/images/note/9651/yelp_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/yelp_highlevel.png){:width="800px"}
 
 ## 14. Design Uber(Ride Sharing)
 ### 14.1 Requirements
@@ -853,7 +853,7 @@ There are two kinds of users in our system: `Drivers` and `Riders`.
 * Upon reaching the destination, the driver marks the journey complete to become available for the next ride.
 
 ### 14.2 Basic System Design and Algorithm
-![image](/public/images/note/9651/uber_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/uber_highlevel.png){:width="800px"}
 * 1) The customer will put a request for a ride.
 * 2) One of the Aggregator servers will take the request and asks QuadTree servers to return nearby drivers.
 * 3) The Aggregator server collects all the results and sorts them by ratings.
@@ -972,13 +972,13 @@ Here are a few observations about the data we are going to store:
 * Each Movie will have many Shows and each Show will have multiple Bookings.
 * A user can have multiple bookings.
 
-![image](/public/images/note/9651/ticketmaster_db.png){:width="800px"}
+![image](/assets/images/note/9651/ticketmaster_db.png){:width="800px"}
 
 ### 15.4 High Level Design
-![image](/public/images/note/9651/ticketmaster_highlevel.png){:width="800px"}
+![image](/assets/images/note/9651/ticketmaster_highlevel.png){:width="800px"}
 
 ### 15.5 Detailed Component Design
-![image](/public/images/note/9651/ticketmaster_detailed.png){:width="800px"}
+![image](/assets/images/note/9651/ticketmaster_detailed.png){:width="800px"}
 
 ## 16. Design a Parking Lot
 ### 16.1 Questions/Clarification
@@ -1029,7 +1029,7 @@ Message
 
 ## 18. Uber Lyft ride sharing services
 QUIC protocol(Quick UDP internet connections)
-![image](/public/images/note/9651/uber_architecture.jpg)
+![image](/assets/images/note/9651/uber_architecture.jpg)
 * [Understanding QUIC wire protocol](https://medium.com/@nirosh/understanding-quic-wire-protocol-d0ff97644de7)
 
 * [Geohash Intro](http://www.bigfastblog.com/geohash-intro)

@@ -45,34 +45,34 @@ deploy:
 
 ## 2. Travis
 Go to https://travis-ci.com/ to sign up with your GitHub account. After login, go to 'Profile'. We see the 'GitHub App Integration' section, click 'Activate' button.
-![image](/public/images/frontend/2766/travis_integration.png)
+![image](/assets/images/frontend/2766/travis_integration.png)
 Grant with GitHub authority, choose the repository you want to integrate, click 'Approve & install' button.
-![image](/public/images/frontend/2766/travis_select_repository.png)
+![image](/assets/images/frontend/2766/travis_select_repository.png)
 After a while, your GitHub repository is integrated to Travis, click 'Settings'.
-![image](/public/images/frontend/2766/travis_integrated.png)
+![image](/assets/images/frontend/2766/travis_integrated.png)
 Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/images/frontend/2766/travis_settings.png)
+![image](/assets/images/frontend/2766/travis_settings.png)
 In the 'Environment Variables' section, paste your GitHub token in the field ‘Value’ and name it ‘GITHUB_TOKEN’, click 'Add' button.
-![image](/public/images/frontend/2766/travis_environment_variable.png)
+![image](/assets/images/frontend/2766/travis_environment_variable.png)
 
 ## 3. Deployment
 Make any change to your Angular app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/images/frontend/2766/travis_build.png)
+![image](/assets/images/frontend/2766/travis_build.png)
 If the build is finished successfully, your site is deployed to GitHub page.
-![image](/public/images/frontend/2766/travis_deploy.png)  
+![image](/assets/images/frontend/2766/travis_deploy.png)  
 
 If you see below error, remove the cache settings in traivs.yml.
 ```raw
 The command "eval npm ci  " failed 3 times.
 The command "npm ci " failed and exited with 127 during .
 ```
-![image](/public/images/frontend/2766/module_error.png)
+![image](/assets/images/frontend/2766/module_error.png)
 
 ## 4. Testing
 Open web browser, access 'https://game-store-angular.herokuapp.com/'. The Angular app is working now.
-![image](/public/images/frontend/2766/gamestore_home.png)
+![image](/assets/images/frontend/2766/gamestore_home.png)
 It works properly, wee see the products.
-![image](/public/images/frontend/2766/gamestore_list.png)  
+![image](/assets/images/frontend/2766/gamestore_list.png)  
 
 ## 5. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

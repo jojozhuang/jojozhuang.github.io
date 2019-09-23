@@ -22,7 +22,7 @@ OGF <---------- sanity ----------> OOP
 
 ### 1.2 NetWorking
 The classic seven-layer OSI model has lately been replaced by the easier-to- understand four-layer TCP/IP model.
-![image](/public/images/note/9152/tcpip_model.png){:width="800px"}  
+![image](/assets/images/note/9152/tcpip_model.png){:width="800px"}  
 
 ## 2. Development Environments
 The Three Rules

@@ -31,7 +31,7 @@ mathjax: true
 ## 2. Matrix DP
 ### 2.1 Problem - Unique Paths
 A robot is located at the top-left corner of a `m x n` grid (marked 'Start' in the diagram below). The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below). How many possible unique paths are there?
-![image](/public/images/dsa/1221/robot.png){:width="500px"}  
+![image](/assets/images/dsa/1221/robot.png){:width="500px"}  
 ### 2.2 Solution with Matrix(Two-dimensional array)
 ```java
 // time: O(m*n), space: O(m*n)

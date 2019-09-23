@@ -63,7 +63,7 @@ Handy metrics based on numbers above:
 * 2,000 round trips per second within a data center
 
 **Latency numbers visualized**
-![image](/public/images/note/9512/latency-numbers-visualized.png)
+![image](/assets/images/note/9512/latency-numbers-visualized.png)
 
 ## 2. Reference
 * [Powers of two](https://en.wikipedia.org/wiki/Power_of_two)

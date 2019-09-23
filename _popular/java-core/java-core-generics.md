@@ -619,7 +619,7 @@ Wildcards can be used in three ways −
 * Lower Bounded Wildcard − `? super` Type.
 
 See the difference between upper bound wildcard and lower bound wildcard.
-![image](/public/images/java/1417/wildcards.png)
+![image](/assets/images/java/1417/wildcards.png)
 
 ### 5.2 Unbounded Wildcards
 The question mark (?), represents the wildcard, stands for `unknown` type in generics. There may be times when any object can be used when a method can be implemented using functionality provided in the Object class or When the code is independent of the type parameter. To declare a Unbounded Wildcard parameter, list the `?` only.

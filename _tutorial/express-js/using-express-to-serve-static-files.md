@@ -77,7 +77,7 @@ Update `index.html` with following content.
 </html>
 ```
 And put some static files, images to the both root folder and sub folder.
-![image](/public/images/frontend/2561/folder_structure.png){:width="500px"}  
+![image](/assets/images/frontend/2561/folder_structure.png){:width="500px"}  
 
 ## 3. Running and Testing
 In terminal, start the server with `node` command.
@@ -89,19 +89,19 @@ You should see the following log.
 Server running at http://localhost:12000/
 ```
 Now the HTTP server is running on the local machine and waiting for a request at port 12000.
-![image](/public/images/frontend/2561/startserver.png){:width="550px"}  
+![image](/assets/images/frontend/2561/startserver.png){:width="550px"}  
 Open web browser, access http://127.0.0.1:12000/.
-![image](/public/images/frontend/2561/index.png)
+![image](/assets/images/frontend/2561/index.png)
 1) Static Html
-![image](/public/images/frontend/2561/statichtml.png)
+![image](/assets/images/frontend/2561/statichtml.png)
 2) Html in Sub Folder
-![image](/public/images/frontend/2561/htmlsubfolder.png)
+![image](/assets/images/frontend/2561/htmlsubfolder.png)
 3) Image
-![image](/public/images/frontend/2561/image.png)
+![image](/assets/images/frontend/2561/image.png)
 4) Image in Sub Folder
-![image](/public/images/frontend/2561/imagesubfolder.png)
+![image](/assets/images/frontend/2561/imagesubfolder.png)
 5) Game 2048
-![image](/public/images/frontend/2561/game2048.png)
+![image](/assets/images/frontend/2561/game2048.png)
 
 ## 4. Source Files
 * [Source files of Static Web Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/StaticWebServer)

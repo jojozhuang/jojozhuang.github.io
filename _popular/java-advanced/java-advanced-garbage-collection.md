@@ -36,7 +36,7 @@ The GC has to stop application threads while it is running. This is because it m
 
 ### 1.2 Memory Coalescing
 A simple demonstration of memory coalescing is shown below
-![image](/public/images/java/1473/memory-coalescing.jpg){:width="600px"}
+![image](/assets/images/java/1473/memory-coalescing.jpg){:width="600px"}
 Memory Coalescing
 The shaded portion are objects that need to be freed. Even after when all the space is reclaimed, we can only allocate an object of maximum size = 75Kb. This is even after we have 200Kb of free space as shown below
 
@@ -45,7 +45,7 @@ Most JVMs divide the heap into three generations − the young generation (`YG`)
 
 Empirical studies have shown that most of the objects that are created have very short lifespan −
 
-![image](/public/images/java/1473/monitoring.jpg){:width="600px"}
+![image](/assets/images/java/1473/monitoring.jpg){:width="600px"}
 
 
 As you can see that as more and more objects are allocated with time, the number of bytes surviving becomes less (in general). Java objects have high mortality rate.
@@ -79,9 +79,9 @@ This GC is default on 64-bit JVMs and multi-CPU machines. Unlike the serial GC, 
 The throughput GC collects the YG and the OG. When the eden has filled up, the collector ejects live objects from it into either the OG or one of the survivor spaces (SS0 and SS1 in the below diagram). The dead objects are discarded to free up the space they occupied.
 
 Before GC of YG
-![image](/public/images/java/1473/before-gc-of-yg.jpg){:width="500px"}
+![image](/assets/images/java/1473/before-gc-of-yg.jpg){:width="500px"}
 After GC of YG
-![image](/public/images/java/1473/after-gc-of-yg.jpg){:width="500px"}
+![image](/assets/images/java/1473/after-gc-of-yg.jpg){:width="500px"}
 During a full GC, the throughput collector empties the entire YG, SS0 and SS1. After the operation, the OG contains only live objects. We should note that both of the above collectors stop the application threads while processing the heap. This means long ‘stop-the- world’ pauses during a major GC. The next two algorithms aim to eliminate them, at the cost of more hardware resources −
 
 ### 2.3 CMS Collector
@@ -90,9 +90,9 @@ It stands for `concurrent mark-sweep`. Its function is that it uses some backgro
 This collector needs additional CPU time to scan through the heap while running the application threads. Further, the background threads just collect the heap and do not perform any compaction. They may lead to the heap becoming fragmented. As this keeps going on, after a certain point of time, the CMS will stop all the application threads and compact the heap using a single thread. Use the following JVM arguments to tell the JVM to use the CMS collector - **XX:+UseConcMarkSweepGC -XX:+UseParNewGC**.
 
 Before GC
-![image](/public/images/java/1473/before-gc.jpg){:width="500px"}
+![image](/assets/images/java/1473/before-gc.jpg){:width="500px"}
 After GC
-![image](/public/images/java/1473/after-gc.jpg){:width="500px"}
+![image](/assets/images/java/1473/after-gc.jpg){:width="500px"}
 Note that the collection is being done concurrently.
 
 ### 2.4 G1 GC

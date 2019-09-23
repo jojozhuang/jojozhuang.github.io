@@ -16,7 +16,7 @@ tags: [Bloom Filter]
 The cost paid for this efficiency is that a Bloom filter is a `probabilistic data structure`: it tells us that the element either definitely is **not** in the set or **may be** in the set.
 
 The base data structure of a Bloom filter is a `Bit Vector`.
-![image](/public/images/dsa/1133//bloom-filter.png){:width="700px"}
+![image](/assets/images/dsa/1133//bloom-filter.png){:width="700px"}
 
 ## 2. Implementation
 Use an integer array as bit vector. Each cell has the value either 0 or 1. One key will be hashed by three hash functions, then it will be stored into the array.

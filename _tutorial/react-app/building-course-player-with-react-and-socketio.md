@@ -1240,7 +1240,7 @@ Canvas.propTypes = {
 export default Canvas;
 ```
 ### 3.8 Final Project Structure
-![image](/public/images/frontend/2638/projectstructure.png){:width="350px"}
+![image](/assets/images/frontend/2638/projectstructure.png){:width="350px"}
 Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ## 4. Running and Testing
@@ -1249,11 +1249,11 @@ Start this React app, serve it in web server.
 $ npm start
 ```
 View the course player at http://localhost:12100/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![image](/public/images/frontend/2638/homepage.png)
+![image](/assets/images/frontend/2638/homepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/public/images/frontend/2638/play.png)
+![image](/assets/images/frontend/2638/play.png)
 You can drag the slider bar to move forward or backward.
-![image](/public/images/frontend/2638/drag.png)
+![image](/assets/images/frontend/2638/drag.png)
 
 ## 5. Source Files
 * [Source files of Course Player(React) on Github](https://github.com/jojozhuang/course-player-react)

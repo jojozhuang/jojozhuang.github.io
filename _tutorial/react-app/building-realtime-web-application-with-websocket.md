@@ -75,7 +75,7 @@ In terminal, execute clock-server.js with node command.
 $ node clock-server.js
 ```
 Open browser, access http://127.0.0.1:8080/. The time will be updated for every one second.  
-![image](/public/images/frontend/2632/socketiotimer.png "Server Time")  
+![image](/assets/images/frontend/2632/socketiotimer.png "Server Time")  
 
 ### 2.2 Online Painting Application
 Another example of Socket.IO usage is online painting. This sample comes from [here](http://wesbos.com/html5-canvas-websockets-nodejs/). This sample shows the Broadcasting feature of Socket.IO.  
@@ -90,13 +90,13 @@ $ npm start
 Open the web application in different web browsers from different machines, laptop, ipad and iphone.
 
 After all opened, start to draw in the first chrome browser.  
-![image](/public/images/frontend/2632/socketiopaint1.png)  
+![image](/assets/images/frontend/2632/socketiopaint1.png)  
 After drawing is finished, switch to Firefox. Same drawing in Firefox.  
-![image](/public/images/frontend/2632/socketiopaint2.png)  
+![image](/assets/images/frontend/2632/socketiopaint2.png)  
 Same in iPad.  
-![image](/public/images/frontend/2632/socketiopaint3.png)  
+![image](/assets/images/frontend/2632/socketiopaint3.png)  
 Same in iPhone.  
-![image](/public/images/frontend/2632/socketiopaint4.png)  
+![image](/assets/images/frontend/2632/socketiopaint4.png)  
 
 ## 3. WebSockets in ASP.NET
 WebSocket is supported in ASP.NET 4.5. You can install it through NuGet, which is called [Microsoft.WebSockets](http://www.nuget.org/packages/Microsoft.WebSockets/). And please note, Windows7 does not support WebSocket.  
@@ -104,17 +104,17 @@ Here is the article shows how to use it.
 * [Building an HTML5 Web Sockets Server with ASP.NET 4.5](http://weblogs.asp.net/dwahlin/building-an-html5-web-sockets-server-with-asp-net-4-5) .  
 
 ### 3.1 First user comes in, says 'Hi'.  
-![image](/public/images/frontend/2632/mswebsocket1.png "MS WebSocket1"){:width="600px"}    
+![image](/assets/images/frontend/2632/mswebsocket1.png "MS WebSocket1"){:width="600px"}    
 ### 3.2 Second user comes in(another page), says 'I'm here, too'.  
-![image](/public/images/frontend/2632/mswebsocket2.png "MS WebSocket2"){:width="600px"}    
+![image](/assets/images/frontend/2632/mswebsocket2.png "MS WebSocket2"){:width="600px"}    
 ### 3.3 Back to the page of first user.
-![image](/public/images/frontend/2632/mswebsocket3.png "MS WebSocket3"){:width="600px"}    
+![image](/assets/images/frontend/2632/mswebsocket3.png "MS WebSocket3"){:width="600px"}    
 
 ## 4. SignalR
 SignalR is popular and it can run in Windows7. The official tutorial is [Tutorial: Getting Started with SignalR 2](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr). Follow the steps to create the application or just download the sample code at the top of the tutorial page.
 
 This sample implements the online chatting function.  
-![image](/public/images/frontend/2632/signalrsample.png "SignalR")  
+![image](/assets/images/frontend/2632/signalrsample.png "SignalR")  
 
 ## 5. Source Files
 * [Source files of SocketIO Clock Server on Github](https://github.com/jojozhuang/Tutorials/tree/master/SocketIOClock)

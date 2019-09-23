@@ -177,21 +177,21 @@ public class ProductService {
 ```
 ### 2.5 Project Structure
 This is the final structure of this tutorial project.
-![image](/public/images/frontend/2232/structure.png){:width="400px"}  
+![image](/assets/images/frontend/2232/structure.png){:width="400px"}  
 ### 2.6 Running and Testing
 1) Right click project JerseyTutorial -> Run As -> Run On Server.  
 Choose an existing server or create a new Tomcat server.  
-![image](/public/images/frontend/2232/runonserver.png){:width="600px"}  
+![image](/assets/images/frontend/2232/runonserver.png){:width="600px"}  
 
 After Tomcat is started, let's test RESTful services through web browser.  
 2) Get Product List  
 * http://localhost:8080/JerseyTutorial/rest/ProductService/products
 
-![image](/public/images/frontend/2232/products.png){:width="600px"}  
+![image](/assets/images/frontend/2232/products.png){:width="600px"}  
 3) Get Product by ID  
 * http://localhost:8080/JerseyTutorial/rest/ProductService/product/1
 
-![image](/public/images/frontend/2232/oneproduct.png){:width="600px"}  
+![image](/assets/images/frontend/2232/oneproduct.png){:width="600px"}  
 
 ## 3. Supporting Json
 ### 3.1 Adding Dependency to pom.xml
@@ -235,7 +235,7 @@ public Product getProductJson(@PathParam("id") int id) {
 Get product by id, data is returned in JSON format.
 * http://localhost:8080/JerseyTutorial/rest/ProductService/productJson/1  
 
-![image](/public/images/frontend/2232/jsonapi.png){:width="600px"}  
+![image](/assets/images/frontend/2232/jsonapi.png){:width="600px"}  
 
 ## 4. Source Files
 * [Source files of Jersey Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JerseyTutorial)

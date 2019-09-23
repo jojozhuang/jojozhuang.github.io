@@ -13,7 +13,7 @@ tags: [MEAN, Angular, Express, MongoDB]
 ## 1. Online Judge
 ### 1.1 Introduction
 This online judge application is used to practice programming to solve algorithm questions. It can compile and execute code, and test them with pre-constructed data. The output of the code will be captured by the system, and compared with the standard output. The system will then return the result.
-![image](/public/images/frontend/2801/oj_twosum.png)
+![image](/assets/images/frontend/2801/oj_twosum.png)
 
 ### 1.2 Functions
 The implemented functions are listed as follows.

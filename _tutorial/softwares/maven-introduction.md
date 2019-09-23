@@ -200,7 +200,7 @@ A Maven Build Profile can be activated in various ways.
 
 ### 4.4 Profile Activation Examples
 Let us assume the following directory structure of your project −
-![image](/public/images/devops/3711/profile-activation.jpg)
+![image](/assets/images/devops/3711/profile-activation.jpg)
 Now, under **src/main/resources**, there are three environment specific files −
 
  No. | File Name & Description
@@ -266,7 +266,7 @@ Maven repository are of three types. The following illustration will give an ide
 * central
 * remote
 
-![image](/public/images/devops/3711/maven-repository.png){:width="500px"}
+![image](/assets/images/devops/3711/maven-repository.png){:width="500px"}
 
 ### 5.1 Local Repository
 Maven local repository is a folder location on your machine. It gets created when you run any maven command for the first time.
@@ -333,7 +333,7 @@ When we execute Maven build commands, Maven starts looking for dependency librar
 * Step 3 − If a remote repository has not been mentioned, Maven simply stops the processing and throws error (Unable to find dependency).
 * Step 4 − Search dependency in remote repository or repositories, if found then it is downloaded to local repository for future reference. Otherwise, Maven stops processing and throws error (Unable to find dependency).
 
-![image](/public/images/devops/3711/search-sequence.png){:width="600px"}
+![image](/assets/images/devops/3711/search-sequence.png){:width="600px"}
 
 ## 6. Maven Plugins
 ### 6.1 What are Maven Plugins?
@@ -479,7 +479,7 @@ Transitive Dependencies Discovery can be restricted using various Dependency Sco
 ### 8.3 Dependency Management
 Usually, we have a set of project under a common project. In such case, we can create a common pom having all the common dependencies and then make this pom, the parent of sub-project's poms. Following example will help you understand this concept.
 
-![image](/public/images/devops/3711/dependency-graph.jpg){:width="600px"}
+![image](/assets/images/devops/3711/dependency-graph.jpg){:width="600px"}
 
 Following are the detail of the above dependency graph −
 * App-UI-WAR depends upon App-Core-lib and App-Data-lib.

@@ -39,26 +39,26 @@ Get the logs for level=0(header level).
 ```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=0"
 ```
-![image](/public/images/blog/2017-02-17/level0.png)  
+![image](/assets/images/blog/2017-02-17/level0.png)  
 ### 3.4 Exporting to CSV File
 Export the search result to csv file.  
-![image](/public/images/blog/2017-02-17/export.png)  
+![image](/assets/images/blog/2017-02-17/export.png)  
 ### 3.5 Processing the CSV File
 Use Microsoft Excel for the rest steps, since Excel is good at handling csv files.  
 Open the csv file, eliminate all other columns except Level, Class, FieldName and TimeSpent.
-![image](/public/images/blog/2017-02-17/eliminate.png)  
+![image](/assets/images/blog/2017-02-17/eliminate.png)  
 Then, sort the 'TimeSpent' column in descending order. Now, we see that field 'LineItems' on IR consumes 19.7 seconds. We find the bottleneck.
-![image](/public/images/blog/2017-02-17/level0sorted.png)  
+![image](/assets/images/blog/2017-02-17/level0sorted.png)  
 
 ### 3.6 Searching the Logs for Line Level
 Now, we take the same steps to get the logs for level=1(line level).
 ```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=1"
 ```
-![image](/public/images/blog/2017-02-17/level1.png)  
+![image](/assets/images/blog/2017-02-17/level1.png)  
 Open the csv file, eliminate all other columns except Level, Class, FieldName and TimeSpent.
 Then, sort the 'TimeSpent' column in descending order.
-![image](/public/images/blog/2017-02-17/level1sorted.png)  
+![image](/assets/images/blog/2017-02-17/level1sorted.png)  
 Notice that there are two fields consumes lots of time. Each field takes about 90 millisecond for validation. The total time would be 90 * 2 * 100 = 18000 millisecond = 18 seconds, almost all of the proportion of LineItems.
 * cus_SupervisorTotalMismatch
 * cus_SupervisorTotalMismatchContract

@@ -58,7 +58,7 @@ t2.start();
 * `Timed Waiting` - A thread lies in timed waiting state when it calls a method with a time out parameter. (Thread.sleep(1000);)
 * `Terminated` -  A thread terminates because of either of the following reasons: Normally exits or interrupted.
 
-![image](/public/images/java/1431/threadstate.png){:width="800px"}  
+![image](/assets/images/java/1431/threadstate.png){:width="800px"}  
 
 ## 2. Synchronization
 Monitor, lock, race condition.Reentrant Lock, Intrinsic Lock

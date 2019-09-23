@@ -18,45 +18,45 @@ There are two ways of getting started with GitLab Pages: either fork an existing
 ## 2. Fork GitLab Pages Examples
 ### 2.1 Fork Existing Jekyll Project
 Fork the repository https://gitlab.com/pages/jekyll. After fork, you will see a new project in the list.
-![image](/public/images/jekyll/1602/fork-jekyll.png)
+![image](/assets/images/jekyll/1602/fork-jekyll.png)
 ### 2.2 Remove the Fork Relationship
 Go to Settings > General, scroll down and expand 'Advance' and click the "Remove fork relationship" button.
-![image](/public/images/jekyll/1602/remove-fork-relationship.png)
+![image](/assets/images/jekyll/1602/remove-fork-relationship.png)
 ### 2.3 Trigger Build
 Edit any file to trigger a build. For example, edit file 'README.md'.
-![image](/public/images/jekyll/1602/edit-readme.png)
+![image](/assets/images/jekyll/1602/edit-readme.png)
 Stage and Commit the change.
-![image](/public/images/jekyll/1602/stage-and-commit.png)
+![image](/assets/images/jekyll/1602/stage-and-commit.png)
 Then merge the request.
-![image](/public/images/jekyll/1602/merge-request.png)
+![image](/assets/images/jekyll/1602/merge-request.png)
 The pipeline is started automatically to trigger a new build.
-![image](/public/images/jekyll/1602/pipeline-pending.png)
+![image](/assets/images/jekyll/1602/pipeline-pending.png)
 After build is finished, merge the change.
-![image](/public/images/jekyll/1602/merge-after-build.png)
+![image](/assets/images/jekyll/1602/merge-after-build.png)
 The pipeline starts running again.
-![image](/public/images/jekyll/1602/pipeline-build.png)
+![image](/assets/images/jekyll/1602/pipeline-build.png)
 This time, the project is built and deployed.
-![image](/public/images/jekyll/1602/pipeline-deploy.png)
+![image](/assets/images/jekyll/1602/pipeline-deploy.png)
 ### 2.4 Test Page
 Go to Settings->Page, the website url hosted in GitLab Pages appears, click on it.
-![image](/public/images/jekyll/1602/settings-pages.png)
+![image](/assets/images/jekyll/1602/settings-pages.png)
 We can see the Jekyll site.
-![image](/public/images/jekyll/1602/test-website.png)
+![image](/assets/images/jekyll/1602/test-website.png)
 ### 2.5 Change Domain
 Notice the URL of the site is https://jojozhuang.gitlab.io/jekyll/. We can change it to other domains, for example, https://jojozhuang.gitlab.io/
 
 Go to Settings > General, put the domain name and click "Change path" button.
-![image](/public/images/jekyll/1602/change-path.png)
+![image](/assets/images/jekyll/1602/change-path.png)
 Go to Settings->Page, the url is updated.
-![image](/public/images/jekyll/1602/domain-changed.png)
+![image](/assets/images/jekyll/1602/domain-changed.png)
 Click the url and you will see the site is in new domain(Please wait for few minutes if you don't see it immediately). However, there is something wrong here, the page doesn't look good. This is because the main.css file is not linked properly.
-![image](/public/images/jekyll/1602/new-domain.png)
+![image](/assets/images/jekyll/1602/new-domain.png)
 We are able to see the cause with chrome debugger.
-![image](/public/images/jekyll/1602/main-css.png)
+![image](/assets/images/jekyll/1602/main-css.png)
 To solve the issue, edit `_config.yml`, set `baseurl` to empty string. Submit and merge the request.
-![image](/public/images/jekyll/1602/change-baseurl.png)
+![image](/assets/images/jekyll/1602/change-baseurl.png)
 After the site is successfully built and deployed, we can access it with the new domain.
-![image](/public/images/jekyll/1602/test-new-domain.png)
+![image](/assets/images/jekyll/1602/test-new-domain.png)
 
 ## 3. Migrate Existing Site
 ### 3.1 Copy Files
@@ -114,7 +114,7 @@ pages:
 
 ### 3.4 Test
 After the site is successfully compiled and deployed, we are able to access it. The migration is done.
-![image](/public/images/jekyll/1602/test-migration.png)
+![image](/assets/images/jekyll/1602/test-migration.png)
 
 ## 4. References
 * [GitLab Pages Getting Started](https://docs.gitlab.com/ee/user/project/pages/index.html)

@@ -17,7 +17,7 @@ Actually, since Java 5 the volatile keyword guarantees more than just that volat
 
 ## 2. Variable Visibility Problems
 The Java volatile keyword guarantees visibility of changes to variables across threads. In a multithreaded application where the threads operate on non-volatile variables, each thread may copy variables from main memory into a CPU cache while working on them, for performance reasons. If the computer contains more than one CPU, each thread may run on a different CPU. That means, each thread may copy the variables into the CPU cache of different CPUs. This is illustrated here:
-![image](/public/images/java/1477/java-volatile-1.png){:width="500px"}
+![image](/assets/images/java/1477/java-volatile-1.png){:width="500px"}
 Threads may hold copies of variables from main memory in CPU caches.
 With non-volatile variables there are no guarantees about when the Java Virtual Machine (JVM) reads data from main memory into CPU caches, or writes data from CPU caches to main memory. This can cause several problems.
 
@@ -30,7 +30,7 @@ public class SharedObject {
 Imagine too, that only Thread 1 increments the counter variable, but both Thread 1 and Thread 2 may read the counter variable from time to time.
 
 If the counter variable is not declared volatile there is no guarantee about when the value of the counter variable is written from the CPU cache back to main memory. This means, that the counter variable value in the CPU cache may not be the same as in main memory. This situation is illustrated here:
-![image](/public/images/java/1477/java-volatile-2.png){:width="500px"}
+![image](/assets/images/java/1477/java-volatile-2.png){:width="500px"}
 The CPU cache used by Thread 1 and main memory contains different values for the counter variable.
 The problem with threads not seeing the latest value of a variable because it has not yet been written back to main memory by another thread, is called a `visibility problem`. The updates of one thread are not visible to other threads.
 
@@ -160,7 +160,7 @@ As soon as a thread needs to first read the value of a volatile variable, and ba
 The situation where multiple threads are incrementing the same counter is exactly such a situation where a volatile variable is not enough. The following sections explain this case in more detail.
 
 Imagine if Thread 1 reads a shared counter variable with the value 0 into its CPU cache, increment it to 1 and not write the changed value back into main memory. Thread 2 could then read the same counter variable from main memory where the value of the variable is still 0, into its own CPU cache. Thread 2 could then also increment the counter to 1, and also not write it back to main memory. This situation is illustrated in the diagram below:
-![image](/public/images/java/1477/java-volatile-3.png){:width="500px"}
+![image](/assets/images/java/1477/java-volatile-3.png){:width="500px"}
 Two threads have read a shared counter variable into their local CPU caches and incremented it.
 Thread 1 and Thread 2 are now practically out of sync. The real value of the shared counter variable should have been 2, but each of the threads has the value 1 for the variable in their CPU caches, and in main memory the value is still 0. It is a mess! Even if the threads eventually write their value for the shared counter variable back to main memory, the value will be wrong.
 
