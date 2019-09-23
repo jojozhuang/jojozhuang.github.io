@@ -53,7 +53,7 @@ window.image = {
         appendString += '  <div class="media">';
         appendString += '    <div class="media-left">';
         appendString += '      <a href="' + item.url + '" title="' + item.title + '">';
-        appendString += '        <img src="../public/assets/category/' + getImage(item.subcategory) + '" class="rounded">';
+        appendString += '        <img src="../assets/assets/category/' + getImage(item.subcategory) + '" class="rounded">';
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';

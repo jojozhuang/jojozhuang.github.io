@@ -7,23 +7,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-  <link href="/public/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="/assets/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   {% if page.key == "editormd" %}
     <link rel="stylesheet" href="/public/3rdparty/editormd/editormd.min.css" />
   {% endif %}
-  <link rel="stylesheet" href="/public/css/allinone.css">
+  <link rel="stylesheet" href="/assets/css/allinone.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
   <script>hljs.initLineNumbersOnLoad();</script>
-  <script src="/public/js/nanobar.min.js"></script>
+  <script src="/assets/js/nanobar.min.js"></script>
   {% seo %}
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark navbar-custom">
     <a class="navbar-brand" href="/">
-        <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="/public/assets/rz-50px.png">
+        <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="/assets/assets/rz-50px.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -90,43 +90,43 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <!--
-link href="/public/css/navbar.css" rel="stylesheet" />
-<link href="/public/css/main.css" rel='stylesheet' />
-<link href="/public/css/highlight.css" rel="stylesheet" />
+link href="/assets/css/navbar.css" rel="stylesheet" />
+<link href="/assets/css/main.css" rel='stylesheet' />
+<link href="/assets/css/highlight.css" rel="stylesheet" />
 {% if page.key == "favorite" %}
-  <link href="/public/css/favorite.css" rel='stylesheet' />
+  <link href="/assets/css/favorite.css" rel='stylesheet' />
 {% endif %}
 {% if page.tutorial == "list" %}
-  <link href="/public/css/tutoriallist.css" rel='stylesheet' />
+  <link href="/assets/css/tutoriallist.css" rel='stylesheet' />
 {% endif %}
 {% if page.note == "list" %}
-  <link href="/public/css/tutoriallist.css" rel='stylesheet' />
+  <link href="/assets/css/tutoriallist.css" rel='stylesheet' />
 {% endif %}
 {% if page.blog == "list" %}
-  <link href="/public/css/bloglist.css" rel='stylesheet' />
+  <link href="/assets/css/bloglist.css" rel='stylesheet' />
 {% endif %}
 {% if page.key == "library" %}
-  <link href="/public/css/library.css" rel='stylesheet' />
+  <link href="/assets/css/library.css" rel='stylesheet' />
 {% endif %}
 {% if page.key == "cv" %}
-  <link href="/public/css/cv.css" rel='stylesheet' />
+  <link href="/assets/css/cv.css" rel='stylesheet' />
 {% endif %}
 -->
 {% if page.key == "tutorial" or page.key == "popular" or page.key == "note" %}
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>-->
-  <!--<link href="/public/css/sidebar.css" rel='stylesheet' />-->
-  <script src="/public/js/sidebar.js"></script>
+  <!--<link href="/assets/css/sidebar.css" rel='stylesheet' />-->
+  <script src="/assets/js/sidebar.js"></script>
 {% endif %}
 {% if page.key == "favorite" %}
-  <script src="/public/js/favorite.js"></script>
+  <script src="/assets/js/favorite.js"></script>
 {% endif %}
 {% if page.layout == "tutorial" or page.layout == "portfolio" or page.layout == "blog" or page.layout == "note"%}
-  <script src="/public/js/img.js"></script>
+  <script src="/assets/js/img.js"></script>
 {% endif %}
 {% if page.layout == "default" and page.key == "tutorial" or page.key == "popular" or page.key == "note"%}
-  <script src="/public/js/tooltip.js"></script>
+  <script src="/assets/js/tooltip.js"></script>
 {% endif %}
 {% if page.mathjax %}
   {% include mathjax.html %}

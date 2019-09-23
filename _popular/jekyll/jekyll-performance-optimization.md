@@ -33,11 +33,11 @@ Create netlify.toml
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 [[headers]]
-  for = "/public/css/*.css"
+  for = "/assets/css/*.css"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 [[headers]]
-  for = "/public/js/*.js"
+  for = "/assets/js/*.js"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 ```
