@@ -19,7 +19,7 @@ When you use cookie-free domains you are able to separate the content that doesn
 
 Testing
 
-![image](/public/images/jekyll/1632/imagesize_before.png)
+![image](/assets/images/jekyll/1632/imagesize_before.png)
 
 ## 2. Cache Header
 Create netlify.toml
@@ -29,7 +29,7 @@ Create netlify.toml
   publish = "_site/"
 
 [[headers]]
-  for = "/public/images/*"
+  for = "/assets/images/*"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 [[headers]]

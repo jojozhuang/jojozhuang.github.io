@@ -41,38 +41,38 @@ Submit these two files to GitHub repository.
 
 ## 4. Configuration on Travis CI
 Access the home page of Travis CI - https://travis-ci.org, logon with your GitHub account.
-![image](/public/images/jekyll/1641/travisci_account.png)
+![image](/assets/images/jekyll/1641/travisci_account.png)
 All the public repositories will be displayed here. Find the Github Page repository and switch on for auto building. The only left thing to do is to make some changes to your repository. Travis CI starts building the website once it detects new changes are committed.
-![image](/public/images/jekyll/1641/travisci_activate.png)
+![image](/assets/images/jekyll/1641/travisci_activate.png)
 
 ## 5. Demo
 Edit some files and submit them to GitHub. Few minutes later, you will receive one notification email from GitHub Page saying the page build failed. However, there is no detailed information of the failure. We don't know what is the exact error.
-![image](/public/images/jekyll/1641/notification_builderror.png)
+![image](/assets/images/jekyll/1641/notification_builderror.png)
 Then, you will get another notification email from Travis CI. It also reminds you that the build is failed.
-![image](/public/images/jekyll/1641/notification_travis.png)
+![image](/assets/images/jekyll/1641/notification_travis.png)
 Click on the 'Build was broken' link. You will see the details about the current build(which is numbered 86 in this example).
-![image](/public/images/jekyll/1641/travis1.png)
+![image](/assets/images/jekyll/1641/travis1.png)
 Scroll down until you see the error marked in red. The error comes from [Liquid](https://shopify.github.io/liquid/)(an open-source template language). It is complaining that the link to file '\_posts/2017-07-10-developing-ios-app.md' cannot be generated in '\_posts/2017-07-21-building-ios-app-with-xamarin.md'. The file 'developing-ios-app' doesn't exist.
-![image](/public/images/jekyll/1641/travis2.png)
+![image](/assets/images/jekyll/1641/travis2.png)
 Open file '\_posts/2017-07-21-building-ios-app-with-xamarin.md'. The cause is found. In the last commit, I changed the file name from 'developing-ios-app' to 'building-ios-app-with-xcode'. But I forgot to change the files which link to this file.
-![image](/public/images/jekyll/1641/linkerror.png)
+![image](/assets/images/jekyll/1641/linkerror.png)
 Correct the file name in '\_posts/2017-07-21-building-ios-app-with-xamarin.md' and submit the change to Github. No notification email from Github, instead, only one notification email from Travis CI. The new build(#87) succeeded.
-![image](/public/images/jekyll/1641/notification_fixed.png)
+![image](/assets/images/jekyll/1641/notification_fixed.png)
 Click on the 'Build was fixed' link. You will see the details about the latest build.
-![image](/public/images/jekyll/1641/fix1.png)
+![image](/assets/images/jekyll/1641/fix1.png)
 Scroll down, no error occurs this time.
-![image](/public/images/jekyll/1641/fix2.png)
+![image](/assets/images/jekyll/1641/fix2.png)
 
 ## 6. Travis CI Dashboard
 The current activated repositories are listed in the dashboard.
-![image](/public/images/jekyll/1641/dashboard.png)
+![image](/assets/images/jekyll/1641/dashboard.png)
 Click on the repository, we get the latest build.
-![image](/public/images/jekyll/1641/latestbuild.png)
+![image](/assets/images/jekyll/1641/latestbuild.png)
 Branches.
-![image](/public/images/jekyll/1641/branches.png)
+![image](/assets/images/jekyll/1641/branches.png)
 Build history.
-![image](/public/images/jekyll/1641/history.png)
-![image](/public/images/jekyll/1641/history2.png)
+![image](/assets/images/jekyll/1641/history.png)
+![image](/assets/images/jekyll/1641/history2.png)
 
 ## 7. Reference
 * [Travis CI to the Jekyll site](https://jekyllrb.com/docs/continuous-integration/travis-ci/)

@@ -642,30 +642,30 @@ public class LogUtil {
 ```
 ## 4. Auxiliary Resources
 Some images, and static files. The final project looks as follows.
-![image](/public/images/java/1505/project.png){:width="350px"}
+![image](/assets/images/java/1505/project.png){:width="350px"}
 
 ## 5. Testing
 Right click on 'WebServer.java'-> Run As->Java Application. You will see the logs in console. The web server starts working.
-![image](/public/images/java/1505/console.png){:width="800px"}  
+![image](/assets/images/java/1505/console.png){:width="800px"}  
 
 Open web browser, access 'http://localhost:2540/'. All of the files in the root directory are displayed.
-![image](/public/images/java/1505/homepage.png)
+![image](/assets/images/java/1505/homepage.png)
 Click on the folder 'src' and navigate to the deeper layers. The path in browser's address bar changes accordingly, files in each directory are properly displayed.
-![image](/public/images/java/1505/navigation.png)
+![image](/assets/images/java/1505/navigation.png)
 Click on file 'WebServer.java', its content shows up.
-![image](/public/images/java/1505/content.png)
+![image](/assets/images/java/1505/content.png)
 Go back to the root folder, view content of txt file.
-![image](/public/images/java/1505/dogtxt.png){:width="800px"}
+![image](/assets/images/java/1505/dogtxt.png){:width="800px"}
 View html file.
-![image](/public/images/java/1505/cathtml.png){:width="800px"}
+![image](/assets/images/java/1505/cathtml.png){:width="800px"}
 Let's test the CGI function. In the root directory, click 'addnums.html'.
-![image](/public/images/java/1505/cgi.png){:width="800px"}
+![image](/assets/images/java/1505/cgi.png){:width="800px"}
 If numbers are correctly set, we can get the proper result.
-![image](/public/images/java/1505/addnumbers.png){:width="800px"}
+![image](/assets/images/java/1505/addnumbers.png){:width="800px"}
 If invalid input are passed to the server, it returns 500 error with specific error message.
-![image](/public/images/java/1505/error.png){:width="800px"}
+![image](/assets/images/java/1505/error.png){:width="800px"}
 Check the logs in WebServerLogs.txt. These logs are also available in the console of Eclipse.
-![image](/public/images/java/1505/logs.png){:width="800px"}  
+![image](/assets/images/java/1505/logs.png){:width="800px"}  
 
 ## 6. Source Files
 * [Source files of Web Server on Github](https://github.com/jojozhuang/web-server-java)

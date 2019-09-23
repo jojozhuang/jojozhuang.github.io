@@ -11,7 +11,7 @@ tags: [Microservice]
 > Use Microservice to separate web layer and application layer.
 
 ## 1. Application layer
-![image](/public/images/note/9507/applicationlayer.png){:width="800px"}
+![image](/assets/images/note/9507/applicationlayer.png){:width="800px"}
 Separating out the web layer from the application layer (also known as platform layer) allows you to scale and configure both layers independently. Adding a new API results in adding application servers without necessarily adding additional web servers. The **single responsibility principle** advocates for small and autonomous services that work together. Small teams with small services can plan more aggressively for rapid growth.
 
 Workers in the application layer also help enable asynchronism.

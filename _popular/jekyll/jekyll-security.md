@@ -15,7 +15,7 @@ tags: [Security]
 I have my personal website hosted on two domains, [jojozhuang.github.io](https://jojozhuang.github.io) and [jojozhuang.netlify.com](https://jojozhuang.netlify.com). The first one is hosted on [GitHub Pages](https://pages.github.com/), while the second one is hosted on [Netlify](https://www.netlify.com/). These two websites are powered by [Jekyll](https://jekyllrb.com/) and all their contents are totally static. Actually, they are using the same code base.The source codes are managed on GitHub in repository [https://github.com/jojozhuang/jojozhuang.github.io](https://github.com/jojozhuang/jojozhuang.github.io). Both sites are CI/CD with GitHub. If there is any change submitted to this repository, GitHub Pages and Netlify will compile and deploy the website automatically.
 ### 1.2 Header Security
 Visit [securityheaders.com](https://securityheaders.com) and scan headers for site https://jojozhuang.github.io.
-![image](/public/images/jekyll/1633/header_githubpages.png)
+![image](/assets/images/jekyll/1633/header_githubpages.png)
 All the checks on header are failed. If we scan site https://jojozhuang.netlify.com, same result will be returned.
 ### 1.3 Resolution
 To fix these security issues, we need to make some change at server side. However, there is no way to do that on GitHub Pages, but it can be done on Netlify. PS: This is one of the reasons why I migrated this static website from GitHub Pages to Netlify.
@@ -42,7 +42,7 @@ In the root directory of repository, create a file named `netlify.toml` with the
       s-max-age=604800'''
 ```
 Submit this file, wait for a while to let Netlify deploy the change. Once this file is deployed, run the scan for https://jojozhuang.netlify.com. This time, we can see all tests for header security are passed.
-![image](/public/images/jekyll/1633/header_netlify_fixed.png)
+![image](/assets/images/jekyll/1633/header_netlify_fixed.png)
 
 ## 2. SSL
 

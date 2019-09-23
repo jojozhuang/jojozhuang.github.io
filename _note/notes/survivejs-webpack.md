@@ -24,7 +24,7 @@ The smallest project you can bundle with webpack consists of **input** and **out
 When you bundle a project using webpack, it traverses the imports, constructing a **dependency graph** of the project and then generates output based on the configuration. Additionally, it's possible to define **split points** to create separate bundles within the project code itself.
 
 ### 1.2 Webpack's Execution Process
-![image](/public/images/note/9134/executionprocess.png){:width="800px"}  
+![image](/assets/images/note/9134/executionprocess.png){:width="800px"}  
 
 ### 1.3 Webpack Is Configuration Driven
 webpack.config.js
@@ -143,7 +143,7 @@ In the 'dist' directory, a file named index.html will be created with the conten
 </html>
 ```
 Run 'serve' in the 'dist' directory and access 'http://localhost:5000/' in browser.
-![image](/public/images/note/9134/helloworld.png){:width="500px"}  
+![image](/assets/images/note/9134/helloworld.png){:width="500px"}  
 
 **Adding a Build Shortcut**  
 Add short cut for 'node_modules/.bin/webpack'. Modify package.json, add 'build' into scripts.
@@ -178,7 +178,7 @@ Start dev server.
 node_modules/.bin/webpack-dev-server --mode development
 ```
 Open broswer and access 'http://localhost:8080/'.
-![image](/public/images/note/9134/devserver.png){:width="500px"}
+![image](/assets/images/note/9134/devserver.png){:width="500px"}
 If you try modifying the code, you should see the output in your terminal. The browser should also perform a hard refresh on change.
 
 **Attaching WDS to the Project**  
@@ -220,7 +220,7 @@ Then, run the following command to start the dev server at port 1234.
 $ PORT=1234 npm start
 ```
 And, notice that the browser is opened automatically, because we set the 'open:true' in devServer.
-![image](/public/images/note/9134/devserver2.png){:width="500px"}  
+![image](/assets/images/note/9134/devserver2.png){:width="500px"}  
 * [Source Codes for Dev Server](https://github.com/jojozhuang/Note/tree/master/SurvivejsWebpack/WebpackDemo)
 
 **Enabling Error Overlay**  
@@ -350,9 +350,9 @@ Add import in src/index.js.
 import "./main.css";
 ```
 Execute 'npm start' and browse to http://localhost:8080.
-![image](/public/images/note/9134/loadingstyles.png){:width="500px"}
+![image](/assets/images/note/9134/loadingstyles.png){:width="500px"}
 Notice that the styles are added to the header. It is inline css.
-![image](/public/images/note/9134/inlinestyle.png)  
+![image](/assets/images/note/9134/inlinestyle.png)  
 **Loading Less**
 ```javascript
 {
@@ -450,9 +450,9 @@ module.exports = mode => {
 ```
 Run 'npm run build'. Check the output in dist directory.  
 1) File styles/main.css is generated as desired.
-![image](/public/images/note/9134/separatingcssmain.png){:width="800px"}
+![image](/assets/images/note/9134/separatingcssmain.png){:width="800px"}
 2) In the index.html, the css file is included in the header. Now, css is separated with html and javascript.
-![image](/public/images/note/9134/separatingcsshtml.png){:width="800px"}
+![image](/assets/images/note/9134/separatingcsshtml.png){:width="800px"}
 * [Source Codes for Separating CSS](https://github.com/jojozhuang/Note/tree/master/SurvivejsWebpack/WebpackSeparatingCSS)
 
 ### 3.3 Eliminating Unused CSS
@@ -484,7 +484,7 @@ export default (text = "Hello world, Unused CSS!") => {
 };
 ```
 Run 'npm start' and take a look the UI change.
-![image](/public/images/note/9134/purebutton.png){:width="600px"}
+![image](/assets/images/note/9134/purebutton.png){:width="600px"}
 Run 'npm run build' to build the application.
 ```raw
 Hash: 72fa55ecdebc33f6635a
@@ -647,7 +647,7 @@ images/background.jpg   79.8 KiB          [emitted]
 Entrypoint main = ./styles/main.css main.js
 ```
 Deploy all of the output files into nginx server. The background image is displayed. And we can see browser send a separate request to fetch this image.
-![image](/public/images/note/9134/loadingimages.png)
+![image](/assets/images/note/9134/loadingimages.png)
 
 Change the limit to 85000, which is larger than the image size. The image will be converted to base64 string.
 ```javascript
@@ -678,10 +678,10 @@ Built at: 5/27/2018 2:32:09 PM
 Entrypoint main = ./styles/main.css main.js
 ```
 Open the main.css in the dist directory. You will see the background images is embedded into this file in base64 format.
-![image](/public/images/note/9134/base64.png){:width="800px"}
+![image](/assets/images/note/9134/base64.png){:width="800px"}
 
 Deploy again the output files into nginx server. The background image is displayed as well. However, we can see no separate request this time.
-![image](/public/images/note/9134/loadingimages2.png)
+![image](/assets/images/note/9134/loadingimages2.png)
 
 * [Source Codes for Loading Images](https://github.com/jojozhuang/Note/tree/master/SurvivejsWebpack/WebpackLoadingImages)
 
@@ -813,7 +813,7 @@ fonts/sansation_light.woff   10.9 KiB          [emitted]
 Entrypoint main = ./styles/main.css main.js
 ```
 Deploy all of the output files into nginx server. The new font is working now.
-![image](/public/images/note/9134/loadingfonts.png)
+![image](/assets/images/note/9134/loadingfonts.png)
 
 * [Source Codes for Loading Fonts](https://github.com/jojozhuang/Note/tree/master/SurvivejsWebpack/WebpackLoadingFonts)
 

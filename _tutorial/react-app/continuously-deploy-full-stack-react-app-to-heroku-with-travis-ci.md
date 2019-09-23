@@ -127,42 +127,42 @@ echo 'web: node server.js' > Procfile
 ## 3. Heroku
 ### 3.1 Create App for Server
 Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'code-editor-api', click 'Create app' button.
-![image](/public/images/frontend/2646/heroku_createapp.png)
+![image](/assets/images/frontend/2646/heroku_createapp.png)
 ### 3.2 Create App for Client
 Create another app with name 'code-editor-react' for hosting React app.
-![image](/public/images/frontend/2646/heroku_create_client.png)
+![image](/assets/images/frontend/2646/heroku_create_client.png)
 ### 3.3 Heroku API Key
 Go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
-![image](/public/images/frontend/2646/heroku_apikey.png)  
+![image](/assets/images/frontend/2646/heroku_apikey.png)  
 
 ## 4. Travis
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub' and add 'code-editor-react'.
-![image](/public/images/frontend/2646/travis_add_repository.png)
+![image](/assets/images/frontend/2646/travis_add_repository.png)
 Click the 'Settings' of the new repository. Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/public/images/frontend/2646/travis_settings.png)
+![image](/assets/images/frontend/2646/travis_settings.png)
 In the 'Environment Variables' section, paste your Heroku API Key in the field ‘Value’ and name it 'HEROKU_API_KEY', click 'Add' button.
-![image](/public/images/frontend/2646/travis_environment_variable.png)
+![image](/assets/images/frontend/2646/travis_environment_variable.png)
 
 ## 5. Deployment
 ### 5.1 Triggering Build
 Make any change to this app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/public/images/frontend/2646/travis_build.png)
+![image](/assets/images/frontend/2646/travis_build.png)
 If the build is finished successfully, the whole site(server + client) is deployed to Heroku.
-![image](/public/images/frontend/2646/travis_deploy.png)  
+![image](/assets/images/frontend/2646/travis_deploy.png)  
 ### 5.2 Testing Server
 Go to Heroku, you should see the new app 'code-editor-api' in the dashboard.
-![image](/public/images/frontend/2646/heroku_newapp.png)
+![image](/assets/images/frontend/2646/heroku_newapp.png)
 Click on it, and switch to 'Setting' tab. You should find the link, it is the root url of the RESTful API.
-![image](/public/images/frontend/2646/heroku_link.png)
+![image](/assets/images/frontend/2646/heroku_link.png)
 Access https://code-editor-api.herokuapp.com/api/file/java in browser, we see it returns data.
-![image](/public/images/frontend/2646/heroku_api.png)
+![image](/assets/images/frontend/2646/heroku_api.png)
 ### 5.3 Testing Client
 Access https://code-editor-react.herokuapp.com/, we see the homepage.
-![image](/public/images/frontend/2646/test_home.png)
+![image](/assets/images/frontend/2646/test_home.png)
 Click 'Code Editor' button, select javascript and click Run. It works properly.
-![image](/public/images/frontend/2646/test_editor.png)
+![image](/assets/images/frontend/2646/test_editor.png)
 Though chrome debug tool, we see this React app is calling the RESTful API hosted on Heroku to fetch data.
-![image](/public/images/frontend/2646/test_remoteapi.png)
+![image](/assets/images/frontend/2646/test_remoteapi.png)
 
 ## 6. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

@@ -26,17 +26,17 @@ Two available demos:
 
 ## 3. UI
 Home page.
-![image](/public/images/portfolio/textcompareangular/home.png)
+![image](/assets/images/portfolio/textcompareangular/home.png)
 Click the 'Text Compare' menu.
-![image](/public/images/portfolio/textcompareangular/textcompare.png)
+![image](/assets/images/portfolio/textcompareangular/textcompare.png)
 Input some text in both the original and modified text boxes, and click 'Find Difference' button.
-![image](/public/images/portfolio/textcompareangular/plaintext.png)
+![image](/assets/images/portfolio/textcompareangular/plaintext.png)
 Check the 'Inline Style' to view the difference in inline mode.
-![image](/public/images/portfolio/textcompareangular/inline.png)
+![image](/assets/images/portfolio/textcompareangular/inline.png)
 Input some typescripts and set the language to 'typescript'.
-![image](/public/images/portfolio/textcompareangular/typescript.png)
+![image](/assets/images/portfolio/textcompareangular/typescript.png)
 Change theme to 'Visual Studio Dark'.
-![image](/public/images/portfolio/textcompareangular/darktheme.png)
+![image](/assets/images/portfolio/textcompareangular/darktheme.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Online Text Compare Tool with Angular]({% link _tutorial/angular-app/building-online-text-compare-tool-with-angular.md %}) to learn how this text compare tool is built.

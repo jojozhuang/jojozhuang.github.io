@@ -12,7 +12,7 @@ tags: [Eclipse]
 
 
 Author: Lars Vogel
-![image](/public/images/note/9122/cover.jpg){:width="300px"}  
+![image](/assets/images/note/9122/cover.jpg){:width="300px"}  
 
 
 ## 1. Shortcuts in Eclipse:

@@ -236,9 +236,9 @@ To https://git.heroku.com/game-store-angular.git
 
 ## 3. Testing
 Open web browser, access 'https://game-store-angular.herokuapp.com/'. The Angular app is working now.
-![image](/public/images/frontend/2765/gamestore_home.png)
+![image](/assets/images/frontend/2765/gamestore_home.png)
 It works properly, wee see the products.
-![image](/public/images/frontend/2765/gamestore_list.png)  
+![image](/assets/images/frontend/2765/gamestore_list.png)  
 
 ## 4. References
 * [Angular CLI Deployment: Host Your Angular 2 App on Heroku](https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352)

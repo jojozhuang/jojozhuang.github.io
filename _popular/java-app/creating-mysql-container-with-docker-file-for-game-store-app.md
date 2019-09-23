@@ -25,7 +25,7 @@ mysql/
 ### 1.2 MySQL Connector
 To let the JSP application access MySQL database, we need MySQL connector jar. It is a middleware between JSP application and MySQL database. Even though MySQL is not required to be installed on the host machine, this JSP application needs to connect to MySQL container with it.  
 Go to https://dev.mysql.com/downloads/connector/j/5.1.html, download MySQL Connector/J.
-![image](/public/images/java/1529/mysql_connector.png)  
+![image](/assets/images/java/1529/mysql_connector.png)  
 Unzip it, and copy mysql-connector-java-5.1.46-bin.jar to /GameStore/src/web/WEB-INF/lib/.
 
 I have already put this jar file to WEB-INF. So, actually, you don't need to do again after you download the source files from my GitHub. But, I think it's better to understand how the application works with database. Depends on which platform the JSP application is deployed on, you needs to choose appropriate version of MySQL Connector.
@@ -36,19 +36,19 @@ Pull the source files of this JSP application from my GitHub repository.
 $ git clone https://github.com/jojozhuang/game-store-mysql.git
 ```
 Launch Eclipse, File->'Open Projects from File System' to import the JSP project.
-![image](/public/images/java/1529/eclipse_project.png){:width="370px"}
+![image](/assets/images/java/1529/eclipse_project.png){:width="370px"}
 Add Tomcat server to Eclipse. Go to Window->Show View->Server, click the link to add new server.
-![image](/public/images/java/1529/eclipse_servers.png){:width="700px"}
+![image](/assets/images/java/1529/eclipse_servers.png){:width="700px"}
 Select Tomcat 9.0, next.
-![image](/public/images/java/1529/eclipse_tomcat.png){:width="550px"}
+![image](/assets/images/java/1529/eclipse_tomcat.png){:width="550px"}
 Add our project to right side, finish.
-![image](/public/images/java/1529/eclipse_addresource.png){:width="550px"}
+![image](/assets/images/java/1529/eclipse_addresource.png){:width="550px"}
 In eclipse project, a new server folder for tomcat is added.
-![image](/public/images/java/1529/eclipse_project2.png){:width="370px"}
+![image](/assets/images/java/1529/eclipse_project2.png){:width="370px"}
 Set Targeted Runtimes, go to Project->Properties->Targeted Runtimes, check Tomcat 9.0.
-![image](/public/images/java/1529/eclipse_runtimes.png){:width="550px"}
+![image](/assets/images/java/1529/eclipse_runtimes.png){:width="550px"}
 Now, let's start this JSP application. Right click on the project, select 'Run As' -> 'Run on Server'. A browser will be opened in eclipse, which shows the Game Store website. Or you can directly access http://localhost:8080/GameStoreMysql/ in your favorite browser.
-![image](/public/images/java/1529/gamestore_launched.png)  
+![image](/assets/images/java/1529/gamestore_launched.png)  
 
 ## 2. MySQL in Docker
 ### 2.1 Docker File
@@ -121,7 +121,7 @@ Now, check whether the image is created.
 $ docker images
 ```
 As you see, the new image is created with tag 0.1.
-![image](/public/images/java/1529/docker_newimage.png){:width="700px"}  
+![image](/assets/images/java/1529/docker_newimage.png){:width="700px"}  
 
 ### 2.3 Running Container
 In docker terminal, run the following command.
@@ -130,17 +130,17 @@ $ docker run --detach --name=gsmysql --publish 6605:3306 gsmysql:0.1
 ```
 ### 2.4 Container in Kitematic
 A MySQL container named `gsmysql` is running now. Notice in Kitematic, it's source image is `gsmysql:0.1`. And environment variable MYSQL_ROOT_PASSWORD has been added to the container.
-![image](/public/images/java/1529/kitematic_mysql.png)
+![image](/assets/images/java/1529/kitematic_mysql.png)
 Port 3306 is also exposed and mapped to 6605.
-![image](/public/images/java/1529/kitematic_port.png)
+![image](/assets/images/java/1529/kitematic_port.png)
 
 ### 2.5 Connection URL
 In Kitematic, select 'gsmysql' container, check the URL. It's `192.168.99.100:6605`.
-![image](/public/images/java/1529/kitematic_url.png)  
+![image](/assets/images/java/1529/kitematic_url.png)  
 
 ### 2.6 Viewing Data from MySQL Workbench
 In MySQL workbench, create a connection to '192.168.99.100:6605' with user `root` and password `gspassword`. You will see the database `gamestore` and the data in table `SalesOrder`.
-![image](/public/images/java/1529/workbench_data.png)  
+![image](/assets/images/java/1529/workbench_data.png)  
 
 ## 3. Connecting JSP App to MySQL Container
 ### 3.1 Connection Configuration
@@ -161,13 +161,13 @@ Login as follows:
 * Password:  customer
 * User Type: customer
 
-![image](/public/images/java/1529/gamestore_login.png)
+![image](/assets/images/java/1529/gamestore_login.png)
 Add some items, eg. console, accessory or game to shopping cart, and place the order.
-![image](/public/images/java/1529/gamestore_cart.png)
+![image](/assets/images/java/1529/gamestore_cart.png)
 Order is created now.
-![image](/public/images/java/1529/gamestore_order.png)
+![image](/assets/images/java/1529/gamestore_order.png)
 After the above operation, check the data in MySQL workbench. You see there is one new order entry in SalesOrder table.
-![image](/public/images/java/1529/workbench_neworder.png)  
+![image](/assets/images/java/1529/workbench_neworder.png)  
 
 ## 4. Source Files
 * [Source files for Game Store MySQL on GitHub](https://github.com/jojozhuang/game-store-mysql)

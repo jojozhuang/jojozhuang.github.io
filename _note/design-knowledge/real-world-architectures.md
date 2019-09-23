@@ -13,7 +13,7 @@ tags: [Architecture]
 
 ## 1. Real world architectures
 Articles on how real world systems are designed.
-![image](/public/images/note/9513/twitter-timeline-scalability.png)
+![image](/assets/images/note/9513/twitter-timeline-scalability.png)
 
 **Don't focus on nitty gritty details for the following articles, instead:**
 

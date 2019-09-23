@@ -25,7 +25,7 @@ The Java “White Paper” Buzzwords
 11. Dynamic
 
 Author: Cay S. Horstmann  
-![image](/public/images/note/9121/cover.jpg){:width="300px"}  
+![image](/assets/images/note/9121/cover.jpg){:width="300px"}  
 
 
 Java programs that work on web pages are called `applets`. It is replaced by Adobe Flash later.
@@ -1056,7 +1056,7 @@ public interface Iterable<T> {
 * The `Collection` interface extends the `Iterable` interface.
 * A List is an ordered collection.
 
-![image](/public/images/note/9121/collections.png){:width="800px"}  
+![image](/assets/images/note/9121/collections.png){:width="800px"}  
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1JQm4fmR0wIOm11OqS4H4qyhb_z96WnDzaLI0u28CYWc/edit?usp=sharing)
 
 ### 9.2 Concrete Collections
@@ -1094,7 +1094,7 @@ The only reason to use a linked list is to minimize the cost of insertion and re
 We recommend that you use an `ArrayList` instead of a `Vector` whenever you don’t need synchronization.
 #### 9.2.3 Hash Sets
 In Java, hash tables are implemented as arrays of linked lists. Key concepts: hash collision, rehash, load factor at 0.75.
-![image](/public/images/note/9121/hashtable.png){:width="800px"}  
+![image](/assets/images/note/9121/hashtable.png){:width="800px"}  
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1JQm4fmR0wIOm11OqS4H4qyhb_z96WnDzaLI0u28CYWc/edit#slide=id.g35eabee3aa_0_0?usp=sharing)
 
 #### 9.2.4 Tree Sets
@@ -1522,7 +1522,7 @@ void fillMenu(JMenu menu, Collection<JMenuItem> items) {
 ```
 ### 9.6 Legacy Collections  
 Legacy classes in the collections framework
-![image](/public/images/note/9121/legacycollections.png){:width="800px"}  
+![image](/assets/images/note/9121/legacycollections.png){:width="800px"}  
 #### 9.6.1 The Hashtable Class  
 Hashtable, HashMap, ConcurrentHashMap. See more about [What's the difference between ConcurrentHashMap and Collections.synchronizedMap(Map)?](https://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap)
 
@@ -1799,7 +1799,7 @@ Threads can be in one of six states:
 * Waiting
 * Timed waiting
 
-![image](/public/images/note/9121/threadstate.png){:width="800px"}  
+![image](/assets/images/note/9121/threadstate.png){:width="800px"}  
 #### 14.3.2 Runnable Threads
 preemptive scheduling, cooperative scheduling  
 Always keep in mind that a runnable thread may or may not be running at any given time. (This is why the state is called “runnable” and not “running”.)

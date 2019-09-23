@@ -73,7 +73,7 @@ Define a flow chart containing 3 nodes.
 </body>
 </html>
 ```
-![image](/public/images/blog/2018-09-14/firstsample.png/){:width="600px"}
+![image](/assets/images/blog/2018-09-14/firstsample.png/){:width="600px"}
 
 ## 3. Basic Support for fontawesome
 It is possible to add icons from [fontawesome](https://fontawesome.com/) for Mermaid diagrams.
@@ -92,7 +92,7 @@ Define a flow chart containing 4 nodes. The icons are accessed via the syntax `f
       B-->E(fa:fa-camera-retro perhaps?);
 </div>
 ```
-![image](/public/images/blog/2018-09-14/icon_supported.png/){:width="600px"}
+![image](/assets/images/blog/2018-09-14/icon_supported.png/){:width="600px"}
 
 ## 4. References
 * [Mermaid Documentation](https://mermaidjs.github.io/)

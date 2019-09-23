@@ -30,21 +30,21 @@ Four available demos:
 
 ## 3. UI
 Home page.
-![image](/public/images/portfolio/gamestorereact/homepage.png)
+![image](/assets/images/portfolio/gamestorereact/homepage.png)
 Click the List button. There are three products with images.
-![image](/public/images/portfolio/gamestorereact/productlist.png)
+![image](/assets/images/portfolio/gamestorereact/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/public/images/portfolio/gamestorereact/productadd.png)
+![image](/assets/images/portfolio/gamestorereact/productadd.png)
 Click 'Save' button, product is saved.
-![image](/public/images/portfolio/gamestorereact/productlistafteradd.png)
+![image](/assets/images/portfolio/gamestorereact/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/public/images/portfolio/gamestorereact/productedit.png)
+![image](/assets/images/portfolio/gamestorereact/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/public/images/portfolio/gamestorereact/productlistafteredit.png)
+![image](/assets/images/portfolio/gamestorereact/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/public/images/portfolio/gamestorereact/deleteconfirm.png)
+![image](/assets/images/portfolio/gamestorereact/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/public/images/portfolio/gamestorereact/productlistafterdel.png)
+![image](/assets/images/portfolio/gamestorereact/productlistafterdel.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Web Application with React]({% link _tutorial/react-app/building-web-application-with-react.md %}) and [Building Web Application with React and Redux]({% link _tutorial/react-app/building-web-application-with-react-and-redux.md %}) to learn how these two apps are built with React and Redux.

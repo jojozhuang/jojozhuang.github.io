@@ -66,7 +66,7 @@ public class WSServer {
 }
 ```
 Launch the server and visit http://localhost:8888/ws/demo?wsdl in web browser. You will see WSDL as follows, note down the **name space** and **location**, we will use them in web service client.
-![image](/public/images/java/1492/wsdl.png)
+![image](/assets/images/java/1492/wsdl.png)
 
 ### 2.2 Client
 Create web service client to access to the published service. Without tool, you can create a Java web service client like this. The name space and location are used for constructing Qname.

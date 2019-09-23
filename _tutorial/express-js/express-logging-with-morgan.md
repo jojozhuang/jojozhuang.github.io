@@ -185,7 +185,7 @@ app.listen(3000, function() {
 });
 ```
 Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You would see multiple log files in directory ./logs. Each file name has the format 'yyyyMMdd-hhmm-01-minute.log'. From the following screenshot, we see ten log files are created from 20:57 to 21:06 on Jan 07, 2018.
-![image](/public/images/frontend/2553/logfiles.png){:width="350px"}  
+![image](/assets/images/frontend/2553/logfiles.png){:width="350px"}  
 
 ## 4. Source Files
 * [Source files of Express Logging Morgan on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressLoggingMorgan)

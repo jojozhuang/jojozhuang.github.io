@@ -31,14 +31,14 @@ There are many techniques to scale a relational database:
 
 ### 1.3 Master-slave Replication
 The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
-![image](/public/images/note/9508/master-slave.png){:width="600px"}
+![image](/assets/images/note/9508/master-slave.png){:width="600px"}
 **Disadvantage(s): master-slave replication**
 * Additional logic is needed to promote a slave to a master.
 * See [Disadvantage(s): replication](#disadvantages-replication) for points related to **both** master-slave and master-master.
 
 ### 1.4 Master-master replication
 Both masters serve reads and writes and coordinate with each other on writes.  If either master goes down, the system can continue to operate with both reads and writes.
-![image](/public/images/note/9508/master-master.png){:width="600px"}
+![image](/assets/images/note/9508/master-master.png){:width="600px"}
 **Disadvantage(s): master-master replication**
 * You'll need a load balancer or you'll need to make changes to your application logic to determine where to write.
 * Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.
@@ -59,7 +59,7 @@ Both masters serve reads and writes and coordinate with each other on writes.  I
 
 ### 1.5 Federation
 Federation (or functional partitioning) splits up databases by function. For example, instead of a single, monolithic database, you could have three databases: **forums**, **users**, and **products**, resulting in less read and write traffic to each database and therefore less replication lag.
-![image](/public/images/note/9508/federation.png){:width="400px"}
+![image](/assets/images/note/9508/federation.png){:width="400px"}
 Smaller databases result in more data that can fit in memory, which in turn results in more cache hits due to improved cache locality.  With no single central master serializing writes you can write in parallel, increasing throughput.
 
 **Disadvantage(s): federation**
@@ -73,7 +73,7 @@ Smaller databases result in more data that can fit in memory, which in turn resu
 
 ### 1.6 Sharding
 Sharding distributes data across different databases such that each database can only manage a subset of the data. Taking a users database as an example, as the number of users increases, more shards are added to the cluster.
-![image](/public/images/note/9508/sharding.png){:width="550px"}
+![image](/assets/images/note/9508/sharding.png){:width="550px"}
 Similar to the advantages of federation, sharding results in less read and write traffic, less replication, and more cache hits. Index size is also reduced, which generally improves performance with faster queries. If one shard goes down, the other shards are still operational, although you'll want to add some form of replication to avoid data loss. Like federation, there is no single central master serializing writes, allowing you to write in parallel with increased throughput.
 
 Common ways to shard a table of users is either through the user's last name initial or the user's geographic location.
@@ -190,7 +190,7 @@ Document stores provide high flexibility and are often used for working with occ
 * [Elasticsearch architecture](https://www.elastic.co/blog/found-elasticsearch-from-the-bottom-up)
 
 ### 2.3 Wide Column Store
-![image](/public/images/note/9508/wide-column.png){:width="600px"}
+![image](/assets/images/note/9508/wide-column.png){:width="600px"}
 
 Abstraction: nested map `ColumnFamily<RowKey, Columns<ColKey, Value, Timestamp>>`
 
@@ -207,7 +207,7 @@ Wide column stores offer high availability and high scalability.  They are often
 * [Cassandra architecture](http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archIntro.html)
 
 ### 2.4 Graph Store
-![image](/public/images/note/9508/graph-store.png){:width="600px"}
+![image](/assets/images/note/9508/graph-store.png){:width="600px"}
 Abstraction: graph
 
 In a graph database, each node is a record and each arc is a relationship between two nodes.  Graph databases are optimized to represent complex relationships with many foreign keys or many-to-many relationships.
@@ -227,7 +227,7 @@ Graphs databases offer high performance for data models with complex relationshi
 * [NoSQL patterns](http://horicky.blogspot.com/2009/11/nosql-patterns.html)
 
 ## 3. SQL or NoSQL
-![image](/public/images/note/9508/sql-vs-nosql.png){:width="500px"}
+![image](/assets/images/note/9508/sql-vs-nosql.png){:width="500px"}
 
 Reasons for **SQL**:
 * Structured data

@@ -34,7 +34,7 @@ inventory.sort(comparing(Apple::getWeight));
 
 
 
-![image](/public/images/java/1451/lambda-expression.png){:width="700px"}
+![image](/assets/images/java/1451/lambda-expression.png){:width="700px"}
 
 A lambda expression is composed of parameters, an arrow, and a body.
 

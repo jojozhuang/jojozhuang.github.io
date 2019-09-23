@@ -13,9 +13,9 @@ tags: [iOS, Android, Xamarin, Cordova]
 ## 1. Introduction
 ### 1.1 Game Store Web Application
 I have a portfolio named '[Online Game Store]({% link _portfolio/game-store-aspnet.md %})' which is built with ASP.NET MVC in C#. It's an online store for selling game facilities. Visit the <a href="https://ect583final.azurewebsites.net/" target="\_blank">Live Demo on Azure</a>.
-![image](/public/images/portfolio/gamestoremulti/gamestore_web.png)  
+![image](/assets/images/portfolio/gamestoremulti/gamestore_web.png)  
 There is one core functionality for the store administrator, managing products.
-![image](/public/images/portfolio/gamestoremulti/gamestore_products.png)
+![image](/assets/images/portfolio/gamestoremulti/gamestore_products.png)
 ### 1.2 Game Store Mobile Apps
 Compared with the existing Game Store web application, the mobile apps have only one simple function, product management.
 
@@ -28,10 +28,10 @@ I built four mobile apps with multiple different technologies. Apart from the na
 
 | Dev Tools       | Simulator | Product List | Product Detail | Product Deletion |
 |-----------------|--------------------|--------------|----------------|------------------|
-| iOS(Native)     | ![image](/public/images/portfolio/gamestoremulti/ios_native_simulator.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/ios_native_productlist.png){:width="220px"} | ![image](/public/images/portfolio/gamestoremulti/ios_native_productdetail.png){:width="220px"} | ![image](/public/images/portfolio/gamestoremulti/ios_native_productdeletion.png){:width="220px"} |
-| Android(Native) | ![image](/public/images/portfolio/gamestoremulti/android_native_emulator.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_native_productlist.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_native_productdetail.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_native_productdeletion.png){:width="200px"} |
-| iOS(Xamarin)    | ![image](/public/images/portfolio/gamestoremulti/ios_xamarin_simulator.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/ios_xamarin_productlist.png){:width="220px"} | ![image](/public/images/portfolio/gamestoremulti/ios_xamarin_productdetail.png){:width="220px"} | ![image](/public/images/portfolio/gamestoremulti/ios_xamarin_productdeletion.png){:width="220px"} |
-| Android(Xamarin)| ![image](/public/images/portfolio/gamestoremulti/android_xamarin_emulator.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_xamarin_productlist.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_xamarin_productdetail.png){:width="200px"} | ![image](/public/images/portfolio/gamestoremulti/android_xamarin_productdeletion.png){:width="200px"} |
+| iOS(Native)     | ![image](/assets/images/portfolio/gamestoremulti/ios_native_simulator.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/ios_native_productlist.png){:width="220px"} | ![image](/assets/images/portfolio/gamestoremulti/ios_native_productdetail.png){:width="220px"} | ![image](/assets/images/portfolio/gamestoremulti/ios_native_productdeletion.png){:width="220px"} |
+| Android(Native) | ![image](/assets/images/portfolio/gamestoremulti/android_native_emulator.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/android_native_productlist.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/android_native_productdetail.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/android_native_productdeletion.png){:width="200px"} |
+| iOS(Xamarin)    | ![image](/assets/images/portfolio/gamestoremulti/ios_xamarin_simulator.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/ios_xamarin_productlist.png){:width="220px"} | ![image](/assets/images/portfolio/gamestoremulti/ios_xamarin_productdetail.png){:width="220px"} | ![image](/assets/images/portfolio/gamestoremulti/ios_xamarin_productdeletion.png){:width="220px"} |
+| Android(Xamarin)| ![image](/assets/images/portfolio/gamestoremulti/android_xamarin_emulator.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/android_xamarin_productlist.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/android_xamarin_productdetail.png){:width="200px"} | ![image](/assets/images/portfolio/gamestoremulti/android_xamarin_productdeletion.png){:width="200px"} |
 
 ## 3. Under the Hood
 Read the following tutorials to learn the details how these mobile apps were built.

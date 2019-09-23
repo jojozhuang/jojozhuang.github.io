@@ -13,7 +13,7 @@ tags: [Cache]
 ## 1. Cache
 ### 1.1 What is Cache?
 Caching improves page load times and can reduce the load on your servers and databases.  In this model, the dispatcher will first lookup if the request has been made before and try to find the previous result to return, in order to save the actual execution.
-![image](/public/images/note/9509/cache.png){:width="700px"}
+![image](/assets/images/note/9509/cache.png){:width="700px"}
 Databases often benefit from a uniform distribution of reads and writes across its partitions.  Popular items can skew the distribution, causing bottlenecks.  Putting a cache in front of a database can help absorb uneven loads and spikes in traffic.
 ### 1.2 Client caching
 Caches can be located on the client side (OS or browser), server side, or in a distinct cache layer.
@@ -60,7 +60,7 @@ Suggestions of what to cache:
 Since you can only store a limited amount of data in cache, you'll need to determine which cache update strategy works best for your use case.
 
 ### 2.1 Cache-aside
-![image](/public/images/note/9509/cache-aside.png){:width="500px"}
+![image](/assets/images/note/9509/cache-aside.png){:width="500px"}
 The application is responsible for reading and writing from storage.  The cache does not interact with storage directly.  The application does the following:
 
 * Look for entry in cache, resulting in a cache miss
@@ -93,7 +93,7 @@ The application uses the cache as the main data store, reading and writing data 
 * Application adds/updates entry in cache
 * Cache synchronously writes entry to data store
 * Return
-![image](/public/images/note/9509/write-through.png){:width="400px"}
+![image](/assets/images/note/9509/write-through.png){:width="400px"}
 
 Application code:
 
@@ -119,7 +119,7 @@ Write-through is a slow overall operation due to the write operation, but subseq
 In write-behind, the application does the following:
 * Add/update entry in cache
 * Asynchronously write entry to the data store, improving write performance
-![image](/public/images/note/9509/write-behind.png){:width="700px"}
+![image](/assets/images/note/9509/write-behind.png){:width="700px"}
 
 **Disadvantage(s): write-behind**
 * There could be data loss if the cache goes down prior to its contents hitting the data store.
@@ -127,7 +127,7 @@ In write-behind, the application does the following:
 
 ### 2.4 Refresh-ahead
 You can configure the cache to automatically refresh any recently accessed cache entry prior to its expiration.
-![image](/public/images/note/9509/refresh-ahead.png){:width="700px"}
+![image](/assets/images/note/9509/refresh-ahead.png){:width="700px"}
 
 Refresh-ahead can result in reduced latency vs read-through if the cache can accurately predict which items are likely to be needed in the future.
 

@@ -16,11 +16,11 @@ tags: [Java, Interview]
 * JRE - Java Runtime Environment: provides the libraries, the Java Virtual Machine, and other components to run applications written in the Java programming language.
 * JDK - Java Development Kit: The JDK is a superset of the JRE, and contains everything that is in the JRE, plus tools such as the compilers and debuggers necessary for developing applets and applications.
 
-![image](/public/images/note/9603/jvm_jre_jdk.png){:width="450px"}  
-![image](/public/images/note/9603/jvm_jre_jdk2.png){:width="350px"}
+![image](/assets/images/note/9603/jvm_jre_jdk.png){:width="450px"}  
+![image](/assets/images/note/9603/jvm_jre_jdk2.png){:width="350px"}
 
 ### 1.2 JVM Architecture
-![image](/public/images/note/9603/jvm-architecture.png){:width="700px"}
+![image](/assets/images/note/9603/jvm-architecture.png){:width="700px"}
 ### 1.3 ClassLoader
 * Loading (`ClassNotFoundException` may occur during load)
   - BootStrap Class Loader: **jre/lib/rt.jar**
@@ -32,7 +32,7 @@ tags: [Java, Interview]
   - Resolve (`NoClassDefFoundError` may occur during resolution)
 * Initialization
 
-![image](/public/images/note/9603/class-loader.png){:width="600px"}
+![image](/assets/images/note/9603/class-loader.png){:width="600px"}
 
 ## 2. OOP
 ### 2.1 Access Modifiers
@@ -144,7 +144,7 @@ Reference Type - Reference       | Copied       | Copied
 Reference Type - Referred Object | Not copied   | Copied
 
 Object clone.
-![image](/public/images/note/9603/object_clone.jpg){:width="400px"}  
+![image](/assets/images/note/9603/object_clone.jpg){:width="400px"}  
 
 ### 3.4 Errors vs Exceptions In Java
 Both Errors and Exceptions are the subclasses of `java.lang.Throwable` class.

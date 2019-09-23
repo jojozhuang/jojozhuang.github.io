@@ -18,7 +18,7 @@ A heap is a binary tree with these characteristics:
 * It’s (usually) implemented as an array. Binary trees can be stored in arrays, rather than using references to connect the nodes.
 * Each node in a heap satisfies the `heap condition`, which states that every node’s key is larger/smaller than the keys of its children.
 
-![image](/public/images/dsa/1132//complete.png){:width="800px"}  
+![image](/assets/images/dsa/1132//complete.png){:width="800px"}  
 ### 1.2 Types of Heap
 * Max Heap - The value of each node is less than the value of its parent, with the maximum-value element at the root.
 * Min Heap - The value of each node is greater than the value of its parent, with the minimum-value element at the root.
@@ -42,7 +42,7 @@ If you remove a node and then insert the same node, the result is `not` necessar
 ### 2.1 Array Heap
 Heap can be implemented with array. A heap is a complete binary tree implies that there are no “holes” in the
 array used to represent it. The traversal method use to achieve array representation is `Level Order`.
-![image](/public/images/dsa/1132//heaparray.png){:width="800px"}  
+![image](/assets/images/dsa/1132//heaparray.png){:width="800px"}  
 ### 2.2 Index Relationship
 For a node at index `i` in the array,
 * Its parent is (i - 1) / 2.
@@ -57,7 +57,7 @@ Insertion means add new element to the heap. Initially, the new element is place
 * 2) Compare the value of this node with its parent. If value of parent is less than child, then swap them.
 * 3) Repeat step 2) to bubble up this new node to maintain the heap condition if possible; otherwise, stop.
 
-![image](/public/images/dsa/1132//heapinsert.png)
+![image](/assets/images/dsa/1132//heapinsert.png)
 
 ### 3.2 Removal
 Removal means removing the node with the maximum key. This node is always the root. Removing decreases the array size by one. Here are the steps for removing the maximum node:
@@ -66,7 +66,7 @@ Removal means removing the node with the maximum key. This node is always the ro
 * 3) Compare the value of this child with its parent. If value of parent is less than child, then swap them.
 * 4) Repeat step 3) to bubble down this node to maintain the heap condition if possible; otherwise, stop.  
 
-![image](/public/images/dsa/1132//heapremove.png)
+![image](/assets/images/dsa/1132//heapremove.png)
 
 ### 3.3 Implementing MaxHeap
 The following code is the implementation of max heap with type integer.

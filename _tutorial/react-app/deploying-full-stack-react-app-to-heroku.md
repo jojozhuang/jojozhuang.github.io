@@ -178,9 +178,9 @@ $ heroku git:remote -a code-editor-api
 ```
 4) Testing Server  
 Open web browser, access 'https://code-editor-api.herokuapp.com/api'. The API is working now.
-![image](/public/images/frontend/2644/api.png)
+![image](/assets/images/frontend/2644/api.png)
 If we access https://code-editor-api.herokuapp.com/api/file/Java, it returns some java source codes.
-![image](/public/images/frontend/2644/java.png)
+![image](/assets/images/frontend/2644/java.png)
 
 ### 3.2 Client
 1) Build react app.
@@ -188,7 +188,7 @@ If we access https://code-editor-api.herokuapp.com/api/file/Java, it returns som
 $ npm run build
 ```
 The React app is built and exported to dist folder. All are static files(html, js and images).
-![image](/public/images/frontend/2644/build.png){:width="800px"}  
+![image](/assets/images/frontend/2644/build.png){:width="800px"}  
 2) Create App on Heroku
 ```raw
 $ heroku create code-editor
@@ -208,23 +208,23 @@ $ heroku git:remote -a code-editor
 ```
 4) Testing Server  
 Open web browser, access 'https://code-editor.herokuapp.com/'. The React app is working now.
-![image](/public/images/frontend/2644/client.png)
+![image](/assets/images/frontend/2644/client.png)
 * Notice, because the Client Side Routing doesn't work properly, I changed to the router rules to show editor in the root path /.
 
 In addition, notice that c, c++ and java are not supported in Heroku or Netlify. I got the CORS error when trying to execute java program.
-![image](/public/images/frontend/2644/cors_error.png)
+![image](/assets/images/frontend/2644/cors_error.png)
 So these three languages are removed from the dropdown list in production mode. They are only available in dev mode, locally.
 
 ## 4. Heroku UI
 ### 4.1 Dashboard
 Log into Heroku and go to https://dashboard.heroku.com/. The dashboard shows all the app we have created.
-![image](/public/images/frontend/2644/dashboard.png)
+![image](/assets/images/frontend/2644/dashboard.png)
 ### 4.2 Overview
 Click one of the app and check the overview.
-![image](/public/images/frontend/2644/overview.png)
+![image](/assets/images/frontend/2644/overview.png)
 ### 4.3 Deploy
 In the deploy tab, notice that we can connect GitHub and deploy projects.
-![image](/public/images/frontend/2644/deploy.png)
+![image](/assets/images/frontend/2644/deploy.png)
 
 ## 5. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

@@ -22,7 +22,7 @@ We learned how to build RESTful API from [Building RESTful API with Express And 
 We will have two servers running. The front end code will be served by the Angular dev server which helps with hot and live reloading. The server side Express code will be served by a node server using [nodemon](https://nodemon.io/) which helps in automatically restarting the server whenever server side code changes.
 ### 2.3 Making Change
 1) Create a new folder named `server` in the Angular project, and copy all required files from Express project into this folder.
-![image](/public/images/frontend/2753/merge.png){:width="350px"}
+![image](/assets/images/frontend/2753/merge.png){:width="350px"}
 2) We need to run the Angular dev server and the backend express server concurrently. Create three new script commands defined in 'package.json'.
 ```javascript
 "client": "ng serve",
@@ -39,14 +39,14 @@ Start both the client and server with 'npm run dev'.
 $ npm run dev
 ```
 You will see two services are started. The server is served at port 5000 and the client is served at port 12080.
-![image](/public/images/frontend/2753/start.png)
+![image](/assets/images/frontend/2753/start.png)
 
 Open web browser, access 'http://localhost:12080/'.
-![image](/public/images/frontend/2753/homepage.png)
+![image](/assets/images/frontend/2753/homepage.png)
 Access the product list page.
-![image](/public/images/frontend/2753/productlist.png)
+![image](/assets/images/frontend/2753/productlist.png)
 Through the debug tool, we can see, the name is fetched from the api.
-![image](/public/images/frontend/2753/api.png)
+![image](/assets/images/frontend/2753/api.png)
 
 ## 4. Enable Logging(Optional)
 ### 4.1 Installing Packages
@@ -140,7 +140,7 @@ app.use(morgan("combined", { stream: winston.stream }));
 ```
 ### 4.4 Logs
 Restart the server, and try to access the some pages. You should see two types of log files in ./logs folder, one is info and another is error.
-![image](/public/images/frontend/2753/logs.png){:width="350px"}
+![image](/assets/images/frontend/2753/logs.png){:width="350px"}
 
 ## 5. Source Files
 * [Source files of MEAN Statck Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/MEANStackTutorial)

@@ -25,9 +25,9 @@ POST /api/upload          | Upload an image     | Image File   | Image URL
 ## 2. Maven Project
 ### 2.1 Creating Project
 1) In Eclipse, File -> New -> 'Maven Project', check the box 'Create a simple project'-> Next, Name: SpringBootTutorial  
-![image](/public/images/frontend/2222/mavenproject.png){:width="650px"}  
+![image](/assets/images/frontend/2222/mavenproject.png){:width="650px"}  
 In the new created project, there are two main branches, one is for source code, another is for test.
-![image](/public/images/frontend/2222/initialproject.png){:width="350px"}  
+![image](/assets/images/frontend/2222/initialproject.png){:width="350px"}  
 ### 2.2 Specifying Java Version
 Since, we will use lamda expression, specify java version to java 8 in pom.xml.
 ```xml
@@ -458,11 +458,11 @@ class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 }
 ```
 When accessing the URL 'http://localhost:8080/images/controller.jpg'. The image with name 'controller.jpg' is displayed in the browser.
-![image](/public/images/frontend/2222/images_serving.png){:width="700px"}  
+![image](/assets/images/frontend/2222/images_serving.png){:width="700px"}  
 
 ### 4.5 Final Project Structure
 The final structure of the Web API project.
-![image](/public/images/frontend/2222/project_final.png){:width="350px"}  
+![image](/assets/images/frontend/2222/project_final.png){:width="350px"}  
 We created 6 APIs and will test them through Postman, see next blog.
 
 API                       | Description         | URL
@@ -482,10 +482,10 @@ $ mvn spring-boot:run
 Use Postman to access http://localhost:8080/ for testing. Create new collection named 'RESTfulSpringBoot', all requests will be saved to this collection.
 ### 5.1 Get All Products
 Create a request, choose 'GET' method and specify 'http://localhost:8080/api/products' as the URL, click the Send button. All three products are returned in the response body.
-![image](/public/images/frontend/2222/getall.png)
+![image](/assets/images/frontend/2222/getall.png)
 ### 5.2 Get a product by ID
 Create a new request, choose the 'GET' method and specify 'http://localhost:8080/api/products/1' as the URL, click the Send button. Product with ID equals to '1' is returned in the response body.
-![image](/public/images/frontend/2222/getone.png)
+![image](/assets/images/frontend/2222/getone.png)
 ### 5.3 Add New Product
 Create another request, choose the 'POST' method and specify 'http://localhost:8080/api/products/' as the URL. In the Request Body, select 'raw', provide the new product information in JSON format, and choose 'JSON(application/json)'.
 ```json
@@ -497,9 +497,9 @@ Create another request, choose the 'POST' method and specify 'http://localhost:8
 }
 ```
 Click the Send button. In the response body, we see the new product.
-![image](/public/images/frontend/2222/add.png)
+![image](/assets/images/frontend/2222/add.png)
 Run the 'Get all products' request to verify whether the new product is created. We see there is a new product with ID equals to 4.
-![image](/public/images/frontend/2222/addcheck.png)
+![image](/assets/images/frontend/2222/addcheck.png)
 ### 5.4 Update Product
 Create a new request, choose 'PUT' method and specify 'http://localhost:8080/api/products/4' as the URL. In the Request Body, select 'raw', provide the new product information in JSON format, and choose 'JSON(application/json)'.
 ```json
@@ -511,21 +511,21 @@ Create a new request, choose 'PUT' method and specify 'http://localhost:8080/api
 }
 ```
 Click the Send button. In the response body, we see the product has new name and price.
-![image](/public/images/frontend/2222/update.png)
+![image](/assets/images/frontend/2222/update.png)
 Run the 'Get all products' request to verify whether the product is updated. We see product 4 has new name and price.
-![image](/public/images/frontend/2222/updatecheck.png)
+![image](/assets/images/frontend/2222/updatecheck.png)
 ### 5.5 Delete Product
 Create a new request, choose 'DELETE' method and specify 'http://localhost:8080/api/products/4' as the URL, click the Send button. There is no response body returned, but we see the status is '200 OK'. Product 4 should be deleted.
-![image](/public/images/frontend/2222/delete.png)
+![image](/assets/images/frontend/2222/delete.png)
 Run the 'Get all products' request to verify whether product4 is deleted. We see product 4 is no longer existing.
-![image](/public/images/frontend/2222/deletecheck.png)
+![image](/assets/images/frontend/2222/deletecheck.png)
 ### 5.5 Upload Image
 Create a new request, choose the 'POST' method and specify 'http://localhost:8080/api/upload' as the URL. In the Request Body, select 'form-data', add new key named 'file', select 'File' type, you will see the 'Choose Files' button. Select one image from your local disk, and click the Send button. In the response body, we see the status code and message. This message actually contains the URL of the uploaded image.
-![image](/public/images/frontend/2222/upload.png)
+![image](/assets/images/frontend/2222/upload.png)
 Click on the image link. A new request is created automatically, click the Send button, you will see the image displayed in the response body.
-![image](/public/images/frontend/2222/uploadcheck.png)
+![image](/assets/images/frontend/2222/uploadcheck.png)
 If you go to the project's image folder '/src/main/resources/images/', you will see this image.
-![image](/public/images/frontend/2222/imageonserver.png){:width="700px"}  
+![image](/assets/images/frontend/2222/imageonserver.png){:width="700px"}  
 
 ## 6. Source Files
 * [Source files of RESTful API(Spring Boot) on Github](https://github.com/jojozhuang/restful-api-springboot)

@@ -25,7 +25,7 @@ Kill the process with its id.
 ```raw
 $ sudo kill -9 <PID>
 ```
-![image](/public/images/jekyll/1605/port.png){:width="700px"}  
+![image](/assets/images/jekyll/1605/port.png){:width="700px"}  
 
 Retry 'jekyll serve', the error 'Port Already in Use' is gone.
 
@@ -38,8 +38,8 @@ nxd     11199   nx    3u  IPv4 0x2fad2a11645a3de5      0t0  TCP *:terabase (LIST
 nxd     11199   nx    4u  IPv6 0x2fad2a115cded5bd      0t0  TCP *:terabase (LISTEN)
 ```
 Killing the thread won't work, because NoMachine's nxd process will keep restarting, with a new PID. Either you have to change the port for your app. Or, change the service port for NoMachine. NoMachine->Preferences->Connection preferences.
-![image](/public/images/jekyll/1605/nomachine_preferences.png){:width="700px"}  
-![image](/public/images/jekyll/1605/nomachine_port.png){:width="700px"}  
+![image](/assets/images/jekyll/1605/nomachine_preferences.png){:width="700px"}  
+![image](/assets/images/jekyll/1605/nomachine_port.png){:width="700px"}  
 
 We can also shutdown NoMachine and disable the automatic start at next boot via command line.
 
