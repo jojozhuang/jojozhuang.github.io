@@ -1,10 +1,11 @@
 ---
 layout: post
 key: blog
-title: "Custom Domain for My Personal Website"
+title: "Custom Domain for My Personal Website - Draft"
 date: 2019-06-27
 subcategory: blog
 tags: [Bootstrap]
+draft: true
 ---
 
 > Upgrade bootstrap from 3 to 4 for rongzhuang.me.

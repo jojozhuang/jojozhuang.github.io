@@ -37,10 +37,12 @@
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a>
               <div class="dropdown-menu">
                 {% for sublink in link.sublist %}
-                  {% if sublink.key == "separator"%}
-                    <div class="dropdown-divider"></div>
-                  {% else %}
-                    <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
+                  {% if sublink.visible != false %}
+                    {% if sublink.key == "separator"%}
+                      <div class="dropdown-divider"></div>
+                    {% else %}
+                      <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
+                    {% endif %}
                   {% endif %}
                 {% endfor %}
               </div>
@@ -79,7 +81,7 @@
 {{ content }}
 
 <footer class="container-fluid text-center" style="clear: both;">
-  <span>&copy; {{ site.time | date: '%Y' }} rongzhuang.me, All rights reserved.</span>
+  <span>&copy; {{ site.time | date: '%Y' }} jojozhuang.github.io, All rights reserved.</span>
 </footer>
 
 <!-- scripts.html -->
