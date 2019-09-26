@@ -13,6 +13,7 @@ title: Rong Zhuang's Blog
         <h1 class="page-header">{{ page.title }}</h1>
         <dl class="dl-unsur-blog">
           {% for post in site.posts %}
+            {% if post.draft == false %}
             <dd>
               <a href="{{ post.url }}" title="{{ post.title }}">
                   <div>{{ post.title }}</div>
@@ -20,6 +21,7 @@ title: Rong Zhuang's Blog
               <div class="float-left"><p class="small"><i class="far fa-calendar-alt"></i> {{ post.date | date_to_string }}</p></div>
               <div class="tag float-right">{{ post.tags | array_to_sentence_string}}</div>
             </dd>
+            {% endif %}
           {% endfor %}
         </dl>
     </div>
