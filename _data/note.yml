@@ -15,6 +15,11 @@ categories:
         icon: fab fa-aws
         subcategory: amazon-aws
         image: aws.png
+      - name: Google Cloud
+        description: Google Cloud
+        icon: fab fa-google
+        subcategory: google-cloud
+        image: google-cloud.png
   - category: workspace
     name: Workspace
     subcategories:

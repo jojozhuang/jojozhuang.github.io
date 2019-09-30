@@ -63,6 +63,10 @@ bookmarks:
         type: webpage
   - category: Distributed System
     links:
+      - name: Google Associate Cloud Engineer
+        description: Google Associate Cloud Engineer
+        url: https://cloud.google.com/certification/cloud-engineer
+        type: webpage
       - name: The Google Cloud Developer's Cheat Sheet
         description: The Google Cloud Developer's Cheat Sheet
         url: https://github.com/gregsramblings/google-cloud-4-words
