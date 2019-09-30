@@ -21,11 +21,7 @@ bookmarks:
         type: webpage
       - name: 系统设计(System Design)
         description: 系统设计(System Design)
-        url: /public/pdf/system-design-cn.pdf
-        type: doc
-      - name: AWS Exam
-        description: AWS Exam
-        url: /public/pdf/awsexam.pdf
+        url: /assets/pdf/system-design-cn.pdf
         type: doc
       - name: How to Design Twitter 1
         description: How to Design Twitter 1
@@ -43,7 +39,7 @@ bookmarks:
         type: webpage
       - name: Modern Java
         description: Modern Java in Action
-        url: /public/pdf/Manning.Modern.Java.in.Action.2018.9.pdf
+        url: /assets/pdf/Manning.Modern.Java.in.Action.2018.9.pdf
         type: doc
       - name: JVM (java virtual machine) architecture - tutorial
         description: JVM (java virtual machine) architecture - tutorial
@@ -67,6 +63,14 @@ bookmarks:
         type: webpage
   - category: Distributed System
     links:
+      - name: The Google Cloud Developer's Cheat Sheet
+        description: The Google Cloud Developer's Cheat Sheet
+        url: https://github.com/gregsramblings/google-cloud-4-words
+        type: webpage
+      - name: AWS Exam
+        description: AWS Exam
+        url: /assets/pdf/awsexam.pdf
+        type: doc
       - name: Load Balancer原理和实战：最终如何实现？
         description: Load Balancer原理和实战：最终如何实现？
         url: https://www.youtube.com/watch?v=6R-RYVehQNg
@@ -129,7 +133,7 @@ bookmarks:
         type: webpage
       - name: Algorithm Essentials
         description: Algorithm Essentials
-        url: /public/pdf/algorithm-essentials-java.pdf
+        url: /assets/pdf/algorithm-essentials-java.pdf
         type: doc
       - name: 2019年最新总结,国内大厂面试指南
         description: 2019年最新总结,国内大厂面试指南
