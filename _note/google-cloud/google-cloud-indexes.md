@@ -12,6 +12,7 @@ tags: [Google Cloud]
 
 ## 1. Google Cloud
 ### 1.1 Google Associate Cloud Engineer
+* [Google Professional Cloud Architect](https://cloud.google.com/certification/cloud-architect)
 * [Google Associate Cloud Engineer](https://cloud.google.com/certification/cloud-engineer)
 * [GCP Free Tier](https://cloud.google.com/free/docs/gcp-free-tier)
 

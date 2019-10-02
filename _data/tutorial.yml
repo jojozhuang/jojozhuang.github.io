@@ -109,6 +109,19 @@ categories:
         icon: fas fa-shield-alt
         subcategory: security
         image: security.png
+  - category: cloud
+    name: Cloud
+    subcategories:
+      - name: Amazon AWS
+        description: Amazon AWS
+        icon: fab fa-aws
+        subcategory: amazon-aws
+        image: aws.png
+      - name: Google GCP
+        description: Google GCP
+        icon: fab fa-google
+        subcategory: google-gcp
+        image: google-cloud.png
   - category: project
     name: Project
     subcategories:
