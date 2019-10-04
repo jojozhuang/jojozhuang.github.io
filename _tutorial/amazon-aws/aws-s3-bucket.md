@@ -9,26 +9,41 @@ tags: [AWS]
 draft: true
 ---
 
-> Amazon AWS Tutorial
+> Create a S3 bucket to store files.
 
-### 3.5 Let's Create An S3 Bucket
-Create Bucket.
+## 1. S3 and Bucket
+
+## 2. Basic Usage of S3 Bucket
+### 2.1 Creating S3 Bucket
+Services->S3.
+![image](/assets/images/cloud/3803/s3-home.png)
+Create Bucket, bucket name must be unique. Choose region, next.
 ![image](/assets/images/note/9551/3-5-create-s3-bucket.png)
+Configure versioning, logging, encryption, etc.
 ![image](/assets/images/note/9551/3-5-create-s3-bucket-config.png)
+Set permission, block all public access.
 ![image](/assets/images/note/9551/3-5-create-s3-bucket-permission.png)
-Upload files to bucket.
+### 2.2 Uploading Files to S3 Bucket
+In the S3 bucket, click the upload button.
+![image](/assets/images/cloud/3803/s3-bucket.png)
+Select files from local disk and upload.
+![image](/assets/images/cloud/3803/s3-upload.png)
+Files are uploaded, next.
 ![image](/assets/images/note/9551/3-5-upload-file.png)
+Set permission.
 ![image](/assets/images/note/9551/3-5-upload-file-permission.png)
+Set properties, choose the storage class, next, done.
 ![image](/assets/images/note/9551/3-5-upload-file-properties.png)
-Publish file.
+### 2.3 Public Files
+Get the open URL of the uploaded file.
 ![image](/assets/images/note/9551/3-5-file-link.png)
-https://johnnyawsguru-s3-01.s3.amazonaws.com/IMG_5807.JPG
+Access the URL, for example https://johnnyawsguru-s3-01.s3.amazonaws.com/IMG_5807.JPG in web browser. We will get the access denied error.
 ![image](/assets/images/note/9551/3-5-file-access-denied.png)
-Public bucket.
+The cause of the error is that the file hasn't been published yet. We need to public the file. Remove the 'Block all public access' in S3 Bucket Permission.
 ![image](/assets/images/note/9551/3-5-public-bucket.png)
 Then, public file.
 ![image](/assets/images/note/9551/3-5-public-file.png)
-Now, the file is accessible.
+Refresh the link. Now, the file is accessible.
 ![image](/assets/images/note/9551/3-5-public-file-success.png)
 Change storage class for one file. Click on the file, switch to 'Properties' tab -> Storage Class.
 ![image](/assets/images/note/9551/3-5-change-storage-class.png)
