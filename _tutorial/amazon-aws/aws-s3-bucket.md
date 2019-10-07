@@ -39,7 +39,7 @@ S3 buckets can be configured to create access logs which log all requests made t
 * Integrated with **Lifecycle rules**
 * Versioning's **MFA Delete** capability, which uses multi-factor authentication, can be used to provide an additional layer of security.
 
-### 1.5 Lifecycle Management
+### 1.5 Lifecycle Policies
 * Automates moving objects between the different storage tiers.
 * Can be used in conjunction with versioning.
 * Can be applied to current versions and previous versions.
@@ -54,6 +54,7 @@ S3 buckets can be configured to create access logs which log all requests made t
 
 ### 1.7 S3 Transfer Acceleration
 Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon **CloudFront**’s globally distributed **edge locations**. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
+![image](/assets/images/note/9551/3-16-s3-exam-tips-12.png)
 
 When using Transfer Acceleration, additional data transfer charges may apply. For more information about pricing, see Amazon S3 Pricing.
 
