@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: tutorial
-title: "AWS-Billing-Alarm"
+title: "AWS-Billing Alarm"
 index: 3802
 subcategory: amazon-aws
 date: 2019-09-16

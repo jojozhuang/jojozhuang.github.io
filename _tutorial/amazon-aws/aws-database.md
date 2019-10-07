@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "AWS-Databases-5-Draft"
-index: 3806
+index: 3807
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [EC2]
