@@ -9,24 +9,67 @@ tags: [EC2]
 draft: true
 ---
 
-> Amazon AWS Tutorial
+> Amazon EC2.
 
-## 4. EC2
-### 4.1 EC2 101
-![image](/assets/images/note/9551/4-1-ec2.png)
-EC2 Pricing models.
-![image](/assets/images/note/9551/4-1-ec2-pricing-model.png)
-On demand.
-![image](/assets/images/note/9551/4-1-ec2-on-demand.png)
-Reserved Pricing.
-![image](/assets/images/note/9551/4-1-ec2-reserved-pricing.png)
-Reserved pricing types.
-![image](/assets/images/note/9551/4-1-ec2-reserved-types.png)
-Spot pricing.
-![image](/assets/images/note/9551/4-1-ec2-spot-pricing.png)
-Dedicated Hosts pricing.
-![image](/assets/images/note/9551/4-1-ec2-dedicated-hosts-pricing.png)
-Instance Types
+## 1. EC2
+### 1.1 What is EC2?
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+### 1.2 Amazon EC2 Pricing
+There are four ways to pay for Amazon EC2 instances:
+* `On Demand` - Allows you to pay a fixed rate by the hour (or by the second) with no commitment.
+* `Reserved` - Provides you with a capacity reservation, and offer a significant discount on the hourly charge for an instance. Contract Terms are 1 or 3 Year Terms.
+* `Spot` - Enables you to bid whatever price you want for instance capacity, providing for even greater savings if your applications have flexible start and end times.
+* `Dedicated Hosts` - Physical EC2 server dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound software licenses.
+
+### 1.3 On Demand Pricing
+On Demand pricing is useful for:
+* Users that want the low cost and flexibility of Amazon EC2 without any up-front payment or long-term commitment.
+* Applications with short term, spiky, or unpredictable workloads that cannot be interrupted.
+* Applications being developed or tested on Amazon EC2 for the first time.
+
+### 1.4 Reserved Pricing
+Reserved Pricing Reserved pricing is useful for:
+* Applications with steady state or predictable usage.
+* Applications that require reserved capacity.
+* Users able to make upfront payments to reduce their total computing costs even further
+
+Reserved Pricing Types:
+* Standard Reserved instances - These offer up to 75% off on demand instances. The more you pay up front and the longer the contract, the greater the discount.
+* Convertible Reserved Instances - These offer up to 54% off on demand capability to change the attributes of the RI as long as the exchange results in the creation of Reserved Instances of equal or greater value.
+* Scheduled Reserved Instances - These are available to launch within the time windows you reserve. This option allows you to match your capacity reservation to a predictable recurring schedule that only requires a fraction of a day, a week, or a month.
+
+### 1.5 Spot Pricing
+Spot pricing is useful for:
+* Applications that have flexible start and end times.
+* Applications that are only feasible at very low compute prices.
+* Users with urgent computing needs for large amounts of additional capacity.
+
+### 1.6 Dedicated Hosts Pricing
+Dedicated Hosts pricing is useful for:
+* Useful for regulatory requirements that may not support multi-tenant virtualization.
+* Great for licensing which does not support multi-tenancy or cloud deployments.
+* Can be purchased On-Demand (hourly).
+* Can be purchased as a Reservation for up to 70% off the On-Demand price.
+
+### 1.7 EC2 Instance Types
+
+Family | Speciality                    | Use case
+-------|-------------------------------|------------------------------------------
+F1     | Field Programmable Gate Array | Genomics research, financial analytics, real-time video processing, big data etc
+I3     | High Speed Storage            | NoSQL DBs, Data Warehousing etc
+G3     | Graphics Intensive            | Video Encoding/ 3D Application Streaming
+H1     | High Disk Throughput          | MapReduce-based workloads, distributed file systems such as HDFS and MapR-FS
+T3     | Lowest Cost, General Purpose  | Web Servers/Small DBs
+D2     | Dense Storage                 | Fileservers/Data Warehousing/Hadoop
+R5     | Memory Optimized              | Memory Intensive Apps/DBs
+M5     | General Purpose               | Application Servers
+C5     | Compute Optimized             | CPU Intensive Apps/DBs
+P3     | Graphics/General Purpose GPU  | Machine Learning, Bit Coin Mining etc
+X1     | Memory Optimized              | SAP HANA/Apache Spark etc
+Z1D    | High compute capacity and a high memory footprint  | Ideal for electronic design automation (EDA) and certain relational database workloads with high per-core licensing costs.
+A1     | Arm-based workloads           | Scale-out workloads such as web servers
+U-6tb1 | Bare Metal                    | Bare metal capabilities that eliminate virtualization overhead
+
 ![image](/assets/images/note/9551/4-1-ec2-instance-types.png)
 Mnemonic.
 ![image](/assets/images/note/9551/4-1-ec2-reserved-types-mnemonic.png)
@@ -524,35 +567,9 @@ Exam tips.
 ![image](/assets/images/note/9551/4-17-ec2-summary-23.png)
 ![image](/assets/images/note/9551/4-17-ec2-summary-24.png)
 ### 4.18 EC2 Quiz
-![image](/assets/images/note/9551/4-18-ec2-quiz-1.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-2.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-3.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-4.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-5.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-6.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-7.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-8.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-9.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-10.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-11.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-12.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-13.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-14.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-15.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-16.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-17.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-18.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-19.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-20.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-21.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-22.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-23.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-24.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-25.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-26.png)
-![image](/assets/images/note/9551/4-18-ec2-quiz-27.png)
-
-
-
 
 ## 9. References
+* [Amazon EC2](https://aws.amazon.com/ec2/)
+* [Amazon EC2 pricing](https://aws.amazon.com/ec2/pricing/)
+* [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
+* [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)

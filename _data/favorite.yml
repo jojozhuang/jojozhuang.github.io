@@ -48,6 +48,10 @@ bookmarks:
       - name: Colors From Image
         description: Get HEX Value of color from image
         url: https://html-color-codes.info/colors-from-image/
+      - name: Image/PDF TO Text
+        description: Extract text from PDF and images
+        url: https://www.onlineocr.net/
+        favorite: true
       - name: Convert WebP to PNG / APNG
         description: Convert WebP to PNG / APNG
         url: https://ezgif.com/webp-to-png
@@ -226,13 +230,10 @@ bookmarks:
         url: https://www.typescriptlang.org/
   - category: Cloud Service Provider
     links:
-      - name: Amazon EC2
+      - name: Amazon AWS
         description: World largest cloud platform
-        url: https://aws.amazon.com/ec2/
-      - name: Amazon S3
-        description: The largest and most performant, secure, and feature-rich object storage service
-        url: https://aws.amazon.com/s3/
-      - name: Google Cloud
+        url: https://aws.amazon.com/
+      - name: Google Cloud Platform
         description: Google's cloud platform
         url: https://cloud.google.com/
       - name: Microsoft Azure
@@ -571,7 +572,7 @@ bookmarks:
       - name: Grafana
         description: The open platform for beautiful analytics and monitoring
         url: https://grafana.com/
-  - category: Logging, Monitoring
+  - category: Logging, Monitoring, Quality Assurance
     links:
       - name: Log4j
         description: A popular logging package written in Java
@@ -583,6 +584,12 @@ bookmarks:
       - name: Dynatrace
         description: A performance monitoring tool
         url: https://www.dynatrace.com/
+      - name: Selenium
+        description: A portable framework for testing web applications
+        url: https://www.seleniumhq.org/
+      - name: Katalon
+        description: Free automation testing solution
+        url: https://www.katalon.com/
   - category: Personal Website
     links:
       - name: Liquid
