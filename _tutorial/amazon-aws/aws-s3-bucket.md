@@ -131,8 +131,7 @@ Try to add and remove some versions in the source bucket to see the impact.
 ![image](/assets/images/note/9551/3-9-new-replication-bucket-replicated.png)
 ### 2.9 Transfer Acceleration
 After enabling the transfer acceleration, you can upload file through a unique link, for example.
-http://johnnyawsguru-s3-01.s3-accelerate.amazonaws.com
-A tool to test acceleration speed, see [Amazon S3 Transfer Acceleration Speed Comparison](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)
+http://johnnyawsguru-s3-01.s3-accelerate.amazonaws.com. A tool to test acceleration speed, see [Amazon S3 Transfer Acceleration Speed Comparison](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)
 ![image](/assets/images/note/9551/3-10-transfer-acceleration-speed-comparison.png)
 Speed in different regions.
 ![image](/assets/images/note/9551/3-10-transfer-acceleration-speed-comparison2.png)
