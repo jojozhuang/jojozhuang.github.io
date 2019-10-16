@@ -52,6 +52,10 @@ bookmarks:
         description: Extract text from PDF and images
         url: https://www.onlineocr.net/
         favorite: true
+      - name: Online Drawing
+        description: An Online Drawing Tool
+        url: https://awwapp.com/
+        favorite: true
       - name: Convert WebP to PNG / APNG
         description: Convert WebP to PNG / APNG
         url: https://ezgif.com/webp-to-png
