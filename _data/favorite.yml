@@ -87,6 +87,12 @@ bookmarks:
       - name: HTTP Status Codes
         description: HTTP Status Codes
         url: https://www.restapitutorial.com/httpstatuscodes.html
+      - name: Google Cloud Cheat Sheet
+        description: Google Cloud Cheat Sheet
+        url: https://github.com/gregsramblings/google-cloud-4-words
+      - name: Google Cloud Cheat Sheet(Image)
+        description: Google Cloud Cheat Sheet
+        url: /assets/others/gcp-cheat-sheet.png
   - category: Online Learning
     links:
       - name: Stack Overflow
