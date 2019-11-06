@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 key: note
-title: "System Design Interview Questions"
+title: "System Design - Best Practice"
 index: 9502
 subcategory: design-knowledge
 date: 2019-01-03

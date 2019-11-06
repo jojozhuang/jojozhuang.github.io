@@ -23,33 +23,35 @@ How to initialize an Array in Java?
 
 Valid Examples.
 ```java
-//initialize primitive one dimensional array
-int[] nums = new int[5];
+private static void initializeArray() {
+    //initialize primitive one dimensional array
+    int[] nums = new int[5];
 
-//initialize Object one dimensional array
-String[] strings; //declaration
+    //initialize Object one dimensional array
+    String[] strings; //declaration
 
-strings = new String[4]; //initialization
+    strings = new String[4]; //initialization
 
-//initialize multidimensional array
-int[][] matrix = new int[4][5];
+    //initialize multidimensional array
+    int[][] matrix = new int[4][5];
 
-//multidimensional array initialization with only leftmost dimension
-int[][] array = new int[2][];
-array[0] = new int[2];
-array[1] = new int[3]; //complete initialization is required before we use the array
+    //multidimensional array initialization with only leftmost dimension
+    int[][] array = new int[2][];
+    array[0] = new int[2];
+    array[1] = new int[3]; //complete initialization is required before we use the array
 
-//array initialization using shortcut syntax
-int[] nums1 = {1,2,3};
-int[][] nums2 = { {1,2}, {1,2,3} };
+    //array initialization using shortcut syntax
+    int[] nums1 = {1,2,3};
+    int[][] nums2 = { {1,2}, {1,2,3} };
+}
 ```
 Some invalid examples.
 ```java
-//invalid because dimension is not provided
-int[] a = new int[];
+    //invalid because dimension is not provided
+    int[] a = new int[];
 
-//invalid because leftmost dimension value is not provided
-int[][] aa = new int[][5];
+    //invalid because leftmost dimension value is not provided
+    int[][] aa = new int[][5];
 ```
 
 ### 1.2 Array of List
