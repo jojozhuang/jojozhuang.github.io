@@ -11,7 +11,9 @@ tags: [Comparable, Comparator]
 > Comparable, Comparator and their difference.
 
 ## 1. Comparable vs Comparator
-A comparable object is capable of comparing itself with another object. The class itself must implements the `java.lang.Comparable` interface to compare its instances. Below is the definition of `Comparable` Interface.
+A comparable object is capable of comparing itself with another object. The class itself must implements the `java.lang.Comparable` interface to compare its instances.
+
+Below is the definition of `Comparable` Interface.
 ```java
 public interface Comparable<T> {
     public int compareTo(T o); // the only method
