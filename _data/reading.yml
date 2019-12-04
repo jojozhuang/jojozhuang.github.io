@@ -71,6 +71,10 @@ bookmarks:
         description: The Google Cloud Developer's Cheat Sheet
         url: https://github.com/gregsramblings/google-cloud-4-words
         type: webpage
+      - name: Automation vs. Orchestration - What’s the Difference?
+        description: Automation vs. Orchestration - What’s the Difference?
+        url: https://www.burwood.com/blog-archive/automation-vs-orchestration-whats-the-difference
+        type: webpage
       - name: AWS Exam
         description: AWS Exam
         url: /assets/pdf/awsexam.pdf
@@ -94,6 +98,10 @@ bookmarks:
       - name: Beginning visualization with GRAFANA and INFLUXDB
         description: Beginning visualization with GRAFANA and INFLUXDB
         url: https://medium.com/@ashrafur/beginning-visualization-with-grafana-and-influxdb-81701e10569d
+        type: webpage
+      - name: What is a CDN Edge Server?
+        description: Edge servers are a primary component of making the Internet fast.
+        url: https://www.cloudflare.com/learning/cdn/glossary/edge-server/
         type: webpage
   - category: Frontend
     links:
