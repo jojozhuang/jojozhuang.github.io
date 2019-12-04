@@ -95,12 +95,20 @@ Serverless, Tigger, events, Sub/Pub
 * Peering VPC for SaaS ecosystem.
 * Load Balancing and Auto Scale
 
+### 3.1 Network Connection
+* [Cloud VPN](https://cloud.google.com/vpn/docs/concepts/overview)
+* [Dedicated Interconnect Overview](https://cloud.google.com/interconnect/docs/concepts/dedicated-overview)
+* [Partner Interconnect](https://cloud.google.com/interconnect/partners/)
+* [Direct Peering](https://cloud.google.com/interconnect/docs/how-to/direct-peering)
+* [What GCP Connection is right for you?](https://cloud.google.com/hybrid-connectivity/)
+
 ## 4. IAM
 * Service account.
 * three roles: Primitive Role, Curated Role, Custom Role.
 * Cloud Audit Logging.
 * GSuite, LDAP(Lightweight Directory Access Protocol)
 * [Cloud Security Scanner](https://cloud.google.com/security-scanner/)
+* [Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts#migrating_data_to_google_cloud_platform)
 
 ## 5. Projects
 Quotas
@@ -120,6 +128,18 @@ Quotas
 * Cloud DataStore - NoSQL database
 * Cloud Spanner - Relational database service, Strong Consistency
 
+* [Cloud storage products](https://cloud.google.com/products/storage/)
+* [Streaming transfers](https://cloud.google.com/storage/docs/streaming)
+
+[Transfer Appliance](https://cloud.google.com/transfer-appliance/) is an offline data transfer service, from 100TB or 480TB of raw capacity per appliance.
+
+Follow these rules of thumb when deciding whether to use `gsutil` or `Storage Transfer Service`:
+* When transferring data from an on-premises location, use gsutil.
+* When transferring data from another cloud storage provider, use Storage Transfer Service.
+
+https://cloud.google.com/solutions/transferring-big-data-sets-to-gcp
+
+
 ## 8. Database Data Services
 
 ## 9. Details
@@ -134,6 +154,9 @@ Regional resources can be used by any resources in that region, regardless of zo
 * StackDriver is for monitoring and management for services, containers, applications, and infrastructure.
 * StackDriver metrics
 * Logs retention: Allows you to retain the logs in Stackdriver Logging for 30 days, and gives you a one-click configuration tool to archive data for a longer period in Cloud Storage, see https://cloud.google.com/logging/.
+
+### 9.3 Google Cloud Endpoints
+Develop, deploy, protect and monitor your APIs with Google Cloud Endpoints. Using an Open API Specification or one of our API frameworks, Cloud Endpoints gives you the tools you need for every phase of API development.
 
 ## 99. References
 ### 99.1 Official Documentation
@@ -150,6 +173,14 @@ Regional resources can be used by any resources in that region, regardless of zo
 * [Cloud Storage FUSE](https://cloud.google.com/storage/docs/gcs-fuse)
 * [Using Blue-Green Deployment to Reduce Downtime and Risk](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html)
 * [A Comprehensive Guide to Canary Releases](https://blog.getambassador.io/cloud-native-patterns-canary-release-1cb8f82d371a)
+* [Best practices for enterprise organizations](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations#authentication-and-identity)
 
 ### 99.2 Third-party Blogs
 * [What Is BGP? - BGP Routing Explained](https://www.cloudflare.com/learning/security/glossary/what-is-bgp/)
+
+### 99.3 Summary
+* Use Cloud Bigtable for time series data, use Cloud Spanner for transactional data, and use BigQuery
+for historical data queries.
+
+### 99.4 Important topics
+* [How to guarantee the sequence of message](https://cloud.google.com/pubsub/docs/ordering)
