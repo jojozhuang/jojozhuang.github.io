@@ -74,6 +74,9 @@ public class LinkedListQueue {
         }
         int value = head.val;
         head = head.next;
+        if (head == null) {
+          tail = null;
+        }
         return value;
     }
 
