@@ -165,62 +165,55 @@ public class CircularArrayQueue {
     private int head; // the first node in queue, not the first item in array
     private int tail; // the last node in queue, not the first item in array
     private int[] arr;
+    private int size;
 
     public CircularArrayQueue(int capacity) {
         arr = new int[capacity];
-        head = -1;
-        tail = -1;
+        head = 0;
+        tail = 0;
+        size = 0;
     }
 
     // Add item to the end of the queue
     public void enqueue(int value) {
-        // check if queue is full
-        if (tail == arr.length - 1 && head == 0 || tail == head - 1) {
+        // check if deque is full
+        if (isFull()) {
             System.out.println("queue is full.");
             return;
         }
-        // reset tail if it reaches to the end
-        if (tail == arr.length - 1 && head != 0) {
-            tail = 0;
-            arr[tail] = value;
-        } else {
-            arr[++tail] = value;
-            if (head == -1) {
-                head = 0;
-            }
-        }
+        tail = (head + size) % arr.length;
+        arr[tail] = value;
+        size += 1;
     }
 
     // Remove the first item from the queue and return its value
     public int dequeue() throws Exception {
         if (isEmpty()) {
-            throw new Exception();
+            throw new Exception("Array Queue is empty when dequeue!");
         }
 
         int value = arr[head];
-        if (head == tail) {
-            // empty, reset to initial status
-            head = -1;
-            tail = -1;
-        } else if (head == arr.length-1) {
-            head = 0;
-        } else {
-            head++;
-        }
+        head = (head + 1) % arr.length;
+        size -= 1;
         return value;
     }
 
     // Get the first item
     public int peek() throws Exception {
         if (isEmpty()) {
-            throw new Exception();
+            throw new Exception("Array Queue is empty when peek!");
         }
         return arr[head];
     }
 
+    // Return whether the queue is full
+    public boolean isFull() {
+        return size == arr.length;
+    }
+
     // Return whether the queue is empty
     public boolean isEmpty() {
-        return head == -1;
+        return size == 0;
     }
 }
 ```
@@ -230,40 +223,42 @@ Use two stacks. The first one only stores new items, and the second one only sto
 import java.util.Stack;
 
 public class StackQueue {
-    // push: O(1), pop: O(1), worst O(n)
-    private Stack<Integer> stack1; // s1 stores new elements
-    private Stack<Integer> stack2; // s2 stores old elements
+    private Stack<Integer> stack1; // s1 stores new items
+    private Stack<Integer> stack2; // s2 stores old items
 
-    /** Initialize your data structure here. */
     public StackQueue() {
-        stack1 = new Stack<Integer>();
-        stack2 = new Stack<Integer>();
+        stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
 
-    /** Push element x to the back of queue. */
-    public void push(int x) {
-        stack1.push(x);
+    // Add new item onto queue
+    public void enqueue(int value) {
+        stack1.push(value);
     }
 
-    /** Removes the element from in front of queue and returns that element. */
-    public int pop() {
+    // Remove the first item from the queue and return its value
+    public int dequeue() throws Exception {
         peek();
         return stack2.pop();
     }
 
-    /** Get the front element. */
-    public int peek() {
+    // Get the first element
+    public int peek() throws Exception {
         if (stack2.isEmpty()) {
             while (!stack1.isEmpty()) {
                 stack2.push(stack1.pop());
             }
         }
 
+        if (stack2.isEmpty()) {
+            throw new Exception();
+        }
+
         return stack2.peek();
     }
 
-    /** Returns whether the queue is empty. */
-    public boolean empty() {
+    // Return whether the queue is empty
+    public boolean isEmpty() {
         return stack1.isEmpty() && stack2.empty();
     }
 }

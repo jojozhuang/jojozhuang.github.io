@@ -45,11 +45,11 @@ Define Node.
 ```java
 public class ListNode {
     public int val;
-    public ListNode previous;
+    public ListNode prev;
     public ListNode next;
     public ListNode(int val) {
         this.val = val;
-        previous = null;
+        this.prev = null;
         this.next = null;
     }
 }
@@ -71,9 +71,9 @@ public class LinkedListDeque {
             head = new ListNode(value);
             tail = head;
         } else {
-            head.previous = new ListNode(value);
-            head.previous.next = head;
-            head = head.previous;
+            head.prev = new ListNode(value);
+            head.prev.next = head;
+            head = head.prev;
         }
     }
 
@@ -85,7 +85,7 @@ public class LinkedListDeque {
         int value = head.val;
         head = head.next;
         if (head != null) {
-            head.previous = null;
+            head.prev = null;
         } else {
             tail = null;
         }
@@ -107,7 +107,7 @@ public class LinkedListDeque {
             head = tail;
         } else {
             tail.next = new ListNode(value);
-            tail.next.previous = tail;
+            tail.next.prev = tail;
             tail = tail.next;
         }
     }
@@ -118,7 +118,7 @@ public class LinkedListDeque {
             throw new Exception();
         }
         int value = tail.val;
-        tail = tail.previous;
+        tail = tail.prev;
         if (tail != null) {
             tail.next = null;
         } else {
@@ -142,16 +142,19 @@ public class LinkedListDeque {
 }
 ```
 ### 2.2 Using Circular Array
+Use `MOD` to get the new position.
 ```java
 public class CircularArrayDeque {
     private int head; // the first node in deque, not the first item in array
     private int tail; // the last node in deque, not the first item in array
     private int[] arr;
+    private int size;
 
     public CircularArrayDeque(int capacity) {
         arr = new int[capacity];
-        head = -1;
-        tail = -1;
+        head = 0;
+        tail = 0;
+        size = 0;
     }
 
     // Add item to the head of the deque
@@ -161,15 +164,12 @@ public class CircularArrayDeque {
             return;
         }
 
-        if (head == -1) {
-            head = 0;
-            tail = 0;
-        } else if (head == 0) {
+        head = head - 1;
+        if (head < 0) {
             head = arr.length - 1;
-        } else {
-            head = head - 1;
         }
         arr[head] = value;
+        size += 1;
     }
 
     // Remove the first item from the deque and return its value
@@ -177,17 +177,9 @@ public class CircularArrayDeque {
         if (isEmpty()) {
             throw new Exception("Circular Array Deque is empty when dequeue!");
         }
-
         int value = arr[head];
-        if (head == tail) {
-            // empty, reset to initial status
-            head = -1;
-            tail = -1;
-        } else if (head == arr.length - 1) {
-            head = 0;
-        } else {
-            head++;
-        }
+        head = (head + 1) % arr.length;
+        size -= 1;
         return value;
     }
 
@@ -205,16 +197,9 @@ public class CircularArrayDeque {
         if (isFull()) {
             return;
         }
-
-        if (head == -1) {
-            head = 0;
-            tail = 0;
-        } else if (tail == arr.length - 1) {
-            tail = 0;
-        } else {
-            tail = tail + 1;
-        }
+        tail = (head + size) % arr.length;
         arr[tail] = value;
+        size += 1;
     }
 
     // Remove the last item from the deque and return its value
@@ -224,15 +209,11 @@ public class CircularArrayDeque {
         }
 
         int value = arr[tail];
-        if (head == tail) {
-            // empty, reset to initial status
-            head = -1;
-            tail = -1;
-        } else if (tail == 0) {
+        tail = tail - 1;
+        if (tail < 0) {
             tail = arr.length - 1;
-        } else {
-            tail--;
         }
+        size -= 1;
         return value;
     }
 
@@ -244,19 +225,14 @@ public class CircularArrayDeque {
         return arr[tail];
     }
 
-    // Return whether the queue is empty
+    // Return whether the queue is full
     public boolean isFull() {
-        if (tail == arr.length - 1 && head == 0 || tail == head - 1) {
-            System.out.println("deque is full.");
-            return true;
-        }
-
-        return false;
+        return size == arr.length;
     }
 
     // Return whether the queue is empty
     public boolean isEmpty() {
-        return head == -1;
+        return size == 0;
     }
 }
 ```
