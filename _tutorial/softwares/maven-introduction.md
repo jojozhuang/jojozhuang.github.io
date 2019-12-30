@@ -50,6 +50,8 @@ As an example, following table shows the default values for project source code 
  Distributable JAR  | ${basedir}/target/classes
 
 In order to build the project, Maven provides developers with options to mention life-cycle `goals` and project `dependencies` (that rely on Maven plugin capabilities and on its default conventions). Much of the project management and build related tasks are maintained by `Maven plugins`.
+### 1.4 Java Project Structure
+![image](/assets/images/devops/3711/java-project-structure.png){:width="800px"}
 
 ## 2. POM
 ### 2.1 POM and pom.xml
