@@ -50,6 +50,7 @@ sudo chown $USER /ariba/ssp_git/ -R
 * CMD + SHIFT + G, paste path in finder to open a file.
 
 ## 2. Git Commands
+### 2.1 Basic Commands
 <table>
   <tbody>
     <tr>
@@ -185,6 +186,20 @@ sudo chown $USER /ariba/ssp_git/ -R
     </tr>
    </tbody>
   </table>
+
+### 2.2 Advanced Commands
+1) Remove `.idea` folder, which is already checked into github.
+```sh
+git rm --cached -r .idea
+git commit -a -m "remove .idea"
+git push origin master
+```
+2) Remove `.iml` files, which are already checked into github.
+```sh
+git rm --cached **/*.iml
+git commit -a -m "remove .iml"
+git push origin master
+```
 
 ## 3. Docker Commands
 ### 3.1 Docker
