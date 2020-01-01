@@ -2,6 +2,8 @@ markdown: kramdown
 highlighter: rouge
 #incremental: true
 
+excerpt_separator: "\n" # for windows only, the default value is "\n\n".
+
 sass:
   sass_dir: assets/css
   style: compressed
