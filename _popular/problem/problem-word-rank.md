@@ -192,17 +192,20 @@ public class WordRankExample {
     private static final String OUTPUT_FILE = "output.txt";
 
     public static void main(String args[]) throws Exception {
-        String currentDir = System.getProperty("user.dir");
+
+        ClassLoader classLoader = WordRankExample.class.getClassLoader();
 
         // Get words from file
         List<Word> words = new ArrayList<>();
-        // Set system.io
-        Path path = Paths.get(currentDir, "files", INPUT_FILE);
-        File file = path.toFile();
-        System.setIn(new FileInputStream(file));
-        Scanner sc = new Scanner(System.in);
-        while (sc.hasNextLine()) {
-            words.add(new Word(sc.next(), sc.nextInt()));
+        Path path = Paths.get("files", INPUT_FILE);
+        try (InputStream inputStream = classLoader.getResourceAsStream(path.toString())) {
+            System.setIn(inputStream);
+            Scanner sc = new Scanner(System.in);
+            while (sc.hasNextLine()) {
+                words.add(new Word(sc.next(), sc.nextInt()));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         // Create Work Rank object
@@ -210,25 +213,21 @@ public class WordRankExample {
 
         // Get prefixes from file
         List<String> prefixes = new ArrayList<>();
-        path = Paths.get(currentDir, "files", PREFIX_FILE);
-        file = path.toFile();
-        System.setIn(new FileInputStream(file));
-        sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            prefixes.add(sc.next());
+        path = Paths.get("files", PREFIX_FILE);
+        try (InputStream inputStream = classLoader.getResourceAsStream(path.toString())) {
+            System.setIn(inputStream);
+            Scanner sc = new Scanner(System.in);
+            while (sc.hasNext()) {
+                prefixes.add(sc.next());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        sc.close();
-
-        // Set system.out
-        Path output = Paths.get(currentDir, "files", OUTPUT_FILE);
-        File outputFile = output.toFile();
-        System.setOut(new PrintStream(outputFile));
 
         // Search
         for (String pre : prefixes) {
             System.out.println(pre + ":");
             List<Word> list = wr.search(pre);
-            Collections.sort(list, (a, b)->a.rank - b.rank);
             for (Word word : list) {
                 System.out.println(word.name + " " + word.rank);
             }
@@ -260,6 +259,38 @@ hello 6
 world:
 worldwide 7
 world 10
+```
+Test class.
+```java
+public class WordRankTest {
+    @Test
+    public void testWordRank() {
+        System.out.println("testWordRank");
+
+        List<Word> words = new ArrayList<>();
+        words.add(new Word("hello", 6));
+        words.add(new Word("world", 10));
+        words.add(new Word("wide", 3));
+        words.add(new Word("hell", 4));
+        words.add(new Word("worldwide", 7));
+        words.add(new Word("lyft", 20));
+
+        WordRank wr = new WordRank(words);
+        List<Word> res1 = wr.search("hell");
+        assertEquals(2, res1.size());
+        assertEquals("hell", res1.get(0).name);
+        assertEquals(4, res1.get(0).rank);
+        assertEquals("hello", res1.get(1).name);
+        assertEquals(6, res1.get(1).rank);
+
+        List<Word> res2 = wr.search("world");
+        assertEquals(2, res2.size());
+        assertEquals("worldwide", res2.get(0).name);
+        assertEquals(7, res2.get(0).rank);
+        assertEquals("world", res2.get(1).name);
+        assertEquals(10, res2.get(1).rank);
+    }
+}
 ```
 
 ## 3. Source Files

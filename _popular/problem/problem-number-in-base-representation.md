@@ -23,11 +23,11 @@ Output : 1101
 ```
 Implementation.
 ```java
-public static String base2(int N) {
+public String base2(int n) {
     StringBuilder res = new StringBuilder();
-    while (N != 0) {
-        res.append(N & 1);
-        N = N >> 1;
+    while (n != 0) {
+        res.append(n & 1);
+        n = n >> 1;
     }
     return res.length() > 0 ? res.reverse().toString() : "0";
 }
@@ -41,40 +41,57 @@ Output : 11101
 ```
 Implementation.
 ```java
-public static String baseNeg2(int N) {
+public String baseNeg2(int n) {
     StringBuilder res = new StringBuilder();
-    while (N != 0) {
-        res.append(N & 1);
-        N = -(N >> 1);
+    while (n != 0) {
+        res.append(n & 1);
+        n = -(n >> 1);
     }
     return res.length() > 0 ? res.reverse().toString() : "0";
 }
 ```
+Test class.
+```java
+public class Base2Test {
 
-## 3. Generic Solution
+    @Test
+    public void testBase2() {
+        System.out.println("testBase2");
+        Base2 instance = new Base2();
+        assertEquals("101", instance.base2(5));
+        assertEquals("1101", instance.base2(13));
+        assertEquals("100000", instance.base2(32));
+    }
+
+    @Test
+    public void testBaseNeg2() {
+        System.out.println("testBaseNeg2");
+        Base2 instance = new Base2();
+        assertEquals("101", instance.baseNeg2(5));
+        assertEquals("11101", instance.baseNeg2(13));
+        assertEquals("1100000", instance.baseNeg2(32));
+    }
+}
+```
+### 2.3 Generic Solution
 Generic solution for any base.
 ```java
 public class GenericBase {
-    public static void main(String args[]) {
-        System.out.println(base(13, 2));
-        System.out.println(base(13, -2));
-    }
-
-    public static String base(int N, int base) {
-        if (N == 0) {
+    public String base(int n, int base) {
+        if (n == 0) {
             return "0";
         }
 
         String converted = "";
-        while (N != 0) {
+        while (n != 0) {
             // Get remainder by negative base, it can be negative also
-            int remainder = N % base;
-            N /= base;
+            int remainder = n % base;
+            n /= base;
 
             // if remainder is negative, add abs(base) to it and add 1 to n
             if (remainder < 0) {
                 remainder += (-base);
-                N += 1;
+                n += 1;
             }
 
             // convert remainder to string add into the result
@@ -85,15 +102,28 @@ public class GenericBase {
     }
 }
 ```
-Output.
-```raw
-1101
-11101
+Test class.
+```java
+public class GenericBaseTest {
+
+    @Test
+    public void testGenericBase() {
+        System.out.println("testGenericBase");
+        GenericBase instance = new GenericBase();
+        assertEquals("101", instance.base(5, 2));
+        assertEquals("1101", instance.base(13, 2));
+        assertEquals("100000", instance.base(32, 2));
+
+        assertEquals("101", instance.base(5, -2));
+        assertEquals("11101", instance.base(13, -2));
+        assertEquals("1100000", instance.base(32, -2));
+    }
+}
 ```
 
-## 4. Source Files
+## 3. Source Files
 * [Source files of Number in Base2 Representation on Github](https://github.com/jojozhuang/practice-problems/tree/master/number-base)
 
-## 5. References
+## 4. References
 * [Convert a number into negative base representation](https://www.geeksforgeeks.org/convert-number-negative-base-representation/)
 * [1017. Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/discuss/265507/JavaC%2B%2BPython-2-lines-Exactly-Same-as-Base-2)

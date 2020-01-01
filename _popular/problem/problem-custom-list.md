@@ -74,13 +74,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import johnny.problem.customlist.ArrayList;
-
 public class ArrayListTest {
 
     @Test
     public void test() {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         assertEquals(0, list.size());
         list.add(1);
         list.add(2);
@@ -108,7 +106,7 @@ public class ArrayListTest {
 
     @Test(expected=IndexOutOfBoundsException.class)
     public void testLowerBound() {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -119,7 +117,7 @@ public class ArrayListTest {
 
     @Test(expected=IndexOutOfBoundsException.class)
     public void testHigherBound() {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
         list.add(3);
@@ -179,11 +177,6 @@ public class ListNode<E> {
 ```
 Linked List.
 ```java
-import johnny.problem.customlist.common.IQueue;
-import johnny.problem.customlist.common.IStack;
-import johnny.problem.customlist.common.IDeque;
-import johnny.problem.customlist.common.ListNode;
-
 public class LinkedList<E> implements IStack<E>, IQueue<E>, IDeque<E> {
     private int size = 0;
 
@@ -306,16 +299,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import johnny.problem.customlist.common.IQueue;
-import johnny.problem.customlist.common.IStack;
-import johnny.problem.customlist.common.IDeque;
-import johnny.problem.customlist.LinkedList;
-
 public class LinkedListTest {
 
     @Test
     public void testStack() {
-        IStack<Integer> stack = new LinkedList<Integer>();
+        IStack<Integer> stack = new LinkedList<>();
         assertEquals(true, stack.isEmpty());
         stack.push(1);
         stack.push(2);
@@ -337,7 +325,7 @@ public class LinkedListTest {
 
     @Test
     public void testQueue() {
-        IQueue<Integer> queue = new LinkedList<Integer>();
+        IQueue<Integer> queue = new LinkedList<>();
         assertEquals(true, queue.isEmpty());
         queue.offer(1);
         queue.offer(2);
@@ -359,7 +347,7 @@ public class LinkedListTest {
 
     @Test
     public void testDeque() {
-        IDeque<Integer> deque = new LinkedList<Integer>();
+        IDeque<Integer> deque = new LinkedList<>();
         assertEquals(true, deque.isEmpty());
         deque.offerLast(1);
         deque.offerLast(2);
