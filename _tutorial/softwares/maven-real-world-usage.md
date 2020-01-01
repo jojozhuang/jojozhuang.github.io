@@ -1,23 +1,80 @@
 ---
 layout: tutorial
 key: tutorial
-title: "Maven - Real World Usage - Draft"
+title: "Maven - Real World Usage"
 index: 3714
 subcategory: softwares
 date: 2018-08-10
 tags: [Maven]
-draft: true
 ---
 
-> Maven Tutorial
+> Maven Usage.
 
-## 1. Maven
-* Scenario
-* Configuration Steps
-* Launch and Test
+## 1. Common Usagge
+### 1.1 Configure and Manage a multi-module project
+Parent pom.xml.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-### 1. Configure and Manage a multi-module project
-https://www.jetbrains.com/help/idea/maven-support.html#
+    <groupId>johnny.java</groupId>
+    <artifactId>java-programming</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>java-advanced-classnotfound</module>
+        <module>java-advanced-shallowcopy</module>
+    </modules>
+    <packaging>pom</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
+```
+Child pom.xml.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java-programming</artifactId>
+        <groupId>johnny.java</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>java-core-basic</artifactId>
+</project>
+```
+See [Configure a multi-module Maven project﻿](https://www.jetbrains.com/help/idea/maven-support.html#maven_multi_module) for more details.
+
+### 1.2 Convert to Maven project
+* 1) Open an existing project, for example, a Java project.
+* 2) In the Project tool window, right-click your project and select Add Framework Support.
+
+See [Convert a regular project into a Maven project](https://www.jetbrains.com/help/idea/convert-a-regular-project-into-a-maven-project.html).
 
 ## 2. Issues
 ### 2.1 Can't Download Plugin From Remote Repository
