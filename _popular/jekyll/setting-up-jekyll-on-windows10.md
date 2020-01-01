@@ -146,7 +146,13 @@ Then, restart your computer when prompted.
 ![image](/assets/images/jekyll/1604/ubuntuapp.png){:width="800px"}
 
 ### 5.3 Installing Jekyll on Ubuntu
-Follow the steps mentioned in Jekyll official site https://jekyllrb.com/docs/windows/.
+Follow the steps mentioned in [Setting up Jekyll on Ubuntu and macOS]({% link _popular/jekyll/setting-up-jekyll-on-ubuntu-and-macos.md %}) to setup Jekyll on Ubuntu sub system.
+
+Then navigate to the root directory of jekyll site, use bundle command to launch it.
+```sh
+cd /mnt/d/GitHub/jojozhuang.github.io/
+bundle exec jekyll serve --port 12001
+```
 
 ## 6. References
 * [How to Install and Setup Jekyll on Windows?](https://www.goyllo.com/install-jekyll-on-windows/)
