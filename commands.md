@@ -8,9 +8,13 @@ title: Commands
 
 ## 1. Linux/macOS Commands
 ### 1.1 Jekyll
+Start local Jekyll site.
 ```sh
-# Start Local Jekyll
+# On MacOS
 cd Johnny/GitHub/jojozhuang.github.io/
+# Or on Windows, Ubuntu sub system
+cd /mnt/d/GitHub/jojozhuang.github.io/
+# Launch
 bundle exec jekyll serve --port 12001
 ```
 ### 1.2 File and Directory
