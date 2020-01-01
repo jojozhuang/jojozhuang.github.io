@@ -17,6 +17,7 @@ Implement an ID generator, which can generate random unique id. You are able to 
 * Scalable.
 
 ## 2. Solution
+Total characters = 10 numbers + 26 upper case letters + 26 lower case letters. Randomly pickup characters within these 62 letters for the given length.
 ```java
 public class RandomIdGenerator {
     private static char[] base62chars =
@@ -47,20 +48,27 @@ public class RandomIdGenerator {
 ```
 Test Class.
 ```java
-public class RandomIdGeneratorExample {
-    public static void main(String[] args) {
-        System.out.println("Create 5 IDs with length of 6, base62");
+public class RandomIdGeneratorTest {
+    @Test
+    public void testRandomIdGenerator() {
+        System.out.println("testRandomIdGenerator");
+
         // Create 5 IDs with length of 6, base62
+        System.out.println("Create 5 IDs with length of 6, base62");
         for (int i = 0; i < 5; i++) {
-            System.out.println(RandomIdGenerator.GetBase62(6));
+            String base62ID = RandomIdGenerator.GetBase62(6);
+            System.out.println(base62ID);
+            assertEquals(6, base62ID.length());
         }
 
         System.out.println();
 
-        System.out.println("Create 5 IDs with length of 8, base36");
         // Create 5 IDs with length of 8, base36
+        System.out.println("Create 5 IDs with length of 8, base36");
         for (int i = 0; i < 5; i++) {
-            System.out.println(RandomIdGenerator.GetBase36(8));
+            String base36ID = RandomIdGenerator.GetBase36(8);
+            System.out.println(base36ID);
+            assertEquals(8, base36ID.length());
         }
     }
 }
@@ -68,18 +76,18 @@ public class RandomIdGeneratorExample {
 Output.
 ```raw
 Create 5 IDs with length of 6, base62
-naVtP1
-UYQRn5
-ksGMIl
-QX9Ma8
-FqTJKB
+S3oss6
+5tTbvF
+FQ0282
+7Zvv8U
+qx7xni
 
 Create 5 IDs with length of 8, base36
-V7LD8CMD
-A9CMC7J1
-1SJ0ZRR3
-O4PTJAXV
-A8X8Y324
+PYO7W1RM
+ASSXF1UI
+GI6STYE9
+81BQJKR8
+M5QDTUMM
 ```
 
 ## 3. Source Files

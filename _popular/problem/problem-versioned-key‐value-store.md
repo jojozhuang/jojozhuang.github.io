@@ -157,21 +157,20 @@ public class KeyValueStoreExample {
     public static void main(String[] args) {
 
         try {
-            String currentDir = System.getProperty("user.dir");
+            ClassLoader classLoader = KeyValueStoreExample.class.getClassLoader();
 
             for (int i = 1; i <= 2; i++) {
+
                 // Create VersionedStore object
                 KeyValueStore kvs = new KeyValueStore();
-
-                // Set system.io
-                Path path = Paths.get(currentDir, "files", PREFIX_INPUT_FILE + i + ".txt");
-                File file = path.toFile();
-                System.setIn(new FileInputStream(file));
+                Path path = Paths.get("files", PREFIX_INPUT_FILE + i + ".txt");
+                InputStream inputStream = classLoader.getResourceAsStream(path.toString());
+                System.setIn(inputStream);
 
                 // Set system.out
-                Path output = Paths.get(currentDir, "files", PREFIX_OUTPUT_FILE + i + ".txt");
-                File outputFile = output.toFile();
-                System.setOut(new PrintStream(outputFile));
+                //Path output = Paths.get("files", PREFIX_OUTPUT_FILE + i + ".txt");
+                //File outputFile = output.toFile();
+                //System.setOut(new PrintStream(outputFile));
 
                 // Read from stdin
                 Scanner sc = new Scanner(System.in);
@@ -197,6 +196,7 @@ public class KeyValueStoreExample {
                     }
                 }
                 sc.close();
+                System.out.println();
             }
         } catch (Exception ex) {
             ex.printStackTrace();
