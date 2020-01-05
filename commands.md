@@ -254,7 +254,24 @@ docker diff [container name or ID] | Lists the changes made to a container.
 docker attach [container name or ID] | Changes the command prompt from the host to a running container.
 docker exec [container name or ID] shell command | Executes a command within a running container.
 
-## 4. References
+## 4. Intellij IDEA Commands
+* fn+F3: Add Bookmark
+* generate java doc: mvn javadoc:javadoc
+
+### 4.2 Live Templates
+* sout -> System.out.println();
+* souf -> System.out.printf("");
+* psfs -> public static final String
+* psfi -> public static final int
+
+### 4.3 Common Used Function
+* Code->Optimize Imports
+* Code->Reformat Code
+
+## 5. References
 * [Basic Git commands](https.//confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
 * [Docker Commands Quick Reference Cheat Sheet](https://www.linode.com/docs/applications/containers/docker-commands-quick-reference-cheat-sheet/)
 * [Saving Changes with Git Stash](https://mijingo.com/blog/saving-changes-with-git-stash)
+* [Intellij IDEA Shortcuts Mac](https://www.jetbrains.com/help/rider/Reference_Keymap_Rider_OSX.html)
+* [Intellij IDEA Shortcuts Windows](https://shortcutworld.com/IntelliJ-IDEA/win/IntelliJ_Shortcuts)
+* [A Guide to Formatting Code Snippets in Javadoc](https://reflectoring.io/howto-format-code-snippets-in-javadoc/)
