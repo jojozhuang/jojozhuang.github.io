@@ -76,6 +76,27 @@ See [Configure a multi-module Maven project﻿](https://www.jetbrains.com/help/i
 
 See [Convert a regular project into a Maven project](https://www.jetbrains.com/help/idea/convert-a-regular-project-into-a-maven-project.html).
 
+### 1.3 Generate Java Doc
+1) Add javadoc plugin
+```xml
+<build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+</build>
+```
+2) Run "mvn javadoc:javadoc".  
+3) Open java doc in browser.
+```raw
+project_location/target/site/apidocs/index.html
+```
+
 ## 2. Issues
 ### 2.1 Can't Download Plugin From Remote Repository
 Error: "Failed to read artifact descriptor ...".
