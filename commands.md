@@ -268,6 +268,19 @@ docker exec [container name or ID] shell command | Executes a command within a r
 * Code->Optimize Imports
 * Code->Reformat Code
 
+### 4.4 Views and Tools
+* Favorites
+* Breakpoint with condition
+* Scratch files
+* Gist
+
+## 5. Maven Commands
+```sh
+mvn install
+mvn test
+mvn javadoc:javadoc
+```
+
 ## 5. References
 * [Basic Git commands](https.//confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
 * [Docker Commands Quick Reference Cheat Sheet](https://www.linode.com/docs/applications/containers/docker-commands-quick-reference-cheat-sheet/)
