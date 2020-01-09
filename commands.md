@@ -70,17 +70,26 @@ sudo chown $USER /ariba/ssp_git/ -R
     <tr>
       <td>Initial</td>
       <td>git init</td>
-      <td>&nbsp;</td>
+      <td>Create '.git' directory.</td>
     </tr>
     <tr>
-      <td>Clone</td>
-      <td>git clone username@host./path/to/repository</td>
-      <td>For a remote server, use.</td>
+      <td rowspan="2">Clone</td>
+      <td colspan="1">git clone username@host./path/to/repository</td>
+      <td colspan="1">Clone git repository from remote server.</td>
+    </tr>
+    <tr>
+      <td colspan="1">git clone --mirror URL_ON_GITHUB .git</td>
+      <td colspan="1">Clone only the '.git' folder from remote server.</td>
     </tr>
     <tr>
       <td>Add files</td>
       <td>git add &lt;filename&gt;<br/>git add * <br/>git add .</td>
       <td>Add one or more files to staging (index).</td>
+    </tr>
+    <tr>
+      <td>Remove files</td>
+      <td>git reset HEAD &lt;filename&gt;</td>
+      <td>Remove file from staging (index).</td>
     </tr>
     <tr>
       <td rowspan="2">Commit</td>
@@ -114,6 +123,10 @@ sudo chown $USER /ariba/ssp_git/ -R
       <td rowspan="7">Branches</td>
       <td colspan="1">git checkout -b &lt;branchname&gt;</td>
       <td colspan="1">Create a new branch and switch to it.</td>
+    </tr>
+    <tr>
+      <td colspan="1">git checkout -b &lt;branchname&gt; origin/branchname</td>
+      <td colspan="1">Create a new branch from specific branch.</td>
     </tr>
     <tr>
       <td colspan="1">git checkout &lt;branchname&gt;</td>
@@ -172,7 +185,7 @@ sudo chown $USER /ariba/ssp_git/ -R
     <tr>
       <td rowspan="2">Undo local changes</td>
       <td colspan="1">git checkout -- &lt;filename&gt;</td>
-      <td colspan="1">If you mess up, you can replace the changes in your working tree with the last content in head.<p>Changes already added to the index, as well as new files, will be kept.</p></td>
+      <td colspan="1">If you mess up, you can replace the changes in your working tree with the last content in head: Changes already added to the index, as well as new files, will be kept.</td>
     </tr>
     <tr>
       <td colspan="1">git fetch origin <br/>git reset --hard origin/master</td>
@@ -203,6 +216,15 @@ git push origin master
 git rm --cached **/*.iml
 git commit -a -m "remove .iml"
 git push origin master
+```
+3) Clone all branches and switch to specific branch.
+```raw
+git clone --mirror https://github.com/jojozhuang/jojozhuang.github.io.git .git
+git config --bool core.bare false
+git reset --hard
+Checking out files: 100% (4315/4315), done.
+HEAD is now at e3260368 note for book designing data intesive applciation
+git checkout bootstrap-4
 ```
 
 ## 3. Docker Commands
@@ -282,7 +304,7 @@ mvn javadoc:javadoc
 ```
 
 ## 5. References
-* [Basic Git commands](https.//confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+* [Basic Git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
 * [Docker Commands Quick Reference Cheat Sheet](https://www.linode.com/docs/applications/containers/docker-commands-quick-reference-cheat-sheet/)
 * [Saving Changes with Git Stash](https://mijingo.com/blog/saving-changes-with-git-stash)
 * [Intellij IDEA Shortcuts Mac](https://www.jetbrains.com/help/rider/Reference_Keymap_Rider_OSX.html)
