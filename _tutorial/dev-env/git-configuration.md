@@ -32,5 +32,15 @@ fi
 ## 3. Git help
 Type `git help` to get the help document. To get document for a specific command, just append the command name, eg. `git help branch`.
 
+## 4. Git Concepts and Architecture
+### 4.1 Three Trees
+* working
+* staging index
+* repository
+
+![image](/assets/images/devops/2124/three-trees.png){:width="600px"}  
+Change status between trees.
+![image](/assets/images/devops/2124/change-status.png){:width="600px"}  
+
 ## 7. References
 * [ Git Essential Training: The Basics](https://www.linkedin.com/learning/git-essential-training-the-basics/basic-git-configuration?u=57692769)

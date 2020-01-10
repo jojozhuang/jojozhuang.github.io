@@ -237,3 +237,18 @@ PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 // create max heap
 PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
 ```
+
+## 7. Stream
+Convert Map to List.
+```java
+Map<String, Integer> map = new HashMap<>();
+map.put("Apple", 2);
+map.put("Orange", 5);
+map.put("Watermelon", 3);
+
+List<String> list = map.entrySet().stream()
+                       .map(x -> (x.getKey() + " " + x.getValue()))
+                       .collect(Collectors.toList());
+
+// list = {"Apple 2", "Orange 5", "Watermelon 3"}
+```

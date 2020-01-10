@@ -226,6 +226,15 @@ Checking out files: 100% (4315/4315), done.
 HEAD is now at e3260368 note for book designing data intesive applciation
 git checkout bootstrap-4
 ```
+4) Search commits.  
+Search the latest three commits.
+```sh
+git log -n 3
+```
+Find commits which has "queue" in the commit description.
+```sh
+git log --grep="queue"
+```
 
 ## 3. Docker Commands
 ### 3.1 Docker
