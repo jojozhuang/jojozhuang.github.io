@@ -30,6 +30,7 @@ Square        | $A = a^2$              | where `a` = any side of the square
 Rectangle     | $A = lw$               | where `l` = length and `w` = width
 Parallelogram | $A = bh$               | where `b` = base and `h` = height
 Triangle      | $A = \frac{1}{2}bh$    | where `b` = base and `h` = height
+Triangle      | $A = \vert \frac{(A_x(B_y-C_y) + B_x(C_y-A_y)+C_x(A_y-B_y)}{2}\vert$| where ($A_x$,$A_y$) are the `x` and `y` coordinates of the point `A`, etc.
 Circle        | $A = \pi r^2$          | where $\pi$ = 3.14 and `r` = radius
 Trapezoid     | $A = \frac{a + b}{2}h$ | where `a` = top base, `b` = bottom base, and `h` = height
 Sphere        | $S = 4{\pi}r^2$        | where `S` = surface area, $\pi$ = 3.14 and `r` = radius
@@ -65,8 +66,8 @@ Equation      | ${\sin}^2\theta+{\cos}^2\theta = 1$
 
 Title                       | Formula                                | Explanation
 ----------------------------|----------------------------------------|-----------------------------------------------------------------
-Distance between two points | $d=\sqrt{(x_2-x_1)^2+{(y_2-y_1)^2}}$   | where (x_1,y_1) and (x_2,y_2) are two points on a coordinate plane
-Slope of a line             | $m=\frac{y_2-y_1}{x_2-x_1}$            | where (x_1,y_1) and (x_2,y_2) are two points on a coordinate plane
+Distance between two points | $d=\sqrt{(x_2-x_1)^2+{(y_2-y_1)^2}}$   | where ($x_1$,$y_1$) and ($x_2$,$y_2$) are two points on a coordinate plane
+Slope of a line             | $m=\frac{y_2-y_1}{x_2-x_1}$            | where ($x_1$,$y_1$) and ($x_2$,$y_2$) are two points on a coordinate plane
 Equation of a line          | $y=mx+b$                               | where `m` is the slope and `b` is the y-intercept
 Quadratic Equation          | $ax^2+bx+c=0$                          | where `a` and `b` are coefficients and `c` is constant
 Quadratic formula           | $x={-b\pm \sqrt{b^2-4ac}\over 2a}$     | where `a` and `b` are coefficients and `c` is constant  
@@ -148,3 +149,4 @@ $$C(4,2)=\frac{4!}{2!(4-2)!}=\frac{4!}{2!(2!)}=\frac{24}{2*2}=6$$
 * [COMMON MATH FORMULAS](http://www.mdc.edu/main/images/common_math_formulas_tcm6-33520.pdf)
 * [Easy Copy MathJax](http://easy-copy-mathjax.xxxx7.com/)
 * [Einstein's summation of integers from 1 to n](https://math.stackexchange.com/questions/1439523/einsteins-summation-of-integers-from-1-to-n)
+* [Area of a Triangle by formula](https://www.mathopenref.com/coordtrianglearea.html)
