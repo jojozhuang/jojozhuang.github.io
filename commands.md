@@ -235,6 +235,14 @@ Find commits which has "queue" in the commit description.
 ```sh
 git log --grep="queue"
 ```
+5) View the changes in staged files.
+```sh
+git diff -staged
+```
+6) Rename file
+```sh
+git mv file1.txt file2.txt
+```
 
 ## 3. Docker Commands
 ### 3.1 Docker
