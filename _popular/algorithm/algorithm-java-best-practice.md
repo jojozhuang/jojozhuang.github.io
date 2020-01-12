@@ -239,6 +239,15 @@ PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
 ```
 
 ## 7. Stream
+Convert List Characters to String.
+```java
+List<Character> list = Arrays.asList('J','o','h','n','n','y');
+String str = list.stream()
+                    .map(String::valueOf)
+                    .collect(Collectors.joining());
+
+// str = "Johnny"
+```
 Convert Map to List.
 ```java
 Map<String, Integer> map = new HashMap<>();
