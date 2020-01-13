@@ -137,6 +137,10 @@ bookmarks:
         description: Publish GitBook to Your GitHub Pages
         url: http://sangsoonam.github.io/2016/08/02/publish-gitbook-to-your-github-pages.html
         type: webpage
+      - name: Google Analytics Tutorial 2019 For Beginners
+        description: Google Analytics Tutorial 2019 For Beginners
+        url: https://www.youtube.com/watch?v=eojr5PtPAhM
+        type: video
   - category: Interview
     links:
       - name: Coding Interview University

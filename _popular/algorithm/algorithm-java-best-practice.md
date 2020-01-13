@@ -5,7 +5,7 @@ title: "Algorithm - Java Best Practice"
 index: 1253
 subcategory: algorithm
 date: 2016-04-01
-tags: [Java]
+tags: [Java, Stream]
 ---
 
 > Useful Java tricks.
@@ -260,4 +260,11 @@ List<String> list = map.entrySet().stream()
                        .collect(Collectors.toList());
 
 // list = {"Apple 2", "Orange 5", "Watermelon 3"}
+```
+Find sum of array.
+```java
+int [] arr = {1,2,3,4};
+int sum = Arrays.stream(arr).sum(); 
+
+// sum = 10
 ```
