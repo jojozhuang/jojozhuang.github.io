@@ -81,7 +81,7 @@
 {{ content }}
 
 <footer class="container-fluid text-center" style="clear: both;">
-  <span>&copy; {{ site.time | date: '%Y' }} jojozhuang.github.io, All rights reserved.</span>
+  <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "customdomain" %}rongzhuang.me{% else %}jojozhuang.github.io{% endif %}, All rights reserved.</span>
 </footer>
 
 <!-- scripts.html -->
