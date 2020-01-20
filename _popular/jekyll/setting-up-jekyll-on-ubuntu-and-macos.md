@@ -182,7 +182,7 @@ Install rvm and use it to manage multiple ruby versions.
 ```raw
 brew install gnupg
 ```
-2) Install GPG keys
+2) Install GPG keys  
 Go to https://rvm.io/rvm/install, find the link for gpg, execute it. You may get the "No route to host" error, find the host's ip address and try again.
 ```raw
 $ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -219,7 +219,7 @@ gpg:     signatures cleaned: 49
 ```
 3) Install RVM with the latest stable version of Ruby.
 ```raw
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
+$ curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 Source the path, so that we can use rvm.
 ```raw
