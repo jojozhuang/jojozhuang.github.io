@@ -264,7 +264,20 @@ List<String> list = map.entrySet().stream()
 Find sum of array.
 ```java
 int [] arr = {1,2,3,4};
-int sum = Arrays.stream(arr).sum(); 
+int sum = Arrays.stream(arr).sum();
 
 // sum = 10
+```
+Convert List of Integer to array of int.
+```java
+List<Integer> list = Arrays.asList(1,2,3,4,5);
+int[] primitive = list.stream()
+                      .mapToInt(Integer::intValue)
+                      .toArray();
+// primitive = [1,2,3,4,5];
+
+// Handle null with default value
+int[] primitive = list.stream()
+                      .mapToInt(i->(i == null ? 0 : 1))
+                      .toArray();
 ```
