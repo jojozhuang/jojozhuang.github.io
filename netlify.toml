@@ -1,5 +1,5 @@
 [build]
-  command = "JEKYLL_ENV=production jekyll build"
+  command = "JEKYLL_ENV=customdomain jekyll build"
   publish = "_site/"
 
 [[headers]]
