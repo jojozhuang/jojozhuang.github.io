@@ -1,20 +1,22 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 {% if jekyll.environment == "production" %}
+<!--rongzhuang.me-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72686620-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-72686620-2'); //rongzhuang.me
+  gtag('config', 'UA-72686620-2');
 </script>
 {% else %}
+<!--jojozhuang.github.io-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72686620-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-72686620-1'); //jojozhuang.github.io
+  gtag('config', 'UA-72686620-1');
 </script>
 {% endif %}
