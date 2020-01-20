@@ -1,5 +1,5 @@
 [build]
-  command = "jekyll build"
+  command = "JEKYLL_ENV=production jekyll build"
   publish = "_site/"
 
 [[headers]]
