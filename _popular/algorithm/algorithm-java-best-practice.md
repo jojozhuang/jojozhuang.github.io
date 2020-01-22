@@ -268,6 +268,15 @@ int sum = Arrays.stream(arr).sum();
 
 // sum = 10
 ```
+Find sum of integer list.
+```java
+List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
+Integer sum = integers.stream()
+                      .reduce(0, (a, b) -> a + b);
+
+Integer sum = integers.stream()
+                      .reduce(0, Integer::sum);
+```
 Convert List of Integer to array of int.
 ```java
 List<Integer> list = Arrays.asList(1,2,3,4,5);
@@ -281,3 +290,15 @@ int[] primitive = list.stream()
                       .mapToInt(i->(i == null ? 0 : 1))
                       .toArray();
 ```
+
+## 8. Regex
+Convert string to array. Ignore any characters which are not letters, split by whitespace.
+```java
+String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
+String[] words = paragraph.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
+
+// words = ["bob", "hit", "a", "ball", "the", "hit", "ball", "flew",  "far", "after", "it", "was", "hit"];
+```
+
+## 9. References
+* [Summing Numbers with Java Streams](https://www.baeldung.com/java-stream-sum)
