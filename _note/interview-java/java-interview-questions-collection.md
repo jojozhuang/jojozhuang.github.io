@@ -570,3 +570,4 @@ fruits set after iteration = [Apple, Banana, Watermelon, Kiwi]
 * [300 Core Java Interview Questions](https://www.javatpoint.com/corejava-interview-questions)
 * [Comparable and Comparator in Java Example](https://www.journaldev.com/780/comparable-and-comparator-in-java-example)
 * [Collision Resolution](http://www.cs.cmu.edu/~ab/15-121N11/lectures/lecture16.pdf)
+* [Why is ArrayDeque better than LinkedList](https://stackoverflow.com/questions/6163166/why-is-arraydeque-better-than-linkedlist)
