@@ -554,7 +554,7 @@ When autocomplete is on, the browser automatically completes the input values ba
 
 Tip: It is possible to have autocomplete "on" for the form, and "off" for specific input fields, or vice versa.
 
-The autocomplete attribute works with <form> and the following <input> types: text, search, url, tel, email, password, datepickers, range, and color.
+The autocomplete attribute works with \<form\> and the following \<input\> types: text, search, url, tel, email, password, datepickers, range, and color.
 
 ```html
 <form action="/action_page.php" autocomplete="on">

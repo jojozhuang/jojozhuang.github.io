@@ -58,7 +58,7 @@ navlist:
   - key: note
     url: /note
     icon: fas fa-book-open
-    visible: false
+    visible: true
   - key: more
     url: /#
     icon: fas fa-chevron-circle-down
