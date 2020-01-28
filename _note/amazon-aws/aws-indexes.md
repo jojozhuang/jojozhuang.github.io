@@ -33,15 +33,75 @@ tags: [AWS]
 
 ## 4. Comparison
 ### 4.1 Storage
-1) S3 Standard-IA vs. S3 One Zone-IA vs. Glaciar
+S3 features:
+* S3 is Object-based
+* size of single file is from 0 byte to 5 TB.
+* S3 name is unique globally.
+* Using Bucket ACL or Bucket Policies to control access.
+* Server Side Encryption: SSE-S3, SSE-KMS, SSE-C
+* Versioning is supported, can't disable once enabled.
+* CloudFront - CDN
+* Snowball for Petabyte-scale data transport.
+* Storage Gateway: File Gateway, Volume Gateway, Tape Gateway
+
+S3 Storage Class:
+* S3 Standard
+* S3-IA
+* S3 One Zone - IA
+* S3 - Intelligent Tiering
+* S3 Glacier
+* S3 Glacier Deep Archive
+* Lifecycle Policies
+
+Comparison:
 * S3 One Zone is not high available
 * S3 One Zone is cheaper.
-* Glaciar is immutable.
+* Glacier is immutable.
+
+IAM:
+* IAM is universal.
+* No permissions for new users.
+
+CloudWatch is all about performance, whereas CloudTrail is all about auditing.
 
 2) CloudTrail logs vs. VPC flow logs vs. S3 bucket logs vs. CloudWatch Logs
 3) SSE-S3 vs. SSE-KMS
 
-2) sdfsdf
+### 4.2 EC2
+EC2 Pricing Models:
+* On Demand
+* Reserved
+* Spot
+* Dedicated Host
+
+EBS:
+* General Purpose SSD
+* Provisioned IOPS SSD
+* Throughput Optimized HDD
+* Cold HDD
+* EBS Magnetic
+
+Security Group:
+* Specify allow rules, but not deny rules.
+
+BootStrap Scripts.
+
+Instance MetaData & User Data
+
+EFS
+
+EC2 Placement Groups
+* Clustered Placement Group:
+* Spread Placement Group
+* Partitioned Placement Group
+
+### 4.3 Database
+* RDS(OLTP): SQL, MySQL, PostgreSQL, Oracle, Aurora, MariaDB
+* DynamoDB(NoSQL)
+* Red Shift(OLAP) - Business Intelligence
+
+Elastic Cache: Memcached, Redis
+
 ### 4.2 Network
 1) Security Group vs. Network ACL
 * You can only config allow rules in Security Group, you can't config deny rules.
@@ -65,6 +125,31 @@ tags: [AWS]
 * Use VPC Endpoint Policies to secure Gateway Endpoint.
 
 5) CName vs. A Record vs. Alias
+
+6) Route53
+* Simple Routing
+* Weighted Routing
+* Latency-based Routing
+* Failover Routing
+* Geolocation Routing
+* Geoproximity Routing(Traffic Flow Only)
+* Multivalue Answer Routing
+
+7) ELB: Elastic Load Balancer
+* Application Load Balancer
+* Network Load Balancer
+* Classic Load Balancer
+
+8) VPC
+NAT Instances vs. NAT Gateways
+9) Direct Connect
+10) VPC Endpoint
+
+CloudFormation, Elastic Beanstalk
+
+SQS, SWF, SNS
+
+Serverless, Lamda
 
 ## 5. Auto Scaling Group
 ### 5.1 Default Termination Policy
