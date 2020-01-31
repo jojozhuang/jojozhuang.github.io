@@ -77,28 +77,32 @@ public class Base2Test {
 Generic solution for any base.
 ```java
 public class GenericBase {
-    public String base(int n, int base) {
+    // Given a decimal number n and an integer k, Convert decimal number n to base-k.
+    public String base(int n, int k) {
         if (n == 0) {
             return "0";
         }
 
-        String converted = "";
+        String ans = "";
         while (n != 0) {
-            // Get remainder by negative base, it can be negative also
-            int remainder = n % base;
-            n /= base;
+            int r = n % k;
+            n /= k;
 
             // if remainder is negative, add abs(base) to it and add 1 to n
-            if (remainder < 0) {
-                remainder += (-base);
+            if (r < 0) {
+                r += (-k);
                 n += 1;
             }
 
             // convert remainder to string add into the result
-            converted = remainder + converted;
+            if (r <= 9) {
+                ans = r + ans;
+            } else {
+                ans = (char)(r - 10 + 'A') + ans;
+            }
         }
 
-        return converted;
+        return ans;
     }
 }
 ```
@@ -117,6 +121,12 @@ public class GenericBaseTest {
         assertEquals("101", instance.base(5, -2));
         assertEquals("11101", instance.base(13, -2));
         assertEquals("1100000", instance.base(32, -2));
+
+        assertEquals("21", instance.base(17, 8));
+        assertEquals("36", instance.base(30, 8));
+
+        assertEquals("11", instance.base(17, 16));
+        assertEquals("1E", instance.base(30, 16));
     }
 }
 ```
