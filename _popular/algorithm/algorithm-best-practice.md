@@ -209,6 +209,21 @@ while (index >= 0) {
 
 // output [2,3,5]
 ```
+### 1.10 Find primes with the Sieve of Eratosthenes
+```java
+boolean exclusion[] = new boolean[n]; // not prime, n can be 100
+
+for (int i = 2; i < n; i++) {
+    System.out.println(i);
+    if (exclusion[i] == false){
+        for (int j = 2 * i; j < n; j += i) {
+            exclusion[j] = true;
+        }
+    }
+}
+
+// output [2,3,5,7,11,13 ...]
+```
 ## 2. Array and Strings
 ### 2.1 Partition of Quick Sort
 ```java
