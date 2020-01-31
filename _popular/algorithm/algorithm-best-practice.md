@@ -197,6 +197,18 @@ public int findLongestChain(int[][] pairs) {
     return dp[n - 1];
 }
 ```
+### 1.9 Indexes of all occurrences of character in a string
+```java
+String word = "bannanas";
+String guess = "n";
+int index = word.indexOf(guess);
+while (index >= 0) {
+    System.out.println(index);
+    index = word.indexOf(guess, index + 1);
+}
+
+// output [2,3,5]
+```
 ## 2. Array and Strings
 ### 2.1 Partition of Quick Sort
 ```java
