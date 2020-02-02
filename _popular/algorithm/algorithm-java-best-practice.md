@@ -290,7 +290,12 @@ int[] primitive = list.stream()
                       .mapToInt(i->(i == null ? 0 : 1))
                       .toArray();
 ```
-
+Convert List of String to array of String.
+```java
+List<String> list = Arrays.asList("Hello", "Johnny", "Welcome")
+String[] array = list.stream().toArray(String[]::new);
+// array = ["Hello", "Johnny", "Welcome"];
+```
 ## 8. Regex
 Convert string to array. Ignore any characters which are not letters, split by whitespace.
 ```java
