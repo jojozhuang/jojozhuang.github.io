@@ -91,6 +91,8 @@ tags: [English]
 * xor: Exclusive Or
 * throughput: 吞吐量
 * idempotent: 幂等的
+* alphabetical: 依字母顺序的
+* lexicographical: 按字典顺序的
 
 ## 4. Others:
 * within bound: 在边界之内
