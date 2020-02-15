@@ -2,8 +2,8 @@
 layout: tutorial
 key: popular
 title: "Algorithm - Template for Subset Problems"
-index: 1216
-subcategory: algorithm
+index: 1285
+subcategory: algorithm-overview
 date: 2016-04-04
 tags: [Algorithm, Subsets]
 ---

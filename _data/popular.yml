@@ -15,6 +15,11 @@ categories:
         icon: fas fa-square-root-alt
         subcategory: algorithm
         image: algorithms.png
+      - name: Algorithm Overview
+        description: Algorithm Overview
+        icon: fas fa-superscript
+        subcategory: algorithm-overview
+        image: algorithms2.png
       - name: Design Pattern
         description: Object-Orientation, Inheritance
         icon: fas fa-pencil-ruler

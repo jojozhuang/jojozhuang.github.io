@@ -2,8 +2,8 @@
 layout: tutorial
 key: popular
 title: "Algorithm - Problem List at LeetCode"
-index: 1251
-subcategory: algorithm
+index: 1281
+subcategory: algorithm-overview
 date: 2016-04-10
 tags: [Algorithm, Leetcode]
 ---

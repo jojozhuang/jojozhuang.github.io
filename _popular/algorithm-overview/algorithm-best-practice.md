@@ -2,8 +2,8 @@
 layout: tutorial
 key: popular
 title: "Algorithm - Best Practice"
-index: 1252
-subcategory: algorithm
+index: 1282
+subcategory: algorithm-overview
 date: 2016-04-02
 tags: [Algorithm]
 ---
