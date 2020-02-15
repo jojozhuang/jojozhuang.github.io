@@ -2,8 +2,8 @@
 layout: tutorial
 key: popular
 title: "Algorithm - Java Best Practice"
-index: 1253
-subcategory: algorithm
+index: 1283
+subcategory: algorithm-overview
 date: 2016-04-01
 tags: [Java, Stream, Regex]
 ---

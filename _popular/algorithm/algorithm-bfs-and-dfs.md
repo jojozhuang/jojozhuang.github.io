@@ -273,6 +273,7 @@ public int numIslands(char[][] grid) {
 * [LeetCode 102 - Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 * [LeetCode 144 - Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 * [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
+* [LeetCode 542 - 01 Matrix](https://leetcode.com/problems/01-matrix/)
 
 ## 6. References
 * [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
