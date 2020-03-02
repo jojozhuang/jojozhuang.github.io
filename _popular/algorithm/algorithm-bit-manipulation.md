@@ -106,7 +106,7 @@ Given an integer and a specific position, set the bit at this position of to a g
 int updateBit(int num, int i, boolean bitIsOne) {
     int value = bitIsOne ? 1 : 0;
     int mask = ~(1 << i); // if i = 4, mask = 11101111
-    return (num & mask) | (value < i); // if i = 4, and value = 1, (value < i) =  00010000
+    return (num & mask) | (value << i); // if i = 4, and value = 1, (value < i) =  00010000
 }
 ```
 

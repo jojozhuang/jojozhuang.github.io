@@ -44,13 +44,19 @@ nautilus . #linux
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ### `r` - Recursively copy entire directories.
 ```
-### 1.3 Permission
+### 1.3 Compression/Zip
+```sh
+# Compress the files without the .DS_Store, __MACOSX and other .* files.
+cd SINV/SINV-10330
+zip -r ImportInvoiceStatus.zip . -x ".*" -x "__MACOSX"
+```
+### 1.4 Permission
 ```sh
 # Change Owner of Entire Directory to Current User
 sudo chown $USER /ariba/ssp_git/ -R
 ### `R` - Recursively change the owner for sub directories.
 ```
-### 1.4 Shortcut Keys for Mac
+### 1.5 Shortcut Keys for Mac
 * CMD + SHIFT + G, paste path in finder to open a file.
 
 ## 2. Git Commands

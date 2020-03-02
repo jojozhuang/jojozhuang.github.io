@@ -71,10 +71,10 @@ Create a same array as discussed in the previous solution. Sweep the time line f
 ![image](/assets/images/dsa/1231/sweep_time_line.png)
 Notice that, when decreasing the count, we don't care who was actually dead in that year. For example, if we exchange the death year for person A and person B, our algorithm produces same array.
 ![image](/assets/images/dsa/1231/exchange_death.png)
-Below is the implementation.
+Below is the implementation. Notice that no sorting is required.
 ```java
 // timeline, add 1 if born, minus 1 if dead, count the maximum of the timeline.
-// time: O(p+p+y), n is the number of persons, y is the year range.
+// time: O(n+y), n is the number of persons, y is the year range.
 // space: O(y)
 public int getMostPopulation(int[][] persons) {
     if (persons == null || persons.length == 0) {
@@ -103,7 +103,7 @@ public int getMostPopulation(int[][] persons) {
         max = Math.max(max, count);
     }
 
-    return max;
+    return max; // return 4
 }
 ```
 * Time complexity: $O(n+y)$, n is the number of persons, y is the year range.

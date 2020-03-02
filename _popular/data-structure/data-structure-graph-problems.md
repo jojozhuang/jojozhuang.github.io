@@ -172,17 +172,27 @@ Return the smallest number of 0s that must be flipped.  (It is guaranteed that t
 
 Example 1:
 ```raw
-Input: [[0,1],[1,0]]
+Input:
+[[0,1],
+ [1,0]]
 Output: 1
 ```
 Example 2:
 ```raw
-Input: [[0,1,0],[0,0,0],[0,0,1]]
+Input:
+[[0,1,0],
+ [0,0,0],
+ [0,0,1]]
 Output: 2
 ```
 Example 3:
 ```raw
-Input: [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
+Input:
+[[1,1,1,1,1],
+ [1,0,0,0,1],
+ [1,0,1,0,1],
+ [1,0,0,0,1],
+ [1,1,1,1,1]]
 Output: 1
 ```
 ### 2.2 Solution with DFS + BFS
