@@ -5,7 +5,7 @@ title: "Algorithm - Useful Math Knowledge"
 index: 1284
 subcategory: algorithm-overview
 date: 2016-04-05
-tags: [Math]
+tags: [Math, GCD]
 ---
 
 > Useful math knowledge for algorithm problems.
