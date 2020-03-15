@@ -47,7 +47,7 @@ scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ### 1.3 Compression/Zip
 ```sh
 # Compress the files without the .DS_Store, __MACOSX and other .* files.
-cd SINV/SINV-10330
+cd SINV/SINV-10300
 zip -r ImportInvoiceStatus.zip . -x ".*" -x "__MACOSX"
 ```
 ### 1.4 Permission
