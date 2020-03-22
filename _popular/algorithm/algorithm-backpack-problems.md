@@ -9,7 +9,7 @@ tags: [Knapsack, Backpack]
 mathjax: true
 ---
 
-> Backpack1, Backpack2.
+> Knapsack1, Knapsack2.
 
 ## 1. Knapsack Problem 1 - Capacity only
 Given N items, `A[i]` is the weight of the i-th item. And given a knapsack with capacity `w`, maximize the **total weight** that the knapsack can be filled. Each item can be use 0 or 1 time.
