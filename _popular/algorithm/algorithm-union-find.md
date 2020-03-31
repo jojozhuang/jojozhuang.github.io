@@ -165,6 +165,34 @@ public void union(int i, int j) {
 
 ## 4. Union Find Template
 Based on the above discussion, here is the template for Union and Find.
+### 4.1 Without Path Compression and Rank
+```java
+public class DSU {
+    public int[] parents;
+
+    public DSU(int size) {
+        parents = new int[size];
+        for (int i = 0; i < parents.length; i++) {
+            // Initially, all elements are in their own set.
+            parents[i] = i;
+        }
+    }
+
+    public int find(int i) {
+        while (parents[i] != i) {
+            i = parents[i];
+        }
+        return parents[i];
+    }
+
+    public void union(int i, int j) {
+        int p1 = find(i);
+        int p2 = find(j);
+        parents[p1] = p2;
+    }
+}
+```
+### 4.2 With Path Compression and Rank
 ```java
 public class DSU { // Disjoint Set Union with Rank
     public int[] parents;
@@ -266,9 +294,23 @@ public void dfs(int[][] M, int[] visited, int i) {
 ```
 ### 5.3 Solution With Union Find Template
 ```java
-public class DSU { // Disjoint Set Union with Rank
+public int findCircleNum(int[][] M) {
+    DSU dsu = new DSU(M.length);
+    for (int i = 0; i < M.length - 1; i++) {
+        for (int j = i + 1; j < M.length; j++) {
+            if (M[i][j] == 1) {
+                dsu.union(i, j);
+            }
+        }
+    }
+
+    return dsu.count;
+}
+
+class DSU { // Disjoint Set Union with Rank
     public int[] parents;
     public int[] rank;
+    public int count; // number of groups
 
     public DSU(int size) {
         parents = new int[size];
@@ -277,6 +319,7 @@ public class DSU { // Disjoint Set Union with Rank
             parents[i] = i;
         }
         rank = new int[size];
+        count = size;
     }
 
     // Path Compression
@@ -300,40 +343,109 @@ public class DSU { // Disjoint Set Union with Rank
         if (rank[p1] < rank[p2]) {
             // Then move root1 under root2
             parents[p1] = p2;
-        // If root1’s rank is larger than root2’s rank
+            // If root1’s rank is larger than root2’s rank
         } else if (rank[p1] > rank[p2]) {
             // Then move root2 under root1
             parents[p2] = p1;
-        // if ranks are the same
+            // if ranks are the same
         } else {
             // Then move root1 under root2 (doesn't matter which one goes where)
             parents[p1] = p2;
             rank[p2]++;
         }
+        count--;
     }
-}
-
-public int findCircleNum(int[][] M) {
-    DSU dsu = new DSU(M.length);
-    for (int i = 0; i < M.length - 1; i++) {
-        for (int j = i + 1; j < M.length; j++) {
-            if (M[i][j] == 1) {
-                dsu.union(i, j);
-            }
-        }
-    }
-
-    Set<Integer> set = new HashSet<>();
-    for (int i = 0; i < M.length; i++) {
-        set.add(dsu.find(i));
-    }
-
-    return set.size();
 }
 ```
 
-## 6. Redundant Connection
+## 6. Linked List Components
 ### 6.1 Description
+We are given `head`, the head node of a linked list containing `unique integer values`. We are also given the list `G`, a subset of the values in the linked list.
+
+Return the number of connected components in G, where two values are connected if they appear consecutively in the linked list.
+
+Example 1:
+```raw
+Input:
+head: 0->1->2->3
+G = [0, 1, 3]
+Output: 2
+Explanation:
+0 and 1 are connected, so [0, 1] and [3] are the two connected components.
+```
+Example 2:
+```raw
+Input:
+head: 0->1->2->3->4
+G = [0, 3, 1, 4]
+Output: 2
+Explanation:
+0 and 1 are connected, 3 and 4 are connected, so [0, 1] and [3, 4] are the two connected components.
+```
+### 6.2 Solution with HashSet
+```java
+public int numComponents(ListNode head, int[] G) {
+    Set<Integer> set = new HashSet<>();
+    for (int g : G) {
+        set.add(g);
+    }
+
+    int ans = 0;
+    while (head != null) {
+        if (set.contains(head.val) && (head.next == null || !set.contains(head.next.val))) {
+            ans++;
+        }
+        head = head.next;
+    }
+
+    return ans;
+}
+```
+### 6.3 Solution With Union Find
+```java
+public int numComponents(ListNode head, int[] G) {
+        DSU dsu = new DSU(G);
+        while (head != null && head.next != null) {
+            dsu.union(head.val, head.next.val);
+            head = head.next;
+        }
+
+        return dsu.count;
+    }
+
+    public class DSU {
+        Map<Integer, Integer> map; // <child, parent>, use map instead of array
+        int count; // the number of component groups
+
+        public DSU(int[] nodes) {
+            map = new HashMap<>();
+            for (int node : nodes) {
+                map.put(node, node);
+            }
+            count = nodes.length;
+        }
+
+        public int find(int i) {
+            while (map.get(i) != i) {
+                map.put(i, map.get(map.get(i)));
+                i = map.get(i);
+            }
+            return map.get(i);
+        }
+
+        public void union(int i, int j) {
+            if (map.containsKey(i) && map.containsKey(j)) {
+                int p1 = find(i);
+                int p2 = find(j);
+                map.put(p1, p2);
+                count--;
+            }
+        }
+    }
+```
+
+## 7. Redundant Connection
+### 7.1 Description
 In this problem, a tree is an undirected graph that is connected and has no cycles.
 
 The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
@@ -358,7 +470,7 @@ Explanation: The given undirected graph will be like this:
     |   |
     4 - 3
 ```
-### 6.2 Solution with Graph + DFS
+### 7.2 Solution with Graph + DFS
 Construct graph with the given edges. During the construction, use DFS to search the target edge.
 ```java
 public int[] findRedundantConnection(int[][] edges) {
@@ -402,7 +514,7 @@ private boolean dfs(Map<Integer, List<Integer>> map, int start, int target, Set<
     return false;
 }
 ```
-### 6.3 Solution with Union Find
+### 7.3 Solution with Union Find
 Create parents array, go through each edge, find and union them until find the target edge.
 ```java
 public int[] findRedundantConnection(int[][] edges) {
@@ -434,7 +546,7 @@ private int find(int curr, int[] parents) {
     return curr;
 }
 ```
-### 6.4 Solution With Union Find Template
+### 7.4 Solution With Union Find Template
 ```java
 class DSU {
     int[] rank;
@@ -483,18 +595,19 @@ public int[] findRedundantConnection(int[][] edges) {
 }
 ```
 
-## 7. Classic Problems
+## 8. Classic Problems
 * [LeetCode 547 - Friend Circles](https://leetcode.com/problems/friend-circles/)
+* [LeetCode 817 - Linked List Components](https://leetcode.com/problems/linked-list-components/)
 * [LeetCode 684 - Redundant Connection](https://leetcode.com/problems/redundant-connection/)
 * [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
 * [LeetCode 305 - Number of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
 * [LeetCode 323 - Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
-## 8. Source Files
+## 9. Source Files
 * [Source files for Union Find on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-union-find)
 * [Union Find Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1CulEG8tHmHdQQ5UPnCjrIzdpIZNZd-WB/view?usp=sharing)
 
-## 9. References
+## 10. References
 * [Union-Find Algorithms](https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf)
 * [Disjoint Set Data Structures](https://www.geeksforgeeks.org/disjoint-set-data-structures-java-implementation/)
 * [Disjoint Set (Or Union-Find)](https://www.geeksforgeeks.org/union-find/)
