@@ -11,13 +11,13 @@ tags: [Topological Sorting]
 > Topological Sorting and related questions.
 
 ## 1. Topological Sorting
-Out-degree and In-degree
-
-Given a digraph, put the vertices in order such that all its directed edges point from a vertex earlier in the order to a vertex later in the order (or report that doing so is not possible). Topological.java solves this problem using depth-first search. Remarkably, a reverse postorder in a DAG provides a topological order.
+In computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge `uv` from vertex `u` to vertex `v`, u comes before v in the ordering.
+* indegree
+* outdegree
 
 ### 1.1 Problem Description
 Given an directed graph, a topological order of the graph nodes is defined as follow:
-* For each directed edge A -> B in graph, A must before B in the order list.
+* For each directed edge `A -> B` in graph, A must before B in the order list.
 * The first node in the order can be any node in the graph with no nodes direct to it.
 
 Find any topological order for the given graph.

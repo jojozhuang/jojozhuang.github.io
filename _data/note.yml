@@ -61,3 +61,8 @@ categories:
         icon: fas fa-pencil-ruler
         subcategory: interview-system-design
         image: interview.png
+      - name: Behavior Questions
+        description: Behavior Interview Questions
+        icon: fas fa-handshake
+        subcategory: interview-behavior
+        image: interview.png
