@@ -5,7 +5,7 @@ title: "Behavior Questions - Amazon"
 index: 9662
 subcategory: interview-behavior
 date: 2016-03-04
-tags: [Behavior, Star]
+tags: [Behavior, STAR Method]
 ---
 
 > Behavior Questions
@@ -43,87 +43,97 @@ No. | Examples                  | Questions
 10  |   |  
 
 ## 3. Example Details
-### 3.1 Tax API Feature
+### 3.1 Tax API Feature(Ariba)
+For questions like, System integration? Tight deadline?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
-Situation | I was assigned a P1 performance issue(Custom field) when I was developing the tax api feature. The issue is that the end user has to wait for 2 or 3 minutes after submitting the invoice. Normally, it only takes few seconds. The customer can hardly use the system. The deadline for the feature development is approaching soon. However, this customer’s issue has higher priority.
-Task      | I talked to my manager to see if someone else could work on the P1 issue. But she said I’m the only person who is familiar with that issue. I had to work on this issue immediately and need to take care of the development for the feature as well. For my primary task- Tax API feature, I talked to my manager that
-Action    | I talked to another developer who was also working on the tax api feature, explained my current status, asked him to provide me help with the feature development, discussed what functions can be postponed. Then, I started working on this issue. The issue couldn’t be reproduced locally. It took me lots of time to analyze the log. I had to add new logging function(summary and detail level). The root cause is this customer configured custom field at invoice line level. But actually, it should be defined at header level according to their business logic.
-Result    | Finally, I solved the P1 issue but I had to leave some function unfinished(Logging, retry mechanism, UI change.) for the feature. I discussed with my manager about how to avoid such situation in the future. We agreed that I wouldn’t be the sole person to handle such case. We should have someone else to backup each other.
+Situation | Previously, Ariba Buyer developed its own tax engine to calculate the tax on invoice. ***Background of tax/commodity code/ship to, etc.*** We call it native tax engine. All master data for tax calculation need to be maintained in Ariba Buyer. The more customers we have, the more challenges we have to face. We introduced the third-party tax provider to help us on the tax calculation. ***Background of external tax engine.*** Call tax API to get the tax.
+Task      | Figure out how the native tax engine works. Analyze the changes required for the new tax API. ***Automatic call, manual call.***
+Action    | Discussed with Product Manager and partner(Tax Provider) to see what information is required for tax api to calculate tax. ***Functionalities, error message, exception handling, retry mechanism, logging, Junit etc.***
+Result    | Finished all of the functions, the main process flow is completed. Feature toggle, parameter control.
 
 ### 3.2 P1 Performance Issue(Custom Field)
+For questions like, Challenging task? Complex problem?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
-Situation | A customer reported P1 performance issue(Custom field). Background of customization/customized field, etc. The issue is that the end user has to wait for 2 or 3 minutes after submitting the invoice. Normally, it only takes few seconds. The customer can hardly use the system. The issue couldn’t be reproduced locally. After analyzing the logs, I identify the bottle neck, getInvalidFields method, validation before submission. However, I couldn’t find out which field caused this issue from the existing log.  
-Task | Solve the performance issue, remove the block.  
-Action | I added new logging function(summary and detail level) to track how much time is spent during validation. I used splunk to search these logs from production environment. Export to csv file and filter, clear the data, sort them by time in descending order. Finally, found the root cause. The customer configured two custom fields at invoice line level. But actually, they should be defined at header level according to their business logic.  
-Result | Suggest the customer to move these two custom fields to header level and the problem is solved.
+Situation | A customer reported a P1 performance issue(Custom field). The issue is that the end user has to wait for 2 or 3 minutes after submitting the invoice. Normally, it only takes few seconds. The customer can hardly use the system. The issue couldn’t be reproduced locally. ***Background of customization/customized field, etc.*** After analyzing the logs, I identify the bottle neck, getInvalidFields method, validation before submission. However, I couldn’t find out which field caused this issue from the existing log.  
+Task      | Identify the root cause, provide the solution to solve the performance issue.  
+Action    | I added new logging function(summary and detail level) to track how much time is spent during validation. I used **Splunk** to search these logs from production environment. Export to csv file and filter, clear the data, sort them by time in descending order. Finally, found the root cause. The customer configured two custom fields at invoice line level. ***Background of header level/line level, etc.*** But actually, they should be defined at header level according to their business logic.  
+Result    | Suggest the customer to move these two custom fields to header level and the problem is solved.
 
-### 3.3 Data corruption on IR because of Data Fix
-
-Section   | Description
-----------|------------------------------------------------------------------------------------------
-Situation | Sometimes in production, the data on invoice or payment documents is incorrect because of code bugs, wrong configuration, mis-operations by users. In this case, we need to correct them. But we can’t modify them directly at database level. We need to add audit log to record this change. Some changes are complex not only one field. Can’t restart server with deploying new java codes. Instead, use javascript to call native java code.
-Task | Working on a data fix to correct accounting values on invoice reconciliation documents.
-Action | Wrong script to cause more errors. The plus “+” character is missing for the where condition. Since there was no warning or compile error in javascript, no way to find this issue. Have to write another script to correct more documents.
-Result | What I learned is to be careful when using javascript for such critical operation. Updated the coding style to remind every developer be aware of this. Added plus character into the check list for code review.
-
-### 3.4 GTS china localization
+### 3.3 GTS Localization for China
+For questions like, Act as leader? Challenging task?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
-Situation | Acted as team architect to lead the development team. Worked on the localization for SAP GTS. Introduction of GTS…Processing trade, etc…
-Task | One challenge was I need to take training from German colleague in the morning and gave the same training to other team members in the afternoon. Another challenge, I have to learn some business knowledge about global trade, import, export.
-Action | Took the training from Priciple Engineer, repeated the stories to my team members. Wrote the knowledge training document to summarize what’ve learned, collected questions. Visited customer to collected requirements with product manager. Took notes, went through the procedure with teammates, brain storming, decide development task, prioritize them, make plan, high level and detailed design. Assign task, implementation, confirm with customer with POC. Keep continuous improvement.
-Result | Finished the development before the deadline. Learned how to collect requirements, prioritize them and make decision, how to plan, how to design. Wrote many documents, which is helpful for new enhancement and maintenance.
+Situation | Acted as team architect to lead the development team. Worked on the localization for SAP GTS. ***Background of GTS, Import, Export, Compliance management, Customs management, etc.*** The localization is specifically for **Processing Trade** in China. Run the project in scrum mode.
+Task      | One challenge was I need to take training from German colleague in the morning and gave the same training to other team members in the afternoon. Another challenge, I have to learn some business knowledge about global trade, import, export.
+Action    | Took the training from Principle Engineer, repeated the stories to my team members. Wrote the knowledge training document to summarize what’ve learned, collected questions. Visited customer with product manager to collect requirements. Took notes, went through the procedure with teammates, brain storming, **Gap Analysis**, decide development task, prioritize them, make plan, **high level and detailed design**. Assign task, implementation, **confirm with customer with POC**. Keep continuous improvement.
+Result    | Finished the development before the deadline. Learned how to collect requirements, prioritize them and make decision, how to plan, how to design. Wrote many documents, which is helpful for new enhancement and maintenance.
 
-### 3.5 Course player(Most interesting project/brand-new technique?)
- Cross-platform mobile solution, Xamarin + PhoneGap + Html5
+### 3.4 Cross-platform Course Player
+For questions like, Most interesting project? Brand-new technique?
 
- Section   | Description
- ----------|------------------------------------------------------------------------------------------
-Situation | The students in DePaul uniActed as team architect to lead the development team. Worked on the localization for SAP GTS. Introduction of GTS…Processing trade, etc…
-Task | Get the overview about these new technologies, development and maintenance costs. Demonstration of the investigation result.
-Action | Learn mobile development through internet, online courses. Designed and built 3 prototypes with HTML5, PhoneGap and Xamarin in 5 weeks. Evaluated the feasibility of cross-platform mobile app development, wrote the investigation report with detailing the pros and cons of each approach.
-Result | Finish the task in 6 weeks. Demonstrate the prototypes and share the investigation result to director and other team members.
+Cross-platform mobile solution, Xamarin + PhoneGap + Html5
 
-### 3.6 Accounting defaulting function issue, Trigger Problems.
-
-Section   | Description
+ Section  | Description
 ----------|------------------------------------------------------------------------------------------
-Situation | There are many accounting defaulting issues in our JIRA queue. This is because of the complex business logic and the triggers in our system. Introduction of triggers… The difficulty is that the value of field is updated for several times in a single event. I had worked on several issues before. But my colleague didn’t have much experience about it.
-Task | Mentor him to figure out the root cause and provide a proper fix without cauing regression.
-Actions | Introduced what is accounting defaulting and how it works, scenarios, relevant master data, parameters, etc. Shared my experience, the issues I worked before and how I solved them. Best practice, where is the entry points and where to set breakpoint. Find a proper case and compare it with the broken one to find the difference. Teach but not give the answer – do it yourself. Compare logs.
-Result | He analyzed and reproduced the issue locally. Then figured out the root cause by himself. After discussing with me about his findings, finally he came up a solution.
+Situation | ***DePaul course online system, etc.*** The students uses web browser, mobile apps to watch recordings. For development team, the challenge is how to maintain these players developed with different tech stack.
+Task      | Investigate cross-platform mobile app solutions. Get the overview about these new technologies, development and maintenance costs. Demonstration of the investigation result.
+Action    | Learn mobile development through internet, online courses. Designed and built 3 prototypes with **HTML5, PhoneGap and Xamarin**. Evaluated the feasibility of cross-platform mobile app development, wrote the investigation report with detailing the pros and cons of each approach.
+Result    | Finish the task in 6 weeks. Demonstrate the prototypes and share the investigation result to director and other team members.
 
-### 3.7 JPMC Year-end accounting Data Fix
-
-Section   | Description
-----------|------------------------------------------------------------------------------------------
-Situation | I worked on a very tough customer ticket for 2 weeks, 16 hours every day. There are lots of data issues in this customer’s system.
-Task | Fix data issues.
-Action | Created several specific DF scripts to fix all the blocking issues.
-Result |  After providing over 10 scripts to fix all the issues for this customer, remove the Go live block. Misconfiguration. Finally, created a generic javascript template for data fix. It reduces the development cost and the review effort, saves time for both supports and devs. Improve the team’s productivity. Escalate the issue to manager team, the consultant team and implementation should test thoroughly for each function.
-
-### 3.8 Email attachment feature at Ariba.
+### 3.5 Email attachment feature at Ariba
+For questions like, disagree with manager?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
 Situation | In Ariba Buyer system, we have a feature called email notification. It sends out emails to stakeholders if invoice is created or updated. I worked on the new feature which enables system to include attachments in the email. I planned to let the end user decide whether to receive attachments. But my manager wanted to enable this feature by default, so user can receive attachments without changing their preferences. I was worried about the network traffic and the performance impact to mail server, since attachments have much larger size than simple plaint text emails. More network bandwidth is required to transfer these attachments.
-Task | Enable the attachment feature without overloading the mail server.
-Actions | I investigated the performance locally and contacted the Ops team to confirm if any customer reported similar issue when using our cloud applications. And ops mentioned that there is such issue previously. Many emails are stuck in the mail server, and they have to add more servers to handle emails.
-Result | I reported my findings to my manager and she agreed to not activate the feature by default and add feature toggle to safeguard it. If performance issue occurs, we can turn off this feature. No issue reported after this feature is released.
+Task      | Enable the attachment feature without overloading the mail server.
+Actions   | I investigated the performance locally and contacted the Ops team to confirm if any customer reported similar issue when using our cloud applications. And ops mentioned that there is such issue previously. Many emails are stuck in the mail server, and they have to add more servers to handle emails.
+Result    | I reported my findings to my manager and she agreed to not activate the feature by default and add feature toggle to safeguard it. If performance issue occurs, we can turn off this feature. No issue reported after this feature is released.
 
-### 3.9 Enhancement or Bug(conflicts with your teammates?)
+### 3.6 Accounting defaulting function issue, Trigger Problems.
+For questions like, helped other teammates?
+
+Section   | Description
+----------|------------------------------------------------------------------------------------------
+Situation | There are many accounting defaulting issues in our JIRA queue. This is because of the complex business logic and the triggers in our system. Introduction of triggers… The difficulty is that the value of field is updated for several times in a single event. I had worked on several issues before. But my colleague didn’t have much experience about it.
+Task      | Mentor him to figure out the root cause and provide a proper fix without cauing regression.
+Actions   | Introduced what is accounting defaulting and how it works, scenarios, relevant master data, parameters, etc. Shared my experience, the issues I worked before and how I solved them. Best practice, where is the entry points and where to set breakpoint. Find a proper case and compare it with the broken one to find the difference. Teach but not give the answer – do it yourself. Compare logs.
+Result    | He analyzed and reproduced the issue locally. Then figured out the root cause by himself. After discussing with me about his findings, finally he came up a solution.
+
+### 3.7 JPMC Year-end accounting Data Fix
+For questions like, tough customer?
+
+Section   | Description
+----------|------------------------------------------------------------------------------------------
+Situation | I worked on a very tough customer ticket for 2 weeks, 16 hours every day. There are lots of data issues in this customer’s system.
+Task      | Fix data issues.
+Action    | Created several specific DF scripts to fix all the blocking issues. After providing over 10 scripts to fix all the issues for this customer, remove the Go live block. Misconfiguration.
+Result    | Finally, created a generic javascript template for data fix. It reduces the development cost and the review effort, saves time for both supports and devs. Improve the team’s productivity. Escalate the issue to manager team, the consultant team and implementation should test thoroughly for each function.
+
+### 3.8 Trigger Tax API Call for BP - Enhancement or Bug
+For questions like, conflicts with your teammates, tough customer?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
 Situation | There was a time that I had a debate with our support colleague. The support team reported a Go Live Block issue on the behalf of customer. After investigating, I found it is not a bug, instead, it should be a function gap. We should treat it as new feature and follow the enhancement process. We should not follow the maintenance process, as we need more time to make it work. But the support didn’t agree, he mentioned that the deadline for go live is approaching, the customer cannot wait.
-Task | Solve the issue regardless it’s a bug or an enhancement.
-Action | After discussing with the support and confirmed with my manager, I agreed to fix the issue first. The support also agreed to follow the enhancement process later and submit all required documents.
-Result | Provide a fix to solve the customer issue. Followed the enhancement proces afterwards. In any situation, we should always keep commitment to our customer.
+Task      | Solve the issue regardless it’s a bug or an enhancement.
+Action    | After discussing with the support and confirmed with my manager, I agreed to fix the issue first. The support also agreed to follow the enhancement process later and submit all required documents.
+Result    | Provide a fix to solve the customer issue. Followed the enhancement proces afterwards. In any situation, we should always keep commitment to our customer.
+
+### 3.9 Data corruption on IR because of Data Fix
+For questions like, failure? lesson learned?
+
+Section   | Description
+----------|------------------------------------------------------------------------------------------
+Situation | ***Background: Use Javascript to fix data in production.*** Sometimes in production, the data on invoice or payment documents is incorrect because of code bugs, wrong configuration, mis-operations by users. In this case, we need to correct them. But we can’t modify them directly at database level. We need to add audit log to record this change. Some changes are complex not only one field. Can’t restart server with deploying new java codes. Instead, use javascript(**Rihno**) to call native java code.
+Task      | Working on a data fix to correct accounting values on invoice reconciliation documents.
+Action    | Wrong script to cause more errors. The plus “+” character is missing for the where condition. Since there was no warning or compile error in javascript, no way to find this issue. Have to write another script to correct more documents.
+Result    | What I learned is to be careful when using javascript for such critical operation. Updated the coding style to remind every developer be aware of this. Added plus character into the check list for code review. Print out the query when testing locally to double check it is correct.
 
 ### 3.10 Tax API(second chance to improve?)
 For the tax api feature, customers are not using it. We received some issues from them.
