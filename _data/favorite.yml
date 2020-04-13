@@ -74,6 +74,10 @@ bookmarks:
         description: Create useful .gitignore files for your project
         url: https://www.gitignore.io/
         favorite: true
+      - name: GeoGebra Math
+        description: Online math tools for graphing, geometry, etc.
+        url: https://www.geogebra.org/classic
+        favorite: true
   - category: Quick Reference
     links:
       - name: Rico's cheatsheets
