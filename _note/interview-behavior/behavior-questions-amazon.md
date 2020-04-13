@@ -12,44 +12,45 @@ tags: [Behavior, STAR Method]
 
 ## 1. Questions -> Examples
 
-No. | Questions       | Examples
-----|-----------------|----------------------------------------
-1   | Tight deadline  | [Tax API feature](#31-tax-api-feature), [P1 Performance Issue](#32-p1-performance-issue)
+No. | Questions                    | Examples
+----|------------------------------|----------------------------------------
+1   | Miss deadline/Tight deadline | [Tax API feature](#31-tax-api-feature), [P1 Performance Issue](#32-p1-performance-issue)
 2   | Challenging task/complex problem | [P1 Performance Issue](#32-p1-performance-issue), [GTS China Localization](#33-gts-china-localization), [Course player](#34-course-player)
 3   | Most interesting project/brand-new technique | [Course player](#34-course-player)
-4   | Disagree with your manager   | [Email Attachment](#35-email-attachment)
-5   | Conflict with your teammates | [Accounting Determination Rules](#37-accounting-determination-rules)
-6   | Act as leader                | [GTS China Localization](#33-gts-china-localization)
-7   | A good team player           | [Search Customization](#39-search-customization)
-8   | Help teammates               | [Accounting Defaulting](#36-accounting-defaulting)
-9   | Customer                     | [JPMC Data Fix](#38-jpmc-data-fix), [Accounting Determination Rules](#37-accounting-determination-rules)
-10  | Biggest mistake              | Data corruption on IR because of Data Fix
-11  | Second chance to improve     | Tax API (ambiguous error message, retry mechanism)
+4   | Disagree with your manager   | [Email Attachment](#36-email-attachment)
+5   | Conflict with your teammates | [Accounting Determination Rules](#38-accounting-determination-rules)
+6   | Act as leader                | [GTS China Localization](#33-gts-china-localization), [Online Video Sharing](#35-online-video-sharing)
+7   | A good team player           | [Search Customization](#310-search-customization)
+8   | Help teammates               | [Accounting Defaulting](#37-accounting-defaulting)
+9   | Customer                     | [JPMC Data Fix](#39-jpmc-data-fix), [Accounting Determination Rules](#38-accounting-determination-rules)
+10  | Second chance to improve     | [Online Video Sharing](#35-online-video-sharing), [Email Attachment](#36-email-attachment), [Tax API feature](#31-tax-api-feature)
+11  | Biggest mistake              | Data corruption on IR because of Data Fix
 
 ## 2. Examples -> Questions
 
 No. | Examples                                                             | Questions
 ----|----------------------------------------------------------------------|----------------------------------------
-1   | [Tax API feature](#31-tax-api-feature)                               | Tight deadline/Second chance to improve
+1   | [Tax API feature](#31-tax-api-feature)                               | Miss deadline/Tight deadline/Second chance to improve
 2   | [P1 Performance Issue](#32-p1-performance-issue)                     | Complex problem/Performance issue/Challenging issue
-3   | [GTS China Localization](#33-gts-china-localization)                 | Challenging task
+3   | [GTS China Localization](#33-gts-china-localization)                 | Act as leader, Challenging task.
 4   | [Course player](#34-course-player)                                   | Interesting project/brand-new technique
-5   | [Email Attachment](#35-email-attachment)                             | Disagree with manager
-6   | [Accounting Defaulting](#36-accounting-defaulting)                   | Team player/help teammate   
-7   | [Accounting Determination Rules](#37-accounting-determination-rules) | Conflict with your teammates
-8   | [JPMC Data Fix](#38-jpmc-data-fix)                                   | Challenging task
-9   | [Search Customization](#39-search-customization)                     | Team player
+5   | [Online Video Sharing](#35-online-video-sharing)                     | Second chance to improve/Act as leader
+6   | [Email Attachment](#36-email-attachment)                             | Disagree with manager
+7   | [Accounting Defaulting](#37-accounting-defaulting)                   | Team player/help teammate   
+8   | [Accounting Determination Rules](#38-accounting-determination-rules) | Conflict with your teammates
+9   | [JPMC Data Fix](#39-jpmc-data-fix)                                   | Challenging task
+10  | [Search Customization](#310-search-customization)                    | Team player
 
 ## 3. Example Details
 ### 3.1 Tax API Feature
-For questions like, System integration? Tight deadline?
+For questions like, Miss deadline? Tight deadline? System integration?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
-Situation | Previously, Ariba Buyer developed its own tax engine to calculate the tax on invoice. ***Background of tax/commodity code/ship to, etc.*** We call it native tax engine. All master data for tax calculation need to be maintained in Ariba Buyer. The more customers we have, the more challenges we have to face. We introduced the third-party tax provider to help us on the tax calculation. ***Background of external tax engine.*** Call tax API(SOAP, Web Service) to get the tax.
+Situation | Previously, Ariba Buyer developed its own tax engine to calculate the tax on invoice. ***Background of tax/commodity code/ship to, etc.*** We call it native tax engine. All master data for tax calculation need to be maintained in Ariba Buyer. The more customers we have, the more challenges we have to face. We introduced the third-party tax provider to help us on the tax calculation. ***Background of external tax engine.*** Call tax API(SOAP, Web Service) to get the tax. **Miss deadline because of P1 issue.**
 Task      | Figure out how the native tax engine works. Analyze the changes required for the new tax API. ***Automatic call, manual call.***
-Action    | Discussed with Product Manager and partner(Tax Provider) to see what information is required for tax api to calculate tax. ***Functionalities, error message, exception handling, retry mechanism, logging, Junit etc.***
-Result    | Finished all of the functions, the main process flow is completed. Feature toggle, parameter control.
+Action    | Discussed with Product Manager and partner(Tax Provider) to see what information is required for tax api to calculate tax. Analyze the gap, to se what needs to be enhanced. ***Functionalities, exception handling, retry mechanism, etc.***
+Result    | Finished all of the functional modules, make sure the main process flow is working properly. Feature toggle, parameter control. **Monthly release vs Weekly release**, error message, logging, Junit, etc can be postponed to weekly release.
 
 Second chance to improve?
 
@@ -109,7 +110,17 @@ Developer’s Qualification|Platform specified knowledge|Cross-platform knowledg
 License Fee(Per Year)|iOS $99; Android free|iOS developer account $99; Xamarin iOS: $999; Xamarin Android: $999
 Potential Risk|None|Uncertainty of Xamarin’s future.
 
-### 3.5 Email Attachment
+### 3.5 Online Video Sharing
+For questions like, improve the project if given a second chance? Act as leader/key person?
+
+ Section  | Description
+----------|------------------------------------------------------------------------------------------
+Situation | ***Background DePaul, CDM and Game Programming, etc.*** Teachers who teach **game programming and digital media** need an online application to share videos. **share level: public, internal, private(copy right)**. Teachers share video in a class or self defined group, students who receive the link can view the video. **Video Sharing Website=React + RESTful API(ASP.NET MVC - Web API)**. Two developers, I was responsible for the entire framework and the backend.
+Task      | Function Design, Database Design, Implementation with C# for RESTful API.
+Action    | Visited the director and some teachers to collect requirements. Design some main functions - login, upload, delete video, play, create topic, share topic. Design database - roles, users, permissions, courses, videos, topics. Create prototype with another developer. Demonstrated the POC to teachers to collect feedbacks for improvement, eg. **Copy from previous semester, expiration date, UI**.
+Result    | Completed the design and implemented the POC. Redefine some functions. **Why second chance?** Implement it with the concept of cloud computing, develop a **cloud-based application**. Object storage for video, metadata storage for database, load balancing for web server(API), CI/CD, Scale, etc.
+
+### 3.6 Email Attachment
 For questions like, disagree with manager?
 
 Section   | Description
@@ -119,7 +130,16 @@ Task      | Enable the attachment feature without overloading the mail server.
 Actions   | I investigated the performance locally and contacted the Ops team to confirm if any customer reported similar issue for email notification. And ops mentioned it did happened previously. Some emails are stuck in the mail server, and users have to wait for a longer time to receive the email notifications. The Ops team has to add more servers to handle this issue.
 Result    | I reported my findings to my manager and she agreed to not activate the feature by default and add parameter to safeguard it. If performance issue occurs, we can turn off this **feature or parameter**. No issue has been reported since this feature was released.
 
-### 3.6 Accounting Defaulting
+Second chance to improve? Monolithic architecture vs Micro-services architecture.
+
+Section   | Description
+----------|------------------------------------------------------------------------------------------
+Situation | See above ***Background of Email Notification and Email Attachment.***. `Issues`: 1.A monolith system is often deployed all at once, both frontend and backend code together, regardless of what is changed. 2. Not easy to scale. 3. Impact the performance of main function. 4. Maintained by different team.
+Task      | Convert Monolithic architecture vs Micro-services architecture.
+Action    | Create RFC or RESTful services, MessageQueue, Load balancing, CI/CD, etc.
+Result    |
+
+### 3.7 Accounting Defaulting
 For questions like, helped other teammates?
 
 Section   | Description
@@ -129,7 +149,7 @@ Task      | Mentor him to figure out the root cause and provide a proper fix wit
 Actions   | Introduced what is accounting defaulting and how it works, **scenarios, CEME master data, parameters, etc**. Shared my experience, the issues I worked before and how I solved them. Best practice, where is the entry points and where to set breakpoint. Find a proper case and compare it with the broken one to find the difference. Teach but not give the answer – do it yourself. Compare logs.
 Result    | He analyzed and reproduced the issue locally. Then figured out the root cause by himself. After discussing with me about his findings, finally he came up with a solution.
 
-### 3.7 Accounting Determination Rules
+### 3.8 Accounting Determination Rules
 For questions like, conflicts with your teammates? Customer Obsession?
 
 Section   | Description
@@ -139,7 +159,7 @@ Task      | Solve the issue regardless it’s a bug or an enhancement.
 Action    | After discussing with the support and confirmed with my manager, I agreed to enhance the ADR feature and fix the issue. The support also agreed to follow the enhancement process later and submit the enhancement request.
 Result    | Provided a fix to solve the customer issue. Followed the enhancement process afterwards. In any situation, we should always keep commitment to our customer.
 
-### 3.8 JPMC Data Fix
+### 3.9 JPMC Data Fix
 For questions like, tough issue?
 
 Section   | Description
@@ -149,7 +169,7 @@ Task      | Fix all data issues reported by customer.
 Action    | Quickly fixed the reported issue with **DF script**, but customer returned back and reported more other data issues. Created more DF scripts to fix all the these issues. Followed the internal workflow, cooperated with support and ops team to find the issue and deliver DF fix. Created **RCA(root cause analysis)** tickets for each issue.
 Result    | After providing over 10 scripts, all data issues are fixed. Finally, created a generic **DF javascript template** for data fix, including **exception handling, delay, retry, batch commit**. It reduces the development cost and the review effort, saves time for both supports and devs. Improve the team’s productivity. Escalate the issue to manager team, the consultant team should test thoroughly for each function before go-live.
 
-### 3.9 Search Customization
+### 3.10 Search Customization
 For questions like, you are a good team player?
 
 Section   | Description
@@ -159,7 +179,7 @@ Task      | Provide a solution to get latest customization from production envir
 Action    | Run the script to download customization. Import them into **Opengrok**, which is hosted in **Docker**.
 Result    | Public the service to all team members. Ask the RC team to automate the whole process.
 
-### 3.10 Data corruption on IR because of Data Fix(TBD)
+### 3.11 Data corruption on IR because of Data Fix(TBD)
 For questions like, failure? lesson learned?
 
 Section   | Description
@@ -169,7 +189,7 @@ Task      | Working on a data fix to correct accounting values on invoice reconc
 Action    | Wrong script to cause more errors. The plus “+” character is missing for the where condition. Since there was no warning or compile error in javascript, no way to find this issue. Have to write another script to correct more documents.
 Result    | What I learned is to be careful when using javascript for such critical operation. Updated the coding style to remind every developer be aware of this. Added plus character into the check list for code review. Print out the query when testing locally to double check it is correct.
 
-### 3.11 Currency rate issue( short-term value vs long-term value?)
+### 3.12 Currency rate issue( short-term value vs long-term value?)
 IR gets resubmitted on approval even though no changes are made to the IR
 Fix the issue at application level not platform level.  New rate is used when two money objects are added.
 
@@ -277,10 +297,14 @@ Amazon EMR is a service that uses Apache Spark and Hadoop, open-source framework
 *	What do you do in the work day?
 
 ## 8. Other BQs
-* Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome of that choice?
-* When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow from that experience?
+* Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome of that choice?  
+**Video sharing (Node.js, Springboot, ASP.net MVC).**
+* When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow from that experience?  
+**Tax API, integration issues. Provide fix and release with hotfix. Never trust the external system, error handling as more as possible.**
 * Describe a time you took the lead on a project.
+**GTS china localization. Online Video sharing.**
 * What did you do when you needed to motivate a group of individuals or promote collaboration on a particular project?
+**Act as leader, not boss. Work at the frontline. Take the hardest tasks**
 * How have you leveraged data to develop a strategy?
 
 ## 9. Referennces
