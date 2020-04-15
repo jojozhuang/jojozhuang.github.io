@@ -31,10 +31,10 @@ No. | Questions                    | Examples
 No. | Examples                                                             | Questions
 ----|----------------------------------------------------------------------|----------------------------------------
 1   | [Tax API feature](#31-tax-api-feature)                               | Miss deadline/Tight deadline/Second chance to improve
-2   | [P1 Performance Issue](#32-p1-performance-issue)                     | Complex problem/Performance issue/Challenging issue
+2   | [P1 Performance Issue](#32-p1-performance-issue)                     | Complex/Challenging/Dive deeper
 3   | [GTS China Localization](#33-gts-china-localization)                 | Act as leader, Challenging task.
-4   | [Course player](#34-course-player)                                   | Interesting project/brand-new technique
-5   | [Online Video Sharing](#35-online-video-sharing)                     | Second chance to improve/Act as leader
+4   | [Course player(DePaul)](#34-course-player)                           | Interesting project/brand-new technique
+5   | [Online Video Sharing(DePaul)](#35-online-video-sharing)             | Second chance to improve/Act as leader
 6   | [Email Attachment](#36-email-attachment)                             | Disagree with manager
 7   | [Accounting Defaulting](#37-accounting-defaulting)                   | Team player/help teammate   
 8   | [Accounting Determination Rules](#38-accounting-determination-rules) | Conflict with your teammates
@@ -118,7 +118,8 @@ For questions like, improve the project if given a second chance? Act as leader/
 Situation | ***Background DePaul, CDM and Game Programming, etc.*** Teachers who teach **game programming and digital media** need an online application to share videos. **share level: public, internal, private(copy right)**. Teachers share video in a class or self defined group, students who receive the link can view the video. **Video Sharing Website=React + RESTful API(ASP.NET MVC - Web API)**. Two developers, I was responsible for the entire framework and the backend.
 Task      | Function Design, Database Design, Implementation with C# for RESTful API.
 Action    | Visited the director and some teachers to collect requirements. Design some main functions - login, upload, delete video, play, create topic, share topic. Design database - roles, users, permissions, courses, videos, topics. Create prototype with another developer. Demonstrated the POC to teachers to collect feedbacks for improvement, eg. **Copy from previous semester, expiration date, UI**.
-Result    | Completed the design and implemented the POC. Redefine some functions. **Why second chance?** Implement it with the concept of cloud computing, develop a **cloud-based application**. Object storage for video, metadata storage for database, load balancing for web server(API), CI/CD, Scale, etc.
+Result    | Completed the design and implemented the POC. Redefine some functions. **Why second chance?** Implement it with the concept of cloud computing, develop a **cloud-based application**. Object storage for video, metadata storage for database, load balancing for web server(API), CDN, CI/CD, Scale, etc. AWS, including `S3 bucket, CloudFront, Elastic Transcoder(Convert Formats), RTMP for Media Streaming`(replace JW player streaming server).
+
 
 ### 3.6 Email Attachment
 For questions like, disagree with manager?
@@ -306,6 +307,35 @@ Amazon EMR is a service that uses Apache Spark and Hadoop, open-source framework
 * What did you do when you needed to motivate a group of individuals or promote collaboration on a particular project?
 **Act as leader, not boss. Work at the frontline. Take the hardest tasks**
 * How have you leveraged data to develop a strategy?
+
+## 9. System Design
+### 9.1 Elevator
+### 9.2 Find Command/File System
+```java
+class File {
+    String name = "";
+    boolean isFile = false;
+    HashMap<String, File> files = new HashMap<>();
+    String content = "";
+}
+```
+* [Design In-Memory File System](https://leetcode.com/articles/design-in-memory-file-system/)
+* [Amazon Onsite - Linux Find Command](https://leetcode.com/discuss/interview-question/369272/Amazon-or-Onsite-or-Linux-Find-Command)
+
+### 9.3 Email Notification System
+MessageQueue, Decouple,
+AWS SQS(Simple Queue Service):
+* Standard Queues - a messsage is delivered at least once. Occasionally more than one copy of message might be delivered out of order.
+* FIFO Queues - FIFO delivery and exactly-once processing.
+
+AWS SNS(Simple Notification Service):
+* Provides `topic`s for high-throughput, push-based, many-to-many messaging
+* Send to Amazon SQS queues, AWS Lambda functions, any `HTTP endpoint`.
+* Send notifications to end users using mobile push, `SMS`(text message and email).
+
+SQS vs SNS:
+* SNS - Push
+* SQS - Poll
 
 ## 9. Referennces
 * [Leadership Principles](https://www.amazon.jobs/en/principles)
