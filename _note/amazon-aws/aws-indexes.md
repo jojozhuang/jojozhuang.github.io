@@ -5,7 +5,7 @@ title: "AWS - Indexes"
 index: 9550
 subcategory: amazon-aws
 date: 2017-08-04
-tags: [AWS]
+tags: [AWS, AWS Components]
 ---
 
 > Amazon AWS Document Indexes
@@ -32,6 +32,31 @@ tags: [AWS]
 * [AWS Whitepapers & Guides](https://aws.amazon.com/whitepapers)
 
 ## 4. Comparison
+
+## 4.0 AWS Components
+
+ Name      | Short Description              | Usage
+-----------|--------------------------------|-------------------
+S3         | Object-based Storage           | Object Storage(files, pictures, videos, etc)
+EC2        | Elastic Computing Service      | Computing service for applications
+EBS        | Elastic Block Store            | Block storage for ec2
+IAM        | Identity and Access Management | Access control, user, role, group, permissions
+CloudWatch | logging serivce                | for performance
+CloudTrail | logging service                | for auditing
+Route53    | Domain Service                 | Domain, Routing Strategy(Simple, Weighted, ,Latency, Failover, Geolocation, etc)
+CloudFront | CDN Service                    | Improving access speed
+ELB        | Elastic Load Balancer          | Load balancing, Application, NetWork, Classic
+VPC        | Virtual Private Cloud          | Direct Connect, VPC Endpoint
+Aurora     | Relational Database            | Relational Database
+AWS RDS    | Relational Database            | PostgreSQL, MySQL, MariaDB, Oracle, SQL Server
+DynamoDB   | No-SQL database                | Key-value database
+Cassandra  | No-SQL database                | Wide column database
+SQS        | Simple Queue Service           | Message queuing service(Kafka), Standard Queue(deliver at least once); FIFO(guarantee once)
+SNS        | Simple Notification Service    | Notification, text, email.
+SWF        | Simple Workflow Service        | Media processing, web application back-ends, business process workflows, etc
+Elastic Beanstalk  |   |  
+Lambda  |   |  
+
 ### 4.1 Storage
 S3 features:
 * S3 is Object-based

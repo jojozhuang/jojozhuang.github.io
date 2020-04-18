@@ -5,7 +5,7 @@ title: "Grokking the System Design Interview"
 index: 9652
 subcategory: interview-system-design
 date: 2016-03-02
-tags: [System Design]
+tags: [System Design, TinyUrl, Instagram, Dropbox, Facebook Messager, Slack, Twitter, Youtube, Newsfeed, Yelp, Uber, Lyft]
 ---
 
 > Note for Grokking the System Design Interview.
