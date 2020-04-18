@@ -14,6 +14,7 @@ tags: [Thread Pool, BlockingQueue]
 Implement a thread pool with blocking queue. Use `BlockingQueue` to store the tasks from client. The `Worker` will take one task from BlockingQueue and run it.
 
 ## 2. Solution
+Customized ThreadPool.
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -26,20 +27,21 @@ public class ThreadPool {
     private boolean isStopped;
     private int capacity;
 
-    public ThreadPool(int numOfThreads){
+    public ThreadPool(int numOfThreads) {
         isStopped = false;
         capacity = 100;
         bq = new ArrayBlockingQueue(capacity);
         threads = new ArrayList<>();
-        for (int i = 0; i < numOfThreads; i++){
-            threads.add(new Worker(bq));
+        for (int i = 0; i < numOfThreads; i++) {
+            threads.add(new Worker(i + 1, bq));
         }
         for (Worker worker : threads) {
             worker.start();
         }
+        System.out.println("Thread pool is ready...");
     }
 
-    public synchronized void execute(Runnable task) throws Exception{
+    public synchronized void execute(Runnable task) throws Exception {
         if (this.isStopped) {
             throw new IllegalStateException("ThreadPool is stopped");
         }
@@ -47,7 +49,7 @@ public class ThreadPool {
         this.bq.put(task);
     }
 
-    public synchronized void shutdown(){
+    public synchronized void shutdown() {
         try {
             Thread.sleep(20000);
         } catch (InterruptedException e) {
@@ -63,11 +65,12 @@ public class ThreadPool {
 Worker extends the Thread class. Call BlockingQueue.take() method to get task and execute it.
 ```java
 class Worker extends Thread {
-
-    private BlockingQueue<Runnable> bq;
+    private int id;
+    private BlockingQueue<Task> bq;
     private boolean isStopped;
 
-    public Worker(BlockingQueue bq){
+    public Worker(int id, BlockingQueue bq) {
+        this.id = id;
         this.bq = bq;
         this.isStopped = false;
     }
@@ -75,8 +78,9 @@ class Worker extends Thread {
     public void run(){
         while(!isStopped()){
             try {
-                Runnable runnable = bq.take();
-                runnable.run();
+                Task task = bq.take();
+                System.out.println("Worker #" + id + " is working on the task: " + task.getName());
+                task.run();
             } catch(Exception e){
                 //log or otherwise report exception,
                 //but keep worker thread alive.
@@ -100,17 +104,46 @@ class Worker extends Thread {
     }
 }
 ```
-Example to use ThreadPool.
+Real task needs to be executed.
+```java
+public class Task implements Runnable {
+    private String name;
+    private Random random;
+
+    public Task(String name) {
+        this.name = name;
+        this.random = new Random();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void run() {
+        try {
+            Long duration = (long) (random.nextInt(10));
+            System.out.println("Executing : " + name + " at " + LocalDateTime.now().toString());
+            TimeUnit.SECONDS.sleep(duration);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+Create a thread pool with 2 workers and create 5 tasks to be executed by the thread pool.
 ```java
 public class ThreadPoolExample {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ThreadPool threadPool = new ThreadPool(2);
 
-        for (int i = 1; i <= 5; i++)
-        {
-            Task task = new Task("Task " + i);
+        List<Task> list = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            Task task = new Task("Task" + i);
+            list.add(task);
             System.out.println("Created : " + task.getName());
+        }
+
+        for (Task task : list) {
             try {
                 threadPool.execute(task);
             } catch (Exception e) {
@@ -123,16 +156,22 @@ public class ThreadPoolExample {
 ```
 Output.
 ```raw
-Created : Task 1
-Created : Task 2
-Created : Task 3
-Created : Task 4
-Created : Task 5
-Executing : Task 2 at 2019-03-27T18:45:03.941
-Executing : Task 1 at 2019-03-27T18:45:03.941
-Executing : Task 3 at 2019-03-27T18:45:03.989
-Executing : Task 4 at 2019-03-27T18:45:08.994
-Executing : Task 5 at 2019-03-27T18:45:08.994
+Thread pool is ready...
+Created : Task1
+Created : Task2
+Created : Task3
+Created : Task4
+Created : Task5
+Worker #2 is working on the task: Task2
+Worker #1 is working on the task: Task1
+Executing : Task2 at 2020-04-17T21:24:56.042
+Executing : Task1 at 2020-04-17T21:24:56.042
+Worker #1 is working on the task: Task3
+Executing : Task3 at 2020-04-17T21:24:56.099
+Worker #2 is working on the task: Task4
+Executing : Task4 at 2020-04-17T21:25:04.100
+Worker #1 is working on the task: Task5
+Executing : Task5 at 2020-04-17T21:25:05.102
 ```
 
 ## 3. Source Files

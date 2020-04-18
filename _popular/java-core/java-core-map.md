@@ -386,6 +386,11 @@ private static void commonOperations() {
     System.out.println("Closest floor entry than 5 is: "+ treeMap1.floorEntry(5));
     System.out.println("Closest ceiling entry than 4 is: " + treeMap1.ceilingEntry(4));
 
+    // lower(n)   smaller than the given element
+    // floor(n)   smaller than or equal to the given element
+    // ceiling(n) larger than or equal to the given element
+    // higher(n)  larger than the given element
+
     // poll first and last entries
     System.out.println("First entry(Polled) is: " + treeMap1.pollFirstEntry());
     System.out.println("Last entry(Polled) is: " + treeMap1.pollLastEntry());

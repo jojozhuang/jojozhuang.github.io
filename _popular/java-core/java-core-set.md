@@ -269,6 +269,11 @@ private static void commonOperations() {
     System.out.println("Closest floor element than 5 is: "+ treeSet1.floor(5));
     System.out.println("Closest ceiling element than 4 is: " + treeSet1.ceiling(4));
 
+    // lower(n)   smaller than the given element
+    // floor(n)   smaller than or equal to the given element
+    // ceiling(n) larger than or equal to the given element
+    // higher(n)  larger than the given element
+
     // poll first and last entries
     System.out.println("First element(Polled) is: " + treeSet1.pollFirst());
     System.out.println("Last element(Polled) is: " + treeSet1.pollLast());
