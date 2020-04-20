@@ -103,6 +103,10 @@ bookmarks:
         description: Edge servers are a primary component of making the Internet fast.
         url: https://www.cloudflare.com/learning/cdn/glossary/edge-server/
         type: webpage
+      - name: Exactly-once Semantics are Possible-Here’s How Kafka Does it
+        description: Exactly-once Semantics are Possible - Here’s How Kafka Does it
+        url: https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/
+        type: webpage
   - category: Frontend
     links:
       - name: Front-end Developer Handbook 2019

@@ -46,7 +46,7 @@ We cannot find a way to divide the set of nodes into two independent subsets.
 ### 1.2 Solution - Graph Coloring
 For each node
 * If has not been colored, color it to RED(1).
-* Color its neighbors with a different color RED(1) to BLUE(-1) or BLUE(-1) to RED(-1).
+* Color its neighbors with a different color RED(1) to BLUE(-1) or BLUE(-1) to RED(1).
 
 If we can finish the coloring then the graph is bipartite. All red nodes on the left no connections between them and all blues nodes on the right, again no connections between them. red and blue nodes are neighbors.
 
@@ -60,7 +60,7 @@ public boolean isBipartite(int[][] graph) {
     }
 
     int n = graph.length;
-    int[] colors = new int[n]; // 0: initial, not colored, 1: colored to blue, -1: colored to red.
+    int[] colors = new int[n]; // 0: initial, not colored, 1: colored to red, -1: colored to blue.
 
     for (int i = 0; i < n; i++) { // This graph might be a disconnected graph. So check each unvisited node.
         if (colors[i] == 0 && !dfs(graph, colors, 1, i)) {
@@ -117,7 +117,7 @@ public boolean possibleBipartition(int N, int[][] dislikes) {
     }
 
     List<Integer>[] graph = new ArrayList[N];
-    int[] colors = new int[N]; // 0: initial, not colored, 1: colored to blue, -1: colored to red.
+    int[] colors = new int[N]; // 0: initial, not colored, 1: colored to red, -1: colored to blue.
 
     for (int i = 0; i < N; i++) {
         graph[i] = new ArrayList<Integer>();
