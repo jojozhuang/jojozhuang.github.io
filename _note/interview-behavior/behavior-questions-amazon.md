@@ -12,34 +12,43 @@ tags: [Behavior, STAR Method]
 
 ## 1. Questions -> Examples
 
-No. | Questions                    | Examples
-----|------------------------------|----------------------------------------
-1   | Miss deadline/Tight deadline | [Tax API feature](#31-tax-api-feature), [P1 Performance Issue](#32-p1-performance-issue)
-2   | Challenging task/complex problem | [P1 Performance Issue](#32-p1-performance-issue), [GTS China Localization](#33-gts-china-localization), [Course player](#34-course-player)
-3   | Most interesting project/brand-new technique | [Course player](#34-course-player)
-4   | Disagree with your manager   | [Email Attachment](#36-email-attachment)
-5   | Conflict with your teammates | [Accounting Determination Rules](#38-accounting-determination-rules)
-6   | Act as leader                | [GTS China Localization](#33-gts-china-localization), [Online Video Sharing](#35-online-video-sharing)
-7   | A good team player           | [Search Customization](#310-search-customization)
-8   | Help teammates               | [Accounting Defaulting](#37-accounting-defaulting)
-9   | Customer                     | [JPMC Data Fix](#39-jpmc-data-fix), [Accounting Determination Rules](#38-accounting-determination-rules)
-10  | Second chance to improve     | [Online Video Sharing](#35-online-video-sharing), [Email Attachment](#36-email-attachment), [Tax API feature](#31-tax-api-feature)
-11  | Biggest mistake              | Data corruption on IR because of Data Fix
+No. | Questions                            | Examples
+----|--------------------------------------|-----------------------------------------------------------------------------------
+1   | Tight Deadline/Stressful situation   | [Tax API feature](#31-tax-api-feature), [JPMC Data Fix](#39-jpmc-data-fix)
+2   | Complex problem/Decision wo data     | [P1 Performance Issue](#32-p1-performance-issue)
+3   | Most challenging task/Proud of       | [GTS China Localization](#33-gts-china-localization), [Course player](#34-course-player)
+4   | Interesting project/New technologies | [Course player](#34-course-player)
+5   | Disagree with your manager           | [Email Attachment](#36-email-attachment)
+6   | Conflict with your teammates         | [Accounting Determination Rules](#38-accounting-determination-rules)
+7   | Act as leader                        | [GTS China Localization](#33-gts-china-localization), [Online Video Sharing](#35-online-video-sharing)
+8   | A good team player                   | [Search Customization](#310-search-customization)
+9   | Help teammates                       | [Accounting Defaulting](#37-accounting-defaulting)
+10  | Customer                             | [JPMC Data Fix](#39-jpmc-data-fix), [Accounting Determination Rules](#38-accounting-determination-rules)
+11  | Second chance to improve             | [Online Video Sharing](#35-online-video-sharing), [Email Attachment](#36-email-attachment), [Tax API feature](#31-tax-api-feature)
+12  | Commit a mistake                     | [Data Corruption](#311-data-corruption)  
+13  | Earn teammate's trust                | [GTS China Localization](#33-gts-china-localization)
+14  | Invent something                     | [Search Customization](#310-search-customization)
+15  | Take important decision wo. data     | AWS Architect Certificate
+16  | Simple method solve big problem      | Create customization for account defaulting, ADR(Accounting Determination Rule).  
 
 ## 2. Examples -> Questions
 
 No. | Examples                                                             | Questions
-----|----------------------------------------------------------------------|----------------------------------------
-1   | [Tax API feature](#31-tax-api-feature)                               | Miss deadline/Tight deadline/Second chance to improve
-2   | [P1 Performance Issue](#32-p1-performance-issue)                     | Complex/Challenging/Dive deeper
-3   | [GTS China Localization](#33-gts-china-localization)                 | Act as leader, Challenging task.
-4   | [Course player(DePaul)](#34-course-player)                           | Interesting project/brand-new technique
+----|----------------------------------------------------------------------|--------------------------------------------------------
+1   | [Tax API feature](#31-tax-api-feature)                               | Tight deadline/Second chance to improve
+2   | [P1 Performance Issue](#32-p1-performance-issue)                     | Complex/Dive deeper
+3   | [GTS China Localization](#33-gts-china-localization)                 | Act as leader/Challenging task/Earn trust/Proud of
+4   | [Course player(DePaul)](#34-course-player)                           | Interesting project/New technologies
 5   | [Online Video Sharing(DePaul)](#35-online-video-sharing)             | Second chance to improve/Act as leader
 6   | [Email Attachment](#36-email-attachment)                             | Disagree with manager
 7   | [Accounting Defaulting](#37-accounting-defaulting)                   | Team player/help teammate   
-8   | [Accounting Determination Rules](#38-accounting-determination-rules) | Conflict with your teammates
-9   | [JPMC Data Fix](#39-jpmc-data-fix)                                   | Challenging task
-10  | [Search Customization](#310-search-customization)                    | Team player
+8   | [Accounting Determination Rules](#38-accounting-determination-rules) | Conflict with your teammates/Customer
+9   | [JPMC Data Fix](#39-jpmc-data-fix)                                   | Tight Deadline/Customer
+10  | [Search Customization](#310-search-customization)                    | Invention/Team player
+11  | [Data Corruption](#311-data-corruption)                              | Commit a mistake
+
+* [Amazon Behavioral questions - Leadership Principles - LP](https://leetcode.com/discuss/interview-question/437082/Amazon-Behavioral-questions-or-Leadership-Principles-or-LP)
+* [Interview Questions](https://www.youtube.com/channel/UCw0uQHve23oMWgQcTTpgQsQ/playlists)
 
 ## 3. Example Details
 ### 3.1 Tax API Feature
@@ -69,7 +78,7 @@ Section   | Description
 Situation | A customer reported a P1 performance issue(**Custom field**). The issue is that the end user has to wait for 2 or 3 minutes after submitting the invoice. Normally, it only takes few seconds. The customer can hardly use the system. The issue couldn’t be reproduced locally. ***Background of customization/customized field, etc.*** After analyzing the logs, I identify the bottle neck, getInvalidFields method, validation before submission. However, I couldn’t find out which field caused this issue from the existing log.  
 Task      | Identify the root cause, provide the solution to solve the performance issue.  
 Action    | I added new logging function(summary and detail level) to track how much time is spent during validation. I used **Splunk** to search these logs from production environment. Export to csv file and filter, clear the data, sort them by time in descending order. Finally, found the root cause. The customer configured two custom fields at invoice line level. ***Background of header level/line level, etc.*** But actually, they should be defined at header level according to their business logic.  
-Result    | Suggest the customer to move these two custom fields to header level and the problem is solved.
+Result    | Suggest the customer to move these two custom fields to header level and the problem is solved. Asked support to update the guideline of creating customized fields.
 
 ### 3.3 GTS China Localization
 For questions like, Act as leader? Challenging task?
@@ -161,13 +170,13 @@ Action    | After discussing with the support and confirmed with my manager, I a
 Result    | Provided a fix to solve the customer issue. Followed the enhancement process afterwards. In any situation, we should always keep commitment to our customer.
 
 ### 3.9 JPMC Data Fix
-For questions like, tough issue?
+For questions like, tight deadline?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
 Situation | ***Background: Use Javascript to fix data in production.*** Sometimes in production, the data on invoice or payment documents is incorrect because of code bugs, wrong configuration, mis-operations by users. In this case, we need to correct them. But we can’t modify them directly at database level. We need to add audit log to record this change. Some changes are complex not only one field. Can’t restart server with deploying new java codes. Instead, use javascript(**Rihno**) to call native java code. I worked on a very tough customer ticket for **2 weeks, 16 hours every day**. There are lots of data issues in this customer’s system. At very beginning, this customer reported that the **Purchase Unit is not defaulted** correctly on invoice for some company codes.
 Task      | Fix all data issues reported by customer.
-Action    | Quickly fixed the reported issue with **DF script**, but customer returned back and reported more other data issues. Created more DF scripts to fix all the these issues. Followed the internal workflow, cooperated with support and ops team to find the issue and deliver DF fix. Created **RCA(root cause analysis)** tickets for each issue.
+Action    | Quickly fixed the reported issue with **DF script**, but customer returned back and reported more other data issues. **Effort was under-estimated previously, couldn't finish other tasks on hand.** Customer required us to fix all issues as the invoices need to be processed before end of year. Talked to manager to re-schedule my rest tasks. **Worked on the issue during the Christmas holiday**. Followed the internal workflow, cooperated with support and ops team to find the issues. Created **RCA(root cause analysis)** tickets for each issue. Created more DF scripts to fix all the these issues.
 Result    | After providing over 10 scripts, all data issues are fixed. Finally, created a generic **DF javascript template** for data fix, including **exception handling, delay, retry, batch commit**. It reduces the development cost and the review effort, saves time for both supports and devs. Improve the team’s productivity. Escalate the issue to manager team, the consultant team should test thoroughly for each function before go-live.
 
 ### 3.10 Search Customization
@@ -180,15 +189,15 @@ Task      | Provide a solution to get latest customization from production envir
 Action    | Run the script to download customization. Import them into **Opengrok**, which is hosted in **Docker**.
 Result    | Public the service to all team members. Ask the RC team to automate the whole process.
 
-### 3.11 Data corruption on IR because of Data Fix(TBD)
+### 3.11 Data Corruption
 For questions like, failure? lesson learned?
 
 Section   | Description
 ----------|------------------------------------------------------------------------------------------
 Situation | ***Background: Use Javascript to fix data in production.*** Sometimes in production, the data on invoice or payment documents is incorrect because of code bugs, wrong configuration, mis-operations by users. In this case, we need to correct them. But we can’t modify them directly at database level. We need to add audit log to record this change. Some changes are complex not only one field. Can’t restart server with deploying new java codes. Instead, use javascript(**Rihno**) to call native java code.
-Task      | Working on a data fix to correct accounting values on invoice reconciliation documents.
-Action    | Wrong script to cause more errors. The plus “+” character is missing for the where condition. Since there was no warning or compile error in javascript, no way to find this issue. Have to write another script to correct more documents.
-Result    | What I learned is to be careful when using javascript for such critical operation. Updated the coding style to remind every developer be aware of this. Added plus character into the check list for code review. Print out the query when testing locally to double check it is correct.
+Task      | Working on a data fix for a customer to correct accounting values on the **PO-based** invoice documents.
+Action    | Logon to production to check the issue. Wrote script for data fix and tested it locally. Publish to production and asked Ops team to run. **Contract-based invoices are also updated because of the wrong script, they were corrupted.**. In the query, the plus “+” character is missing for the where condition. Since there was no warning or compile error in javascript, no way to find this issue. Had to write another script to correct these documents. Analyzed how many invoices were impacted. Test the query in production first. **Spent the whole weekend on this issue. Monitor the result and wait for confirmation from Ops and customer.**
+Result    | Fixed all data issues. What I learned is to be careful when using javascript for such critical operation. Updated the coding style to remind every developer be aware of this. Added plus character into the check list for code review. Print out the query when testing locally to double check it is correct.
 
 ### 3.12 Currency rate issue( short-term value vs long-term value?)
 IR gets resubmitted on approval even though no changes are made to the IR
@@ -307,6 +316,8 @@ Amazon EMR is a service that uses Apache Spark and Hadoop, open-source framework
 * What did you do when you needed to motivate a group of individuals or promote collaboration on a particular project?
 **Act as leader, not boss. Work at the frontline. Take the hardest tasks**
 * How have you leveraged data to develop a strategy?
+
+## 9. AWS
 
 ## 9. System Design
 ### 9.1 Elevator
