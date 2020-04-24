@@ -15,9 +15,9 @@ mathjax: true
 ### 1.1 LRU Cache Algorithm
 Least Recently Used(LRU) cache algorithm keeps recently used items near the front of cache. Whenever a new item is accessed, the LRU places it at the head of the cache. When the cache reaches to its capacity, items that have been accessed less recently will be removed starting from the end of the cache.
 ### 1.2 How It Works?
-The LRU cache provides two methods: `add` and `get`.
-* add(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
-* get(key) - If the key doesn't exist in the cache, return the minimum value of Integer. Otherwise, return the value of the key and move this item to the head of the cache.
+The LRU cache provides two methods: `put` and `get`.
+* put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+* get(key) - Get the value of the key and move this item to the head of the cache. If the key doesn't exist in the cache, return -1.
 
 The following diagram illustrates how LRU works.
 ![image](/assets/images/dsa/1116/lru.png){:width="800px"}  
@@ -36,17 +36,17 @@ Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
 * Only two dummy nodes, head and tail.
 * Notice that there is another HashMap which stores the value-node pair.
 
-2) Add (Cache is not full)
+2) Put (Cache is not full)
 ![image](/assets/images/dsa/1116/add1.png)
 * Create new node for the given value and insert it to the head of the linked list.
-* Add the new node to HashMap with the given value as key.
+* Put the new node to HashMap with the given value as key.
 * Size is increased by one.
 
-3) Add (Cache is full)
+3) Put (Cache is full)
 ![image](/assets/images/dsa/1116/add2.png)
 * Remove the last element(The one tail.prev is pointing) from the list.
 * Create new node for the given value and insert it to the head of the linked list.
-* Add the new node to HashMap with the given value as key.
+* Put the new node to HashMap with the given value as key.
 * Size remains unchanged.
 
 4) Get
@@ -61,39 +61,42 @@ The following code is the implementation of LRU based on custom nodes. The node 
 ```java
 public class Node {
     public int key;
-    public int value;
+    public int val;
     public Node prev;
     public Node next;
 
-    public Node(int key, int value) {
+    public Node(int key, int val) {
         this.key = key;
-        this.value = value;
+        this.value = val;
         this.prev = null;
         this.next = null;
     }
 }
 ```
-Following is the LRU class which implements the `add()` and `get()` methods.
+Following is the LRU class which implements the `put()` and `get()` methods.
 ```java
 public class LRU {
     private int capacity;
     private HashMap<Integer, Node> map; // key, node
     private Node head;                  // The latest accessed element
     private Node tail;                  // The least recently used element
-    private final int MAX = Integer.MAX_VALUE;
-    private final int MIN = Integer.MIN_VALUE;
 
     public LRU(int capacity) {
         this.capacity = capacity;
-        this.map = new HashMap<Integer, Node>();
-        this.head = new Node(this.MAX, this.MAX);
-        this.tail = new Node(this.MIN, this.MIN);
+        this.map = new HashMap<>();
+        this.head = new Node(-1,-1);
+        this.tail = new Node(-1,-1);
         head.next = tail;
         tail.prev = head;
     }
 
-    public void add(int key, int value) {
+    public void put(int key, int val) {
         if (map.containsKey(key)) {
+            Node node = map.get(key);
+            node.val = val;
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+            moveToHead(node);
             return;
         }
 
@@ -103,27 +106,27 @@ public class LRU {
             tail.prev.next = tail;
         }
 
-        Node newNode = new Node(key, value);
-        map.put(key, newNode);
+        Node node = new Node(key, val);
+        map.put(key, node);
 
         // move new node to head
-        moveToHead(newNode);
+        moveToHead(node);
     }
 
     public int get(int key) {
         if (!map.containsKey(key)) {
-            return this.MIN;
+            return -1;
         }
 
         // remove current
-        Node current = map.get(key);
-        current.prev.next = current.next;
-        current.next.prev = current.prev;
+        Node node = map.get(key);
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
 
         // move current node to head
-        moveToHead(current);
+        moveToHead(node);
 
-        return map.get(key).value;
+        return node.val;
     }
 
     private void moveToHead(Node node) {
@@ -135,7 +138,7 @@ public class LRU {
 }
 ```
 Time complexity:
-* add() - $O(1)$
+* put() - $O(1)$
 * get() - $O(1)$
 
 Space complexity:
@@ -148,16 +151,20 @@ public class LRUDeque {
     private int capacity;
     private HashMap<Integer, Integer> map; // key, value
     private Deque<Integer> deque;          // key
-    private final int MIN = Integer.MIN_VALUE;
 
     public LRUDeque(int capacity) {
         this.capacity = capacity;
-        this.map = new HashMap<Integer, Integer>();
-        this.deque = new LinkedList<Integer>();
+        this.map = new HashMap<>();
+        this.deque = new LinkedList<>();
     }
 
-    public void add(int key, int value) {
+    public void put(int key, int val) {
         if (map.containsKey(key)) {
+            map.put(key, val);
+            // remove current
+            deque.remove(key); // equivalent to removeFirstOccurrence(), performance issue, O(n)
+            // move it to head
+            deque.addFirst(key);
             return;
         }
 
@@ -167,14 +174,14 @@ public class LRUDeque {
         }
 
         // add to map
-        map.put(key, value);
+        map.put(key, val);
         // add to the head of deque
         deque.addFirst(key);
     }
 
     public int get(int key) {
         if (!map.containsKey(key)) {
-            return this.MIN;
+            return -1;
         }
 
         // remove current
@@ -187,28 +194,31 @@ public class LRUDeque {
 }
 ```
 Time complexity:
-* add() - $O(1)$
+* put() - $O(1)$
 * get() - $O(n)$
 
 Space complexity:
 * $O(n)$, 2*N, N is the number of nodes
 
 ### 2.5 Testing
-Create an instance of LRU class and call add() and get() methods. The change of the list is described in the inline comments.
+Create an instance of LRU class and call put() and get() methods. The change of the list is described in the inline comments.
 ```java
 LRU lru = new LRU(5); //capacity = 5
-lru.add(1,1); // values = [1]
-lru.add(2,2); // values = [2,1]
-lru.add(3,3); // values = [3,2,1]
+lru.put(1,1); // values = [1]
+lru.put(2,2); // values = [2,1]
+lru.put(3,3); // values = [3,2,1]
 lru.get(1);   // values = [1,3,2], return 1
 lru.get(3);   // values = [3,1,2], return 3
 lru.get(3);   // values = [3,1,2], return 3
-lru.add(4,4); // values = [4,3,1,2]
-lru.add(5,5); // values = [5,4,3,1,2], cache is full
-lru.add(6,6); // values = [6,5,4,3,1]
+lru.put(4,4); // values = [4,3,1,2]
+lru.put(5,5); // values = [5,4,3,1,2], cache is full
+lru.put(6,6); // values = [6,5,4,3,1], remove least recently visited element, 2
 lru.get(4);   // values = [4,6,5,3,1], return 4
-lru.add(7,7); // values = [7,4,6,5,3]
-lru.add(8,8); // values = [8,7,4,6,5]
+lru.put(7,7); // values = [7,4,6,5,3], remove 1
+lru.put(7,2); // values = [2,4,6,5,3], element with key=7 is updated
+lru.get(7);   // keys = [7,4,6,5,3], values = [2,4,6,5,3], return 2
+lru.put(3,9); // keys = [3,7,4,6,5], values = [9,2,4,6,5], move key=3 to head
+lru.get(3);   // keys = [3,7,4,6,5], values = [9,2,4,6,5], return 9
 ```
 
 ## 3. Source Files
