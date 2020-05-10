@@ -22,7 +22,8 @@ Example 2:
     Input:  [2,3,5,7], knapsack capacity=12
     Output:  12
 ```
-### 1.1 Solution with Two Dimensional Array
+### 1.1 Solution with Boolean Array
+Define a two-dimensional boolean array.
 ```java
 public int knapsack(int[] A, int m) {
     boolean[][] dp = new boolean[A.length + 1][m + 1];
@@ -60,10 +61,9 @@ Item\\Size | 0    | 1     |  2    | 3     | 4     | 5     | 6     | 7     | 8   
 8          | true | false | false | true  | true  | false | false | true  | true  | false | false
 5          | true | false | false | true  | true  | true  | false | true  | true  | true  | false
 
-### 1.2 Solution with Two One-dimensional Arrays
-The above solution can be optimized with two rotated arrays.
+The above solution can be optimized with two one-dimensional arrays. Space complexity is reduced to O(m).
 ```java
-public int knapsack2(int[] A, int m) {
+public int knapsack12(int[] A, int m) {
     boolean[] dp = new boolean[m + 1];
     boolean[] dp2 = new boolean[m + 1];
     dp[0] = true;
@@ -77,7 +77,9 @@ public int knapsack2(int[] A, int m) {
                 dp[j] = dp2[j];
             }
         }
-        dp2 = dp.clone();
+        for (int j = 0; j <= m; j++) {
+            dp2[j] = dp[j];
+        }
     }
 
     for (int i = m; i >= 0; i--) {
@@ -92,9 +94,87 @@ public int knapsack2(int[] A, int m) {
 * Time Complexity: O(n*m)
 * Space Complexity: O(2m)->O(m)
 
-### 1.3 Solution with One One-dimensional Array
+### 1.2 Solution with Integer Array
+Instead of using boolean array, we can use integer array as well.
 ```java
-public int knapsack(int[] A, int m) {
+public int knapsack2(int[] A, int m) {
+    // maximum weight can be filled for the every capacity
+    int[][] dp = new int[A.length + 1][m + 1];
+
+    for (int i = 1; i <= A.length; i++) {
+        for (int j = 1; j <= m; j++) {
+            dp[i][j] = dp[i - 1][j];
+            if (j - A[i - 1] >= 0) {
+                dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - A[i - 1]] + A[i - 1]);
+            }
+        }
+    }
+
+    return dp[A.length][m];
+}
+```
+* Time Complexity: O(n*m)
+* Space Complexity: O(n*m)
+
+Values of the dp array for input A=[3,4,8,5] and m=10. The answer is 9 and the selected items are 4 and 5.
+
+Item\\Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+-----------|---|---|---|---|---|---|---|---|---|---|----
+3          | 0 | 0 | 0 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3
+4          | 0 | 0 | 0 | 3 | 4 | 4 | 4 | 7 | 7 | 7 | 7
+8          | 0 | 0 | 0 | 3 | 4 | 4 | 4 | 7 | 8 | 8 | 8
+5          | 0 | 0 | 0 | 3 | 4 | 5 | 5 | 7 | 8 | 9 | 9
+
+Let's try to optimize the above solution with one-dimensional array.
+```java
+// incorrect
+public int knapsack22(int[] A, int m) {
+    // maximum weight can be filled for the every capacity
+    int[] dp = new int[m + 1];
+
+    for (int i = 1; i <= A.length; i++) {
+        for (int j = 0; j <= m; j++) {
+            if (j - A[i - 1] >= 0) {
+                dp[j] = Math.max(dp[j], dp[j - A[i - 1]] + A[i - 1]);
+            }
+        }
+    }
+
+    return dp[m];
+}
+```
+This solution returns incorrect result 10. The problem is, for each item, it is picked up for not only once.
+
+Item\\Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+-----------|---|---|---|---|---|---|---|---|---|---|----
+3          | 0 | 0 | 0 | 3 | 3 | 3 | 6 | 6 | 6 | 9 | 9
+4          | 0 | 0 | 0 | 3 | 4 | 4 | 6 | 7 | 8 | 9 | 10
+8          | 0 | 0 | 0 | 3 | 4 | 4 | 6 | 7 | 8 | 9 | 10
+5          | 0 | 0 | 0 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+To make it work, we have to iterate the knapsack size in reverse order, see below.
+```java
+public int knapsack23(int[] A, int m) {
+    // maximum weight can be filled for the every capacity
+    int[] dp = new int[m + 1];
+
+    for (int i = 1; i <= A.length; i++) {
+        for (int j = m; j >= 0; j--) {
+            if (j - A[i - 1] >= 0) {
+                dp[j] = Math.max(dp[j], dp[j - A[i - 1]] + A[i - 1]);
+            }
+        }
+    }
+
+    return dp[m];
+}
+```
+
+Further move, we can improve the readability by setting `i` to 0 instead of 1 and moving check "j - A[i - 1] >= 0" to the 'for' loop. The final solution as follows. Space complexity is reduced to O(m).
+```java
+// set i = 0 instead of 1
+// move check "j - A[i - 1] >= 0" to for loop
+public int knapsack24(int[] A, int m) {
     // maximum weight can be filled for the every capacity
     int[] dp = new int[m + 1];
 
@@ -119,7 +199,7 @@ i\\Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
 2(8)    | 0 | 0 | 0 | 3 | 4 | 4 | 4 | 7 | 8 | 8 | 8
 3(5)    | 0 | 0 | 0 | 3 | 4 | 5 | 5 | 7 | 8 | 9 | 9
 
-### 1.4 Summary of Knapsack Problems
+### 1.3 Summary of Knapsack Problems
 * Generally, we need to create a two dimensional array. The first dimension represents the elements and the second represents the size of knapsack.
 * For each dimension of the DP array, we need one more larger size(`n+1` and `m+1`), because we need to handle the special cases that no items fills the knapsack and items fills zero-size knapsack.
 * The result is in the last row and last column(Need to search from end).
