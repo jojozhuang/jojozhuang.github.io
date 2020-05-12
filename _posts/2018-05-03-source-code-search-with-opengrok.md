@@ -44,11 +44,11 @@ drwxr-xr-x  59 Johnny  1694527156  1888 May 03 21:10 Tutorials
 ### 3.2 Installing Image and Running Container
 Pull the OpenGrok docker image.
 ```raw
-$ docker pull scue/docker-opengrok
+$ docker pull opengrok/docker
 ```
 Run a Docker container and mount these two directories: src and data; this will automatically run indexing as a part of startup.
 ```raw
-$ docker run --name=opengrok-git -v /opengrok/src:/src -v /opengrok/data:/data -p 31030:8080 scue/docker-opengrok
+$ docker run --name=opengrok-git -v /opengrok/src:/src -v /opengrok/data:/data -p 31030:8080 opengrok/docker
 ```
 
 ## 4. Searching Code
