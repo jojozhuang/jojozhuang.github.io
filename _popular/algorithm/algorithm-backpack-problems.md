@@ -389,7 +389,7 @@ public int knapsack33(int[] A, int[] V, int m) {
 * Time Complexity: O(n*m)
 * Space Complexity: O(m)
 
-## 4. Knapsack Problem 4 - Number of Ways
+## 4. Knapsack Problem 4 - Number of Ways(unlimited times)
 There are `n` unique items and a backpack with size `m`. Given array `A` representing the size of each item. Find the `number of ways` to fill the backpack. Each item may be chosen `unlimited` number of times.
 ```raw
 Example 1:
@@ -471,14 +471,108 @@ public int knapsack43(int[] A, int m) {
 * Time Complexity: O(n*m)
 * Space Complexity: O(m)
 
-## 5. Summary of Knapsack Problems
+## 5. Knapsack Problem 5 - Number of Ways (only once)
+There are `n` unique items and a backpack with size `m`. Given array `A` representing the size of each item. Find the `number of ways` to fill the backpack. Each item can only be chosen `once`.
+```raw
+Example 1:
+    Input:  A=[2, 3, 6, 7], m=7
+    Output:  1
+    Explanation: Solution set is: [7].
+Example 2:
+    Input:  A=[1, 2, 3, 3, 7], m=7
+    Output:  2
+    Explanation: Solution sets are: [1, 3, 3], [7].
+```
+Solution:
+```java
+public int knapsack51(int[] A, int m) {
+    // number of ways to full fill every capacity
+    int[][] dp = new int[A.length + 1][m + 1];
+
+    dp[0][0] = 1;
+    for (int i = 1; i <= A.length; i++) {
+        for (int j = 0; j <= m; j++) {
+            dp[i][j] = dp[i - 1][j];
+            if (j - A[i - 1] >= 0) {
+                dp[i][j] += dp[i - 1][j - A[i - 1]];
+            }
+        }
+    }
+    return dp[A.length][m];
+}
+```
+* Time Complexity: O(n*m)
+* Space Complexity: O(n*m)
+
+Values of the dp array for input A=[2,3,6,7] and m=7. The answer is 1.
+
+Item\\Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+-----------|---|---|---|---|---|---|---|---
+0          | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+2          | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0
+3          | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0
+6          | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0
+7          | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 1
+
+Values of the dp array for input A=[1,2,3,3,7] and m=7. The answer is 2.
+
+Item\\Size | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+-----------|---|---|---|---|---|---|---|---
+0          | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+1          | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0
+2          | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0
+3          | 1 | 1 | 1 | 2 | 1 | 1 | 1 | 0
+3          | 1 | 1 | 1 | 3 | 2 | 2 | 3 | 1
+7          | 1 | 1 | 1 | 3 | 2 | 2 | 3 | 2
+
+We can optimize the above solution with one-dimensional array.
+```java
+public int knapsack52(int[] A, int m) {
+    // number of ways to full fill every capacity
+    int[] dp = new int[m + 1];
+    dp[0] = 1;
+    for (int i = 1; i <= A.length; i++) {
+        for (int j = m; j >= 0; j--) {
+            if (j - A[i - 1] >= 0) {
+                dp[j] += dp[j - A[i - 1]];
+            }
+        }
+    }
+
+    return dp[m];
+}
+```
+* Time Complexity: O(n*m)
+* Space Complexity: O(m)
+
+Further more, we can improve the readability by setting `i` to 0 instead of 1 and moving check "j - A[i - 1] >= 0" to the 'for' loop. The final solution as follows.
+```java
+public int knapsack53(int[] A, int m) {
+    // number of ways to full fill every capacity
+    int[] dp = new int[m + 1];
+    dp[0] = 1;
+    for (int i = 0; i < A.length; i++) {
+        for (int j = m; j >= A[i]; j--) {
+            dp[j] += dp[j - A[i]];
+        }
+    }
+
+    return dp[m];
+}
+```
+* Time Complexity: O(n*m)
+* Space Complexity: O(m)
+
+## 6. Summary of Knapsack Problems
 * Generally, we need to create a two dimensional array. The first dimension represents the elements and the second represents the size of knapsack.
 * For each dimension of the DP array, we need one more larger size(`n+1` and `m+1`), because we need to handle the special cases that no items fills the knapsack and items fills zero-size knapsack.
 * The result is in the last row and last column(Need to search from end).
 * Space complexity can be optimized to O(m).
+* When using one-dimensional array, if item can be selected for unlimited times, iterate from beginning.
+* When using one-dimensional array, if item can only be selected for once, iterate from end.
 
-## 6. Related Problems
-### 6.1 Coin Change
+## 7. Related Problems
+### 7.1 Coin Change
 You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
 
 ```raw
@@ -513,15 +607,15 @@ public int coinChange(int[] coins, int amount) {
     return dp[amount] == Integer.MAX_VALUE ? -1: dp[amount];
 }
 ```
-## 7. Classic Problems
+## 8. Classic Problems
 * [LintCode 92 - Backpack](https://www.lintcode.com/problem/backpack/)
 * [LintCode 91 - Minimum Adjustment Cost](https://www.lintcode.com/problem/minimum-adjustment-cost)
 
-## 8. Source Files
+## 9. Source Files
 * [Source files for Knapsack Problems on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-knapsack)
 * [Dynamic Programming Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1gp898o4dRvrV2nPVZOEfJYfijkeyjdnK/view?usp=sharing)
 
-## 9. References
+## 10. References
 * [0-1 Knapsack Problem 0-1背包问题](https://zxi.mytechroad.com/blog/sp/knapsack-problem/)
 * [花花酱 0-1 Knapsack Problem 01背包问题 - 刷题找工作 SP10](https://www.youtube.com/watch?v=CO0r6kcwHUU)
 * [Backpack solution](https://www.jiuzhang.com/solution/backpack/)
