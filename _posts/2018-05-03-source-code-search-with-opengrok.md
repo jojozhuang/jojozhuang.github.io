@@ -50,7 +50,39 @@ Run a Docker container and mount these two directories: src and data; this will 
 ```raw
 $ docker run --name=opengrok-git -v /opengrok/src:/src -v /opengrok/data:/data -p 31030:8080 opengrok/docker
 ```
+Later, you can use the following commands to start and stop the container.
+```raw
+$ docker start opengrok-git
+$ docker stop opengrok-git
+```
+Use the following command to check logs.
+```raw
+$ docker logs
+```
+### 3.3 Issues
+Sometimes, the opengrok indexer stops working, and you see the following message in the logs.
+```raw
+Indexer still locked, skipping indexing
+```
+This is because of the locker check, see here https://github.com/OpenGrok/docker/blob/master/scripts/index.sh.
+```sh
+#!/bin/bash
 
+LOCKFILE=/var/run/opengrok-indexer
+URI="http://localhost:8080"
+
+if [ -f "$LOCKFILE" ]; then
+	date +"%F %T Indexer still locked, skipping indexing"
+	exit 1
+fi
+...
+```
+This issues occurs especially when indexing stops unexpectedly. The solution is to get inside the container and delete the file `/var/run/opengrok-indexer`.
+```raw
+$ docker exec -it opengrok-git bash
+rm /var/run/opengrok-indexer
+```
+When the next time indexing happens, you won't see this error, and indexer should start working again.
 ## 4. Searching Code
 The OpenGrok application will now be running on http://192.168.99.100:31030/source/. Notice, we have three projects as we cloned three repositories into the 'src' folder.
 ![image](/assets/images/blog/2018-05-03/homepage.png)
@@ -66,3 +98,4 @@ Search 'docker' in tutorials, all my tutorials related to 'docker' are displayed
 * [OpenGrok: An Indexing Service for Your Development Code](https://dzone.com/articles/development-teams-personal-google)
 * [OpenGrok on GitHub](https://github.com/oracle/opengrok)
 * [Docker run reference](https://docs.docker.com/engine/reference/run/#general-form)
+* [A Docker container for OpenGrok](https://hub.docker.com/r/opengrok/docker/)
