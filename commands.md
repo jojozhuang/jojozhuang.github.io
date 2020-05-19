@@ -70,8 +70,8 @@ sudo chown $USER /ariba/ssp_git/ -R
     </tr>
     <tr>
       <td colspan="1">Config</td>
-      <td colspan="1">git config<br/>git config --list<br/>git config remote.origin.url [remote url]</td>
-      <td colspan="1"></td>
+      <td colspan="1">git config<br/>git config --list<br/>git config remote.origin.url [remote url]<br/>git config user.email "jojozhuang@gmail.com"</td>
+      <td colspan="1"><br/>List all configurations<br/>Change url of remote repository<br/>Change email for specific repository<br/></td>
     </tr>
     <tr>
       <td>Initial</td>
