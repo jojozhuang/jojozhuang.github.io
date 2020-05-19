@@ -29,10 +29,11 @@ mathjax: true
 * Loop
 
 ## 2. Matrix DP
-### 2.1 Problem - Unique Paths
+### 2.1 Unique Paths
+#### 2.1.1 Problem Description
 A robot is located at the top-left corner of a `m x n` grid (marked 'Start' in the diagram below). The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below). How many possible unique paths are there?
 ![image](/assets/images/dsa/1221/robot.png){:width="500px"}  
-### 2.2 Solution with Matrix(Two-dimensional array)
+#### 2.1.2 Solution with Matrix(Two-dimensional array)
 ```java
 // time: O(m*n), space: O(m*n)
 public int uniquePathMatrix(int m, int n) {
@@ -81,7 +82,7 @@ public int uniquePathMatrix2(int m, int n) {
 * Time complexity: $O(m*n)$
 * Space complexity: $O(m*n)$
 
-### 2.3 Solution with One-dimensional Array
+#### 2.1.3 Solution with One-dimensional Array
 Use one-dimensional array instead of the matrix. Same time complexity, but space is reduced to $O(n)$.
 ```java
 // time: O(m*n), space: O(n)
@@ -126,18 +127,19 @@ public int uniquePath(int m, int n) {
 * Time complexity: $O(m*n)$
 * Space complexity: $O(n)$
 
-### 2.4 Define Matrix with Larger Size
+### 2.2 Define Matrix with Larger Size
 When to define a dp matrix with `m+1` and `n+1`? see question [LeetCode 221 - Maximal Square](https://leetcode.com/problems/maximal-square).
 
-### 2.5 Classic Problems
+### 2.3 Classic Problems
 * [LeetCode 62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
 * [LeetCode 64 - Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
 * [LeetCode 221 - Maximal Square](https://leetcode.com/problems/maximal-square)
 
 ## 3. Sequence DP
-### 3.1 Problem - Fibonacci Numbers
+### 3.1 Fibonacci Numbers
+#### 3.1.1 Problem Description
 Fibonacci Numbers are 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ... Now, given an integer N(N >= 0), return the Nth Fibonacci number.
-### 3.2 Recursive Solution
+#### 3.1.2 Recursive Solution
 ```java
 // recursive implementation
 public int fibonacci(int n) {
@@ -154,7 +156,7 @@ public int fibonacci(int n) {
 * Time complexity: $O(2^n)$
 * Space complexity: $O(1)$
 
-### 3.3 DP Solution
+#### 3.1.3 DP Solution
 ```java
 // DP
 public int fibonacci(int n) {
@@ -178,7 +180,7 @@ public int fibonacci(int n) {
 * Time complexity: $O(n)$
 * Space complexity: $O(n)$
 
-### 3.4 Solution with Constant Space
+#### 3.1.4 Solution with Constant Space
 ```java
 // constant space
 public int fibonacci(int n) {
@@ -204,6 +206,114 @@ public int fibonacci(int n) {
 ```
 * Time complexity: $O(n)$
 * Space complexity: $O(1)$
+
+### 3.2 Longest Increasing Subsequence
+#### 3.2.1 Problem Description
+Given a sequence of integers, find the longest increasing subsequence (LIS). Your code should return the `length` of the LIS.
+```raw
+Example 1:
+    Input:  [5,4,1,2,3]
+    Output:  3
+    Explanation: LIS is [1,2,3].
+Example 2:
+    Input: [4,2,4,5,3,7]
+    Output:  4
+    Explanation: LIS is [2,4,5,7]
+```
+#### 3.2.2 DP Solution(n^2)
+```java
+// O(n^2)
+public int longestIncreasingSubsequence(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+
+    // dp[i], the longest length of LIS which ends at index i.
+    int[] dp = new int[nums.length];
+    int max = 0;
+    for (int i = 0; i < nums.length; i++) {
+        dp[i] = 1;
+        for (int j = 0; j < i; j++) { // check 0~i
+            if (nums[j] < nums[i]) {
+                dp[i] = Math.max(dp[i], dp[j] + 1);
+            }
+        }
+        max = Math.max(max, dp[i]);
+    }
+
+    return max;
+}
+```
+* Time Complexity: $O(n^2)$
+* Space Complexity: $O(n)$
+
+Values of the dp array for input A=[4,2,4,5,3,7]. The answer is 4 and the longest increasing subsequence is [2,4,5,7].
+
+A[i]\dp[i] | 0 | 1 | 2 | 3 | 4 | 5
+-----------|---|---|---|---|---|---
+4          | 1 | 0 | 0 | 0 | 0 | 0
+2          | 1 | `1` | 0 | 0 | 0 | 0
+4          | 1 | 1 | `2` | 0 | 0 | 0
+5          | 1 | 1 | 2 | `3` | 0 | 0
+3          | 1 | 1 | 2 | 3 | 2 | 0
+7          | 1 | 1 | 2 | 3 | 2 | `4`
+
+#### 3.2.3 Binary Search Solution(nlog(n))
+Maintain a monotonic increasing array.
+```java
+// O(nlog(n))
+// https://www.youtube.com/watch?v=5rfZ4WnNKBk
+public int longestIncreasingSubsequence3(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+
+    int[] arr = new int[nums.length]; // increasing array
+    // 10,9,2,5,3,7,101,18 -> 2,3,7,18
+    int len = 0;
+    for (int i = 0; i < nums.length; i++) {
+        int index = Arrays.binarySearch(arr, 0, len, nums[i]);
+        if (index < 0) {
+            index = -(index + 1);
+        }
+
+        arr[index] = nums[i];
+        if (index == len) {
+            len++;
+        }
+    }
+
+    return len;
+}
+```
+* Time Complexity: $O(nlog(n))$
+* Space Complexity: $O(n)$
+
+Values of the dp array for input A=[10,9,2,5,3,7,101,18]. The answer is 4 and the longest increasing subsequence are [2,5,7,101], [2,5,7,18], [2,3,7,101] or [2,3,7,18].
+
+A[i]\arr[i] | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+------------|---|---|---|---|---|---|---|---
+10          | 10| 0 | 0 | 0 | 0 | 0 | 0 | 0
+9           | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+2           | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+5           | 2 | 5 | 0 | 0 | 0 | 0 | 0 | 0
+3           | 2 | 3 | 0 | 0 | 0 | 0 | 0 | 0
+7           | 2 | 3 | 7 | 0 | 0 | 0 | 0 | 0
+101         | 2 | 3 | 7 |101| 0 | 0 | 0 | 0
+18          | 2 | 3 | 7 |18 | 0 | 0 | 0 | 0
+
+Here, the final array contains the correct LIS . But it is not guaranteed this is always the case. Take another input as example, A=[10,9,2,5,7,3,101,18]. The only difference with the previous input is that 7 and 3 are swapped. The answer is still 4. But the longest increasing subsequence are [2,5,7,101] and [2,5,7,18] only. [2,3,7,101] and [2,3,7,18] are not valid LIS any more, but we have the same final array [2,3,7,18,0,0,0,0] as the previous exmaple.
+
+A[i]\arr[i] | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+------------|---|---|---|---|---|---|---|---
+10          | 10| 0 | 0 | 0 | 0 | 0 | 0 | 0
+9           | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+2           | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+5           | 2 | 5 | 0 | 0 | 0 | 0 | 0 | 0
+7           | 2 | 5 | 7 | 0 | 0 | 0 | 0 | 0
+3           | 2 | 3 | 7 | 0 | 0 | 0 | 0 | 0
+101         | 2 | 3 | 7 |101| 0 | 0 | 0 | 0
+18          | 2 | 3 | 7 | 18| 0 | 0 | 0 | 0
 
 ## 4. Game, Min-Max
 * [LeetCode 486 - Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
@@ -243,3 +353,4 @@ public int fibonacci(int n) {
 * [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)
 * [How to solve a Dynamic Programming Problem ?](https://www.geeksforgeeks.org/solve-dynamic-programming-problem/)
 * [Tabulation vs Memorization](https://www.geeksforgeeks.org/tabulation-vs-memoizatation/)
+* [用两种方法求最长上升子序列 LeetCode 300.Longest Increasing Subsequence](https://www.youtube.com/watch?v=5rfZ4WnNKBk)
