@@ -315,11 +315,7 @@ A[i]\arr[i] | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 101         | 2 | 3 | 7 |101| 0 | 0 | 0 | 0
 18          | 2 | 3 | 7 | 18| 0 | 0 | 0 | 0
 
-## 4. Game, Min-Max
-* [LeetCode 486 - Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
-* [LeetCode 877 - Stone Game](https://leetcode.com/problems/stone-game/)
-
-### 4.5 Classic Problems
+### 3.3 Classic Problems
 * [LeetCode 70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 * [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
 * [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
@@ -331,24 +327,124 @@ A[i]\arr[i] | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 * [LeetCode 198 - House Robber](https://leetcode.com/problems/house-robber/)
 * [LeetCode 213 - House Robber II](https://leetcode.com/problems/house-robber-ii)
 
-## 5. Two Sequences DP
-### 5.4 Classic Problems
+## 4. Two Sequences DP
+### 4.1 Longest Common Subsequence
+#### 4.1.1 Problem Description
+Given two strings, find the longest common subsequence (LCS). Your code should return the `length` of LCS.
+```raw
+Example 1:
+    Input:  "ABCD" and "EDCA"
+    Output:  1
+    Explanation: LCS is 'A' or  'D' or 'C'.
+Example 2:
+    Input: "ABCD" and "EACB"
+    Output:  2
+    Explanation: LCS is "AC"
+```
+#### 4.1.2 DP Solution(n^2)
+```java
+// O(n^2)
+public int longestCommonSubsequence(String A, String B) {
+    if (A == null || A.length() == 0 || B == null || B.length() == 0) {
+        return 0;
+    }
+
+    int m = A.length();
+    int n = B.length();
+    int[][] dp = new int[m + 1][n + 1];
+
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (A.charAt(i - 1) == B.charAt(j - 1)) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+
+    return dp[m][n];
+}
+```
+* Time Complexity: $O(n^2)$
+* Space Complexity: $O(n^2)$
+
+### 4.2 Minimum Edit Distance
+#### 4.2.1 Problem Description
+Given two strings A and B, find the minimum number of steps required to convert A to B. (each operation is counted as 1 step.)
+You have the following 3 operations permitted on a word:
+* Insert a character
+* Delete a character
+* Replace a character
+
+```raw
+Example 1:
+    Input: A="horse", B="ros"
+    Output:  3
+    Explanation:
+      horse -> rorse (replace 'h' with 'r')
+      rorse -> rose (remove 'r')
+      rose -> ros (remove 'e')
+Example 2:
+    Input: A="intention", B="execution"
+    Output:  5
+    Explanation:
+      intention -> inention (remove 't')
+      inention -> enention (replace 'i' with 'e')
+      enention -> exention (replace 'n' with 'x')
+      exention -> exection (replace 'n' with 'c')
+      exection -> execution (insert 'u')
+```
+#### 4.2.2 DP Solution(n^2)
+```java
+// O(n^2)
+public int minDistance(String A, String B) {
+    int m = A.length();
+    int n = B.length();
+    int[][] dp = new int[m + 1][n + 1];
+
+    for (int i = 1; i <= m; i++) {
+        dp[i][0] = i;
+    }
+    for (int j = 1; j <= n; j++) {
+        dp[0][j] = j;
+    }
+
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (A.charAt(i - 1) == B.charAt(j - 1)) {
+                dp[i][j] = dp[i - 1][j - 1];
+            } else {
+                // 1) dp[i][j - 1], insert character at end of A
+                // 2) dp[i - 1][j], delete A's last character
+                // 3) dp[i - 1][j - 1], replace A's last character
+                dp[i][j] = Math.min(Math.min(dp[i][j - 1], dp[i - 1][j]), dp[i - 1][j - 1]) + 1;
+            }
+        }
+    }
+
+    return dp[m][n];
+}
+```
+* Time Complexity: $O(n^2)$
+* Space Complexity: $O(n^2)$
+
+### 4.3 Classic Problems
 * [LintCode 77 - Longest Common Subsequence](https://www.lintcode.com/problem/longest-common-subsequence)
 * [LintCode 79 - Longest Common Substring](https://www.lintcode.com/problem/longest-common-substring)
 * [LeetCode 72 - Edit Distance](https://leetcode.com/problems/edit-distance/)
 * [LeetCode 115 - Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
 * [LeetCode 97 - Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
-## 6. Backpack
-### 6.4 Classic Problems
-* [LintCode 92 - Backpack](https://www.lintcode.com/problem/backpack/)
-* [LintCode 91 - Minimum Adjustment Cost](https://www.lintcode.com/problem/minimum-adjustment-cost)
+## 5. Game, Min-Max
+* [LeetCode 486 - Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
+* [LeetCode 877 - Stone Game](https://leetcode.com/problems/stone-game/)
 
-## 7. Source Files
+## 6. Source Files
 * [Source files for Dynamic Programming on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-dp)
 * [Dynamic Programming Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1gp898o4dRvrV2nPVZOEfJYfijkeyjdnK/view?usp=sharing)
 
-## 8. References
+## 7. References
 * [Introduction to Dynamic Programming 1](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
 * [Dynamic Programming](https://www.geeksforgeeks.org/dynamic-programming/)
 * [How to solve a Dynamic Programming Problem ?](https://www.geeksforgeeks.org/solve-dynamic-programming-problem/)
