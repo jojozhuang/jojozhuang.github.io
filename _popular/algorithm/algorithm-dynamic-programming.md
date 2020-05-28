@@ -369,8 +369,56 @@ public int longestCommonSubsequence(String A, String B) {
 * Time Complexity: $O(n^2)$
 * Space Complexity: $O(n^2)$
 
-### 4.2 Minimum Edit Distance
+### 4.2 Uncrossed Lines
 #### 4.2.1 Problem Description
+We write the integers of `A` and `B` (in the order they are given) on two separate horizontal lines. Now, we may draw connecting lines: a straight line connecting two numbers `A[i]` and `B[j]` such that:
+* A[i] == B[j];
+* The line we draw does not intersect any other connecting (non-horizontal) line.
+* Each number can only belong to one connecting line.
+
+Return the `maximum number` of connecting lines we can draw in this way.
+```raw
+Example 1:
+    Input: A = [1,4,2], B = [1,2,4]
+    Output:  2
+    Explanation: We can draw line from A[0]=1 to B[0]=1 and line from A[1]=4 to B[2]=4. We cannot draw line
+    from A[1]=4 to B[2]=4 and line from A[2]=2 to B[1]=2 at the same time because they intersect each other.
+Example 2:
+    Input: A = [2,5,1,2,5], B = [10,5,2,1,5,2]
+    Output: 3
+    Explanation: One solution is A[0]=2 -> B[2]=2, A[1]=5 to B[4]=5 and A[3]=2 to B[5]=2
+Example 3:
+    Input: A = [1,3,7,1,7,5], B = [1,9,2,5,1]
+    Output: 2
+    Explanation: One solution is A[0]=1 -> B[0]=1 and A[3]=1 to B[4]=1
+```
+#### 4.2.2 DP Solution(n^2)
+This question is exactly same with Longest Common Sequence.
+```java
+// same as longest common subsequence, O(n^2)
+public int maxUncrossedLines(int[] A, int[] B) {
+    int m = A.length;
+    int n = B.length;
+
+    int[][] dp = new int[m + 1][n + 1];
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (A[i-1] == B[j-1]) {
+                dp[i][j] = dp[i-1][j-1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+            }
+        }
+    }
+
+    return dp[m][n];
+}
+```
+* Time Complexity: $O(n^2)$
+* Space Complexity: $O(n^2)$
+
+### 4.3 Minimum Edit Distance
+#### 4.3.1 Problem Description
 Given two strings A and B, find the minimum number of steps required to convert A to B. (each operation is counted as 1 step.)
 You have the following 3 operations permitted on a word:
 * Insert a character
@@ -395,7 +443,7 @@ Example 2:
       exention -> exection (replace 'n' with 'c')
       exection -> execution (insert 'u')
 ```
-#### 4.2.2 DP Solution(n^2)
+#### 4.3.2 DP Solution(n^2)
 ```java
 // O(n^2)
 public int minDistance(String A, String B) {
@@ -429,8 +477,9 @@ public int minDistance(String A, String B) {
 * Time Complexity: $O(n^2)$
 * Space Complexity: $O(n^2)$
 
-### 4.3 Classic Problems
-* [LintCode 77 - Longest Common Subsequence](https://www.lintcode.com/problem/longest-common-subsequence)
+### 4.4 Classic Problems
+* [LeetCode 1143 - Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+* [LeetCode 1035 - Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)
 * [LintCode 79 - Longest Common Substring](https://www.lintcode.com/problem/longest-common-substring)
 * [LeetCode 72 - Edit Distance](https://leetcode.com/problems/edit-distance/)
 * [LeetCode 115 - Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)

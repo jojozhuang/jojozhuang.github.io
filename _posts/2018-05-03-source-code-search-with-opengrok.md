@@ -57,7 +57,7 @@ $ docker stop opengrok-git
 ```
 Use the following command to check logs.
 ```raw
-$ docker logs
+$ docker logs opengrok-git
 ```
 ### 3.3 Issues
 Sometimes, the opengrok indexer stops working, and you see the following message in the logs.
