@@ -42,7 +42,6 @@ Right-click on RhinoDataFix->Java Resources->src, create a new package named 'Jo
  * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
  */
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    // TODO Auto-generated method stub
     response.setContentType("text/plain");
     String code = request.getParameter("code");
     Context ctx = Context.enter();

@@ -88,7 +88,6 @@ Hello johnny, greetings from CustomClass.greet().
 Edit the 'doPost()' method of 'RhinoServlet.java', add `var Johnny = Packages.Johnny;` before running the script submitted from client. By doing this, there is no need to use `Packages` prefix in the client scripts.
 ```java
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    // TODO Auto-generated method stub
     response.setContentType("text/plain");
     String code = request.getParameter("code");
     Context ctx = Context.enter();

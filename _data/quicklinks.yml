@@ -15,13 +15,17 @@ bookmarks:
         description: Logging into a specific realm (p2pTePsoft)
         url: 	http://localhost:8050/Buyer/Main?realm=p2pTePsoft
         type: webpage
+      - name: Inspector - internal data base view of the data
+        description: Inspector - internal data base view of the data
+        url: http://localhost:8050/Buyer/Main?realm=p2pTeSap
+        type: webpage
       - name: TestRunner - Junit
         description: TestRunner - Junit
         url: http://localhost:8050/Buyer/TestRunner/
         type: webpage
       - name: Inspector - internal data base view of the data
         description: Inspector - internal data base view of the data
-        url: http://localhost:8050/Buyer/Main?realm=p2pTeSap
+        url: http://localhost:8050/Buyer/inspector/
         type: webpage
       - name: Arches - indexing jobs
         description: Arches - indexing jobs
@@ -45,13 +49,17 @@ bookmarks:
         description: Logging into a specific realm (p2pTePsoft)
         url: 	http://10.48.104.140:8050/Buyer/Main?realm=p2pTePsoft
         type: webpage
+      - name: Inspector - internal data base view of the data
+        description: Inspector - internal data base view of the data
+        url: http://10.48.104.140:8050/Buyer/Main?realm=p2pTeSap
+        type: webpage
       - name: TestRunner - Junit
         description: TestRunner - Junit
         url: http://10.48.104.140:8050/Buyer/TestRunner/
         type: webpage
       - name: Inspector - internal data base view of the data
         description: Inspector - internal data base view of the data
-        url: http://10.48.104.140:8050/Buyer/Main?realm=p2pTeSap
+        url: http://10.48.104.140:8050/Buyer/inspector/
         type: webpage
       - name: Arches - indexing jobs
         description: Arches - indexing jobs
