@@ -63,7 +63,7 @@ navlist:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["searchadv","reading","contact","editormd","about","commands"]
+    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
     sublist:
       - key: commands
         description: Commands
@@ -76,6 +76,10 @@ navlist:
       - key: reading
         description: Further Reading
         url: /reading
+        icon: fas fa-book-reader
+      - key: quicklinks
+        description: Quick Links
+        url: /quicklinks
         icon: fas fa-book-reader
       - key: separator
       - key: Markdown Editor
