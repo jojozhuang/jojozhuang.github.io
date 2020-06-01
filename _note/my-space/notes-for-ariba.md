@@ -9,6 +9,52 @@ tags: [Ariba]
 ---
 
 > OpenGrok
+## 1. Buyer Build
+
+## 2. GitHub
+Config user name, email and remote url.
+```sh
+git config --list  
+git config user.name "Rong Zhuang"
+git config user.email "r.zhuang@sap.com"
+git config remote.origin.url "https://github.wdf.sap.corp/Ariba-Ond/Buyer.git"
+```
+
+Generate new ssh key, check https://help.github.com/articles/connecting-to-github-with-ssh/.
+```sh
+$ ssh-keygen -t rsa -b 4096 -C "r.zhuang@sap.com"
+```
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+```sh
+> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+```
+Passphrase:001266
+
+//TODO: local
+```sh
+git remote set-url origin git@github.com:jojozhuang/text-compare-angular.git
+
+ssh-keygen -t rsa -b 4096 -C "jojozhuang@gmail.com"
+mv jojozhuang_github_rsa ~/.ssh
+mv jojozhuang_github_rsa.pub ~/.ssh
+
+open ~/.ssh/config
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/jojozhuang_github_rsa
+
+ssh-add -K ~/.ssh/jojozhuang_github_rsa
+
+pbcopy < ~/.ssh/jojozhuang_github_rsa.pub
+
+```
+
 
 ## 1. OpenGrok
 ### 1.1 Install Ubuntu 18.04 in VMware Fusion
