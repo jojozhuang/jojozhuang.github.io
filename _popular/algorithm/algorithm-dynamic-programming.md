@@ -477,7 +477,113 @@ public int minDistance(String A, String B) {
 * Time Complexity: $O(n^2)$
 * Space Complexity: $O(n^2)$
 
-### 4.4 Classic Problems
+### 4.4 Distinct Subsequences
+#### 4.4.1 Problem Description
+Given two strings S and T. Count the number of distinct subsequences of S which equals T.
+
+A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, "ACE" is a subsequence of "ABCDE" while "AEC" is not)
+
+```raw
+Example 1:
+    Input: S = "rabbbit", T = "rabbit"
+    Output: 3
+    Explanation: You could remove any 'b' in S, so there are 3 ways to get T.
+
+Example 2:
+    Input: S = "abcd", T = ""
+    Output: 1
+    Explanation: There is only 1 way to get T - remove all chars in S.
+```
+#### 4.4.2 DP Solution(n^2)
+```java
+// O(n^2)
+public int numDistinct(String S, String T) {
+    int m = S.length();
+    int n = T.length();
+    int[][] dp = new int[m + 1][n + 1];
+
+    for (int i = 0; i <= m; i++) {
+        dp[i][0] = 1;
+    }
+
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (S.charAt(i - 1) == T.charAt(j - 1)) {
+                dp[i][j] = dp[i - 1][j - 1]; // case 1: last character in T is same with that in S
+            }
+            dp[i][j] += dp[i-1][j]; // case 2: last character in T is not same with that in S
+        }
+    }
+
+    return dp[m][n];
+}
+```
+* Time Complexity: $O(n^2)$
+* Space Complexity: $O(n^2)$
+
+### 4.5 Interleaving String
+#### 4.5.1 Problem Description
+Given three strings: s1, s2, s3, determine whether s3 is formed by the interleaving of s1 and s2.
+
+```raw
+Example 1:
+    Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+    Output: true
+
+Example 2:
+    Input: s1 = "", s2 = "", s3 = "1"
+    Output: false
+
+Example 3:
+    Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"
+    Output: false
+```
+#### 4.5.2 DP Solution(n^2)
+```java
+// O(n^2)
+public boolean isInterleave(String s1, String s2, String s3) {
+    int m = s1.length();
+    int n = s2.length();
+
+    if (m + n != s3.length()) {
+        return false;
+    }
+
+    boolean[][] dp = new boolean[m+1][n+1];
+    dp[0][0] = true;
+    for (int i = 1; i <= m; i++) {
+        if (s1.charAt(i-1) == s3.charAt(i-1)) {
+            dp[i][0] = true;
+        } else {
+            break;
+        }
+    }
+    for (int j = 1; j <= n; j++) {
+        if (s2.charAt(j-1) == s3.charAt(j-1)) {
+            dp[0][j] = true;
+        } else {
+            break;
+        }
+    }
+
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (s1.charAt(i - 1) == s3.charAt(i+j-1)) {
+                dp[i][j] = dp[i][j] || dp[i-1][j];
+            }
+            if (s2.charAt(j - 1) == s3.charAt(i+j-1)) {
+                dp[i][j] = dp[i][j] || dp[i][j-1];
+            }
+        }
+    }
+
+    return dp[m][n];
+}
+```
+* Time Complexity: $O(n^2)$
+* Space Complexity: $O(n^2)$
+
+### 4.6 Classic Problems
 * [LeetCode 1143 - Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 * [LeetCode 1035 - Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/)
 * [LintCode 79 - Longest Common Substring](https://www.lintcode.com/problem/longest-common-substring)
