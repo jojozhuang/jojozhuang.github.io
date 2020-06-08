@@ -80,7 +80,7 @@ navlist:
       - key: quicklinks
         description: Quick Links
         url: /quicklinks
-        icon: fas fa-book-reader
+        icon: fas fa-link
       - key: separator
       - key: Markdown Editor
         description: Markdown Editor

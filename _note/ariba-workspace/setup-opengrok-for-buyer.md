@@ -1,60 +1,14 @@
 ---
 layout: tutorial
 key: note
-title: "Notes for Ariba"
-index: 9021
-subcategory: my-space
-date: 2020-05-30
+title: "Setup OpenGrok for Buyer"
+index: 9203
+subcategory: ariba-workspace
+date: 2020-06-08
 tags: [Ariba]
 ---
 
-> OpenGrok
-## 1. Buyer Build
-
-## 2. GitHub
-Config user name, email and remote url.
-```sh
-git config --list  
-git config user.name "Rong Zhuang"
-git config user.email "r.zhuang@sap.com"
-git config remote.origin.url "https://github.wdf.sap.corp/Ariba-Ond/Buyer.git"
-```
-
-Generate new ssh key, check https://help.github.com/articles/connecting-to-github-with-ssh/.
-```sh
-$ ssh-keygen -t rsa -b 4096 -C "r.zhuang@sap.com"
-```
-When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
-```sh
-> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-```
-Passphrase:001266
-
-//TODO: local2333
-```sh
-git remote set-url origin git@github.com:jojozhuang/text-compare-angular.git
-
-ssh-keygen -t rsa -b 4096 -C "jojozhuang@gmail.com"
-mv jojozhuang_github_rsa ~/.ssh
-mv jojozhuang_github_rsa.pub ~/.ssh
-
-open ~/.ssh/config
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/jojozhuang_github_rsa
-
-ssh-add -K ~/.ssh/jojozhuang_github_rsa
-
-pbcopy < ~/.ssh/jojozhuang_github_rsa.pub
-
-```
-
+> Setup OpenGrok with Docker.
 
 ## 1. OpenGrok
 ### 1.1 Install Ubuntu 18.04 in VMware Fusion
@@ -102,14 +56,30 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ docker -v
 Docker version 19.03.10, build 9424aeaee9
 ```
-7) Executing the Docker Command Without Sudo
+7) Add user to sudo group
+```sh
+# change root password
+$ sudo passwd root
+[sudo] password for johnny:
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+# add user to sudo group
+$ su -
+Password:
+$ sudo usermod -aG sudo johnny
+$ id -nG
+johnny adm cdrom sudo dip plugdev lpadmin sambashare vboxsf
+```
+8) Add user to docker group  
+So we can execute the docker commands without sudo.
 ```sh
 $ sudo usermod -aG docker ${USER}  // add the current user(johnny) to the docker group
 $ su - ${USER}                     // apply the new group membership
 $ id -nG                           // check user is now added to the docker group
 johnny adm cdrom sudo dip plugdev lpadmin sambashare docker
 ```
-8) Pull docker image of opengrok.
+9) Pull docker image of opengrok. We will use this image, https://hub.docker.com/r/opengrok/docker/.
 ```sh
 $ docker pull opengrok/docker
 ```
@@ -140,6 +110,15 @@ $ docker run --name=buyer-git \
     opengrok/docker
 ```
 Wait until opengrok finishes the indexing, then we can access http://localhost:31030/source/.
+### 1.4 Update Source Code
+Use `git pull` to download the latest source codes. Opengrok will re-index them automatically.
+```sh
+cd ~
+cd opengrok/buyer-git/src/Buyer
+git pull
+cd opengrok/buyer-git/src/platfrom
+git pull
+```
 ### 1.4 Production Customization
 Create folders for production customization.
 ```sh
@@ -178,6 +157,16 @@ Find the ip address of Ubuntu VM. For example, it is `192.168.244.131`.
 $ ifconfig
 ```
 Then, we can access the opengrok from host with URL http://192.168.244.131:31040/.
+### 1.6 Docker Commands
+```sh
+docker stop buyer-git
+docker start buyer-git
+docker rm buyer-git
 
-## 3. References
+docker exec -it buyer-git bash
+docker exec buyer-git /scripts/index.sh
+```
+
+## 2. References
 * [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+* [A Docker container for OpenGrok](https://hub.docker.com/r/opengrok/docker/)

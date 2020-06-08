@@ -33,6 +33,11 @@ categories:
         icon: fas fa-book
         subcategory: notes
         image: note.png
+      - name: Ariba Workspace
+        description: Ariba Workspace
+        icon: fas fa-dice-d20
+        subcategory: ariba-workspace
+        image: ariba.png
       - name: Others
         description: Japanese
         icon: fas fa-language
