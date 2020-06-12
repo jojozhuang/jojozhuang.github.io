@@ -5,7 +5,7 @@ title: "Setup OpenGrok for Buyer"
 index: 9203
 subcategory: ariba-workspace
 date: 2020-06-08
-tags: [Ariba]
+tags: [Ariba, OpenGrok]
 ---
 
 > Setup OpenGrok with Docker.

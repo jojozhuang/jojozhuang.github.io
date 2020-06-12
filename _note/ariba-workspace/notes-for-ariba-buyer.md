@@ -5,7 +5,7 @@ title: "Notes for Ariba Buyer"
 index: 9209
 subcategory: ariba-workspace
 date: 2020-06-05
-tags: [Ariba]
+tags: [Ariba, Notes]
 ---
 
 > Ariba Buyer Setup.
@@ -148,65 +148,71 @@ For the local build, the file is located in
 For production, find it in cloud health. LogSearch->Cloud Health Perf Log Details, search User by email address.
 * [PR from Milton for Perflog](https://github.wdf.sap.corp/Ariba-Ond/Buyer/pull/3070)
 
-### 3.18 Connect to dev service server
-1) Go to anrc, find the service(eg. dev11).  
-2) Note down the buyer label(eg. dev11.SSP.2019.gMaster-5616) and domain name of server(eg. app1471.lab1.ariba.com, app623.lab1.ariba.com or app622.lab1.ariba.com).  
-3) Use ssh connect to the server with user svcdev11.  
+### 3.10 Check and copy file from dev service server
+1) Connect to dev service server `hydra.ariba.com`, login as `devbuild`.
+```sh
+ssh devbuild@hydra.ariba.com
+```
+2) Navigate to the buyer root directory for the particular server, eg. dev6, dev9, etc.
+```sh
+cd /home/svcdev6/buyer   # dev6
+cd /home/svcdev9/buyer   # dev9
+cd /home/svcdev11/buyer  # dev11
+```
+3) Navigate the particular label. You can check the label number in anrc.ariba.com.
+```sh
+cd SSP.2019.gMaster-5616
+```
+4) Then you can open or copy files.
+```sh
+# copy p table file to local.
+scp devbuild@hydra.ariba.com:/home/svcdev9/buyer/SSP.2018.mDev-7035/config/Parameters.table .
+```
+
+You can also connect to the specific server directly.  
+1) Go to anrc.ariba.com, find the service(eg. dev11), click the link for 'buyer'.  
+2) Note down the label(eg. SSP.2019.gMaster-5616) at top of the page.  
+3) Copy the url of the server(eg. app1471.lab1.ariba.com, app623.lab1.ariba.com or app622.lab1.ariba.com), which is at the right side of “Customer Sites”.  
+4) In terminal, connect to the server with user `svcdev11`.  
 ```sh
 ssh svcdev11@app1471.lab1.ariba.com
 ```
-4) Navigate to buyer folder and the particular label.
+5) Navigate to the directory for buyer and find the file in the particular label folder, eg SSP.2019.gMaster-5616.
 ```sh
 cd buyer
 cd SSP.2019.gMaster-5616
+scp remote_file ~ # Copy file from server to local directly
 ```
 
-### 3.7 Remote connect to server, dev6
-1) Go to anrc.ariba.com->dev6->buyer, copy the url of “Customer Sites”  
-2) Use ssl to remote connect to server
-```sh
-ssh -l svcdev6 app383.lab1.ariba.com
-cd buyer
-```
-3) Navigate to the correct label folder, eg SSP.2017.Dev-8016, find the file and open it.
-
-### 3.8 Copy file from server to local directly
-```sh
-scp remote_file ~
-```
-
-### 3.12 Login and search file on server disk through terminal
-```sh
-ssh devbuild@hydra.ariba.com
-cd /home/svcdev9
-// copy file
-scp devbuild@hydra.ariba.com:/home/svcdev9/buyer/SSP.2018.mDev-7035/config/Parameters.table .
-```
-For windows, install putty, access \\maytag.ariba.com\home\svcdev9\.
-
-### 3.9 Directly way to go to AN Dev6
-Anrc.ariba.com->dev6->AN->Supplier(Insecure), input user qatestsupplier1@ariba.com, and click login button.
-
-### 3.10 Create admin user on AN
-Check wiki [Customization Admin: Creating a custom attribute and using it in a customization project](https://wiki.ariba.com/display/~arana/Customization+Admin%3A+Creating+a+custom+attribute+and+using+it+in+a+customization+project).
-
-### 3.13 access server
-Access smb://maytag.ariba.com/home/svcdev9
+**Connect svcdev9 on Mac**  
+1) Finder->Go->Connect to Server, access smb://maytag.ariba.com/home/svcdev9.
 * user name: global\i857285
 * password: domain password
 
-See ticket: https://product-jira.ariba.com/browse/HOA-159240
+You should request access to maytag server first, see ticket: https://product-jira.ariba.com/browse/HOA-159240.
 
-### 3.15 Access Subzero
-```sh
-Server: smb://Subzero.ariba.com
-Credentials: GLOBAL\I857285, domain password
-Path: /subzero/opsdumps/2019-02-19/HOA-201484
-https://product-jira.ariba.com/browse/HOA-201484
-https://product-jira.ariba.com/browse/HOA-81858
+**Connect svcdev9 on Windows**  
+For windows, we need to install putty and access
+```raw
+\\maytag.ariba.com\home\svcdev9\
 ```
 
-### 3.16 Find CQ/Traige on Azure
+### 3.11 Access Subzero
+* Server: smb://Subzero.ariba.com
+* Credentials: GLOBAL\I857285, domain password
+* Path: /subzero/opsdumps/2019-02-19/HOA-201484
+
+Useful JIRA tickets:
+* https://product-jira.ariba.com/browse/HOA-201484
+* https://product-jira.ariba.com/browse/HOA-81858
+
+### 3.12 Directly way to go to AN Dev6
+Go to anrc.ariba.com->dev6->AN->Supplier(Insecure), input user qatestsupplier1@ariba.com, and click login button.
+
+### 3.13 Create admin user on AN
+Check wiki [Customization Admin: Creating a custom attribute and using it in a customization project](https://wiki.ariba.com/display/~arana/Customization+Admin%3A+Creating+a+custom+attribute+and+using+it+in+a+customization+project).
+
+### 3.14 Find CQ/Traige on Azure
 Visit https://cq-jenkins.ariba-cobalt.com:8443/view/buyer_hana_trunk_branch/, login with GitHub account.
 
 ## 4. Coding
@@ -325,7 +331,7 @@ private Object evaluateExpresssionValue (BaseObject obj, String strExpr)
 }
 ```
 ### 4.7 Create new Invoice Exception Type
-Check wiki page [Creating new Invoice Exception Type](https://wiki.ariba.com/pages/viewpage.action?spaceKey=ENGKB&title=Creating+new+Invoice+Exception+Type).
+Check wiki page [Creating new Invoice Exception Type](https://wiki.ariba.com/display/ENGKB/Creating+new+Invoice+Exception+Type).
 
 1) Update files in folder //ariba/ond/buyer/dev/invoicing/configTemplates/Invoicing/SharedServicesOnly/defaultERP/config/partition/data/
 * InvoiceExceptionType.csv (insert new row)

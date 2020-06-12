@@ -5,7 +5,7 @@ title: "Setup Local Build for Ariba Buyer"
 index: 9202
 subcategory: ariba-workspace
 date: 2020-06-05
-tags: [Ariba]
+tags: [Ariba, Local Build]
 ---
 
 > Ariba Buyer Setup.
