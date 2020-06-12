@@ -100,7 +100,42 @@ if [ -f ~/.bashrc ]; then
 fi
 ```
 
-### 1.4 Hana in Docker
+### 1.4 Hana Database
+**Hana in VM(Mac)**  
+Check wiki [SAP HANA for SSP/S4](https://wiki.ariba.com/pages/viewpage.action?pageId=77582113) and [SAP HANA Tutorial](https://developers.sap.com/topics/sap-hana-express.html).
+
+1) Go to http://sap.com/sap-hana-express register, download manager.
+2) Configuration
+ * ip address: 10.48.61.64
+ * hxeadm/password
+ * Database password: same for hxeadm
+
+3) Do you need configuration, Yes.  
+4) Add VM ip address to Mac host file
+```sh
+sudo sh -c 'echo 10.48.61.64    hxehost >> /etc/hosts'
+sudo sh -c 'echo 192.168.1.104    hxehost >> /etc/hosts'
+```
+5) Install `DBeaver`.  
+6) Launch DBeaver, create two Hana DB users
+```sql
+CREATE USER ssp_hana_user1 PASSWORD Hanauser1 NO FORCE_FIRST_PASSWORD_CHANGE;
+CREATE USER ssp_hana_user2 PASSWORD Hanauser2 NO FORCE_FIRST_PASSWORD_CHANGE;
+```
+7) Find port : 39015 for HXE DB.
+```sql
+SELECT database_name, port, sql_port, (port+2) http_port FROM sys_databases.m_services
+```
+
+Hana DB issue: Sometimes, the ip address of hana DB(in virtual machine) is changed after restart. Then we need to up the new ip address in Parameters.table.  
+a) Find the new ip address(eg. 10.48.60.25) of hana db, update it in hosts.
+```sh
+sudo sh -c 'echo 10.48.60.25    hxehost >> /etc/hosts'
+```
+b) Search `AribaDBHostname` in Parameters.table and update its value to the new IP.  
+c) Restart buyer.
+
+**Hana in Docker**  
 Wiki pages:
 * [How to set up Buyer on Mac to use Docker + Hana](https://wiki.ariba.com/pages/viewpage.action?pageId=121803876)
 * [Installing SAP HANA, express edition with Docker](https://developers.sap.com/tutorials/hxe-ua-install-using-docker.html)
@@ -503,6 +538,17 @@ To fix the issue, you need to delete and copy some files.
 * servlet-api.jar
 * tomcat-coyote.jar
 
+```sh
+cd /opt/apache-tomcat-9.0.27/lib
+cp annotations-api.jar ~/ariba/ssp_git/roots/install/classes/annotations-api.jar
+cp catalina.jar ~/ariba/ssp_git/roots/install/classes/catalina.jar
+cp jasper.jar ~/ariba/ssp_git/roots/install/classes/jasper.jar
+cp jsp-api.jar ~/ariba/ssp_git/roots/install/classes/jsp-api.jar
+cp servlet-api.jar ~/ariba/ssp_git/roots/install/classes/servlet-api.jar
+cp tomcat-coyote.jar ~/ariba/ssp_git/roots/install/classes/tomcat-coyote.jar
+```
+* See wiki [EZ build setup with Tomcat 9](https://wiki.ariba.com/pages/viewpage.action?pageId=108531774) for more details.
+
 Or you can just run the following script.
 ```sh
 source ariba/ezone/fixbuild.sh ssp_git
@@ -548,7 +594,34 @@ To use catalog items, we need to setup arches for buyer. We can use remote arche
 Restart server, arches indexing will start automatically. Check the status of indexing in https://svcscdev3ows.sc1-lab1.ariba.com/Arches/inspector/indexerjobs/, search your name alias, eg. r.zhuang.
 If you can’t visit buyer with the new ip address, change back the ip address to 127.0.0.1. The client ip address is only for indexing.
 
-### 1.8 Rebuild with New Label
+### 1.8 EZ build with Label(Tag)
+1) Get new source files for buyer.
+```sh
+cd /ssp_git/ariba/ond/Buyer/
+git checkout ssp-newbuild #Create a new buyer branch and checkout to this branch.
+git fetch # get the latest history, including the tags.
+```
+2) Go to rc.ariba.com, find the latest label, eg. SSP.2020.gDev-5074.  
+3) Get new source files for the label.  
+```sh
+git checkout tags/SSP.2020.gDev-5074 -b SSP.2020.gDev-5074
+git pull origin dev #(optional)
+```
+4) Get new source files for platform, similar steps as buyer.
+```sh
+cd /ssp_git/ariba/ond/platform/
+git checkout platform-newbuild
+git fetch # get the latest history, including the tags.
+git checkout tags/SSP.2020.gDev-5074 -b SSP.2020.gDev-5074
+git pull origin dev #(optional)
+```
+5) Build all of them
+```sh
+ez -info
+ez -run compilePlatform+
+```
+
+### 1.9 Rebuild with New Label
 Suppose you've already had build locally, it is easy to 'upgrade' to new labels.  
 1) Shutdown existing buyer service, quit any terminal window for buyer instance, close IDE, etc.  
 2) Rename build folder 'ssp_git' to other names.  
