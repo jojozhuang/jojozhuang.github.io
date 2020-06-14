@@ -426,6 +426,11 @@ For different data centers, run
 ```
 The output goes to customizations directory.
 
+**Use the following command to delete folders from testing realm or dev realms:**
+```sh
+find . -name "*-T" -type d -exec rm -rf {} \;
+```
+
 ## 6. External Tax Integration(Tax API)
 Check wiki [External Tax Integration](https://wiki.ariba.com/pages/viewpage.action?spaceKey=ENGKB&title=External+Tax+Integration).
 
