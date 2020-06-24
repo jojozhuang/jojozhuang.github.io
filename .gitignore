@@ -2,3 +2,4 @@ _site/
 .sass-cache/
 .jekyll-metadata
 vendor
+_popular/algorithm/algorithm-string-and-array.md
