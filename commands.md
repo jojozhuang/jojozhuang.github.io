@@ -16,6 +16,8 @@ cd Johnny/GitHub/jojozhuang.github.io/
 cd /mnt/d/GitHub/jojozhuang.github.io/
 # Launch
 bundle exec jekyll serve --port 12001
+# Docker
+docker run --name jekyll-github-pages --volume="$PWD:/srv/jekyll" -p 12005:4000 jekyll/jekyll:4.0 jekyll serve
 ```
 ### 1.2 Move a full Git repository
 Move `jojozhuang.github.io` from github to `jojozhuang-gitlab-io` in gitlab.  
