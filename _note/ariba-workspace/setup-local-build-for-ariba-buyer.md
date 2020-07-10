@@ -941,16 +941,24 @@ Remove:
 * SenderEmailAddress = "nobody@ansmtp.lab1.ariba.com";
 
 Change:
-* EmailApprovalReplyTo = "approval@<yourMachineName>.ariba.com"; (like approval@10.48.105.101.ariba.com)
+* EmailApprovalReplyTo = "approval@\<yourMachineName\>.ariba.com"; (like approval@10.48.105.101.ariba.com)
 * NotificationFromAddress = "notificationAdmin@your.admins.domain";
 * AdministratorEmailAddress = "admin@your.admins.domain";
-* EmailApprovalReplyTo = "approval@<yourMachineName>.ariba.com";
+* EmailApprovalReplyTo = "approval@\<yourMachineName\>.ariba.com";
 * SMTPDomainName = "sap.com";
 * SMTPServerNameList = "(mail.sap.corp)";
 * SMTPAddressRedirect = "";
 
 If the above does not work, try to set NotificationFromAddress with your own email address. And you can debug `ApprovableNotification.reallySendEmail()` if necessary.
 * NotificationFromAddress = "r.zhuang@sap.com";
+
+**Email Format**  
+To get the new enhanced email format, enable the features:
+* PR-438, Email Enhanced Look and Feel
+* PR-453, Enhancements to email notifications
+
+Turn on parameter:
+* Application.Approvable.EnableEnhancedHTMLEmailFormat = Yes
 
 **Other issues related to email notification**  
 1) Disable black email list.  
@@ -973,6 +981,7 @@ delete FROM SSP_GIT_USER1.DURABLEEMAILTAB
 /* search messge by ir or invoice’s baseid */
 Select * from SSP_GIT_USER1.LONGSTRINGELEMENTTAB WHERE ROOTID = 'AAAeADUSUbx'
 ```
+
 
 ### 3.3 Enable Realm Encryption
 Run the following command and wait for about 5 minutes.
@@ -1060,25 +1069,48 @@ git config user.name "Rong Zhuang"
 git config user.email "r.zhuang@sap.com"
 git config remote.origin.url "https://github.wdf.sap.corp/Ariba-Ond/Buyer.git"
 ```
-
-Generate new ssh key, check https://help.github.com/articles/connecting-to-github-with-ssh/.
-```sh
-$ ssh-keygen -t rsa -b 4096 -C "r.zhuang@sap.com"
-```
-When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
-```sh
-> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-```
-
-Create key.
+Switch url to ssh.
 ```sh
 git remote set-url origin git@github.com:jojozhuang/text-compare-angular.git
+```
 
-ssh-keygen -t rsa -b 4096 -C "jojozhuang@gmail.com"
-mv jojozhuang_github_rsa ~/.ssh
-mv jojozhuang_github_rsa.pub ~/.ssh
-
+### 4.1 Generate Private and Public Keys
+1) Generate new ssh key, check https://help.github.com/articles/connecting-to-github-with-ssh/.
+```sh
+$ ssh-keygen -t rsa -b 4096 -C "jojozhuang@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/i857285/.ssh/id_rsa): jojozhuang_gitlab_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in jojozhuang_gitlab_rsa.
+Your public key has been saved in jojozhuang_gitlab_rsa.pub.
+The key fingerprint is:
+SHA256:YbYN5h2yW/jvGOVrCJeq3DnQtJvF5VQRBqJU0zqXKVs jojozhuang@gmail.com
+The key\'s randomart image is:
++---[RSA 2048]----+
+|        ..+...+o |
+|       . . o...  |
+|        O .. +   |
+|       =.X+.E    |
+|       oSo+@.    |
+|      . ++*o.    |
+|       ..Bo..    |
+|     . .=..+..   |
+|      o.o..o+    |
++----[SHA256]-----+
+```
+Two files are generated jojozhuang_gitlab_rsa and jojozhuang_gitlab_rsa.pub.  
+2) Move the two fiels to '~/.ssh' directory.
+```sh
+mv jojozhuang_gitlab_rsa ~/.ssh
+mv jojozhuang_gitlab_rsa.pub ~/.ssh
+```
+3) Add new public file to ssh config.
+```sh
 open ~/.ssh/config
+```
+Copy and past the previous rows, replace the file path for the new private key.
+```raw
 Host *
   AddKeysToAgent yes
   UseKeychain yes
@@ -1089,11 +1121,30 @@ Host *
   UseKeychain yes
   IdentityFile ~/.ssh/jojozhuang_github_rsa
 
-ssh-add -K ~/.ssh/jojozhuang_github_rsa
-
-pbcopy < ~/.ssh/jojozhuang_github_rsa.pub
-
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/jojozhuang_gitlab_rsa
 ```
+4) Initialize the agent.
+```sh
+$ ssh-agent bash
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+```
+5) Add key with 'ssh-add'.
+```sh
+bash-3.2$  ssh-add -K ~/.ssh/jojozhuang_gitlab_rsa
+Enter passphrase for /Users/i857285/.ssh/jojozhuang_gitlab_rsa:
+Identity added: /Users/i857285/.ssh/jojozhuang_gitlab_rsa (jojozhuang@gmail.com)
+```
+6) Copy the content of public key.
+```sh
+pbcopy < ~/.ssh/jojozhuang_github_rsa.pub
+```
+7) Go to https://gitlab.com/profile/keys, paste the public key, click 'Add key'.
+![image](/assets/images/note/9202/add_key_gitlab.png)
 
 ## 5. Intellij IDEA
 ### 5.1 Disable 'import \*'

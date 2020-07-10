@@ -88,6 +88,14 @@ bookmarks:
         description: Free icons from Font Awecome
         url: https://fontawesome.com/icons?d=gallery&m=free
         favorite: true
+      - name: Pexels - Free photos
+        description: Free photos
+        url: https://www.pexels.com/
+        favorite: true
+      - name: Free Logo Maker
+        description: Free Logo Maker
+        url: https://logomakr.com/
+        favorite: true
       - name: HTTP Status Codes
         description: HTTP Status Codes
         url: https://www.restapitutorial.com/httpstatuscodes.html

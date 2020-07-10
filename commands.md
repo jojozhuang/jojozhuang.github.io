@@ -17,7 +17,34 @@ cd /mnt/d/GitHub/jojozhuang.github.io/
 # Launch
 bundle exec jekyll serve --port 12001
 ```
-### 1.2 File and Directory
+### 1.2 Move a full Git repository
+Move `jojozhuang.github.io` from github to `jojozhuang-gitlab-io` in gitlab.  
+1) Create a repository named "jojozhuang-gitlab-io" in gitlab.  
+2) In local machine, copy the full folder of /GitHub/jojozhuang.github.io to /GitLab/jojozhuang-gitlab-io, including the `.git` folder.  
+3) Go to the new directory, clear the link to the origin repository.  
+4) Link the local repository to the newly created NEW repository.  
+5) Push all the branches and tags to remote.  
+
+In terminal.
+```sh
+cd ~
+# Copy the full folder of /GitHub/jojozhuang.github.io to /GitLab/jojozhuang-gitlab-io
+cp GitHub/jojozhuang.github.io GitLab/jojozhuang-gitlab-io
+cd GitLab/jojozhuang-gitlab-io
+
+# Clear the link to the origin repository
+git remote rm origin
+
+# Link the local repository to the newly created NEW repository.  
+git remote add origin git@gitlab.com:jojozhuang/jojozhuang-gitlab-io.git
+
+# Push all the branches and tags to remote.
+git push origin --all
+git push --tags
+```
+* [How to move a full Git repository](https://www.atlassian.com/git/tutorials/git-move-repository)
+
+### 1.3 File and Directory
 ```sh
 # Search Files by Name
 find . -name 'filename' -R
@@ -44,19 +71,19 @@ nautilus . #linux
 scp -r user@your.server.example.com:/path/to/foo /home/user/Desktop/
 ### `r` - Recursively copy entire directories.
 ```
-### 1.3 Compression/Zip
+### 1.4 Compression/Zip
 ```sh
 # Compress the files without the .DS_Store, __MACOSX and other .* files.
 cd SINV/SINV-10300
 zip -r ImportInvoiceStatus.zip . -x ".*" -x "__MACOSX"
 ```
-### 1.4 Permission
+### 1.5 Permission
 ```sh
 # Change Owner of Entire Directory to Current User
 sudo chown $USER /ariba/ssp_git/ -R
 ### `R` - Recursively change the owner for sub directories.
 ```
-### 1.5 Shortcut Keys for Mac
+### 1.6 Shortcut Keys for Mac
 * CMD + SHIFT + G, paste path in finder to open a file.
 
 ## 2. Git Commands

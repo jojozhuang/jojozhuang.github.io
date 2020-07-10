@@ -137,8 +137,11 @@ public void testMST() {
 }
 ```
 
-## 4. Source Files
+## 4. Related Questions
+* [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops)
+
+## 5. Source Files
 * [Source files for Minimum Spanning Tree on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/ds-spanning-tree)
 
-## 5. Reference
+## 6. Reference
 * [Spanning Tree](https://www.javatpoint.com/spanning-tree)

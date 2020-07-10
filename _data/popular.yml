@@ -66,3 +66,8 @@ categories:
         icon: fas fa-globe
         subcategory: jekyll
         image: jekyll.png
+      - name: Wordpress
+        description: Wordpress
+        icon: fab fa-wordpress
+        subcategory: wordpress
+        image: wordpress.png
