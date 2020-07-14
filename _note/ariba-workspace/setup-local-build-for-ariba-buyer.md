@@ -27,7 +27,7 @@ Create directory `ariba` under user's root directory, eg. /Users/i857285/ariba. 
 * Apache Maven 3.5.3
 * Apache Tomcat 6.0.13(for build)
 * Apache Tomcat 9.0.27(for runtime)
-* Git
+* Git and GitHub (see Section 4)
 * Nodejs (node, npm)
 * Hana in Docker - [Download from Docker Hub](https://hub.docker.com/_/sap-hana-express-edition)
 * DBeaver Community Version - [Download](https://dbeaver.io/)
@@ -776,7 +776,8 @@ wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-
 * c) The timezone info is saved in /etc/timezone eg. US/Pacific
 * d) show time: date "+%H:%M:%S   %d/%m/%y"
 
-7) GitHub SSO with token
+### 2.3 Git and GitHub
+1) GitHub SSO with token
 In ubuntu sub system(not windows), Create file ~/.git-credentials with following content.
 ```sh
 https://user:xxxx@github.wdf.sap.corp
@@ -789,7 +790,7 @@ See details:
 * [SSO Enablement for GitHub.wdf.sap.corp](https://github.wdf.sap.corp/pages/github/sso-enablement)
 * [git-credential-store](https://git-scm.com/docs/git-credential-store)
 
-### 2.3 Hana on Windows
+### 2.4 Hana on Windows
 Go through wiki [SAP HANA for SSP/S4](https://wiki.ariba.com/pages/viewpage.action?pageId=77582113) and check Getting_Started_HANAexpress_VM.pdf, which can be downloaded along with hana express.
 
 1) Install VMVare from SAP software center.  
@@ -810,6 +811,11 @@ Go through wiki [SAP HANA for SSP/S4](https://wiki.ariba.com/pages/viewpage.acti
 ```sql
 CREATE USER ssp_hana_user1 PASSWORD Hanauser1 NO FORCE_FIRST_PASSWORD_CHANGE;
 CREATE USER ssp_hana_user2 PASSWORD Hanauser2 NO FORCE_FIRST_PASSWORD_CHANGE;
+```
+Use the following sql to delete user.
+```sql
+/* delete user and all objects with it */
+DROP USER ssp_git_user1 CASCADE;
 ```
 10)Update Hana Db connection info in ez override file.
 ```xml
@@ -1061,31 +1067,97 @@ a) Administer the parent realm and go to "Site Manager"->"Data Import/Export"->"
 b) Import the zip file found in your directory: {install}/internal/demo/vsap/zips/merp-walkthrough.zip (Note: "{install}" is the install directory of your ssp build, example "/ariba/ssp_sp/root/install" and "vsap" is for sap variant. Choose the appropriate variant folder for other variants).  
 c) The above Import should be successful.  
 
-## 4. GitHub SSO
-Config user name, email and remote url.
+## 4. Git and GitHub
+### 4.1 GitHub Token
+Token is used to connect Github corporate repositories without password, see https://github.wdf.sap.corp/pages/github/sso-enablement. This is only used by new buyer build when cloning Buyer and platform, etc.
+
+1) Generate token  
+Go to https://github.wdf.sap.corp/, Settings -> Developer settings -> Personal access tokens, Generate new token.
+![image](/assets/images/note/9202/generate_access_token.png)
+
+2) Apply the token in `MacOS`  
+Verify that you use the **OSxKeychain** with `git config --list`. This should contain this line: **credential.helper=osxkeychain**
 ```sh
-git config --list  
-git config user.name "Rong Zhuang"
-git config user.email "r.zhuang@sap.com"
-git config remote.origin.url "https://github.wdf.sap.corp/Ariba-Ond/Buyer.git"
+$ git config --list
+credential.helper=osxkeychain
+...
 ```
-Switch url to ssh.
+Open the Keychain Access App, login->Passwords, find `github.wdf.sap.corp`. If you don't see it, you can try to clone any repository from https://github.wdf.sap.corp/, eg. 'git clone git@github.wdf.sap.corp:Ariba-Ond/Buyer.git'. You will be prompted to provide the password for the github account(i857285), just input the token as password. No need to wait for the download to finish, just refresh the "Passwords" Category here, you will see the entry for `github.wdf.sap.corp` with the blue icon.
+![image](/assets/images/note/9202/keychain_access.png)
+You can also update the token by double click this entry and paste the token in the password textbox.
+![image](/assets/images/note/9202/update_token_in_keychain.png)
+
+3) Apply the token in `Ubuntu or Windows WSL`  
+Verify that you use the **store** with `git config --list`. This should contain this line: **credential.helper store**
 ```sh
-git remote set-url origin git@github.com:jojozhuang/text-compare-angular.git
+$ git config --list
+credential.helper=store
+...
+```
+If it is not there, run the following command.
+```sh
+git config credential.helper store
 ```
 
-### 4.1 Generate Private and Public Keys
-1) Generate new ssh key, check https://help.github.com/articles/connecting-to-github-with-ssh/.
+In ubuntu sub system(not windows), Create file ~/.git-credentials with following content.
 ```sh
-$ ssh-keygen -t rsa -b 4096 -C "jojozhuang@gmail.com"
+https://[user]:[password]@github.wdf.sap.corp
+```
+
+4) Error  
+Even if the Github token is configured correctly, we may still encounter the build error like below. The link for the github repository is incorrect.
+```sh
+#######################################################################################
+info  : Executing syncPerl: Restart from here via ez -run syncPerl+
+info  : Get Perl path from local
+perl path is PERL : /usr/local/ActivePerl-5.26/bin
+#######################################################################################
+info  : Executing syncShared: Restart from here via ez -run syncShared+
+info  : Sync shared on MAC
+Cloning into 'shared'...
+Username for 'https://github.wdf.sap.corp': ^CERROR : The command `cd /Users/i857285/ariba/ssp_hana/ariba; git clone --branch SSP.2020.gDev-8019 https://github.wdf.sap.corp/Ariba-Ond/shared.git` exited abnormally with status=2.
+Details
+ - location of your ezconfig file:   [/Users/i857285/ariba/ezone/ssp_hana.xml]
+ - location of generated legacy files: [/Users/i857285/ariba/ssp_hana/roots/config]
+ - location of your devhere:      [/Users/i857285/ariba/ssp_hana/roots/devhere.sh]
+You can try again with either of these commands:
+ez -run syncShared+
+ez -retry
+```
+In this case, we have to manually clone these repositories. Replace the file **path** and **build label** before running the clone commands.
+```sh
+# Mac
+cd /Users/i857285/ariba/ssp_hana/ariba; git clone --branch SSP.2020.gDev-8019 git@github.wdf.sap.corp:Ariba-Ond/shared.git
+cd /Users/i857285/ariba/ssp_hana/ariba; git clone --branch SSP.2020.gDev-8019 git@github.wdf.sap.corp:Ariba-Ond/3rdParty.git
+cd /Users/i857285/ariba/ssp_hana/ariba/ond; git clone --branch SSP.2020.gDev-8019 git@github.wdf.sap.corp:Ariba-Ond/platform.git
+cd /Users/i857285/ariba/ssp_hana/ariba/ond; git clone --branch SSP.2020.gDev-8019 git@github.wdf.sap.corp:Ariba-Ond/Buyer.git
+
+# WSL
+cd /ariba/ssp_hana/ariba; git clone --branch SSP.2020.gDev-8024 git@github.wdf.sap.corp:Ariba-Ond/shared.git
+cd /ariba/ssp_hana/ariba; git clone --branch SSP.2020.gDev-8024 git@github.wdf.sap.corp:Ariba-Ond/3rdParty.git
+cd /ariba/ssp_hana/ariba/ond; git clone --branch SSP.2020.gDev-8024 git@github.wdf.sap.corp:Ariba-Ond/platform.git
+cd /ariba/ssp_hana/ariba/ond; git clone --branch SSP.2020.gDev-8024 git@github.wdf.sap.corp:Ariba-Ond/Buyer.git
+ez -run compilePlatform+
+export TOMCAT_HOME='/opt/apache-tomcat-6.0.53'
+ez -run setupTomcat6+
+```
+
+### 4.2 SSH keys
+We use SSH to connect to GitHub. To make it work, we need to generate Private and Public Keys, see https://help.github.com/articles/connecting-to-github-with-ssh/. We setup SSH connection for development purpose, eg. push Pull Request to remote.
+
+The steps below should be same in MacOS and WSL(Ubuntu).
+
+1) Generate new ssh key
+```sh
+$ ssh-keygen -t rsa -b 4096 -C "r.zhuang@sap.com"
 Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/i857285/.ssh/id_rsa): jojozhuang_gitlab_rsa
+Enter file in which to save the key (/Users/i857285/.ssh/id_rsa): rzhuang_github_rsa
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in jojozhuang_gitlab_rsa.
-Your public key has been saved in jojozhuang_gitlab_rsa.pub.
+Your identification has been saved in rzhuang_github_rsa.
+Your public key has been saved in rzhuang_github_rsa.pub.
 The key fingerprint is:
-SHA256:YbYN5h2yW/jvGOVrCJeq3DnQtJvF5VQRBqJU0zqXKVs jojozhuang@gmail.com
+SHA256:YbYN5h2yW/jvGOVrCJeq3DnQtJvF5VQRBqJU0zqXKVs r.zhuang@sap.com
 The key\'s randomart image is:
 +---[RSA 2048]----+
 |        ..+...+o |
@@ -1099,13 +1171,13 @@ The key\'s randomart image is:
 |      o.o..o+    |
 +----[SHA256]-----+
 ```
-Two files are generated jojozhuang_gitlab_rsa and jojozhuang_gitlab_rsa.pub.  
+Two files are generated rzhuang_github_rsa and rzhuang_github_rsa.pub.  
 2) Move the two fiels to '~/.ssh' directory.
 ```sh
-mv jojozhuang_gitlab_rsa ~/.ssh
-mv jojozhuang_gitlab_rsa.pub ~/.ssh
+mv rzhuang_github_rsa ~/.ssh
+mv rzhuang_github_rsa.pub ~/.ssh
 ```
-3) Add new public file to ssh config.
+3) [Optionsl]Add new public file to ssh config.
 ```sh
 open ~/.ssh/config
 ```
@@ -1119,12 +1191,7 @@ Host *
 Host *
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/jojozhuang_github_rsa
-
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/jojozhuang_gitlab_rsa
+  IdentityFile ~/.ssh/rzhuang_github_rsa
 ```
 4) Initialize the agent.
 ```sh
@@ -1135,16 +1202,183 @@ For more details, please visit https://support.apple.com/kb/HT208050.
 ```
 5) Add key with 'ssh-add'.
 ```sh
-bash-3.2$  ssh-add -K ~/.ssh/jojozhuang_gitlab_rsa
-Enter passphrase for /Users/i857285/.ssh/jojozhuang_gitlab_rsa:
-Identity added: /Users/i857285/.ssh/jojozhuang_gitlab_rsa (jojozhuang@gmail.com)
+bash-3.2$  ssh-add -K ~/.ssh/rzhuang_github_rsa
+Enter passphrase for /Users/i857285/.ssh/rzhuang_github_rsa:
+Identity added: /Users/i857285/.ssh/rzhuang_github_rsa (r.zhuang@sap.com)
 ```
-6) Copy the content of public key.
+6) Or you can just run(In Ubuntu), no need to create **config** file in .ssh directory.
 ```sh
-pbcopy < ~/.ssh/jojozhuang_github_rsa.pub
+$ eval "$(ssh-agent -s)"
+> Agent pid 59566
+$ ssh-add ~/.ssh/rzhuang_github_rsa
 ```
-7) Go to https://gitlab.com/profile/keys, paste the public key, click 'Add key'.
-![image](/assets/images/note/9202/add_key_gitlab.png)
+7) Copy the content of public key.
+```sh
+pbcopy < ~/.ssh/rzhuang_github_rsa.pub
+```
+8) Go to https://github.wdf.sap.corp/, Settings -> SSH and GPG keys -> New SSH key, paste the public key, click 'Add key'.
+
+![image](/assets/images/note/9202/ssh_keys.png)
+
+### 4.3 Creating New Build
+Copy the EZ configuration files from MacOS, just change some settings in the override file.
+* WORKSPACE
+* LABEL
+* LOCALHOSTNAME - Windows Desktop has public IP address.
+* DBHostname - Windows Desktop is using Hana in virtual machine, the ip address is not localhost.
+* AribaDBPort - The port for virtual machine is 39015, for hana in docker, the port is 39017.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ez>
+ <data>
+    <global>
+      <!-- You could override the value for one or more replace or define elements. -->
+      <replace string="@@WORKSPACE@@" value="ssp_hana"/>
+      <replace string="@@LABEL@@" value="SSP.2020.gDev-8024"/>
+
+<!--
+      <replace string="@@SSPHTTP@@" value="http"/>
+      <replace string="@@LOCALHOSTNAME@@" value="127.0.0.1"/>
+      <replace string="@@SSPTOMCATPORT@@" value="443"/>-->
+
+	  <replace string="@@LOCALHOSTNAME@@" value="10.48.104.140"/>
+
+      <!-- hana database -->
+      <replace string="@@DBHostname@@" value="192.168.220.134"/>
+      <replace string="@@DBServer@@" value="HXE"/>
+      <replace string="@@AribaDBType@@" value="hana"/>
+      <replace string="@@AribaDBJDBCDriverType@@" value="hana"/>
+      <replace string="@@AribaDBPort@@" value="39015"/>
+      <replace string="@@AribaDBUserName0@@" value="ssp_hana_user1"/>
+      <replace string="@@AribaDBUserPassword0@@" value="Hanauser1"/>
+      <replace string="@@AribaDBUserName1@@" value="ssp_hana_user2"/>
+      <replace string="@@AribaDBUserPassword1@@" value="Hanauser2"/>
+
+      <!--remote arches -->
+      <replace string="@@ARCHESSERVICE@@" value="svcscdev3ows.sc1-lab1.ariba.com"/>
+      <replace string="@@ARCHESPORT@@" value="443"/>
+
+      <!-- Enable EmailApproval -->
+      <replace string="@@EMAILAPPROVALENABLED@@" value="true"/>
+      <replace string="@@EMAILAPPROVALMAILTOLINK@@" value="true"/>
+      <replace string="@@NOTIFICATIONFROMADDRESS@@" value="r.zhuang@sap.com"/>
+      <replace string="@@SMTPDOMAINNAME@@" value="sap.com"/>
+      <replace string="@@SMTPSERVERNAME@@" value="mail.sap.corp"/>
+
+      <!-- AN IDs -->
+      <replace string="@@ANSERVICE@@"            value="svcdev6.ariba.com"/>
+      <replace string="@@ANBUYERID_p2pPsoft@@"   value="AN02004936421"/>
+      <replace string="@@ANBUYERID_p2pSap@@"     value="AN02005268257"/>
+      <replace string="@@ANBUYERID_p2pSg@@"      value="AN02005252797"/>
+      <replace string="@@ANBUYERID_apcAippSap@@" value="AN02004936423"/>
+
+      <!-- JVM debugging port -->
+      <environment name="EZSTART_JDWP_OPTIONS" value="address=6455,suspend=n"/>
+
+      <!-- JVM memory settings -->
+      <replace string="@@JAVAMEMORYMAX@@" value="4096m"/>
+      <replace string="@@JAVAMEMORYMIN@@" value="2048m"/>
+    </global>
+    <!--
+    <file name="PersonalParameters.table" type="table">
+      <write type="set" params="Application.Base.NotificationFromAddress" value="@@NOTIFICATIONFROMADDRESS@@"/>
+    </file>
+  -->
+    <!-- You could override the entire content template for one or more files by name. -->
+ </data>
+ <!-- You could override the entire action section, but it is not recommended. -->
+</ez>
+```
+### 4.4 Tomcat 9 Issue after the build
+After steps `initdb` and `enablerealms` are finished, the build process will be stopped again at step `startserver`.
+```sh
+Name "URI::OVERLOAD" used only once: possible typo at /Users/i857285/ariba/ssp_git/ariba/3rdParty/perl/AP810/common/lib/overload.pm line 13.
+Name "File::Temp::OVERLOAD" used only once: possible typo at /Users/i857285/ariba/ssp_git/ariba/3rdParty/perl/AP810/common/lib/overload.pm line 13.
+Scalar value @args[...] better written as $args[...] at /Users/i857285/ariba/ssp_git/roots/install/lib/perl/Ariba/Tomcat/ServerStart.pm line 69.
+-Dcatalina.base=/Users/i857285/ariba/ssp_git/roots/catalina-Dcatalina.home=/opt/apache-tomcat-6.0.13-Djava.io.tmpdir=/Users/i857285/ariba/ssp_git/roots/catalina/temp-Djava.endorsed.dirs=/Users/i857285/ariba/ssp_git/roots/install/classes/endorsed:/opt/apache-tomcat-6.0.13/common/endorsed-DAriba.CommandLineArgs=-nodeName buyerserver1"my" variable $xmlDecl masks earlier declaration in same scope at /Users/i857285/ariba/ssp_git/roots/install/lib/perl/Ariba/Config/Base.pm line 1268.
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+java.lang.NoClassDefFoundError: org/apache/tomcat/util/file/ConfigurationSource
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)
+	at java.lang.Class.getConstructor0(Class.java:3075)
+	at java.lang.Class.newInstance(Class.java:412)
+	at org.apache.catalina.startup.Bootstrap.init(Bootstrap.java:218)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:390)
+Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.util.file.ConfigurationSource
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 6 more
+```
+This is because we use `tomcat 6 to build buyer`, but we need to use `tomcat 9 to run buyer`. Follow the steps below to continue the process.  
+1) Modify /ssp_hana/root/install/classes/classpath.txt, add the following entries to include all tomcat/lib jars.
+ i.e add two entries
+```raw
+/opt/apache-tomcat-9.0.29/lib/*
+classes/commons-fileupload-1.4.jar
+```
+2) delete /ssp_hana/root/install/classes/patches/tomcat-servlet-api-9.0.35.jar
+3) Copy the following files from $TOMCAT_HOME/lib to /ssp_hana/root/install/classes
+```sh
+cp /opt/apache-tomcat-9.0.29/lib/annotations-api.jar /ariba/ssp_hana/root/install/classes/annotations-api.jar
+cp /opt/apache-tomcat-9.0.29/lib/catalina.jar /ariba/ssp_hana/root/install/classes/catalina.jar
+cp /opt/apache-tomcat-9.0.29/lib/jasper.jar /ariba/ssp_hana/root/install/classes/jasper.jar
+cp /opt/apache-tomcat-9.0.29/lib/jsp-api.jar /ariba/ssp_hana/root/install/classes/jsp-api.jar
+cp /opt/apache-tomcat-9.0.29/lib/servlet-api.jar /ariba/ssp_hana/root/install/classes/servlet-api.jar
+cp /opt/apache-tomcat-9.0.29/lib/tomcat-coyote.jar /ariba/ssp_hana/root/install/classes/tomcat-coyote.jar
+```
+### 4.5 Setting up SSL to allow punch-in from AN
+Create ezstart file, see https://wiki.ariba.com/display/ENGKB/Running+EZ+builds+on+Red+Hat+and+Mac.
+
+1) Copy the myezstart file from other old build, replace the exports with those in the /ssp_hana/root/devhere.sh, except the last one(Use tomcat 9).
+```sh
+export TOMCAT_HOME='/opt/apache-tomcat-9.0.29'
+```
+2) Edit /ariba/ssp_hana/root/install/config/asmshared/AppInfo.xml, use ip address instead of machine name and remove the port 8050.
+```xml
+<Instance isCDS="true" name="Buyer">
+	<Param name="InternalURL" value="http://10.48.104.140"/>
+	<Param name="Type" value="Buyer"/>
+	<Param name="Version" value="14s2"/>
+	<Param name="ContextRoot" value="Buyer"/>
+	<Param name="CXMLServletName" value="cxmlchannel"/>
+	<Param name="IncomingHttpServerURL" value="http://10.48.104.140"/>
+	<Param name="AuthIds" value="base,IntegratedRealm:base"/>
+</Instance>
+```
+3) Edit /ariba/ssp_hana/root/catalina/conf/server.xml, add connector for using keystore file.
+```xml
+<!-- Define a SSL Coyote HTTP/1.1 Connector on port 443 -->
+<!-- To use SSL, uncomment the section belog. -->
+<Connector port="80" protocol="HTTP/1.1"
+connectionTimeout="20000"
+redirectPort="443"/>
+
+<Connector port="443" protocol="HTTP/1.1" SSLEnabled="true"
+maxThreads="150" scheme="https" secure="true"
+clientAuth="false" sslProtocol="TLS"
+keystoreFile="/opt/apache-tomcat-6.0.53/10.48.104.140.p12" keystoreType="PKCS12" keystorePass="123456"/>
+```
+4) Start server.
+```sh
+chmod +x /ariba/ssp_hana/myezstart
+sudo /ariba/ssp_hana/myezstart
+````
+### 4.6 Config User Name and Email
+After each build, we need to verify that we are using correct user name, password and url.
+```sh
+git config --list  
+git config user.name "Rong Zhuang"
+git config user.email "r.zhuang@sap.com"
+git config remote.origin.url "https://github.wdf.sap.corp/Ariba-Ond/Buyer.git"
+```
+Switch url from https to ssh.
+```sh
+git remote set-url origin git@github.wdf.sap.corp:Ariba-Ond/Buyer.git
+```
 
 ## 5. Intellij IDEA
 ### 5.1 Disable 'import \*'
