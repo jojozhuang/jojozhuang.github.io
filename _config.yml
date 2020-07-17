@@ -48,20 +48,10 @@ navlist:
     url: /blog
     icon: fas fa-blog
     visible: true
-  - key: cv
-    url: /cv
-    visible: false
-  - key: course
-    url: /course
-    visible: false
   - key: favorite
     url: /favorite
     icon: fas fa-star
     visible: true
-  - key: note
-    url: /note
-    icon: fas fa-book-open
-    visible: false
   - key: more
     url: /#
     icon: fas fa-chevron-circle-down
