@@ -218,7 +218,7 @@ collections:
   portfolio:
     output: true
 ```
-Create new folder named `_portfolio` in root directory, and put all portfolio postings into it.
+Create new folder named `_project` in root directory, and put all portfolio postings into it.
 ![image](/assets/images/jekyll/1612/collection.png){:width="400px"}  
 Each posting Markdown file contains following attributes.
 ```

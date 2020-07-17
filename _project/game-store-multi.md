@@ -12,7 +12,7 @@ tags: [iOS, Android, Xamarin, Cordova]
 
 ## 1. Introduction
 ### 1.1 Game Store Web Application
-I have a portfolio named '[Online Game Store]({% link _portfolio/game-store-aspnet.md %})' which is built with ASP.NET MVC in C#. It's an online store for selling game facilities. Visit the <a href="https://ect583final.azurewebsites.net/" target="\_blank">Live Demo on Azure</a>.
+I have a portfolio named '[Online Game Store]({% link _project/game-store-aspnet.md %})' which is built with ASP.NET MVC in C#. It's an online store for selling game facilities. Visit the <a href="https://ect583final.azurewebsites.net/" target="\_blank">Live Demo on Azure</a>.
 ![image](/assets/images/portfolio/gamestoremulti/gamestore_web.png)  
 There is one core functionality for the store administrator, managing products.
 ![image](/assets/images/portfolio/gamestoremulti/gamestore_products.png)

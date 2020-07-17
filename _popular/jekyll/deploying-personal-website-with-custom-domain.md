@@ -40,7 +40,7 @@ Go to the github repository. In Settings, input the custom domain and check 'Enf
 The settings on GitHub and GoDaddy will be activated after a while. Visit the website with new domain [rongzhuang.me](rongzhuang.me). Notice that the url always starts with `https`.
 ![image](/assets/images/jekyll/1642/rongzhuang_home.png)
 Portfolio page.
-![image](/assets/images/jekyll/1642/rongzhuang_portfolio.png)
+![image](/assets/images/jekyll/1642/rongzhuang_project.png)
 
 ## 5. Reference
 * [How to Configure GoDaddy Custom Domains with GitHub Pages](https://medium.com/@supriyakankure/how-to-add-a-custom-domain-to-your-github-page-with-godaddy-84495781143e)

@@ -11,7 +11,7 @@ tags: [JSP, MySQL, Docker]
 > Introduce how to user Docker Container to host MySQL database for JSP Application.
 
 ## 1. Project Introduction
-I have one portfolio named [Online Game Store]({% link _portfolio/game-store-jsp.md %}), which is built with JSP and MySQL. In this tutorial, I will introduce how to host this MySQL database in Docker container.
+I have one portfolio named [Online Game Store]({% link _project/game-store-jsp.md %}), which is built with JSP and MySQL. In this tutorial, I will introduce how to host this MySQL database in Docker container.
 
 ### 1.1 Database
 The instance of MySQL for this JSP application has the following structure.  

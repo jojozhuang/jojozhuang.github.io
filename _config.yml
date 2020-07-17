@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-#incremental: true
+incremental: false
 
 excerpt_separator: "\n" # for windows only, the default value is "\n\n".
 
@@ -16,6 +16,9 @@ permalink: /blog/:year/:month/:day/:title/
 # Setup
 mywebsite:
   url: http://jojozhuang.github.io
+  title: Computer Science
+  subtitle: Data Structure, Algorithm, Angular, React, etc.
+  logo: /assets/assets/website-logo.png
 #theme: jekyll-theme-cayman
 
 # rss
@@ -29,8 +32,8 @@ author:
   github: https://github.com/jojozhuang
 
 navlist:
-  - key: portfolio
-    url: /portfolio
+  - key: project
+    url: /project
     icon: fas fa-briefcase
     visible: true
   - key: popular
@@ -111,7 +114,7 @@ navlist:
         icon: fas fa-info-circle
 
 collections:
-  portfolio:
+  project:
     output: true
   popular:
     output: true
