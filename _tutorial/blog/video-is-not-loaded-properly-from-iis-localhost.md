@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Video Is Not Loaded Properly From IIS Localhost"
+index: 8004
+subcategory: special-blog
 date: 2016-03-04
-subcategory: blog
 tags: [IIS, MIME Type]
 ---
 

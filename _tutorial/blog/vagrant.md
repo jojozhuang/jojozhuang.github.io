@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Vagrant - Draft"
+index: 8025
+subcategory: special-blog
 date: 2018-11-29
-subcategory: blog
 tags: [Vagrant]
 draft: true
 ---

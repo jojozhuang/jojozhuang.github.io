@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "MathJax Cheat Sheet for Mathematical Notation"
+index: 8020
+subcategory: special-blog
 date: 2018-09-11
-subcategory: blog
 tags: [MathJax, Time Complexity]
 mathjax: true
 ---

@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Source Code Search with OpenGrok"
+index: 8015
+subcategory: special-blog
 date: 2018-05-03
-subcategory: blog
 tags: [OpenGrok]
 ---
 

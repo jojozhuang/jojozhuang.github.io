@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Creating Data Structure Diagrams with Mermaid"
+index: 8023
+subcategory: special-blog
 date: 2018-09-16
-subcategory: blog
 tags: [Mermaid, Tree]
 mermaid: true
 ---

@@ -130,3 +130,8 @@ categories:
         icon: fas fa-gavel
         subcategory: online-judge
         image: online-judge.png
+      - name: Blog
+        description: Blog
+        icon: fas fa-blog
+        subcategory: special-blog
+        image: online-judge.png

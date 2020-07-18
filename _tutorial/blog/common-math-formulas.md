@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Common Math Formulas"
+index: 8013
+subcategory: special-blog
 date: 2018-01-03
-subcategory: blog
 tags: [Math Formulas]
 mathjax: true
 ---

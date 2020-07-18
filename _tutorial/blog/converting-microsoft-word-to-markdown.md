@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Converting Microsoft Word to Markdown"
+index: 8012
+subcategory: special-blog
 date: 2017-07-09
-subcategory: blog
 tags: [Markdown, Writage]
 ---
 

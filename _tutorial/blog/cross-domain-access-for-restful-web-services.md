@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Cross Domain Access for RESTful Web Services"
+index: 8003
+subcategory: special-blog
 date: 2016-02-05
-subcategory: blog
 tags: [CORS, ASP.NET WebAPI]
 ---
 

@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Mermaid Cheat Sheet"
+index: 8024
+subcategory: special-blog
 date: 2018-09-18
-subcategory: blog
 tags: [Mermaid]
 mermaid: true
 ---

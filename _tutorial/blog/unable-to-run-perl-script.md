@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Unable to Run Perl Script"
+index: 8016
+subcategory: special-blog
 date: 2018-05-05
-subcategory: blog
 tags: [Perl]
 ---
 

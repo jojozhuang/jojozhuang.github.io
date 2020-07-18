@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Migrating Repositories From GitHub to GitLab"
+index: 8018
+subcategory: special-blog
 date: 2018-07-21
-subcategory: blog
 tags: [GitHub, GitLab]
 ---
 

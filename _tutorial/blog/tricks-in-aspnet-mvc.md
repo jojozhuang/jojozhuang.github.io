@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Tricks in ASP.NET MVC"
+index: 8005
+subcategory: special-blog
 date: 2016-03-19
-subcategory: blog
 tags: [ASP.NET MVC]
 ---
 

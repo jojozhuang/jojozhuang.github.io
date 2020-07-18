@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Deploying ASP.NET MVC Application to Azure"
+index: 8002
+subcategory: special-blog
 date: 2016-01-28
-subcategory: blog
 tags: [Microsoft Azure, ASP.NET]
 ---
 

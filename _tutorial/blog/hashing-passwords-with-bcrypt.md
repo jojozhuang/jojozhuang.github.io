@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Hashing Passwords with Bcrypt"
+index: 8014
+subcategory: special-blog
 date: 2018-04-07
-subcategory: blog
 tags: [Bcrypt]
 ---
 

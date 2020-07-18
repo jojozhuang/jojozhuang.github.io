@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Advanced Topics in Elasticsearch"
+index: 8011
+subcategory: special-blog
 date: 2017-06-29
-subcategory: blog
 tags: [Elasticsearch]
 ---
 

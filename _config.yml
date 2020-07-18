@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-incremental: false
+#incremental: true
 
 excerpt_separator: "\n" # for windows only, the default value is "\n\n".
 
@@ -170,7 +170,7 @@ navlist:
         url: /tutorial/?n=tutorial&c=distributed-system&s=network
         icon: fas fa-network-wired
       - key: softwares
-        description: softwares
+        description: Softwares
         url: /tutorial/?n=tutorial&c=distributed-system&s=softwares
         icon: fas fa-compact-disc
       - key: database-cache
@@ -221,6 +221,10 @@ navlist:
     visible: true
     subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
     sublist:
+      - key: page-index
+        description: Page Index
+        url: /page-index
+        icon: fas fa-terminal
       - key: commands
         description: Commands
         url: /commands
@@ -238,10 +242,6 @@ navlist:
         description: Tutorial
         url: /tutorial
         icon: fas fa-chalkboard-teacher
-      - key: blog
-        description: Blog
-        url: /blog
-        icon: fas fa-blog
       - key: separator
       - key: rss
         description: RSS Feed

@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Popular Tools - draft"
+index: 8026
+subcategory: special-blog
 date: 2019-03-16
-subcategory: blog
 tags: [Storm]
 draft: true
 ---

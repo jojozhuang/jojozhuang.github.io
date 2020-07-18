@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Basic Queries in Elasticsearch"
+index: 8010
+subcategory: special-blog
 date: 2017-06-23
-subcategory: blog
 tags: [Elasticsearch]
 ---
 

@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Big O Cheat Sheet"
+index: 8021
+subcategory: special-blog
 date: 2018-09-12
-subcategory: blog
 tags: [Big O, Time Complexity]
 ---
 

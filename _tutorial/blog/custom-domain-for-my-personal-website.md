@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Custom Domain for My Personal Website - Draft"
+index: 8028
+subcategory: special-blog
 date: 2019-06-27
-subcategory: blog
 tags: [Bootstrap]
 draft: true
 ---

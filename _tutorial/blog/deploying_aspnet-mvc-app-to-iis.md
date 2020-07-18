@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Deploying ASP.NET MVC Application to IIS"
+index: 8001
+subcategory: special-blog
 date: 2016-01-25
-subcategory: blog
 tags: [IIS, ASP.NET]
 ---
 

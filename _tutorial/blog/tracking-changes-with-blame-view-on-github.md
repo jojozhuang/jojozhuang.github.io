@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Tracking Changes with Blame View on GitHub"
+index: 8019
+subcategory: special-blog
 date: 2018-09-01
-subcategory: blog
 tags: [GitHub]
 ---
 

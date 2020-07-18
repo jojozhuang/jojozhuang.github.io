@@ -1,9 +1,10 @@
 ---
-layout: post
-key: blog
+layout: tutorial
+key: tutorial
 title: "Upgrading Angular App from 5 to 6"
+index: 8017
+subcategory: special-blog
 date: 2018-07-05
-subcategory: blog
 tags: [Angular]
 ---
 
