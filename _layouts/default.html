@@ -34,7 +34,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        {% for link in site.navlist %}
+        {% for link in site.data.menu.menuitems %}
           {% if link.visible == true %}
             {% if link.sublist %}
             <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}">

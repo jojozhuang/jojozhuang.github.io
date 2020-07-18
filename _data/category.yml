@@ -1,0 +1,203 @@
+key: category
+name: Category
+description: Data Structure, Algorithm, Java, Jekyll
+categories:
+  - category: algorithm
+    name: Algorithm
+    subcategories:
+      - name: Data Structure
+        description: Data Structure
+        icon: fas fa-sitemap
+        subcategory: data-structure
+        image: data-structure.png
+      - name: Algorithm
+        description: Algorithm
+        icon: fas fa-square-root-alt
+        subcategory: algorithm
+        image: algorithms.png
+      - name: Algorithm Overview
+        description: Algorithm Overview
+        icon: fas fa-superscript
+        subcategory: algorithm-overview
+        image: algorithms2.png
+      - name: Practice Problems
+        description: Practice Problems
+        icon: fab fa-resolving
+        subcategory: practice-problems
+        image: target.png
+  - category: programming
+    name: Programming
+    subcategories:
+      - name: Dev Environment
+        description: Development Environment
+        icon: fab fa-dev
+        subcategory: dev-env
+        image: dev.png
+      - name: Java Core
+        description: Core features of Java
+        icon: fab fa-java
+        subcategory: java-core
+        image: java.png
+      - name: Java 8
+        description: New features in Java 8
+        icon: fab fa-java
+        subcategory: java-java8
+        image: java.png
+      - name: Java Concurrency
+        description: Concurrency and MultiThreading
+        icon: fab fa-java
+        subcategory: java-concurrency
+        image: java.png
+      - name: Java Advanced
+        description: Advanced topics of Java
+        icon: fab fa-java
+        subcategory: java-advanced
+        image: java2.png
+      - name: Java App
+        description: Java Application
+        icon: fab fa-java
+        subcategory: java-app
+        image: java3.png
+      - name: Javascript
+        description: Javascript
+        icon: fab fa-js-square
+        subcategory: javascript
+        image: javascript.png
+      - name: Design Pattern
+        description: Object-Orientation, Inheritance
+        icon: fas fa-pencil-ruler
+        subcategory: design-pattern
+        image: design-pattern.png
+  - category: architecture
+    name: Architecture
+    subcategories:
+      - name: Theory and Principle
+        description: Theory and Principle
+        icon: fas fa-lightbulb
+        subcategory: theory
+        image: theory.png
+      - name: Network
+        description: Network
+        icon: fas fa-network-wired
+        subcategory: network
+        image: network.png
+      - name: Softwares
+        description: Softwares
+        icon: fas fa-compact-disc
+        subcategory: softwares
+        image: softwares.png
+      - name: Database and Cache
+        description: MongoDB, Cassandra, Redis, Memcached
+        icon: fas fa-database
+        subcategory: database
+        image: database.png
+      - name: Message Queue
+        description: Kafka, RabbitQueue
+        icon: fas fa-mail-bulk
+        subcategory: message-queue
+        image: message-queue.png
+      - name: Docker
+        description: Docker Hub, Image, Container, Kitematic, Dockerfile, Compose
+        icon: fab fa-docker
+        subcategory: docker
+        image: docker.png
+      - name: DevOps
+        description: Nginx, Zookeeper, Splunk, Spark
+        icon: fas fa-tools
+        subcategory: devops
+        image: devops.png
+      - name: Security
+        description: Security
+        icon: fas fa-shield-alt
+        subcategory: security
+        image: security.png
+  - category: cloud
+    name: Cloud
+    subcategories:
+      - name: Cloud Knowledge
+        description: Cloud Knowledge
+        icon: fas fa-cloud
+        subcategory: knowledge
+        image: code.png
+      - name: Amazon AWS
+        description: Amazon AWS
+        icon: fab fa-aws
+        subcategory: amazon-aws
+        image: aws.png
+      - name: Google GCP
+        description: Google GCP
+        icon: fab fa-google
+        subcategory: google-gcp
+        image: google-cloud.png
+  - category: frontend
+    name: Frontend
+    subcategories:
+      - name: Angular Tutorial
+        description: Angular Tutorial
+        icon: fab fa-angular
+        subcategory: angular-js
+        image: angular-js.png
+      - name: Angular App
+        description: Angular App
+        icon: fab fa-angular
+        subcategory: angular-app
+        image: angular-js.png
+      - name: React Tutorial
+        description: React Tutorial
+        icon: fab fa-react
+        subcategory: react-js
+        image: react-js.png
+      - name: React App
+        description: React App
+        icon: fab fa-react
+        subcategory: react-app
+        image: react-js.png
+      - name: Mobile
+        description: Mobile
+        icon: fas fa-mobile-alt
+        subcategory: mobile
+        image: mobile.png
+  - category: backend
+    name: Backend
+    subcategories:
+      - name: RESTful API
+        description: RESTful API
+        icon: fas fa-cogs
+        subcategory: restful
+        image: restfulapi.png
+      - name: Node.js
+        description: Node.js
+        icon: fab fa-node-js
+        subcategory: node-js
+        image: node-js.png
+      - name: Express.js
+        description: Express.js
+        icon: fab fa-node-js
+        subcategory: express-js
+        image: express-js.png
+  - category: website
+    name: Personal Website
+    subcategories:
+      - name: Jekyll
+        description: Jekyll
+        icon: fas fa-globe
+        subcategory: jekyll
+        image: jekyll.png
+      - name: Wordpress
+        description: Wordpress
+        icon: fab fa-wordpress
+        subcategory: wordpress
+        image: wordpress.png
+  - category: project
+    name: Project
+    subcategories:
+      - name: Online Judge
+        description: Online Judge
+        icon: fas fa-gavel
+        subcategory: online-judge
+        image: online-judge.png
+      - name: Blog
+        description: Blog
+        icon: fas fa-blog
+        subcategory: special-blog
+        image: online-judge.png

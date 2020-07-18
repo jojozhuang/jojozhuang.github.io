@@ -99,6 +99,33 @@ key: home
                 </div>
               {% endif %}
             {% endfor %}
+
+            {% assign subject = site.data.category %}
+            {% assign postings = site.tutorial | sort: 'index' %}
+            {% for category in subject.categories %}
+              {% assign col = forloop.index | modulo: 3 %}
+              {% if col == 1 %}
+                <div class="card-deck">
+              {% endif %}
+                  <div class="card">
+                    <div class="card-header">
+                      {% assign categoryurl = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category %}
+                      <a href="{{categoryurl}}" class="card-link">{{category.name}}</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    {% for subcategory in category.subcategories %}
+                    {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
+                    {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
+                    <a href="{{url}}" class="list-group-item list-group-item-action">
+                      <span data-toggle="tooltip" data-placement="right" title="{{subcategory.description}}"><i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span></span>
+                    </a>
+                    {% endfor %}
+                    </ul>
+                  </div>
+              {% if col == 0 or forloop.last == true %}
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
           <dl class="dl-unsur" id="posting-list"/>
         </div>
