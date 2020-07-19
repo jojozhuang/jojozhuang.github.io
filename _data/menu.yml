@@ -190,10 +190,6 @@ menuitems:
     visible: true
     subkeys: ["searchadv","reading","quicklinks","contact","about","commands"]
     sublist:
-      - key: commands
-        description: Commands
-        url: /commands
-        icon: fas fa-terminal
       - key: separator
       - key: page-index
         description: Page Index
@@ -211,7 +207,7 @@ menuitems:
       - key: separator
       - key: rss
         description: RSS Feed
-        url: /blog/atom.xml
+        url: /atom.xml
         icon: fas fa-rss
       - key: sitemap
         description: Sitemap

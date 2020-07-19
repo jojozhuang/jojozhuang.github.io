@@ -32,7 +32,7 @@ git version 2.11.0 (Apple Git-81)
 Configure your Git username and email using the following commands:
 ```raw
 $ git config --global user.name "Johnny"
-$ git config --global user.email "jojozhuang@gmail.com"
+$ git config --global user.email "csgeek@mail.com"
 ```
 
 ### 2.2 Installing Git on Ubuntu

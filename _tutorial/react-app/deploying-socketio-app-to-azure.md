@@ -98,7 +98,7 @@ Add 'engines' section into 'package.json' of the Node.js project. It indicates t
   "keywords": [],
   "author": {
     "name": "Rong Zhuang",
-    "email": "jojozhuang@gmail.com"
+    "email": "csgeek@mail.com"
   },
   "license": "MIT",
   "dependencies": {

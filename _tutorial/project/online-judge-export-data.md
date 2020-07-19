@@ -165,7 +165,7 @@ Click on the 'Export to CSV' button. Later, you will see the popup with the csv 
 Save the file to your local folder, open it, you will see the data entries.
 ```csv
 _id,username,email,hash,salt,role,timecreated
-"5b6bd0925c49e7b2edba5674","jojozhuang","jojozhuang@gmail.com","9f51bcd7a80a8da6fa02dcc9e136cd2ea5a08a24c988e4d822ebeb0b3eb430fd9a62af4fc6e1c456cb12cbc5b8792f737166ca39b3bb0fe4d34e1cd1ae134fd3","f8dae7c30d811b322b8763afc424fec0","admin","Wed Aug 08 2018 22:26:42 GMT-0700 (PDT)"
+"5b6bd0925c49e7b2edba5674","jojozhuang","csgeek@mail.com","9f51bcd7a80a8da6fa02dcc9e136cd2ea5a08a24c988e4d822ebeb0b3eb430fd9a62af4fc6e1c456cb12cbc5b8792f737166ca39b3bb0fe4d34e1cd1ae134fd3","f8dae7c30d811b322b8763afc424fec0","admin","Wed Aug 08 2018 22:26:42 GMT-0700 (PDT)"
 "5b6c8d16867fe7cf152eaef5","demo","demo@gmail.com","db33f89976f40c25026eb60ca8975c5391015b8f3ea42e18f38a10b65833f977bbd1093b034b3435ef21ca5edb9f541edd991254c0e370b13cf6cfbe2d865457","a9c0ad6442a6c14e0fb426312359845e","regular","Tue Aug 07 2018 23:49:35 GMT-0700 (PDT)"
 "5b6c8d16867fe7cf152eaef6","admin","admin@gmail.com","95af1d1b4dae7e42b23e15fe3fad7d9360d828eba3bce126bf40f9595ad940b28690907a2b4a976898561cb725b3fc562d793596a040826f41cfaccd40825812","7df2bb6d0c96a4fd83c92d79b3f8e68d","admin","Tue Aug 07 2018 23:49:35 GMT-0700 (PDT)"
 ```

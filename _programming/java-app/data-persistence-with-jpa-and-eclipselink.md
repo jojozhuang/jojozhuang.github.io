@@ -55,7 +55,7 @@ Create a file named `Dockerfile` with the following content.
 ```raw
 #Create MySQL Image for JPA Tutorial
 FROM mysql
-MAINTAINER jojozhuang@gmail.com
+MAINTAINER csgeek@mail.com
 
 ENV MYSQL_ROOT_PASSWORD jpa
 ADD jpa_backup.sql /docker-entrypoint-initdb.d

@@ -73,7 +73,7 @@ First, read the official tutorial [Getting Started on Heroku with Node.js](https
 ```raw
 $ heroku login
 Enter your Heroku credentials.
-Email: jojozhuang@gmail.com
+Email: csgeek@mail.com
 Password: **********
 ```
 2) Create Heroku App

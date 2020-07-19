@@ -56,7 +56,7 @@ In 'Docker' directory, there is a file named `Dockerfile` which has the followin
 ```raw
 #Create MySQL Image for JSP Tutorial Application
 FROM mysql:5.7
-MAINTAINER jojozhuang@gmail.com
+MAINTAINER csgeek@mail.com
 
 ENV MYSQL_ROOT_PASSWORD gspassword
 ADD gs_backup.sql /docker-entrypoint-initdb.d
@@ -98,7 +98,7 @@ a65f125fa718: Pull complete
 Digest: sha256:d39a8ab7679df309e7eff6ddba434ad5747cc2a2acee2d7c60d8221c9acedcad
 Status: Downloaded newer image for mysql:latest
  ---> 29e0ae3b69b9
-Step 2/5 : MAINTAINER jojozhuang@gmail.com
+Step 2/5 : MAINTAINER csgeek@mail.com
  ---> Running in 8f3f9b16b854
  ---> f5a22f4f9a3e
 Step 3/5 : ENV MYSQL_ROOT_PASSWORD gspassword

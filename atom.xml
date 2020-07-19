@@ -4,7 +4,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>{{ site.blogtitle }}</title>
+  <title>{{ site.rsstitle }}</title>
   <link href="{{ site.url }}/blog/atom.xml" rel="self"/>
   <link href="{{ site.url }}/blog"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
@@ -14,7 +14,7 @@
     <email>{{ site.author.email }}</email>
   </author>
 
-  {% for post in site.tutorial %}
+  {% for post in site.project %}
       <entry>
         <title>{{ post.title }}</title>
         <link href="{{ site.url }}{{ post.url }}"/>

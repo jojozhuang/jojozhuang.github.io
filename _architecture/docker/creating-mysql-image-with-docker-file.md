@@ -44,7 +44,7 @@ Edit Dockerfile, fill with following content.
 ```raw
 #Create MySQL Image for JSP Tutorial Application
 FROM mysql
-MAINTAINER jojozhuang@gmail.com
+MAINTAINER csgeek@mail.com
 
 ENV MYSQL_ROOT_PASSWORD jsppassword
 ADD jsp_backup.sql /docker-entrypoint-initdb.d

@@ -42,7 +42,7 @@ Edit Dockerfile, fill with following content.
 ```raw
 #Create Tomcat Image for JSP Tutorial Application
 FROM tomcat
-MAINTAINER jojozhuang@gmail.com
+MAINTAINER csgeek@mail.com
 
 ENV JPDA_ADDRESS 8000
 EXPOSE 8000

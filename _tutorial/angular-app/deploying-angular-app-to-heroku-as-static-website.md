@@ -25,7 +25,7 @@ First, read the official tutorial [Getting Started on Heroku with Node.js](https
 ```raw
 $ heroku login
 Enter your Heroku credentials.
-Email: jojozhuang@gmail.com
+Email: csgeek@mail.com
 Password: **********
 ```
 2) Create Heroku App
@@ -82,7 +82,7 @@ $ heroku login
 heroku: Press any key to open up the browser to login or q to exit:
 Opening browser to https://cli-auth.heroku.com/auth/browser/d849177a-d6f2-492e-88f5-8ad8ea019a90
 Logging in... done
-Logged in as jojozhuang@gmail.com
+Logged in as csgeek@mail.com
 ```
 Create new app.
 ```raw

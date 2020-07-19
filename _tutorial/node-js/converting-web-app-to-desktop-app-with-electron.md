@@ -207,7 +207,7 @@ To use electron-build for building, we need to create a folder named 'build' and
   "main": "main.js",
   "author": {
     "name": "Rong Zhuang",
-    "email": "jojozhuang@gmail.com"
+    "email": "csgeek@mail.com"
   }
 
 }

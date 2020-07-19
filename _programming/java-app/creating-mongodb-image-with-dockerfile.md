@@ -23,7 +23,7 @@ Edit Dockerfile, fill with following content.
 ```raw
 #Create MongoDB Image for MongoDB Tutorial Application
 FROM mongo
-MAINTAINER jojozhuang@gmail.com
+MAINTAINER csgeek@mail.com
 
 EXPOSE 27017
 ```

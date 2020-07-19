@@ -66,7 +66,7 @@ Create a file named `Dockerfile` with the following content.
 ```raw
 #Create MySQL Image for Hibernate Tutorial
 FROM mysql
-MAINTAINER jojozhuang@gmail.com
+MAINTAINER csgeek@mail.com
 
 ENV MYSQL_ROOT_PASSWORD hbn
 ADD hbn_backup.sql /docker-entrypoint-initdb.d

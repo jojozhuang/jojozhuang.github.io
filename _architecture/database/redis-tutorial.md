@@ -91,7 +91,7 @@ redis 127.0.0.1:6379> GET name
 ### 3.2 Hashes
 Redis hash is a collection of key value pairs. Redis Hashes are maps between string fields and string values. Hence, they are used to represent `objects`.
 ```raw
-redis 127.0.0.1:6379> HMSET user:1 username johnny password 123456 email jojozhuang@gmail.com
+redis 127.0.0.1:6379> HMSET user:1 username johnny password 123456 email csgeek@mail.com
 OK
 redis 127.0.0.1:6379> HGETALL user:1  
 1) "username"
@@ -99,7 +99,7 @@ redis 127.0.0.1:6379> HGETALL user:1
 3) "password"
 4) "123456"
 5) "email"
-6) "jojozhuang@gmail.com"
+6) "csgeek@mail.com"
 ```
 ### 3.3 Lists
 Redis Lists are simply lists of strings, sorted by insertion order. You can add elements to a Redis List on the head or on the tail.
