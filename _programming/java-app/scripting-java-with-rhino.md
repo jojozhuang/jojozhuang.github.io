@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Scripting Java With Rhino"
-index: 1541
+index: 2541
 subcategory: java-app
 date: 2017-10-10
 tags: [Rhino, Javascript]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Running JUnit Tests in Command Line"
-index: 1521
+index: 2521
 subcategory: java-app
 date: 2018-02-20
 tags: [JUnit]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Creating MySQL Image with Docker File"
-index: 3112
+index: 3512
 subcategory: docker
 date: 2017-10-15
 tags: [Dockerfile, Docker, MySQL]

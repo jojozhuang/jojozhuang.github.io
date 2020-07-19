@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Sharing Files between Host and Guest in VirtualBox"
-index: 2112
+index: 2012
 subcategory: dev-env
 date: 2016-10-10
 tags: [VirtualBox, Ubuntu, macOS]

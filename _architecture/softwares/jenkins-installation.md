@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Jenkins - Installation - Draft"
-index: 3717
+index: 3217
 subcategory: softwares
 date: 2018-08-10
 tags: [Jenkins]

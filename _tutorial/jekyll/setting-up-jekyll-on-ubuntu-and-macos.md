@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Jekyll on Ubuntu and macOS"
-index: 1603
+index: 8103
 subcategory: jekyll
 date: 2016-01-16
 tags: [GitHub Pages, Jekyll, Ruby, macOS]
@@ -129,7 +129,7 @@ _includes/google_analytics.html                                          |   392
 _project/game-store-multi.md                                           |     1 |     3.67K | 0.008
 _tutorial/mobile/mobile-app-development.md                               |     1 |     2.01K | 0.008
 _layouts/portfolio.html                                                  |    21 |   106.48K | 0.008
-_tutorial/project/building-online-judge-application-with-mean-stack.md   |     1 |     4.07K | 0.007
+_tutorial/online-judge/building-online-judge-application-with-mean-stack.md   |     1 |     4.07K | 0.007
 _popular/java-app/data-fix-with-javascript-for-web-application.md    |     1 |     8.77K | 0.006
 _project/course-player-socketio.md                                     |     1 |     2.61K | 0.005
 _tutorial/react-app/building-course-player-with-signalr-and-aspnet.md     |     1 |    28.92K | 0.005

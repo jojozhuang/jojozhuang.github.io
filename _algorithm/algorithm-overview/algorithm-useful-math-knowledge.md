@@ -2,7 +2,7 @@
 layout: tutorial
 key: algorithm
 title: "Algorithm - Useful Math Knowledge"
-index: 1284
+index: 1304
 subcategory: algorithm-overview
 date: 2016-04-05
 tags: [Math, GCD]

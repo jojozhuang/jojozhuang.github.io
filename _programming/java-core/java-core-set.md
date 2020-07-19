@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Set"
-index: 1414
+index: 2314
 subcategory: java-core
 date: 2017-01-08
 tags: [Set, HashSet, TreeSet]

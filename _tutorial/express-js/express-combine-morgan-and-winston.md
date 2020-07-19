@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Combine Morgan & Winston"
-index: 2555
+index: 8755
 subcategory: express-js
 date: 2018-01-09
 tags: [Express, Morgan, Winston]

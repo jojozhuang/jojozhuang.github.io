@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Enum"
-index: 1406
+index: 2306
 subcategory: java-core
 date: 2017-01-06
 tags: [Enum, EnumSet, EnumMap]

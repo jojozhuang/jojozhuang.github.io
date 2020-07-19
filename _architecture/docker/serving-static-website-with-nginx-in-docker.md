@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Serving Static Website With Nginx In Docker"
-index: 3121
+index: 3521
 subcategory: docker
 date: 2017-10-18
 tags: [Docker, Nginx]

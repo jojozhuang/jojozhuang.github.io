@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - Garbage Collection"
-index: 1473
+index: 2453
 subcategory: java-advanced
 date: 2017-03-04
 tags: [GC, YG, OG]

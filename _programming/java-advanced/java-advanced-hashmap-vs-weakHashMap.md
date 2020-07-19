@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - Hashmap vs WeakHashMap"
-index: 1477
+index: 2457
 subcategory: java-advanced
 date: 2017-03-02
 tags: [WeakHashMap, Weak References]

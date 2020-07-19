@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Docker - Hypervisor vs Container"
-index: 3702
+index: 3202
 subcategory: softwares
 date: 2018-08-10
 tags: [Hypervisor, Container]

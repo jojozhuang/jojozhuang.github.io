@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Template Method"
-index: 1330
+index: 2930
 subcategory: design-pattern
 date: 2016-05-30
 tags: [Template Method Pattern]

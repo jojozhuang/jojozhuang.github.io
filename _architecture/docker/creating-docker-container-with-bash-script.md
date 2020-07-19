@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Creating Docker Container with Bash Script[Draft]"
-index: 3133
+index: 3533
 subcategory: docker
 date: 2018-04-15
 tags: [Docker, Bash]

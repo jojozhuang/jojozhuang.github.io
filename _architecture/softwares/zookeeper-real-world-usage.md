@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "ZooKeeper - Real World Usage - Draft"
-index: 3743
+index: 3243
 subcategory: softwares
 date: 2018-08-10
 tags: [ZooKeeper]

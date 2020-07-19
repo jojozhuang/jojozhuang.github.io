@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java 8 - Predicate"
-index: 1458
+index: 2358
 subcategory: java-java8
 date: 2017-04-07
 tags: [Predicate]

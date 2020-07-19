@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Load-Balancer-8-Draft"
-index: 3810
+index: 4110
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [VPC]

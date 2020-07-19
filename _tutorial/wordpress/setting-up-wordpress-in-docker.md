@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up WordPress in Docker"
-index: 1801
+index: 8201
 subcategory: wordpress
 date: 2020-06-20
 tags: [WordPress, Docker]

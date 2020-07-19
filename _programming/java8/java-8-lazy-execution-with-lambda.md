@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java 8 - Lazy Execution with Lambda"
-index: 1459
+index: 2359
 subcategory: java-java8
 date: 2019-04-07
 tags: [Lazy, Supplier]

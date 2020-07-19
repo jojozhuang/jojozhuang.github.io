@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "ZooKeeper - Installation - Draft"
-index: 3742
+index: 3242
 subcategory: softwares
 date: 2018-08-10
 tags: [ZooKeeper]

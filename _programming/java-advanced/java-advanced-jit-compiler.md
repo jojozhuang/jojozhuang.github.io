@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - JIT Compiler"
-index: 1472
+index: 2452
 subcategory: java-advanced
 date: 2017-03-03
 tags: [JIT]

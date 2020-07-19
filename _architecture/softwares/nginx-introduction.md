@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Nginx - Introduction"
-index: 3726
+index: 3226
 subcategory: softwares
 date: 2018-08-10
 tags: [Nginx]

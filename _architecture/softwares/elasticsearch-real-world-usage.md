@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Elasticsearch - Real World Usage - Draft"
-index: 3798
+index: 3298
 subcategory: softwares
 date: 2018-08-10
 tags: [Elasticsearch]

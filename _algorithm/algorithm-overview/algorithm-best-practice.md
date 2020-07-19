@@ -2,7 +2,7 @@
 layout: tutorial
 key: algorithm
 title: "Algorithm - Best Practice"
-index: 1282
+index: 1302
 subcategory: algorithm-overview
 date: 2016-04-02
 tags: [Algorithm]

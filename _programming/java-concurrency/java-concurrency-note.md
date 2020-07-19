@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Concurrency - Note"
-index: 1430
+index: 2400
 subcategory: java-concurrency
 date: 2017-02-01
 tags: [Multi Threading]

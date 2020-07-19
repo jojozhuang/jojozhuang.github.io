@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Docker - Installation - Draft"
-index: 3703
+index: 3203
 subcategory: softwares
 date: 2018-08-10
 tags: [Docker]

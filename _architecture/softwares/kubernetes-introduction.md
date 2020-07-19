@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Kubernetes - Introduction - Draft"
-index: 3706
+index: 3206
 subcategory: softwares
 date: 2018-08-10
 tags: [Kubernetes]

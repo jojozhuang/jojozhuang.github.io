@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - IO"
-index: 1426
+index: 2326
 subcategory: java-core
 date: 2017-01-11
 tags: [IO, File, Directory, Stream]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Calling Java Class from Javascript"
-index: 1543
+index: 2543
 subcategory: java-app
 date: 2017-10-12
 tags: [Rhino, Javascript, Java]

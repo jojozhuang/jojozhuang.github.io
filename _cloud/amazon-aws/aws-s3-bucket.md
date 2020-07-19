@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-S3 Bucket"
-index: 3803
+index: 4103
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [S3]

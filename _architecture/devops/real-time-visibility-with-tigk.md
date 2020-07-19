@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Real Time Visibility with TIGK"
-index: 3562
+index: 3662
 subcategory: devops
 date: 2017-11-06
 tags: [TIGK, Telegraf, InfluxDb, Grafana, Kapacitor]

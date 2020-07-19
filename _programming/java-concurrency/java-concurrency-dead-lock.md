@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Concurrency - Dead Lock"
-index: 1442
+index: 2412
 subcategory: java-concurrency
 date: 2018-04-02
 tags: [synchronized, deadlock]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Scanner"
-index: 1407
+index: 2307
 subcategory: java-core
 date: 2017-01-02
 tags: [Scanner]

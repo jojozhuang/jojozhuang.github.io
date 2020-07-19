@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Nginx - Installation - Draft"
-index: 3727
+index: 3227
 subcategory: softwares
 date: 2018-08-10
 tags: [Nginx]

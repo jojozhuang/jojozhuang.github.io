@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Running JavaScript at Server Side with Rhino"
-index: 1542
+index: 2542
 subcategory: java-app
 date: 2017-10-11
 tags: [Rhino, Javascript, Servlet]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Collection"
-index: 1411
+index: 2311
 subcategory: java-core
 date: 2017-01-07
 tags: [List, Set, Map, Stack]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Jekyll Website to Netlify"
-index: 1643
+index: 8143
 subcategory: jekyll
 date: 2019-06-22
 tags: [Jekyll, Netlify]

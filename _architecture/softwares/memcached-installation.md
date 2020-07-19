@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Memcached - Installation - Draft"
-index: 3752
+index: 3252
 subcategory: softwares
 date: 2018-08-10
 tags: [Memcached]

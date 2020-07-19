@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Building Website with JSP and MySQL"
-index: 1532
+index: 2532
 subcategory: java-app
 date: 2016-02-26
 tags: [JSP, MySQL]

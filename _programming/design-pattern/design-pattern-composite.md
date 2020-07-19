@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Composite"
-index: 1312
+index: 2912
 subcategory: design-pattern
 date: 2016-05-12
 tags: [Composite Pattern]

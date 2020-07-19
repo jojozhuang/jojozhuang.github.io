@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Highlighting"
-index: 1623
+index: 8123
 subcategory: jekyll
 date: 2019-06-18
 tags: [Highlighting, highlight.js]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Performance Optimization"
-index: 1632
+index: 8132
 subcategory: jekyll
 date: 2019-06-28
 tags: [Performance]

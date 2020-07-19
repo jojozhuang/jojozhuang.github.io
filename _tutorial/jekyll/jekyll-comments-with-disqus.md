@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Comments with Disqus"
-index: 1616
+index: 8116
 subcategory: jekyll
 date: 2017-08-17
 tags: [Disqus]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Social Share Buttons"
-index: 1617
+index: 8117
 subcategory: jekyll
 date: 2017-08-19
 tags: [Social Share]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Jenkins - Real World Usage - Draft"
-index: 3718
+index: 3218
 subcategory: softwares
 date: 2018-08-10
 tags: [Jenkins]

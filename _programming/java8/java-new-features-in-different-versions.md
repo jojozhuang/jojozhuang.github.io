@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java - Java 11,10,9,8,7 - Draft"
-index: 1460
+index: 2360
 subcategory: java-java8
 date: 2017-06-01
 tags: [Formatting]

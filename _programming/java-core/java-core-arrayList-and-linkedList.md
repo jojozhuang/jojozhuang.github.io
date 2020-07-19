@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - ArrayList and LinkedList"
-index: 1412
+index: 2312
 subcategory: java-core
 date: 2017-01-07
 tags: [ArrayList, LinkedList]

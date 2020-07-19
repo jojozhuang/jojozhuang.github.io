@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Concurrency - Synchronization"
-index: 1437
+index: 2407
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [Synchronization, Reentrant Lock, Monitor]

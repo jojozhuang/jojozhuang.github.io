@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Prevent Security Vulnerabilities in Web Development"
-index: 3614
+index: 3814
 subcategory: security
 date: 2019-07-20
 tags: [DomSanitizer, JSX]

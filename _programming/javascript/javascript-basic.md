@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "JavaScript - Basic"
-index: 2401
+index: 2701
 subcategory: javascript
 date: 2018-03-21
 tags: [JavaScript]

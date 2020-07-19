@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Realtime Application with SignalR"
-index: 2633
+index: 8473
 subcategory: react-app
 date: 2016-03-14
 tags: [Chat Room, Sketch Pad, SignalR]

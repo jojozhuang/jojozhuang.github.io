@@ -2,7 +2,7 @@
 layout: tutorial
 key: algorithm
 title: "Algorithm - Chi squared test for randomness"
-index: 1287
+index: 1307
 subcategory: algorithm-overview
 date: 2020-04-02
 tags: [Random]

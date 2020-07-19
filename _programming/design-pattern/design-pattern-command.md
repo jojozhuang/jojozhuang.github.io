@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Command"
-index: 1321
+index: 2921
 subcategory: design-pattern
 date: 2016-05-21
 tags: [Command Pattern]

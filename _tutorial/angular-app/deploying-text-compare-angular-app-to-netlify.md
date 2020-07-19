@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Text Compare Angular App to Netlify"
-index: 2773
+index: 8373
 subcategory: angular-app
 date: 2018-07-29
 tags: [Netlify]

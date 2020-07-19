@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Installing Docker Toolbox and Kitematic on Mac"
-index: 3102
+index: 3502
 subcategory: docker
 date: 2017-10-11
 tags: [Docker, Kitematic]

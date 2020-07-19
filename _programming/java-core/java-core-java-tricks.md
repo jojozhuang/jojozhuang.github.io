@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Tricks"
-index: 1402
+index: 2302
 subcategory: java-core
 date: 2017-09-02
 tags: [Java]

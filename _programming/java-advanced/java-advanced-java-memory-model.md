@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - Java Memory Model"
-index: 1474
+index: 2454
 subcategory: java-advanced
 date: 2017-03-03
 tags: [Memory Model, JVM]

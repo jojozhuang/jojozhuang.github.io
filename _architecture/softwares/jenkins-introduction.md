@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Jenkins - Introduction"
-index: 3716
+index: 3216
 subcategory: softwares
 date: 2018-08-10
 tags: [Jenkins, CI]

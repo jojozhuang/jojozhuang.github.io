@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Installing and Using Visual Studio Code"
-index: 2126
+index: 2026
 subcategory: dev-env
 date: 2018-07-13
 tags: [Visual Studio Code]

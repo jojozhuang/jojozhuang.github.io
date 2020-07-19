@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Full Stack React App to Heroku"
-index: 2644
+index: 8484
 subcategory: react-app
 date: 2018-08-02
 tags: [Nodejs, Heroku]

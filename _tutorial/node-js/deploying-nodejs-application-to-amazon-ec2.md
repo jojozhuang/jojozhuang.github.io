@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Node.js Application to Amazon EC2"
-index: 2525
+index: 8725
 subcategory: node-js
 date: 2016-03-18
 tags: [Amazon EC2, Node.js, Putty]

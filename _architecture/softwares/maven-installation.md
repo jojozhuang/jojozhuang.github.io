@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Maven - Installation - Draft"
-index: 3713
+index: 3213
 subcategory: softwares
 date: 2018-08-10
 tags: [Maven]

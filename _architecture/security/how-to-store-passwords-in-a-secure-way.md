@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "How To Store Passwords In a Secure Way?"
-index: 3611
+index: 3811
 subcategory: security
 date: 2019-07-17
 tags: [Hashing, Salt, Pepper]

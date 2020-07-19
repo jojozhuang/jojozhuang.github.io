@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Maven - Nexus and Maven"
-index: 3712
+index: 3212
 subcategory: softwares
 date: 2018-08-10
 tags: [Nexus, Maven]

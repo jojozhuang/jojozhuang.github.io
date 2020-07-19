@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Creating Docker Machine with More Disk Space"
-index: 3131
+index: 3531
 subcategory: docker
 date: 2017-11-15
 tags: [Docker Machine, Docker]

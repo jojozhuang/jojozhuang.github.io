@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Creating Web App and RESTful API with MEAN Stack"
-index: 2753
+index: 8353
 subcategory: angular-app
 date: 2018-01-25
 tags: [MEAN, MongoDB, Express, Angular]
@@ -17,7 +17,7 @@ There are two famous MEAN frameworks, [Mean.io](http://mean.io/) and [MeanJS](ht
 
 ## 2. MEAN Project
 ### 2.1 Existing Projects
-We learned how to build RESTful API from [Building RESTful API with Express And MongoDB]({% link _tutorial/restful/building-restful-api-with-express-and-mongodb.md %}), and we also learned how to build web application with Angular from [Building CRUD Application With Angular]({% link _tutorial/angular-app/building-crud-application-with-angular.md %}). In this tutorial, I will reuse the `Angular project` and merge the `Express project` into it to setup the MEAN stack project.
+We learned how to build RESTful API from [Building RESTful API with Express And MongoDB]({% link _tutorial/restful-api/building-restful-api-with-express-and-mongodb.md %}), and we also learned how to build web application with Angular from [Building CRUD Application With Angular]({% link _tutorial/angular-app/building-crud-application-with-angular.md %}). In this tutorial, I will reuse the `Angular project` and merge the `Express project` into it to setup the MEAN stack project.
 ### 2.2 Organizing MEAN Project
 We will have two servers running. The front end code will be served by the Angular dev server which helps with hot and live reloading. The server side Express code will be served by a node server using [nodemon](https://nodemon.io/) which helps in automatically restarting the server whenever server side code changes.
 ### 2.3 Making Change

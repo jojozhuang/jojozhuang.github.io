@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Installing Nginx on macOS"
-index: 3511
+index: 3611
 subcategory: devops
 date: 2018-05-26
 tags: [Nginx, macOS]

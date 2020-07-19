@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Pagination"
-index: 1622
+index: 8122
 subcategory: jekyll
 date: 2019-06-04
 tags: [Pagination]

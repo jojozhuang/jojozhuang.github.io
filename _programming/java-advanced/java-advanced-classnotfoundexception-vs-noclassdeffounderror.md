@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - ClassNotFoundException vs. NoClassDefFoundError"
-index: 1476
+index: 2456
 subcategory: java-advanced
 date: 2017-03-02
 tags: [ClassNotFoundException, NoClassDefFoundError]

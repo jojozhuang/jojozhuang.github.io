@@ -2,7 +2,7 @@
 layout: tutorial
 key: algorithm
 title: "Algorithm - Serialize and Deserialize Tree"
-index: 1286
+index: 1306
 subcategory: algorithm-overview
 date: 2016-04-04
 tags: [Tree, BST, NaryTree]

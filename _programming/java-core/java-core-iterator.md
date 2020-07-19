@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Iterator"
-index: 1405
+index: 2305
 subcategory: java-core
 date: 2017-04-03
 tags: [Iterator, Predicate]

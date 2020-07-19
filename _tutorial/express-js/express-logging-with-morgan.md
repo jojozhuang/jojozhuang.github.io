@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Logging with Morgan"
-index: 2553
+index: 8753
 subcategory: express-js
 date: 2018-01-07
 tags: [Express, Morgan]

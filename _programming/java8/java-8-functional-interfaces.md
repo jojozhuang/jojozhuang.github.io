@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java 8 - Functional Interfaces"
-index: 1455
+index: 2355
 subcategory: java-java8
 date: 2017-05-04
 tags: [Predicate, Supplier, Consumer]

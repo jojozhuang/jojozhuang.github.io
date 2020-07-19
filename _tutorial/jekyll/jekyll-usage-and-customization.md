@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Usage and Customization"
-index: 1612
+index: 8112
 subcategory: jekyll
 date: 2016-11-18
 tags: [Jekyll, Excerpt]

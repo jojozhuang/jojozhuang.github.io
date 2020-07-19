@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Maven - Introduction"
-index: 3711
+index: 3211
 subcategory: softwares
 date: 2018-08-10
 tags: [Maven]

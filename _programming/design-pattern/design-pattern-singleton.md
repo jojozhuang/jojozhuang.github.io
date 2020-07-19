@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Singleton"
-index: 1302
+index: 2902
 subcategory: design-pattern
 date: 2016-05-02
 tags: [Singleton Pattern]

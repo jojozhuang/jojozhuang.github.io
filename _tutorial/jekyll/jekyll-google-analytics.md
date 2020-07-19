@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Google Analytics - Draft"
-index: 1615
+index: 8115
 subcategory: jekyll
 date: 2017-08-17
 tags: [Google Analytics]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Installing MySQL and Workbench on Mac"
-index: 2131
+index: 2031
 subcategory: dev-env
 date: 2017-10-30
 tags: [MySQL, MySQL Workbench]

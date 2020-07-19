@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-EC2-Draft"
-index: 3806
+index: 4106
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [EC2]

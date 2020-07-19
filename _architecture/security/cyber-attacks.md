@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Cyber Attacks"
-index: 3601
+index: 3801
 subcategory: security
 date: 2019-07-17
 tags: [DNS, DDos, XSS, CSRF]

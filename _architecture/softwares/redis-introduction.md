@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Redis - Introduction - Draft"
-index: 3746
+index: 3246
 subcategory: softwares
 date: 2018-08-10
 tags: [Redis]

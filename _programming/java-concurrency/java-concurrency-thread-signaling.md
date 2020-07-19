@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Concurrency - Thread Signaling"
-index: 1441
+index: 2411
 subcategory: java-concurrency
 date: 2017-03-02
 tags: [Thread Signaling]

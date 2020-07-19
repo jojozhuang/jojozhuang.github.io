@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - IO vs NIO"
-index: 1428
+index: 2328
 subcategory: java-core
 date: 2019-01-11
 tags: [IO, NIO]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Remote Debugging JSP Application"
-index: 1514
+index: 2514
 subcategory: java-app
 date: 2016-03-23
 tags: [Eclipse, Debugging]

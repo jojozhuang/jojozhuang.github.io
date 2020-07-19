@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "JavaScript - ES6"
-index: 2404
+index: 2704
 subcategory: javascript
 date: 2018-03-25
 tags: [ES6]

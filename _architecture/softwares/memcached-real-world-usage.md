@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Memcached - Real World Usage - Draft"
-index: 3753
+index: 3253
 subcategory: softwares
 date: 2018-08-10
 tags: [Memcached]

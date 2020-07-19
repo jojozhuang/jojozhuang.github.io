@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Introduction of Course Player"
-index: 2631
+index: 8471
 subcategory: react-app
 date: 2016-03-12
 tags: [Course Player]

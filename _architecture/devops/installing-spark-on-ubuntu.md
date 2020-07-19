@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Installing Spark on Ubuntu"
-index: 3561
+index: 3661
 subcategory: devops
 date: 2017-11-06
 tags: [Apache Spark, Scala]

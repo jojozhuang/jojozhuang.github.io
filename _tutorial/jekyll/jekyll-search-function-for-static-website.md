@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Search Function for Static Website - draft"
-index: 1625
+index: 8125
 subcategory: jekyll
 date: 2019-05-23
 tags: [Search, Lunr.js]

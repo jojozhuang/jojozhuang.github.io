@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Installing and Using Splunk on Linux"
-index: 3551
+index: 3651
 subcategory: devops
 date: 2017-08-23
 tags: [RedHat, Ubuntu, Splunk]

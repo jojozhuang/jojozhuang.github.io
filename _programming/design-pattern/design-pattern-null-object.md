@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Null Object"
-index: 1326
+index: 2926
 subcategory: design-pattern
 date: 2016-05-26
 tags: [Null Object]

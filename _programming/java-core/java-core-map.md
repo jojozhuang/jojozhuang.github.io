@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Map"
-index: 1415
+index: 2315
 subcategory: java-core
 date: 2017-01-08
 tags: [Map, HashMap, TreeMap]

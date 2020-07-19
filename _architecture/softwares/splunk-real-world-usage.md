@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Splunk - Real World Usage - Draft"
-index: 3793
+index: 3293
 subcategory: softwares
 date: 2018-08-10
 tags: [Splunk]

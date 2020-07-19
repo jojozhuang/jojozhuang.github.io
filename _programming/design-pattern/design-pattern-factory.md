@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Factory"
-index: 1303
+index: 2903
 subcategory: design-pattern
 date: 2016-05-03
 tags: [Abstract Factory, Factory Method]

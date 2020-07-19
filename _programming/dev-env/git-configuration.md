@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Git Configuration"
-index: 2124
+index: 2024
 subcategory: dev-env
 date: 2019-11-19
 tags: [Git, GitHub]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java 8 - Functional Composition"
-index: 1456
+index: 2356
 subcategory: java-java8
 date: 2017-05-05
 tags: [Functional Composition]

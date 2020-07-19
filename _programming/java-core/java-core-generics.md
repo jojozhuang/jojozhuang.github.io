@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Generics"
-index: 1417
+index: 2317
 subcategory: java-core
 date: 2017-01-13
 tags: [Generics, Bounded Wildcards]

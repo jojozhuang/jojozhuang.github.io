@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Kafka - Introduction - Draft"
-index: 3766
+index: 3266
 subcategory: softwares
 date: 2018-08-10
 tags: [Kafka]

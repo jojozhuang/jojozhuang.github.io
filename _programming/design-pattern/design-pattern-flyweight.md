@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Flyweight"
-index: 1315
+index: 2915
 subcategory: design-pattern
 date: 2016-05-15
 tags: [Flyweight Pattern]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Personal Website on GitLab Pages"
-index: 1602
+index: 8102
 subcategory: jekyll
 date: 2018-06-06
 tags: [GitLab Pages]

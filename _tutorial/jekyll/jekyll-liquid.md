@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Liquid"
-index: 1611
+index: 8111
 subcategory: jekyll
 date: 2016-01-19
 tags: [Jekyll, Liquid]

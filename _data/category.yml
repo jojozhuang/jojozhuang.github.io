@@ -22,10 +22,10 @@ categories:
         icon: fas fa-superscript
         subcategory: algorithm-overview
         image: algorithms2.png
-      - name: Practice Problems
-        description: Practice Problems
+      - name: Practice Problem
+        description: Practice Problem
         icon: fab fa-resolving
-        subcategory: practice-problems
+        subcategory: practice-problem
         image: target.png
   - category: programming
     key: programming
@@ -80,12 +80,12 @@ categories:
       - name: Theory and Principle
         description: Theory and Principle
         icon: fas fa-lightbulb
-        subcategory: theory
+        subcategory: theory-principle
         image: theory.png
       - name: Network
         description: Network
         icon: fas fa-network-wired
-        subcategory: network
+        subcategory: computer-network
         image: network.png
       - name: Softwares
         description: Softwares
@@ -95,7 +95,7 @@ categories:
       - name: Database and Cache
         description: MongoDB, Cassandra, Redis, Memcached
         icon: fas fa-database
-        subcategory: database
+        subcategory: database-cache
         image: database.png
       - name: Message Queue
         description: Kafka, RabbitQueue
@@ -125,7 +125,7 @@ categories:
       - name: Cloud Knowledge
         description: Cloud Knowledge
         icon: fas fa-cloud
-        subcategory: knowledge
+        subcategory: cloud-knowledge
         image: code.png
       - name: Amazon AWS
         description: Amazon AWS
@@ -135,7 +135,7 @@ categories:
       - name: Google GCP
         description: Google GCP
         icon: fab fa-google
-        subcategory: google-gcp
+        subcategory: google-cloud
         image: google-cloud.png
   - category: frontend
     key: frontend
@@ -145,7 +145,7 @@ categories:
       - name: Angular Tutorial
         description: Angular Tutorial
         icon: fab fa-angular
-        subcategory: angular-js
+        subcategory: angular-tutorial
         image: angular-js.png
       - name: Angular App
         description: Angular App
@@ -155,7 +155,7 @@ categories:
       - name: React Tutorial
         description: React Tutorial
         icon: fab fa-react
-        subcategory: react-js
+        subcategory: react-tutorial
         image: react-js.png
       - name: React App
         description: React App
@@ -175,7 +175,7 @@ categories:
       - name: RESTful API
         description: RESTful API
         icon: fas fa-cogs
-        subcategory: restful
+        subcategory: restful-api
         image: restfulapi.png
       - name: Node.js
         description: Node.js

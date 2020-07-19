@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "JavaScript - Test JavaScript with Mocha(Draft)"
-index: 2406
+index: 2706
 subcategory: javascript
 date: 2018-03-28
 tags: [Mocha]

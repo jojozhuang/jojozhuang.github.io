@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Spark - Installation - Draft"
-index: 3777
+index: 3277
 subcategory: softwares
 date: 2018-08-10
 tags: [Spark]

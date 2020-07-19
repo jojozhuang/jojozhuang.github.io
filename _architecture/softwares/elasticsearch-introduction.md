@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Elasticsearch - Introduction - Draft"
-index: 3796
+index: 3296
 subcategory: softwares
 date: 2018-08-10
 tags: [Elasticsearch]

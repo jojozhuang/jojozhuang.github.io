@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Basic"
-index: 1401
+index: 2301
 subcategory: java-core
 date: 2017-01-01
 tags: [String, Integer, Array, List]

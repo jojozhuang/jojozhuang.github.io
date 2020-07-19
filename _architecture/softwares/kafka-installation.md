@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Kafka - Installation - Draft"
-index: 3767
+index: 3267
 subcategory: softwares
 date: 2018-08-10
 tags: [Kafka]

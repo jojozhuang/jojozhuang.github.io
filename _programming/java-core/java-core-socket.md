@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Socket"
-index: 1423
+index: 2323
 subcategory: java-core
 date: 2016-02-22
 tags: [Socket, TCP, UDP]

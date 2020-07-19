@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Influxdb - Installation - Draft"
-index: 3762
+index: 3262
 subcategory: softwares
 date: 2018-08-10
 tags: [Influxdb]

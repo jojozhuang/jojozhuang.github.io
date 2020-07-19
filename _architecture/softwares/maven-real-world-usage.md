@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Maven - Real World Usage"
-index: 3714
+index: 3214
 subcategory: softwares
 date: 2018-08-10
 tags: [Maven]

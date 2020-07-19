@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Generics Type Erasure"
-index: 1418
+index: 2318
 subcategory: java-core
 date: 2017-01-14
 tags: [Type Erasure]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Remote Debugging with Eclipse"
-index: 1513
+index: 2513
 subcategory: java-app
 date: 2016-03-22
 tags: [Eclipse, Debugging]

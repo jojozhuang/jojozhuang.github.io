@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Concurrency - Volatile Keyword"
-index: 1439
+index: 2409
 subcategory: java-concurrency
 date: 2017-03-02
 tags: [Volatile]

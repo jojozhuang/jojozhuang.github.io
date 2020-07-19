@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Formatting"
-index: 1403
+index: 2303
 subcategory: java-core
 date: 2017-01-03
 tags: [Formatting]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Strategy"
-index: 1329
+index: 2929
 subcategory: design-pattern
 date: 2016-05-29
 tags: [Strategy Pattern]

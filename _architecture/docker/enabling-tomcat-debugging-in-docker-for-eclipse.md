@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Enabling Tomcat Debugging in Docker for Eclipse"
-index: 3123
+index: 3523
 subcategory: docker
 date: 2017-10-22
 tags: [Docker, Debugging, Eclipse, Tomcat]

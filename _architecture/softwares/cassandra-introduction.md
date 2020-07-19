@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Cassandra - Introduction - Draft"
-index: 3756
+index: 3256
 subcategory: softwares
 date: 2018-08-10
 tags: [Cassandra]

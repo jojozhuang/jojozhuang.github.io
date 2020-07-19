@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Concurrency - wait, notify and notifyAll"
-index: 1433
+index: 2403
 subcategory: java-concurrency
 date: 2017-04-04
 tags: [wait, notify, notifyAll]

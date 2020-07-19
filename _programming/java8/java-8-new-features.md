@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java 8 - New Features"
-index: 1452
+index: 2352
 subcategory: java-java8
 date: 2017-05-01
 tags: [Lambda, Stream, Optional]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Backing up MySQL Database Hosted in Docker Container"
-index: 3113
+index: 3513
 subcategory: docker
 date: 2017-10-16
 tags: [MySQL, Docker]

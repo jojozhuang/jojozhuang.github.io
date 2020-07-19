@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Stack, Queue and Deque"
-index: 1413
+index: 2313
 subcategory: java-core
 date: 2017-01-09
 tags: [Queue, Stack, Queue, Heap]

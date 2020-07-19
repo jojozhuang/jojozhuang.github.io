@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Setting up Java Development Environment on Mac"
-index: 2122
+index: 2022
 subcategory: dev-env
 date: 2016-11-01
 tags: [JDK, Tomcat, Eclipse]

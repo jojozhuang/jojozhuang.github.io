@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - Java Virtual Machine"
-index: 1471
+index: 2451
 subcategory: java-advanced
 date: 2017-03-03
 tags: [JVM]

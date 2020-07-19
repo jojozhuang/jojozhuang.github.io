@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Builder"
-index: 1304
+index: 2904
 subcategory: design-pattern
 date: 2016-05-04
 tags: [Builder Pattern]

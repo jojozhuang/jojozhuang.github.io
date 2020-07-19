@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Storm - Installation - Draft"
-index: 3782
+index: 3282
 subcategory: softwares
 date: 2018-08-10
 tags: [Storm]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Spark - Real World Usage - Draft"
-index: 3778
+index: 3278
 subcategory: softwares
 date: 2018-08-10
 tags: [Spark]

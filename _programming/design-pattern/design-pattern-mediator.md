@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Mediator"
-index: 1324
+index: 2924
 subcategory: design-pattern
 date: 2016-05-24
 tags: [Mediator Pattern]

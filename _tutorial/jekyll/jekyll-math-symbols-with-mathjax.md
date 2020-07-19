@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Math Symbols with MathJax"
-index: 1626
+index: 8126
 subcategory: jekyll
 date: 2018-09-10
 tags: [MathJax, Mathematic]

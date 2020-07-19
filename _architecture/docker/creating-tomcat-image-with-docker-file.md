@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Creating Tomcat Image with Docker File"
-index: 3124
+index: 3524
 subcategory: docker
 date: 2017-10-25
 tags: [Docker, Dockerfile, Tomcat]

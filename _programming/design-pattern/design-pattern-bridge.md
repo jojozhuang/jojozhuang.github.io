@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Bridge"
-index: 1311
+index: 2911
 subcategory: design-pattern
 date: 2016-05-11
 tags: [Bridge Pattern]

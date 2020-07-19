@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building CRUD Application With Angular"
-index: 2752
+index: 8352
 subcategory: angular-app
 date: 2018-01-22
 tags: [Angular, MEAN, Node.js]

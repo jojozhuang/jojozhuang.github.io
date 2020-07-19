@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Cassandra - Real World Usage - Draft"
-index: 3758
+index: 3258
 subcategory: softwares
 date: 2018-08-10
 tags: [Cassandra]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-SQS-SNS-9-Draft"
-index: 3811
+index: 4111
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [VPC]

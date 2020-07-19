@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Vagrant - Installation - Draft"
-index: 3722
+index: 3222
 subcategory: softwares
 date: 2018-08-10
 tags: [Vagrant]

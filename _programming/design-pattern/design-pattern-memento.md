@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Memento"
-index: 1325
+index: 2925
 subcategory: design-pattern
 date: 2016-05-25
 tags: [Memento Pattern]

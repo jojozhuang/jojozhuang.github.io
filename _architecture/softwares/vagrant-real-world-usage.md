@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Vagrant - Real World Usage - Draft"
-index: 3723
+index: 3223
 subcategory: softwares
 date: 2018-08-10
 tags: [Vagrant]

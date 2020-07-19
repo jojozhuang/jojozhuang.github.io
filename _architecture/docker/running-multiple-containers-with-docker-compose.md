@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Running Multiple Containers with Docker Compose"
-index: 3125
+index: 3525
 subcategory: docker
 date: 2017-10-30
 tags: [Docker, Compose]

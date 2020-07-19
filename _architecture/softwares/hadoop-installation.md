@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Hadoop - Installation - Draft"
-index: 3772
+index: 3272
 subcategory: softwares
 date: 2018-08-10
 tags: [Hadoop]

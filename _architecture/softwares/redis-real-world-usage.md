@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Redis - Real World Usage - Draft"
-index: 3748
+index: 3248
 subcategory: softwares
 date: 2018-08-10
 tags: [Redis]

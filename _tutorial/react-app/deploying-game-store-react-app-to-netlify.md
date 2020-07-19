@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Game Store React App to Netlify"
-index: 2614
+index: 8454
 subcategory: react-app
 date: 2018-07-31
 tags: [Netlify]

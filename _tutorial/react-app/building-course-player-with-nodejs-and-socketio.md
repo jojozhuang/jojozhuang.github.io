@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Course Player with Node.js and Socket.IO"
-index: 2635
+index: 8475
 subcategory: react-app
 date: 2016-03-16
 tags: [Node.js, Socket.IO, jQuery]

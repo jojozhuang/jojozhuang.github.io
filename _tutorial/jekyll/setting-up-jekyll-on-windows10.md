@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Setting up Jekyll on Windows 10"
-index: 1604
+index: 8104
 subcategory: jekyll
 date: 2018-04-01
 tags: [Jekyll, Windows10]

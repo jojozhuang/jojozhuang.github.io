@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Installing Microsoft SQL Server in Docker"
-index: 3132
+index: 3532
 subcategory: docker
 date: 2017-11-16
 tags: [SQL Server, Docker]

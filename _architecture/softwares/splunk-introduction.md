@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Splunk - Introduction - Draft"
-index: 3791
+index: 3291
 subcategory: softwares
 date: 2018-08-10
 tags: [Splunk]

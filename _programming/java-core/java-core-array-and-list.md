@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Core - Array and List"
-index: 1404
+index: 2304
 subcategory: java-core
 date: 2017-01-04
 tags: [Array, ArrayList]

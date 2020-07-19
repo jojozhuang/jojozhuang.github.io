@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Visitor"
-index: 1331
+index: 2931
 subcategory: design-pattern
 date: 2016-05-31
 tags: [Visitor Pattern]

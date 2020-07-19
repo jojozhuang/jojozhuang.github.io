@@ -3,7 +3,7 @@ menuitems:
     url: /#
     icon: fas fa-square-root-alt
     visible: true
-    subkeys: ["data-structure","algorithm","algorithm-overview","practice-problems"]
+    subkeys: ["data-structure","algorithm","algorithm-overview","practice-problem"]
     sublist:
       - key: data-structure
         description: Data Structure
@@ -18,9 +18,9 @@ menuitems:
         url: /algorithm/?n=algorithm&c=algorithm&s=algorithm-overview
         icon: fas fa-superscript
       - key: separator
-      - key: practice-problems
-        description: Practice Problems
-        url: /algorithm/?n=algorithm&c=algorithm&s=practice-problems
+      - key: practice-problem
+        description: Practice Problem
+        url: /algorithm/?n=algorithm&c=algorithm&s=practice-problem
         icon: fab fa-resolving
   - key: programming
     url: /#
@@ -71,11 +71,11 @@ menuitems:
     sublist:
       - key: theory-principle
         description: Theory and Principle
-        url: /architecture/?n=architecture&c=architecture&s=theory
+        url: /architecture/?n=architecture&c=architecture&s=theory-principle
         icon: fas fa-lightbulb
       - key: computer-network
         description: Computer Network
-        url: /architecture/?n=architecture&c=architecture&s=network
+        url: /architecture/?n=architecture&c=architecture&s=computer-network
         icon: fas fa-network-wired
       - key: separator
       - key: softwares
@@ -84,7 +84,7 @@ menuitems:
         icon: fas fa-compact-disc
       - key: database-cache
         description: Database and Cache
-        url: /architecture/?n=architecture&c=architecture&s=database
+        url: /architecture/?n=architecture&c=architecture&s=database-cache
         icon: fas fa-database
       - key: message-queue
         description: Message Queue
@@ -111,7 +111,7 @@ menuitems:
     sublist:
       - key: cloud-knowledge
         description: Cloud Knowledge
-        url: /cloud/?n=cloud&c=cloud&s=knowledge
+        url: /cloud/?n=cloud&c=cloud&s=cloud-knowledge
         icon: fas fa-cloud
       - key: separator
       - key: amazon-aws
@@ -120,7 +120,7 @@ menuitems:
         icon: fab fa-aws
       - key: google-cloud
         description: Google Cloud
-        url: /cloud/?n=cloud&c=cloud&s=google-gcp
+        url: /cloud/?n=cloud&c=cloud&s=google-cloud
         icon: fab fa-google
   - key: tutorial
     url: /#
@@ -139,7 +139,7 @@ menuitems:
       - key: separator
       - key: angular-tutorial
         description: Angular Tutorial
-        url: /tutorial/?n=tutorial&c=frontend&s=angular-js
+        url: /tutorial/?n=tutorial&c=frontend&s=angular-tutorial
         icon: fab fa-angular
       - key: angular-app
         description: Angular App
@@ -147,7 +147,7 @@ menuitems:
         icon: fab fa-angular
       - key: react-tutorial
         description: React Tutorial
-        url: /tutorial/?n=tutorial&c=frontend&s=react-js
+        url: /tutorial/?n=tutorial&c=frontend&s=react-tutorial
         icon: fab fa-react
       - key: react-app
         description: React App
@@ -161,7 +161,7 @@ menuitems:
       - key: separator
       - key: restful-api
         description: RESTful API
-        url: /tutorial/?n=tutorial&c=backend&s=restful
+        url: /tutorial/?n=tutorial&c=backend&s=restful-api
         icon: fas fa-plug
       - key: nodejs
         description: Node.js

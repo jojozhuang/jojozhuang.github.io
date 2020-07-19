@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Memcached - Introduction - Draft"
-index: 3751
+index: 3251
 subcategory: softwares
 date: 2018-08-10
 tags: [Memcached]

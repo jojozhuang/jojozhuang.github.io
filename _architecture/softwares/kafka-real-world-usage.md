@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Kafka - Real World Usage - Draft"
-index: 3768
+index: 3268
 subcategory: softwares
 date: 2018-08-10
 tags: [Kafka]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Continuously Deploy Jekyll Website to GitHub Pages with Travis-CI"
-index: 1641
+index: 8141
 subcategory: jekyll
 date: 2017-12-10
 tags: [Jekyll, Github Pages, Travis CI]

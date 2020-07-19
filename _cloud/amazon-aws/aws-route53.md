@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Route53-6-Draft"
-index: 3808
+index: 4108
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [EC2]

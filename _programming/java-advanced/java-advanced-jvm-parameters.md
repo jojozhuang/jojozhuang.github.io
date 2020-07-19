@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java Advanced - JVM Parameters"
-index: 1475
+index: 2455
 subcategory: java-advanced
 date: 2017-03-02
 tags: [JVM Parameters]

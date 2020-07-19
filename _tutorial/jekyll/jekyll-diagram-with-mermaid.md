@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Diagram with Mermaid"
-index: 1627
+index: 8127
 subcategory: jekyll
 date: 2018-09-15
 tags: [Mermaid, Diagram]

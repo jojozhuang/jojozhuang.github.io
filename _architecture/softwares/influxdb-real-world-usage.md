@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Influxdb - Real World Usage - Draft"
-index: 3763
+index: 3263
 subcategory: softwares
 date: 2018-08-10
 tags: [Influxdb]

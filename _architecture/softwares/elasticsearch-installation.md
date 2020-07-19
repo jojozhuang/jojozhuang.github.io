@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Elasticsearch - Installation - Draft"
-index: 3797
+index: 3297
 subcategory: softwares
 date: 2018-08-10
 tags: [Elasticsearch]

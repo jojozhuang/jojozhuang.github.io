@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - Social Share Buttons with ShareThis"
-index: 1618
+index: 8118
 subcategory: jekyll
 date: 2017-08-20
 tags: [ShareThis]

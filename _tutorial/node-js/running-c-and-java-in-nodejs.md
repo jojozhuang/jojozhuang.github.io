@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Running C and Java in Node.js"
-index: 2512
+index: 8712
 subcategory: node-js
 date: 2018-05-28
 tags: [Nodejs, Java]

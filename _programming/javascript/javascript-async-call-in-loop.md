@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "JavaScript - Async Call in Loop[Draft]"
-index: 2405
+index: 2705
 subcategory: javascript
 date: 2018-03-28
 tags: [Async]

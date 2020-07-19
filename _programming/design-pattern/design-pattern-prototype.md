@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Prototype"
-index: 1306
+index: 2906
 subcategory: design-pattern
 date: 2016-05-06
 tags: [Prototype Pattern]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Proxy"
-index: 1316
+index: 2916
 subcategory: design-pattern
 date: 2016-05-16
 tags: [Proxy Pattern]

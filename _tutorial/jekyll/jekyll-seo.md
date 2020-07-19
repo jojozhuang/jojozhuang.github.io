@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Jekyll - SEO"
-index: 1631
+index: 8131
 subcategory: jekyll
 date: 2019-06-27
 tags: [SEO, CDN, DNS]

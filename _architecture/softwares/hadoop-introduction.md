@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Hadoop - Introduction - Draft"
-index: 3771
+index: 3271
 subcategory: softwares
 date: 2018-08-10
 tags: [Hadoop]

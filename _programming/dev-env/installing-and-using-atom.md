@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Installing and Using Atom"
-index: 2125
+index: 2025
 subcategory: dev-env
 date: 2017-10-15
 tags: [Atom, Markdown]

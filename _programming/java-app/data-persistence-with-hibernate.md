@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Data Persistence with Hibernate"
-index: 1537
+index: 2537
 subcategory: java-app
 date: 2016-12-23
 tags: [Hibernate, ORM]

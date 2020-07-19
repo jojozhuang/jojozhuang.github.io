@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Java 8 - Tricks"
-index: 1451
+index: 2351
 subcategory: java-java8
 date: 2017-05-01
 tags: [Lamda Expression]

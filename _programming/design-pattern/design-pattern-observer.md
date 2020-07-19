@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Design Pattern - Observer"
-index: 1327
+index: 2927
 subcategory: design-pattern
 date: 2016-05-27
 tags: [Observer Pattern]

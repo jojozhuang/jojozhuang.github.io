@@ -2,7 +2,7 @@
 layout: tutorial
 key: programming
 title: "Building Web Server with Java Socket"
-index: 1505
+index: 2505
 subcategory: java-app
 date: 2016-02-24
 tags: [Http, Socket]

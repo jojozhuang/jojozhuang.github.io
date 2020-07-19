@@ -2,7 +2,7 @@
 layout: tutorial
 key: architecture
 title: "Vagrant - Introduction"
-index: 3721
+index: 3221
 subcategory: softwares
 date: 2018-08-10
 tags: [Vagrant]
