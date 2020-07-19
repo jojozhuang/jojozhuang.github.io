@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Course Player(SignalR)"
 index: 330
 category: dotnet

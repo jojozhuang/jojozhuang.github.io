@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Course Player(Socket)"
 index: 240
 category: web

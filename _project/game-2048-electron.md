@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Game 2048(Electron)"
 index: 230
 category: web

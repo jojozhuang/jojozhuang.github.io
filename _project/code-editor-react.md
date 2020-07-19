@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Code Editor(React)"
 index: 260
 category: web

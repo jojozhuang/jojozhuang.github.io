@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Online Game Store(JSP)"
 index: 340
 category: dotnet

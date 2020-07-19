@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Shoe Store(ASP.NET)"
 index: 320
 category: dotnet

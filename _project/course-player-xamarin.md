@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "CoursePlayer(Xamarin)"
 index: 110
 category: mobile

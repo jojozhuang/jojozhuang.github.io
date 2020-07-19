@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Restaurant(Anroid)"
 index: 130
 category: mobile

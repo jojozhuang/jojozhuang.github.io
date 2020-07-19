@@ -1,6 +1,6 @@
 ---
-layout: portfolio
-key: portfolio
+layout: project
+key: project
 title: "Trip Planner(iOS)"
 index: 140
 category: mobile
