@@ -39,7 +39,7 @@ Check the logs in WebServerLogs.txt. These logs are also available in the consol
 ![image](/assets/images/portfolio/webserverjava/logs.png){:width="800px"}  
 
 ## 2. Under the Hood
-Check posting [Building Web Server with Java Socket]({% link _popular/java-app/building-web-server-with-java-socket.md %}) to learn the details how this web server is built.
+Check posting [Building Web Server with Java Socket]({% link _programming/java-app/building-web-server-with-java-socket.md %}) to learn the details how this web server is built.
 
 ## 3. Source Files
 * [Source files of Web Server(Java Socket) on Github](https://github.com/jojozhuang/web-server-java)

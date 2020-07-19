@@ -3,7 +3,9 @@ name: Category
 description: Data Structure, Algorithm, Java, Jekyll
 categories:
   - category: algorithm
+    key: algorithm
     name: Algorithm
+    description: Data Structure, Algorithm, Java, Javascript
     subcategories:
       - name: Data Structure
         description: Data Structure
@@ -26,6 +28,7 @@ categories:
         subcategory: practice-problems
         image: target.png
   - category: programming
+    key: programming
     name: Programming
     subcategories:
       - name: Dev Environment
@@ -69,6 +72,7 @@ categories:
         subcategory: design-pattern
         image: design-pattern.png
   - category: architecture
+    key: architecture
     name: Architecture
     subcategories:
       - name: Theory and Principle
@@ -112,6 +116,7 @@ categories:
         subcategory: security
         image: security.png
   - category: cloud
+    key: cloud
     name: Cloud
     subcategories:
       - name: Cloud Knowledge
@@ -130,6 +135,7 @@ categories:
         subcategory: google-gcp
         image: google-cloud.png
   - category: frontend
+    key: frontend
     name: Frontend
     subcategories:
       - name: Angular Tutorial
@@ -158,6 +164,7 @@ categories:
         subcategory: mobile
         image: mobile.png
   - category: backend
+    key: backend
     name: Backend
     subcategories:
       - name: RESTful API
@@ -176,6 +183,7 @@ categories:
         subcategory: express-js
         image: express-js.png
   - category: website
+    key: website
     name: Personal Website
     subcategories:
       - name: Jekyll
@@ -189,6 +197,7 @@ categories:
         subcategory: wordpress
         image: wordpress.png
   - category: project
+    key: project
     name: Project
     subcategories:
       - name: Online Judge

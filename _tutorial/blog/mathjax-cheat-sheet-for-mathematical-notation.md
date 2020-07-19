@@ -13,7 +13,7 @@ mathjax: true
 
 ## 1. MathJax
 [MathJax](https://www.mathjax.org/) is a cross-browser JavaScript library that displays mathematical notation in web browsers.
-Read tutorial [Jekyll - Math Symbols with MathJax]({% link _popular/jekyll/jekyll-math-symbols-with-mathjax.md %}) to learn how to use MathJax in web page and Markdown.
+Read tutorial [Jekyll - Math Symbols with MathJax]({% link _tutorial/jekyll/jekyll-math-symbols-with-mathjax.md %}) to learn how to use MathJax in web page and Markdown.
 
 ## 2. MathJax Cheat Sheet
 

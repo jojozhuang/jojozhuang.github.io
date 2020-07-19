@@ -3,175 +3,175 @@ menuitems:
     url: /#
     icon: fas fa-square-root-alt
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
+    subkeys: ["data-structure","algorithm","algorithm-overview","practice-problems"]
     sublist:
       - key: data-structure
         description: Data Structure
-        url: /category/?n=category&c=algorithm&s=data-structure
+        url: /algorithm/?n=algorithm&c=algorithm&s=data-structure
         icon: fas fa-sitemap
       - key: algorithm
         description: Algorithm
-        url: /category/?n=category&c=algorithm&s=algorithm
+        url: /algorithm/?n=algorithm&c=algorithm&s=algorithm
         icon: fas fa-square-root-alt
       - key: algorithm-overview
         description: Algorithm Overview
-        url: /category/?n=category&c=algorithm&s=algorithm-overview
+        url: /algorithm/?n=algorithm&c=algorithm&s=algorithm-overview
         icon: fas fa-superscript
       - key: separator
       - key: practice-problems
         description: Practice Problems
-        url: /category/?n=category&c=algorithm&s=practice-problems
+        url: /algorithm/?n=algorithm&c=algorithm&s=practice-problems
         icon: fab fa-resolving
   - key: programming
     url: /#
     icon: fas fa-code
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
+    subkeys: ["programming","dev-environment","java-core","java8","java-concurrency","java-advanced","java-app","javascript","design-pattern"]
     sublist:
       - key: dev-environment
         description: Dev Environment
-        url: /category/?n=category&c=programming&s=dev-env
+        url: /programming/?n=programming&c=programming&s=dev-env
         icon: fab fa-dev
       - key: separator
       - key: java-core
         description: Java Core
-        url: /category/?n=category&c=programming&s=java-core
+        url: /programming/?n=programming&c=programming&s=java-core
         icon: fab fa-java
       - key: java8
         description: Java 8
-        url: /category/?n=category&c=programming&s=java-java8
+        url: /programming/?n=programming&c=programming&s=java-java8
         icon: fab fa-java
       - key: java-concurrency
         description: Java Concurrency
-        url: /category/?n=category&c=programming&s=java-concurrency
+        url: /programming/?n=programming&c=programming&s=java-concurrency
         icon: fab fa-java
       - key: java-advanced
         description: Java Advanced
-        url: /category/?n=category&c=programming&s=java-advanced
+        url: /programming/?n=programming&c=programming&s=java-advanced
         icon: fab fa-java
       - key: java-app
         description: Java App
-        url: /category/?n=category&c=programming&s=java-app
+        url: /programming/?n=programming&c=programming&s=java-app
         icon: fab fa-java
       - key: separator
       - key: javascript
         description: Javascript
-        url: /category/?n=category&c=programming&s=javascript
+        url: /programming/?n=programming&c=programming&s=javascript
         icon: fab fa-js-square
       - key: separator
       - key: design-pattern
         description: Design Pattern
-        url: /category/?n=category&c=programming&s=design-pattern
+        url: /programming/?n=programming&c=programming&s=design-pattern
         icon: fas fa-pencil-ruler
   - key: architecture
     url: /#
     icon: fas fa-swatchbook
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
+    subkeys: ["theory-principle","computer-network","softwares","database-cache","message-queue","docker","devops","security"]
     sublist:
-      - key: theory-and-principle
+      - key: theory-principle
         description: Theory and Principle
-        url: /category/?n=category&c=architecture&s=theory
+        url: /architecture/?n=architecture&c=architecture&s=theory
         icon: fas fa-lightbulb
-      - key: computer network
+      - key: computer-network
         description: Computer Network
-        url: /category/?n=category&c=architecture&s=network
+        url: /architecture/?n=architecture&c=architecture&s=network
         icon: fas fa-network-wired
       - key: softwares
         description: Softwares
-        url: /category/?n=category&c=architecture&s=softwares
+        url: /architecture/?n=architecture&c=architecture&s=softwares
         icon: fas fa-compact-disc
       - key: database-cache
         description: Database and Cache
-        url: /category/?n=category&c=architecture&s=database
+        url: /architecture/?n=architecture&c=architecture&s=database
         icon: fas fa-database
       - key: message-queue
         description: Message Queue
-        url: /category/?n=category&c=architecture&s=softwares
+        url: /architecture/?n=architecture&c=architecture&s=message-queue
         icon: fas fa-mail-bulk
       - key: docker
         description: Docker
-        url: /category/?n=category&c=architecture&s=docker
+        url: /architecture/?n=architecture&c=architecture&s=docker
         icon: fab fa-docker
       - key: devops
         description: DevOps
-        url: /category/?n=category&c=architecture&s=devops
+        url: /architecture/?n=architecture&c=architecture&s=devops
         icon: fas fa-tools
       - key: security
         description: Security
-        url: /category/?n=category&c=architecture&s=security
+        url: /architecture/?n=architecture&c=architecture&s=security
         icon: fas fa-shield-alt
   - key: cloud
     url: /#
     icon: fas fa-cloud
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
+    subkeys: ["cloud-knowledge","amazon-aws","google-cloud"]
     sublist:
       - key: cloud-knowledge
         description: Cloud Knowledge
-        url: /category/?n=category&c=cloud&s=knowledge
+        url: /cloud/?n=cloud&c=cloud&s=knowledge
         icon: fas fa-cloud
       - key: amazon-aws
         description: Amazon AWS
-        url: /category/?n=category&c=cloud&s=amazon-aws
+        url: /cloud/?n=cloud&c=cloud&s=amazon-aws
         icon: fab fa-aws
       - key: google-cloud
         description: Google Cloud
-        url: /category/?n=category&c=cloud&s=google-gcp
+        url: /cloud/?n=cloud&c=cloud&s=google-gcp
         icon: fab fa-google
   - key: tutorial
     url: /#
     icon: fas fa-chalkboard-teacher
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
+    subkeys: ["angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","nodejs","express-js","jekyll","wordpress","online-judge"]
     sublist:
       - key: angular-tutorial
         description: Angular Tutorial
-        url: /category/?n=category&c=frontend&s=angular-js
+        url: /tutorial/?n=tutorial&c=frontend&s=angular-js
         icon: fab fa-angular
       - key: angular-app
         description: Angular App
-        url: /category/?n=category&c=frontend&s=angular-app
+        url: /tutorial/?n=tutorial&c=frontend&s=angular-app
         icon: fab fa-angular
       - key: react-tutorial
         description: React Tutorial
-        url: /category/?n=category&c=frontend&s=react-js
+        url: /tutorial/?n=tutorial&c=frontend&s=react-js
         icon: fab fa-react
       - key: react-app
         description: React App
-        url: /category/?n=category&c=frontend&s=react-app
+        url: /tutorial/?n=tutorial&c=frontend&s=react-app
         icon: fab fa-react
       - key: separator
       - key: mobile
         description: Mobile
-        url: /category/?n=category&c=frontend&s=mobile
+        url: /tutorial/?n=tutorial&c=frontend&s=mobile
         icon: fas fa-mobile-alt
       - key: separator
       - key: restful-api
         description: RESTful API
-        url: /category/?n=category&c=backend&s=restful
+        url: /tutorial/?n=tutorial&c=backend&s=restful
         icon: fas fa-plug
       - key: nodejs
         description: Node.js
-        url: /category/?n=category&c=backend&s=node-js
+        url: /tutorial/?n=tutorial&c=backend&s=node-js
         icon: fab fa-node-js
       - key: express-js
         description: Express.js
-        url: /category/?n=category&c=backend&s=express-js
+        url: /tutorial/?n=tutorial&c=backend&s=express-js
         icon: fab fa-node-js
       - key: separator
       - key: jekyll
         description: Jekyll
-        url: /category/?n=category&c=website&s=jekyll
+        url: /tutorial/?n=tutorial&c=website&s=jekyll
         icon: fas fa-globe
       - key: wordpress
         description: Wordpress
-        url: /category/?n=category&c=website&s=wordpress
+        url: /tutorial/?n=tutorial&c=website&s=wordpress
         icon: fab fa-wordpress
       - key: separator
       - key: online-judge
         description: Online Judge
-        url: /category/?n=category&c=project&s=online-judge
+        url: /tutorial/?n=tutorial&c=project&s=online-judge
         icon: fas fa-gavel
   - key: project
     url: /project

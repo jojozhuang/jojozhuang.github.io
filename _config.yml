@@ -33,14 +33,25 @@ author:
   github: https://github.com/jojozhuang
 
 collections:
+  algorithm:
+    output: true
+    permalink: /algorithm/:name
+  programming:
+    output: true
+    permalink: /programming/:name
+  architecture:
+    output: true
+    permalink: /architecture/:name
+  cloud:
+    output: true
+    permalink: /cloud/:name
+  tutorial:
+    output: true
+    permalink: /tutorial/:name
   project:
     output: true
   popular:
     output: true
-    permalink: /:name
-  tutorial:
-    output: true
-    permalink: /tutorial/:name
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #exclude: ["note", "popular", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
