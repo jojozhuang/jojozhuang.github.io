@@ -3,16 +3,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
-    {% if page.layout != nil and page.layout != 'feed' and page.url != '/note/' and page.url != '/index_note/' and page.url != '/index_tutorial/' and page.url != '/search/' and page.url != '/blog/atom.xml' and page.url != '/contact/'%}
+    {% if page.layout != nil and page.layout != 'feed' and page.url != '/page-index/' and page.url != '/search/' and page.url != '/searchadv/' and page.url != '/blog/atom.xml' %}
       <url>
         <loc>{{site.mywebsite.url}}{{ page.url | remove: 'index.html' }}</loc>
       </url>
     {% endif %}
   {% endfor %}
 
-  {% assign portfolios = site.portfolio %}
-  {% assign blogs = site.posts %}
-  {% assign posts = portfolios | concat: blogs %}
+  {% assign posts = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | concat: site.project %}
   {% for post in posts %}
     <url>
       <loc>{{site.mywebsite.url}}{{ post.url | remove: 'index.html' }}</loc>
