@@ -128,6 +128,15 @@ menuitems:
     visible: true
     subkeys: ["tutorial","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","nodejs","express-js","jekyll","wordpress","online-judge"]
     sublist:
+      - key: jekyll
+        description: Jekyll
+        url: /tutorial/?n=tutorial&c=website&s=jekyll
+        icon: fas fa-globe
+      - key: wordpress
+        description: Wordpress
+        url: /tutorial/?n=tutorial&c=website&s=wordpress
+        icon: fab fa-wordpress
+      - key: separator
       - key: angular-tutorial
         description: Angular Tutorial
         url: /tutorial/?n=tutorial&c=frontend&s=angular-js
@@ -162,15 +171,6 @@ menuitems:
         description: Express.js
         url: /tutorial/?n=tutorial&c=backend&s=express-js
         icon: fab fa-node-js
-      - key: separator
-      - key: jekyll
-        description: Jekyll
-        url: /tutorial/?n=tutorial&c=website&s=jekyll
-        icon: fas fa-globe
-      - key: wordpress
-        description: Wordpress
-        url: /tutorial/?n=tutorial&c=website&s=wordpress
-        icon: fab fa-wordpress
       - key: separator
       - key: online-judge
         description: Online Judge
