@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Singleton"
 index: 1302
 subcategory: design-pattern

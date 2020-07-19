@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Strategy"
 index: 1329
 subcategory: design-pattern

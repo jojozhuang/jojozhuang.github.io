@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Maven - Introduction"
 index: 3711
 subcategory: softwares

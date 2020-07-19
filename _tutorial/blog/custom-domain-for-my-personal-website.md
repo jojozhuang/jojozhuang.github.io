@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Custom Domain for My Personal Website - Draft"
 index: 8028
 subcategory: special-blog

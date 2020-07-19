@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Angular - Testing - Draft"
 index: 2732
 subcategory: angular-js

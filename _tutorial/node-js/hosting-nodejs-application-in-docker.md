@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Hosting Node.js Application in Docker[Draft]"
 index: 2521
 subcategory: node-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Web Application with React and Redux"
 index: 2612
 subcategory: react-app

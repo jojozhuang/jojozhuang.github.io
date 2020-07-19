@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building CRUD Application With Angular"
 index: 2752
 subcategory: angular-app

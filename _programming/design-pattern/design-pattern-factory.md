@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Factory"
 index: 1303
 subcategory: design-pattern

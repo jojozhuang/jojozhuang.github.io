@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Angular - Bootstrap"
 index: 2716
 subcategory: angular-js

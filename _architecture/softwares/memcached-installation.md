@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Memcached - Installation - Draft"
 index: 3752
 subcategory: softwares

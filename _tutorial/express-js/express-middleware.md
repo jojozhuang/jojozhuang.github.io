@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Middleware"
 index: 2552
 subcategory: express-js

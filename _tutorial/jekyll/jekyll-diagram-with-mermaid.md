@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Jekyll - Diagram with Mermaid"
 index: 1627
 subcategory: jekyll

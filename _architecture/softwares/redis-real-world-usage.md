@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Redis - Real World Usage - Draft"
 index: 3748
 subcategory: softwares

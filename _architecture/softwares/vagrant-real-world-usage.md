@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Vagrant - Real World Usage - Draft"
 index: 3723
 subcategory: softwares

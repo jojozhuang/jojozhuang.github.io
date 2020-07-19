@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Creating MySQL Image with Docker File"
 index: 3112
 subcategory: docker

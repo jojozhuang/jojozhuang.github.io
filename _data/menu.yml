@@ -67,7 +67,7 @@ menuitems:
     url: /#
     icon: fas fa-swatchbook
     visible: true
-    subkeys: ["theory-principle","computer-network","softwares","database-cache","message-queue","docker","devops","security"]
+    subkeys: ["architecture","theory-principle","computer-network","softwares","database-cache","message-queue","docker","devops","security"]
     sublist:
       - key: theory-principle
         description: Theory and Principle
@@ -105,7 +105,7 @@ menuitems:
     url: /#
     icon: fas fa-cloud
     visible: true
-    subkeys: ["cloud-knowledge","amazon-aws","google-cloud"]
+    subkeys: ["cloud","cloud-knowledge","amazon-aws","google-cloud"]
     sublist:
       - key: cloud-knowledge
         description: Cloud Knowledge
@@ -123,7 +123,7 @@ menuitems:
     url: /#
     icon: fas fa-chalkboard-teacher
     visible: true
-    subkeys: ["angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","nodejs","express-js","jekyll","wordpress","online-judge"]
+    subkeys: ["tutorial","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","nodejs","express-js","jekyll","wordpress","online-judge"]
     sublist:
       - key: angular-tutorial
         description: Angular Tutorial

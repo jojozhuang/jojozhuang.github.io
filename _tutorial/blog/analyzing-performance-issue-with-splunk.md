@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Analyzing Performance Issue with Splunk"
 index: 8008
 subcategory: special-blog

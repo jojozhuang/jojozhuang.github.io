@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - Application layer"
 index: 3209
 subcategory: theory

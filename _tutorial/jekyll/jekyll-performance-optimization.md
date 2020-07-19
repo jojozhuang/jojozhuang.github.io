@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Jekyll - Performance Optimization"
 index: 1632
 subcategory: jekyll

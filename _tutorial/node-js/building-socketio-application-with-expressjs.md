@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Socket.IO Application with ExpressJS[Draft]"
 index: 2515
 subcategory: node-js

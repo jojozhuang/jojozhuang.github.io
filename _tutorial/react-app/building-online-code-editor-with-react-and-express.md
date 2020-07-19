@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Online Code Editor with React and Express"
 index: 2642
 subcategory: react-app

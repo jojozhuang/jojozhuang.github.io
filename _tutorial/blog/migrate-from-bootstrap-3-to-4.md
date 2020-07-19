@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Migrate from Bootstrap 3 to 4 - Draft"
 index: 8027
 subcategory: special-blog

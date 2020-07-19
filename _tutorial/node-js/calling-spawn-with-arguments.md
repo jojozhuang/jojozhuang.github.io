@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Calling spawn with Arguments[Draft]"
 index: 2513
 subcategory: node-js

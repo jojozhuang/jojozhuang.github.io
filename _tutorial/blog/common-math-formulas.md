@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Common Math Formulas"
 index: 8013
 subcategory: special-blog

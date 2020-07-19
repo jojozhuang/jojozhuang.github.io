@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - Caching"
 index: 3207
 subcategory: theory

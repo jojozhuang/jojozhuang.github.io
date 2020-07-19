@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Installing VirtualBox and Creating Ubuntu VM"
 index: 2111
 subcategory: dev-env

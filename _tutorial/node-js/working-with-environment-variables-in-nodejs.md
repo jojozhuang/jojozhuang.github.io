@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Working with Environment Variables in Node.js[Draft]"
 index: 2522
 subcategory: node-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Setting up Android Development Environment on Mac"
 index: 2321
 subcategory: mobile

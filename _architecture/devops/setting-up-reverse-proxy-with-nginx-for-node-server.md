@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Setting Up Reverse Proxy with Nginx for Node Server"
 index: 3512
 subcategory: devops

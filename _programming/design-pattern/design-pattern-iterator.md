@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Iterator"
 index: 1323
 subcategory: design-pattern

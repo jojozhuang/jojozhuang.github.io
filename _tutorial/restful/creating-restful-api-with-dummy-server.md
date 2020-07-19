@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Creating RESTful API with Dummy Server"
 index: 2211
 subcategory: restful

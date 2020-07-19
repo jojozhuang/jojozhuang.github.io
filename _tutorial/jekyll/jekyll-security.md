@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Jekyll - Security"
 index: 1633
 subcategory: jekyll

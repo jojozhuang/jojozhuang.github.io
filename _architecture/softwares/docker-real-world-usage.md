@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Docker - Real World Usage - Draft"
 index: 3704
 subcategory: softwares

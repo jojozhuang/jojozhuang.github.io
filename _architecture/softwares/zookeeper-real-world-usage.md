@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "ZooKeeper - Real World Usage - Draft"
 index: 3743
 subcategory: softwares

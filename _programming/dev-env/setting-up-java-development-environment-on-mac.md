@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Setting up Java Development Environment on Mac"
 index: 2122
 subcategory: dev-env

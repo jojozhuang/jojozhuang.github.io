@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Cyber Attacks"
 index: 3601
 subcategory: security

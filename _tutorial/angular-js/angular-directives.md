@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Angular - Directives"
 index: 2714
 subcategory: angular-js

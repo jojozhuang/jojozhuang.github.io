@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Spark - Introduction - Draft"
 index: 3776
 subcategory: softwares

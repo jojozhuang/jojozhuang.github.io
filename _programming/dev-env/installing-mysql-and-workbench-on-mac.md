@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Installing MySQL and Workbench on Mac"
 index: 2131
 subcategory: dev-env

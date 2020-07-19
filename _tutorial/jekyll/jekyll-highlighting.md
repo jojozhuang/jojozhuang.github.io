@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Jekyll - Highlighting"
 index: 1623
 subcategory: jekyll

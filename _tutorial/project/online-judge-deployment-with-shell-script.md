@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Online Judge - Deployment with Shell Script - Draft"
 index: 2843
 subcategory: online-judge

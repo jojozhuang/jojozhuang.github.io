@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Setting up Jekyll on Windows 10"
 index: 1604
 subcategory: jekyll

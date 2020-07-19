@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: cloud
 title: "AWS-Load-Balancer-8-Draft"
 index: 3810
 subcategory: amazon-aws

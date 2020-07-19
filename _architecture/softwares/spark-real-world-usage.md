@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Spark - Real World Usage - Draft"
 index: 3778
 subcategory: softwares

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - Consensus Protocols"
 index: 3202
 subcategory: theory

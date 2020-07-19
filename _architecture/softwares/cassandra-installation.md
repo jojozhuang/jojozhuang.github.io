@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Cassandra - Installation - Draft"
 index: 3757
 subcategory: softwares

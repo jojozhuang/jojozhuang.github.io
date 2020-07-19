@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - Asynchronism"
 index: 3209
 subcategory: theory

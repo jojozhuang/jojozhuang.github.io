@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - DNS and CDN"
 index: 3204
 subcategory: theory

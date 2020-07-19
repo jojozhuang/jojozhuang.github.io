@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Nginx - Installation - Draft"
 index: 3727
 subcategory: softwares

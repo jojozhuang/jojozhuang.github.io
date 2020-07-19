@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: cloud
 title: "Deploying Web Applications to Cloud Services"
 index: 3502
 subcategory: knowledge

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Template Method"
 index: 1330
 subcategory: design-pattern

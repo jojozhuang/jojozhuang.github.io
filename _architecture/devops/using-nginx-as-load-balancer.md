@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Using Nginx as Load Balancer"
 index: 3513
 subcategory: devops

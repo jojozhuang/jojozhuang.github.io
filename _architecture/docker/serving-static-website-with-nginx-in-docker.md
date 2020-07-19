@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Serving Static Website With Nginx In Docker"
 index: 3121
 subcategory: docker

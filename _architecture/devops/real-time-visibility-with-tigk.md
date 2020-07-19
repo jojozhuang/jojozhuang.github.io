@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Real Time Visibility with TIGK"
 index: 3562
 subcategory: devops

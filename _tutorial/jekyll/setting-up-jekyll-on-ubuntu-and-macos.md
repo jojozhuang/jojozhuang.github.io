@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Setting up Jekyll on Ubuntu and macOS"
 index: 1603
 subcategory: jekyll

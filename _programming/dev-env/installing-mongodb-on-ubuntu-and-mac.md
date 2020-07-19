@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Installing MongoDB on Ubuntu and Mac"
 index: 2132
 subcategory: dev-env

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building iOS App with Xcode"
 index: 2311
 subcategory: mobile

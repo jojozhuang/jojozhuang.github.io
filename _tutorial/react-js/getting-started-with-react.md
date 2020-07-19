@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Getting Started with React"
 index: 2601
 subcategory: react-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Redis - Introduction - Draft"
 index: 3746
 subcategory: softwares

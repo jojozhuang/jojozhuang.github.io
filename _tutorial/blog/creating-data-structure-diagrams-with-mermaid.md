@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Creating Data Structure Diagrams with Mermaid"
 index: 8023
 subcategory: special-blog

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Advanced Topics in Elasticsearch"
 index: 8011
 subcategory: special-blog

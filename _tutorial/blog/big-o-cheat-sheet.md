@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Big O Cheat Sheet"
 index: 8021
 subcategory: special-blog

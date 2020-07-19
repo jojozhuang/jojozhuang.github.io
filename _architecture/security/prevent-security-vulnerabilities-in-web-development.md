@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Prevent Security Vulnerabilities in Web Development"
 index: 3614
 subcategory: security

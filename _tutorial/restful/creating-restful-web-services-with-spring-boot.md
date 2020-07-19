@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Creating RESTful Web Services with Spring Boot"
 index: 2221
 subcategory: restful

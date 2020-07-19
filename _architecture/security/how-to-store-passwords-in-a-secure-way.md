@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "How To Store Passwords In a Secure Way?"
 index: 3611
 subcategory: security

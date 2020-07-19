@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Cross Domain Access for RESTful Web Services"
 index: 8003
 subcategory: special-blog

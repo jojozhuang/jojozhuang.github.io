@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Socket.IO App to Heroku"
 index: 2636
 subcategory: react-app

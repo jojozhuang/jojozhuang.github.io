@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Flux and Redux"
 index: 2603
 subcategory: react-js

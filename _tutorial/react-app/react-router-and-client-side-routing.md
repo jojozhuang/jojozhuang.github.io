@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "React Router and Client Side Routing"
 index: 2613
 subcategory: react-app

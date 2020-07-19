@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Game Store Angular App to Netlify"
 index: 2762
 subcategory: angular-app

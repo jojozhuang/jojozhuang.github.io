@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: cloud
 title: "AWS-Billing Alarm"
 index: 3802
 subcategory: amazon-aws

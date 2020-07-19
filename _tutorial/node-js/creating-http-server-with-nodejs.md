@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Creating Http Server with Node.js"
 index: 2511
 subcategory: node-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Angular - Dependency Injection"
 index: 2715
 subcategory: angular-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Online Judge - Remember Me"
 index: 2812
 subcategory: online-judge

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Installing and Using Visual Studio Code"
 index: 2126
 subcategory: dev-env

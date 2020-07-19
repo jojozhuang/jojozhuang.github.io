@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Mermaid Cheat Sheet"
 index: 8024
 subcategory: special-blog

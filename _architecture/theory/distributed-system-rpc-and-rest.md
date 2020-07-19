@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - RPC and REST"
 index: 3205
 subcategory: theory

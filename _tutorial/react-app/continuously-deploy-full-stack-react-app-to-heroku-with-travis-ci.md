@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Continuously Deploy Full Stack React App to Heroku with Travis-CI"
 index: 2646
 subcategory: react-app

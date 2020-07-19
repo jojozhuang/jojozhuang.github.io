@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Mediator"
 index: 1324
 subcategory: design-pattern

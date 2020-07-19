@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Using Node.js and NPM"
 index: 2502
 subcategory: node-js

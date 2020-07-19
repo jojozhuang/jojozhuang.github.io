@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Setting up Java Development Environment on Ubuntu"
 index: 2121
 subcategory: dev-env

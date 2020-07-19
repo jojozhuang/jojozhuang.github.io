@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Logging with Winston"
 index: 2554
 subcategory: express-js

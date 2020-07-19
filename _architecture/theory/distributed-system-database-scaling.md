@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - Database Scaling"
 index: 3208
 subcategory: theory

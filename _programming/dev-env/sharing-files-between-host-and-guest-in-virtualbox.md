@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Sharing Files between Host and Guest in VirtualBox"
 index: 2112
 subcategory: dev-env

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Kafka - Real World Usage - Draft"
 index: 3768
 subcategory: softwares

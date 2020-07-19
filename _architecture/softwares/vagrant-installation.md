@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Vagrant - Installation - Draft"
 index: 3722
 subcategory: softwares

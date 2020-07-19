@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Kafka - Installation - Draft"
 index: 3767
 subcategory: softwares

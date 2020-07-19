@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Realtime Web Application with WebSocket"
 index: 2632
 subcategory: react-app

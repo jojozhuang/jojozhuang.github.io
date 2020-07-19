@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Authenticating Users with Passport - Draft"
 index: 2560
 subcategory: express-js

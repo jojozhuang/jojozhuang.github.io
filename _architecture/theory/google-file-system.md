@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Google File System - Draft"
 index: 3221
 subcategory: theory

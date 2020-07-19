@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Video Is Not Loaded Properly From IIS Localhost"
 index: 8004
 subcategory: special-blog

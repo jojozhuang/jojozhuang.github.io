@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Using MongoDB in Shell"
 index: 2133
 subcategory: dev-env

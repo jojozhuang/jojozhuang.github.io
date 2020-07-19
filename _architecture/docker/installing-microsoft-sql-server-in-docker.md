@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Installing Microsoft SQL Server in Docker"
 index: 3132
 subcategory: docker

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Kubernetes - Introduction - Draft"
 index: 3706
 subcategory: softwares

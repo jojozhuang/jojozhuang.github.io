@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Online Judge - Frontend with Angular"
 index: 2803
 subcategory: online-judge

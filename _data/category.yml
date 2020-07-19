@@ -5,7 +5,7 @@ categories:
   - category: algorithm
     key: algorithm
     name: Algorithm
-    description: Data Structure, Algorithm, Java, Javascript
+    description: Data Structure, Algorithm
     subcategories:
       - name: Data Structure
         description: Data Structure
@@ -30,6 +30,7 @@ categories:
   - category: programming
     key: programming
     name: Programming
+    description: Development Environment, Java, Javascript, Design Pattern
     subcategories:
       - name: Dev Environment
         description: Development Environment
@@ -74,6 +75,7 @@ categories:
   - category: architecture
     key: architecture
     name: Architecture
+    description: System Design, Docker, Security
     subcategories:
       - name: Theory and Principle
         description: Theory and Principle
@@ -118,6 +120,7 @@ categories:
   - category: cloud
     key: cloud
     name: Cloud
+    description: Amazon AWS, Google Cloud
     subcategories:
       - name: Cloud Knowledge
         description: Cloud Knowledge
@@ -137,6 +140,7 @@ categories:
   - category: frontend
     key: frontend
     name: Frontend
+    description: Angular, React, Mobile
     subcategories:
       - name: Angular Tutorial
         description: Angular Tutorial
@@ -166,6 +170,7 @@ categories:
   - category: backend
     key: backend
     name: Backend
+    description: Node.js, ExpressJs
     subcategories:
       - name: RESTful API
         description: RESTful API
@@ -185,6 +190,7 @@ categories:
   - category: website
     key: website
     name: Personal Website
+    description: Jekyll, Wordpress
     subcategories:
       - name: Jekyll
         description: Jekyll
@@ -199,6 +205,7 @@ categories:
   - category: project
     key: project
     name: Project
+    description: Online Judge
     subcategories:
       - name: Online Judge
         description: Online Judge

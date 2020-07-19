@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Jekyll - Search Function for Static Website - draft"
 index: 1625
 subcategory: jekyll

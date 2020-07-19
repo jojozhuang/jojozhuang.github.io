@@ -35,22 +35,20 @@ author:
 collections:
   algorithm:
     output: true
-    permalink: /algorithm/:name
+    permalink: /:collection/:name
   programming:
     output: true
-    permalink: /programming/:name
+    permalink: /:collection/:name
   architecture:
     output: true
-    permalink: /architecture/:name
+    permalink: /:collection/:name
   cloud:
     output: true
-    permalink: /cloud/:name
+    permalink: /:collection/:name
   tutorial:
     output: true
-    permalink: /tutorial/:name
+    permalink: /:collection/:name
   project:
-    output: true
-  popular:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]

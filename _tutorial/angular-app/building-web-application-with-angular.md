@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Web Application with Angular"
 index: 2761
 subcategory: angular-app

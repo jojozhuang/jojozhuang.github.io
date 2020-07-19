@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Cross-platform Desktop Apps with Electron"
 index: 2531
 subcategory: node-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: cloud
 title: "AWS-CloudFront"
 index: 3804
 subcategory: amazon-aws

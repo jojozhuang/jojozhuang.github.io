@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Web Application with React"
 index: 2611
 subcategory: react-app

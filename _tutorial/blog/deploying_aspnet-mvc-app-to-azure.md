@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying ASP.NET MVC Application to Azure"
 index: 8002
 subcategory: special-blog

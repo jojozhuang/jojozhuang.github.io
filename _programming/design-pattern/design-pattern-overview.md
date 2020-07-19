@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Overview"
 index: 1301
 subcategory: design-pattern

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Influxdb - Installation - Draft"
 index: 3762
 subcategory: softwares

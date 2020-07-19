@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Visitor"
 index: 1331
 subcategory: design-pattern

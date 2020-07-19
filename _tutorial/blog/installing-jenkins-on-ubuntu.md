@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Installing Jenkins On Ubuntu"
 index: 8006
 subcategory: special-blog

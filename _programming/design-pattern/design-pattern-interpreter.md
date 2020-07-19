@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Interpreter"
 index: 1322
 subcategory: design-pattern

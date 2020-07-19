@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Running Multiple Containers with Docker Compose"
 index: 3125
 subcategory: docker

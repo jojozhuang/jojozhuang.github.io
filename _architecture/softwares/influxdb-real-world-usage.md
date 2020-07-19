@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Influxdb - Real World Usage - Draft"
 index: 3763
 subcategory: softwares

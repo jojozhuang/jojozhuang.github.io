@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Maven - Real World Usage"
 index: 3714
 subcategory: softwares

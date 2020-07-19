@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Maven - Installation - Draft"
 index: 3713
 subcategory: softwares

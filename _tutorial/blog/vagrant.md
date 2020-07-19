@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Vagrant - Draft"
 index: 8025
 subcategory: special-blog

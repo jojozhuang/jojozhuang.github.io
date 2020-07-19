@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "ZooKeeper - Introduction - Draft"
 index: 3741
 subcategory: softwares

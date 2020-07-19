@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Hadoop - Introduction - Draft"
 index: 3771
 subcategory: softwares

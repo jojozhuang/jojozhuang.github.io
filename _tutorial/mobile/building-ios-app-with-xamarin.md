@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building iOS App with Xamarin"
 index: 2333
 subcategory: mobile

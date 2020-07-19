@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Full Stack React App to Heroku"
 index: 2644
 subcategory: react-app

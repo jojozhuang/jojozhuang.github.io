@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Game Store React App to Netlify"
 index: 2614
 subcategory: react-app

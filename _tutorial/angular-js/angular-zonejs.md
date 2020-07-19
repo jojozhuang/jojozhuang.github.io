@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Angular - Zone.js - Draft"
 index: 2705
 subcategory: angular-js

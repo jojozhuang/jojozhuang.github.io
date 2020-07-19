@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Networking Terminology, Interfaces, and Protocols"
 index: 3901
 subcategory: network

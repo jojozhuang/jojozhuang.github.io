@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Docker - Introduction"
 index: 3701
 subcategory: softwares

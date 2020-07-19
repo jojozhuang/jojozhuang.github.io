@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Installing and Using Cordova on macOS"
 index: 2341
 subcategory: mobile

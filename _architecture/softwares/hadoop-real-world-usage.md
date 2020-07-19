@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Hadoop - Real World Usage - Draft"
 index: 3773
 subcategory: softwares

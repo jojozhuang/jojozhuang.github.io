@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Redis - Using Redis in Java"
 index: 3523
 subcategory: database

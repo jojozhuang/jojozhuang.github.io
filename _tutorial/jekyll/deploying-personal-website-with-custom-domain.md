@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Personal Website with Custom Domain"
 index: 1642
 subcategory: jekyll

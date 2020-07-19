@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Hadoop Architecture - Draft"
 index: 3224
 subcategory: theory

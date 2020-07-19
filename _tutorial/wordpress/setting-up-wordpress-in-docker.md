@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Setting up WordPress in Docker"
 index: 1801
 subcategory: wordpress

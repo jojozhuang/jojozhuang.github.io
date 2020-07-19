@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Online Judge - Deploying Full Stack Angular App to Heroku"
 index: 2841
 subcategory: online-judge

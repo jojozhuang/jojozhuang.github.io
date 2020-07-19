@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Design Pattern - Observer"
 index: 1327
 subcategory: design-pattern

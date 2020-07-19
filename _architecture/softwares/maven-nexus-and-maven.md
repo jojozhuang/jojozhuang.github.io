@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Maven - Nexus and Maven"
 index: 3712
 subcategory: softwares

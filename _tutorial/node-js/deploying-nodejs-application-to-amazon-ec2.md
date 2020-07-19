@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Node.js Application to Amazon EC2"
 index: 2525
 subcategory: node-js

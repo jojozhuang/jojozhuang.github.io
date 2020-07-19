@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Express Routing"
 index: 2556
 subcategory: express-js

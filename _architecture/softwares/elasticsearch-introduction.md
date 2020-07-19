@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Elasticsearch - Introduction - Draft"
 index: 3796
 subcategory: softwares

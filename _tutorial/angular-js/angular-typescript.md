@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Angular - TypeScript"
 index: 2702
 subcategory: angular-js

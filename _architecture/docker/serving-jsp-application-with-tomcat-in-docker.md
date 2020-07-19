@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Serving JSP Application With Tomcat In Docker"
 index: 3122
 subcategory: docker

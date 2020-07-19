@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Cross-platform Mobile Apps Development with Xamarin"
 index: 2332
 subcategory: mobile

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "JavaScript - Modern"
 index: 2402
 subcategory: javascript

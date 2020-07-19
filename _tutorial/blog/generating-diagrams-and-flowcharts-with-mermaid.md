@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Generating Diagrams and Flowcharts with Mermaid"
 index: 8022
 subcategory: special-blog

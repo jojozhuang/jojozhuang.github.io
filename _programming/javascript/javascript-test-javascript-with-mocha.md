@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "JavaScript - Test JavaScript with Mocha(Draft)"
 index: 2406
 subcategory: javascript

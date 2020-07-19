@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Using Express to Serve Static Files"
 index: 2561
 subcategory: express-js

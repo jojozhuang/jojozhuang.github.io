@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Enabling Tomcat Debugging in Docker for Eclipse"
 index: 3123
 subcategory: docker

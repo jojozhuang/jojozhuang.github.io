@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: cloud
 title: "GCP-Overview-Draft"
 index: 3851
 subcategory: google-gcp

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Express Security - Draft"
 index: 2558
 subcategory: express-js

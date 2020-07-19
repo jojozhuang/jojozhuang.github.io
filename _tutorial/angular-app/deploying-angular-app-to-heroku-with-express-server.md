@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Deploying Angular App to Heroku with Express Server"
 index: 2765
 subcategory: angular-app

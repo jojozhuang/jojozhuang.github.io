@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Creating Web App and RESTful API with MEAN Stack"
 index: 2753
 subcategory: angular-app

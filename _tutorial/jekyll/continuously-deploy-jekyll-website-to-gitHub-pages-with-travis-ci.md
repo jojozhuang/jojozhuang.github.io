@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Continuously Deploy Jekyll Website to GitHub Pages with Travis-CI"
 index: 1641
 subcategory: jekyll

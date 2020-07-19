@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Docker - Hypervisor vs Container"
 index: 3702
 subcategory: softwares

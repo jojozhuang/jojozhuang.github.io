@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Creating Docker Container with Bash Script[Draft]"
 index: 3133
 subcategory: docker

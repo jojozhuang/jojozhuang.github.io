@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: programming
 title: "Getting Started with macOS"
 index: 2102
 subcategory: dev-env

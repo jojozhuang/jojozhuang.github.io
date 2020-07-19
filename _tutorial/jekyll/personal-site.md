@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Personal Site"
 index: 1699
 subcategory: jekyll

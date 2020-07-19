@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: architecture
 title: "Distributed System - Real World Architectures"
 index: 3215
 subcategory: theory

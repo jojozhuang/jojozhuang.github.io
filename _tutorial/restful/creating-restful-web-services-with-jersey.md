@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Creating RESTful Web Services with Jersey"
 index: 2232
 subcategory: restful

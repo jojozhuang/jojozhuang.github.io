@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Building Course Player with React and Socket.IO"
 index: 2638
 subcategory: react-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: tutorial
 title: "Versioning RESTful API - Draft"
 index: 2564
 subcategory: express-js

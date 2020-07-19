@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: category
+key: cloud
 title: "Cloud Services"
 index: 3501
 subcategory: knowledge
