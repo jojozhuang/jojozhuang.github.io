@@ -6,8 +6,11 @@ title: Architecture
 ---
 <div class="container">
   <div class="page-wrapper chiller-theme">
-    <!-- sidebar-wrapper  -->
+    <!-- sidebar-wrapper, must after subject is assigned  -->
     {% assign subject = site.data.category %}
+    {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | sort: 'index' %}
+    {% include sidebar.html %}
+    <!-- current category -->
     {% assign firstlevel = site.data.category %}
     {% for category in firstlevel.categories %}
       {% if category.key == 'architecture' %}
