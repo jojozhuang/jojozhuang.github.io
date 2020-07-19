@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Message Queue - Draft"
 index: 1493
 subcategory: java-advanced

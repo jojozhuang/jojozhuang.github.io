@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Remote Debugging JSP Application"
 index: 1514
 subcategory: java-app

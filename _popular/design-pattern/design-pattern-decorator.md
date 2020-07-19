@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Decorator"
 index: 1313
 subcategory: design-pattern

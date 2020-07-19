@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Abstract Class Vs Interface"
 index: 1481
 subcategory: java-advanced

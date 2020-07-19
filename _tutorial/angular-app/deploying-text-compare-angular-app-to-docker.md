@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying Text Compare Angular App to Docker"
 index: 2772
 subcategory: angular-app

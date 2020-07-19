@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Generics"
 index: 1417
 subcategory: java-core

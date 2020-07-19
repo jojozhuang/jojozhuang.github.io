@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - Building Web App with MEAN Stack"
 index: 2801
 subcategory: online-judge

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Sweep Line"
 index: 1231
 subcategory: algorithm

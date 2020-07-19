@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Custom List"
 index: 1701
 subcategory: practice-problems

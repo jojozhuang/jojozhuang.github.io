@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Problem List at LeetCode"
 index: 1281
 subcategory: algorithm-overview

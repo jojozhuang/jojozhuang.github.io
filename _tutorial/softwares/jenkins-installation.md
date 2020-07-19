@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Jenkins - Installation - Draft"
 index: 3717
 subcategory: softwares

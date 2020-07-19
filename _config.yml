@@ -12,6 +12,7 @@ plugins:
   - jekyll-seo-tag
 
 permalink: /blog/:year/:month/:day/:title/
+#permalink: /popular/:year/:month/:day/:title/
 
 # Setup
 mywebsite:
@@ -36,10 +37,14 @@ collections:
     output: true
   popular:
     output: true
+    permalink: /:name
   tutorial:
     output: true
+    permalink: /tutorial/:name
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #exclude: ["note", "popular", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
+
+#https://jekyllrb.com/docs/permalinks/

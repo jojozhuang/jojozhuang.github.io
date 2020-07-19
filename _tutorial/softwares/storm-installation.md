@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Storm - Installation - Draft"
 index: 3782
 subcategory: softwares

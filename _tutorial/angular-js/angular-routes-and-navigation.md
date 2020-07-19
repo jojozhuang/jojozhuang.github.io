@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Angular - Routes and Navigation"
 index: 2717
 subcategory: angular-js

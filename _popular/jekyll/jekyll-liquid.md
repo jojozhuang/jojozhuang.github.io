@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Liquid"
 index: 1611
 subcategory: jekyll

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - BitSet"
 index: 1422
 subcategory: java-core

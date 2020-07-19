@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Heap"
 index: 1132
 subcategory: data-structure

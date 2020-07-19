@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Hadoop - Installation - Draft"
 index: 3772
 subcategory: softwares

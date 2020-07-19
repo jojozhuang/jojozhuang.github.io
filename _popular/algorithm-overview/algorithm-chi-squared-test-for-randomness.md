@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Chi squared test for randomness"
 index: 1287
 subcategory: algorithm-overview

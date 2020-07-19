@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Generics Type Erasure"
 index: 1418
 subcategory: java-core

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Dynamic Tests with JUnit 5 in Eclipse"
 index: 1522
 subcategory: java-app

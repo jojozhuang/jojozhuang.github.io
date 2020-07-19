@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Knapsack Problems"
 index: 1222
 subcategory: algorithm

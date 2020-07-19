@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Persistence with Hibernate"
 index: 1537
 subcategory: java-app

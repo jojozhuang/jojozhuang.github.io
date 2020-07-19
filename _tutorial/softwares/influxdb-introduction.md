@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Influxdb - Introduction - Draft"
 index: 3761
 subcategory: softwares

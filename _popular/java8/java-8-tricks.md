@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Tricks"
 index: 1451
 subcategory: java-java8

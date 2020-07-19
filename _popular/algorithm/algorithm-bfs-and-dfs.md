@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - BFS and DFS"
 index: 1214
 subcategory: algorithm

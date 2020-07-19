@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Prevent Security Vulnerabilities in Web Development"
 index: 3614
 subcategory: security

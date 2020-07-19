@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-Storage Gateway"
 index: 3805
 subcategory: amazon-aws

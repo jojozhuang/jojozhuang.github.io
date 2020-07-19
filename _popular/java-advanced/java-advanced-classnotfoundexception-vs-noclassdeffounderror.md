@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - ClassNotFoundException vs. NoClassDefFoundError"
 index: 1476
 subcategory: java-advanced

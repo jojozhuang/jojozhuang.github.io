@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Map Reduce - Draft"
 index: 1235
 subcategory: algorithm

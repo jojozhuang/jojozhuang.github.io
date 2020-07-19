@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Stack, Queue and Deque"
 index: 1413
 subcategory: java-core

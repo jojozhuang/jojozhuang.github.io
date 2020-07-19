@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Stack"
 index: 1112
 subcategory: data-structure

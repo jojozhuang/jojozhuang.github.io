@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Callable and Future"
 index: 1435
 subcategory: java-concurrency

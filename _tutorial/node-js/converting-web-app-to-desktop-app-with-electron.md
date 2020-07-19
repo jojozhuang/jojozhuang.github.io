@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Converting Web App to Desktop App with Electron"
 index: 2532
 subcategory: node-js

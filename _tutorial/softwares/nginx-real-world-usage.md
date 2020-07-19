@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Nginx - Real World Usage - Draft"
 index: 3728
 subcategory: softwares

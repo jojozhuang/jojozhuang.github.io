@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Creating MySQL Container with Docker File for Game Store App"
 index: 1529
 subcategory: java-app

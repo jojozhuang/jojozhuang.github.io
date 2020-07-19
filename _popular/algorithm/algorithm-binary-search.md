@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Binary Search"
 index: 1211
 subcategory: algorithm

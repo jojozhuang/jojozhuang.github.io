@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Running C and Java in Node.js"
 index: 2512
 subcategory: node-js

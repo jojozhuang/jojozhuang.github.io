@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Overview"
 index: 1431
 subcategory: java-concurrency

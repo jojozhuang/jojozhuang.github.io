@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying Angular App to Heroku as Static Website"
 index: 2764
 subcategory: angular-app

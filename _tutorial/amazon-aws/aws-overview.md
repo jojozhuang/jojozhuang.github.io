@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-Overview-Draft"
 index: 3801
 subcategory: amazon-aws

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Comparable vs Comparator"
 index: 1416
 subcategory: java-core

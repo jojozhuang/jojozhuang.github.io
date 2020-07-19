@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Lazy Execution with Lambda"
 index: 1459
 subcategory: java-java8

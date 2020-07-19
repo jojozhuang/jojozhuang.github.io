@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Converting Microsoft Word to Markdown"
 index: 8012
 subcategory: special-blog

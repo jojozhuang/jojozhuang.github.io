@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Kubernetes - Real World Usage - Draft"
 index: 3708
 subcategory: softwares

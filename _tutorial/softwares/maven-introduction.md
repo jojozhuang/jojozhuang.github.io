@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Maven - Introduction"
 index: 3711
 subcategory: softwares

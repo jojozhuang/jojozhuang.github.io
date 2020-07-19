@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - B Tree"
 index: 1124
 subcategory: data-structure

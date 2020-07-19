@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - Backend RESTful API Server"
 index: 2802
 subcategory: online-judge

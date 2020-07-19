@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Android App with Android Studio"
 index: 2322
 subcategory: mobile

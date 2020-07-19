@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Persistence with JPA & Eclipselink"
 index: 1536
 subcategory: java-app

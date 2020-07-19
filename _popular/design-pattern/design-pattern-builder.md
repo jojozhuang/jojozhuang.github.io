@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Builder"
 index: 1304
 subcategory: design-pattern

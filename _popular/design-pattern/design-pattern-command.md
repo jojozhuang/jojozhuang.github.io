@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Command"
 index: 1321
 subcategory: design-pattern

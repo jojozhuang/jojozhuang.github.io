@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Popular Tools - draft"
 index: 8026
 subcategory: special-blog

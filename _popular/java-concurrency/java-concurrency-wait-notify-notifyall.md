@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - wait, notify and notifyAll"
 index: 1433
 subcategory: java-concurrency

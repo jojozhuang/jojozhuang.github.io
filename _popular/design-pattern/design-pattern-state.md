@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - State"
 index: 1328
 subcategory: design-pattern

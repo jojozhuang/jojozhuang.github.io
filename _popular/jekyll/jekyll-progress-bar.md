@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Progress Bar"
 index: 1621
 subcategory: jekyll

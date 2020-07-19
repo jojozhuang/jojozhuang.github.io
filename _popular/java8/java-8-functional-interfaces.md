@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Functional Interfaces"
 index: 1455
 subcategory: java-java8

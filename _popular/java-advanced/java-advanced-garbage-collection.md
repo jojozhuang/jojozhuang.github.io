@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Garbage Collection"
 index: 1473
 subcategory: java-advanced

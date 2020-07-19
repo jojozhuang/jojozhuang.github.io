@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Thread Signaling"
 index: 1441
 subcategory: java-concurrency

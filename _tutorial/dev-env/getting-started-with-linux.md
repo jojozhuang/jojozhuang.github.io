@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Getting Started with Linux"
 index: 2101
 subcategory: dev-env

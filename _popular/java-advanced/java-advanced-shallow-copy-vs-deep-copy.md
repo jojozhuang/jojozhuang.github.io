@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Shallow Copy vs Deep Copy"
 index: 1484
 subcategory: java-advanced

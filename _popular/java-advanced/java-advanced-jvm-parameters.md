@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - JVM Parameters"
 index: 1475
 subcategory: java-advanced

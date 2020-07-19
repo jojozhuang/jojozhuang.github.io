@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Minimum Spanning Tree - Draft"
 index: 1146
 subcategory: data-structure

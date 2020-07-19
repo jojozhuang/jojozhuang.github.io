@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Collection"
 index: 1411
 subcategory: java-core

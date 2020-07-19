@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - ConcurrentSkipListMap"
 index: 1443
 subcategory: java-concurrency

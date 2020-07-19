@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "JavaScript - Basic"
 index: 2401
 subcategory: javascript

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - LFU Cache"
 index: 1117
 subcategory: data-structure

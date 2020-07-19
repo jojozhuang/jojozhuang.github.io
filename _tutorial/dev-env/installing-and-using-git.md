@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing and Using Git"
 index: 2123
 subcategory: dev-env

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Mobile App with React Native - Draft"
 index: 2342
 subcategory: mobile

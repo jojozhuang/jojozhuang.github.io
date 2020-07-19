@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing and Using Atom"
 index: 2125
 subcategory: dev-env

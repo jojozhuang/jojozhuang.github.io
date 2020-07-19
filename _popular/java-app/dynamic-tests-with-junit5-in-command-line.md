@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Dynamic Tests with JUnit 5 in Command Line"
 index: 1523
 subcategory: java-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Angular - Components 2"
 index: 2712
 subcategory: angular-js

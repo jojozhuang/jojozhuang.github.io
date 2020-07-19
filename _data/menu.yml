@@ -1,5 +1,5 @@
 menuitems:
-  - key: Algorithm
+  - key: algorithm
     url: /#
     icon: fas fa-square-root-alt
     visible: true
@@ -7,22 +7,22 @@ menuitems:
     sublist:
       - key: data-structure
         description: Data Structure
-        url: /popular/?n=popular&c=general&s=data-structure
+        url: /category/?n=category&c=algorithm&s=data-structure
         icon: fas fa-sitemap
       - key: algorithm
         description: Algorithm
-        url: /popular/?n=popular&c=general&s=algorithm
+        url: /category/?n=category&c=algorithm&s=algorithm
         icon: fas fa-square-root-alt
       - key: algorithm-overview
         description: Algorithm Overview
-        url: /popular/?n=popular&c=general&s=algorithm-overview
+        url: /category/?n=category&c=algorithm&s=algorithm-overview
         icon: fas fa-superscript
       - key: separator
       - key: practice-problems
         description: Practice Problems
-        url: /popular/?n=popular&c=general&s=practice-problems
+        url: /category/?n=category&c=algorithm&s=practice-problems
         icon: fab fa-resolving
-  - key: Programmming
+  - key: programming
     url: /#
     icon: fas fa-code
     visible: true
@@ -30,40 +30,40 @@ menuitems:
     sublist:
       - key: dev-environment
         description: Dev Environment
-        url: /tutorial/?n=tutorial&c=prerequisites&s=dev-env
+        url: /category/?n=category&c=programming&s=dev-env
         icon: fab fa-dev
       - key: separator
       - key: java-core
         description: Java Core
-        url: /popular/?n=popular&c=java&s=java-core
+        url: /category/?n=category&c=programming&s=java-core
         icon: fab fa-java
       - key: java8
         description: Java 8
-        url: /popular/?n=popular&c=java&s=java-java8
+        url: /category/?n=category&c=programming&s=java-java8
         icon: fab fa-java
       - key: java-concurrency
         description: Java Concurrency
-        url: /popular/?n=popular&c=java&s=java-concurrency
+        url: /category/?n=category&c=programming&s=java-concurrency
         icon: fab fa-java
       - key: java-advanced
         description: Java Advanced
-        url: /popular/?n=popular&c=java&s=java-advanced
+        url: /category/?n=category&c=programming&s=java-advanced
         icon: fab fa-java
       - key: java-app
         description: Java App
-        url: /popular/?n=popular&c=java&s=java-app
+        url: /category/?n=category&c=programming&s=java-app
         icon: fab fa-java
       - key: separator
       - key: javascript
         description: Javascript
-        url: /tutorial/?n=tutorial&c=frontend&s=javascript
+        url: /category/?n=category&c=programming&s=javascript
         icon: fab fa-js-square
       - key: separator
       - key: design-pattern
         description: Design Pattern
-        url: /popular/?n=popular&c=general&s=design-pattern
+        url: /category/?n=category&c=programming&s=design-pattern
         icon: fas fa-pencil-ruler
-  - key: Architecture
+  - key: architecture
     url: /#
     icon: fas fa-swatchbook
     visible: true
@@ -71,37 +71,37 @@ menuitems:
     sublist:
       - key: theory-and-principle
         description: Theory and Principle
-        url: /tutorial/?n=tutorial&c=distributed-system&s=theory
+        url: /category/?n=category&c=architecture&s=theory
         icon: fas fa-lightbulb
       - key: computer network
         description: Computer Network
-        url: /tutorial/?n=tutorial&c=distributed-system&s=network
+        url: /category/?n=category&c=architecture&s=network
         icon: fas fa-network-wired
       - key: softwares
         description: Softwares
-        url: /tutorial/?n=tutorial&c=distributed-system&s=softwares
+        url: /category/?n=category&c=architecture&s=softwares
         icon: fas fa-compact-disc
       - key: database-cache
         description: Database and Cache
-        url: /tutorial/?n=tutorial&c=distributed-system&s=database
+        url: /category/?n=category&c=architecture&s=database
         icon: fas fa-database
       - key: message-queue
         description: Message Queue
-        url: /tutorial/?n=tutorial&c=distributed-system&s=softwares
+        url: /category/?n=category&c=architecture&s=softwares
         icon: fas fa-mail-bulk
       - key: docker
         description: Docker
-        url: /tutorial/?n=tutorial&c=distributed-system&s=docker
+        url: /category/?n=category&c=architecture&s=docker
         icon: fab fa-docker
       - key: devops
         description: DevOps
-        url: /tutorial/?n=tutorial&c=distributed-system&s=devops
+        url: /category/?n=category&c=architecture&s=devops
         icon: fas fa-tools
       - key: security
         description: Security
-        url: /tutorial/?n=tutorial&c=distributed-system&s=security
+        url: /category/?n=category&c=architecture&s=security
         icon: fas fa-shield-alt
-  - key: Cloud
+  - key: cloud
     url: /#
     icon: fas fa-cloud
     visible: true
@@ -109,17 +109,17 @@ menuitems:
     sublist:
       - key: cloud-knowledge
         description: Cloud Knowledge
-        url: /tutorial/?n=tutorial&c=prerequisites&s=knowledge
+        url: /category/?n=category&c=cloud&s=knowledge
         icon: fas fa-cloud
       - key: amazon-aws
         description: Amazon AWS
-        url: /tutorial/?n=tutorial&c=cloud&s=amazon-aws
+        url: /category/?n=category&c=cloud&s=amazon-aws
         icon: fab fa-aws
       - key: google-cloud
         description: Google Cloud
-        url: /tutorial/?n=tutorial&c=cloud&s=google-gcp
+        url: /category/?n=category&c=cloud&s=google-gcp
         icon: fab fa-google
-  - key: Tutorial
+  - key: tutorial
     url: /#
     icon: fas fa-chalkboard-teacher
     visible: true
@@ -127,51 +127,51 @@ menuitems:
     sublist:
       - key: angular-tutorial
         description: Angular Tutorial
-        url: /tutorial/?n=tutorial&c=frontend&s=angular-js
+        url: /category/?n=category&c=frontend&s=angular-js
         icon: fab fa-angular
       - key: angular-app
         description: Angular App
-        url: /tutorial/?n=tutorial&c=frontend&s=angular-app
+        url: /category/?n=category&c=frontend&s=angular-app
         icon: fab fa-angular
       - key: react-tutorial
         description: React Tutorial
-        url: /tutorial/?n=tutorial&c=frontend&s=react-js
+        url: /category/?n=category&c=frontend&s=react-js
         icon: fab fa-react
       - key: react-app
         description: React App
-        url: /tutorial/?n=tutorial&c=frontend&s=react-app
+        url: /category/?n=category&c=frontend&s=react-app
         icon: fab fa-react
       - key: separator
       - key: mobile
         description: Mobile
-        url: /tutorial/?n=tutorial&c=frontend&s=mobile
+        url: /category/?n=category&c=frontend&s=mobile
         icon: fas fa-mobile-alt
       - key: separator
       - key: restful-api
         description: RESTful API
-        url: /tutorial/?n=tutorial&c=backend&s=restful
+        url: /category/?n=category&c=backend&s=restful
         icon: fas fa-plug
       - key: nodejs
         description: Node.js
-        url: /tutorial/?n=tutorial&c=backend&s=node-js
+        url: /category/?n=category&c=backend&s=node-js
         icon: fab fa-node-js
       - key: express-js
         description: Express.js
-        url: /tutorial/?n=tutorial&c=backend&s=express-js
+        url: /category/?n=category&c=backend&s=express-js
         icon: fab fa-node-js
       - key: separator
       - key: jekyll
         description: Jekyll
-        url: /popular/?n=popular&c=website&s=jekyll
+        url: /category/?n=category&c=website&s=jekyll
         icon: fas fa-globe
       - key: wordpress
         description: Wordpress
-        url: /popular/?n=popular&c=website&s=wordpress
+        url: /category/?n=category&c=website&s=wordpress
         icon: fab fa-wordpress
       - key: separator
       - key: online-judge
         description: Online Judge
-        url: /tutorial/?n=tutorial&c=project&s=online-judge
+        url: /category/?n=category&c=project&s=online-judge
         icon: fas fa-gavel
   - key: project
     url: /project
@@ -200,6 +200,10 @@ menuitems:
         url: /searchadv
         icon: fas fa-search
       - key: separator
+      - key: category
+        description: Category
+        url: /category
+        icon: fas fa-fire-alt
       - key: popular
         description: Popular
         url: /popular

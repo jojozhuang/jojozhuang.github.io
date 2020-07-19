@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-vpc-7-Draft"
 index: 3809
 subcategory: amazon-aws

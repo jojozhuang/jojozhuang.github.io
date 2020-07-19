@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-EC2-Draft"
 index: 3806
 subcategory: amazon-aws

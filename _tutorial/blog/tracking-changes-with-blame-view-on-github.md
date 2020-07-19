@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Tracking Changes with Blame View on GitHub"
 index: 8019
 subcategory: special-blog

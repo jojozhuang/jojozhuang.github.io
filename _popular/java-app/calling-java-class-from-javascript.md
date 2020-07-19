@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Calling Java Class from Javascript"
 index: 1543
 subcategory: java-app

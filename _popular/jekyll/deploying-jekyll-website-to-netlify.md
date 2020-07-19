@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Deploying Jekyll Website to Netlify"
 index: 1643
 subcategory: jekyll

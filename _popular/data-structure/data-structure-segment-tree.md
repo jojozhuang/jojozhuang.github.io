@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Segment Tree"
 index: 1127
 subcategory: data-structure

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Java Virtual Machine"
 index: 1471
 subcategory: java-advanced

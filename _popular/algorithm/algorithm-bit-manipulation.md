@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Bit Manipulation"
 index: 1203
 subcategory: algorithm

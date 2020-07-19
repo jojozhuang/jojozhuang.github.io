@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - Others"
 index: 2832
 subcategory: online-judge

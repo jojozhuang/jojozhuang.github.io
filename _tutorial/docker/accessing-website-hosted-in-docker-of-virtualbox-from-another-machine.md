@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Accessing Website Hosted in Docker of VirtualBox from Another Machine"
 index: 3134
 subcategory: docker

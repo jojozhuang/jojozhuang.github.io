@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Sorting"
 index: 1201
 subcategory: algorithm

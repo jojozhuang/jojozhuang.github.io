@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Docker - Installation - Draft"
 index: 3703
 subcategory: softwares

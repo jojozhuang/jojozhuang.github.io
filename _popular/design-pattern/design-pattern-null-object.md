@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Null Object"
 index: 1326
 subcategory: design-pattern

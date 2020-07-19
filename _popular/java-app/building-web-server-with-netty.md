@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Building Web Server with Netty"
 index: 1506
 subcategory: java-app

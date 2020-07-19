@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Basic Queries in Elasticsearch"
 index: 8010
 subcategory: special-blog

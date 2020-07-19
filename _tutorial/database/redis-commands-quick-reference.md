@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Redis - Commands Quick Reference"
 index: 3522
 subcategory: database

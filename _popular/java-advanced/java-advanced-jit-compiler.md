@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - JIT Compiler"
 index: 1472
 subcategory: java-advanced

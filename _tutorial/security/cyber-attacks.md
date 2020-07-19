@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Cyber Attacks"
 index: 3601
 subcategory: security

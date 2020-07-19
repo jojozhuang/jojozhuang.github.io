@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Remote Debugging with Eclipse"
 index: 1513
 subcategory: java-app

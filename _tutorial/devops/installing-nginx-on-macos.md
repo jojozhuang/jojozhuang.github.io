@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing Nginx on macOS"
 index: 3511
 subcategory: devops

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Iterator"
 index: 1405
 subcategory: java-core

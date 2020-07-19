@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Setting up Personal Website on GitLab Pages"
 index: 1602
 subcategory: jekyll

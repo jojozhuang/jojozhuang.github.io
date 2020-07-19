@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Creating Docker Machine with More Disk Space"
 index: 3131
 subcategory: docker

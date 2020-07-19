@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Logging with Morgan"
 index: 2553
 subcategory: express-js

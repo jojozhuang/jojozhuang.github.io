@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - Code Editor"
 index: 2822
 subcategory: online-judge

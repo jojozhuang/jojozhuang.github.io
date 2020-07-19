@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Array and List"
 index: 1404
 subcategory: java-core

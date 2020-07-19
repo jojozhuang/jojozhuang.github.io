@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Using Nginx as Load Balancer"
 index: 3513
 subcategory: devops

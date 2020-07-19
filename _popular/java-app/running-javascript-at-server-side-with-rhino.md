@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Running JavaScript at Server Side with Rhino"
 index: 1542
 subcategory: java-app

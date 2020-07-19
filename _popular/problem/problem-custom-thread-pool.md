@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Custom Thread Pool"
 index: 1705
 subcategory: practice-problems

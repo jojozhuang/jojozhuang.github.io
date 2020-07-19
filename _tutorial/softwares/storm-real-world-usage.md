@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Storm - Real World Usage - Draft"
 index: 3783
 subcategory: softwares

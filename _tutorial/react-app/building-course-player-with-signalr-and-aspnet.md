@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Course Player with SignalR and ASP.NET"
 index: 2634
 subcategory: react-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Basic Knowledge of React"
 index: 2602
 subcategory: react-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-Serverless-10-Draft"
 index: 3812
 subcategory: amazon-aws

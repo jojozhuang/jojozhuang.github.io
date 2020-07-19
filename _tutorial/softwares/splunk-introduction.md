@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Splunk - Introduction - Draft"
 index: 3791
 subcategory: softwares

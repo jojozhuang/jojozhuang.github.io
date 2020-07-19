@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Pagination"
 index: 1622
 subcategory: jekyll

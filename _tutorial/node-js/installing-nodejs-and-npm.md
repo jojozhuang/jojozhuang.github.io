@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing Node.js and NPM"
 index: 2501
 subcategory: node-js

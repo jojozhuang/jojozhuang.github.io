@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Checking Which JDK Eclipse is Using"
 index: 1511
 subcategory: java-app

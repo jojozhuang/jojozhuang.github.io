@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Versioned Key‐Value Store"
 index: 1706
 subcategory: practice-problems

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying ASP.NET RESTful API to Azure"
 index: 2214
 subcategory: restful

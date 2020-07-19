@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Angular - Pipes"
 index: 2719
 subcategory: angular-js

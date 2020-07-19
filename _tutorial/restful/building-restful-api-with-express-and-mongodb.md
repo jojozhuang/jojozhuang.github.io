@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building RESTful API with Express And MongoDB"
 index: 2231
 subcategory: restful

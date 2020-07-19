@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Jenkins - Real World Usage - Draft"
 index: 3718
 subcategory: softwares

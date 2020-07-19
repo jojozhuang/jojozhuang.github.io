@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Word Counter"
 index: 1702
 subcategory: practice-problems

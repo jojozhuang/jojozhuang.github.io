@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Graph Problems"
 index: 1142
 subcategory: data-structure

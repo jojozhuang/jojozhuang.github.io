@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying Spring Boot RESTful API to Heroku"
 index: 2223
 subcategory: restful

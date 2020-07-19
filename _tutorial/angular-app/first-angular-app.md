@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "First Angular App"
 index: 2751
 subcategory: angular-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Sqrt Decomposition"
 index: 1232
 subcategory: algorithm

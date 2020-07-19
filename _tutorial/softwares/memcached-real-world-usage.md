@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Memcached - Real World Usage - Draft"
 index: 3753
 subcategory: softwares

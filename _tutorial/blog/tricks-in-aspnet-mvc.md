@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Tricks in ASP.NET MVC"
 index: 8005
 subcategory: special-blog

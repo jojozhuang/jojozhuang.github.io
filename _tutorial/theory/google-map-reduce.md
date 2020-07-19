@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Google Map Reduce - Draft"
 index: 3222
 subcategory: theory

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Random ID"
 index: 1704
 subcategory: practice-problems

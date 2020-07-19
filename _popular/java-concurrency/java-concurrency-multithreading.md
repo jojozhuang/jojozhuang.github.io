@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - MultiThreading"
 index: 1432
 subcategory: java-concurrency

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - SEO"
 index: 1631
 subcategory: jekyll

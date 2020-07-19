@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Cassandra - Real World Usage - Draft"
 index: 3758
 subcategory: softwares

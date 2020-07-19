@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Mobile App Development"
 index: 2301
 subcategory: mobile

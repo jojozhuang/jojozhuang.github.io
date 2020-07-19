@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying Socket.IO App to Azure"
 index: 2637
 subcategory: react-app

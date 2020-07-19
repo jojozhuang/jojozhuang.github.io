@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Angular - HTTP and HttpClient - Draft"
 index: 2703
 subcategory: angular-js

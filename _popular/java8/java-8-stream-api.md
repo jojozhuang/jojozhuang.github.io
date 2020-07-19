@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Stream API"
 index: 1457
 subcategory: java-java8

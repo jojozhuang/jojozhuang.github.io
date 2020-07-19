@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - Progress Bar"
 index: 2823
 subcategory: online-judge

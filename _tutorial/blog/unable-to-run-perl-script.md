@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Unable to Run Perl Script"
 index: 8016
 subcategory: special-blog

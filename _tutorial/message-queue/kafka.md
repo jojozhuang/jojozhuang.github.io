@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Kafka"
 index: 3541
 subcategory: message-queue

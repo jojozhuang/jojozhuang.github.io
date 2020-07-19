@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - N-ary Tree"
 index: 1123
 subcategory: data-structure

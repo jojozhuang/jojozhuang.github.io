@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Predicate"
 index: 1458
 subcategory: java-java8

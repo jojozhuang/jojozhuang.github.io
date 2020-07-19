@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Angular - Getting Started with Angular CLI"
 index: 2701
 subcategory: angular-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Scripting Java With Rhino"
 index: 1541
 subcategory: java-app

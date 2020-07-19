@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Creating Tomcat Image with Docker File"
 index: 3124
 subcategory: docker

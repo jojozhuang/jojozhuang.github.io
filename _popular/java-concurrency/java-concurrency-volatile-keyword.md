@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Volatile Keyword"
 index: 1439
 subcategory: java-concurrency

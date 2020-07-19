@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Online Text Compare Tool with Angular"
 index: 2771
 subcategory: angular-app

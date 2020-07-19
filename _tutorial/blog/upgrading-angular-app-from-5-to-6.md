@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Upgrading Angular App from 5 to 6"
 index: 8017
 subcategory: special-blog

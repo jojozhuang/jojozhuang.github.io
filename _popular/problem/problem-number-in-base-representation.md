@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Number in Base Representation"
 index: 1708
 subcategory: practice-problems

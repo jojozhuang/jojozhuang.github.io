@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing and Using Docker on Ubuntu"
 index: 3101
 subcategory: docker

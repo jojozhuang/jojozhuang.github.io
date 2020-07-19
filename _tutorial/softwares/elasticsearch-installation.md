@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Elasticsearch - Installation - Draft"
 index: 3797
 subcategory: softwares

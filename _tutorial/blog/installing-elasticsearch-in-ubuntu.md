@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing Elasticsearch in Ubuntu"
 index: 8009
 subcategory: special-blog

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Online Chinese Dictionary with React and Express"
 index: 2643
 subcategory: react-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Adapter"
 index: 1310
 subcategory: design-pattern

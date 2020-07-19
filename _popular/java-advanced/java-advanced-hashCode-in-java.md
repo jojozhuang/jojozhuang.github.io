@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - hashCode() in Java - Draft"
 index: 1483
 subcategory: java-advanced

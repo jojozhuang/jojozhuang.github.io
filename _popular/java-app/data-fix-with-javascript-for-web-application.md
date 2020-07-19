@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Fix with Javascript For Web Application"
 index: 1544
 subcategory: java-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building RESTful API with ASP.NET Core"
 index: 2212
 subcategory: restful

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - NIO"
 index: 1427
 subcategory: java-core

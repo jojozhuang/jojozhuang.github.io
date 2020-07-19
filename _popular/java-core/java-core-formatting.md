@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Formatting"
 index: 1403
 subcategory: java-core

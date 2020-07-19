@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Serialize and Deserialize Tree"
 index: 1286
 subcategory: algorithm-overview

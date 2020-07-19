@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Synchronization"
 index: 1437
 subcategory: java-concurrency

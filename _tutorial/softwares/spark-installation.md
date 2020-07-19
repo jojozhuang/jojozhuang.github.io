@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Spark - Installation - Draft"
 index: 3777
 subcategory: softwares

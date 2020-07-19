@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Building Website with JSP and MongoDB"
 index: 1533
 subcategory: java-app

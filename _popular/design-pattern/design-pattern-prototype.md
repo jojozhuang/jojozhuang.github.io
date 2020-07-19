@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Prototype"
 index: 1306
 subcategory: design-pattern

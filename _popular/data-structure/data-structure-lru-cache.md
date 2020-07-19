@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - LRU Cache"
 index: 1116
 subcategory: data-structure

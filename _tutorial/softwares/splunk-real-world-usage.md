@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Splunk - Real World Usage - Draft"
 index: 3793
 subcategory: softwares

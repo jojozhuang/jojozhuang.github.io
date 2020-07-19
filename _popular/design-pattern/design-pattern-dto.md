@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - DTO - Draft"
 index: 1307
 subcategory: design-pattern

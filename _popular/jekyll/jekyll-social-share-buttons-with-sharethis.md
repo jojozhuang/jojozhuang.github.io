@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Social Share Buttons with ShareThis"
 index: 1618
 subcategory: jekyll

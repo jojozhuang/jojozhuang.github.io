@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Redis - Tutorial"
 index: 3521
 subcategory: database

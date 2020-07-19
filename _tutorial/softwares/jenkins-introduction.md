@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Jenkins - Introduction"
 index: 3716
 subcategory: softwares

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Nginx - Introduction"
 index: 3726
 subcategory: softwares

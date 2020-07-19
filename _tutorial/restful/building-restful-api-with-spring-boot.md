@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building RESTful API with Spring Boot"
 index: 2222
 subcategory: restful

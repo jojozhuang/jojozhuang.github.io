@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Facade"
 index: 1314
 subcategory: design-pattern

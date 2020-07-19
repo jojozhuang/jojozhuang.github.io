@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Introduction of Course Player"
 index: 2631
 subcategory: react-app

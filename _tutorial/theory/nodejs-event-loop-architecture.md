@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Node.js event loop architecture - Draft"
 index: 3226
 subcategory: theory

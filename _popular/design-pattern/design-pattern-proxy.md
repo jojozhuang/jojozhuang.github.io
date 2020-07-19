@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Proxy"
 index: 1316
 subcategory: design-pattern

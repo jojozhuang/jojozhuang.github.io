@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Testing RESTful API with Postman"
 index: 2213
 subcategory: restful

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Static Block and Initialization Block"
 index: 1421
 subcategory: java-core

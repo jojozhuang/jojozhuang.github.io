@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Minimax Algorithm - Draft"
 index: 1233
 subcategory: algorithm

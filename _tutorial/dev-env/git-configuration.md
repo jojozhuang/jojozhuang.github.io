@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Git Configuration"
 index: 2124
 subcategory: dev-env

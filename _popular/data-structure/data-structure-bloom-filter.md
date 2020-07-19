@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Bloom Filter"
 index: 1133
 subcategory: data-structure

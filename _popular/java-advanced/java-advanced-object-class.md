@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Object Class - Draft"
 index: 1482
 subcategory: java-advanced

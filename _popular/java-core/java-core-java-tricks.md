@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - Tricks"
 index: 1402
 subcategory: java-core

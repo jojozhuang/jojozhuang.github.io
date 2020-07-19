@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Bipartite Graph"
 index: 1143
 subcategory: data-structure

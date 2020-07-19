@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Cryptography"
 index: 1491
 subcategory: java-advanced

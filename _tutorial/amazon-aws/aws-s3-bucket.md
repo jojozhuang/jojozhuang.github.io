@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-S3 Bucket"
 index: 3803
 subcategory: amazon-aws

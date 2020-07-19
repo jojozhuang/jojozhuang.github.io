@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Setting up Jekyll on Ubuntu and macOS"
 index: 1603
 subcategory: jekyll

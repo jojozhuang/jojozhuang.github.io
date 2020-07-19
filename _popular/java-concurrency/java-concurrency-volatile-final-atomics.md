@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Volatile, Final and Atomics"
 index: 1445
 subcategory: java-concurrency

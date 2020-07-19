@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Dead Lock"
 index: 1442
 subcategory: java-concurrency

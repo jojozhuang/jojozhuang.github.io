@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - ArrayList and LinkedList"
 index: 1412
 subcategory: java-core

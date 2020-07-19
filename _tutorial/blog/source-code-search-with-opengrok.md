@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Source Code Search with OpenGrok"
 index: 8015
 subcategory: special-blog

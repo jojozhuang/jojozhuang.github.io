@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Flyweight"
 index: 1315
 subcategory: design-pattern

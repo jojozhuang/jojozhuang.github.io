@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Two Pointers"
 index: 1212
 subcategory: algorithm

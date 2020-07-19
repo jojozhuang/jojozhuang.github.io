@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Higher Order Functions"
 index: 1454
 subcategory: java-java8

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Building Website with JSP and MySQL"
 index: 1532
 subcategory: java-app

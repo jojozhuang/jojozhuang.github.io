@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Combine Morgan & Winston"
 index: 2555
 subcategory: express-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "JavaScript - ES5"
 index: 2403
 subcategory: javascript

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Hashmap vs WeakHashMap"
 index: 1477
 subcategory: java-advanced

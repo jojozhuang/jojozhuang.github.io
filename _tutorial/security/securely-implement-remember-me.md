@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Securely Implement Remember Me"
 index: 3612
 subcategory: security

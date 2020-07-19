@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-Databases-5-Draft"
 index: 3807
 subcategory: amazon-aws

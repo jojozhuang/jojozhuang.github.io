@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Linked List"
 index: 1111
 subcategory: data-structure

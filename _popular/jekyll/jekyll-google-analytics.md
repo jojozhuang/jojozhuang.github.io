@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Google Analytics - Draft"
 index: 1615
 subcategory: jekyll

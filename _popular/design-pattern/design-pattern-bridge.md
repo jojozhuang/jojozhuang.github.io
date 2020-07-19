@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Bridge"
 index: 1311
 subcategory: design-pattern

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Binary Search Tree"
 index: 1122
 subcategory: data-structure

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Pre Sum - Draft"
 index: 1236
 subcategory: algorithm

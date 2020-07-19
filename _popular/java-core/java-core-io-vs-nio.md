@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Core - IO vs NIO"
 index: 1428
 subcategory: java-core

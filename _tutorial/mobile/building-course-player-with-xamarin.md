@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Course Player with Xamarin"
 index: 2335
 subcategory: mobile

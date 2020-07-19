@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - HashMap"
 index: 1131
 subcategory: data-structure

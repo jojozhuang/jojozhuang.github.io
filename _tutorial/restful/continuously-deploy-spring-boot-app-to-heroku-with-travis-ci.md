@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Continuously Deploy Spring Boot App to Heroku with Travis-CI"
 index: 2224
 subcategory: restful

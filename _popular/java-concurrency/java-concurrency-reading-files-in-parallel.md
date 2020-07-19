@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Reading Files in Parallel"
 index: 1447
 subcategory: java-concurrency

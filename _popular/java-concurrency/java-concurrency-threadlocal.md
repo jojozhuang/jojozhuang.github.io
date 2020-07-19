@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - ThreadLocal"
 index: 1440
 subcategory: java-concurrency

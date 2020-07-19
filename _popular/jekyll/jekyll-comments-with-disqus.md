@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Comments with Disqus"
 index: 1616
 subcategory: jekyll

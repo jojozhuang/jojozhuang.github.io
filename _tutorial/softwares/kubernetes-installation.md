@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Kubernetes - Installation - Draft"
 index: 3707
 subcategory: softwares

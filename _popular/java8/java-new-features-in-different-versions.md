@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java - Java 11,10,9,8,7 - Draft"
 index: 1460
 subcategory: java-java8

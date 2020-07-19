@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Continuously Deploy Angular App to GitHub Pages using Travis-CI"
 index: 2763
 subcategory: angular-app

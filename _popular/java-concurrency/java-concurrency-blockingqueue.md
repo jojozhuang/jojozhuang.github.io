@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - BlockingQueue"
 index: 1446
 subcategory: java-concurrency

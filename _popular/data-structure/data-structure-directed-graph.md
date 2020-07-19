@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Directed Graph - Draft"
 index: 1144
 subcategory: data-structure

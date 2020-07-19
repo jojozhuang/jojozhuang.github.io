@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Realtime Application with SignalR"
 index: 2633
 subcategory: react-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Word Rank"
 index: 1707
 subcategory: practice-problems

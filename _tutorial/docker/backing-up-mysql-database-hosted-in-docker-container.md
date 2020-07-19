@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Backing up MySQL Database Hosted in Docker Container"
 index: 3113
 subcategory: docker

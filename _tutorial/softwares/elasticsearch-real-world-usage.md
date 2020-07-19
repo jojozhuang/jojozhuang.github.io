@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Elasticsearch - Real World Usage - Draft"
 index: 3798
 subcategory: softwares

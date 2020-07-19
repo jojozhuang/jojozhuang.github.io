@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Functional programming"
 index: 1453
 subcategory: java-java8

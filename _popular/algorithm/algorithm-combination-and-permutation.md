@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Combination and Permutation"
 index: 1215
 subcategory: algorithm

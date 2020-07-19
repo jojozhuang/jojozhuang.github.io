@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-SQS-SNS-9-Draft"
 index: 3811
 subcategory: amazon-aws

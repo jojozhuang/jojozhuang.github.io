@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Setting up Personal Website on GitHub Pages(Draft)"
 index: 1601
 subcategory: jekyll

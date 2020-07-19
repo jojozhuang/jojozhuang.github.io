@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Best Practice"
 index: 1282
 subcategory: algorithm-overview

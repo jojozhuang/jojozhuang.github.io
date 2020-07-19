@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Topological Sorting"
 index: 1145
 subcategory: data-structure

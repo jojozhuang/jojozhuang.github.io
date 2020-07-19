@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "JavaScript - Async Call in Loop[Draft]"
 index: 2405
 subcategory: javascript

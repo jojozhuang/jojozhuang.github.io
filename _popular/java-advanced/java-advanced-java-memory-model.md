@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Java Memory Model"
 index: 1474
 subcategory: java-advanced

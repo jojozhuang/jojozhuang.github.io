@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - Rich Text Editor"
 index: 2821
 subcategory: online-judge

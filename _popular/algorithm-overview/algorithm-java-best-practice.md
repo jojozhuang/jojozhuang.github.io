@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Java Best Practice"
 index: 1283
 subcategory: algorithm-overview

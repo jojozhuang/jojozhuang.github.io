@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying Game Store React App to Azure with FTP"
 index: 2615
 subcategory: react-app

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "AWS-Route53-6-Draft"
 index: 3808
 subcategory: amazon-aws

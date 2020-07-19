@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Skip List"
 index: 1119
 subcategory: data-structure

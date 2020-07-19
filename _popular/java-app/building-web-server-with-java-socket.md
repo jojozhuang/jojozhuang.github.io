@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Building Web Server with Java Socket"
 index: 1505
 subcategory: java-app

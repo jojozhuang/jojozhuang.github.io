@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Advanced - Web Service"
 index: 1492
 subcategory: java-advanced

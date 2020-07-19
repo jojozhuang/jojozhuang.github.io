@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing Docker Toolbox and Kitematic on Mac"
 index: 3102
 subcategory: docker

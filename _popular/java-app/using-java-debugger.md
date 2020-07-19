@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Using Java Debugger"
 index: 1512
 subcategory: java-app

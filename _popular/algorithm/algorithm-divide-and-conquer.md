@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Divide and Conquer"
 index: 1213
 subcategory: algorithm

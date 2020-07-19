@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Cassandra - Introduction - Draft"
 index: 3756
 subcategory: softwares

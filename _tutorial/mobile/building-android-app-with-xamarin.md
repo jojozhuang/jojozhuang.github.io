@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Building Android App with Xamarin"
 index: 2334
 subcategory: mobile

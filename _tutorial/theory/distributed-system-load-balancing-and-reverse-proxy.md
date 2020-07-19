@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Distributed System - Load Balancing and Reverse Proxy"
 index: 3206
 subcategory: theory

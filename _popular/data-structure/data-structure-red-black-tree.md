@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Data Structure - Red Black Tree - draft"
 index: 1123
 subcategory: data-structure

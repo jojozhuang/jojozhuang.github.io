@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Union Find"
 index: 1217
 subcategory: algorithm

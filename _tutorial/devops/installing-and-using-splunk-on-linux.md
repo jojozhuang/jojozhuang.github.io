@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing and Using Splunk on Linux"
 index: 3551
 subcategory: devops

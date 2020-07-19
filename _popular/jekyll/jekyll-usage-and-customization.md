@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Usage and Customization"
 index: 1612
 subcategory: jekyll

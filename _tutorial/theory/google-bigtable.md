@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Google BigTable- Draft"
 index: 3223
 subcategory: theory

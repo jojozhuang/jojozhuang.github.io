@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Problem - Image Cache"
 index: 1703
 subcategory: practice-problems

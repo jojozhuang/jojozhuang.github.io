@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java - Thread Dumps & Analysis"
 index: 1503
 subcategory: java-app

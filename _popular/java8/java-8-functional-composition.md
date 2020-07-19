@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java 8 - Functional Composition"
 index: 1456
 subcategory: java-java8

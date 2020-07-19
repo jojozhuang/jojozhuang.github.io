@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Synchronizers"
 index: 1438
 subcategory: java-concurrency

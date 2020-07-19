@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Jekyll - Math Symbols with MathJax"
 index: 1626
 subcategory: jekyll

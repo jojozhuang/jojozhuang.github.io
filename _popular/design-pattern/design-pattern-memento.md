@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Design Pattern - Memento"
 index: 1325
 subcategory: design-pattern

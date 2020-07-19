@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Hashing Passwords with Bcrypt"
 index: 8014
 subcategory: special-blog

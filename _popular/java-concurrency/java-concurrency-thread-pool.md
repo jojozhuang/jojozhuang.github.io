@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Java Concurrency - Thread Pool"
 index: 1434
 subcategory: java-concurrency

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Using MySQL Container for JSP Application"
 index: 3111
 subcategory: docker

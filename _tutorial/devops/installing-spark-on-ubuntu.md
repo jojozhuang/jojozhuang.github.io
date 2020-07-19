@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Installing Spark on Ubuntu"
 index: 3561
 subcategory: devops

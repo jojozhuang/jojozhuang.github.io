@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Vagrant - Introduction"
 index: 3721
 subcategory: softwares

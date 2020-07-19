@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Getting Started with Express"
 index: 2551
 subcategory: express-js

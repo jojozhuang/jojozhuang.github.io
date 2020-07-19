@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "MathJax Cheat Sheet for Mathematical Notation"
 index: 8020
 subcategory: special-blog

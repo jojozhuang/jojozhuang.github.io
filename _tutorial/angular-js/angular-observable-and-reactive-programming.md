@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Angular - Observable and Reactive Programming - Draft"
 index: 2704
 subcategory: angular-js

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Using Yarn to Manage Packages"
 index: 2503
 subcategory: node-js

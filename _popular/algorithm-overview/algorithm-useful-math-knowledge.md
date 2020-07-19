@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Algorithm - Useful Math Knowledge"
 index: 1284
 subcategory: algorithm-overview

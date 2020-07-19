@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Template Engine"
 index: 2557
 subcategory: express-js

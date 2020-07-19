@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Online Judge - User Authentication"
 index: 2811
 subcategory: online-judge

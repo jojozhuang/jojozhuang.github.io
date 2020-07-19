@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Setting up .Net Development Environment on Mac"
 index: 2331
 subcategory: mobile

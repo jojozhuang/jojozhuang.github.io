@@ -1,6 +1,6 @@
 ---
 layout: default
-key: popular
+key: category
 tutorial: list
 title: Popular Topics
 ---
@@ -8,7 +8,7 @@ title: Popular Topics
   <div class="page-wrapper chiller-theme">
     <!-- sidebar-wrapper  -->
     {% assign subject = site.data.category %}
-    {% assign postings = site.popular | sort: 'index' %}
+    {% assign postings = site.popular | concat: site.tutorial | sort: 'index'%}
     {% include sidebar.html %}
     <!-- page-content" -->
     <main class="page-content">

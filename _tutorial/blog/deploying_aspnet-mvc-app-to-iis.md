@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "Deploying ASP.NET MVC Application to IIS"
 index: 8001
 subcategory: special-blog

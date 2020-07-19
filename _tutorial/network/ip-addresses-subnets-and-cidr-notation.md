@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: tutorial
+key: category
 title: "IP Addresses, Subnets, and CIDR Notation"
 index: 3902
 subcategory: network

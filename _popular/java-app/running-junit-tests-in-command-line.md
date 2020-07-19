@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-key: popular
+key: category
 title: "Running JUnit Tests in Command Line"
 index: 1521
 subcategory: java-app
