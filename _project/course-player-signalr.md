@@ -22,11 +22,11 @@ Check the posting [Introduction of Course Player]({% link _tutorial/react-app/in
 For a real course player, video is played separately. The content of the screenshot and whiteboard is synchronized with the playing process of the video.
 
 On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The upper one is for screenshot and the lower one is for whiteboard. And there is a video player at the left side.
-![image](/assets/images/portfolio/courseplayersignalr/homepage.png)  
+![image](/assets/images/project/courseplayersignalr/homepage.png)  
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/assets/images/portfolio/courseplayersignalr/playing.png)  
+![image](/assets/images/project/courseplayersignalr/playing.png)  
 You can drag the slider bar to move forward or backward.
-![image](/assets/images/portfolio/courseplayersignalr/drag.png)  
+![image](/assets/images/project/courseplayersignalr/drag.png)  
 
 ## 4. Under the Hood
 Check posting [Building Course Player with SignalR and ASP.NET]({% link _tutorial/react-app/building-course-player-with-signalr-and-aspnet.md %}) to learn the details of SignalR and how this course player is built.

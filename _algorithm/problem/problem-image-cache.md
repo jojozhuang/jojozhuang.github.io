@@ -210,34 +210,34 @@ Input.
 ```raw
 524288
 5
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/index.png
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/trips.png
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/search.png
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/city2.png
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/settings.png
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/index.png
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/detail.png
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/pad.png
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/backend.png
+https://jojozhuang.github.io/assets/images/project/tripplannerios/index.png
+https://jojozhuang.github.io/assets/images/project/tripplannerios/trips.png
+https://jojozhuang.github.io/assets/images/project/tripplannerios/search.png
+https://jojozhuang.github.io/assets/images/project/tripplannerios/city2.png
+https://jojozhuang.github.io/assets/images/project/tripplannerios/settings.png
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/index.png
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/detail.png
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/pad.png
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/backend.png
 ```
 Output.
 ```raw
 testImageCache
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/index.png DOWNLOADED 189248
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/trips.png DOWNLOADED 178584
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/search.png DOWNLOADED 81909
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/city2.png DOWNLOADED 278500
-Current size: 728241 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/index.png
-Current size: 538993 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/trips.png
-https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/settings.png DOWNLOADED 28392
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/index.png DOWNLOADED 431474
-Current size: 820275 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/search.png
-Current size: 738366 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/city2.png
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/detail.png DOWNLOADED 336079
-Current size: 795945 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/portfolio/tripplannerios/settings.png
-Current size: 767553 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/index.png
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/pad.png DOWNLOADED 535287
-https://jojozhuang.github.io/assets/images/portfolio/restaurantandroid/backend.png DOWNLOADED 52852
+https://jojozhuang.github.io/assets/images/project/tripplannerios/index.png DOWNLOADED 189248
+https://jojozhuang.github.io/assets/images/project/tripplannerios/trips.png DOWNLOADED 178584
+https://jojozhuang.github.io/assets/images/project/tripplannerios/search.png DOWNLOADED 81909
+https://jojozhuang.github.io/assets/images/project/tripplannerios/city2.png DOWNLOADED 278500
+Current size: 728241 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/project/tripplannerios/index.png
+Current size: 538993 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/project/tripplannerios/trips.png
+https://jojozhuang.github.io/assets/images/project/tripplannerios/settings.png DOWNLOADED 28392
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/index.png DOWNLOADED 431474
+Current size: 820275 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/project/tripplannerios/search.png
+Current size: 738366 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/project/tripplannerios/city2.png
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/detail.png DOWNLOADED 336079
+Current size: 795945 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/project/tripplannerios/settings.png
+Current size: 767553 exceeds the maximum capacity: 524288, delete the least recently used image:https://jojozhuang.github.io/assets/images/project/restaurantandroid/index.png
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/pad.png DOWNLOADED 535287
+https://jojozhuang.github.io/assets/images/project/restaurantandroid/backend.png DOWNLOADED 52852
 capacity=524288, size=388931, quantity=5, count=2
 
 ```

@@ -34,21 +34,21 @@ Try it out on any live demo website with the following accounts:
 
 ## 3. UI
 Home page.
-![image](/assets/images/portfolio/onlinejudgemean/home.png)
+![image](/assets/images/project/onlinejudgemean/home.png)
 Click the 'Questions' menu.
-![image](/assets/images/portfolio/onlinejudgemean/questions.png)
+![image](/assets/images/project/onlinejudgemean/questions.png)
 Create a new account.
-![image](/assets/images/portfolio/onlinejudgemean/signup.png)
+![image](/assets/images/project/onlinejudgemean/signup.png)
 After login, you can select one question to solve, and submit the solution.
-![image](/assets/images/portfolio/onlinejudgemean/solution.png)
+![image](/assets/images/project/onlinejudgemean/solution.png)
 If the solution is passed all of the test cases, the submission is successful.
-![image](/assets/images/portfolio/onlinejudgemean/pass.png)
+![image](/assets/images/project/onlinejudgemean/pass.png)
 Or the solutions is failed by some of the test cases.
-![image](/assets/images/portfolio/onlinejudgemean/fail.png)
+![image](/assets/images/project/onlinejudgemean/fail.png)
 Switch to 'Submissions' to view all your submissions.
-![image](/assets/images/portfolio/onlinejudgemean/submissions.png)
+![image](/assets/images/project/onlinejudgemean/submissions.png)
 Click on the 'Accepted' or 'Wrong Answer' link to view the submission in details.
-![image](/assets/images/portfolio/onlinejudgemean/submission.png)
+![image](/assets/images/project/onlinejudgemean/submission.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Online Judge Application With MEAN Stack]({% link _tutorial/project/online-judge-building-web-app-with-mean-stack.md %}) and [Online Judge - Judging System]({% link _tutorial/project/online-judge-judging-system.md %}) to learn how this online judge app is built.

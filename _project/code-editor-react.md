@@ -26,13 +26,13 @@ Two available demos:
 
 ## 3. UI
 Home page.
-![image](/assets/images/portfolio/codeeditorreact/homepage.png)
+![image](/assets/images/project/codeeditorreact/homepage.png)
 Select javascript from the dropdown list. Notice, only javascript and python are supported on [Heroku](https://www.heroku.com/). If you run this application locally, then all 5 languages are supported.
-![image](/assets/images/portfolio/codeeditorreact/selectlanguage.png)
+![image](/assets/images/project/codeeditorreact/selectlanguage.png)
 Edit the code and click 'Run' button to execute the program.
-![image](/assets/images/portfolio/codeeditorreact/execute.png)
+![image](/assets/images/project/codeeditorreact/execute.png)
 If the code has issue and can't run properly, the error will be displayed.
-![image](/assets/images/portfolio/codeeditorreact/error.png)
+![image](/assets/images/project/codeeditorreact/error.png)
 
 ## 4. Under the Hood
 Check posting [Building Online Code Editor with React and Express]({% link _tutorial/react-app/building-online-code-editor-with-react-and-express.md %}) to learn the details of how this code editor is built.

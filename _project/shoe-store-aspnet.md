@@ -29,21 +29,21 @@ This web application is a content management system(CMS), built with ASP.NET MVC
 
 ## 3. UI Pages
 ### 3.1 Login Page  
-![image](/assets/images/portfolio/shoestoreaspnet/login.png)
+![image](/assets/images/project/shoestoreaspnet/login.png)
 ### 3.2 List View
 In list view, we can view all of the items, and add/edit/delete item. Other list pages have the similar layout.
-![image](/assets/images/portfolio/shoestoreaspnet/listview.png)
+![image](/assets/images/project/shoestoreaspnet/listview.png)
 ### 3.3 Responsive UI for Different Screen Size
 View in large size screen.
-![image](/assets/images/portfolio/shoestoreaspnet/responsive.png)
+![image](/assets/images/project/shoestoreaspnet/responsive.png)
 View in small size screen, eg. mobile phone.  
-![image](/assets/images/portfolio/shoestoreaspnet/responsive2.png)
+![image](/assets/images/project/shoestoreaspnet/responsive2.png)
 ### 3.4 List of Sales Order
 Add, edit, delete and search order.
-![image](/assets/images/portfolio/shoestoreaspnet/orderlist.png)  
+![image](/assets/images/project/shoestoreaspnet/orderlist.png)  
 ### 3.5 New Order
 Add order items.
-![image](/assets/images/portfolio/shoestoreaspnet/addorder.png)  
+![image](/assets/images/project/shoestoreaspnet/addorder.png)  
 
 ## 4. Source Files
 * [Source files of Shoe Store on Github](https://github.com/jojozhuang/shoe-store-aspnet)

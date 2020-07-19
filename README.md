@@ -1,19 +1,11 @@
 # jojozhuang.github.io
-My personal website hosted on Github, built with Jekyll, Liquid and MarkDown.
+Website for sharing the knowledge of computer science, hosted on Github, built with Jekyll, Liquid and MarkDown.
 
 <kbd>![image](/assets/assets/github_portfolio1.png)</kbd>
 
 <kbd>![image](/assets/assets/github_portfolio2.png)</kbd>
 
 <kbd>![image](/assets/assets/github_tutorial.png)</kbd>
-
-# Function
-This website is mainly used to demonstrate my portfolios and share my knowledge about software development through tutorials.
-* Profile - Introduction of myself.
-* Portfolio - Over 15 software portfolios with detailed explanation and live demos
-* Tutorial - Over 160 tutorials for software development, including iOS, Android, Angular, React, Docker, etc.
-* Blog - My technical blogs.
-* Favorite - Popular open-source projects and useful online tools for software development.
 
 # Demo
 Two available demos:

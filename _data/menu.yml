@@ -188,9 +188,8 @@ menuitems:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","about","commands"]
+    subkeys: ["page-index","category","searchadv","about"]
     sublist:
-      - key: separator
       - key: page-index
         description: Page Index
         url: /page-index

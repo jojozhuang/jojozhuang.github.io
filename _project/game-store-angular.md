@@ -27,21 +27,21 @@ Two available demos:
 
 ## 3. UI
 Home page.
-![image](/assets/images/portfolio/gamestoreangular/homepage.png)
+![image](/assets/images/project/gamestoreangular/homepage.png)
 Click the List button. There are three products with images.
-![image](/assets/images/portfolio/gamestoreangular/productlist.png)
+![image](/assets/images/project/gamestoreangular/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/assets/images/portfolio/gamestoreangular/productadd.png)
+![image](/assets/images/project/gamestoreangular/productadd.png)
 Click 'Save' button, product is saved.
-![image](/assets/images/portfolio/gamestoreangular/productlistafteradd.png)
+![image](/assets/images/project/gamestoreangular/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/assets/images/portfolio/gamestoreangular/productedit.png)
+![image](/assets/images/project/gamestoreangular/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/assets/images/portfolio/gamestoreangular/productlistafteredit.png)
+![image](/assets/images/project/gamestoreangular/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/assets/images/portfolio/gamestoreangular/deleteconfirm.png)
+![image](/assets/images/project/gamestoreangular/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/assets/images/portfolio/gamestoreangular/productlistafterdel.png)
+![image](/assets/images/project/gamestoreangular/productlistafterdel.png)
 
 ## 4. Under the Hood
 Read tutorial [Building Web Application with Angular]({% link _tutorial/angular-app/building-web-application-with-angular.md %}) to learn how this angular app is built.
