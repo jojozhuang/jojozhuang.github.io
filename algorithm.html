@@ -76,6 +76,7 @@ title: Algorithm
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
+  {% assign subject = site.data.category %}
   // mapping of category and image
   window.image = {
     {% for category in subject.categories %}

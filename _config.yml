@@ -16,7 +16,7 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Setup
 mywebsite:
-  url: http://jojozhuang.github.io
+  url: https://jojozhuang.github.io
   title: Computer Science
   subtitle: Data Structure, Algorithm, Angular, React, etc.
   logo: /assets/assets/website-logo.png

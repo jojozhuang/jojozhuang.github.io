@@ -30,7 +30,7 @@ categories:
   - category: programming
     key: programming
     name: Programming
-    description: Development Environment, Java, Javascript, Design Pattern
+    description: Java, Javascript, Design Pattern
     subcategories:
       - name: Dev Environment
         description: Development Environment

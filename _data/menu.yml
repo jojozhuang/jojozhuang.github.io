@@ -77,6 +77,7 @@ menuitems:
         description: Computer Network
         url: /architecture/?n=architecture&c=architecture&s=network
         icon: fas fa-network-wired
+      - key: separator
       - key: softwares
         description: Softwares
         url: /architecture/?n=architecture&c=architecture&s=softwares
@@ -97,6 +98,7 @@ menuitems:
         description: DevOps
         url: /architecture/?n=architecture&c=architecture&s=devops
         icon: fas fa-tools
+      - key: separator
       - key: security
         description: Security
         url: /architecture/?n=architecture&c=architecture&s=security
@@ -111,6 +113,7 @@ menuitems:
         description: Cloud Knowledge
         url: /cloud/?n=cloud&c=cloud&s=knowledge
         icon: fas fa-cloud
+      - key: separator
       - key: amazon-aws
         description: Amazon AWS
         url: /cloud/?n=cloud&c=cloud&s=amazon-aws
@@ -187,31 +190,24 @@ menuitems:
     visible: true
     subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
     sublist:
-      - key: page-index
-        description: Page Index
-        url: /page-index
-        icon: fas fa-terminal
       - key: commands
         description: Commands
         url: /commands
         icon: fas fa-terminal
+      - key: separator
+      - key: page-index
+        description: Page Index
+        url: /page-index
+        icon: fas fa-chart-line
+      - key: category
+        description: Category
+        url: /category
+        icon: fas fa-object-group
+      - key: separator
       - key: searchadv
         description: Advanced Search
         url: /searchadv
         icon: fas fa-search
-      - key: separator
-      - key: category
-        description: Category
-        url: /category
-        icon: fas fa-fire-alt
-      - key: popular
-        description: Popular
-        url: /popular
-        icon: fas fa-fire-alt
-      - key: tutorial
-        description: Tutorial
-        url: /tutorial
-        icon: fas fa-chalkboard-teacher
       - key: separator
       - key: rss
         description: RSS Feed

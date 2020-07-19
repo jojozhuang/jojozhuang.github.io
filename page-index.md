@@ -1,9 +1,7 @@
 ---
-layout: tutorial
-title: "Page Index"
-index: 9001
-date: 2017-09-01
-tags: [Index]
+layout: general
+key: page-index
+title: Page Index
 ---
 
 > Index for each category used for this website
@@ -37,10 +35,4 @@ Tutorial | Softwares           | 3701 ~ 3800
 Tutorial | Cloud               | 3801 ~ 3900
 Tutorial | Network             | 3901 ~ 4000
 Tutorial | Old Blog/Special    | 8001 ~ 9000
-Note     | Basis               | 9001 ~ 9100
-Note     | Book Notes          | 9101 ~ 9200
-Note     | Airba Workspace     | 9201 ~ 9300
-Note     | System Design       | 9501 ~ 9600
-Note     | Interview Questions | 9601 ~ 9700
-Note     | Others              | 9901 ~ 9999
 {: .table-striped }
