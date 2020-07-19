@@ -14,7 +14,7 @@ tags: [Personal Site]
 My personal website can be accessed through following domains. These sites are all using the same source files.
 * [jojozhuang.github.io](https://jojozhuang.github.com)
 * [jojozhuang.netlify.com](https://jojozhuang.netlify.com)
-* [rongzhuang.me](https://rongzhuang.me)
+* [jojozhuang.github.io](https://jojozhuang.github.io)
 
 
  No. | URL                                                | Description
@@ -24,9 +24,9 @@ My personal website can be accessed through following domains. These sites are a
  3   | https://travis-ci.org/                             | CI/CD for jojozhuang.github.io
  4   | https://jojozhuang.netlify.com/                    | `Domain 2`, hosted by Netlify
  5   | https://www.netlify.com/                           | CI/CD for jojozhuang.netlify.com
- 6   | https://rongzhuang.me/                             | `Domain 3`, hosted by Cloudflare
- 7   | https://www.cloudflare.com/                        | CDN for rongzhuang.me
- 8   | https://www.godaddy.com/                           | Domain service for rongzhuang.me
+ 6   | https://jojozhuang.github.io/                             | `Domain 3`, hosted by Cloudflare
+ 7   | https://www.cloudflare.com/                        | CDN for jojozhuang.github.io
+ 8   | https://www.godaddy.com/                           | Domain service for jojozhuang.github.io
  9   | https://sharethis.com/                             | Share buttons
  10  | https://disqus.com/                                | Comments service
  11  | https://analytics.google.com                       | Track website traffic

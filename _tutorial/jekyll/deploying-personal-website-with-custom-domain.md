@@ -24,20 +24,20 @@ After you finish the payment, congratulations, you own the domain!
 ![image](/assets/images/jekyll/1642/godaddy_domain.png)
 
 ## 3. Setup DNS
-Now, it's time to setup DNS for your new domain. Add `A` record to point the new domain(eg. rongzhuang.me) to a specific IP. The below four IP addresses are for GitHub Pages.
+Now, it's time to setup DNS for your new domain. Add `A` record to point the new domain(eg. jojozhuang.github.io) to a specific IP. The below four IP addresses are for GitHub Pages.
 * 185.199.108.153
 * 185.199.109.153
 * 185.199.110.153
 * 185.199.111.153
 
-In addition, add `CNAME` record to point the new domain(eg. rongzhuang.me) to the existing github page domain(eg. jojozhuang.github.io).
+In addition, add `CNAME` record to point the new domain(eg. jojozhuang.github.io) to the existing github page domain(eg. jojozhuang.github.io).
 ![image](/assets/images/jekyll/1642/godaddy_adddns.png)
 
 ## 4. Enable Custom Domain and SSL on GitHub
 Go to the github repository. In Settings, input the custom domain and check 'Enforce HTTPS'.
 ![image](/assets/images/jekyll/1642/custom_domain.png){:width="700px"}
 
-The settings on GitHub and GoDaddy will be activated after a while. Visit the website with new domain [rongzhuang.me](rongzhuang.me). Notice that the url always starts with `https`.
+The settings on GitHub and GoDaddy will be activated after a while. Visit the website with new domain [jojozhuang.github.io](jojozhuang.github.io). Notice that the url always starts with `https`.
 ![image](/assets/images/jekyll/1642/rongzhuang_home.png)
 Portfolio page.
 ![image](/assets/images/jekyll/1642/rongzhuang_project.png)

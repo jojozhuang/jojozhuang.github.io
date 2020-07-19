@@ -700,7 +700,7 @@ Example
 public static void main(String args[]) {
     try {
         // Original
-        String original = "rongzhuang.me?java8";
+        String original = "jojozhuang.github.io?java8";
         System.out.println("Original String: " + original);
 
         // Encode using basic encoder
@@ -732,9 +732,9 @@ public static void main(String args[]) {
 ```
 Output.
 ```raw
-Original String: rongzhuang.me?java8
+Original String: jojozhuang.github.io?java8
 Base64 Encoded String (Basic) :am9qb3podWFuZy5naXRodWIuaW8/amF2YTg=
-Decoded String: rongzhuang.me?java8
+Decoded String: jojozhuang.github.io?java8
 Base64 Encoded String (URL) :am9qb3podWFuZy5naXRodWIuaW8_amF2YTg=
 Original UUID: 565ce125-6615-441e-8719-f7cd721e0077
 Base64 Encoded String (MIME) :NTY1Y2UxMjUtNjYxNS00NDFlLTg3MTktZjdjZDcyMWUwMDc3

@@ -9,7 +9,7 @@ tags: [Bootstrap]
 draft: true
 ---
 
-> Upgrade bootstrap from 3 to 4 for rongzhuang.me.
+> Upgrade bootstrap from 3 to 4 for jojozhuang.github.io.
 
 ## 1. Difference between 3 and 4
 

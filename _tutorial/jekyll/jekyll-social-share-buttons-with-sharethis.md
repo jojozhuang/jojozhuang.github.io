@@ -50,7 +50,7 @@ Access the website from mobile device.
 ShareThis supports multiple domains. You can create different share buttons for different domains. For different domains, you will get different urls for sharethis.js.
 ![image](/assets/images/jekyll/1618/multi-domain.png)
 
-I deployed my personal website to two domains, https://jojozhuang.github.io/ and https://rongzhuang.me/. Both are generated based on the same codes, https://github.com/jojozhuang/jojozhuang.github.io.
+I deployed my personal website to two domains, https://jojozhuang.github.io/ and https://jojozhuang.github.io/. Both are generated based on the same codes, https://github.com/jojozhuang/jojozhuang.github.io.
 
 We can use Jekyll Environment Variables to specify different urls for share buttons.
 
@@ -65,7 +65,7 @@ Edit `_layouts/default.html`, use `jekyll.environment` in the condition statemen
 ```
 {% endraw %}
 
-Edit `netlify.toml`, specify a "customdomain" environment in the build command. Notice, https://rongzhuang.me/ is hosted on http://jojozhuang.netlify.com/, we reply on netlify to build this website. netlify.toml is the configuration file.
+Edit `netlify.toml`, specify a "customdomain" environment in the build command. Notice, https://jojozhuang.github.io/ is hosted on http://jojozhuang.netlify.com/, we reply on netlify to build this website. netlify.toml is the configuration file.
 ```toml
 [build]
   command = "JEKYLL_ENV=customdomain jekyll build"

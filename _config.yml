@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-#incremental: true
+incremental: true
 
 excerpt_separator: "\n" # for windows only, the default value is "\n\n".
 
@@ -12,7 +12,6 @@ plugins:
   - jekyll-seo-tag
 
 permalink: /blog/:year/:month/:day/:title/
-#permalink: /popular/:year/:month/:day/:title/
 
 # Setup
 mywebsite:
@@ -52,7 +51,7 @@ collections:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
-#exclude: ["note", "popular", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
+#exclude: ["note", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
 

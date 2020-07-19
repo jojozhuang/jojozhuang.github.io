@@ -51,7 +51,7 @@ Add following content to 'footer.component.html'.
 ```html
 <hr/>
 <footer class="container-fluid text-center">
-  <p>&copy; 2017 rongzhuang.me, All rights reserved.</p>
+  <p>&copy; 2017 jojozhuang.github.io, All rights reserved.</p>
 </footer>
 ```
 ### 2.3 Routing

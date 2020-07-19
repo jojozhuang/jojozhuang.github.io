@@ -5,7 +5,7 @@ layout: default
     <div class="page-wrapper chiller-theme">
       <!-- sidebar-wrapper  -->
       {% assign subject = site.data.category %}
-      {% assign postings = site.popular | concat: site.tutorial | sort: 'index'%}
+      {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | sort: 'index' %}
       {% include sidebar.html %}
       <!-- category for breadcrumb -->
       {% assign categories = subject.categories %}

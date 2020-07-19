@@ -76,18 +76,18 @@ Refresh the page. The highlighting is working now.
 In Markdown, we can create hyperlinks to the pages of our own website or external website with the following codes:
 ````
 ```
-[My Website](http://rongzhuang.me/)
+[My Website](http://jojozhuang.github.io/)
 ```
 ````
-Here is the result after Markdown file is converted to web page: [My Website](http://rongzhuang.me/).
+Here is the result after Markdown file is converted to web page: [My Website](http://jojozhuang.github.io/).
 
 We can also add `{:target="_blank"}` at end, which makes the browser open a new tab when the link is clicked.
 ````
 ```
-[My Website](http://rongzhuang.me/){:target="_blank"}
+[My Website](http://jojozhuang.github.io/){:target="_blank"}
 ```
 ````
-Here is the result after Markdown file is converted to web page: [My Website](http://rongzhuang.me/){:target="\_blank"}.
+Here is the result after Markdown file is converted to web page: [My Website](http://jojozhuang.github.io/){:target="\_blank"}.
 
 The problem of above approach is the url is hard-coded. Suppose we rename our internal page or the external URL is obsolete, then this link would be unreachable, which means it becomes 'dead'. It is impossible for you to know if all your hyperlinks are alive.
 
@@ -133,7 +133,7 @@ Again, use `post.excerpt` to get customized excerpt and display it on page.
 ![image](/assets/images/jekyll/1612/excerpt.png){:width="400px"}  
 
 ## 6. Data File
-All the links in [favorite page](http://rongzhuang.me/favorite/) are from `Data File`.  
+All the links in [favorite page](http://jojozhuang.github.io/favorite/) are from `Data File`.  
 Create `_data` folder in the root directory, add create a data file named `favorite.yml`.
 ![image](/assets/images/jekyll/1612/datafile.png){:width="400px"}  
 Add following content to `favorite.yml`.
@@ -211,7 +211,7 @@ Open browser, access the favorite page.
 ![image](/assets/images/jekyll/1612/favorite.png)  
 
 ## 7. Collection
-Use `Collection` to create similar pages. The [portfolio index page](http://rongzhuang.me/portfolio/) is created by collection.
+Use `Collection` to create similar pages. The [portfolio index page](http://jojozhuang.github.io/portfolio/) is created by collection.
 Edit `_config.yml`, add following lines.
 ```
 collections:

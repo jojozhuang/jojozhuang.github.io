@@ -9,10 +9,10 @@ tags: [Bootstrap]
 draft: true
 ---
 
-> Upgrade bootstrap from 3 to 4 for rongzhuang.me.
+> Upgrade bootstrap from 3 to 4 for jojozhuang.github.io.
 
 ## 1. Difference between 3 and 4
-I Register a domain rongzhuang.me for my personal website. Now, you can visit it through rongzhuang.me. When user visits the original rongzhuang.me, they will be redirected to rongzhuang.me automatically.
+I Register a domain jojozhuang.github.io for my personal website. Now, you can visit it through jojozhuang.github.io. When user visits the original jojozhuang.github.io, they will be redirected to jojozhuang.github.io automatically.
 
 ## 3. References
 * [Bootstrap 4 - Introduction](https://getbootstrap.com/docs/4.0/getting-started/introduction/)

@@ -83,10 +83,9 @@
 {{ content }}
 
 <footer class="container-fluid text-center" style="clear: both;">
-  <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "customdomain" %}rongzhuang.me{% else %}jojozhuang.github.io{% endif %}, All rights reserved.</span>
+  <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "customdomain" %}jojozhuang.github.io{% else %}jojozhuang.github.io{% endif %}, All rights reserved.</span>
 </footer>
 
-<!-- scripts.html -->
 <!--<script id="dsq-count-scr" src="//jojozhuang.disqus.com/count.js" defer></script>-->
 {% if jekyll.environment == "customdomain" %}
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e25e723d6ee4a00124a9181&product=sticky-share-buttons' async='async'></script>
@@ -133,7 +132,7 @@ link href="/assets/css/navbar.css" rel="stylesheet" />
 {% if page.layout == "tutorial" or page.layout == "portfolio" or page.layout == "blog" or page.layout == "note"%}
   <script src="/assets/js/img.js"></script>
 {% endif %}
-{% if page.layout == "default" and page.key == "tutorial" or page.key == "popular" or page.key == "note"%}
+{% if page.layout == "default" and page.key == "category" or page.key == "algorithm" or page.key == "programming" or page.key == "architecture" or page.key == "cloud" or page.key == "tutorial" or page.key == "note"%}
   <script src="/assets/js/tooltip.js"></script>
 {% endif %}
 {% if page.mathjax %}

@@ -64,7 +64,7 @@ type: blog
   {% for page in site.pages %}
     {% if page.layout != nil and page.layout != 'feed' and page.url != '/note/' and page.url != '/index_note/' and page.url != '/index_tutorial/' and page.url != '/search/' and page.url != '/blog/atom.xml' and page.url != '/contact/'%}
       <url>
-        <loc>http://rongzhuang.me{{ page.url | remove: 'index.html' }}</loc>
+        <loc>http://jojozhuang.github.io{{ page.url | remove: 'index.html' }}</loc>
       </url>
     {% endif %}
   {% endfor %}
@@ -74,7 +74,7 @@ type: blog
   {% assign posts = portfolios | concat: blogs %}
   {% for post in posts %}
     <url>
-      <loc>http://rongzhuang.me{{ post.url | remove: 'index.html' }}</loc>
+      <loc>http://jojozhuang.github.io{{ post.url | remove: 'index.html' }}</loc>
     </url>
   {% endfor %}
 

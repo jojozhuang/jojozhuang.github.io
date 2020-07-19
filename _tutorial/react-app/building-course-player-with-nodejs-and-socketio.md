@@ -453,7 +453,7 @@ Create file '`index.html`'. It is the default page for this app.
     </div>
   <div>
     <footer className="container-fluid text-center">
-      <p>&copy; 2016 rongzhuang.me, All rights reserved.</p>
+      <p>&copy; 2016 jojozhuang.github.io, All rights reserved.</p>
     </footer>
   </div>
   <!--Add script to update the page and send messages.-->

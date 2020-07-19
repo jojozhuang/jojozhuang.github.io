@@ -67,7 +67,7 @@ public class ClientTest {
         System.out.println("Internet is working now ...");
         try
         {
-            internet.connect("rongzhuang.me");
+            internet.connect("jojozhuang.github.io");
             internet.connect("abc.com");
         }
         catch (Exception e)
@@ -80,7 +80,7 @@ public class ClientTest {
 Output.
 ```raw
 Internet is working now ...
-Connecting to 'rongzhuang.me' ...
+Connecting to 'jojozhuang.github.io' ...
 Access Denied: unable to connect to 'abc.com'
 ```
 ## 4. Source Files

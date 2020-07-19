@@ -1,6 +1,6 @@
 key: category
 name: Category
-description: Data Structure, Algorithm, Java, Jekyll
+description: Algorithm, Prgoramming, Architecture, Cloud
 categories:
   - category: algorithm
     key: algorithm

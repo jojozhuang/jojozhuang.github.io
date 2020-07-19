@@ -1,6 +1,7 @@
 ---
 layout: default
 key: home
+title: Happy Coding
 ---
 <div class="container">
   <div class="page-wrapper chiller-theme">
@@ -16,16 +17,16 @@ key: home
                 <div class="card-body">
                   <h5 class="card-title">Data Structure and Algorithm</h5>
                   <p class="card-text">Learn data structure and algorithm with examples.</p>
-                  <a href="/popular/?n=popular&c=general&s=data-structure" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
-                  <a href="/popular/?n=popular&c=general&s=algorithm" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
+                  <a href="/algorithm/?n=algorithm&c=algorithm&s=data-structure" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
+                  <a href="/algorithm/?n=algorithm&c=algorithm&s=algorithm" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
                 </div>
               </div>
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Personal Website</h5>
                   <p class="card-text">Learn how to use Jekyll to setup your personal website.</p>
-                  <a href="/popular/?n=popular&c=website&s=jekyll" class="btn btn-outline-primary"><i class="fas fa-globe"></i> Jekyll</a>
-                  <a href="/popular/?n=popular&c=website&s=wordpress" class="btn btn-outline-primary"><i class="fab fa-wordpress"></i> Wordpress</a>
+                  <a href="/tutorial/?n=tutorial&c=website&s=jekyll" class="btn btn-outline-primary"><i class="fas fa-globe"></i> Jekyll</a>
+                  <a href="/tutorial/?n=tutorial&c=website&s=wordpress" class="btn btn-outline-primary"><i class="fab fa-wordpress"></i> Wordpress</a>
                 </div>
               </div>
             </div>
@@ -48,7 +49,7 @@ key: home
               </div>
             </div>
             {% assign subject = site.data.category %}
-            {% assign postings = site.popular | concat: site.tutorial | sort: 'index'%}
+            {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | sort: 'index' %}
             {% for category in subject.categories %}
               {% assign col = forloop.index | modulo: 3 %}
               {% if col == 1 %}
