@@ -188,7 +188,7 @@ menuitems:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
+    subkeys: ["searchadv","reading","quicklinks","contact","about","commands"]
     sublist:
       - key: commands
         description: Commands
