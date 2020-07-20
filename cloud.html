@@ -25,32 +25,7 @@ title: Cloud
         <div class="col-md-10">
           <h1 class="page-header">{{subject.name}} <small>{{subject.description}}</small></h1>
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
-          <div id="category-list" style="display: none">
-            {% for category in subject.categories %}
-              {% assign col = forloop.index | modulo: 3 %}
-              {% if col == 1 %}
-                <div class="card-deck">
-              {% endif %}
-                  <div class="card">
-                    <div class="card-header">
-                      {% assign categoryurl = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category %}
-                      <a href="{{categoryurl}}" class="card-link">{{category.name}}</a>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                    {% for subcategory in category.subcategories %}
-                    {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
-                    {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
-                    <a href="{{url}}" class="list-group-item list-group-item-action">
-                      <span data-toggle="tooltip" data-placement="right" title="{{subcategory.description}}"><i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span></span>
-                    </a>
-                    {% endfor %}
-                    </ul>
-                  </div>
-              {% if col == 0 or forloop.last == true %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+          <div id="category-list" style="display: none"></div>
           <dl class="dl-unsur" id="posting-list"/>
         </div>
         <div class="col-md-1"></div>
