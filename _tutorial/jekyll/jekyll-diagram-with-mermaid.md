@@ -14,7 +14,7 @@ mermaid: true
 ## 1. Mermaid
 [Mermaid](https://mermaidjs.github.io/) a simple markdown-like script language for generating charts from text via javascript.
 ### 1.1 Using Mermaid in Web Page
-Read tutorial [Generating Diagrams and Flowcharts with Mermaid]({% link _tutorial/blog/generating-diagrams-and-flowcharts-with-mermaid.md %}) to learn how to use Mermaid in web page.
+Read tutorial [Generating Diagrams and Flowcharts with Mermaid]({% link _tutorial/legacy-blog/generating-diagrams-and-flowcharts-with-mermaid.md %}) to learn how to use Mermaid in web page.
 ### 1.2 Using Mermaid in Markdown
 You can use Jekyll plugin [jekyll-mermaid](https://github.com/jasonbellamy/jekyll-mermaid) to create diagrams and flowcharts with markdown in your local Jekyll. For example, define a flowchart with 4 nodes as follows.
 ~~~markdown

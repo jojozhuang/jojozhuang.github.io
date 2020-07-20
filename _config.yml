@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-incremental: true
+#incremental: true
 
 excerpt_separator: "\n" # for windows only, the default value is "\n\n".
 

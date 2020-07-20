@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Common Math Formulas"
 index: 9113
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2018-01-03
 tags: [Math Formulas]
 mathjax: true

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Tricks in ASP.NET MVC"
 index: 9105
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2016-03-19
 tags: [ASP.NET MVC]
 ---

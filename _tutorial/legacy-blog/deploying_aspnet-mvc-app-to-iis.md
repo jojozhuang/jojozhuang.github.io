@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying ASP.NET MVC Application to IIS"
 index: 9101
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2016-01-25
 tags: [IIS, ASP.NET]
 ---

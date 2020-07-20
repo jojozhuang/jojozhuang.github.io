@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Deploying ASP.NET MVC Application to Azure"
 index: 9102
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2016-01-28
 tags: [Microsoft Azure, ASP.NET]
 ---

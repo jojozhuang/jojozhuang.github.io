@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Vagrant - Draft"
 index: 9125
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2018-11-29
 tags: [Vagrant]
 draft: true

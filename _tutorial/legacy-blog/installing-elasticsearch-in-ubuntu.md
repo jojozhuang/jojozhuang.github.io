@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Installing Elasticsearch in Ubuntu"
 index: 9109
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2017-06-21
 tags: [Elasticsearch]
 ---

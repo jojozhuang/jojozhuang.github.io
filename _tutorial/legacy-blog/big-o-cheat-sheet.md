@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Big O Cheat Sheet"
 index: 9121
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2018-09-12
 tags: [Big O, Time Complexity]
 ---

@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Popular Tools - draft"
 index: 9126
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2019-03-16
 tags: [Storm]
 draft: true

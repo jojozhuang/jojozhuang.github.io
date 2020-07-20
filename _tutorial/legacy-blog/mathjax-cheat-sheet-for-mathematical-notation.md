@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "MathJax Cheat Sheet for Mathematical Notation"
 index: 9120
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2018-09-11
 tags: [MathJax, Time Complexity]
 mathjax: true

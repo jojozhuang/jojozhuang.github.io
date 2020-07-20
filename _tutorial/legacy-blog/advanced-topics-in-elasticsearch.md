@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Advanced Topics in Elasticsearch"
 index: 9111
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2017-06-29
 tags: [Elasticsearch]
 ---

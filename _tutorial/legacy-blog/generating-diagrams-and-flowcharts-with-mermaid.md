@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Generating Diagrams and Flowcharts with Mermaid"
 index: 9122
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2018-09-14
 tags: [Mermaid, Flowchart, Gantt]
 ---

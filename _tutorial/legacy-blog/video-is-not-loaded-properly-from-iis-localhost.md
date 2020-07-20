@@ -3,7 +3,7 @@ layout: tutorial
 key: tutorial
 title: "Video Is Not Loaded Properly From IIS Localhost"
 index: 9104
-subcategory: special-blog
+subcategory: legacy-blog
 date: 2016-03-04
 tags: [IIS, MIME Type]
 ---
