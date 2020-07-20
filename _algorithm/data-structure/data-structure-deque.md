@@ -21,7 +21,7 @@ A double-ended queue (abbreviated to deque) is an abstract data type that genera
 * `removeFirst`: remove the first element
 * `removeLast`: remove the last element
 
-![image](/assets/images/dsa/1114/deque.png)
+![image](/assets/images/algorithm/1114/deque.png)
 ### 1.3 Common Operations on Queue
 * addFirst(item): Add an item to the head of the list.
 * addLast(item): Add an item to the tail of the list.

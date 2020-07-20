@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Custom Domain for My Personal Website - Draft"
-index: 8028
+index: 9128
 subcategory: special-blog
 date: 2019-06-27
 tags: [Bootstrap]

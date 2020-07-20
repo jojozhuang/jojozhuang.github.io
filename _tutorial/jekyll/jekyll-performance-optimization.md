@@ -19,7 +19,7 @@ When you use cookie-free domains you are able to separate the content that doesn
 
 Testing
 
-![image](/assets/images/jekyll/1632/imagesize_before.png)
+![image](/assets/images/jekyll/8132/imagesize_before.png)
 
 ## 2. Cache Header
 Create netlify.toml

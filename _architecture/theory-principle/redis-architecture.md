@@ -34,7 +34,7 @@ Primary memory is limited(much lesser size and expensive than secondary) therefo
 ## 2. Redis Architecture
 ### 2.1 Redis Single Instance Architecture
 Redis architecture contains two main processes: Redis client and Redis Server.
-![image](/assets/images/devops/3225/redis-client-server.jpg){:width="700px"}
+![image](/assets/images/architecture/3025/redis-client-server.jpg){:width="700px"}
 Redis client and server can be in the same computer or in two different computers.
 
 Redis server is responsible for storing data in memory. It handles all kinds of management and forms the major part of architecture. Redis client can be Redis console client or any other programming language’s Redis API.
@@ -55,7 +55,7 @@ If you are using Redis in a replicated environment then there is no need for bac
 Replication is a technique involving many computers to enable fault-tolerance and data accessibility. In a replication environment many computers share the same data with each other so that even if few computers go down, all the data will be available.
 
 This image shows a basic Redis replication, master and slaves are redis servers configured as such.
-![image](/assets/images/devops/3225/redis-replication.jpg){:width="700px"}
+![image](/assets/images/architecture/3025/redis-replication.jpg){:width="700px"}
 All the slaves contain exactly same data as master. There can be as many as slaves per master server. When a new slave is inserted to the environment, the master automatically syncs all data to the slave.
 
 All the queries are redirected to master server, master server then executes the operations. When a write operation occurs, master replicates the newly written data to all slaves. When a large number sort or read operation are made, master distributes them to the slaves so that a large number of read and sort operations can be executed at a time.
@@ -77,7 +77,7 @@ Using persistence and replication together all our data is completely safe and p
 Clustering is a technique by which data can be sharded(divided) into many computers. The main advantage is that more data can be stored in a cluster because its a combination of computers.
 
 Suppose we have one redis server with 64GB of memory i.e., we can have only 64GB of data. Now if we have 10 clustered computers with each 64GB of RAM then we can store 640GB of data.
-![image](/assets/images/devops/3225/redis-cluster.jpg){:width="700px"}
+![image](/assets/images/architecture/3025/redis-cluster.jpg){:width="700px"}
 In the above image we can see that data is sharded into four nodes. Each node is a redis server configured as a cluster node.
 
 If one node fails then the whole cluster stops working.
@@ -87,7 +87,7 @@ Data is stored in primary memory of nodes. We need to make the data of each node
 Suppose due to disk crash, one of our node goes down then the whole cluster stops working and never resumes. There is no way we can recover back the node as the data is completely lost.
 
 To avoid this situation we can take a manual backup of each node regularly. But thats a tough and improper task. Therefore we can rely on replication to solve this problem.
-![image](/assets/images/devops/3225/cluster-replication-redis.jpg){:width="700px"}
+![image](/assets/images/architecture/3025/cluster-replication-redis.jpg){:width="700px"}
 Here we convert each node server to a master server. And we keep a slave for every master. So if any node(master) fails, the cluster will start using the slave to keep the cluster operating.
 
 ## 4. References

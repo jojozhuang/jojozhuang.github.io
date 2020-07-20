@@ -15,14 +15,14 @@ tags: [SkipList]
 A linked list is represented by a sequence of nodes. Each node contains a link to another node. The worst case search time for a sorted linked list is `O(n)` as we can only linearly traverse the list and cannot skip nodes while searching.
 ### 1.2 Skip List
 A skip list is a data structure that allows `log(n)` search complexity as well as `log(n)` insertion complexity within an ordered sequence of `n` elements. It skips over many of the items of the full list in one step, that’s why it is known as skip list.
-![image](/assets/images/dsa/1119/skip-list.jpg){:width="600px"}  
+![image](/assets/images/algorithm/1119/skip-list.jpg){:width="600px"}  
 ### 1.3 Insert, Search and Delete
 Insert 44.
-![image](/assets/images/dsa/1119/insert.gif){:width="800px"}
+![image](/assets/images/algorithm/1119/insert.gif){:width="800px"}
 Search 44.
-![image](/assets/images/dsa/1119/search.gif){:width="800px"}
+![image](/assets/images/algorithm/1119/search.gif){:width="800px"}
 Delete 25.
-![image](/assets/images/dsa/1119/delete.gif){:width="800px"}
+![image](/assets/images/algorithm/1119/delete.gif){:width="800px"}
 
 ## 2. Implementation
 Define skip list node.

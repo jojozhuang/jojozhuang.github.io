@@ -23,16 +23,16 @@ Use 'create-react-app' to create new React application named 'react-app'
 $ create-react-app react-app
 ```
 Open 'react-app' in Visual Studio Code.
-![image](/assets/images/frontend/2601/project.png){:width="350px"}
+![image](/assets/images/frontend/8401/project.png){:width="350px"}
 
 ## 3. Serving the Application
 Start 'react-app' through npm.
 ```raw
 $ npm start
 ```
-![image](/assets/images/frontend/2601/npmstart.png){:width="600px"}
+![image](/assets/images/frontend/8401/npmstart.png){:width="600px"}
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-![image](/assets/images/frontend/2601/runapp.png)
+![image](/assets/images/frontend/8401/runapp.png)
 
 You can make it serve at different port. Open `package.json`, add 'PORT' option to 'start' script. For example, set the port to `12090` as follows.
 ```json
@@ -44,7 +44,7 @@ You can make it serve at different port. Open `package.json`, add 'PORT' option 
 }
 ```
 Run 'npm start' again. Now, this application is served at port '12090'.
-![image](/assets/images/frontend/2601/changeport.png)  
+![image](/assets/images/frontend/8401/changeport.png)  
 
 ## 4. References
 * [React Official Website](https://reactjs.org/)

@@ -16,18 +16,18 @@ We will use MongoDB to store data for our RESTful APIs. Our database will be hos
 Go to https://mlab.com/signup/ to register a free account.
 ### 1.2 Creating Database
 After login, click 'Create new' button.
-![image](/assets/images/frontend/2231/homepage.png)
+![image](/assets/images/backend/8631/homepage.png)
 Input the database name, eg. 'product', continue.
-![image](/assets/images/frontend/2231/database.png)
+![image](/assets/images/backend/8631/database.png)
 It should be successfully created.
-![image](/assets/images/frontend/2231/dbcreated.png)
+![image](/assets/images/backend/8631/dbcreated.png)
 ### 1.3 Creating User
 Select the database we just created, eg. 'ds153700/product'.
-![image](/assets/images/frontend/2231/createuser.png)
+![image](/assets/images/backend/8631/createuser.png)
 Click the 'Add database user' button. Specify the user name and password, eg. testproduct/abc123.
-![image](/assets/images/frontend/2231/username.png)
+![image](/assets/images/backend/8631/username.png)
 Click 'Create' button, done!
-![image](/assets/images/frontend/2231/usercreated.png)
+![image](/assets/images/backend/8631/usercreated.png)
 ### 1.4 Connection String
 Syntax:
 ```javascript
@@ -261,7 +261,7 @@ app.listen(port, () => {
 
 ### 3.6 Final Project Structure
 The final structure of the express server project.
-![image](/assets/images/frontend/2231/project_final.png){:width="350px"}
+![image](/assets/images/backend/8631/project_final.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the server and begin to test with [Postman](https://www.getpostman.com/).
@@ -270,25 +270,25 @@ $ npm start
 ```
 ### 4.1 Get All Products
 Create a request, choose 'GET' method and specify 'http://localhost:5000/api/product' as the URL, click the Send button. All two products are returned in the response body.
-![image](/assets/images/frontend/2231/getall.png)
+![image](/assets/images/backend/8631/getall.png)
 ### 4.2 Get a product by ID
 Create a new request, choose the 'GET' method and specify 'http://localhost:8080/api/product/5b2694837dd3716d0b6710b1' as the URL, click the Send button. Product with that id is returned in the response body.
-![image](/assets/images/frontend/2231/getone.png)
+![image](/assets/images/backend/8631/getone.png)
 ### 4.3 Create New Product
 Create another request, choose the 'POST' method and specify 'http://localhost:8080/api/product/' as the URL. In the Request Body, set name to 'iPad Pro' and price to '799', click the Send button. In the response body, we see the new product.
-![image](/assets/images/frontend/2231/create.png)
+![image](/assets/images/backend/8631/create.png)
 Run the 'Get all products' request to verify whether the new product is created. We see there is a new product in the response body.
-![image](/assets/images/frontend/2231/checkcreate.png)
+![image](/assets/images/backend/8631/checkcreate.png)
 ### 4.4 Update Product
 Create a new request, choose 'PUT' method and specify 'http://localhost:8080/api/product/5b273a13398fc8a253ab1b6d' as the URL. In the Request Body, set name to 'iPad 5th Generation' and price to '499', click the Send button. In the response body, we see the product has new name and price.
-![image](/assets/images/frontend/2231/update.png)
+![image](/assets/images/backend/8631/update.png)
 Run the 'Get all products' request to verify whether the product is updated. We see the third product has the new name and price.
-![image](/assets/images/frontend/2231/checkupdate.png)
+![image](/assets/images/backend/8631/checkupdate.png)
 ### 4.5 Delete Product
 Create a new request, choose 'DELETE' method and specify 'http://localhost:8080/api/product/5b273a13398fc8a253ab1b6d' as the URL, click the Send button. The deleted product is returned.
-![image](/assets/images/frontend/2231/delete.png)
+![image](/assets/images/backend/8631/delete.png)
 Run the 'Get all products' request to verify whether the third product is deleted. We see it is no longer existing.
-![image](/assets/images/frontend/2231/checkdelete.png)
+![image](/assets/images/backend/8631/checkdelete.png)
 
 ## 5. Source Files
 * [Source files of RESTful API(Express + MongoDB) on Github](https://github.com/jojozhuang/Tutorials/tree/master/RestfulExpressMongoDB)

@@ -163,48 +163,48 @@ b84b1ee907b2        wordpress:latest        "docker-entrypoint.s…"   6 minutes
 Open browser, visit http://localhost:12002, it will navigate to the wordpress install page.
 
 Select language.
-![image](/assets/images/wordpress/1801/wordpress_installation.png)
+![image](/assets/images/wordpress/8201/wordpress_installation.png)
 Configure the basic information for the website and setup admin account.
-![image](/assets/images/wordpress/1801/wordpress_welcome.png)
+![image](/assets/images/wordpress/8201/wordpress_welcome.png)
 Success.
-![image](/assets/images/wordpress/1801/wordpress_setup_success.png)
+![image](/assets/images/wordpress/8201/wordpress_setup_success.png)
 Use the admin account to login.
-![image](/assets/images/wordpress/1801/login.png)
+![image](/assets/images/wordpress/8201/login.png)
 Admin dashboard.
-![image](/assets/images/wordpress/1801/admin_dashboard.png)
+![image](/assets/images/wordpress/8201/admin_dashboard.png)
 Click "Johnny's Webiste"->Visit Site, or visit http://localhost:12002 directly.
-![image](/assets/images/wordpress/1801/homepage.png)
+![image](/assets/images/wordpress/8201/homepage.png)
 
 ### 2.4 phpMyAdmin
 Visit http://localhost:12003 to open phpMyAdmin.
-![image](/assets/images/wordpress/1801/phpmyadmin_login.png)
+![image](/assets/images/wordpress/8201/phpmyadmin_login.png)
 In the admin page, you can view the database for workpress.
-![image](/assets/images/wordpress/1801/phpmyadmin_admin.png)
+![image](/assets/images/wordpress/8201/phpmyadmin_admin.png)
 
 ## 3. Basic Settings
 ### 3.1 Permalink
 Go to Settings -> Permalinks, choose "Post Namme".
-![image](/assets/images/wordpress/1801/permalink_postname.png)
+![image](/assets/images/wordpress/8201/permalink_postname.png)
 
 ### 3.2 Plugins
 Go to Plugins->Add New, search `Starter Template`. This plugin provides lots of free website templates.
-![image](/assets/images/wordpress/1801/plugins-search.png)
+![image](/assets/images/wordpress/8201/plugins-search.png)
 Choose the first plugin "Starter Templates", install and activate it.
-![image](/assets/images/wordpress/1801/plugin-install-activate.png)
+![image](/assets/images/wordpress/8201/plugin-install-activate.png)
 Go to Appearance->Starter Template, select `Elementor` as page builder.
-![image](/assets/images/wordpress/1801/starter-page-builder.png)
+![image](/assets/images/wordpress/8201/starter-page-builder.png)
 Search and choose your favorite template.
-![image](/assets/images/wordpress/1801/starter_search_template.png)
+![image](/assets/images/wordpress/8201/starter_search_template.png)
 Import Complete Site.
-![image](/assets/images/wordpress/1801/starter_import_site.png)
+![image](/assets/images/wordpress/8201/starter_import_site.png)
 Keep the default settings, click "Import" button.
-![image](/assets/images/wordpress/1801/starter_import_options.png)
+![image](/assets/images/wordpress/8201/starter_import_options.png)
 Wait until the import is completed.
-![image](/assets/images/wordpress/1801/starter_import_progress.png)
+![image](/assets/images/wordpress/8201/starter_import_progress.png)
 Then, visit http://localhost:12002. The appearance of the website is total different.
-![image](/assets/images/wordpress/1801/homepage_new.png)
+![image](/assets/images/wordpress/8201/homepage_new.png)
 Click "Customize" on the top to switch to "Customize" mode. It's easy to edit the page.
-![image](/assets/images/wordpress/1801/page_customize.png)
+![image](/assets/images/wordpress/8201/page_customize.png)
 If you make any change, click the "Publish" button publish the site.
 
 ### 3.3 Relative Path of Media Files

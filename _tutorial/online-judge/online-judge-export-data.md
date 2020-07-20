@@ -12,9 +12,9 @@ tags: [csv-express]
 
 ## 1. Data Import and Output on mLab
 mLab provides some useful tools/commands to import and export data from MongoDB. Login to http://mlab.com/, choose one database -> Tools.
-![image](/assets/images/frontend/2813/mlab_tools.png)
+![image](/assets/images/online-judge/9013/mlab_tools.png)
 MongoDB provides two mechanisms for importing and exporting data. One way is via the `mongoimport` and `mongoexport` utilities. These allow you to import and export JSON and CSV representations of your data. The other way is with `mongorestore` and `mongodump` utilities which deal with binary dumps.
-![image](/assets/images/frontend/2813/mlab_commands.png)
+![image](/assets/images/online-judge/9013/mlab_commands.png)
 
 For example, we can use the following command to export data from MongoDB to `csv` format file.
 ```raw
@@ -157,11 +157,11 @@ In the UI, add 'exportCSV()' to the click event of button.
 
 ## 3. Testing
 Start the app, login as admin, go to Database.
-![image](/assets/images/frontend/2813/test_menu.png)
+![image](/assets/images/online-judge/9013/test_menu.png)
 Choose any collection, eg. Users. All the data in this collection are displayed.
-![image](/assets/images/frontend/2813/test_database.png)
+![image](/assets/images/online-judge/9013/test_database.png)
 Click on the 'Export to CSV' button. Later, you will see the popup with the csv file.
-![image](/assets/images/frontend/2813/test_download.png)
+![image](/assets/images/online-judge/9013/test_download.png)
 Save the file to your local folder, open it, you will see the data entries.
 ```csv
 _id,username,email,hash,salt,role,timecreated

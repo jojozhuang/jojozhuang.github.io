@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing Jenkins in Docker"
-index: 8007
+index: 9107
 subcategory: special-blog
 date: 2016-10-08
 tags: [Docker, Jenkins]

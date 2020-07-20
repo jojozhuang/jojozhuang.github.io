@@ -34,9 +34,9 @@ A content delivery network or content distribution network is a geographically d
 ## 2. CloudFront Lab
 ### 2.1 Creating CloudFront Distribution
 Go to Services->Networking & Content Delivery->CloudFront, or visit https://console.aws.amazon.com/cloudfront/, click "Create distribution".
-![image](/assets/images/cloud/3804/cloudfront-home.png)
+![image](/assets/images/cloud/4104/cloudfront-home.png)
 Select "Web", get started.
-![image](/assets/images/cloud/3804/cloudfront-web.png)
+![image](/assets/images/cloud/4104/cloudfront-web.png)
 Then select the S3 bucket to distribute.
 ![image](/assets/images/note/9551/3-12-cloundfront-create-distribution.png)
 Some settings:

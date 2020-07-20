@@ -27,7 +27,7 @@ What is this command doing?
 * Start tomcat via command `catalina.sh jpda run`.
 
 In this posting, we will use Dockerfile to create a tomcat image with the same configuration mentioned above. Before moving forward, make sure you’ve already setup folder ~/Documents/jsptomcat in local machine, which will be volumed to tomcat container later. And all jsp and class files have been deployed into this folder.
-![image](/assets/images/devops/3124/localfolder.png){:width="800px"}  
+![image](/assets/images/architecture/3524/localfolder.png){:width="800px"}  
 
 ## 3. Creating Tomcat Image with Dockerfile
 ### 3.1 Creating Docker File
@@ -69,7 +69,7 @@ Here, `jsptomcat` is the name we are giving to the Image and `0.2` is the tag nu
 $ docker images
 ```
 As you see, the new image is created with tag 0.2.
-![image](/assets/images/devops/3124/imagecreated.png){:width="800px"}  
+![image](/assets/images/architecture/3524/imagecreated.png){:width="800px"}  
 
 ## 3. Testing Tomcat Image
 ### 3.1 Running Container
@@ -80,18 +80,18 @@ $ docker run --name=jsptomcat -d -v ~/Documents/jsptomcat:/usr/local/tomcat/weba
 Notice we don't need to set the environment variable `JPDA_ADDRESS`, and execute `catalina.sh jpda run` any more. They are already set in the Dockerfile.
 ### 3.2 Verifying Container in Kitematic
 A tomcat container named jsptomcat is running now. Notice, its source image is 'jsptomcat:0.2'. And environment variable JPDA_ADDRESS has been added to the container.
-![image](/assets/images/devops/3124/general.png)  
+![image](/assets/images/architecture/3524/general.png)  
 Port 8000 and port 8080 are also exposed.
-![image](/assets/images/devops/3124/ports.png)  
+![image](/assets/images/architecture/3524/ports.png)  
 Volume is also configured correctly.
-![image](/assets/images/devops/3124/volume.png)  
+![image](/assets/images/architecture/3524/volume.png)  
 
 ### 3.3 Verifying JSP Tutorial Website
 Access http://192.168.99.100:31020/jsptutorial/productlist.jsp in web browser. JSP Tutorial application is launched successfully!
-![image](/assets/images/devops/3124/deployed.png)  
+![image](/assets/images/architecture/3524/deployed.png)  
 
 In Eclipse, enable debugging and set breakpoint to `productlist.jsp`. Refresh the page in web browser. Switch back to Eclipse, the breakpoint is activated. The remote debugging function is working now.
-![image](/assets/images/devops/3124/breakpointdt.png)  
+![image](/assets/images/architecture/3524/breakpointdt.png)  
 
 ## 4. Source Files
 * [Source files for JSPTutorialDockerfile on GitHub](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorialDockerfile)

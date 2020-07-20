@@ -20,37 +20,37 @@ The LRU cache provides two methods: `put` and `get`.
 * get(key) - Get the value of the key and move this item to the head of the cache. If the key doesn't exist in the cache, return -1.
 
 The following diagram illustrates how LRU works.
-![image](/assets/images/dsa/1116/lru.png){:width="800px"}  
+![image](/assets/images/algorithm/1116/lru.png){:width="800px"}  
 
 ## 2. Implementation
 ### 2.1 Data Structure
 Generally, LRU algorithm is implemented with HashMap and Doubly Linked List.
-![image](/assets/images/dsa/1116/structure.png)
+![image](/assets/images/algorithm/1116/structure.png)
 * The head and tail nodes don't store any data. They are created just for conveniently manipulating the linked list.
 * Nodes between the head and tail nodes are used to store data, each node for one value. Every node has two pointers, pointing to the previous and the next nodes. They are connected to each other.
 * Nodes near the tail are least recently accessed. They will be removed if cache reaches to its capacity.
 
 ### 2.2 Operations On LRU
 1) Initialization
-![image](/assets/images/dsa/1116/initialization.png){:width="400px"}  
+![image](/assets/images/algorithm/1116/initialization.png){:width="400px"}  
 * Only two dummy nodes, head and tail.
 * Notice that there is another HashMap which stores the value-node pair.
 
 2) Put (Cache is not full)
-![image](/assets/images/dsa/1116/add1.png)
+![image](/assets/images/algorithm/1116/add1.png)
 * Create new node for the given value and insert it to the head of the linked list.
 * Put the new node to HashMap with the given value as key.
 * Size is increased by one.
 
 3) Put (Cache is full)
-![image](/assets/images/dsa/1116/add2.png)
+![image](/assets/images/algorithm/1116/add2.png)
 * Remove the last element(The one tail.prev is pointing) from the list.
 * Create new node for the given value and insert it to the head of the linked list.
 * Put the new node to HashMap with the given value as key.
 * Size remains unchanged.
 
 4) Get
-![image](/assets/images/dsa/1116/get.png)
+![image](/assets/images/algorithm/1116/get.png)
 * Find the given value in HashMap.
 * If the corresponding node is not at the head position of the linked list, move it to head.
 * Update the tail pointers accordingly.

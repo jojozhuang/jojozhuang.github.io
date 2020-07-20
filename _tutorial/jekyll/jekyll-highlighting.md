@@ -20,7 +20,7 @@ java code
 ````
 
 Be default, there is only a grey rectangle as background, no highlighting on the codes. See the below screenshot.
-![image](/assets/images/jekyll/1623/withouthighlight.png)  
+![image](/assets/images/jekyll/8123/withouthighlight.png)  
 ### 1.2 Highlighting in Jekyll Site
 To enable the highlighting, you need to edit `_config.yml` file which is located in the root directory of the website, add following lines.
 ```
@@ -32,7 +32,7 @@ Then, create css file, for example, [highlight.scss]({% link /assets/css/highlig
 <link href="/assets/css/highlight.css" rel="stylesheet" />
 ```
 Refresh the page. The highlighting is working now.
-![image](/assets/images/jekyll/1623/javahighlight.png)  
+![image](/assets/images/jekyll/8123/javahighlight.png)  
 
 ## 2. Generic Highlighting Solution
 ### 2.1 highlight.js
@@ -56,7 +56,7 @@ pre {
 }
 ```
 The highlighting works as follows.
-![image](/assets/images/jekyll/1623/highlighting_with_js.png)  
+![image](/assets/images/jekyll/8123/highlighting_with_js.png)  
 ### 2.3 Line Numbers
 Add line numbers with highlightjs-line-numbers.js, which is a plug-in for highlight.js.
 ```html
@@ -95,7 +95,7 @@ table.hljs-ln td {
 }
 ```
 The line numbers are displayed as follows.
-![image](/assets/images/jekyll/1623/line-numbers.png)
+![image](/assets/images/jekyll/8123/line-numbers.png)
 
 ### 2.4 Styles
 If you don't like the default style, you can change it with other styles. highlight.js supports 185 languages and 89 styles. Check all styles through the [demo page](https://highlightjs.org/static/demo/), then pick up your favorite one.
@@ -105,7 +105,7 @@ For example, I choose the style which is named `Atom One Light`. Concatenate all
 https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css
 ```
 Replace the URL for the default style with the URL for the new style. Refresh the page to see the new style.
-![image](/assets/images/jekyll/1623/custom-style.png)
+![image](/assets/images/jekyll/8123/custom-style.png)
 
 ## 3. Reference
 * [Code highlighting in Jekyll blog using highlight.js](http://www.vishalsinha.in/2017/04/23/highlight-code-jekyll.html)

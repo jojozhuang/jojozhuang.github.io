@@ -51,7 +51,7 @@ As an example, following table shows the default values for project source code 
 
 In order to build the project, Maven provides developers with options to mention life-cycle `goals` and project `dependencies` (that rely on Maven plugin capabilities and on its default conventions). Much of the project management and build related tasks are maintained by `Maven plugins`.
 ### 1.4 Java Project Structure
-![image](/assets/images/devops/3711/java-project-structure.png){:width="800px"}
+![image](/assets/images/architecture/3211/java-project-structure.png){:width="800px"}
 
 ## 2. POM
 ### 2.1 POM and pom.xml
@@ -202,7 +202,7 @@ A Maven Build Profile can be activated in various ways.
 
 ### 4.4 Profile Activation Examples
 Let us assume the following directory structure of your project −
-![image](/assets/images/devops/3711/profile-activation.jpg)
+![image](/assets/images/architecture/3211/profile-activation.jpg)
 Now, under **src/main/resources**, there are three environment specific files −
 
  No. | File Name & Description
@@ -268,7 +268,7 @@ Maven repository are of three types. The following illustration will give an ide
 * central
 * remote
 
-![image](/assets/images/devops/3711/maven-repository.png){:width="500px"}
+![image](/assets/images/architecture/3211/maven-repository.png){:width="500px"}
 
 ### 5.1 Local Repository
 Maven local repository is a folder location on your machine. It gets created when you run any maven command for the first time.
@@ -335,7 +335,7 @@ When we execute Maven build commands, Maven starts looking for dependency librar
 * Step 3 − If a remote repository has not been mentioned, Maven simply stops the processing and throws error (Unable to find dependency).
 * Step 4 − Search dependency in remote repository or repositories, if found then it is downloaded to local repository for future reference. Otherwise, Maven stops processing and throws error (Unable to find dependency).
 
-![image](/assets/images/devops/3711/search-sequence.png){:width="600px"}
+![image](/assets/images/architecture/3211/search-sequence.png){:width="600px"}
 
 ## 6. Maven Plugins
 ### 6.1 What are Maven Plugins?
@@ -481,7 +481,7 @@ Transitive Dependencies Discovery can be restricted using various Dependency Sco
 ### 8.3 Dependency Management
 Usually, we have a set of project under a common project. In such case, we can create a common pom having all the common dependencies and then make this pom, the parent of sub-project's poms. Following example will help you understand this concept.
 
-![image](/assets/images/devops/3711/dependency-graph.jpg){:width="600px"}
+![image](/assets/images/architecture/3211/dependency-graph.jpg){:width="600px"}
 
 Following are the detail of the above dependency graph −
 * App-UI-WAR depends upon App-Core-lib and App-Data-lib.

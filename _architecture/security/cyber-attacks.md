@@ -22,30 +22,30 @@ DoS attacks typically fall in 2 categories:
 
 ### 1.3 What is the difference between a DDoS attack and a DOS attack?
 The distinguishing difference between DDoS and DoS is the number of connections utilized in the attack. DoS utilizes a single connection, while a DDoS attack utilizes many sources of attack traffic, often in the form of a botnet. Generally speaking, many of the attacks are fundamentally similar and can be attempted using one more many sources of malicious traffic.
-![image](/assets/images/devops/3601/dos-vs-ddos.png){:width="700px"}
+![image](/assets/images/architecture/3801/dos-vs-ddos.png){:width="700px"}
 
 ## 2. DDoS
 ### 2.1 What is a DDoS Attack?
 A distributed denial-of-service (`DDoS`) attack is a malicious attempt to disrupt normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic. DDoS attacks achieve effectiveness by utilizing multiple compromised computer systems as sources of attack traffic. Exploited machines can include computers and other networked resources such as IoT devices. From a high level, a DDoS attack is like a traffic jam clogging up with highway, preventing regular traffic from arriving at its desired destination.
-![image](/assets/images/devops/3601/ddos-attack-traffic.png)
+![image](/assets/images/architecture/3801/ddos-attack-traffic.png)
 ### 2.2 How does a DDoS attack work?
 A DDoS attack requires an attacker to gain control of a network of online machines in order to carry out an attack. Computers and other machines (such as IoT devices) are infected with malware, turning each one into a bot (or zombie). The attacker then has remote control over the group of bots, which is called a `botnet`.
 
 Once a botnet has been established, the attacker is able to direct the machines by sending updated instructions to each bot via a method of remote control. When the IP address of a victim is targeted by the botnet, each bot will respond by sending requests to the target, potentially causing the targeted server or network to overflow capacity, resulting in a denial-of-service to normal traffic. Because each bot is a legitimate Internet device, separating the attack traffic from normal traffic can be difficult.
 ### 2.3 What are common types of DDoS attacks?
 The OSI model, shown below, is a conceptual framework used to describe network connectivity in 7 distinct layers.
-![image](/assets/images/devops/3601/osi-model.png)
+![image](/assets/images/architecture/3801/osi-model.png)
 While nearly all DDoS attacks involve overwhelming a target device or network with traffic, attacks can be divided into three categories. An attacker may make use one or multiple different attack vectors, or cycle attack vectors potentially based on counter measures taken by the target.
 
 **Application Layer Attacks(Layer 7 DDoS attack)**  
 The goal of these attacks is to exhaust the resources of the target.
-![image](/assets/images/devops/3601/http-flood-ddos-attack.png){:width="700px"}
+![image](/assets/images/architecture/3801/http-flood-ddos-attack.png){:width="700px"}
 `HTTP Flood`  
 This attack is similar to pressing refresh in a web browser over and over on many different computers at once – large numbers of HTTP requests flood the server, resulting in denial-of-service.
 
 **Protocol Attacks(Layer 3 and Layer 4 DDoS attack)**  
 Protocol attacks, also known as a state-exhaustion attacks, cause a service disruption by consuming all the available state table capacity of web application servers or intermediate resources like firewalls and load balancers. Protocol attacks utilize weaknesses in layer 3 and layer 4 of the protocol stack to render the target inaccessible.
-![image](/assets/images/devops/3601/syn-flood-ddos-attack.png){:width="700px"}
+![image](/assets/images/architecture/3801/syn-flood-ddos-attack.png){:width="700px"}
 `SYN Flood`  
 A SYN Flood is analogous to a worker in a supply room receiving requests from the front of the store. The worker receives a request, goes and gets the package, and waits for confirmation before bringing the package out front. The worker then gets many more package requests without confirmation until they can’t carry any more packages, become overwhelmed, and requests start going unanswered.
 
@@ -53,7 +53,7 @@ This attack exploits the `TCP handshake` by sending a target a large number of T
 
 **Volumetric Attacks**  
 This category of attacks attempts to create congestion by consuming all available bandwidth between the target and the larger Internet. Large amounts of data are sent to a target by using a form of amplification or another means of creating massive traffic, such as requests from a botnet.
-![image](/assets/images/devops/3601/dns-amplification-botnet-ddos-attack.png){:width="700px"}
+![image](/assets/images/architecture/3801/dns-amplification-botnet-ddos-attack.png){:width="700px"}
 `DNS Amplification`  
 A DNS Amplification is like if someone were to call a restaurant and say “I’ll have one of everything, please call me back and tell me my whole order,” where the callback phone number they give is the target’s number. With very little effort, a long response is generated.
 
@@ -70,7 +70,7 @@ An attack that targets multiple layers of the protocol stack at the same time, s
 Cross-site scripting (XSS) is an exploit where the attacker attaches code onto a legitimate website that will execute when the victim loads the website. That malicious code can be inserted in several ways. Most popularly, it is either added to the end of a url or posted directly onto a page that displays user-generated content. In more technical terms, cross-site scripting is a client-side code injection attack.
 ### 3.2 How does XSS work?
 Specifically, the attacker injects a payload with malicious JavaScript into a website’s database. When the victim requests a page from the website, the website transmits the page, with the attacker’s payload as part of the HTML body, to the victim’s browser, which executes the malicious script. For example, it might send the victim’s cookie to the attacker’s server, and the attacker can extract it and use it for session hijacking.
-![image](/assets/images/devops/3601/xss-attack.png){:width="700px"}
+![image](/assets/images/architecture/3801/xss-attack.png){:width="700px"}
 The most dangerous consequences occur when XSS is used to exploit additional vulnerabilities. These vulnerabilities can enable an attacker to not only steal cookies, but also log key strokes, capture screenshots, discover and collect network information, and remotely access and control the victim’s machine.
 ### 3.3 What is client-side code?
 Client-side code is JavaScript code that runs on a user’s machine. In terms of websites, client-side code is typically code that is executed by the web browser after the browser loads a web page.

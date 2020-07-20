@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Common Math Formulas"
-index: 8013
+index: 9113
 subcategory: special-blog
 date: 2018-01-03
 tags: [Math Formulas]

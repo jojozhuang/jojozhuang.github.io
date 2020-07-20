@@ -12,7 +12,7 @@ tags: [Express, Template Engine, EJS]
 
 ## 1. Template Engine
 A `template engine` enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client. This approach makes it easier to design an HTML page.
-![image](/assets/images/frontend/2557/viewengine.png){:width="600px"}
+![image](/assets/images/backend/8757/viewengine.png){:width="600px"}
 
 Popular template engines that work with Express:
 * Pug
@@ -156,9 +156,9 @@ app.listen(3000, function() {
 
 ## 3. Testing
 Start the server and access http://localhost:3000/ in browser.
-![image](/assets/images/frontend/2557/home.png){:width="800px"}
+![image](/assets/images/backend/8757/home.png){:width="800px"}
 Try to access http://localhost:3000/about.html.
-![image](/assets/images/frontend/2557/about.png){:width="800px"}  
+![image](/assets/images/backend/8757/about.png){:width="800px"}  
 
 ## 4. Source Files
 * [Source files of Express Template Engine on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressTemplateEngine)

@@ -15,7 +15,7 @@ tags: [Tree, BST, NaryTree]
 * Deserialization - Decode a string to binary tree.
 
 For example, we have a tree as follows.
-![image](/assets/images/dsa/1121/binary_tree.png){:width="350px"}
+![image](/assets/images/algorithm/1121/binary_tree.png){:width="350px"}
 
 ### 1.1 Serializing Binary Tree By Level
 Serialization will convert to tree to string ["1,2,3,#,#,4,5"] and deserialization will convert this string to the original tree.

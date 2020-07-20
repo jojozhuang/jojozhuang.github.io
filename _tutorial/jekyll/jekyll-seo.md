@@ -53,7 +53,7 @@ type: blog
 </feed>
 {% endraw %}
 ```
-![image](/assets/images/jekyll/1631/rssfeed.png)
+![image](/assets/images/jekyll/8131/rssfeed.png)
 ### 1.3 Sitemap
 ```xml
 {%- raw -%}
@@ -81,7 +81,7 @@ type: blog
 </urlset>
 {% endraw %}
 ```
-![image](/assets/images/jekyll/1631/sitemap.png)
+![image](/assets/images/jekyll/8131/sitemap.png)
 
 ## 2. Caching with CDN
 ### 2.1 Create a new account in Cloudflare
@@ -91,15 +91,15 @@ Add a new site, note the two name servers
 
 ### 2.2 Update Name server in GoDaddy
 Find your domain, click the three dot button, choose 'Manage DNS'.
-![image](/assets/images/jekyll/1631/godaddy_mydomains.png)
+![image](/assets/images/jekyll/8131/godaddy_mydomains.png)
 Scroll down, see the Nameservers section, click 'Change' btton.
-![image](/assets/images/jekyll/1631/godaddy_nameservers.png)
+![image](/assets/images/jekyll/8131/godaddy_nameservers.png)
 Select 'Custom' type and input two Cloudflare name servers.
-![image](/assets/images/jekyll/1631/godaddy_changenameserver.png)
+![image](/assets/images/jekyll/8131/godaddy_changenameserver.png)
 Done.
-![image](/assets/images/jekyll/1631/godaddy_done.png)
+![image](/assets/images/jekyll/8131/godaddy_done.png)
 You will receive an email from CloudFlare.
-![image](/assets/images/jekyll/1631/cloudflare_notification.png)
+![image](/assets/images/jekyll/8131/cloudflare_notification.png)
 
 ## 3. Move Javascript Files to Bottom
 Put javascript files to the bottom of the page can speed up the loading.

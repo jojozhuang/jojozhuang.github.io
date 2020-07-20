@@ -61,7 +61,7 @@ When using Transfer Acceleration, additional data transfer charges may apply. Fo
 ## 2. Basic Usage of S3 Bucket
 ### 2.1 Creating S3 Bucket
 Go to Services->S3, or visit https://s3.console.aws.amazon.com/s3/, click Create Bucket.
-![image](/assets/images/cloud/3803/s3-home.png)
+![image](/assets/images/cloud/4103/s3-home.png)
 Set bucket name(must be unique) and choose region, next.
 ![image](/assets/images/note/9551/3-5-create-s3-bucket.png){:width="800px"}
 Configure versioning, logging, encryption, etc, next.
@@ -70,9 +70,9 @@ Set permission, choose block all public access(We will see the effect of this se
 ![image](/assets/images/note/9551/3-5-create-s3-bucket-permission.png){:width="800px"}
 ### 2.2 Uploading Files to S3 Bucket
 Now, we can upload files to the new bucket we just created. Inside the bucket, click the upload button.
-![image](/assets/images/cloud/3803/s3-bucket.png)
+![image](/assets/images/cloud/4103/s3-bucket.png)
 Select files from local disk and upload.
-![image](/assets/images/cloud/3803/s3-upload.png){:width="800px"}
+![image](/assets/images/cloud/4103/s3-upload.png){:width="800px"}
 Files are uploaded, next.
 ![image](/assets/images/note/9551/3-5-upload-file.png){:width="800px"}
 Set permission.
@@ -94,7 +94,7 @@ Refresh the open url of the file. Now, it is accessible.
 To change the storage class of file, click on the file, switch to 'Properties' tab.
 ![image](/assets/images/note/9551/3-5-change-storage-class.png)
 Choose the Storage Class, save.
-![image](/assets/images/cloud/3803/s3-file-storage-class.png)
+![image](/assets/images/cloud/4103/s3-file-storage-class.png)
 ### 2.5 Changing Encryption Type
 Select the file, click Encryption in the file properties.
 ![image](/assets/images/note/9551/3-6-change-encryption-type.png)
@@ -102,10 +102,10 @@ Choose AWS-KMS.
 ![image](/assets/images/note/9551/3-6-change-encryption-type2.png)
 ### 2.6 Enable Versioning for S3 Bucket
 Switch to Properties tab of S3 Bucket, choose Versioning and enable it.
-![image](/assets/images/cloud/3803/s3-versioning.png)
+![image](/assets/images/cloud/4103/s3-versioning.png)
 ### 2.7 S3 Lifecycle Management and Glacier
 In bucket, switch to Management tab, click 'Add Lifecycle rule'.
-![image](/assets/images/cloud/3803/s3-lifecycle-management.png)
+![image](/assets/images/cloud/4103/s3-lifecycle-management.png)
 Set rule name, next.
 ![image](/assets/images/note/9551/3-8-create-lifecycle-rule-1.png){:width="650px"}
 Set transitions, next.
@@ -116,7 +116,7 @@ Save and done.
 ![image](/assets/images/note/9551/3-8-create-lifecycle-rule-done.png)
 ### 2.8 Enable Cross Region Replication
 In bucket, switch to Management tab, then Replication, click 'Add rule'.
-![image](/assets/images/cloud/3803/s3-replication.png)
+![image](/assets/images/cloud/4103/s3-replication.png)
 Choose source, next.
 ![image](/assets/images/note/9551/3-9-create-replication-rule-source.png){:width="650px"}
 Set destination, create new bucket for destination, next.

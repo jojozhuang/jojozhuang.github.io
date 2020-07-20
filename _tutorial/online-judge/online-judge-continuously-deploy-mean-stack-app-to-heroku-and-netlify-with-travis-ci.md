@@ -62,30 +62,30 @@ deploy:
 ```
 ### 2.3 Heroku
 Login to Heroku https://www.heroku.com/, go to Dashboard -> New -> Create new app. Set app name 'online-judge-api', click 'Create app' button.
-![image](/assets/images/frontend/2842/heroku_createapp.png)
+![image](/assets/images/online-judge/9042/heroku_createapp.png)
 Then, go to Settings, click 'Reveal Config Vars' button. Add new Key: MONGOLAB_URI and Value: Your MongoDB link.
-![image](/assets/images/frontend/2842/heroku_configvar.png)
+![image](/assets/images/online-judge/9042/heroku_configvar.png)
 In addition, go to 'Account settings', copy the 'API Key'. We will use it to setup continuous integration on Travis.
-![image](/assets/images/frontend/2842/heroku_apikey.png)  
+![image](/assets/images/online-judge/9042/heroku_apikey.png)  
 ### 2.4 Travis
 Login to https://travis-ci.com/, then go to 'Profile', click 'Manage repositories on GitHub' and add 'online-judge-mean'.
-![image](/assets/images/frontend/2842/travis_add_repository.png)
+![image](/assets/images/online-judge/9042/travis_add_repository.png)
 Click the 'Settings' of the new repository. Keep the default settings for 'General' and 'Auto Cancellation'.
-![image](/assets/images/frontend/2842/travis_settings.png)
+![image](/assets/images/online-judge/9042/travis_settings.png)
 In the 'Environment Variables' section, paste your Heroku API Key in the field ‘Value’ and name it 'HEROKU_API_KEY', click 'Add' button.
-![image](/assets/images/frontend/2842/travis_environment_variable.png)
+![image](/assets/images/online-judge/9042/travis_environment_variable.png)
 ### 2.5 Push
 Make any change to this MEAN app and submit it to Github. Once Travis notice the new submission, it starts to build the app according to the instructions configured in '.travis.yml' file.
-![image](/assets/images/frontend/2842/travis_build.png)
+![image](/assets/images/online-judge/9042/travis_build.png)
 If the build is finished successfully, the RESTful API service is deployed to Heroku.
-![image](/assets/images/frontend/2842/travis_deploy.png)  
+![image](/assets/images/online-judge/9042/travis_deploy.png)  
 ### 2.6 Testing Server
 Go to Heroku, you should see the new app 'online-judge-api' in the dashboard.
-![image](/assets/images/frontend/2842/heroku_newapp.png)
+![image](/assets/images/online-judge/9042/heroku_newapp.png)
 Click on it, and switch to 'Setting' tab. You should find the link, it is the root url of the RESTful API.
-![image](/assets/images/frontend/2842/heroku_link.png)
+![image](/assets/images/online-judge/9042/heroku_link.png)
 Access https://online-judge-api.herokuapp.com/api/submission/questions in browser, we see it returns data.
-![image](/assets/images/frontend/2842/heroku_api.png)
+![image](/assets/images/online-judge/9042/heroku_api.png)
 
 ## 3. Client Deployment
 ### 3.1 Build Command
@@ -109,30 +109,30 @@ export const environment = {
 ```
 ### 3.3 Netlify
 Login to Netlify https://www.netlify.com/ with GitHub account, click 'New site from Git'.
-![image](/assets/images/frontend/2842/netlify_app.png)
+![image](/assets/images/online-judge/9042/netlify_app.png)
 Choose 'Github', next.
-![image](/assets/images/frontend/2842/netlify_newsite.png)
+![image](/assets/images/online-judge/9042/netlify_newsite.png)
 Authorize Netlify to access your GitHub account, then choose the repository 'online-judge-mean', next.
-![image](/assets/images/frontend/2842/netlify_repository.png)
+![image](/assets/images/online-judge/9042/netlify_repository.png)
 Choose `master` for the Branch to deploy, set `npm run build` to the Build command, and set `dist` to the Publish directory, click the 'Deploy site' button.
-![image](/assets/images/frontend/2842/netlify_options.png)
+![image](/assets/images/online-judge/9042/netlify_options.png)
 Netlify will start to deploy your site.
-![image](/assets/images/frontend/2842/netlify_inprogress.png)
+![image](/assets/images/online-judge/9042/netlify_inprogress.png)
 If no issue occurs, the publish will be done after few seconds(or minutes). Notice the site is given with a random name.
-![image](/assets/images/frontend/2842/netlify_published.png)
+![image](/assets/images/online-judge/9042/netlify_published.png)
 Switch to Settings tab, scroll down and click the 'Change site name' button.
-![image](/assets/images/frontend/2842/netlify_settings.png)
+![image](/assets/images/online-judge/9042/netlify_settings.png)
 Change the name to 'online-judge' and save.
-![image](/assets/images/frontend/2842/netlify_changename.png)
+![image](/assets/images/online-judge/9042/netlify_changename.png)
 Go back to overview, we see the new site name with the link.
-![image](/assets/images/frontend/2842/netlify_overview.png)
+![image](/assets/images/online-judge/9042/netlify_overview.png)
 ### 3.4 Testing Client
 Access https://online-judge.netlify.com/, we see the homepage.
-![image](/assets/images/frontend/2842/test_home.png)
+![image](/assets/images/online-judge/9042/test_home.png)
 Click 'Questions' button, we see 5 questions are displayed.
-![image](/assets/images/frontend/2842/test_questions.png)
+![image](/assets/images/online-judge/9042/test_questions.png)
 Though chrome debug tool, we see this Angular app is calling the RESTful API hosted on Heroku to fetch data.
-![image](/assets/images/frontend/2842/test_remoteapi.png)
+![image](/assets/images/online-judge/9042/test_remoteapi.png)
 
 ## 4. References
 * [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)

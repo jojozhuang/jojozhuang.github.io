@@ -309,22 +309,22 @@ Johnny@Johnny-Mac:~$
 ```
 4) Add MongoDB URL  
 Login to Heroku, go to Settings, click 'Reveal Config Vars' button. Add new Key: MONGOLAB_URI and Value: Your MongoDB link.
-![image](/assets/images/frontend/2841/configvar.png)
+![image](/assets/images/online-judge/9041/configvar.png)
 5) Testing Server  
 Open web browser, access 'https://online-judge-api.herokuapp.com/api/'. The API is working now.
 ```raw
 {"message":"Hello! welcome to our api!"}
 ```
-![image](/assets/images/frontend/2841/api.png){:width="650px"}  
+![image](/assets/images/online-judge/9041/api.png){:width="650px"}  
 If you access https://online-judge-api.herokuapp.com/api/submission/questions, you should get all reqestions in json format.
-![image](/assets/images/frontend/2841/questionsjson.png)
+![image](/assets/images/online-judge/9041/questionsjson.png)
 ### 3.2 Client
 1) Build Angular app.
 ```raw
 $ npm run build
 ```
 The Angular app is built and exported to dist folder. All are static files(html, js and images).
-![image](/assets/images/frontend/2841/build.png){:width="800px"}  
+![image](/assets/images/online-judge/9041/build.png){:width="800px"}  
 2) Create App on Heroku
 ```raw
 $ heroku create online-judge-mean
@@ -427,11 +427,11 @@ $ heroku git:remote -a online-judge-mean
 ```
 4) Testing Client  
 Open web browser, access 'https://online-judge-mean.herokuapp.com/'. The Angular app is working now.
-![image](/assets/images/frontend/2841/home.png)
+![image](/assets/images/online-judge/9041/home.png)
 Click on the 'Questions' menu.
-![image](/assets/images/frontend/2841/questions.png)
+![image](/assets/images/online-judge/9041/questions.png)
 Go to the question details.
-![image](/assets/images/frontend/2841/question.png)
+![image](/assets/images/online-judge/9041/question.png)
 
 ## 4. Reference
 * [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)

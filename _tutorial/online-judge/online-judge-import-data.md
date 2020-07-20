@@ -228,13 +228,13 @@ You see, the folder is in controller folder, create uploads folder in it or chan
 
 ## 3. Testing
 Start the app, login as admin, go to Database.
-![image](/assets/images/frontend/2814/test_menu.png)
+![image](/assets/images/online-judge/9014/test_menu.png)
 Choose collection 'questions'. Delete all entries if they exist.
-![image](/assets/images/frontend/2814/test_database.png)
+![image](/assets/images/online-judge/9014/test_database.png)
 Click 'Import with CSV' button. A modal dialog will be displayed, choose questions.csv in './backup_csv' folder.
-![image](/assets/images/frontend/2814/test_csvfile.png)
+![image](/assets/images/online-judge/9014/test_csvfile.png)
 Click 'Upload' button, all data in the csv file is uploaded to MongoDB.
-![image](/assets/images/frontend/2814/test_finish.png)
+![image](/assets/images/online-judge/9014/test_finish.png)
 
 ## 4. References
 * [File Upload with AngularJS and NodeJS](https://ciphertrick.com/2015/12/07/file-upload-with-angularjs-and-nodejs/)

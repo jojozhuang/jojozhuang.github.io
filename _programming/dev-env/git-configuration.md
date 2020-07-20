@@ -38,9 +38,9 @@ Type `git help` to get the help document. To get document for a specific command
 * staging index
 * repository
 
-![image](/assets/images/devops/2124/three-trees.png){:width="600px"}  
+![image](/assets/images/programming/2024/three-trees.png){:width="600px"}  
 Change status between trees.
-![image](/assets/images/devops/2124/change-status.png){:width="600px"}  
+![image](/assets/images/programming/2024/change-status.png){:width="600px"}  
 
 ## 7. References
 * [ Git Essential Training: The Basics](https://www.linkedin.com/learning/git-essential-training-the-basics/basic-git-configuration?u=57692769)

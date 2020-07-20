@@ -725,7 +725,7 @@ console.log(buffer.readUInt32LE(7)); // print 212
 Append `data:image/png;base64` to image data and set it to src of html image control to diaplay it.
 
 ### 2.10 Final Project Structure
-![image](/assets/images/frontend/2635/projectstructure.png){:width="350px"}
+![image](/assets/images/frontend/8475/projectstructure.png){:width="350px"}
 Notice, folder `204304` contains the data files for screenshot and whiteboard.
 
 ## 3. Running and Testing
@@ -734,11 +734,11 @@ Start the app.
 $ npm start
 ```
 View the course player at http://localhost:12103/ in chrome. On the top of the player, there is the slider bar and a Play button. There are two canvases below the slider bar. The left one is for screenshot and the right one is for whiteboard.
-![image](/assets/images/frontend/2635/homepage.png)
+![image](/assets/images/frontend/8475/homepage.png)
 Click the `Play` button, the slider bar begins to move and the current time will increment in seconds. Meanwhile, the screenshot and whiteboard canvas show the content simultaneously.
-![image](/assets/images/frontend/2635/play.png)
+![image](/assets/images/frontend/8475/play.png)
 You can drag the slider bar to move forward or backward.
-![image](/assets/images/frontend/2635/drag.png)
+![image](/assets/images/frontend/8475/drag.png)
 
 ## 4. Conclusion
 ### 4.1 Easy to Implement  

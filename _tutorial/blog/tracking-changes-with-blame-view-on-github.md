@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Tracking Changes with Blame View on GitHub"
-index: 8019
+index: 9119
 subcategory: special-blog
 date: 2018-09-01
 tags: [GitHub]

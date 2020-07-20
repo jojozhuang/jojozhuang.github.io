@@ -231,7 +231,7 @@ Create ./public/index.html
 </html>
 ```
 ### 3.4 Final Project Structure
-![image](/assets/images/frontend/2641/projectstructure.png){:width="350px"}
+![image](/assets/images/frontend/8481/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start both the client and server with 'npm run dev'.
@@ -253,9 +253,9 @@ yarn build (or npm run build)
 yarn start (or npm start)
 ```
 Open web browser, access 'http://localhost:3000/'.
-![image](/assets/images/frontend/2641/homepage.png)
+![image](/assets/images/frontend/8481/homepage.png)
 Through the debug tool, we can see, the name is fetched from the api.
-![image](/assets/images/frontend/2641/api.png)
+![image](/assets/images/frontend/8481/api.png)
 
 ## 5. Setting up ESLint and Prettier on VS Code
 [VSCode](https://code.visualstudio.com/) is a lightweight but powerful source code editor. [ESLint](https://eslint.org/) takes care of the code-quality. [Prettier](https://prettier.io/) takes care of all the formatting.
@@ -272,10 +272,10 @@ Code->Preferences->Settings, add following scripts to User Settings.
 "editor.formatOnSave": true,
 "prettier.eslintIntegration": true
 ```
-![image](/assets/images/frontend/2641/usersettings.png)
+![image](/assets/images/frontend/8481/usersettings.png)
 ### 5.3 Having a Try
 Restart VS Code, open any source file, try to edit any `js` file. ESLint will check your code against the Airbnb JavaScript Style Guide and warn you of any conflicts.
-![image](/assets/images/frontend/2641/eslint.gif)
+![image](/assets/images/frontend/8481/eslint.gif)
 
 ## 6. Source Files
 * [Source files of FullStack React Node.js on Github](https://github.com/jojozhuang/Tutorials/tree/master/FullStackReactNodejs)

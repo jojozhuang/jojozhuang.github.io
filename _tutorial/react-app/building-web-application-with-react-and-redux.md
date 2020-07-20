@@ -771,7 +771,7 @@ dispatch(fetchResoucesFail(Object.assign(error, {product: product})));
 ```
 
 ### 2.10 Final Project Structure
-![image](/assets/images/frontend/2612/projectstructure.png){:width="350px"}
+![image](/assets/images/frontend/8452/projectstructure.png){:width="350px"}
 
 ## 4. Running and Testing
 Start the RESTful service first, and start this React app, serve it in web server.
@@ -779,21 +779,21 @@ Start the RESTful service first, and start this React app, serve it in web serve
 $ npm start
 ```
 Open web browser, access 'http://localhost:12090/'.
-![image](/assets/images/frontend/2612/homepage.png)
+![image](/assets/images/frontend/8452/homepage.png)
 Click the List button. There are three products with images.
-![image](/assets/images/frontend/2612/productlist.png)
+![image](/assets/images/frontend/8452/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/assets/images/frontend/2612/productadd.png)
+![image](/assets/images/frontend/8452/productadd.png)
 Click 'Save' button, product is saved.
-![image](/assets/images/frontend/2612/productlistafteradd.png)
+![image](/assets/images/frontend/8452/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/assets/images/frontend/2612/productedit.png)
+![image](/assets/images/frontend/8452/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/assets/images/frontend/2612/productlistafteredit.png)
+![image](/assets/images/frontend/8452/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/assets/images/frontend/2612/deleteconfirm.png)
+![image](/assets/images/frontend/8452/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/assets/images/frontend/2612/productlistafterdel.png)
+![image](/assets/images/frontend/8452/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of Game Store(React+Redux) on Github](https://github.com/jojozhuang/game-store-reactredux)

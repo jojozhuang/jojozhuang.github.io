@@ -17,7 +17,7 @@ tags: [SaaS, PaaS, IaaS]
 * IaaS: Infrastructure as a service
 
 ### 1.2 Summary of Key Differences
-![image](/assets/images/devops/3501/iaas-paas-saas-comparison.png){:width="800px"}  
+![image](/assets/images/cloud/4001/iaas-paas-saas-comparison.png){:width="800px"}  
 
 ### 1.3 Common Examples of SaaS, PaaS, & IaaS
 

@@ -185,7 +185,7 @@ The problem with calling wait() and notify() on the empty string, or any other c
 
 The situation is sketched in the diagram below:
 
-![image](/assets/images/java/1479/strings-wait-notify.png){:width="650px"}
+![image](/assets/images/programming/2411/strings-wait-notify.png){:width="650px"}
 
 Remember, that even if the 4 threads call wait() and notify() on the same shared string instance, the signals from the doWait() and doNotify() calls are stored individually in the two MyWaitNotify instances. A doNotify() call on the MyWaitNotify 1 may wake threads waiting in MyWaitNotify 2, but the signal will only be stored in MyWaitNotify 1.
 

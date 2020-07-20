@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Source Code Search with OpenGrok"
-index: 8015
+index: 9115
 subcategory: special-blog
 date: 2018-05-03
 tags: [OpenGrok]

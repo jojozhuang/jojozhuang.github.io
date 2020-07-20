@@ -22,7 +22,7 @@ Containers are instances of Docker images that can be run using the Docker run c
 [Docker Hub](https://hub.docker.com/) is a registry service on the cloud that allows you to download Docker images that are built by other communities. You can also upload your own Docker built images to Docker hub.
 
 Go to [https://hub.docker.com/](https://hub.docker.com/) to create a Docker ID, then login. You will see there is no repository/image initially. We will create our own image later.
-![image](/assets/images/devops/3101/hub.png)  
+![image](/assets/images/architecture/3501/hub.png)  
 
 ## 2. Installing Docker on Ubuntu
 1) Add the GPG key for the official Docker repository to the system:
@@ -101,17 +101,17 @@ Pull the `ubuntu` image from Docker Hub.
 ```raw
 $ docker pull ubuntu
 ```
-![image](/assets/images/devops/3101/pullubuntu.png){:width="800px"}  
+![image](/assets/images/architecture/3501/pullubuntu.png){:width="800px"}  
 Check the existing images in the docker.
 ```raw
 $ docker images
 ```
-![image](/assets/images/devops/3101/images1.png){:width="800px"}  
+![image](/assets/images/architecture/3501/images1.png){:width="800px"}  
 Start a Ubuntu container and go inside to its shell.
 ```raw
 $ docker run -it ubuntu
 ```
-![image](/assets/images/devops/3101/shell.png){:width="800px"}  
+![image](/assets/images/architecture/3501/shell.png){:width="800px"}  
 Install Node.js in Ubuntu container.
 ```raw
 $ root@98116ebd10e5:/# apt-get update
@@ -121,7 +121,7 @@ Check the node version to make sure the installation is properly completed.
 ```raw
 $ root@98116ebd10e5:/# nodejs -v
 ```
-![image](/assets/images/devops/3101/installnodejs.png){:width="800px"}   
+![image](/assets/images/architecture/3501/installnodejs.png){:width="800px"}   
 
 ## 5.2 Creating New Image
 First, type 'exit' to quit the container. Then check the container id with following command.
@@ -129,7 +129,7 @@ First, type 'exit' to quit the container. Then check the container id with follo
 $ docker ps -a
 ```
 This command shows all of the existing containers. As you see, there is only one ubuntu container is running, which we just install node.js on it. Note down the container id.
-![image](/assets/images/devops/3101/checkcontainer.png){:width="800px"}  
+![image](/assets/images/architecture/3501/checkcontainer.png){:width="800px"}  
 Now, we are ready to create our own image.  
 Syntax of creating new image.
 ```raw
@@ -148,7 +148,7 @@ Show the image list to check whether our new image is created.
 ```raw
 $ docker images
 ```
-![image](/assets/images/devops/3101/createimage.png){:width="800px"}  
+![image](/assets/images/architecture/3501/createimage.png){:width="800px"}  
 As you see, a new image named 'jojozhuang/ubuntu-nodejs' has been created. Notice that its size is bigger than the original ubuntu image. This is because we install node.js into it.
 
 ## 5.3 Using Dockerfile to Create New Images
@@ -166,7 +166,7 @@ Type command as follows, then input password.
 ```raw
 $ docker login -u jojozhuang
 ```
-![image](/assets/images/devops/3101/login.png){:width="700px"}  
+![image](/assets/images/architecture/3501/login.png){:width="700px"}  
 
 ## 6.2 Pushing the Image
 Syntax of push command.
@@ -178,15 +178,15 @@ Type command as follows, providing the full name of the new image.
 $ docker push jojozhuang/ubuntu-nodejs
 ```
 Then, docker starts to upload the image to its hub.
-![image](/assets/images/devops/3101/push.png)  
+![image](/assets/images/architecture/3501/push.png)  
 After the push is completed, you will see the 'Pushed' status.
-![image](/assets/images/devops/3101/pushfinished.png)  
+![image](/assets/images/architecture/3501/pushfinished.png)  
 
 ## 6.3 Checking The New Image in Docker Hub
 Log into the Docker Hub, we see there is a new image.
-![image](/assets/images/devops/3101/newimageonhub1.png)  
+![image](/assets/images/architecture/3501/newimageonhub1.png)  
 Now, you can share this image to others and you can pull this image from Docker Hub as well.
-![image](/assets/images/devops/3101/newimageonhub2.png)  
+![image](/assets/images/architecture/3501/newimageonhub2.png)  
 
 ## 7. Pulling The New Image from Hub to Mac
 Launch Docker Terminal on Mac, run the following command to pull the new image.
@@ -201,7 +201,7 @@ Check the nodejs version.
 ```raw
 $ nodejs -v
 ```
-![image](/assets/images/devops/3101/pull.png){:width="600px"}  
+![image](/assets/images/architecture/3501/pull.png){:width="600px"}  
 Yes, it's our image!
 
 ## 8. References

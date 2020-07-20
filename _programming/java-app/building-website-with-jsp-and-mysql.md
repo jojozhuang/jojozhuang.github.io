@@ -681,12 +681,12 @@ Create another JSP file named `productedel.jsp` with following content.
 ```
 ### 3.7 Project Structure
 Finally, the project structure looks like this.
-![image](/assets/images/java/1532/project.png){:width="400px"}
+![image](/assets/images/programming/2532/project.png){:width="400px"}
 
 ## 4. Setting up MySQL Database
 ### 4.1 Creating Connection
 In MySQL Workbench, create a new connection to MySQL database, specify the connection name `JSP Tutorial`.
-![image](/assets/images/java/1532/addconnection.png){:width="800px"}
+![image](/assets/images/programming/2532/addconnection.png){:width="800px"}
 ### 4.2 Creating Database and Table
 In Query tab, execute following sql script to create a new database named `jsptutorial`.
 ```sql
@@ -710,38 +710,38 @@ Run the following script to show all data in table `Product`.
 ```sql
 SELECT * FROM jsptutorial.Product;
 ```
-![image](/assets/images/java/1532/mysqlworkbench.png)
+![image](/assets/images/programming/2532/mysqlworkbench.png)
 
 ## 5. Launching JSP Application
 In Eclipse, add Tomcat server. Window->Show View->Server, click the link to add new server.
-![image](/assets/images/java/1532/eclipseserver.png){:width="600px"}
+![image](/assets/images/programming/2532/eclipseserver.png){:width="600px"}
 Select Tomcat 9.0.
-![image](/assets/images/java/1532/newserver.png){:width="600px"}
+![image](/assets/images/programming/2532/newserver.png){:width="600px"}
 Add Our Project to right side.
-![image](/assets/images/java/1532/addresource.png){:width="600px"}
+![image](/assets/images/programming/2532/addresource.png){:width="600px"}
 In eclipse project, a new server folder for tomcat is added.
-![image](/assets/images/java/1532/servers.png){:width="400px"}
+![image](/assets/images/programming/2532/servers.png){:width="400px"}
 Set Targeted Runtimes.  
 Right click on the JSPTutorial Project->Properties->Targeted Runtimes, check Tomcat 9.0.
-![image](/assets/images/java/1532/targetedruntimes.png){:width="800px"}
+![image](/assets/images/programming/2532/targetedruntimes.png){:width="800px"}
 Now, we can use 'Run on Server' to start our JSP Application.
-![image](/assets/images/java/1532/runonserver.png)  
+![image](/assets/images/programming/2532/runonserver.png)  
 There will be a browser opened in eclipse, which shows our JSP website. Or you can directly access http://localhost:8080/JSPTutorial/productlist.jsp in browser.
-![image](/assets/images/java/1532/productlist.png)
+![image](/assets/images/programming/2532/productlist.png)
 
 ## 6. Testing
 Click the 'Create' button, input product name and price.
-![image](/assets/images/java/1532/productadd.png)
+![image](/assets/images/programming/2532/productadd.png)
 Click 'Save' button, product is saved.
-![image](/assets/images/java/1532/productlistafteradd.png)
+![image](/assets/images/programming/2532/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/assets/images/java/1532/productedit.png)
+![image](/assets/images/programming/2532/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/assets/images/java/1532/productlistafteredit.png)
+![image](/assets/images/programming/2532/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/assets/images/java/1532/deleteconfirm.png)
+![image](/assets/images/programming/2532/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/assets/images/java/1532/productlistafterdel.png)
+![image](/assets/images/programming/2532/productlistafterdel.png)
 
 ## 7. Source Files
 * [Source files of JSP Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/JSPTutorial)

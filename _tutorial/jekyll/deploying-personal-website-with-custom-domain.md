@@ -17,11 +17,11 @@ For demo purpose, I will use the repository of my personal website, see https://
 
 ## 2. Register domain from Godaddy
 Visit https://www.godaddy.com, register account and search domains.
-![image](/assets/images/jekyll/1642/godaddy_searchdomain.png)
+![image](/assets/images/jekyll/8142/godaddy_searchdomain.png)
 Add the domain you're interested into shopping cart, and prepare to pay for it.
-![image](/assets/images/jekyll/1642/godaddy_cart.png)
+![image](/assets/images/jekyll/8142/godaddy_cart.png)
 After you finish the payment, congratulations, you own the domain!
-![image](/assets/images/jekyll/1642/godaddy_domain.png)
+![image](/assets/images/jekyll/8142/godaddy_domain.png)
 
 ## 3. Setup DNS
 Now, it's time to setup DNS for your new domain. Add `A` record to point the new domain(eg. jojozhuang.github.io) to a specific IP. The below four IP addresses are for GitHub Pages.
@@ -31,16 +31,16 @@ Now, it's time to setup DNS for your new domain. Add `A` record to point the new
 * 185.199.111.153
 
 In addition, add `CNAME` record to point the new domain(eg. jojozhuang.github.io) to the existing github page domain(eg. jojozhuang.github.io).
-![image](/assets/images/jekyll/1642/godaddy_adddns.png)
+![image](/assets/images/jekyll/8142/godaddy_adddns.png)
 
 ## 4. Enable Custom Domain and SSL on GitHub
 Go to the github repository. In Settings, input the custom domain and check 'Enforce HTTPS'.
-![image](/assets/images/jekyll/1642/custom_domain.png){:width="700px"}
+![image](/assets/images/jekyll/8142/custom_domain.png){:width="700px"}
 
 The settings on GitHub and GoDaddy will be activated after a while. Visit the website with new domain [jojozhuang.github.io](jojozhuang.github.io). Notice that the url always starts with `https`.
-![image](/assets/images/jekyll/1642/rongzhuang_home.png)
+![image](/assets/images/jekyll/8142/rongzhuang_home.png)
 Portfolio page.
-![image](/assets/images/jekyll/1642/rongzhuang_project.png)
+![image](/assets/images/jekyll/8142/rongzhuang_portfolio.png)
 
 ## 5. Reference
 * [How to Configure GoDaddy Custom Domains with GitHub Pages](https://medium.com/@supriyakankure/how-to-add-a-custom-domain-to-your-github-page-with-godaddy-84495781143e)

@@ -15,7 +15,7 @@ tags: [synchronized, deadlock]
 `synchronized` keyword is used to make the class or method thread-safe which means only one thread can have lock of synchronized method and use it, other threads have to wait till the lock releases. It is important if our program is running in multi-threaded environment where two or more threads execute simultaneously. But sometimes it also causes a problem which is called Deadlock.
 ### 1.2 Deadlock
 `Deadlock` describes a situation where two or more threads are blocked forever, waiting for each other. Deadlock occurs when multiple threads need the same locks but obtain them in different order. A Java multithreaded program may suffer from the deadlock condition because the synchronized keyword causes the executing thread to block while waiting for the lock, or monitor, associated with the specified object.
-![image](/assets/images/java/1440/deadlock.png){:width="500px"}
+![image](/assets/images/programming/2412/deadlock.png){:width="500px"}
 ### 1.3 Deadlock Example
 Below is a simple example of Deadlock condition. Each thread acquires two locks in different order.
 ```java

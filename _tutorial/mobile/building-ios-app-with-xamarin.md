@@ -15,22 +15,22 @@ tags: [Xamarin, Xcode, SQLite, C#]
 We will create an app named 'Game Store' to manage products. It has the similar layout and functions with the app we created with Xcode and Swift. See more details in the posting [Building iOS App with Xcode]({% link _tutorial/mobile/building-ios-app-with-xcode.md %}).
 ### 1.2 Creating Project
 In Visual Studio, File->New Solution, select Multiplatform->App->Blank Native App(iOS, Android), Next.
-![image](/assets/images/frontend/2333/project_create.png){:width="800px"}  
+![image](/assets/images/mobile/8533/project_create.png){:width="800px"}  
 Specify the name and Organization Identifier, Next.
-![image](/assets/images/frontend/2333/project_appname.png){:width="800px"}  
+![image](/assets/images/mobile/8533/project_appname.png){:width="800px"}  
 Specify the location where the source files locate, Create.
-![image](/assets/images/frontend/2333/project_location.png){:width="800px"}  
+![image](/assets/images/mobile/8533/project_location.png){:width="800px"}  
 One solution and three projects are created. 'GameStoreXamarin' is a Portable .NET project, which contains common functions. 'GameStoreXamarin.Droid' and 'GameStoreXamarin.iOS' are specifically responsible for UI, one for Android and another for iOS.
-![image](/assets/images/frontend/2333/project_stucture.png){:width="320px"}  
+![image](/assets/images/mobile/8533/project_stucture.png){:width="320px"}  
 Rename the project 'GameStoreXamarin' to 'GameStoreXamarin.Core'. And Rename project 'GameStoreXamarin.Droid' to 'GameStoreXamarin.Android'.
 
 ## 2. Portable Project
 We will use [SQLite](https://www.sqlite.org/) to store data for this app. And all of the core database operations are in this portable project. Later, it will be shared to iOS project and Android project. This portable project is re-usable.
 ### 2.1 Installing Packages
 Select the 'GameStoreXamarin.Core' project, Project->Add NuGet Package, then NuGet Package Manager will be opened.
-![image](/assets/images/frontend/2333/package_add.png){:width="800px"}  
+![image](/assets/images/mobile/8533/package_add.png){:width="800px"}  
 Search 'sqlite', select the package named 'sqlite-net-pcl', click 'Add Package'.
-![image](/assets/images/frontend/2333/package_sqlite.png){:width="800px"}  
+![image](/assets/images/mobile/8533/package_sqlite.png){:width="800px"}  
 The selected package will be installed to current project. A new file named 'package.config' is added to the project. `sqlite` and its dependencies will be listed in this file.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -155,23 +155,23 @@ namespace GameStoreXamarin.Core.Data
 ```
 ### 2.3 Final Project Structure
 The final structure of the portable project.
-![image](/assets/images/frontend/2333/portable_project.png){:width="320px"}  
+![image](/assets/images/mobile/8533/portable_project.png){:width="320px"}  
 
 ## 3. iOS Project
 ### 3.1 Creating Views
 1) Right click the ‘GameStoreXamarin.iOS' project, Add->New File. Select iOS->View Controller, set name to 'ProductTableViewController'.
-![image](/assets/images/frontend/2333/ios_tableviewcontroller.png){:width="700px"}  
+![image](/assets/images/mobile/8533/ios_tableviewcontroller.png){:width="700px"}  
 Open the 'ProductTableViewController.cs' file, change the base class from 'UIViewController' to 'UITableViewController'.  
 2) Create another file named 'ProductTableViewCell.cs' through Add->New File->iOS->Table View Cell.  
 3) Create third file named 'ProductDetailsViewController.cs' through Add->New File->iOS->View Controller.  
 4) We will not use the `xib` files, you can just delete them.
 ### 3.2 UI Design with Xcode
 Right click on 'Main.storyboard', Open With -> Xcode Interface Builder. Notice that all the files from 'GameStoreXamarin.iOS' project are showing in Xcode, including the files we just created in Visual Studio.
-![image](/assets/images/frontend/2333/ios_xcode.png)  
+![image](/assets/images/mobile/8533/ios_xcode.png)  
 Create two navigation controllers, one table view controller to display product list and one view controller to display product details. And bind view controller classes we created in Visual Studio to these Scenes.
-![image](/assets/images/frontend/2333/ios_storyboard.png)  
+![image](/assets/images/mobile/8533/ios_storyboard.png)  
 Connect the controls(label, textfield, button, etc) on canvas to code manually.
-![image](/assets/images/frontend/2333/ios_connect.png)  
+![image](/assets/images/mobile/8533/ios_connect.png)  
 Save the storyboard before closing it, return to Visual Studio.
 ### 3.3 Views in Visual Studio
 When you add controls(label, textfield, button, etc) to the storyboard in Xcode, some changes will be made to the View Controller classes. For example, in file 'ProductTableViewCell.designer.cs', you see two labels and one image view, they all have the `Outlet` attribute. They are generated automatically by Visual Studio. You should never manually change the content inside a 'designer.cs' file.
@@ -342,7 +342,7 @@ protected void Handle_Canceled(object sender, EventArgs e)
 ```
 ### 3.8 Adding Images
 Add three images to assets.xcassets. These images are used as product's photo.
-![image](/assets/images/frontend/2333/assets_images.png)  
+![image](/assets/images/mobile/8533/assets_images.png)  
 ### 3.9 Dummy Data
 Create three products with images in assets. If there is no data in SQLite database, call this method get initial products.
 ```c#
@@ -523,7 +523,7 @@ public void UnwindToProductTableViewController(UIStoryboardSegue segue)
 }
 ```
 Second, unwind segue to Exit for the Cancel button, select the action method defined in list view.
-![image](/assets/images/frontend/2333/unwindtoexit.png)  
+![image](/assets/images/mobile/8533/unwindtoexit.png)  
 When tapping the Cancel button in the detail view, screen will return to the list view. For the Save button, we need to do more. Override the 'PrepareForSegue' method, save the change.
 ```c#
 public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
@@ -548,21 +548,21 @@ this.PerformSegue("UnwindSave", btnSave);
 ```
 ### 3.12 Final Project Structure
 The final structure of the iOS project.
-![image](/assets/images/frontend/2333/ios_project.png){:width="320px"}  
+![image](/assets/images/mobile/8533/ios_project.png){:width="320px"}  
 
 ## 4. Testing
 In Visual Studio, click the arrow button(or Run->Start Without Debugging) to run the app in iOS Simulator.
-![image](/assets/images/frontend/2333/simulator.png){:width="400px"}  
+![image](/assets/images/mobile/8533/simulator.png){:width="400px"}  
 Product list.
-![image](/assets/images/frontend/2333/runproductlist.png){:width="350px"}  
+![image](/assets/images/mobile/8533/runproductlist.png){:width="350px"}  
 Edit product.
-![image](/assets/images/frontend/2333/runproductadd.png){:width="350px"}  
+![image](/assets/images/mobile/8533/runproductadd.png){:width="350px"}  
 Select photo.
-![image](/assets/images/frontend/2333/runimagepicker.png){:width="350px"}  
+![image](/assets/images/mobile/8533/runimagepicker.png){:width="350px"}  
 Delete product.
-![image](/assets/images/frontend/2333/runproductdelete.png){:width="350px"}  
+![image](/assets/images/mobile/8533/runproductdelete.png){:width="350px"}  
 In landscape view.
-![image](/assets/images/frontend/2333/runlandscape.png){:width="700px"}  
+![image](/assets/images/mobile/8533/runlandscape.png){:width="700px"}  
 
 ## 5. Source Files
 * [Source files of Game Store(Xamarin) on Github](https://github.com/jojozhuang/game-store-xamarin)

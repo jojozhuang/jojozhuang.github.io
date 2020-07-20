@@ -32,7 +32,7 @@ Google File System is a scalable distributed file system for large distributed &
 ### 2.2 Interface
 Usual operations: create, delete, open, close, read, and write files.
 ### 2.3 Architecture
-![image](/assets/images/devops/3221/gfs-architecture.png)
+![image](/assets/images/architecture/3021/gfs-architecture.png)
 * A GFS cluster consists of a single `master` and multiple `chunkservers` and is accessed by multiple clients.
 * The master maintains all file system metadata.
 * The master periodically communicates with each chunkserver in `HeartBeat` messages to give it instructions and collect its state.
@@ -59,7 +59,7 @@ The first two types (namespaces and file-to-chunk mapping) are also kept persist
 ## 3. System Interactions
 ### 3.1 Leases and Mutation Order
 Each mutation is performed at all the chunk’s replicas. We use `leases` to maintain a consistent mutation order across replicas. The master grants a chunk lease to one of the replicas, which we call the `primary`. The primary picks a serial order for all mutations to the chunk.
-![image](/assets/images/devops/3221/gfs-control-flow.png){:width="600px"}
+![image](/assets/images/architecture/3021/gfs-control-flow.png){:width="600px"}
 1. The client asks the master which chunkserver holds the current lease for the chunkand the locations of the other replicas. If no one has a lease, the master grants one to a replica it chooses.
 2. The master replies with the identity of the primary and the locations of the other (secondary) replicas. The client caches this data for future mutations. It needs to contact the master again only when the primary becomes unreachable or replies that it no longer holds a lease.
 3. The client pushes the data to all the replicas. A client can do so in any order. Each chunkserver will store the data in an internal `LRU buffer` cache until the data is used or aged out. By decoupling the data flow from the control flow, we can improve performance by scheduling the expensive data flow based on the network topology regardless of which chunkserver is the primary.

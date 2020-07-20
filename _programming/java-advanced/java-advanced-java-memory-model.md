@@ -19,7 +19,7 @@ The original Java memory model was insufficient, so the Java memory model was re
 
 ## 2. The Internal Java Memory Model
 The Java memory model used internally in the JVM divides memory between `thread stacks` and the `heap`. This diagram illustrates the Java memory model from a logic perspective:
-![image](/assets/images/java/1474/java-memory-model.png){:width="350px"}
+![image](/assets/images/programming/2454/java-memory-model.png){:width="350px"}
 ### 2.1 Thread Stack
 Each thread running in the Java virtual machine has its own thread stack. The thread stack contains information about what methods the thread has called to reach the current point of execution. I will refer to this as the "call stack". As the thread executes its code, the call stack changes.
 
@@ -30,7 +30,7 @@ All local variables of primitive types ( boolean, byte, short, char, int, long, 
 The heap contains all objects created in your Java application, regardless of what thread created the object. This includes the object versions of the primitive types (e.g. Byte, Integer, Long etc.). It does not matter if an object was created and assigned to a local variable, or created as a member variable of another object, the object is still stored on the heap.
 
 Here is a diagram illustrating the call stack and local variables stored on the thread stacks, and objects stored on the heap:
-![image](/assets/images/java/1474/thread-stack.png){:width="500px"}
+![image](/assets/images/programming/2454/thread-stack.png){:width="500px"}
 
 ### 2.3 Where is the storage?
 * A local variable may be of a `primitive type`, in which case it is totally kept on the `thread stack`.
@@ -43,7 +43,7 @@ Objects on the heap can be accessed by all threads that have a reference to the 
 
 ### 2.4 Example
 Here is a diagram illustrating the points above:
-![image](/assets/images/java/1474/variables-in-memory.png){:width="500px"}
+![image](/assets/images/programming/2454/variables-in-memory.png){:width="500px"}
 
 Two threads have a set of local variables. One of the local variables (Local Variable 2) point to a shared object on the heap (Object 3). The two threads each have a different reference to the same object. Their references are local variables and are thus stored in each thread's thread stack (on each). The two different references point to the same object on the heap, though.
 
@@ -115,7 +115,7 @@ Notice also the two member variables in the class MySharedObject of type long wh
 Modern hardware memory architecture is somewhat different from the internal Java memory model. It is important to understand the hardware memory architecture too, to understand how the Java memory model works with it. This section describes the common hardware memory architecture, and a later section will describe how the Java memory model works with it.
 
 Here is a simplified diagram of modern computer hardware architecture:
-![image](/assets/images/java/1474/hardware-memory.png){:width="500px"}
+![image](/assets/images/programming/2454/hardware-memory.png){:width="500px"}
 
 Modern hardware memory architecture.
 A modern computer often has 2 or more CPUs in it. Some of these CPUs may have multiple cores too. The point is, that on a modern computer with 2 or more CPUs it is possible to have more than one thread running simultaneously. Each CPU is capable of running one thread at any given time. That means that if your Java application is multithreaded, one thread per CPU may be running simultaneously (concurrently) inside your Java application.
@@ -132,7 +132,7 @@ The values stored in the cache memory is typically flushed back to main memory w
 
 ## 4. Bridging The Gap Between The Java Memory Model And The Hardware Memory Architecture
 As already mentioned, the Java memory model and the hardware memory architecture are different. The hardware memory architecture does not distinguish between thread stacks and heap. On the hardware, both the thread stack and the heap are located in main memory. Parts of the thread stacks and heap may sometimes be present in CPU caches and in internal CPU registers. This is illustrated in this diagram:
-![image](/assets/images/java/1474/java-with-hardware.png){:width="800px"}
+![image](/assets/images/programming/2454/java-with-hardware.png){:width="800px"}
 The division of thread stack and heap among CPU internal registers, CPU cache and main memory.
 When objects and variables can be stored in various different memory areas in the computer, certain problems may occur. The two main problems are:
 * Visibility of thread updates (writes) to shared variables.
@@ -146,7 +146,7 @@ If two or more threads are sharing an object, without the proper use of either v
 Imagine that the shared object is initially stored in main memory. A thread running on CPU one then reads the shared object into its CPU cache. There it makes a change to the shared object. As long as the CPU cache has not been flushed back to main memory, the changed version of the shared object is not visible to threads running on other CPUs. This way each thread may end up with its own copy of the shared object, each copy sitting in a different CPU cache.
 
 The following diagram illustrates the sketched situation. One thread running on the left CPU copies the shared object into its CPU cache, and changes its count variable to 2. This change is not visible to other threads running on the right CPU, because the update to count has not been flushed back to main memory yet.
-![image](/assets/images/java/1474/memory-visibility.png){:width="500px"}
+![image](/assets/images/programming/2454/memory-visibility.png){:width="500px"}
 To solve this problem you can use Java's `volatile` keyword. The volatile keyword can make sure that a given variable is read directly from main memory, and always written back to main memory when updated.
 
 ## 4.2 Race Conditions
@@ -160,7 +160,7 @@ However, the two increments have been carried out concurrently without proper sy
 
 This diagram illustrates an occurrence of the problem with race conditions as described above:
 
-![image](/assets/images/java/1474/race-condition.png){:width="500px"}
+![image](/assets/images/programming/2454/race-condition.png){:width="500px"}
 
 To solve this problem you can use a Java `synchronized block`. A synchronized block guarantees that only one thread can enter a given critical section of the code at any given time. Synchronized blocks also guarantee that all variables accessed inside the synchronized block will be read in from main memory, and when the thread exits the synchronized block, all updated variables will be flushed back to main memory again, regardless of whether the variable is declared volatile or not.
 

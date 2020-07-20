@@ -53,7 +53,7 @@ greeter.greet() // print "Hello, world"
 ```
 ### 1.3 Play Ground
 You can go to http://www.typescriptlang.org/play/index.html to try it. Input TypeScript at the left side and you will see the equivalent javascript code at the right side.
-![image](/assets/images/frontend/2702/playground.png)
+![image](/assets/images/frontend/8302/playground.png)
 ### 1.4 Local Environment Setup
 Type the following command in terminal to install TypeScript.
 ```raw

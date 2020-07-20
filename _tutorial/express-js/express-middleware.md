@@ -14,7 +14,7 @@ tags: [Express, Middleware]
 [Express](https://expressjs.com/) is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
 
 `Middleware` are functions that have access to the request object (`req`), the response object (`res`), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named `next`.
-![image](/assets/images/frontend/2552/middleware.png){:width="800px"}  
+![image](/assets/images/backend/8752/middleware.png){:width="800px"}  
 
 ## 2. Capabilities
 Middleware functions can perform the following tasks:
@@ -54,7 +54,7 @@ app.listen(3000, function() {
 });
 ```
 After starting the express server, we can access http://localhost:3000/ in browser. In the console, we see the log for accessing the homepage.
-![image](/assets/images/frontend/2552/logging.png){:width="600px"}  
+![image](/assets/images/backend/8752/logging.png){:width="600px"}  
 
 2) Authorization  
 We add a check to the request url. It must start with '/hello', otherwise, 403 error will be returned.
@@ -92,9 +92,9 @@ app.listen(3000, function() {
 });
 ```
 Start the server and access http://localhost:3000/ in browser. You won't see the 'Hello World!'. Instead, you will get 'Not authorized' error.
-![image](/assets/images/frontend/2552/authenticationfail.png){:width="600px"}
+![image](/assets/images/backend/8752/authenticationfail.png){:width="600px"}
 Now, let's try to access http://localhost:3000/hello/johnny. You passed the authentication check this time.
-![image](/assets/images/frontend/2552/authenticationpass.png){:width="600px"}  
+![image](/assets/images/backend/8752/authenticationpass.png){:width="600px"}  
 
 ### 3.3 Router-Level Middleware
 Use different routing URLs.
@@ -154,7 +154,7 @@ app.listen(3000, function() {
 });
 ```
 Start the server and access http://localhost:3000/ in browser. You will see the error instead of the image.
-![image](/assets/images/frontend/2552/internalerror.png){:width="600px"}
+![image](/assets/images/backend/8752/internalerror.png){:width="600px"}
 In the console, we see the error log.
 ```raw
 $ node error.js
@@ -204,9 +204,9 @@ app.listen(3000, function() {
 });
 ```
 Start the server and access http://localhost:3000/ in browser. You will see the 'file not found' error.
-![image](/assets/images/frontend/2552/filenotfound.png){:width="600px"}
+![image](/assets/images/backend/8752/filenotfound.png){:width="600px"}
 But if you try access http://localhost:3000/index.html, you will get the page properly.
-![image](/assets/images/frontend/2552/statichtml.png){:width="600px"}  
+![image](/assets/images/backend/8752/statichtml.png){:width="600px"}  
 
 2) Use `express.static` to serve static files. It is much simpler than the previous approach.
 ```javascript
@@ -262,7 +262,7 @@ Start the server and access the following URL in browser. Notice, the first and 
 * http://localhost:3000/johnny
 
 Let's check the logs in console.
-![image](/assets/images/frontend/2552/morgan.png){:width="600px"}  
+![image](/assets/images/backend/8752/morgan.png){:width="600px"}  
 
 ## 4. More Middlewares
 * `express-rate-limit`: Use to limit repeated requests to public APIs and/or endpoints such as password reset.

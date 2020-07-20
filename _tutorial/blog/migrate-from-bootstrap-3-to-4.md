@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Migrate from Bootstrap 3 to 4 - Draft"
-index: 8027
+index: 9127
 subcategory: special-blog
 date: 2019-05-11
 tags: [Bootstrap]

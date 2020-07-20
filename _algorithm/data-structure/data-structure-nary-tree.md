@@ -19,7 +19,7 @@ Binary Search Tree(BST) is a node-based binary tree data structure which has the
 * The left and right subtree each must also be a binary search tree.
 * There must be no duplicate nodes.
 
-![image](/assets/images/dsa/1122/bst.png){:width="450px"}  
+![image](/assets/images/algorithm/1122/bst.png){:width="450px"}  
 
 ### 1.2 Common Operations on BST
 * Search - $O(\log{}n)$
@@ -28,7 +28,7 @@ Binary Search Tree(BST) is a node-based binary tree data structure which has the
 
 ## 2. Search
 Given a binary search tree as follows, search node with value 7.
-![image](/assets/images/dsa/1122/search7.png){:width="450px"}
+![image](/assets/images/algorithm/1122/search7.png){:width="450px"}
 Binary Search Tree is constructed with nodes recursively. The following example shows how the node is defined.
 ```java
 public class BSTNode {
@@ -59,7 +59,7 @@ public boolean search(int val) {
 
 ## 3. Insertion
 Given a binary search tree as follows, insert new value 5 into this tree.
-![image](/assets/images/dsa/1122/insert5.png)
+![image](/assets/images/algorithm/1122/insert5.png)
 A new value is always inserted at leaf. Similar with the search operation, we start searching the given value from root till we hit a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node. At each step, we compare the given value with the node value to determine whether to go left or right.
 ```java
 public void insert(int val) {
@@ -94,18 +94,18 @@ There are three cases when deleting a node from Binary Search Tree.
 * Node has two children.
 
 ### 4.1 Node Has No Children
-![image](/assets/images/dsa/1122/delete4.png)
+![image](/assets/images/algorithm/1122/delete4.png)
 The solution is easy, simply remove the node from the tree.
 ### 4.2 Node Has One Child
-![image](/assets/images/dsa/1122/delete9.png)
+![image](/assets/images/algorithm/1122/delete9.png)
 If node has only one child, then replace this node with its child.
 ### 4.3 Node Has Two Children
 This case is more complex, and we have two options.  
 1) Populate successor
-![image](/assets/images/dsa/1122/delete3successor.png)
+![image](/assets/images/algorithm/1122/delete3successor.png)
 Find inorder successor of the node. Replace the node with its successor and delete the successor from its original parent.  
 2) Populate predecessor  
-![image](/assets/images/dsa/1122/delete3predecessor.png)
+![image](/assets/images/algorithm/1122/delete3predecessor.png)
 Find inorder predecessor of the node. Replace the node with its predecessor and delete the predecessor from its original parent.  
 
 The following implementation populates the successor of the deleted node.
@@ -198,7 +198,7 @@ private BSTNode getSuccessor(BSTNode deleleNode) {
 
 ## 5. Balanced Binary Search Tree
 In some cases, we need to convert a normal BST tree to a balanced BST.
-![image](/assets/images/dsa/1122/balanced_bst.png){:width="800px"}
+![image](/assets/images/algorithm/1122/balanced_bst.png){:width="800px"}
 We can convert it with the following two steps.
 * Get the sorted node list from existing bst tree by traversing it inorder.
 * Binary construct the balanced BST with the sorted node list.

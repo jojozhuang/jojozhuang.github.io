@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Hashing Passwords with Bcrypt"
-index: 8014
+index: 9114
 subcategory: special-blog
 date: 2018-04-07
 tags: [Bcrypt]

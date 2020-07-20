@@ -35,7 +35,7 @@ How Does Nginx Work? Nginx uses a predictable process model that is tuned to the
 * The `cache manager process` runs periodically and prunes entries from the disk caches to keep them within the configured sizes.
 * The `worker processes` do all of the work! They handle network connections, read and write content to disk, and communicate with upstream servers.
 
-![image](/assets/images/devops/3726/nginx-process-model.png){:width="650px"}
+![image](/assets/images/architecture/3226/nginx-process-model.png){:width="650px"}
 
 To better understand this design, you need to understand how Nginx runs. Nginx has a master process (which performs the privileged operations such as reading configuration and binding to ports) and a number of worker and helper processes.
 
@@ -77,9 +77,9 @@ Each worker process is **single‑threaded** and runs independently, grabbing ne
 
 ### 2.3 Nginx Worker Process
 Each Nginx worker process is initialized with the Nginx configuration and is provided with a set of listen sockets by the master process.
-![image](/assets/images/devops/3726/nginx-worker-process.png){:width="700px"}
+![image](/assets/images/architecture/3226/nginx-worker-process.png){:width="700px"}
 The Nginx worker processes begin by waiting for events on the listen sockets (`accept_mutex` and `kernel socket sharding`). Events are initiated by new incoming connections. These connections are assigned to a `state machine` – the HTTP state machine is the most commonly used, but Nginx also implements state machines for stream (raw TCP) traffic and for a number of mail protocols (SMTP, IMAP, and POP3).
-![image](/assets/images/devops/3726/nginx-request-flow.png){:width="700px"}
+![image](/assets/images/architecture/3226/nginx-request-flow.png){:width="700px"}
 The state machine is essentially the set of instructions that tell Nginx how to process a request. Most web servers that perform the same functions as Nginx use a similar state machine – the difference lies in the implementation.
 ### 2.4 Scheduling the State Machine
 Think of the state machine like the rules for chess. Each HTTP transaction is a `chess game`. On one side of the chessboard is the web server – a grandmaster who can make decisions very quickly. On the other side is the remote client – the web browser that is accessing the site or application over a relatively slow network.
@@ -88,7 +88,7 @@ However, the rules of the game can be very complicated. For example, the web ser
 
 **1) A Blocking State Machine**  
 Recall our description of a process or thread as a self‑contained set of instructions that the operating system can schedule to run on a CPU core. Most web servers and web applications use a `process‑per‑connection` or `thread‑per‑connection` model to play the chess game. Each process or thread contains the instructions to play one game through to the end. During the time the process is run by the server, it spends most of its time ‘blocked’ – waiting for the client to complete its next move.
-![image](/assets/images/devops/3726/blocking-io.png){:width="450px"}
+![image](/assets/images/architecture/3226/blocking-io.png){:width="450px"}
 * The web server process listens for new connections (new games initiated by clients) on the listen sockets.
 * When it gets a new game, it plays that game, blocking after each move to wait for the client’s response.
 * Once the game completes, the web server process might wait to see if the client wants to start a new game (this corresponds to a keepalive connection). If the connection is closed (the client goes away or a timeout occurs), the web server process returns to listening for new games.
@@ -97,7 +97,7 @@ The important point to remember is that **every active HTTP connection (every ch
 
 **2) Nginx is a True Grandmaster**  
 Each worker (remember – there’s usually one worker for each CPU core) is a grandmaster that can play hundreds (in fact, hundreds of thousands) of games simultaneously.
-![image](/assets/images/devops/3726/nonblocking-io.png){:width="450px"}
+![image](/assets/images/architecture/3226/nonblocking-io.png){:width="450px"}
 * The worker waits for events on the listen and connection sockets.
 * Events occur on the sockets and the worker handles them:
   - An event on the listen socket means that a client has started a new chess game. The worker creates a new connection socket.
@@ -117,7 +117,7 @@ With appropriate system tuning, Nginx can scale to handle hundreds of thousands 
 ## 3. Updating and Upgrading
 ### 3.1 Updating Configuration
 Nginx’s process architecture, with a small number of worker processes, makes for very efficient updating of the configuration and even the Nginx binary itself.
-![image](/assets/images/devops/3726/nginx-load-config.png){:width="700px"}
+![image](/assets/images/architecture/3226/nginx-load-config.png){:width="700px"}
 Updating Nginx configuration is a very simple, lightweight, and reliable operation. It typically just means running the `nginx -s reload` command, which checks the configuration on disk and sends the master process a SIGHUP signal.
 
 When the master process receives a SIGHUP, it does two things:
@@ -128,7 +128,7 @@ This reload process can cause a small spike in CPU and memory usage, but it’s 
 
 ### 3.2 Upgrading Binary
 Nginx’s binary upgrade process achieves the Holy Grail of high availability – you can upgrade the software on the fly, without any dropped connections, downtime, or interruption in service.
-![image](/assets/images/devops/3726/nginx-load-binary.png){:width="700px"}
+![image](/assets/images/architecture/3226/nginx-load-binary.png){:width="700px"}
 
 The binary upgrade process is similar in approach to the graceful reload of configuration. A new Nginx master process runs in parallel with the original master process, and they share the listening sockets. Both processes are active, and their respective worker processes handle traffic. You can then signal the old master and its workers to gracefully exit.
 

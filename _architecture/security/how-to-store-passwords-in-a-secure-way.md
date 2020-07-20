@@ -30,17 +30,17 @@ The problem here is, if an attacker was to break into the database and steal the
 ## 3. Encryption
 ### 3.1 Encryption & Decryption
 A better approach is to encrypt the password before storing it to database. In cryptography, `encryption` is the process of transforming information (referred to as plaintext) using an algorithm (called `cipher`) to make it unreadable to anyone except those possessing special knowledge, usually referred to as a key. The result of the process is encrypted information (in cryptography, referred to as `ciphertext`). In many contexts, the word encryption also implicitly refers to the reverse process, `decryption`, to make the encrypted information readable again (i.e. to make it unencrypted).
-![image](/assets/images/devops/3611/encryption-process.png){:width="700px"}
+![image](/assets/images/architecture/3811/encryption-process.png){:width="700px"}
 
 ### 3.2 Symmetric Encryption
 `Symmetric encryption` uses only one secret key to cipher and decipher information. The sender and the recipient should know the secret key that is used to encrypt and decrypt all the messages. Blowfish, AES, RC4, DES, RC5, and RC6 are examples of symmetric encryption. The most widely used symmetric algorithm is AES-128, AES-192, and AES-256.
-![image](/assets/images/devops/3611/symmetric-encryption.png){:width="600px"}
+![image](/assets/images/architecture/3811/symmetric-encryption.png){:width="600px"}
 
 The main disadvantage of the symmetric key encryption is that all parties involved have to exchange the key used to encrypt the data before they can decrypt it.
 
 ### 3.3 Asymmetric Encryption
 `Asymmetrical encryption` is also known as public key cryptography. It uses two keys to encrypt a plain text. A `public key` is made freely available to anyone who might want to encrypt the message. The second `private key` is kept a secret so that the original user can only know. A message that is encrypted using a public key can only be decrypted using a private key, while also, a message encrypted using a private key can be decrypted using a public key.
-![image](/assets/images/devops/3611/asymmetric-encryption.png){:width="600px"}
+![image](/assets/images/architecture/3811/asymmetric-encryption.png){:width="600px"}
 
 Asymmetric encryption is mostly used in day-to-day communication channels, especially over the Internet. Popular asymmetric key encryption algorithm includes EIGamal, RSA, DSA, Elliptic curve techniques, PKCS.
 
@@ -86,7 +86,7 @@ Is hashing enough? Not really. Though hashing is unidirectional and the hashed t
 Some websites provide the hash lookup service, which allows you to input a hash and search for its corresponding plaintext in its database of already-cracked hashes.
 
 Go to https://hashkiller.co.uk/Cracker, input MD5 hash **e99a18c428cb38d5f260853678922e03**, the original plain text **abc123** is returned.
-![image](/assets/images/devops/3611/hash-cracker.png)
+![image](/assets/images/architecture/3811/hash-cracker.png)
 
 ## 5. Hashing with Salt
 ### 5.1 Rainbow Table
@@ -105,7 +105,7 @@ Hash(SHA3-256): 35fdfd6564fe248c8412b71f6a331c593665b12646d28e54cb8270d579ece966
 **Best Practice**  
 * Salt should be stored separately, can't be stored along with password.
 * Each user should have a unique salt, so that the generated hashes are totally different for the same password from different users.
-![image](/assets/images/devops/3611/password-salt.png)
+![image](/assets/images/architecture/3811/password-salt.png)
 
 ## 6. Bcrypt
 From above, we learned that a better way to store passwords is to add a salt to the hashing process: adding additional random data to the input of a hashing function that makes each password hash unique.
@@ -123,7 +123,7 @@ Bcrypt uses the expensive key setup phase of the Blowfish cipher to develop a ne
 bcrypt runs in two phases:
 * Phase 1: A function called `EksBlowfishSetup` is setup using the desired cost, the salt, and the password to initialize the state of eksblowfish. Then, bcrypt spends a lot of time running an expensive key schedule which consists of performing a `key derivation` where we derive a set of subkeys from a primary key. Here, the password is used as the primary key.
 * Phase 2: The magic value is the 192-bit value `OrpheanBeholderScryDoubt`. This value is encrypted 64 times using eksblowfish in ECB mode with the state from the previous phase. The output of this phase is the cost and the 128-bit salt value concatenated with the result of the encryption loop.
-![image](/assets/images/devops/3611/bcrypt.png){:width="600px"}
+![image](/assets/images/architecture/3811/bcrypt.png){:width="600px"}
 
 ### 6.3 Implementing bcrypt
 **Generate hash for password**

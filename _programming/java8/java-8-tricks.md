@@ -32,9 +32,7 @@ inventory.sort(comparing(Apple::getWeight));
 * anonymous functions, lambda expression
 * functional interface: an interface that specifies exactly one abstract method.
 
-
-
-![image](/assets/images/java/1451/lambda-expression.png){:width="700px"}
+![image](/assets/images/programming/2351/lambda-expression.png){:width="700px"}
 
 A lambda expression is composed of parameters, an arrow, and a body.
 

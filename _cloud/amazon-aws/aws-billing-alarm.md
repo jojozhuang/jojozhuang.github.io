@@ -24,29 +24,29 @@ Choose Receive Billing Alerts, and Save preferences.
 
 ## 3. Creating a Billing Alarm
 Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/. If necessary, change the Region to US East (N. Virginia). Billing metric data is stored in this Region and represents worldwide charges.
-![image](/assets/images/cloud/3802/cloudwatch.png)
+![image](/assets/images/cloud/4102/cloudwatch.png)
 In the navigation pane, choose Alarms, Create Alarm.
-![image](/assets/images/cloud/3802/alarms.png)
+![image](/assets/images/cloud/4102/alarms.png)
 Choose Select metric.
-![image](/assets/images/cloud/3802/select-metric.png)
+![image](/assets/images/cloud/4102/select-metric.png)
 In the All metrics tab, choose Billing, then Total Estimated Charge.
-![image](/assets/images/cloud/3802/total-estimated-charge.png)
+![image](/assets/images/cloud/4102/total-estimated-charge.png)
 Select the check box next to EstimatedCharges, and choose Select metric.
-![image](/assets/images/cloud/3802/estimated-charges.png)
+![image](/assets/images/cloud/4102/estimated-charges.png)
 Under Conditions, choose Static, set threshold.
-![image](/assets/images/cloud/3802/threshold.png)
+![image](/assets/images/cloud/4102/threshold.png)
 Create new topic, set email to receive alarm.
-![image](/assets/images/cloud/3802/create-topic.png)
+![image](/assets/images/cloud/4102/create-topic.png)
 Topic is created, next.
-![image](/assets/images/cloud/3802/create-topic-2.png)
+![image](/assets/images/cloud/4102/create-topic-2.png)
 Set description.
-![image](/assets/images/cloud/3802/alarm-description.png)
+![image](/assets/images/cloud/4102/alarm-description.png)
 Preview, scroll to bottom, Create Alarm.
-![image](/assets/images/cloud/3802/preview.png)
+![image](/assets/images/cloud/4102/preview.png)
 Alarm is created and in pending status.
-![image](/assets/images/cloud/3802/alarm-pending.png)
+![image](/assets/images/cloud/4102/alarm-pending.png)
 It will take few minutes to setup the alarm. Refresh the page, it will be done finally.
-![image](/assets/images/cloud/3802/alarm-done.png)
+![image](/assets/images/cloud/4102/alarm-done.png)
 
 ## 4. References
 * [Creating a Billing Alarm to Monitor Your Estimated AWS Charges](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)

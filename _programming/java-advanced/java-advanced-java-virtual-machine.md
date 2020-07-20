@@ -16,7 +16,7 @@ A Virtual Machine is a Software implementation of a Physical Machine, Java was d
 ### 1.2 JVM Specification and Implementation
 JVM can have different implementations, as long as they adhere to the specs. The JVM specs(Java 7) can be found at https://docs.oracle.com/javase/specs/jvms/se7/html/. Oracle has its own JVM implementation (called `HotSpot JVM`), whereas IBM has its own (called `J9 JVM`).
 ### 1.3 Architecture of JVM
-![image](/assets/images/java/1471/jvm-architecture.png){:width="800px"}
+![image](/assets/images/programming/2451/jvm-architecture.png){:width="800px"}
 As shown in the above architecture diagram JVM is divided into three main subsystems:
 * Class Loader Subsystem
 * Runtime Data Area
@@ -26,7 +26,7 @@ As shown in the above architecture diagram JVM is divided into three main subsys
 Java’s dynamic class loading functionality is handled by the class loader subsystem. It **loads, links and initializes** the class when it refers to a class for the first time at runtime, not at compile-time. It performs three major functionality such as Loading, Linking, and Initialization.
 ### 2.1 Loading
 Classes will be loaded by this component. BootStrap Class Loader, Extension Class Loader, Application Class Loader are the three class loaders which will help in achieving it. The Class Loaders follow `Delegation Hierarchy Algorithm` while loading the class files.
-![image](/assets/images/java/1471/class-loader.png){:width="700px"}
+![image](/assets/images/programming/2451/class-loader.png){:width="700px"}
 * `BootStrap Class Loader` – Responsible for loading classes from the bootstrap class path at `jre/lib/rt.jar` of the root directory of JDK.
 * `Extension Class Loader` – It is the child class of Bootstrap Class Loader. Responsible for loading classes which are inside `jre/lib/ext` folder.
 * `Application Class Loader` – It is the child class of Extension Class Loader. Responsible for loading Application Level Classes. The path of these classes is defined by `CLASSPATH` environment variable.

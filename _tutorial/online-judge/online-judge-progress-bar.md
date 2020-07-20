@@ -82,7 +82,7 @@ const app = {
 };
 ```
 Start the app, eg. 'npm run local'. Click on the top 'Questions' menu, a http request is sent to server. Now we see the progress bar is moving, meanwhile there is a spin at the top of the right side.
-![image](/assets/images/frontend/2823/loading_top.png)
+![image](/assets/images/online-judge/9023/loading_top.png)
 
 
 ### 3.2 Changing Style
@@ -103,7 +103,7 @@ div .bar-shadow[_ngcontent-c1] {
 ```
 
 Start the app and click 'Questions' menu again. This time, both the progress bar and the spin are under the menu bar.
-![image](/assets/images/frontend/2823/loading_menubar.png)
+![image](/assets/images/online-judge/9023/loading_menubar.png)
 
 ## 4. Reference
 * [ngx-progressbar](https://www.npmjs.com/package/ngx-progressbar)

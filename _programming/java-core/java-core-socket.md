@@ -124,7 +124,7 @@ Enter any string now, (quit) to end:
 ```
 
 In the terminal for TCP Client(Right one of the following screenshot), input any string and Enter. You will see the response from TCP Server.
-![image](/assets/images/java/1423/tcpserver.png)  
+![image](/assets/images/programming/2323/tcpserver.png)  
 
 ## 3. UDP Example
 Create UDP Server and UDP Client with same function as TCP Server and TCP Client.
@@ -232,7 +232,7 @@ Enter any string now, (quit) to end:
 ```
 
 In the terminal for UDP Client(Right one of the following screenshot), input any string and Enter. You will see the response from UDP Server.
-![image](/assets/images/java/1423/udpserver.png)  
+![image](/assets/images/programming/2323/udpserver.png)  
 
 ## 4. Source Files
 * [Source files of Java Socket on Github](https://github.com/jojozhuang/java-programming/tree/master/java-core-socket)

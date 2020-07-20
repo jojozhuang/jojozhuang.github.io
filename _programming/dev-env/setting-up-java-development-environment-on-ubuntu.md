@@ -105,7 +105,7 @@ Add role and admin user to this file.
 $ $CATALINA_HOME/bin/startup.sh
 ```
 Verify that Tomcat is working by visiting http://localhost:8080.
-![tomcat](/assets/images/devops/2121/tomcat.png)  
+![tomcat](/assets/images/programming/2021/tomcat.png)  
 Tomcat can be stopped by executing the following command:
 ```raw
 $ $CATALINA_HOME/bin/shutdown.sh
@@ -119,11 +119,11 @@ $ tar xvzf eclipse-inst-linux64.tar.gz
 ```
 ### 3.2 Installing Eclipse
 Go to the uncompressed folder 'eclipse-installer', double click the installation file 'eclipse-inst'.
-![installeclipse](/assets/images/devops/2121/installeclipse.png)  
+![installeclipse](/assets/images/programming/2021/installeclipse.png)  
 In the wizard, select 'Eclipse IDE for Java EE Developers'.
-![jee](/assets/images/devops/2121/jee.png)  
+![jee](/assets/images/programming/2021/jee.png)  
 Leave the installation folder unchanged, click 'INSTALL' button.
-![location](/assets/images/devops/2121/location.png)  
+![location](/assets/images/programming/2021/location.png)  
 Installation should start and wait until it is finished. If you see 'read-only' error, run the following command, and try to install again.
 ```raw
 $ sudo chown -R $USER /opt/  // grant all access of rights for folder /opt/ to current user.
@@ -135,9 +135,9 @@ $ cd /home/johnny/eclipse/jee-oxygen/eclipse/
 $ ./eclipse
 ```
 Set workspace.
-![eclipse_workspace](/assets/images/devops/2121/eclipse_workspace.png)  
+![eclipse_workspace](/assets/images/programming/2021/eclipse_workspace.png)  
 Close the welcome page, you will get Eclipse ready for use.
-![eclipse_launched](/assets/images/devops/2121/eclipse_launched.png)  
+![eclipse_launched](/assets/images/programming/2021/eclipse_launched.png)  
 
 In addition, if your eclipse icon is missing after you launch it, copy `icon.xpm` to `/usr/share/pixmaps/`, and rename it to `eclipse.xpm`.
 ```raw

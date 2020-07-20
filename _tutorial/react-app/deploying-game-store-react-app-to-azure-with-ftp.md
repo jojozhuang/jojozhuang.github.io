@@ -22,23 +22,23 @@ Compile the app.
 $ npm run build
 ```
 The compiled files are put into 'dist' folder. Please ignore file '\_redirects', it's used to solve the client routing issue when deploying this app to Netlify. We will encounter the similar issue on Azure, see below.
-![image](/assets/images/frontend/2615/dist.png){:width="350px"}
+![image](/assets/images/frontend/8455/dist.png){:width="350px"}
 
 ## 2. Web App on Azure
 ### 2.1 Creating New App
 Login Azure Portal: https://portal.azure.com/. Go to 'App Services', create a new app. Input 'web app' in the search box, and select 'Web App', Create.
-![image](/assets/images/frontend/2615/webapp.png)
+![image](/assets/images/frontend/8455/webapp.png)
 Set app name, subscription and resource group, click 'Create' button.
-![image](/assets/images/frontend/2615/create.png)
+![image](/assets/images/frontend/8455/create.png)
 The web app will be deployed in few minutes. Find the new app in 'App Services', go to 'Overview'. Click on the URL for this app.
-![image](/assets/images/frontend/2615/url.png)
+![image](/assets/images/frontend/8455/url.png)
 We see the sample app in browser, it's alive on Azure.
-![image](/assets/images/frontend/2615/sampleapp.png)
+![image](/assets/images/frontend/8455/sampleapp.png)
 ### 2.2 FTP Connection Profile
 Go to 'Deployment Center(Preview)', scroll down the page and select 'FTP', click 'Dashboard' button.
-![image](/assets/images/frontend/2615/ftp_profile.png)
+![image](/assets/images/frontend/8455/ftp_profile.png)
 In the FTP dashboard, click Copy to copy the FTPS endpoint and app credentials. We will use them later.
-![image](/assets/images/frontend/2615/ftp_credential.png)
+![image](/assets/images/frontend/8455/ftp_credential.png)
 
 ## 3. Deployment
 We need a FTP client tool to upload the app files from local machine to Azure. For this tutorial, I'm using FileZilla.
@@ -46,20 +46,20 @@ We need a FTP client tool to upload the app files from local machine to Azure. F
 If you haven't installed it yet, go to https://filezilla-project.org/download.php?type=client, download the free version of FileZilla and install it.
 ### 3.2 Connection Setup
 Open FileZilla, File->Site Manager, create a new connection. Use the FTPS endpoint and app credentials from Azure app to set Host, User and Password here, click 'Connect'.
-![image](/assets/images/frontend/2615/ftp_connect.png){:width="650px"}
+![image](/assets/images/frontend/8455/ftp_connect.png){:width="650px"}
 * Notice, prefix 'ftps://' is not required for Host in FileZilla.
 
 ### 3.3 Uploading Local Files to Azure
 Now, FileZilla should be connected to Azure, see the screen below. The remote site at the right size is from Azure. Navigate the folder to '/site/wwwroot/'. It's the root folder of the app on Azure. Currently, there is only one file, which we saw in the web browser. The local site at the left side is from our local machine. Navigate to the 'dist' folder of the React app.
-![image](/assets/images/frontend/2615/file_sync.png)
+![image](/assets/images/frontend/8455/file_sync.png)
 Delete all files in remote '/site/wwwroot' and upload all the files in 'dist' to remote '/site/wwwroot'.
-![image](/assets/images/frontend/2615/upload.png)
+![image](/assets/images/frontend/8455/upload.png)
 
 ## 4. Testing
 Refresh the browser, the React app should show up.
-![image](/assets/images/frontend/2615/deployed.png)
+![image](/assets/images/frontend/8455/deployed.png)
 However, when click on 'List' or 'Add' button, we get the following error. This is because client side routing is used in React.
-![image](/assets/images/frontend/2615/pagenotfound.png){:width="800px"}
+![image](/assets/images/frontend/8455/pagenotfound.png){:width="800px"}
 
 ## 5. Fixing the Issue
 In the React project, create a file named 'web.config' in 'public' folder with the following content.
@@ -103,13 +103,13 @@ exports.loadStatic = () => ({
 });
 ```
 Run 'npm run build' again. In the dist, we have file 'web.config'.
-![image](/assets/images/frontend/2615/webconfig.png){:width="350px"}
+![image](/assets/images/frontend/8455/webconfig.png){:width="350px"}
 Upload this file to remote '/site/wwwroot'.
-![image](/assets/images/frontend/2615/upload2.png)
+![image](/assets/images/frontend/8455/upload2.png)
 Refresh the browser, both 'products' and 'productpage' pages should work.
-![image](/assets/images/frontend/2615/products.png)
+![image](/assets/images/frontend/8455/products.png)
 The 'productpage' page is also visible.
-![image](/assets/images/frontend/2615/productpage.png)
+![image](/assets/images/frontend/8455/productpage.png)
 
 ## 5. Reference
 * [Deploying a React App As a Static Site On Azure](https://burkeknowswords.com/deploying-create-react-app-as-a-static-site-on-azure-dd1330b215a5)

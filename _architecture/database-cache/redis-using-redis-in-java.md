@@ -15,9 +15,9 @@ There are many redis clients. We will use Jedis.jar which is for java. Download 
 
 ## 2. Redis Connection
 If redis is installed in Ubuntu Virtual Machine, we need to find the ip address of Ubuntu. Settings->Network, click the setting icon.
-![image](/assets/images/devops/3523/network.png){:width="800px"}
+![image](/assets/images/architecture/3303/network.png){:width="800px"}
 See the ip address, eg. '192.168.182.130'.
-![image](/assets/images/devops/3523/ipaddress.png){:width="500px"}
+![image](/assets/images/architecture/3303/ipaddress.png){:width="500px"}
 
 Edit file `/etc/redis/redis.conf` in Ubuntu. Change bind from '127.0.0.1 ::1' to '0.0.0.0 ::1'. Or directly comment out.
 ```raw

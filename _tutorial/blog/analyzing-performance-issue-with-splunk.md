@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Analyzing Performance Issue with Splunk"
-index: 8008
+index: 9108
 subcategory: special-blog
 date: 2017-02-17
 tags: [Splunk, Log Analysis]

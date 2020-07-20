@@ -24,7 +24,7 @@ A B tree of order m contains all the properties of an M way tree. In addition, i
 
 It is not necessary that, all the nodes contain the same number of children but, each node must have m/2 number of nodes.
 
-![image](/assets/images/dsa/1124/b-tree.png)
+![image](/assets/images/algorithm/1124/b-tree.png)
 While performing some operations on B Tree, any property of B Tree may violate such as number of minimum children a node can have. To maintain the properties of B Tree, the tree may split or join.
 
 ### 1.2 Application of B tree
@@ -42,7 +42,7 @@ Searching in B Trees is similar to that in Binary search tree. For example, if w
 * match found, return.
 
 Searching in a B tree depends upon the height of the tree. The search algorithm takes O(log n) time to search any element in a B tree.
-![image](/assets/images/dsa/1124/b-tree-searching.png)
+![image](/assets/images/algorithm/1124/b-tree-searching.png)
 
 ### 2.2 Inserting
 Insertions are done at the leaf node level. The following algorithm needs to be followed in order to insert an item into B Tree.
@@ -58,11 +58,11 @@ Insertions are done at the leaf node level. The following algorithm needs to be 
 Example:
 
 Insert the node 8 into the B Tree of order 5 shown in the following image.
-![image](/assets/images/dsa/1124/b-tree-inserting.png)
+![image](/assets/images/algorithm/1124/b-tree-inserting.png)
 8 will be inserted to the right of 5, therefore insert 8.
-![image](/assets/images/dsa/1124/b-tree-inserting2.png)
+![image](/assets/images/algorithm/1124/b-tree-inserting2.png)
 The node, now contain 5 keys which is greater than (5 -1 = 4 ) keys. Therefore split the node from the median i.e. 8 and push it up to its parent node shown as follows.
-![image](/assets/images/dsa/1124/b-tree-inserting3.png)
+![image](/assets/images/algorithm/1124/b-tree-inserting3.png)
 
 ### 2.3 Deletion
 Deletion is also performed at the leaf nodes. The node which is to be deleted can either be a leaf node or an internal node. Following algorithm needs to be followed in order to delete a node from a B tree.
@@ -80,13 +80,13 @@ If the the node which is to be deleted is an internal node, then replace the nod
 Example:
 
 Delete the node 53 from the B Tree of order 5 shown in the following figure.
-![image](/assets/images/dsa/1124/b-tree-deletion.png)
+![image](/assets/images/algorithm/1124/b-tree-deletion.png)
 53 is present in the right child of element 49. Delete it.
-![image](/assets/images/dsa/1124/b-tree-deletion2.png)
+![image](/assets/images/algorithm/1124/b-tree-deletion2.png)
 Now, 57 is the only element which is left in the node, the minimum number of elements that must be present in a B tree of order 5, is 2. it is less than that, the elements in its left and right sub-tree are also not sufficient therefore, merge it with the left sibling and intervening element of parent i.e. 49.
 
 The final B tree is shown as follows.
-![image](/assets/images/dsa/1124/b-tree-deletion3.png)
+![image](/assets/images/algorithm/1124/b-tree-deletion3.png)
 
 ## 3. Implementation
 ```java

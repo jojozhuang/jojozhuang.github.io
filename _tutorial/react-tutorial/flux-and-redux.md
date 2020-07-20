@@ -29,7 +29,7 @@ The following diagram describes how data flows through the system.
 2. The dispatcher sends actions to every store.
 3. Stores send data to the views.
 
-![image](/assets/images/frontend/2603/fluxdataflow.png){:width="700px"}
+![image](/assets/images/frontend/8403/fluxdataflow.png){:width="700px"}
 
 ## 2. Redux
 ### 2.1 Flux Overview

@@ -243,9 +243,9 @@ module.exports.signup = function(req, res) {
 ```
 ### 2.3 Testing
 Click on the 'Sign Up' menu, input user name, password and email, then click 'Register' button.
-![image](/assets/images/frontend/2811/signup_page.png)
+![image](/assets/images/online-judge/9011/signup_page.png)
 If no validation error, new user is created and the page is navigated to user profile.
-![image](/assets/images/frontend/2811/signup_profile.png)
+![image](/assets/images/online-judge/9011/signup_profile.png)
 
 ## 3. Login
 ### 3.1 Angular(Client)
@@ -426,9 +426,9 @@ module.exports.login = function(req, res) {
 ```
 ### 3.3 Testing
 Click on the 'Login' menu, input user name and password, then click 'Login' button.
-![image](/assets/images/frontend/2811/login_page.png)
+![image](/assets/images/online-judge/9011/login_page.png)
 If no validation error, login is successful and user is navigated to home page.
-![image](/assets/images/frontend/2811/login_home.png)
+![image](/assets/images/online-judge/9011/login_home.png)
 
 ## 4. Login with Return URL
 ### 4.1 Auth Guard
@@ -487,11 +487,11 @@ onSubmit() {
 ```
 ### 4.4 Testing
 Try to access 'http://localhost:12080/admin/users' without login.
-![image](/assets/images/frontend/2811/returnurl_url.png)
+![image](/assets/images/online-judge/9011/returnurl_url.png)
 You will be redirected to the login page. Notice the url in browser's address bar.
-![image](/assets/images/frontend/2811/returnurl_login.png)
+![image](/assets/images/online-judge/9011/returnurl_login.png)
 Input admin user name and password, login. After login, you will be redirected to the admin user page.
-![image](/assets/images/frontend/2811/returnurl_users.png)
+![image](/assets/images/online-judge/9011/returnurl_users.png)
 
 ## 5. References
 * [Angular 6 - User Registration and Login Example & Tutorial](http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial)

@@ -12,9 +12,9 @@ draft: true
 > Node.js Architecture Overview.
 
 ## 1. Node.js Overview
-![image](/assets/images/devops/3226/nodejs-architecture.png){:width="700px"}
+![image](/assets/images/architecture/3026/nodejs-architecture.png){:width="700px"}
 
-![image](/assets/images/devops/3226/nodejs-event-loop.png){:width="700px"}
+![image](/assets/images/architecture/3026/nodejs-event-loop.png){:width="700px"}
 
 
 ## 4. References

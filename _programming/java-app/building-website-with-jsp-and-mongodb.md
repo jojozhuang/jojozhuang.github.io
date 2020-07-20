@@ -19,7 +19,7 @@ MongoDB database has been installed. Otherwise, refer to [Installing MongoDB on 
 ## 2. Setting up JSP Project
 ### 2.1 Creating Dynamic Web Project
 In Eclipse, File->New->Dynamic Web Project, specify project name as 'MongoDBTutorial'. Then, right click project MongoDBTutorial -> Configure -> Convert to Maven Project.
-![image](/assets/images/java/1533/converttomaven.png){:width="550px"}  
+![image](/assets/images/programming/2533/converttomaven.png){:width="550px"}  
 ### 2.2 Adding Libraries to the Project
 1) JSTL  
 Go to [https://tomcat.apache.org/taglibs/index.html](https://tomcat.apache.org/taglibs/index.html), download JSP Standard Tag Library(JSTL). Put the jar file to `\WebContent\WEB-INF\lib`.  
@@ -572,7 +572,7 @@ Create another JSP file named `productedel.jsp` with following content.
 ```
 ### 2.6 Project Structure
 Finally, the project structure looks like this.
-![image](/assets/images/java/1533/project.png){:width="400px"}
+![image](/assets/images/programming/2533/project.png){:width="400px"}
 
 ## 3. Setting up MongoDB
 ### 3.1 Starting MongoDB
@@ -590,23 +590,23 @@ Create a database named `mongodbtutorial` and three documents for collection `pr
 ```raw
 > db.product.insert([{name: 'Xbox', price: 100},{name: 'PS4',price: 400},{name: 'iPhone',price: 699}])
 ```
-![image](/assets/images/java/1533/initialization.png){:width="800px"}  
+![image](/assets/images/programming/2533/initialization.png){:width="800px"}  
 
 ## 4. Testing
 Launch the MongoDB Tutorial application, access http://localhost:8080/MongoDBTutorial/productlist.jsp in browser.
-![image](/assets/images/java/1533/productlist.png)
+![image](/assets/images/programming/2533/productlist.png)
 Click the 'Create' button, input product name and price.
-![image](/assets/images/java/1533/productadd.png)
+![image](/assets/images/programming/2533/productadd.png)
 Click 'Save' button, product is saved.
-![image](/assets/images/java/1533/productlistafteradd.png)
+![image](/assets/images/programming/2533/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/assets/images/java/1533/productedit.png)
+![image](/assets/images/programming/2533/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/assets/images/java/1533/productlistafteredit.png)
+![image](/assets/images/programming/2533/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/assets/images/java/1533/deleteconfirm.png)
+![image](/assets/images/programming/2533/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/assets/images/java/1533/productlistafterdel.png)
+![image](/assets/images/programming/2533/productlistafterdel.png)
 
 ## 5. Source Files
 * [Source files of MongoDB Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/MongoDBTutorial)

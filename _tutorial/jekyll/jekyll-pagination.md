@@ -48,9 +48,9 @@ Then, include it into template page `_layouts/tutorial.html`. The buttons are ad
 {% endraw %}
 ### 2.3 Demo
 Open any posting page, we will see the buttons just below the title.
-![image](/assets/images/jekyll/1622/button-top.png){:width="700px"}
+![image](/assets/images/jekyll/8122/button-top.png){:width="700px"}
 And the same buttons in the bottom.
-![image](/assets/images/jekyll/1622/button-bottom.png){:width="700px"}
+![image](/assets/images/jekyll/8122/button-bottom.png){:width="700px"}
 
 ## 3. Improvement
 The above pagination based on the `date` of posts. The posts are sorted by `date`. Enhance it to support sorting by any field, eg. `index`.

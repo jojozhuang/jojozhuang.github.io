@@ -219,10 +219,10 @@ In addition, `x & (-x)` gives the last set bit in a number.
 
 ### 3.2 Representation of BIT
 Binary Indexed Tree(BIT) is represented as an array. Let the array be BIT[]. Each node of the Binary Indexed Tree stores the sum of some elements of the input array. The size of the Binary Indexed Tree is equal to the size of the input array, denoted as n. In the code below, we use a size of n+1 for ease of implementation.
-![image](/assets/images/dsa/1128/array-and-bit.png){:width="800px"}  
+![image](/assets/images/algorithm/1128/array-and-bit.png){:width="800px"}  
 ### 3.3 Get Sum Function
 Fenwick Tree is constructed as follows.
-![image](/assets/images/dsa/1128/getsum-view.png){:width="800px"}
+![image](/assets/images/algorithm/1128/getsum-view.png){:width="800px"}
 Create method prefixSum() to get the sum for the given index. We just need to summarize all the values along the path from dummy node to targeted node. Here are some examples.
 * prefixSum(1) = BIT[1] = 2.
 * prefixSum(3) = BIT[3] + BIT[2] = 6 + 1 = 7.
@@ -236,7 +236,7 @@ index -= index & (-index);
 ```
 
 Below is another view of the BIT, which helps to understand how getsum works.
-![image](/assets/images/dsa/1128/tree-view.png){:width="850px"}
+![image](/assets/images/algorithm/1128/tree-view.png){:width="850px"}
 * prefixSum(10) = range(1, 8) + range(9, 10) = BIT[8] + BIT[10]
 * prefixSum(8) = range(1, 8) = BIT[8]
 * prefixSum(7) = range(1, 4) + range(5, 6) + range(7) = BIT[4] + BIT[6] + BIT[7]
@@ -245,7 +245,7 @@ Below is another view of the BIT, which helps to understand how getsum works.
 
 ### 3.4 Update Function
 The update function needs to make sure that all the BIT nodes which contain arr[i] within their ranges being updated. We loop over such nodes in the BIT by repeatedly adding the decimal number corresponding to the last set bit of the current index. Notice that the import parameter is the 'delta value' not an absolute value. For example, if the original array is [2, -1, 6, 1, 5, -3, 4, 1, -2, 7] and we want to update the second element arr[1] to 2, we should put 3 as import parameter when calling update() method.
-![image](/assets/images/dsa/1128/update-view.png){:width="650px"}
+![image](/assets/images/algorithm/1128/update-view.png){:width="650px"}
 Here are some examples.
 * To update node1(BIT[1]), we need to update BIT[1], BIT[2], BIT[4], BIT[8].
 * To update node2(BIT[2]), we need to update BIT[2], BIT[4], BIT[8].

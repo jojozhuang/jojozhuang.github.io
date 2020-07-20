@@ -20,7 +20,7 @@ Queue is an abstract data type that serves as a collection of elements, with two
 * `dequeue`: remove the least recently added element
 
 Queue follows the `FIFO`(First-in, first-out) rule. The item that goes in first is the item that comes out first too.
-![image](/assets/images/dsa/1113/queue.png)
+![image](/assets/images/algorithm/1113/queue.png)
 ### 1.3 Common Operations on Queue
 * enqueue(item): Add an item to the end of the list.
 * dequeue(): Pull the first item out of the list.
@@ -41,7 +41,7 @@ Four ways to implement queue.
 
 ### 2.1 Using Linked List
 Use two pointers(head and tail) to locate the first and last nodes in the list and track the change.
-![image](/assets/images/dsa/1113/linkedlist_queue.png)
+![image](/assets/images/algorithm/1113/linkedlist_queue.png)
 * enqueue: Create new node with the given value in the tail of the list, set current tail's next pointer point to the new node and let the tail pointer point to the last node.
 * dequeue: Get value of the head node, let the head pointer point to the next node.
 
@@ -96,7 +96,7 @@ public class LinkedListQueue {
 ```
 ### 2.2 Using Array
 Use two pointers(head and tail) to locate the first and last position in the array and track the change.
-![image](/assets/images/dsa/1113/array_queue.png)
+![image](/assets/images/algorithm/1113/array_queue.png)
 * enqueue: Move tail one step ahead and set value.
 * dequeue: Return the head value and move head one step ahead.
 
@@ -152,9 +152,9 @@ public class ArrayQueue {
 
 ### 2.3 Using Circular Array
 To solve the issue mentioned above, we can use a circular array to implement the queue.
-![image](/assets/images/dsa/1113/circular_array.png){:width="400px"}
+![image](/assets/images/algorithm/1113/circular_array.png){:width="400px"}
 See the details below.
-![image](/assets/images/dsa/1113/circular_queue.png)
+![image](/assets/images/algorithm/1113/circular_queue.png)
 Notice the step of 'enqueue 9' and 'dequeue 8'.
 * If `tail` is at the last position of the array, it will be moved back to the first position if new item needs to be added.
 * If `head` is at the last position of the array, it will be moved back to the first position if old item needs to be deleted.
