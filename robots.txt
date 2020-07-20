@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /note/
+Disallow: /search/
+Disallow: /searchadv/
 
-Sitemap: https://jojozhuang.githu.io/sitemap.xml
+Sitemap: https://jojozhuang.github.io/sitemap.xml
