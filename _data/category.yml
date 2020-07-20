@@ -137,6 +137,10 @@ categories:
         icon: fab fa-google
         subcategory: google-cloud
         image: google-cloud.png
+  - category: tutorial #dummy category
+    key: tutorial
+    name: Tutorial
+    description: Node.js, Angular, React, Jekyll
   - category: frontend
     key: frontend
     name: Frontend

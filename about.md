@@ -10,5 +10,4 @@ Here are some resources which helped me to build this website:
 * Two blogs introduce how to setup website on Github, [Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/) and [How I Created a Beautiful and Minimal Blog](http://joshualande.com/jekyll-github-pages-poole).
 * [Jekyll's official documentation](https://jekyllrb.com/docs/)
 * [About GitHub Pages](https://help.github.com/en/articles/what-is-github-pages)
-* [GitHub Repository](https://github.com/jojozhuang/jojozhuang.github.io) for this website.
 * [Tutorials](/tutorial/?n=tutorial&c=website&s=jekyll) for how to setup personal website with Jekyll.
