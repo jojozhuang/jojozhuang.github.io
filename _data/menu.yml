@@ -1,0 +1,219 @@
+menuitems:
+  - key: algorithm
+    url: /#
+    icon: fas fa-square-root-alt
+    visible: true
+    subkeys: ["data-structure","algorithm","algorithm-overview","practice-problem"]
+    sublist:
+      - key: data-structure
+        description: Data Structure
+        url: /algorithm/?n=algorithm&c=algorithm&s=data-structure
+        icon: fas fa-sitemap
+      - key: algorithm
+        description: Algorithm
+        url: /algorithm/?n=algorithm&c=algorithm&s=algorithm
+        icon: fas fa-square-root-alt
+      - key: algorithm-overview
+        description: Algorithm Overview
+        url: /algorithm/?n=algorithm&c=algorithm&s=algorithm-overview
+        icon: fas fa-superscript
+      - key: separator
+      - key: practice-problem
+        description: Practice Problem
+        url: /algorithm/?n=algorithm&c=algorithm&s=practice-problem
+        icon: fab fa-resolving
+  - key: programming
+    url: /#
+    icon: fas fa-code
+    visible: true
+    subkeys: ["programming","dev-environment","java-core","java8","java-concurrency","java-advanced","java-app","javascript","design-pattern"]
+    sublist:
+      - key: dev-environment
+        description: Dev Environment
+        url: /programming/?n=programming&c=programming&s=dev-env
+        icon: fab fa-dev
+      - key: separator
+      - key: java-core
+        description: Java Core
+        url: /programming/?n=programming&c=programming&s=java-core
+        icon: fab fa-java
+      - key: java8
+        description: Java 8
+        url: /programming/?n=programming&c=programming&s=java-java8
+        icon: fab fa-java
+      - key: java-concurrency
+        description: Java Concurrency
+        url: /programming/?n=programming&c=programming&s=java-concurrency
+        icon: fab fa-java
+      - key: java-advanced
+        description: Java Advanced
+        url: /programming/?n=programming&c=programming&s=java-advanced
+        icon: fab fa-java
+      - key: java-app
+        description: Java App
+        url: /programming/?n=programming&c=programming&s=java-app
+        icon: fab fa-java
+      - key: separator
+      - key: javascript
+        description: Javascript
+        url: /programming/?n=programming&c=programming&s=javascript
+        icon: fab fa-js-square
+      - key: separator
+      - key: design-pattern
+        description: Design Pattern
+        url: /programming/?n=programming&c=programming&s=design-pattern
+        icon: fas fa-pencil-ruler
+  - key: architecture
+    url: /#
+    icon: fas fa-swatchbook
+    visible: true
+    subkeys: ["architecture","theory-principle","computer-network","softwares","database-cache","message-queue","docker","devops","security"]
+    sublist:
+      - key: theory-principle
+        description: Theory and Principle
+        url: /architecture/?n=architecture&c=architecture&s=theory-principle
+        icon: fas fa-lightbulb
+      - key: computer-network
+        description: Computer Network
+        url: /architecture/?n=architecture&c=architecture&s=computer-network
+        icon: fas fa-network-wired
+      - key: separator
+      - key: softwares
+        description: Softwares
+        url: /architecture/?n=architecture&c=architecture&s=softwares
+        icon: fas fa-compact-disc
+      - key: database-cache
+        description: Database and Cache
+        url: /architecture/?n=architecture&c=architecture&s=database-cache
+        icon: fas fa-database
+      - key: message-queue
+        description: Message Queue
+        url: /architecture/?n=architecture&c=architecture&s=message-queue
+        icon: fas fa-mail-bulk
+      - key: docker
+        description: Docker
+        url: /architecture/?n=architecture&c=architecture&s=docker
+        icon: fab fa-docker
+      - key: devops
+        description: DevOps
+        url: /architecture/?n=architecture&c=architecture&s=devops
+        icon: fas fa-tools
+      - key: separator
+      - key: security
+        description: Security
+        url: /architecture/?n=architecture&c=architecture&s=security
+        icon: fas fa-shield-alt
+  - key: cloud
+    url: /#
+    icon: fas fa-cloud
+    visible: true
+    subkeys: ["cloud","cloud-knowledge","amazon-aws","google-cloud"]
+    sublist:
+      - key: cloud-knowledge
+        description: Cloud Knowledge
+        url: /cloud/?n=cloud&c=cloud&s=cloud-knowledge
+        icon: fas fa-cloud
+      - key: separator
+      - key: amazon-aws
+        description: Amazon AWS
+        url: /cloud/?n=cloud&c=cloud&s=amazon-aws
+        icon: fab fa-aws
+      - key: google-cloud
+        description: Google Cloud
+        url: /cloud/?n=cloud&c=cloud&s=google-cloud
+        icon: fab fa-google
+  - key: tutorial
+    url: /#
+    icon: fas fa-chalkboard-teacher
+    visible: true
+    subkeys: ["tutorial","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","nodejs","express-js","jekyll","wordpress","online-judge"]
+    sublist:
+      - key: jekyll
+        description: Jekyll
+        url: /tutorial/?n=tutorial&c=website&s=jekyll
+        icon: fas fa-globe
+      - key: wordpress
+        description: Wordpress
+        url: /tutorial/?n=tutorial&c=website&s=wordpress
+        icon: fab fa-wordpress
+      - key: separator
+      - key: angular-tutorial
+        description: Angular Tutorial
+        url: /tutorial/?n=tutorial&c=frontend&s=angular-tutorial
+        icon: fab fa-angular
+      - key: angular-app
+        description: Angular App
+        url: /tutorial/?n=tutorial&c=frontend&s=angular-app
+        icon: fab fa-angular
+      - key: react-tutorial
+        description: React Tutorial
+        url: /tutorial/?n=tutorial&c=frontend&s=react-tutorial
+        icon: fab fa-react
+      - key: react-app
+        description: React App
+        url: /tutorial/?n=tutorial&c=frontend&s=react-app
+        icon: fab fa-react
+      - key: separator
+      - key: mobile
+        description: Mobile
+        url: /tutorial/?n=tutorial&c=frontend&s=mobile
+        icon: fas fa-mobile-alt
+      - key: separator
+      - key: restful-api
+        description: RESTful API
+        url: /tutorial/?n=tutorial&c=backend&s=restful-api
+        icon: fas fa-plug
+      - key: nodejs
+        description: Node.js
+        url: /tutorial/?n=tutorial&c=backend&s=node-js
+        icon: fab fa-node-js
+      - key: express-js
+        description: Express.js
+        url: /tutorial/?n=tutorial&c=backend&s=express-js
+        icon: fab fa-node-js
+      - key: separator
+      - key: online-judge
+        description: Online Judge
+        url: /tutorial/?n=tutorial&c=project&s=online-judge
+        icon: fas fa-gavel
+  - key: project
+    url: /project
+    icon: fas fa-briefcase
+    visible: true
+  - key: favorite
+    url: /favorite
+    icon: fas fa-star
+    visible: true
+  - key: more
+    url: /#
+    icon: fas fa-chevron-circle-down
+    visible: true
+    subkeys: ["page-index","category","searchadv","about"]
+    sublist:
+      - key: page-index
+        description: Page Index
+        url: /page-index
+        icon: fas fa-chart-line
+      - key: category
+        description: Category
+        url: /category
+        icon: fas fa-object-group
+      - key: separator
+      - key: searchadv
+        description: Advanced Search
+        url: /searchadv
+        icon: fas fa-search
+      - key: separator
+      - key: rss
+        description: RSS Feed
+        url: /atom.xml
+        icon: fas fa-rss
+      - key: sitemap
+        description: Sitemap
+        url: /sitemap.xml
+        icon: fas fa-sitemap
+      - key: separator
+      - key: about
+        description: About
+        url: /about
+        icon: fas fa-info-circle

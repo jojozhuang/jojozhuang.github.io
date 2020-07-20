@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Combine Morgan & Winston"
-index: 2555
+index: 8755
 subcategory: express-js
 date: 2018-01-09
 tags: [Express, Morgan, Winston]
@@ -258,7 +258,7 @@ var winston = require("./config/winston-config-rotate");
 ```
 ### 3.2 Testing
 Start the server then access http://localhost:3000/ and http://localhost:3000/random in browser. You would see two log files in directory ./logs with proper log entries. The file name has the format 'application-YYYY-MM-DD-HH-[level].log'.
-![image](/assets/images/frontend/2555/logfiles.png){:width="350px"}  
+![image](/assets/images/backend/8755/logfiles.png){:width="350px"}  
 
 ## 4. Source Files
 * [Source files of Express Combine Morgan and Winston on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressLoggingCombine)

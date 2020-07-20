@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Socket.IO App to Azure"
-index: 2637
+index: 8477
 subcategory: react-app
 date: 2018-08-03
 tags: [Azure]
@@ -98,7 +98,7 @@ Add 'engines' section into 'package.json' of the Node.js project. It indicates t
   "keywords": [],
   "author": {
     "name": "Rong Zhuang",
-    "email": "jojozhuang@gmail.com"
+    "email": "csgeek@mail.com"
   },
   "license": "MIT",
   "dependencies": {
@@ -117,35 +117,35 @@ Submit all the changes to GitHub.
 Log onto Azure Portal: https://portal.azure.com/. Go to 'App Services', create a new app.
 
 We need to use the correct template for deployment. Input 'node' in the search box, and select 'Node JS Starter Site', then click 'Create' button.
-![image](/assets/images/frontend/2637/search.png)
+![image](/assets/images/frontend/8477/search.png)
 Set app name, subscription and resource group, click 'Create' button.
-![image](/assets/images/frontend/2637/create.png)
+![image](/assets/images/frontend/8477/create.png)
 The Node.js app will be deployed in few minutes. Find the new app in 'App Services', go to 'Overview'. Click on the URL for this app.
-![image](/assets/images/frontend/2637/url.png)
+![image](/assets/images/frontend/8477/url.png)
 We see the sample app in browser, it's alive on Azure.
-![image](/assets/images/frontend/2637/sampleapp.png)
+![image](/assets/images/frontend/8477/sampleapp.png)
 If you want to know the source of the app, go to 'Deployment Center(Preview)'. You will see the 'External Git'. The source comes from the official Azure Services repository on GitHub.
-![image](/assets/images/frontend/2637/sample_repository.png)
+![image](/assets/images/frontend/8477/sample_repository.png)
 * Access this GitHub repository, open the files of 'package.json' and 'web.config' to learn how this Node.js app is configured for deploying to Azure.
 
 ### 2.2 Deploying Our Own App
 Go to 'Deployment options', click 'Disconnet' to remove the sample GitHub repository.
-![image](/assets/images/frontend/2637/disconnect.png)
+![image](/assets/images/frontend/8477/disconnect.png)
 After the 'Disconnection', go to 'Deployment options' again. Now you have the chance to choose a new source, select 'GitHub'.
-![image](/assets/images/frontend/2637/newsource.png)
+![image](/assets/images/frontend/8477/newsource.png)
 Authorize Azure to access your GitHub account, choose the project and branch, then OK.
-![image](/assets/images/frontend/2637/github.png)
+![image](/assets/images/frontend/8477/github.png)
 Azure starts deploying the new Node.js App from your GitHub repository.
 ### 2.3 Logs
 Once the deployment is finished, we can check the application log. First, go to 'Diagnostics logs', choose the logging categories and save.
-![image](/assets/images/frontend/2637/activate_log.png)
+![image](/assets/images/frontend/8477/activate_log.png)
 Then, go to 'Log stream' to check the application logs.
-![image](/assets/images/frontend/2637/log_stream.png)
+![image](/assets/images/frontend/8477/log_stream.png)
 ## 3. Test
 Refresh the web browser, our own app is deployed.
-![image](/assets/images/frontend/2637/ownapp.png)
+![image](/assets/images/frontend/8477/ownapp.png)
 Click on the 'Play' button, and drag the slider bar. The player works properly.
-![image](/assets/images/frontend/2637/player.png)
+![image](/assets/images/frontend/8477/player.png)
 
 ## 4. References
 * [Deploy Node.js in Microsoft Azure](https://www.codeproject.com/Articles/1133660/Deploy-Node-js-in-Microsoft-Azure)

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Online Text Compare Tool with Angular"
-index: 2771
+index: 8371
 subcategory: angular-app
 date: 2018-07-28
 tags: [Angular, Monaco Editor]
@@ -56,7 +56,7 @@ Add following content to 'footer.component.html'.
 ```html
 <hr/>
 <footer class="container-fluid text-center">
-  <p>&copy; 2018 rongzhuang.me, All rights reserved.</p>
+  <p>&copy; 2018 jojozhuang.github.io, All rights reserved.</p>
 </footer>
 ```
 ### 2.3 Routing
@@ -426,17 +426,17 @@ Start this app, serve it in web server.
 $ npm start
 ```
 Open web browser, access ‘http://localhost:4200/’.
-![image](/assets/images/frontend/2771/home.png)
+![image](/assets/images/frontend/8371/home.png)
 Click the 'Text Compare' menu.
-![image](/assets/images/frontend/2771/textcompare.png)
+![image](/assets/images/frontend/8371/textcompare.png)
 Input some text in both the original and modified text boxes, and click 'Find Difference' button.
-![image](/assets/images/frontend/2771/plaintext.png)
+![image](/assets/images/frontend/8371/plaintext.png)
 Check the 'Inline Style' to view the difference in inline mode.
-![image](/assets/images/frontend/2771/inline.png)
+![image](/assets/images/frontend/8371/inline.png)
 Input some typescripts and set the language to 'typescript'.
-![image](/assets/images/frontend/2771/typescript.png)
+![image](/assets/images/frontend/8371/typescript.png)
 Change theme to 'Visual Studio Dark'.
-![image](/assets/images/frontend/2771/darktheme.png)
+![image](/assets/images/frontend/8371/darktheme.png)
 
 ## 5. Source Files
 * [Source files of Text Compare on Github](https://github.com/jojozhuang/text-compare-angular)

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Authenticating Users with Passport - Draft"
-index: 2560
+index: 8760
 subcategory: express-js
 date: 2018-01-14
 tags: [React, Nodejs]

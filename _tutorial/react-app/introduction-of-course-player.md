@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Introduction of Course Player"
-index: 2631
+index: 8471
 subcategory: react-app
 date: 2016-03-12
 tags: [Course Player]
@@ -20,9 +20,9 @@ DePaul University has a powerful course online system called COL, which supports
   - Android Player
 
 `Online players` are developed by Adobe Flash and Microsoft Silverlight. They are installed as plug-ins on web browsers. Below is the screenshot that flash player is working on Microsoft IE. Notice, the video is sent in a continuous stream of data from server to client web browser.
-![image](/assets/images/frontend/2631/flash.png)
+![image](/assets/images/frontend/8471/flash.png)
 `Mobile players` are native apps for iOS and Android platforms. Below is the screenshot that iOS player is working on iPhone 5s. Notice that all the data, including video, screenshot, whiteboard are downloaded to mobile devices before playing.
-![image](/assets/images/frontend/2631/coliphone.jpeg)
+![image](/assets/images/frontend/8471/coliphone.jpeg)
 
 ## 2. Course Player
 For each course player, no matter whether it is an online application or a mobile app, each contains three components: Video, Screenshot and Whiteboard.  
@@ -30,7 +30,7 @@ For each course player, no matter whether it is an online application or a mobil
 Video is recorded by camera with audios throughout the whole class, and saved to file in `mp4` format. Each video lasts 3 and half hours(12,600 seconds).
 ### 2.2 Screenshot
 During class, teachers shares course handouts/materials of PPT or PDF through computer monitor. And they will be captured and saved as screenshots for the course. Screenshots are actually images and each image has base64 format. Each screenshot consists of 8x8 = 64 small images, which finally aggregates to a single image.
-![image](/assets/images/frontend/2631/screenshot.png){:width="550px"}
+![image](/assets/images/frontend/8471/screenshot.png){:width="550px"}
 * [Diagrams on Google Slides](https://docs.google.com/presentation/d/1dy1h3lmJh-vskUyPUWAeqCxNT0-YSHfioo4VwwcTdpM/edit?usp=sharing)
 
 Screenshots are displayed simultaneously when the course is playing, and only the different sections will be refreshed.
@@ -38,7 +38,7 @@ Screenshots are displayed simultaneously when the course is playing, and only th
 Teachers also write or draw something on the whiteboard. Each action(pen down, pen move, pen up and erase) on the whiteboard is captured by special pens and brushes and persisted into files.
 
 ## 3. Course Structure
-![image](/assets/images/frontend/2631/datafiles.png){:width="550px"}  
+![image](/assets/images/frontend/8471/datafiles.png){:width="550px"}  
 The following points need to be noted about these files.
 * Each course has a unique id. For the above course, the course id is `204304`.
 * Video is simple, just a mp4 file.
@@ -56,7 +56,7 @@ The problem with the existing online players is, different technologies(flash an
 Similar problem for mobile players. The COL team has to maintain two piece of code for iOS and Android, even though they have the same function.
 ### 4.3 Prototypes for New Course Players
 I created several course player with new technologies. See below.
-* [Course Player (Socket.IO)]({% link _portfolio/course-player-socketio.md %}): Built with html5 canvas and socket.io based on Node.js.
-* [Course Player (React)]({% link _portfolio/course-player-react.md %}): Enhancement of the first player, built with React, html5 canvas and socket.io based on Node.js.
-* [Course Player (SignalR)]({% link _portfolio/course-player-signalr.md %}): Another online player, built with SingalR.
-* [Course Player(Xamarin)]({% link _portfolio/course-player-xamarin.md %}): An iOS player built with Xamarin.
+* [Course Player (Socket.IO)]({% link _project/course-player-socketio.md %}): Built with html5 canvas and socket.io based on Node.js.
+* [Course Player (React)]({% link _project/course-player-react.md %}): Enhancement of the first player, built with React, html5 canvas and socket.io based on Node.js.
+* [Course Player (SignalR)]({% link _project/course-player-signalr.md %}): Another online player, built with SingalR.
+* [Course Player(Xamarin)]({% link _project/course-player-xamarin.md %}): An iOS player built with Xamarin.

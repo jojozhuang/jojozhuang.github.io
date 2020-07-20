@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /note/
 
-Sitemap: https://rongzhuang.me/sitemap.xml
+Sitemap: https://jojozhuang.githu.io/sitemap.xml

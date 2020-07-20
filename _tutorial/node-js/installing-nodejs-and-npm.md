@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Installing Node.js and NPM"
-index: 2501
+index: 8701
 subcategory: node-js
 date: 2016-03-06
 tags: [Node.js, NPM]
@@ -98,7 +98,7 @@ If everything is fine with your installation, this should produce the following 
 ```raw
 Hello, World!
 ```
-![image](/assets/images/frontend/2501/testnode.png){:width="600px"}
+![image](/assets/images/backend/8701/testnode.png){:width="600px"}
 
 ## 7. References
 * [Nodejs Guides](https://nodejs.org/en/docs/guides/)

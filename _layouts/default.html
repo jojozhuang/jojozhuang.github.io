@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
   <link href="/assets/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  {% if page.key == "editormd" %}
-    <link rel="stylesheet" href="/assets/3rdparty/editormd/editormd.min.css" />
-  {% endif %}
   <link rel="stylesheet" href="/assets/css/allinone.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
@@ -27,14 +24,14 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark navbar-custom">
     <a class="navbar-brand" href="/">
-        <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="/assets/assets/rz-50px.png">
+        <img class="rounded-circle" width="30" height="30" alt="Rong Zhuang" src="{{site.mywebsite.logo}}">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        {% for link in site.navlist %}
+        {% for link in site.data.menu.menuitems %}
           {% if link.visible == true %}
             {% if link.sublist %}
             <li class="nav-item dropdown {% if link.subkeys contains page.key %} active {% endif %}">
@@ -61,9 +58,6 @@
           {% endif %}
         {% endfor %}
       </ul>
-      <ul class="nav navbar-nav ml-auto">
-        <!--<li><a href="/public/cv/cv.pdf"><i class="fas fa-download"></i> Download CV</a></li>-->
-      </ul>
       <form class="form-inline ml-auto" action="/search">
         <!--<div class="input-group">
            <input class="form-control border-secondary py-2" style="width:100px" type="search" name="k" placeholder="Search this site">
@@ -89,10 +83,9 @@
 {{ content }}
 
 <footer class="container-fluid text-center" style="clear: both;">
-  <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "customdomain" %}rongzhuang.me{% else %}jojozhuang.github.io{% endif %}, All rights reserved.</span>
+  <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "customdomain" %}jojozhuang.github.io{% else %}jojozhuang.github.io{% endif %}, All rights reserved.</span>
 </footer>
 
-<!-- scripts.html -->
 <!--<script id="dsq-count-scr" src="//jojozhuang.disqus.com/count.js" defer></script>-->
 {% if jekyll.environment == "customdomain" %}
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e25e723d6ee4a00124a9181&product=sticky-share-buttons' async='async'></script>
@@ -126,7 +119,7 @@ link href="/assets/css/navbar.css" rel="stylesheet" />
   <link href="/assets/css/cv.css" rel='stylesheet' />
 {% endif %}
 -->
-{% if page.key == "tutorial" or page.key == "popular" or page.key == "note" %}
+{% if page.key == "category" or page.key == "algorithm" or page.key == "programming" or page.key == "architecture" or page.key == "cloud" or page.key == "tutorial" %}
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>-->
@@ -136,10 +129,10 @@ link href="/assets/css/navbar.css" rel="stylesheet" />
 {% if page.key == "favorite" %}
   <script src="/assets/js/favorite.js"></script>
 {% endif %}
-{% if page.layout == "tutorial" or page.layout == "portfolio" or page.layout == "blog" or page.layout == "note"%}
+{% if page.layout == "tutorial" or page.layout == "project" %}
   <script src="/assets/js/img.js"></script>
 {% endif %}
-{% if page.layout == "default" and page.key == "tutorial" or page.key == "popular" or page.key == "note"%}
+{% if page.layout == "default" and page.key == "category" or page.key == "algorithm" or page.key == "programming" or page.key == "architecture" or page.key == "cloud" or page.key == "tutorial" or page.key == "note"%}
   <script src="/assets/js/tooltip.js"></script>
 {% endif %}
 {% if page.mathjax %}

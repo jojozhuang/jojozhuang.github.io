@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building Web Application with Angular"
-index: 2761
+index: 8361
 subcategory: angular-app
 date: 2017-12-14
 tags: [Angular]
@@ -51,7 +51,7 @@ Add following content to 'footer.component.html'.
 ```html
 <hr/>
 <footer class="container-fluid text-center">
-  <p>&copy; 2017 rongzhuang.me, All rights reserved.</p>
+  <p>&copy; 2017 jojozhuang.github.io, All rights reserved.</p>
 </footer>
 ```
 ### 2.3 Routing
@@ -645,21 +645,21 @@ Start the RESTful service first, and start this Angular app, serve it in web ser
 $ ng serve
 ```
 Open web browser, access 'http://localhost:12080/'.
-![image](/assets/images/frontend/2761/homepage.png)
+![image](/assets/images/frontend/8361/homepage.png)
 Click the List button. There are three products with images.
-![image](/assets/images/frontend/2761/productlist.png)
+![image](/assets/images/frontend/8361/productlist.png)
 Click the 'Create' button, input product name and price. And click 'Choose Image' to select an image from local disk. Then, click 'Upload' button to upload it to the remote server. The image will be displayed at the left side.
-![image](/assets/images/frontend/2761/productadd.png)
+![image](/assets/images/frontend/8361/productadd.png)
 Click 'Save' button, product is saved.
-![image](/assets/images/frontend/2761/productlistafteradd.png)
+![image](/assets/images/frontend/8361/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/assets/images/frontend/2761/productedit.png)
+![image](/assets/images/frontend/8361/productedit.png)
 Click 'Save' button, product(ID=4) is updated.
-![image](/assets/images/frontend/2761/productlistafteredit.png)
+![image](/assets/images/frontend/8361/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/assets/images/frontend/2761/deleteconfirm.png)
+![image](/assets/images/frontend/8361/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/assets/images/frontend/2761/productlistafterdel.png)
+![image](/assets/images/frontend/8361/productlistafterdel.png)
 
 ## 6. Source Files
 * [Source files of Game Store(Angular) on Github](https://github.com/jojozhuang/game-store-angular)

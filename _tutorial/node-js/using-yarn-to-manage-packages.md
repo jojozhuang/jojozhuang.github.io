@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Using Yarn to Manage Packages"
-index: 2503
+index: 8703
 subcategory: node-js
 date: 2018-02-01
 tags: [Yarn]

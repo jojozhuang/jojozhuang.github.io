@@ -15,112 +15,41 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Setup
 mywebsite:
-  url: http://jojozhuang.github.io
+  url: https://jojozhuang.github.io
+  title: Computer Science
+  subtitle: Data Structure, Algorithm, Angular, React, etc.
+  logo: /assets/assets/website-logo.png
 #theme: jekyll-theme-cayman
 
 # rss
-blogtitle: Rong Zhuang's Blog
+rsstitle: CS Geek
 
 author:
-  name: 'Rong Zhuang'
+  name: 'Johnny'
   email: 'jojozhuang@gmail.com'
-  phone: '(+1) 650 380 4437'
-  linkedin: https://www.linkedin.com/in/rongzhuang
-  github: https://github.com/jojozhuang
-
-navlist:
-  - key: portfolio
-    url: /portfolio
-    icon: fas fa-briefcase
-    visible: true
-  - key: popular
-    url: /popular
-    icon: fas fa-fire-alt
-    visible: true
-  - key: tutorial
-    url: /tutorial
-    icon: fas fa-chalkboard-teacher
-    visible: true
-  - key: blog
-    url: /blog
-    icon: fas fa-blog
-    visible: true
-  - key: cv
-    url: /cv
-    visible: false
-  - key: course
-    url: /course
-    visible: false
-  - key: favorite
-    url: /favorite
-    icon: fas fa-star
-    visible: true
-  - key: note
-    url: /note
-    icon: fas fa-book-open
-    visible: false
-  - key: more
-    url: /#
-    icon: fas fa-chevron-circle-down
-    visible: true
-    subkeys: ["searchadv","reading","quicklinks","contact","editormd","about","commands"]
-    sublist:
-      - key: commands
-        description: Commands
-        url: /commands
-        icon: fas fa-terminal
-      - key: searchadv
-        description: Advanced Search
-        url: /searchadv
-        icon: fas fa-search
-      - key: reading
-        description: Further Reading
-        url: /reading
-        icon: fas fa-book-reader
-      - key: quicklinks
-        description: Quick Links
-        url: /quicklinks
-        icon: fas fa-link
-      - key: separator
-      - key: Markdown Editor
-        description: Markdown Editor
-        url: /editormd
-        icon: fas fa-edit
-      - key: blank
-        description: Blank Page
-        url: /blank
-        icon: fas fa-chalkboard
-      - key: separator
-      - key: rss
-        description: RSS Feed
-        url: /blog/atom.xml
-        icon: fas fa-rss
-      - key: sitemap
-        description: Sitemap
-        url: /sitemap.xml
-        icon: fas fa-sitemap
-      - key: contact
-        description: Contact Me
-        url: /contact
-        icon: fas fa-address-book
-        visible: false
-      - key: separator
-      - key: about
-        description: About
-        url: /about
-        icon: fas fa-info-circle
 
 collections:
-  portfolio:
+  algorithm:
     output: true
-  popular:
+    permalink: /:collection/:name
+  programming:
     output: true
+    permalink: /:collection/:name
+  architecture:
+    output: true
+    permalink: /:collection/:name
+  cloud:
+    output: true
+    permalink: /:collection/:name
   tutorial:
     output: true
-  note:
+    permalink: /:collection/:name
+  project:
     output: true
 
 exclude: ["vendor", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
-#exclude: ["note", "popular", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
+#exclude: ["note", "vendor", "favorite.html", "_obsolete", "templates", "Gemfile", "Gemfile.lock"]
 #https://sacha.me/articles/jekyll-rouge/
 #https://github.com/ZhengshuaiPENG/zhengshuaipeng.github.io/blob/master/_config.yml
+
+#https://jekyllrb.com/docs/permalinks/

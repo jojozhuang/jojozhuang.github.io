@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "QPS and Event Loop - draft"
-index: 2505
+index: 8705
 subcategory: node-js
 date: 2018-08-02
 tags: [Node.js]
@@ -14,11 +14,11 @@ draft: true
 ## 1. Queries Per Second(QPS)
 Queries-per-second (QPS) is a measure of how much traffic a particular query server is handling at a given time.
 ### 1.1 Single Thread
-![image](/assets/images/frontend/2505/qps-single-thread.png)
+![image](/assets/images/backend/8705/qps-single-thread.png)
 ### 1.2 Two Threads
-![image](/assets/images/frontend/2505/qps-two-threads.png)
+![image](/assets/images/backend/8705/qps-two-threads.png)
 ### 1.3 Two Threads with Context Switch
-![image](/assets/images/frontend/2505/qps-conext-switch.png)
+![image](/assets/images/backend/8705/qps-conext-switch.png)
 
 ## 2. Event Loop
 ### 2.1 Event Loop in Node.js

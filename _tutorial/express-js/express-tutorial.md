@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Getting Started with Express"
-index: 2551
+index: 8751
 subcategory: express-js
 date: 2018-01-05
 tags: [Express]
@@ -32,7 +32,7 @@ app.listen(3000, function() {
   console.log("Express app started on port 3000.");
 });
 ```
-![image](/assets/images/frontend/2551/helloworld.png){:width="600px"}  
+![image](/assets/images/backend/8751/helloworld.png){:width="600px"}  
 
 ## 2. Express Core
 Express has four major features:
@@ -147,7 +147,7 @@ To see all the internal logs used in Express, set the DEBUG environment variable
 "debug": "DEBUG=express:* node helloworld.js"
 ```
 Run 'npm run debug'.
-![image](/assets/images/frontend/2551/debug.png){:width="1000px"}  
+![image](/assets/images/backend/8751/debug.png){:width="1000px"}  
 
 ## 5. Source Files
 * [Source files of Express Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/ExpressTutorial)
