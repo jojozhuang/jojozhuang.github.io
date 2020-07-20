@@ -6,10 +6,18 @@ title: Tutorial
 ---
 <div class="container">
   <div class="page-wrapper chiller-theme">
-    <!-- sidebar-wrapper  -->
-    {% assign subject = site.data.tutorial %}
-    {% assign postings = site.tutorial | sort: 'index' %}
+    <!-- sidebar-wrapper, must after subject is assigned  -->
+    {% assign subject = site.data.category %}
+    {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | sort: 'index' %}
     {% include sidebar.html %}
+    <!-- current category -->
+    {% assign firstlevel = site.data.category %}
+    {% for category in firstlevel.categories %}
+      {% if category.key == 'tutorial' %}
+        {% assign subject = category %}
+      {% endif %}
+    {% endfor %}
+    {% assign postings = site.tutorial | sort: 'index'%}
     <!-- page-content" -->
     <main class="page-content">
       <div class="row">
@@ -18,24 +26,6 @@ title: Tutorial
           <h1 class="page-header">{{subject.name}} <small>{{subject.description}}</small></h1>
           <nav aria-label="breadcrumb" id="bread-crumb"></nav>
           <div id="category-list" style="display: none">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Angular</h5>
-                  <p class="card-text">Learn how to use Angular to build front-end application with examples.</p>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=angular-js" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular Tutorial</a>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=angular-app" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular App</a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">React</h5>
-                  <p class="card-text">Learn how to use React to build front-end application with examples.</p>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=react-js" class="btn btn-outline-primary"><i class="fab fa-react"></i> React Tutorial</a>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=react-app" class="btn btn-outline-primary"><i class="fab fa-react"></i> React App</a>
-                </div>
-              </div>
-            </div>
             {% for category in subject.categories %}
               {% assign col = forloop.index | modulo: 3 %}
               {% if col == 1 %}
@@ -78,7 +68,7 @@ title: Tutorial
         "subcategory": "{{ post.subcategory | xml_escape }}",
         "url": "{{ post.url | xml_escape }}",
         "index": "{{ post.index | xml_escape }}",
-        "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}",
+        "excerpt": "{{ post.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip | truncatewords: 30 }}",
         "tags": "{{ post.tags | join: ", "}}",
         "date": "{{ post.date | date_to_string}}",
         "draft": {{ post.draft | xml_escape }}
@@ -86,6 +76,7 @@ title: Tutorial
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
+  {% assign subject = site.data.category %}
   // mapping of category and image
   window.image = {
     {% for category in subject.categories %}
@@ -116,7 +107,6 @@ title: Tutorial
       {% endfor %}
     {% endfor %}
   };
-
   // tutorial category
   //window.tc = {{ site.data.tutorial | replace: '=>', ':'}};
 

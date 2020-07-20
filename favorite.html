@@ -41,11 +41,7 @@ title: Favorite
         <div id="library" class="tab-pane fade">
           <p>{{favorite.librarydesc}}</p>
           <div class="list">
-            {% assign portfolios = site.portfolio %}
-            {% assign populars = site.popular %}
-            {% assign tutorials = site.tutorial %}
-            {% assign blogs = site.posts %}
-            {% assign postings = portfolios | concat: populars | concat: tutorials | concat: blogs %}
+            {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | concat: site.project %}
             {%- for bookmark in favorite.bookmarks -%}
                 {% assign idx1 = forloop.index %}
                 <div class="list-category">

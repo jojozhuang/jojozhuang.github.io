@@ -1,9 +1,5 @@
 <script>
-{% assign popular = site.popular %}
-{% assign tutorial = site.tutorial %}
-{% assign note = site.note %}
-{% assign blog = site.posts %}
-{% assign postings = popular | concat: tutorial | concat: note | concat: blog %}
+{% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | concat: site.project %}
 window.store = {
   {% for post in postings %}
     "{{ post.url | slugify }}": {
@@ -24,11 +20,7 @@ window.store = {
 };
 
 // mapping of subcategory and image
-{% assign popular = site.data.popular.categories %}
-{% assign tutorial = site.data.tutorial.categories %}
-{% assign note = site.data.note.categories %}
-{% assign blog = site.data.blog.categories %}
-{% assign categories = popular | concat: tutorial | concat: note | concat: blog %}
+{% assign categories = site.data.category.categories %}
 window.image = {
   {% for category in categories %}
     {% for subcategory in category.subcategories %}

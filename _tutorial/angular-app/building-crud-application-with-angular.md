@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Building CRUD Application With Angular"
-index: 2752
+index: 8352
 subcategory: angular-app
 date: 2018-01-22
 tags: [Angular, MEAN, Node.js]
@@ -50,7 +50,7 @@ Add following content to 'footer.component.html'.
 ```html
 <hr/>
 <footer class="container-fluid text-center">
-  <p>&copy; 2018 rongzhuang.me, All rights reserved.</p>
+  <p>&copy; 2018 jojozhuang.github.io, All rights reserved.</p>
 </footer>
 ```
 ### 2.3 Routing
@@ -600,21 +600,21 @@ Start the RESTful service first, and start this Angular app, serve it at port 12
 $ ng serve
 ```
 Open web browser, access 'http://localhost:12080/'.
-![image](/assets/images/frontend/2752/homepage.png)
+![image](/assets/images/frontend/8352/homepage.png)
 Click the List button. There are three products with images.
-![image](/assets/images/frontend/2752/productlist.png)
+![image](/assets/images/frontend/8352/productlist.png)
 Click the 'Create' button, input product name and price.
-![image](/assets/images/frontend/2752/productadd.png)
+![image](/assets/images/frontend/8352/productadd.png)
 Click 'Save' button, product is saved.
-![image](/assets/images/frontend/2752/productlistafteradd.png)
+![image](/assets/images/frontend/8352/productlistafteradd.png)
 Click 'Edit' button of the new added product. Change the product name and price.
-![image](/assets/images/frontend/2752/productedit.png)
+![image](/assets/images/frontend/8352/productedit.png)
 Click 'Save' button, the fourth product is updated.
-![image](/assets/images/frontend/2752/productlistafteredit.png)
+![image](/assets/images/frontend/8352/productlistafteredit.png)
 Click 'Delete' button of the last product. A popup window for confirming the delete operation shows up.
-![image](/assets/images/frontend/2752/deleteconfirm.png)
+![image](/assets/images/frontend/8352/deleteconfirm.png)
 Click 'OK' button, product will be deleted.
-![image](/assets/images/frontend/2752/productlistafterdel.png)
+![image](/assets/images/frontend/8352/productlistafterdel.png)
 
 ## 6. Source Files
 * [Source files of Angular Tutorial on Github](https://github.com/jojozhuang/Tutorials/tree/master/AngularTutorial)

@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Angular App to Heroku as Static Website"
-index: 2764
+index: 8364
 subcategory: angular-app
 date: 2019-05-25
 tags: [Angular, Heroku]
@@ -25,7 +25,7 @@ First, read the official tutorial [Getting Started on Heroku with Node.js](https
 ```raw
 $ heroku login
 Enter your Heroku credentials.
-Email: jojozhuang@gmail.com
+Email: csgeek@mail.com
 Password: **********
 ```
 2) Create Heroku App
@@ -82,7 +82,7 @@ $ heroku login
 heroku: Press any key to open up the browser to login or q to exit:
 Opening browser to https://cli-auth.heroku.com/auth/browser/d849177a-d6f2-492e-88f5-8ad8ea019a90
 Logging in... done
-Logged in as jojozhuang@gmail.com
+Logged in as csgeek@mail.com
 ```
 Create new app.
 ```raw
@@ -238,9 +238,9 @@ To https://git.heroku.com/game-store-angular.git
 
 ## 4. Testing
 Access https://game-store-angular.herokuapp.com/, we see the homepage.
-![image](/assets/images/frontend/2764/gamestore_home.png)
+![image](/assets/images/frontend/8364/gamestore_home.png)
 It works properly, wee see the products.
-![image](/assets/images/frontend/2764/gamestore_list.png)  
+![image](/assets/images/frontend/8364/gamestore_list.png)  
 
 ## 5. References
 * [Deploying Node.js Apps on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)

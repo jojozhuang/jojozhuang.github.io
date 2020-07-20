@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Deploying Game Store Angular App to Netlify"
-index: 2762
+index: 8362
 subcategory: angular-app
 date: 2018-07-31
 tags: [Netlify]
@@ -66,9 +66,9 @@ export class ProductService {
 Follow the steps described in tutorial [Deploying Text Compare Angular App to Netlify]({% link _tutorial/angular-app/deploying-text-compare-angular-app-to-netlify.md %}) to deploy this app to Netlify.
 
 Access https://game-store-angular.netlify.com/ in browser, and click the 'List' button, everything looks fine.
-![image](/assets/images/frontend/2762/productlist.png)
+![image](/assets/images/frontend/8362/productlist.png)
 However, when trying to create a new product, I got this 'post() map' error.
-![image](/assets/images/frontend/2762/maperror.png)
+![image](/assets/images/frontend/8362/maperror.png)
 And similar error occurs for put and delete when trying to update and delete product.
 ```raw
 ERROR TypeError: this.http.post(...).map is not a function
@@ -131,7 +131,7 @@ export class ProductService {
 }
 ```
 Submit the change to GitHub and deploy the app to Netlify again. The creation, update, deletion operations should work.
-![image](/assets/images/frontend/2762/put.png)
+![image](/assets/images/frontend/8362/put.png)
 
 ## 5. Reference
 * [Deploy Angular 6 Application to Netlify](https://medium.com/@geeksamu/deploy-angular-6-application-to-netlify-60b39b9df61c)

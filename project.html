@@ -1,0 +1,45 @@
+---
+layout: default
+key: project
+title: Projects
+categories:
+  - name: Mobile Apps
+    description: iOS, Android, Xamarin
+    type: mobile
+  - name: Web Apps
+    description: Angular, React, Node.js, Socket.IO
+    type: web
+  - name: .NET & Java Apps
+    description: SignalR, WebSocket
+    type: dotnet
+---
+<div class="container">
+  {% for category in page.categories %}
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">{{category.name}} <small>{{category.description}}</small></h1>
+      </div>
+    </div>
+    <div class="row">
+    {% assign projects = site.project | where: "category", category.type | sort: 'index' | reverse %}
+    {% for project in projects %}
+        {% if category.type == 'mobile' %}
+          <div class="col-6 col-lg-3 portfolio-item">
+        {% else %}
+          <div class="col-6 col-lg-4 portfolio-item">
+        {% endif %}
+          <div class="item-border">
+            <a href="{{ project.url }}">
+              <img class="img-fluid" src="/assets/images/project/{{ project.image }}" alt="{{project.title}}">
+            </a>
+            <div class="item-detail">
+              <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+              <p>{{ project.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30 }}</p>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+<br/><br/>

@@ -4,16 +4,8 @@ layout: default
 <div class="container">
     <div class="page-wrapper chiller-theme">
       <!-- sidebar-wrapper  -->
-      {% assign subject = site.data.popular %}
-      {% assign postings = site.popular | sort: 'index' %}
-      {% if page.key == "tutorial" %}
-        {% assign subject = site.data.tutorial %}
-        {% assign postings = site.tutorial | sort: 'index' %}
-      {% endif %}
-      {% if page.key == "note" %}
-        {% assign subject = site.data.note %}
-        {% assign postings = site.note | sort: 'index' %}
-      {% endif %}
+      {% assign subject = site.data.category %}
+      {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | sort: 'index' %}
       {% include sidebar.html %}
       <!-- category for breadcrumb -->
       {% assign categories = subject.categories %}
