@@ -1,5 +1,5 @@
 key: category
-name: Category
+name: Article Index
 description: Algorithm, Prgoramming, Architecture, Cloud
 categories:
   - category: algorithm
@@ -82,11 +82,11 @@ categories:
         icon: fas fa-lightbulb
         subcategory: theory-principle
         image: theory.png
-      - name: Network
-        description: Network
+      - name: Computer Network
+        description: Computer Network
         icon: fas fa-network-wired
         subcategory: computer-network
-        image: network.png
+        image: computer-network.png
       - name: Softwares
         description: Softwares
         icon: fas fa-compact-disc
@@ -137,10 +137,6 @@ categories:
         icon: fab fa-google
         subcategory: google-cloud
         image: google-cloud.png
-  - category: tutorial #dummy category
-    key: tutorial
-    name: Tutorial
-    description: Node.js, Angular, React, Jekyll
   - category: frontend
     key: frontend
     name: Frontend
