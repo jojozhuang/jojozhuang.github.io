@@ -19,6 +19,7 @@ This application is used to manage products. It implements all CRUD operations. 
 
 ## 2. Demo
 Two available demos:
+* `Live Demo on GitHub Page:` <a href="https://jojozhuang.github.io/game-store-angular/" target="\_blank">https://jojozhuang.github.io/game-store-angular/</a>
 * `Live Demo on Netlify(CI):` <a href="https://game-store-angular.netlify.com/" target="\_blank">https://game-store-angular.netlify.com/</a>
 * `Live Demo on Heroku(CI):` <a href="https://game-store-angular.herokuapp.com/" target="\_blank">https://game-store-angular.herokuapp.com/</a>
 * `Live Demo on Azure:` <a href="https://game-store-angular.azurewebsites.net/" target="\_blank">https://game-store-angular.azurewebsites.net/</a>

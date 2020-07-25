@@ -84,7 +84,7 @@ First, install Travis CLI.
 $ brew install travis
 ```
 ### 2.2 Log into Travis
-Then login. Since I'm using travis-ci.com instead of travis-ci.org, I need to add `--pro` option for login.
+Then login. Since I'm using travis-ci.com instead of travis-ci.org, I need to add `--pro` option for login. Besides, I'm using GitHub to log into Travis, so just provide the user name and password of GitHub account.
 ```raw
 $ travis login --pro
 Shell completion not installed. Would you like to install it now? |y| y
