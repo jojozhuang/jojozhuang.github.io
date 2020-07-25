@@ -190,14 +190,14 @@ menuitems:
     visible: true
     subkeys: ["page-index","category","searchadv","about"]
     sublist:
+      - key: article-index
+        description: Article Index
+        url: /category
+        icon: fas fa-object-group
       - key: page-index
         description: Page Index
         url: /page-index
         icon: fas fa-chart-line
-      - key: category
-        description: Category
-        url: /category
-        icon: fas fa-object-group
       - key: separator
       - key: searchadv
         description: Advanced Search
