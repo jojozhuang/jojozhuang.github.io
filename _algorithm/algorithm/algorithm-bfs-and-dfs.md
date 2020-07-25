@@ -109,11 +109,50 @@ public List<Integer> preorderTraversal(TreeNode root) {
 ```
 
 ## 3. Graph Problems
+### 3.1 All Paths From Source to Target
+Given a directed, acyclic graph of N nodes. Find all possible paths from node 0 to node N-1, and return them in any order.
+
+The graph is given as follows:  the nodes are 0, 1, ..., graph.length - 1.  graph[i] is a list of all nodes j for which the edge (i, j) exists.
+```raw
+Example:
+Input: [[1,2], [3], [3], []]
+Output: [[0,1,3],[0,2,3]]
+Explanation: The graph looks like this:
+0--->1
+|    |
+v    v
+2--->3
+There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.
+```
+DFS Solution.
+```java
+public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+    List<List<Integer>> ans = new ArrayList<>();
+    List<Integer> list = new ArrayList<>();
+    list.add(0);
+    dfs(graph, 0, list, ans);
+
+    return ans;
+}
+
+private void dfs(int[][] graph, int node, List<Integer> list, List<List<Integer>> ans) {
+    if (node == graph.length - 1) {
+        ans.add(new ArrayList<>(list));
+    }
+
+    for (int nei : graph[node]) {
+        list.add(nei);
+        dfs(graph, nei, list, ans);
+        list.remove(list.size() - 1);
+    }
+}
+```
+
+### 3.2 Traverse in Undirected Graph
 Given an undirected graph with 5 vertices, traverse all vertices in this graph.
 ![image](/assets/images/algorithm/1214/graph.png){:width="350px"}
 
-### 3.1 DFS
-DFS method returns [A, B, C, D, E].
+1) DFS Solution. DFS traverse returns [A, B, C, D, E].
 ```java
 // dfs, recursion
 public void dfs(Node root, List<String> list) {
@@ -129,8 +168,7 @@ public void dfs(Node root, List<String> list) {
     }
 }
 ```
-### 3.2 BFS
-BFS method returns [A, B, E, C, D].
+2) BFS Solution. BFS traverse returns [A, B, E, C, D].
 ```java
 public List<String> bfs(Node root) {
     List<String> ans = new ArrayList<>();
@@ -274,8 +312,12 @@ public int numIslands(char[][] grid) {
 * [LeetCode 144 - Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 * [LeetCode 200 - Number of Islands](https://leetcode.com/problems/number-of-islands/)
 * [LeetCode 542 - 01 Matrix](https://leetcode.com/problems/01-matrix/)
+* [LeetCode 797 - All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)
 
-## 6. References
+## 6. Source Files
+* [Source files for BFS and DFS on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-bfs-dfs)
+
+## 7. References
 * [Depth-first search](https://en.wikipedia.org/wiki/Depth-first_search)
 * [Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)
 * [BFS vs DFS for Binary Tree](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
