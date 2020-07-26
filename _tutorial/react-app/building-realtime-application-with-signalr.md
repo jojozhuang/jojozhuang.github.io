@@ -8,7 +8,7 @@ date: 2016-03-14
 tags: [Chat Room, Sketch Pad, SignalR]
 ---
 
-> Introduce two web applications built with SignalR. One is a chat room, another is a drawing application.
+> Build chat room and drawing application with SignalR. 
 
 ## 1. Home Page  
 Some resources which help to build this application.  
