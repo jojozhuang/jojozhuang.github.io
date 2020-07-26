@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Source Code Search with OpenGrok"
-index: 9115
-subcategory: legacy-blog
+index: 9715
+subcategory: uncategorized
 date: 2018-05-03
 tags: [OpenGrok]
 ---
@@ -86,14 +86,14 @@ rm /var/run/opengrok-indexer
 When the next time indexing happens, you won't see this error, and indexer should start working again.
 ## 4. Searching Code
 The OpenGrok application will now be running on http://192.168.99.100:31030/source/. Notice, we have three projects as we cloned three repositories into the 'src' folder.
-![image](/assets/images/blog/2018-05-03/homepage.png)
+![image](/assets/images/uncategorized/9715/homepage.png)
 
 Search 'trie' in algorithm, all the questions related to trie are displayed.
-![image](/assets/images/blog/2018-05-03/searchalgorithm.png)
+![image](/assets/images/uncategorized/9715/searchalgorithm.png)
 Search 'course player' in portfolio, all my portfolios related to 'course player' are displayed.
-![image](/assets/images/blog/2018-05-03/searchportfolio.png)
+![image](/assets/images/uncategorized/9715/searchportfolio.png)
 Search 'docker' in tutorials, all my tutorials related to 'docker' are displayed.
-![image](/assets/images/blog/2018-05-03/searchtutorials.png)
+![image](/assets/images/uncategorized/9715/searchtutorials.png)
 
 ## 5. References
 * [OpenGrok: An Indexing Service for Your Development Code](https://dzone.com/articles/development-teams-personal-google)

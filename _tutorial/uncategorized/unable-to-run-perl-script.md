@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Unable to Run Perl Script"
-index: 9116
-subcategory: legacy-blog
+index: 9716
+subcategory: uncategorized
 date: 2018-05-05
 tags: [Perl]
 ---

@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Basic Queries in Elasticsearch"
-index: 9110
-subcategory: legacy-blog
+index: 9710
+subcategory: uncategorized
 date: 2017-06-23
 tags: [Elasticsearch]
 ---

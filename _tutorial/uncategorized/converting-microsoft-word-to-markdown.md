@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Converting Microsoft Word to Markdown"
-index: 9112
-subcategory: legacy-blog
+index: 9712
+subcategory: uncategorized
 date: 2017-07-09
 tags: [Markdown, Writage]
 ---

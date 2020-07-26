@@ -202,18 +202,28 @@ categories:
         icon: fab fa-wordpress
         subcategory: wordpress
         image: wordpress.png
-      - name: Legacy Blog
-        description: Legacy Blog
-        icon: fas fa-blog
-        subcategory: legacy-blog
-        image: blog.png
   - category: project
     key: project
     name: Project
-    description: Online Judge
+    description: Tutorial for Projects
     subcategories:
       - name: Online Judge
         description: Online Judge
         icon: fas fa-gavel
         subcategory: online-judge
         image: online-judge.png
+  - category: Others
+    key: others
+    name: Others
+    description: Other Articles
+    subcategories:
+      - name: ASP.NET
+        description: ASP.NET
+        icon: fab fa-adn
+        subcategory: asp-net
+        image: asp-net.png
+      - name: Uncategorized
+        description: Uncategorized Articles
+        icon: fas fa-eye-slash
+        subcategory: uncategorized
+        image: blog.png

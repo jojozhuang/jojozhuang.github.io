@@ -35,7 +35,6 @@ Cloud                     | Amazon AWS                 | 4101 ~ 4200
 Cloud                     | Google Cloud               | 4201 ~ 4300
 Tutorial-Personal Website | Jekyll                     | 8101 ~ 8200
 Tutorial-Personal Website | WordPress                  | 8201 ~ 8300
-Tutorial-Personal Website | Legacy Blog                | 9101 ~ 9200
 Tutorial-Frontend         | Angular Tutorial           | 8301 ~ 8350
 Tutorial-Frontend         | Angular App                | 8351 ~ 8400
 Tutorial-Frontend         | React Tutorial             | 8401 ~ 8450
@@ -45,6 +44,8 @@ Tutorial-Backend          | RESTful API                | 8601 ~ 8700
 Tutorial-Backend          | Node.js                    | 8701 ~ 8750
 Tutorial-Backend          | Express.js                 | 8751 ~ 8800
 Tutorial-Project          | Online Judge               | 9001 ~ 9100
+Tutorial-Others           | ASP.NET                    | 9501 ~ 9600
+Tutorial-Others           | Uncategorized              | 9701 ~ 9800
 {: .table-striped }
 
 <!---

@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Custom Domain for My Personal Website - Draft"
-index: 9128
-subcategory: legacy-blog
+index: 9728
+subcategory: uncategorized
 date: 2019-06-27
 tags: [Bootstrap]
 draft: true

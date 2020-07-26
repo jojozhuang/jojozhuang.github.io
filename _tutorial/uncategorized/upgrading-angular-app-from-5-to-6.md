@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Upgrading Angular App from 5 to 6"
-index: 9117
-subcategory: legacy-blog
+index: 9717
+subcategory: uncategorized
 date: 2018-07-05
 tags: [Angular]
 ---

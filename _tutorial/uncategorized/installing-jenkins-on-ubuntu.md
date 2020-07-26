@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Installing Jenkins On Ubuntu"
-index: 9106
-subcategory: legacy-blog
+index: 9706
+subcategory: uncategorized
 date: 2016-10-05
 tags: [Ubuntu, Jenkins]
 ---
@@ -43,31 +43,31 @@ After running above command, this package installation will:
 
 ### 2.2 Launching Jenkins Web
 Open a web browser, access http://localhost:8080/. You need to find the password in the given file to unlock Jenkins.
-![image](/assets/images/blog/2016-10-05/unlock.png)  
+![image](/assets/images/uncategorized/9706/unlock.png)  
 
 In terminal, navigate to the given directory.
 ```raw
 $ cd /var/lib/jenkins/secrets/
 ```
 If you encounter the permission denied error, use 'sudo su' command (without another user name) to allow you to run commands as the super-user (root).
-![image](/assets/images/blog/2016-10-05/secretfile.png){:width="700px"}
+![image](/assets/images/uncategorized/9706/secretfile.png){:width="700px"}
 Use any text editor to open file initialAdminPassword, you should see the password.
 ```raw
 $ nano initialAdminPassword
 ```
-![image](/assets/images/blog/2016-10-05/password.png){:width="700px"}
+![image](/assets/images/uncategorized/9706/password.png){:width="700px"}
 Copy this password and paste it to the input box in Getting Started page, continue.
-![image](/assets/images/blog/2016-10-05/setpassword.png)
+![image](/assets/images/uncategorized/9706/setpassword.png)
 In the next page, select Install Suggested Plugins.
-![image](/assets/images/blog/2016-10-05/plugin.png)
+![image](/assets/images/uncategorized/9706/plugin.png)
 Jenkins starts to install plugins.
-![image](/assets/images/blog/2016-10-05/installplugin.png)
+![image](/assets/images/uncategorized/9706/installplugin.png)
 In the next page, you need to create an admin user.
-![image](/assets/images/blog/2016-10-05/createuser.png)
+![image](/assets/images/uncategorized/9706/createuser.png)
 Setup is complete, ready for use.
-![image](/assets/images/blog/2016-10-05/ready.png)
+![image](/assets/images/uncategorized/9706/ready.png)
 Finally, we see the homepage of Jenkins.
-![image](/assets/images/blog/2016-10-05/homepage.png)
+![image](/assets/images/uncategorized/9706/homepage.png)
 
 ### 2.3 Commands for Jenkins
 The following commands when appended to the Jenkins instance URL will carry out the relevant actions on the Jenkins instance.
