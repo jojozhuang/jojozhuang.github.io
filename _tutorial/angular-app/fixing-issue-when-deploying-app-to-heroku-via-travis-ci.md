@@ -179,5 +179,7 @@ There is one concern about whether it is safe to store the encrypted key in '.tr
 
 ## 4. References
 * [Issues with Deploying to Heroku via Travis-CI](https://stackoverflow.com/questions/51925918/issues-with-deploying-to-heroku-via-travis-ci)
+* [Heroku Deployment](https://docs.travis-ci.com/user/deployment/heroku/)
 * [Encryption keys](https://docs.travis-ci.com/user/encryption-keys/)
 * [Environment Variables](https://docs.travis-ci.com/user/environment-variables/)
+* [Online tool to generate encrypted key(doesn't work for travis-ci.com)](http://travis-encrypt.github.io/)
