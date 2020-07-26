@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Mermaid Cheat Sheet"
-index: 9124
-subcategory: legacy-blog
+index: 9724
+subcategory: uncategorized
 date: 2018-09-18
 tags: [Mermaid]
 mermaid: true

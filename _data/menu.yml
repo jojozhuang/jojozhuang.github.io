@@ -176,6 +176,15 @@ menuitems:
         description: Online Judge
         url: /tutorial/?n=tutorial&c=project&s=online-judge
         icon: fas fa-gavel
+      - key: separator
+      - key: asp-net
+        description: ASP.NET
+        url: /tutorial/?n=category&c=Others&s=asp-net
+        icon: fab fa-adn
+      - key: uncategorized
+        description: Uncategorized
+        url: /tutorial/?n=category&c=Others&s=uncategorized
+        icon: fas fa-eye-slash
   - key: project
     url: /project
     icon: fas fa-briefcase

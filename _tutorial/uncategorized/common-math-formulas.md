@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Common Math Formulas"
-index: 9113
-subcategory: legacy-blog
+index: 9713
+subcategory: uncategorized
 date: 2018-01-03
 tags: [Math Formulas]
 mathjax: true
@@ -12,7 +12,7 @@ mathjax: true
 > Common math formulas.
 
 ## 1. Geometry
-![image](/assets/images/blog/2018-01-03/geometry-formula.png){:width="800px"}
+![image](/assets/images/uncategorized/9713/geometry-formula.png){:width="800px"}
 
 ### 1.1 Perimeter
 
@@ -51,7 +51,7 @@ Sphere                  | $V = \frac{4}{3}\pi r^3$  | where $\pi$ = 3.14, `r` = 
 Right Circular Cylinder | $V = \pi r^2h$            | where $\pi$ = 3.14, `r` = radius, and `h` = height
 
 ## 2. Trigonometry
-![image](/assets/images/blog/2018-01-03/triangle.png){:width="300px"}
+![image](/assets/images/uncategorized/9713/triangle.png){:width="300px"}
 
 Function      | Formula
 --------------|-------------------------------------------

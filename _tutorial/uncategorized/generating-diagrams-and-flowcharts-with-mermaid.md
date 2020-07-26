@@ -2,8 +2,8 @@
 layout: tutorial
 key: tutorial
 title: "Generating Diagrams and Flowcharts with Mermaid"
-index: 9122
-subcategory: legacy-blog
+index: 9722
+subcategory: uncategorized
 date: 2018-09-14
 tags: [Mermaid, Flowchart, Gantt]
 ---
@@ -74,7 +74,7 @@ Define a flow chart containing 3 nodes.
 </body>
 </html>
 ```
-![image](/assets/images/blog/2018-09-14/firstsample.png){:width="600px"}
+![image](/assets/images/uncategorized/9722/firstsample.png){:width="600px"}
 
 ## 3. Basic Support for fontawesome
 It is possible to add icons from [fontawesome](https://fontawesome.com/) for Mermaid diagrams.
@@ -93,7 +93,7 @@ Define a flow chart containing 4 nodes. The icons are accessed via the syntax `f
       B-->E(fa:fa-camera-retro perhaps?);
 </div>
 ```
-![image](/assets/images/blog/2018-09-14/icon_supported.png){:width="600px"}
+![image](/assets/images/uncategorized/9722/icon_supported.png){:width="600px"}
 
 ## 4. References
 * [Mermaid Documentation](https://mermaidjs.github.io/)

@@ -2,16 +2,16 @@
 layout: tutorial
 key: tutorial
 title: "Analyzing Performance Issue with Splunk"
-index: 9108
-subcategory: legacy-blog
+index: 9708
+subcategory: uncategorized
 date: 2017-02-17
 tags: [Splunk, Log Analysis]
 ---
 
-> Recently, I was working on a performance issue which occurs in our procurement system on the cloud. I reproduced the issue locally and added logs to get the time spent information at runtime. Later, I imported these logs into Splunk for analyzing.
+> Use Splunk logs to analyze performance issues in production.
 
-## 1. About the Issue
-In our cloud-based procurement system, the customer has to wait for one minute to get response after he clicks the 'Save' button on Invoice Reconciliation(IR) document. This IR contains over one hundred line items. There is no available tools for debugging on the cloud. I have to reproduce the issue locally by copying the configuration from cloud to my local sandbox, importing some master data and creating a similar IR document. The root cause is because of the validation on the fields of IR. However, I couldn't narrow down what exact field caused this issue. There are hundreds of fields on IR and on each line item. It seems there is no single bottleneck. Instead, it's an accumulated performance issue. To get the whole picture of how exactly the time is consumed, I added logs to the validation method to capture the time spent for each field. Later, I imported these logs to Splunk for analyzing.
+## 1. Issue in Production
+Recently, I was working on a performance issue which occurs in our procurement system on the cloud. In our cloud-based procurement system, the customer has to wait for one minute to get response after he clicks the 'Save' button on Invoice Reconciliation(IR) document. This IR contains over one hundred line items. There is no available tools for debugging on the cloud. I have to reproduce the issue locally by copying the configuration from cloud to my local sandbox, importing some master data and creating a similar IR document. The root cause is because of the validation on the fields of IR. However, I couldn't narrow down what exact field caused this issue. There are hundreds of fields on IR and on each line item. It seems there is no single bottleneck. Instead, it's an accumulated performance issue. To get the whole picture of how exactly the time is consumed, I added logs to the validation method to capture the time spent for each field. Later, I imported these logs to Splunk for analyzing.
 
 ## 2. Creating Logging Function
 For IR document, it has two level attributes. The first level is the fields on itself, we call it header level. The second level is the line items, we call it line level. We need to get the logs for both two levels.
@@ -40,26 +40,26 @@ Get the logs for level=0(header level).
 ```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=0"
 ```
-![image](/assets/images/blog/2017-02-17/level0.png)  
+![image](/assets/images/uncategorized/9708/level0.png)  
 ### 3.4 Exporting to CSV File
 Export the search result to csv file.  
-![image](/assets/images/blog/2017-02-17/export.png)  
+![image](/assets/images/uncategorized/9708/export.png)  
 ### 3.5 Processing the CSV File
 Use Microsoft Excel for the rest steps, since Excel is good at handling csv files.  
 Open the csv file, eliminate all other columns except Level, Class, FieldName and TimeSpent.
-![image](/assets/images/blog/2017-02-17/eliminate.png)  
+![image](/assets/images/uncategorized/9708/eliminate.png)  
 Then, sort the 'TimeSpent' column in descending order. Now, we see that field 'LineItems' on IR consumes 19.7 seconds. We find the bottleneck.
-![image](/assets/images/blog/2017-02-17/level0sorted.png)  
+![image](/assets/images/uncategorized/9708/level0sorted.png)  
 
 ### 3.6 Searching the Logs for Line Level
 Now, we take the same steps to get the logs for level=1(line level).
 ```raw
 source="performancelog.txt" host="johnny-Ubuntu" sourcetype="log4j" fieldtiming:debug "level=1"
 ```
-![image](/assets/images/blog/2017-02-17/level1.png)  
+![image](/assets/images/uncategorized/9708/level1.png)  
 Open the csv file, eliminate all other columns except Level, Class, FieldName and TimeSpent.
 Then, sort the 'TimeSpent' column in descending order.
-![image](/assets/images/blog/2017-02-17/level1sorted.png)  
+![image](/assets/images/uncategorized/9708/level1sorted.png)  
 Notice that there are two fields consumes lots of time. Each field takes about 90 millisecond for validation. The total time would be 90 * 2 * 100 = 18000 millisecond = 18 seconds, almost all of the proportion of LineItems.
 * cus_SupervisorTotalMismatch
 * cus_SupervisorTotalMismatchContract

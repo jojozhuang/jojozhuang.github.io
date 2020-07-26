@@ -2,13 +2,13 @@
 layout: tutorial
 key: tutorial
 title: "Cross Domain Access for RESTful Web Services"
-index: 9103
-subcategory: legacy-blog
+index: 9703
+subcategory: uncategorized
 date: 2016-02-05
 tags: [CORS, ASP.NET WebAPI]
 ---
 
-> How to access the RESTful web services for web client which is deployed on another web server?
+> Access RESTful web services for web client which is deployed on another web server.
 
 ## 1. Background
 I'm building a web application with ReactJS. The client calls RESTful web services built with ASP.NET WebAPI to fetch data. This client website(ReactJS) and the backend RESTful services are deployed on different servers. One issue is the client side fails to get the JSON data from the RESTful services. Similar issue can be found on stackoverflow.  
