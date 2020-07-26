@@ -12,9 +12,9 @@ tags: [JSP, MongoDB, Maven]
 
 ## 1. Prerequisites
 ### 1.1 Java Development Environment
-Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _programming/dev-env/setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
+Development environment has been setup. JDK, Eclipse and Tomcat are all installed. Otherwise, refer to [Setting up Java Development Environment on Mac]({% link _programming/dev-environment/setting-up-java-development-environment-on-mac.md %}) to setup your development environment.
 ### 1.2 MongoDB
-MongoDB database has been installed. Otherwise, refer to [Installing MongoDB on Ubuntu and Mac]({% link _programming/dev-env/installing-mongodb-on-ubuntu-and-mac.md %}) to install MongoDB.
+MongoDB database has been installed. Otherwise, refer to [Installing MongoDB on Ubuntu and Mac]({% link _programming/dev-environment/installing-mongodb-on-ubuntu-and-mac.md %}) to install MongoDB.
 
 ## 2. Setting up JSP Project
 ### 2.1 Creating Dynamic Web Project

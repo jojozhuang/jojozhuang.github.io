@@ -3,7 +3,7 @@ layout: tutorial
 key: programming
 title: "Installing and Using Git"
 index: 2023
-subcategory: dev-env
+subcategory: dev-environment
 date: 2017-08-31
 tags: [Git, GitHub, SourceTree]
 ---

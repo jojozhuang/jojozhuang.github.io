@@ -3,7 +3,7 @@ layout: tutorial
 key: programming
 title: "Installing MongoDB on Ubuntu and Mac"
 index: 2032
-subcategory: dev-env
+subcategory: dev-environment
 date: 2017-11-08
 tags: [MongoDB]
 ---

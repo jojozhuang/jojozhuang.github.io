@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Math"
 index: 1238
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2020-03-21
 tags: [String, Array]
 draft: true

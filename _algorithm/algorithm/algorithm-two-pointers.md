@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Two Pointers"
 index: 1212
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-23
 tags: [Two Pointers]
 mathjax: true

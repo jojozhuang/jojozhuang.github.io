@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Sqrt Decomposition"
 index: 1232
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-30
 tags: [Sqrt Decomposition]
 mathjax: true

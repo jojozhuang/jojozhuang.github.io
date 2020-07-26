@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Map Reduce - Draft"
 index: 1235
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-31
 tags: [Map, Reduce]
 draft: true

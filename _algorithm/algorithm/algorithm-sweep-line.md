@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Sweep Line"
 index: 1231
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-29
 tags: [Sweep Line]
 mathjax: true

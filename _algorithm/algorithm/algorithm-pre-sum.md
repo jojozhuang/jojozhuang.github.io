@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Pre Sum - Draft"
 index: 1236
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-31
 tags: [Pre sum]
 draft: true
