@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Bit Manipulation"
 index: 1203
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-04-03
 tags: [Xor, Shifting]
 ---

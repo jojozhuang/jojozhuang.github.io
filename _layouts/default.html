@@ -42,7 +42,7 @@
                     {% if sublink.key == "separator"%}
                       <div class="dropdown-divider"></div>
                     {% else %}
-                      <a class="dropdown-item {% if page.key == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
+                      <a class="dropdown-item {% if page.key == sublink.key or page.subcategory == sublink.key %} active {% endif %}" href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
                     {% endif %}
                   {% endif %}
                 {% endfor %}

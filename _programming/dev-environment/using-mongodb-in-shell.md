@@ -3,7 +3,7 @@ layout: tutorial
 key: programming
 title: "Using MongoDB in Shell"
 index: 2033
-subcategory: dev-env
+subcategory: dev-environment
 date: 2017-11-09
 tags: [MongoDB, CRUD]
 ---

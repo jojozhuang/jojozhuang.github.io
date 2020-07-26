@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Dynamic Programming"
 index: 1221
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-28
 tags: [DP]
 mathjax: true

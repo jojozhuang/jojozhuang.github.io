@@ -15,7 +15,7 @@ categories:
       - name: Algorithm
         description: Algorithm
         icon: fas fa-square-root-alt
-        subcategory: algorithm
+        subcategory: algorithm-algorithm
         image: algorithms.png
       - name: Algorithm Overview
         description: Algorithm Overview
@@ -35,7 +35,7 @@ categories:
       - name: Dev Environment
         description: Development Environment
         icon: fab fa-dev
-        subcategory: dev-env
+        subcategory: dev-environment
         image: dev.png
       - name: Java Core
         description: Core features of Java

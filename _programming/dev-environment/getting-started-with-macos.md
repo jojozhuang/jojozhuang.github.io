@@ -3,7 +3,7 @@ layout: tutorial
 key: programming
 title: "Getting Started with macOS"
 index: 2002
-subcategory: dev-env
+subcategory: dev-environment
 date: 2017-06-17
 tags: [macOS, Bash, Shell]
 ---

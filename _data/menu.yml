@@ -3,15 +3,15 @@ menuitems:
     url: /#
     icon: fas fa-square-root-alt
     visible: true
-    subkeys: ["data-structure","algorithm","algorithm-overview","practice-problem"]
+    subkeys: ["data-structure","algorithm-algorithm","algorithm-overview","practice-problem"]
     sublist:
       - key: data-structure
         description: Data Structure
         url: /algorithm/?n=algorithm&c=algorithm&s=data-structure
         icon: fas fa-sitemap
-      - key: algorithm
+      - key: algorithm-algorithm
         description: Algorithm
-        url: /algorithm/?n=algorithm&c=algorithm&s=algorithm
+        url: /algorithm/?n=algorithm&c=algorithm&s=algorithm-algorithm
         icon: fas fa-square-root-alt
       - key: algorithm-overview
         description: Algorithm Overview
@@ -26,18 +26,18 @@ menuitems:
     url: /#
     icon: fas fa-code
     visible: true
-    subkeys: ["programming","dev-environment","java-core","java8","java-concurrency","java-advanced","java-app","javascript","design-pattern"]
+    subkeys: ["programming","dev-environment","java-core","java-java8","java-concurrency","java-advanced","java-app","javascript","design-pattern"]
     sublist:
       - key: dev-environment
         description: Dev Environment
-        url: /programming/?n=programming&c=programming&s=dev-env
+        url: /programming/?n=programming&c=programming&s=dev-environment
         icon: fab fa-dev
       - key: separator
       - key: java-core
         description: Java Core
         url: /programming/?n=programming&c=programming&s=java-core
         icon: fab fa-java
-      - key: java8
+      - key: java-java8
         description: Java 8
         url: /programming/?n=programming&c=programming&s=java-java8
         icon: fab fa-java
@@ -126,7 +126,7 @@ menuitems:
     url: /#
     icon: fas fa-chalkboard-teacher
     visible: true
-    subkeys: ["tutorial","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","nodejs","express-js","jekyll","wordpress","online-judge"]
+    subkeys: ["tutorial","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","node-js","express-js","jekyll","wordpress","online-judge"]
     sublist:
       - key: jekyll
         description: Jekyll
@@ -163,7 +163,7 @@ menuitems:
         description: RESTful API
         url: /tutorial/?n=tutorial&c=backend&s=restful-api
         icon: fas fa-plug
-      - key: nodejs
+      - key: node-js
         description: Node.js
         url: /tutorial/?n=tutorial&c=backend&s=node-js
         icon: fab fa-node-js

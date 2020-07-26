@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Knapsack Problems"
 index: 1222
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-28
 tags: [Knapsack, Backpack]
 mathjax: true

@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Union Find"
 index: 1217
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-24
 tags: [Disjoint Set, Union, Find]
 ---

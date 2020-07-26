@@ -3,7 +3,7 @@ layout: tutorial
 key: algorithm
 title: "Algorithm - Divide and Conquer"
 index: 1213
-subcategory: algorithm
+subcategory: algorithm-algorithm
 date: 2016-03-25
 tags: [Divide, Conquer]
 ---
