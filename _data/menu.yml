@@ -197,9 +197,9 @@ menuitems:
     url: /#
     icon: fas fa-chevron-circle-down
     visible: true
-    subkeys: ["page-index","category","searchadv","about"]
+    subkeys: ["category","page-index","searchadv","about"]
     sublist:
-      - key: article-index
+      - key: category
         description: Article Index
         url: /category
         icon: fas fa-object-group
