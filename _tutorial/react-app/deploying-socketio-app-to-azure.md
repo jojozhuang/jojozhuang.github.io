@@ -97,7 +97,7 @@ Add 'engines' section into 'package.json' of the Node.js project. It indicates t
   },
   "keywords": [],
   "author": {
-    "name": "Rong Zhuang",
+    "name": "Johnny",
     "email": "csgeek@mail.com"
   },
   "license": "MIT",

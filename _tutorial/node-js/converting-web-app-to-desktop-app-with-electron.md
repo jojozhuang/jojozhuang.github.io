@@ -206,7 +206,7 @@ To use electron-build for building, we need to create a folder named 'build' and
   "homepage": "https://github.com/jojozhuang/Portfolio",
   "main": "main.js",
   "author": {
-    "name": "Rong Zhuang",
+    "name": "Johnny",
     "email": "csgeek@mail.com"
   }
 

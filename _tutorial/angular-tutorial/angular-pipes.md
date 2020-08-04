@@ -169,7 +169,7 @@ import { ReversePipe } from './reverse.pipe';
 })
 
 export class AppComponent {
-  name: string = 'Rong Zhuang';
+  name: string = 'Johnny';
 }
 ```
 {% endraw %}

@@ -3,7 +3,7 @@ menuitems:
     url: /#
     icon: fas fa-square-root-alt
     visible: true
-    subkeys: ["data-structure","algorithm-algorithm","algorithm-overview","practice-problem"]
+    subkeys: ["algorithm","data-structure","algorithm-algorithm","algorithm-overview","practice-problem"]
     sublist:
       - key: data-structure
         description: Data Structure
@@ -126,7 +126,7 @@ menuitems:
     url: /#
     icon: fas fa-chalkboard-teacher
     visible: true
-    subkeys: ["tutorial","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","node-js","express-js","jekyll","wordpress","online-judge"]
+    subkeys: ["tutorial","jekyll","wordpress","angular-tutorial","angular-app","react-tutorial","react-app","mobile","restful-api","node-js","express-js","online-judge"]
     sublist:
       - key: jekyll
         description: Jekyll

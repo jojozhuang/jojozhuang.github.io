@@ -88,7 +88,7 @@ input the following information
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rong Zhuang",
+  "author": "Johnny",
   "license": "GPL-3.0"
 }
 ```

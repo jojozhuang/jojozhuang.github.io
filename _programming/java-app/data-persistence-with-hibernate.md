@@ -191,7 +191,7 @@ public class ManageEmployee {
         ManageEmployee ME = new ManageEmployee();
 
         /* Add few employee records in database */
-        Integer empID1 = ME.addEmployee("Rong Zhuang", 1000);
+        Integer empID1 = ME.addEmployee("Johnny Zhuang", 1000);
         Integer empID2 = ME.addEmployee("Michael Jackson", 5000);
         Integer empID3 = ME.addEmployee("Johnny Walker", 10000);
 
@@ -335,10 +335,10 @@ Finally, the project looks as follows.
 ### 5.1 Running ManageEmployee Class
 In Eclipse, right click on `ManageEmployee.java` file -> Run AS -> Java Application. You will get the following output in the console panel of eclipse IDE.
 ```raw
-Name: Rong Zhuang Salary: 1000.0
+Name: Johnny Zhuang Salary: 1000.0
 Name: Michael Jackson Salary: 5000.0
 Name: Johnny Walker Salary: 10000.0
-Name: Rong Zhuang Salary: 7000.0
+Name: Johnny Zhuang Salary: 7000.0
 Name: Johnny Walker Salary: 10000.0
 ```
 ![image](/assets/images/programming/2537/console.png)
