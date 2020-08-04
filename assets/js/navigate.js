@@ -139,7 +139,9 @@
 
     appendString += '</ol>';
     var breadcrumbCtrl = document.getElementById('bread-crumb');
-    breadcrumbCtrl.innerHTML = appendString;
+    if (breadcrumbCtrl) {
+      breadcrumbCtrl.innerHTML = appendString;
+    }
 
    // match
     for (var key in window.store) {
