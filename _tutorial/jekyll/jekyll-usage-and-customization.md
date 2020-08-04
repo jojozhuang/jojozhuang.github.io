@@ -182,7 +182,7 @@ Finally, create `favorite.html` in the root directory, add codes to read data fr
 ---
 layout: default
 key: favorite
-title: Rong Zhuang's Favorite Bookmarks
+title: My Favorite Bookmarks
 ---
 <div class="main-contents">
     <div class="main-contents-inner">
