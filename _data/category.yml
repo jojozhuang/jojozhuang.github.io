@@ -21,12 +21,12 @@ categories:
         description: Algorithm Overview
         icon: fas fa-superscript
         subcategory: algorithm-overview
-        image: algorithms2.png
+        image: algorithms-overview.png
       - name: Practice Problem
         description: Practice Problem
         icon: fab fa-resolving
         subcategory: practice-problem
-        image: target.png
+        image: practice-problem.png
   - category: programming
     key: programming
     name: Programming
@@ -41,27 +41,27 @@ categories:
         description: Core features of Java
         icon: fab fa-java
         subcategory: java-core
-        image: java.png
+        image: java-core.png
       - name: Java 8
         description: New features in Java 8
         icon: fab fa-java
         subcategory: java-java8
-        image: java.png
+        image: java-8.png
       - name: Java Concurrency
         description: Concurrency and MultiThreading
         icon: fab fa-java
         subcategory: java-concurrency
-        image: java.png
+        image: java-concurrency.png
       - name: Java Advanced
         description: Advanced topics of Java
         icon: fab fa-java
         subcategory: java-advanced
-        image: java2.png
+        image: java-advanced.png
       - name: Java App
         description: Java Application
         icon: fab fa-java
         subcategory: java-app
-        image: java3.png
+        image: java-app.png
       - name: Javascript
         description: Javascript
         icon: fab fa-js-square
