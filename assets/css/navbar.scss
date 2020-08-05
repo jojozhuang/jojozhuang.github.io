@@ -29,7 +29,13 @@
   padding: 0rem 0.75rem 0rem 0.5rem;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .search-form {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
   .navbar-toggler {
     margin: .30rem .25rem;
     padding: .45rem .75rem;
