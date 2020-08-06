@@ -101,6 +101,7 @@
   }
 
   var categoryList = document.getElementById('category-list');
+  var categoryList2 = document.getElementById('category-list2');
   var postingList = document.getElementById('posting-list');
   var subject = document.getElementById('subject').value;
   var nav = getQueryVariable('n');
@@ -111,9 +112,11 @@
   if (nav) {
     //$(".page-wrapper").removeClass("toggled");
     categoryList.style.display = "none";
+    categoryList2.style.display = "none";
     postingList.style.display = "block";
   } else {
     categoryList.style.display = "block";
+    categoryList2.style.display = "block";
     postingList.style.display = "none";
     //$(".page-wrapper").addClass("toggled");
     nav = subject;

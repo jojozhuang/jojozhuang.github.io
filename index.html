@@ -11,47 +11,73 @@ title: Happy Coding
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <h1 class="page-header">{{site.mywebsite.title}} <small>{{site.mywebsite.subtitle}}</small></h1>
-          <div id="category-list" style="display: none">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Data Structure and Algorithm</h5>
-                  <p class="card-text">Learn data structure and algorithm with examples.</p>
-                  <a href="/algorithm/?n=algorithm&c=algorithm&s=data-structure" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
-                  <a href="/algorithm/?n=algorithm&c=algorithm&s=algorithm" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Personal Website</h5>
-                  <p class="card-text">Learn how to use Jekyll to setup your personal website.</p>
-                  <a href="/tutorial/?n=tutorial&c=website&s=jekyll" class="btn btn-outline-primary"><i class="fas fa-globe"></i> Jekyll</a>
-                  <a href="/tutorial/?n=tutorial&c=website&s=wordpress" class="btn btn-outline-primary"><i class="fab fa-wordpress"></i> Wordpress</a>
-                </div>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Data Structure and Algorithm</h5>
+                <p class="card-text">Learn data structure and algorithm with examples.</p>
+                <a href="/algorithm/?n=algorithm&c=algorithm&s=data-structure" class="btn btn-outline-primary"><i class="fas fa-sitemap"></i> Data Structure</a>
+                <a href="/algorithm/?n=algorithm&c=algorithm&s=algorithm" class="btn btn-outline-primary"><i class="fas fa-square-root-alt"></i> Algorithm</a>
               </div>
             </div>
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Angular</h5>
-                  <p class="card-text">Learn how to use Angular to build front-end application with examples.</p>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=angular-js" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular Tutorial</a>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=angular-app" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular App</a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">React</h5>
-                  <p class="card-text">Learn how to use React to build front-end application with examples.</p>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=react-js" class="btn btn-outline-primary"><i class="fab fa-react"></i> React Tutorial</a>
-                  <a href="/tutorial/?n=tutorial&c=frontend&s=react-app" class="btn btn-outline-primary"><i class="fab fa-react"></i> React App</a>
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Personal Website</h5>
+                <p class="card-text">Learn how to use Jekyll to setup your personal website.</p>
+                <a href="/tutorial/?n=tutorial&c=website&s=jekyll" class="btn btn-outline-primary"><i class="fas fa-globe"></i> Jekyll</a>
+                <a href="/tutorial/?n=tutorial&c=website&s=wordpress" class="btn btn-outline-primary"><i class="fab fa-wordpress"></i> Wordpress</a>
               </div>
             </div>
+          </div>
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Angular</h5>
+                <p class="card-text">Learn how to use Angular to build front-end application with examples.</p>
+                <a href="/tutorial/?n=tutorial&c=frontend&s=angular-js" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular Tutorial</a>
+                <a href="/tutorial/?n=tutorial&c=frontend&s=angular-app" class="btn btn-outline-danger"><i class="fab fa-angular"></i> Angular App</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">React</h5>
+                <p class="card-text">Learn how to use React to build front-end application with examples.</p>
+                <a href="/tutorial/?n=tutorial&c=frontend&s=react-js" class="btn btn-outline-primary"><i class="fab fa-react"></i> React Tutorial</a>
+                <a href="/tutorial/?n=tutorial&c=frontend&s=react-app" class="btn btn-outline-primary"><i class="fab fa-react"></i> React App</a>
+              </div>
+            </div>
+          </div>
+          <div id="category-list" class="d-none d-xl-block" style="display: none">
             {% assign subject = site.data.category %}
             {% assign postings = site.algorithm | concat: site.programming | concat: site.architecture | concat: site.cloud | concat: site.tutorial | sort: 'index' %}
             {% for category in subject.categories %}
               {% assign col = forloop.index | modulo: 3 %}
+              {% if col == 1 %}
+                <div class="card-deck">
+              {% endif %}
+                  <div class="card">
+                    <div class="card-header">
+                      {% assign categoryurl = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category %}
+                      <a href="{{categoryurl}}" class="card-link">{{category.name}}</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    {% for subcategory in category.subcategories %}
+                    {% assign list = postings | where: 'subcategory', subcategory.subcategory %}
+                    {% assign url = "/" | append: subject.key | append: "/?n=" | append: subject.key | append: "&c=" | append: category.category | append: "&s=" | append: subcategory.subcategory %}
+                    <a href="{{url}}" class="list-group-item list-group-item-action">
+                      <span data-toggle="tooltip" data-placement="right" title="{{subcategory.description}}"><i class="{{subcategory.icon}}"></i> {{subcategory.name}} <span class="badge badge-pill badge-primary pull-right">{{list | size}}</span></span>
+                    </a>
+                    {% endfor %}
+                    </ul>
+                  </div>
+              {% if col == 0 or forloop.last == true %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div id="category-list2" class="d-xl-none" style="display: none">
+            {% for category in subject.categories %}
+              {% assign col = forloop.index | modulo: 2 %}
               {% if col == 1 %}
                 <div class="card-deck">
               {% endif %}
