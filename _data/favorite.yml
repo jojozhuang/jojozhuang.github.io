@@ -129,6 +129,9 @@ bookmarks:
       - name: The Modern JavaScript Tutorial
         description: A good tutorial for javascript
         url: https://javascript.info/
+      - name: Mastertheboss
+        description: A large collection of tutorials for Jakarta Enterprise programming
+        url: http://www.mastertheboss.com/
   - category: Basic Concepts in Computer Science
     links:
       - name: Data Structure
