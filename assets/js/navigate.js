@@ -111,6 +111,7 @@
 
   if (nav) {
     //$(".page-wrapper").removeClass("toggled");
+    categoryList.classList.remove("d-xl-block")
     categoryList.style.display = "none";
     categoryList2.style.display = "none";
     postingList.style.display = "block";
