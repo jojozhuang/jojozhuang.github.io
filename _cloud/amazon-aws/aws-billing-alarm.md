@@ -8,7 +8,7 @@ date: 2019-09-16
 tags: [AWS, Billing Alarm]
 ---
 
-> Create a billing alarm to monitor the AWS charges.
+> Create billing alarms to monitor the AWS charges.
 
 ## 1. Monitoring Overview
 We can monitor the estimated AWS charges by using Amazon CloudWatch. If we enable the monitoring of estimated charges for AWS account, the estimated charges are calculated and sent several times daily to CloudWatch. Then we can create an alarm, which triggers when the account billing exceeds the threshold we specify.

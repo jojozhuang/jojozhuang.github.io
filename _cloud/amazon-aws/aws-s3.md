@@ -1,14 +1,14 @@
 ---
 layout: tutorial
 key: cloud
-title: "AWS-S3 Bucket"
+title: "AWS-S3"
 index: 4103
 subcategory: amazon-aws
 date: 2019-09-16
-tags: [S3]
+tags: [AWS, S3]
 ---
 
-> Create a S3 bucket to store files.
+> Using S3 buckets to store files.
 
 ## 1. S3 and Bucket
 ### 1.1 What is Amazon S3?
