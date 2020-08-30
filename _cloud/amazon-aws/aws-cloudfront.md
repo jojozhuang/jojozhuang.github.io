@@ -5,7 +5,7 @@ title: "AWS-CloudFront"
 index: 4104
 subcategory: amazon-aws
 date: 2019-09-16
-tags: [CloudFront, CND]
+tags: [AWS, CloudFront, CND]
 ---
 
 > Using CloudFront for caching files.

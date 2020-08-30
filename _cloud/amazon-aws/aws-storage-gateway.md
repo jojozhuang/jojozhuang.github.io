@@ -5,7 +5,7 @@ title: "AWS-Storage Gateway"
 index: 4105
 subcategory: amazon-aws
 date: 2019-09-16
-tags: [Storage Gateway]
+tags: [AWS, Storage Gateway]
 ---
 
 > Using Storage Gateway for integrating with on-premise software.

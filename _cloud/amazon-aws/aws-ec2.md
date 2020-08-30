@@ -5,7 +5,7 @@ title: "AWS-EC2"
 index: 4106
 subcategory: amazon-aws
 date: 2019-09-16
-tags: [EC2]
+tags: [AWS, EC2]
 ---
 
 > Amazon EC2.
