@@ -11,7 +11,93 @@ draft: true
 
 > Amazon AWS Tutorial
 
-## 1. AWS
+## 1. AWS Components
+
+ Name      | Short Description              | Usage
+-----------|--------------------------------|-------------------
+S3         | Object-based Storage           | Object Storage(files, pictures, videos, etc)
+EC2        | Elastic Computing Service      | Computing service for applications
+EBS        | Elastic Block Store            | Block storage for ec2
+IAM        | Identity and Access Management | Access control, user, role, group, permissions
+CloudWatch | logging serivce                | for performance
+CloudTrail | logging service                | for auditing
+Route53    | Domain Service                 | Domain, Routing Strategy(Simple, Weighted, ,Latency, Failover, Geolocation, etc)
+CloudFront | CDN Service                    | Improving access speed
+ELB        | Elastic Load Balancer          | Load balancing, Application, NetWork, Classic
+VPC        | Virtual Private Cloud          | Direct Connect, VPC Endpoint
+Aurora     | Relational Database            | Relational Database
+AWS RDS    | Relational Database            | PostgreSQL, MySQL, MariaDB, Oracle, SQL Server
+DynamoDB   | No-SQL database                | Key-value database
+Cassandra  | No-SQL database                | Wide column database
+SQS        | Simple Queue Service           | Message queuing service(Kafka), Standard Queue(deliver at least once); FIFO(guarantee once)
+SNS        | Simple Notification Service    | Notification, text, email.
+SWF        | Simple Workflow Service        | Media processing, web application back-ends, business process workflows, etc
+Elastic Beanstalk  |   |  
+Lambda  |   |  
+
+### 1.1 Storage
+S3 features:
+* S3 is Object-based
+* size of single file is from 0 byte to 5 TB.
+* S3 name is unique globally.
+* Using Bucket ACL or Bucket Policies to control access.
+* Server Side Encryption: SSE-S3, SSE-KMS, SSE-C
+* Versioning is supported, can't disable once enabled.
+* CloudFront - CDN
+* Snowball for Petabyte-scale data transport.
+* Storage Gateway: File Gateway, Volume Gateway, Tape Gateway
+
+S3 Storage Class:
+* S3 Standard
+* S3-IA
+* S3 One Zone - IA
+* S3 - Intelligent Tiering
+* S3 Glacier
+* S3 Glacier Deep Archive
+* Lifecycle Policies
+
+Comparison:
+* S3 One Zone is not high available
+* S3 One Zone is cheaper.
+* Glacier is immutable.
+
+IAM:
+* IAM is universal.
+* No permissions for new users.
+
+CloudWatch is all about performance, whereas CloudTrail is all about auditing.
+
+2) CloudTrail logs vs. VPC flow logs vs. S3 bucket logs vs. CloudWatch Logs
+3) SSE-S3 vs. SSE-KMS
+
+### 1.2 EC2
+EC2 Pricing Models:
+* On Demand
+* Reserved
+* Spot
+* Dedicated Host
+
+EBS:
+* General Purpose SSD
+* Provisioned IOPS SSD
+* Throughput Optimized HDD
+* Cold HDD
+* EBS Magnetic
+
+Security Group:
+* Specify allow rules, but not deny rules.
+
+BootStrap Scripts.
+
+Instance MetaData & User Data
+
+EFS
+
+EC2 Placement Groups
+* Clustered Placement Group:
+* Spread Placement Group
+* Partitioned Placement Group
+
 
 
 ### 3.16 Identity Access Management & S3 Summary
