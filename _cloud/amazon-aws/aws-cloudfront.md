@@ -38,26 +38,26 @@ Go to Services->Networking & Content Delivery->CloudFront, or visit https://cons
 Select "Web", get started.
 ![image](/assets/images/cloud/4104/cloudfront-web.png)
 Then select the S3 bucket to distribute.
-![image](/assets/images/note/9551/3-12-cloundfront-create-distribution.png)
+![image](/assets/images/cloud/4104/cloudfront-create-distribution.png)
 Some settings:
 * Restrict View Access
 * TTL
 
 Keep the default settings, create distribution.
-![image](/assets/images/note/9551/3-12-cloundfront-create-distribution-in-progress.png)
+![image](/assets/images/cloud/4104/cloudfront-create-distribution-in-progress.png)
 Wait for few minutes until the deployment is done.
-![image](/assets/images/note/9551/3-12-cloundfront-create-distribution-enabled.png)
+![image](/assets/images/cloud/4104/cloudfront-create-distribution-enabled.png)
 Copy the domain name, which is 'digq5vi21aheh.cloudfront.net' here.
 ### 2.2 Testing CloudFront Distribution
 There are two images files in the original bucket.
 
 Access the first one, http://digq5vi21aheh.cloudfront.net/IMG_5807.JPG, failed. because this file is encrypted with AWS KMS.
-![image](/assets/images/note/9551/3-12-cloundfront-distributed-encrypted-file.png)
+![image](/assets/images/cloud/4104/cloudfront-distributed-encrypted-file.png)
 Access the second file, http://digq5vi21aheh.cloudfront.net/IMG_5819.JPG, succeeded.
-![image](/assets/images/note/9551/3-12-cloundfront-distributed-file.png)
+![image](/assets/images/cloud/4104/cloudfront-distributed-file.png)
 ### 2.3 Creating Invalidation
 Create invalidation for distribution.
-![image](/assets/images/note/9551/3-12-cloundfront-distribution-invalidation.png)
+![image](/assets/images/cloud/4104/cloudfront-distribution-invalidation.png)
 
 ## 3. References
 * [Amazon CloudFront](https://aws.amazon.com/cloudfront)

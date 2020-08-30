@@ -17,9 +17,9 @@ We can monitor the estimated AWS charges by using Amazon CloudWatch. If we enabl
 Before creating an alarm for the estimated charges, we must enable billing alerts first, so that we can monitor the estimated AWS charges and create an alarm using billing metric data.
 
 Open the Billing and Cost Management console at https://console.aws.amazon.com/billing/.
-![image](/assets/images/note/9551/3-3-billing-dashboard.png)
+![image](/assets/images/cloud/4102/billing-dashboard.png)
 In the navigation pane, choose Billing Preferences.
-![image](/assets/images/note/9551/3-3-billing-preferences.png)
+![image](/assets/images/cloud/4102/billing-preferences.png)
 Choose Receive Billing Alerts, and Save preferences.
 
 ## 3. Creating a Billing Alarm
