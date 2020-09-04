@@ -12,7 +12,7 @@ tags: [AWS, S3]
 
 ## 1. S3 and Bucket
 ### 1.1 What is Amazon S3?
-Amazon Simple Storage Service is storage for the Internet. It is designed to make web-scale computing easier for developers.
+Amazon Simple Storage Service(S3) is storage for the Internet. It is designed to make web-scale computing easier for developers.
 
 Amazon S3 has a simple web services interface that you can use to store and retrieve any amount of data, at any time, from anywhere on the web. It gives any developer access to the same highly scalable, reliable, fast, inexpensive data storage infrastructure that Amazon uses to run its own global network of web sites. The service aims to maximize benefits of scale and to pass those benefits on to developers.
 ### 1.2 S3 Security
