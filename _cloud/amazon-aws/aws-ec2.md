@@ -136,18 +136,18 @@ Redirecting to /bin/systemctl start httpd.service
 Access 3.83.9.181 or http://3.83.9.181/index.html through web browser.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-12.png)
 
-**Tips for EC2**:
+### 2.2 Summary
 * Termination Protection is turned off by default, you must turn it on.
 * On an EBS-backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated.
 * EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be done when creating AMI's (lab to follow) in the AWS console or using the API.
 * Additional volumes can be encrypted.
 
-### 2.2 Security Groups Basics
+### 2.3 Security Groups Basics
 All outbound traffic is allowed.
 ![image](/assets/images/cloud/4106/4-4-ec2-security-group-outbound.png)
 You can have multiple security groups attached to EC2 instance. (Instance->Actions->NetWorking->Change Security Groups)
 ![image](/assets/images/cloud/4106/4-4-ec2-security-group-multiple-groups.png)
-**Tips for Security Groups**:
+### 2.4 Summary
 * All Inbound traffic is blocked by default.
 * All Outbound traffic is allowed.
 * Changes to Security Groups take effect immediately.
@@ -207,7 +207,7 @@ The new image appears in the AMIs, and it is ready to use.
 ![image](/assets/images/cloud/4106/4-6-volumes-snapshots-11.png)
 Let's launch a new instance with this image, choose a different AZ.
 ![image](/assets/images/cloud/4106/4-6-volumes-snapshots-12.png)
-After launch, notice it is in a different AZ(us-east-1a) from the original one(us-east-1b).
+After launch, notice it is in a different AZ(us-west-1a) from the original one(us-west-1c).
 ![image](/assets/images/cloud/4106/4-6-volumes-snapshots-13.png)
 We can also move the EBS volume to another region by copying AMI image to another region and launch new instance with it. And we can choose any AZ in that region.
 ![image](/assets/images/cloud/4106/4-6-volumes-snapshots-14.png)
@@ -221,7 +221,7 @@ And we have 5 volumes for above two instances.
 After the instances are terminated, the addition volumes are still there, their states are changed to 'available' though. Only the root volumes are deleted.
 ![image](/assets/images/cloud/4106/4-6-volumes-snapshots-17.png)
 
-Tips of VOLUMES & SNAPSHOTS:
+### 3.3 Summary of VOLUMES & SNAPSHOTS:
 * Volumes exist on EBS. Think of EBS as a virtual hard disk
 * Snapshots exist on S3. Think of snapshots as a photograph of the disk.
 * Snapshots are point in time copies of Volumes.
@@ -263,7 +263,7 @@ Continue with the default settings and reuse the security group created previous
 Instance store can't be stopped. Terminate it as it is not in the free trial.
 ![image](/assets/images/cloud/4106/4-7-ec2-create-instance-store-6.png)
 
-Tips of EBS and Instance Store:
+### 3.4 Summary of EBS and Instance Store
 * Instance Store Volumes are sometimes called Ephemeral Storage.
 * Instance store volumes cannot be stopped. If the underlying host fails, you will lose your data.
 * EBS backed instances can be stopped. You will not lose the data on this instance if it is stopped.
@@ -287,7 +287,7 @@ Switch to Images view and see the AMI.
 Now, we can use this image to launch new instance, notice it is encrypted by default.
 ![image](/assets/images/cloud/4106/4-8-ec2-volume-create-snapshot-8.png)
 
-Tips of Volumes and Snapshots:
+### Summary of Volumes and Snapshots:
 * Snapshots of encrypted volumes are encrypted automatically.
 * Volumes restored from encrypted snapshots are encrypted automatically.
 * You can share snapshots, but only if they are unencrypted.
@@ -326,7 +326,7 @@ What Can I do With CloudWatch?
 ### 4.2 What Is AWS Cloud Trail?
 AWS CloudTrail increases visibility into your user and resource activity by recording AWS Management Console actions and API calls. You can identify which users and accounts called AWS, the source IP address from which the calls were made, and when the calls occurred.
 
-Tips of CloudWatch:
+### 4.3 Summary of CloudWatch
 * CloudWatch is used for monitoring performance.
 * CloudWatch can monitor most of AWS as well as your applications that run on AWS.
 * CloudWatch with EC2 will monitor events every 5 minutes by default.
@@ -471,7 +471,7 @@ Unable to locate credentials. You can configure credentials by running "aws conf
 ```
 By doing this, there is no credentials are stored in the server directory.
 
-Tips of IDENTITY ACCESS MANAGEMENT ROLES:
+### 5.3 Summary of IDENTITY ACCESS MANAGEMENT ROLES:
 * Roles are more secure than storing your access key and secret access key on individual EC2 instances.
 * Roles are easier to manage.
 * Roles can be assigned to an EC2 instance after it is created using both the console & command line.
@@ -658,7 +658,7 @@ Click new Placement Group, input name and choose Strategy.
 Use Placement Group when launch new instance.
 ![image](/assets/images/cloud/4106/4-16-ec2-placement-group-lab-3.png)
 
-Tips of Placement Groups:
+### 9.3 Summary
 * A clustered placement group can't span multiple Availability Zones, but a spread placement or partitioned group can.
 * The name you specify for a placement group must be unique within your AWS account.
 * Only certain types of instances can be launched in a placement group (Compute Optimized, GPU, Memory Optimized, Storage Optimized)
