@@ -60,23 +60,34 @@ ElastiCache supports two open-source in-memory caching engines:
 * Redis
 
 Elasticache is used to speed up performance of existing databases (frequent identical queries).
+### 1.5 Summary
+* RDS runs on virtual machines, you cannot log in to these operating systems.
+* Patching of the RDS Operating System and DB is Amazon's responsibility
+* RDS is NOT Serverless
+* Aurora Serverless IS Serverless
 
 ## 2. Database Lab
+### 2.1 Create Security Groups
+First, create security group 'WebSG' for web server, expose 80 and 22 ports.
+![image](/assets/images/cloud/4107/websg-security-group.png)
+Then, create another security group 'RDS-MySQL' for MySQL database, expose 3306 port to source 'WebSG'.
+![image](/assets/images/cloud/4107/mysql-security-group.png)
 ### 2.1 Create RDS Instance
-Create MySql database. Services->Storage->RDS.
+Services->Database->RDS, Create database, select MySQL, choose version and select "Free Tier".
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-1.png)
-Select free tier and set database name and password.
+Set DB Instance Identifier, master name and password(eg. mysqlwordpress/mysqlwordpress).
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-2.png)
-Choose to create security group.
+Expand "Additional connectivity configuration", choose "RDS-MySQL" as the security group, which allows web server instance to connect the database.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-3.png)
-Set database name, so when this database is launched, a new db will be created automatically.
+Set the initial database name, eg. mysqlwordpress. This is important for configuring the wordpress later. If you don't see this option, try to switch to "Production" template and switch back to "Free tier". Sometime, there is a UI issue here. The input box for "Initial database name" may not be visible.
+![image](/assets/images/cloud/4107/initial-database-name.png)
+Click 'Create database', a new db will be created automatically.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-4.png)
-Set retention period to 0 days to disable backup.
-![image](/assets/images/cloud/4107/5-2-rds-wordpress-5.png)
 It takes some time until the MySQL instance is launched.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-6.png)
 Copy the endpoint value, we will use it later.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-7.png)
+### 2.2 Create EC2 Instance
 Create new instance with the following bootstrap script, which will install Apache, php mysql driver and wordpress.
 ```raw
 #!/bin/bash
@@ -92,19 +103,117 @@ chown -R apache:apache wp-content
 service httpd start
 chkconfig httpd on
 ```
+In the step of "Configure Instance", paste the script to the user data box.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-8.png)
 Add tag "WordPressServer".
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-9.png)
-Add 'WebDMZ' security group into the inbound rule of 'rds-launch-wizard', so that the web server instance can access the MySQL instance.
+Select the "WebSG" security group, Review and Launch.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-10.png)
-Access the public ip of web server. We will see the webpress admin page.
+Once the instance is launched, access the public ip of web server in browser, eg. http://13.52.237.32/wp-admin/setup-config.php. We will see the wordpress admin page.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-11.png)
 Setup the data connection, including database name, use name, password. Put the endpoint value(MySQL instance) into Database Host.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-12.png)
-Error occurs: can't write the wp-config.php file.
+You may get the error: Can't select database.
+![image](/assets/images/cloud/4107/cant-select-database.png)
+This is because you didn't set the database name when creating the MySQL instance. Recreate the MySQL database with initial database name.
+![image](/assets/images/cloud/4107/empy-database-name.png)
+If mysql connection is fine, we will get the following error: can't write the wp-config.php file.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-13.png)
-Copy the script, then ssh to the web server. Create a file named `wp-config.php` in folder `/var/www/html` with the content from latest step.
-![image](/assets/images/cloud/4107/5-2-rds-wordpress-14.png){:width="600px"}
+Copy the script.
+```raw
+<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'mysqlwordpress' );
+
+/** MySQL database username */
+define( 'DB_USER', 'mysqlwordpress' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'mysqlwordpress' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'mysqlwordpress.cxezc5oy8ugg.us-west-1.rds.amazonaws.com' );
+
+/** Database Charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** The Database Collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',         '%].Fd+<w!Wn2M/doG9m7[?rm[,{ vQgo;>Rdz$gK,&tDy^(J|pviR 6O=V$Qo|dC' );
+define( 'SECURE_AUTH_KEY',  'uqM];s7i#`lRh%-AhVt<D4(_c:AtM0m/xC0]uhOW>51MlFiQ7rLHr_6:3i:x$+Cf' );
+define( 'LOGGED_IN_KEY',    'w@hu_^`Z%aA1j>G=o@esrk1VvReTiUS6DFWZ[=,PbRE@ ]S^P#a&6d@4#}Q?>v+i' );
+define( 'NONCE_KEY',        '9o6JLTl&uFh.&0Ep.jCWhe`~<2b2!:~Z)tvak<[z~V`w}^APlZ39>ra-shN3c[{H' );
+define( 'AUTH_SALT',        'zI%f1X;*Whd:$<j~Nf[:$y>H%8{BvJW8%Z=!$Ik/wM>E@;k-PBl7mh} PQhq!8^W' );
+define( 'SECURE_AUTH_SALT', '2J0>Gbq>L3 {ed!;}C@R:7;mpc@g`SP?Xgu]Eqv;8;d>BDl9PPuF](UT;[wKTQmz' );
+define( 'LOGGED_IN_SALT',   ']3gC1`57z}]i](#QknK:0D|zPJz;k+E$i@_tJ?SW|fmYreD^Wy.5V ,&m7;(M/(!' );
+define( 'NONCE_SALT',       'j0v07]{l{6rWxZwh2H{x#BlEZtWe^*=;`(-Z{tB_GGdL=fpt<{fL7azOV==!aM^s' );
+
+/**#@-*/
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define( 'WP_DEBUG', false );
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+require_once( ABSPATH . 'wp-settings.php' );
+```
+Then ssh to the web server. Create a file named `wp-config.php` in folder `/var/www/html` with the content from latest step.
+![image](/assets/images/cloud/4107/5-2-rds-wordpress-14.png)
 Refresh the page, now, the wordpress admin page is displayed properly. Set title, name, etc.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-15.png)
 WordPress is installed successfully.
@@ -113,11 +222,6 @@ Login.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-17.png)
 Home page of WordPress.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-18.png)
-Tips of Relational Databases:
-* RDS runs on virtual machines, you cannot log in to these operating systems.
-* Patching of the RDS Operating System and DB is Amazon's responsibility
-* RDS is NOT Serverless
-* Aurora Serverless IS Serverless
 
 ## 3. RDS Backups
 ### 3.1 Backup Types
@@ -167,11 +271,13 @@ Things to know about Read Replicas:
 * You can have a read replica in a second region.
 
 ### 3.4 RDS Backups Lab
-Choose the Mysql database create in previous session, click modify button.
+Choose the Mysql database created in previously, click Modify button.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-1.png)
 Enable Multi-AZ deployment.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-2.png)
-Click 'Modify' button, warning appears. Select 'Apply immediately' option.
+Scroll down to the bottom, click Continue.
+![image](/assets/images/cloud/4107/rds-backup-continue.png)
+Select 'Apply immediately' option and click 'Modify DB Instance' button.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-3.png)
 The status of the database instance will be in modifying status. Wait for a while until the status is changed to 'Available'.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-4.png)
@@ -181,11 +287,11 @@ Modify the database instance, turn on backup by setting the retention period to 
 ![image](/assets/images/cloud/4107/5-4-rds-backup-6.png)
 The database instance will change to modifying status again, wait until it becomes to Available status. Actions->Create read replica.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-7.png)
-Choose a different region to replica, eg. EU West(Ireland). Provide database identify name and keep other settings as default, click "Create read replica".
+Choose a different region to replica, eg. US West(N. California). Provide database identify name(eg. mysqlwordpress-replica) and keep other settings as default, click "Create read replica".
 ![image](/assets/images/cloud/4107/5-4-rds-backup-8.png)
 A new database instance is created with role 'Replica' in a different AZ.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-9.png)
-Click Actions->Promote read replica to convert a MySQL Read Replica into a “standalone” RDS database instance.
+Click Actions->Promote to convert a MySQL Read Replica into a “standalone” RDS database instance.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-10.png)
 
 Tips for RDS Backups:  
