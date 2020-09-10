@@ -45,7 +45,7 @@ Default VPC vs Custom VPC:
 Can't access from B to C through A. Must create VPC peering from B to C directly.
 ![image](/assets/images/cloud/4109/vpc-peering.jpg)
 
-### 1.4 Tips of VPC
+### 1.4 Summary of VPC
 * Think of a VPC as a logical datacenter in AWS.
 * Consists of IGWs (Or Virtual Private Gateways), Route Tables, Network Access Control Lists, Subnets, and Security Groups
 * 1 Subnet = 1 Availability Zone
@@ -60,20 +60,21 @@ Remember the following:
 * You can only have 1 Internet Gateway per VPC.
 * Security Groups can't span VPCs.
 
-## 2. VPC Lab
-### 2.1 Build A Custom VPC - Part 1
+## 2. VPC Lab - Build A Custom VPC
+### 2.1 Create Custom VPC
 VPC contains Route Table, Network ACL and Security Group.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-1.png)
-Create VPC: Services->Networking & Content Delivery->VPC, select "Your VPCs" at the left panel.
+Go to Services->Networking & Content Delivery->VPC, select "Your VPCs" at the left panel, click "Create VPC" button.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-2.png)
+Provide name and ip address, then Create.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-3.png)
 New VPC is created.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-4.png)
-One more entry in Route Tables.
+There is one more entry in Route Tables.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-5.png)
-One more entry in Network ACLs.
+And one more entry in Network ACLs.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-6.png)
-One more entry in Security Group, the second one.
+And one more entry in Security Group(the second one).
 ![image](/assets/images/cloud/4109/7-2-create-vpc-7.png)
 Create Subnet, 10.0.1.0.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-1.png)
@@ -90,18 +91,23 @@ You see the "Available IPv4" is 251(total should be 256, CIDR.xyz), 5 ip address
 
 Select the first subnet, click Actions->Modify auto-assign IP settings.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-4.png)
+Enable the option "Enable auto-assign public IPv4 address", Save.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-5.png)
 Now, auto public ip address is enabled to the subnet 10.0.1.0.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-6.png)
 Now, our VPC looks like this.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-7.png)
-Create gateway: Select Internet Gateways->Create internet gateway.
+
+### 2.2 Create Internet Gateway
+Go to Services->Networking & Content Delivery->VPC, select "Internet Gateways" at the left panel, click "Create internet gateway" button.
+![image](/assets/images/cloud/4109/7-2-create-gateway-0.png)
+Provide the name, Create.
 ![image](/assets/images/cloud/4109/7-2-create-gateway-1.png)
 It is created and its state is detached.
 ![image](/assets/images/cloud/4109/7-2-create-gateway-2.png)
-Select the gateway, Actions->Attach to VPC.
+Select the new gateway, Actions->Attach to VPC.
 ![image](/assets/images/cloud/4109/7-2-create-gateway-3.png)
-Choose the VPC.
+Choose the VPC we just created before.
 ![image](/assets/images/cloud/4109/7-2-create-gateway-4.png)
 Now, it is attached.
 ![image](/assets/images/cloud/4109/7-2-create-gateway-5.png)
@@ -111,7 +117,9 @@ Check the status of the current route table for new VPC. It has route for intern
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-1.png)
 There are two subnets, but none of them is associated to this route table.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-2.png)
-Create new route table for public access.
+In the next steps, we will create a new route table for public access.
+### 2.3 Create Route Table
+Go to Services->Networking & Content Delivery->VPC, select "Route Tables" at the left panel, click "Create route table" button. Provide the name and select the new VPC.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-3.png)
 The new route table is created, notice it is not main.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-4.png)
@@ -121,15 +129,16 @@ Now we have two more routes.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-6.png)
 Switch to Subnet Associations tab, click "Edit subnet associations" button.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-7.png)
-Select the first one and save.
+Select the first subnet(10.0.1.0) and save.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-8.png)
 Now, the first subnet is associated with the public route table.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-9.png)
 If we check the subnet associations of the main route tables, the first subnet is not there anymore. Now we have the private subnet and the public subnet.
 ![image](/assets/images/cloud/4109/7-2-create-route-tables-10.png)
-Create instance for web server, select the second AMI.
+### 2.4 Create EC2 Instance
+Create a new EC2 instance for acting as web server, select the second AMI.
 ![image](/assets/images/cloud/4109/7-2-create-instance-1.png)
-Select the VPC created previously and select the first subnet. Notice the public ip is auto enabled.
+Select the custom VPC created previously and choose the first subnet(10.0.1.0). Notice the public ip is auto enabled.
 ![image](/assets/images/cloud/4109/7-2-create-instance-2.png)
 Add tags to indicate this is a web server.
 ![image](/assets/images/cloud/4109/7-2-create-instance-3.png)
@@ -137,7 +146,7 @@ There is no existing security groups here(Not seeing the WebDMZ), since we are u
 ![image](/assets/images/cloud/4109/7-2-create-instance-4.png)
 Create new security group.
 ![image](/assets/images/cloud/4109/7-2-create-instance-5.png)
-Create second instance for database. Select the VPC and choose the second subnet.  Notice the public ip is auto disabled.
+Create second instance for database. Select the VPC and choose the second subnet(10.0.2.0).  Notice the public ip is auto disabled.
 ![image](/assets/images/cloud/4109/7-2-create-instance-6.png)
 Add tags to indicate this is a database server.
 ![image](/assets/images/cloud/4109/7-2-create-instance-7.png)
@@ -147,18 +156,17 @@ Now we have two instances, one for web server, one for db server. Notice the web
 ![image](/assets/images/cloud/4109/7-2-create-instance-9.png)
 Until now, we have created the VPC from scratch and it looks as follows.
 ![image](/assets/images/cloud/4109/7-2-create-instance-10.png)
-### 2.2 Build A Custom VPC - Part 2
-Now we have two instances, one is web server and another is db server. Currently, the web server can't connect to db server. We will create security group to enable the connection from web server to db server.
-
-Create new security group.
+We have two instances, one is web server and another is DB server. Currently, the web server can't connect to db server. We will create security group to enable the connection from web server to db server.
+### 2.5 Create Security Group
+Go to Services->EC2->Network & Security->Security Groups, click "Create security group". Provide name and description, select the custom VPC. Setup the rules as follows, Create.
 ![image](/assets/images/cloud/4109/7-3-create-security-group.png)
-It is created.
+A new security group is created.
 ![image](/assets/images/cloud/4109/7-3-create-security-group-2.png)
-Change the security group for db server. Select the database instance, Actions->Networking->Change Security Group.
+Change the security group for DB server. Go to EC2 instances, select the database instance, Actions->Networking->Change Security Group.
 ![image](/assets/images/cloud/4109/7-3-create-security-group-3.png)
 Only select the new security group for database.
 ![image](/assets/images/cloud/4109/7-3-create-security-group-4.png)
-ssh to web server and ping the database server from it. '54.175.89.128' is the public ip of web server and '10.0.2.140' is the private ip of database server. If you upload the keypair to web server, you can also ssh to database server from webserver.
+Remote ssh to web server and ping the database server from it. '54.175.89.128' is the public ip of web server and '10.0.2.140' is the private ip of database server. If you upload the keypair to web server, you can also ssh to database server from webserver.
 ```raw
 $ ssh ec2-user@54.175.89.128 -i johnny-aws-ec2-keypair.pem
 The authenticity of host '54.175.89.128 (54.175.89.128)' can't be established.
@@ -178,8 +186,11 @@ PING 10.0.2.140 (10.0.2.140) 56(84) bytes of data.
 64 bytes from 10.0.2.140: icmp_seq=3 ttl=255 time=0.946 ms
 64 bytes from 10.0.2.140: icmp_seq=4 ttl=255 time=0.807 ms
 ```
-### 2.3 Network Address Translation (NAT)
-Currently, there is one problem with the database server, it has no public connection to internet. We will create NAT instance and NAT Gateway to setup the connection for database server.
+## 3. Network Address Translation (NAT)
+### 3.1 What is NAT?
+Network address translation (NAT) is a method of remapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. Network Address Translation allows a single device, such as a router, to act as an agent between the Internet (or "public network") and a local (or "private") network.
+
+AWS offers two kinds of NAT devices—a NAT gateway or a NAT instance.
 
 NAT Instances:
 * When creating a NAT instance, disable Source/Destination Check on the Instance.
@@ -200,42 +211,47 @@ NAT Gateways:
 * No need to disable Source/Destination Checks
 * If you have resources in multiple Availability Zones and they share one NAT gateway, in the event that the NAT gateway's Availability Zone is down, resources in the other Availability Zones lose internet access. To create an Availability Zone-independent architecture, create a NAT gateway in each Availability Zone and configure your routing to ensure that resources use the NAT gateway in the same Availability Zone.
 
+### 3.2 VPC Lab
+Continue with the VPC lab. Currently, there is one problem with the database server, it has no public connection to internet. We will create NAT instance and NAT Gateway to setup the connection for database server.
+
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-1.png)
+### 3.3 Lab - NAT Instance
+1) Create NAT Instance  
 Launch new instance, search 'nat' in the 'Community AMIs', select the first one.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-2.png)
-Select the custom VPC and choose the public subnet.
+Select the custom VPC and choose the public subnet(10.0.1.0).
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-3.png)
 Add name to indicate it is a NAT instance.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-4.png)
-Select the WebDMZ group.
+Select the WebDMZ group, Review and Launch.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-5.png)
+Choose the second option and continue.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-6.png)
 The NAT instance is created, it's running in the same AZ with the web server. It has its own public ip address.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-7.png)
-Disabling Source/Destination Checks, see [NAT Instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html).
-
+2) Disabling Source/Destination Checks  
 Select the NAT instance, actions->Networking->Change Source/Dest. Check.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-8.png)
 Disable it.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-9.png)
-Create route to let database server talk to nat instance.
+* Check [NAT Instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html) for more details.
 
+3) Create route to let database server talk to NAT instance  
 Services -> VPC->Route Tables, select the main route table of the custom VPC, click "Edit rules".
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-10.png)
-Select the nat instance as target.
+Select the NAT instance as target.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-11.png)
 Done.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-12.png)
 Now, if you ssh to your webserver, then ssh to your database server, you can run "yum install update", and it will be able to download files from internet.
 
-NAT instance is not good as it may be overloaded. If it is stopped, then database server will lose the internet connection and you will see the route status becomes to 'blackhole'.
+NAT instance is not good as it may be overloaded. If it is stopped, then database server will lose the internet connection and you will see the route status becomes to "blackhole".
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-13.png)
-
 Create NAT gateway which is more reliable and flexible.
-
-VPC->NAT Gateways->Create NAT Gateway.
+### 3.4 Lab - NAT Gateway
+Go to VPC->NAT Gateways->Create NAT Gateway.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-14.png)
-Select the public subnet, click "Create New EIP".
+Select the public subnet(10.0.1.0), click "Create New EIP".
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-15.png)
 Edit route tables.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-16.png)
@@ -249,8 +265,8 @@ Switch to "NAT Gateways", the new gateway is there.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-20.png)
 Now, the database server has the internet connection again.
 
-## 3. Access Control Lists (ACL)
-### 3.1 ACL
+## 4. Access Control Lists (ACL)
+### 4.1 ACL
 * Your VPC automatically comes a default network ACL, and by default it allows all outbound and inbound traffic.
 * You can create custom network ACLs. By default, each custom network ACL denies all inbound and outbound traffic until you add rules.
 * Each subnet in your VPC must be associated with a network ACL. If you don't explicitly associate a subnet with a network ACL, the subnet is automatically associated with the default network ACL.
@@ -262,7 +278,7 @@ Now, the database server has the internet connection again.
 
 We have two ACLs. One is default ACL, another is custom ACL for the custom VPC.
 ![image](/assets/images/cloud/4109/7-5-acl-1.png)
-Create new ACL.
+Create new ACL, select the custom VPC.
 ![image](/assets/images/cloud/4109/7-5-acl-2.png)
 By default all inbound and outbound requests are denied.
 ![image](/assets/images/cloud/4109/7-5-acl-3.png)
@@ -292,16 +308,20 @@ Refresh the page, it will be timeout.
 ![image](/assets/images/cloud/4109/7-5-acl-9.png)
 Add some rules(80,443,22) to inbound of the new ACL.
 ![image](/assets/images/cloud/4109/7-5-acl-10.png)
-Similar, add rules for outbound of the new ACL. Check [Ephemeral Ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports) to understand why we set the range 1024-65535.
+Similarly, add rules for outbound of the new ACL. Check [Ephemeral Ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports) to understand why we set the range 1024-65535.
 ![image](/assets/images/cloud/4109/7-5-acl-11.png)
 Refresh the page, we get the page back.
 ![image](/assets/images/cloud/4109/7-5-acl-12.png)
-### 3.2 Custom VPCs and ELBs
-ELB requires at least two subnets with gateway configured for all.
+### 4.2 Custom VPCs and ELBs
+ELB requires at least two subnets with gateway configured for all. Go to Services->EC2->Load Balancing->Load Balancers->Create Load Balancer.
 ![image](/assets/images/cloud/4109/7-6-load-balancer-1.png)
+Choose the load balancer type.
+![image](/assets/images/cloud/4109/7-6-load-balancer-2.png)
+Provide name.
+![image](/assets/images/cloud/4109/7-6-load-balancer-3.png)
 
-## 4. VPC Flow Logs
-### 4.1 What is VPC Flog Logs
+## 5. VPC Flow Logs
+### 5.1 What is VPC Flog Logs
 VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data is stored using Amazon CloudWatch Logs. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs.
 
 Flow logs can be created at 3 levels:
@@ -309,7 +329,8 @@ Flow logs can be created at 3 levels:
 * Subnet
 * Network Interface Level
 
-Create Log Group in CloudWatch. Services->Management & Governance->CloudWatch
+### 5.2 Create Log Group in CloudWatch
+Go to Services->Management & Governance->CloudWatch->Logs->Create log group.
 ![image](/assets/images/cloud/4109/7-7-vpc-flow-3.png)
 Go to VPC console, select the custom VPC, actions->Create flow log.
 ![image](/assets/images/cloud/4109/7-7-vpc-flow-4.png)
@@ -327,8 +348,7 @@ You will see some log streams.
 ![image](/assets/images/cloud/4109/7-7-vpc-flow-10.png)
 Click on any of them, you will see the detailed logs.
 ![image](/assets/images/cloud/4109/7-7-vpc-flow-11.png)
-
-### 4.2 Tips of VPC Flow Logs
+### 5.3 Summary of VPC Flow Logs
 * You cannot enable flow logs for VPCs that are peered with your VPC unless the peer VPC is in your account.
 * You cannot tag a flow log.
 * After you've created a flow log, you cannot change its configuration; for example, you can't associate a different IAM role with the flow log.
@@ -340,8 +360,8 @@ Not all IP Traffic is monitored:
 * DHCP traffic.
 * Traffic to the reserved IP address for the default VPC router.
 
-## 5. Bastions
-### 5.1 What Is A Bastion Host?
+## 6. Bastions
+### 6.1 What Is A Bastion Host?
 A bastion host is a special purpose computer on a network specifically designed and configured to withstand attacks. The computer generally hosts a single application, for example a proxy server, and all other services are removed or limited to reduce the threat to the computer. It is hardened in this manner primarily due to its location and purpose, which is either on the outside of a firewall or in a demilitarized zone (DMZ) and usually involves access from untrusted networks or computers.
 ![image](/assets/images/cloud/4109/7-8-bastions-2.png)
 Remember the following:
@@ -349,8 +369,8 @@ Remember the following:
 * A Bastion is used to securely administer EC2 instances (Using SSH or RDP). Bastions are called Jump Boxes in Australia.
 * You cannot use a NAT Gateway as a Bastion host.
 
-## 6. Direct Connect
-### 6.1 What Is Direct Connect?  
+## 7. Direct Connect
+### 7.1 What Is Direct Connect?  
 AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Using AWS Direct Connect, you can establish private connectivity between AWS and your datacenter, office, or colocation environment, which in many cases can reduce your network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based connections.
 ![image](/assets/images/cloud/4109/7-9-direct-connect-2.png)
 Remember the following:
@@ -358,12 +378,12 @@ Remember the following:
 * Useful for high throughput workloads (ie lots of network traffic)
 * Or if you need a stable and reliable secure connection.
 
-## 7. VPC End Points
-### 7.1 What Is A VPC Endpoint?
+## 8. VPC End Points
+### 8.1 What Is A VPC Endpoint?
 A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Instances in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC and the other service does not leave the Amazon network.
 
 Endpoints are virtual devices. They are horizontally scaled, redundant, and highly available VPC components that allow communication between instances in your VPC and services without imposing availability risks or bandwidth constraints on your network traffic.
-### 7.2 Types of VPC Endpoints
+### 8.2 Types of VPC Endpoints
 There are two types of VPC endpoints:
 * Interface Endpoints
 * Gateway Endpoints
@@ -399,7 +419,8 @@ Current solution: Use NAT gateway to let private subnet to access public interne
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-5.png)
 Use VPC gateway to achieve the same purpose.
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-6.png)
-Create endpoint: Service->VPC->Endpoints, Create Endpoint, select s3 and gateway.
+### 8.3 Create Endpoint
+Go to Service->VPC->Endpoints, Create Endpoint, select s3 and gateway.
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-7.png)
 Select the custom VPC, and choose the main subnet, 10.0.2.0.
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-8.png)
@@ -408,6 +429,7 @@ Now, the end point is created.
 Go to the Route Tables, select the main route table, wait for few minutes, the endpoint will show up in the routes. With this endpoint, the private subnet can connect to outside world.
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-10.png)
 
-## 8. References
+## 9. References
 * [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/)
 * [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
+* [VPC - NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html)
