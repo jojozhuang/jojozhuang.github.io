@@ -294,7 +294,7 @@ A new database instance is created with role 'Replica' in a different AZ.
 Click Actions->Promote to convert a MySQL Read Replica into a “standalone” RDS database instance.
 ![image](/assets/images/cloud/4107/5-4-rds-backup-10.png)
 
-Tips for RDS Backups:  
+### 3.5 Summary of RDS Backup
 Read Replicas:
 * Can be Multi-AZ.
 * Used to increase performance.
@@ -302,7 +302,6 @@ Read Replicas:
 * Can be in different regions.
 * Can be Aurora or MySQL.
 * Can be promoted to master, this will break the Read Replica.
-
 
 MuItiAZ:
 * Used For DR.
@@ -404,7 +403,7 @@ Aurora replica is created.
 Wait for a while, there is one writer instance and one reader instance.
 ![image](/assets/images/cloud/4107/5-7-aurora-9.png)
 
-Tips of Aurora:
+### 6.7 Summary of Aurora
 * 2 copies of your data is contained in each availability zone, with minimum of 3 availability zones. 6 copies of your data.
 * You can share Aurora Snapshots with other AWS accounts.
 * 2 types of replicas available. Aurora Replicas and MySQL replicas. Automated failover is only available with Aurora Replicas.
@@ -428,7 +427,7 @@ Persistence                    | No        | Yes
 Multi-AZ                       | No        | Yes
 Backup & Restore Capabilities  | No        | Yes
 
-### 7.3 Tips of Elasticache
+### 7.3 Summary of Elasticache
 * Use Elasticache to increase database and web application performance.
 * Redis is Multi-AZ
 * You can do back ups and restores of Redis
