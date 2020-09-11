@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Serverless"
-index: 4112
+index: 4115
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Serverless, Lambda]
@@ -13,7 +13,7 @@ tags: [AWS, Serverless, Lambda]
 ## 1. Amazon Lambda
 ### 1.1 Serverless Concept
 History of cloud: Data center->IaaS->PaaS->Containers->Serverless.
-![image](/assets/images/cloud/4112/history-of-cloud.jpg)
+![image](/assets/images/cloud/4115/history-of-cloud.jpg)
 ### 1.2 Amazon Lambda
 AWS Lambda is a compute service where you can upload your code and create a Lambda function. AWE Lambda takes care of provisioning and managing the servers that you use to run the code. You don't have to worry about operating systems, patching, scaling, etc.
 
@@ -31,9 +31,9 @@ You can use Lambda in the following ways:
 * As a compute service to run your code in response to HTTP requests using Amazon API Gateway or API calls made using AWS SDKs.
 
 Lambda usage cases.
-![image](/assets/images/cloud/4112/aws-lambda.jpg)
+![image](/assets/images/cloud/4115/aws-lambda.jpg)
 Traditional vs. Serverless Architecture
-![image](/assets/images/cloud/4112/traditional-vs-serverless.jpeg)
+![image](/assets/images/cloud/4115/traditional-vs-serverless.jpeg)
 
 What Languages Does Lambda Support?
 * Node.js
@@ -66,15 +66,15 @@ Why Is Lambda Cool?
 
 ## 2. Lab - Build A Serverless Website
 ### 2.1 Overview
-![image](/assets/images/cloud/4112/10-2-build-serverless-1.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-1.png)
 Go to Services->Compute->Lambda, create a function.
-![image](/assets/images/cloud/4112/10-2-build-serverless-2.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-2.png)
 Choose "Author from scratch", set name, choose python 3.8 for runtime.
-![image](/assets/images/cloud/4112/10-2-build-serverless-3.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-3.png)
 Create a new role and select 'Simple microservice permissions' policy template, click "Create function".
-![image](/assets/images/cloud/4112/10-2-build-serverless-4.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-4.png)
 Lambda function is created.
-![image](/assets/images/cloud/4112/10-2-build-serverless-5.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-5.png)
 Copy the following python codes.
 ```python
 def lambda_handler(event, context):
@@ -91,36 +91,36 @@ def lambda_handler(event, context):
     return resp
 ```
 Paste them to the function code editor, save the change.
-![image](/assets/images/cloud/4112/10-2-build-serverless-6.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-6.png)
 Scroll down, edit the "Basic settings" and set the description.
-![image](/assets/images/cloud/4112/10-2-build-serverless-7.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-7.png)
 Scroll up and go back to the Designer, click 'Add trigger'.
-![image](/assets/images/cloud/4112/10-2-build-serverless-8.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-8.png)
 Select 'API Gateway', choose "Create an API", select "HTTP API" as API type and select "Open" for security, click "Add" button.
-![image](/assets/images/cloud/4112/10-2-build-serverless-8-2.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-8-2.png)
 The API Gateway trigger is created.
-![image](/assets/images/cloud/4112/10-2-build-serverless-10.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-10.png)
 Save the function, click the api link in the API Gateway section.
-![image](/assets/images/cloud/4112/10-2-build-serverless-10-2.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-10-2.png)
 A new window will be opened, click the Deploy button. Wait for a while, then click on any invoke url(with default or w/o default), eg. https://knrurtw609.execute-api.us-west-1.amazonaws.com/default.
-![image](/assets/images/cloud/4112/10-2-build-serverless-10-3.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-10-3.png)
 Another window is opened. It should return "Johnny", which is defined in the python script.
-![image](/assets/images/cloud/4112/10-2-build-serverless-10-4.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-10-4.png)
 ### 2.2 Create S3 Bucket
 Now, our lambda function is working. We will create a static web page in S3 to call this function.
 
 Go to Services->Storage->S3->Create bucket, set Bucket name and select region.
-![image](/assets/images/cloud/4112/10-2-build-serverless-15.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-15.png)
 In the step "Set permissions", uncheck "Block all public access", next and create the bucket.
-![image](/assets/images/cloud/4112/10-2-build-serverless-15-1.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-15-1.png)
 After the bucket is created, make sure the bucket is public.
-![image](/assets/images/cloud/4112/10-2-build-serverless-16.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-16.png)
 Click the bucket and switch to "Properties" tab, choose "Static website hosting".
-![image](/assets/images/cloud/4112/10-2-build-serverless-18.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-18.png)
 Choose the "Use this bucket to host a website" option, set the index document(index.html) and error document(error.html), save.
-![image](/assets/images/cloud/4112/10-2-build-serverless-19.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-19.png)
 Static website hosting is set up.
-![image](/assets/images/cloud/4112/10-2-build-serverless-20.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-20.png)
 Create two html files in your local machine with the following content respectively.
 
 index.html
@@ -160,14 +160,14 @@ error.html
 </html>
 ```
 Upload these two files into the bucket and make them public.
-![image](/assets/images/cloud/4112/10-2-build-serverless-21.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-21.png)
 Access the link of index.html in web browser. We should see the page.
-![image](/assets/images/cloud/4112/10-2-build-serverless-22.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-22.png)
 Click on the button, the title will be changed. A call to the lambda function is made to get the name.
-![image](/assets/images/cloud/4112/10-2-build-serverless-23.png)
+![image](/assets/images/cloud/4115/10-2-build-serverless-23.png)
 
 Architecture of Lambda.
-![image](/assets/images/cloud/4112/10-3-serverless-diagram.png)
+![image](/assets/images/cloud/4115/10-3-serverless-diagram.png)
 
 ## 3. References
 * [AWS Lambda](https://aws.amazon.com/lambda/)

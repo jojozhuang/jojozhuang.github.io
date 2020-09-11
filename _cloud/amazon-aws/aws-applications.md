@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Applications"
-index: 4111
+index: 4114
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS,SQS,SNS]
@@ -36,7 +36,7 @@ FIFO queues also support message groups that allow multiple ordered message grou
 * Messages are 256 KB in size.
 * Messages can be kept in the queue from 1 minute to 14 days; the default retention period is 4 days.
 * Standard order is not guaranteed and messages can be delivered more than once.
-* FIFO order is strictly maintained and messages are delivered only once. 
+* FIFO order is strictly maintained and messages are delivered only once.
 * Visibility Time Out is the amount of time that the message is invisible in the SQS queue after a reader picks up that message. Provided the job is processed before the visibility time out expires, the message will then be deleted from the queue. If the job is not processed within that time, the message will become visible again and another reader will process it. This could result in the same message being delivered twice.
 * Visibility timeout maximum is 12 hours.
 * SQS guarantees that your messages will be processed at least once.
@@ -91,7 +91,7 @@ What Is Elastic Transcoder?
 * Provides transcoding presets for popular output formats, which means that you don't need to guess about which settings work best on particular devices.
 * Pay based on the minutes that you transcode and the resolution at which you transcode.
 
-![image](/assets/images/cloud/4111/elastic-transcoder.jpg)
+![image](/assets/images/cloud/4114/elastic-transcoder.jpg)
 Just remember that Elastic Transcoder is a media transcoder in the cloud. It converts media files from their original source format in to different formats that will play on smartphones, tablets, PCs, etc.
 
 ## 5. API Gateway
@@ -100,7 +100,7 @@ Amazon API Gateway is a fully managed service that makes it easy for developers 
 
 With a few clicks in the AWS Management Console, you can create an API that acts as a "front door" for applications to access data, business logic, or functionality from your back-end services, such as applications running on Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS Lambda, or any web application.
 ### 5.2 How API Gateway works?
-![image](/assets/images/cloud/4111/api-gateway.png)
+![image](/assets/images/cloud/4114/api-gateway.png)
 ### 5.3 API Gateway Options
 What Can API Gateway Do?   
 * Expose HTTPS endpoints to define a RESTful API
@@ -177,7 +177,7 @@ Amazon Kinesis is a platform on AWS to send your streaming data to other AWS app
 * Kinesis Analytics
 
 ### 6.4 Kinesis Streaming
-![image](/assets/images/cloud/4111/kinesis-streaming.png)
+![image](/assets/images/cloud/4114/kinesis-streaming.png)
 
 Kinesis Streams Consist Of Shards:
 * 5 transactions per second for reads, up to a maximum total data read rate of 2 MB per second and up to 1,000 records per second for writes, up to a maximum total data write rate of 1 MB per second (including partition keys.)
@@ -185,13 +185,13 @@ Kinesis Streams Consist Of Shards:
 
 ### 6.5 Kinesis Firehose
 Data can be exported to S3, Redfhift or ElasticSearch.
-![image](/assets/images/cloud/4111/kinesis-firehose.png)
+![image](/assets/images/cloud/4114/kinesis-firehose.png)
 
 ### 6.6 Kinesis Analytics
 Amazon Kinesis Data Analytics is the easiest way to transform and analyze streaming data in real time with Apache Flink. Apache Flink is an open source framework and engine for processing data streams. Amazon Kinesis Data Analytics reduces the complexity of building, managing, and integrating Apache Flink applications with other AWS services.
 
 Amazon Kinesis Data Analytics takes care of everything required to run streaming applications continuously, and scales automatically to match the volume and throughput of your incoming data. With Amazon Kinesis Data Analytics, there are no servers to manage, no minimum fee or setup cost, and you only pay for the resources your streaming applications consume.
-![image](/assets/images/cloud/4111/kinesis-analytics.png)
+![image](/assets/images/cloud/4114/kinesis-analytics.png)
 
 ## 7. Amazon Cognito
 ### 7.1 Identity Federation
@@ -208,19 +208,19 @@ Amazon Cognito provides Web Identity Federation with the following features:
 Cognito brokers between the app and Facebook or Google to provide temporary credentials which map to an IAM role allowing access to the required resources.
 
 No need for the application to embed or store AWS credentials locally on the device and it gives users a seamless experience across all mobile devices.
-![image](/assets/images/cloud/4111/cognito-use-case.png)
+![image](/assets/images/cloud/4114/cognito-use-case.png)
 ### 7.4 Cognito User Pools
 User Pools are user directories used to manage sign-up and sign-in functionality for mobile and web applications. Users can sign-in directly to the User Pool, or using Facebook, Amazon, or Google. Cognito acts as an Identity Broker between the identity provider and AWS. Successful authentication generates a JSON Web token (JWTs).
 ### 7.5 Cognito Identity Pools
 Identity Pools enable provide temporary AWS credentials to access AWS services like S3 or DynamoDB.
 
 How they work?
-![image](/assets/images/cloud/4111/cognito-identity-pools.png)
+![image](/assets/images/cloud/4114/cognito-identity-pools.png)
 ### 7.6 Cognito Synchronization
 Cognito tracks the association between user identity and the various different devices they sign-in from. In order to provide a seamless user experience for your application, Cognito uses Push Synchronization to push updates and synchronize user data across multiple devices. Cognito uses SNS to send a notification to all the devices associated with a given user identity whenever data stored in the cloud changes.
 
 How Synchronization works?
-![image](/assets/images/cloud/4111/cognito-sync.png)
+![image](/assets/images/cloud/4114/cognito-sync.png)
 ### 7.7 Summary
 * Federation allows users to authenticate with a Web Identity Provider (Google, Facebook, Amazon)
 * The user authenticates first with the Web ID Provider and receives an authentication token, which is exchanged for temporary AWS credentials allowing them to assume an IAM role.
