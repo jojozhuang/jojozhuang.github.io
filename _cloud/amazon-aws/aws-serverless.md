@@ -44,9 +44,6 @@ What Languages Does Lambda Support?
 * PowerShell
 
 How lamda is priced?
-
-Lambda Pricing
-How Is Lambda Priced
 * Number Of Requests
   - First 1 million requests are free. $0.20 per 1 million requests thereafter.
 * Duration
@@ -70,15 +67,15 @@ Why Is Lambda Cool?
 ## 2. Lab - Build A Serverless Website
 ### 2.1 Overview
 ![image](/assets/images/cloud/4112/10-2-build-serverless-1.png)
-Services->Compute->Lambda, create a function.
+Go to Services->Compute->Lambda, create a function.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-2.png)
-Set name, choose python 3.6 for runtime.
+Choose "Author from scratch", set name, choose python 3.8 for runtime.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-3.png)
-Create a new role and select 'Simple microservice permissions' policy template, Create Function.
+Create a new role and select 'Simple microservice permissions' policy template, click "Create function".
 ![image](/assets/images/cloud/4112/10-2-build-serverless-4.png)
 Lambda function is created.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-5.png)
-Scroll down and copy the python code to the function code editor, save the change.
+Copy the following python codes.
 ```python
 def lambda_handler(event, context):
     print("In lambda handler")
@@ -93,27 +90,40 @@ def lambda_handler(event, context):
 
     return resp
 ```
+Paste them to the function code editor, save the change.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-6.png)
-Scroll down and set the description.
+Scroll down, edit the "Basic settings" and set the description.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-7.png)
-Scroll up, select the 'API Gateway' trigger.
+Scroll up and go back to the Designer, click 'Add trigger'.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-8.png)
-Create a new api and select AWS IAM as the security mechanism. Click add and save.
-![image](/assets/images/cloud/4112/10-2-build-serverless-9.png)
+Select 'API Gateway', choose "Create an API", select "HTTP API" as API type and select "Open" for security, click "Add" button.
+![image](/assets/images/cloud/4112/10-2-build-serverless-8-2.png)
 The API Gateway trigger is created.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-10.png)
-Hit the name of the gateway "MyFirstLambdaFunction-API".
-![image](/assets/images/cloud/4112/10-2-build-serverless-11.png)
-Delete the existing ANY method and create a new get method.
-![image](/assets/images/cloud/4112/10-2-build-serverless-12.png)
-Then deploy this api.
-![image](/assets/images/cloud/4112/10-2-build-serverless-13.png)
-Expand the get method, click the invoke url. It should return "Johnny", which is defined in the python script.
-![image](/assets/images/cloud/4112/10-2-build-serverless-14.png)
+Save the function, click the api link in the API Gateway section.
+![image](/assets/images/cloud/4112/10-2-build-serverless-10-2.png)
+A new window will be opened, click the Deploy button. Wait for a while, then click on any invoke url(with default or w/o default), eg. https://knrurtw609.execute-api.us-west-1.amazonaws.com/default.
+![image](/assets/images/cloud/4112/10-2-build-serverless-10-3.png)
+Another window is opened. It should return "Johnny", which is defined in the python script.
+![image](/assets/images/cloud/4112/10-2-build-serverless-10-4.png)
+### 2.2 Create S3 Bucket
+Now, our lambda function is working. We will create a static web page in S3 to call this function.
 
-Now, our lambda function is working. We will create a web page to call this function.
+Go to Services->Storage->S3->Create bucket, set Bucket name and select region.
+![image](/assets/images/cloud/4112/10-2-build-serverless-15.png)
+In the step "Set permissions", uncheck "Block all public access", next and create the bucket.
+![image](/assets/images/cloud/4112/10-2-build-serverless-15-1.png)
+After the bucket is created, make sure the bucket is public.
+![image](/assets/images/cloud/4112/10-2-build-serverless-16.png)
+Click the bucket and switch to "Properties" tab, choose "Static website hosting".
+![image](/assets/images/cloud/4112/10-2-build-serverless-18.png)
+Choose the "Use this bucket to host a website" option, set the index document(index.html) and error document(error.html), save.
+![image](/assets/images/cloud/4112/10-2-build-serverless-19.png)
+Static website hosting is set up.
+![image](/assets/images/cloud/4112/10-2-build-serverless-20.png)
+Create two html files in your local machine with the following content respectively.
 
-Replace YOUR-API-GATEWAY-LINK-HERE with the invoke URL in the index.html.
+index.html
 ```html
 <html>
 <script>
@@ -125,46 +135,36 @@ function myFunction() {
         document.getElementById("my-demo").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "YOUR-API-GATEWAY-LINK-HERE", true);
+    xhttp.open("GET", "YOUR-API-GATEWAY-URL", true);
     xhttp.send();
 
 }
 
 </script>
-<body><div align="center"><br><br><br><br>
-<h1>Hello <span id="my-demo">Cloud Gurus!</span></h1>
-<button onclick="myFunction()">Click me</button><br>
-<img src="https://s3.amazonaws.com/acloudguru-opsworkslab-donotdelete/ACG_Austin.JPG"></div>
+<body>
+  <div align="center"><br><br><br><br>
+    <h1>Hello <span id="my-demo">AWS Lamda!</span></h1>
+    <button onclick="myFunction()">Click me</button><br>
+  </div>
 </body>
 </html>
 ```
-Create a s3 bucket.
-![image](/assets/images/cloud/4112/10-2-build-serverless-15.png)
-Notice the bucket is not public.
-![image](/assets/images/cloud/4112/10-2-build-serverless-16.png)
-Select the bucket, click "Edit public access settings", clear all checks, save.
-![image](/assets/images/cloud/4112/10-2-build-serverless-17.png)
-Switch to Properties tab, choose "Static website hosting".
-![image](/assets/images/cloud/4112/10-2-build-serverless-18.png)
-Choose the "Use this bucket to host a website" option, set the index document and error document.
-![image](/assets/images/cloud/4112/10-2-build-serverless-19.png)
-error.html.
+* Replace YOUR-API-GATEWAY-URL with the invoke URL of the lambda function, eg. https://knrurtw609.execute-api.us-west-1.amazonaws.com.
+
+error.html
 ```html
-<html><body><h1>There has been an error!</h1></body></html>
+<html>
+  <body>
+    <h1>Oops! Error occurred!</h1>
+  </body>
+</html>
 ```
-Bucket hosting is setup.
-![image](/assets/images/cloud/4112/10-2-build-serverless-20.png)
-Upload the two html files into the bucket and make them public.
+Upload these two files into the bucket and make them public.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-21.png)
 Access the link of index.html in web browser. We should see the page.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-22.png)
-Click on the button, the title will be changed.
+Click on the button, the title will be changed. A call to the lambda function is made to get the name.
 ![image](/assets/images/cloud/4112/10-2-build-serverless-23.png)
-Further more, you can bind your domain name to the s3 bucket by creating an A Record.
-![image](/assets/images/cloud/4112/10-2-build-serverless-24.png)
-Now, when we visit the domain, it shows the same content.
-![image](/assets/images/cloud/4112/10-2-build-serverless-25.png)
-* Wait for a while if you see a blank page as dns takes some time to work.
 
 Architecture of Lambda.
 ![image](/assets/images/cloud/4112/10-3-serverless-diagram.png)
