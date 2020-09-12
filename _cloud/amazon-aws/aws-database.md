@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Database"
-index: 4107
+index: 4141
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, RDS, Aurora, DynamoDB, RedShift]

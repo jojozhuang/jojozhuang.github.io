@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Storage Gateway"
-index: 4105
+index: 4113
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Storage Gateway]

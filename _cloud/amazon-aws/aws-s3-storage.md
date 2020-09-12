@@ -1,8 +1,8 @@
 ---
 layout: tutorial
 key: cloud
-title: "AWS-S3"
-index: 4103
+title: "AWS-S3 Storage"
+index: 4110
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, S3]

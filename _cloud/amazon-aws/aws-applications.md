@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Applications"
-index: 4114
+index: 4178
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS,SQS,SNS]

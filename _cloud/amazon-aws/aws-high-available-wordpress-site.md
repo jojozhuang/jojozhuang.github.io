@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-High Available Wordpress Site"
-index: 4112
+index: 4191
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Load Balancer]
