@@ -8,7 +8,7 @@ date: 2019-09-16
 tags: [AWS, Load Balancer]
 ---
 
-> Build high availability applications.
+> Build high availability applications with Auto Scaling Groups.
 
 ## 1. High Availability Architecture
 Everything fails, you should always plan for failures.
@@ -75,7 +75,7 @@ Now, select any two instances, terminate them.
 ![image](/assets/images/cloud/4111/8-4-autoscaling-groups-14.png)
 In the Activity history of the Auto Scaling group, we can see it detected the termination and launched new instances automatically.
 ![image](/assets/images/cloud/4111/8-4-autoscaling-groups-15.png)
-After a while, new instances are launched. The auto scaling group ensures that there are always three instances alive. 
+After a while, new instances are launched. The auto scaling group ensures that there are always three instances alive.
 ![image](/assets/images/cloud/4111/8-4-autoscaling-groups-16.png)
 
 ## 4. References
