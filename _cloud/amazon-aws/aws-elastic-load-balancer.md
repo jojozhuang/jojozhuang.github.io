@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Elastic Load Balancer"
-index: 4110
+index: 4171
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Load Balancer]

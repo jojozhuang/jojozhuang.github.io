@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Auto Scaling Groups"
-index: 4111
+index: 4176
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Load Balancer]

@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-Route53"
-index: 4108
+index: 4151
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Route53]

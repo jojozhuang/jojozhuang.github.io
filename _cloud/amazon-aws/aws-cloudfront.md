@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-CloudFront"
-index: 4104
+index: 4112
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, CloudFront, CND]
