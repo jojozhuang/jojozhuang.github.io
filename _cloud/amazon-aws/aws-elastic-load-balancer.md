@@ -8,7 +8,7 @@ date: 2019-09-16
 tags: [AWS, Load Balancer]
 ---
 
-> Build high availability applications.
+> Build high availability applications with Elastic Load Balancer.
 
 ## 1. Elastic Load Balancer
 ### 1.1 Load Balancer Types
