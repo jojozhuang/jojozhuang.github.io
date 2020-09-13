@@ -2,7 +2,7 @@
 layout: tutorial
 key: cloud
 title: "AWS-S3 Storage"
-index: 4110
+index: 4111
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, S3]
@@ -39,12 +39,21 @@ S3 buckets can be configured to create access logs which log all requests made t
 * Integrated with **Lifecycle rules**
 * Versioning's **MFA Delete** capability, which uses multi-factor authentication, can be used to provide an additional layer of security.
 
-### 1.5 Lifecycle Policies
+### 1.5 S3 Storage Class
+* S3 Storage Class
+* S3 Standard
+* S3-IA
+* S3 One Zone - IA
+* S3 - Intelligent Tiering
+* S3 Glacier
+* S3 Glacier Deep Archive
+
+### 1.6 Lifecycle Policies
 * Automates moving objects between the different storage tiers.
 * Can be used in conjunction with versioning.
 * Can be applied to current versions and previous versions.
 
-### 1.6 Replication
+### 1.7 Replication
 * Versioning must be enabled on both the source and destination buckets.
 * Regions must be unique.
 * Files in an existing bucket are not replicated automatically.
@@ -52,12 +61,12 @@ S3 buckets can be configured to create access logs which log all requests made t
 * Delete markers are not replicated.
 * Deleting individual versions or delete markers will not be replicated.
 
-### 1.7 S3 Transfer Acceleration
+### 1.8 S3 Transfer Acceleration
 Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon **CloudFront**’s globally distributed **edge locations**. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
 
 When using Transfer Acceleration, additional data transfer charges may apply. For more information about pricing, see Amazon S3 Pricing.
 
-## 2. Basic Usage of S3 Bucket
+## 2. Lab - Basic Usage of S3 Bucket
 ### 2.1 Creating S3 Bucket
 Go to Services->S3, or visit https://s3.console.aws.amazon.com/s3/, click Create Bucket.
 ![image](/assets/images/cloud/4103/s3-home.png)
@@ -130,7 +139,7 @@ Try to add and remove some versions in the source bucket to see the impact.
 ![image](/assets/images/cloud/4103/new-replication-bucket-replicated.png)
 ### 2.9 Transfer Acceleration
 After enabling the transfer acceleration, you can upload file through a unique link, for example.
-http://johnnyawsguru-s3-01.s3-accelerate.amazonaws.com. A tool to test acceleration speed, see [Amazon S3 Transfer Acceleration Speed Comparison](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)
+http://johnnyawsguru-s3-01.s3-accelerate.amazonaws.com. A tool to test acceleration speed, see [Amazon S3 Transfer Acceleration Speed Comparison](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html).
 ![image](/assets/images/cloud/4103/transfer-acceleration-speed-comparison.png)
 Speed in different regions.
 ![image](/assets/images/cloud/4103/transfer-acceleration-speed-comparison2.png)
