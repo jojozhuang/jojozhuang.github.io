@@ -31,17 +31,26 @@ A content delivery network or content distribution network is a geographically d
 * Objects are cached for the life of the TTL(Time To Live.)
 * You can clear cached objects, but you will be charged.
 
-## 2. CloudFront Lab
+### 1.5 Invalidating Files
+If you need to remove a file from CloudFront edge caches before it expires, you can do one of the following:
+* Invalidate the file from edge caches. The next time a viewer requests the file, CloudFront returns to the origin to fetch the latest version of the file.
+* Use file versioning to serve a different version of the file that has a different name.
+
+To invalidate files, you can specify either the path for individual files or a path that ends with the * wildcard, which might apply to one file or to many, as shown in the following examples:
+* /images/image1.jpg
+* /images/image*
+* /images/*
+
+## 2. Lab - CloudFront
 ### 2.1 Creating CloudFront Distribution
 Go to Services->Networking & Content Delivery->CloudFront, or visit https://console.aws.amazon.com/cloudfront/, click "Create distribution".
 ![image](/assets/images/cloud/4104/cloudfront-home.png)
 Select "Web", get started.
 ![image](/assets/images/cloud/4104/cloudfront-web.png)
-Then select the S3 bucket to distribute.
+Then set the S3 bucket to distribute.
 ![image](/assets/images/cloud/4104/cloudfront-create-distribution.png)
 Some settings:
-* Restrict View Access
-* TTL
+* Restrict Viewer Access - Choose whether you want CloudFront to require users to access your content using a `signed URL` or a  `signed cookie`. Additional configuration is required. In the Help, see "Serving Private Content through CloudFront".
 
 Keep the default settings, create distribution.
 ![image](/assets/images/cloud/4104/cloudfront-create-distribution-in-progress.png)
@@ -49,16 +58,17 @@ Wait for few minutes until the deployment is done.
 ![image](/assets/images/cloud/4104/cloudfront-create-distribution-enabled.png)
 Copy the domain name, which is 'digq5vi21aheh.cloudfront.net' here.
 ### 2.2 Testing CloudFront Distribution
-There are two images files in the original bucket.
-
-Access the first one, http://digq5vi21aheh.cloudfront.net/IMG_5807.JPG, failed. because this file is encrypted with AWS KMS.
+There are two images files in the original bucket. Visit the first one, http://digq5vi21aheh.cloudfront.net/IMG_5807.JPG, you will get the "InvalidArgument" error. This is because the file is encrypted with AWS KMS.
 ![image](/assets/images/cloud/4104/cloudfront-distributed-encrypted-file.png)
 Access the second file, http://digq5vi21aheh.cloudfront.net/IMG_5819.JPG, succeeded.
 ![image](/assets/images/cloud/4104/cloudfront-distributed-file.png)
 ### 2.3 Creating Invalidation
-Create invalidation for distribution.
+Select the CloudFront Distribution, then "Create Invalidation".
 ![image](/assets/images/cloud/4104/cloudfront-distribution-invalidation.png)
+Set the file path, then "Invalidate".
+![image](/assets/images/cloud/4104/cloudfront-distribution-invalidating-file-path.png)
 
 ## 3. References
 * [Amazon CloudFront](https://aws.amazon.com/cloudfront)
 * [Amazon CloudFront FAQs](https://aws.amazon.com/cloudfront/faqs/)
+* [Invalidating Files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html)

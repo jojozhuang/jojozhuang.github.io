@@ -54,7 +54,6 @@ Lambda     | Serverless computing platform  | Event-driven, manages the computin
 * S3 - Intelligent Tiering
 * S3 Glacier
 * S3 Glacier Deep Archive
-* Lifecycle Policies
 
 ### 2.3 Comparison
 * S3 One Zone is not high available
