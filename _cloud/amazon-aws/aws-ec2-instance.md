@@ -8,7 +8,7 @@ date: 2019-09-16
 tags: [AWS, EC2]
 ---
 
-> Amazon EC2.
+> Creating EC2 Instances.
 
 ## 1. EC2
 ### 1.1 What is EC2?
@@ -69,35 +69,45 @@ Z1D    | High compute capacity and a high memory footprint  | Ideal for electron
 A1     | Arm-based workloads           | Scale-out workloads such as web servers
 U-6tb1 | Bare Metal                    | Bare metal capabilities that eliminate virtualization overhead
 
-## 2. EC2 Lab
-### 2.1 Create EC2 Instance
-Services->EC2, Launch Instance.
+## 2. Lab - EC2 Instance
+### 2.1 Creating EC2 Instance
+Go to Services->EC2, Launch Instance.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-1.png)
 Choose AMI(Amazon Machine Image).
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-2.png)
-Choose Instance Type.
+Choose Instance Type which is Free Tier Eligible.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-3.png)
 Configure Instance Details, check "Protect against accidental termination".
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-4.png)
-Add Storage.
+Add Storage, leave the default settings.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-5.png)
-Add Tags.
+Add Tags. For example, add name value pair to set instance's name.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-6.png)
-Security Group.
+Security Group. Expose port 80 if the instance acts as web server. Expose port 22 for remote connection with ssh.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-7.png)
 Launch.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-8.png)
 Create key pair, eg. 'johnny-aws-ec2-keypair'.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-9.png)
-Download Key Pair and Launch Instances.
+Download Key Pair and Launch Instances. Save the key pair in your local machine, we will use it for remote ssh to AWS server.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-10.png)
-Instance created and launched. Note down the public ip '3.83.9.181'.
+Instance is created and launched. Note down the public ip '3.83.9.181'.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-11.png)
-Connect to EC2 instance remotely.
+### 2.2 Connecting to EC2 Instance Remotely
+In your local machine, launch terminal, go to the directory where the key pair locates.
+
+Assign proper access permissions of the key pair file.
+```sh
+chmod 400 johnny-aws-ec2-keypair.pem
+```
+Use ssh command to connect ec2 instance remotely.
+```sh
+ssh ec2-user@[the public ip of ec2 instance] -i [key pair file]
+```
+See the demo below.
 ```raw
 > ls
-IMG_5807.JPG			johnny-aws-ec2-keypair.pem
-IMG_5819.JPG			vertioning-test.txt
+johnny-aws-ec2-keypair.pem
 > chmod 400 johnny-aws-ec2-keypair.pem
 > ssh ec2-user@3.83.9.181 -i johnny-aws-ec2-keypair.pem
 ECDSA key fingerprint is SHA256:U8mtdYsvO0ltiT2L/GY+p+4+n/td8Q7qzWkGovkIlPI.
@@ -110,7 +120,8 @@ Warning: Permanently added '3.83.9.181' (ECDSA) to the list of known hosts.
 https://aws.amazon.com/amazon-linux-2/
 [ec2-user@ip-172-31-83-218 ~]$
 ```
-Install httpd.
+### 2.3 Installing Apache Server
+Install httpd(Apache HTTP Server) in EC2 instance.
 ```raw
 [ec2-user@ip-172-31-83-218 ~]$ sudo su
 [root@ip-172-31-83-218 ec2-user]# yum update -y
@@ -121,9 +132,11 @@ No packages marked for update
 ```
 Create an html page under /var/www/html with the following content.
 ```html
-<html><h1>Hello	Johnny from EC2!</h1></html>
+<html>
+  <h1>Hello Johnny from EC2!</h1>
+</html>
 ```
-In remote ec2.
+Then start the Apache server.
 ```raw
 [root@ip-172-31-83-218 ec2-user]# cd /var/www/html
 [root@ip-172-31-83-218 html]# nano index.html
@@ -133,35 +146,46 @@ index.html
 Redirecting to /bin/systemctl start httpd.service
 [root@ip-172-31-83-218 html]# chkconfig on
 ```
-Access 3.83.9.181 or http://3.83.9.181/index.html through web browser.
+### 2.4 Testing the Static Site
+Visit the public ip address of EC2 instance(eg. 3.83.9.181) or http://3.83.9.181/index.html in web browser. The web page is shown properly.
 ![image](/assets/images/cloud/4106/4-2-ec2-create-instance-12.png)
 
-### 2.2 Summary
+### 2.5 Summary
 * Termination Protection is turned off by default, you must turn it on.
 * On an EBS-backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated.
-* EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be done when creating AMI's (lab to follow) in the AWS console or using the API.
+* EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be done when creating AMIs in the AWS console or using the API.
 * Additional volumes can be encrypted.
 
-### 2.3 Security Groups Basics
-All outbound traffic is allowed.
-![image](/assets/images/cloud/4106/4-4-ec2-security-group-outbound.png)
-You can have multiple security groups attached to EC2 instance. (Instance->Actions->NetWorking->Change Security Groups)
-![image](/assets/images/cloud/4106/4-4-ec2-security-group-multiple-groups.png)
-### 2.4 Summary
+## 3. Security Groups
+A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. When you launch an instance in a VPC, you can assign up to five security groups to the instance. Security groups act at the instance level, not the subnet level. Therefore, each instance in a subnet in your VPC can be assigned to a different set of security groups.
+
+If you launch an instance using the Amazon EC2 API or a command line tool and you don't specify a security group, the instance is automatically assigned to the default security group for the VPC. If you launch an instance using the Amazon EC2 console, you have an option to create a new security group for the instance.
+
+For each security group, you add rules that control the inbound traffic to instances, and a separate set of rules that control the outbound traffic. This section describes the basic things that you need to know about security groups for your VPC and their rules.
+
+### 3.1 Security Group Basics
+The following are the basic characteristics of security groups for your VPC:
+* You can specify allow rules, but not deny rules.
 * All Inbound traffic is blocked by default.
 * All Outbound traffic is allowed.
 * Changes to Security Groups take effect immediately.
 * You can have any number of EC2 instances within a security group.
 * You can have multiple security groups attached to EC2 Instances.
-* Security Groups are STATEFUL.
+* Security Groups are stateful.
 * If you create an inbound rule allowing traffic in, that traffic is automatically allowed back out again.
 * You cannot block specific IP addresses using Security Groups, instead use Network Access Control Lists.
-* You can specify allow rules, but not deny rules.
 
-## 10. References
+### 3.2 Security Group on Instance
+Select the EC2 instance, you will see the assigned security groups.
+![image](/assets/images/cloud/4106/4-4-ec2-security-group-outbound.png)
+You can have multiple security groups attached to EC2 instance. (Instance->Actions->NetWorking->Change Security Groups)
+![image](/assets/images/cloud/4106/4-4-ec2-security-group-multiple-groups.png)
+
+## 4. References
 * [Amazon EC2](https://aws.amazon.com/ec2/)
 * [Amazon EC2 pricing](https://aws.amazon.com/ec2/pricing/)
 * [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
 * [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
 * [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
 * [Easily Replace or Attach an IAM Role to an Existing EC2 Instance by Using the EC2 Console](https://aws.amazon.com/blogs/security/easily-replace-or-attach-an-iam-role-to-an-existing-ec2-instance-by-using-the-ec2-console/)
+* [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
