@@ -8,19 +8,27 @@ date: 2019-09-16
 tags: [AWS, EC2]
 ---
 
-> Amazon EC2.
+> Use IAM roles to manage secure access to AWS services.
 
-### 5.2 Using IAM Roles With EC2
-Services -> IAM -> Roles -> Create Role, choose EC2.
+## 1. IAM
+### 1.1 What is Identity and Access Management?
+AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.
+
+### 1.2 What is IAM Role?
+An IAM role is an IAM entity that defines a set of permissions for making AWS service requests. IAM roles are not associated with a specific user or group. Instead, trusted entities assume roles, such as IAM users, applications, or AWS services such as EC2.
+
+## 2. Lab - IAM Roles
+### 2.1 Using IAM Roles With EC2
+Go to Services -> IAM -> Roles -> Create Role, choose EC2.
 ![image](/assets/images/cloud/4106/4-12-ec2-iam-role-1.png)
-Select AdministratorAccess.
+Select AdministratorAccess, next.
 ![image](/assets/images/cloud/4106/4-12-ec2-iam-role-2.png)
-Input name.
+Set role name, then "Create role".
 ![image](/assets/images/cloud/4106/4-12-ec2-iam-role-3.png)
-New role created.
+New role is created.
 ![image](/assets/images/cloud/4106/4-12-ec2-iam-role-4.png)
-
-Use role. ssh to remote ec2 instance, try 'aws s3 ls' command. It doesn't work if credentials are not there in '.aws' folder.
+### 2.2 Using the Role
+Remote connect to EC2 instance with ssh. Try "aws s3 ls" command. It doesn't work if credentials are not there in ".aws" folder.
 ```raw
 [ec2-user@ip-172-31-93-212 ~]$ cd ~
 [ec2-user@ip-172-31-93-212 ~]$ ls -la
@@ -36,11 +44,11 @@ drwx------ 2 ec2-user ec2-user  29 Sep  9 15:39 .ssh
 Unable to locate credentials. You can configure credentials by running "aws configure".
 [ec2-user@ip-172-31-93-212 ~]$
 ```
-Attach role to ec2 instance. Select the instance, Actions->Instance Settings->Attach/Replace IAM Role.
+Attach role to EC2 instance. Select the instance, Actions->Instance Settings->Attach/Replace IAM Role.
 ![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance.png)
 Select the role created in previous step and click Apply button.
 ![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance-2.png)
-Then, we will see the role visible for the instance.
+Then, we will see the role is attached to the instance.
 ![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance-3.png)
 Click on the role to see the details.
 ![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance-4.png)
@@ -54,18 +62,14 @@ Unable to locate credentials. You can configure credentials by running "aws conf
 2019-09-08 22:41:06 johnnyawsguru-version-01
 [ec2-user@ip-172-31-93-212 ~]$
 ```
-By doing this, there is no credentials are stored in the server directory.
-
-### 5.3 Summary of IDENTITY ACCESS MANAGEMENT ROLES:
+By doing this, there is no credentials are stored in the server directory, which is more secure.
+### 2.3 Summary of IAM Roles
 * Roles are more secure than storing your access key and secret access key on individual EC2 instances.
 * Roles are easier to manage.
 * Roles can be assigned to an EC2 instance after it is created using both the console & command line.
 * Roles are universal you can use them in any region.
 
-## 10. References
-* [Amazon EC2](https://aws.amazon.com/ec2/)
-* [Amazon EC2 pricing](https://aws.amazon.com/ec2/pricing/)
-* [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
-* [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
-* [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
+## 3. References
+* [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/)
+* [AWS IAM FAQs](https://aws.amazon.com/iam/faqs/)
 * [Easily Replace or Attach an IAM Role to an Existing EC2 Instance by Using the EC2 Console](https://aws.amazon.com/blogs/security/easily-replace-or-attach-an-iam-role-to-an-existing-ec2-instance-by-using-the-ec2-console/)
