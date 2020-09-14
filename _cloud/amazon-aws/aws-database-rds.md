@@ -1,78 +1,35 @@
 ---
 layout: tutorial
 key: cloud
-title: "AWS-Database"
-index: 4141
+title: "AWS-Database-RDS"
+index: 4142
 subcategory: amazon-aws
 date: 2019-09-16
-tags: [AWS, RDS, Aurora, DynamoDB, RedShift]
+tags: [AWS, RDS, MySQL]
 ---
 
-> Using SQL and NO SQL database services.
+> Use RDS database services.
 
-## 1. Databases On AWS
-### 1.1 Database Types on AWS
-* Relational databases(RDB, OLTP)
-  - SQL Server
-  - Oracle
-  - MySQL Server
-  - PostgreSQL
-  - Aurora
-  - MariaDB
-* DynamoDB(No SQL)
-* RedShift(OLAP)
+## 1. Amazon RDS
+### 1.1 What is Amazon RDS?
+Amazon Relational Database Service (Amazon RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity, while managing time-consuming database administration tasks, freeing you up to focus on your applications and business.
 
-RDS has two key features:
-* `Multi-AZ` - For Disaster Recovery
-* `Read Replicas` - For Performance
+### 1.2 Relational Databases Supported By Amazon RDS
+Amazon RDS supports:
+* Amazon Aurora
+* MySQL
+* MariaDB
+* Oracle
+* SQL Server
+* PostgreSQL
 
-Multi AZ.
-![image](/assets/images/cloud/4107/database-rds-multi-az.png){:width="800px"}
-Replica.
-![image](/assets/images/cloud/4107/database-rds-replica.png)
-
-### 1.2 OLTP vs OLAP
-Online Transaction Processing (`OLTP`) differs from OLAP Online Analytics Processing (`OLAP`) in terms of the types of queries you will run.
-
-OLTP Example: Purchase Order, Invoice
-* Pulls up a row of data such as Name, Date, Address to Deliver to, Delivery Status etc.
-
-OLAP Example: Net Profit for EMEA and Pacific for the Digital Radio Product.
-* Pulls in large numbers of records
-* Sum of Radios Sold in EMEA
-* Sum of Radios Sold in Pacific
-* Unit Cost of Radio in each region
-* Sales price of each radio
-* Sales price - unit cost.
-
-### 1.3 What is Data Warehousing?
-Used for business intelligence. Tools like Cognos, Jaspersoft, SQL Server Reporting Services, Oracle Hyperion, SAP NetWeaver.
-
-Used to pull in very large and complex data sets. Usually used by management to do queries on data (such as current performance vs targets etc)
-
-Data Warehousing databases use different type of architecture both from a database perspective and infrastructure layer.
-
-Amazon's Data Warehouse Solution Is Called `Redshift`. Redshift is for Business Intelligence or Data Warehousing.
-### 1.4 What Is ElastiCache?
-ElastiCache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. The service improves the performance of web applications by allowing you to retrieve information from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases.
-ElastiCache supports two open-source in-memory caching engines:
-* Memcache
-* Redis
-
-Elasticache is used to speed up performance of existing databases (frequent identical queries).
-### 1.5 Summary
-* RDS runs on virtual machines, you cannot log in to these operating systems.
-* Patching of the RDS Operating System and DB is Amazon's responsibility
-* RDS is NOT Serverless
-* Aurora Serverless IS Serverless
-
-## 2. Database Lab
-### 2.1 Create Security Groups
+## 2. Lab - RDS
+### 2.1 Creating Security Groups
 First, create security group 'WebSG' for web server, expose 80 and 22 ports.
 ![image](/assets/images/cloud/4107/websg-security-group.png)
 Then, create another security group 'RDS-MySQL' for MySQL database, expose 3306 port to source 'WebSG'.
 ![image](/assets/images/cloud/4107/mysql-security-group.png)
-### 2.1 Create RDS Instance
+### 2.2 Creating RDS Instance
 Services->Database->RDS, Create database, select MySQL, choose version and select "Free Tier".
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-1.png)
 Set DB Instance Identifier, master name and password(eg. mysqlwordpress/mysqlwordpress).
@@ -87,7 +44,7 @@ It takes some time until the MySQL instance is launched.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-6.png)
 Copy the endpoint value, we will use it later.
 ![image](/assets/images/cloud/4107/5-2-rds-wordpress-7.png)
-### 2.2 Create EC2 Instance
+### 2.3 Creating EC2 Instance
 Create new instance with the following bootstrap script, which will install Apache, php mysql driver and wordpress.
 ```raw
 #!/bin/bash
@@ -307,132 +264,6 @@ MuItiAZ:
 * Used For DR.
 * You can force a failover from one AZ to another by rebooting the RDS instance.
 
-## 4. DynamoDB
-### 4.1 What Is DynamoDB?
-Amazon DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale. It is a fully managed database and supports both document and key-value data models. Its flexible data model and reliable performance make it a great fit for mobile, web, gaming, ad-tech, loT, and many other applications.
-
-### 4.2 Basics of DynamoDB
-* Stored on SSD storage
-* Spread across 3 geographically distinct data centers
-* Eventual Consistent Reads (Default)
-* Strongly Consistent Reads
-
-`Eventual Consistent Reads`: Consistency across all copies of data is usually reached within a second. Repeating a read after a short time should return the updated data. (Best Read Performance)
-
-`Strongly Consistent Reads`: A strongly consistent read returns a result that reflects all writes that received a successful response prior to the read.
-
-## 5. Redshift
-### 5.1 What is Redshift?
-Amazon Redshift is a fast and powerful, fully managed, petabyte scale data warehouse service in the cloud. Customers can start small for just $0.25 per hour with no commitments or upfront costs and scale to a petabyte or more for $1,000 per terabyte per year, less than a tenth of most other data warehousing solutions.
-### 5.2 Redshift Configuration
-Redshift can be configured as follows
-* Single Node (160Gb)
-* Multi-Node
-  - Leader Node (manages client connections and receives queries.)
-  - Compute Node (store data and perform queries and computations). Up to 128 Compute Nodes.
-
-### 5.3 Advanced Compression
-Columnar data stores can be compressed much more than row-based data stores because similar data is stored sequentially on disk. Amazon Redshift employs multiple compression techniques and can often achieve significant compression relative to traditional relational data stores. In addition, Amazon Redshift doesn't require indexes or materialized views, and so uses less space than traditional relational database systems. When loading data into an empty table, Amazon Redshift automatically samples your data and selects the most appropriate compression scheme.
-
-### 5.4 Massively Parallel Processing (MPP)
-Amazon Redshift automatically distributes data and query load across all nodes. Amazon Redshift makes it easy to add nodes to your data warehouse and enables you to maintain fast query performance as your data warehouse grows.
-### 5.5 Redshift Backups
-Backups:
-* Enabled by default with a 1 day retention period.
-* Maximum retention period is 35 days.
-* Redshift always attempts to maintain at least three copies of your data (the original and replica on the compute nodes and a backup in Amazon S3).
-* Redshift can also asynchronously replicate your snapshots to S3 in another region for disaster recovery.
-
-### 5.6 Redshift Pricing
-Redshift is priced as follows:
-* Compute Node Hours (total number of hours you run across all your compute nodes for the billing period. You are billed for 1 unit per node per hour, so a 3-node data warehouse cluster running persistently for an entire month would incur 2,160 instance hours. You will not be charged for leader node hours; only compute nodes will incur charges.)
-* Backup
-* Data transfer (only within a VPC, not outside it)
-
-### 5.7 Redshift Security
-Security Considerations:
-* Encrypted in transit using SSL
-* Encrypted at rest using AES-256 encryption
-* By default RedShift takes care of key management.
-  - Manage your own keys through HSM
-  - AWS Key Management Service
-
-### 5.8 Redshift Availability
-Redshift Availability:
-* Currently only available in 1 AZ
-* Can restore snapshots to new AZs in the event of an outage.
-
-## 6. Aurora
-### 6.1 What Is Aurora?
-Amazon Aurora is a MySQL-compatible, relational database engine that combines the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open source databases. Amazon Aurora provides up to five times better performance than MySQL at a price point one tenth that of a commercial database while delivering similar performance and availability.
-
-### 6.2 The Basics of Aurora
-Things to know about Aurora:
-* Start with 10GB, Scales in 10GB increments to 64TB (Storage Autoscaling)
-* Compute resources can scale up to 32vCPUs and 244GB of Memory.
-* 2 copies of your data is contained in each availability zone, with minimum of 3 availability zones. 6 copies of your data.
-
-### 6.3 Scaling Aurora
-* Aurora is designed to transparently handle the loss of up to two copies of data without affecting database write availability and up to three copies without affecting read availability.
-* Aurora storage is also self-healing. Data blocks and disks are continuously scanned for errors and repaired automatically.
-
-### 6.4 Compare Aurora replica and MySQL replica
-
-Feature                                          |  Amazon Aurora Replicas       | MySQL Replicas
--------------------------------------------------|-------------------------------|-----------------
-Number of replicas                               | Up to 15                      | Up to 5
-Replication type                                 | Asynchronous (milliseconds)   | Asynchronous (seconds)
-Performance impact on primary                    | Low                           | High
-Act as failover target                           | Yes (no data loss)            | Yes (potentially minutes of data loss)
-Automated failover                               | Yes                           | No
-Support for user-defined replication delay       | No                            | Yes
-Support for different data or schema vs. primary | No                            | Yes
-
-### 6.5 Backups With Aurora
-* Automated backups are always enabled on Amazon Aurora DB Instances. Backups do not impact database performance.
-* You can also take snapshots with Aurora. This also does not impact on performance.
-* You can share Aurora Snapshots with other AWS accounts.
-
-### 6.6 Aurora Lab
-Select the MySQL instance, actions->Create Aurora read replica
-![image](/assets/images/cloud/4107/5-7-aurora-6.png)
-Choose 'Create Replica in Different Zone' and set DB instance identifier, keep other settings as default, click "Create read replica" button in the bottom.
-![image](/assets/images/cloud/4107/5-7-aurora-7.png)
-Aurora replica is created.
-![image](/assets/images/cloud/4107/5-7-aurora-8.png)
-Wait for a while, there is one writer instance and one reader instance.
-![image](/assets/images/cloud/4107/5-7-aurora-9.png)
-
-### 6.7 Summary of Aurora
-* 2 copies of your data is contained in each availability zone, with minimum of 3 availability zones. 6 copies of your data.
-* You can share Aurora Snapshots with other AWS accounts.
-* 2 types of replicas available. Aurora Replicas and MySQL replicas. Automated failover is only available with Aurora Replicas.
-* Aurora has automated backups turned on by default. You can also take Snapshots with Aurora. You can share these snapshots with other AWS accounts.
-
-## 7. Elasticache
-### 7.1 What Is ElastiCache?
-ElastiCache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. The service improves the performance of web applications by allowing you to retrieve information from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases.
-
-### 7.2 Memcached vs Redis
-
-Requirement                    | Memcached | Redis
--------------------------------|-----------|--------------
-Simple Cache to offload DB     | Yes       | Yes
-Ability to scale horizontally  | Yes       | Yes
-Multi-threaded performance     | Yes       | No
-Advanced data types            | No        | Yes
-Ranking/Sorting data sets      | No        | Yes
-Pub/Sub capabilities           | No        | Yes
-Persistence                    | No        | Yes
-Multi-AZ                       | No        | Yes
-Backup & Restore Capabilities  | No        | Yes
-
-### 7.3 Summary of Elasticache
-* Use Elasticache to increase database and web application performance.
-* Redis is Multi-AZ
-* You can do back ups and restores of Redis
-
-## 8. References
-* [Databases on AWS](https://aws.amazon.com/products/databases/)
+## 4. References
 * [Amazon Relational Database Service (RDS)](https://aws.amazon.com/rds/)
-* [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
+* [Amazon RDS FAQs](https://aws.amazon.com/rds/faqs/)
