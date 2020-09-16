@@ -8,10 +8,12 @@ date: 2019-09-16
 tags: [AWS, VPC, ACL]
 ---
 
-> Using VPC to setup cloud network.
+> Use ACL to control access.
 
 ## 1. Access Control Lists (ACL)
-### 1.1 ACL
+### 1.1 ACL Overview
+Amazon S3 access control lists (ACLs) enable you to manage access to buckets and objects. Each bucket and object has an ACL attached to it as a subresource. It defines which AWS accounts or groups are granted access and the type of access. When a request is received against a resource, Amazon S3 checks the corresponding ACL to verify that the requester has the necessary access permissions.
+### 1.2 ACL Features
 * Your VPC automatically comes a default network ACL, and by default it allows all outbound and inbound traffic.
 * You can create custom network ACLs. By default, each custom network ACL denies all inbound and outbound traffic until you add rules.
 * Each subnet in your VPC must be associated with a network ACL. If you don't explicitly associate a subnet with a network ACL, the subnet is automatically associated with the default network ACL.
@@ -21,13 +23,17 @@ tags: [AWS, VPC, ACL]
 * Network ACLs have separate inbound and outbound rules, and each rule can either allow or deny traffic.
 * Network ACLs are stateless; responses to allowed inbound traffic are subject to the rules for outbound traffic (and vice versa.)
 
-We have two ACLs. One is default ACL, another is custom ACL for the custom VPC.
+## 2. Lab - ACL
+Currently, We have two ACLs. One is default ACL, another is custom ACL for the custom VPC. We will create a new ACL test the instance connection.
+### 2.1 Creating Custom ACL
+Go to Services->Networking & Content Delivery->VPC, select Network ACLs, Create network ACL.
 ![image](/assets/images/cloud/4109/7-5-acl-1.png)
-Create new ACL, select the custom VPC.
+Set name, select the custom VPC, Create.
 ![image](/assets/images/cloud/4109/7-5-acl-2.png)
-By default all inbound and outbound requests are denied.
+New VPC is created. By default, all inbound and outbound requests are denied.
 ![image](/assets/images/cloud/4109/7-5-acl-3.png)
-Test the port 80. SSh to web server, run commands to create a web page and start web server.
+### 2.2 Testing ACL(Port 80)
+Remote log into the instance(web server) through ssh. Run the following scripts to install and start Apache server, then use it to host a static web page.
 ```raw
 [root@ip-10-0-1-251 ec2-user]# yum install httpd -y
 [root@ip-10-0-1-251 ec2-user]# chkconfig httpd on
@@ -39,33 +45,26 @@ Starting httpd:
 [root@ip-10-0-1-251 html]# ls
 index.html
 ```
-Access the public ip address, we should see the page.
+Access the instance's public ip address, we should see the page.
 ![image](/assets/images/cloud/4109/7-5-acl-4.png)
 It's currently working, because the default ACL has inbound rules for all public sources.
 ![image](/assets/images/cloud/4109/7-5-acl-5.png)
+### 2.3 Switching ACL
 Associate the new ACL to current subnet. Select the new ACL and click "Edit subnet associations".
 ![image](/assets/images/cloud/4109/7-5-acl-6.png)
 Choose the subnet which is for web server.
 ![image](/assets/images/cloud/4109/7-5-acl-7.png)
-Notice, the old ACL doesn't associate the same subnet anymore.
+Notice, the old ACL doesn't associate the same subnet(10.0.1.0) anymore.
 ![image](/assets/images/cloud/4109/7-5-acl-8.png)
 Refresh the page, it will be timeout.
 ![image](/assets/images/cloud/4109/7-5-acl-9.png)
-Add some rules(80,443,22) to inbound of the new ACL.
+### 2.4 Enabling the new ACL
+Add some new inbound rules(80,443,22) for the new ACL.
 ![image](/assets/images/cloud/4109/7-5-acl-10.png)
-Similarly, add rules for outbound of the new ACL. Check [Ephemeral Ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports) to understand why we set the range 1024-65535.
+Similarly, add new outbound rules for the new ACL. Check [Ephemeral Ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports) to understand why we set the range 1024-65535.
 ![image](/assets/images/cloud/4109/7-5-acl-11.png)
 Refresh the page, we get the page back.
 ![image](/assets/images/cloud/4109/7-5-acl-12.png)
-### 4.2 Custom VPCs and ELBs
-ELB requires at least two subnets with gateway configured for all. Go to Services->EC2->Load Balancing->Load Balancers->Create Load Balancer.
-![image](/assets/images/cloud/4109/7-6-load-balancer-1.png)
-Choose the load balancer type.
-![image](/assets/images/cloud/4109/7-6-load-balancer-2.png)
-Provide name.
-![image](/assets/images/cloud/4109/7-6-load-balancer-3.png)
 
-## 9. References
-* [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/)
-* [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
-* [VPC - NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html)
+## 3. References
+* [Access Control List (ACL) Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html)

@@ -1,44 +1,31 @@
 ---
 layout: tutorial
 key: cloud
-title: "AWS-VPC-Flow Logs"
+title: "AWS-VPC Flow Logs"
 index: 4164
 subcategory: amazon-aws
 date: 2019-09-16
-tags: [AWS, VPC]
+tags: [AWS, VPC Flow Logs]
 ---
 
-> Using VPC to setup cloud network.
+> Monitor the traffic with VPC Flow Logs.
 
-## 5. VPC Flow Logs
-### 5.1 What is VPC Flog Logs
+## 1. VPC Flow Logs
+### 1.1 What is VPC Flog Logs
 VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data is stored using Amazon CloudWatch Logs. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs.
+### 1.2 Usage of Flog Logs
+Flow logs can help you with a number of tasks, such as:
+* Diagnosing overly restrictive security group rules.
+* Monitoring the traffic that is reaching your instance.
+* Determining the direction of the traffic to and from the network interfaces.
 
+### 1.3 Logging Level
 Flow logs can be created at 3 levels:
 * VPC
 * Subnet
 * Network Interface Level
 
-### 1.2 Create Log Group in CloudWatch
-Go to Services->Management & Governance->CloudWatch->Logs->Create log group.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-3.png)
-Go to VPC console, select the custom VPC, actions->Create flow log.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-4.png)
-Click the link "Set Up Permissions".
-![image](/assets/images/cloud/4109/7-7-vpc-flow-5.png)
-Allow.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-6.png)
-Go back to create the flow log.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-7.png)
-Now the flow log is enabled. Refresh the web page.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-8.png)
-Then go to CloudWatch, select Logs and click the log group.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-9.png)
-You will see some log streams.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-10.png)
-Click on any of them, you will see the detailed logs.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-11.png)
-### 1.3 Summary of VPC Flow Logs
+### 1.4 Summary of VPC Flow Logs
 * You cannot enable flow logs for VPCs that are peered with your VPC unless the peer VPC is in your account.
 * You cannot tag a flow log.
 * After you've created a flow log, you cannot change its configuration; for example, you can't associate a different IAM role with the flow log.
@@ -50,7 +37,26 @@ Not all IP Traffic is monitored:
 * DHCP traffic.
 * Traffic to the reserved IP address for the default VPC router.
 
-## 9. References
-* [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/)
-* [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
-* [VPC - NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html)
+## 2. Lab - VPC Flow Logs
+### 2.1 Creating Log Group in CloudWatch
+Go to Services->Management & Governance->CloudWatch->Logs->Create log group.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-3.png)
+Go to VPC console, select the custom VPC, actions->Create flow log. This VPC is used by a web server instance.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-4.png)
+Click the link "Set Up Permissions".
+![image](/assets/images/cloud/4109/7-7-vpc-flow-5.png)
+Create a new role, Allow.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-6.png)
+Go back to create the flow log.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-7.png)
+Now the flow log is enabled. Visit the web page hosted by the web server instance to trigger the logging.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-8.png)
+Then go to CloudWatch, select Logs and click the log group.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-9.png)
+You will see some log streams.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-10.png)
+Click on any of them, you will see the detailed logs.
+![image](/assets/images/cloud/4109/7-7-vpc-flow-11.png)
+
+## 3. References
+* [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html)
