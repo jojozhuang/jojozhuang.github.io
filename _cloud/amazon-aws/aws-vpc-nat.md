@@ -37,7 +37,6 @@ AWS offers two kinds of NAT devices — `NAT instance` or `NAT gateway`.
 
 ## 2. Lab - NAT Instance
 Continue with the VPC lab. Currently, there is one problem with the database server, it has no public connection to internet. We will create NAT instance and NAT Gateway to setup the connection for database server.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-1.png)
 ### 2.1 Creating NAT Instance
 Launch new instance, search 'nat' in the 'Community AMIs', select the first one.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-2.png)
@@ -89,7 +88,10 @@ New route is created.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-19.png)
 Go to Services->Networking & Content Delivery->VPC, select "NAT Gateways", the new gateway is there.
 ![image](/assets/images/cloud/4109/7-4-nat-gateway-20.png)
-Now, the database server has the internet connection again.
+Now, the database server has the internet connection again. The VPC looks as follows.
+![image](/assets/images/cloud/4109/7-4-nat-gateway-1.png)
 
 ## 4. References
 * [VPC - NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html)
+* [NAT instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html)
+* [NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html)

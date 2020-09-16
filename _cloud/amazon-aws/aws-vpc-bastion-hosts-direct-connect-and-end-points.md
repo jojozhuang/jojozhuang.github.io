@@ -16,7 +16,7 @@ A bastion host is a special purpose computer on a network specifically designed 
 ![image](/assets/images/cloud/4109/7-8-bastions-2.png)
 Remember the following:
 * A NAT Gateway or NAT Instance is used to provide Internet traffic to EC2 instances in a private subnets.
-* A Bastion is used to securely administer EC2 instances (Using SSH or RDP). Bastions are called Jump Boxes in Australia.
+* A Bastion is used to securely administer EC2 instances (Using SSH or RDP).
 * You cannot use a NAT Gateway as a Bastion host.
 
 ## 2. Direct Connect
@@ -67,7 +67,7 @@ Currently `Gateway Endpoints` Support
 
 Current solution: Use NAT gateway to let private subnet to access public internet.
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-5.png)
-Use VPC gateway to achieve the same purpose.
+Use VPC endpoint to achieve the same purpose.
 ![image](/assets/images/cloud/4109/7-10-vpc-endpoints-6.png)
 
 ## 4. Lab - Endpoint
