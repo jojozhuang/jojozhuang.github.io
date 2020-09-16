@@ -8,7 +8,7 @@ date: 2019-09-16
 tags: [AWS, VPC]
 ---
 
-> Using VPC to setup cloud network.
+> Create custom VPC.
 
 ## 1. VPCs
 ### 1.1 What Is A VPC?
@@ -60,7 +60,7 @@ Remember the following:
 * You can only have 1 Internet Gateway per VPC.
 * Security Groups can't span VPCs.
 
-## 2. VPC Lab - Build A Custom VPC
+## 2. Lab - VPC
 ### 2.1 Create Custom VPC
 VPC contains Route Table, Network ACL and Security Group.
 ![image](/assets/images/cloud/4109/7-2-create-vpc-1.png)
@@ -97,7 +97,6 @@ Now, auto public ip address is enabled to the subnet 10.0.1.0.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-6.png)
 Now, our VPC looks like this.
 ![image](/assets/images/cloud/4109/7-2-create-subnet-7.png)
-
 ### 2.2 Create Internet Gateway
 Go to Services->Networking & Content Delivery->VPC, select "Internet Gateways" at the left panel, click "Create internet gateway" button.
 ![image](/assets/images/cloud/4109/7-2-create-gateway-0.png)
@@ -187,7 +186,6 @@ PING 10.0.2.140 (10.0.2.140) 56(84) bytes of data.
 64 bytes from 10.0.2.140: icmp_seq=4 ttl=255 time=0.807 ms
 ```
 
-## 9. References
+## 3. References
 * [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/)
 * [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
-* [VPC - NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html)

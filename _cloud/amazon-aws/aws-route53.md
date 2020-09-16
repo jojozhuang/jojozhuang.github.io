@@ -88,9 +88,9 @@ When you create a record, you choose a routing policy, which determines how Amaz
 * Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
 * Multivalue answer routing policy – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random.
 
-## 3. Route53 Lab
+## 3. Lab - Route53
 ### 3.1 Register A Domain Name
-Services -> Networking & Content Delivery -> Route 53, Registered domains.
+Go to Services -> Networking & Content Delivery -> Route 53, Registered domains.
 ![image](/assets/images/cloud/4108/route53-console.png)
 Search available domains, add the one you like into cart.
 ![image](/assets/images/cloud/4108/6-2-domain-name-1.png)
