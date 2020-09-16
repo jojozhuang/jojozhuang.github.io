@@ -1,16 +1,16 @@
 ---
 layout: tutorial
 key: cloud
-title: "AWS-Serverless"
-index: 4179
+title: "AWS-Amazon Lambda"
+index: 4180
 subcategory: amazon-aws
 date: 2019-09-16
 tags: [AWS, Serverless, Lambda]
 ---
 
-> Build serverless applications.
+> Build serverless applications with Amazon Lambda.
 
-## 1. Amazon Lambda
+## 1. Serverless and Amazon Lambda
 ### 1.1 Serverless Concept
 History of cloud: Data center->IaaS->PaaS->Containers->Serverless.
 ![image](/assets/images/cloud/4115/history-of-cloud.jpg)
@@ -64,9 +64,10 @@ Why Is Lambda Cool?
 * Lambda can do things globally, you can use it to back up S3 buckets to other S3 buckets etc
 * Know your triggers
 
-## 2. Lab - Build A Serverless Website
-### 2.1 Overview
+## 2. Lab - Amazon Lambda
+Create a serverless website.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-1.png)
+### 2.1 Creating Lambda Function
 Go to Services->Compute->Lambda, create a function.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-2.png)
 Choose "Author from scratch", set name, choose python 3.8 for runtime.
@@ -75,6 +76,7 @@ Create a new role and select 'Simple microservice permissions' policy template, 
 ![image](/assets/images/cloud/4115/10-2-build-serverless-4.png)
 Lambda function is created.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-5.png)
+### 2.2 Configuring Lambda Function
 Copy the following python codes.
 ```python
 def lambda_handler(event, context):
@@ -100,13 +102,14 @@ Select 'API Gateway', choose "Create an API", select "HTTP API" as API type and 
 ![image](/assets/images/cloud/4115/10-2-build-serverless-8-2.png)
 The API Gateway trigger is created.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-10.png)
-Save the function, click the api link in the API Gateway section.
+Save the function.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-10-2.png)
-A new window will be opened, click the Deploy button. Wait for a while, then click on any invoke url(with default or w/o default), eg. https://knrurtw609.execute-api.us-west-1.amazonaws.com/default.
+### 2.3 Deploying Function
+Click the api link in the API Gateway section. A new window will be opened, click the Deploy button. Wait for a while, then click on any invoke url(with default or w/o default), eg. https://knrurtw609.execute-api.us-west-1.amazonaws.com/default.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-10-3.png)
 Another window is opened. It should return "Johnny", which is defined in the python script.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-10-4.png)
-### 2.2 Create S3 Bucket
+### 2.4 Creating S3 Bucket
 Now, our lambda function is working. We will create a static web page in S3 to call this function.
 
 Go to Services->Storage->S3->Create bucket, set Bucket name and select region.
@@ -161,7 +164,8 @@ error.html
 ```
 Upload these two files into the bucket and make them public.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-21.png)
-Access the link of index.html in web browser. We should see the page.
+### 2.5 Testing Lambda Function
+Visit the link of index.html in web browser. We should see the page.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-22.png)
 Click on the button, the title will be changed. A call to the lambda function is made to get the name.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-23.png)
