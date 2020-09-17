@@ -78,7 +78,7 @@ drwx------  2 root root  29 Sep  9 15:39 .ssh
 config  credentials
 [root@ip-172-31-93-212 .aws]# nano credentials
 ```
-![image](/assets/images/cloud/4124/4-11-ec2-command-line-credentials.png)
+![image](/assets/images/cloud/4124/ec2-command-line-credentials.png)
 
 ## 3. References
 * [AWS Command Line Interface](https://aws.amazon.com/cli/)

@@ -39,7 +39,7 @@ If you need the IPv4 address of your end user, look for the `X-Forwarded-For` he
 
 ## 2. Load Balancer and Health Check
 The architecture of Load Balancer and Health Check.
-![image](/assets/images/cloud/4171/8-2-load-balancer-architecture.png)
+![image](/assets/images/cloud/4171/elb-load-balancer-architecture.png)
 The flow of the http request:  
 1) Client(Web browser) requests the IP address of the Load Balancer from DNS.  
 2) DNS returns the IP address of the Load Balancer.  
@@ -67,36 +67,36 @@ cd /var/www/html
 echo "<html><h1>This is WebServer 01</h1></html>" > index.html
 ```
 Specify the subnet/AZ to 'us-west-1a'.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-1.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-1.png)
 Add tag, Name=Web01.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-1-2.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-1-2.png)
 Create second instance with the same bootstrap script, make it showing "This is WebServer 02" in the web page. Specify the subnet/AZ to 'us-west-1c'. Add tag, Name=Web02. Now, we have two instances running in different AZs.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-2.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-2.png)
 If we access the public id address, we will see the "This is WebServer 01" or "This is WebServer 02" respectively.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-3.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-3.png)
 ### 3.2 Create Classic Load Balancer
 Go to Services->EC2->Load Balancers, Create Load Balancer, select "Classic Load Balancer".
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-4-1.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-4-1.png)
 provider name for it.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-4.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-4.png)
 Choose the same security group with EC2 instance, eg. WebSG.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-5.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-5.png)
 Configure health check.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-6.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-6.png)
 Add two EC2 instances.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-7.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-7.png)
 Keep tag empty and create. The load balancer is created, wait until the status is changed from "OutService" to "InService".
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-8.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-8.png)
 Copy the dns name and visit it in web browser.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-9.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-9.png)
 We will see the content. Keep refreshing the page, sometimes we hit WebServer 1 and sometime we hit WebServer 2.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-10.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-10.png)
 Stop the first instance which is Webserver 1.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-11.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-11.png)
 The health check will notice this and the status of web server 1 instance is changed to "OutService".
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-12.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-12.png)
 If we refresh the page, we will only see webserver 2, as load balancer detects webserver 1 is not available, it is sending all traffic to web server 2.
-![image](/assets/images/cloud/4171/8-2-classic-load-balancer-13.png)
+![image](/assets/images/cloud/4171/elb-classic-load-balancer-13.png)
 
 ## 4. Lab - Application Load Balancer
 Create target group and application load balancer.
@@ -104,53 +104,53 @@ Create target group and application load balancer.
 Launch the two web server instances.
 ### 4.1 Create Target Group
 Go to Services->EC2->Target Groups, Create target group
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-1-2.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-1-2.png)
 Select "Instances" as target type, provide the group name.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-1.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-1.png)
 Set path, threshold, timeout and interval for health checks, next.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-2.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-2.png)
 Select the two web server instances, click "Include as pending below", then "Create target group".
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-3.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-3.png)
 The target group is created.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-4.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-4.png)
 ### 4.2 Create Application Load Balancer
 Go to Services->EC2->Load Balancers, Create Load Balancer, select "Application Load Balancer", provider name and select all availability zones, next.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-5.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-5.png)
 Skip the warning, next.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-7.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-7.png)
 Select the WebSG security group, next.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-8.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-8.png)
 Select the existing group created in previous lab, next.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-9.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-9.png)
 Select the two instances and click 'Add to registered', next.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-10.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-10.png)
 Review, create.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-11.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-11.png)
 ELB is created.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-12.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-12.png)
 Go to target group, wait for a while, until the status become 'healthy'.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-13.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-13.png)
 Go to the load balancer, copy the dns name, visit it in the web browser.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-14.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-14.png)
 We will see the content. Keep refreshing the page, sometimes we hit WebServer 1 and sometime we hit WebServer 2.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-15.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-15.png)
 Why application load balancer is more intelligent than classic load balancer? Check the listeners in the load balancer, click on the listener.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-21.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-21.png)
 You can create rules with conditions and corresponding actions.
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-22.png)
-![image](/assets/images/cloud/4171/8-2-application-load-balancer-23.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-22.png)
+![image](/assets/images/cloud/4171/elb-application-load-balancer-23.png)
 
 ## 5. Advanced Load Balancer
 ### 5.1 Sticky Sessions
 Classic Load Balancer routes each request independently to the registered EC2 instance with the smallest load. `Sticky sessions` allow you to bind a user's session to a specific EC2 instance. This ensures that all requests from the user during the session are sent to the same instance.
-![image](/assets/images/cloud/4171/sticky-sessions.jpg)
+![image](/assets/images/cloud/4171/elb-adv-sticky-sessions.jpg)
 You can enable Sticky Sessions for Application Load Balancers as well, but the traffic will be sent at the Target Group Level.
 ### 5.2 Cross Zone load Balancing
 With cross-zone load balancing, each load balancer node for your Classic Load Balancer distributes requests evenly across the registered instances in all enabled Availability Zones. If cross-zone load balancing is disabled, each load balancer node distributes requests evenly across the registered instances in its Availability Zone only.
-![image](/assets/images/cloud/4171/cross-zone-load-balancing.jpg)
+![image](/assets/images/cloud/4171/elb-adv-cross-zone-load-balancing.jpg)
 ### 5.3 Path Patterns
 You can create a listener with rules to forward requests based on the URL path. This is known as path-based routing. If you are running microservices, you can route traffic to multiple back-end services using path-based routing. For example, you can route general requests to one target group and requests to render images to another target group.
-![image](/assets/images/cloud/4171/path-based-routing.jpeg)
+![image](/assets/images/cloud/4171/elb-adv-path-based-routing.jpeg)
 ### 5.4 Summary
 * Sticky Sessions enable your users to stick to the same EC2 instance. Can be useful if you are storing information locally to that instance.
 * Cross Zone Load Balancing enables you to load balance across multiple availability zones.

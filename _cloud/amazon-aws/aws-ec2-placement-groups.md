@@ -32,14 +32,14 @@ Depending on the type of workload, you can create a placement group using one of
 ## 2. Lab - Placement Groups
 ### 2.1 Creating Placement Group
 Go to Services->EC2->Network & Security->Placement Group, Create placement group.
-![image](/assets/images/cloud/4128/4-16-ec2-placement-group-lab-1.png)
+![image](/assets/images/cloud/4128/ec2-placement-group-lab-1.png)
 Set name and choose Strategy, Create group.
-![image](/assets/images/cloud/4128/4-16-ec2-placement-group-lab-2.png)
+![image](/assets/images/cloud/4128/ec2-placement-group-lab-2.png)
 New placement group is created.
-![image](/assets/images/cloud/4128/4-16-ec2-placement-group-lab-3.png)
+![image](/assets/images/cloud/4128/ec2-placement-group-lab-3.png)
 ### 2.2 Using Placement Group
 Create new instance, in the step of "Configure instance", enable "Add instance to placement group" and select the existing placement group we just created.
-![image](/assets/images/cloud/4128/4-16-ec2-placement-group-lab-4.png)
+![image](/assets/images/cloud/4128/ec2-placement-group-lab-4.png)
 ### 2.3 Summary
 * A clustered placement group can't span multiple Availability Zones, but a spread placement or partitioned group can.
 * The name you specify for a placement group must be unique within your AWS account.
