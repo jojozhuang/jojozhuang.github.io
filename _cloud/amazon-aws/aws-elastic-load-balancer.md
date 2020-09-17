@@ -37,14 +37,23 @@ If you need the IPv4 address of your end user, look for the `X-Forwarded-For` he
 * Load Balances have their own DNS name. You are never given an IP address.
 * Read the ELB FAQ for Classic Load Balancers.
 
-## 2. Load Balancers And Health Checks
-Reminder: Load Balancers are **not** free.
-
-Diagram: Load Balancer & Health Check Architecture
+## 2. Load Balancer and Health Check
+The architecture of Load Balancer and Health Check.
 ![image](/assets/images/cloud/4110/8-2-load-balancer-architecture.png)
+The flow of the http request:  
+1) Client(Web browser) requests the IP address of the Load Balancer from DNS.  
+2) DNS returns the IP address of the Load Balancer.  
+3) Client uses the IP address to request the web page.   
+4) Internet Gateway checks and forwards the request to the Load Balancer.  
+5) The Load Balancer finds an active web server and forwards the request.  
+6) The selected web server returns the requested html file.  
+7) Client receives and processes the html file.  
+
+The Load Balancer checks the health of each web server via the health check service.
 
 ## 3. Lab - Classic Load Balancer
 Create two instances with showing different web pages, then create a classic load balancer.
+* Reminder: Load Balancers are `not free`.
 
 ### 3.1 Create Two EC2 Instances
 Create first instance with the following bootstrap script, make it showing "This is WebServer 01" in the web page.

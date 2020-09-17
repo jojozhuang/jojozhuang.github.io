@@ -170,8 +170,5 @@ Visit the link of index.html in web browser. We should see the page.
 Click on the button, the title will be changed. A call to the lambda function is made to get the name.
 ![image](/assets/images/cloud/4115/10-2-build-serverless-23.png)
 
-Architecture of Lambda.
-![image](/assets/images/cloud/4115/10-3-serverless-diagram.png)
-
 ## 3. References
 * [AWS Lambda](https://aws.amazon.com/lambda/)
