@@ -1,17 +1,17 @@
 ---
 layout: tutorial
 key: cloud
-title: "AWS-Overview-Draft"
+title: "AWS-Overview"
 index: 4101
 subcategory: amazon-aws
 date: 2019-09-15
 tags: [AWS]
-draft: true
 ---
 
 > Amazon AWS Tutorial
 
 ## 1. AWS Components
+Some of the most popular components/services on AWS.
 
  Name      | Short Description              | Usage
 -----------|--------------------------------|-------------------
@@ -19,9 +19,9 @@ S3         | Object-based Storage           | Object Storage(files, pictures, vi
 EC2        | Elastic Computing Service      | Computing service for applications
 EBS        | Elastic Block Store            | Block storage for ec2
 IAM        | Identity and Access Management | Access control, user, role, group, permissions
-CloudWatch | logging serivce                | for performance
-CloudTrail | logging service                | for auditing
-Route53    | Domain Service                 | Domain, Routing Strategy(Simple, Weighted, ,Latency, Failover, Geolocation, etc)
+CloudWatch | logging serivce                | For performance
+CloudTrail | logging service                | For auditing
+Route53    | Domain Service                 | Domain, Routing Strategy(Simple, Weighted, Latency, Failover, Geolocation, etc)
 CloudFront | CDN Service                    | Improving access speed
 ELB        | Elastic Load Balancer          | Load balancing, Application, NetWork, Classic
 VPC        | Virtual Private Cloud          | Direct Connect, VPC Endpoint
@@ -32,13 +32,13 @@ Cassandra  | No-SQL database                | Wide column database
 SQS        | Simple Queue Service           | Message queuing service(Kafka), Standard Queue(deliver at least once); FIFO(guarantee once)
 SNS        | Simple Notification Service    | Notification, text, email.
 SWF        | Simple Workflow Service        | Media processing, web application back-ends, business process workflows, etc
-Elastic Beanstalk  |   |  
-Lambda  |   |  
+Elastic Beanstalk  | Orchestration Service  | For deploying applications
+Lambda     | Serverless computing platform  | Event-driven, manages the computing resources automatically
 
-### 1.1 Storage
-S3 features:
+## 2. Storage - S3
+### 2.1 S3 Features
 * S3 is Object-based
-* size of single file is from 0 byte to 5 TB.
+* Size of single file is from 0 byte to 5 TB.
 * S3 name is unique globally.
 * Using Bucket ACL or Bucket Policies to control access.
 * Server Side Encryption: SSE-S3, SSE-KMS, SSE-C
@@ -47,63 +47,20 @@ S3 features:
 * Snowball for Petabyte-scale data transport.
 * Storage Gateway: File Gateway, Volume Gateway, Tape Gateway
 
-S3 Storage Class:
+### 2.2 S3 Storage Class
 * S3 Standard
 * S3-IA
 * S3 One Zone - IA
 * S3 - Intelligent Tiering
 * S3 Glacier
 * S3 Glacier Deep Archive
-* Lifecycle Policies
 
-Comparison:
+### 2.3 Comparison
 * S3 One Zone is not high available
 * S3 One Zone is cheaper.
 * Glacier is immutable.
 
-IAM:
-* IAM is universal.
-* No permissions for new users.
-
-CloudWatch is all about performance, whereas CloudTrail is all about auditing.
-
-2) CloudTrail logs vs. VPC flow logs vs. S3 bucket logs vs. CloudWatch Logs
-3) SSE-S3 vs. SSE-KMS
-
-### 1.2 EC2
-EC2 Pricing Models:
-* On Demand
-* Reserved
-* Spot
-* Dedicated Host
-
-EBS:
-* General Purpose SSD
-* Provisioned IOPS SSD
-* Throughput Optimized HDD
-* Cold HDD
-* EBS Magnetic
-
-Security Group:
-* Specify allow rules, but not deny rules.
-
-BootStrap Scripts.
-
-Instance MetaData & User Data
-
-EFS
-
-EC2 Placement Groups
-* Clustered Placement Group:
-* Spread Placement Group
-* Partitioned Placement Group
-
-
-
-### 3.16 Identity Access Management & S3 Summary
-![image](/assets/images/note/9551/3-16-s3-exam-tips-1.png)
-![image](/assets/images/note/9551/3-16-s3-exam-tips-2.png)
-S3 Summary:
+### 2.4 S3 Summary
 * S3 is Object-based.
 * Files can be form 0 Bytes to 5TB.
 * There is unlimited storage.
@@ -113,7 +70,7 @@ S3 Summary:
 * Not suitable to install an operating system on.
 * Successful uploads will generate a HTTP 200 status code.
 
-Key Fundamentals of S3:
+### 2.5 Key Fundamentals of S3
 * Key(This is simply the name of the object)
 * Value(This is simply the data and is made up of a sequence of bytes).
 * Version ID(Important for versioning)
@@ -121,7 +78,7 @@ Key Fundamentals of S3:
 * Read after Write consistency for PUTS of new objects
 * Eventual Consistency for overwrite PUTS and DELETES(can take some time to propagate)
 
-Performance across the S3 Storage Classes
+### 2.6 Performance across the S3 Storage Classes
 
 ||S3 Standard|S3 Intelligent-Tiering*|S3 Standard-IA|S3 One Zone-IA|S3 Glacier|S3 Glacier Deep Archive|
 |-|----------|-----------------------|--------------|---------------|----------|-----------------------|
@@ -136,6 +93,44 @@ Performance across the S3 Storage Classes
 |Storage type|Object|Object|Object|Object|Object|Object|
 |Lifecycle transitions|Yes|Yes|Yes|Yes|Yes|Yes|
 
+### 2.7 Identity Access Management(IAM)
+* IAM is universal. It does not apply to regions at this time.
+* The "root account" is simply the account created when first setup your AWS account. It has complete Admin access.
+* New Users have NO permissions when first created.
+* New Users are assigned Access Key ID & Secret Access Keys when first created.
+* These are not the same as a password. You cannot use the Access key ID & Secret Access Key to Login in to the console. You can use this to access AWS via the APIs and Command Line, however.
+* You only get to view these once. If you lose them, you have to regenerate them. So, save them in a secure location.
 
-## 9. References
+### 2.8 Others
+* CloudWatch is all about performance, whereas CloudTrail is all about auditing.
+* CloudTrail logs vs. VPC flow logs vs. S3 bucket logs vs. CloudWatch Logs
+* SSE-S3 vs. SSE-KMS
+
+## 3. Computing - EC2
+### 3.1 EC2 Pricing Models
+* On Demand
+* Reserved
+* Spot
+* Dedicated Host
+
+### 3.2 EBS
+* General Purpose SSD
+* Provisioned IOPS SSD
+* Throughput Optimized HDD
+* Cold HDD
+* EBS Magnetic
+
+### 3.3 EC2 Placement Groups
+* Clustered Placement Group:
+* Spread Placement Group
+* Partitioned Placement Group
+
+### 3.4 Key Concepts
+* Security Group: Specify allow rules, but not deny rules.
+* BootStrap Scripts.
+* Instance MetaData & User Data
+* EFS
+
+## 4. References
+* [Amazon AWS](https://aws.amazon.com/)
 * [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/)
