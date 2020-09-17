@@ -31,14 +31,14 @@ aws s3 mb s3://johnny-aws-guru-s3-bootstrap-01
 aws s3 cp index.html s3://johnny-aws-guru-s3-bootstrap-01  
 ```
 Paste the script into the user data text box.
-![image](/assets/images/cloud/4106/4-13-ec2-bootstrap-script-1.png)
+![image](/assets/images/cloud/4126/4-13-ec2-bootstrap-script-1.png)
 After the instance is launched successfully, access its public ip address, we should see the web page.
-![image](/assets/images/cloud/4106/4-13-ec2-bootstrap-script-2.png)
+![image](/assets/images/cloud/4126/4-13-ec2-bootstrap-script-2.png)
 ### 2.2 Checking the S3 Bucket
 We will see the new S3 bucket.
-![image](/assets/images/cloud/4106/4-13-ec2-bootstrap-script-3.png)
+![image](/assets/images/cloud/4126/4-13-ec2-bootstrap-script-3.png)
 The index.html file is copied to this bucket.
-![image](/assets/images/cloud/4106/4-13-ec2-bootstrap-script-4.png)
+![image](/assets/images/cloud/4126/4-13-ec2-bootstrap-script-4.png)
 
 ## 3. Instance Metadata
 ### 3.1 Instance Metadata

@@ -39,57 +39,57 @@ AWS offers two kinds of NAT devices — `NAT instance` or `NAT gateway`.
 Continue with the VPC lab. Currently, there is one problem with the database server, it has no public connection to internet. We will create NAT instance and NAT Gateway to setup the connection for database server.
 ### 2.1 Creating NAT Instance
 Launch new instance, search 'nat' in the 'Community AMIs', select the first one.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-2.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-2.png)
 Select the custom VPC and choose the public subnet(10.0.1.0).
-![image](/assets/images/cloud/4109/7-4-nat-gateway-3.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-3.png)
 Add name to indicate it is a NAT instance.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-4.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-4.png)
 Select the WebDMZ group, Review and Launch.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-5.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-5.png)
 Choose the second option and continue.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-6.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-6.png)
 The NAT instance is created, it's running in the same AZ with the web server. It has its own public ip address.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-7.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-7.png)
 ### 2.2 Disabling Source/Destination Checks  
 Select the NAT instance, actions->Networking->Change Source/Dest. Check.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-8.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-8.png)
 Disable it.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-9.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-9.png)
 * Check [NAT Instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html) for more details.
 
 ### 2.3 Creating Routes
 Create routes to let database server talk to NAT instance.
 
 Go to Services->VPC->Route Tables, select the main route table of the custom VPC, click "Edit rules".
-![image](/assets/images/cloud/4109/7-4-nat-gateway-10.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-10.png)
 Select the NAT instance as target, Save.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-11.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-11.png)
 New route is created.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-12.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-12.png)
 Now, if you ssh to your webserver, then ssh to your database server, you can run "yum install update", and it will be able to download files from internet.
 ### 2.4 Drawback of NAT Instance
 NAT instance is not good as it may be overloaded. If it is stopped, then database server will lose the internet connection and you will see the route status becomes to "blackhole".
-![image](/assets/images/cloud/4109/7-4-nat-gateway-13.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-13.png)
 Create NAT gateway which is more reliable and flexible.
 
 ## 3. Lab - NAT Gateway
 ### 3.1 Creating NAT Gateway
 Go to VPC->NAT Gateways->Create NAT Gateway.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-14.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-14.png)
 Select the public subnet(10.0.1.0), click "Create New EIP".
-![image](/assets/images/cloud/4109/7-4-nat-gateway-15.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-15.png)
 Edit route tables.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-16.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-16.png)
 Select the main route table, click "Edit routes".
-![image](/assets/images/cloud/4109/7-4-nat-gateway-17.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-17.png)
 Select the NAT gateway as target, Save.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-18.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-18.png)
 New route is created.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-19.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-19.png)
 Go to Services->Networking & Content Delivery->VPC, select "NAT Gateways", the new gateway is there.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-20.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-20.png)
 Now, the database server has the internet connection again. The VPC looks as follows.
-![image](/assets/images/cloud/4109/7-4-nat-gateway-1.png)
+![image](/assets/images/cloud/4162/7-4-nat-gateway-1.png)
 
 ## 4. References
 * [VPC - NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html)

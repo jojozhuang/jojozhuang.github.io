@@ -72,27 +72,27 @@ U-6tb1 | Bare Metal                    | Bare metal capabilities that eliminate 
 ## 2. Lab - EC2 Instance
 ### 2.1 Creating EC2 Instance
 Go to Services->EC2, Launch Instance.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-1.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-1.png)
 Choose AMI(Amazon Machine Image).
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-2.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-2.png)
 Choose Instance Type which is Free Tier Eligible.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-3.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-3.png)
 Configure Instance Details, check "Protect against accidental termination".
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-4.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-4.png)
 Add Storage, leave the default settings.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-5.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-5.png)
 Add Tags. For example, add name value pair to set instance's name.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-6.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-6.png)
 Security Group. Expose port 80 if the instance acts as web server. Expose port 22 for remote connection with ssh.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-7.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-7.png)
 Launch.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-8.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-8.png)
 Create key pair, eg. 'johnny-aws-ec2-keypair'.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-9.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-9.png)
 Download Key Pair and Launch Instances. Save the key pair in your local machine, we will use it for remote ssh to AWS server.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-10.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-10.png)
 Instance is created and launched. Note down the public ip '3.83.9.181'.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-11.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-11.png)
 ### 2.2 Connecting to EC2 Instance Remotely
 In your local machine, launch terminal, go to the directory where the key pair locates.
 
@@ -148,7 +148,7 @@ Redirecting to /bin/systemctl start httpd.service
 ```
 ### 2.4 Testing the Static Site
 Visit the public ip address of EC2 instance(eg. 3.83.9.181) or http://3.83.9.181/index.html in web browser. The web page is shown properly.
-![image](/assets/images/cloud/4106/4-2-ec2-create-instance-12.png)
+![image](/assets/images/cloud/4121/4-2-ec2-create-instance-12.png)
 
 ### 2.5 Summary
 * Termination Protection is turned off by default, you must turn it on.
@@ -177,9 +177,9 @@ The following are the basic characteristics of security groups for your VPC:
 
 ### 3.2 Security Group on Instance
 Select the EC2 instance, you will see the assigned security groups.
-![image](/assets/images/cloud/4106/4-4-ec2-security-group-outbound.png)
+![image](/assets/images/cloud/4121/4-4-ec2-security-group-outbound.png)
 You can have multiple security groups attached to EC2 instance. (Instance->Actions->NetWorking->Change Security Groups)
-![image](/assets/images/cloud/4106/4-4-ec2-security-group-multiple-groups.png)
+![image](/assets/images/cloud/4121/4-4-ec2-security-group-multiple-groups.png)
 
 ## 4. References
 * [Amazon EC2](https://aws.amazon.com/ec2/)

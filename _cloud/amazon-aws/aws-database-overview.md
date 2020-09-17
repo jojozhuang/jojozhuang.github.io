@@ -56,9 +56,9 @@ RDS has two key features:
 * `Read Replicas` - For Performance
 
 Multi AZ.
-![image](/assets/images/cloud/4107/database-rds-multi-az.png){:width="800px"}
+![image](/assets/images/cloud/4141/database-rds-multi-az.png){:width="800px"}
 Replica.
-![image](/assets/images/cloud/4107/database-rds-replica.png)
+![image](/assets/images/cloud/4141/database-rds-replica.png)
 
 ### 2.3 Summary
 * RDS runs on virtual machines, you cannot log in to these operating systems.

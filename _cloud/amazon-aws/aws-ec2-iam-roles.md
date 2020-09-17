@@ -20,13 +20,13 @@ An IAM role is an IAM entity that defines a set of permissions for making AWS se
 ## 2. Lab - IAM Roles
 ### 2.1 Using IAM Roles With EC2
 Go to Services -> IAM -> Roles -> Create Role, choose EC2.
-![image](/assets/images/cloud/4106/4-12-ec2-iam-role-1.png)
+![image](/assets/images/cloud/4125/4-12-ec2-iam-role-1.png)
 Select AdministratorAccess, next.
-![image](/assets/images/cloud/4106/4-12-ec2-iam-role-2.png)
+![image](/assets/images/cloud/4125/4-12-ec2-iam-role-2.png)
 Set role name, then "Create role".
-![image](/assets/images/cloud/4106/4-12-ec2-iam-role-3.png)
+![image](/assets/images/cloud/4125/4-12-ec2-iam-role-3.png)
 New role is created.
-![image](/assets/images/cloud/4106/4-12-ec2-iam-role-4.png)
+![image](/assets/images/cloud/4125/4-12-ec2-iam-role-4.png)
 ### 2.2 Using the Role
 Remote connect to EC2 instance with ssh. Try "aws s3 ls" command. It doesn't work if credentials are not there in ".aws" folder.
 ```raw
@@ -45,13 +45,13 @@ Unable to locate credentials. You can configure credentials by running "aws conf
 [ec2-user@ip-172-31-93-212 ~]$
 ```
 Attach role to EC2 instance. Select the instance, Actions->Instance Settings->Attach/Replace IAM Role.
-![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance.png)
+![image](/assets/images/cloud/4125/4-12-ec2-attach-role-to-instance.png)
 Select the role created in previous step and click Apply button.
-![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance-2.png)
+![image](/assets/images/cloud/4125/4-12-ec2-attach-role-to-instance-2.png)
 Then, we will see the role is attached to the instance.
-![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance-3.png)
+![image](/assets/images/cloud/4125/4-12-ec2-attach-role-to-instance-3.png)
 Click on the role to see the details.
-![image](/assets/images/cloud/4106/4-12-ec2-attach-role-to-instance-4.png)
+![image](/assets/images/cloud/4125/4-12-ec2-attach-role-to-instance-4.png)
 Back to the ssh terminal, and try the command again. This time, we will see all the s3 buckets.
 ```raw
 [ec2-user@ip-172-31-93-212 ~]$ aws s3 ls

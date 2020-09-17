@@ -40,23 +40,23 @@ Not all IP Traffic is monitored:
 ## 2. Lab - VPC Flow Logs
 ### 2.1 Creating Log Group in CloudWatch
 Go to Services->Management & Governance->CloudWatch->Logs->Create log group.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-3.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-3.png)
 Go to VPC console, select the custom VPC, actions->Create flow log. This VPC is used by a web server instance.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-4.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-4.png)
 Click the link "Set Up Permissions".
-![image](/assets/images/cloud/4109/7-7-vpc-flow-5.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-5.png)
 Create a new role, Allow.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-6.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-6.png)
 Go back to create the flow log.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-7.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-7.png)
 Now the flow log is enabled. Visit the web page hosted by the web server instance to trigger the logging.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-8.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-8.png)
 Then go to CloudWatch, select Logs and click the log group.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-9.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-9.png)
 You will see some log streams.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-10.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-10.png)
 Click on any of them, you will see the detailed logs.
-![image](/assets/images/cloud/4109/7-7-vpc-flow-11.png)
+![image](/assets/images/cloud/4164/7-7-vpc-flow-11.png)
 
 ## 3. References
 * [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html)
