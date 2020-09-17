@@ -30,20 +30,20 @@ AWS Storage Gateway supports three storage interfaces: file, volume, and tape. E
 
 ## 2. File Gateway
 File gateway presents a file-based interface to Amazon S3, which appears as a network file share. It enables you to store and retrieve Amazon S3 objects through standard file storage protocols. File gateway allows your existing file-based applications or devices to use secure and durable cloud storage without needing to be modified. With file gateway, your configured S3 buckets will be available as Network File System (NFS) mount points or Server Message Block (SMB) file shares. Your applications read and write files and directories over NFS or SMB, interfacing to the gateway as a file server. In turn, the gateway translates these file operations into object requests on your S3 buckets. Your most recently used data is cached on the gateway for low-latency access, and data transfer between your data center and AWS is fully managed and optimized by the gateway. Once in S3, you can access the objects directly or manage them using features such as S3 Lifecycle Policies, object versioning, and cross-region replication. You can run file gateway on-premises or in EC2.
-![image](/assets/images/cloud/4105/file-gateway-concepts.png)
+![image](/assets/images/cloud/4113/file-gateway-concepts.png)
 
 ## 3. Volume Gateway
 Volume gateway provides an iSCSI target, which enables you to create block storage volumes and mount them as iSCSI devices from your on-premises or EC2 application servers. The volume gateway runs in either a cached or stored mode.
 * In the `cached mode`, your primary data is written to S3, while retaining your frequently accessed data locally in a cache for low-latency access.
-![image](/assets/images/cloud/4105/aws-storage-gateway-cached.png)
+![image](/assets/images/cloud/4113/aws-storage-gateway-cached.png)
 * In the `stored mode`, your primary data is stored locally and your entire dataset is available for low-latency access while asynchronously backed up to AWS.
-![image](/assets/images/cloud/4105/aws-storage-gateway-stored.png)
+![image](/assets/images/cloud/4113/aws-storage-gateway-stored.png)
 
 In either mode, you can take point-in-time snapshots of your volumes, which are stored as Amazon EBS Snapshots in AWS, enabling you to make space-efficient versioned copies of your volumes for data protection, recovery, migration and various other copy data needs.
 
 ## 4. Tape Gateway
 Tape gateway is a cloud-based Virtual Tape Library (VTL). It presents your backup application with a VTL interface, consisting of a media changer and tape drives. You can create virtual tapes in your virtual tape library using the AWS Management Console. Your backup application can read data from or write data to virtual tapes by mounting them to virtual tape drives using the virtual media changer. Virtual tapes are discovered by your backup application using its standard media inventory procedure. Virtual tapes are available for immediate access and are backed by Amazon S3. You can also archive tapes. Archived tapes are stored in Amazon S3 Glacier or Amazon S3 Glacier Deep Archive.
-![image](/assets/images/cloud/4105/tape-gateway-volume-gateway.png)
+![image](/assets/images/cloud/4113/tape-gateway-volume-gateway.png)
 
 ## 5. References
 * [AWS Storage Gateway](https://aws.amazon.com/storagegateway)

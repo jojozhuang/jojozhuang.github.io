@@ -21,25 +21,25 @@ AWS CloudFormation provides a common language for you to model and provision AWS
 ## 2. Lab - CloudFormation
 ### 2.1 Creating Cloudformation
 Go to Services->Management & Governance->CloudFormation, create stack.
-![image](/assets/images/cloud/4113/8-10-cloudformation-1.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-1.png)
 Choose 'Use a sample template' option, and select WordPress blog template.
-![image](/assets/images/cloud/4113/8-10-cloudformation-2.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-2.png)
 Set name and database parameters.
-![image](/assets/images/cloud/4113/8-10-cloudformation-3.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-3.png)
 Add tag, next, review and create.
-![image](/assets/images/cloud/4113/8-10-cloudformation-4.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-4.png)
 It is created.
-![image](/assets/images/cloud/4113/8-10-cloudformation-5.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-5.png)
 Wait for a while, the creation is completed. We see some web servers and security groups are created.
-![image](/assets/images/cloud/4113/8-10-cloudformation-6.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-6.png)
 Switch to the Outputs tab, hit the link.
-![image](/assets/images/cloud/4113/8-10-cloudformation-7.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-7.png)
 We should see the word press configuration page. WordPress site is ready to use.
-![image](/assets/images/cloud/4113/8-10-cloudformation-8.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-8.png)
 Switch to Resources tab. Notice that only web server and security group are created. There is no RDS is created. You can confirm this by going to RDS to see if there is any new instance is launched.
-![image](/assets/images/cloud/4113/8-10-cloudformation-9.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-9.png)
 Only one EC2 instance we can find.
-![image](/assets/images/cloud/4113/8-10-cloudformation-10.png)
+![image](/assets/images/cloud/4177/8-10-cloudformation-10.png)
 * Visit https://aws.amazon.com/quickstart/?quick to see available templates.
 
 ## 3. References
