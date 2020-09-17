@@ -44,13 +44,13 @@ Support for different data or schema vs. primary | No                           
 ## 2. Lab - Aurora
 ### 2.1 Creating Aurora Read Replica
 Select the MySQL instance, actions->Create Aurora read replica
-![image](/assets/images/cloud/4143//5-7-aurora-6.png)
+![image](/assets/images/cloud/4143/aurora-1.png)
 Choose "Create Replica in Different Zone" and set DB instance identifier, keep other settings as default, click "Create read replica" button in the bottom.
-![image](/assets/images/cloud/4143//5-7-aurora-7.png)
+![image](/assets/images/cloud/4143/aurora-2.png)
 Aurora replica is created.
-![image](/assets/images/cloud/4143//5-7-aurora-8.png)
+![image](/assets/images/cloud/4143/aurora-3.png)
 Wait for a while, there is one writer instance and one reader instance.
-![image](/assets/images/cloud/4143//5-7-aurora-9.png)
+![image](/assets/images/cloud/4143/aurora-4.png)
 
 ### 2.2 Summary of Aurora
 * 2 copies of your data is contained in each availability zone, with minimum of 3 availability zones. 6 copies of your data.

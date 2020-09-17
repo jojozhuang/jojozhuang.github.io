@@ -50,22 +50,22 @@ AWS CloudTrail increases visibility into your user and resource activity by reco
 ## 2. Lab - CloudWatch
 ### 2.1 Enabling CloudWatch on Instance
 Create a new instance, enable option "Enable CloudWatch detailed monitoring". Don't do it for experiment as it charges.
-![image](/assets/images/cloud/4123/4-10-ec2-create-instance-with-cloudwatch.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-instance.png)
 ### 2.2 Creating CloudWatch Alarm for CPU Usage
 Go to Services->Management & Governance -> CloudWatch, Create Alarm, Select metric.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-1.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-1.png)
 Select EC2.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-2.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-2.png)
 Per-Instance Metrics.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-3.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-3.png)
 Choose 'CPUUtilization' for the target instance.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-4.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-4.png)
 Set condition, period, etc.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-5.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-5.png)
 Set threshold. For example, send alarm when CPU utilization is greater than 90%.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-6.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-6.png)
 Create topic and set email address.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-7.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-7.png)
 ### 2.3 Testing CloudWatch Alarm
 Remote login into EC2 instance with ssh and run the following command to infinitely run "echo" command repeatedly.
 ```raw
@@ -74,7 +74,7 @@ Remote login into EC2 instance with ssh and run the following command to infinit
 > while true; do echo; done
 ```
 CPU usage will increase to high level to trigger the alarm and you will receive the alarm email.
-![image](/assets/images/cloud/4123/4-10-ec2-cloudwatch-create-alarm-8.png)
+![image](/assets/images/cloud/4123/ec2-cloudwatch-create-alarm-8.png)
 
 ## 3. References
 * [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/)

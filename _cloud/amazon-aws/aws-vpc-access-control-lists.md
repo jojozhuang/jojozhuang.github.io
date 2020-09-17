@@ -27,11 +27,11 @@ Amazon S3 access control lists (ACLs) enable you to manage access to buckets and
 Currently, We have two ACLs. One is default ACL, another is custom ACL for the custom VPC. We will create a new ACL test the instance connection.
 ### 2.1 Creating Custom ACL
 Go to Services->Networking & Content Delivery->VPC, select Network ACLs, Create network ACL.
-![image](/assets/images/cloud/4163/7-5-acl-1.png)
+![image](/assets/images/cloud/4163/vpc-acl-1.png)
 Set name, select the custom VPC, Create.
-![image](/assets/images/cloud/4163/7-5-acl-2.png)
+![image](/assets/images/cloud/4163/vpc-acl-2.png)
 New VPC is created. By default, all inbound and outbound requests are denied.
-![image](/assets/images/cloud/4163/7-5-acl-3.png)
+![image](/assets/images/cloud/4163/vpc-acl-3.png)
 ### 2.2 Testing ACL(Port 80)
 Remote log into the instance(web server) through ssh. Run the following scripts to install and start Apache server, then use it to host a static web page.
 ```raw
@@ -46,25 +46,25 @@ Starting httpd:
 index.html
 ```
 Access the instance's public ip address, we should see the page.
-![image](/assets/images/cloud/4163/7-5-acl-4.png)
+![image](/assets/images/cloud/4163/vpc-acl-4.png)
 It's currently working, because the default ACL has inbound rules for all public sources.
-![image](/assets/images/cloud/4163/7-5-acl-5.png)
+![image](/assets/images/cloud/4163/vpc-acl-5.png)
 ### 2.3 Switching ACL
 Associate the new ACL to current subnet. Select the new ACL and click "Edit subnet associations".
-![image](/assets/images/cloud/4163/7-5-acl-6.png)
+![image](/assets/images/cloud/4163/vpc-acl-6.png)
 Choose the subnet which is for web server.
-![image](/assets/images/cloud/4163/7-5-acl-7.png)
+![image](/assets/images/cloud/4163/vpc-acl-7.png)
 Notice, the old ACL doesn't associate the same subnet(10.0.1.0) anymore.
-![image](/assets/images/cloud/4163/7-5-acl-8.png)
+![image](/assets/images/cloud/4163/vpc-acl-8.png)
 Refresh the page, it will be timeout.
-![image](/assets/images/cloud/4163/7-5-acl-9.png)
+![image](/assets/images/cloud/4163/vpc-acl-9.png)
 ### 2.4 Enabling the new ACL
 Add some new inbound rules(80,443,22) for the new ACL.
-![image](/assets/images/cloud/4163/7-5-acl-10.png)
+![image](/assets/images/cloud/4163/vpc-acl-10.png)
 Similarly, add new outbound rules for the new ACL. Check [Ephemeral Ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports) to understand why we set the range 1024-65535.
-![image](/assets/images/cloud/4163/7-5-acl-11.png)
+![image](/assets/images/cloud/4163/vpc-acl-11.png)
 Refresh the page, we get the page back.
-![image](/assets/images/cloud/4163/7-5-acl-12.png)
+![image](/assets/images/cloud/4163/vpc-acl-12.png)
 
 ## 3. References
 * [Access Control List (ACL) Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html)

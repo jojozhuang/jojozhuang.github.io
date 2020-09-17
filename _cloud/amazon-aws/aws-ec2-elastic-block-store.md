@@ -35,44 +35,44 @@ Max. IOPS Volume | 16,000 | 64,000 | 500 | 250 | 40-200
 ## 2. Lab - EBS
 ### 2.1 Volumes & Snapshots
 When launching a new instance, one EBS volume is attached automatically and they are in the same Available Zone.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-1.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-1.png)
 Go to Services->EC2->Elastic Block Store->Volumes
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-2.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-2.png)
 ### 2.2 Creating EC2 Instance with Additional EBS Volumes
 Launch a new instance with adding three additional EBS volumes.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-3.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-3.png)
 After the instance is started, we will see four volumes.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-4.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-4.png)
 Here, we can change the size of volume. For example, change the size of HDD from 500GB to 1000GB.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-5.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-5.png)
 We can also change the Volume type from "Standard SDD" to "Provisioned IOPS SSD" for root volume.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-6.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-6.png)
 Save the change, after a while, we will see the change is go live. For the root volume, type is changed from gp2 to io1.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-7.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-7.png)
 ### 2.3 Creating EC2 Instance in Another AZ
 Select root volume, Actions->Create Snapshot.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-8.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-8.png)
 Wait for a while, we will see the snapshot is ready.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-9.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-9.png)
 Now we can create image with this snapshot.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-10.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-10.png)
 The new image appears in the AMIs, and it is ready to use.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-11.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-11.png)
 Let's launch a new instance with this image, choose a different AZ.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-12.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-12.png)
 After launch, notice it is in a different AZ(us-west-1a) from the original one(us-west-1c).
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-13.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-13.png)
 We can also move the EBS volume to another region by copying AMI image to another region and launch new instance with it. And we can choose any AZ in that region.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-14.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-14.png)
 ### 2.4 Volumes after Instances are Terminated
 What happens to volumes if instances are terminated, will they all be deleted as well? See below.
 
 Now we have two instance running.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-15.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-15.png)
 And we have 5 volumes for above two instances.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-16.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-16.png)
 After the two instances are terminated, the addition volumes are still there, their states are changed to "available" though. Only the root volumes are deleted.
-![image](/assets/images/cloud/4122/4-6-volumes-snapshots-17.png)
+![image](/assets/images/cloud/4122/volumes-snapshots-17.png)
 ### 2.5 Summary of Volumes & Snapshots
 * Volumes exist on EBS. Think of EBS as a virtual hard disk
 * Snapshots exist on S3. Think of snapshots as a photograph of the disk.
@@ -105,17 +105,17 @@ All AMIs are categorized as either backed by Amazon EBS or backed by instance st
 
 ### 3.3 Using Instance Store
 Create EC2 instance with instance store. Launch instance, switch to "Community AMIs".
-![image](/assets/images/cloud/4122/4-7-ec2-create-instance-store.png)
+![image](/assets/images/cloud/4122/ec2-create-instance-store-1.png)
 Go through the AMIs list and select one.
-![image](/assets/images/cloud/4122/4-7-ec2-create-instance-store-2.png)
+![image](/assets/images/cloud/4122/ec2-create-instance-store-2.png)
 Choose the first available instance type.
-![image](/assets/images/cloud/4122/4-7-ec2-create-instance-store-3.png)
+![image](/assets/images/cloud/4122/ec2-create-instance-store-3.png)
 Keep the default settings. In step "Add Storage", notice the volume type is Instance Store.
-![image](/assets/images/cloud/4122/4-7-ec2-create-instance-store-4.png)
+![image](/assets/images/cloud/4122/ec2-create-instance-store-4.png)
 Continue with the default settings and reuse the security group created previously and launch.
-![image](/assets/images/cloud/4122/4-7-ec2-create-instance-store-5.png)
+![image](/assets/images/cloud/4122/ec2-create-instance-store-5.png)
 Instance store can't be stopped. Terminate it as it is not free in the free trial.
-![image](/assets/images/cloud/4122/4-7-ec2-create-instance-store-6.png)
+![image](/assets/images/cloud/4122/ec2-create-instance-store-6.png)
 ### 3.4 Summary of EBS and Instance Store
 * Instance Store Volumes are sometimes called Ephemeral Storage.
 * Instance store volumes cannot be stopped. If the underlying host fails, you will lose your data.
@@ -146,21 +146,21 @@ You can encrypt both the boot and data volumes of an EC2 instance. When you crea
 
 ### 4.4 Lab - Encrypted Instance
 Volumes->Select one volume, Actions->Create Snapshot.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-1.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-1.png)
 Set description, then "Create Snapshot".
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-2.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-2.png)
 Switch to Snapshots view and wait until it's finished.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-3.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-3.png)
 Copy and choose encrypted.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-4.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-4.png)
 The new instance is launched.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-5.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-5.png)
 Select it and create image with it.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-6.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-6.png)
 Switch to Images view and see the AMI.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-7.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-7.png)
 Now, we can use this image to launch new instance, notice it is encrypted by default.
-![image](/assets/images/cloud/4122/4-8-ec2-volume-create-snapshot-8.png)
+![image](/assets/images/cloud/4122/ec2-volume-create-snapshot-8.png)
 
 ### 4.5 Summary of EBS Encryption
 * Snapshots of encrypted volumes are encrypted automatically.

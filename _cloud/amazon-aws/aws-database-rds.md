@@ -26,24 +26,24 @@ Amazon RDS supports:
 ## 2. Lab - RDS
 ### 2.1 Creating Security Groups
 First, create security group 'WebSG' for web server, expose 80 and 22 ports.
-![image](/assets/images/cloud/4142//websg-security-group.png)
+![image](/assets/images/cloud/4142/rds-websg-security-group.png)
 Then, create another security group 'RDS-MySQL' for MySQL database, expose 3306 port to source 'WebSG'.
-![image](/assets/images/cloud/4142//mysql-security-group.png)
+![image](/assets/images/cloud/4142/rds-mysql-security-group.png)
 ### 2.2 Creating RDS Instance
 Services->Database->RDS, Create database, select MySQL, choose version and select "Free Tier".
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-1.png)
+![image](/assets/images/cloud/4142/rds-wordpress-1.png)
 Set DB Instance Identifier, master name and password(eg. mysqlwordpress/mysqlwordpress).
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-2.png)
+![image](/assets/images/cloud/4142/rds-wordpress-2.png)
 Expand "Additional connectivity configuration", choose "RDS-MySQL" as the security group, which allows web server instance to connect the database.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-3.png)
+![image](/assets/images/cloud/4142/rds-wordpress-3.png)
 Set the initial database name, eg. mysqlwordpress. This is important for configuring the wordpress later. If you don't see this option, try to switch to "Production" template and switch back to "Free tier". Sometime, there is a UI issue here. The input box for "Initial database name" may not be visible.
-![image](/assets/images/cloud/4142//initial-database-name.png)
+![image](/assets/images/cloud/4142/rds-initial-database-name.png)
 Click 'Create database', a new db will be created automatically.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-4.png)
+![image](/assets/images/cloud/4142/rds-wordpress-4.png)
 It takes some time until the MySQL instance is launched.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-6.png)
+![image](/assets/images/cloud/4142/rds-wordpress-6.png)
 Copy the endpoint value, we will use it later.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-7.png)
+![image](/assets/images/cloud/4142/rds-wordpress-7.png)
 ### 2.3 Creating EC2 Instance
 Create new instance with the following bootstrap script, which will install Apache, php mysql driver and wordpress.
 ```raw
@@ -61,21 +61,21 @@ service httpd start
 chkconfig httpd on
 ```
 In the step of "Configure Instance", paste the script to the user data box.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-8.png)
+![image](/assets/images/cloud/4142/rds-wordpress-8.png)
 Add tag "WordPressServer".
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-9.png)
+![image](/assets/images/cloud/4142/rds-wordpress-9.png)
 Select the "WebSG" security group, Review and Launch.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-10.png)
+![image](/assets/images/cloud/4142/rds-wordpress-10.png)
 Once the instance is launched, access the public ip of web server in browser, eg. http://13.52.237.32/wp-admin/setup-config.php. We will see the wordpress admin page.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-11.png)
+![image](/assets/images/cloud/4142/rds-wordpress-11.png)
 Setup the data connection, including database name, use name, password. Put the endpoint value(MySQL instance) into Database Host.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-12.png)
+![image](/assets/images/cloud/4142/rds-wordpress-12.png)
 You may get the error: Can't select database.
-![image](/assets/images/cloud/4142//cant-select-database.png)
+![image](/assets/images/cloud/4142/rds-cant-select-database.png)
 This is because you didn't set the database name when creating the MySQL instance. Recreate the MySQL database with initial database name.
-![image](/assets/images/cloud/4142//empy-database-name.png)
+![image](/assets/images/cloud/4142/rds-empy-database-name.png)
 If mysql connection is fine, we will get the following error: can't write the wp-config.php file.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-13.png)
+![image](/assets/images/cloud/4142/rds-wordpress-13.png)
 Copy the script.
 ```raw
 <?php
@@ -170,15 +170,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once( ABSPATH . 'wp-settings.php' );
 ```
 Then ssh to the web server. Create a file named `wp-config.php` in folder `/var/www/html` with the content from latest step.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-14.png)
+![image](/assets/images/cloud/4142/rds-wordpress-14.png)
 Refresh the page, now, the wordpress admin page is displayed properly. Set title, name, etc.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-15.png)
+![image](/assets/images/cloud/4142/rds-wordpress-15.png)
 WordPress is installed successfully.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-16.png)
+![image](/assets/images/cloud/4142/rds-wordpress-16.png)
 Login.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-17.png)
+![image](/assets/images/cloud/4142/rds-wordpress-17.png)
 Home page of WordPress.
-![image](/assets/images/cloud/4142//5-2-rds-wordpress-18.png)
+![image](/assets/images/cloud/4142/rds-wordpress-18.png)
 
 ## 3. RDS Backups
 ### 3.1 Backup Types
@@ -229,27 +229,27 @@ Things to know about Read Replicas:
 
 ### 3.4 RDS Backups Lab
 Choose the Mysql database created in previously, click Modify button.
-![image](/assets/images/cloud/4142//5-4-rds-backup-1.png)
+![image](/assets/images/cloud/4142/rds-backup-1.png)
 Enable Multi-AZ deployment.
-![image](/assets/images/cloud/4142//5-4-rds-backup-2.png)
+![image](/assets/images/cloud/4142/rds-backup-2.png)
 Scroll down to the bottom, click Continue.
-![image](/assets/images/cloud/4142//rds-backup-continue.png)
+![image](/assets/images/cloud/4142/rds-backup-continue.png)
 Select 'Apply immediately' option and click 'Modify DB Instance' button.
-![image](/assets/images/cloud/4142//5-4-rds-backup-3.png)
+![image](/assets/images/cloud/4142/rds-backup-3.png)
 The status of the database instance will be in modifying status. Wait for a while until the status is changed to 'Available'.
-![image](/assets/images/cloud/4142//5-4-rds-backup-4.png)
+![image](/assets/images/cloud/4142/rds-backup-4.png)
 Click it to see the details, switch to Configuration tab, you can see Multi AZ is set to yes.
-![image](/assets/images/cloud/4142//5-4-rds-backup-5.png)
+![image](/assets/images/cloud/4142/rds-backup-5.png)
 Modify the database instance, turn on backup by setting the retention period to 35 days, then choose "Apply immediately" option.
-![image](/assets/images/cloud/4142//5-4-rds-backup-6.png)
+![image](/assets/images/cloud/4142/rds-backup-6.png)
 The database instance will change to modifying status again, wait until it becomes to Available status. Actions->Create read replica.
-![image](/assets/images/cloud/4142//5-4-rds-backup-7.png)
+![image](/assets/images/cloud/4142/rds-backup-7.png)
 Choose a different region to replica, eg. US West(N. California). Provide database identify name(eg. mysqlwordpress-replica) and keep other settings as default, click "Create read replica".
-![image](/assets/images/cloud/4142//5-4-rds-backup-8.png)
+![image](/assets/images/cloud/4142/rds-backup-8.png)
 A new database instance is created with role 'Replica' in a different AZ.
-![image](/assets/images/cloud/4142//5-4-rds-backup-9.png)
+![image](/assets/images/cloud/4142/rds-backup-9.png)
 Click Actions->Promote to convert a MySQL Read Replica into a “standalone” RDS database instance.
-![image](/assets/images/cloud/4142//5-4-rds-backup-10.png)
+![image](/assets/images/cloud/4142/rds-backup-10.png)
 
 ### 3.5 Summary of RDS Backup
 Read Replicas:

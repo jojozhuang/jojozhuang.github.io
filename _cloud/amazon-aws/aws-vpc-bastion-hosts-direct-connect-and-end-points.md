@@ -13,7 +13,7 @@ tags: [AWS, Bastion Hosts, Direct Connect, End Points]
 ## 1. Bastion Hosts
 ### 1.1 What Is A Bastion Host?
 A bastion host is a special purpose computer on a network specifically designed and configured to withstand attacks. The computer generally hosts a single application, for example a proxy server, and all other services are removed or limited to reduce the threat to the computer. It is hardened in this manner primarily due to its location and purpose, which is either on the outside of a firewall or in a demilitarized zone (DMZ) and usually involves access from untrusted networks or computers.
-![image](/assets/images/cloud/4165/7-8-bastions-2.png)
+![image](/assets/images/cloud/4165/vpc-bastions-1.png)
 Remember the following:
 * A NAT Gateway or NAT Instance is used to provide Internet traffic to EC2 instances in a private subnets.
 * A Bastion is used to securely administer EC2 instances (Using SSH or RDP).
@@ -22,7 +22,7 @@ Remember the following:
 ## 2. Direct Connect
 ### 2.1 What Is Direct Connect?  
 AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Using AWS Direct Connect, you can establish private connectivity between AWS and your datacenter, office, or colocation environment, which in many cases can reduce your network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based connections.
-![image](/assets/images/cloud/4165/7-9-direct-connect-2.png)
+![image](/assets/images/cloud/4165/vpc-direct-connect-1.png)
 Remember the following:
 * Direct Connect directly connects your data center to AWS
 * Useful for high throughput workloads (ie lots of network traffic)
@@ -66,20 +66,20 @@ Currently `Gateway Endpoints` Support
 * DynamoDB
 
 Current solution: Use NAT gateway to let private subnet to access public internet.
-![image](/assets/images/cloud/4165/7-10-vpc-endpoints-5.png)
+![image](/assets/images/cloud/4165/vpc-endpoints-5.png)
 Use VPC endpoint to achieve the same purpose.
-![image](/assets/images/cloud/4165/7-10-vpc-endpoints-6.png)
+![image](/assets/images/cloud/4165/vpc-endpoints-6.png)
 
 ## 4. Lab - Endpoint
 ### 4.1 Creating Endpoint
 Go to Service->VPC->Endpoints, Create Endpoint, select s3 and gateway.
-![image](/assets/images/cloud/4165/7-10-vpc-endpoints-7.png)
+![image](/assets/images/cloud/4165/vpc-endpoints-7.png)
 Select the custom VPC, and choose the main subnet, 10.0.2.0.
-![image](/assets/images/cloud/4165/7-10-vpc-endpoints-8.png)
+![image](/assets/images/cloud/4165/vpc-endpoints-8.png)
 Now, the end point is created.
-![image](/assets/images/cloud/4165/7-10-vpc-endpoints-9.png)
+![image](/assets/images/cloud/4165/vpc-endpoints-9.png)
 Go to the Route Tables, select the main route table, wait for few minutes, the endpoint will show up in the routes. With this endpoint, the private subnet can connect to outside world.
-![image](/assets/images/cloud/4165/7-10-vpc-endpoints-10.png)
+![image](/assets/images/cloud/4165/vpc-endpoints-10.png)
 
 ## 5. References
 * [Linux Bastion Hosts on AWS](https://aws.amazon.com/quickstart/architecture/linux-bastion/)

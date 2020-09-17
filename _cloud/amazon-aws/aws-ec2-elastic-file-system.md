@@ -26,31 +26,31 @@ Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully manag
 Create an EFS file system and two Linux instances that can share data using the file system.
 ### 2.1 Creating EFS
 Go to Services->Storage->EFS, Create File System.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-1.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-1.png)
 Keep default, next.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-2.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-2.png)
 Just enable the encryption, next.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-3.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-3.png)
 Keep default, Create File System.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-4.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-4.png)
 It will take few minutes to finish.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-5.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-5.png)
 Mount targets are being created cross Availability Zones.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-6.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-6.png)
 Wait until EFS is created, click on "Amazon EC2 mount instructions (from local VPC)".
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-7.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-7.png)
 Copy the TLC command , "sudo mount -t efs -o tls fs-9c5a377e:/ efs". We will use it in terminal later.
-![image](/assets/images/cloud/4127/4-15-ec2-create-efs-8.png)
+![image](/assets/images/cloud/4127/ec2-create-efs-8.png)
 ### 2.2 Editing Security Group
 Meanwhile, go to Services->EC2->Security Group, select the default security group, switch to "Inbound" tab.
-![image](/assets/images/cloud/4127/4-15-ec2-add-nfs-1.png)
+![image](/assets/images/cloud/4127/ec2-add-nfs-1.png)
 Click Edit->Add Rule, choose NFS and select 'WebDMZ' security group, Save.
-![image](/assets/images/cloud/4127/4-15-ec2-add-nfs-2.png)
+![image](/assets/images/cloud/4127/ec2-add-nfs-2.png)
 Now NFS is in the inbound.
-![image](/assets/images/cloud/4127/4-15-ec2-add-nfs-3.png)
+![image](/assets/images/cloud/4127/ec2-add-nfs-3.png)
 ### 2.3 Creating Instances
 Create new instance with bootstrap script(User Data), set "Number of instances" = 2.
-![image](/assets/images/cloud/4127/4-15-ec2-create-instance-1.png)
+![image](/assets/images/cloud/4127/ec2-create-instance-1.png)
 Put the following shell script to user data. This script will install and launch Apache server, then install amazon-efs-utils.
 ```raw
 #!/bin/bash
@@ -60,9 +60,9 @@ service httpd start
 chkconfig httpd on
 yum install amazon-efs-utils -y
 ```
-![image](/assets/images/cloud/4127/4-15-ec2-create-instance-2.png)
+![image](/assets/images/cloud/4127/ec2-create-instance-2.png)
 Once the two instances are launched, note the public IP addresses.
-![image](/assets/images/cloud/4127/4-15-ec2-create-instance-3.png)
+![image](/assets/images/cloud/4127/ec2-create-instance-3.png)
 ### 2.4 Mounting EFS in Instances
  Open two terminals to SSH to these two EC2 instances. In the first instance, navigate to '/var/www/html', nothing there.
  ```raw

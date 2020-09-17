@@ -24,21 +24,21 @@ With Elastic Beanstalk, you can quickly deploy and manage applications in the AW
 ## 2. Lab - Elastic Beanstalk
 ### 2.1 Creating Elastic Beanstalk
 Go to Services->Compute->Elastic Beanstalk, Create New Application.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-1.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-1.png)
 Set name, choose platform, click "Create application" button.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-2.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-2.png)
 Application is creating.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-3.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-3.png)
 Wait until the setup is done, click the environment.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-4.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-4.png)
 We can see the history of the creation.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-5.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-5.png)
 Switch to configuration. Here you can make change to the application.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-6.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-6.png)
 If we go to Services->EC2, we will see new instance is auto generated.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-7.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-7.png)
 Visit the public ip in the web browser, we will see the web page.
-![image](/assets/images/cloud/4178/8-11-elastic-beanstalk-8.png)
+![image](/assets/images/cloud/4178/elastic-beanstalk-8.png)
 
 ## 3. References
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
