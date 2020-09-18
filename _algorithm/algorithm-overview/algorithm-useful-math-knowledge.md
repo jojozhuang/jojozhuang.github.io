@@ -69,6 +69,44 @@ private int gcd(int x, int y) {
     return y == 0 ? x : gcd(y, x % y);
 }
 ```
+All common divisors of two given numbers.
+```java
+// method to calculate all common divisors of two given numbers
+private List<Integer> commDiv(int a, int b)
+{
+    Set<Integer> set = new HashSet();
+    // find gcd of a, b
+    int n = gcd(a, b);
+    set.add(n);
+
+    for (int i = 1; i <= Math.sqrt(n); i++) {
+        // if 'i' is factor of n
+        if (n % i == 0) {
+            // check if divisors are equal
+            if (n / i == i) {
+                set.add(i);
+            } else {
+                set.add(i);
+                set.add(n/i);
+            }
+        }
+    }
+    return new ArrayList<>(set);
+}
+```
+All dividers of the given number.
+```java
+private List<Integer> divider(int num)
+{
+    List<Integer> list = new ArrayList<>();
+    for (int i = 1; i < num; i++) {
+        if (num % i == 0) {
+            list.add(i);
+        }
+    }
+    return list;
+}
+```
 
 ### 1.4 Valid Perfect Square(leetcode 367)
 ```java
