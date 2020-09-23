@@ -66,7 +66,7 @@ public int getMostPopulationBruteForce(int[][] persons) {
 * Time complexity: $O(n*y)$, n is the number of persons, y is the year range.
 * Space complexity: $O(y)$, y is the year range.
 
-### 2.3 Time Line Solution
+### 2.3 Sweep Line Solution
 Create a same array as discussed in the previous solution. Sweep the time line from left to right, when we meet a birth, increment the count for that year by one; when we meet a death, decrement the count for that year by one. At last, go through the array, summarize the count for all years from left to right. Meanwhile, note down the maximum count.
 ![image](/assets/images/algorithm/1231/sweep_time_line.png)
 Notice that, when decreasing the count, we don't care who was actually dead in that year. For example, if we exchange the death year for person A and person B, our algorithm produces same array.
@@ -109,15 +109,119 @@ public int getMostPopulation(int[][] persons) {
 * Time complexity: $O(n+y)$, n is the number of persons, y is the year range.
 * Space complexity: $O(y)$, y is the year range.
 
-## 3. Classic Problems
+## 3. Problem - Car Pooling
+### 3.1 Problem Description
+You are driving a vehicle that has `capacity` empty seats initially available for passengers.  The vehicle only drives east (ie. it cannot turn around and drive west.)
+
+Given a list of trips, `trip[i] = [num_passengers, start_location, end_location]` contains information about the i-th trip: the number of passengers that must be picked up, and the locations to pick them up and drop them off.  The locations are given as the number of kilometers due east from your vehicle's initial location.
+
+Return true if and only if it is possible to pick up and drop off all passengers for all the given trips.
+
+Example 1:
+```raw
+Input: trips = [[2,1,5],[3,3,7]], capacity = 4
+Output: false
+```
+Example 2:
+```raw
+Input: trips = [[2,1,5],[3,3,7]], capacity = 5
+Output: true
+```
+Example 3:
+```raw
+Input: trips = [[2,1,5],[3,5,7]], capacity = 3
+Output: true
+```
+Example 4:
+```raw
+Input: trips = [[3,2,7],[3,7,9],[8,3,9]], capacity = 11
+Output: true
+```
+Constraints:
+* trips.length <= 1000
+* trips[i].length == 3
+* 1 <= trips[i][0] <= 100
+* 0 <= trips[i][1] < trips[i][2] <= 1000
+* 1 <= capacity <= 100000
+
+### 3.2 Sweep Line Solution
+Similar solution as the previous problem. Create an array to store the number of passengers for all locations.
+
+Below is the implementation. Notice that no sorting is required.
+```java
+public boolean carPooling(int[][] trips, int capacity) {
+    if (trips == null || trips.length == 0) {
+        return true;
+    }
+
+    // find the minimum and maximum locations
+    int start = Integer.MIN_VALUE, end = Integer.MAX_VALUE;
+    for (int[] trip : trips) {
+        start = Math.min(start, trip[1]);
+        end = Math.max(end, trip[2]);
+    }
+
+    // create an array with the length of available locations
+    int[] locations = new int[end - start + 1];
+
+    // increment if pick up, decrement if drop off
+    for (int i = 0; i < trips.length; i++) {
+        locations[trips[i][1] - start] += trips[i][0];
+        locations[trips[i][2] - start] -= trips[i][0];
+    }
+
+    // go through and count the passengers on board
+    int count = 0;
+    for (int i = 0; i < locations.length; i++) {
+        count += locations[i];
+        if (count > capacity) {
+            return false;
+        }
+    }
+
+    return true;
+}
+```
+* Time complexity: $O(n+y)$, n is the number of persons, y is the year range.
+* Space complexity: $O(y)$, y is the year range.
+
+Since the value of location is restricted within 0~1000, so we can optimize the solution by directly defining the location array with length 1001.
+```java
+public boolean carPooling(int[][] trips, int capacity) {
+    if (trips == null || trips.length == 0) {
+        return true;
+    }
+
+    int[] locations = new int[1001];
+
+    // increment if pick up, decrement if drop off
+    for (int i = 0; i < trips.length; i++) {
+        locations[trips[i][1]] += trips[i][0];
+        locations[trips[i][2]] -= trips[i][0];
+    }
+
+    // go through and count the passengers on board
+    int count = 0;
+    for (int i = 0; i < locations.length; i++) {
+        count += locations[i];
+        if (count > capacity) {
+            return false;
+        }
+    }
+
+    return true;
+}
+```
+## 4. Classic Problems
 * [LintCode 391 - Number of Airplanes in the Sky](https://www.lintcode.com/problem/number-of-airplanes-in-the-sky/)
+* [LeetCode 1094 - Car Pooling](https://leetcode.com/problems/car-pooling/)
 * [LeetCode 218 - The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
-## 4. Source Files
+## 5. Source Files
 * [Source files for Sweep Line on GitHub](https://github.com/jojozhuang/dsa-java/tree/master/alg-sweep-line)
 * [Sweep Line Diagrams(draw.io) in Google Drive](https://drive.google.com/file/d/1qh2nqRorRfF4H89DP94aU3SeywZvI17C/view?usp=sharing)
 
-## 5. References
+## 6. References
 * [Line Sweep Technique](https://www.hackerearth.com/practice/math/geometry/line-sweep-technique/tutorial/)
 * [Line Segment Intersection](https://www.youtube.com/watch?v=dePDHVovJlE)
 * [The Skyline Problem at LeetCode](https://leetcode.com/problems/the-skyline-problem/)

@@ -2,7 +2,7 @@
 layout: tutorial
 key: algorithm
 title: "Algorithm - Math"
-index: 1238
+index: 1241
 subcategory: algorithm-algorithm
 date: 2020-03-21
 tags: [String, Array]
@@ -11,147 +11,119 @@ draft: true
 
 > Common approaches for solving string and array problems
 
-## 1. String
-* Presum
-* Two Pointers
-* Split to Left and Right
+## 1. Two City Scheduling
+### 1.1 Question
+A company is planning to interview 2n people. Given the array costs where costs[i] = [aCosti, bCosti], the cost of flying the ith person to city a is aCosti, and the cost of flying the ith person to city b is bCosti.
 
-Examples for **Split to Left and Right**:
+Return the minimum cost to fly every person to a city such that exactly n people arrive in each city.
 
-## 2. Questions
-### 2.1 Min Deletions To Obtain String in Right Format
-We are given a string S of length N consisting only of letters A and/or B. Our goal is to obtain a string in the format `A...AB...B`(all letters A occur before all letters B) by deleting some letters from S. In particular, strings consisting only of letters A or only of letters B fit this format.
+Example 1:
+```raw
+Input: costs = [[10,20],[30,200],[400,50],[30,20]]
+Output: 110
+Explanation:
+The first person goes to city A for a cost of 10.
+The second person goes to city A for a cost of 30.
+The third person goes to city B for a cost of 50.
+The fourth person goes to city B for a cost of 20.
 
-Write a function that, given a string S, return the minimum number of letters that need to be deleted from S in order to obtain a string in the above format.
-* N is an integer within the range [1,100000];
-* string S consists only of the characters A and/or B.
-
-Example
-Example 1
-```sh
-Input: "BAAABAB"
-Output: 2
-Explanation: We can obtain "AAABB" by deleting the first occurrence of 'B' and the last occurrence of 'A'.
+The total minimum cost is 10 + 30 + 50 + 20 = 110 to have half the people interviewing in each city.
 ```
-Example 2
-```sh
-Input: "BBABAA"
-Output: 3
-Explanation: We can delete all occurrences of 'A' or 'B'.
+Example 2:
+```raw
+Input: costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]
+Output: 1859
 ```
-Example 3
-```sh
-Input: "AABBBB"
-Output: 0
-Explanation: We do not have to delete any letters, because the given string is already in the expected format.
+Example 3:
+```raw
+Input: costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]
+Output: 3086
 ```
-Solution:
-First, go through the string, count the number of B at left side and the number of A at right side. Then, find the minimum sum of left B and right A at each position. **The key concept of the solution is to divide the array/string into left and right parts.**
+
+Constraints:
+* 2n == costs.length
+* 2 <= costs.length <= 100
+* costs.length is even.
+* 1 <= aCosti, bCosti <= 1000
+
+### 1.2 Solution 1
 ```java
-// time: O(n), space: O(n)
-public int minDeletionsToObtainStringInRightFormat3(String s) {
-    // Go through the string, count the number of B at left side and the number of A at right side.
-    // Then, find the minimum sum of left B and right A at each position.
-    if (s == null || s.length() == 0) {
-        return 0;
-    }
-
-    int n = s.length();
-    int[] left = new int[n];  // number of B from left
-    int[] right = new int[n]; // number of A from right
-    left[0] = s.charAt(0) == 'B' ? 1 : 0;
-    for (int i = 1; i < n; i++) {
-        left[i] = left[i - 1];
-        if (s.charAt(i) == 'B') {
-            left[i]++;
-        }
-
-    }
-
-    right[n - 1] = s.charAt(n - 1) == 'A' ? 1 : 0;
-    for (int i = n - 2; i >= 0; i--) {
-        right[i] = right[i + 1];
-        if (s.charAt(i) == 'A') {
-            right[i]++;
-        }
-    }
-
-    int min = n;
-    for (int i = 0; i < n; i++) {
-        int count = 0;
-        if (i == 0) {
-            count = right[i + 1];
-        } else if (i == n - 1) {
-            count = left[i - 1];
+public int twoCitySchedCost(int[][] costs) {
+    int n = costs.length;
+    List<int[]> list1 = new ArrayList<>();
+    List<int[]> list2 = new ArrayList<>();
+    for (int[] cost : costs) {
+        if (cost[0] < cost[1]) {
+            list1.add(cost);
         } else {
-            count = left[i - 1] + right[i + 1];
-        }
-        min = Math.min(min, count);
-    }
-
-    return min;
-}
-```
-Optimized space solution.
-```java
-// time: O(n), space: O(1)
-public int minDeletionsToObtainStringInRightFormat2(String s) {
-    if (s == null || s.length() == 0) {
-        return 0;
-    }
-    int n = s.length();
-
-    int leftB = 0;
-    int rightA = 0;
-
-    for (int i = 0; i < n; i++) {
-        if (s.charAt(i) == 'A') {
-            rightA++;
+            list2.add(cost);
         }
     }
 
-    int ans = rightA;
+    int sum = 0;
+    if (list1.size() < list2.size()) {
+        Collections.sort(list2, (a, b) -> (a[0] - a[1]) - (b[0] - b[1]));
 
-    for (int i = 0; i < n; i++) {
-        if (s.charAt(i) == 'A') {
-            rightA--;
-        } else {
-            leftB++;
+        for (int[] cost : list1) {
+            sum += cost[0];
         }
-        ans = Math.min(ans, rightA + leftB);
-    }
-
-    return ans;
-}
-```
-Further, one pass solution.
-```java
-// one pass: time: O(n), space: O(1)
-public int minDeletionsToObtainStringInRightFormat(String s) {
-    if (s == null || s.isEmpty()) {
-        return 0;
-    }
-
-    int countA = 0;
-    int countB = 0;
-    int toDelete = 0;
-
-    for (char c : s.toCharArray()) {
-        if (c == 'A') {
-            countA++;
-            if (countB > toDelete) {
-                toDelete++;
+        int i = 0;
+        for (int[] cost : list2) {
+            if (i < n / 2 - list1.size()) {
+                sum += cost[0];
+            } else {
+                sum += cost[1];
             }
-        } else {
-            countB++;
+            i++;
+        }
+    } else if (list1.size() > list2.size()) {
+        Collections.sort(list1, (a, b) -> (a[1] - a[0]) - (b[1] - b[0]));
+
+        for (int[] cost : list2) {
+            sum += cost[1];
+        }
+        int i = 0;
+        for (int[] cost : list1) {
+            if (i < n / 2 - list2.size()) {
+                sum += cost[1];
+            } else {
+                sum += cost[0];
+            }
+            i++;
+        }
+    } else {
+        for (int[] cost : list1) {
+            sum += cost[0];
+        }
+        for (int[] cost : list2) {
+            sum += cost[1];
         }
     }
 
-    return Math.min(countA, Math.min(countB, toDelete));
+    return sum;
 }
 ```
-## 5. Source Files
+### 1.2 Solution 2
+Suppose we have two city costs [a, b] and [c, d], if we select `a` to make the cost minimal, then a + d < b + c => a - b < c - d. So we can sort the cost list by its difference, then pick up the first one for left half of the array and pick up the second one for the right half of the array.
+```java
+public int twoCitySchedCost(int[][] costs) {
+    Arrays.sort(costs, (a, b) -> {
+       return (a[0]-a[1]) - (b[0]-b[1]);
+    });
 
+    int cost = 0;
+    for (int i = 0; i < costs.length; i++) {
+        if (i < costs.length / 2) {
+            cost += costs[i][0];
+        } else {
+            cost += costs[i][1];
+        }
+    }
 
-## 7. References
-* [1821. Min Deletions To Obtain String in Right Format](https://www.lintcode.com/problem/min-deletions-to-obtain-string-in-right-format/description)
+    return cost;
+}
+```
+
+## 2. References
+* [1029. Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)
+* [1895. Arrange interview city](https://www.lintcode.com/problem/arrange-interview-city/description)
