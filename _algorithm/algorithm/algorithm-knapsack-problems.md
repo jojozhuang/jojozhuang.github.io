@@ -2,14 +2,14 @@
 layout: tutorial
 key: algorithm
 title: "Algorithm - Knapsack Problems"
-index: 1222
+index: 1225
 subcategory: algorithm-algorithm
 date: 2016-03-28
-tags: [Knapsack, Backpack]
+tags: [DP, Knapsack]
 mathjax: true
 ---
 
-> Knapsack1, Knapsack2.
+> Knapsack problems.
 
 ## 1. Knapsack Problem 1 - Capacity only
 Given `n` items with size A[i] for i-th item, and an integer `m` denotes the capacity of a backpack. How full you can fill this backpack? Maximize the **total size** that the knapsack can be filled. Each item can be use 0 or 1 time.

@@ -84,6 +84,10 @@ bookmarks:
         description: Cheatsheets
         url: https://devhints.io/
         favorite: true
+      - name: Explain Shell
+        description: Explain Shell
+        url: https://explainshell.com/
+        favorite: true
       - name: Font Awesome
         description: Free icons from Font Awecome
         url: https://fontawesome.com/icons?d=gallery&m=free
