@@ -177,6 +177,10 @@ menuitems:
         url: /tutorial/?n=tutorial&c=project&s=online-judge
         icon: fas fa-gavel
       - key: separator
+      - key: synology
+        description: Synology
+        url: /tutorial/?n=category&c=Others&s=synology
+        icon: fas fa-server
       - key: asp-net
         description: ASP.NET
         url: /tutorial/?n=category&c=Others&s=asp-net
