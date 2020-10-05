@@ -44,7 +44,8 @@ Tutorial-Backend          | RESTful API                | 8601 ~ 8700
 Tutorial-Backend          | Node.js                    | 8701 ~ 8750
 Tutorial-Backend          | Express.js                 | 8751 ~ 8800
 Tutorial-Project          | Online Judge               | 9001 ~ 9100
-Tutorial-Others           | ASP.NET                    | 9501 ~ 9600
+Tutorial-Others           | Synology                   | 9501 ~ 9600
+Tutorial-Others           | ASP.NET                    | 9601 ~ 9700
 Tutorial-Others           | Uncategorized              | 9701 ~ 9800
 {: .table-striped }
 

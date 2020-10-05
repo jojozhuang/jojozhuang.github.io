@@ -2,7 +2,7 @@
 layout: tutorial
 key: tutorial
 title: "Tricks in ASP.NET MVC"
-index: 9505
+index: 9605
 subcategory: asp-net
 date: 2016-03-19
 tags: [ASP.NET MVC]

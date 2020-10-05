@@ -217,6 +217,11 @@ categories:
     name: Others
     description: Other Articles
     subcategories:
+      - name: Synology
+        description: Synology
+        icon: fas fa-server
+        subcategory: synology
+        image: synology.png
       - name: ASP.NET
         description: ASP.NET
         icon: fab fa-adn
