@@ -17,7 +17,7 @@ tags: [Backup, Synology]
 * On macOS, iPhone is not recognized as a USB Flash Drive, but it is recognized on Windows.  
 
 2) Sync photos from portable ssd drive to macOS.  
-3) Use "Sync Folders" app sync files to Synology NAS.  
+3) Use "Sync Folders" app sync files to Synology NAS, https://www.greenworldsoft.com/sync-folders-pro-help.php#Sync-modes. 
 4) In Synology NAS, use "Cloud Sync" upload files to Baidu Cloud.
 
 Total 4 File Copies:
