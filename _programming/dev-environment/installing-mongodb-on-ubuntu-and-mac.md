@@ -61,6 +61,29 @@ $ brew update
 2) Installing MongoDB.
 ```raw
 $ brew install mongodb
+Error: No available formula or cask with the name "mongodb".
+==> Searching for a previously deleted formula (in the last month)...
+Warning: homebrew/core is shallow clone. To get complete history run:
+  git -C "$(brew --repo homebrew/core)" fetch --unshallow
+
+Error: No previously deleted formula found.
+==> Searching for similarly named formulae...
+Error: No similarly named formulae found.
+==> Searching taps...
+==> Searching taps on GitHub...
+Error: No formulae found in taps.
+```
+Formula mongodb has been removed from homebrew-core. Check pr-43770 from homebrew-core.
+> To our users: if you came here because mongodb stopped working for you, we have removed it from the Homebrew core formulas since it was migrated to a non open-source license.
+
+Fortunately, the team of mongodb is maintaining a custom Homebrew tap. You can uninstall the old mongodb and reinstall the new one from the new tap.
+```sh
+brew services stop mongodb
+brew uninstall mongodb
+
+brew tap mongodb/brew
+brew install mongodb-community
+brew services start mongodb-community
 ```
 3) Check MongoDB version.
 ```raw
