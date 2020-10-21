@@ -120,5 +120,6 @@ sq();
 ```
 
 ## 8. Reference
+* [ES6 Tutorial](https://www.javascripttutorial.net/es6/)
 * [ECMAScript 6 - JavaScript 6](https://www.w3schools.com/js/js_es6.asp)
 * [ES6 Javascript: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
