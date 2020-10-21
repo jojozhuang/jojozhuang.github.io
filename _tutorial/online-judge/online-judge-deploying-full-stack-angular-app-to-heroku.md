@@ -201,6 +201,17 @@ https://online-judge-api.herokuapp.com/ | https://git.heroku.com/online-judge-ap
 ```
 * When creating an app, a git remote (called heroku) is also created and associated with the local git repository.
 
+*update*
+For existing git repository(remote is set to github)
+```raw
+cd leetcode-algorithm-mean
+# Clear the link to the origin repository
+git remote rm origin
+# Link the local repository to the newly created NEW repository.  
+git remote add origin https://git.heroku.com/leetcode-algorithm-api.git
+# Push all the branches and tags to remote.
+git push origin --all
+```
 3) Push files to Heroku
 ```raw
 $ git push heroku master
