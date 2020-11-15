@@ -78,6 +78,9 @@ bookmarks:
         description: Online math tools for graphing, geometry, etc.
         url: https://www.geogebra.org/classic
         favorite: true
+      - name: ExtendsClass
+        description: Online playgrounds, Data Generators, Formatters, etc.
+        url: https://extendsclass.com/
   - category: Quick Reference
     links:
       - name: Rico's cheatsheets
