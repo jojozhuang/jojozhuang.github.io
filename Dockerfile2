@@ -1,5 +1,22 @@
-FROM jekyll/minimal:4.2.0
+# https://github.com/envygeeks/jekyll-docker/blob/master/README.md
+#
+# Builder stage.
+# This state compile our jekyll site to get static files
+#
+FROM jekyll/minimal:4.2.0 AS builder
 
-COPY . /srv/jekyll
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN chmod 777 /usr/src/app -R
 
 RUN jekyll build
+
+#
+# Production stage.
+# This state compile get back the static files from builder stage
+#
+FROM jekyll/minimal:4.2.0
+
+COPY --from=builder /usr/src/app/_site /srv/jekyll/_site

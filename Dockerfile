@@ -5,9 +5,11 @@
 #
 FROM jekyll/minimal:4.2.0 AS builder
 
-WORKDIR /srv/jekyll
+WORKDIR /usr/src/app
 
-COPY . /srv/jekyll
+COPY . .
+
+RUN chmod 777 /usr/src/app -R
 
 RUN jekyll build
 
@@ -18,4 +20,4 @@ RUN jekyll build
 FROM nginx:1.19.8-alpine
 
 ## We just need the build to execute the command
-COPY --from=builder /srv/jekyll/_site /usr/share/nginx/html/
+COPY --from=builder /usr/src/app/_site /usr/share/nginx/html/

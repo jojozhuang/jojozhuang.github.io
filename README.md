@@ -30,15 +30,19 @@ Create image, build in image.
 ```sh
 FROM jekyll/minimal:4.2.0
 
-COPY . /srv/jekyll
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN chmod 777 /usr/src/app -R
 
 RUN jekyll build
 ```
 Create container. `jekyll serve --skip-initial-build` will skip build when container is launched.
 ```sh
-docker run --name jojozhuang.github.io -p 12095:4000 -d jojozhuang/jojozhuang.github.io jekyll serve --skip-initial-build 
+docker run --name jojozhuang.github.io -p 12080:4000 -d jojozhuang/jojozhuang.github.io jekyll serve --skip-initial-build 
 ```
-Access `http://localhost:12095/` in browser.
+Access `http://localhost:12080/` in browser.
 
 Check the image size. It is 1.33GB.
 ```
@@ -76,9 +80,9 @@ COPY --from=builder /srv/jekyll/_site /srv/jekyll/_site
 ```
 Create container. `jekyll serve --skip-initial-build` will skip build when container is launched.
 ```sh
-docker run --name jojozhuang.github.io -p 12095:4000 -d jojozhuang/jojozhuang.github.io jekyll serve --skip-initial-build 
+docker run --name jojozhuang.github.io -p 12080:4000 -d jojozhuang/jojozhuang.github.io jekyll serve --skip-initial-build 
 ```
-Access `http://localhost:12095/` in browser.
+Access `http://localhost:12080/` in browser.
 
 Check the new image, size is reduced to 807MB.
 ```sh
@@ -119,7 +123,7 @@ Create container. `jekyll serve --skip-initial-build` will skip build when conta
 docker run --name jojozhuang.github.io -p 12080:80 -d jojozhuang/jojozhuang.github.io
 docker run --name jojozhuang.github.io -p 12080:80 -v=/Users/johnny/Docker/nginx:/etc/nginx/conf.d/ -d jojozhuang/jojozhuang.github.io
 ```
-Access `http://localhost:12095/` in browser.
+Access `http://localhost:12080/` in browser.
 
 Check the new image, size is reduced to 620MB.
 ```sh
