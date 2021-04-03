@@ -31,19 +31,19 @@ author:
 collections:
   algorithm:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   programming:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   architecture:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   cloud:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   tutorial:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:name/
   project:
     output: true
 

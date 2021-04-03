@@ -1,4 +1,4 @@
-(function() {
+(function () {
   function displayListView(results) {
     var searchResults = document.getElementById('posting-list');
 
@@ -14,8 +14,8 @@
         appendString += '      </a>';
         appendString += '    </div>';
         appendString += '    <div class="media-body">';
-        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + item.title+ '</span></div></a>';
-        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + formatTitle(item.title)+ '</span></div></a>';
+        appendString += '      <a class="title-org" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + item.title + '</span></div></a>';
+        appendString += '      <a class="title-abb" href="' + item.url + '" title="' + item.title + '"><div class="subject"><span ' + formatColor(item.draft) + ' >' + item.index + '. ' + formatTitle(item.title) + '</span></div></a>';
         appendString += '      <p class="excerpt">' + item.excerpt + '</p>';
         appendString += '      <div class="pull-left">';
         appendString += '          <ul class="list-inline list-unstyled more-att">';
@@ -58,7 +58,7 @@
   }
 
   function jsUcfirst(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   function isNullOrUndefined(val) {
@@ -68,7 +68,7 @@
   function formatTitle(title) {
     if (title) {
       if (title.length > 37) {
-        title = title.slice(0,37) + "...";
+        title = title.slice(0, 37) + "...";
       }
     }
     return title;
@@ -129,16 +129,16 @@
     appendString += '<ol class="breadcrumb">';
     var q = subject;
     if (nav) {
-      q += "?n=" + nav;
+      q += "/?n=" + nav;
     }
-    appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">'+jsUcfirst(subject)+'</a></li>';
+    appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">' + jsUcfirst(subject) + '</a></li>';
     if (cat) {
       q += "&c=" + cat;
-      appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">'+getCategoryName(cat)+'</a></li>';
+      appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">' + getCategoryName(cat) + '</a></li>';
     }
     if (subcat) {
       q += "&s=" + subcat;
-      appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">'+getSubCategoryName(subcat)+'</a></li>';
+      appendString += '  <li class="breadcrumb-item"><a href="/' + q + '">' + getSubCategoryName(subcat) + '</a></li>';
     }
 
     appendString += '</ol>';
@@ -147,12 +147,12 @@
       breadcrumbCtrl.innerHTML = appendString;
     }
 
-   // match
+    // match
     for (var key in window.store) {
       var subcategory = window.store[key].subcategory;
       if (subcat && subcategory == subcat ||
-          isNullOrUndefined(subcat) && cat && getParentCategory(subcategory) === cat ||
-          isNullOrUndefined(cat)) {
+        isNullOrUndefined(subcat) && cat && getParentCategory(subcategory) === cat ||
+        isNullOrUndefined(cat)) {
         results.push({
           'id': key,
           'title': window.store[key].title,
