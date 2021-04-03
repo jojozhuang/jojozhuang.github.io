@@ -116,8 +116,8 @@ COPY --from=builder /srv/jekyll/_site /usr/share/nginx/html/
 ```
 Create container. `jekyll serve --skip-initial-build` will skip build when container is launched.
 ```sh
-docker run --name jojozhuang.github.io -p 12095:80 -d jojozhuang/jojozhuang.github.io
-docker run --name jojozhuang.github.io -p 12095:80 -v=/Users/johnny/Docker/nginx:/etc/nginx/conf.d/ -d jojozhuang/jojozhuang.github.io
+docker run --name jojozhuang.github.io -p 12080:80 -d jojozhuang/jojozhuang.github.io
+docker run --name jojozhuang.github.io -p 12080:80 -v=/Users/johnny/Docker/nginx:/etc/nginx/conf.d/ -d jojozhuang/jojozhuang.github.io
 ```
 Access `http://localhost:12095/` in browser.
 
