@@ -11,7 +11,7 @@ COPY . .
 
 RUN chmod 777 /usr/src/app -R
 
-RUN jekyll build
+RUN JEKYLL_ENV=nas jekyll build
 
 #
 # Production stage.

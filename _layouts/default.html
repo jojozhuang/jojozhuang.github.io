@@ -50,7 +50,7 @@
             <div class="dropdown-divider"></div>
             {% else %}
             <a class="dropdown-item {% if page.key == sublink.key or page.subcategory == sublink.key %} active {% endif %}"
-              href="{{ sublink.url }}/"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
+              href="{{ sublink.url }}"><i class="{{ sublink.icon }}"></i> {{ sublink.description }}</a>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -66,7 +66,14 @@
         {% endif %}
         {% endif %}
         {% endfor %}
-        <li class="nav-item "><i class="fas fa-star"></i> TEST</li>
+        {% if jekyll.environment == "production" %}
+        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Production</a></li>
+        {% elsif jekyll.environment == "nas" %}
+        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">NAS</a></li>
+        {% else %}
+        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Local</a></li>
+        {% endif %}
+
       </ul>
       <form class="form-inline ml-auto search-form" action="/search/">
         <!--<div class="input-group">

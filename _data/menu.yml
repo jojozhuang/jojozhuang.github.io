@@ -190,11 +190,11 @@ menuitems:
         url: /tutorial/?n=category&c=Others&s=uncategorized
         icon: fas fa-eye-slash
   - key: project
-    url: /project
+    url: /project/
     icon: fas fa-briefcase
     visible: true
   - key: favorite
-    url: /favorite
+    url: /favorite/
     icon: fas fa-star
     visible: true
   - key: more
@@ -205,16 +205,16 @@ menuitems:
     sublist:
       - key: category
         description: Article Index
-        url: /category
+        url: /category/
         icon: fas fa-object-group
       - key: page-index
         description: Page Index
-        url: /page-index
+        url: /page-index/
         icon: fas fa-chart-line
       - key: separator
       - key: searchadv
         description: Advanced Search
-        url: /searchadv
+        url: /searchadv/
         icon: fas fa-search
       - key: separator
       - key: rss
@@ -228,5 +228,5 @@ menuitems:
       - key: separator
       - key: about
         description: About
-        url: /about
+        url: /about/
         icon: fas fa-info-circle

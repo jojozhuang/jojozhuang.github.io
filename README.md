@@ -20,6 +20,14 @@ bundle exec jekyll serve --port 12001
 ```
 Access http://localhost:12001/ in web browser, enjoy!
 
+Run for production
+```sh
+JEKYLL_ENV=production bundle exec jekyll serve --port 12001
+```
+Run for nas
+```
+JEKYLL_ENV=nas bundle exec jekyll serve --port 12001
+```
 # Docker
 Create image with Dockerfile.
 ```bash
