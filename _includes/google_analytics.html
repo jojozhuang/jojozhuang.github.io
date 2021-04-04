@@ -1,10 +1,10 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-{% if jekyll.environment == "customdomain" %}
+{% if jekyll.environment == "env-netlify" %}
 <!--jojozhuang.github.io-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72686620-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'UA-72686620-2');
@@ -14,7 +14,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72686620-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'UA-72686620-1');

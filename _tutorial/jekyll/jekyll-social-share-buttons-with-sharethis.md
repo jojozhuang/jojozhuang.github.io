@@ -57,7 +57,7 @@ We can use Jekyll Environment Variables to specify different urls for share butt
 Edit `_layouts/default.html`, use `jekyll.environment` in the condition statement.
 {% raw %}
 ```raw
-{% if jekyll.environment == "customdomain" %}
+{% if jekyll.environment == "env-netlify" %}
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e25e723d6ee4a00124a9181&product=sticky-share-buttons' async='async'></script>
 {% else %}
   <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5b595ccbf5aa6d001130cf95&product=sticky-share-buttons' async='async'></script>
@@ -65,10 +65,10 @@ Edit `_layouts/default.html`, use `jekyll.environment` in the condition statemen
 ```
 {% endraw %}
 
-Edit `netlify.toml`, specify a "customdomain" environment in the build command. Notice, https://jojozhuang.github.io/ is hosted on http://jojozhuang.netlify.com/, we reply on netlify to build this website. netlify.toml is the configuration file.
+Edit `netlify.toml`, specify a "env-netlify" environment in the build command. Notice, https://jojozhuang.github.io/ is hosted on http://jojozhuang.netlify.com/, we reply on netlify to build this website. netlify.toml is the configuration file.
 ```toml
 [build]
-  command = "JEKYLL_ENV=customdomain jekyll build"
+  command = "JEKYLL_ENV=env-netlify jekyll build"
   publish = "_site/"
 
 ...

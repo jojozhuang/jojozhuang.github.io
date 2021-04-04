@@ -18,7 +18,7 @@
     src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
   <script>hljs.initLineNumbersOnLoad();</script>
   <script src="/assets/js/nanobar.min.js"></script>
-  {% if jekyll.environment == "customdomain" %}
+  {% if jekyll.environment == "env-netlify" %}
   <!-- google ads-->
   <script data-ad-client="ca-pub-9555704636957165" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -57,17 +57,19 @@
           </div>
         </li>
         {% else %}
-        {% if jekyll.environment == "customdomain" and link.key == "note" %}
+        {% if jekyll.environment == "env-netlify" and link.key == "note" %}
         <!--hide note-->
         {% else %}
         <li class="nav-item {% if page.key == link.key %} active {% endif %}"><a class="nav-link"
-            href="{{ link.url }}/"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a></li>
+            href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.key | capitalize }}</a></li>
         {% endif %}
         {% endif %}
         {% endif %}
         {% endfor %}
         {% if jekyll.environment == "production" %}
         <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Production</a></li>
+        {% elsif jekyll.environment == "env-netlify" %}
+        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Netlify</a></li>
         {% elsif jekyll.environment == "nas" %}
         <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">NAS</a></li>
         {% else %}
@@ -100,12 +102,12 @@
   {{ content }}
 
   <footer class="container-fluid text-center" style="clear: both;">
-    <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "customdomain" %}jojozhuang.github.io{% else
+    <span>&copy; {{ site.time | date: '%Y' }} {% if jekyll.environment == "env-netlify" %}jojozhuang.github.io{% else
       %}jojozhuang.github.io{% endif %}, All rights reserved.</span>
   </footer>
 
   <!--<script id="dsq-count-scr" src="//jojozhuang.disqus.com/count.js" defer></script>-->
-  {% if jekyll.environment == "customdomain" %}
+  {% if jekyll.environment == "env-netlify" %}
   <script type='text/javascript'
     src='https://platform-api.sharethis.com/js/sharethis.js#property=5e25e723d6ee4a00124a9181&product=sticky-share-buttons'
     async='async'></script>
