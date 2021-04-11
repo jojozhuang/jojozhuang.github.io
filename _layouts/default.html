@@ -67,15 +67,14 @@
         {% endif %}
         {% endfor %}
         {% if jekyll.environment == "production" %}
-        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Production</a></li>
+        <li class="nav-item env-name">Production</li>
         {% elsif jekyll.environment == "env-netlify" %}
-        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Netlify</a></li>
+        <li class="nav-item env-name">Netlify</li>
         {% elsif jekyll.environment == "nas" %}
-        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">NAS</a></li>
+        <li class="nav-item env-name">NAS</li>
         {% else %}
-        <li class="nav-item "><a class="nav-link" href="#" style="color: chartreuse;">Local</a></li>
+        <li class="nav-item env-name">Local</li>
         {% endif %}
-
       </ul>
       <form class="form-inline ml-auto search-form" action="/search/">
         <!--<div class="input-group">

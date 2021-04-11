@@ -29,6 +29,15 @@
   padding: 0rem 0.75rem 0rem 0.5rem;
 }
 
+.navbar-custom .env-name {
+  color: whitesmoke !important;
+  font-size: 12px;
+  background-color: olivedrab;
+  margin: 18px 0px 18px 10px !important;
+  padding: 0px 8px !important;
+  font-weight: bold;
+}
+
 @media (min-width: 1200px) and (max-width: 1300px) {
   .search-form {
     display: none !important;
