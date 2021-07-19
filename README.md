@@ -139,6 +139,27 @@ Johnny-MacBook-Pro:nginx johnny$ docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 jojozhuang/jojozhuang.github.io         latest              98cc74b754d8        4 seconds ago       620MB
 ```
+
+## 1.4 Serve in Container
+Create container with compiling and serving.
+```sh
+docker run --rm \
+  --volume="/Users/johnny/Johnny/github/jojozhuang.github.io:/srv/jekyll" \
+  -p 12001:12001 \
+  jekyll/jekyll:3.8 \
+  jekyll serve --port 12001
+```
+Access http://localhost:12001/.
+
+## 1.5 Build without Serve
+```sh
+docker run --rm \
+  --volume="/Users/johnny/Johnny/github/jojozhuang.github.io:/srv/jekyll" \
+  -it jekyll/jekyll:3.8 \
+  jekyll build
+```
+Site will be compiled and generated to `_site` folder.
+
 # Deployment
 Follow tutorial [Deploying Jekyll Website to Netlify](https://jojozhuang.github.io/tutorial/deploying-jekyll-website-to-netlify) to continuously deploy this personal website to Netlify.
 
