@@ -258,3 +258,4 @@ public ListNode detectCycle(ListNode head) {
 * [Linked List](https://www.programiz.com/dsa/linked-list)
 * [Linked List Operations](https://www.programiz.com/dsa/linked-list-operations)
 * [Detecting a Loop in Singly Linked List - Tortoise & Hare](http://codingfreak.blogspot.com/2012/09/detecting-loop-in-singly-linked-list_22.html)
+* [Linked List in Data Structures](https://www.scaler.com/topics/linked-list/)
