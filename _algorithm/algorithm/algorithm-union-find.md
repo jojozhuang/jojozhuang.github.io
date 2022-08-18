@@ -613,3 +613,4 @@ public int[] findRedundantConnection(int[][] edges) {
 * [Disjoint Set (Or Union-Find)](https://www.geeksforgeeks.org/union-find/)
 * [Union-Find Algorithm](https://www.geeksforgeeks.org/union-find-algorithm-union-rank-find-optimized-path-compression/)
 * [Union By Rank and Path Compression](https://www.geeksforgeeks.org/union-find-algorithm-set-2-union-by-rank/)
+* [Disjoint Set (Union Find Algorithm)](https://www.scaler.com/topics/data-structures/disjoint-set/)
