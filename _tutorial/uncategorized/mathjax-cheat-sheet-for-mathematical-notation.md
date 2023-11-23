@@ -20,7 +20,7 @@ Read tutorial [Jekyll - Math Symbols with MathJax]({% link _tutorial/jekyll/jeky
 Title                   | Formula                 | Markdown
 ------------------------|-------------------------|--------------------------------------
 Variables               | $x_1$, $y_1$, $z_{3,4}$ | `$x_1$, $y_1$, $z_{3,4}$`
-Square                  | $a^2$, $x^y$, $2^{n-1}$ | `$a^2$, $$x^y$, $2^{n-1}$`
+Square                  | $a^2$, $x^y$, $2^{n-1}$ | `$a^2$, $x^y$, $2^{n-1}$`
 Square Root             | $\sqrt{9}$, $\sqrt{x}$, $\sqrt[n]{x}$ | `$\sqrt{9}$, $\sqrt{x}$, $\sqrt[n]{x}$`
 Logarithm               | $\log{}x$, $\log_{2}x$  | `$\log{}x$, $\log_{2}x$`
 Fraction                | $\frac{1}{2}$, $\left(-\frac{1}{2}\right)^n$ | `$\frac{1}{2}$, $\left(-\frac{1}{2}\right)^n$`
@@ -28,7 +28,7 @@ Infinity                | $\infty$                | `$\infty$`
 Absolute Value          | $\vert{x}\vert$, $\vert\frac{x}{2}\vert$, $\lfloor{x}\rfloor$, $\lceil{x}\rceil$ | `$\vert{x}\vert$, $\vert\frac{x}{2}\vert$, $\lfloor{x}\rfloor$, $\lceil{x}\rceil$`
 Arithmetic Operation    | $2\times 3$, $6\div 3$  | `$2\times 3$, $6\div 3$`
 Factorial               | $n!$                    | `$n!$`
-Trigonometric Functions | $\sin\theta$, $\cos\theta$, $\tan\theta$ | `$\sin\theta$, $$\cos\theta$, $\tan\theta$`
+Trigonometric Functions | $\sin\theta$, $\cos\theta$, $\tan\theta$ | `$\sin\theta$, $\cos\theta$, $\tan\theta$`
 Greater or Less         | $a\gt b$, $a\geq b$, $a\lt b$, $a\leq b$ | `$a\gt b$, $a\geq b$, $a\lt b$, $a\leq b$`
 Equation                | $a=b$, $a\neq b$, $a\approx b$ | `$a=b$, $a\neq b$, $a\approx b$ `
 Times Dot               | $a\cdot b=ab$           | `$a\cdot b=ab$`
